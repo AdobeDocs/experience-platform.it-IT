@@ -2,9 +2,9 @@
 title: Endpoint API per tipi di pubblico esterni
 description: Scopri come utilizzare l’API per tipi di pubblico esterni per creare, aggiornare, attivare ed eliminare i tipi di pubblico esterni da Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
+source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2189'
 ht-degree: 5%
 
 ---
@@ -78,10 +78,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -95,8 +97,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | Stringa | Il nome del pubblico esterno. |
 | `description` | Stringa | Una descrizione facoltativa per il pubblico esterno. |
 | `customAudienceId` | Stringa | Un identificatore opzionale per il pubblico esterno. |
-| `fields` | Array di oggetti | L’elenco dei campi e i relativi tipi di dati. Durante la creazione dell’elenco di campi, puoi aggiungere i seguenti elementi: <ul><li>`name`: **Obbligatorio** Il nome del campo che fa parte della specifica del pubblico esterno.</li><li>`type`: **Obbligatorio** tipo di dati da inserire nel campo. I valori supportati sono `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li>`identityNs`: **Obbligatorio per il campo di identità** Spazio dei nomi utilizzato dal campo di identità. I valori supportati includono tutti gli spazi dei nomi validi, ad esempio `ECID` o `email`.li><li>`labels`: *Facoltativo* Matrice di etichette di controllo di accesso per il campo. Ulteriori informazioni sulle etichette di controllo di accesso disponibili sono disponibili nel glossario [etichette di utilizzo dati](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Oggetto | Oggetto contenente le informazioni in cui si trova il pubblico esterno. Quando utilizzi questo oggetto, **devi** includere le seguenti informazioni: <ul><li>`path`: **Obbligatorio**: posizione del pubblico esterno o cartella che contiene il pubblico esterno all&#39;interno dell&#39;origine.</li><li>`type`: **Obbligatorio** Il tipo dell&#39;oggetto che si sta recuperando dall&#39;origine. Questo valore può essere `file` o `folder`.</li><li>`sourceType`: *Facoltativo* Il tipo di origine da cui si sta recuperando. Attualmente, l&#39;unico valore supportato è `Cloud Storage`.</li><li>`cloudType`: *Facoltativo* Il tipo di archiviazione cloud, basato sul tipo di origine. I valori supportati sono `S3`, `DLZ`, `GCS` e `SFTP`.</li><li>`baseConnectionId`: ID della connessione di base e fornito dal provider di origine. Questo valore è **obbligatorio** se si utilizza un valore `cloudType` di `S3`, `GCS` o `SFTP`. Per ulteriori informazioni, leggere la [panoramica dei connettori di origine](../../sources/home.md)li></ul> |
+| `fields` | Array di oggetti | L’elenco dei campi e i relativi tipi di dati. Durante la creazione dell’elenco di campi, puoi aggiungere i seguenti elementi: <ul><li>`name`: **Obbligatorio** Il nome del campo che fa parte della specifica del pubblico esterno.</li><li>`type`: **Obbligatorio** tipo di dati da inserire nel campo. I valori supportati sono `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obbligatorio per il campo di identità** Spazio dei nomi utilizzato dal campo di identità. I valori supportati includono tutti gli spazi dei nomi validi, ad esempio `ECID` o `email`.</li><li>`labels`: *Facoltativo* Matrice di etichette di controllo di accesso per il campo. Ulteriori informazioni sulle etichette di controllo di accesso disponibili sono disponibili nel glossario [etichette di utilizzo dati](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Oggetto | Oggetto contenente le informazioni in cui si trova il pubblico esterno. Quando utilizzi questo oggetto, **devi** includere le seguenti informazioni: <ul><li>`path`: **Obbligatorio**: posizione del pubblico esterno o cartella che contiene il pubblico esterno all&#39;interno dell&#39;origine.</li><li>`type`: **Obbligatorio** Il tipo dell&#39;oggetto che si sta recuperando dall&#39;origine. Questo valore può essere `file` o `folder`.</li><li>`sourceType`: *Facoltativo* Il tipo di origine da cui si sta recuperando. Attualmente, l&#39;unico valore supportato è `Cloud Storage`.</li><li>`cloudType`: *Facoltativo* Il tipo di archiviazione cloud, basato sul tipo di origine. I valori supportati sono `S3`, `DLZ`, `GCS` e `SFTP`.</li><li>`baseConnectionId`: ID della connessione di base e fornito dal provider di origine. Questo valore è **obbligatorio** se si utilizza un valore `cloudType` di `S3`, `GCS` o `SFTP`. Per ulteriori informazioni, leggere la [panoramica dei connettori di origine](../../sources/home.md)</li></ul> |
 | `ttlInDays` | Intero | La scadenza dei dati per il pubblico esterno, in giorni. Questo valore può essere impostato da 1 a 90. Per impostazione predefinita, la scadenza dei dati è impostata su 30 giorni. |
 | `audienceType` | Stringa | Il tipo di pubblico per il pubblico esterno. Attualmente, è supportato solo `people`. |
 | `originName` | Stringa | **Obbligatorio** L&#39;origine del pubblico. Indica da dove proviene il pubblico. Per i tipi di pubblico esterni, utilizzare `CUSTOM_UPLOAD`. |
@@ -139,11 +141,13 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 con i detta
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -231,11 +235,13 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -276,6 +282,7 @@ Quando utilizzi questo endpoint, puoi aggiornare i campi seguenti:
 - Descrizione del pubblico
 - Etichette di controllo dell’accesso a livello di campo
 - Etichette di controllo dell’accesso a livello di pubblico
+- Scadenza dei dati del pubblico
 
 L&#39;aggiornamento del campo utilizzando questo endpoint **sostituisce** il contenuto del campo richiesto.
 
@@ -403,7 +410,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Timestamp epoca | **Obbligatorio** L&#39;intervallo che specifica l&#39;ora di inizio dell&#39;esecuzione del flusso per selezionare i file da elaborare. |
 | `dataFilterEndTime` | Timestamp epoca | L’intervallo che specifica l’ora di fine in cui il flusso verrà eseguito per selezionare i file da elaborare. |
-| `differentialIngestion` | Booleano | Campo che determina se l’acquisizione sarà un’acquisizione parziale in base alla differenza rispetto all’ultima acquisizione o a un’acquisizione completa di pubblico. Per impostazione predefinita, questo valore è `true`. |
 
 +++
 
