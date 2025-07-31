@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
 source-wordcount: '1280'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -54,7 +54,7 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Nome account"
->abstract="Immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni alla stessa destinazione."
+>abstract="Immetti un nome che ti aiuterà a riconoscere facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni alla stessa destinazione."
 
 Il primo passaggio nella connessione a una destinazione consiste nell’eseguire l’autenticazione nella piattaforma di destinazione.
 
