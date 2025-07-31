@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
+source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
 workflow-type: tm+mt
-source-wordcount: '2486'
+source-wordcount: '2502'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 5%
 
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.28.1 - venerdì 31 luglio 2025
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema che impediva l’esecuzione delle build personalizzate.
 
 ## Versione 2.28.0 - venerdì 24 luglio 2025
 
