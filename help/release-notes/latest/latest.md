@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di luglio 2025
 description: Note sulla versione di Adobe Experience Platform di luglio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2a8d5576ea937cdda70f10218b5eec35613fd264
+source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 25%
+source-wordcount: '1457'
+ht-degree: 23%
 
 ---
 
@@ -29,7 +29,6 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 - [Capacità](#capacity)
 - [Destinazioni](#destinations)
 - [Acquisizione dei dati](#data-ingestion)
-- [Servizio query]&#x200B;(#query-service
 - [Edizione B2B di Real-Time CDP](#b2b)
 - [Sandbox](#sandboxes)
 - [Servizio di segmentazione](#segmentation-service)
@@ -84,19 +83,6 @@ Experience Platform fornisce un framework completo per l’acquisizione dei dati
 | Supporto per il monitoraggio dell’acquisizione del profilo di streaming | È ora disponibile il monitoraggio in tempo reale per l’acquisizione dei profili di streaming, che fornisce trasparenza in termini di velocità effettiva, latenza e metriche di qualità dei dati. In questo modo è possibile inviare avvisi proattivi e ottenere informazioni utili per aiutare i data engineer a identificare le violazioni della capacità e i problemi di acquisizione. Per ulteriori informazioni, consulta la guida sul [monitoraggio dell&#39;acquisizione del profilo di streaming](../../dataflows/ui/monitor-streaming-profile.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sull&#39;acquisizione dei dati](../../ingestion/home.md).
-
-## Query Service {#query-service}
-
-Eseguire query sui dati nel data lake di Adobe Experience Platform utilizzando SQL standard con Query Service. Combina facilmente i set di dati e generane nuovi dai risultati delle query per alimentare il reporting, i flussi di lavoro data science o facilitare l’acquisizione nel profilo cliente in tempo reale. Ad esempio, puoi unire i dati di transazione della clientela con i dati comportamentali per identificare tipi di pubblico ad alto valore per campagne di marketing mirate.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-|--------|-------------|
-| Supporto per le restrizioni di carattere per le password senza scadenza delle credenziali | Data Distiller ora supporta [credenziali senza scadenza con restrizioni di carattere specifiche](../../query-service/ui/credentials.md#non-expiring-credentials). Sebbene le password richiedano almeno un numero, una lettera minuscola, una lettera maiuscola e un carattere speciale, il simbolo del dollaro ($) non è supportato. I caratteri speciali consigliati includono `!, @, #, ^, or &`. |
-| Miglioramento della coerenza delle prestazioni negli ambienti | Le prestazioni di Data Distiller [sono ora coerenti tra le sandbox di sviluppo e di produzione](../../query-service/troubleshooting-guide.md#data-distiller), con risorse di back-end simili disponibili in entrambi gli ambienti. Le ore di calcolo utilizzate possono variare in base al volume di dati e alle risorse di calcolo back-end disponibili al momento dell’elaborazione. |
-
-Per ulteriori informazioni su [!DNL Query Service], consulta la [[!DNL Query Service] panoramica](../../query-service/home.md).
 
 ## Edizione B2B di Real-Time CDP {#b2b}
 

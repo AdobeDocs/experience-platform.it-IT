@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti su Query Service e Data Distiller
 description: Questo documento contiene domande e risposte comuni relative a Query Service e Data Distiller. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5186'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Una possibile causa è la funzione di completamento automatico. La funzione elab
 ### Posso usare [!DNL Postman] per l&#39;API Query Service?
 
 +++Risposta
-Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/36258?captions=ita) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
@@ -379,7 +379,7 @@ Query Service supporta funzioni SQL incorporate per convertire un determinato ti
 
 | Parametro | Descrizione |
 |-----------|---------------|
-| Timestamp | Il timestamp può essere scritto in formato UTC o in formato `{year-month-day}` semplice. Se non viene specificata un&#39;ora, il valore predefinito è la mezzanotte del mattino del giorno specificato. |
+| Marca temporale | Il timestamp può essere scritto in formato UTC o in formato `{year-month-day}` semplice. Se non viene specificata un&#39;ora, il valore predefinito è la mezzanotte del mattino del giorno specificato. |
 | Fuso orario | Il fuso orario è scritto in un formato `{continent/city})`. Deve corrispondere a uno dei codici di fuso orario riconosciuti presenti nel [database TZ di dominio pubblico](https://data.iana.org/time-zones/tz-link.html#tzdb). |
 
 #### Converti in timestamp UTC
@@ -406,7 +406,7 @@ L’output della console fornito nell’interfaccia utente di Query Service è u
 
 #### Converti dal timestamp UTC
 
-Il metodo `from_utc_timestamp()` interpreta i parametri specificati **dalla marca temporale del fuso orario locale** e fornisce la marca temporale equivalente dell&#39;area desiderata in formato UTC. Nell’esempio seguente, l’ora è le 14:40 nel fuso orario locale dell’utente. Il fuso orario di Seoul superato come variabile è di nove ore davanti al fuso orario locale.
+Il metodo `from_utc_timestamp()` interpreta i parametri specificati **dalla marca temporale del fuso orario locale** e fornisce la marca temporale equivalente dell&#39;area desiderata in formato UTC. Nell&#39;esempio seguente, l&#39;ora è 2:40PM nel fuso orario locale dell&#39;utente. Il fuso orario di Seoul superato come variabile è di nove ore davanti al fuso orario locale.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -647,6 +647,14 @@ Le ore di calcolo per una query possono variare a causa di più fattori. Tra que
 L’infrastruttura back-end viene costantemente migliorata per ottimizzare l’utilizzo dell’Ora di calcolo e il tempo di elaborazione. Di conseguenza, potresti notare modifiche nel tempo man mano che vengono implementati miglioramenti delle prestazioni.
 +++
 
+### Le prestazioni di Data Distiller differiscono tra le sandbox di sviluppo e di produzione?
+
++++Risposta
+Prestazioni simili si possono verificare quando si eseguono query sia nelle sandbox di sviluppo che in quelle di produzione. Entrambi gli ambienti sono progettati per fornire lo stesso livello di funzionalità di elaborazione. Tuttavia, possono verificarsi differenze nelle ore di calcolo, a seconda della quantità di dati elaborati e dell&#39;attività complessiva del sistema al momento dell&#39;esecuzione della query.
+
+Monitora l&#39;utilizzo delle ore di calcolo nel [dashboard Utilizzo licenze](../dashboards/guides/license-usage.md) nell&#39;interfaccia utente di Experience Platform.
++++
+
 ## Interfaccia query
 
 ### Quando si tenta di connettersi a Query Service, la &quot;Crea query&quot; si blocca su &quot;Inizializzazione della connessione in corso...&quot;. Come posso risolvere il problema?
@@ -752,6 +760,12 @@ Sì, i client desktop di terze parti possono essere collegati a Query Service tr
 +++Risposta
 Il valore per le credenziali senza scadenza sono gli argomenti concatenati di `technicalAccountID` e `credential` ricavati dal file JSON di configurazione. Il valore della password assume la forma: `{{technicalAccountId}:{credential}}`.
 Per ulteriori informazioni su come [connettersi ai client esterni con le credenziali](./ui/credentials.md#using-credentials-to-connect-to-external-clients), vedere la documentazione.
++++
+
+### Sono previste restrizioni per i caratteri speciali per le password delle credenziali senza scadenza?
+
++++Risposta
+Sì. Quando si imposta una password per le credenziali senza scadenza, è necessario includere almeno un numero, una lettera minuscola, una lettera maiuscola e un carattere speciale. Il simbolo del dollaro ($) non è supportato. Utilizza al suo posto caratteri speciali come !, @, #, ^ o &amp;.
 +++
 
 ### Che tipo di editor SQL di terze parti è possibile connettere a Query Service Editor?

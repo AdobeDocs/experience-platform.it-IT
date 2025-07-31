@@ -2,9 +2,9 @@
 title: Creare un filtro globale
 description: Scopri come filtrare le informazioni sui dati con un filtro personalizzato applicato a livello globale.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 473aaa8dedd549cf524d77c9b0a37d71b4688805
+source-git-commit: 60b0c73766c89b98685810b4f58cfe1a40316dc9
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,17 @@ Per creare un filtro globale, seleziona innanzitutto **[!UICONTROL Aggiungi filt
 
 È possibile modificare rapidamente le informazioni fornite dall&#39;istruzione SQL mediante filtri globali personalizzati.
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Crea un filtro globale]. La creazione di un filtro globale segue lo stesso processo della creazione di un approfondimento con SQL. Selezionare innanzitutto un database (modello dati di insights) per eseguire una query, quindi immettere le istruzioni SQL personalizzate nell&#39;editor di query e infine selezionare l&#39;icona di esecuzione (![Icona di esecuzione.](/help/images/icons/play.png)).
+Viene visualizzata la finestra di dialogo [!UICONTROL Crea un filtro globale]. La creazione di un filtro globale segue lo stesso processo della creazione di un’insight con SQL. Selezionare innanzitutto un database (modello dati di insights) per eseguire una query, quindi immettere le istruzioni SQL personalizzate nell&#39;editor di query e infine selezionare l&#39;icona di esecuzione (![Icona di esecuzione.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
 >Quando crei un filtro globale, devi includere un ID e un valore. I valori di esempio consentono di eseguire l&#39;istruzione SQL e generare il grafico. I valori di esempio forniti durante la composizione dell’istruzione vengono sostituiti dai valori effettivi selezionati per la data o il filtro globale in fase di esecuzione.
 
 Dopo aver eseguito correttamente la query, nella scheda dei risultati vengono visualizzati i risultati. Seleziona **[!UICONTROL Avanti]**.
+
+>[!NOTE]
+>
+>Per impostazione predefinita, i risultati della query sono limitati a 100 righe. Per restituire più righe, aggiungere una clausola LIMIT alla query SQL con il numero di righe desiderato. Per recuperare tutte le righe e rimuovere il limite predefinito, utilizzare LIMIT 0 nella query.
 
 ![La [!UICONTROL finestra di dialogo per la creazione di un filtro globale] con il menu a discesa del set di dati, l&#39;icona Esegui e Successivo evidenziati.](../../images/sql-insights-query-pro-mode/global-filter.png)
 
@@ -41,7 +45,7 @@ Infine, seleziona **[!UICONTROL Seleziona]** per tornare alla visualizzazione de
 
 ![La [!UICONTROL finestra di dialogo per la creazione di un filtro globale] con l&#39;opzione Seleziona e l&#39;input del testo dell&#39;etichetta del filtro evidenziato.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
-## Abilita il filtro globale per ogni informazione approfondita {#enable-global-filter}
+## Abilita il filtro globale per ogni insight {#enable-global-filter}
 
 >[!TIP]
 >
@@ -53,7 +57,7 @@ Dopo aver creato il filtro globale per il dashboard, l’interruttore per tale f
 
 >[!IMPORTANT]
 >
->Assicurati che il parametro del filtro globale sia incluso nell’istruzione SQL di ogni informazione approfondita.
+>Assicurati che il parametro del filtro globale sia incluso nell’istruzione SQL di ogni insight.
 
 ## Seleziona un filtro globale {#select-global-filter}
 

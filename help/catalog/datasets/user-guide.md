@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
+source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4482'
 ht-degree: 5%
 
 ---
@@ -108,25 +108,26 @@ Ulteriori informazioni su queste azioni disponibili sono disponibili nelle rispe
 
 ### Visualizzare in anteprima un set di dati {#preview}
 
-Puoi visualizzare in anteprima i dati di esempio del set di dati sia dalle opzioni in linea della scheda [!UICONTROL Sfoglia] che dalla visualizzazione [!UICONTROL Attività set di dati]. È disponibile una nuova finestra di anteprima del set di dati con ulteriori miglioramenti a livello di navigazione e contesto.
+Puoi visualizzare in anteprima fino a 100 righe di dati di esempio per qualsiasi set di dati, dalle opzioni in linea nella scheda [!UICONTROL Sfoglia] o dalla vista [!UICONTROL Attività set di dati].
 
-Dalla scheda [!UICONTROL Sfoglia], seleziona i puntini di sospensione (...) accanto al nome del set di dati da visualizzare in anteprima. Viene visualizzato un elenco di opzioni. Selezionare [!UICONTROL Anteprima set di dati] dalle opzioni disponibili. Se il set di dati è vuoto, il collegamento di anteprima viene disattivato e indica che l’anteprima non è disponibile.
+Dalla scheda [!UICONTROL Sfoglia], seleziona i puntini di sospensione (...) accanto al nome del set di dati e scegli [!UICONTROL Anteprima set di dati]. Se il set di dati è vuoto, l’opzione di anteprima viene disattivata. In alternativa, dalla schermata **[!UICONTROL Attività set di dati]**, seleziona **[!UICONTROL Anteprima set di dati]** nell&#39;angolo in alto a destra dello schermo.
 
 ![Scheda Sfoglia dell&#39;area di lavoro Set di dati con i puntini di sospensione e l&#39;opzione Anteprima set di dati evidenziati per il set di dati selezionato.](../images/datasets/user-guide/preview-dataset-option.png)
 
-Viene visualizzata la finestra di anteprima, in cui a sinistra è visualizzata la vista schema gerarchica per il set di dati.
+Viene aperta la finestra di anteprima, in cui a sinistra viene visualizzata la vista schema gerarchica per il set di dati.
 
 >[!NOTE]
 >
->Il diagramma schema sul lato sinistro della visualizzazione mostra solo i campi che contengono dati. I campi senza dati vengono nascosti automaticamente per semplificare l’interfaccia utente e concentrarsi su informazioni rilevanti.
+>Il diagramma schema a sinistra mostra solo i campi che contengono dati. I campi senza dati vengono nascosti automaticamente per semplificare l’interfaccia utente e concentrarsi su informazioni rilevanti.
 
 ![Viene visualizzata la finestra di dialogo di anteprima del set di dati con informazioni sulla struttura e valori di esempio per il set di dati.](../images/datasets/user-guide/preview-dataset.png)
 
-In alternativa, dalla schermata **[!UICONTROL Attività set di dati]**, seleziona **[!UICONTROL Anteprima set di dati]** nell&#39;angolo superiore destro dello schermo per visualizzare in anteprima fino a 100 righe di dati.
+In alternativa, dalla schermata **[!UICONTROL Attività set di dati]**, seleziona **[!UICONTROL Anteprima set di dati]** per aprire la finestra di anteprima e rivedere un esempio della struttura e dei valori del set di dati.
 
 ![Il pulsante Anteprima set di dati è evidenziato.](../images/datasets/user-guide/select-preview.png)
 
-La finestra di anteprima del set di dati fornisce un’interfaccia semplificata per l’esplorazione e la convalida dei set di dati.
+La finestra di anteprima del set di dati consente di esplorare e convalidare rapidamente la struttura e i dati del set di dati.
+
 
 #### Finestra di anteprima del set di dati {#dataset-preview-window}
 
@@ -137,34 +138,25 @@ L’animazione seguente mostra la finestra di anteprima del set di dati con le r
 La finestra di anteprima del set di dati include:
 
 * Barra laterale del browser oggetti a sinistra per la navigazione e il filtraggio dei campi dei set di dati.
-* Indicatori del tipo di dati visualizzati accanto al nome di ogni colonna per insight rapido nella struttura del set di dati.
+* Indicatori del tipo di dati accanto al nome di ogni colonna per insight nella struttura del set di dati.
 * Nella parte superiore della finestra viene visualizzata una query SQL che mostra la query utilizzata per generare il set di dati.
-* Una vista a tabella formattata con un massimo di 100 righe nell’area in basso a destra per una revisione efficiente dei dati.
-* Navigazione diretta all’editor delle query per gli utenti di Data Distiller, con la query SQL precompilata per ulteriori esplorazioni o modifiche.
+* Una vista tabella formattata con un massimo di 100 righe per una revisione dei dati efficiente.
 
-Queste funzioni supportano la navigazione rapida, la comprensione degli schemi e la convalida trasparente dei set di dati.
-
-Seleziona **[!UICONTROL Anteprima set di dati]** dalle azioni in linea o dalla schermata [!UICONTROL Attività set di dati] per aprire la finestra di anteprima.
-
->[!NOTE]
->
->Nella finestra di anteprima viene visualizzato un esempio di un massimo di 100 righe. I campi senza dati sono esclusi dalla visualizzazione.
+Queste funzioni consentono di navigare, comprendere i dettagli dello schema e convalidare i dati di esempio in modo efficiente.
 
 #### Scelta rapida dell’Editor query avanzato {#query-editor-shortcut}
 
-Se la tua organizzazione dispone di una licenza di Data Distiller, puoi accedere all’Editor query avanzato direttamente dalla finestra di anteprima del set di dati.
+Se la tua organizzazione dispone di una licenza di Data Distiller, puoi accedere a [!UICONTROL Advanced Query Editor] direttamente dalla finestra di anteprima del set di dati. Utilizza questa scelta rapida per passare facilmente dall’anteprima dei dati di esempio all’esecuzione e all’ottimizzazione delle query in Query Service.
 
 >[!AVAILABILITY]
 >
->Solo gli utenti con la licenza Data Distiller richiesta possono accedere a questa funzionalità. Se la tua organizzazione non dispone di Data Distiller, l&#39;opzione [!UICONTROL Editor query avanzato] non è visibile.
+>L&#39;accesso all&#39;[!UICONTROL Editor query avanzato] è limitato alle organizzazioni con una licenza SKU di Data Distiller. Se la tua organizzazione non dispone della licenza richiesta, questa opzione non viene visualizzata nella finestra di anteprima del set di dati.
 
-Seleziona **[!UICONTROL Editor query avanzato]** nell&#39;angolo superiore destro della finestra di anteprima per aprire l&#39;Editor query. La query di anteprima corrente è precaricata ed è pronta per l&#39;esecuzione o per ulteriori analisi.
+Seleziona [!UICONTROL Editor query avanzato] nell&#39;angolo superiore destro della finestra di anteprima per aprire Query Service con la query SQL corrente precaricata ed eseguita. È possibile continuare l&#39;analisi o la modifica del codice SQL senza immettere nuovamente la query.
 
 ![Finestra di anteprima del set di dati con il pulsante Editor query avanzate in alto a destra.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-Questa scelta rapida consente di passare facilmente dall’anteprima dei dati di esempio all’esecuzione e all’ottimizzazione delle query in Query Service, senza dover immettere nuovamente il contesto o l’SQL.
-
-Per ulteriori analisi e accesso ai dati, utilizzare i servizi downstream come [!DNL Query Service] e [!DNL JupyterLab]. Per ulteriori informazioni, consulta i seguenti documenti:
+Per ulteriori analisi, utilizzare i servizi downstream come [!DNL Query Service] e [!DNL JupyterLab]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica di Query Service](../../query-service/home.md)
 * [Guida utente di JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
