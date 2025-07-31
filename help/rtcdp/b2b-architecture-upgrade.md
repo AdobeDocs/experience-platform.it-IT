@@ -1,12 +1,11 @@
 ---
 title: Aggiornamenti dell'architettura a Real-Time CDP B2B edition
 description: Leggi questo documento per scoprire gli aggiornamenti completi dell’architettura a Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-hide: true
-hidefromtoc: true
-source-git-commit: 78444555178773a8305ba27aaaf7998fe279a71d
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+exl-id: d958a947-e195-4dd4-a04c-63ad82829728
+source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Questo documento illustra gli aggiornamenti dell’architettura alle edizioni B2B e B2P di Real-Time CDP. **Non è richiesta alcuna azione da parte tua** al momento. Consulta questo documento per informazioni su come gli aggiornamenti influenzeranno le funzioni esistenti di Adobe Experience Platform. In caso di domande, contatta il team del tuo account Adobe.
+>Questo documento illustra gli aggiornamenti dell’architettura alle edizioni B2B e B2P di Real-Time CDP. Gli aggiornamenti non richiederanno azioni da parte della maggior parte dei clienti. Tuttavia, esistono tipi di pubblico che non possono essere aggiornati automaticamente. Adobe collaborerà direttamente con te per affrontare questi scenari. Consulta questo documento per informazioni su come gli aggiornamenti influenzeranno le funzioni esistenti di Adobe Experience Platform. In caso di domande, contatta il team del tuo account Adobe.
 
 Adobe ha riprogettato le edizioni B2B e B2P di Real-Time CDP per migliorare la scalabilità, le prestazioni e l’affidabilità, supportando allo stesso tempo casi d’uso B2B più avanzati. Per garantire che tutti i clienti beneficino di questi miglioramenti, Adobe aggiornerà tutti i clienti B2B e B2P esistenti alla nuova architettura.
 
@@ -52,19 +51,6 @@ Con questo aggiornamento, ora puoi:
 
 Per ulteriori informazioni, leggi la documentazione su [tipi di pubblico dell&#39;account](../segmentation/types/account-audiences.md).
 
-### Lookback completo per eventi a livello di persona nel pubblico dell’account
-
-Il pubblico dell’account ora può sfruttare la cronologia completa degli eventi a livello di persona, espandendosi oltre l’intervallo di lookback di 30 giorni precedente.
-
-Con questo aggiornamento, ora puoi:
-
-* Crea un pubblico più completo in base alla cronologia completa degli eventi a livello di persona associati.
-* Definizioni di pubblico più ricche e precise sfruttando i dati comportamentali a lungo termine.
-* Identifica account di alto valore in base a modelli di coinvolgimento più approfonditi nel tempo.
-* Supporta i casi d’uso che richiedono informazioni provenienti da azioni storiche, ad esempio quelli che comportano lunghi cicli di vendita o segnali di acquisto ritardati.
-
-Per ulteriori informazioni, leggi la documentazione su [tipi di pubblico dell&#39;account](../segmentation/types/account-audiences.md).
-
 ## Aggiornamenti alle funzioni esistenti
 
 Le seguenti funzioni sono state aggiornate come parte degli aggiornamenti dell’architettura B2B.
@@ -73,16 +59,33 @@ Le seguenti funzioni sono state aggiornate come parte degli aggiornamenti dell�
 
 Come parte della nuova architettura di aggiornamento, i filtri degli eventi di esperienza non possono più essere utilizzati all’interno di un singolo pubblico multi-entità che include attributi B2B.
 
-Per ottenere la stessa logica di pubblico, utilizza l’approccio segmento-di-segmento:
+Per ottenere la stessa logica di pubblico, puoi utilizzare il Generatore di segmenti per [aggiungere tipi di pubblico e tipi di pubblico di riferimento](../segmentation/ui/segment-builder.md#adding-audiences)
 
-1. Creare un pubblico di Experience Event: definisci separatamente la condizione comportamentale. Ad esempio: &quot;Persone che hanno visitato la pagina dei prezzi negli ultimi tre giorni&quot;.
-2. Creare un pubblico con più entità con attributi B2B: fai riferimento al pubblico di Experience Event come parte dei criteri di questo pubblico. Ad esempio: &quot;Persone che sono un **&#39;Responsabile delle decisioni&#39;** di qualsiasi opportunità in cui l&#39;account si trova nel settore **&#39;Finanza&#39;** e membro del pubblico di persone che ha visitato la pagina dei prezzi negli ultimi tre giorni.
+Ad esempio:
 
-Una volta completato l’aggiornamento, è necessario creare qualsiasi nuovo pubblico con più entità con attributi B2B ed eventi di esperienza utilizzando l’approccio per segmenti. Inoltre, devi convalidare l’iscrizione al pubblico per garantire il comportamento previsto.
+* Creare un pubblico di Experience Event
+   * Definisci separatamente la condizione comportamentale. Ad esempio: &quot;Persone che hanno visitato la pagina dei prezzi negli ultimi tre giorni&quot;.
+* Creare un pubblico con più entità con attributi B2B.
+   * Da qui, puoi fare riferimento al pubblico di Experience Event come parte dei criteri di questo pubblico. Ad esempio: &quot;Persone che sono un **&#39;Responsabile delle decisioni&#39;** di qualsiasi opportunità in cui l&#39;account si trova nel settore **&#39;Finanza&#39;** e membro del pubblico di persone che ha visitato la pagina dei prezzi negli ultimi tre giorni.
+
+Una volta completato l&#39;aggiornamento, è necessario creare qualsiasi nuovo pubblico con più entità con attributi B2B ed eventi di esperienza utilizzando l&#39;approccio [segmento di segmento](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types).
+
+>[!TIP]
+>
+>Un **segmento di segmenti** è una definizione di segmento che contiene uno o più segmenti batch o edge. **Nota**: se utilizzi un segmento di segmenti, l&#39;annullamento del profilo avverrà **ogni 24 ore**.
 
 ### Risoluzione delle entità e unione di precedenza temporale nei tipi di pubblico B2B
 
-Come parte dell’aggiornamento dell’architettura, Adobe ha introdotto la risoluzione delle entità per account e opportunità, che viene eseguita ogni giorno. Questo miglioramento consente ad Experience Platform di identificare e consolidare più record che rappresentano la stessa entità reale, migliorando in tal modo la coerenza dei dati e consentendo una segmentazione del pubblico più accurata.
+Come parte dell’aggiornamento dell’architettura, Adobe sta introducendo la risoluzione delle entità per account e opportunità. La risoluzione dell’entità si basa sulla corrispondenza degli ID deterministici e sui dati più recenti. Il processo di risoluzione delle entità viene eseguito quotidianamente durante la segmentazione batch, prima di valutare tipi di pubblico con più entità con attributi B2B.
+
+>[!BEGINSHADEBOX]
+
+#### Come funziona la risoluzione delle entità?
+
+* **Prima**: se è stato utilizzato un numero DUNS (Data Universal Numbering System) come identità aggiuntiva e il numero DUNS dell&#39;account è stato aggiornato in un sistema di origine come CRM, l&#39;ID account è collegato sia ai numeri DUNS vecchi che a quelli nuovi.
+* **Dopo**: se il numero DUNS è stato utilizzato come identità aggiuntiva e il numero DUNS dell&#39;account è stato aggiornato in un sistema di origine come CRM, l&#39;ID account viene collegato solo al nuovo numero DUNS, riflettendo in tal modo lo stato corrente dell&#39;account in modo più accurato.
+
+>[!ENDSHADEBOX]
 
 Con questo aggiornamento, ora puoi:
 
@@ -94,8 +97,6 @@ Leggi [[!DNL Profile Access] API](../profile/api/entities.md) per ulteriori info
 ### Supporto dei criteri di unione per tipi di pubblico B2B con più entità
 
 I tipi di pubblico con più entità e attributi B2B ora supportano un singolo criterio di unione, ovvero il criterio di unione predefinito configurato, anziché più criteri di unione.
-
-I tipi di pubblico che in precedenza utilizzavano un criterio di unione non predefinito possono produrre risultati diversi. Per comprendere le potenziali modifiche nella composizione del pubblico, rivedi e verifica i tipi di pubblico che si basano su un criterio di unione non predefinito. Inoltre, monitora i risultati dell’attivazione per rilevare eventuali spostamenti nella composizione del pubblico dovuti alla modifica dei criteri di unione.
 
 Per ulteriori informazioni, consulta la guida del caso di utilizzo [segmentation per Real-Time CDP B2B edition](./segmentation/b2b.md).
 
@@ -127,25 +128,25 @@ Leggi [[!DNL Profile Access] API](../profile/api/entities.md) per ulteriori info
 
 Ora puoi recuperare gli schemi di account e opportunità come entità dimensione di ricerca solo dopo aver completato il processo di risoluzione giornaliero delle entità. I nuovi record acquisiti non saranno disponibili per l’arricchimento dei profili o le definizioni dei segmenti fino al completamento del successivo ciclo di risoluzione dell’entità (in genere ogni 24 ore).
 
-Ti consigliamo di esaminare tutti i casi d’uso che richiedono l’accesso in tempo reale ai dati dell’account e dell’opportunità. Inoltre, ti consigliamo di pianificare un periodo di latenza fino a 24 ore durante la progettazione o l’aggiornamento di flussi di lavoro che dipendono dalla segmentazione basata sulla ricerca o dalla personalizzazione con entità account e opportunità.
+<!-- ### Deprecation of audience creation via API for B2B entities
 
-### Creazione di tipi di pubblico obsoleti tramite API per entità B2B
-
-La creazione di tipi di pubblico utilizzando entità B2B tramite API diventerà obsoleta. L’elenco delle entità B2B interessate include:
+Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
 * Account
-* Opportunità
-* Relazione account-persona
-* Relazione opportunità-persona
+* Opportunity
+* Account-Person Relation
+* Opportunity-Person Relation
 * Campaign
-* Membro della campagna
-* Elenco marketing
-* Membro elenco marketing
+* Campaign Member
+* Marketing List
+* Marketing List Member
 
-Per ulteriori informazioni, consulta la [guida dell&#39;API per l&#39;endpoint delle definizioni dei segmenti](../segmentation/api/segment-definitions.md).
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
 
 ### Modifiche alle importazioni di tipi di pubblico con più entità negli strumenti sandbox
 
-Con gli aggiornamenti dell’architettura, non sarà più possibile importare tipi di pubblico con più entità con attributi B2B ed eventi di esperienza se sono stati esportati prima dell’aggiornamento. Questi tipi di pubblico non verranno importati e non potranno essere convertiti automaticamente nella nuova architettura. Per ovviare a questo limite, è necessario riesportare questi tipi di pubblico e quindi importarli nelle rispettive sandbox di destinazione utilizzando gli strumenti sandbox.
+Con gli aggiornamenti dell’architettura, non sarà più possibile importare tipi di pubblico con più entità con attributi B2B ed eventi di esperienza se un pacchetto che includeva tali tipi di pubblico veniva pubblicato prima dell’aggiornamento. Questi tipi di pubblico non verranno importati e non potranno essere convertiti automaticamente nella nuova architettura. Per ovviare a questo limite, è necessario creare un nuovo pacchetto con i tipi di pubblico aggiornati e quindi importarli nelle rispettive sandbox di destinazione utilizzando gli strumenti sandbox.
+
+Le sandbox di sviluppo verranno aggiornate alla nuova architettura. I tipi di pubblico che possono essere aggiornati automaticamente verranno aggiornati; quelli che non possono essere disabilitati. I tipi di pubblico disattivati devono essere ricreati dopo l’aggiornamento.
 
 Per ulteriori informazioni, consulta la [guida agli strumenti per la sandbox](../sandboxes/ui/sandbox-tooling.md).
