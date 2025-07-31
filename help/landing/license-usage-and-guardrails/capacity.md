@@ -1,15 +1,13 @@
 ---
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 1%
+source-wordcount: '577'
+ht-degree: 6%
 
 ---
-
 
 # Utilizzo delle licenze e capacità
 
@@ -27,12 +25,12 @@ Per ulteriori informazioni sui guardrail in Experience Platform, leggere la [pan
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="Conteggio del pubblico in streaming"
->abstract="Il numero massimo di tipi di pubblico in streaming per sandbox. Questo numero è comprensivo del numero di tipi di pubblico edge disponibili nella sandbox."
+>abstract="Numero massimo di tipi di pubblico in streaming per sandbox. Questo numero include il numero di tipi di pubblico Edge disponibili nella sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
 >title="Tipi di pubblico di Edge"
->abstract="Il numero massimo di tipi di pubblico edge per sandbox."
+>abstract="Numero massimo di tipi di pubblico Edge per sandbox."
 
 Attualmente, Capacity supporta i seguenti servizi:
 
@@ -43,7 +41,7 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
 
 - Il numero massimo di pubblici in streaming è 500
    - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
-- Il throughput massimo combinato per la segmentazione in streaming è di 1500 record al secondo (rps)
+- La velocità effettiva massima combinata per la segmentazione in streaming è di 1500 record al secondo (rps)
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
