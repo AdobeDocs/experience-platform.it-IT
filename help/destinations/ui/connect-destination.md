@@ -3,9 +3,9 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
+source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -54,15 +54,24 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Nome account"
->abstract="Immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni allo stesso tipo di destinazione."
+>abstract="Immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni alla stessa destinazione."
 
 Il primo passaggio nella connessione a una destinazione consiste nell’eseguire l’autenticazione nella piattaforma di destinazione.
 
-A seconda della destinazione a cui ti stai connettendo, è possibile che venga visualizzata la pagina del partner di destinazione per l’autenticazione o che ti venga richiesto di immettere le credenziali di autenticazione direttamente nel flusso di lavoro di Experience Platform. Di seguito è riportato un esempio di input necessario per l&#39;autenticazione in una destinazione [!DNL Amazon S3]. Istruzioni dettagliate sull&#39;input richiesto vengono fornite in ogni pagina della documentazione di destinazione (vedere, ad esempio, la sezione di autenticazione per [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) e per [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+A seconda della destinazione a cui ti stai connettendo, è possibile che venga visualizzata la pagina del partner di destinazione per l’autenticazione o che ti venga richiesto di immettere le credenziali di autenticazione direttamente nel flusso di lavoro di Experience Platform.
+
+Quando si imposta una nuova connessione di destinazione, è necessario fornire un **[!UICONTROL nome account]** e, facoltativamente, una **[!UICONTROL descrizione]**. Questi campi sono disponibili per tutte le destinazioni.
+
+* **[!UICONTROL Nome account]**: immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni alla stessa destinazione.
+* **[!UICONTROL Descrizione]** (facoltativo): aggiungi ulteriori dettagli che possano aiutare te o il tuo team a distinguere gli account, ad esempio lo scopo della connessione o il contesto di business pertinente.
+
+L’immissione di informazioni chiare e descrittive in questi campi facilita la gestione e la selezione dell’account di destinazione corretto durante l’attivazione dei tipi di pubblico.
+
+Di seguito è riportato un esempio di input necessario per l&#39;autenticazione in una destinazione [!DNL Amazon S3]. Istruzioni dettagliate sull&#39;input richiesto vengono fornite in ogni pagina della documentazione di destinazione (vedere, ad esempio, la sezione di autenticazione per [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) e per [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 **[!DNL Amazon S3]parametri di autenticazione obbligatori e facoltativi**
 
-![Immagine che mostra i parametri di input obbligatori e facoltativi durante l&#39;autenticazione in una destinazione Amazon S3.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![Immagine che mostra i parametri di input obbligatori e facoltativi durante l&#39;autenticazione in una destinazione Amazon S3.](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## Impostare i parametri di connessione {#set-up-connection-parameters}
 
