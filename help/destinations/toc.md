@@ -5,10 +5,10 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c3f570ad3fcae50f2381e344bb88d8a9cace57be
+source-git-commit: bef5176048bad269c9e32e56d1e331a93eb80e13
 workflow-type: tm+mt
-source-wordcount: '1295'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 6%
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esporta set di dati](/help/destinations/api/export-datasets.md)
-   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=it#use-cases)
+   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
@@ -52,6 +52,7 @@ ht-degree: 6%
       * [Esportare array, mappe e oggetti](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Eseguire trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
+   * [(Beta) Modificare le destinazioni](./ui/edit-destination.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
    * [Elimina account di destinazione](./ui/delete-destination-account.md)
    * [Modifica flussi di dati di attivazione](./ui/edit-activation.md)
@@ -67,7 +68,7 @@ ht-degree: 6%
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Connessione Marketo Engage Person Sync](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it)
+      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni di Advertising{#advertising}
       * [(Beta) Distribuzione del pubblico di Acxiom](./catalog/advertising/acxiom-audience-distribution.md)

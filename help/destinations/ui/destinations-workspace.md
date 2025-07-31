@@ -3,10 +3,10 @@ keywords: piattaforma;destinazioni;area di lavoro;area di lavoro;interfaccia ute
 title: Area di lavoro destinazioni
 description: 'L’area di lavoro Destinazioni è costituita da cinque sezioni: Panoramica, Catalogo, Sfoglia, Account e Visualizzazione sistema. Sono descritte nelle sezioni seguenti.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: a0326a6d616937552d7f8ff7001808bbfb69bd62
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ L&#39;area di lavoro [!UICONTROL Destinazioni] è costituita da cinque sezioni, 
 
 ## [!UICONTROL Panoramica] {#overview}
 
-Nella scheda **[!UICONTROL Panoramica]** è visualizzata la dashboard [!UICONTROL Destinazioni], che fornisce le metriche chiave relative ai dati di destinazione della tua organizzazione. Per ulteriori informazioni, visita la [[!UICONTROL Guida del dashboard &#x200B;] Destinazioni](../../dashboards/guides/destinations.md).
+Nella scheda **[!UICONTROL Panoramica]** è visualizzata la dashboard [!UICONTROL Destinazioni], che fornisce le metriche chiave relative ai dati di destinazione della tua organizzazione. Per ulteriori informazioni, visita la [[!UICONTROL Guida del dashboard ] Destinazioni](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
@@ -69,9 +69,9 @@ La scheda **[!UICONTROL Account]** mostra i dettagli sulle connessioni stabilite
 
 >[!TIP]
 >
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Attiva controllo](/help/images/icons/data-add.png)**[!UICONTROL Attiva &#x200B;]**/**[!UICONTROL &#x200B; Attiva tipi di pubblico &#x200B;]**/**[!UICONTROL &#x200B; Esporta set di dati &#x200B;]**&#x200B;per esportare tipi di pubblico o set di dati in tale destinazione.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Modifica dettagli](/help/images/icons/edit.png)**[!UICONTROL Modifica dettagli &#x200B;]**&#x200B;per [aggiornare](update-accounts.md) i dettagli di un account di destinazione esistente.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Elimina](/help/images/icons/delete.png)**[!UICONTROL Elimina &#x200B;]**&#x200B;per [eliminare](delete-destination-account.md) un account di destinazione esistente.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Attiva controllo](/help/images/icons/data-add.png)**[!UICONTROL Attiva ]**/**[!UICONTROL  Attiva tipi di pubblico ]**/**[!UICONTROL  Esporta set di dati ]**per esportare tipi di pubblico o set di dati in tale destinazione.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Modifica dettagli](/help/images/icons/edit.png)**[!UICONTROL Modifica dettagli ]**per [aggiornare](update-accounts.md) i dettagli di un account di destinazione esistente.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Elimina](/help/images/icons/delete.png)**[!UICONTROL Elimina ]**per [eliminare](delete-destination-account.md) un account di destinazione esistente.
 
 ![Scheda Account](../assets/ui/workspace/destination-account-options.png)
 
@@ -92,16 +92,18 @@ Nella scheda **[!UICONTROL Sfoglia]** sono visualizzate le destinazioni con le q
 
 >[!TIP]
 >
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Activate audiences](/help/images/icons/data-add.png)**[!UICONTROL Activate &#x200B;]**&#x200B;per esportare tipi di pubblico o set di dati in tale destinazione.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Elimina](/help/images/icons/delete.png)**[!UICONTROL Elimina &#x200B;]**&#x200B;per [rimuovere](delete-destinations.md) una connessione esistente a una destinazione.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare la ![View nel controllo di monitoraggio](/help/images/icons/monitoring.png)**[!UICONTROL View nel controllo di monitoraggio &#x200B;]**&#x200B;per visualizzare le informazioni di attivazione per questa destinazione nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Seleziona i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizza il controllo ![Subscribe to alerts ](/help/images/icons/alert-add.png)**[!UICONTROL Subscribe to alerts &#x200B;]**&#x200B;per sottoscrivere gli avvisi sul flusso di dati di destinazione. È possibile abbonarsi agli avvisi per ricevere messaggi relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso. Per informazioni dettagliate sugli avvisi del flusso di dati di destinazione, consulta [Abbonati agli avvisi contestuali di destinazione](alerts.md).
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Activate audiences](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** per esportare tipi di pubblico o set di dati in tale destinazione.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Modifica destinazione](/help/images/icons/edit.png)**[!UICONTROL Modifica destinazione ]**per modificare le connessioni di destinazione esistenti. Per ulteriori informazioni, leggi l&#39;esercitazione su [modifica destinazioni](/help/destinations/ui/edit-destination.md).
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Modifica azioni di marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Modifica azioni di marketing]** per [modificare le azioni di marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) per la destinazione selezionata.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Delete](/help/images/icons/delete.png) **[!UICONTROL Delete]** per [remove](delete-destinations.md) una connessione esistente a una destinazione.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare la ![View nel controllo di monitoraggio](/help/images/icons/monitoring.png) **[!UICONTROL View nel controllo di monitoraggio]** per visualizzare le informazioni di attivazione per questa destinazione nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Sottoscrivi avvisi ](/help/images/icons/alert-add.png) **[!UICONTROL Sottoscrivi avvisi]** per sottoscrivere gli avvisi del flusso di dati di destinazione. È possibile abbonarsi agli avvisi per ricevere messaggi relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso. Per informazioni dettagliate sugli avvisi del flusso di dati di destinazione, consulta [Abbonati agli avvisi contestuali di destinazione](alerts.md).
 
 ![Sfoglia scheda](../assets/ui/workspace/browse-tab.png)
 
 | Elemento | Descrizione |
 |---------|----------|
-| Nome | Il nome fornito per il flusso di attivazione verso questa destinazione. La stessa colonna include due controlli: [!UICONTROL Attiva] e [!UICONTROL Elimina destinazione]. |
+| Nome | Il nome fornito per il flusso di attivazione verso questa destinazione. |
 | Tipo di dati | Tipo di dati supportato dalla connessione di destinazione. Tipi di dati supportati: <ul><li>**[!UICONTROL Clienti]**</li><li>**[!UICONTROL Potenziali clienti]**</li><li>**[!UICONTROL Account]**</li><li>**[!UICONTROL Set di dati]**</li></ul> |
 | [!UICONTROL Stato ultima esecuzione flusso di dati] | Stato dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, vedere [Visualizza dettagli destinazione](destination-details-page.md). |
 | [!UICONTROL Data ultima esecuzione flusso di dati] | Ora e data in cui si è verificata l’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, vedere [Visualizza dettagli destinazione](destination-details-page.md). |
@@ -112,6 +114,7 @@ Nella scheda **[!UICONTROL Sfoglia]** sono visualizzate le destinazioni con le q
 | [!UICONTROL Dati attivazione] | Indica il numero di tipi di pubblico attivati in questa destinazione. Seleziona questo controllo per ulteriori informazioni sui tipi di pubblico attivati. Per ulteriori informazioni sui tipi di pubblico attivati, consulta [Dati attivazione](/help/destinations/ui/destination-details-page.md#activation-data) nella pagina dei dettagli della destinazione. |
 | [!UICONTROL Creato] | Data e ora UTC in cui è stato creato il flusso di attivazione verso la destinazione. Seleziona il simbolo freccia su/giù per ordinare i flussi di attivazione in base al primo più recente o al primo meno recente. |
 | [!UICONTROL Stato] | `Enabled` o `Disabled`. Indica se i dati vengono attivati in questa destinazione. |
+| [!UICONTROL Etichette di accesso] | Visualizza tutte le etichette di accesso aggiunte al flusso di dati di destinazione. Ulteriori informazioni sull&#39;[applicazione delle etichette di accesso ai flussi di dati di destinazione](/help/access-control/abac/apply-access-labels-destinations.md). |
 
 Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra, come ID destinazione, descrizione, numero di tipi di pubblico attivati e altro ancora.
 

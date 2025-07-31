@@ -4,10 +4,10 @@ title: Modificare le connessioni di destinazione utilizzando l’API del servizi
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Questo tutorial illustra i passaggi necessari per modificare vari componenti di 
 
 >[!NOTE]
 >
-> Le operazioni di modifica descritte in questo tutorial sono attualmente supportate solo tramite l’API del servizio Flusso.
+> Le operazioni di modifica descritte in questo tutorial sono supportate anche nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, leggi l&#39;esercitazione su come [modificare le destinazioni nell&#39;interfaccia utente](/help/destinations/ui/edit-destination.md).
 
 ## Introduzione {#get-started}
 
