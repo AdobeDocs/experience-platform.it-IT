@@ -3,10 +3,10 @@ keywords: pubblicità; ufficio commerciale; ufficio commerciale di pubblicità
 title: La connessione a Trade Desk
 description: Trade Desk è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0954b5f22d609b0b12352de70f6c618cc88757c8
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 3%
+source-wordcount: '1026'
+ht-degree: 5%
 
 ---
 
@@ -14,11 +14,19 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
+>[!IMPORTANT]
+>
+>* A partire dal venerdì 31 luglio 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL The Trade Desk]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL The Trade Desk]** esistente è stato rinominato in **[!UICONTROL (Obsoleto) The Trade Desk]** e una nuova scheda con il nome **[!UICONTROL The Trade Desk]** è ora disponibile.
+>* Utilizza la nuova connessione **[!UICONTROL Trade Desk]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (obsoleto) The Trade Desk]**, verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente.
+>* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
+>   * Flow spec ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`
+>   * Connection spec ID: `1029798b-a97f-4c21-81b2-e0301471166e`
+
 Utilizzare questo connettore di destinazione per inviare i dati del profilo a [!DNL The Trade Desk]. Questo connettore invia dati all&#39;endpoint di prime parti [!DNL The Trade Desk]. L&#39;integrazione tra Adobe Experience Platform e [!DNL The Trade Desk] non supporta l&#39;esportazione dei dati nell&#39;endpoint di terze parti [!DNL The Trade Desk].
 
 [!DNL The Trade Desk] è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 
-Per inviare i dati del profilo a [!DNL Trade Desk], è necessario prima connettersi alla destinazione, come descritto nelle sezioni seguenti di questa pagina.
+Per inviare i dati del profilo a [!DNL The Trade Desk], è necessario prima connettersi alla destinazione, come descritto nelle sezioni seguenti di questa pagina.
 
 ## Casi d’uso {#use-cases}
 
@@ -28,11 +36,16 @@ In qualità di addetto al marketing, desidero poter utilizzare tipi di pubblico 
 
 [!DNL The Trade Desk] supporta l&#39;attivazione di tipi di pubblico in base alle identità mostrate nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
-| Identità | Descrizione |
-|---|---|
-| GAID | [!DNL Google Advertising ID] |
-| IDFA | [!DNL Apple ID for Advertisers] |
-| ID Trade Desk | ID inserzionista nella piattaforma Trade Desk |
+Di seguito sono riportate le identità supportate dalla destinazione [!DNL The Trade Desk]. Queste identità possono essere utilizzate per attivare i tipi di pubblico in [!DNL The Trade Desk].
+
+Tutte le identità nella tabella seguente sono mappature obbligatorie.
+
+| Identità di destinazione | Descrizione | Considerazioni |
+|---|---|---|
+| GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
+| IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
+| ECID | Experience Cloud ID | Questa identità è obbligatoria per il corretto funzionamento dell’integrazione, ma non viene utilizzata per l’attivazione del pubblico. |
+| ID Trade Desk | ID inserzionista nella piattaforma [!DNL The Trade Desk] | Utilizza questa identità durante l’attivazione di tipi di pubblico in base all’ID proprietario del Trade Desk. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +75,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL The Trade Desk] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/it/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+>Se stai cercando di creare la tua prima destinazione con [!DNL The Trade Desk] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -78,14 +91,15 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 
 * **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account]**: [!DNL Trade Desk] [!UICONTROL ID account].
-* **[!UICONTROL Posizione server]**: chiedere al rappresentante [!DNL Trade Desk] quale server regionale utilizzare. Di seguito sono riportati i server regionali disponibili tra cui è possibile scegliere:
-   * **[!UICONTROL Europa]**
-   * **[!UICONTROL Singapore]**
+* **[!UICONTROL ID account]**: [!DNL The Trade Desk] [!UICONTROL ID account].
+* **[!UICONTROL Posizione server]**: chiedere al rappresentante [!DNL The Trade Desk] quale server regionale utilizzare. Di seguito sono riportati i server regionali disponibili tra cui è possibile scegliere:
+
+   * **[!UICONTROL APAC]**
+   * **[!UICONTROL Cina]**
    * **[!UICONTROL Tokyo]**
-   * **[!UICONTROL Nord America orientale]**
-   * **[!UICONTROL Nord America occidentale]**
-   * **[!UICONTROL America Latina]**
+   * **[!UICONTROL Regno Unito/UE]**
+   * **[!UICONTROL Costa orientale USA]**
+   * **[!UICONTROL Costa occidentale USA]**
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -106,10 +120,19 @@ Nel passaggio [Pianificazione pubblico](../../ui/activate-segment-streaming-dest
 
 Quando esegui la mappatura dei tipi di pubblico, Adobe consiglia di utilizzare il nome del pubblico di Experience Platform, o una forma più breve, per facilitarne l’utilizzo. Tuttavia, l’ID o il nome del pubblico nella destinazione non deve necessariamente corrispondere a quello nel tuo account Experience Platform. Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
 
-Se utilizzi più mappature dispositivo (ID cookie, [!DNL IDFA], [!DNL GAID]), assicurati di utilizzare lo stesso valore di mappatura per tutte e tre le mappature. [!DNL The Trade Desk] li aggregherà tutti in un singolo segmento, con un raggruppamento a livello di dispositivo.
+### Mappature obbligatorie {#mandatory-mappings}
 
-![ID mappatura segmento](../../assets/common/segment-mapping-id.png)
+Tutte le identità di destinazione descritte nella sezione [identità supportate](#supported-identities) sono obbligatorie e devono essere mappate durante il processo di attivazione del pubblico. Ciò include:
+
+* **GAID** (Google Advertising ID)
+* **IDFA** (ID Apple per inserzionisti)
+* **ECID** (Experience Cloud ID)
+* **ID Trade Desk**
+
+Il mancato mapping di tutte le identità richieste impedirà l&#39;attivazione corretta del pubblico su [!DNL The Trade Desk]. Ogni identità ha uno scopo specifico nell’integrazione e tutte sono necessarie affinché la destinazione funzioni correttamente.
+
+![Schermata che mostra le mappature obbligatorie](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
 ## Dati esportati {#exported-data}
 
-Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL The Trade Desk], controllare l&#39;account [!DNL Trade Desk]. Se l&#39;attivazione ha esito positivo, i tipi di pubblico vengono popolati nel tuo account.
+Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL The Trade Desk], controllare l&#39;account [!DNL The Trade Desk]. Se l&#39;attivazione ha esito positivo, i tipi di pubblico vengono popolati nel tuo account.
