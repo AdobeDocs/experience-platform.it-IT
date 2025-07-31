@@ -2,9 +2,9 @@
 title: Endpoint API per pacchetti di strumenti sandbox
 description: L’endpoint /packages nell’API degli strumenti sandbox consente di gestire in modo programmatico i pacchetti in Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2933'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ L&#39;endpoint `/packages` nell&#39;API degli strumenti sandbox consente di gest
 
 ## Creare un pacchetto {#create}
 
-È possibile creare un pacchetto con più artefatti effettuando una richiesta POST all&#39;endpoint `/packages` e fornendo i valori per il nome e il tipo di pacchetto del pacchetto.
+È possibile creare un pacchetto con più artefatti effettuando una richiesta POST all&#39;endpoint `/packages` e fornendo i valori per il nome e il tipo di pacchetto.
 
 **Formato API**
 
@@ -100,7 +100,7 @@ In caso di esito positivo, la risposta restituisce il pacchetto appena creato. L
 
 ## Aggiornare un pacchetto {#update}
 
-È possibile aggiornare un pacchetto effettuando una richiesta PUT all&#39;endpoint `/packages`.
+Utilizza l&#39;endpoint `/packages` nell&#39;API di strumenti sandbox per aggiornare un pacchetto.
 
 ### Aggiungere artefatti a un pacchetto {#add-artifacts}
 
@@ -139,7 +139,7 @@ curl -X PUT \
 | `id` | ID del pacchetto da aggiornare. | Stringa | Sì |
 | `action` | Per aggiungere artifact al pacchetto, il valore dell&#39;azione deve essere **ADD**. Questa azione è supportata solo per i tipi di pacchetto **PARTIAL**. | Stringa | Sì |
 | `artifacts` | Elenco di artefatti da aggiungere al pacchetto. Non ci sarebbero modifiche al pacchetto se l&#39;elenco è **null** o **empty**. Gli artefatti vengono deduplicati prima di essere aggiunti al pacchetto. Per un elenco completo degli artefatti supportati, consulta la tabella seguente. | Array | No |
-| `expiry` | Il timestamp che definisce la data di scadenza del pacchetto. Il valore predefinito è 90 giorni dalla chiamata dell’API di PUT se la scadenza non è specificata nel payload. Il campo di scadenza della risposta sarà l’ora UTC dell’epoca. | Stringa (formato timestamp UTC) | No |
+| `expiry` | Il timestamp che definisce la data di scadenza del pacchetto. Il valore predefinito è 90 giorni dal momento in cui viene chiamata l’API di PUT, se la scadenza non è specificata nel payload. Il campo di scadenza della risposta sarà l’ora UTC dell’epoca. | Stringa (formato timestamp UTC) | No |
 
 I seguenti tipi di artefatto sono attualmente supportati.
 
@@ -380,9 +380,9 @@ In caso di esito positivo, la risposta restituisce un motivo che mostra l’ID p
 }
 ```
 
-## Publish un pacchetto {#publish}
+## Pubblicare un pacchetto {#publish}
 
-Per abilitare l’importazione di un pacchetto in una sandbox, devi pubblicarlo. Effettuare una richiesta di GET all&#39;endpoint `/packages` specificando l&#39;ID del pacchetto da pubblicare.
+Per abilitare l’importazione di un pacchetto in una sandbox, devi pubblicarlo. Effettuare una richiesta GET all&#39;endpoint `/packages` specificando l&#39;ID del pacchetto da pubblicare.
 
 **Formato API**
 
@@ -501,7 +501,7 @@ In caso di esito positivo, la risposta restituisce i dettagli per l’ID pacchet
 
 ## Elencare pacchetti {#list-packages}
 
-È possibile elencare tutti i pacchetti dell&#39;organizzazione effettuando una richiesta di GET all&#39;endpoint `/packages`.
+È possibile elencare tutti i pacchetti dell&#39;organizzazione effettuando una richiesta GET all&#39;endpoint `/packages`.
 
 **Formato API**
 
@@ -753,7 +753,7 @@ I conflitti vengono restituiti nella risposta. La risposta mostra il pacchetto o
 >
 >Per la risoluzione dei conflitti è fondamentale che l’artefatto alternativo esista già nella sandbox di destinazione.
 
-Dopo aver esaminato i conflitti e fornito le sostituzioni, è possibile inviare un&#39;importazione per un pacchetto effettuando una richiesta POST all&#39;endpoint `/packages`. Il risultato viene fornito come payload, che avvia il processo di importazione per la sandbox di destinazione come specificato nel payload.
+È possibile inviare un&#39;importazione per un pacchetto dopo aver esaminato i conflitti e fornito le sostituzioni effettuando una richiesta POST all&#39;endpoint `/packages`. Il risultato viene fornito come payload, che avvia il processo di importazione per la sandbox di destinazione come specificato nel payload.
 
 Il payload accetta anche il nome e la descrizione del processo specificati dall’utente per il processo di importazione. Se il nome e la descrizione specificati dall&#39;utente non sono disponibili, vengono utilizzati il nome e la descrizione del pacchetto per il nome e la descrizione del processo.
 
@@ -1165,7 +1165,7 @@ L&#39;endpoint `/handshake` nell&#39;API degli strumenti sandbox consente di col
 
 ### Invio di una richiesta di condivisione {#send-request}
 
-Invia una richiesta a un&#39;organizzazione partner di destinazione per l&#39;approvazione condivisa eseguendo una richiesta POST all&#39;endpoint `/handshake/bulkCreate`. Questa operazione è necessaria prima di poter condividere pacchetti privati.
+Inviare una richiesta a un&#39;organizzazione partner di destinazione per condividere l&#39;approvazione effettuando una richiesta POST all&#39;endpoint `/handshake/bulkCreate`. Questa operazione è necessaria prima di poter condividere pacchetti privati.
 
 **Formato API**
 
@@ -1223,7 +1223,7 @@ In caso di esito positivo, la risposta restituisce i dettagli relativi alla rich
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1481,7 +1481,7 @@ In caso di esito positivo, la risposta restituisce i dettagli di una richiesta d
 
 ### Recupera elenco condivisioni {#transfers-list}
 
-Recupera un elenco di richieste di trasferimento effettuando una richiesta GET all&#39;endpoint `/transfer/list?{QUERY_PARAMETERS}`, modificando i parametri di query in base alle esigenze.
+Recupera un elenco di richieste di trasferimento effettuando una richiesta GET all&#39;endpoint `/transfer/list?{QUERY_PARAMETERS}` e modificando i parametri di query in base alle esigenze.
 
 **Formato API**
 
@@ -1628,7 +1628,7 @@ In caso di esito positivo, la risposta restituisce i dettagli su un pacchetto e 
 
 ### Richiesta di importazione di un pacchetto pubblico {#pull-public-package}
 
-Importa un pacchetto da un&#39;organizzazione di origine con disponibilità pubblica effettuando una richiesta POST all&#39;endpoint `/transfer/pullRequest`.
+Importare un pacchetto da un&#39;organizzazione di origine con disponibilità pubblica effettuando una richiesta POST all&#39;endpoint `/transfer/pullRequest`.
 
 **Formato API**
 
@@ -1975,5 +1975,497 @@ In caso di esito positivo, la risposta restituisce il payload del pacchetto.
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## Eseguire la migrazione degli aggiornamenti della configurazione dell&#39;oggetto
+
+Utilizza l’endpoint /packages nell’API degli strumenti sandbox per migrare gli aggiornamenti della configurazione dell’oggetto.
+
+### Operazioni di aggiornamento (#update-operations)
+
+Confrontare una versione specificata o più recente di uno snapshot di pacchetto con lo stato corrente della sandbox di origine o con una sandbox di destinazione utilizzata in precedenza in cui il pacchetto è stato importato effettuando una richiesta POST all&#39;endpoint `/packages/{packageId}/version/compare`, fornendo l&#39;ID del pacchetto.
+
+***Formato API***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| Proprietà | Descrizione | Tipo | Obbligatorio |
+| --- | --- | --- | --- |
+| `packageId` | ID del pacchetto. | Stringa | Sì |
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| Proprietà | Descrizione | Tipo | Obbligatorio |
+| --- | --- | --- | --- |
+| `triggerNew` | Flag per attivare il nuovo processo di calcolo delle differenze anche se è già presente un processo attivo o completato. | Booleano | No |
+| `targetSandbox` | Rappresenta il nome della sandbox di destinazione con cui deve essere calcolata la differenza. Se non viene specificata, la sandbox di origine verrà utilizzata come sandbox di destinazione. | Stringa | No |
+
+**Risposta**
+
+In caso di esito positivo, la risposta per un processo completato in precedenza restituisce l’oggetto processo con i risultati di differenze calcolati in precedenza. Un processo appena completato restituisce il JobId.
+
++++Visualizza risposta (processo inviato)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++Visualizza risposta (nuovo processo inviato)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### Aggiorna versione pacchetto (#package-versioning)
+
+Aggiornare il pacchetto a una nuova versione utilizzando lo snapshot più recente dalla sandbox di origine per ciascun oggetto effettuando una richiesta GET all&#39;endpoint `/packages/{packageId}/version/save`, fornendo l&#39;ID del pacchetto.
+
+***Formato API***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| Proprietà | Descrizione | Tipo | Obbligatorio |
+| --- | --- | --- | --- |
+| `packageId` | ID del pacchetto. | Stringa | Sì |
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato del processo per l’aggiornamento della versione.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Recupera cronologia versione pacchetto (#package-version-history)
+
+Recupera la cronologia del controllo delle versioni del pacchetto, inclusi la marca temporale e il modificatore, effettuando una richiesta GET all&#39;endpoint `/packages/{packageId}/history` e fornendo l&#39;ID del pacchetto.
+
+***Formato API***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| Proprietà | Descrizione | Tipo | Obbligatorio |
+| --- | --- | --- | --- |
+| `packageId` | ID del pacchetto. | Stringa | Sì |
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce la cronologia delle versioni di un pacchetto.
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### Invia un processo di aggiornamento (#submit-update)
+
+Inviare nuovi aggiornamenti agli oggetti sandbox di destinazione effettuando una richiesta PATCH all&#39;endpoint `/packages/{packageId}/import` e fornendo l&#39;ID del pacchetto.
+
+***Formato API***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| Proprietà | Descrizione | Tipo | Obbligatorio |
+| --- | --- | --- | --- |
+| `packageId` | ID del pacchetto. | Stringa | Sì |
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce l’ID del processo per l’aggiornamento.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Disattiva aggiornamento e sostituzione per un pacchetto (#disable-update)
+
+Disabilitare l&#39;aggiornamento e l&#39;override per i pacchetti che non li supportano effettuando una richiesta GET all&#39;endpoint `/packages/{packageId}/?{QUERY_PARAMS}`, fornendo l&#39;ID del pacchetto.
+
+***Formato API***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| Proprietà | Descrizione | Tipo | Obbligatorio |
+| --- | --- | --- | --- |
+| `packageId` | ID del pacchetto. | Stringa | Sì |
+| {QUERY_PARAM} | Il parametro di query getCapabilites. Deve essere impostato su `true` o `false` | Booleano | Sì |
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce un elenco delle funzionalità del pacchetto.
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```
