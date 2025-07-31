@@ -1,13 +1,11 @@
 ---
 title: Endpoint API per tipi di pubblico esterni
 description: Scopri come utilizzare l’API per tipi di pubblico esterni per creare, aggiornare, attivare ed eliminare i tipi di pubblico esterni da Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
-ht-degree: 4%
+source-wordcount: '2219'
+ht-degree: 5%
 
 ---
 
@@ -528,24 +526,23 @@ Per recuperare tutte le esecuzioni dell’acquisizione per il pubblico esterno s
 
 **Formato API**
 
-L’endpoint seguente supporta diversi parametri di query per aiutare a filtrare i risultati. Anche se questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per rendere più mirati i risultati.
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**Parametri query**
+<!-- **Query parameters**
 
-+++ Elenco dei parametri di query disponibili.
++++ A list of available query parameters. 
 
-| Parametro | Descrizione | Esempio |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | Numero massimo di elementi restituiti nella risposta. Questo valore può essere compreso tra 1 e 40. Per impostazione predefinita, il limite è impostato su 20. | `limit=30` |
-| `sortBy` | Ordine in cui vengono ordinati gli elementi restituiti. È possibile ordinare per `name` o per `createdAt`. Inoltre, puoi aggiungere un segno `-` per ordinare in base all&#39;ordine **discendente** invece che **ascendente**. Per impostazione predefinita, gli elementi sono ordinati per `createdAt` in ordine decrescente. | `sortBy=name` |
-| `property` | Un filtro per determinare quali esecuzioni dell’acquisizione del pubblico vengono visualizzate. Puoi filtrare in base alle seguenti proprietà: <ul><li>`name`: consente di filtrare in base al nome del pubblico. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `=`, `!=`, `=contains` o `!=contains`. </li><li>`createdAt`: consente di filtrare in base al tempo di acquisizione. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `>=` o `<=`.</li><li>`status`: consente di filtrare in base allo stato dell’esecuzione dell’acquisizione. Se si utilizza questa proprietà, è possibile eseguire il confronto utilizzando `=`, `!=`, `=contains` o `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **Richiesta**
 
@@ -594,19 +591,23 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | Proprietà | Tipo | Descrizione |
 | -------- | ---- | ----------- |
 | `runs` | Oggetto | Oggetto contenente l’elenco delle esecuzioni di acquisizione che appartiene al pubblico. Ulteriori informazioni su questo oggetto sono disponibili nella sezione [recupero stato acquisizione](#retrieve-ingestion-status). |
-| `_page` | Oggetto | Oggetto contenente le informazioni di impaginazione relative all’elenco dei risultati. |
 
 +++
 
