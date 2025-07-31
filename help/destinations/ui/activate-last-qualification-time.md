@@ -3,9 +3,9 @@ title: Utilizza l’ultimo attributo XDM del tempo di qualifica nelle nuove dest
 description: Scopri come utilizzare l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud in versione beta
 badgeBeta: label="Beta" type="Informative"
 exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
-source-git-commit: 7130ac46a7768ea6e71bf73eb970bf2890323d0f
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
->Questa pagina descrive le funzionalità presenti in versione beta. La funzionalità e la documentazione sono soggette a modifiche. Contatta il tuo rappresentante di Adobe o l’Assistenza clienti per accedere a questo programma beta.
+>Questa pagina descrive le funzionalità presenti in versione beta. La funzionalità e la documentazione sono soggette a modifiche. Se desideri accedere a questo programma beta, contatta il rappresentante Adobe o l’Assistenza clienti.
 
 ## Prerequisiti {#prerequisites}
 
@@ -23,7 +23,7 @@ Per utilizzare l&#39;ultimo attributo XDM relativo all&#39;ora di qualificazione
 * [[!DNL ADLS Gen 2]](/help/destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * [[!DNL Azure Blob]](/help/destinations/catalog/cloud-storage/azure-blob.md)
-* [[!DNL Data Landing Zon]e](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Data Landing Zone]](/help/destinations/catalog/cloud-storage/data-landing-zone.md)
 * [[!DNL Google Cloud Storage]](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)
 * [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
 

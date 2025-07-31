@@ -3,7 +3,7 @@ title: Implementazione di applicazioni a pagina singola per Adobe Experience Pla
 description: Scopri come creare un’implementazione di un’applicazione a pagina singola (SPA) di Adobe Experience Platform Web SDK utilizzando Adobe Target.
 keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;ciclo di vita SPA;lato client;test AB;AB;Targeting esperienza;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 0%
@@ -19,7 +19,7 @@ I siti web tradizionali funzionavano su modelli di navigazione &quot;da pagina a
 
 Le applicazioni web moderne, come le applicazioni a pagina singola, hanno invece adottato un modello che attiva rapidamente il rendering dell’interfaccia utente del browser, spesso indipendente dai ricaricamenti delle pagine. Queste esperienze possono essere attivate dalle interazioni dei clienti, ad esempio scorrimento, clic e movimenti del cursore. Con l’evolversi dei paradigmi del web moderno, la rilevanza degli eventi generici tradizionali, come il caricamento di una pagina, per distribuire personalizzazione e sperimentazione non funziona più.
 
-![Diagramma che mostra il ciclo di vita delle applicazioni a pagina singola rispetto al ciclo di vita tradizionale.](assets/spa-vs-traditional-lifecycle.png)
+![Diagramma che mostra il ciclo di vita delle applicazioni a pagina singola rispetto al ciclo di vita delle pagine tradizionali.](assets/spa-vs-traditional-lifecycle.png)
 
 ## Vantaggi di Experience Platform Web SDK per applicazioni a pagina singola
 

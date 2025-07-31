@@ -3,9 +3,9 @@ title: Hint client agente utente
 description: Scopri come funzionano gli hint client dell’agente utente in Web SDK. Gli hint client consentono ai proprietari del sito web di accedere a gran parte delle stesse informazioni disponibili nella stringa dell’agente utente, ma in modo più rispettoso della privacy.
 keywords: user-agent;client hints; string; user-agent string; bassa entropia; alta entropia
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 3%
 
 ---
@@ -109,7 +109,7 @@ Gli hint client ad alta entropia sono informazioni più dettagliate sul disposit
 | Versione browser | Versione significativa del browser. Anche l&#39;hint a bassa entropia `Sec-CH-UA` raccoglie questo elemento. La versione esatta del browser non viene raccolta automaticamente. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Sì | No |
 
 
-Gli hint client ad alta entropia sono disabilitati per impostazione predefinita in Web SDK. Per abilitarli, devi configurare manualmente Web SDK per richiedere hint client ad alta entropia.
+Gli hint client ad alta entropia sono disabilitati per impostazione predefinita in Web SDK. Per attivarli è necessario configurare manualmente il Web SDK per richiedere suggerimenti client ad alta entropia.
 
 ## Gli hint client ad alta entropia influiscono sulle soluzioni Experience Cloud {#impact-in-experience-cloud-solutions}
 
@@ -119,17 +119,17 @@ Se non abiliti gli hint client ad alta entropia nell’ambiente, i rapporti e le
 
 ### Adobe Analytics segnala che si basa su hint client ad alta entropia {#analytics}
 
-La dimensione [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=it) include la versione del sistema operativo memorizzata come hint client ad alta entropia. Se gli hint client ad alta entropia non sono abilitati, la versione del sistema operativo potrebbe non essere accurata per gli hit raccolti dai browser Chromium.
+La dimensione [Sistema operativo](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) include la versione del sistema operativo memorizzata come hint client ad alta entropia. Se gli hint client ad alta entropia non sono abilitati, la versione del sistema operativo potrebbe non essere accurata per gli hit raccolti dai browser Chromium.
 
-### caratteristiche Audienci Manager basate su hint client ad alta entropia {#aam}
+### Caratteristiche di Audience Manager basate su hint client ad alta entropia {#aam}
 
-[!DNL Google] ha aggiornato la funzionalità del browser [!DNL Chrome] per ridurre le informazioni raccolte tramite l&#39;intestazione `User-Agent`. Di conseguenza, i clienti Audience Manager che utilizzano [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it) non riceveranno più informazioni affidabili sulle caratteristiche basate su [chiavi a livello di piattaforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=it).
+[!DNL Google] ha aggiornato la funzionalità del browser [!DNL Chrome] per ridurre le informazioni raccolte tramite l&#39;intestazione `User-Agent`. Di conseguenza, i clienti Audience Manager che utilizzano [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it) non riceveranno più informazioni affidabili sulle caratteristiche basate su [chiavi a livello di piattaforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
 I clienti Audience Manager che utilizzano chiavi a livello di piattaforma per il targeting devono passare a [Experience Platform Web SDK](/help/web-sdk/home.md) invece di [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it) e abilitare [High Entropy Client Hints](#enabling-high-entropy-client-hints) per continuare a ricevere dati affidabili sulle caratteristiche.
 
 ## Abilitazione degli hint client ad alta entropia {#enabling-high-entropy-client-hints}
 
-Per abilitare gli hint client ad alta entropia nella distribuzione Web SDK, è necessario includere l&#39;opzione di contesto `highEntropyUserAgentHints` aggiuntiva nel campo [`context`](/help/web-sdk/commands/configure/context.md).
+Per abilitare gli hint client ad alta entropia nella distribuzione di Web SDK, è necessario includere l&#39;opzione di contesto `highEntropyUserAgentHints` aggiuntiva nel campo [`context`](/help/web-sdk/commands/configure/context.md).
 
 Ad esempio, per recuperare gli hint client ad alta entropia dalle proprietà web, la configurazione sarà simile alla seguente:
 

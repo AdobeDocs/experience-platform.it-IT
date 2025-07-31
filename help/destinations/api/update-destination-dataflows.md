@@ -5,7 +5,7 @@ title: Aggiornare i flussi di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Questa esercitazione illustra i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere tipi di pubblico e attributi utilizzando l’API del servizio Flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 4%

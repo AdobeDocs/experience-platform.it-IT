@@ -3,7 +3,7 @@ title: Personalizzazione ibrida tramite Web SDK e API di Edge Network
 description: Questo articolo illustra come utilizzare il Web SDK insieme all’API Edge Network per distribuire la personalizzazione ibrida sulle proprietà web.
 keywords: personalizzazione; ibrida; api server; lato server; implementazione ibrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-La personalizzazione Hybdrid descrive il processo di recupero del contenuto di personalizzazione lato server, utilizzando l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/), e di rendering lato client, utilizzando il [Web SDK](../home.md).
+La personalizzazione ibrida descrive il processo di recupero del contenuto di personalizzazione lato server, utilizzando l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/), e di rendering lato client, utilizzando il [Web SDK](../home.md).
 
 Puoi utilizzare la personalizzazione ibrida con soluzioni di personalizzazione come Adobe Target, Adobe Journey Optimizer o Offer Decisioning; la differenza consiste nel contenuto del payload dell&#39;[!UICONTROL API Edge Network].
 
@@ -39,7 +39,7 @@ Il diagramma di flusso seguente descrive l’ordine dei passaggi effettuati per 
 1. L’API Edge Network restituisce il contenuto di personalizzazione al server applicazioni.
 1. Il server applicazioni restituisce una risposta HTML al browser client, contenente [cookie di identità e cluster](#cookies).
 1. Nella pagina client viene chiamato il comando [!DNL Web SDK] `applyResponse`, passando le intestazioni e il corpo della risposta [!UICONTROL API Edge Network] del passaggio precedente.
-1. [!DNL Web SDK] esegue automaticamente il rendering delle offerte di Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it) e degli elementi di Journey Optimizer Web Channel, perché il flag `renderDecisions` è impostato su `true`.
+1. [!DNL Web SDK] esegue automaticamente il rendering delle offerte di Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) e degli elementi di Journey Optimizer Web Channel, perché il flag `renderDecisions` è impostato su `true`.
 1. Le offerte [!DNL HTML]/[!DNL JSON] basate su moduli di destinazione e le esperienze basate su codice di Journey Optimizer vengono applicate manualmente tramite il metodo `applyProposition`, per aggiornare [!DNL DOM] in base al contenuto di personalizzazione nella proposta.
 1. Per le offerte [!DNL HTML]/[!DNL JSON] basate su moduli di Target e le esperienze basate su codice di Journey Optimizer, gli eventi di visualizzazione devono essere inviati manualmente, per indicare quando è stato visualizzato il contenuto restituito. Questa operazione viene eseguita tramite il comando `sendEvent`.
 
@@ -92,7 +92,7 @@ Se non è presente alcun hint di posizione (ovvero nessun cookie), utilizzare l&
 
 >[!TIP]
 >
->Come best practice, utilizza un elenco delle posizioni consentite. Questo impedisce che l’hint di posizione sia mitigato con, in quanto viene fornito tramite cookie lato client.
+>Come best practice, utilizza un elenco delle posizioni consentite. Questo impedisce che l’hint di posizione venga manomesso, in quanto viene fornito tramite cookie lato client.
 
 ## implicazioni di Analytics {#analytics}
 

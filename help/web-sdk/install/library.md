@@ -1,19 +1,19 @@
 ---
-title: Installare l’SDK web utilizzando la libreria JavaScript
-description: Fai riferimento alla libreria dell’SDK web utilizzando un file CDN indipendente.
+title: Installare il Web SDK utilizzando la libreria JavaScript
+description: Fai riferimento alla libreria Web SDK utilizzando un file CDN autonomo.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 9876390f7ba34c312f2ce4c00fe39e3ea1ef1ace
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# Installare l’SDK web utilizzando la libreria JavaScript
+# Installare il Web SDK utilizzando la libreria JavaScript
 
-Un&#39;alternativa all&#39;installazione di Web SDK senza [utilizzo dell&#39;estensione tag](extension.md) consiste nel fare riferimento alla libreria JavaScript ospitata su una rete CDN. Puoi fare riferimento direttamente alla libreria, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e completi.
+Un&#39;alternativa all&#39;installazione del Web SDK senza [utilizzo dell&#39;estensione tag](extension.md) consiste nel fare riferimento alla libreria JavaScript ospitata su una rete CDN. Puoi fare riferimento direttamente alla libreria, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e completi.
 
-La libreria SDK web è disponibile utilizzando la seguente struttura URL:
+La libreria SDK Web è disponibile utilizzando la seguente struttura URL:
 
 * **Minificato**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
 * **Completo**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
@@ -34,4 +34,4 @@ Aggiungi il seguente blocco di codice il più in alto possibile nel tag `<head>`
 <script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>
 ```
 
-Questo codice crea in modo asincrono un oggetto `alloy` che consente di chiamare qualsiasi comando Web SDK. Se desideri caricare l&#39;SDK Web in modo sincrono, puoi rimuovere l&#39;attributo `async` nell&#39;ultima riga del blocco di codice. La rimozione dell&#39;attributo `async` impedisce al resto del documento HTML di essere analizzato e renderizzato dal browser fino a quando la libreria non viene caricata ed eseguita. Questo ritardo aggiuntivo prima di mostrare il contenuto principale agli utenti è in genere sconsigliato, ma può avere un senso a seconda delle esigenze della tua organizzazione.
+Questo codice crea in modo asincrono un oggetto `alloy` che consente di chiamare qualsiasi comando di Web SDK. Se si desidera caricare il Web SDK in modo sincrono, è possibile rimuovere l&#39;attributo `async` nell&#39;ultima riga del blocco di codice. La rimozione dell&#39;attributo `async` impedisce l&#39;analisi e il rendering del resto del documento HTML da parte del browser fino al caricamento e all&#39;esecuzione della libreria. Questo ritardo aggiuntivo prima di mostrare il contenuto principale agli utenti è in genere sconsigliato, ma può avere un senso a seconda delle esigenze della tua organizzazione.

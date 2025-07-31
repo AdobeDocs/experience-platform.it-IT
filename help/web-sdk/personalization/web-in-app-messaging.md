@@ -2,7 +2,7 @@
 title: Configurare il supporto per la messaggistica in-app web in Web SDK
 description: Scopri come configurare l’estensione tag Web SDK per supportare la messaggistica in-app web.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Utilizzando i messaggi in-app, puoi interagire in modo efficace con il pubblico 
 >
 >La messaggistica Web in-app è una funzionalità di [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) che utilizza il Web SDK per distribuire il contenuto personalizzato.
 >
->Per istruzioni dettagliate su come configurare la campagna di messaggistica in-app Web, consulta la [documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=it).
+>Per istruzioni dettagliate su come configurare la campagna di messaggistica in-app Web, consulta la [documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Prerequisiti {#prerequisites}
@@ -105,7 +105,7 @@ Selezionare la proprietà tag che contiene l&#39;estensione Web SDK e [creare un
 
 1. **[!UICONTROL Estensione]**: [!UICONTROL Core]
 2. **[!UICONTROL Tipo evento]**: [!UICONTROL Fare clic]
-3. Imposta il trigger per un elemento specifico sulla pagina, identificabile da un selettore CSS a tua scelta.
+3. Imposta il trigger per un elemento specifico sulla pagina, identificato da un selettore CSS a tua scelta.
 
    ![Immagine che mostra la schermata di configurazione dell&#39;evento.](assets/web-in-app-messaging/event-configuration-manual.png)
 
@@ -184,5 +184,5 @@ In questo esempio, il contenuto di personalizzazione viene visualizzato quando u
 
 Nella [configurazione di Web SDK](../commands/configure/overview.md) impostare l&#39;opzione `personalizationStorageEnabled` in base alle proprie esigenze:
 
-* `personalizationStorageEnabled: true` attiva il messaggio in-app con la frequenza definita nella [campagna Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=it#configure-inapp).
+* `personalizationStorageEnabled: true` attiva il messaggio in-app con la frequenza definita nella [campagna Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` attiva il messaggio in-app a ogni caricamento di pagina.

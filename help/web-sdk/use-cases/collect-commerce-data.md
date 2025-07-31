@@ -2,7 +2,7 @@
 title: Raccogliere informazioni su prodotti e ordini tramite Adobe Experience Platform Web SDK
 description: Scopri come aggiungere dati relativi a prodotti o a un carrello utilizzando Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 2%
@@ -53,7 +53,7 @@ Espandere la sezione seguente per visualizzare un esempio di un comando Web SDK 
 
 +++`productViews`
 
-Una chiamata Web SDK di base `sendEvent` che imposta il campo `productViews` su `1`:
+Chiamata di base di Web SDK `sendEvent` che imposta il campo `productViews` su `1`:
 
 ```javascript
 alloy("sendEvent", {
@@ -93,7 +93,7 @@ Espandere la sezione seguente per visualizzare un esempio di un comando Web SDK 
 
 +++`Order` esempio di oggetto
 
-Una chiamata SDK Web `sendEvent` che imposta l&#39;oggetto `order` che si applica a più prodotti nell&#39;array `productListItems`:
+Una chiamata Web SDK `sendEvent` che imposta l&#39;oggetto `order` che si applica a più prodotti nell&#39;array `productListItems`:
 
 ```javascript
 alloy("sendEvent",{
@@ -153,7 +153,7 @@ Espandere le sezioni seguenti per visualizzare esempi di comandi Web SDK che uti
 
 +++`productListItems` esempio
 
-Una chiamata SDK Web `sendEvent` che imposta `productViews` per più prodotti nell&#39;array `productListItems`:
+Una chiamata Web SDK `sendEvent` che imposta `productViews` per più prodotti nell&#39;array `productListItems`:
 
 ```javascript
 alloy("sendEvent",{
@@ -181,7 +181,7 @@ alloy("sendEvent",{
 
 +++`productListAdds` esempio
 
-Una chiamata SDK Web `sendEvent` che imposta l&#39;evento `productListAdds` per più prodotti nell&#39;array `productListItems`:
+Una chiamata Web SDK `sendEvent` che imposta l&#39;evento `productListAdds` per più prodotti nell&#39;array `productListItems`:
 
 ```javascript
 alloy("sendEvent",{
@@ -215,7 +215,7 @@ alloy("sendEvent",{
 
 +++`checkouts` esempio
 
-Una chiamata SDK Web `sendEvent` che imposta l&#39;evento `checkouts` per più prodotti nell&#39;array `productListItems`:
+Una chiamata Web SDK `sendEvent` che imposta l&#39;evento `checkouts` per più prodotti nell&#39;array `productListItems`:
 
 ```javascript
 alloy("sendEvent",{

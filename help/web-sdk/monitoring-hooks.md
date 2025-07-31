@@ -1,23 +1,23 @@
 ---
 title: Hook di monitoraggio per Adobe Experience Platform Web SDK
-description: Scopri come utilizzare gli hook di monitoraggio forniti da Adobe Experience Platform Web SDK per eseguire il debug dell’implementazione e acquisire i registri Web SDK.
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+description: Scopri come utilizzare gli hook di monitoraggio forniti da Adobe Experience Platform Web SDK per eseguire il debug dell’implementazione e acquisire i registri di Web SDK.
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
 
 ---
 
+# Hook di monitoraggio per Web SDK
 
-# Monitoraggio degli hook per Web SDK
-
-Adobe Experience Platform Web SDK include hook di monitoraggio utilizzabili per monitorare vari eventi di sistema. Questi strumenti sono utili per sviluppare strumenti di debug personalizzati e per acquisire i registri dell’SDK web.
+Adobe Experience Platform Web SDK include hook di monitoraggio utilizzabili per monitorare vari eventi di sistema. Questi strumenti sono utili per sviluppare strumenti di debug personalizzati e per acquisire i registri di Web SDK.
 
 Web SDK attiva le funzioni di monitoraggio indipendentemente dal fatto che sia stato abilitato il [debug](commands/configure/debugenabled.md).
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
-Questa funzione di callback viene attivata quando è stata creata correttamente una nuova istanza di Web SDK. Per informazioni dettagliate sui parametri della funzione, consulta l’esempio seguente.
+Questa funzione di callback viene attivata dopo la creazione di una nuova istanza di Web SDK. Per informazioni dettagliate sui parametri della funzione, consulta l’esempio seguente.
 
 ```js
 onInstanceCreated(data) {
@@ -28,12 +28,12 @@ onInstanceCreated(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
-| `data.instance` | Funzione | Funzione di istanza utilizzata per chiamare i comandi Web SDK. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
+| `data.instance` | Funzione | Funzione di istanza utilizzata per chiamare i comandi di Web SDK. |
 
 ## `onInstanceConfigured` {#onInstanceConfigured}
 
-Questa funzione di callback viene attivata dall&#39;SDK Web quando il comando [`configure`](commands/configure/overview.md) è stato risolto. Per informazioni dettagliate sui parametri della funzione, consulta l’esempio seguente.
+Questa funzione di callback viene attivata dal Web SDK quando il comando [`configure`](commands/configure/overview.md) è stato risolto. Per informazioni dettagliate sui parametri della funzione, consulta l’esempio seguente.
 
 ```js
  onInstanceConfigured(data) {
@@ -44,8 +44,8 @@ Questa funzione di callback viene attivata dall&#39;SDK Web quando il comando [`
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
-| `data.config` | Oggetto | Oggetto contenente la configurazione utilizzata per l’istanza Web SDK. Queste sono le opzioni passate al comando [`configure`](commands/configure/overview.md) con tutti i valori predefiniti aggiunti. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
+| `data.config` | Oggetto | Oggetto contenente la configurazione utilizzata per l&#39;istanza di Web SDK. Queste sono le opzioni passate al comando [`configure`](commands/configure/overview.md) con tutti i valori predefiniti aggiunti. |
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
@@ -61,8 +61,8 @@ onBeforeCommand(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
-| `data.commandName` | Stringa | Nome del comando Web SDK prima del quale viene eseguita questa funzione. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
+| `data.commandName` | Stringa | Il nome del comando Web SDK prima del quale viene eseguita questa funzione. |
 | `data.options` | Oggetto | Oggetto contenente le opzioni passate al comando Web SDK. |
 
 ## `onCommandResolved` {#onCommandResolved}
@@ -80,8 +80,8 @@ onCommandResolved(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
-| `data.commandName` | Stringa | Nome del comando Web SDK eseguito. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
+| `data.commandName` | Stringa | Nome del comando di Web SDK eseguito. |
 | `data.options` | Oggetto | Oggetto contenente le opzioni passate al comando Web SDK. |
 | `data.result` | Oggetto | Oggetto contenente il risultato del comando Web SDK. |
 
@@ -100,8 +100,8 @@ onCommandRejected(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
-| `data.commandName` | Stringa | Nome del comando Web SDK eseguito. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
+| `data.commandName` | Stringa | Nome del comando di Web SDK eseguito. |
 | `data.options` | Oggetto | Oggetto contenente le opzioni passate al comando Web SDK. |
 | `data.error` | Oggetto | Oggetto contenente il messaggio di errore restituito dalla chiamata di rete del browser (`fetch` nella maggior parte dei casi) insieme al motivo per cui il comando è stato rifiutato. |
 
@@ -120,7 +120,7 @@ onBeforeNetworkRequest(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
 | `data.requestId` | Stringa | `requestId` generato da Web SDK per abilitare il debug. |
 | `data.url` | Stringa | L’URL richiesto. |
 | `data.payload` | Oggetto | Oggetto payload della richiesta di rete che verrà convertito in formato JSON e inviato nel corpo della richiesta tramite un metodo `POST`. |
@@ -144,7 +144,7 @@ onNetworkResponse(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
 | `data.requestId` | Stringa | `requestId` generato da Web SDK per abilitare il debug. |
 | `data.url` | Stringa | L’URL richiesto. |
 | `data.payload` | Oggetto | Oggetto payload che verrà convertito in formato JSON e inviato nel corpo della richiesta tramite un metodo `POST`. |
@@ -169,7 +169,7 @@ onNetworkError(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
 | `data.requestId` | Stringa | `requestId` generato da Web SDK per abilitare il debug. |
 | `data.url` | Stringa | L’URL richiesto. |
 | `data.payload` | Oggetto | Oggetto payload che verrà convertito in formato JSON e inviato nel corpo della richiesta tramite un metodo `POST`. |
@@ -177,7 +177,7 @@ onNetworkError(data) {
 
 ## `onBeforeLog` {#onBeforeLog}
 
-Questa funzione di callback viene attivata prima che l’SDK web registri qualsiasi elemento nella console. Per informazioni dettagliate sui parametri della funzione, consulta l’esempio seguente.
+Questa funzione di callback viene attivata prima che Web SDK registri qualsiasi elemento nella console. Per informazioni dettagliate sui parametri della funzione, consulta l’esempio seguente.
 
 ```js
 onBeforeLog(data) {
@@ -190,7 +190,7 @@ onBeforeLog(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
 | `data.componentName` | Stringa | Nome del componente che ha generato il messaggio di registro. |
 | `data.level` | Stringa | Livello di registrazione. Livelli supportati: `log`, `info`, `warn`, `error`. |
 | `data.arguments` | Array di stringhe | Argomenti del messaggio di registro. |
@@ -211,10 +211,10 @@ Questa funzione di callback viene attivata dal componente `personalization` in v
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
 | `data.componentName` | Stringa | Nome del componente che ha generato il messaggio di registro. |
 | `data.payload` | Oggetto | Oggetto payload che verrà convertito in formato JSON e inviato nel corpo della richiesta tramite un metodo `POST`. |
-| `data.status` | Stringa | Il componente `personalization` notifica all&#39;SDK Web lo stato del rendering.  Valori supportati: <ul><li>`rendering-started`: indica che Web SDK sta per eseguire il rendering delle proposte. Prima che l&#39;SDK Web inizi a eseguire il rendering di un ambito di decisione o di una visualizzazione, nell&#39;oggetto `data` è possibile visualizzare le proposte che stanno per essere sottoposte a rendering dal componente `personalization` e il nome dell&#39;ambito.</li><li>`no-offers`: indica che non è stato ricevuto alcun payload per i parametri richiesti.</li> <li>`rendering-failed`: indica che Web SDK non è riuscito a eseguire il rendering di una proposta.</li><li>`rendering-succeeded`: indica che il rendering è stato completato per un ambito di decisione.</li> <li>`rendering-redirect`: indica che Web SDK restituirà una proposta di reindirizzamento.</li></ul> |
+| `data.status` | Stringa | Il componente `personalization` notifica al Web SDK lo stato del rendering.  Valori supportati: <ul><li>`rendering-started`: indica che il Web SDK sta per eseguire il rendering delle proposte. Prima che il Web SDK inizi a eseguire il rendering di un ambito di decisione o di una visualizzazione, nell&#39;oggetto `data` è possibile visualizzare le proposte che stanno per essere sottoposte a rendering dal componente `personalization` e il nome dell&#39;ambito.</li><li>`no-offers`: indica che non è stato ricevuto alcun payload per i parametri richiesti.</li> <li>`rendering-failed`: indica che Web SDK non è riuscito a eseguire il rendering di una proposta.</li><li>`rendering-succeeded`: indica che il rendering è stato completato per un ambito di decisione.</li> <li>`rendering-redirect`: indica che Web SDK eseguirà il rendering di una proposta di reindirizzamento.</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -230,13 +230,13 @@ onContentHiding(data) {
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|----------|
-| `data.instanceName` | Stringa | Il nome della variabile globale in cui è memorizzata l’istanza dell’SDK web. |
+| `data.instanceName` | Stringa | Nome della variabile globale in cui è memorizzata l&#39;istanza di Web SDK. |
 | `data.componentName` | Stringa | Nome del componente che ha generato il messaggio di registro. |
-| `data.status` | Stringa | Il componente `personalization` notifica all&#39;SDK Web lo stato del rendering. Valori supportati: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
+| `data.status` | Stringa | Il componente `personalization` notifica al Web SDK lo stato del rendering. Valori supportati: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## Specificare gli hook di monitoraggio quando si utilizza il pacchetto NPM {#specify-monitoris-npm}
+## Specificare gli hook di monitoraggio quando si utilizza il pacchetto NPM {#specify-monitoring-npm}
 
-Se si utilizza Web SDK tramite il pacchetto [NPM](install/npm.md), è possibile specificare hook di monitoraggio nella funzione `createInstasnce`, come illustrato di seguito.
+Se si utilizza il Web SDK tramite il pacchetto [NPM](install/npm.md), è possibile specificare hook di monitoraggio nella funzione `createInstance`, come illustrato di seguito.
 
 ```js
 var monitor = {
@@ -255,9 +255,9 @@ alloy("sendEvent", { ... });
 
 Web SDK cerca un array di oggetti in una variabile globale denominata `__alloyMonitors`.
 
-Per acquisire tutti gli eventi Web SDK, è necessario definire gli hook di monitoraggio prima che il codice Web SDK venga caricato sulla pagina. Ogni metodo di monitoraggio acquisisce un evento Web SDK.
+Per acquisire tutti gli eventi di Web SDK, è necessario definire gli hook di monitoraggio prima che il codice Web SDK venga caricato sulla pagina. Ogni metodo di monitoraggio acquisisce un evento Web SDK.
 
-Puoi definire gli hook di monitoraggio *dopo* il caricamento del codice Web SDK sulla pagina, ma gli hook attivati prima del caricamento della pagina *non* verranno acquisiti.
+Puoi definire gli hook di monitoraggio *dopo* il caricamento del codice Web SDK nella pagina, ma gli hook attivati prima del caricamento della pagina *non* verranno acquisiti.
 
 Quando definisci l’oggetto hook di monitoraggio, devi solo definire i metodi per i quali desideri definire una logica speciale.
 Ad esempio, se ti interessa solo `onContentRendering`, puoi semplicemente definire tale metodo. Non è necessario utilizzare tutti gli hook di monitoraggio contemporaneamente.

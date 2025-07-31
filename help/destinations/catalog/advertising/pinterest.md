@@ -1,10 +1,10 @@
 ---
-title: Connessione a elenco clienti pinterest
+title: Connessione a elenco clienti Pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato il tuo sito o dagli utenti che hanno già interagito con i tuoi contenuti su Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '808'
 ht-degree: 3%
 
 ---
@@ -26,14 +26,14 @@ Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato
 
 ## Identità supportate {#supported-identities}
 
-La destinazione [!DNL Pinterest Customer List] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+La destinazione [!DNL Pinterest Customer List] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Nel [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione della destinazione, mappa le identità desiderate al campo di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest.
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Mappa lo spazio dei nomi dell&#39;identità di origine *GAID* al campo dell&#39;identità di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Mappa lo spazio dei nomi dell&#39;identità di origine *IDFA* al campo dell&#39;identità di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Mappa lo spazio dei nomi dell&#39;identità di origine *GAID* al campo dell&#39;identità di destinazione *pinterest_audience*. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mappa lo spazio dei nomi dell&#39;identità di origine *IDFA* al campo dell&#39;identità di destinazione *pinterest_audience*. |
 | EMAIL | Indirizzi e-mail (testo non crittografato o con hash con l’algoritmo SHA256) | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. <br> Mappa lo spazio dei nomi dell&#39;identità di origine *E-mail* o *E-mail_LC_SHA256* al campo dell&#39;identità di destinazione *pinterest_audience*. |
 
 {style="table-layout:auto"}
@@ -75,7 +75,7 @@ Quando [configura](../../ui/connect-destination.md) questa destinazione, devi fo
 
 ### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
 
-I token pinterest scadono ogni 30 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+I token Pinterest scadono ogni 30 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
 
 1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
 2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account Pinterest.

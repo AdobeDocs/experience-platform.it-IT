@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari; avvisi;destinazioni
 description: È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali sulle destinazioni
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 8%
@@ -83,7 +83,7 @@ Viene visualizzata la pagina [!UICONTROL Dettagli esecuzione flusso di dati]. Ne
 
 ![Immagine dell&#39;interfaccia utente che mostra la pagina dei dettagli di esecuzione del flusso di dati.](../assets/ui/alerts/dataflow-overview.png)
 
-Nella metà inferiore della pagina vengono visualizzati [!UICONTROL errori di esecuzione del flusso di dati] verificatisi durante la fase di esecuzione del flusso di dati. Da qui puoi visualizzare in anteprima la diagnostica degli errori oppure utilizzare l&#39;[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) per scaricare la diagnostica degli errori o il manifesto del file che corrisponde al flusso di dati.
+Nella metà inferiore della pagina vengono visualizzati [!UICONTROL errori di esecuzione del flusso di dati] che si sono verificati durante la fase di esecuzione del flusso di dati. Da qui puoi visualizzare in anteprima la diagnostica degli errori oppure utilizzare l&#39;[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) per scaricare la diagnostica degli errori o il manifesto del file che corrisponde al flusso di dati.
 
 ![Immagine dell&#39;interfaccia utente che mostra la pagina dei dettagli di esecuzione del flusso di dati, con un&#39;evidenziazione nella sezione errori.](../assets/ui/alerts/dataflow-run-error.png)
 
