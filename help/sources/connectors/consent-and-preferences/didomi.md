@@ -2,16 +2,20 @@
 title: Panoramica di Didomi Source
 description: Scopri come collegare Didomi a Adobe Experience Platform utilizzando l’interfaccia utente.
 last-substantial-update: 2025-07-29T00:00:00Z
+badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '911'
 ht-degree: 1%
 
 ---
 
 # [!DNL Didomi]
 
+>[!AVAILABILITY]
+>
+>L&#39;origine [!DNL Didomi] è in versione beta. Leggi i [termini e condizioni](../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
 [!DNL Didomi] è una piattaforma di gestione del consenso e delle preferenze che consente alle organizzazioni di raccogliere, gestire e applicare le scelte degli utenti in merito ai dati personali su siti Web, app e strumenti interni.
 
