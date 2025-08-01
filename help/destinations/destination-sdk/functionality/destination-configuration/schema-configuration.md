@@ -2,9 +2,9 @@
 description: Scopri come configurare lo schema partner per le destinazioni create con Destination SDK.
 title: Configurazione schema partner
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
+source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1910'
 ht-degree: 3%
 
 ---
@@ -106,7 +106,7 @@ Per creare uno schema statico con attributi di profilo, definire gli attributi d
 | `segmentRequired` | Booleano | Obbligatorio | Questo parametro è richiesto da Destination SDK e deve essere sempre impostato su `true`. |
 | `identityRequired` | Booleano | Obbligatorio | Impostato su `true` se gli utenti devono essere in grado di mappare [tipi di identità](identity-namespace-configuration.md) da Experience Platform agli attributi definiti nell&#39;array `profileFields`. |
 | `segmentNamespaceAllowList` | Array | Facoltativo | Consente agli utenti di mappare solo i tipi di pubblico dagli spazi dei nomi definiti nell’array alla destinazione. <br><br> L&#39;utilizzo di questo parametro è sconsigliato nella maggior parte dei casi. Utilizza invece `"segmentNamespaceDenyList":[]` per consentire l&#39;esportazione di tutti i tipi di pubblico nella tua destinazione. <br><br> Se nella configurazione mancano sia `segmentNamespaceAllowList` che `segmentNamespaceDenyList`, gli utenti potranno esportare solo i tipi di pubblico provenienti dal [servizio di segmentazione](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` si escludono a vicenda. |
-| `segmentNamespaceDenyList` | Array | Facoltativo | Impedisce agli utenti di mappare i tipi di pubblico dagli spazi dei nomi di pubblico definiti nell’array alla destinazione. <br><br>Adobe consiglia di consentire l&#39;esportazione di tutti i tipi di pubblico, indipendentemente dall&#39;origine, impostando `"segmentNamespaceDenyList":[]`. <br><br>Se nella configurazione mancano sia `segmentNamespaceAllowed` che `segmentNamespaceDenyList`, gli utenti potranno esportare solo i tipi di pubblico provenienti dal [servizio di segmentazione](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` si escludono a vicenda. |
+| `segmentNamespaceDenyList` | Array | Facoltativo | Impedisce agli utenti di mappare i tipi di pubblico dagli spazi dei nomi di pubblico definiti nell’array alla destinazione. <br><br>Adobe consiglia di consentire l&#39;esportazione di tutti i tipi di pubblico, indipendentemente dall&#39;origine, impostando `"segmentNamespaceDenyList":[]`. <br><br>**Importante:** Se non si specifica `segmentNamespaceDenyList` in `schemaConfig` e non si utilizza `segmentNamespaceAllowList`, il sistema imposta automaticamente `segmentNamespaceDenyList` su `[]`. Questo impedisce la perdita di tipi di pubblico personalizzati in futuro. Per motivi di sicurezza, Adobe consiglia di impostare esplicitamente `"segmentNamespaceDenyList":[]` nella configurazione. <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` si escludono a vicenda. |
 
 {style="table-layout:auto"}
 
@@ -250,7 +250,7 @@ Per configurare la destinazione in modo da supportare l&#39;attivazione di [tipi
 }
 ```
 
-Per ulteriori informazioni sulla funzionalità `segmentNamespaceDenyList`, consulta le descrizioni delle proprietà nella [tabella](#attributes-schema) più avanti in questa pagina.
+Per ulteriori informazioni sulla funzionalità [, consulta le descrizioni delle proprietà nella ](#attributes-schema)tabella`segmentNamespaceDenyList` più avanti in questa pagina.
 
 ## Passaggi successivi {#next-steps}
 
