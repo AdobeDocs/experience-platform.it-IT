@@ -2,7 +2,7 @@
 title: Guida All’Implementazione Per Le Regole Di Collegamento Del Grafico Di Identità
 description: Scopri i passaggi consigliati da seguire per l’implementazione dei dati con le configurazioni delle regole di collegamento del grafico identità.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 6%
@@ -193,7 +193,7 @@ Se i dati lo richiedono, devi innanzitutto creare gli spazi dei nomi appropriati
 
 ## Usa strumento di simulazione grafico {#graph-simulation}
 
-Quindi, passa allo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
+Quindi, passa allo strumento di simulazione del grafico [](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
 
 Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del grafico per scoprire e comprendere meglio in che modo l’algoritmo di ottimizzazione delle identità e alcune configurazioni possono influenzare il comportamento del grafico.
 
@@ -203,7 +203,11 @@ Per avere un&#39;idea migliore del comportamento del grafico, passa alla [interf
 
 ![La pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato.](../images/implementation/settings.png "Pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato."){zoomable="yes"}
 
-Utilizza l’interfaccia utente delle impostazioni di identità per designare gli spazi dei nomi univoci e configurare gli spazi dei nomi in ordine di priorità. Una volta completata l’applicazione delle impostazioni, attendi almeno sei ore prima di poter procedere all’acquisizione dei dati, poiché sono necessarie almeno sei ore affinché le nuove impostazioni vengano applicate al servizio Identity.
+Utilizza l’interfaccia utente delle impostazioni di identità per designare gli spazi dei nomi univoci e configurare gli spazi dei nomi in ordine di priorità.
+
+>[!IMPORTANT]
+>
+>Una volta completata l’applicazione delle impostazioni, attendi almeno 24 ore prima di poter procedere all’acquisizione dei dati, poiché sono necessarie almeno 24 ore affinché le nuove impostazioni vengano applicate al servizio Identity.
 
 Per ulteriori informazioni, leggere la [guida dell&#39;interfaccia utente per le impostazioni delle identità](./identity-settings-ui.md).
 

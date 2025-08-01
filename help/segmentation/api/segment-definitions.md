@@ -4,14 +4,18 @@ title: Endpoint API per le definizioni dei segmenti
 description: L’endpoint per le definizioni dei segmenti nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico le definizioni dei segmenti per la tua organizzazione.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
+source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1558'
 ht-degree: 3%
 
 ---
 
 # Endpoint di definizioni segmento
+
+>[!WARNING]
+>
+>La creazione di tipi di pubblico utilizzando entità B2B tramite l’API del servizio di segmentazione è obsoleta. Non è più possibile creare tipi di pubblico utilizzando le seguenti entità B2B: account, relazione account-persona, campagna, membro della campagna, elenco di marketing, membro elenco di marketing, opportunità e relazione opportunità-persona.
 
 Adobe Experience Platform consente di creare definizioni di segmenti che definiscono un gruppo di attributi o comportamenti specifici da un gruppo di profili. Una definizione di segmento è un oggetto che incapsula una query scritta in [!DNL Profile Query Language] (PQL). Le definizioni dei segmenti vengono applicate ai profili per creare tipi di pubblico. Questo oggetto (definizione del segmento) è anche denominato predicato PQL. I predicati PQL definiscono le regole per la definizione del segmento in base alle condizioni relative a qualsiasi record o dati di serie temporali forniti a [!DNL Real-Time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consulta la [guida di PQL](../pql/overview.md).
 
@@ -162,7 +166,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 ## Creare una nuova definizione di segmento {#create}
 
-Per creare una nuova definizione di segmento, devi eseguire una richiesta POST all&#39;endpoint `/segment/definitions`.
+È possibile creare una nuova definizione di segmento effettuando una richiesta POST all&#39;endpoint `/segment/definitions`.
 
 >[!IMPORTANT]
 >
@@ -338,7 +342,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Recuperare una definizione di segmento specifica {#get}
 
-Per recuperare informazioni dettagliate su una definizione di segmento specifica, effettua una richiesta di GET all&#39;endpoint `/segment/definitions` e fornisci l&#39;ID della definizione di segmento da recuperare nel percorso della richiesta.
+Per recuperare informazioni dettagliate su una definizione di segmento specifica, effettua una richiesta GET all&#39;endpoint `/segment/definitions` e fornisci l&#39;ID della definizione di segmento da recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -427,7 +431,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Definizioni di segmenti di recupero in blocco {#bulk-get}
 
-È possibile recuperare informazioni dettagliate su più definizioni di segmenti specificate effettuando una richiesta POST all&#39;endpoint `/segment/definitions/bulk-get` e fornendo i valori `id` delle definizioni di segmenti nel corpo della richiesta.
+Per recuperare informazioni dettagliate su più definizioni di segmenti specificate, effettua una richiesta POST all&#39;endpoint `/segment/definitions/bulk-get` e fornisce i valori `id` delle definizioni di segmenti nel corpo della richiesta.
 
 **Formato API**
 

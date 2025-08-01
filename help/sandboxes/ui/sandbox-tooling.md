@@ -2,9 +2,9 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
+source-git-commit: a3db2b69400a43abe399f90036041aaeaf0bd0a0
 workflow-type: tm+mt
-source-wordcount: '3414'
+source-wordcount: '3496'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,17 @@ Migliora la precisione della configurazione nelle sandbox ed esporta e importa f
 La funzionalità di strumenti sandbox consente di esportare [!DNL Adobe Real-Time Customer Data Platform] e [!DNL Adobe Journey Optimizer] oggetti in un pacchetto.
 
 ### Oggetti di Real-time Customer Data Platform {#real-time-cdp-objects}
+
+>[!BEGINSHADEBOX]
+
+### Modifiche alle importazioni di tipi di pubblico con più entità
+
+Con gli aggiornamenti dell&#39;architettura [B2B](../../rtcdp/b2b-architecture-upgrade.md), non sarà più possibile importare tipi di pubblico con più entità con attributi B2B ed eventi di esperienza se un pacchetto che includeva tali tipi di pubblico è stato pubblicato prima dell&#39;aggiornamento. Questi tipi di pubblico non verranno importati e non potranno essere convertiti automaticamente nella nuova architettura.
+
+Per ovviare a questo limite, è necessario creare un nuovo pacchetto con i tipi di pubblico aggiornati e quindi importarli nelle rispettive sandbox di destinazione utilizzando gli strumenti sandbox.
+
+
+>[!ENDSHADEBOX]
 
 Nella tabella seguente sono elencati [!DNL Adobe Real-Time Customer Data Platform] oggetti attualmente supportati per gli strumenti sandbox:
 
@@ -54,12 +65,12 @@ Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attu
 | [!DNL Adobe Journey Optimizer] | Pubblico | | Un pubblico può essere copiato come oggetto dipendente dell’oggetto percorso. Puoi selezionare Crea un nuovo pubblico o riutilizzarne uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Schema | | Gli schemi utilizzati nel percorso possono essere copiati come oggetti dipendenti. Puoi selezionare Crea un nuovo schema o riutilizzarne uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Criterio di unione | | I criteri di unione utilizzati nel percorso possono essere copiati come oggetti dipendenti. Nella sandbox di destinazione **non puoi** creare un nuovo criterio di unione. Puoi utilizzarne solo uno esistente. |
-| [!DNL Adobe Journey Optimizer] | Percorso | I seguenti oggetti utilizzati nel percorso vengono copiati come oggetti dipendenti. Durante il flusso di lavoro di importazione, puoi selezionare **[!UICONTROL Crea nuovo]** o **[!UICONTROL Usa esistente]** per ciascuno: <ul><li>Tipi di pubblico</li><li>Schemi</li><li>Azioni personalizzate</li><li>Eventi</li><li>Frammenti</li><li>Modelli di contenuto</li><li>Dettagli area di lavoro</li></ul> | <ul><li>**[!UICONTROL Azioni personalizzate]**: quando selezioni **[!UICONTROL Usa esistente]** durante il processo di importazione durante la copia di un percorso in un&#39;altra sandbox, le azioni personalizzate esistenti selezionate **devono** essere le stesse dell&#39;azione personalizzata di origine. In caso contrario, il nuovo percorso presenterà errori irrisolvibili.</li><li>Gli eventi e i dettagli dell’evento utilizzati nel percorso vengono copiati. Crea sempre una nuova versione nella sandbox di destinazione.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Percorso | I seguenti oggetti utilizzati nel percorso vengono copiati come oggetti dipendenti. Durante il flusso di lavoro di importazione, puoi scegliere tra **[!UICONTROL Crea nuovo]** o **[!UICONTROL Usa esistente]** per ciascuno: <ul><li>Tipi di pubblico</li><li>Dettagli area di lavoro</li><li>Modelli di contenuto</li><li>Azioni personalizzate</li><li>Origini dati</li><li>Eventi</li><li>Gruppi di campi</li><li>Frammenti</li><li>Schemi</li></ul> | Quando selezioni **[!UICONTROL Usa esistente]** durante il processo di importazione per copiare un percorso in un&#39;altra sandbox, le azioni personalizzate esistenti che scegli **devono** corrispondere esattamente all&#39;azione personalizzata di origine. Se non corrispondono, il nuovo percorso genererà errori irrisolvibili.<br>Il percorso copia gli eventi e i dettagli dell&#39;evento utilizzati e crea una nuova versione nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Azione | | I messaggi e-mail e push utilizzati nel percorso possono essere copiati come oggetti dipendenti. Le attività di azione del canale utilizzate nei campi del percorso, che vengono utilizzate per la personalizzazione nel messaggio, non vengono controllate per completezza. I blocchi di contenuto non vengono copiati.<br><br>È possibile copiare l&#39;azione di aggiornamento del profilo utilizzata nel percorso. Le azioni personalizzate possono essere aggiunte a un pacchetto in modo indipendente. Vengono copiati anche i dettagli delle azioni utilizzati nel percorso. Crea sempre una nuova versione nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Azioni personalizzate |  | Le azioni personalizzate possono essere aggiunte a un pacchetto in modo indipendente. Una volta assegnata a un percorso, un’azione personalizzata non può più essere modificata. Per apportare aggiornamenti alle azioni personalizzate, devi: <ul><li>spostare le azioni personalizzate prima di eseguire la migrazione di un percorso</li><li>aggiorna le configurazioni (come intestazioni di richiesta, parametri di query e autenticazione) per le azioni personalizzate dopo la migrazione</li><li>esegui la migrazione degli oggetti percorso con le azioni personalizzate aggiunte durante il primo passaggio</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Modello di contenuto | | Un modello di contenuto può essere copiato come oggetto dipendente dell&#39;oggetto percorso. I modelli autonomi consentono di riutilizzare facilmente i contenuti personalizzati nelle campagne e nei percorsi Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Frammento | Tutti i frammenti nidificati. | Un frammento può essere copiato come oggetto dipendente dell’oggetto percorso. I frammenti sono componenti riutilizzabili a cui è possibile fare riferimento in una o più e-mail in campagne e percorsi Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
 
 Le superfici (ad esempio i predefiniti) non vengono copiate. Il sistema seleziona automaticamente la corrispondenza più simile possibile nella sandbox di destinazione in base al tipo di messaggio e al nome della superficie. Se nella sandbox di destinazione non è presente alcuna superficie, la copia della superficie avrà esito negativo e la copia del messaggio avrà esito negativo perché un messaggio richiede che una superficie sia disponibile per l’impostazione. In questo caso, affinché la copia funzioni, è necessario creare almeno una superficie per il canale destro del messaggio.
 
@@ -345,7 +356,7 @@ Dopo aver identificato gli oggetti di destinazione da aggiornare, selezionare **
 
 Il video seguente illustra gli strumenti della sandbox e spiega come creare un nuovo pacchetto, pubblicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446095/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Passaggi successivi
 

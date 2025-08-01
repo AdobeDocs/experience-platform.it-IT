@@ -2,13 +2,12 @@
 title: Note sulla versione di Adobe Experience Platform di luglio 2025
 description: Note sulla versione di Adobe Experience Platform di luglio 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
+source-git-commit: ba475df04342424dc0b22cb1d3d429d12701dbd1
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1573'
 ht-degree: 23%
 
 ---
-
 
 # Note sulla versione di Adobe Experience Platform
 
@@ -34,6 +33,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 - [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
 
+
 ## Capacità {#capacity}
 
 >[!AVAILABILITY]
@@ -53,6 +53,7 @@ Per ulteriori informazioni, leggere la [Panoramica capacità](../../landing/lice
 | Destinazione | Descrizione |
 | --- | --- |
 | Disponibilità limitata della connessione [Google Customer Match + Display &amp; Video 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) | Dopo essere stata brevemente disponibile per tutti i clienti a giugno, Adobe ha ripristinato la disponibilità limitata di questa integrazione. Attualmente, l’accesso a questa destinazione è limitato ai clienti che sono già abilitati, mentre Adobe e Google lavorano per risolvere i problemi di implementazione. Se ti interessa utilizzare questa integrazione una volta ripreso il rollout più ampio, contatta il tuo rappresentante Adobe per esprimere le tue intenzioni. |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) aggiornamento interno | A partire dal venerdì 31 luglio 2025 nel catalogo delle destinazioni, puoi visualizzare due schede [!DNL The Trade Desk] affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. <br><br>Il connettore di destinazione [!DNL The Trade Desk] esistente è stato rinominato in **[!UICONTROL (obsoleto) The Trade Desk]** e una nuova scheda con il nome **[!UICONTROL The Trade Desk]** è ora disponibile. Utilizza la nuova connessione **[!UICONTROL Trade Desk]** nel catalogo per i nuovi flussi di dati di attivazione. <br><br>Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (obsoleto) Trade Desk]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente. <br><br>Se si creano flussi di dati tramite l&#39;API [Servizio flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:<ul><li>Flow spec ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>Connection spec ID: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **Funzionalità nuove o aggiornate**
 

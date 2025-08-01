@@ -3,9 +3,9 @@ title: Guida API del servizio di segmentazione
 description: L’API del servizio di segmentazione consente agli sviluppatori di gestire in modo programmatico le operazioni di segmentazione in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform [!DNL Segmentation Service] consente di creare tipi di
 
 L&#39;API [!DNL Segmentation Service] fornisce più endpoint che consentono di gestire programmaticamente le operazioni di segmentazione in [!DNL Experience Platform]. Questo documento fornisce introduzioni di alto livello su ciascuno di questi endpoint e collegamenti alle relative guide degli endpoint associate per ulteriori dettagli. Prima di leggere le guide dei singoli endpoint, consulta la [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, consulta il riferimento API del servizio di segmentazione [&#128279;](https://www.adobe.io/experience-platform-apis/references/segmentation/).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, consulta il riferimento API del servizio di segmentazione [](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
 ## Tipi di pubblico
 
@@ -29,6 +29,12 @@ Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, leggere la [gui
 I processi di esportazione sono processi asincroni utilizzati per rendere persistenti i membri del segmento di pubblico nei set di dati. È possibile utilizzare l&#39;endpoint `/export/jobs` per recuperare tutti i processi di esportazione, creare un nuovo processo di esportazione, recuperare i dettagli di un processo di esportazione specifico o annullare un processo di esportazione specifico.
 
 Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, leggere la [guida dell&#39;endpoint dei processi di esportazione](./export-jobs.md).
+
+## Pubblico esterno
+
+È possibile importare tipi di pubblico esterni in Experience Platform, recuperare lo stato di creazione di un pubblico, aggiornare un pubblico esterno, avviare un&#39;esecuzione di acquisizione del pubblico, recuperare uno stato di acquisizione del pubblico esterno, elencare le esecuzioni di acquisizione del pubblico ed eliminare un pubblico esterno utilizzando l&#39;endpoint `/core/ais/external-audiences`.
+
+Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, leggere la [guida dell&#39;endpoint per tipi di pubblico esterni](./external-audiences.md).
 
 ## Anteprime e stime
 
