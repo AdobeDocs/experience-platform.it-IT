@@ -1,25 +1,25 @@
 ---
-title: Schemi in Real-time Customer Data Platform B2B Edition
-description: Panoramica del ruolo degli schemi Experience Data Model (XDM) in Adobe Real-time Customer Data Platform B2B Edition.
+title: Schemi in Real-Time Customer Data Platform B2B edition
+description: Panoramica del ruolo degli schemi Experience Data Model (XDM) in Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, Data Management, Schemas
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 09f671af0d04251ab7b0a71528cb4b9745594b1c
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 13%
+source-wordcount: '251'
+ht-degree: 12%
 
 ---
 
-# Schemi in Real-time Customer Data Platform B2B Edition
+# Schemi in Real-Time Customer Data Platform B2B edition
 
-Adobe Real-time Customer Data Platform B2B Edition fornisce diverse [classi XDM (Experience Data Model) standard](../../xdm/schema/composition.md#class) che acquisiscono dettagli sulle entità di dati B2B essenziali, come account, opportunità, campagne e altro ancora. Inoltre, Real-Time CDP B2B Edition consente di definire relazioni molti-a-uno tra questi schemi in modo che possano partecipare a casi d’uso di segmentazione avanzata.
+Adobe Real-Time Customer Data Platform B2B edition fornisce diverse [classi XDM (Experience Data Model) standard](../../xdm/schema/composition.md#class) che acquisiscono dettagli sulle entità di dati B2B essenziali, come account, opportunità, campagne e altro ancora. Inoltre, Real-Time CDP B2B edition consente di definire relazioni molti-a-uno tra questi schemi in modo che possano partecipare a casi di utilizzo di segmentazione avanzata.
 
 >[!IMPORTANT]
 >
->Per consentire agli schemi B2B di partecipare a [Profilo cliente in tempo reale](../../profile/home.md), è necessario avere accesso a Real-Time CDP B2B Edition.
+>Gli schemi B2B sono disponibili per l&#39;utilizzo nelle applicazioni Experience Platform, ad esempio in [Customer Journey Analytics B2B edition](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2b/cja-b2b-edition). <br/>È tuttavia necessario avere accesso a Real-Time CDP B2B edition per consentire agli schemi B2B (profili in) di partecipare a [Profilo cliente in tempo reale](../../profile/home.md).
 
-In Real-Time CDP B2B Edition sono disponibili le seguenti classi standard:
+In Real-Time CDP B2B edition sono disponibili le seguenti classi standard:
 
 * [Account aziendale XDM](../../xdm/classes/b2b/business-account.md)
 * [Relazione della persona dell’account aziendale XDM](../../xdm/classes/b2b/business-account-person-relation.md)
