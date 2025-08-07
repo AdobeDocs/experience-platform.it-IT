@@ -3,26 +3,26 @@ title: Endpoint API di scadenza set di dati
 description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ca6d7d257085da65b3f08376f0bd32e51e293533
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '2331'
 ht-degree: 2%
 
 ---
 
 # Endpoint di scadenza del set di dati
 
-L&#39;endpoint `/ttl` nell&#39;API di igiene dei dati consente di pianificare le date di scadenza per i set di dati in Adobe Experience Platform.
+Utilizza l&#39;endpoint `/ttl` nell&#39;API di igiene dei dati per pianificare l&#39;eliminazione dei set di dati in Adobe Experience Platform.
 
-La scadenza di un set di dati è solo un’operazione di eliminazione ritardata nel tempo. Il set di dati non è protetto nel frattempo, pertanto può essere cancellato con altri mezzi prima che sia raggiunta la sua scadenza.
+La scadenza di un set di dati è un’operazione di eliminazione ritardata. Il set di dati non è protetto nel frattempo e può essere eliminato in altro modo prima della scadenza pianificata.
 
 >[!NOTE]
 >
 >Sebbene la scadenza sia specificata come un momento specifico nel tempo, possono trascorrere fino a 24 ore dalla scadenza prima che venga avviata l’effettiva cancellazione. Una volta avviata l’eliminazione, possono essere necessari fino a sette giorni prima che tutte le tracce del set di dati siano state rimosse dai sistemi Experience Platform.
 
-In qualsiasi momento, prima che l’eliminazione del set di dati venga effettivamente avviata, puoi annullare la scadenza o modificarne l’ora di attivazione. Dopo aver annullato la scadenza di un set di dati, puoi riaprirlo impostando una nuova scadenza.
+Prima dell’inizio dell’eliminazione, puoi annullare la scadenza o modificarne l’ora pianificata. Per riaprire una scadenza annullata, impostare una nuova scadenza.
 
-Una volta avviata l&#39;eliminazione del set di dati, il relativo processo di scadenza verrà contrassegnato come `executing` e non potrà essere ulteriormente modificato. Il set di dati può essere recuperato per un massimo di sette giorni, ma solo tramite un processo manuale avviato tramite una richiesta di servizio Adobe. Durante l’esecuzione della richiesta, il data lake, Identity Service e Real-Time Customer Profile avviano processi separati per rimuovere i contenuti del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come `completed`.
+Una volta avviata l&#39;eliminazione, il processo di scadenza viene contrassegnato come `executing` e non può più essere modificato. Il set di dati può essere recuperabile per un massimo di sette giorni, ma solo tramite una richiesta manuale del servizio Adobe. Durante l’eliminazione, il data lake, Identity Service e Real-Time Customer Profile rimuovono ciascuno i contenuti del set di dati separatamente. Al termine dell&#39;eliminazione, la scadenza viene contrassegnata come `completed`.
 
 >[!WARNING]
 >
@@ -44,7 +44,9 @@ L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. 
 
 ## Elenca scadenze set di dati {#list}
 
-Per elencare tutte le scadenze dei set di dati per la tua organizzazione, devi eseguire una richiesta GET. I parametri di query possono essere utilizzati per filtrare la risposta in base ai risultati appropriati.
+È possibile elencare tutte le scadenze dei set di dati configurate per l&#39;organizzazione effettuando una richiesta GET all&#39;endpoint `/ttl`.
+
+Filtra i risultati utilizzando i parametri di query per restituire solo le scadenze che soddisfano i criteri. Ogni risultato include lo stato e i dettagli di configurazione per ogni scadenza del set di dati.
 
 **Formato API**
 
@@ -54,11 +56,20 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | Elenco di parametri di query facoltativi, con più parametri separati da `&` caratteri. I parametri comuni includono `limit` e `page` a scopo di impaginazione. Per un elenco completo dei parametri di query supportati, consulta la [sezione dell&#39;appendice](#query-params). |
+| `{QUERY_PARAMETERS}` | Elenco di parametri di query facoltativi, con più parametri separati da `&` caratteri. I parametri comuni includono `limit` e `page` a scopo di impaginazione. Per un elenco completo dei parametri di query supportati, fare riferimento alla [sezione dell&#39;appendice](#query-params) un elenco completo dei parametri di query supportati. I parametri più comunemente utilizzati sono riportati di seguito e anche nell’appendice. |
+| `author` | Filtra in base all’utente che ha aggiornato o creato la scadenza del set di dati più di recente. Supporta modelli di tipo SQL (ad esempio, `LIKE %john%`). |
+| `datasetId` | Filtra le scadenze per un ID set di dati specifico. |
+| `datasetName` | Filtro senza distinzione tra maiuscole e minuscole per le corrispondenze nei nomi dei set di dati. |
+| `status` | Filtra in base a un elenco di stati separati da virgole: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiryDate` | Filtra per le scadenze con una data di scadenza specifica. |
+| `limit` | Specifica il numero massimo di risultati da restituire (1-100, valore predefinito: 25). |
+| `page` | Impaginare i risultati con un indice basato su zero (dimensioni pagina predefinite: 50, max: 100). |
 
 {style="table-layout:auto"}
 
 **Richiesta**
+
+La richiesta seguente recupera tutte le scadenze del set di dati aggiornate prima del 1° agosto 2021 e aggiornate da ultimo da un utente il cui nome corrisponde a &quot;Jane Doe&quot;.
 
 ```shell
 curl -X GET \
@@ -81,15 +92,17 @@ In caso di esito positivo, la risposta elenca le scadenze risultanti del set di 
 {
   "results": [
     {
-      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-      "datasetId": "629bd9125b31471b2da7645c",
-      "datasetName": "Sample Acme dataset",
-      "sandboxName": "hygiene-beta",
-      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
+      "ttlId": "SD-c9f113f2-d751-44bc-bc20-9d5ca0b6ae15",
+      "datasetId": "3e9f815ae1194c65b2a4c5ea",
+      "datasetName": "Acme_Profile_Engagements",
+      "sandboxName": "acme-beta",
+      "displayName": "Engagement Data Retention Policy",
+      "description": "Scheduled expiry for Acme marketing data",
+      "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
       "status": "pending",
-      "expiry": "2050-01-01T00:00:00Z",
-      "updatedAt": "2023-06-09T16:52:44.136028Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
+      "expiry": "2027-01-12T17:15:31.000Z",
+      "updatedAt": "2026-12-15T12:40:20.000Z",
+      "updatedBy": "t.lannister@acme.com <t.lannister@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
     }
   ],
   "current_page": 0,
@@ -100,30 +113,43 @@ In caso di esito positivo, la risposta elenca le scadenze risultanti del set di 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `total_count` | Il conteggio delle scadenze del set di dati che corrispondono ai parametri della chiamata di elenco. |
-| `results` | Contiene i dettagli delle scadenze dei set di dati restituiti. Per ulteriori dettagli sulle proprietà di scadenza di un set di dati, consulta la sezione delle risposte per effettuare una [chiamata di ricerca](#lookup). |
+| `results` | Array delle configurazioni di scadenza dei set di dati. |
+| `ttlId` | L’identificatore univoco per la configurazione della scadenza del set di dati. |
+| `datasetId` | L’identificatore univoco del set di dati associato a questa configurazione. |
+| `datasetName` | Nome del set di dati. |
+| `sandboxName` | La sandbox in cui è configurata la scadenza di questo set di dati. |
+| `displayName` | Nome leggibile per la configurazione di scadenza. |
+| `description` | Una descrizione della configurazione di scadenza. |
+| `imsOrg` | L’identificatore univoco dell’organizzazione. |
+| `status` | Lo stato corrente della scadenza. Uno di: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | La data e l’ora di scadenza pianificata (formato ISO 8601). |
+| `updatedAt` | La marca temporale dell’ultimo aggiornamento a questa configurazione. |
+| `updatedBy` | L’identificatore e l’e-mail dell’utente o del servizio che ha aggiornato per ultimo la configurazione. |
+| `current_page` | Indice della pagina dei risultati corrente (basato su zero). |
+| `total_pages` | Numero totale di pagine di risultati disponibili. |
+| `total_count` | Numero totale di record di configurazione della scadenza del set di dati restituiti. |
 
 {style="table-layout:auto"}
 
 ## Cercare una scadenza del set di dati {#lookup}
 
-Per cercare la scadenza di un set di dati, effettua una richiesta GET con `{DATASET_ID}` o `{DATASET_EXPIRATION_ID}`.
+Recupera i dettagli per una specifica configurazione di scadenza del set di dati effettuando una richiesta GET con l’ID di scadenza del set di dati o l’ID del set di dati come parametro del percorso.
 
 >[!IMPORTANT]
 >
->Nella risposta, `{DATASET_EXPIRATION_ID}` è indicato come `ttlId`. Entrambi fanno riferimento all’identificatore univoco per la scadenza del set di dati.
+>È possibile fornire un ID di scadenza del set di dati (ad esempio, `SD-xxxxxx-xxxx`) o un ID del set di dati nel percorso. `ttlId` nella risposta è l&#39;identificatore univoco per la scadenza del set di dati.
 
 **Formato API**
 
 ```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}
+GET /ttl/{ID}
+GET /ttl/{ID}?include=history
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_ID}` | ID del set di dati di cui desideri cercare la scadenza. |
-| `{DATASET_EXPIRATION_ID}` | ID della scadenza del set di dati. |
+| `{ID}` | L’identificatore univoco per la configurazione della scadenza del set di dati. Puoi fornire un ID di scadenza del set di dati o un ID del set di dati. |
+| `include` | (Facoltativo) Se è impostato su `history`, la risposta include un array `history` con eventi di modifica per la configurazione. |
 
 {style="table-layout:auto"}
 
@@ -150,29 +176,29 @@ In caso di esito positivo, la risposta restituisce i dettagli della scadenza del
     "datasetId": "62759f2ede9e601b63a2ee14",
     "datasetName": "XtVRwq9-38734",
     "sandboxName": "prod",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2024-05-11T15:12:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
     "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
+    "imsOrg": "885737B25DC460C50A49411B@AdobeOrg",
+    "status": "pending",
+    "expiry": "2035-09-25T00:00:00Z",
+    "updatedAt": "2025-05-01T19:00:55.000Z",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
-| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
-| `datasetName` | Nome visualizzato del set di dati a cui si applica questa scadenza. |
-| `sandboxName` | Il nome della sandbox in cui si trova il set di dati di destinazione. |
-| `imsOrg` | ID organizzazione. |
-| `status` | Lo stato corrente della scadenza del set di dati. |
-| `expiry` | La data e l’ora pianificate in cui il set di dati verrà eliminato. |
-| `updatedAt` | Timestamp dell’ultimo aggiornamento della scadenza. |
-| `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
-| `displayName` | Nome visualizzato della richiesta di scadenza. |
-| `description` | Descrizione della richiesta di scadenza. |
+| `ttlId` | L’identificatore univoco per la configurazione della scadenza del set di dati. |
+| `datasetId` | L’identificatore univoco del set di dati. |
+| `datasetName` | Nome del set di dati. |
+| `sandboxName` | La sandbox in cui è configurata la scadenza del set di dati. |
+| `displayName` | Nome leggibile per la configurazione di scadenza del set di dati. |
+| `description` | Una descrizione della configurazione della scadenza del set di dati. |
+| `imsOrg` | L’identificatore organizzazione univoco associato a questa configurazione. |
+| `status` | Lo stato corrente della configurazione di scadenza del set di dati.<br>Uno di: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | La marca temporale di scadenza pianificata per il set di dati (formato ISO 8601). |
+| `updatedAt` | Timestamp dell’aggiornamento più recente. |
+| `updatedBy` | L’identificatore e l’e-mail dell’utente o del servizio che ha aggiornato per ultimo la scadenza del set di dati. |
 
 {style="table-layout:auto"}
 
@@ -180,7 +206,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della scadenza del
 
 Quando si utilizza l&#39;[API catalogo](../../catalog/api/getting-started.md) per cercare i dettagli del set di dati, se il set di dati ha una scadenza attiva verrà elencato in `tags.adobe/hygiene/ttl`.
 
-Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di dati dal catalogo, che ha un valore di scadenza di `32503680000000`. Il valore del tag codifica la scadenza come numero intero di millisecondi dall’inizio dell’epoca Unix.
+Il seguente JSON mostra una risposta Catalog API troncata per un set di dati con valore di scadenza `32503680000000`. Il tag codifica la scadenza come il numero di millisecondi trascorsi dall’epoca Unix.
 
 ```json
 {
@@ -200,11 +226,16 @@ Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di d
 
 ## Creare una scadenza del set di dati {#create}
 
-Per garantire che i dati vengano rimossi dal sistema dopo un determinato periodo, pianifica una scadenza per un set di dati specifico fornendo l’ID del set di dati e la data e l’ora di scadenza nel formato ISO 8601.
-
-Per creare una scadenza del set di dati, esegui una richiesta POST come mostrato di seguito e fornisci i valori menzionati di seguito all’interno del payload.
+Crea una nuova configurazione di scadenza del set di dati per definire quando scadrà un set di dati e se sarà idoneo per l’eliminazione.\
+Fornisci l’ID del set di dati, la data di scadenza o la data-ora (nel formato ISO 8601), un nome visualizzato e (facoltativamente) una descrizione.
 
 >[!NOTE]
+>
+>Il valore di scadenza può essere una data (AAAA-MM-GG) o una data e un&#39;ora (AAAA-MM-GGTHH:MM:SSZ). Se specifichi solo una data, il sistema utilizza la mezzanotte UTC (00:00:00Z) di quel giorno. La scadenza deve essere di almeno 24 ore nel futuro.
+
+Per creare una scadenza del set di dati, invia una richiesta POST come mostrato di seguito.
+
+>[!TIP]
 >
 >Se ricevi un errore 404, accertati che la richiesta non contenga ulteriori barre. Una barra finale può causare un errore nella richiesta POST.
 
@@ -219,68 +250,69 @@ POST /ttl
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/hygiene/ttl \
-  -H `Authorization: Bearer {ACCESS_TOKEN}`
-  -H `x-gw-ims-org-id: {ORG_ID}`
-  -H `x-api-key: {API_KEY}`
-  -H `Accept: application/json`
-  -d {
-      "datasetId": "5b020a27e7040801dedbf46e",
-      "expiry": "2030-12-31T23:59:59Z"
-      "displayName": "Delete Acme Data before 2025",
-      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
-      }
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "datasetId": "3e9f815ae1194c65b2a4c5ea",
+        "expiry": "2030-12-31",
+        "displayName": "Expiry rule for Acme customers",
+        "description": "Set expiration for Acme customer dataset"
+      }'
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `datasetId` | **Obbligatorio** ID del set di dati di destinazione per cui si desidera pianificare una scadenza. |
-| `expiry` | **Obbligatorio** Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito.<br>Nota:<ul><li>La richiesta non riuscirà se per il set di dati esiste già una scadenza del set di dati.</li><li>La data e l&#39;ora devono essere almeno **24 ore nel futuro**.</li></ul> |
-| `displayName` | Nome visualizzato facoltativo per la richiesta di scadenza del set di dati. |
-| `description` | Descrizione facoltativa della richiesta di scadenza. |
+| `datasetId` | **Obbligatorio.** Identificatore univoco del set di dati per applicare la scadenza. |
+| `expiry` | **Obbligatorio.** Data e ora di scadenza nel formato ISO 8601. Questo definisce la durata dei dati all’interno del sistema. Se viene fornita solo una data, il valore predefinito è mezzanotte UTC (00:00:00Z). La scadenza **deve essere di almeno 24 ore nel futuro**. <br>**NOTA**:<ul><li>La richiesta non riuscirà se per il set di dati esiste già una scadenza del set di dati.</li></ul> |
+| `displayName` | **Obbligatorio.** Nome leggibile per la configurazione di scadenza del set di dati. |
+| `description` | Descrizione facoltativa per la configurazione della scadenza del set di dati. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e il nuovo stato di scadenza del set di dati.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e la nuova configurazione di scadenza del set di dati.
 
 ```json
 {
-  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-  "datasetId":   "5b020a27e7040801dedbf46e",
-  "datasetName": "Acme licensed data",
-  "sandboxName": "prod",
-  "imsOrg":      "{ORG_ID}",
-  "status":      "pending",
-  "expiry":      "2030-12-31T23:59:59Z",
-  "updatedAt":   "2021-08-19T11:14:16Z",
-  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "displayName": "Delete Acme Data before 2031",
-  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+  "ttlId": "SD-2aaf113e-3f17-4321-bf29-a2c51152b042",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Expiry rule for Acme customers",
+  "description": "Set expiration for Acme customer dataset",
+  "imsOrg": "{ORG_ID}",
+  "status": "pending",
+  "expiry": "2030-12-31T00:00:00Z",
+  "updatedAt": "2025-01-02T10:35:45.000Z",
+  "updatedBy": "s.stark@acme.com <s.stark@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
-| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
-| `datasetName` | Nome visualizzato del set di dati a cui si applica questa scadenza. |
-| `sandboxName` | Il nome della sandbox in cui si trova il set di dati di destinazione. |
-| `imsOrg` | ID organizzazione. |
-| `status` | Lo stato corrente della scadenza del set di dati. |
-| `expiry` | La data e l’ora pianificate in cui il set di dati verrà eliminato. |
-| `updatedAt` | Timestamp dell’ultimo aggiornamento della scadenza. |
-| `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
-| `displayName` | Nome visualizzato per la richiesta di scadenza. |
-| `description` | Descrizione della richiesta di scadenza. |
+| `ttlId` | L’identificatore univoco per la configurazione di scadenza del set di dati creato. |
+| `datasetId` | L’identificatore univoco del set di dati. |
+| `datasetName` | Nome del set di dati. |
+| `sandboxName` | La sandbox in cui è configurata la scadenza di questo set di dati. |
+| `displayName` | Nome visualizzato per la configurazione di scadenza del set di dati. |
+| `description` | Una descrizione della configurazione della scadenza del set di dati. |
+| `imsOrg` | L’identificatore organizzazione univoco associato a questa configurazione. |
+| `status` | Lo stato corrente della configurazione di scadenza del set di dati.<br>Uno di: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | Il timestamp di scadenza pianificato per il set di dati. |
+| `updatedAt` | Il timestamp dell’aggiornamento più recente. |
+| `updatedBy` | L’identificatore e l’e-mail dell’utente o del servizio che ha aggiornato per ultimo la configurazione di scadenza del set di dati. |
 
-Se per il set di dati esiste già una scadenza, si verifica uno stato HTTP 400 (richiesta non valida). In caso di esito negativo, la risposta restituisce lo stato HTTP 404 (Non trovato) se non esiste una scadenza del set di dati (o se non disponi dell’accesso al set di dati).
+Se per il set di dati esiste già una scadenza, si verifica uno stato HTTP 400 (richiesta non valida). Lo stato HTTP 404 (Non trovato) si verifica se non esiste un set di dati o se non si dispone dell’accesso al set di dati.
 
-## Aggiornare la scadenza di un set di dati {#update}
+## Aggiornare una configurazione di scadenza del set di dati {#update}
 
-Per aggiornare una data di scadenza per un set di dati, utilizza una richiesta PUT e `ttlId`. È possibile aggiornare le informazioni di `displayName`, `description` e/o `expiry`.
+Per aggiornare una configurazione di scadenza di un set di dati esistente, effettuare una richiesta PUT a `/ttl/DATASET_EXPIRATION_ID`. È possibile aggiornare solo i campi `displayName`, `description` e `expiry` della configurazione. Gli aggiornamenti sono consentiti solo quando lo stato di scadenza è `pending`.
 
 >[!NOTE]
 >
->Se modifichi la data e l’ora di scadenza, devono trascorrere almeno 24 ore nel futuro. Questo ritardo forzato offre la possibilità di annullare o riprogrammare la scadenza ed evitare perdite accidentali di dati.
+>Il campo `expiry` accetta una data (AAAA-MM-GG) o una data e un&#39;ora (AAAA-MM-GG:MM:SSZ). Se viene fornita solo una data, il sistema utilizza la mezzanotte UTC (00:00:00Z) di quel giorno. La scadenza **deve essere di almeno 24 ore nel futuro**.
 
 **Formato API**
 
@@ -290,62 +322,70 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | ID della scadenza del set di dati che desideri modificare. Nota: nella risposta viene indicato come `ttlId`. |
+| `{DATASET_EXPIRATION_ID}` | L’identificatore univoco per la configurazione della scadenza del set di dati. **NOTA**: nella risposta viene indicato come `ttlId`. |
 
 **Richiesta**
 
-La richiesta seguente ripianifica la scadenza di un set di dati `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` in modo che avvenga alla fine del 2024 (ora di Greenwich). Se viene trovata la scadenza del set di dati esistente, tale scadenza viene aggiornata con il nuovo valore `expiry`.
+La richiesta seguente aggiorna la scadenza, il nome visualizzato e la descrizione per la scadenza del set di dati `SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45`:
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2024-12-31T23:59:59Z",
-        "displayName": "Delete Acme Data before 2025",
-        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+        "displayName": "Customer Dataset Expiry Rule",
+        "description": "Updated description for Acme customer dataset",
+        "expiry": "2031-06-15"
       }'
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `expiry` | **Obbligatorio** Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito. Eventuali marche temporali di scadenza precedenti per lo stesso set di dati devono essere sostituite dal nuovo valore di scadenza fornito. La data e l&#39;ora devono essere almeno **24 ore nel futuro**. |
-| `displayName` | Nome visualizzato per la richiesta di scadenza. |
-| `description` | Descrizione facoltativa della richiesta di scadenza. |
+| `displayName` | (Facoltativo) Nuovo nome leggibile per la configurazione di scadenza del set di dati. |
+| `description` | (Facoltativo) Nuova descrizione per la configurazione della scadenza del set di dati. |
+| `expiry` | (Facoltativo) Una nuova data di scadenza o data e ora nel formato ISO 8601. Se viene fornita solo una data, il valore predefinito è mezzanotte UTC. La scadenza deve essere **di almeno 24 ore nel futuro**. |
 
-{style="table-layout:auto"}
+>[!NOTE]
+>
+>Almeno uno di questi campi deve essere fornito nella richiesta.
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce il nuovo stato della scadenza del set di dati e uno stato HTTP 200 (OK) se è stata aggiornata una scadenza preesistente.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) e la configurazione di scadenza del set di dati aggiornata.
 
 ```json
 {
-    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-    "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+  "ttlId": "SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Updated description for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "pending",
+  "expiry": "2031-06-15T00:00:00Z",
+  "updatedAt": "2031-05-01T14:11:12.000Z",
+  "updatedBy": "b.tarth@acme.com <b.tarth@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `ttlId` | ID della scadenza del set di dati. |
-| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
-| `imsOrg` | ID organizzazione. |
-| `status` | Lo stato corrente della scadenza del set di dati. |
-| `expiry` | La data e l’ora pianificate in cui il set di dati verrà eliminato. |
-| `updatedAt` | Timestamp dell’ultimo aggiornamento della scadenza. |
-| `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
+| `ttlId` | L’identificatore univoco della configurazione di scadenza del set di dati aggiornato. |
+| `datasetId` | L’identificatore univoco del set di dati. |
+| `datasetName` | Nome del set di dati. |
+| `sandboxName` | La sandbox in cui è configurata la scadenza di questo set di dati. |
+| `displayName` | Nome visualizzato per la configurazione di scadenza del set di dati. |
+| `description` | Una descrizione della configurazione della scadenza del set di dati. |
+| `imsOrg` | L’ID organizzazione associato a questa configurazione. |
+| `status` | Lo stato corrente della configurazione di scadenza del set di dati.<br>Uno di: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | Il timestamp di scadenza pianificato per il set di dati. |
+| `updatedAt` | Il timestamp dell’aggiornamento più recente. |
+| `updatedBy` | L’identificatore e l’e-mail dell’utente o del servizio che ha aggiornato per ultimo la configurazione di scadenza del set di dati. |
 
 {style="table-layout:auto"}
 
@@ -353,31 +393,31 @@ In caso di esito negativo, la risposta restituisce lo stato HTTP 404 (Non trovat
 
 ## Annullare la scadenza di un set di dati {#delete}
 
-Per annullare la scadenza di un set di dati, devi eseguire una richiesta DELETE.
+Annullare una configurazione di scadenza di un set di dati in sospeso effettuando una richiesta DELETE a `/ttl/{ID}`.
 
 >[!NOTE]
 >
->È possibile annullare solo le scadenze dei set di dati con stato `pending`. Se si tenta di annullare una scadenza già annullata o eseguita, viene restituito un errore HTTP 404.
+>È possibile annullare solo le scadenze dei set di dati nello stato `pending`. Il tentativo di annullare una scadenza già `executing`, `completed` o `cancelled` restituisce HTTP 400 (richiesta non valida).
 
 **Formato API**
 
 ```http
-DELETE /ttl/{EXPIRATION_ID}
+DELETE /ttl/{ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXPIRATION_ID}` | `ttlId` della scadenza del set di dati che si desidera annullare. |
+| `{ID}` | L’identificatore univoco per la configurazione della scadenza del set di dati. Puoi fornire un ID di scadenza del set di dati o un ID del set di dati. |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-La richiesta seguente annulla la scadenza di un set di dati con ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
+La richiesta seguente annulla la scadenza di un set di dati con ID `SD-d4a7d918-283b-41fd-bfe1-4e730a613d21`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-d4a7d918-283b-41fd-bfe1-4e730a613d21 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -386,7 +426,71 @@ curl -X DELETE \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e l&#39;attributo `status` della scadenza è impostato su `cancelled`.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 (OK) e la configurazione della scadenza del set di dati annullata. L&#39;attributo `status` della scadenza non è impostato su `cancelled`.
+
+```json
+{
+  "ttlId": "SD-d4a7d918-283b-41fd-bfe1-4e730a613d21",
+  "datasetId": "5a9e2c68d3b24f03b55a91ce",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Cancelled expiry configuration for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "cancelled",
+  "expiry": "2032-02-28T00:00:00Z",
+  "updatedAt": "2032-01-15T08:27:31.000Z",
+  "updatedBy": "s.clegane@acme.com <s.clegane@acme.com> 5A9E2C68D3B24F03B55A91CE@acme.com"
+}
+```
+
+| Proprietà | Descrizione |
+|---|---|
+| `ttlId` | L’identificatore univoco della configurazione di scadenza del set di dati eliminato. |
+| `datasetId` | L’identificatore univoco del set di dati. |
+| `datasetName` | Nome del set di dati. |
+| `sandboxName` | La sandbox in cui è configurata la scadenza di questo set di dati. |
+| `displayName` | Nome visualizzato per la configurazione di scadenza del set di dati. |
+| `description` | Una descrizione della configurazione della scadenza del set di dati. |
+| `imsOrg` | L’identificatore organizzazione univoco associato a questa configurazione. |
+| `status` | Lo stato corrente della configurazione di scadenza del set di dati.<br>Uno di: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | Il timestamp di scadenza pianificato per il set di dati. |
+| `updatedAt` | Il timestamp dell’aggiornamento più recente. |
+| `updatedBy` | L’identificatore e l’e-mail dell’utente o del servizio che ha aggiornato per ultimo la configurazione di scadenza del set di dati. |
+
+**Esempio di risposta 400 (richiesta non valida)**
+
+Errore 400 durante il tentativo di annullare un set di dati con una configurazione di scadenza `executing`, `completed` o `cancelled`.
+
+```json
+{
+  "type": "http://ns.adobe.com/aep/errors/HYGN-3102-400",
+  "title": "The requested dataset already has an existing expiration. Additional detail: A TTL already exists for datasetId=686e9ca25ef7462aefe72c93",
+  "status": 400,
+  "report": {
+    "tenantInfo": {
+      "sandboxName": "prod",
+      "sandboxId": "not-applicable",
+      "imsOrgId": "{IMS_ORG_ID}"
+    },
+    "additionalContext": {
+      "Invoking Client ID": "acp_privacy_hygiene"
+    }
+  },
+  "error-chain": [
+    {
+      "serviceId": "HYGN",
+      "errorCode": "HYGN-3102-400",
+      "invokingServiceId": "acp_privacy_hygiene",
+      "unixTimeStampMs": 1754408150394
+    }
+  ]
+}
+```
+
+>[!NOTE]
+>
+>Errore 404 durante il tentativo di annullare la scadenza di un set di dati già `completed` o `cancelled`.
 
 ## Appendice
 
