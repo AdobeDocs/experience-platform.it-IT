@@ -18,7 +18,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > A seguito dell&#39;[aggiornamento interno](../../../release-notes/2025/july-2025.md#destinations) al servizio Destinazioni a partire da luglio 2025, potrebbe verificarsi un calo di **profili attivati** nei flussi di dati a [!DNL The Trade Desk].
-> > Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. Per informazioni dettagliate, consulta la sezione [mappatura obbligatoria](#mandatory-mappings) in questa pagina.
+> &#x200B;> Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. Per informazioni dettagliate, consulta la sezione [mappatura obbligatoria](#mandatory-mappings) in questa pagina.
 >
 >**Modifica:**
 >
