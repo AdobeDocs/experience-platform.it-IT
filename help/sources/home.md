@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1643'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Origine | Categoria | Tipo di acquisizione | Cloud |
 | --- | --- | --- | --- |
@@ -176,7 +176,7 @@ Per acquisire i dati dal database ad Experience Platform, puoi utilizzare le seg
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
 
