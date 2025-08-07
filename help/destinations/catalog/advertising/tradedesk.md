@@ -3,9 +3,9 @@ keywords: pubblicità; ufficio commerciale; ufficio commerciale di pubblicità
 title: La connessione a Trade Desk
 description: Trade Desk è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
+source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '1017'
 ht-degree: 3%
 
 ---
@@ -13,6 +13,23 @@ ht-degree: 3%
 # Connessione [!DNL The Trade Desk]
 
 ## Panoramica {#overview}
+
+
+>[!IMPORTANT]
+>
+> A seguito dell&#39;[aggiornamento interno](../../../release-notes/2025/july-2025.md#destinations) al servizio Destinazioni a partire da luglio 2025, potrebbe verificarsi un calo di **profili attivati** nei flussi di dati a [!DNL The Trade Desk].
+> > Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. Per informazioni dettagliate, consulta la sezione [mappatura obbligatoria](#mandatory-mappings) in questa pagina.
+>
+>**Modifica:**
+>
+>* Il mapping ECID (Experience Cloud ID) è ora **obbligatorio** per tutte le attivazioni di profilo.
+>* I profili senza mappatura ECID verranno **eliminati** dai flussi di dati di attivazione esistenti.
+>
+>**Operazioni da eseguire:**
+>
+>* Esamina i dati del pubblico per verificare che i profili abbiano valori ECID validi.
+>* Monitora le metriche di attivazione per verificare i conteggi dei profili previsti.
+
 
 Utilizzare questo connettore di destinazione per inviare i dati del profilo a [!DNL The Trade Desk]. Questo connettore invia dati all&#39;endpoint di prime parti [!DNL The Trade Desk]. L&#39;integrazione tra Adobe Experience Platform e [!DNL The Trade Desk] non supporta l&#39;esportazione dei dati nell&#39;endpoint di terze parti [!DNL The Trade Desk].
 
@@ -67,7 +84,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL The Trade Desk] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/it/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+>Se stai cercando di creare la tua prima destinazione con [!DNL The Trade Desk] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -121,7 +138,7 @@ Tutte le identità di destinazione descritte nella sezione [identità supportate
 * **ECID** (Experience Cloud ID)
 * **ID Trade Desk**
 
-Il mancato mapping di tutte le identità richieste impedirà l&#39;attivazione corretta del pubblico su [!DNL The Trade Desk]. Ogni identità ha uno scopo specifico nell’integrazione e tutte sono necessarie affinché la destinazione funzioni correttamente.
+Il mancato mapping di tutte le identità richieste impedisce il completamento del flusso di lavoro di attivazione. Ogni identità ha uno scopo specifico nell’integrazione e tutte sono necessarie affinché la destinazione funzioni correttamente.
 
 ![Schermata che mostra le mappature obbligatorie](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
