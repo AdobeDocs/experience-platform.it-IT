@@ -2,7 +2,7 @@
 description: Scopri come configurare le impostazioni di esportazione dei file per le destinazioni create con Destination SDK.
 title: Configurazione batch
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: a149e0b96b68c8ac61e355cf8605742feb4eec41
+source-git-commit: 8e7356bdc5692678e46a61b538d4b6748792a423
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 2%
@@ -95,7 +95,7 @@ I valori impostati qui vengono visualizzati nel passaggio [Pianifica esportazion
 | `defaultExportMode` | Enumerazione | Definisce la modalità di esportazione predefinita del file. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> Il valore predefinito è `DAILY_FULL_EXPORT`. Consulta la [documentazione sull&#39;attivazione batch](../../../ui/activate-batch-profile-destinations.md#scheduling) per informazioni dettagliate sulla pianificazione delle esportazioni di file. |
 | `allowedExportModes` | Elenco | Definisce le modalità di esportazione dei file disponibili per i clienti. Valori supportati:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Elenco | Definisce la frequenza di esportazione dei file disponibile per i clienti. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
-| `defaultFrequency` | Enumerazione | Definisce la frequenza di esportazione predefinita dei file. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Il valore predefinito è `DAILY`. |
+| `defaultFrequency` | Enumerazione | Definisce la frequenza di esportazione predefinita dei file. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> Il valore predefinito è `DAILY`. |
 | `defaultStartTime` | Stringa | Definisce l&#39;ora di inizio predefinita per l&#39;esportazione del file. Utilizza il formato file a 24 ore. Il valore predefinito è &quot;00:00&quot;. |
 | `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Richiesto*. Elenco delle macro di nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi dei file esportati (ID pubblico, nome organizzazione, data e ora di esportazione e altri). Quando si imposta `defaultFilename`, assicurarsi di evitare la duplicazione delle macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall’ordine in cui si definiscono le macro, nell’interfaccia utente di Experience Platform queste vengono sempre visualizzate nell’ordine presentato qui. <br><br> Se `defaultFilename` è vuoto, l&#39;elenco `allowedFilenameAppendOptions` deve contenere almeno una macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Richiesto*. Macro dei nomi di file predefiniti preselezionate che gli utenti possono deselezionare.<br><br> Le macro in questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
