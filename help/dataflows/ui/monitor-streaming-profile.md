@@ -5,7 +5,7 @@ exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
 workflow-type: tm+mt
 source-wordcount: '1820'
-ht-degree: 2%
+ht-degree: 20%
 
 ---
 
@@ -26,19 +26,19 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 >[!NOTE]
 >
->La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metriche di monitoraggio per l’acquisizione del profilo di streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitorare l’acquisizione del profilo di streaming"
->abstract="La dashboard di monitoraggio per i profili di streaming visualizza informazioni su velocità effettiva, tassi di acquisizione e latenza. Utilizza questo dashboard per visualizzare, comprendere e analizzare le metriche di elaborazione dei dati. dei profili di streaming in Experience Platform."
+>abstract="La dashboard di monitoraggio per i profili di streaming mostra informazioni su velocità effettiva, tassi di acquisizione e latenza. Utilizza questa dashboard per visualizzare, comprendere e analizzare le metriche di elaborazione dei dati. dei profili di streaming in Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_request_throughput"
->title="Velocità effettiva di richiesta"
+>title="Velocità effettiva della richiesta"
 >abstract="Questa metrica rappresenta il numero di eventi che entrano nel sistema di acquisizione al secondo."
 >text="Learn more in documentation"
 
@@ -88,7 +88,7 @@ Utilizza la tabella delle metriche per informazioni specifiche sui flussi di dat
 
 | Metrica | Descrizione | Dimensioni | Frequenza di misurazione |
 | --- | --- | --- | --- |
-| Velocità effettiva di richiesta | Questa metrica rappresenta il numero di eventi che entrano nel sistema di acquisizione al secondo. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
+| Velocità effettiva della richiesta | Questa metrica rappresenta il numero di eventi che entrano nel sistema di acquisizione al secondo. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
 | Velocità effettiva di elaborazione | Questa metrica rappresenta il numero di eventi correttamente acquisiti dal sistema ogni secondo. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
 | Latenza di acquisizione P95 | Questa metrica misura la latenza del 95° percentile dal momento in cui un evento arriva in Experience Platform al momento in cui viene correttamente acquisito nell’archivio Profili. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
 | Velocità effettiva massima | Questa metrica rappresenta il numero massimo di richieste in entrata al secondo che entrano nell’acquisizione del profilo di streaming | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> |

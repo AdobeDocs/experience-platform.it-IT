@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
 workflow-type: tm+mt
 source-wordcount: '5188'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -58,7 +58,7 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -129,8 +129,8 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
->title="Pubblico esterno"
->abstract="I tipi di pubblico importati tramite la scheda Tipi di pubblico ora vengono visualizzati automaticamente tramite Audience Portal. I tipi di pubblico acquisiti da Audience Manager, Customer Journey Analytics, Segment Match e altre integrazioni personalizzate sono immediatamente disponibili, senza prima effettuare la configurazione in Segment Builder. A partire dal 1° settembre 2025, tutti i tipi di pubblico vengono recuperati esclusivamente tramite Ricerca unificata e il flusso di lavoro precedente non è più supportato."
+>title="Tipi di pubblico esterni"
+>abstract="I tipi di pubblico importati tramite la scheda Tipi di pubblico ora vengono visualizzati automaticamente tramite Audience Portal. I tipi di pubblico acquisiti da Audience Manager, Customer Journey Analytics, Segment Match e altre integrazioni personalizzate sono immediatamente disponibili, senza la necessità di configurarli in Generatore di segmenti. A partire dal 1° settembre 2025, tutti i tipi di pubblico verranno recuperati esclusivamente tramite Ricerca unificata e il flusso di lavoro precedente non è più supportato."
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce d
 >[!NOTE]
 >
 >Quando si utilizza il vincolo di tempo &quot;After&quot; (Dopo), quest’ultimo evento può verificarsi più del tempo elencato all’interno del vincolo di tempo. >
->&#x200B;>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
+>>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
 >
 >Inoltre, questi due vincoli temporali possono essere utilizzati in coordinamento tra loro.
 >

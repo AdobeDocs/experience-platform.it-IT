@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
@@ -15,21 +15,21 @@ In Adobe Experience Platform, le funzionalità ti informano se l’organizzazion
 
 Per ulteriori informazioni sui guardrail in Experience Platform, leggere la [panoramica sui guardrail di Real-Time CDP](../../rtcdp/guardrails/overview.md).
 
-## Comportamento capacità {#behavior}
+## Comportamento della capacità {#behavior}
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Velocità effettiva di streaming"
->abstract="Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel servizio Profilo, nelle sandbox di produzione e sviluppo."
+>abstract="Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel servizio Profilo e nelle sandbox di produzione e sviluppo."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
 >title="Conteggio del pubblico in streaming"
->abstract="Numero massimo di tipi di pubblico in streaming per sandbox. Questo numero include il numero di tipi di pubblico Edge disponibili nella sandbox."
+>abstract="Numero massimo di tipi di pubblico in streaming per sandbox. Questo numero è comprensivo del numero di tipi di pubblico Edge disponibili nella sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
->title="Tipi di pubblico di Edge"
+>title="Tipi di pubblico Edge"
 >abstract="Numero massimo di tipi di pubblico Edge per sandbox."
 
 Attualmente, Capacity supporta i seguenti servizi:

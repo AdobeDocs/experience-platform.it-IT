@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
 source-wordcount: '1280'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -54,7 +54,7 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Nome account"
->abstract="Immetti un nome che ti aiuterà a riconoscere facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni alla stessa destinazione."
+>abstract="Immetti un nome che ti aiuterà a riconoscere facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se hai più connessioni per la stessa destinazione."
 
 Il primo passaggio nella connessione a una destinazione consiste nell’eseguire l’autenticazione nella piattaforma di destinazione.
 
@@ -62,7 +62,7 @@ A seconda della destinazione a cui ti stai connettendo, è possibile che venga v
 
 Quando si imposta una nuova connessione di destinazione, è necessario fornire un **[!UICONTROL nome account]** e, facoltativamente, una **[!UICONTROL descrizione]**. Questi campi sono disponibili per tutte le destinazioni.
 
-* **[!UICONTROL Nome account]**: immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se disponi di più connessioni alla stessa destinazione.
+* **[!UICONTROL Nome account]**: immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se hai più connessioni per la stessa destinazione.
 * **[!UICONTROL Descrizione]** (facoltativo): aggiungi ulteriori dettagli che possano aiutare te o il tuo team a distinguere gli account, ad esempio lo scopo della connessione o il contesto di business pertinente.
 
 L’immissione di informazioni chiare e descrittive in questi campi facilita la gestione e la selezione dell’account di destinazione corretto durante l’attivazione dei tipi di pubblico.
