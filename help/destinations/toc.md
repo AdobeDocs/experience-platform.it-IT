@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: b5f28a2df411d3aa99bc2714a4e2bb569c16dda1
+source-git-commit: d410471658d27e84453fabaebba698ef0530afe4
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1311'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 6%
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esporta set di dati](/help/destinations/api/export-datasets.md)
-   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=it#use-cases)
+   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
@@ -48,6 +48,7 @@ ht-degree: 6%
       * [Attivare il pubblico dell’account nelle destinazioni](./ui/activate-account-audiences.md)
       * [Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](./ui/export-file-now.md)
       * [Esportare i set di dati utilizzando l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
+      * [Estendere le pianificazioni di esportazione dei set di dati per i flussi di dati creati prima di novembre 2024](./ui/dataset-expiration-update.md)
       * [(Beta) Utilizza l’ultimo attributo XDM del tempo di qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
       * [Esportare array, mappe e oggetti](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Eseguire trasformazioni sui dati esportati nelle destinazioni di archiviazione cloud](/help/destinations/ui/data-transformations-calculated-fields.md)
@@ -68,7 +69,7 @@ ht-degree: 6%
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Connessione Marketo Engage Person Sync](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it)
+      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni di Advertising{#advertising}
       * [(Beta) Distribuzione del pubblico di Acxiom](./catalog/advertising/acxiom-audience-distribution.md)
