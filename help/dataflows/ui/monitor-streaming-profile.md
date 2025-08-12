@@ -2,10 +2,10 @@
 title: Monitorare l’acquisizione del profilo di streaming
 description: Scopri come utilizzare la dashboard di monitoraggio per monitorare l’acquisizione del profilo di streaming
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
+source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 20%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 >[!NOTE]
 >
->La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metriche di monitoraggio per l’acquisizione del profilo di streaming {#streaming-profile-metrics}
 
@@ -197,6 +197,28 @@ Se il limite corrente di **1.500 eventi al secondo** non è sufficiente, è cons
 | Acquisizione di dati non necessaria | L’acquisizione di dati non necessari per la personalizzazione aumenta la velocità effettiva senza aggiungere valore e sprecare risorse. Ad esempio, acquisendo in profili tutto il traffico di Analytics, indipendentemente dalla rilevanza. | L’eccesso di dati non rilevanti crea rumore, rendendo più difficile l’identificazione dei punti di dati con impatto. Può anche causare attriti durante la definizione e la gestione di tipi di pubblico e profili. | Acquisisci solo i dati necessari per i tuoi casi d’uso. Assicurati di filtrare i dati non necessari.<ul><li>**Adobe Analytics**: utilizza [filtro a livello di riga](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) per ottimizzare l&#39;immissione di dati.</li><li>**Origini**: utilizza l&#39;API [[!DNL Flow Service] API per filtrare i dati a livello di riga](../../sources/tutorials/api/filter.md) per le origini supportate come [!DNL Snowflake] e [!DNL Google BigQuery].</li></li>**Stream dati di Edge**: configura [flussi dati dinamici](../../datastreams/configure-dynamic-datastream.md) per eseguire il filtro a livello di riga del traffico in arrivo da WebSDK.</li></ul> |
 
 {style="table-layout:auto"}
+
+### Domande frequenti {#faq}
+
+Leggi questa sezione per le risposte alle domande più frequenti sul monitoraggio dell’acquisizione del profilo di streaming.
+
+#### Perché le metriche sono diverse tra le dashboard Capacità e Monitoraggio per la velocità effettiva delle richieste?
+
++++Risposta
+
+Il dashboard [!UICONTROL Monitoraggio] mostra le metriche in tempo reale per l&#39;acquisizione e l&#39;elaborazione. Questi numeri sono metriche esatte registrate al momento dell’attività. Al contrario, il dashboard [!UICONTROL Capacità] utilizza un meccanismo di arrotondamento per il calcolo della capacità di throughput. Questo meccanismo consente di ridurre picchi di breve durata derivanti dalla qualificazione istantanea come violazioni e garantisce che gli avvisi di capacità si concentrino su tendenze sostenute, anziché su picchi momentanei.
+
+A causa del meccanismo di lisciatura, potrebbe notare:
+
+* Piccoli picchi in [!UICONTROL Monitoraggio] non visualizzati in [!UICONTROL Capacità].
+* Valori leggermente inferiori in [!UICONTROL Capacità] rispetto a [!UICONTROL Monitoraggio] nello stesso timestamp.
+
+Le due dashboard sono accurate, ma sono progettate per scopi diversi.
+
+* [!UICONTROL Monitoraggio]: visibilità operativa dettagliata, momento per momento.
+* [!UICONTROL Capacità]: vista strategica per l&#39;identificazione dei pattern di utilizzo e di violazione.
+
++++
 
 ## Passaggi successivi {#next-steps}
 
