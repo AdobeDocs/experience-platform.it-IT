@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Adobe Content Analytics
 description: Scopri l’estensione tag Adobe Content Analytics in Adobe Experience Platform.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45ce2b0ff57155dccef2f7c94390a6ddff5c17cd
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -19,28 +19,26 @@ Questo documento spiega come configurare l’estensione tag nell’interfaccia u
 
 ## Installare l’estensione tag Adobe Content Analytics {#install}
 
->[!NOTE]
->
->L&#39;estensione tag Adobe Content Analytics viene installata automaticamente come parte della proprietà tag creata automaticamente quando si utilizza la [configurazione guidata di Content Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"}.
+L&#39;estensione tag Adobe Content Analytics viene installata automaticamente come parte della proprietà tag creata automaticamente quando si utilizza la [configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided).
 
+<!--
+### Manual installation
 
-### Installazione manuale
+In case of a manual configuration, the Adobe Content Analytics tag extension needs a property to be installed on. If you have not done so already, see the documentation on [creating a tag property](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-In caso di configurazione manuale, l’estensione tag Adobe Content Analytics deve essere installata su. Se non lo hai già fatto, consulta la documentazione su [creazione di una proprietà tag](https://experienceleague.adobe.com/it/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
+After you have created a property or when you select the property created using the [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided), open the property and select the **[!UICONTROL Extensions]** tab on the left side bar.
 
-Dopo la creazione di una proprietà o quando si seleziona la proprietà creata mediante la [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/content-analytics/configuration/guided), aprire la proprietà e selezionare la scheda **[!UICONTROL Estensioni]** sulla barra laterale sinistra.
+Select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the **[!DNL Adobe Content Analytics]** extension and select **[!UICONTROL Install]**.
 
-Selezionare la scheda **[!UICONTROL Catalogo]**. Nell&#39;elenco delle estensioni disponibili, trovare l&#39;estensione **[!DNL Adobe Content Analytics]** e selezionare **[!UICONTROL Installa]**.
+![Image showing the Tags UI with the Web SDK extension selected](assets/aca-tag-install.png)
 
-![Immagine che mostra l&#39;interfaccia utente dei tag con l&#39;estensione Web SDK selezionata](assets/aca-tag-install.png)
-
-Dopo aver selezionato **[!UICONTROL Installa]**, è necessario configurare l&#39;estensione tag Adobe Content Analytics e salvare la configurazione.
-
+After selecting **[!UICONTROL Install]**, you must configure the Adobe Content Analytics tag extension and save the configuration.
+-->
 
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/it/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -52,7 +50,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Configurare i flussi di dati
 
-La [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/content-analytics/configuration/guided) seleziona automaticamente il valore corretto per **[!UICONTROL Sandbox]** e **[!UICONTROL Production Datastream]**. Facoltativamente, puoi configurare un ulteriore **[!UICONTROL stream di dati di staging]** e **[!UICONTROL stream di dati di sviluppo]**.
+La [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) seleziona automaticamente il valore corretto per **[!UICONTROL Sandbox]** e **[!UICONTROL Production Datastream]**. Facoltativamente, puoi configurare un ulteriore **[!UICONTROL stream di dati di staging]** e **[!UICONTROL stream di dati di sviluppo]**.
 
 ![Immagine che mostra la configurazione Datastreams dell&#39;estensione tag Adobe Content Analytics nell&#39;interfaccia utente Tag](assets/aca-tag-datastreams.png)
 
@@ -63,7 +61,7 @@ Puoi sovrascrivere i valori selezionati automaticamente per **[!UICONTROL Sandbo
 >Quando configuri un’altra sandbox e altri flussi di dati, assicurati che
 >
 >* la sandbox selezionata non è già associata a un’altra configurazione Content Analytics e
->* qualsiasi stream di dati selezionato dispone del servizio Experience Platform configurato con un set di dati evento esperienza di Content Analytics abilitato.
+>* per qualsiasi stream di dati selezionato, il servizio Experience Platform è configurato con un set di dati evento esperienza Content Analytics abilitato.
 
 Per informazioni su come configurare uno stream di dati, consulta la guida sugli [stream di dati](../../../../datastreams/overview.md).
 
@@ -83,7 +81,7 @@ Utilizza ![Chiudi](./assets/CrossSize300.svg) per eliminare i singoli parametri,
 
 ## Configurare il filtro degli eventi
 
-Nella sezione **[!UICONTROL Filtro eventi]**, puoi modificare le espressioni regolari per filtrare **[!UICONTROL URL di pagina]** e **[!UICONTROL URL di Assets]** durante la raccolta di dati per Content Analytics. Le espressioni regolari definite nella [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/content-analytics/configuration/guided) vengono popolate automaticamente.
+Nella sezione **[!UICONTROL Filtro eventi]**, puoi modificare le espressioni regolari per filtrare **[!UICONTROL URL di pagina]** e **[!UICONTROL URL di Assets]** durante la raccolta di dati per Content Analytics. Le espressioni regolari definite nella [Configurazione guidata di Content Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) vengono popolate automaticamente.
 
 ![Immagine che mostra le impostazioni di filtro degli eventi dell&#39;estensione tag Adobe Content Analytics nell&#39;interfaccia utente Tag](assets/aca-tag-eventfiltering.png)
 
