@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze clienti personalizzate in tempo reale con guide, documentazione e tutorial.
-source-git-commit: 77b542e98e1c58e1d6f63b15b4daa6129d92c94a
+source-git-commit: 9df876a730cc1568162f3353bc75258c5ce0e3dd
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 29%
@@ -17,7 +17,7 @@ ht-degree: 29%
 * [Panoramica di Experience Platform (video)](video/platform-overview.md)
 * [Panoramica su più cloud](multi-cloud.md)
 * [Confronto tra rete Edge e hub](./edge-and-hub-comparison.md)
-* [Tutorial su Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it)
+* [Tutorial su Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Esperienza del cliente basata su Experience Platform (video)](video/customer-experience.md)
 * [Dietro le quinte di un’esperienza del cliente basata su Experience Platform (video)](video/customer-experience-bts.md)
 * Introduzione {#getting-started}
@@ -43,12 +43,12 @@ ht-degree: 29%
    * [Supporto delle lingue](documentation/language-support.md)
 * Applicazioni basate su Experience Platform {#ecosystem}
    * [Panoramica](application-services.md)
-   * [Adobe Real-Time Customer Data Platform (tutte le edizioni)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=it)
+   * [Adobe Real-Time Customer Data Platform (tutte le edizioni)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Applicazione e Intelligent Services (video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=it)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=it)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=it)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Integrazioni di Experience Platform con Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Governance, privacy e sicurezza {#governance-privacy-security}
    * [Panoramica](./governance-privacy-security/overview.md)
@@ -80,13 +80,13 @@ ht-degree: 29%
          * [Utilizzare l’interfaccia utente per configurare la CMK su AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
       * [Riferimento risoluzione avvisi CMK](./governance-privacy-security/customer-managed-keys/alert-resolution-reference.md)
 * Utilizzo delle licenze e guardrail {#license}
-   * [Best practice per l&#39;adesione alle licenze di gestione dati](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [Best practice per l’adesione alle licenze di gestione dati](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard utilizzo licenze](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Utilizzo e capacità della licenza](./license-usage-and-guardrails/capacity.md)
    * [Volume totale dei dati](./license-usage-and-guardrails/total-data-volume.md)
-   * [Guardrail Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=it)
-   * [Guardrail Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=it)
-   * [Guardrail Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=it)
+   * [Guardrail Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Guardrail Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Guardrail Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
 * [Migrazione del data lake di generazione 2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
