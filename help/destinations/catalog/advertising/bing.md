@@ -3,9 +3,9 @@ keywords: pubblicità; bing;
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in tutta la rete Microsoft Advertising, inclusi display advertising, search e native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '981'
 ht-degree: 10%
 
 ---
@@ -13,6 +13,28 @@ ht-degree: 10%
 # Connessione [!DNL Microsoft Bing] {#bing-destination}
 
 ## Panoramica {#overview}
+
+
+>[!IMPORTANT]
+>
+>* A partire dal martedì 11 agosto 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL Microsoft Bing]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL Microsoft Bing]** esistente è stato rinominato in **[!UICONTROL (obsoleto) Microsoft Bing]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Microsoft Bing]**.
+>* Utilizza la nuova connessione **[!UICONTROL Microsoft Bing]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione **[!UICONTROL (obsoleto) Microsoft Bing]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente.
+>* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
+>   * Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
+>   * Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>
+> In seguito a questo aggiornamento, potrebbe verificarsi un calo di **del numero di profili attivati** nei flussi di dati a [!DNL Microsoft Bing].
+> > Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. Per informazioni dettagliate, consulta la sezione [mappatura obbligatoria](#mandatory-mappings) in questa pagina.
+>
+>**Modifica:**
+>
+>* Il mapping ECID (Experience Cloud ID) è ora **obbligatorio** per tutte le attivazioni di profilo.
+>* I profili senza mappatura ECID verranno **eliminati** dai flussi di dati di attivazione esistenti.
+>
+>**Operazioni da eseguire:**
+>
+>* Esamina i dati del pubblico per verificare che i profili abbiano valori ECID validi.
+>* Monitora le metriche di attivazione per verificare i conteggi dei profili previsti.
 
 Utilizzare la destinazione [!DNL Microsoft Bing] per inviare i dati del profilo all&#39;intero [!DNL Microsoft Advertising Network], inclusi [!DNL Display Advertising], [!DNL Search] e [!DNL Native].
 
@@ -31,6 +53,7 @@ In qualità di addetto al marketing, desidero poter utilizzare i tipi di pubblic
 | Identità | Descrizione |
 |---|---|
 | DOMESTICA | MICROSOFT ADVERTISING ID |
+| ECID | ID Experience Cloud. Questa identità è obbligatoria per il corretto funzionamento dell’integrazione, ma non viene utilizzata per l’attivazione del pubblico. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +85,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL Microsoft Bing] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL Microsoft Bing] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+>Se stai cercando di creare la tua prima destinazione con [!DNL Microsoft Bing] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL Microsoft Bing] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 Durante la configurazione della destinazione, devi fornire le seguenti informazioni:
 
@@ -106,6 +129,15 @@ Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione,
 Nel passaggio [Pianificazione pubblico](../../ui/activate-segment-streaming-destinations.md#scheduling), devi mappare manualmente il nome del pubblico nel campo [!UICONTROL ID mappatura]. In questo modo i metadati del pubblico verranno trasmessi correttamente a [!DNL Bing].
 
 ![Immagine dell&#39;interfaccia utente che mostra la schermata di pianificazione del pubblico con un esempio di come mappare il nome del pubblico all&#39;ID di mappatura Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### Mappature obbligatorie {#mandatory-mappings}
+
+Tutte le identità di destinazione descritte nella sezione [identità supportate](#supported-identities) sono obbligatorie e devono essere mappate durante il processo di attivazione del pubblico. Ciò include:
+
+* **MAID** (Microsoft Advertising ID)
+* **ECID** (Experience Cloud ID)
+
+Il mancato mapping di tutte le identità richieste impedisce il completamento del flusso di lavoro di attivazione. Ogni identità ha uno scopo specifico nell’integrazione e tutte sono necessarie affinché la destinazione funzioni correttamente.
 
 ## Dati esportati {#exported-data}
 
