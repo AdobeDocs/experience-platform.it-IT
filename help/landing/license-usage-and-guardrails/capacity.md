@@ -2,7 +2,7 @@
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: b65765d8e93b13fbb3c2a3e44f47725b936223eb
+source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -59,7 +59,7 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
-La capacità effettiva si trova a un livello **organizzazione** e può essere distribuita alle singole sandbox. Ad esempio, con 1500 rps per la velocità effettiva di segmentazione in streaming, puoi impostare la sandbox di produzione su 1500 rps e la sandbox di sviluppo su 150 rps.
+La capacità effettiva si trova a un livello **organizzazione** e può essere distribuita alle singole sandbox. Ad esempio, con 1500 rps per la velocità effettiva di segmentazione in streaming, puoi impostare la sandbox di produzione su 1350 rps e la sandbox di sviluppo su 150 rps.
 
 Experience Platform calcola la velocità effettiva della sandbox in intervalli di rotazione di 15 minuti. Questo throughput viene misurato in tempo reale, con i dati aggiornati ogni 60 secondi.
 
