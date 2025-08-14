@@ -4,10 +4,10 @@ description: Un’anteprima delle ultime note sulla versione di Adobe Experience
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
+source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 34%
+source-wordcount: '1074'
+ht-degree: 35%
 
 ---
 
@@ -53,28 +53,31 @@ Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insigh
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
+>[!IMPORTANT]
+>
+>**Estensione pianificazione esportazione set di dati**
+>
+>Se nell&#39;organizzazione sono presenti flussi di dati di esportazione del set di dati creati prima di novembre 2024, questi flussi di dati cesseranno di funzionare il **1 settembre 2025**. Se i flussi di dati sono necessari per continuare a esportare dati dopo il 1° settembre 2025, è necessario estendere le pianificazioni per ogni destinazione in cui si esportano i set di dati, seguendo i passaggi descritti in [questa guida](../destinations/ui/dataset-expiration-update.md).
+
 **Nuove destinazioni**
 
 | Destinazione | Descrizione |
 | --- | --- |
 | [!DNL Acxiom Real ID Audience] destinazione | Utilizza la destinazione [!DNL Acxiom Real ID Audience Connection] per migliorare i tipi di pubblico con la tecnologia [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) e attivare i tipi di pubblico su più piattaforme, ad esempio [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora. |
 
-
 **Destinazioni aggiornate**
 
 | Destinazione | Descrizione |
 | --- | --- |
-| Dettagli scadenza autenticazione per [!DNL LinkedIn] destinazioni | Non preoccuparti più delle credenziali scadute. Le informazioni sulla scadenza dell&#39;account sono ora visibili direttamente nell&#39;interfaccia di Experience Platform, quindi puoi vedere quando scadrà l&#39;autenticazione [!DNL LinkedIn] e rinnovarla prima che causi interruzioni ai flussi di dati. |
+| Dettagli scadenza autenticazione per [!DNL LinkedIn] e [!DNL Pinterest] destinazioni | Le informazioni sulla scadenza dell&#39;account sono ora visibili direttamente nell&#39;interfaccia di Experience Platform, quindi puoi vedere quando scadrà l&#39;autenticazione [!DNL LinkedIn] e [!DNL Pinterest] e rinnovarla prima che causi interruzioni ai flussi di dati. |
 | Supporto crittografia per [!DNL Data Landing Zone] destinazioni | Protezione dei dati esportati con crittografia. È ora possibile allegare chiavi pubbliche in formato RSA per crittografare i file esportati, garantendo lo stesso livello di sicurezza fornito da altre destinazioni di archiviazione cloud per le informazioni riservate. |
 | Aggiornamento interno di [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) | A partire dal martedì 11 agosto 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL Microsoft Bing]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL Microsoft Bing]** esistente è stato rinominato in **[!UICONTROL (obsoleto) Microsoft Bing]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Microsoft Bing]**. Utilizza la nuova connessione **[!UICONTROL Microsoft Bing]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione **[!UICONTROL (obsoleto) Microsoft Bing]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente. <br><br>Se stai creando flussi di dati tramite [API Flow Service ](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare l’[!DNL flow spec ID] e l’[!DNL connection spec ID] ai seguenti valori:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> In seguito a questo aggiornamento, potrebbe verificarsi un calo di **del numero di profili attivati** nei flussi di dati a [!DNL Microsoft Bing]. Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. |
-| Identificatori aggiuntivi per [!DNL Amazon Ads] destinazioni | La destinazione di Amazon Ads ora supporta le nuove identità (`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`). Questi campi hanno lo scopo di migliorare le percentuali di corrispondenza del pubblico e vengono trasmessi in testo normale, con hashing SHA256 facoltativo. |
 | Consolidamento di [!DNL Marketo] schede di destinazione | Semplifica la configurazione della destinazione [!DNL Marketo] con la scheda di destinazione unificata. Abbiamo consolidato [!DNL Marketo] schede V2 e V3 in un&#39;unica opzione semplificata, semplificando la scelta della destinazione giusta e consentendo di iniziare rapidamente. |
 
 **Funzionalità nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Estendere le pianificazioni di esportazione dei set di dati per i flussi di dati creati prima di novembre 2024 | Se nell’organizzazione sono presenti flussi di dati di esportazione del set di dati creati prima di novembre 2024, questi flussi di dati cesseranno di funzionare il 1° settembre 2025. Se i flussi di dati sono necessari per continuare a esportare dati dopo il 1° settembre 2025, è necessario estendere le pianificazioni per ogni destinazione in cui si esportano i set di dati, seguendo i passaggi descritti in [questa guida](../destinations/ui/dataset-expiration-update.md). |
 | Funzionalità avanzate di ricerca, filtro e assegnazione di tag per le destinazioni | Migliora il flusso di lavoro di gestione della destinazione con funzionalità avanzate di ricerca, filtro e assegnazione di tag nelle schede Sfoglia e Account. Ora puoi cercare flussi di dati e account specifici per nome, filtrare in base a vari criteri, tra cui piattaforma di destinazione, stato e date, e creare tag personalizzati per organizzare le destinazioni. L’ordinamento a colonne è disponibile anche per campi chiave come l’ultimo runtime del flusso di dati, facilitando l’identificazione e la gestione delle connessioni di destinazione. |
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../destinations/home.md).
