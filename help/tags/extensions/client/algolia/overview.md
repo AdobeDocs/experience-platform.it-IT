@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione tag in Algolia
 description: Scopri l’estensione Tag per Algolia in Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 24d2dc76fc4208f8e1555d90fd3c3ef2cf55643e
+source-git-commit: 904200c5d3ef2be58582e4679109390e8d4aebc1
 workflow-type: tm+mt
-source-wordcount: '1635'
-ht-degree: 2%
+source-wordcount: '1977'
+ht-degree: 1%
 
 ---
 
@@ -42,12 +42,12 @@ Nella vista di configurazione visualizzata, è necessario fornire i dettagli seg
 
 | Proprietà | Descrizione |
 | --- | --- |
-| ID applicazione | Immetti l&#39;[!UICONTROL ID applicazione] raccolto in precedenza nella sezione [dettagli configurazione](#configuration-details). |
-| Chiave API di ricerca | Immetti la [!UICONTROL Chiave API di ricerca] raccolta in precedenza nella sezione [dettagli configurazione](#configuration-details). |
-| Nome indice | Il [!UICONTROL Nome indice] contiene i prodotti o il contenuto.  Questo indice verrà utilizzato come valore predefinito. |
-| Elemento dati token utente | Elemento dati che restituirà il token utente. |
-| Elemento dati token utente autenticato | Imposta l’elemento dati che restituirà il token utente autenticato. |
-| Valuta | Selezionare un tipo di valuta.  Il valore predefinito è `USD`. |
+| [!UICONTROL ID applicazione] | Immetti l&#39;[!UICONTROL ID applicazione] raccolto in precedenza nella sezione [dettagli configurazione](#configuration-details). |
+| [!UICONTROL Chiave API di ricerca] | Immetti la [!UICONTROL Chiave API di ricerca] raccolta in precedenza nella sezione [dettagli configurazione](#configuration-details). |
+| [!UICONTROL Nome indice] | Il [!UICONTROL Nome indice] contiene i prodotti o il contenuto.  Questo indice verrà utilizzato come valore predefinito. |
+| [!UICONTROL Elemento dati token utente] | Elemento dati che restituirà il token utente. |
+| [!UICONTROL Elemento dati token utente autenticato] | Imposta l’elemento dati che restituirà il token utente autenticato. |
+| [!UICONTROL Valuta] | Selezionare un tipo di valuta. Il valore predefinito è `USD`. |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -80,13 +80,14 @@ Aggiungi l&#39;azione **[!UICONTROL Clic]** alla regola di tag per inviare gli e
 | Proprietà | Descrizione |
 | --- | --- |
 | [!UICONTROL Nome evento] | Il Nome evento che può essere utilizzato per perfezionare ulteriormente questo evento di clic. |
-| Elemento dati Dettagli evento | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facoltativo)</li><li>`position` (facoltativo)</li></ul> |
+| [!UICONTROL Elemento dati dettagli evento] | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facoltativo)</li><li>`position` (facoltativo)</li></ul> |
+| [!UICONTROL Elemento dati ID record] | L&#39;ID record viene utilizzato come chiave per i dati dell&#39;evento archiviati nell&#39;archivio del browser durante un evento `click`. Per impostazione predefinita, l’URL della pagina funge da ID record. Per ignorare questo comportamento, utilizza questa proprietà per fornire un elemento dati che restituisca l’ID record come stringa. |
 
 >[!NOTE]
 >
 >Se sono inclusi sia `queryID` che `position`, l&#39;evento viene classificato come **ID oggetto selezionati dopo la ricerca**. In caso contrario, viene classificato come evento **ID oggetto selezionato**.
->&#x200B;><br>
->&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>><br>
+>>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -99,14 +100,16 @@ Aggiungi l&#39;azione **[!UICONTROL Convertito]** alla regola di tag per inviare
 
 | Proprietà | Descrizione |
 | --- | --- |
-| Nome evento | Nome evento che verrà utilizzato per perfezionare ulteriormente l&#39;evento **convert**. |
-| Elemento dati Dettagli evento | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facoltativo)</li></ul> |
+| [!UICONTROL Nome evento] | Nome evento che verrà utilizzato per perfezionare ulteriormente l&#39;evento **convert**. |
+| [!UICONTROL Elemento dati dettagli evento] | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (facoltativo)</li></ul> |
+| [!UICONTROL Disabilita rimozione dati evento] | In un evento di conversione, i dati dell’evento vengono rimossi dall’archiviazione. Se questi dati sono necessari per eventi di conversione successivi, disabilita il processo di rimozione per garantire che i dati dell’evento rimangano disponibili. |
+| [!UICONTROL Elemento dati ID record] | L’ID record viene utilizzato come chiave per cercare i dati dell’evento memorizzati nell’archiviazione del browser. L&#39;URL della pagina è l&#39;ID record predefinito. Per ignorare questo comportamento, utilizza questa proprietà per fornire un elemento dati che restituisca l’ID record come stringa. |
 
 >[!NOTE]
 >
 >Se l&#39;elemento dati contiene `queryId`, l&#39;evento viene classificato come **Convertito dopo la ricerca**. In caso contrario, verrà classificato come evento **Convertito**.
->&#x200B;><br>
->&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>><br>
+>>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -118,17 +121,17 @@ Aggiungi l&#39;azione **[!UICONTROL Aggiunto al carrello]** alla regola di tag p
 
 | Proprietà | Descrizione |
 | --- | --- |
-| Nome evento | Nome evento che verrà utilizzato per perfezionare ulteriormente l&#39;evento **convert**. |
-| Elemento dati Dettagli evento | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (facoltativo)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (facoltativo)</li></ul>. |
-| Valuta | Specifica il tipo di valuta, ad esempio `USD`. |
+| [!UICONTROL Nome evento] | Nome evento che verrà utilizzato per perfezionare ulteriormente l&#39;evento **convert**. |
+| [!UICONTROL Elemento dati dettagli evento] | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (facoltativo)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (facoltativo)</li></ul>. |
+| [!UICONTROL Valuta] | Selezionare un tipo di valuta. Il valore predefinito è `USD`. |
 
 >[!NOTE]
 >
 >Se l&#39;elemento dati contiene `queryId`, l&#39;evento verrà classificato come **Aggiunto agli ID dell&#39;oggetto carrello dopo la ricerca**. In caso contrario, verrà classificato come evento **Aggiunto agli ID dell&#39;oggetto carrello**.
->&#x200B;><br>
->&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
->&#x200B;><br>
->&#x200B;>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
+>><br>
+>>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>><br>
+>>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -140,17 +143,17 @@ Aggiungi l&#39;azione **[!UICONTROL Acquistato]** alla regola di tag per inviare
 
 | Proprietà | Descrizione |
 | --- | --- |
-| Nome evento | Il Nome evento che verrà utilizzato per perfezionare ulteriormente questo evento **acquisto**. |
-| Elemento dati Dettagli evento | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (facoltativo)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (facoltativo)</li></ul>. |
-| Valuta | Specifica il tipo di valuta, ad esempio `USD`. |
+| [!UICONTROL Nome evento] | Il Nome evento che verrà utilizzato per perfezionare ulteriormente questo evento **acquisto**. |
+| [!UICONTROL Elemento dati dettagli evento] | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (facoltativo)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (facoltativo)</li></ul>. |
+| [!UICONTROL Valuta] | Selezionare un tipo di valuta. Il valore predefinito è `USD`. |
 
 >[!NOTE]
 >
 >Se l&#39;elemento dati contiene `queryId`, l&#39;evento verrà classificato come **ID oggetto acquistato dopo la ricerca**. In caso contrario, verrà classificato come evento **ID oggetto acquistato**.
->&#x200B;><br>
->&#x200B;>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
->&#x200B;><br>
->&#x200B;>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
+>><br>
+>>Se l&#39;elemento dati non fornisce `indexName`, verrà utilizzato il **nome indice predefinito** al momento dell&#39;invio dell&#39;evento.
+>><br>
+>>Se gli elementi dati predefiniti non soddisfano le tue esigenze, puoi creare un elemento dati personalizzato per restituire i dettagli dell’evento desiderati.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
@@ -163,8 +166,8 @@ Aggiungi l&#39;azione **[!UICONTROL Visualizzato]** alla regola di tag per invia
 
 | Proprietà | Descrizione |
 | --- | --- |
-| Nome evento | Il nome dell&#39;evento che verrà utilizzato per perfezionare ulteriormente l&#39;evento **view**. |
-| Elemento dati Dettagli evento | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL Nome evento] | Il nome dell&#39;evento che verrà utilizzato per perfezionare ulteriormente l&#39;evento **view**. |
+| [!UICONTROL Elemento dati dettagli evento] | L’elemento dati restituisce i dettagli dell’evento, tra cui: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -184,8 +187,12 @@ L&#39;elemento dati DataSet recupera i dati associati agli elementi HTML, che ve
 
 | Proprietà | Descrizione |
 | --- | --- |
-| Nome classe/div elemento hit | Il nome dell&#39;elemento HTML e/o il nome della classe CSS contenente gli attributi del set di dati incluso `data-insights-object-id` e facoltativamente `data-insights-query-id` e `data-insights-position` nell&#39;elemento HTML. |
-| Nome indice Div elemento/nome classe | Il nome dell&#39;elemento HTML e/o il nome della classe CSS con gli attributi del set di dati (`data-indexname`) nell&#39;elemento HTML. |
+| [!UICONTROL Div elemento hit/Nome classe] | Il nome dell&#39;elemento HTML e/o il nome della classe CSS contenente gli attributi del set di dati incluso `data-insights-object-id` e facoltativamente `data-insights-query-id` e `data-insights-position` nell&#39;elemento HTML. |
+| [!UICONTROL Nome elemento nome indice Div/Nome classe] | Il nome dell&#39;elemento HTML e/o il nome della classe CSS con gli attributi del set di dati (`data-indexname`) nell&#39;elemento HTML. |
+| [!UICONTROL Elemento dati ID query] | L’ID query viene recuperato dal set di dati sull’elemento HTML. Per ignorare questo comportamento, utilizza questa proprietà per fornire un elemento dati che restituisca l’ID query come stringa. |
+| [!UICONTROL Elemento dati ID oggetto] | Gli ID oggetto vengono recuperati dal set di dati sull’elemento HTML. Per ignorare questo comportamento, utilizza questa proprietà per fornire un elemento dati che restituisca gli ID oggetto come array. |
+| [!UICONTROL Elemento dati posizioni] | Le posizioni vengono recuperate dal set di dati sull’elemento HTML. Per ignorare questo comportamento, utilizza questa proprietà per fornire un elemento dati che restituirà le Posizioni come array. |
+| [!UICONTROL Elemento dati nome indice] | Il nome dell’indice viene recuperato dal set di dati sull’elemento HTML. Per ignorare questo comportamento, utilizza questa proprietà per fornire un elemento dati che restituirà il Nome indice come stringa. |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -220,10 +227,10 @@ L&#39;elemento dati stringa di query estrae i dati dalla stringa di query URL da
 
 | Proprietà | Descrizione |
 | --- | --- |
-| Nome parametro ID oggetto | Nome del parametro di query che contiene l&#39;ID oggetto. |
-| Nome parametro nome indice (facoltativo) | Nome del parametro di query che contiene il nome dell&#39;indice. |
-| Nome parametro ID query (facoltativo) | Il nome del parametro di query che contiene l’ID della query. |
-| Nome parametro posizione (facoltativo) | Il nome del parametro di query che contiene la posizione. |
+| [!UICONTROL Nome parametro ID oggetto] | Nome del parametro di query che contiene l&#39;ID oggetto. |
+| [!UICONTROL Nome parametro nome indice] | Nome del parametro di query che contiene il nome dell&#39;indice. |
+| [!UICONTROL Nome parametro ID query] | Il nome del parametro di query che contiene l’ID della query. |
+| [!UICONTROL Nome parametro posizione] | Il nome del parametro di query che contiene la posizione. |
 
 ![](../../../images/extensions/client/algolia/query-string.png)
 
@@ -249,6 +256,10 @@ Esempio di HTML contenente i parametri di query.
 L&#39;elemento dati di archiviazione recupera i dati dall&#39;archiviazione sessione per utilizzarli nelle azioni [!DNL Algolia].
 
 Questo elemento dati recupera i dettagli dell’evento dall’archiviazione sessione. Non è richiesta alcuna configurazione. I dati vengono aggiunti automaticamente durante l&#39;azione evento *click* e rimossi durante l&#39;azione evento *convert*.
+
+| Proprietà | Descrizione |
+| --- | --- |
+| [!UICONTROL Elemento dati ID record] | L’ID record viene utilizzato come chiave per cercare i dati dell’evento memorizzati nell’archiviazione del browser. L&#39;URL della pagina è l&#39;ID record predefinito. Per ignorare questo comportamento, utilizza questa proprietà per fornire un elemento dati che restituisca l’ID record come stringa. |
 
 ![](../../../images/extensions/client/algolia/storage.png)
 
