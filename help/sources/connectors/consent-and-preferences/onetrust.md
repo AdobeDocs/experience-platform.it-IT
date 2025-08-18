@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;OneTrust;onetrust;consenso;consenso e preferenze;conformità
-solution: Experience Platform
 title: Panoramica del connettore Source per l'integrazione di OneTrust
 description: Scopri come collegare l’integrazione OneTrust a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
-last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b3053e23f5b13fd7ebf0cf41a64c1bc5b71f2db
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -16,13 +13,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->L&#39;origine [!DNL OneTrust Integration] supporta solo l&#39;acquisizione dei dati di consenso e preferenze e non dei cookie. Per problemi relativi al connettore di origine, contatta il supporto di OneTrust all&#39;indirizzo https://support.onetrust.com
+>L&#39;origine [!DNL OneTrust Integration] supporta solo l&#39;acquisizione dei dati di consenso e preferenze e non dei cookie. Per problemi con il connettore di origine, contattare [[!DNL OneTrust] supporto](https://support.onetrust.com).
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+[!DNL OneTrust] è una piattaforma per la gestione della privacy, della sicurezza e dell&#39;attendibilità progettata per consentire alle organizzazioni di gestire i dati in modo responsabile, rispettare le normative e creare un clima di fiducia con i clienti e le parti interessate. Fornisce una suite unificata di strumenti per la governance dei dati, la gestione dei rischi e l&#39;automazione della conformità.
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di gestione delle preferenze e del consenso di terze parti. Il supporto per i provider di consenso e preferenze include [!DNL OneTrust Integration].
+Utilizza l&#39;origine [!DNL OneTrust Integration] per collegare il tuo account e acquisire i dati di consenso e preferenze in Experience Platform.
 
-La documentazione seguente fornisce informazioni su come connettere [!DNL OneTrust Integration] ad Experience Platform tramite API o tramite l&#39;interfaccia utente:
+>[!IMPORTANT]
+>
+>Con l&#39;origine [!DNL OneTrust Integration], ogni esecuzione acquisisce solo i nuovi dati creati dopo l&#39;esecuzione precedente, anche se questa non è stata completata correttamente.
 
 ## Connetti [!DNL OneTrust Integration] ad Experience Platform tramite API
 
