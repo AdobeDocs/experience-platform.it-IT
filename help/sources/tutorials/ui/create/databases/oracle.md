@@ -2,14 +2,14 @@
 title: Collegare Oracle DB Ad Experience Platform Tramite L’Interfaccia Utente
 description: Scopri come collegare la tua istanza di Oracle DB ad Experience Platform utilizzando l’interfaccia utente.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-# Crea una connessione di origine [!DNL Oracle DB] nell&#39;interfaccia utente
+# Connetti [!DNL Oracle DB] ad Experience Platform tramite l&#39;interfaccia utente
 
 Leggere questa guida per scoprire come collegare l&#39;istanza [!DNL Oracle DB] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente di Experience Platform.
 
