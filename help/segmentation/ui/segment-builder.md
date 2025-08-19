@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
+source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
-source-wordcount: '5188'
-ht-degree: 11%
+source-wordcount: '5174'
+ht-degree: 10%
 
 ---
 
@@ -58,7 +58,7 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -330,7 +330,7 @@ L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce d
 >[!NOTE]
 >
 >Quando si utilizza il vincolo di tempo &quot;After&quot; (Dopo), quest’ultimo evento può verificarsi più del tempo elencato all’interno del vincolo di tempo. >
->&#x200B;>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
+>>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
 >
 >Inoltre, questi due vincoli temporali possono essere utilizzati in coordinamento tra loro.
 >
@@ -375,12 +375,12 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ![Il selettore dei criteri di unione è evidenziato. In questo modo è possibile scegliere il criterio di unione da selezionare per la definizione del segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Proprietà della definizione di segmento {#segment-properties}
+## Proprietà pubblico {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Proprietà della definizione di segmento"
->abstract="Nella sezione Proprietà della definizione di segmento viene visualizzata una stima della dimensione del segmento risultante, con il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare la definizione del segmento in base alle tue esigenze prima di creare il pubblico stesso."
+>title="Proprietà pubblico"
+>abstract="Nella sezione delle proprietà del pubblico viene visualizzata una stima delle dimensioni del pubblico risultante, con il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare il pubblico in base alle esigenze prima di crearlo."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -391,12 +391,12 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Profili qualificati"
->abstract="I profili qualificati indicano il numero effettivo di profili che corrispondono alle regole della definizione del segmento. Questo numero viene aggiornato ogni 24 ore, dopo l’esecuzione del processo di valutazione del segmento."
+>abstract="I profili qualificati indicano il numero effettivo di profili che corrispondono alle regole del pubblico. Questo numero viene aggiornato ogni 24 ore, dopo l’esecuzione del processo di valutazione del segmento."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Profili stimati"
->abstract="I profili stimati indicano un numero approssimativo di profili, in base al processo campione, che sarebbero idonei per le regole di definizione del segmento."
+>abstract="I profili stimati indicano un numero approssimativo di profili, in base al processo di esempio, che sarebbero idonei per le regole del pubblico."
 
 Durante la creazione di una definizione del segmento, la sezione **[!UICONTROL Proprietà pubblico]** sul lato destro dell&#39;area di lavoro visualizza una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento secondo necessità prima di creare il pubblico stesso.
 
@@ -404,22 +404,22 @@ Durante la creazione di una definizione del segmento, la sezione **[!UICONTROL P
 
 Il timestamp per i profili qualificati indica il processo di valutazione del segmento **batch** più recente ed è **non** visualizzato per le definizioni dei segmenti valutate utilizzando lo streaming o la segmentazione Edge. Se modifichi la definizione del segmento, il numero di profili idonei rimarrà invariato fino all’esecuzione del processo di valutazione del segmento successivo.
 
-**[!UICONTROL Profili stimati]** indica un numero **approssimativo** di profili, in base al **processo di esempio**. Ciò significa che i dati di esempio sono proiettati sul set di profili più ampio, con un risultato stimato che può differire dal numero effettivo di profili qualificati. Il campione di profilo stimato ha un intervallo di affidabilità del 95%.
+**[!UICONTROL Profili stimati]** indica un **intervallo approssimativo** di profili, in base al **processo di esempio**. Ciò significa che i dati di esempio sono proiettati sul set di profili più ampio, con un risultato stimato che può differire dal numero effettivo di profili qualificati. Il campione di profilo stimato ha un intervallo di affidabilità del 95%.
 
 Questo numero viene aggiornato in due scenari:
 
-1. Si è verificata una modifica superiore al 5% nei dati del cliente oppure l’ultimo processo di esempio risale a più di sette giorni prima.
+1. Si è verificata una modifica superiore al 3% nei dati del cliente oppure l’ultimo processo di esempio risale a più di tre giorni prima.
 2. Le regole del pubblico sono state modificate o rimosse.
 
-Selezionando la bolla di informazioni si ottiene la soglia di errore e il tempo del processo di campionamento più recente.
+Se si seleziona la bolla di informazioni, viene visualizzata la data e l’ora dell’ultimo processo di campionamento.
 
 ![I profili qualificati e i profili stimati sono evidenziati nella sezione delle proprietà del pubblico.](../images/ui/segment-builder/audience-estimates.png)
 
-Nella sezione **[!UICONTROL Proprietà pubblico]** è inoltre possibile specificare informazioni importanti sulla definizione del segmento, tra cui nome, descrizione e tipo di valutazione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare la definizione del segmento tra quelle definite dall’organizzazione e devono quindi essere descrittivi, concisi e univoci.
+Nella sezione **[!UICONTROL Proprietà pubblico]** è inoltre possibile specificare informazioni importanti sul pubblico, tra cui il nome, la descrizione e il tipo di valutazione. I nomi vengono utilizzati per identificare la definizione del segmento tra quelle definite dall’organizzazione e devono quindi essere descrittivi, concisi e univoci.
 
-Mentre continui a creare la definizione del segmento, puoi visualizzare un&#39;anteprima impaginata del pubblico selezionando **[!UICONTROL Visualizza profili]**.
+Continuando a creare il pubblico, puoi visualizzare un&#39;anteprima impaginata selezionando **[!UICONTROL Visualizza profili]**.
 
-![La sezione delle proprietà di definizione del segmento è evidenziata. Le proprietà di definizione del segmento includono, tra l&#39;altro, il nome, la descrizione e il metodo di valutazione della definizione del segmento.](../images/ui/segment-builder/segment-properties.png)
+![La sezione delle proprietà del pubblico è evidenziata. Le proprietà del pubblico includono, tra l&#39;altro, il nome, la descrizione e il metodo di valutazione.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -453,4 +453,4 @@ Segment Builder offre un flusso di lavoro avanzato che consente di isolare i tip
 - Abilita tutte le definizioni dei segmenti per la segmentazione pianificata.
 - Abilita le definizioni di segmenti specificate per la segmentazione in streaming.
 
-Per ulteriori informazioni su [!DNL Segmentation Service], continuare a leggere la documentazione e completare le attività di apprendimento guardando i video correlati. Per ulteriori informazioni sulle altre parti dell&#39;interfaccia utente di [!DNL Segmentation Service], leggere la [[!DNL Segmentation Service] guida utente](./overview.md)
+Per ulteriori informazioni su [!DNL Segmentation Service], continuare a leggere la documentazione e completare le attività di apprendimento guardando i video correlati. Per ulteriori informazioni sulle altre parti dell&#39;interfaccia utente di [!DNL Segmentation Service], leggere la [[!DNL Segmentation Service] guida utente](./overview.md).
