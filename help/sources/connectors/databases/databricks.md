@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
+source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '631'
 ht-degree: 3%
 
 ---
@@ -44,7 +44,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 La richiesta seguente recupera le credenziali per l&#39;Experience Platform [!DNL Azure Blob Storage].
 
-+++Esempio di richiesta View
++++Visualizza esempio di richiesta
 
 ```shell
 curl -X GET \
@@ -102,7 +102,7 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sou
 
 La richiesta seguente aggiorna le credenziali per [!DNL Azure Blob Storage].
 
-+++Esempio di richiesta View
++++Visualizza esempio di richiesta
 
 ```shell
 curl -X POST \
@@ -160,6 +160,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Token SAS | Il token di firma di accesso condiviso per [!DNL Azure Blob Storage]. È possibile ottenere questo valore recuperando le credenziali di [!DNL Azure Blob Storage]. |
 
 ![Interfaccia utente di Database in Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+
+Se non specificato, l’attività di copia nell’esecuzione del flusso non riesce e restituisce il seguente errore:
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
 
 ## Connetti [!DNL Databricks] ad Experience Platform
 
