@@ -3,9 +3,9 @@ keywords: servizio catalogo; domande; domande frequenti; FAQ; FAQ set di dati
 title: Domande frequenti
 description: Risposte alle domande più frequenti su Adobe Experience Platform Catalog Service e sui set di dati.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 38f63f1fc985601c53925a529e603f47dc7fb58b
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '487'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,10 @@ Puoi impostare criteri di conservazione per i set di dati creati utilizzando la 
 ### Posso impostare diversi criteri di conservazione per il data lake e il servizio profilo?
 
 +++Risposta
+
+>[!NOTE]
+>
+>Il periodo di conservazione per il servizio profili può essere aggiornato solo una volta ogni 30 giorni.
 
 Sì, puoi applicare diversi criteri di conservazione per il data lake e il servizio profilo.
 

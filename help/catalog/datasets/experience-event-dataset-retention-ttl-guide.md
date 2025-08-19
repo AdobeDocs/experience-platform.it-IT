@@ -2,9 +2,9 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
+source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Utilizza l’endpoint API di igiene dei dati `/ttl/{DATASET_ID}` per pianificare
 
 Per ulteriori informazioni, consulta la documentazione dell&#39;[API di igiene dei dati](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) di Adobe Developer.
 
-Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [ &lbrace;API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
+Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [ {API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -333,7 +333,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### È possibile impostare diversi criteri di conservazione per il data lake e i servizi profilo?
 
 +++Risposta
+
+>[!NOTE]
+>
+>Il periodo di conservazione per il servizio profili può essere aggiornato solo una volta ogni 30 giorni.
+
 Sì, puoi impostare diversi criteri di conservazione per il data lake e i servizi profilo. Il periodo di conservazione per l’archivio profili può essere più breve o più lungo del periodo di conservazione del data lake, a seconda delle esigenze della tua organizzazione.
+
 +++
 
 ### Come posso verificare l’utilizzo del set di dati corrente?
@@ -366,13 +372,13 @@ No, una volta applicati i criteri di conservazione, tutti i dati precedenti al p
 
 ### Qual è il TTL minimo che posso configurare su un set di dati Experience Event di un data lake?
 
-+++Risposta
++++Risposta 
 Il TTL minimo per un set di dati Experience Event del data lake è di 30 giorni. Il data lake funziona come un sistema di elaborazione di backup e ripristino durante l’acquisizione e l’elaborazione iniziali. Di conseguenza, i dati devono rimanere nel data lake per almeno 30 giorni dopo l’acquisizione, prima che possa scadere.
 +++
 
 ### Cosa succede se devo conservare alcuni campi del data lake più a lungo di quanto consenta il mio criterio TTL?
 
-+++Risposta
++++Risposta 
 Utilizza Data Distiller per mantenere campi specifici oltre il TTL del set di dati, mantenendo al contempo i limiti di utilizzo. Crea un processo che scrive regolarmente solo i campi necessari in un set di dati derivato. Questo flusso di lavoro garantisce la conformità con un TTL più breve, preservando al contempo i dati critici per un uso esteso.
 
 Per ulteriori dettagli, vedere la [guida Creare set di dati derivati con SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).

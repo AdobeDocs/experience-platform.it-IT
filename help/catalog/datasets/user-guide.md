@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
+source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
 workflow-type: tm+mt
-source-wordcount: '4482'
+source-wordcount: '4497'
 ht-degree: 5%
 
 ---
@@ -57,7 +57,7 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campagne orchestrate"
->abstract="Abilita questa opzione per consentire l’utilizzo del set di dati selezionato nelle campagne orchestrate di Adobe Journey Optimizer. Il set di dati deve utilizzare uno schema relazionale ed è possibile creare un solo set di dati per schema."
+>abstract="Abilita questo pulsante di attivazione per consentire l’utilizzo del set di dati selezionato nelle campagne orchestrate di Adobe Journey Optimizer. Il set di dati deve utilizzare uno schema relazionale ed è possibile creare un solo set di dati per schema."
 
 Nell&#39;interfaccia utente [!DNL Experience Platform], seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra per aprire il dashboard **[!UICONTROL Set di dati]**. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
 
@@ -237,6 +237,8 @@ Configura il periodo di conservazione preferito nella finestra di dialogo delle 
 >[!NOTE]
 > 
 >Il periodo minimo di conservazione per il data lake è di 30 giorni. Il periodo minimo di conservazione per il servizio Profilo è di un giorno.
+>
+>Inoltre, puoi aggiornare il periodo di conservazione per il servizio profili solo una volta ogni 30 giorni.
 
 Per supportare la trasparenza e il monitoraggio, vengono forniti i timestamp per le esecuzioni del processo di conservazione dei dati **last** e **next**. I timestamp consentono di comprendere quando si è verificata l’ultima pulizia dei dati e quando è stata pianificata la successiva.
 
