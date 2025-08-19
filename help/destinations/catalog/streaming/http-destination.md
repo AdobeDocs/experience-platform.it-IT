@@ -189,7 +189,7 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL Credenziali client OAuth
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Includi timestamp dei segmenti"
->abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei tipi di pubblico, nonché il timestamp UNIX al momento della mappatura dei tipi di pubblico sulla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei tipi di pubblico, nonché la marca temporale UNIX al momento della mappatura dei tipi di pubblico sulla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"

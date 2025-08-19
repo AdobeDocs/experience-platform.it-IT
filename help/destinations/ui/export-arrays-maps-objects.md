@@ -46,7 +46,7 @@ Ottieni le informazioni più importanti sulle funzionalità in questa sezione e 
 
 In Experience Platform puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campi. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare campi di tipo coppia chiave-valore semplici, come le stringhe, da Experience Platform nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
 
-Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform [&#128279;](/help/xdm/ui/fields/array.md).  È ora possibile esportare oggetti array come nell’esempio seguente.
+Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform [. ](/help/xdm/ui/fields/array.md) È ora possibile esportare oggetti array come nell’esempio seguente.
 
 ```
 organizations = [{
@@ -82,7 +82,7 @@ Oltre agli array, puoi anche esportare mappe e oggetti da Experience Platform al
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="Esportare array, mappe e oggetti"
->abstract="<p> <b>Attiva</b> questa impostazione per abilitare l’esportazione di array, mappe e oggetti in file JSON o Parquet. Puoi selezionare questi tipi di oggetto nella visualizzazione del campo di origine del passaggio della mappatura. Con l’impostazione attivata, non puoi utilizzare l’opzione dei campi calcolati nel passaggio di mappatura.</p><p>Con questa impostazione <b>disattivata</b>, puoi utilizzare l’opzione dei campi calcolati e applicare varie funzioni di trasformazione dei dati durante l’attivazione dei tipi di pubblico. Tuttavia, è possibile <i>non</i> esportare array, mappe e oggetti in file JSON o Parquet e, a tale scopo, è necessario configurare una destinazione separata.</p>"
+>abstract="<p> <b>Attiva</b> questa impostazione per abilitare l’esportazione di array, mappe e oggetti in file JSON o Parquet. Puoi selezionare questi tipi di oggetto nella visualizzazione del campo di origine del passaggio della mappatura. Se il pulsante di attivazione è attivato, non puoi utilizzare l’opzione dei campi calcolati nel passaggio di mappatura.</p><p>Con questo pulsante di attivazione <b>disattivata</b>, puoi utilizzare l’opzione dei campi calcolati e applicare varie funzioni di trasformazione dei dati durante l’attivazione dei tipi di pubblico. Tuttavia, è possibile <i>non</i> esportare array, mappe e oggetti in file JSON o Parquet e, a tale scopo, è necessario configurare una destinazione separata.</p>"
 
 Durante la connessione a una destinazione di archiviazione cloud basata su file, è possibile impostare l&#39;attivazione o la disattivazione di **[!UICONTROL Esporta array, mappe, oggetti]**.
 
@@ -90,7 +90,7 @@ Durante la connessione a una destinazione di archiviazione cloud basata su file,
 
 **Attiva** questa impostazione per abilitare l’esportazione di array, mappe e oggetti in file JSON o Parquet. È possibile selezionare questi tipi di oggetto nella visualizzazione del campo di origine del [passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) durante l&#39;attivazione dei tipi di pubblico nelle destinazioni dell&#39;archiviazione cloud. Tuttavia, con questa impostazione attivata, non è possibile utilizzare l’opzione dei campi calcolati per trasformare i dati all’attivazione.
 
-Con questa impostazione **disattivata**, puoi utilizzare l’opzione dei campi calcolati e applicare varie funzioni di trasformazione dei dati durante l’attivazione dei tipi di pubblico. Tuttavia, non è possibile esportare array, mappe e oggetti in file JSON o Parquet e a tale scopo è necessario configurare una destinazione separata.
+Con questo pulsante di attivazione **disattivata**, puoi utilizzare l’opzione dei campi calcolati e applicare varie funzioni di trasformazione dei dati durante l’attivazione dei tipi di pubblico. Tuttavia, non è possibile esportare array, mappe e oggetti in file JSON o Parquet e a tale scopo è necessario configurare una destinazione separata.
 
 ## Esporta array, mappe, oggetti *su* {#export-arrays-maps-objects-toggle-on}
 

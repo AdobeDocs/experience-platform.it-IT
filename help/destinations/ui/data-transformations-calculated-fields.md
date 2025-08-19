@@ -44,7 +44,7 @@ Per utilizzare i campi calcolati per le trasformazioni dei dati:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Aggiungere campi calcolati disabilitati"
->abstract="Questo controllo è disabilitato, perché durante la configurazione della connessione di destinazione hai selezionato **Esporta array, mappe, oggetti** su *Attivato*. Per utilizzare i campi calcolati e le funzioni disponibili all’interno, imposta una nuova connessione di destinazione con l’opzione **Esporta array, mappe, oggetti** su *Disattivato*."
+>abstract="Questo controllo è disabilitato, perché durante la configurazione della connessione di destinazione hai selezionato **Esporta array, mappe, oggetti** su *Attivato*. Per utilizzare i campi calcolati e le funzioni disponibili all’interno, imposta una nuova connessione di destinazione con il pulsante di attivazione **Esporta array, mappe, oggetti** su *Disattivato*."
 
 >[!IMPORTANT]
 >
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario **&#x200B; per utilizzare il controllo &#x200B;** [!UICONTROL Campi calcolati]** nell&#39;interfaccia utente.
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Campi calcolati]** nell&#39;interfaccia utente.
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
 
