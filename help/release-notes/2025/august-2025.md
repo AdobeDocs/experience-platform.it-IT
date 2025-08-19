@@ -1,8 +1,7 @@
 ---
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 39%
@@ -22,6 +21,7 @@ ht-degree: 39%
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
 
 **Data di rilascio: mercoledì 19 agosto 2025**
+
 
 Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -104,6 +104,7 @@ Per ulteriori informazioni su Catalog Service, leggere la [Panoramica di Catalog
 | --- | --- |
 | Aggiornamento interno di [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | A partire dal martedì 11 agosto 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL Microsoft Bing]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL Microsoft Bing]** esistente è stato rinominato in **[!UICONTROL (obsoleto) Microsoft Bing]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Microsoft Bing]**. Utilizza la nuova connessione **[!UICONTROL Microsoft Bing]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione **[!UICONTROL (obsoleto) Microsoft Bing]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente. <br><br>Se stai creando flussi di dati tramite [API Flow Service ](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare l’[!DNL flow spec ID] e l’[!DNL connection spec ID] ai seguenti valori:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> In seguito a questo aggiornamento, potrebbe verificarsi un calo di **del numero di profili attivati** nei flussi di dati a [!DNL Microsoft Bing]. Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. |
 
+
 **Funzionalità nuove o aggiornate**
 
 | Funzione | Descrizione |
@@ -171,3 +172,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | Autenticazione avanzata per [!DNL Azure Blob Storage] | È ora possibile utilizzare l&#39;autenticazione basata sull&#39;entità servizio per connettere l&#39;origine [!DNL Azure Blob Storage] ad Experience Platform. Utilizza l’autenticazione basata sull’entità servizio per una maggiore sicurezza, una rotazione delle credenziali più semplice e un controllo di accesso più granulare per il tuo account. Per ulteriori informazioni, consulta la [[!DNL Azure Blob Storage] panoramica](../../sources/connectors/cloud-storage/blob.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
+
+<!--
+| [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
+-->
