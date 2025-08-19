@@ -4,35 +4,51 @@ title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per le destinazioni di strea
 type: Documentation
 description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform all’endpoint API REST HTTP, Amazon Kinesis o all’istanza dei Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
-# INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming {#ip-address-allowlist}
+
+# INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni basate su API in streaming {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe consiglia di applicare un segnalibro a questa pagina e di visitarla nuovamente ogni tre mesi per verificare la presenza degli indirizzi IP più recenti. Adobe non fornisce la notifica dei nuovi intervalli IP.
-> * L&#39;elenco degli IP qui documentati *non* si applica alle destinazioni create con [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
 ## Panoramica {#overview}
 
-Gli intervalli IP qui documentati si applicano alle seguenti destinazioni:
+Gli intervalli IP documentati in questa pagina si applicano alle seguenti destinazioni:
 
-* [Destinazione API HTTP](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinazioni enterprise avanzate](../../destination-types.md#advanced-enterprise-destinations): [Destinazione API HTTP](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinazioni di esportazione del pubblico in streaming](../../destination-types.md#streaming-destinations), ad esempio [Pubblico in tempo reale CDH Pega](/help/destinations/catalog/personalization/pega-v2.md), integrazioni basate su API con [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) e [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Destinazioni pubbliche o private generate tramite [Destination SDK](../../destination-sdk/getting-started.md)
 
 Il traffico in uscita da Experience Platform verso queste destinazioni passa sempre attraverso gli IP elencati in questa pagina.
 
-Questa pagina fornisce intervalli IP che è possibile aggiungere al inserisco nell&#39;elenco Consentiti di per esportare in modo sicuro i dati da Experience Platform all&#39;endpoint HTTP, [!DNL Amazon Kinesis] o all&#39;istanza [!DNL Azure Event Hubs]. Questa funzionalità è particolarmente utile se l’endpoint HTTP si trova dietro un firewall aziendale o se gli standard di sicurezza e conformità dell’azienda richiedono la inserisce nell&#39;elenco Consentiti di un elenco di intervalli IP.
+Questa pagina fornisce intervalli IP che puoi aggiungere al tuo inserisco nell&#39;elenco Consentiti di per esportare in modo sicuro i dati da Experience Platform alle destinazioni elencate in precedenza. Questa funzionalità è particolarmente utile se l’endpoint HTTP si trova dietro un firewall aziendale o se gli standard di sicurezza e conformità dell’azienda richiedono la inserisce nell&#39;elenco Consentiti di un elenco di intervalli IP.
 
 È possibile definire i controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP appropriato, puoi consentire il traffico per il servizio di trasferimento dati.
 
-Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#39;elenco Consentiti di prima di lavorare con le destinazioni menzionate in questa pagina. La mancata aggiunta dell’intervallo IP specifico per la tua regione al inserisco nell&#39;elenco Consentiti di potrebbe causare errori o non prestazioni durante l’utilizzo di queste destinazioni di streaming.
+## Inserire nell&#39;elenco Consentiti Quando gli IP in questa pagina {#when-to-allowlist}
+
+Se il criterio organizzativo richiede di inserire nell&#39;elenco Consentiti gli IP per il traffico in entrata, è necessario aggiungere al elenco Consentiti gli intervalli IP delle seguenti categorie prima di utilizzare le destinazioni sopra menzionate in questa pagina:
+
+1. Tutti i [indirizzi IP globali](#global)
+2. Oltre agli indirizzi IP globali, aggiungi gli indirizzi IP corrispondenti all’area in cui hai effettuato il provisioning, dall’elenco più in basso nella pagina. La mancata aggiunta dell’intervallo IP specifico per la tua regione al inserisco nell&#39;elenco Consentiti di potrebbe causare errori o non prestazioni durante l’utilizzo di queste destinazioni di streaming.
+
+## Indirizzi IP globali {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+Oltre a questi indirizzi IP globali, è necessario inserire nell&#39;elenco Consentiti gli indirizzi IP per l’area in cui è stato eseguito il provisioning della tua organizzazione dall’elenco seguente.
 
 ## VA7: clienti USA e America {#us-americas}
 
@@ -209,3 +225,4 @@ L’intervallo IP riportato di seguito si applica ai clienti di Experience Platf
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
