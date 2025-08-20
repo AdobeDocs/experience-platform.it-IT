@@ -1,9 +1,10 @@
 ---
 title: Condivisione di pacchetti tra organizzazioni tramite strumenti sandbox
 description: Scopri come utilizzare gli strumenti Sandbox in Adobe Experience Platform per condividere pacchetti tra diverse organizzazioni.
-source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
+exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
+source-git-commit: 3183d265eda36df9b08d920ba731bd9e63d150cc
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -72,17 +73,34 @@ Utilizza questo flusso di lavoro/processo per condividere i pacchetti tra la tua
 >
 >Solo i pacchetti con lo stato **Pubblicato** possono essere condivisi.
 
-Per condividere un pacchetto con un&#39;organizzazione partner approvata, passare alla scheda [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]**. Selezionare quindi i puntini di sospensione (`...`) accanto al pacchetto, quindi selezionare **[!UICONTROL Condividi pacchetto]** dal menu a discesa.
+#### Condividere pacchetti con più oggetti {#multi-object-packages}
+
+Per condividere un pacchetto con più oggetti in un&#39;organizzazione partner approvata, passare alla scheda [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]**. Selezionare quindi i puntini di sospensione (`...`) accanto al pacchetto, quindi selezionare **[!UICONTROL Condividi pacchetto]** dal menu a discesa.
 
 ![Elenco di pacchetti che mostra il menu a discesa con Share package evidenziato.](../images/ui/sandbox-tooling/private-share-package.png)
 
-Nella finestra di dialogo **[!UICONTROL Condividi pacchetto]**, seleziona il pacchetto da condividere dal menu a discesa **[!UICONTROL Condividi impostazioni]**, quindi seleziona **[!UICONTROL Conferma]**.
+Nella finestra di dialogo **[!UICONTROL Condividi pacchetto]**, seleziona le organizzazioni con cui condividere il pacchetto dal menu a discesa **[!UICONTROL Condividi impostazioni]**, quindi seleziona **[!UICONTROL Conferma]**.
 
 >[!TIP]
 >
 >È possibile selezionare più di un’organizzazione. Le organizzazioni selezionate verranno visualizzate sotto il menu a discesa [!UICONTROL Impostazioni condivisione].
 
 ![Finestra di dialogo Condividi pacchetto con impostazioni di condivisione e Conferma evidenziata.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+#### Condividere pacchetti sandbox interi {#entire-sandbox-packages}
+
+Per condividere un intero pacchetto sandbox con un&#39;organizzazione partner approvata, accedi alla scheda [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]**. Selezionare quindi i puntini di sospensione (`...`) accanto al pacchetto, quindi selezionare **[!UICONTROL Condividi pacchetto]** dal menu a discesa.
+
+![Scheda Pacchetti che mostra un elenco di pacchetti con il menu a discesa.](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+Nella finestra di dialogo **[!UICONTROL Condividi pacchetto]**, seleziona le organizzazioni con cui condividere il pacchetto dal menu a discesa **[!UICONTROL Condividi impostazioni]**, quindi seleziona **[!UICONTROL Conferma]**.
+
+>[!TIP]
+>
+>È possibile selezionare più di un’organizzazione. Le organizzazioni selezionate verranno visualizzate sotto il menu a discesa [!UICONTROL Impostazioni condivisione].
+
+![Finestra di dialogo Condividi pacchetto con impostazioni di condivisione e Conferma evidenziata.](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
 
 ## Pacchetti pubblici {#public-packages}
 
