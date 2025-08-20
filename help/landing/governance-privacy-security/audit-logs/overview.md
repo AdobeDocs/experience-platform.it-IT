@@ -4,10 +4,10 @@ description: Scopri come i registri di audit consentono di vedere chi ha eseguit
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 32%
+source-wordcount: '1624'
+ht-degree: 29%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 32%
 Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare le attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di audit&quot;. Questi registri costituiscono un audit trail che può essere utile per risolvere eventuali problemi in Experience Platform e aiutare la tua azienda a rispettare in modo efficace le politiche aziendali di gestione dei dati e i requisiti normativi.
 
 In un certo senso, un registro di controllo comunica a **chi** ha eseguito **cosa** azione e **quando**. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione.
+
+Quando un utente esegue un’azione, vengono registrati due tipi di eventi di controllo. Un evento di base acquisisce il risultato dell&#39;autorizzazione dell&#39;azione, [!UICONTROL allow] o [!UICONTROL deny], mentre un evento avanzato acquisisce il risultato dell&#39;esecuzione, [!UICONTROL success] o [!UICONTROL failure]. È possibile collegare più eventi migliorati allo stesso evento di base. Ad esempio, quando si attiva una destinazione, l&#39;evento principale registra l&#39;autorizzazione dell&#39;azione [!UICONTROL Aggiornamento destinazione], mentre gli eventi avanzati registrano più azioni di [!UICONTROL Attivazione segmento].
 
 >[!NOTE]
 >
@@ -89,7 +91,7 @@ Puoi visualizzare i registri di controllo per diverse funzioni di Experience Pla
 
 I registri di audit vengono conservati per 365 giorni dopo i quali verranno eliminati dal sistema. Se hai bisogno di dati per più di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti delle politiche interne.
 
-Il metodo utilizzato per richiedere i registri di audit cambia il periodo di tempo consentito e il numero di record a cui potrai accedere. [L&#39;esportazione dei registri](#export-audit-logs) consente di tornare indietro di 365 giorni (a intervalli di 90 giorni) a un massimo di 10.000 record, dove come [interfaccia utente registro attività](#filter-audit-logs) in Experience Platform visualizza gli ultimi 90 giorni a un massimo di 1000 record.
+Il metodo utilizzato per richiedere i registri di audit cambia il periodo di tempo consentito e il numero di record a cui potrai accedere. [L&#39;esportazione dei registri](#export-audit-logs) consente di tornare indietro di 365 giorni (a intervalli di 90 giorni) a un massimo di 10.000 registri di controllo (core o avanzati), dove come [interfaccia utente del registro attività](#filter-audit-logs) in Experience Platform visualizza gli ultimi 90 giorni a un massimo di 1000 eventi core, ciascuno con i corrispondenti eventi migliorati.
 
 Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra.
 
@@ -101,7 +103,7 @@ Selezionare l&#39;icona funnel (![icona filtro](/help/images/icons/filter.png)) 
 
 >[!NOTE]
 >
->Nell’interfaccia utente di Experience Platform vengono visualizzati solo gli ultimi 90 giorni e un massimo di 1000 record, indipendentemente dai filtri applicati. Se hai bisogno di registri oltre questo (fino a un massimo di 365 giorni), dovrai [esportare i registri di audit](#export-audit-logs).
+>Nell’interfaccia utente di Experience Platform vengono visualizzati solo gli ultimi 90 giorni e un massimo di 1000 eventi core, ciascuno con i corrispondenti eventi migliorati, indipendentemente dai filtri applicati. Se hai bisogno di registri oltre questo (fino a un massimo di 365 giorni), dovrai [esportare i registri di audit](#export-audit-logs).
 
 ![Dashboard dei controlli di audit con il registro attività filtrato evidenziato.](../../images/audit-logs/filters.png)
 
@@ -112,7 +114,7 @@ Nell’interfaccia utente sono disponibili i seguenti filtri per gli eventi di a
 | [!UICONTROL Categoria] | Utilizza il menu a discesa per filtrare i risultati visualizzati per [categoria](#category). |
 | [!UICONTROL Azione] | Filtra per azione. Le azioni disponibili per ciascun servizio sono riportate nella tabella delle risorse precedente. |
 | [!UICONTROL Utente] | Immettere l&#39;ID utente completo (ad esempio, `johndoe@acme.com`) da filtrare per utente. |
-| [!UICONTROL Stato] | Consente di filtrare in base al fatto che l&#39;azione sia stata consentita (completata) o negata a causa della mancanza di [autorizzazioni di controllo di accesso](../../../access-control/home.md). |
+| [!UICONTROL Stato] | Filtra gli eventi di controllo in base al risultato: operazione riuscita, non riuscita, consentita o negata a causa della mancanza di autorizzazioni [controllo di accesso](../../../access-control/home.md). Per un&#39;azione eseguita, gli eventi di base mostrano [!UICONTROL Consenti] o [!UICONTROL Rifiuta]. Se l&#39;evento di base è [!UICONTROL Consenti], è possibile che abbia allegato uno o più eventi avanzati che mostrano **[!UICONTROL Operazione riuscita]** o **[!UICONTROL Errore]**. Ad esempio, un&#39;azione riuscita mostra [!UICONTROL Consenti] nell&#39;evento principale e [!UICONTROL Riuscito] nell&#39;evento avanzato allegato. |
 | [!UICONTROL Data] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in base al quale filtrare i risultati. I dati possono essere esportati con un periodo di lookback di 90 giorni (ad esempio, da 2021-12-15 a 2022-03-15). Questo può variare a seconda del tipo di evento. |
 
 Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola per il filtro in questione, oppure seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
@@ -137,7 +139,7 @@ Per esportare l’elenco corrente dei registri di audit, seleziona **[!UICONTROL
 
 >[!NOTE]
 >
->I registri possono essere richiesti con intervalli di 90 giorni, fino a 365 giorni nel passato. Tuttavia, il numero massimo di registri che possono essere restituiti durante una singola esportazione è 10.000.
+>I registri possono essere richiesti con intervalli di 90 giorni, fino a 365 giorni nel passato. Tuttavia, la quantità massima di registri che possono essere restituiti durante una singola esportazione è di 10.000 eventi di audit (core o ottimizzati).
 
 ![Dashboard dei controlli con [!UICONTROL Registro di download] evidenziato.](../../images/audit-logs/download.png)
 
@@ -167,7 +169,7 @@ Tutte le azioni che possono essere eseguite nell’interfaccia utente possono es
 
 ## Gestione dei registri di audit per Adobe Admin Console
 
-Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/it/enterprise/using/audit-logs.html).
+Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Passaggi successivi e risorse aggiuntive
 
@@ -175,4 +177,4 @@ Questa guida illustra come gestire i registri di audit in Experience Platform. P
 
 Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/344647?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

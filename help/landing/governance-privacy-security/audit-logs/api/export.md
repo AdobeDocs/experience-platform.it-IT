@@ -4,9 +4,9 @@ description: Scopri come esportare gli eventi di audit in Experience Platform ut
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '168'
 ht-degree: 4%
 
 ---
@@ -43,4 +43,4 @@ curl -X POST \
 
 **Risposta**
 
-I risultati vengono generati in un file CSV per l’esportazione. In caso di esito positivo, la risposta restituisce HTTP 307 senza corpo di risposta. Nell&#39;intestazione di risposta `Location` è disponibile un collegamento al file di esportazione.
+I risultati vengono generati in un file CSV per l’esportazione, ogni voce che rappresenta un evento di audit principale o avanzato. In caso di esito positivo, la risposta restituisce HTTP 307 senza corpo di risposta. Nell&#39;intestazione di risposta `Location` è disponibile un collegamento al file di esportazione.
