@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
+source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1448'
 ht-degree: 39%
 
 ---
@@ -108,7 +108,8 @@ Per ulteriori informazioni su Catalog Service, leggere la [Panoramica di Catalog
 
 | Funzione | Descrizione |
 | --- | --- |
-| Funzionalità avanzate di ricerca, filtro e assegnazione di tag per le destinazioni | Migliora il flusso di lavoro di gestione della destinazione con funzionalità avanzate di ricerca, filtro e assegnazione di tag nelle schede [Sfoglia](../../destinations/ui/destinations-workspace.md#browse) e [Account](../../destinations/ui/destinations-workspace.md#accounts). Ora puoi cercare flussi di dati e account specifici per nome, filtrare in base a vari criteri, tra cui piattaforma di destinazione, stato e date, e creare tag personalizzati per organizzare le destinazioni. L’ordinamento a colonne è disponibile anche per campi chiave come l’ultimo runtime del flusso di dati, facilitando l’identificazione e la gestione delle connessioni di destinazione. |
+| Funzionalità avanzate di ricerca, filtro e assegnazione di tag per le destinazioni | Migliora il flusso di lavoro di gestione della destinazione con funzionalità avanzate di ricerca, filtro e assegnazione di tag nelle schede [Sfoglia](../../destinations/ui/destinations-workspace.md#browse) e [Account](../../destinations/ui/destinations-workspace.md#accounts). <br> È ora possibile cercare flussi di dati e account specifici per nome, filtrare in base a vari criteri tra cui piattaforma di destinazione, stato e date e creare tag personalizzati per organizzare le destinazioni. L’ordinamento a colonne è disponibile anche per campi chiave come l’ultimo runtime del flusso di dati, facilitando l’identificazione e la gestione delle connessioni di destinazione. <br> ![Dimostrazione animata della ricerca di un flusso di dati di destinazione nella scheda Sfoglia](../../destinations/assets/ui/workspace/search.gif) |
+
 
 ## Experience Data Model (XDM) {#xdm}
 
