@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica sull’acquisizione in streaming
 description: L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 2%
+source-wordcount: '419'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform ti consente di creare esperienze coordinate, coerenti 
 
 Il video seguente è stato progettato per comprendere meglio l’acquisizione in streaming e illustra i concetti descritti in precedenza.
 
->[!VIDEO](https://video.tv.adobe.com/v/36263?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Trasmetti record profilo e [!DNL ExperienceEvents]
 
@@ -39,7 +39,7 @@ Per ulteriori informazioni sull&#39;abilitazione di un set di dati per [!DNL Pro
 
 >[!IMPORTANT]
 >
->I guardrail per l’acquisizione in streaming vengono calcolati a livello di organizzazione e non a livello di sandbox. Ciò significa che l’utilizzo dei dati per sandbox è associato al diritto totale all’utilizzo della licenza che corrisponde all’intera organizzazione. Inoltre, l’utilizzo dei dati nelle sandbox di sviluppo è limitato al 10% del totale dei profili. Per ulteriori informazioni sui diritti di utilizzo della licenza, leggere la [guida alle best practice per la gestione dei dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>I guardrail per l’acquisizione in streaming sono associati al diritto totale di utilizzo della licenza che corrisponde all’intera organizzazione. Inoltre, l’utilizzo dei dati nelle sandbox di sviluppo è limitato al 10% del totale dei profili. Per ulteriori informazioni sui diritti di utilizzo della licenza, leggere la [guida alle best practice per la gestione dei dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Per informazioni su come impostare i limiti per la velocità effettiva di streaming, leggere la [Panoramica sulla capacità](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destinazione | Latenza prevista |
 | --------- | ---------------- |

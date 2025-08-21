@@ -2,7 +2,7 @@
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
+source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -103,7 +103,7 @@ Attualmente, questo mostra informazioni sulla capacità relative alla velocità 
 
 #### Velocità effettiva di streaming {#streaming-throughput}
 
-La sezione velocità effettiva in streaming visualizza informazioni sulla velocità effettiva in tutte le sandbox dell’organizzazione. Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel servizio Profilo.
+La sezione velocità effettiva in streaming visualizza informazioni sulla velocità effettiva in streaming nelle sandbox della tua organizzazione. Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel servizio Profilo.
 
 ![Viene visualizzata la sezione della velocità effettiva di streaming all&#39;interno della pagina dei dettagli della capacità.](/help/landing/images/capacity/streaming-throughput-section.png)
 

@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '2649'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -19,6 +19,8 @@ Adobe Experience Platform consente di fornire esperienze cross-channel personali
 >[!IMPORTANT]
 >
 >Controlla i diritti di licenza nell&#39;ordine di vendita e la corrispondente [descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi, oltre a questa pagina di guardrail.
+>
+>In alternativa, è possibile utilizzare il servizio [Capacity](../landing/license-usage-and-guardrails/capacity.md) per monitorare e impostare la velocità effettiva di streaming e altro in Experience Platform.
 
 Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti a modellare i dati profilo per ottenere prestazioni di sistema ottimali. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
 
@@ -188,7 +190,7 @@ Quando si riuniscono dati provenienti da più origini, i criteri di unione sono 
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
