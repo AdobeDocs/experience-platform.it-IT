@@ -2,9 +2,10 @@
 title: Acxiom Real ID&trade; Audience Connection
 description: Utilizza la destinazione  [!DNL Acxiom Real ID&trade; Audience Connection]  per migliorare i tipi di pubblico con la tecnologia  [!DNL Acxiom's Real ID] e attivare i tipi di pubblico su più piattaforme, ad esempio  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora.
 badge: label="Beta" type="Informative"
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
+source-git-commit: 1013487e2c38aeb1e2b0388f0c317afdcf02ba62
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '939'
 ht-degree: 3%
 
 ---
@@ -33,8 +34,8 @@ Ad esempio, il reparto Marketing Operations di un brand di servizi finanziari gl
 ## Prerequisiti {#prerequisites}
 
 * **Conferma le condizioni per l&#39;utilizzo:** Prima di poter configurare una nuova destinazione [!DNL Acxiom Real ID Audience Connection], è necessario leggere e firmare il Contratto sulle condizioni per l&#39;utilizzo di [!DNL Acxiom's]. Riceverai il collegamento al contratto una volta completato l&#39;ordine cliente eseguito. Fino alla firma del contratto, la scheda di destinazione [!DNL Acxiom Real ID Audience Connection] non verrà visualizzata nel catalogo di destinazione di Experience Platform. Dopo aver accettato e firmato il contratto, [!DNL Adobe] completerà il processo di onboarding e verrà visualizzata la scheda di destinazione [!DNL Acxiom Real ID Audience Connection].
-* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/it/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Ottenere la licenza per [!DNL Acxiom's Real ID] prodotto:** Una volta ottenuta la licenza, rendere disponibile il Real ID di Acxiom in Real-Time CDP. Per ulteriori informazioni, vedere [Acxiom Data Enhancement](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement).
+* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Ottenere la licenza per [!DNL Acxiom's Real ID] prodotto:** Una volta ottenuta la licenza, rendere disponibile il Real ID di Acxiom in Real-Time CDP. Per ulteriori informazioni, vedere [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement).
 
 
 ## Identità supportate {#supported-identities}
@@ -53,7 +54,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------------|----------------|----------------|
 | Servizio di segmentazione | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/home). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/ui/audience-portal#import-audience) in Experience Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience) in Experience Platform da file CSV. |
 
 
 ## Destinazioni supportati {#supported-destinations}
@@ -88,11 +89,13 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
->
->* Per attivare i dati, è necessario **Visualizza destinazioni**, **Attiva destinazioni**, **Visualizza profili** e **Visualizza segmenti** ![Autorizzazioni di controllo di accesso](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions). Leggi la ![panoramica sul controllo degli accessi](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/ui/overview) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare le identità, è necessario disporre dell&#39;autorizzazione **Visualizza grafo identità** ![controllo di accesso](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions).
+> 
+>* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi ![Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
+
+
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
 
 >[!NOTE]
 >
@@ -129,7 +132,7 @@ Se sei soddisfatto dei risultati, seleziona **[!UICONTROL Fine]** per attivare l
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-governance/home).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Risoluzione dei problemi {#troubleshooting}
 
@@ -145,9 +148,3 @@ Se il rappresentante di destinazione non è in grado di individuare il pubblico,
 ## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, hai attivato correttamente un pubblico sulla piattaforma di destinazione selezionata. Quindi, contatta il rappresentante della piattaforma di destinazione per iniziare a configurare la campagna.
-
-
-
-
-
-
