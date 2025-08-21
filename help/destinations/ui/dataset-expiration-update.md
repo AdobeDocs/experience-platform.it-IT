@@ -2,15 +2,13 @@
 title: Estendere le pianificazioni di esportazione dei set di dati per i flussi di dati creati prima di novembre 2024
 description: Scopri come estendere la pianificazione dell’esportazione per i flussi di dati di esportazione dei set di dati creati prima di novembre 2024 che cesseranno di funzionare il 1° settembre 2025.
 type: Tutorial
-hide: true
-hidefromtoc: true
-source-git-commit: 08a1c6a1830ace4661ab6aa5b547c4473301ce84
+exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
+source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
 
 ---
-
 
 # Estendere le pianificazioni di esportazione dei set di dati per i flussi di dati creati prima di novembre 2024
 
