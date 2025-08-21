@@ -2,9 +2,9 @@
 title: Panoramica del connettore Source BLOB di Azure
 description: Scopri come collegare l’account BLOB di Azure ad Experience Platform
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: f659d78eebc1c5e74021f9a41a2a489389a6588e
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Specificare i valori per le credenziali seguenti per connettere l&#39;account [!
 | Credenziali | Descrizione |
 | --- | --- |
 | `serviceEndpoint` | L&#39;URL dell&#39;endpoint dell&#39;account [!DNL Azure Blob Storage]. In genere nel formato: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
-| `accountKind` | Il tipo del tuo account [!DNL Azure Blob Storage]. I valori comuni includono `StorageV2`, `BlobStorage` o `Storage`. |
+| `accountKind` | Il tipo del tuo account [!DNL Azure Blob Storage]. I valori comuni includono `Storage` (finalità generale V1), `StorageV2` (finalità generale V2), `BlobStorage` e `BlockBlobStorage`. |
 | `servicePrincipalId` | ID client/applicazione dell&#39;entità servizio Azure Active Directory (AAD) utilizzata per l&#39;autenticazione. |
 | `servicePrincipalKey` | Il segreto client o la password associata all&#39;entità servizio Azure. |
 | `tenant` | ID tenant di Azure Active Directory (AAD) in cui è registrata l&#39;entità servizio. |

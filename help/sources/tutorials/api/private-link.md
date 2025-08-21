@@ -1,17 +1,16 @@
 ---
-title: Supporto di collegamenti privati nelle origini
+title: Utilizzare il collegamento privato di Azure per le origini nell’API
 description: Scopri come creare e utilizzare collegamenti privati per origini Adobe Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
-ht-degree: 6%
+source-wordcount: '1380'
+ht-degree: 5%
 
 ---
 
-# Supporto di collegamenti privati nelle origini
+# Usa [!DNL Azure Private Link] per le origini nell&#39;API
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 6%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Leggi questa guida per scoprire come stabilire una connessione dell’endpoint privato alle origini basate su Azure tramite un collegamento privato e consentire un meccanismo di trasferimento più sicuro per i dati.
+È possibile utilizzare la funzionalità [!DNL Azure Private Link] per creare endpoint privati per le origini Adobe Experience Platform a cui connettersi. Connetti in modo sicuro le origini a una rete virtuale utilizzando indirizzi IP privati, eliminando la necessità di IP pubblici e riducendo la superficie di attacco.Semplifica la configurazione della rete eliminando la necessità di configurazioni complesse di firewall o Network Address Translation, garantendo al contempo che il traffico dati raggiunga solo i servizi approvati.
+
+Leggi questa guida per scoprire come utilizzare le API per creare e utilizzare un endpoint privato.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Origini](../../home.md): Experience Platform consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Platform].
 * [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza [!DNL Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.

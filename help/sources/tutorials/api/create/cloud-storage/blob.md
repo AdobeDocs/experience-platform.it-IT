@@ -2,9 +2,9 @@
 title: Collegare l’archiviazione BLOB di Azure ad Experience Platform utilizzando l’API del servizio Flusso
 description: Scopri come connettere Adobe Experience Platform a Azure Blob utilizzando l’API del servizio Flusso.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
@@ -169,7 +169,7 @@ curl -X POST \
 | `serviceEndpoint` | L&#39;URL dell&#39;endpoint dell&#39;account [!DNL Azure Blob Storage]. In genere nel formato: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
 | `servicePrincipalId` | ID client/applicazione dell&#39;entità servizio Azure Active Directory (AAD) utilizzata per l&#39;autenticazione. |
 | `servicePrincipalKey` | Il segreto client o la password associata all&#39;entità servizio Azure. |
-| `accountKind` | Il tipo del tuo account [!DNL Azure Blob Storage]. I valori comuni includono `StorageV2`, `BlobStorage` o `Storage`. |
+| `accountKind` | Il tipo del tuo account [!DNL Azure Blob Storage]. I valori comuni includono `Storage` (finalità generale V1), `StorageV2` (finalità generale V2), `BlobStorage` e `BlockBlobStorage`. |
 | `tenant` | ID tenant di Azure Active Directory (AAD) in cui è registrata l&#39;entità servizio. |
 | `container` | Nome del contenitore [!DNL Azure Blob Storage] in cui sono archiviati i file di dati. |
 | `folderPath` | Percorso all’interno del contenitore specificato in cui si trovano i file. |
