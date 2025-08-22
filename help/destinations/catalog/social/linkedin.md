@@ -88,7 +88,7 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 >[!NOTE]
 >
 >I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
->> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
+>&#x200B;> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
 > 
 > Durante il passaggio [Mappatura identità](../../ui/activate-segment-streaming-destinations.md#mapping), se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Experience Platform] esegua automaticamente l&#39;hashing dei dati all&#39;attivazione.
 > 
