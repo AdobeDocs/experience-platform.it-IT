@@ -3,10 +3,10 @@ keywords: linkedin connessione;linkedin connessione;linkedin destinazioni;linked
 title: Connessione LinkedIn Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting, la personalizzazione e l’eliminazione del pubblico, in base alle e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 4%
+source-wordcount: '1220'
+ht-degree: 3%
 
 ---
 
@@ -88,7 +88,7 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 >[!NOTE]
 >
 >I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
-> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
+>> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
 > 
 > Durante il passaggio [Mappatura identità](../../ui/activate-segment-streaming-destinations.md#mapping), se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Experience Platform] esegua automaticamente l&#39;hashing dei dati all&#39;attivazione.
 > 
@@ -106,7 +106,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL LinkedIn Matched Audiences] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -121,7 +121,9 @@ Il video seguente illustra inoltre i passaggi per configurare una destinazione [
 
 ### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
 
-I token LinkedIn scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+I token LinkedIn scadono ogni 60 giorni. Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../../ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../../ui/destinations-workspace.md#browse)**.
+
+Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
 
 1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
 2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account LinkedIn.

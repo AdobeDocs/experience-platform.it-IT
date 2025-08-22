@@ -3,7 +3,7 @@ keywords: connessione facebook;facebook connection;facebook destinations;faceboo
 title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 5%
@@ -118,7 +118,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
 >[!NOTE]
 >
->Impossibile attivare in [!DNL Facebook] i numeri di telefono acquisiti nello spazio dei nomi `Phone`.
+>Impossibile attivare in `Phone` i numeri di telefono acquisiti nello spazio dei nomi [!DNL Facebook].
 
 ## Requisiti di hashing delle e-mail {#email-hashing-requirements}
 
@@ -138,8 +138,8 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 >[!NOTE]
 >
 >I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
->&#x200B;> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
->&#x200B;> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
+>> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione.
+>> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
 
 ![Applica controllo di trasformazione evidenziato nel passaggio di mappatura.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -157,7 +157,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL Facebook] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -174,7 +174,7 @@ Il video seguente illustra inoltre i passaggi per configurare una destinazione [
 
 I token di autenticazione di Facebook scadono ogni 60 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare.
 
-Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[!UICONTROL Account]** o **[!UICONTROL Sfoglia]**.
+Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../../ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../../ui/destinations-workspace.md#browse)**.
 
 ![Colonna data di scadenza token account Facebook nella scheda Sfoglia](../../assets/catalog/social/facebook/account-expiration-browse.png)
 
