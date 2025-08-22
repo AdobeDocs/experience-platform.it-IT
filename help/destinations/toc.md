@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: cbf00cbe66aa3332f5b5abd41ac5dc9f41170a95
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1321'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 6%
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esporta set di dati](/help/destinations/api/export-datasets.md)
-   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=it#use-cases)
+   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
@@ -66,10 +66,11 @@ ht-degree: 6%
    * Destinazioni di Adobe{#adobe}
       * [Panoramica sulle destinazioni di Adobe](./catalog/adobe/overview.md)
       * [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-      * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
+      * [Connessione Marketo Engage](./catalog/adobe/marketo-engage-connection.md)
+      * [(Legacy) (V2) Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Connessione Marketo Engage Person Sync](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it)
+      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni di Advertising{#advertising}
       * [(Beta) Distribuzione del pubblico di Acxiom](./catalog/advertising/acxiom-audience-connection.md)
