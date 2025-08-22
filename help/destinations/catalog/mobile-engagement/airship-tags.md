@@ -3,16 +3,24 @@ keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
 description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 2%
+source-wordcount: '1082'
+ht-degree: 5%
 
 ---
 
 # Connessione [!DNL Airship Tags] {#airship-tags-destination}
 
 ## Panoramica
+
+>[!IMPORTANT]
+>
+>* A partire dal venerdì 21 agosto 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL Airship Tags]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL Airship Tags]** esistente è stato rinominato in **[!UICONTROL (Obsoleto) Tag dirigibili]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Tag dirigibili]**.
+>* Utilizza la nuova connessione **[!UICONTROL Tag per dirigibili]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (Obsoleto) Tag dirigibili]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente.
+>* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
+>   * Flow spec ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * Connection spec ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship] è la principale piattaforma di Customer Engagement e ti aiuta a fornire messaggi omnicanale significativi e personalizzati ai tuoi utenti in ogni fase del ciclo di vita del cliente.
 
