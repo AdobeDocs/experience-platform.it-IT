@@ -2,9 +2,9 @@
 description: Scopri come configurare lo schema partner per le destinazioni create con Destination SDK.
 title: Configurazione schema partner
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1924'
 ht-degree: 3%
 
 ---
@@ -148,7 +148,7 @@ In una configurazione di schema dinamico, l&#39;array `profileFields` è sostitu
 
 | Parametro | Tipo | Obbligatorio/facoltativo | Descrizione |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Stringa | Obbligatorio | Indica come [!DNL Experience Platform] clienti si connettono alla destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizza `CUSTOMER_AUTHENTICATION` se i clienti Experience Platform accedono al tuo sistema tramite uno dei metodi di autenticazione descritti [qui](customer-authentication.md). </li><li> Utilizzare `PLATFORM_AUTHENTICATION` se esiste un sistema di autenticazione globale tra Adobe e la destinazione e il cliente [!DNL Experience Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario [creare un oggetto credenziali](../../credentials-api/create-credential-configuration.md) utilizzando l&#39;API Credentials. </li><li>Utilizza `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
+| `dynamicEnum.authenticationRule` | Stringa | Obbligatorio | Indica come [!DNL Experience Platform] clienti si connettono alla destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizza `CUSTOMER_AUTHENTICATION` se i clienti Experience Platform accedono al tuo sistema tramite uno dei metodi di autenticazione descritti [qui](customer-authentication.md). </li><li> Utilizzare `PLATFORM_AUTHENTICATION` se esiste un sistema di autenticazione globale tra Adobe e la destinazione e il cliente [!DNL Experience Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario [creare un oggetto credenziali](../../credentials-api/create-credential-configuration.md) utilizzando l&#39;API Credentials e passare l&#39;ID dell&#39;oggetto credenziali nel parametro `authenticationId` nella configurazione [destination delivery](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication). </li><li>Utilizza `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
 | `dynamicEnum.destinationServerId` | Stringa | Obbligatorio | `instanceId` del server dello schema dinamico. Questo server di destinazione include l’endpoint API che Experience Platform chiamerà per recuperare lo schema dinamico. |
 | `dynamicEnum.value` | Stringa | Obbligatorio | Il nome dello schema dinamico, come definito nella configurazione del server di schema dinamico. |
 | `dynamicEnum.responseFormat` | Stringa | Obbligatorio | Sempre impostato su `SCHEMA` durante la definizione di uno schema dinamico. |

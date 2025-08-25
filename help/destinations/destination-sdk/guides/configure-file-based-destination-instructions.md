@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive i passaggi necessari per configurare una destinazione basata su file utilizzando Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione basata su file
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '745'
 ht-degree: 1%
 
 ---
@@ -413,8 +413,7 @@ A seconda che si specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o 
    * [Autenticazione SFTP con chiave SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Autenticazione SFTP con password](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulta la [documentazione API per la configurazione delle credenziali](../credentials-api/create-credential-configuration.md#when-to-use).
-
+* Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, devi creare una [configurazione credenziali](../credentials-api/create-credential-configuration.md) e passare l&#39;ID dell&#39;oggetto credenziali nel parametro `authenticationId` nella configurazione [consegna destinazione](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 ## Passaggio 5: testare la destinazione {#test-destination}
 
@@ -423,7 +422,7 @@ Dopo aver configurato la destinazione utilizzando gli endpoint di configurazione
 Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare tipi di pubblico, che attiverai nella destinazione. Fai riferimento alle due risorse seguenti per istruzioni su come creare tipi di pubblico in Experience Platform:
 
 * [Creare un pubblico - pagina della documentazione](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Creare un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it)
+* [Creare un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Passaggio 6: pubblicare la destinazione {#publish-destination}
 

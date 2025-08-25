@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming con Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione di streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,7 @@ A seconda che si specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o 
 
 Se hai selezionato `"authenticationRule": "CUSTOMER_AUTHENTICATION"` nella configurazione di destinazione e la tua destinazione supporta il metodo di autenticazione OAuth 2, leggi [Autenticazione OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 
-Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, devi creare una [configurazione credenziali](../credentials-api/create-credential-configuration.md).
+Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, devi creare una [configurazione credenziali](../credentials-api/create-credential-configuration.md) e passare l&#39;ID dell&#39;oggetto credenziali nel parametro `authenticationId` nella configurazione [consegna destinazione](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 ## Passaggio 6: verifica della destinazione {#test-destination}
 
@@ -284,7 +284,7 @@ Dopo aver configurato la destinazione utilizzando gli endpoint di configurazione
 Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti che attiverai nella destinazione. Fai riferimento alle due risorse seguenti per istruzioni su come creare tipi di pubblico in Experience Platform:
 
 * [Creare una pagina di documentazione del pubblico](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Procedura dettagliata per la creazione di un video per il pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it)
+* [Procedura dettagliata per la creazione di un video per il pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Passaggio 7: pubblicare la destinazione {#publish-destination}
 

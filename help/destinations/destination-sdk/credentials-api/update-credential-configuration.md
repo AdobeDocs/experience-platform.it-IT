@@ -2,10 +2,10 @@
 description: Questa pagina illustra la chiamata API utilizzata per aggiornare una configurazione di credenziali esistente tramite Adobe Experience Platform Destination SDK.
 title: Aggiornare una configurazione delle credenziali
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 5%
+source-wordcount: '610'
+ht-degree: 7%
 
 ---
 
@@ -27,7 +27,7 @@ Questa pagina esemplifica la richiesta API e il payload che è possibile utilizz
 
 Utilizzare questo endpoint API per creare una configurazione di credenziali solo se è presente un sistema di autenticazione globale tra Adobe e la piattaforma di destinazione e il cliente [!DNL Experience Platform] non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare una configurazione delle credenziali utilizzando l&#39;endpoint API `/credentials`.
 
-Quando si utilizza un sistema di autenticazione globale, è necessario impostare `"authenticationRule":"PLATFORM_AUTHENTICATION"` nella configurazione [consegna di destinazione](../functionality/destination-configuration/destination-delivery.md), durante la [creazione di una nuova configurazione di destinazione](../authoring-api/destination-configuration/create-destination-configuration.md).
+Quando si utilizza un sistema di autenticazione globale, è necessario impostare `"authenticationRule":"PLATFORM_AUTHENTICATION"` nella configurazione [consegna di destinazione](../functionality/destination-configuration/destination-delivery.md), durante la [creazione di una nuova configurazione di destinazione](../authoring-api/destination-configuration/create-destination-configuration.md). Quindi devi creare una [configurazione delle credenziali](../credentials-api/create-credential-configuration.md) e passare l&#39;ID dell&#39;oggetto credenziali nel parametro `authenticationId` nella configurazione [consegna di destinazione](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 >[!IMPORTANT]
 >
