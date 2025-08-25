@@ -2,10 +2,10 @@
 title: Visualizzazioni nelle estensioni web
 description: 'Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 96%
+source-wordcount: '2148'
+ht-degree: 91%
 
 ---
 
@@ -68,15 +68,22 @@ Il contenuto di ciascun metodo dovrà essere modificato in base ai requisiti spe
 Il metodo `init` verrà richiamato dai tag non appena la vista sarà stata caricata nell’iframe. Verrà trasmesso un singolo argomento (`info`) che dovrà essere un oggetto contenente le seguenti proprietà:
 
 | Proprietà | Descrizione |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | Oggetto contenente le impostazioni precedentemente salvate dalla vista. Se `settings` corrisponde a `null`, indica che l’utente sta creando le impostazioni iniziali anziché caricare una versione salvata. Se `settings` corrisponde a un oggetto, utilizzalo per compilare la vista, poiché l’utente sta scegliendo di modificare le impostazioni persistenti precedenti. |
 | `extensionSettings` | Impostazioni salvate dalla vista di configurazione dell’estensione. Questa proprietà può essere utile per accedere alle impostazioni dell’estensione in altre viste, diverse da quella di configurazione dell’estensione. Se la vista corrente è quella di configurazione dell’estensione, utilizza `settings`. |
 | `propertySettings` | Oggetto contenente le impostazioni della proprietà. Per informazioni dettagliate sul contenuto di questo oggetto, consulta la [guida agli oggetti “turbine”](../turbine.md#property-settings). |
 | `tokens` | Oggetto contenente token API. Per accedere alle API di Adobe dall’interno della vista, in genere si utilizza un token IMS in `tokens.imsAccess`. Questo token viene reso disponibile solo per le estensioni sviluppate da Adobe. Se sei un dipendente di Adobe che rappresenta un’estensione creata da Adobe, invia un’[e-mail al team di progettazione di Data Collection](mailto:reactor@adobe.com) e fornisci il nome dell’estensione in modo che sia possibile aggiungerla all’elenco di estensioni consentite. |
-| `company` | Oggetto contenente una singola proprietà, `orgId`, che rappresenta il tuo Adobe Experience Cloud ID (stringa alfanumerica di 24 caratteri). |
+| `company` | Oggetto contenente `orgId` (il tuo Adobe Experience Cloud ID di 24 caratteri), `id` (l&#39;identificatore univoco della tua azienda nell&#39;API di Reactor) e `tenantId` (l&#39;identificatore univoco di un&#39;organizzazione nel sistema Identity Management di Adobe). |
 | `schema` | Oggetto in formato [JSON Schema](https://json-schema.org/). Questo oggetto proviene dal [manifesto dell’estensione](../manifest.md) e può essere utile per convalidare il modulo. |
+| `apiEndpoints` | Oggetto contenente `reactor` che contiene un riferimento all&#39;indirizzo Web dell&#39;API di Reactor. |
+| `userConsentPermissions` | Oggetto contenente i flag di consenso dai [dati di utilizzo del prodotto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) di Adobe. Utilizza il flag archiviato in `globalDataCollectionAndUsage` per capire se l&#39;estensione può raccogliere *qualsiasi* dati cliente. |
+| `preferredLanguages` | Matrice di stringhe di lingua. |
 
 La tua vista deve utilizzare queste informazioni per riprodurre e gestire il modulo. Probabilmente dovrai usare solo `info.settings`, ma le altre informazioni vengono fornite nel caso siano necessarie.
+
+>[!IMPORTANT]
+>
+>Per mantenere l&#39;estensione conforme ai requisiti RGPD, assicurati di utilizzare il flag `userConsentPermissions.globalDataCollectionAndUsage` per determinare se all&#39;estensione è consentito raccogliere dati sull&#39;utente.
 
 ### [!DNL validate]
 
