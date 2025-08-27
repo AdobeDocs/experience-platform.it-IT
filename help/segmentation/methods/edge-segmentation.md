@@ -2,9 +2,9 @@
 title: Guida alla segmentazione di Edge
 description: Scopri come utilizzare la segmentazione Edge per valutare i tipi di pubblico in Experience Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1148'
 ht-degree: 2%
 
 ---
@@ -26,6 +26,8 @@ Una query può essere valutata con segmentazione Edge se soddisfa uno qualsiasi 
 >[!NOTE]
 >
 >Se la query corrisponde a uno dei tipi di query della tabella seguente, verrà valutata automaticamente utilizzando la segmentazione Edge. Il sistema determina automaticamente questa capacità in base all&#39;espressione della query.
+>
+>Inoltre, se il pubblico **only** contiene attributi di profilo, verrà valutato ogni giorno. Se desideri che il pubblico venga valutato in tempo reale, devi aggiungere i dati dell&#39;evento al pubblico.
 
 | Tipo di query | Dettagli | Query | Esempio |
 | ---------- | ------- | ----- | ------- |
@@ -100,7 +102,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della definizione del segmento appena creata.
 
-+++Risposta di esempio durante la creazione di una definizione di segmento.
++++Una risposta di esempio durante la creazione di una definizione di segmento.
 
 ```json
 {

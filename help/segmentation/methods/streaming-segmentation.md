@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida alla segmentazione in streaming
 description: Scopri la segmentazione in streaming, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in streaming e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in streaming.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
 workflow-type: tm+mt
-source-wordcount: '2022'
-ht-degree: 2%
+source-wordcount: '2051'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >I criteri di idoneità per la segmentazione in streaming sono stati aggiornati il 20 maggio 2025.
 
-+++Aggiornamenti di idoneità
++++Aggiornamenti sull’idoneità
 
 >[!IMPORTANT]
 >
@@ -38,6 +38,10 @@ Qualsiasi definizione di segmento **nuova o modificata** che corrisponde ai segu
 Per valutare un pubblico con segmentazione in streaming, **deve** essere vincolato entro un intervallo di tempo di 24 ore.
 
 ## Inclusione di dati batch nei tipi di pubblico in streaming {#include-batch-data}
+
+>[!NOTE]
+>
+>Per mantenere accurata la segmentazione in streaming quando si utilizzano i dati batch, assicurati che i dati batch siano **solo** mantenuti all&#39;interno del pubblico batch e a cui viene fatto riferimento all&#39;interno del pubblico in streaming.
 
 Prima di questo aggiornamento, era possibile creare una definizione di pubblico in streaming che combinasse origini dati in batch e in streaming. Tuttavia, con l’ultimo aggiornamento, la creazione di un pubblico con origini di dati in batch e in streaming verrà valutata utilizzando la segmentazione batch.
 
@@ -102,7 +106,7 @@ Con la segmentazione in streaming, la qualificazione del pubblico ora avviene qu
 
 >[!IMPORTANT]
 >
->Per utilizzare la segmentazione in streaming, **devi** utilizzare un criterio di unione &quot;Attivo su Edge&quot;. Per ulteriori informazioni sui criteri di unione, leggere la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md).
+>Per utilizzare la segmentazione in streaming, **devi** utilizzare un criterio di unione &quot;Attivo su Edge&quot;. Per ulteriori informazioni sui criteri di unione, consulta la [panoramica sui criteri di unione](../../profile/merge-policies/overview.md).
 
 Un set di regole è idoneo per la segmentazione in streaming se soddisfa uno dei criteri descritti nella tabella seguente.
 
@@ -236,7 +240,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della definizione del segmento appena creata.
 
-+++Risposta di esempio durante la creazione di una definizione di segmento.
++++Una risposta di esempio durante la creazione di una definizione di segmento.
 
 ```json
 {
