@@ -5,18 +5,14 @@ type: Documentation
 description: Adobe Experience Platform consente di accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l’interfaccia utente di. Questa guida illustra come accedere alle entità, più comunemente note come "profili", utilizzando l’API di profilo.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 3%
 
 ---
 
 # Endpoint entità (accesso profilo)
-
->[!IMPORTANT]
->
->La ricerca di ExperienceEvent tramite l’API di accesso al profilo diventerà obsoleta. Utilizza funzionalità come attributi calcolati per i casi di utilizzo che richiedono la ricerca di ExperienceEvents. Per ulteriori informazioni su questa modifica, contatta l’Assistenza clienti di Adobe.
 
 Adobe Experience Platform consente di accedere ai dati di [!DNL Real-Time Customer Profile] utilizzando le API RESTful o l&#39;interfaccia utente. Questa guida illustra come accedere alle entità, più comunemente note come &quot;profili&quot;, utilizzando l’API. Per ulteriori informazioni sull&#39;accesso ai profili tramite l&#39;interfaccia utente di [!DNL Experience Platform], fare riferimento alla [Guida utente del profilo](../ui/user-guide.md).
 
@@ -44,6 +40,12 @@ In seguito a questo aggiornamento, l&#39;API [!DNL Profile Access] riflette ora 
 >[!ENDSHADEBOX]
 
 ## Recuperare un’entità {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>Le seguenti entità B2B non sono più supportate per le richieste di ricerca tramite l&#39;API: **Relazione account-persona, Relazione opportunità-persona, Campagna, Membro della campagna, Elenco marketing e Membro dell&#39;elenco marketing**.
+>
+>Il supporto per queste entità è stato dichiarato obsoleto. Se disponi di integrazioni o flussi di lavoro esistenti che si basano sull’accesso a tali entità, aggiornali per utilizzare i tipi di entità supportati per garantire funzionalità continue.
 
 È possibile recuperare un&#39;entità profilo effettuando una richiesta GET all&#39;endpoint `/access/entities` insieme ai parametri di query richiesti.
 
@@ -1202,6 +1204,19 @@ In caso di esito positivo, la risposta restituisce la pagina successiva di risul
 +++
 
 ## Eliminare un’entità {#delete-entity}
+
+>[!IMPORTANT]
+>
+>Le richieste di eliminazione per le seguenti entità B2B sono diventate obsolete:
+>
+>- Account
+>- Relazione account-persona
+>- Opportunità
+>- Relazione opportunità-persona
+>- Campaign
+>- Membro della campagna
+>- Elenco marketing
+>- Membri di elenco marketing
 
 È possibile eliminare un&#39;entità dall&#39;archivio profili effettuando una richiesta DELETE all&#39;endpoint `/access/entities` insieme ai parametri di query richiesti.
 
