@@ -4,7 +4,7 @@ title: Creare una definizione di segmento utilizzando l’API del servizio di se
 type: Tutorial
 description: Segui questa esercitazione per scoprire come sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
@@ -76,8 +76,8 @@ Poiché i dati abilitati per Real-Time Customer Profile vengono acquisiti in Exp
 
 Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
 
-- Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 5% è stata raggiunta. Se questa soglia è stata raggiunta, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
-- Per l’acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o di riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
+- Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 3% è stata raggiunta. Se questa soglia è stata raggiunta, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
+- Per l’acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o riduzione del 3%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
 
 La dimensione del campione dipende dal numero complessivo di entità nell’archivio profili. Queste dimensioni di esempio sono rappresentate nella tabella seguente:
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '2219'
 ht-degree: 3%
@@ -60,7 +60,7 @@ Il conteggio dei profili include anche profili con attributi (dati record) e pro
 
 #### Aggiornamento della metrica del conteggio dei profili
 
-Quando l&#39;acquisizione dei record nell&#39;archivio [!DNL Profile] aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 5% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o di riduzione del 5%, viene eseguito un processo per aggiornare il conteggio dei profili.
+Quando l&#39;acquisizione dei record nell&#39;archivio [!DNL Profile] aumenta o diminuisce il conteggio di oltre il 3%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 3% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o riduzione del 3%, viene eseguito un processo per aggiornare il conteggio dei profili.
 
 ### [!UICONTROL Profili per spazio dei nomi] {#profiles-by-namespace}
 
