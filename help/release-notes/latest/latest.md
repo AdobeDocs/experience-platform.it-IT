@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2b605925a8fd7ea06f198ba8a9f85747a2e585b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1643'
-ht-degree: 81%
+source-wordcount: '1567'
+ht-degree: 80%
 
 ---
 
@@ -170,7 +170,13 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto [!BADGE Beta]{type=Informative} per [!DNL Azure Private Links] nell’interfaccia utente | È ora possibile utilizzare [!DNL Azure Private Links] per un gruppo selezionato di origini nell’interfaccia utente. Utilizza questa funzione per creare un endpoint privato a cui l’origine può connettersi. Con gli endpoint privati, puoi configurare connessioni e flussi di dati che bypassano l’Internet pubblico, garantendo maggiore sicurezza e isolamento della rete per i dati sensibili. Il supporto per [!DNL Azure Private Links] è disponibile per le seguenti origini: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Per ulteriori informazioni, consulta la guida in [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
 | Autenticazione avanzata per [!DNL Azure Blob Storage] | Ora puoi utilizzare l’autenticazione basata sull’entità principale del servizio per connettere l’origine [!DNL Azure Blob Storage] a Experience Platform. Utilizza l’autenticazione basata sull’entità principale del servizio per una maggiore sicurezza, per agevolare la rotazione delle credenziali e per un controllo degli accessi più granulare per il tuo account. Per ulteriori informazioni, consulta la [[!DNL Azure Blob Storage] panoramica](../../sources/connectors/cloud-storage/blob.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
+
+<!---
+
+| [!BADGE Beta]{type=Informative} Support for [!DNL Azure Private Links] in the UI | You can now use [!DNL Azure Private Links] for a select group of sources in the UI. Use this feature to create a private endpoint that which your source can connect to. With private endpoints, you can set up connections and dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. Support for [!DNL Azure Private Links] is available to the following following sources: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> For more information, read the guide on [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
+
+-->
+

@@ -1,16 +1,18 @@
 ---
-title: Utilizzare Azure Private Link per le origini nell’interfaccia utente
+title: Supporto Di Collegamenti Privati Per Le Origini Nell’Interfaccia Utente
 description: Scopri come utilizzare i collegamenti privati di Azure per le origini nell’interfaccia utente di Experience Platform.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
-# Usa [!DNL Azure Private Link] per le origini nell&#39;interfaccia utente
+# Supporto di collegamenti privati per le origini nell’interfaccia utente
 
 >[!AVAILABILITY]
 >
@@ -21,13 +23,13 @@ ht-degree: 0%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-È possibile utilizzare la funzionalità [!DNL Azure Private Link] per creare endpoint privati per le origini Adobe Experience Platform a cui connettersi. Connetti in modo sicuro le origini a una rete virtuale utilizzando indirizzi IP privati, eliminando la necessità di IP pubblici e riducendo la superficie di attacco.Semplifica la configurazione della rete eliminando la necessità di configurazioni complesse di firewall o Network Address Translation, garantendo al contempo che il traffico dati raggiunga solo i servizi approvati.
+Puoi utilizzare la funzione Collegamenti privati per creare endpoint privati per le origini Adobe Experience Platform a cui connetterti. Connetti in modo sicuro le origini a una rete virtuale utilizzando indirizzi IP privati, eliminando la necessità di IP pubblici e riducendo la superficie di attacco. Semplifica la configurazione della rete eliminando la necessità di configurazioni complesse di firewall o Network Address Translation, garantendo al contempo che il traffico dati raggiunga solo i servizi approvati.
 
 Leggi questa guida per scoprire come utilizzare l’area di lavoro origini nell’interfaccia utente di Experience Platform per creare e utilizzare un endpoint privato.
 
 ## Creare un endpoint privato
 
-Per iniziare a utilizzare [!DNL Azure Private Link], passa al catalogo *[!UICONTROL Sources]* dell&#39;interfaccia utente di Experience Platform e seleziona **[!UICONTROL Private endpoints]** dal menu delle schede nell&#39;area di lavoro Sources.
+Per iniziare a utilizzare i collegamenti privati, passa al catalogo *[!UICONTROL Sorgenti]* dell&#39;interfaccia utente di Experience Platform e seleziona **[!UICONTROL Endpoint privati]** dal menu delle schede nell&#39;area di lavoro origini.
 
 ![Catalogo origini con &quot;Endpoint privati&quot;.](../../images/tutorials/private-links/catalog.png)
 

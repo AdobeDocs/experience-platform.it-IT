@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: d2b605925a8fd7ea06f198ba8a9f85747a2e585b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1643'
-ht-degree: 33%
+source-wordcount: '1567'
+ht-degree: 80%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 33%
 >- [Composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
 
-**Data di rilascio: mercoledì 19 agosto 2025**
+**Data di rilascio: 19 agosto 2025**
 
 
 Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
@@ -43,7 +43,7 @@ Experience Platform consente di iscriverti agli avvisi basati su eventi per vari
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Avvisi sulla capacità di throughput in streaming | Tre nuovi avvisi consentono agli utenti di abbonarsi e configurare gli avvisi per gestire e monitorare in modo proattivo le prestazioni della capacità di velocità effettiva in streaming. I nuovi avvisi includono quando la velocità effettiva dello streaming ha raggiunto l’80%, il 90% o supera i limiti di capacità. Per ulteriori informazioni, leggere la [guida alle regole per gli avvisi sulla capacità](../../observability/alerts/rules.md#capacity). |
+| Avvisi sulla capacità della velocità effettiva di streaming | Tre nuovi avvisi consentono agli utenti di iscriversi e configurare gli avvisi per gestire e monitorare in modo proattivo le prestazioni della capacità di velocità effettiva di streaming. I nuovi avvisi includono quando la velocità effettiva di streaming ha raggiunto l’80%, il 90% o supera i limiti della capacità. Per ulteriori informazioni, consulta la guida sulle [regole sugli avvisi della capacità](../../observability/alerts/rules.md#capacity). |
 
 Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insights] panoramica](../../observability/home.md).
 
@@ -55,27 +55,27 @@ Il servizio catalogo è il sistema di registrazione per la posizione e la deriva
 
 | Funzione | Descrizione |
 | --- | --- |
-| Conservazione dei dati per Real-Time Customer Profile | Puoi **solo** aggiornare il periodo di conservazione dei dati per Real-Time Customer Profile una volta ogni 30 giorni. |
+| Conservazione dei dati per profilo cliente in tempo reale | Puoi **solo** aggiornare il periodo di conservazione dei dati per il profilo cliente in tempo reale una volta ogni 30 giorni. |
 
-Per ulteriori informazioni su Catalog Service, leggere la [Panoramica di Catalog Service](../../catalog/home.md).
+Per ulteriori informazioni sul Servizio catalogo, consulta la [panoramica sul servizio catalogo](../../catalog/home.md).
 
 ## Destinazioni {#destinations}
 
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 >[!IMPORTANT]
 >
->**Estensione pianificazione esportazione set di dati**
+>**Estensione pianificazione dell’esportazione dei set di dati**
 >
->Se nell&#39;organizzazione sono presenti flussi di dati di esportazione del set di dati creati prima di novembre 2024, questi flussi di dati cesseranno di funzionare il **1 settembre 2025**. Se i flussi di dati sono necessari per continuare a esportare dati dopo il 1° settembre 2025, è necessario estendere le pianificazioni per ogni destinazione in cui si esportano i set di dati, seguendo i passaggi descritti in [questa guida](../../destinations/ui/dataset-expiration-update.md).
+>Se nell’organizzazione sono presenti flussi di dati di esportazione del set di dati creati prima di novembre 2024, questi flussi di dati cesseranno di funzionare il **1° settembre 2025**. Se è necessario che i flussi di dati continuino a esportare dati dopo il 1° settembre 2025, è necessario estendere le pianificazioni per ogni destinazione in cui i set di dati vengono esportati, seguendo i passaggi descritti in [questa guida](../../destinations/ui/dataset-expiration-update.md).
 
 >[!IMPORTANT]
 >
->**È necessario aggiornare il inserisco nell&#39;elenco Consentiti IP per le destinazioni basate su API**
+>**Aggiornamento dell’elenco IP consentiti necessario per le destinazioni basate su API**
 >
->A causa degli aggiornamenti al motore di esportazione delle destinazioni di streaming, le organizzazioni che utilizzano [inserisce nell&#39;elenco Consentiti di IP](../../destinations/catalog/streaming/ip-address-allow-list.md) per le destinazioni basate su API devono aggiungere i seguenti indirizzi IP ai propri inserisce nell&#39;elenco Consentiti di **prima del 15 settembre 2025**:
+>A causa degli aggiornamenti al motore di esportazione delle destinazioni di streaming, le organizzazioni che utilizzano l’[elenco IP consentiti](../../destinations/catalog/streaming/ip-address-allow-list.md) per le destinazioni basate su API devono aggiungere i seguenti indirizzi IP ai propri elenchi consentiti **prima del 15 settembre 2025**:
 >
->**Indirizzi IP richiesti:**
+>**Indirizzi IP obbligatori:**
 >
 >```
 >3.209.222.108
@@ -91,51 +91,51 @@ Per ulteriori informazioni su Catalog Service, leggere la [Panoramica di Catalog
 >- [Destinazioni di esportazione del pubblico in streaming](../../destinations/destination-types.md#streaming-destinations) ([Pubblico in tempo reale Pega CDH](/help/destinations/catalog/personalization/pega-v2.md), integrazioni basate su API con [Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) e [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md))
 >- Destinazioni pubbliche o private generate tramite [Destination SDK](../../destinations/destination-sdk/getting-started.md)
 >
->**Azione richiesta:** Se hai lavorato con Adobe per inserire nell&#39;elenco Consentiti qualsiasi indirizzo IP a destinazioni di streaming basate su API, devi aggiungere gli indirizzi IP di cui sopra al tuo inserisco nell&#39;elenco Consentiti di per garantire flussi di dati ininterrotti alle destinazioni basate su API.
+>**Azione richiesta:** se hai utilizzato Adobe per inserire eventuali indirizzi IP nell’elenco consentiti verso destinazioni di streaming basate su API, dovrai aggiungere tali indirizzi al tuo elenco consentiti, così da garantire flussi di dati ininterrotti verso le destinazioni basate su API.
 
 **Nuove destinazioni**
 
 | Destinazione | Descrizione |
 | --- | --- |
-| [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) destinazione | Utilizza la destinazione [!DNL Acxiom Real ID Audience Connection] per migliorare i tipi di pubblico con la tecnologia [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) e attivare i tipi di pubblico su più piattaforme, ad esempio [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora. |
+| Destinazione [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | Utilizza la destinazione [!DNL Acxiom Real ID Audience Connection] per migliorare i tipi di pubblico con la tecnologia [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) e attivare i tipi di pubblico su più piattaforme, ad esempio [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora. |
 | [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) destinazione migliorata | La destinazione [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) avanzata è una versione aggiornata del connettore [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) esistente. Questo nuovo connettore offre funzionalità di sincronizzazione dei profili oltre alle funzionalità esistenti di sincronizzazione dei tipi di pubblico dal connettore legacy, fornendo un&#39;integrazione più stretta con [!DNL Marketo Engage]. <br> Il connettore [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) diventerà obsoleto il **marzo 2026**. Per garantire una transizione senza problemi alla nuova destinazione **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)**, controlla i seguenti punti chiave e le azioni richieste: <ul><li>Tutti gli utenti della **[!UICONTROL (Legacy) (V2) Marketo Engage]** esistente devono migrare alla nuova destinazione **[!UICONTROL Marketo Engage]** entro marzo 2026.</li><li> **I flussi di dati esistenti non verranno migrati automaticamente.** Devi [impostare una nuova connessione](../../destinations/ui/connect-destination.md) alla nuova destinazione **[!UICONTROL Marketo Engage]** e attivare i tuoi tipi di pubblico.</li></ul> |
 
 **Destinazioni aggiornate**
 
 | Destinazione | Descrizione |
 | --- | --- |
-| Aggiornamento interno di [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | A partire dall’11 agosto 2025, per un breve periodo di tempo, potresti aver visto due schede **[!DNL Microsoft Bing]** una accanto all’altra nel catalogo delle destinazioni. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL Microsoft Bing]** esistente è stato rinominato in **[!UICONTROL (obsoleto) Microsoft Bing]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Microsoft Bing]**. <br> Aggiornamento completato. La scheda obsoleta è stata rimossa dal catalogo di destinazione. Utilizza la connessione **[!UICONTROL Microsoft Bing]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione **[!UICONTROL (obsoleto) Microsoft Bing]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente. <br><br>Se stai creando flussi di dati tramite [API Flow Service ](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare l’[!DNL flow spec ID] e l’[!DNL connection spec ID] ai seguenti valori:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> In seguito a questo aggiornamento, potrebbe verificarsi un calo di **del numero di profili attivati** nei flussi di dati a [!DNL Microsoft Bing]. Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. |
+| Aggiornamento interno di [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | A partire dall’11 agosto 2025, per un breve periodo di tempo, potresti aver visto due schede **[!DNL Microsoft Bing]** una accanto all’altra nel catalogo delle destinazioni. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore della destinazione **[!DNL Microsoft Bing]** esistente è stato ridenominato in **[!UICONTROL Microsoft Bing (obsoleto)]** ed è ora disponibile una nuova scheda denominata **[!UICONTROL Microsoft Bing]**. <br> Aggiornamento completato. La scheda obsoleta è stata rimossa dal catalogo di destinazione. Utilizza la connessione **[!UICONTROL Microsoft Bing]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione **[!UICONTROL (obsoleto) Microsoft Bing]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente. <br><br>Se stai creando flussi di dati tramite [API Flow Service ](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare l’[!DNL flow spec ID] e l’[!DNL connection spec ID] ai seguenti valori:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> In seguito a questo aggiornamento, potresti riscontrare un **calo nel numero di profili attivati** nei flussi di dati verso [!DNL Microsoft Bing]. Questo calo è causato dall’introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. |
 | Dettagli di scadenza dell&#39;autenticazione per [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) e [tipi di pubblico collegati](../../destinations/catalog/social/linkedin-b2b.md) corrispondenti alle destinazioni | Le informazioni sulla scadenza dell&#39;autenticazione per le destinazioni [!DNL LinkedIn] sono ora visibili direttamente nell&#39;interfaccia di Experience Platform, per consentirti di vedere quando scadrà l&#39;autenticazione e rinnovarla prima che causi interruzioni dei flussi di dati. Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse)**. |
 
 **Funzionalità nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Funzionalità avanzate di ricerca, filtro e assegnazione di tag per le destinazioni | Migliora il flusso di lavoro di gestione della destinazione con funzionalità avanzate di ricerca, filtro e assegnazione di tag nelle schede [Sfoglia](../../destinations/ui/destinations-workspace.md#browse) e [Account](../../destinations/ui/destinations-workspace.md#accounts). <br> È ora possibile cercare flussi di dati e account specifici per nome, filtrare in base a vari criteri tra cui piattaforma di destinazione, stato e date e creare tag personalizzati per organizzare le destinazioni. L’ordinamento a colonne è disponibile anche per campi chiave come l’ultimo runtime del flusso di dati, facilitando l’identificazione e la gestione delle connessioni di destinazione. <br> ![Dimostrazione animata della ricerca di un flusso di dati di destinazione nella scheda Sfoglia](../../destinations/assets/ui/workspace/search.gif) |
+| Funzionalità avanzate di ricerca, filtro e assegnazione di tag per le destinazioni | Migliora il flusso di lavoro di gestione della destinazione con funzionalità di ricerca, filtro e assegnazione tag avanzate nelle schede [Sfoglia](../../destinations/ui/destinations-workspace.md#browse) e [Account](../../destinations/ui/destinations-workspace.md#accounts). <br> È ora possibile cercare flussi di dati e account specifici per nome, filtrare in base a vari criteri tra cui piattaforma di destinazione, stato e date e creare tag personalizzati per organizzare le destinazioni. L’ordinamento a colonne è disponibile anche per campi chiave come l’ultimo runtime del flusso di dati, facilitando l’identificazione e la gestione delle connessioni di destinazione. <br> ![Dimostrazione animata della ricerca di un flusso di dati di destinazione nella scheda Sfoglia](../../destinations/assets/ui/workspace/search.gif) |
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Schemi basati su modelli | Semplifica la modellazione dei dati con schemi basati su modelli. Ora puoi creare gli schemi più facilmente con esempi e indicazioni completi. Questa funzione è attualmente disponibile per i titolari di licenze di Campaign Orchestration e verrà estesa ai clienti Data Distiller in GA, rendendo la modellazione dei dati più accessibile ed efficiente. |
+| Schemi basati su modelli | Semplifica la modellazione dei dati con schemi basati su modelli. Ora puoi creare gli schemi più facilmente con esempi e indicazioni completi. Questa funzione è attualmente disponibile per i titolari di licenze per l’orchestrazione delle campagne e verrà estesa in disponibilità generale alla clientela Data Distiller, rendendo la modellazione dei dati più accessibile ed efficiente. |
 
-Per ulteriori informazioni, leggere la [panoramica XDM](../../xdm/home.md).
+Per ulteriori informazioni, consulta la [panoramica su XDM](../../xdm/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 
-Real-Time Customer Profile fornisce una visualizzazione unificata e actionable di ogni cliente, consolidando i dati di tutti i canali in un unico profilo.
+Il profilo cliente in tempo reale fornisce una visualizzazione unificata e fruibile di ogni cliente, consolidando i dati di tutti i canali in un unico profilo.
 
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Funzionalità di ricerca migliorata nell’API delle entità | L’API Entità ora supporta quanto segue: <ul><li>Persona (profilo)</li><li>Eventi esperienza</li><li>Account</li><li>Opportunità</li></ul> Questo aggiornamento semplifica l’utilizzo delle API e garantisce prestazioni e affidabilità ottimali. Se in precedenza utilizzavi ricerche per altri tipi di entità, tra cui tabelle di join e tipi di più entità personalizzati, ora puoi rivedere l’utilizzo delle API e sfruttare l’esperienza migliorata. Per ulteriori informazioni, leggere la [Guida all&#39;aggiornamento dell&#39;architettura di Real-Time CDB B2B edition](../../rtcdp/b2b-architecture-upgrade.md). |
+| Funzionalità di ricerca migliorata nell’API delle entità | L’API delle entità ora supporta quanto segue: <ul><li>Persona (Profilo)</li><li>Eventi esperienza</li><li>Account</li><li>Opportunità</li></ul> Questo aggiornamento semplifica l’utilizzo delle API e garantisce prestazioni e affidabilità ottimali. Se in precedenza utilizzavi ricerche per altri tipi di entità, tra cui tabelle di unione e tipi di più entità personalizzati, ora puoi rivedere l’utilizzo delle API e sfruttare l’esperienza migliorata. Per ulteriori informazioni, consulta la [guida all’aggiornamento dell’architettura di Real-Time CDP B2B Edition](../../rtcdp/b2b-architecture-upgrade.md). |
 
-Per ulteriori informazioni su Real-Time Customer Profile, leggere la [Panoramica profilo](../../profile/home.md).
+Per ulteriori informazioni sul profilo cliente in tempo reale, consulta la [panoramica sul profilo](../../profile/home.md).
 
 ## Sandbox {#sandboxes}
 
@@ -145,8 +145,8 @@ Experience Platform è stato progettato per arricchire le applicazioni di esperi
 
 | Funzione | Descrizione |
 | --- | --- |
-| Deduplicazione degli oggetti di dipendenza nel flusso di lavoro di importazione | Ora gli strumenti sandbox riutilizzano sempre gli oggetti esistenti se vengono rilevati oggetti con lo stesso nome, per evitare la proliferazione degli oggetti. Questa modifica si applica ai seguenti oggetti: <ul><li>Schema</li><li>Gruppo di campi</li><li>Pubblico</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> Per ulteriori informazioni, consulta la [guida agli oggetti supportati per gli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling). |
-| Supporto completo della sandbox per la condivisione di pacchetti tra organizzazioni | Gli strumenti sandbox ora supportano il tipo **Intero sandbox** nella condivisione dei pacchetti tra organizzazioni. Ora puoi condividere tra le organizzazioni sia l’intero pacchetto sandbox che quello con più oggetti. Per ulteriori informazioni, consulta la [guida agli oggetti supportati per gli strumenti sandbox](../../sandboxes/ui/sharing-packages-across-orgs.md). |
+| Deduplica degli oggetti di dipendenza nel flusso di lavoro di importazione | Ora gli strumenti sandbox riutilizzano sempre gli oggetti esistenti se vengono rilevati oggetti con lo stesso nome, per evitarne la proliferazione. Questa modifica si applica ai seguenti oggetti: <ul><li>Schema</li><li>Gruppo di campi</li><li>Pubblico</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> Per ulteriori informazioni, consulta la [guida agli oggetti supportati per gli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling). |
+| Supporto intero della sandbox per la condivisione di pacchetti tra organizzazioni | Gli strumenti sandbox ora supportano il tipo **Sandbox intera** nella condivisione dei pacchetti tra organizzazioni. Ora puoi condividere sia l’intera sandbox che i pacchetti con più oggetti tra le organizzazioni. Per ulteriori informazioni, consulta la [guida agli oggetti supportati per gli strumenti sandbox](../../sandboxes/ui/sharing-packages-across-orgs.md). |
 
 Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini](../../sandboxes/home.md).
 
@@ -158,7 +158,7 @@ Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini]
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Stime del pubblico | Le stime del pubblico ora vengono generate automaticamente in Segment Builder (Generatore di segmenti). Questo valore viene aggiornato ogni volta che modifichi il pubblico e riflette sempre le regole del pubblico più recenti. Inoltre, la stima verrà ora visualizzata come un **intervallo**, basato sull&#39;intervallo di affidabilità dei dati di campionamento. |
+| Stime del pubblico | Le stime del pubblico ora vengono generate automaticamente nel Generatore di segmenti. Questo valore viene aggiornato ogni volta che modifichi il pubblico e riflette sempre le regole del pubblico più recenti. Inoltre, la stima verrà ora visualizzata come un **intervallo**, basato sull’intervallo di affidabilità dei dati di campionamento. |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
@@ -170,11 +170,11 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto di [!BADGE Beta]{type=Informative} per [!DNL Azure Private Links] nell&#39;interfaccia utente | È ora possibile utilizzare [!DNL Azure Private Links] per un gruppo selezionato di origini nell&#39;interfaccia utente. Utilizza questa funzione per creare un endpoint privato a cui l’origine può connettersi. Con gli endpoint privati, puoi impostare connessioni e flussi di dati che bypassano l’Internet pubblico, garantendo maggiore sicurezza e isolamento della rete per i dati sensibili. Il supporto per [!DNL Azure Private Links] è disponibile per le seguenti origini: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Per ulteriori informazioni, leggere la guida in [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
-| Autenticazione avanzata per [!DNL Azure Blob Storage] | È ora possibile utilizzare l&#39;autenticazione basata sull&#39;entità servizio per connettere l&#39;origine [!DNL Azure Blob Storage] ad Experience Platform. Utilizza l’autenticazione basata sull’entità servizio per una maggiore sicurezza, una rotazione delle credenziali più semplice e un controllo di accesso più granulare per il tuo account. Per ulteriori informazioni, consulta la [[!DNL Azure Blob Storage] panoramica](../../sources/connectors/cloud-storage/blob.md). |
+| Autenticazione avanzata per [!DNL Azure Blob Storage] | Ora puoi utilizzare l’autenticazione basata sull’entità principale del servizio per connettere l’origine [!DNL Azure Blob Storage] a Experience Platform. Utilizza l’autenticazione basata sull’entità principale del servizio per una maggiore sicurezza, per agevolare la rotazione delle credenziali e per un controllo degli accessi più granulare per il tuo account. Per ulteriori informazioni, consulta la [[!DNL Azure Blob Storage] panoramica](../../sources/connectors/cloud-storage/blob.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
 
 <!--
 | [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
+| [!BADGE Beta]{type=Informative} Support for [!DNL Azure Private Links] in the UI | You can now use [!DNL Azure Private Links] for a select group of sources in the UI. Use this feature to create a private endpoint that which your source can connect to. With private endpoints, you can set up connections and dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. Support for [!DNL Azure Private Links] is available to the following following sources: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> For more information, read the guide on [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
 -->

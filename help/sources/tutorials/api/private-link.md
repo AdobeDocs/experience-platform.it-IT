@@ -1,16 +1,18 @@
 ---
-title: Utilizzare il collegamento privato di Azure per le origini nell’API
+title: Supporto Di Collegamenti Privati Per Le Origini Nell’API
 description: Scopri come creare e utilizzare collegamenti privati per origini Adobe Experience Platform
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 4%
 
 ---
 
-# Usa [!DNL Azure Private Link] per le origini nell&#39;API
+# Supporto di collegamenti privati per le origini nell’API
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 4%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-È possibile utilizzare la funzionalità [!DNL Azure Private Link] per creare endpoint privati per le origini Adobe Experience Platform a cui connettersi. Connetti in modo sicuro le origini a una rete virtuale utilizzando indirizzi IP privati, eliminando la necessità di IP pubblici e riducendo la superficie di attacco.Semplifica la configurazione della rete eliminando la necessità di configurazioni complesse di firewall o Network Address Translation, garantendo al contempo che il traffico dati raggiunga solo i servizi approvati.
+Puoi utilizzare la funzione Collegamento privato per creare endpoint privati per le origini Adobe Experience Platform a cui connetterti. Connetti in modo sicuro le origini a una rete virtuale utilizzando indirizzi IP privati, eliminando la necessità di IP pubblici e riducendo la superficie di attacco. Semplifica la configurazione della rete eliminando la necessità di configurazioni complesse di firewall o Network Address Translation, garantendo al contempo che il traffico dati raggiunga solo i servizi approvati.
 
 Leggi questa guida per scoprire come utilizzare le API per creare e utilizzare un endpoint privato.
 
