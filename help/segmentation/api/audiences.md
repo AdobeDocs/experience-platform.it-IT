@@ -3,7 +3,7 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 3%
@@ -37,7 +37,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 Durante il recupero di un elenco di tipi di pubblico è possibile utilizzare i seguenti parametri di query:
 
-| Parametro query | Descrizione | Esempio |
+| Parametri query | Descrizione | Esempio |
 | --------------- | ----------- | ------- |
 | `start` | Specifica l&#39;offset iniziale per i tipi di pubblico restituiti. | `start=5` |
 | `limit` | Specifica il numero massimo di pubblici restituiti per pagina. | `limit=10` |
@@ -51,7 +51,7 @@ Durante il recupero di un elenco di tipi di pubblico è possibile utilizzare i s
 
 La richiesta seguente recupera gli ultimi due tipi di pubblico creati nell’organizzazione.
 
-+++Richiesta di esempio per recuperare un elenco di tipi di pubblico.
++++Una richiesta di esempio per recuperare un elenco di tipi di pubblico.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
@@ -166,7 +166,12 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -550,7 +555,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `op` | Tipo di operazione PATCH eseguita. Per questo endpoint, il valore è **always** `/add`. |
-| `path` | Percorso del campo da aggiornare. Impossibile modificare i campi generati dal sistema, ad esempio `id`, `audienceId` e `namespace` **4&rbrace;.** |
+| `path` | Percorso del campo da aggiornare. Impossibile modificare i campi generati dal sistema, ad esempio `id`, `audienceId` e `namespace` **4}.** |
 | `value` | Il nuovo valore assegnato alla proprietà specificata in `path`. |
 
 +++
