@@ -1,9 +1,10 @@
 ---
 title: Destinazione Marketo Engage
 description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
-source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 891484b279d2521115c6b1edc58f45c594a55382
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '874'
 ht-degree: 1%
 
 ---
@@ -12,14 +13,17 @@ ht-degree: 1%
 
 ## Registro modifiche destinazione {#changelog}
 
+<!--
 >[!IMPORTANT]
 >
->**[!UICONTROL (Legacy) (V2) Marketo Engage]** diventerà obsoleto il **marzo 2026**.
+>The **[!UICONTROL (Legacy) (V2) Marketo Engage]** will be deprecated in **March 2026**.
 >
->Per garantire una transizione senza problemi alla nuova destinazione **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, controlla i seguenti punti chiave e le azioni richieste:
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
 >
->* Tutti gli utenti della **[!UICONTROL (Legacy) (V2) Marketo Engage]** esistente devono migrare alla nuova destinazione **[!UICONTROL Marketo Engage]** entro marzo 2026.
->* **I flussi di dati esistenti non verranno migrati automaticamente.** Devi [impostare una nuova connessione](../../ui/connect-destination.md) alla nuova destinazione **[!UICONTROL Marketo Engage]** e attivare i tuoi tipi di pubblico.
+>* All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
+
+-->
 
 ![Immagine delle due schede di destinazione di Marketo in una visualizzazione affiancata.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -82,7 +86,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 >* Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions).
 >* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per istruzioni dettagliate su come impostare la destinazione e attivare i tipi di pubblico, leggi [Pubblicare un pubblico Adobe Experience Platform in un elenco statico di Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=it) nella documentazione di Marketo.
+Per istruzioni dettagliate su come impostare la destinazione e attivare i tipi di pubblico, leggi [Pubblicare un pubblico Adobe Experience Platform in un elenco statico di Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) nella documentazione di Marketo.
 
 Il video seguente illustra anche i passaggi per configurare una destinazione Marketo e attivare i tipi di pubblico.
 
@@ -95,7 +99,7 @@ Il video seguente illustra anche i passaggi per configurare una destinazione Mar
 >* Le due limitazioni indicate nel video non sono più applicabili. Ora puoi mappare molti altri campi dell’attributo del profilo, oltre alle informazioni sull’iscrizione al pubblico supportate al momento della registrazione del video. Puoi anche esportare i membri del pubblico in Marketo che non esistono ancora negli elenchi statici di Marketo e verranno aggiunti agli elenchi.
 >* Nel **[!UICONTROL passaggio Pianifica pubblico]** del flusso di lavoro di attivazione, in Marketo V1, era necessario aggiungere manualmente un **[!UICONTROL ID mappatura]** per esportare correttamente i dati in Marketo. Questo passaggio manuale non è più richiesto in Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440166?quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Monitorare la destinazione {#monitor-destination}
 
