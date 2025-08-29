@@ -104,7 +104,7 @@ Viene visualizzata la pagina dei dettagli del pubblico. Seleziona la scheda **[!
 >title="Somiglianza e portata"
 >abstract="Il grafico di somiglianza e portata rappresenta la portata prevista di un pubblico Look-Alike costituito da profili al di sopra di un dato punteggio di somiglianza. Puoi passare il puntatore su un punto specifico del grafico per visualizzare la percentuale di somiglianza e il numero di profili previsto per il punto attualmente evidenziato."
 
-La sezione similarità e portata mostra un grafico che rappresenta la portata prevista di un pubblico simile costituito da profili al di sopra di un determinato punteggio di somiglianza. Il punteggio di somiglianza rappresenta la **distanza** di somiglianza tra il profilo del pubblico di base e il profilo dell&#39;approfondimento similare.
+La sezione similarità e portata mostra un grafico che rappresenta la portata prevista di un pubblico simile costituito da profili al di sopra di un determinato punteggio di somiglianza. Il punteggio di somiglianza rappresenta la **distanza** di somiglianza tra il profilo del pubblico di base e il profilo di insight simile.
 
 ![Il grafico similarità e portata è evidenziato.](../images/types/lookalike/similarity-and-reach.png)
 
@@ -127,7 +127,7 @@ La sezione Tipi di pubblico simili visualizza un elenco di tutti i tipi di pubbl
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Fattori di influenza"
->abstract="I fattori di influenza sono attributi, eventi e appartenenze al pubblico importanti per spiegare la somiglianza di un profilo con i membri del pubblico di base. Le etichette e i criteri di utilizzo dei dati possono essere utilizzati per escludere alcuni dati dall’essere considerati fattori di influenza nei modelli Look-Alike."
+>abstract="I fattori di influenza sono attributi, eventi e appartenenze al pubblico importanti per spiegare la similarità di un profilo con i membri del pubblico di base. Le etichette e i criteri di utilizzo dei dati possono essere utilizzati per escludere alcuni dati dall’essere considerati fattori di influenza nei modelli Look-Alike."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=it#exclude" text="Escludi dati"
 
 La sezione dei fattori influenti mostra i primi 100 fattori che influenzano il modello lookalike per il pubblico di base selezionato. Questi fattori influenti sono gli attributi del profilo, gli eventi di esperienza e le appartenenze al pubblico che sono i più importanti per spiegare le somiglianze nel pubblico di base. Comprendere i principali fattori influenti consente di personalizzare meglio i contenuti di marketing per questo pubblico e per qualsiasi pubblico simile che crei da esso. Non verranno visualizzati tutti i fattori influenti che influiscono sul modello lookalike.
