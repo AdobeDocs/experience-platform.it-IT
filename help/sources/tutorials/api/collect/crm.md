@@ -2,10 +2,10 @@
 title: Creare un flusso di dati per acquisire dati da un sistema CRM in Experience Platform
 description: Scopri come utilizzare l’API del servizio Flusso per creare un flusso di dati e acquisire i dati di origine in Experience Platform.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 3%
+source-wordcount: '2112'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ Leggi questa guida per scoprire come creare un flusso di dati e acquisire dati i
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [Acquisizione batch](../../../../ingestion/batch-ingestion/overview.md): scopri come caricare grandi volumi di dati in modo efficiente in batch.
+* [Acquisizione batch](../../../../ingestion/batch-ingestion/overview.md): scopri come caricare in modo rapido ed efficiente grandi volumi di dati in batch.
 * [Catalog Service](../../../../catalog/datasets/overview.md): organizza e tieni traccia dei set di dati in Experience Platform.
 * [Preparazione dati](../../../../data-prep/home.md): trasforma e mappa i dati in arrivo in modo che corrispondano ai requisiti dello schema.
 * [Flussi dati](../../../../dataflows/home.md): imposta e gestisci le pipeline che spostano i dati dalle origini alle destinazioni.
@@ -31,13 +31,13 @@ Per informazioni su come effettuare correttamente chiamate alle API di Experienc
 
 ### Crea connessione di base {#base}
 
-Per creare correttamente un flusso di dati per l’origine, è necessario un account di origine completamente autenticato e il relativo ID di connessione di base corrispondente. Se non disponi di questo ID, visita il [catalogo origini](../../../home.md) per trovare un elenco di origini per le quali puoi creare una connessione di base.
+Per creare un flusso di dati per l’origine, è necessario un account di origine completamente autenticato e il relativo ID di connessione di base corrispondente. Se non disponi di questo ID, visita il [catalogo origini](../../../home.md) per trovare un elenco di origini per le quali puoi creare una connessione di base.
 
 ### Creare uno schema XDM di destinazione {#target-schema}
 
 Uno schema Experience Data Model (XDM) fornisce un modo standardizzato per organizzare e descrivere i dati sull’esperienza del cliente in Experience Platform. Per acquisire i dati di origine in Experience Platform, devi innanzitutto creare uno schema XDM di destinazione che definisca la struttura e i tipi di dati da acquisire. Questo schema funge da blueprint per il set di dati di Experience Platform in cui risiederanno i dati acquisiti.
 
-È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Leggi le seguenti guide per informazioni dettagliate sui passaggi per creare uno schema XDM di destinazione:
+È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Per i passaggi dettagliati su come creare uno schema XDM di destinazione, leggi le seguenti guide:
 
 * [Crea uno schema utilizzando l&#39;API](../../../../xdm/api/schemas.md).
 * [Creare uno schema utilizzando l&#39;interfaccia utente](../../../../xdm/tutorials/create-schema-ui.md).
@@ -46,7 +46,7 @@ Una volta creato, lo schema XDM di destinazione `$id` sarà necessario in seguit
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
-Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe). I dati acquisiti correttamente in Experience Platform vengono memorizzati nel data lake come set di dati. Durante questo passaggio, puoi creare un nuovo set di dati o utilizzare un set di dati esistente.
+Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere strutturato come una tabella con colonne (schema) e righe (campi). I dati acquisiti correttamente in Experience Platform vengono memorizzati nel data lake come set di dati. Durante questo passaggio, puoi creare un nuovo set di dati o utilizzarne uno esistente.
 
 È possibile creare un set di dati di destinazione effettuando una richiesta POST all&#39;API [Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornendo al tempo stesso l&#39;ID dello schema di destinazione all&#39;interno del payload. Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta la guida su [creazione di un set di dati utilizzando l&#39;API](../../../../catalog/api/create-dataset.md).
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Richiesta**
 
-L’esempio seguente mostra come creare un set di dati di destinazione abilitato per l’acquisizione di Real-Time Customer Profile. In questa richiesta, la proprietà `unifiedProfile` è impostata su `true` (nell&#39;oggetto `tags`), che indica ad Experience Platform di includere questo set di dati nel profilo cliente in tempo reale.
+L’esempio seguente mostra come creare un set di dati di destinazione abilitato per l’acquisizione di Real-Time Customer Profile. In questa richiesta, la proprietà `unifiedProfile` è impostata su `true` (nell&#39;oggetto `tags`), che indica ad Experience Platform di includere il set di dati nel profilo cliente in tempo reale.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID del set di dati di destinazione. Questo ID è necessario in un secondo momento per creare una connessione di destinazione.
+In caso di esito positivo, la risposta restituisce l’ID del set di dati target. Questo ID è necessario in un secondo momento per creare una connessione di destinazione.
 
 ```json
 [
@@ -180,7 +180,7 @@ curl -X POST \
 | `baseConnectionId` | `id` della connessione di base. È possibile recuperare questo ID autenticando l&#39;origine in Experience Platform utilizzando l&#39;API [!DNL Flow Service]. |
 | `data.format` | Il formato dei dati. Impostare questo valore su `tabular` per le origini basate su tabelle, ad esempio database, CRM e provider di automazione marketing. |
 | `params.tableName` | Nome della tabella nell’account di origine che desideri acquisire in Experience Platform. |
-| `params.columns` | Le colonne di dati specifiche della tabella che desideri acquisire in Experience Platform. |
+| `params.columns` | Le colonne di tabella specifiche dei dati che desideri acquisire in Experience Platform. |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine in uso. |
 
 **Risposta**
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## Mappatura {#mapping}
 
-Successivamente, devi mappare i dati di origine allo schema di destinazione a cui aderisce il set di dati di destinazione. Per creare una mappatura, effettua una richiesta POST all&#39;endpoint `mappingSets` dell&#39;[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/), fornisci l&#39;ID schema XDM di destinazione e i dettagli dei set di mappatura che desideri creare.
+Quindi, mappa i dati di origine con lo schema di destinazione a cui aderisce il set di dati di destinazione. Per creare una mappatura, effettuare una richiesta POST all&#39;endpoint `mappingSets` dell&#39;[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Includi l’ID dello schema XDM di destinazione e i dettagli dei set di mappatura che desideri creare.
 
 **Formato API**
 
@@ -635,7 +635,7 @@ Per assicurarsi di utilizzare la specifica di flusso di dati corretta, controlla
 
 Un flusso di dati è una pipeline configurata che trasferisce dati tra i servizi di Experience Platform. Definisce il modo in cui i dati vengono acquisiti da origini esterne (come database, archiviazione cloud o API), elaborati e instradati ai set di dati target. Questi set di dati vengono quindi utilizzati da servizi come Identity Service, Real-Time Customer Profile e Destinations per l’attivazione e l’analisi.
 
-Per creare un flusso di dati, è necessario disporre di valori per i seguenti elementi:
+Per creare un flusso di dati, devi fornire i valori per i seguenti elementi:
 
 * [ID connessione Source](#source)
 * [ID connessione di destinazione](#target)
@@ -647,8 +647,8 @@ Durante questo passaggio, puoi utilizzare i seguenti parametri in `scheduleParam
 | Parametro di pianificazione | Descrizione |
 | --- | --- |
 | `startTime` | Tempo di epoca (in secondi) in cui deve iniziare il flusso di dati. |
-| `frequency` | La frequenza di acquisizione. Configura la frequenza per indicare la frequenza con cui deve essere eseguito il flusso di dati. Puoi impostare la frequenza su: <ul><li>`once`: imposta la frequenza su `once` per creare un&#39;acquisizione unica. Le configurazioni di intervallo e backfill non sono disponibili quando crei un flusso di dati di acquisizione una tantum. Per impostazione predefinita, la frequenza di pianificazione è impostata su una volta.</li><li>`minute`: imposta la frequenza su `minute` per pianificare il flusso di dati per acquisire i dati al minuto.</li><li>`hour`: imposta la frequenza su `hour` per pianificare il flusso di dati per acquisire i dati su base oraria.</li><li>`day`: imposta la frequenza su `day` per pianificare il flusso di dati per acquisire i dati su base giornaliera.</li><li>`week`: imposta la frequenza su `week` per pianificare il flusso di dati per acquisire i dati settimanalmente.</li></ul> |
-| `interval` | Intervallo tra acquisizioni consecutive (richiesto per tutte le frequenze eccetto `once`). Configura l’impostazione dell’intervallo per stabilire l’intervallo di tempo tra ogni acquisizione. Ad esempio, se imposti la frequenza su giorno e configuri l’intervallo su 15, il flusso di dati verrà eseguito ogni 15 giorni. Impossibile impostare l&#39;intervallo su zero. Il valore dell&#39;intervallo minimo accettato per ciascuna frequenza è il seguente:<ul><li>`once`: n/d</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `frequency` | La frequenza di acquisizione. Configura la frequenza per indicare la frequenza con cui deve essere eseguito il flusso di dati. Puoi impostare la frequenza su: <ul><li>`once`: imposta la frequenza su `once` per creare un&#39;acquisizione unica. Le impostazioni di intervallo e retrocompilazione non sono disponibili per i processi di acquisizione una tantum. Per impostazione predefinita, la frequenza di pianificazione è impostata su una volta.</li><li>`minute`: imposta la frequenza su `minute` per pianificare il flusso di dati per acquisire i dati al minuto.</li><li>`hour`: imposta la frequenza su `hour` per pianificare il flusso di dati per acquisire i dati su base oraria.</li><li>`day`: imposta la frequenza su `day` per pianificare il flusso di dati per acquisire i dati su base giornaliera.</li><li>`week`: imposta la frequenza su `week` per pianificare il flusso di dati per acquisire i dati settimanalmente.</li></ul> |
+| `interval` | Intervallo tra acquisizioni consecutive (richiesto per tutte le frequenze eccetto `once`). Configura l’impostazione dell’intervallo per stabilire l’intervallo di tempo tra ogni acquisizione. Ad esempio, se la frequenza è impostata su giorno e l’intervallo è 15, il flusso di dati verrà eseguito ogni 15 giorni. Impossibile impostare l&#39;intervallo su zero. Il valore dell&#39;intervallo minimo accettato per ciascuna frequenza è il seguente:<ul><li>`once`: n/d</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
 | `backfill` | Indica se acquisire i dati storici prima di `startTime`. |
 
 {style="table-layout:auto"}
@@ -723,7 +723,7 @@ curl -X POST \
 | `transformations.params.mappingId` | ID di mappatura generato in un passaggio precedente. |
 | `scheduleParams.startTime` | Il tempo di inizio del flusso di dati in tempo epoca (secondi dall’epoca Unix). Determina quando inizierà la prima esecuzione del flusso di dati. |
 | `scheduleParams.frequency` | La frequenza con cui verrà eseguito il flusso di dati. I valori accettabili includono: `once`, `minute`, `hour`, `day` o `week`. |
-| `scheduleParams.interval` | L’intervallo tra esecuzioni consecutive del flusso di dati, in base alla frequenza selezionata. Deve essere un numero intero diverso da zero. Ad esempio, un intervallo di `15` con frequenza `minute` indica che il flusso di dati viene eseguito ogni 15 minuti. |
+| `scheduleParams.interval` | L’intervallo tra esecuzioni consecutive del flusso di dati, in base alla frequenza selezionata. Deve essere un numero intero diverso da zero. Ad esempio, se la frequenza è impostata su minuti e l’intervallo è 15, il flusso di dati verrà eseguito ogni 15 minuti. |
 | `scheduleParams.backfill` | Valore booleano (`true` o `false`) che determina se acquisire i dati storici (backfill) quando il flusso di dati viene creato per la prima volta. |
 
 {style="table-layout:auto"}
@@ -755,11 +755,11 @@ Questa esercitazione ti ha guidato nel processo di creazione di un flusso di dat
 
 ### Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni su tassi di acquisizione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l&#39;esercitazione su [account di monitoraggio e flussi di dati](../../../../dataflows/ui/monitor-sources.md).
+Una volta creato il flusso di dati, puoi monitorarne le prestazioni direttamente nell’interfaccia utente di Experience Platform. Ciò include il tracciamento dei tassi di acquisizione, delle metriche di successo e di eventuali errori che si verificano. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l&#39;esercitazione su [account di monitoraggio e flussi di dati](../../../../dataflows/ui/monitor-sources.md).
 
 ### Aggiornare il flusso di dati
 
-Per aggiornare le configurazioni per la pianificazione, la mappatura e le informazioni generali dei flussi di dati, visita il tutorial su [aggiornamento dei flussi di dati di origine](../../api/update-dataflows.md).
+Per aggiornare le configurazioni per la pianificazione, la mappatura o le informazioni generali dei flussi di dati, visita il tutorial su [aggiornamento dei flussi di dati di origine](../../api/update-dataflows.md).
 
 ## Eliminare il flusso di dati
 

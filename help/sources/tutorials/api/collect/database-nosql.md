@@ -3,20 +3,20 @@ title: Creare un flusso di dati per le origini del database utilizzando l’API 
 type: Tutorial
 description: Scopri come utilizzare l’API del servizio Flusso per creare un flusso di dati e acquisire i dati dal database in Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 3%
 
 ---
 
 # Creare un flusso di dati per le origini del database utilizzando l&#39;API [!DNL Flow Service]
 
-Leggi questo tutorial per scoprire come creare un flusso di dati e acquisire dati dal database a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Leggi questo tutorial per scoprire come creare un flusso di dati e acquisire dati dal database in Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un&#39;origine di database. Se non disponi di questo ID, visita il [catalogo origini](../../../home.md#database) per ottenere un elenco delle origini del database con cui puoi creare una connessione di base.
+>* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un&#39;origine di database. Se non disponi di questo ID, visita il [catalogo origini](../../../home.md#database) per visualizzare un elenco delle origini del database con cui puoi creare una connessione di base.
 >* Affinché Experience Platform possa acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC. L&#39;unico indicatore orario supportato per l&#39;[[!DNL Snowflake] origine](../../../connectors/databases/snowflake.md) è TIMESTAMP_NTZ con ora UTC.
 
 ## Introduzione
