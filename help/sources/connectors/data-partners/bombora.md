@@ -2,12 +2,12 @@
 title: Intento Bombora
 description: Scopri la fonte dell’Intento di Bombora su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account [!DNL Bombora] ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Bombora]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
 
 ### Vincoli di denominazione per file e directory
 
@@ -77,18 +77,27 @@ Per ulteriori informazioni su queste credenziali, leggere la [[!DNL Google Cloud
 
 Leggere questa sezione per informazioni sullo schema [!DNL Bombora] e sulla struttura dei dati.
 
-Lo schema [!DNL Bombora] è denominato **Account Intent Weekly**. Si tratta di informazioni di intento settimanali (ricerca di acquirenti B2B anonimi e consumo di contenuti) su account e argomenti specifici. I dati sono in formato parquet.
+Lo schema [!DNL Bombora] è denominato **Intento account Bombora B2B**. Si tratta di informazioni di intento settimanali (ricerca di acquirenti B2B anonimi e consumo di contenuti) su account e argomenti specifici. I dati sono in formato parquet.
 
-| Nome campo | Tipo di dati | Obbligatorio | Chiave business | Note |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | STRINGA | TRUE | SÌ | Il nome canonico dell’azienda. |
-| `Domain` | STRINGA | TRUE | SÌ | Dominio dell’account identificato che mostra l’intento. |
-| `Topic_Id` | STRINGA | TRUE | SÌ | ID dell&#39;argomento [!DNL Bombora]. |
-| `Topic_Name` | STRINGA | TRUE | | Il nome dell&#39;argomento [!DNL Bombora]. |
-| `Cluster_Name` | STRINGA | TRUE | | Nome del cluster in [!DNL Bombora] per un argomento specificato. |
-| `Cluster_Id` | STRINGA | TRUE | | ID cluster associato a un argomento specificato. |
-| `Composite_Score` | NUMERO INTERO | TRUE | | Il punteggio composito rappresenta il pattern di consumo di un dominio per un dato argomento in un determinato periodo di tempo. Il punteggio composito è misurato tra 0 e 100, dove 100 rappresenta il punteggio più alto possibile e 0 rappresenta il punteggio più basso. Un punteggio composito superiore a 60 rappresenta un aumento dell’interesse in un particolare argomento da parte di un dominio. Questo fenomeno è anche definito &quot;aumento&quot;. |
-| `Partition_Date` | DATA | TRUE | | Data di calendario di un&#39;istantanea. Questa operazione viene eseguita settimanalmente, alla fine della settimana, nel formato `mm/dd/yyyy`. |
+* Classe - XDM [!DNL Bombora Account Intent]
+* Spazio dei nomi - B2B [!DNL Bombora Account Intent]
+* Identità primaria - `intentID`
+* Relazioni - Account B2B
+
+| Nome campo | Tipo di dati | Descrizione |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OGGETTO | Questo campo viene utilizzato dal sistema per il controllo del sistema di origine. |
+| `_id` | STRINGA | Questo campo viene utilizzato dal sistema come identificatore univoco. |
+| `accountDomain` | STRINGA | Questo campo contiene il dominio dell’account. |
+| `accountID` | STRINGA | Questo campo contiene l’ID account B2B a cui è associato questo record intento. |
+| `bomboraAccountName` | STRINGA | Questo campo contiene l&#39;ID azienda di Bombora. |
+| `clusterID` | STRINGA | Questo campo contiene l&#39;ID cluster. |
+| `clusterName` | STRINGA | Questo campo contiene il nome del cluster. |
+| `compositeScore` | NUMERO INTERO | Questo campo contiene il punteggio composito dell’intento. |
+| `intentID` | STRINGA | Questo campo contiene un valore univoco generato dal sistema. |
+| `partitionDate` | DATA | Questo campo contiene la data di partizione. Questa operazione viene eseguita settimanalmente, alla fine della settimana, nel formato `mm/dd/yyyy`. |
+| `topicID` | STRINGA | Questo campo contiene l&#39;ID argomento intento di Bombora. |
+| `topicName` | STRINGA | Questo campo contiene il nome dell&#39;argomento intento di Bombora. |
 
 {style="table-layout:auto"}
 

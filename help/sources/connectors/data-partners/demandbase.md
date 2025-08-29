@@ -2,12 +2,12 @@
 title: Intento Demandbase
 description: Scopri l’origine di Intento Demandbase su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account [!DNL Demandbase] ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Demandbase]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
 
 ### Vincoli di denominazione per file e directory
 
@@ -60,25 +60,33 @@ Per ulteriori informazioni su queste credenziali, leggere la [[!DNL Google Cloud
 
 Leggere questa sezione per informazioni sullo schema [!DNL Demandbase] e sulla struttura dei dati.
 
-Lo schema [!DNL Demandbase] è denominato **Company Intent Weekly**. Si tratta delle informazioni di intento settimanali (ricerca dell’acquirente B2B anonimo e consumo di contenuti) su un account e parole chiave specifici. I dati sono in formato parquet.
+Lo schema [!DNL Demandbase] è denominato **Intento account Demandbase B2B**. Si tratta delle informazioni di intento settimanali (ricerca dell’acquirente B2B anonimo e consumo di contenuti) su un account e parole chiave specifici. I dati sono in formato parquet.
 
-| Nome campo | Tipo di dati | Obbligatorio | Chiave business | Note |
-| --- | --- | --- | --- | --- |
-| `company_id` | STRINGA | TRUE | SÌ | ID canonico dell’azienda. |
-| `domain` | STRINGA | TRUE | SÌ | Il dominio identificato dell’account che mostra l’intento. |
-| `start_date` | DATA | TRUE | SÌ | Data di inizio in cui si è verificata l’attività di intento nel periodo di durata. |
-| `end_date` | DATA | TRUE | SÌ | Data di fine in cui si è verificata l’attività di intento nel periodo di durata. |
-| `duration_type` | STRINGA | TRUE | SÌ | Tipo di durata. In genere, questo valore può essere giornaliero, settimanale o mensile a seconda della durata di rollup scelta. Per questo esempio di dati, il valore è `week`. |
-| `keyword_set_id` | STRINGA | TRUE | SÌ | ID del set di parole chiave. È univoco per ogni cliente. |
-| `keyword_set` | STRINGA | TRUE | SÌ | Nome del set di parole chiave. |
-| `keyword` | STRINGA | TRUE | | Parola chiave Intent. |
-| `is_trending` | STRINGA | TRUE | | Stato corrente di una determinata tendenza. Lo stato di tendenza è misurato come incremento dell’attività intent nell’ultima settimana rispetto alle medie delle sette settimane precedenti. |
-| `intent_strength` | ENUM[STRINGA] | TRUE | | Misurazione quantificata della forza dell&#39;intento. I valori accettati includono: `HIGH`, `MED` e `LOW`. |
-| `num_people_researching` | NUMERO INTERO | TRUE | | Numero di persone appartenenti a `company_id` che hanno cercato la parola chiave negli ultimi sette giorni. |
-| `num_trending_days` | NUMERO INTERO | TRUE | | Il numero di giorni di tendenza della parola chiave in una determinata durata. |
-| `trending_score` | NUMERO INTERO | TRUE | | Punteggio di tendenza. |
-| `record_id` | STRINGA | TRUE | | ID univoco del record primario. |
-| `partition_date` | DATA | TRUE | | Data di calendario dello snapshot. Questa operazione viene eseguita settimanalmente, alla fine della settimana. |
+* Classe - XDM [!DNL Demandbase Account Intent]
+* Spazio dei nomi - B2B [!DNL Demandbase Account Intent]
+* Identità primaria - `intentID`
+* Relazioni - Account B2B
+
+| Nome campo | Tipo di dati | Descrizione |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OGGETTO | Questo campo contiene informazioni sul controllo del sistema provenienti da una fonte esterna. |
+| `_id` | STRINGA | Questo è l’identificatore di sistema univoco del record. |
+| `accountDomain` | STRINGA | Questo campo contiene il dominio dell’account. |
+| `accountID` | STRINGA | Questo è l’ID account B2B a cui è associato il record intento. |
+| `demandbaseAccountID` | STRINGA | Questo è l&#39;ID società in [!DNL Demandbase]. |
+| `durationType` | STRINGA | Questo campo specifica il tipo di periodo di validità dell’intento, ad esempio &quot;settimana&quot;. |
+| `endDate` | DATA | Data di fine del periodo di validità dell&#39;intento. |
+| `intentID` | STRINGA | Si tratta di un valore univoco generato dal sistema per il record intento. |
+| `intentStrength` | STRINGA | Questo campo specifica il tipo di periodo di validità dell’intento, ad esempio &quot;DAY&quot;, &quot;WEEK&quot; o &quot;MONTH&quot;. |
+| `isTrending` | BOOLEANO | Questo campo indica se la parola chiave ha tendenza, con valori possibili come Basso, Medium o Alto. |
+| `keyword` | STRINGA | Questo campo contiene la parola chiave o la frase che indica l&#39;intento da [!DNL Demandbase]. |
+| `keywordSetID` | STRINGA | Identificatore del set di parole chiave. |
+| `keywordSetName` | STRINGA | Nome del set di parole chiave. |
+| `numTrendingDays` | NUMERO INTERO | Questo campo indica il numero di giorni in cui la parola chiave ha avuto una tendenza. |
+| `partitionDate` | DATA | Data di partizione del record. |
+| `peopleResearchingCount` | NUMERO INTERO | Questo campo indica il numero di persone che ricercano la parola chiave. |
+| `startDate` | DATA | Data di inizio del periodo di validità dell&#39;intento. |
+| `trendingScore` | NUMERO INTERO | Questo campo contiene il punteggio di tendenza per la parola chiave. |
 
 {style="table-layout:auto"}
 
