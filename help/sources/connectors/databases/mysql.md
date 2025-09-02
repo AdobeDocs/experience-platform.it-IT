@@ -3,9 +3,9 @@ title: Panoramica di MySQL Source Connector
 description: Scopri come connettere MySQL a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Leggere le sezioni seguenti per completare la configurazione dei prerequisiti pr
 
 ### Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di collegare le origini a Experience Platform in Azure o Amazon Web Services (AWS), è necessario aggiungere indirizzi IP specifici per l’area geografica al inserisco nell&#39;elenco Consentiti di. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform in Azure e AWS](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform in Azure o Amazon Web Services (AWS), è necessario aggiungere indirizzi IP specifici per l’area geografica al inserisco nell&#39;elenco Consentiti di. Per ulteriori informazioni, leggere la guida su [inserire nell&#39;elenco Consentiti gli indirizzi IP per connettersi ad Experience Platform in Azure e AWS](../../ip-address-allow-list.md).
 
 ### Autenticazione in Experience Platform su Azure {#azure}
 

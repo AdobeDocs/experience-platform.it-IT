@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Panoramica di Microsoft Dynamics Source Connector
 description: Scopri come collegare Microsoft Dynamics a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 3%
+source-wordcount: '284'
+ht-degree: 2%
 
 ---
 
-# Connettore Microsoft Dynamics
+# Origine [!DNL Microsoft Dynamics]
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi [!DNL Experience Platform]. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+[!DNL Microsoft Dynamics] è una suite di applicazioni aziendali che è possibile utilizzare per gestire le operazioni in modo più efficace. Sia che tu stia controllando le relazioni con i clienti, le finanze o le catene di fornitura, [!DNL Microsoft Dynamics] ti offre gli strumenti per semplificare i tuoi flussi di lavoro e prendere decisioni più intelligenti. La piattaforma è progettata per supportare sia la pianificazione delle risorse aziendali che la gestione delle relazioni con i clienti (CRM), consentendo di unificare i processi aziendali in un unico sistema integrato.
 
-[!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati da un sistema CRM di terze parti. Il supporto per i provider di gestione delle relazioni con i clienti include [!DNL Microsoft Dynamics].
+È possibile utilizzare l&#39;origine [!DNL Microsoft Dynamics] per acquisire i dati dall&#39;account [!DNL Microsoft Dynamics] a Adobe Experience Platform.
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, consulta la guida su [inserire nell&#39;elenco Consentiti gli indirizzi IP per connettersi ad Experience Platform](../../ip-address-allow-list.md).
 
 ## Mappatura campo da [!DNL Microsoft Dynamics] a XDM
 
