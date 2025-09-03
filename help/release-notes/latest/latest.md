@@ -3,7 +3,7 @@ title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1339'
 ht-degree: 100%
 
