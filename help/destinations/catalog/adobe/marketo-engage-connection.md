@@ -45,7 +45,7 @@ Possono attivare i propri tipi di pubblico in Marketo Engage e utilizzare il tip
 
 ## Prerequisiti {#prerequisites}
 
-* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
+* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
 * Solo le istanze di Marketo Engage nella stessa organizzazione Adobe Real-Time CDP saranno disponibili durante la configurazione di questa destinazione.
 * Questa destinazione può essere utilizzata solo dalle istanze di Marketo Engage con i relativi utenti gestiti in Adobe Admin Console.
 
@@ -146,7 +146,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
    * **[!UICONTROL Solo profilo]**: seleziona questa opzione se desideri mantenere aggiornati i profili lead di Marketo con le informazioni più recenti di Experience Platform.
    * **[!UICONTROL Solo pubblico]**: seleziona questa opzione se desideri aggiungere membri del pubblico agli elenchi di Marketo senza aggiornare le informazioni sul profilo.
 * **[!UICONTROL Partizione]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Solo profilo]**&#x200B;o **[!UICONTROL Tipi di sincronizzazione pubblico e profilo]***. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Predefinita]** in Marketo.
-* **[!UICONTROL Campo di deduplicazione Marketo]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
+* **[!UICONTROL Campo di deduplicazione Marketo]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/it/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
 
   >[!NOTE]
   >
