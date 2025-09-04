@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
+source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
 workflow-type: tm+mt
-source-wordcount: '5174'
+source-wordcount: '5200'
 ht-degree: 11%
 
 ---
@@ -58,7 +58,7 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -330,7 +330,7 @@ L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce d
 >[!NOTE]
 >
 >Quando si utilizza il vincolo di tempo &quot;After&quot; (Dopo), quest’ultimo evento può verificarsi più del tempo elencato all’interno del vincolo di tempo. >
->&#x200B;>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
+>>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
 >
 >Inoltre, questi due vincoli temporali possono essere utilizzati in coordinamento tra loro.
 >
@@ -406,10 +406,7 @@ Il timestamp per i profili qualificati indica il processo di valutazione del seg
 
 **[!UICONTROL Profili stimati]** indica un **intervallo approssimativo** di profili, in base al **processo di esempio**. Ciò significa che i dati di esempio sono proiettati sul set di profili più ampio, con un risultato stimato che può differire dal numero effettivo di profili qualificati. Il campione di profilo stimato ha un intervallo di affidabilità del 95%.
 
-Questo numero viene aggiornato in due scenari:
-
-1. Si è verificata una modifica superiore al 3% nei dati del cliente oppure l’ultimo processo di esempio risale a più di tre giorni prima.
-2. Le regole del pubblico sono state modificate o rimosse.
+Quando apporti modifiche alle regole del pubblico, puoi selezionare il pulsante **[!UICONTROL Aggiorna stima]** per visualizzare un conteggio aggiornato dei profili stimati. Tuttavia, questo numero è ancora basato sul lavoro di esempio precedente. Il processo di esempio viene aggiornato quando si verifica una modifica superiore al 3% nei dati del cliente o l’ultimo processo di esempio ha più di tre giorni.
 
 Se si seleziona la bolla di informazioni, viene visualizzata la data e l’ora dell’ultimo processo di campionamento.
 

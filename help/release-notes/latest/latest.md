@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
-workflow-type: ht
-source-wordcount: '1339'
-ht-degree: 100%
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+workflow-type: tm+mt
+source-wordcount: '1321'
+ht-degree: 97%
 
 ---
 
@@ -160,7 +160,7 @@ Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini]
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Stime del pubblico | Le stime del pubblico ora vengono generate automaticamente nel Generatore di segmenti. Questo valore viene aggiornato ogni volta che modifichi il pubblico e riflette sempre le regole del pubblico più recenti. Inoltre, la stima verrà ora visualizzata come un **intervallo**, basato sull’intervallo di affidabilità dei dati di campionamento. |
+| Stime del pubblico | Le stime del pubblico vengono ora visualizzate come un **intervallo**, basato sull&#39;intervallo di affidabilità dei dati di campionamento. Per ulteriori informazioni sulle stime, consulta la [guida del Generatore di segmenti](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
