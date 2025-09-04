@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 27%
+source-wordcount: '2947'
+ht-degree: 26%
 
 ---
 
@@ -13,6 +13,18 @@ ht-degree: 27%
 # Note sulla versione dell’estensione Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versione 2.32.0 - 4 settembre 2025
+
+**Nuove funzioni**
+
+- Contiene [versione 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) di Adobe Experience Platform Web SDK.
+- È stato aggiunto il supporto per Adobe Advertising come nuovo componente di build personalizzato. Configura nella configurazione dell’estensione e nelle chiamate evento di invio.
+- È stato aggiunto il supporto per la registrazione dei dettagli dell’abbonamento push nel profilo. Ciò avviene tramite una nuova azione, &quot;Dettagli dell’abbonamento push&quot;
+
+**Correzioni e miglioramenti**
+
+- È stata migliorata la modifica degli elementi dati XDM quando gli schemi o le sandbox non sono disponibili. Ora è possibile modificare gli elementi dati di variabili e oggetti XDM anche quando gli schemi a cui si fa riferimento non sono disponibili o quando le sandbox non sono accessibili. Questo risolve i problemi che si verificano comunemente durante le migrazioni dell’organizzazione ai nuovi centri dati, in cui gli ID dello schema possono cambiare e in precedenza causava la visualizzazione di errori nelle interfacce di modifica, rendendole inutilizzabili.
 
 ## Versione 2.31.1 - venerdì 31 luglio 2025
 
@@ -34,7 +46,6 @@ Questo documento descrive le note sulla versione dell’estensione tag Adobe Exp
 **Problemi noti**
 
 - A seguito del rilascio della versione v2.31.0, è stato identificato un problema con il processo [build](/help/web-sdk/install/create-custom-build.md) dei componenti personalizzati. Mentre le build personalizzate continuano a funzionare, tutti i componenti sono attualmente inclusi nella build, dando luogo a un pacchetto di dimensioni intere indipendentemente dalla selezione dei componenti. È in fase di sviluppo una correzione per questo problema. Se ti affidi alla selezione di componenti personalizzati per ridurre al minimo le dimensioni della build, si consiglia di attendere una versione futura.
-
 
 ## Versione 2.30.1, mercoledì 27 maggio 2025
 

@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2573'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 5%
 
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.29.0 - 4 settembre 2025
+
+**Nuove funzionalità**
+
+- È stato aggiunto il supporto per la raccolta di dati sulla pubblicità di Adobe per Adobe Percorsi Analytics
+- È stato aggiunto il supporto per la registrazione dei dettagli dell’abbonamento push nei profili dell’utente.
+
+**Correzioni e miglioramenti**
+
+- È stato risolto un problema che causava l’unione delle sezioni di sostituzione della configurazione anziché la loro sostituzione.
+- È stato risolto un caso in cui la raccolta collegamenti inviava l&#39;intero contenuto del documento come nome del collegamento.
+- È stato risolto un problema che impediva il rendering di alcune proposte.
 
 ## Versione 2.28.1 - venerdì 31 luglio 2025
 
