@@ -3,18 +3,14 @@ title: Acquisisci i dati dei pagamenti dall’account Stripe ad Experience Platf
 description: Scopri come acquisire i dati dei pagamenti dall’account Stripe ad Experience Platform utilizzando l’interfaccia utente.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1637'
 ht-degree: 3%
 
 ---
 
 # Acquisire i dati dei pagamenti dall&#39;account [!DNL Stripe] ad Experience Platform utilizzando l&#39;interfaccia utente
-
->[!NOTE]
->
->L&#39;origine [!DNL Stripe] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
 Leggi l&#39;esercitazione seguente per scoprire come acquisire i dati dei pagamenti dall&#39;account [!DNL Stripe] a Adobe Experience Platform utilizzando l&#39;interfaccia utente.
 

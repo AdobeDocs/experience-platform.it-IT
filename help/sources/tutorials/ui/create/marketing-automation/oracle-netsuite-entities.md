@@ -1,22 +1,15 @@
 ---
 title: Crea una connessione di origine  [!DNL Oracle NetSuite Entities]  nell'interfaccia utente
 description: Scopri come creare una connessione di origine Oracle NetSuite Entities utilizzando l’interfaccia utente di Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '689'
 ht-degree: 2%
 
 ---
 
 # Crea una connessione sorgente [!DNL Oracle NetSuite Entities] nell&#39;interfaccia utente
-
->[!NOTE]
->
->L&#39;origine [!DNL Oracle NetSuite Entities] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, vedere la [panoramica origini](../../../../home.md#terms-and-conditions).
 
 Leggi il seguente tutorial per scoprire come portare i dati di contatti e clienti dal tuo account [!DNL Oracle NetSuite Entities] a Adobe Experience Platform nell&#39;interfaccia utente.
 

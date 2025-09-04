@@ -1,22 +1,15 @@
 ---
 title: Creare una connessione di origine e un flusso di dati per le entità Oracle NetSuite mediante l'API del servizio Flusso
 description: Scopri come creare una connessione sorgente e un flusso di dati per portare i contatti e i dati dei clienti di Oracle NetSuite in Experience Platform utilizzando l’API del servizio Flusso.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2177'
-ht-degree: 2%
+source-wordcount: '2160'
+ht-degree: 1%
 
 ---
 
 # Creare una connessione di origine e un flusso di dati per [!DNL Oracle NetSuite Entities] utilizzando l&#39;API del servizio Flusso
-
->[!NOTE]
->
->L&#39;origine [!DNL Oracle NetSuite Entities] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, vedere la [panoramica origini](../../../../home.md#terms-and-conditions).
 
 Leggi l&#39;esercitazione seguente per scoprire come portare i contatti e i dati dei clienti dal tuo account [!DNL Oracle NetSuite Activities Entities] a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

@@ -1,22 +1,15 @@
 ---
 title: Crea una connessione di origine  [!DNL Oracle NetSuite Activities]  nell'interfaccia utente
 description: Scopri come creare una connessione all’origine delle attività di Oracle NetSuite utilizzando l’interfaccia utente di Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 2%
 
 ---
 
 # Crea una connessione sorgente [!DNL Oracle NetSuite Activities] nell&#39;interfaccia utente
-
->[!NOTE]
->
->L&#39;origine [!DNL Oracle NetSuite Activities] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, vedere la [panoramica origini](../../../../home.md#terms-and-conditions).
 
 Leggi il seguente tutorial per scoprire come portare i dati degli eventi dal tuo account [!DNL Oracle NetSuite Activities] a Adobe Experience Platform nell&#39;interfaccia utente.
 

@@ -3,18 +3,14 @@ title: Acquisisci i dati dei pagamenti dal tuo account  [!DNL Stripe]  ad Experi
 description: Scopri come acquisire i dati dei pagamenti dall’account Stripe ad Experience Platform utilizzando l’API del servizio Flow
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 2%
 
 ---
 
 # Acquisire i dati dei pagamenti dall&#39;account [!DNL Stripe] ad Experience Platform tramite API
-
->[!NOTE]
->
->L&#39;origine [!DNL Stripe] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
 Leggi il seguente tutorial per scoprire come acquisire i dati di pagamento da [!DNL Stripe] a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | L&#39;[ID mappatura](#mapping) generato in un passaggio precedente. |
 | `transformations.params.mappingVersion` | Versione corrispondente dell&#39;ID di mappatura. Il valore predefinito è `0`. |
 | `scheduleParams.startTime` | L’ora in cui inizierà il flusso di dati. Devi fornire il valore dell’ora di inizio nel formato di una marca temporale Unix. |
-| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. Puoi configurare la frequenza di acquisizione in modo da:  <ul><li>**Una volta**: imposta la frequenza su `once` per creare un&#39;acquisizione unica. Le configurazioni di intervallo e backfill non sono disponibili quando crei un flusso di dati di acquisizione una tantum. Per impostazione predefinita, la frequenza di pianificazione è impostata su una volta.</li><li>**Minuti**: imposta la frequenza su `minute` per pianificare il flusso di dati in modo da acquisire i dati al minuto.</li><li>**Ora**: imposta la frequenza su `hour` per pianificare il flusso di dati per acquisire i dati su base oraria.</li><li>**Giorno**: imposta la frequenza su `day` per pianificare il flusso di dati in modo da acquisire i dati su base giornaliera.</li><li>**Settimana**: imposta la frequenza su `week` per pianificare il flusso di dati in modo da acquisire i dati su base settimanale.</li></ul> |
+| `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. Puoi configurare la frequenza di acquisizione in modo da:  <ul><li>**Una volta**: imposta la frequenza su `once` per creare un&#39;acquisizione unica. Le configurazioni di intervallo e backfill non sono disponibili quando crei un flusso di dati di acquisizione una tantum. Per impostazione predefinita, la frequenza di pianificazione è impostata su una volta.</li><li>**Minuti**: imposta la frequenza su `minute` per pianificare il flusso di dati in modo da acquisire i dati al minuto.</li><li>**Ora**:Set la frequenza a `hour` per pianificare il flusso di dati per acquisire i dati su base oraria.</li><li>**Giorno**: imposta la frequenza su `day` per pianificare il flusso di dati in modo da acquisire i dati su base giornaliera.</li><li>**Settimana**: imposta la frequenza su `week` per pianificare il flusso di dati in modo da acquisire i dati su base settimanale.</li></ul> |
 | `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Ad esempio, se imposti la frequenza su giorno e configuri l’intervallo su 15, il flusso di dati verrà eseguito ogni 15 giorni. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Il valore dell&#39;intervallo minimo accettato per ciascuna frequenza è il seguente:<ul><li>**Una volta**: n/d</li><li>**Minuto**: 15</li><li>**Ora**: 1</li><li>**Giorno**: 1</li><li>**Settimana**: 1</li></ul> |
 
 **Risposta**

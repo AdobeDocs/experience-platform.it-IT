@@ -2,20 +2,15 @@
 title: Panoramica di PathFactory Source
 description: Scopri come collegare PathFactory a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2024-04-30T00:00:00Z
-badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '449'
 ht-degree: 3%
 
 ---
 
 # [!DNL PathFactory]
-
->[!NOTE]
->
->L&#39;origine [!DNL PathFactory] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
 
 [[!DNL PathFactory]](https://www.pathfactory.com/) offre una piattaforma basata su cloud che consente alle aziende di gestire i percorsi di contenuti e favorire il coinvolgimento attraverso informazioni intelligenti sui contenuti. Questa guida descrive come integrare i dati da PathFactory in Experience Platform, utilizzando i connettori di PathFactory per un’acquisizione ottimale dei dati.
 
@@ -61,7 +56,7 @@ Per istruzioni dettagliate su come ottenere il nome utente, la password, il domi
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account [!DNL PathFactory] ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
+Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL PathFactory]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
 
 ## Connetti [!DNL PathFactory] ad Experience Platform {#pathfactory-connect}
 

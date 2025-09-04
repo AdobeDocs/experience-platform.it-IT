@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 97%
+source-wordcount: '1432'
+ht-degree: 92%
 
 ---
 
@@ -171,6 +171,9 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
+| Disponibilità generale dell’origine [!DNL Oracle NetSuite] | L&#39;origine [!DNL Oracle NetSuite] è ora generalmente disponibile. Ora puoi collegare il tuo account [!DNL Oracle NetSuite] ad Experience Platform per acquisire i dati di attività ed entità per l&#39;analisi e l&#39;attivazione unificate. Per ulteriori informazioni, consulta la [[!DNL Oracle NetSuite] panoramica](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| Disponibilità generale dell’origine [!DNL PathFactory] | L&#39;origine [!DNL PathFactory] è ora generalmente disponibile. Puoi collegare il tuo account [!DNL PathFactory] ad Experience Platform per acquisire i dati di visitatori, sessioni e visualizzazioni di pagina per l&#39;analisi unificata e l&#39;attivazione. Per ulteriori informazioni, consulta la [[!DNL PathFactory] panoramica](../../sources/connectors/marketing-automation/pathfactory.md). |
+| Disponibilità generale dell’origine [!DNL Stripe] | L&#39;origine [!DNL Stripe] è ora generalmente disponibile. Puoi collegare il tuo account [!DNL Stripe] ad Experience Platform per acquisire i dati di pagamento e transazione per l&#39;analisi e l&#39;attivazione unificate. Per ulteriori informazioni, consulta la [[!DNL Stripe] panoramica](../../sources/connectors/payments/stripe.md). |
 | Autenticazione avanzata per [!DNL Azure Blob Storage] | Ora puoi utilizzare l’autenticazione basata sull’entità principale del servizio per connettere l’origine [!DNL Azure Blob Storage] a Experience Platform. Utilizza l’autenticazione basata sull’entità principale del servizio per una maggiore sicurezza, per agevolare la rotazione delle credenziali e per un controllo degli accessi più granulare per il tuo account. Per ulteriori informazioni, consulta la [[!DNL Azure Blob Storage] panoramica](../../sources/connectors/cloud-storage/blob.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
