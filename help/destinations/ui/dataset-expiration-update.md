@@ -3,9 +3,9 @@ title: Estendere le pianificazioni di esportazione dei set di dati per i flussi 
 description: Scopri come estendere la pianificazione dell’esportazione per i flussi di dati di esportazione dei set di dati creati prima di novembre 2024 che cesseranno di funzionare il 1° settembre 2025.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ La tua organizzazione potrebbe disporre di flussi di dati di esportazione di set
 * [[!DNL SFTP]](../catalog/cloud-storage/sftp.md#changelog)
 * [[!DNL Marketo Measure Ultimate]](../catalog/adobe/marketo-measure-ultimate.md)
 
-## Esercitazione video {#video}
+## Tutorial video {#video}
 
 Guarda il video seguente per una dimostrazione dettagliata di come identificare le esportazioni dei set di dati con le date di fine imminenti ed estendere la pianificazione delle esportazioni per i flussi di dati che desideri mantenere.
 
@@ -87,8 +87,6 @@ Ora puoi modificare la pianificazione dell’esportazione per estenderla oltre i
 
 ## Cosa succede se non rispetto la scadenza del 1° settembre 2025? {#missed-deadline}
 
-Se i flussi di dati di esportazione del set di dati scadono il 1° settembre 2025 e non hai esteso le loro pianificazioni, esiste un periodo di tolleranza di **30 giorni** in cui puoi contattare Adobe per riabilitare i flussi di dati senza alcuna perdita di dati. Ciò include i dati che non sono stati esportati tra il 1° settembre e la data in cui hai contattato Adobe.
+Se i flussi di dati per l’esportazione del set di dati sono scaduti il 1° settembre 2025 e desideri ancora estenderli, segui i passaggi descritti nelle sezioni precedenti per estenderne la pianificazione.
 
->[!IMPORTANT]
->
->Anche se Adobe prevede questo periodo di tolleranza, consigliamo vivamente di estendere le pianificazioni prima della scadenza del 1° settembre 2025 per garantire esportazioni di dati ininterrotte ed evitare potenziali interruzioni del servizio.
+Se estendi la pianificazione dell&#39;esportazione entro 30 giorni (o meno se il [time-to-live impostato nel set di dati esportato](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) è inferiore a 30 giorni), puoi comunque ottenere una retrocompilazione dei dati che non sono stati esportati tra il 1° settembre e la data in cui hai riabilitato l&#39;esportazione. Quando si imposta una nuova ora di fine, *non* verrà prima eseguita un&#39;esportazione di file completa. Invece, le esportazioni continueranno in modo incrementale da dove si sono interrotte il 1° settembre.
