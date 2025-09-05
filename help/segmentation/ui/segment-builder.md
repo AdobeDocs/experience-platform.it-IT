@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
+source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
-source-wordcount: '5200'
-ht-degree: 11%
+source-wordcount: '5248'
+ht-degree: 10%
 
 ---
 
@@ -58,7 +58,7 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributi]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -130,7 +130,7 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Tipi di pubblico esterni"
->abstract="I tipi di pubblico importati tramite la scheda Tipi di pubblico ora vengono visualizzati automaticamente tramite Audience Portal. I tipi di pubblico acquisiti da Audience Manager, Customer Journey Analytics, Segment Match e altre integrazioni personalizzate sono immediatamente disponibili, senza la necessità di configurarli in Generatore di segmenti. A partire dal 1° settembre 2025, tutti i tipi di pubblico verranno recuperati esclusivamente tramite Ricerca unificata e il flusso di lavoro precedente non è più supportato."
+>abstract="I tipi di pubblico importati tramite la scheda Tipi di pubblico ora vengono visualizzati automaticamente tramite Audience Portal. Ciò include tipi di pubblico acquisiti da Audience Manager, Customer Journey Analytics, Segment Match e altre integrazioni personalizzate.<br/><br/>Entro la fine di settembre 2025, i tipi di pubblico verranno recuperati esclusivamente tramite la ricerca unificata e il flusso di lavoro precedente non sarà più supportato. Segment Match rimane disponibile solo per un numero limitato di clienti designati durante la transizione del servizio. L’accesso per i nuovi clienti di Segment Match può ancora essere abilitato su richiesta prima che il servizio venga completamente ritirato.<br/><br/>Per i casi di utilizzo di collaborazione sui dati in corso, Adobe consiglia di passare a Collaboration, che è la soluzione supportata a lungo termine."
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/ui/audience-portal#list" text="Audience Portal"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce d
 >[!NOTE]
 >
 >Quando si utilizza il vincolo di tempo &quot;After&quot; (Dopo), quest’ultimo evento può verificarsi più del tempo elencato all’interno del vincolo di tempo. >
->&#x200B;>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
+>>Ad esempio, se disponi di un evento Visualizzazione pagina e di un evento Pagamento e tra questi due eventi si inserisce il vincolo di tempo &quot;Dopo 1 ora&quot;, si qualificherà una definizione del segmento con un evento Pagamento 2 ore dopo l’evento Visualizzazione pagina.
 >
 >Inoltre, questi due vincoli temporali possono essere utilizzati in coordinamento tra loro.
 >
