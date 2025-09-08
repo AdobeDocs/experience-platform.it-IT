@@ -4,10 +4,10 @@ description: Utilizza il connettore Marketo Engage Person Sync per inviare in st
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 88864353d4872d62258914d6490b90331692fa96
+source-git-commit: 7d9f06f77f2265f3ae62542fd7fc1bd09d34d078
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 5%
+source-wordcount: '1127'
+ht-degree: 9%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->La scheda di destinazione **[!UICONTROL Marketo Engage Person Sync]** diventerà obsoleta il **marzo 2026**.
+>La scheda di destinazione **[!UICONTROL Marketo Engage Person Sync]** diventerà obsoleta il **ottobre 2025**.
 >
->Per garantire una transizione senza problemi alla nuova destinazione **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, controlla i seguenti punti chiave e le azioni richieste:
+>Per garantire una transizione fluida verso la nuova destinazione **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, rivedi i seguenti punti chiave e le azioni richieste:
 >
->* Tutti gli utenti di **[!UICONTROL Marketo Engage Person Sync]** destinazioni devono effettuare la migrazione alla nuova destinazione **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** entro marzo 2026.
->* **I flussi di dati esistenti non verranno migrati automaticamente.** Devi [impostare una nuova connessione](marketo-engage-connection.md#connect-to-the-destination) alla nuova destinazione **[!UICONTROL Marketo Engage]** e attivare i tuoi tipi di pubblico.
+>* Tutti gli utenti devono **interrompere l&#39;utilizzo della destinazione Marketo Engage Person Sync** ed effettuare la migrazione alla nuova destinazione **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** entro ottobre 2025.
+>* **La migrazione dei flussi di dati esistenti non verrà effettuata automaticamente.** Sarà necessario [configurare una nuova connessione](marketo-engage-connection.md#connect-to-the-destination) alla nuova destinazione **[!UICONTROL Marketo Engage]** e attivare lì i propri tipi di pubblico.
 
 
 ## Panoramica {#overview}
@@ -78,7 +78,7 @@ Se la tua azienda ha accesso a più organizzazioni, assicurati di utilizzare la 
 
 >[!IMPORTANT]
 >
->L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
+>L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
 
 ![Connetti alla destinazione](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -89,7 +89,7 @@ Se la tua azienda ha accesso a più organizzazioni, assicurati di utilizzare la 
 * **[!UICONTROL Primo campo ricercabile]**: campo su cui eseguire la deduplicazione. Il campo deve essere presente in ogni record di lead dell’input. Impostazione predefinita e-mail
 * **[!UICONTROL Primo campo ricercabile]**: campo secondario su cui eseguire la deduplicazione. Il campo deve essere presente in ogni record di lead dell’input. Facoltativo
 
-Dopo aver selezionato l’istanza, dovrai selezionare anche la partizione lead con cui desideri integrare la configurazione. Una [partizione lead](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) è un concetto in Marketo Engage utilizzato per separare i record dei lead in base alle esigenze aziendali, ad esempio un marchio o un&#39;area di vendita. Se la sottoscrizione Marketo non dispone della funzionalità Aree di lavoro e partizioni o se non sono state create ulteriori partizioni nella sottoscrizione, sarà disponibile solo la partizione predefinita. Una singola configurazione può aggiornare solo i record dei lead presenti nella partizione configurata.
+Dopo aver selezionato l’istanza, dovrai selezionare anche la partizione lead con cui desideri integrare la configurazione. Una [partizione lead](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) è un concetto in Marketo Engage utilizzato per separare i record dei lead in base alle esigenze aziendali, ad esempio un marchio o un&#39;area di vendita. Se la sottoscrizione Marketo non dispone della funzionalità Aree di lavoro e partizioni o se non sono state create ulteriori partizioni nella sottoscrizione, sarà disponibile solo la partizione predefinita. Una singola configurazione può aggiornare solo i record dei lead presenti nella partizione configurata.
 
 >[!IMPORTANT]
 > 
