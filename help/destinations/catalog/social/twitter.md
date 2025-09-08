@@ -2,16 +2,24 @@
 title: Connessione Twitter per tipi di pubblico personalizzati
 description: Effettua il targeting dei tuoi follower e clienti esistenti su Twitter e crea campagne di remarketing rilevanti attivando il pubblico integrato in Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 5%
+source-wordcount: '971'
+ht-degree: 7%
 
 ---
 
 # Connessione [!DNL Twitter Custom Audiences]
 
 ## Panoramica {#overview}
+
+>[!IMPORTANT]
+>
+>* A partire dal mercoledì 9 settembre 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL Twitter Custom Audiences]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL Twitter Custom Audiences]** esistente è stato rinominato in **[!UICONTROL (Obsoleto) Tipi di pubblico personalizzati di Twitter]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Tipi di pubblico personalizzati di Twitter]**.
+>* Utilizza la nuova connessione **[!UICONTROL Tipi di pubblico personalizzati Twitter]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (obsoleto) Tipi di pubblico personalizzati di Twitter]**, verranno aggiornati automaticamente, quindi non è richiesta alcuna azione da parte tua.
+>* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
+>   * Flow spec ID: `903da9e4-7cf5-442a-9498-a237e4f064f9`
+>   * Connection spec ID: `9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 Effettua il targeting dei tuoi follower e dei tuoi clienti esistenti su Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico creati in Adobe Experience Platform.
 
@@ -24,7 +32,7 @@ Prima di configurare la destinazione [!DNL Twitter Custom Audiences], verificare
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Twitter Custom Audiences] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+[!DNL Twitter Custom Audiences] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
