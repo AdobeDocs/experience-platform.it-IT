@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
 workflow-type: tm+mt
-source-wordcount: '4763'
+source-wordcount: '4911'
 ht-degree: 3%
 
 ---
@@ -1137,7 +1137,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             ]
 ```
 
-+++
++++ 
 
 **Richiesta**
 
@@ -2422,7 +2422,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2456,6 +2457,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2475,7 +2477,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -2514,7 +2516,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2548,6 +2551,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2567,7 +2571,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -2605,7 +2609,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2639,6 +2644,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2658,7 +2664,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -2696,7 +2702,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2730,6 +2737,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2749,7 +2757,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -2788,7 +2796,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2822,6 +2831,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2841,7 +2851,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -2879,7 +2889,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2913,6 +2924,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2932,7 +2944,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -3213,7 +3225,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Richiesta**
 
-+++Crea flusso di dati di esportazione del pubblico nella destinazione SFTP - Richiesta
++++Creare un flusso di dati di esportazione del pubblico nella destinazione SFTP - Richiesta
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -3306,7 +3318,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
 
 **Risposta**
 
-+++Ottieni attributi disponibili dallo schema di unione - Risposta
++++Ottenere gli attributi disponibili dallo schema di unione - Risposta
 
 La risposta seguente è stata ridotta per brevità.
 
@@ -4504,7 +4516,7 @@ La risposta dall’API del servizio Flusso restituisce l’ID del flusso di dati
 
 ![Passaggi per attivare i tipi di pubblico che evidenziano il passaggio corrente in cui si trova l&#39;utente](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-Per aggiornare il flusso di dati, utilizzare l&#39;operazione `PATCH`. Ad esempio, puoi aggiungere un’azione di marketing ai flussi di dati. In alternativa, puoi aggiornare i flussi di dati per selezionare i campi come chiavi obbligatorie o chiavi di deduplicazione.
+Per aggiornare il flusso di dati, utilizzare l&#39;operazione `PATCH`. Ad esempio, puoi aggiungere un’azione di marketing ai flussi di dati, aggiornare i flussi di dati per selezionare i campi come chiavi obbligatorie o chiavi di deduplicazione, oppure aggiungere la generazione del manifesto di file alle destinazioni esistenti.
 
 ### Aggiungere un’azione di marketing {#add-marketing-action}
 
@@ -4641,7 +4653,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Risposta**
 
-+++Aggiungere un campo obbligatorio - Risposta
++++Aggiungi un campo obbligatorio - Risposta
 
 ```json
 {
@@ -4670,7 +4682,7 @@ Per aggiungere una [chiave di deduplicazione](/help/destinations/ui/activate-bat
 
 **Richiesta**
 
-+++Aggiungere un’identità come chiave di deduplicazione - Richiesta
++++Aggiungi un’identità come chiave di deduplicazione - Richiesta
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4726,7 +4738,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Risposta**
 
-+++Aggiungere un campo obbligatorio - Risposta
++++Aggiungi un campo obbligatorio - Risposta
 
 ```json
 {
@@ -4736,6 +4748,44 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### Aggiungi generazione manifesto file alla destinazione esistente {#add-file-manifest}
+
+Per aggiungere la generazione del manifesto di file a una destinazione esistente, è necessario aggiornare i parametri della connessione di destinazione utilizzando l&#39;operazione `PATCH`. In questo modo viene abilitata la generazione del file manifesto per la destinazione, che fornisce metadati sui file esportati.
+
+>[!IMPORTANT]
+>
+>L&#39;intestazione `If-Match` è obbligatoria quando si effettua una richiesta `PATCH`. Il valore di questa intestazione è la versione univoca della connessione di destinazione che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di destinazione e altre.
+>
+> Per ottenere la versione più recente del valore etag, eseguire una richiesta GET all&#39;endpoint `https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}`, dove `{ID}` è l&#39;ID di connessione di destinazione che si desidera aggiornare.
+>
+> Assicurarsi di racchiudere il valore dell&#39;intestazione `If-Match` tra virgolette doppie, come negli esempi seguenti, quando si eseguono `PATCH` richieste.
+
+>[!BEGINSHADEBOX]
+
+**Richiesta**
+
++++Aggiungi manifesto file alla connessione di destinazione esistente - Richiesta
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 
@@ -4765,7 +4815,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Risposta**
 
-+++Ottieni esecuzioni del flusso di dati - Risposta
++++Ottenere esecuzioni del flusso di dati - Risposta
 
 ```json
 {
