@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3623'
 ht-degree: 10%
 
 ---
@@ -86,10 +86,10 @@ Viene visualizzato un elenco di singole esecuzioni e delle relative metriche spe
 
 Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni dei flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione dei flussi di dati, sotto forma di metriche orarie. Ciò significa che per l’esecuzione del flusso di dati in streaming, se un flusso di dati viene avviato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
+- **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni dei flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione dei flussi di dati, sotto forma di metriche orarie. Ciò significa che per l’esecuzione del flusso di dati in streaming, se un flusso di dati è iniziato, ad esempio, alle 10:30PM, la metrica mostra l’ora di inizio come 10:00 PM nell’interfaccia utente.
 - **[!UICONTROL Tempo di elaborazione]**: tempo necessario all&#39;elaborazione del flusso di dati.
    - Per le esecuzioni di **[!UICONTROL completed]**, la metrica del tempo di elaborazione mostra sempre un&#39;ora.
-   - Per le esecuzioni di flussi di dati che si trovano ancora in uno stato di **[!UICONTROL elaborazione]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
+   - Per le esecuzioni di flussi di dati che si trovano ancora in uno stato di **[!UICONTROL elaborazione]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 9:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
 - **[!UICONTROL Profili ricevuti]**: numero totale di profili ricevuti nel flusso di dati.
 - **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata durante l&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identità escluse]**: numero totale di identità di profilo escluse dall&#39;attivazione in base ad attributi mancanti e alla violazione del consenso.
@@ -327,11 +327,27 @@ Ad esempio, stai attivando un pubblico denominato &quot;Membri fedeltà in Calif
 >
 >- La visualizzazione a livello di pubblico è attualmente disponibile per le destinazioni elencate di seguito. Il rollout è pianificato per ulteriori destinazioni di streaming.
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL (API) Oracle Eloqua] connessione](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Destinazioni batch (basate su file)
 > 
 >- Per le destinazioni batch, le metriche a livello di pubblico sono attualmente registrate solo per l’esecuzione corretta del flusso di dati. Non vengono registrati per le esecuzioni dei flussi di dati non riuscite e i record esclusi. Per l’esecuzione del flusso di dati su destinazioni di streaming, le metriche vengono acquisite e visualizzate per i record attivati ed esclusi.
