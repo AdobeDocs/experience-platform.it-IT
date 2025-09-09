@@ -3,10 +3,10 @@ keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
+source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
 workflow-type: tm+mt
-source-wordcount: '2410'
-ht-degree: 2%
+source-wordcount: '2451'
+ht-degree: 8%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 > Google sta rilasciando modifiche all&#39;API [Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti relativi alla conformità e al consenso definiti nel [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione Europea ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
-><br/>
->Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
-><br/>
->I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
-><br/>
->I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
+> ><br/>
+> >Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
+> ><br/>
+> >I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
+> ><br/>
+> >I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) ti consente di utilizzare i tuoi dati online e offline per raggiungere e coinvolgere nuovamente i tuoi clienti nelle proprietà possedute e gestite da Google, ad esempio: [!DNL Search], [!DNL Shopping] e [!DNL Gmail].
 
@@ -63,10 +63,10 @@ Alcune destinazioni in Experience Platform hanno determinate regole e obblighi p
 | `phone_sha256_e.164` | Numeri di telefono in formato E164, con hash con l’algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | `email_lc_sha256` | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | `user_id` | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
-| `address_info_first_name` | Nome dell’utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. |
-| `address_info_last_name` | Cognome dell’utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_country_code` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. |
-| `address_info_country_code` | Codice paese indirizzo utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_last_name` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. <br><br>Formato accettato: codici paese a due lettere minuscole in formato [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
-| `address_info_postal_code` | Codice postale indirizzo utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_last_name` e `address_info_country_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarsi che Google corrisponda all&#39;indirizzo, è necessario mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarsi che nessuno di questi campi sia mancante nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. |
+| `address_info_first_name` | Nome dell’utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarti che Google faccia corrispondere l’indirizzo, devi mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarti che in nessuno di questi campi manchino i dati nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non farà corrispondere l’indirizzo. |
+| `address_info_last_name` | Cognome dell’utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_country_code` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarti che Google faccia corrispondere l’indirizzo, devi mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarti che in nessuno di questi campi manchino i dati nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non farà corrispondere l’indirizzo. |
+| `address_info_country_code` | Codice paese indirizzo utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_last_name` e `address_info_postal_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarti che Google faccia corrispondere l’indirizzo, devi mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarti che in nessuno di questi campi manchino i dati nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non corrisponderà all&#39;indirizzo. <br><br>Formato accettato: codici paese a due lettere minuscole in formato [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
+| `address_info_postal_code` | Codice postale indirizzo utente | Questa identità di destinazione deve essere utilizzata insieme a `address_info_first_name`, `address_info_last_name` e `address_info_country_code`, quando si desidera inviare i dati dell&#39;indirizzo postale alla destinazione. <br><br>Per assicurarti che Google faccia corrispondere l’indirizzo, devi mappare tutti e quattro i campi degli indirizzi (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e assicurarti che in nessuno di questi campi manchino i dati nei profili esportati. <br> Se un campo non è mappato o contiene dati mancanti, Google non farà corrispondere l’indirizzo. |
 
 {style="table-layout:auto"}
 
@@ -96,7 +96,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Prima di configurare una destinazione [!DNL Google Customer Match] in Experience Platform, assicurati di aver letto e rispettato i criteri di Google per l&#39;utilizzo di [!DNL Customer Match], descritti nella [documentazione di supporto Google](https://support.google.com/google-ads/answer/6299717).
 
-Verificare quindi che l&#39;account [!DNL Google] sia configurato per un livello di autorizzazione [!DNL Standard] o superiore. Per informazioni dettagliate, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
+Verificare quindi che l&#39;account [!DNL Google] sia configurato per un livello di autorizzazione [!DNL Standard] o superiore. Per informazioni dettagliate, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
 
 ### Elenco consentiti {#allowlist}
 
@@ -119,7 +119,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Google Customer M
 
 >[!NOTE]
 >
->Impossibile attivare in [!DNL Google Customer Match] i numeri di telefono acquisiti nello spazio dei nomi `Phone`.
+>Impossibile attivare in `Phone` i numeri di telefono acquisiti nello spazio dei nomi [!DNL Google Customer Match].
 
 ### Requisiti di hashing delle e-mail {#hashing-requirements}
 
@@ -156,13 +156,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Panoramica video {#video-overview}
 
 Guarda il video seguente per una spiegazione dei vantaggi e di come attivare i dati per Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/326486?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Connettersi alla destinazione {#connect}
 
@@ -179,6 +179,10 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 * **[!UICONTROL Nome]**: fornisci un nome per questa connessione di destinazione
 * **[!UICONTROL Descrizione]**: fornisci una descrizione per questa connessione di destinazione
 * **[!UICONTROL ID account]**: [ID cliente Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). Il formato dell’ID è xxx-xxx-xxxx. Se utilizzi [!DNL Google Ads Manager Account (My Client Center)], non utilizzare il tuo ID account manager. Utilizza invece l&#39;[ID cliente di Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en).
+
+>[!NOTE]
+>
+>Durante il processo di connessione OAuth2, potresti vedere &quot;Marketo Test&quot; visualizzato come nome del progetto Google OAuth. Si tratta di un comportamento normale, in quanto Adobe utilizza questo nome di progetto per l’integrazione Customer Match di Google. Questo non influisce sulla configurazione di destinazione.
 
 >[!IMPORTANT]
 >
@@ -256,4 +260,4 @@ Durante la configurazione di questa destinazione, potrebbe venire visualizzato i
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Questo errore si verifica quando gli account cliente non sono conformi ai [prerequisiti](#google-account-prerequisites). Per risolvere il problema, contattare Google e verificare che l&#39;account sia inserito nell&#39;elenco Consentiti e configurato per un livello di autorizzazione [!DNL Standard] o superiore. Per informazioni dettagliate, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
+Questo errore si verifica quando gli account cliente non sono conformi ai [prerequisiti](#google-account-prerequisites). Per risolvere il problema, contattare Google e verificare che l&#39;account sia inserito nell&#39;elenco Consentiti e configurato per un livello di autorizzazione [!DNL Standard] o superiore. Per informazioni dettagliate, consulta la [documentazione di Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1).
