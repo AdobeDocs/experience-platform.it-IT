@@ -2,9 +2,9 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experience Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 57b29c396531ee18c79fad7cce068ff3adf5f2a2
+source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
 workflow-type: tm+mt
-source-wordcount: '2965'
+source-wordcount: '3095'
 ht-degree: 3%
 
 ---
@@ -42,13 +42,14 @@ Quando si crea una build di Web SDK personalizzata, questa viene utilizzata da t
 >[!IMPORTANT]
 >
 >La disabilitazione dei componenti di Web SDK può interrompere l&#39;implementazione esistente. Ogni volta che disattivi un componente, accertati di testare a fondo l’implementazione per assicurarti che tutte le funzionalità necessarie funzionino come previsto.
->&#x200B;>Quando disattivi un componente, non puoi più modificarne le impostazioni.
+>>Quando disattivi un componente, non puoi più modificarne le impostazioni.
 
 Per creare una build personalizzata di Web SDK utilizzando l’estensione tag Web SDK, segui la procedura riportata di seguito.
 
 1. Nella pagina di configurazione dell&#39;estensione tag, espandi la sezione **[!UICONTROL Componenti build personalizzati]**.
 1. Abilita o disabilita i componenti in base alle tue esigenze. Puoi scegliere tra i seguenti componenti:
    * **[!UICONTROL Activity Collector]**: questo componente abilita la raccolta di collegamenti automatica e il tracciamento della Activity Map.
+   * **[!UICONTROL Advertising]**: questo componente include tutto il codice JavaScript necessario per Adobe Advertising. Vengono inoltre aggiunte le impostazioni [!UICONTROL Adobe Advertising] nella sezione [!UICONTROL SDK Instances] e un&#39;impostazione [!UICONTROL Advertising] nelle regole dei tag per definire il modo in cui i dati pubblicitari vengono utilizzati per la misurazione dell&#39;attribuzione.
    * **[!UICONTROL Tipi di pubblico]**: questi componenti abilitano l&#39;integrazione Audience Manager, incluse le destinazioni basate su URL e cookie e le sincronizzazioni degli ID.
    * **[!UICONTROL Consenso]**: questo componente abilita le integrazioni del consenso. La disattivazione di questo componente disattiva i seguenti elementi:
       * [Imposta tipo di azione consenso](action-types.md#set-consent)
@@ -75,6 +76,11 @@ Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe
 * **[!UICONTROL Nome]**: l&#39;estensione Adobe Experience Platform Web SDK supporta più istanze nella pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag. Il nome dell&#39;istanza predefinito è `alloy`. È tuttavia possibile modificare il nome dell&#39;istanza in qualsiasi nome di oggetto JavaScript valido.
 * **[!UICONTROL ID organizzazione IMS]**: l&#39;ID dell&#39;organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
 * **[!UICONTROL Dominio Edge]**: dominio da cui l&#39;estensione invia e riceve i dati. Per questa estensione, Adobe consiglia di utilizzare un dominio di prima parte (CNAME). Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
+* **[!UICONTROL Adobe Advertising]**: disponibile quando il componente `Advertising` è selezionato. Impostazioni solo per le organizzazioni con Adobe Advertising DSP:
+   * **[!UICONTROL Adobe Advertising DSP]**: abilita il tracciamento view-through.
+   * **[!UICONTROL Inserzionisti]**: disponibile quando [!UICONTROL Adobe Advertising DSP] è abilitato. Gli inserzionisti per i quali abilitare il tracciamento view-through.
+   * **[!UICONTROL ID partner ID5]**: facoltativo. Disponibile quando [!UICONTROL Adobe Advertising DSP] è abilitato. ID del partner ID5 della tua organizzazione. Questa impostazione consente a Web SDK di raccogliere gli ID universali ID5.
+   * **[!UICONTROL Percorso JavaScript RampID]**: facoltativo. Disponibile quando [!UICONTROL Adobe Advertising DSP] è abilitato. Percorso del codice JavaScript [!DNL LiveRamp RampID] della tua organizzazione (`ats.js`).  Questa impostazione consente a Web SDK di raccogliere [!DNL RampID] ID universali.
 
 ## Configurare le impostazioni dello stream di dati {#datastreams}
 
@@ -117,10 +123,9 @@ Questa sezione ti consente di definire il comportamento del Web SDK quando si tr
 * **[!UICONTROL Usa cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, SDK potrebbe non essere ancora in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, SDK memorizza l’identificatore solo nel dominio di prime parti.
 
   >[!IMPORTANT]
-  >&#x200B;>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
-  >&#x200B;>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
+  >>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
+  >>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
   >
-
 ## Configurare le impostazioni di personalizzazione {#personalization}
 
 Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato. In questo modo i visitatori potranno vedere solo la pagina personalizzata.
@@ -206,7 +211,7 @@ In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi 
 
 >[!IMPORTANT]
 >
->Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
+> Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
 
 ![Immagine che mostra le sostituzioni della configurazione dello stream di dati tramite la pagina dell&#39;estensione tag di Web SDK.](assets/datastream-overrides.png)
 
