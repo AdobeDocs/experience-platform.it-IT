@@ -2,9 +2,9 @@
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
+source-git-commit: 568a0ba7707402496167145ce2673181b240496e
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1593'
 ht-degree: 6%
 
 ---
@@ -55,11 +55,13 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
 
 - Il numero massimo di pubblici in streaming è 500
    - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
-- La velocità effettiva massima combinata per la segmentazione in streaming è di 1500 record al secondo (rps)
+- La velocità effettiva combinata iniziale per l’acquisizione in streaming è di 1500 record al secondo (rps)
+   - Questo throughput di streaming combinato misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo cliente in tempo reale, nelle sandbox di produzione e sviluppo.
+   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
-La capacità effettiva si trova a un livello **organizzazione** e può essere distribuita alle singole sandbox. Ad esempio, con 1500 rps per la velocità effettiva di segmentazione in streaming, puoi impostare la sandbox di produzione su 1350 rps e la sandbox di sviluppo su 150 rps.
+La capacità di trasmissione in streaming si trova a un livello di **organizzazione** e può essere distribuita alle singole sandbox. Ad esempio, con i 1500 rps per la velocità effettiva di acquisizione in streaming, puoi impostare la sandbox di produzione su 1300 rps e la sandbox di sviluppo su 200 rps.
 
 Experience Platform calcola la velocità effettiva della sandbox in intervalli di rotazione di 15 minuti. Questo throughput viene misurato in tempo reale, con i dati aggiornati ogni 60 secondi.
 
@@ -202,11 +204,11 @@ Puoi garantire prestazioni coerenti durante gli eventi di picco, evitando proble
 
 +++
 
-### Quali sono le best practice per gestire la velocità effettiva di segmentazione in streaming?
+### Quali sono le best practice per gestire la velocità effettiva di acquisizione in streaming?
 
 +++ Risposta
 
-Per gestire al meglio la velocità effettiva di segmentazione dello streaming, è necessario valutare i set di dati per assicurarsi che stiano dando la priorità ai dati necessari per la personalizzazione.
+Per gestire al meglio la velocità effettiva di acquisizione in streaming, è necessario valutare i set di dati per assicurarsi che assegnino la priorità ai dati necessari per la personalizzazione.
 
 
 Se non è richiesta l’elaborazione in tempo reale, è necessario utilizzare l’acquisizione in batch invece dell’acquisizione in streaming.
