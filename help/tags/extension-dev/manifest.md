@@ -2,10 +2,10 @@
 title: Manifesto dell’estensione
 description: Scopri come configurare un file manifest JSON che informi Adobe Experience Platform su come utilizzare correttamente l’estensione.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
 workflow-type: tm+mt
-source-wordcount: '2606'
-ht-degree: 86%
+source-wordcount: '2652'
+ht-degree: 84%
 
 ---
 
@@ -22,7 +22,7 @@ Un esempio di `extension.json` è disponibile nell’archivio GitHub dell’[est
 Un manifesto dell’estensione deve essere costituito dai seguenti elementi:
 
 | Proprietà | Descrizione |
-| --- | --- |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name` | Nome dell’estensione. Deve essere univoco rispetto a tutte le altre estensioni e deve essere conforme alle [regole di denominazione](#naming-rules). **Viene usato dai tag come identificatore e non deve essere modificato dopo la pubblicazione dell’estensione.** |
 | `platform` | Piattaforma per l’estensione. Al momento l’unico valore accettato è `web`. |
 | `version` | Versione dell’estensione. Deve seguire il formato di controllo delle versioni [semver](https://semver.org/). È conforme al [campo npm version](https://docs.npmjs.com/files/package.json#version). |
@@ -30,6 +30,7 @@ Un manifesto dell’estensione deve essere costituito dai seguenti elementi:
 | `description` | Descrizione dell’estensione. Verrà mostrato agli utenti di Experience Platform. Se l’estensione consente agli utenti di implementare il prodotto sul loro sito web, descrivi le funzioni del prodotto. Non è necessario indicare “tag” o “Estensione”; gli utenti sapranno già che si tratta di un’estensione tag. |
 | `iconPath` *(Facoltativo)* | Percorso relativo per l’icona che verrà visualizzata per l’estensione. Non può iniziare con una barra. Deve fare riferimento a un file SVG con estensione `.svg`. Il SVG deve essere quadrato e può essere ridimensionato da Experience Platform. |
 | `author` | L’oggetto “author” deve essere strutturato nel modo seguente: <ul><li>`name`: nome dell’autore dell’estensione. In alternativa, qui è possibile utilizzare il nome della società.</li><li>`url` *(facoltativo)*: URL in cui si possono trovare ulteriori informazioni sull’autore dell’estensione.</li><li>`email` *(facoltativo)*: indirizzo e-mail dell’autore dell’estensione.</li></ul>È conforme alle regole [npm per il campo author](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
+| `releaseNotesUrl` *(Facoltativo)* | L’URL delle note sulla versione dell’estensione, se disponi di un percorso per pubblicare queste informazioni. Questo URL verrà utilizzato nell’interfaccia utente dei tag di Adobe per visualizzare questo collegamento durante l’installazione e l’aggiornamento dell’estensione. Questa proprietà è supportata solo per le estensioni Web e Edge. |
 | `exchangeUrl` *(richiesto per le estensioni pubbliche)* | URL dell’inserzione relativa all’estensione su Adobe Exchange. Deve corrispondere al pattern `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
 | `viewBasePath` | Percorso relativo della sottodirectory contenente tutte le viste e le relative risorse (HTML, JavaScript, CSS, immagini). Experience Platform ospita su un server web questa directory, da cui carica i contenuti iframe. Questo campo è obbligatorio e non deve iniziare con una barra. Ad esempio, se tutte le viste sono contenute in `src/view/`, il valore di `viewBasePath` sarà `src/view/`. |
 | `hostedLibFiles` *(Facoltativo)* | Molti dei nostri utenti preferiscono ospitare tutti i file relativi ai tag sul proprio server. Questo offre agli utenti una maggiore certezza sulla disponibilità dei file in fase di esecuzione e consente loro di analizzare facilmente il codice per individuare eventuali vulnerabilità di sicurezza. Se la porzione libreria dell’estensione deve caricare dei file JavaScript in fase di esecuzione, è consigliabile elencare tali file mediante questa proprietà. I file elencati saranno ospitati insieme alla libreria runtime dei tag. L’estensione può quindi caricare i file tramite un URL recuperato utilizzando il metodo [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Questa opzione contiene un array con i percorsi relativi dei file libreria di terze parti che devono essere ospitati. |
@@ -74,20 +75,20 @@ L’oggetto di configurazione deve essere strutturato nel modo seguente:
       <td><code>schema</code></td>
       <td>Oggetto dello <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto valido salvato dalla vista di configurazione dell’estensione. In quanto sviluppatore della vista di configurazione, devi assicurarti che tutti gli oggetti impostazioni salvati siano conformi a questo schema. Questo schema verrà utilizzato anche per la convalida quando gli utenti tenteranno di salvare i dati utilizzando i servizi di Experience Platform.<br><br>Esempio di un oggetto schema:
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       È consigliabile utilizzare uno strumento come <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> per verificare manualmente lo schema.</td>
     </tr>
@@ -134,20 +135,20 @@ La definizione di un tipo è un oggetto utilizzato per descrivere un tipo di eve
       <td><code>schema</code></td>
       <td>Oggetto con <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto impostazioni valido che può essere salvato dall’utente. Le impostazioni vengono generalmente configurate e salvate da un utente che utilizza l’interfaccia di Data Collection. In questi casi, la vista dell’estensione può eseguire i passaggi necessari per convalidare le impostazioni fornite dall’utente. Alcuni utenti preferiscono invece utilizzare direttamente le API dei tag senza l’ausilio di alcuna interfaccia utente. Lo scopo di questo schema è consentire ad Experience Platform di convalidare correttamente che gli oggetti impostazioni salvati dagli utenti siano in un formato compatibile con il modulo libreria che agirà in base all’oggetto impostazioni in fase di esecuzione, indipendentemente dall’utilizzo o meno di un’interfaccia utente.<br><br>Esempio di oggetto schema:<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       È consigliabile utilizzare uno strumento come <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> per verificare manualmente lo schema.</td>
     </tr>
