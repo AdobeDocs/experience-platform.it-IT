@@ -172,7 +172,7 @@ Dopo aver aggiunto un gruppo di campi a uno schema, puoi rimuovere i campi globa
 >[!IMPORTANT]
 >
 >Se si seleziona **[!UICONTROL Rimuovi]**, il campo verrà eliminato dal gruppo di campi stesso, con effetti su *tutti* gli schemi che utilizzano tale gruppo di campi.
->>Non utilizzare questa opzione a meno che non si desideri **rimuovere il campo da ogni schema che include il gruppo di campi**.
+>&#x200B;>Non utilizzare questa opzione a meno che non si desideri **rimuovere il campo da ogni schema che include il gruppo di campi**.
 
 Per eliminare un campo dal gruppo di campi, selezionalo nell&#39;area di lavoro e seleziona **[!UICONTROL Rimuovi]** nella barra a destra. Questo esempio mostra il campo `taxId` dal gruppo **[!UICONTROL Dettagli demografici]**.
 
