@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
 source-wordcount: '1432'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
@@ -160,7 +160,7 @@ Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini]
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Stime del pubblico | Le stime del pubblico vengono ora visualizzate come un **intervallo**, basato sull&#39;intervallo di affidabilità dei dati di campionamento. Per ulteriori informazioni sulle stime, consulta la [guida del Generatore di segmenti](/help/segmentation/ui/segment-builder.md#audience-properties). |
+| Stime del pubblico | Le stime del pubblico verranno ora visualizzate come un **intervallo**, basato sull’intervallo di affidabilità dei dati di campionamento. Per ulteriori informazioni sulle stime, consulta la [guida del Generatore di segmenti](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
