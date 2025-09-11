@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
 workflow-type: tm+mt
-source-wordcount: '4078'
-ht-degree: 1%
+source-wordcount: '4178'
+ht-degree: 2%
 
 ---
 
@@ -167,27 +167,43 @@ Dopo aver aggiunto un gruppo di campi a uno schema, puoi [rimuovere i campi esis
 
 ### Rimuovi campi aggiunti dai gruppi di campi {#remove-fields}
 
-Dopo aver aggiunto un gruppo di campi a uno schema, puoi rimuovere tutti i campi non necessari.
+Dopo aver aggiunto un gruppo di campi a uno schema, puoi rimuovere i campi globalmente dal gruppo di campi o nasconderli localmente dallo schema corrente. Comprendere la differenza tra queste azioni è fondamentale per evitare modifiche non desiderate allo schema.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->La rimozione di campi da un gruppo di campi influisce solo sullo schema su cui si lavora e non sul gruppo di campi stesso. Se rimuovi i campi in uno schema, tali campi sono ancora disponibili in tutti gli altri schemi che utilizzano lo stesso gruppo di campi.
+>Se si seleziona **[!UICONTROL Rimuovi]**, il campo verrà eliminato dal gruppo di campi stesso, con effetti su *tutti* gli schemi che utilizzano tale gruppo di campi.
+>>Non utilizzare questa opzione a meno che non si desideri **rimuovere il campo da ogni schema che include il gruppo di campi**.
 
-Nell&#39;esempio seguente, il gruppo di campi standard **[!UICONTROL Dettagli demografici]** è stato aggiunto a uno schema. Per rimuovere un singolo campo, ad esempio `taxId`, selezionare il campo nell&#39;area di lavoro, quindi selezionare **[!UICONTROL Rimuovi]** nella barra a destra.
+Per eliminare un campo dal gruppo di campi, selezionalo nell&#39;area di lavoro e seleziona **[!UICONTROL Rimuovi]** nella barra a destra. Questo esempio mostra il campo `taxId` dal gruppo **[!UICONTROL Dettagli demografici]**.
 
 ![Il [!DNL Schema Editor] con [!UICONTROL Rimuovi] evidenziato. Questa azione rimuove un singolo campo.](../../images/ui/resources/schemas/remove-single-field.png)
 
-Se si desidera rimuovere più campi, è possibile gestire il gruppo di campi nel suo complesso. Seleziona un campo appartenente al gruppo nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Gestisci campi correlati]** nella barra a destra.
+Per nascondere più campi da uno schema senza rimuoverli dal gruppo di campi stesso, utilizzare l&#39;opzione **[!UICONTROL Gestisci campi correlati]**. Seleziona un campo dal gruppo nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Gestisci campi correlati]** nella barra a destra.
 
 ![Il [!DNL Schema Editor] con [!UICONTROL Gestisci campi correlati] evidenziati.](../../images/ui/resources/schemas/manage-related-fields.png)
 
-Viene visualizzata una finestra di dialogo che mostra la struttura del gruppo di campi in questione. Da qui puoi utilizzare le caselle di controllo fornite per selezionare o deselezionare i campi necessari. Al termine, selezionare **[!UICONTROL Conferma]**.
+Viene visualizzata una finestra di dialogo che mostra la struttura del gruppo di campi. Utilizzare le caselle di controllo per selezionare o deselezionare i campi che si desidera includere.
 
 ![Finestra di dialogo [!UICONTROL Gestisci campi correlati] con campi selezionati ed evidenziata [!UICONTROL Conferma].](../../images/ui/resources/schemas/select-fields.png)
 
-L’area di lavoro viene nuovamente visualizzata con solo i campi selezionati presenti nella struttura dello schema.
+Seleziona **[!UICONTROL Conferma]** per aggiornare l&#39;area di lavoro e riflettere i campi selezionati.
+
 
 ![Campi aggiunti](../../images/ui/resources/schemas/fields-added.png)
+
+### Comportamento del campo durante la rimozione o la deprecazione dei campi {#field-removal-deprecation-behavior}
+
+Utilizza la tabella seguente per comprendere l’ambito di ogni azione.
+
+| Azione | Si applica solo allo schema corrente | Modifica il gruppo di campi | Interessa altri schemi | Descrizione |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **Rimuovi campo** | No | Sì | Sì | Elimina il campo dal gruppo. Questo lo rimuove da tutti gli schemi che utilizzano quel gruppo. |
+| **Gestisci campi correlati** | Sì | No | No | Nasconde i campi solo dallo schema corrente. Il gruppo di campi rimane invariato. |
+| **Campo obsoleto** | No | Sì | Sì | Contrassegna il campo come obsoleto nel gruppo di campi. Non è più disponibile per l’utilizzo in nessuno schema. |
+
+>[!NOTE]
+>
+>Questo comportamento è coerente sia tra gli schemi basati su record che tra quelli basati su eventi.
 
 ### Aggiungere campi personalizzati ai gruppi di campi {#add-fields}
 
