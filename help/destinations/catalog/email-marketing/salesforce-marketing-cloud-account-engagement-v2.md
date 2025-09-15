@@ -4,7 +4,7 @@ description: Scopri come utilizzare la destinazione (V2) Salesforce Marketing Cl
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 21ca268d3ade99cf46b6c511360084297e8163d3
+source-git-commit: d1405237698271607fa672ccae1ac731d66df263
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 3%
@@ -22,9 +22,9 @@ Questa destinazione utilizza [[!DNL Salesforce Import API v5]](https://developer
 
 >[!IMPORTANT]
 > 
-> Versione V2 della destinazione [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Questa versione sostituisce la destinazione precedente ed è attualmente in versione Alpha.
-> &#x200B;> <br>
-> &#x200B;> Se utilizzi la versione precedente della destinazione [Salesforce Marketing Cloud Account Engagement](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), devi eseguire la migrazione a questa versione V2 prima del **gennaio 2026**. Dopo gennaio 2026, Adobe disattiverà la versione precedente e non sarà più disponibile.
+> Versione V2 della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Questa versione sostituisce la destinazione precedente ed è attualmente in versione Alpha.
+> > <br>
+> > Se utilizzi la versione precedente della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), devi eseguire la migrazione a questa versione V2 prima del **gennaio 2026**. Dopo gennaio 2026, Adobe disattiverà la versione precedente e non sarà più disponibile.
 
 
 ## Casi d’uso {#use-cases}
