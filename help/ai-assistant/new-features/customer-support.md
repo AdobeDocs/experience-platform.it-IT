@@ -62,5 +62,5 @@ Dopo aver completato questi passaggi, tutti gli amministratori del supporto nell
 
 Per ulteriori informazioni, guarda il video seguente e scopri come utilizzare l’agente di supporto del prodotto per risolvere facilmente i problemi senza uscire dai flussi di lavoro.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443191?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
 
