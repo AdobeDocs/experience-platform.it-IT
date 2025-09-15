@@ -3,9 +3,9 @@ title: Tipi di azioni nell'estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione tag Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e274dda06c678bdbd230bc2f06204724bac633e8
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2301'
 ht-degree: 1%
 
 ---
@@ -122,13 +122,28 @@ Utilizza il selettore **[!UICONTROL Istanza]** per scegliere l&#39;istanza di We
 ![Immagine dell&#39;interfaccia utente Tag di Experience Platform con le impostazioni di Personalization per il tipo di azione Invia evento.](assets/personalization-settings.png)
 
 * **[!UICONTROL Ambiti]**: selezionare gli ambiti (Adobe Target [!DNL mboxes]) che si desidera richiedere esplicitamente alla personalizzazione. Puoi immettere gli ambiti manualmente o fornendo un elemento dati.
-* **[!UICONTROL Superfici]**: imposta le superfici Web disponibili nella pagina per la personalizzazione. Per ulteriori dettagli, consulta la [documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=it).
+* **[!UICONTROL Superfici]**: imposta le superfici Web disponibili nella pagina per la personalizzazione. Per ulteriori dettagli, consulta la [documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html).
 * **Decisioni di personalizzazione visiva:** Se desideri eseguire il rendering di contenuti personalizzati sulla pagina, seleziona la casella di controllo **[!UICONTROL Decisioni di personalizzazione visiva]**. Se necessario, è inoltre possibile specificare ambiti decisionali e/o superfici. Per ulteriori informazioni sul rendering di contenuti personalizzati, consulta la [documentazione sulla personalizzazione](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content).
 * **[!UICONTROL Richiedi personalizzazione predefinita]**: utilizza questa sezione per controllare se sono richiesti l&#39;ambito a livello di pagina (mbox globale) e la superficie predefinita (superficie Web basata sull&#39;URL corrente). Per impostazione predefinita, questo viene richiesto automaticamente durante la prima chiamata `sendEvent` del caricamento della pagina. Puoi scegliere tra le seguenti opzioni:
    * **[!UICONTROL Automatico]**: comportamento predefinito. Richiedi la personalizzazione predefinita solo se non è ancora stata richiesta. Corrisponde a `requestDefaultPersonalization` non impostato nel comando Web SDK.
    * **[!UICONTROL Abilitato]**: richiede esplicitamente l&#39;ambito della pagina e la superficie predefinita. Questo aggiorna la cache della vista SPA. Corrisponde a `requestDefaultPersonalization` impostato su `true`.
    * **[!UICONTROL Disabilitato]**: elimina esplicitamente la richiesta per l&#39;ambito della pagina e la superficie predefinita. Corrisponde a `requestDefaultPersonalization` impostato su `false`.
 * **[!UICONTROL Contesto della decisione]**: si tratta di una mappa chiave-valore utilizzata durante la valutazione dei set di regole di Adobe Journey Optimizer per il decisioning sul dispositivo. Puoi fornire il contesto decisionale manualmente o tramite un elemento dati.
+
+### Advertising {#advertising}
+
+Quando si seleziona il componente **[!UICONTROL Advertising]** per il componente di compilazione personalizzato di Web SDK, le impostazioni della regola per le azioni `sendEvent` includono una sezione [!UICONTROL Advertising] che definisce il modo in cui i dati pubblicitari vengono utilizzati per la misurazione dell&#39;attribuzione. Questa impostazione è utile quando la regola include una sequenza di più azioni.
+
+![Immagine dell&#39;interfaccia utente Tag di Experience Platform con le impostazioni di Advertising per il tipo di azione Invia evento.](assets/send-event-advertising.png)
+
+La sezione **[!UICONTROL Richiedi dati Advertising predefiniti]** fornisce le seguenti opzioni:
+
+* **[!UICONTROL Automatico]**: tutti i dati pubblicitari disponibili al momento di questo evento verranno aggiunti automaticamente a XDM.
+* **[!UICONTROL Attendi]**: ritarda l&#39;esecuzione della chiamata fino al recupero e alla risoluzione dei dati pubblicitari. Quindi, aggiungi i dati a XDM.
+* **[!UICONTROL Disabilitato]**: non aggiungere dati pubblicitari a XDM. Utilizza questa opzione per tutte le richieste che non sono destinate a Customer Journey Analytics o Adobe Analytics.
+* **[!UICONTROL Fornisci un elemento dati]**: utilizza un elemento dati per includere o escludere dati pubblicitari durante il caricamento della pagina. I valori risolti per l&#39;elemento dati possono includere `automatic`, `wait` e `disabled`.
+
+Se non utilizzi una regola per configurare un&#39;azione `sendEvent`, i dati pubblicitari vengono inviati come evento di arricchimento dell&#39;annuncio separato.
 
 ### Override della configurazione dello stream di dati {#datastream-overrides}
 
