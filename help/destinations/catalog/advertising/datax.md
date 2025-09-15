@@ -2,7 +2,7 @@
 title: Connessione Verizon MediaYahoo DataX
 description: DataX è un’infrastruttura aggregata Verizon Media/Yahoo che ospita vari componenti che consentono a Verizon Media/Yahoo di scambiare dati con i propri partner esterni in modo sicuro, automatizzato e scalabile.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 65809628e8535027edb08e54e84b308777036ab2
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL DataX] di [!DNL Verizon Media/Yahoo]. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Verizon Media/Yahoo] di [!DNL DataX]. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo [dataoperations@yahooinc.com](mailto:dataoperations@yahooinc.com)
 
 ## Prerequisiti {#prerequisites}
 
@@ -67,7 +67,7 @@ Ulteriori informazioni su [Metadati di tassonomia](https://developer.verizonmedi
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Verizon Media] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+[!DNL Verizon Media] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
