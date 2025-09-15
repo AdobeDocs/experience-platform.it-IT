@@ -4,9 +4,9 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
+source-git-commit: 6d8386b4d9ed64128c8d9a9537610f0fd07d74cd
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2852'
 ht-degree: 7%
 
 ---
@@ -205,7 +205,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Intestazioni]**: immettere le intestazioni personalizzate che si desidera includere nelle chiamate di destinazione, nel seguente formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Endpoint HTTP]**: URL dell&#39;endpoint HTTP a cui si desidera inviare i dati del profilo.
 * **[!UICONTROL Parametri query]**: facoltativamente, è possibile aggiungere parametri di query all&#39;URL dell&#39;endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Includi nomi segmento]**: attiva questa opzione se vuoi che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Includi nomi segmento]**: attiva questa opzione se vuoi che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. **Nota**: i nomi dei segmenti sono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includono il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
 * **[!UICONTROL Includi marche temporali segmento]**: attiva questa opzione se desideri che l&#39;esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
 
 ### Abilita avvisi {#enable-alerts}
@@ -245,7 +245,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del segmento mappato nel flusso di dati di attivazione. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del segmento mappato nel flusso di dati di attivazione. <br> **Importante**: quando l&#39;opzione **[!UICONTROL Includi nomi di segmento]** è abilitata, i nomi di segmento vengono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includeranno il campo `name`, anche se l&#39;opzione è abilitata. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -333,10 +333,16 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
             "mappingCreatedAt": 1649856570000,
             "mappingUpdatedAt": 1649856570000,
             "name": "First name equals John"
+          },
+          "354e086f-2e11-49a2-9e39-e5d9a76be683": {
+            "lastQualificationTime": "2020-04-15T02:41:50+0000",
+            "status": "realized"
           }
         }
       }
 ```
+
+**Nota**: in questo esempio, il primo segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) è mappato alla destinazione e include il campo `name`. Il secondo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) non è mappato alla destinazione e non include il campo `name`, anche se l&#39;opzione **[!UICONTROL Includi nomi di segmento]** è abilitata.
 
 +++
 
