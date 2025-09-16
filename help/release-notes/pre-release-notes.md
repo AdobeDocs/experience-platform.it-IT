@@ -1,13 +1,11 @@
 ---
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
+source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 35%
+source-wordcount: '1271'
+ht-degree: 43%
 
 ---
 
@@ -27,15 +25,32 @@ ht-degree: 35%
 >- [Composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
 
-**Data di rilascio: agosto 2025**
+**Data di rilascio: settembre 2025**
 
 Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Assistente IA](#ai-assistant)
 - [Avvisi](#alerts)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Servizio query](#query-service)
+- [Profilo cliente in tempo reale](#profile)
 - [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
+
+## Assistente IA {#ai-assistant}
+
+Adobe Experience Platform AI Assistant è un’esperienza di conversazione che puoi utilizzare per accelerare e ottimizzare i flussi di lavoro tra le applicazioni Adobe Experience Cloud.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator è il tuo assistente intelligente per le applicazioni Experience Cloud. Quando fai domande o richiedi assistenza, Agent Orchestrator chiama automaticamente agenti specializzati per ottenere le risposte giuste. Agent Orchestrator ricorda la cronologia delle conversazioni e consente di basarsi sulle domande precedenti in modo naturale, senza dover ripetere il contesto, e combina le informazioni provenienti da più agenti per fornire risposte chiare e unificate. Puoi utilizzare le funzionalità di Agent Orchestrator tramite l’interfaccia di conversazione dell’Assistente di intelligenza artificiale. |
+| Audience Agent | Audience Agent consente di visualizzare informazioni approfondite sui tipi di pubblico, tra cui il rilevamento di modifiche significative nelle dimensioni del pubblico, il rilevamento di tipi di pubblico duplicati, l’esplorazione dell’inventario dei tipi di pubblico e il recupero delle dimensioni dei tipi di pubblico. |
+| Agente di individuazione campi | L’agente di individuazione campi consente agli utenti di individuare e comprendere automaticamente i campi dati all’interno dei propri schemi e set di dati. Questo agente intelligente analizza la struttura dei dati e fornisce informazioni approfondite sull’utilizzo dei campi, sulle relazioni e sui consigli per l’ottimizzazione. |
+
+Per ulteriori informazioni, consulta la [panoramica dell’Assistente IA](../ai-assistant/home.md).
 
 ## Avvisi {#alerts}
 
@@ -44,55 +59,57 @@ Experience Platform consente di iscriverti agli avvisi basati su eventi per vari
 **Nuove funzioni**
 
 | Funzione | Descrizione |
-| ------- | ----------- |
-| Avvisi sulla capacità di throughput in streaming | Tre nuovi avvisi consentono agli utenti di abbonarsi e configurare gli avvisi per gestire e monitorare in modo proattivo le prestazioni della capacità di velocità effettiva in streaming. I nuovi avvisi includono quando la velocità effettiva dello streaming ha raggiunto l’80%, il 90% o supera i limiti di capacità. Per ulteriori informazioni, leggere la [guida alle regole per gli avvisi sulla capacità](../observability/alerts/rules.md#capacity). |
+| --- | --- |
+| Avvisi di acquisizione del profilo di streaming | Ora puoi iscriverti a due nuovi avvisi per l’acquisizione in streaming a livello di flusso di dati: <ul><li>Frequenza di errori di acquisizione in streaming superata</li><li>Frequenza di acquisizione streaming ignorata superata</li></ul> Gli avvisi e-mail o in piattaforma ti avviseranno quando vengono superate le soglie per la soglia predefinita o per una soglia personalizzata da te definita. Per ulteriori informazioni, consulta la guida [Avvisi profilo](../observability/alerts/rules.md#profile). |
+
+{style="table-layout:auto"}
 
 Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insights] panoramica](../observability/home.md).
 
 ## Destinazioni {#destinations}
 
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
->[!IMPORTANT]
->
->**Estensione pianificazione esportazione set di dati**
->
->Se nell&#39;organizzazione sono presenti flussi di dati di esportazione del set di dati creati prima di novembre 2024, questi flussi di dati cesseranno di funzionare il **1 settembre 2025**. Se i flussi di dati sono necessari per continuare a esportare dati dopo il 1° settembre 2025, è necessario estendere le pianificazioni per ogni destinazione in cui si esportano i set di dati, seguendo i passaggi descritti in [questa guida](../destinations/ui/dataset-expiration-update.md).
-
-**Nuove destinazioni**
+**Destinazioni nuove o aggiornate**
 
 | Destinazione | Descrizione |
 | --- | --- |
-| [!DNL Acxiom Real ID Audience] destinazione | Utilizza la destinazione [!DNL Acxiom Real ID Audience Connection] per migliorare i tipi di pubblico con la tecnologia [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) e attivare i tipi di pubblico su più piattaforme, ad esempio [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora. |
-
-**Destinazioni aggiornate**
-
-| Destinazione | Descrizione |
-| --- | --- |
-| Dettagli scadenza autenticazione per [!DNL LinkedIn] e [!DNL Pinterest] destinazioni | Le informazioni sulla scadenza dell&#39;account sono ora visibili direttamente nell&#39;interfaccia di Experience Platform, quindi puoi vedere quando scadrà l&#39;autenticazione [!DNL LinkedIn] e [!DNL Pinterest] e rinnovarla prima che causi interruzioni ai flussi di dati. |
-| Supporto crittografia per [!DNL Data Landing Zone] destinazioni | Protezione dei dati esportati con crittografia. È ora possibile allegare chiavi pubbliche in formato RSA per crittografare i file esportati, garantendo lo stesso livello di sicurezza fornito da altre destinazioni di archiviazione cloud per le informazioni riservate. |
-| Aggiornamento interno di [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) | A partire dal martedì 11 agosto 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL Microsoft Bing]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL Microsoft Bing]** esistente è stato rinominato in **[!UICONTROL (obsoleto) Microsoft Bing]** ed è ora disponibile una nuova scheda con il nome **[!UICONTROL Microsoft Bing]**. Utilizza la nuova connessione **[!UICONTROL Microsoft Bing]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi nella destinazione **[!UICONTROL (obsoleto) Microsoft Bing]**, questi verranno aggiornati automaticamente, pertanto non è richiesta alcuna azione da parte dell&#39;utente. <br><br>Se stai creando flussi di dati tramite [API Flow Service ](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare l’[!DNL flow spec ID] e l’[!DNL connection spec ID] ai seguenti valori:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> In seguito a questo aggiornamento, potrebbe verificarsi un calo di **del numero di profili attivati** nei flussi di dati a [!DNL Microsoft Bing]. Questo calo è causato dall&#39;introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. |
-| Consolidamento di [!DNL Marketo] schede di destinazione | Semplifica la configurazione della destinazione [!DNL Marketo] con la scheda di destinazione unificata. Abbiamo consolidato [!DNL Marketo] schede V2 e V3 in un&#39;unica opzione semplificata, semplificando la scelta della destinazione giusta e consentendo di iniziare rapidamente. |
+| Connettore [!BADGE Beta]{type=Informative} [!DNL Snowflake Batch] | È ora disponibile un nuovo connettore [!DNL Snowflake Batch] che fornisce un&#39;alternativa al connettore di streaming per casi d&#39;uso specifici. |
+| Destinazione [!DNL Adform] | [!DNL Adform] è uno dei principali fornitori di soluzioni per l&#39;acquisto e la vendita di contenuti multimediali a livello di programmazione. Collegando Adform a Adobe Experience Platform, puoi attivare i tipi di pubblico di prime parti tramite Adform, in base all’Experience Cloud ID (ECID). |
+| Supporto crittografia [!DNL Data Landing Zone] | È ora possibile allegare chiavi pubbliche in formato RSA per crittografare i file esportati, garantendo lo stesso livello di sicurezza fornito da altre destinazioni di archiviazione cloud per le informazioni riservate. |
+| Dettagli scadenza autenticazione per [!DNL Pinterest] destinazioni | Le informazioni sulla scadenza dell’autenticazione per le destinazioni [!DNL Pinterest] sono ora visibili direttamente nell’interfaccia di Experience Platform, per consentirti di visualizzare quando scadrà l’autenticazione e di rinnovarla prima che causi interruzioni nei flussi di dati. Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../destinations/ui/destinations-workspace.md#browse)**. |
 
 **Funzionalità nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Funzionalità avanzate di ricerca, filtro e assegnazione di tag per le destinazioni | Migliora il flusso di lavoro di gestione della destinazione con funzionalità avanzate di ricerca, filtro e assegnazione di tag nelle schede Sfoglia e Account. Ora puoi cercare flussi di dati e account specifici per nome, filtrare in base a vari criteri, tra cui piattaforma di destinazione, stato e date, e creare tag personalizzati per organizzare le destinazioni. L’ordinamento a colonne è disponibile anche per campi chiave come l’ultimo runtime del flusso di dati, facilitando l’identificazione e la gestione delle connessioni di destinazione. |
+| Funzionalità avanzate di gestione delle destinazioni nell’interfaccia utente di Experience Platform | Migliora il flusso di lavoro di gestione della destinazione con nuove funzionalità di ordinamento nelle schede [[!UICONTROL Sfoglia]](../destinations/ui/destinations-workspace.md#browse) e [[!UICONTROL Account]](../destinations/ui/destinations-workspace.md#accounts). Ora puoi anche vedere un indicatore visivo quando l’autenticazione dell’account sta per scadere. |
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Schemi basati su modelli | Semplifica la modellazione dei dati con schemi basati su modelli. Ora puoi creare gli schemi più facilmente con esempi e indicazioni completi. Questa funzione è attualmente disponibile per i titolari di licenze di Campaign Orchestration e verrà estesa ai clienti Data Distiller in GA, rendendo la modellazione dei dati più accessibile ed efficiente. |
+| Schemi basati su modelli | Semplifica la modellazione dei dati con schemi basati su modelli. Ora puoi creare gli schemi più facilmente con esempi e indicazioni completi. Questa funzione è attualmente disponibile per i titolari di licenze di Campaign Orchestration e verrà estesa ai clienti Data Distiller in GA, rendendo la modellazione dei dati più accessibile ed efficiente. Questa funzione include il supporto per i dati della serie temporale e le funzionalità di acquisizione dei dati di modifica. |
 
-Per ulteriori informazioni, leggere la [panoramica XDM](../xdm/home.md).
+Per ulteriori informazioni, consulta la [panoramica su XDM](../xdm/home.md).
+
+## Profilo cliente in tempo reale {#profile}
+
+Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati clienti in una visualizzazione unificata che offre un account utilizzabile e dotato di marca temporale per ogni interazione con il cliente.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Miglioramenti al visualizzatore di profili | La versione di settembre 2025 include i seguenti miglioramenti al visualizzatore profili. <ul><li>**Visualizzazione combinata**: attributi, eventi e informazioni sono stati combinati in un&#39;unica visualizzazione.</li><li>**Informazioni generate da IA**: la pagina dei dettagli del profilo ora visualizza le informazioni generate da IA, consentendo di conoscere i dettagli generati dal profilo. Queste informazioni possono includere informazioni quali i punteggi di tendenza e l’analisi delle tendenze.</li><li>**Aggiornamento stile**: la pagina dei dettagli del profilo è stata aggiornata visivamente.</li><li>**Sfoglia**: ora puoi esplorare i profili tramite un carosello interattivo basato su schede con funzionalità di ricerca e personalizzazione.</li></ul> |
+
+Per ulteriori informazioni, leggere la [Panoramica del profilo cliente in tempo reale](../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation-service}
 
@@ -102,7 +119,13 @@ Per ulteriori informazioni, leggere la [panoramica XDM](../xdm/home.md).
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Stime del pubblico | Le stime del pubblico ora vengono generate automaticamente in Segment Builder (Generatore di segmenti). Questo valore viene aggiornato ogni volta che modifichi il pubblico e riflette sempre le regole del pubblico più recenti. |
+| Pubblico dell’account con eventi esperienza obsoleti | Dopo l’aggiornamento dell’architettura B2B, i tipi di pubblico dell’account con eventi di esperienza non sono più supportati. Invece, utilizza il nuovo approccio per segmenti: crea un pubblico Persone con eventi di esperienza, quindi fai riferimento a tale pubblico Persone durante la creazione di un pubblico Account. Questo fornisce un approccio più flessibile e gestibile alla creazione di tipi di pubblico B2B. |
+
+**Aggiornamenti importanti**
+
+| Aggiornamento | Descrizione |
+| ------- | ----------- |
+| Le stime del pubblico vengono aggiornate automaticamente | Il miglioramento dell’aggiornamento automatico per le stime del pubblico è stato ripristinato. Le stime del pubblico continueranno a essere generate in Segment Builder, ma la funzionalità di aggiornamento automatico è stata rimossa. |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../segmentation/home.md).
 
@@ -110,41 +133,11 @@ Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica]
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
-**Funzionalità nuove o aggiornate**
+**Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!BADGE Supporto di Beta]{type=Informative} Azure Private Link nell&#39;interfaccia utente | Proteggi i tuoi dati con le connessioni di rete private. Ora puoi creare endpoint privati e impostare flussi di dati che ignorino Internet pubblico, garantendo maggiore sicurezza e isolamento della rete per i dati sensibili. |
-| [!DNL Marketo] aggiornamenti della documentazione di origine | Ottieni visibilità completa sulla trasformazione dei dati di [!DNL Marketo] quando entrano in Experience Platform. Tutte le mappature dei campi ora includono spiegazioni dettagliate sulle trasformazioni dei dati, in modo da poter capire esattamente come `PersonID` diventa `leadID` e `eventType` diventa `activityType`. |
-| Supporto per l&#39;autenticazione dell&#39;entità servizio per [!DNL Azure Blob Storage] | È ora possibile collegare l&#39;account [!DNL Azure Blob Storage] ad Experience Platform con l&#39;autenticazione dell&#39;entità servizio. |
+| Nuove origini in Disponibilità generale | Le seguenti origini sono ora in Disponibilità generale: Diversi connettori di origine sono stati aggiornati da Beta a GA: <ul><li>[Acquisizione dati Acxiom](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acquisizione dei dati di Acxiom Prospect](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Queste sorgenti sono ora completamente supportate e pronte per l’uso in produzione. |
+| Supporto dell&#39;autenticazione con coppia di chiavi [!DNL Snowflake] | Sicurezza avanzata per le connessioni Snowflake con supporto per l’autenticazione con coppia di chiavi. L’autenticazione di base (nome utente/password) diventerà obsoleta entro novembre 2025, pertanto si consiglia ai clienti di migrare all’autenticazione con coppia di chiavi per migliorare la sicurezza. |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../sources/home.md).
-
-<!--
-
-## Query Service {#query-service}
-
-Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
-
-For more information, read the [Query Service overview](../query-service/home.md).
-
-## B2B CDP {#b2b-cdp}
-
-Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
-| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
-
-For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
-
--->
