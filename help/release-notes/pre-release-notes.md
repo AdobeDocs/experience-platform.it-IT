@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 43%
+source-wordcount: '1217'
+ht-degree: 45%
 
 ---
 
@@ -46,9 +46,8 @@ Adobe Experience Platform AI Assistant è un’esperienza di conversazione che p
 
 | Funzione | Descrizione |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator è il tuo assistente intelligente per le applicazioni Experience Cloud. Quando fai domande o richiedi assistenza, Agent Orchestrator chiama automaticamente agenti specializzati per ottenere le risposte giuste. Agent Orchestrator ricorda la cronologia delle conversazioni e consente di basarsi sulle domande precedenti in modo naturale, senza dover ripetere il contesto, e combina le informazioni provenienti da più agenti per fornire risposte chiare e unificate. Puoi utilizzare le funzionalità di Agent Orchestrator tramite l’interfaccia di conversazione dell’Assistente di intelligenza artificiale. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator è il livello intelligente che alimenta l’Assistente AI. Quando fai domande o richiedi assistenza, Agent Orchestrator chiama automaticamente agenti specializzati per ottenere le risposte giuste. Agent Orchestrator ricorda la cronologia delle conversazioni e consente di basarsi sulle domande precedenti in modo naturale, senza dover ripetere il contesto, e combina le informazioni provenienti da più agenti per fornire risposte chiare e unificate. |
 | Audience Agent | Audience Agent consente di visualizzare informazioni approfondite sui tipi di pubblico, tra cui il rilevamento di modifiche significative nelle dimensioni del pubblico, il rilevamento di tipi di pubblico duplicati, l’esplorazione dell’inventario dei tipi di pubblico e il recupero delle dimensioni dei tipi di pubblico. |
-| Agente di individuazione campi | L’agente di individuazione campi consente agli utenti di individuare e comprendere automaticamente i campi dati all’interno dei propri schemi e set di dati. Questo agente intelligente analizza la struttura dei dati e fornisce informazioni approfondite sull’utilizzo dei campi, sulle relazioni e sui consigli per l’ottimizzazione. |
 
 Per ulteriori informazioni, consulta la [panoramica dell’Assistente IA](../ai-assistant/home.md).
 
