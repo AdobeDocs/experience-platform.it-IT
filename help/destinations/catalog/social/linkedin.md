@@ -3,25 +3,16 @@ keywords: linkedin connessione;linkedin connessione;linkedin destinazioni;linked
 title: Connessione LinkedIn Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting, la personalizzazione e l’eliminazione del pubblico, in base alle e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
+source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 7%
+source-wordcount: '1234'
+ht-degree: 5%
 
 ---
 
 # Connessione [!DNL LinkedIn Matched Audiences]
 
 ## Panoramica {#overview}
-
->[!IMPORTANT]
->
->* A partire dal mercoledì 9 settembre 2025 nel catalogo delle destinazioni, puoi visualizzare due schede **[!DNL LinkedIn Matched Audiences]** affiancate. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore di destinazione **[!DNL LinkedIn Matched Audiences]** esistente è stato rinominato in **[!UICONTROL (Obsoleto) LinkedIn Matched Audiences]** e ora è disponibile una nuova scheda con il nome **[!UICONTROL LinkedIn Matched Audiences]**.
->* Utilizza la nuova connessione **[!UICONTROL LinkedIn Matched Audiences]** nel catalogo per i nuovi flussi di dati di attivazione. Se sono presenti flussi di dati attivi per la destinazione **[!UICONTROL (Obsoleto) LinkedIn Matched Audiences]**, verranno aggiornati automaticamente, quindi non è richiesta alcuna azione da parte tua.
->* La nuova connessione **[!UICONTROL LinkedIn MatchedAudiences]** non supporta più [!DNL IDFA] identità.
->* Se si creano flussi di dati tramite l&#39;[API del servizio Flow](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare [!DNL flow spec ID] e [!DNL connection spec ID] ai valori seguenti:
->   * Flow spec ID: `963604d1-811d-4ce4-ac66-1fc78bde7c42`
->   * Connection spec ID: `393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 Attiva profili per le campagne [!DNL LinkedIn] per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base alle e-mail con hash e agli ID dei dispositivi mobili.
 
@@ -36,6 +27,11 @@ Una società di software organizza una conferenza e desidera tenersi in contatto
 ## Identità supportate {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
+
+>[!IMPORTANT]
+>
+>A partire da settembre 2025, la destinazione [!DNL LinkedIn Matched Audiences] non supporta più le identità [!DNL IDFA] (identificatore per inserzionisti).  Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform.
+
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
@@ -96,7 +92,7 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 >[!NOTE]
 >
 >I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
->&#x200B;> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
+>> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
 > 
 > Durante il passaggio [Mappatura identità](../../ui/activate-segment-streaming-destinations.md#mapping), se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Experience Platform] esegua automaticamente l&#39;hashing dei dati all&#39;attivazione.
 > 
@@ -114,7 +110,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL LinkedIn Matched Audiences] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
