@@ -193,7 +193,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `results` | Un elenco di ID entità, insieme alle relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate utilizzando l&#39;endpoint API di accesso al profilo [](../../profile/api/entities.md). |
+| `results` | Un elenco di ID entità, insieme alle relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate utilizzando l&#39;endpoint API di accesso al profilo [&#128279;](../../profile/api/entities.md). |
 
 +++
 
