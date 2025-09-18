@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file c
 title: Guida dell’interfaccia utente per la preparazione dei dati
 description: Scopri come utilizzare le funzioni di preparazione dei dati nell’interfaccia utente di Experience Platform per mappare i file CSV su uno schema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ Quindi, usa la finestra [!UICONTROL Carica modello] per scaricare una copia CSV 
 
 ![La finestra del modello di caricamento che visualizza le opzioni per scaricare e caricare un file csv esportato dei mapping.](../images/ui/mapping/upload_template.png)
 
-+++Seleziona questa opzione per visualizzare un esempio di file di mappatura esportato
++++Seleziona per visualizzare un esempio di file di mappatura esportato
 
 ![File CSV scaricato del modello di mapping.](../images/ui/mapping/mapping_csv_file.png)
 
@@ -151,6 +151,10 @@ Al termine, selezionare **[!UICONTROL Carica file]** e selezionare il file CSV a
 >[!ENDTABS]
 
 Al termine delle mappature, puoi selezionare **[!UICONTROL Fine]** e procedere al passaggio successivo per completare il flusso di dati.
+
+>[!TIP]
+>
+>Dopo aver creato le mappature, attendi fino a 10 minuti prima di iniziare l’acquisizione dei dati. Questo periodo di attesa garantisce che le nuove mappature siano completamente salvate e disponibili nel sistema.
 
 ![Interfaccia di mapping con un set completo di mapping.](../images/ui/mapping/completed_mappings.png)
 
