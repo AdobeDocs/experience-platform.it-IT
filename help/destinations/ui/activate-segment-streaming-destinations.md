@@ -64,7 +64,7 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >Questo passaggio si applica solo ad alcune destinazioni di streaming del pubblico. Se la destinazione non dispone di un passaggio **[!UICONTROL Mapping]**, passa alla [pianificazione del pubblico](#scheduling).
 >
 >Quando si attivano tipi di pubblico su destinazioni di streaming, è necessario mappare anche *almeno uno spazio dei nomi delle identità di destinazione*, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
->> ![Immagine del passaggio di mappatura che mostra una mappatura obbligatoria dello spazio dei nomi delle identità.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>&#x200B;> ![Immagine del passaggio di mappatura che mostra una mappatura obbligatoria dello spazio dei nomi delle identità.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Alcune destinazioni di streaming del pubblico richiedono la selezione di attributi di origine o spazi dei nomi di identità da mappare come identità di destinazione nella destinazione.
