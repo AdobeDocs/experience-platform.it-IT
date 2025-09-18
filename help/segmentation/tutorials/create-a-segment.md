@@ -4,7 +4,7 @@ title: Creare una definizione di segmento utilizzando l’API del servizio di se
 type: Tutorial
 description: Segui questa esercitazione per scoprire come sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
@@ -72,7 +72,7 @@ Per visualizzare in anteprima o stimare la definizione del segmento sono necessa
 
 ### Come vengono generate le stime
 
-Poiché i dati abilitati per Real-Time Customer Profile vengono acquisiti in Experience Platform, vengono memorizzati nell’archivio dati Profile. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Se il conteggio dei profili non cambia di oltre il 5%, il processo di campionamento viene eseguito automaticamente su base settimanale.
+Poiché i dati abilitati per Real-Time Customer Profile vengono acquisiti in Experience Platform, vengono memorizzati nell’archivio dati Profile. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 3%, viene attivato un processo di campionamento per aggiornare il conteggio. Se il conteggio dei profili non cambia di oltre il 3%, il processo di campionamento viene eseguito automaticamente su base settimanale.
 
 Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
 
