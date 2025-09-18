@@ -60,7 +60,7 @@ Se trasferisci dati ad Experience Platform utilizzando una connessione di origin
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../field-groups/name-updates.md).
+>I nomi di diversi gruppi di campi sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [&#128279;](../field-groups/name-updates.md).
 
 Adobe fornisce diversi gruppi di campi standard da utilizzare con la classe [!DNL XDM ExperienceEvent]. Di seguito è riportato un elenco di alcuni gruppi di campi comunemente utilizzati per la classe:
 
