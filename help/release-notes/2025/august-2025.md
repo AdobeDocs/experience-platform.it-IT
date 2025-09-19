@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1432'
-ht-degree: 92%
+source-wordcount: '1485'
+ht-degree: 96%
 
 ---
 
@@ -104,6 +104,7 @@ Per ulteriori informazioni sul Servizio catalogo, consulta la [panoramica sul se
 | --- | --- |
 | Aggiornamento interno di [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | A partire dall’11 agosto 2025, per un breve periodo di tempo potresti aver visualizzato due schede **[!DNL Microsoft Bing]** una accanto all’altra nel catalogo delle destinazioni. Questo è dovuto a un aggiornamento interno del servizio destinazioni. Il connettore della destinazione **[!DNL Microsoft Bing]** esistente è stato ridenominato in **[!UICONTROL Microsoft Bing (obsoleto)]** ed è ora disponibile una nuova scheda denominata **[!UICONTROL Microsoft Bing]**. <br> L’aggiornamento è stato completato e la scheda obsoleta è stata rimossa dal catalogo di destinazione. Utilizza la connessione **[!UICONTROL Microsoft Bing]** nel catalogo per i nuovi flussi di dati di attivazione. Nel caso di flussi di dati attivi nella destinazione **[!UICONTROL Microsoft Bing (obsoleto)]**, questi verranno aggiornati automaticamente e non è quindi richiesta alcuna azione da parte tua. <br><br>Se stai creando flussi di dati tramite [API Flow Service ](https://developer.adobe.com/experience-platform-apis/references/destinations/), è necessario aggiornare l’[!DNL flow spec ID] e l’[!DNL connection spec ID] ai seguenti valori:<ul><li>Flow spec ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Connection spec ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> In seguito a questo aggiornamento, potresti riscontrare un **calo nel numero di profili attivati** nei flussi di dati verso [!DNL Microsoft Bing]. Questo calo è causato dall’introduzione del **requisito di mappatura ECID** per tutte le attivazioni su questa piattaforma di destinazione. |
 | Dettagli sulla scadenza dell’autenticazione per le destinazioni [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) e [Audience corrispondenti LinkedIn](../../destinations/catalog/social/linkedin-b2b.md) | Le informazioni sulla scadenza dell’autenticazione per le destinazioni [!DNL LinkedIn] sono ora visibili direttamente nell’interfaccia di Experience Platform, per consentirti di visualizzare quando scadrà l’autenticazione e di rinnovarla prima che causi interruzioni nei flussi di dati. Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse)**. |
+| [Tipi di pubblico corrispondenti a LinkedIn](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA] rimozione supporto identità | A partire da settembre 2025, non è più possibile mappare [!DNL IDFA] come identità di destinazione, poiché [!DNL IDFA] non è più supportato dalla destinazione [!DNL LinkedIn Matched Audiences]. Per ulteriori dettagli, consulta la [!DNL LinkedIn Matched Audiences]documentazione[ dell&#39;integrazione ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes). Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform. |
 
 **Funzionalità nuove o aggiornate**
 
@@ -159,7 +160,7 @@ Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini]
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Stime del pubblico | Le stime del pubblico vengono ora visualizzate come un **intervallo**, basato sull&#39;intervallo di affidabilità dei dati di campionamento. Per ulteriori informazioni sulle stime, consulta la [guida del Generatore di segmenti](/help/segmentation/ui/segment-builder.md#audience-properties). |
+| Stime del pubblico | Le stime del pubblico verranno ora visualizzate come un **intervallo**, basato sull’intervallo di affidabilità dei dati di campionamento. Per ulteriori informazioni sulle stime, consulta la [guida del Generatore di segmenti](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
@@ -171,9 +172,9 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Disponibilità generale dell’origine [!DNL Oracle NetSuite] | L&#39;origine [!DNL Oracle NetSuite] è ora generalmente disponibile. Ora puoi collegare il tuo account [!DNL Oracle NetSuite] ad Experience Platform per acquisire i dati di attività ed entità per l&#39;analisi e l&#39;attivazione unificate. Per ulteriori informazioni, consulta la [[!DNL Oracle NetSuite] panoramica](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
-| Disponibilità generale dell’origine [!DNL PathFactory] | L&#39;origine [!DNL PathFactory] è ora generalmente disponibile. Puoi collegare il tuo account [!DNL PathFactory] ad Experience Platform per acquisire i dati di visitatori, sessioni e visualizzazioni di pagina per l&#39;analisi unificata e l&#39;attivazione. Per ulteriori informazioni, consulta la [[!DNL PathFactory] panoramica](../../sources/connectors/marketing-automation/pathfactory.md). |
-| Disponibilità generale dell’origine [!DNL Stripe] | L&#39;origine [!DNL Stripe] è ora generalmente disponibile. Puoi collegare il tuo account [!DNL Stripe] ad Experience Platform per acquisire i dati di pagamento e transazione per l&#39;analisi e l&#39;attivazione unificate. Per ulteriori informazioni, consulta la [[!DNL Stripe] panoramica](../../sources/connectors/payments/stripe.md). |
+| Disponibilità generale dell’origine [!DNL Oracle NetSuite] | L’origine [!DNL Oracle NetSuite] è ora in disponibilità generale. Ora puoi collegare il tuo account [!DNL Oracle NetSuite] ad Experience Platform per acquisire i dati di attività ed entità per l’analisi e l’attivazione unificate. Per ulteriori informazioni, consulta la [[!DNL Oracle NetSuite] panoramica](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| Disponibilità generale dell’origine [!DNL PathFactory] | L’origine [!DNL PathFactory] è ora in disponibilità generale. Puoi collegare il tuo account [!DNL PathFactory] ad Experience Platform per acquisire i dati di visitatori, sessioni e visualizzazioni di pagina per l’analisi unificata e l’attivazione. Per ulteriori informazioni, consulta la [[!DNL PathFactory] panoramica](../../sources/connectors/marketing-automation/pathfactory.md). |
+| Disponibilità generale dell’origine [!DNL Stripe] | L’origine [!DNL Stripe] è ora in disponibilità generale. Puoi collegare il tuo account [!DNL Stripe] ad Experience Platform per acquisire i dati di pagamento e transazione per l’analisi e l’attivazione unificate. Per ulteriori informazioni, consulta la [[!DNL Stripe] panoramica](../../sources/connectors/payments/stripe.md). |
 | Autenticazione avanzata per [!DNL Azure Blob Storage] | Ora puoi utilizzare l’autenticazione basata sull’entità principale del servizio per connettere l’origine [!DNL Azure Blob Storage] a Experience Platform. Utilizza l’autenticazione basata sull’entità principale del servizio per una maggiore sicurezza, per agevolare la rotazione delle credenziali e per un controllo degli accessi più granulare per il tuo account. Per ulteriori informazioni, consulta la [[!DNL Azure Blob Storage] panoramica](../../sources/connectors/cloud-storage/blob.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).

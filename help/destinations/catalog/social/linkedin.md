@@ -3,9 +3,9 @@ keywords: linkedin connessione;linkedin connessione;linkedin destinazioni;linked
 title: Connessione LinkedIn Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting, la personalizzazione e l’eliminazione del pubblico, in base alle e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1250'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,7 @@ Una società di software organizza una conferenza e desidera tenersi in contatto
 
 >[!IMPORTANT]
 >
->A partire da settembre 2025, la destinazione [!DNL LinkedIn Matched Audiences] non supporta più le identità [!DNL IDFA] (identificatore per inserzionisti).  Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform.
+>A partire da settembre 2025, non è più possibile mappare [!DNL IDFA] come identità di destinazione, poiché [!DNL IDFA] non è più supportato dalla destinazione [!DNL LinkedIn Matched Audiences]. Per ulteriori dettagli, consulta la [!DNL LinkedIn Matched Audiences]documentazione[ dell&#39;integrazione ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes). Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform.
 
 
 | Identità di destinazione | Descrizione | Considerazioni |
@@ -92,7 +92,7 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 >[!NOTE]
 >
 >I dati degli spazi dei nomi senza hash vengono automaticamente sottoposti a hashing da [!DNL Experience Platform] al momento dell&#39;attivazione.
->&#x200B;> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
+>> L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente.
 > 
 > Durante il passaggio [Mappatura identità](../../ui/activate-segment-streaming-destinations.md#mapping), se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Experience Platform] esegua automaticamente l&#39;hashing dei dati all&#39;attivazione.
 > 
@@ -110,7 +110,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL LinkedIn Matched Audiences] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
