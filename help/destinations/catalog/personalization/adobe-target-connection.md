@@ -72,8 +72,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 >[!IMPORTANT]
 >
 >Quando si attivano *tipi di pubblico edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva*, i tipi di pubblico *devono* utilizzare un [criterio di unione attivo-su-edge](../../../segmentation/ui/segment-builder.md#merge-policies). Il criterio di unione [!DNL active-on-edge] garantisce che i tipi di pubblico vengano valutati costantemente [al limite](../../../segmentation/methods/edge-segmentation.md) e siano disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.  Leggi di [tutti i casi d&#39;uso disponibili](#parameter), in base al tipo di implementazione.
->>Se mappi i tipi di pubblico edge che utilizzano un criterio di unione diverso sulle destinazioni di Adobe Target, tali tipi di pubblico non verranno valutati per i casi d’uso in tempo reale e nella pagina successiva.
->>Segui le istruzioni relative alla [creazione di un criterio di unione](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare il criterio di unione **[!UICONTROL Attivo su Edge]**.
+>&#x200B;>Se mappi i tipi di pubblico edge che utilizzano un criterio di unione diverso sulle destinazioni di Adobe Target, tali tipi di pubblico non verranno valutati per i casi d’uso in tempo reale e nella pagina successiva.
+>&#x200B;>Segui le istruzioni relative alla [creazione di un criterio di unione](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare il criterio di unione **[!UICONTROL Attivo su Edge]**.
 
 
 | Origine pubblico | Supportato | Descrizione |
@@ -143,8 +143,8 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 >[!NOTE]
 >
 >Quando si utilizza un&#39;area di lavoro di Target personalizzata per [la personalizzazione della stessa pagina e della pagina successiva con attributi](../../ui/activate-edge-personalization-destinations.md), solo i [tipi di pubblico selezionati](../../ui/activate-edge-personalization-destinations.md#select-audiences) vengono inviati all&#39;area di lavoro di Target selezionata. I [attributi mappati](../../ui/activate-edge-personalization-destinations.md#mapping) vengono inviati all&#39;area di lavoro predefinita di Target.
->><br>
->>Questo comportamento cambierà in un aggiornamento futuro.
+>&#x200B;><br>
+>&#x200B;>Questo comportamento cambierà in un aggiornamento futuro.
 
 ### Abilita avvisi {#enable-alerts}
 
