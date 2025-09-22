@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 45%
+source-wordcount: '703'
+ht-degree: 48%
 
 ---
 
@@ -112,6 +112,7 @@ ht-degree: 45%
       * [Dettagli prospect partner (esempio)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Estensione completa Adobe Analytics](./field-groups/event/analytics-full-extension.md)
+      * [Estensione completa Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
       * [Dettagli pubblicitari](./field-groups/event/advertising-details.md)
       * [Dettagli applicazione](./field-groups/event/application-details.md)
       * [Trasferimenti del saldo](./field-groups/event/balance-transfers.md)
@@ -230,15 +231,15 @@ ht-degree: 45%
    * [Informazioni Web](./data-types/web-information.md)
    * [Interazione web](./data-types/web-interaction.md)
    * [Dettagli della pagina web](./data-types/webpage-details.md)
-* [!UICONTROL Schemi] UI {#ui}
+* [!UICONTROL Schemi] interfaccia utente {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplora risorse XDM](./ui/explore.md)
-   * Crea e modifica le risorse {#resources}
+   * Creare e modificare le risorse {#resources}
       * [Schemi](./ui/resources/schemas.md)
       * [Classi](./ui/resources/classes.md)
       * [Gruppi di campi](./ui/resources/field-groups.md)
       * [Tipi di dati](./ui/resources/data-types.md)
-   * Definisci i campi {#fields}
+   * Definire i campi {#fields}
       * [Panoramica](./ui/fields/overview.md)
       * [Campi array](./ui/fields/array.md)
       * [Campi enum](./ui/fields/enum.md)
@@ -251,7 +252,7 @@ ht-degree: 45%
    * [Creazione di schemi assistiti da apprendimento automatico](./ui/ml-assisted-schema-creation.md)
    * [Genera dati XDM di esempio](./ui/sample.md)
    * [Esportare gli schemi XDM](./ui/export.md)
-* API del registro di schema {#api}
+* API del registro dello schema {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
    * [Schemi](api/schemas.md)
