@@ -1,21 +1,15 @@
 ---
 title: Creare una connessione e un flusso di dati Source per la risoluzione delle identità aziendali di Merkury nell’interfaccia utente
 description: Scopri come creare una connessione sorgente per la risoluzione delle identità aziendali di Merkury utilizzando l’interfaccia utente di Adobe Experience Platform.
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2146'
-ht-degree: 1%
+source-wordcount: '2128'
+ht-degree: 0%
 
 ---
 
 # Crea una connessione di origine [!DNL Merkury Enterprise Identity Resolution] e un flusso di dati nell&#39;interfaccia utente
-
->[!NOTE]
->
->L&#39;origine [!DNL Merkury Enterprise Identity Resolution] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../../../home.md#terms-and-conditions).
 
 Questo tutorial illustra i passaggi necessari per creare una connessione di origine [!DNL Merkury Enterprise Identity Resolution] e un flusso di dati utilizzando l&#39;interfaccia utente di Adobe Experience Platform.
 
@@ -105,7 +99,7 @@ Nella tabella seguente vengono visualizzati i formati di dati appropriati per i 
 
 ### Seleziona un delimitatore di colonna
 
-+++Selezionare questa opzione per visualizzare i passaggi relativi all&#39;impostazione di un delimitatore
++++Selezionare per visualizzare i passaggi per l&#39;impostazione di un delimitatore
 
 Dopo aver configurato il formato dati, puoi impostare un delimitatore di colonna durante l’acquisizione di file delimitati. Selezionare l&#39;opzione **[!UICONTROL Delimitatore]**, quindi selezionare un delimitatore dal menu a discesa. Il menu visualizza le opzioni utilizzate più di frequente per i delimitatori, tra cui una virgola (`,`), una tabulazione (`\t`) e una barra verticale (`|`).
 
@@ -155,7 +149,7 @@ Quindi, seleziona il **[!UICONTROL Set di dati profilo]** per abilitare il set d
 
 ### Abilita avvisi
 
-+++Selezionare questa opzione per visualizzare i passaggi per l&#39;attivazione degli avvisi
++++Seleziona per visualizzare i passaggi per abilitare gli avvisi
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi di origini tramite l&#39;interfaccia utente](../../alerts.md).
 

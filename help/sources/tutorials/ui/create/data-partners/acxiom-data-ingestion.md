@@ -1,21 +1,15 @@
 ---
 title: Acquisizione dei dati Acxiom
 description: Utilizza Acxiom Data Ingestion per acquisire dati Acxiom in Real-Time CDP e arricchire profili di prime parti. Utilizza i profili di prime parti arricchiti con Acxiom per migliorare il pubblico e attivarli tra i canali di marketing.
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1817'
 ht-degree: 3%
 
 ---
 
 # Crea una connessione di origine [!DNL Acxiom Data Ingestion] e un flusso di dati nell&#39;interfaccia utente
-
->[!NOTE]
->
->L&#39;origine [!DNL Acxiom Data Ingestion] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
 Utilizza l&#39;origine [!DNL Acxiom Data Ingestion] per acquisire i dati [!DNL Acxiom] in Real-Time Customer Data Platform e arricchire i profili di prime parti. Puoi quindi utilizzare i profili di prime parti arricchiti con [!DNL Acxiom] per migliorare i tipi di pubblico e attivarli tra i canali di marketing.
 
@@ -43,7 +37,7 @@ Per accedere al bucket su Experience Platform, devi fornire valori validi per le
 
 >[!IMPORTANT]
 >
->Per connettere l&#39;account [!DNL Acxiom] ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../../../access-control/ui/overview.md).
+>Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Acxiom]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../../../access-control/ui/overview.md).
 
 ## Connetti il tuo account [!DNL Acxiom]
 

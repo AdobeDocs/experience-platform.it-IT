@@ -1,21 +1,15 @@
 ---
 title: Importazione di dati potenziali Acxiom
 description: Scopri come collegare i dati potenziali Acxiom a Adobe Experience Platform e Adobe Real-time Customer Data Platform utilizzando l’interfaccia utente.
-last-substantial-update: 2024-02-21T00:00:00Z
-badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1844'
 ht-degree: 5%
 
 ---
 
 # Crea una connessione di origine [!DNL Acxiom Prospecting Data Import] e un flusso di dati nell&#39;interfaccia utente
-
->[!NOTE]
->
->L&#39;origine [!DNL Acxiom Prospecting Data Import] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../../../home.md#terms-and-conditions).
 
 L&#39;importazione di dati di prospezione di [!DNL Acxiom] per Adobe Real-Time Customer Data Platform è un processo per fornire il pubblico di potenziali clienti più produttivo possibile. [!DNL Acxiom] prende i dati di prime parti di Real-Time CDP tramite un&#39;esportazione sicura ed esegue tali dati tramite un sistema di risoluzione delle identità e di igiene pluripremiato. Viene generato un file di dati da utilizzare come elenco di soppressione. Questo file di dati viene quindi confrontato con il database globale di Acxiom, che consente di personalizzare gli elenchi dei prospect per l’importazione.
 
@@ -46,7 +40,7 @@ Per accedere al bucket su Experience Platform, devi fornire valori validi per le
 
 >[!IMPORTANT]
 >
->Per connettere l&#39;account [!DNL Acxiom] ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../../../access-control/ui/overview.md).
+>Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Acxiom]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../../../access-control/ui/overview.md).
 
 ## Connetti il tuo account [!DNL Acxiom]
 

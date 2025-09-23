@@ -1,21 +1,15 @@
 ---
 title: Panoramica di Merkury Enterprise Identity Resolution Source
 description: Scopri come collegare Merkury Enterprise Identity Resolution a Adobe Experience Platform utilizzando l’interfaccia utente.
-last-substantial-update: 2023-12-12T00:00:00Z
-badge: Beta
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # [!DNL Merkury Enterprise Identity Resolution]
-
->[!NOTE]
->
->L&#39;origine [!DNL Merkury Enterprise Identity Resolution] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
 
 Adobe Experience Platform fornisce supporto per l’acquisizione dei dati da un’applicazione partner di dati. Il supporto per i partner dati include [!DNL Merkury Enterprise Identity Resolution].
 
@@ -23,17 +17,17 @@ Adobe Experience Platform fornisce supporto per l’acquisizione dei dati da un�
 
 Puoi utilizzare l&#39;**ID persona** come parte dell&#39;origine [!DNL Merkury] per combinare tutto ciò che la tua organizzazione conosce su un individuo in un unico profilo completo. Tali dettagli possono includere:
 
-- comportamenti digitali
-- preferenze di acquisto
-- informazioni di identificazione come nome, indirizzo e-mail, indirizzo fisico o ID dispositivo.
+- Comportamenti digitali
+- Preferenze di acquisto
+- Informazioni di identificazione come nome, indirizzo e-mail, indirizzo fisico o ID dispositivo.
 
 Puoi formattare i dati acquisiti come JSON Experience Data Model (XDM), XDM Parquet o delimitato. Ogni fase del processo è integrata nel lavoro di origine
 
 ![Illustrazione del flusso di lavoro di elaborazione dati per l&#39;origine Merkury.](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di poter utilizzare i connettori di origine, è necessario aggiungere al inserisco nell&#39;elenco Consentiti di gli indirizzi IP richiesti per la propria area geografica. Se non aggiungi questi indirizzi IP, i connettori di origine potrebbero non funzionare correttamente o generare errori. Per istruzioni dettagliate e per l&#39;elenco di indirizzi IP consentiti, leggere la pagina [inserisco nell&#39;elenco Consentiti di degli indirizzi IP](../../ip-address-allow-list.md).
 
 ## Vincoli di denominazione per file e directory
 
@@ -59,4 +53,4 @@ Prima di iniziare a utilizzare l&#39;origine [!DNL Merkury], è necessario soddi
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai completato la configurazione dei prerequisiti necessaria per portare i dati dall&#39;account [!DNL Merkury] all&#39;Experience Platform. Ora puoi passare alla guida in [connessione [!DNL Merkury] all&#39;Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/data-partners/merkury.md).
+Dopo aver letto questo documento, hai completato la configurazione dei prerequisiti necessaria per trasferire i dati dall&#39;account [!DNL Merkury] ad Experience Platform. Ora puoi passare alla guida su [connessione [!DNL Merkury] ad Experience Platform tramite l&#39;interfaccia utente](../../tutorials/ui/create/data-partners/merkury.md).

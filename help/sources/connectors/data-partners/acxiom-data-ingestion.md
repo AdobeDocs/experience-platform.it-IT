@@ -1,22 +1,17 @@
 ---
 title: Acquisizione dei dati Acxiom
-description: Scopri come acquisire [!DNL Acxiom] dati in Real-time Customer Data Platform, arricchire profili di prime parti, migliorare i tipi di pubblico e attivarli tra i canali di marketing.
-badge: Beta
+description: Scopri come acquisire [!DNL Acxiom] dati in Real-Time Customer Data Platform, arricchire profili di prime parti, migliorare i tipi di pubblico e attivarli tra i canali di marketing.
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 2%
+source-wordcount: '461'
+ht-degree: 1%
 
 ---
 
 # [!DNL Acxiom Data Ingestion]
 
->[!NOTE]
->
->L&#39;origine [!DNL Acxiom Prospecting Data Import] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
-
-Utilizza l&#39;origine [!DNL Acxiom Data Ingestion] per acquisire i dati [!DNL Acxiom] in Real-time Customer Data Platform e arricchire i profili di prime parti. Puoi quindi utilizzare i profili di prime parti arricchiti con [!DNL Acxiom] per migliorare i tipi di pubblico e attivarli tra i canali di marketing.
+Utilizza l&#39;origine [!DNL Acxiom Data Ingestion] per acquisire i dati [!DNL Acxiom] in Real-Time Customer Data Platform e arricchire i profili di prime parti. Puoi quindi utilizzare i profili di prime parti arricchiti con [!DNL Acxiom] per migliorare i tipi di pubblico e attivarli tra i canali di marketing.
 
 ![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
@@ -24,7 +19,7 @@ Per informazioni su come configurare l&#39;account di origine [!DNL Acxiom Data 
 
 ## Prerequisiti {#prerequisites}
 
-Per connettere l&#39;account [!DNL Acxiom Data Ingestion] a Experience Platform, è necessario fornire i valori per le credenziali di autenticazione seguenti:
+Per connettere l&#39;account [!DNL Acxiom Data Ingestion] ad Experience Platform, è necessario fornire i valori per le credenziali di autenticazione seguenti:
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -33,13 +28,13 @@ Per connettere l&#39;account [!DNL Acxiom Data Ingestion] a Experience Platform,
 | Chiave segreta [!DNL Amazon S3] | ID della chiave segreta del bucket. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 | Nome del bucket | Questo è il bucket in cui verranno condivisi i file. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di poter utilizzare i connettori di origine, è necessario aggiungere al inserisco nell&#39;elenco Consentiti di gli indirizzi IP richiesti per la propria area geografica. Se non aggiungi questi indirizzi IP, i connettori di origine potrebbero non funzionare correttamente o generare errori. Per istruzioni dettagliate e per l&#39;elenco di indirizzi IP consentiti, leggere la pagina [inserisco nell&#39;elenco Consentiti di degli indirizzi IP](../../ip-address-allow-list.md).
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account [!DNL Acxiom Data Ingestion] all&#39;Experience Platform, è necessario avere entrambe le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]** abilitate per il proprio account. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
+Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Acxiom Data Ingestion]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
 
 ### Vincoli di denominazione per file e directory
 
@@ -54,4 +49,4 @@ Quando si assegna un nome al file o alla directory di archiviazione cloud, è ne
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai completato la configurazione dei prerequisiti necessaria per portare i dati dall&#39;account [!DNL Acxiom] all&#39;Experience Platform. Ora puoi passare alla guida in [connessione [!DNL Acxiom Data Ingestion] all&#39;Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+Dopo aver letto questo documento, hai completato la configurazione dei prerequisiti necessaria per trasferire i dati dall&#39;account [!DNL Acxiom] ad Experience Platform. Ora puoi passare alla guida su [connessione [!DNL Acxiom Data Ingestion] ad Experience Platform tramite l&#39;interfaccia utente](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

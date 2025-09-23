@@ -1,24 +1,19 @@
 ---
 title: Importazione di dati potenziali Acxiom
 description: Scopri come collegare i dati potenziali Acxiom a Adobe Experience Platform e Adobe Real-time Customer Data Platform utilizzando l’interfaccia utente.
-badge: Beta
 exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '544'
 ht-degree: 5%
 
 ---
 
 # [!DNL Acxiom Prospecting Data Import]
 
->[!NOTE]
->
->L&#39;origine [!DNL Acxiom Prospecting Data Import] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
-
 Adobe Experience Platform fornisce supporto per l’acquisizione dei dati da un’applicazione partner di dati. Il supporto per i partner dati e identità include [!DNL Acxiom Prospecting Data Import].
 
-L&#39;importazione di dati di prospezione di [!DNL Acxiom] per Adobe Real-time Customer Data Platform è un processo per fornire il pubblico di potenziali clienti più produttivo possibile. [!DNL Acxiom] prende i dati di prime parti di Real-Time CDP tramite un&#39;esportazione sicura ed esegue tali dati tramite un sistema di risoluzione delle identità e di igiene pluripremiato. Viene prodotto un file di dati che può essere utilizzato come elenco di soppressione. Il file di dati viene quindi confrontato con il database [!DNL Acxiom Global], che consente di personalizzare gli elenchi dei prospect per l&#39;importazione.
+L&#39;importazione di dati di prospezione di [!DNL Acxiom] per Adobe Real-Time Customer Data Platform è un processo per fornire il pubblico di potenziali clienti più produttivo possibile. [!DNL Acxiom] prende i dati di prime parti di Real-Time CDP tramite un&#39;esportazione sicura ed esegue tali dati tramite un sistema di risoluzione delle identità e di igiene pluripremiato. Viene prodotto un file di dati che può essere utilizzato come elenco di soppressione. Il file di dati viene quindi confrontato con il database [!DNL Acxiom Global], che consente di personalizzare gli elenchi dei prospect per l&#39;importazione.
 
 È possibile utilizzare l&#39;origine [!DNL Acxiom] per recuperare e mappare le risposte dal servizio prospect [!DNL Acxiom] utilizzando [!DNL Amazon S3] come punto di rilascio.
 
@@ -28,7 +23,7 @@ Per informazioni su come configurare l&#39;account di origine [!DNL Acxiom Prosp
 
 ## Prerequisiti
 
-Per accedere al bucket in Experience Platform, devi fornire valori validi per le seguenti credenziali:
+Per accedere al bucket su Experience Platform, devi fornire valori validi per le seguenti credenziali:
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -37,13 +32,13 @@ Per accedere al bucket in Experience Platform, devi fornire valori validi per le
 | Chiave segreta [!DNL Amazon S3] | ID della chiave segreta del bucket. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 | Nome del bucket | Questo è il bucket in cui verranno condivisi i file. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di poter utilizzare i connettori di origine, è necessario aggiungere al inserisco nell&#39;elenco Consentiti di gli indirizzi IP richiesti per la propria area geografica. Se non aggiungi questi indirizzi IP, i connettori di origine potrebbero non funzionare correttamente o generare errori. Per istruzioni dettagliate e per l&#39;elenco di indirizzi IP consentiti, leggere la pagina [inserisco nell&#39;elenco Consentiti di degli indirizzi IP](../../ip-address-allow-list.md).
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account [!DNL Acxiom Prospecting Data Import] all&#39;Experience Platform, è necessario avere entrambe le autorizzazioni **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]** abilitate per il proprio account. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Acxiom Prospecting Data Import]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
 
 ## Vincoli di denominazione per file e directory
 
@@ -58,4 +53,4 @@ Quando si assegna un nome al file o alla directory di archiviazione cloud, è ne
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai completato la configurazione dei prerequisiti necessaria per portare i dati dall&#39;account [!DNL Acxiom] all&#39;Experience Platform. Ora puoi passare alla guida in [connessione [!DNL Acxiom Prospecting Data Import] all&#39;Experience Platform utilizzando l&#39;interfaccia utente](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md).
+Dopo aver letto questo documento, hai completato la configurazione dei prerequisiti necessaria per trasferire i dati dall&#39;account [!DNL Acxiom] ad Experience Platform. Ora puoi passare alla guida su [connessione [!DNL Acxiom Prospecting Data Import] ad Experience Platform tramite l&#39;interfaccia utente](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md).
