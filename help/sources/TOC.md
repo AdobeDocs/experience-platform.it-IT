@@ -5,10 +5,10 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
+source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 35%
+source-wordcount: '1070'
+ht-degree: 34%
 
 ---
 
@@ -103,6 +103,8 @@ ht-degree: 35%
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - Sistema locale {#local-system}
       - [Connettore caricamento file locale](connectors/local-system/local-file-upload.md)
+   - Fedeltà {#loyalty}
+      - [Eventi di streaming capillari](connectors/loyalty/capillary.md)
    - Marketing automation {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -179,6 +181,8 @@ ht-degree: 35%
          - [COMMERCE SAP](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
+      - Fedeltà {#loyalty}
+         - [Eventi di streaming capillari](tutorials/api/create/loyalty/capillary.md)
       - Marketing automation {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -311,6 +315,8 @@ ht-degree: 35%
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema locale {#local-system}
          - [Caricamento file locale](tutorials/ui/create/local-system/local-file-upload.md)
+      - Fedeltà {#loyalty}
+         - [Eventi di streaming capillari](tutorials/ui/create/loyalty/capillary.md)
       - Marketing automation {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -322,6 +328,7 @@ ht-degree: 35%
          - [Attività di Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entità di Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+         - [Connettore Relay](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [Square](tutorials/ui/create/payments/square.md)
