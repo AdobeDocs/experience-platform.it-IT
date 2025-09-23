@@ -3,10 +3,10 @@ keywords: piattaforma;destinazioni;area di lavoro;area di lavoro;interfaccia ute
 title: Area di lavoro destinazioni
 description: 'L’area di lavoro Destinazioni è costituita da cinque sezioni: Panoramica, Catalogo, Sfoglia, Account e Visualizzazione sistema. Sono descritte nelle sezioni seguenti.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
+source-git-commit: ff566e6ec409d237d3831d787d7428859dd4b566
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 0%
+source-wordcount: '2369'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ L&#39;area di lavoro [!UICONTROL Destinazioni] è costituita da cinque sezioni, 
 
 ## [!UICONTROL Panoramica] {#overview}
 
-Nella scheda **[!UICONTROL Panoramica]** è visualizzata la dashboard [!UICONTROL Destinazioni], che fornisce le metriche chiave relative ai dati di destinazione della tua organizzazione. Per ulteriori informazioni, visita la [[!UICONTROL Guida del dashboard &#x200B;] Destinazioni](../../dashboards/guides/destinations.md).
+Nella scheda **[!UICONTROL Panoramica]** è visualizzata la dashboard [!UICONTROL Destinazioni], che fornisce le metriche chiave relative ai dati di destinazione della tua organizzazione. Per ulteriori informazioni, visita la [[!UICONTROL Guida del dashboard ] Destinazioni](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Le destinazioni con l&#39;interruttore **[!UICONTROL Enabled/Disabled]** attivat
 > ![Sfoglia scheda](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Activate audiences](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** per esportare tipi di pubblico o set di dati in tale destinazione.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Modifica destinazione](/help/images/icons/edit.png)**[!UICONTROL Modifica destinazione &#x200B;]**&#x200B;per modificare le connessioni di destinazione esistenti. Per ulteriori informazioni, leggi l&#39;esercitazione su [modifica destinazioni](/help/destinations/ui/edit-destination.md).
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Modifica destinazione](/help/images/icons/edit.png)**[!UICONTROL Modifica destinazione ]**per modificare le connessioni di destinazione esistenti. Per ulteriori informazioni, leggi l&#39;esercitazione su [modifica destinazioni](/help/destinations/ui/edit-destination.md).
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Modifica azioni di marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Modifica azioni di marketing]** per [modificare le azioni di marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) per la destinazione selezionata.
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Delete](/help/images/icons/delete.png) **[!UICONTROL Delete]** per [remove](delete-destinations.md) una connessione esistente a una destinazione.
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare la ![View nel controllo di monitoraggio](/help/images/icons/monitoring.png) **[!UICONTROL View nel controllo di monitoraggio]** per visualizzare le informazioni di attivazione per questa destinazione nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
@@ -93,12 +93,13 @@ Vedere la tabella seguente per tutte le informazioni fornite per ogni destinazio
 | Nome | Il nome fornito per il flusso di attivazione verso questa destinazione. |
 | Tipo di dati | Tipo di dati supportato dalla connessione di destinazione. Tipi di dati supportati: <ul><li>**[!UICONTROL Clienti]**</li><li>**[!UICONTROL Potenziali clienti]**</li><li>**[!UICONTROL Account]**</li><li>**[!UICONTROL Set di dati]**</li></ul> |
 | [!UICONTROL Stato ultima esecuzione flusso di dati] | Stato dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, vedere [Visualizza dettagli destinazione](destination-details-page.md). |
-| [!UICONTROL Data ultima esecuzione flusso di dati] | Ora e data in cui si è verificata l’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, vedere [Visualizza dettagli destinazione](destination-details-page.md). |
+| [!UICONTROL Data ultima esecuzione flusso di dati] | Ora e data in cui si è verificata l’ultima esecuzione del flusso di dati. Selezionare l&#39;intestazione di colonna per accedere alle opzioni di ordinamento (**[!UICONTROL Ordinamento crescente]**, **[!UICONTROL Ordinamento decrescente]**). Per ulteriori informazioni sulle esecuzioni dei flussi di dati, vedere [Visualizza dettagli destinazione](destination-details-page.md). |
 | [!UICONTROL Destinazione] | La piattaforma di destinazione selezionata per il flusso di attivazione. |
-| [!UICONTROL Data di scadenza account] | Data di scadenza dell&#39;autorizzazione di connessione a questa destinazione. <br>**Importante**: colonna attualmente disponibile solo per la connessione [Facebook](../catalog/social/facebook.md). |
+| [!UICONTROL Data di scadenza account] | Data di scadenza dell&#39;autorizzazione di connessione a questa destinazione. <br> Un&#39;icona di avviso ![Avviso: l&#39;icona di scadenza dell&#39;account](/help/images/icons/alert-expiration.png) viene visualizzata prima della data di scadenza per avvisarti che la connessione scadrà e potrebbe richiedere il rinnovo. I flussi di dati per le connessioni scadute vengono interrotti e devi ripetere l’autenticazione per riprendere i flussi di lavoro di attivazione. <br>**Importante**: questa colonna è attualmente disponibile solo per le connessioni [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![Esempio di avviso di scadenza account nella scheda Sfoglia](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL Nome utente] | Credenziali account selezionate per il flusso di destinazione. |
 | [!UICONTROL Dati attivazione] | Indica il numero di tipi di pubblico attivati in questa destinazione. Seleziona questo controllo per ulteriori informazioni sui tipi di pubblico attivati. Per ulteriori informazioni sui tipi di pubblico attivati, consulta [Dati attivazione](/help/destinations/ui/destination-details-page.md#activation-data) nella pagina dei dettagli della destinazione. |
-| [!UICONTROL Creato] | Data e ora UTC in cui è stato creato il flusso di attivazione verso la destinazione. Seleziona il simbolo freccia su/giù per ordinare i flussi di attivazione in base al primo più recente o al primo meno recente. |
+| [!UICONTROL Creato] | Data e ora di creazione del flusso di attivazione verso la destinazione. Seleziona il simbolo freccia su/giù per ordinare i flussi di attivazione in base al primo più recente o al primo meno recente. |
+| [!UICONTROL Modificato] | Data e ora dell’ultima modifica del flusso di attivazione verso la destinazione. |
 | [!UICONTROL Stato] | `Enabled` o `Disabled`. Indica se i dati vengono attivati in questa destinazione. |
 | [!UICONTROL Etichette di accesso] | Visualizza tutte le etichette di accesso aggiunte al flusso di dati di destinazione. Ulteriori informazioni sull&#39;[applicazione delle etichette di accesso ai flussi di dati di destinazione](/help/access-control/abac/apply-access-labels-destinations.md). |
 | [!UICONTROL Tag] | Visualizza tutti i tag aggiunti al flusso di dati di destinazione. Utilizza i tag per organizzare e classificare i flussi di dati per facilitarne la gestione. |
@@ -182,21 +183,21 @@ La scheda **[!UICONTROL Account]** mostra i dettagli sulle connessioni stabilite
 
 >[!TIP]
 >
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Attiva controllo](/help/images/icons/data-add.png)**[!UICONTROL Attiva &#x200B;]**/**[!UICONTROL &#x200B; Attiva tipi di pubblico &#x200B;]**/**[!UICONTROL &#x200B; Esporta set di dati &#x200B;]**&#x200B;per esportare tipi di pubblico o set di dati in tale destinazione.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Modifica dettagli](/help/images/icons/edit.png)**[!UICONTROL Modifica dettagli &#x200B;]**&#x200B;per [aggiornare](update-accounts.md) i dettagli di un account di destinazione esistente.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Elimina](/help/images/icons/delete.png)**[!UICONTROL Elimina &#x200B;]**&#x200B;per [eliminare](delete-destination-account.md) un account di destinazione esistente.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Attiva controllo](/help/images/icons/data-add.png)**[!UICONTROL Attiva ]**/**[!UICONTROL  Attiva tipi di pubblico ]**/**[!UICONTROL  Esporta set di dati ]**per esportare tipi di pubblico o set di dati in tale destinazione.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Modifica dettagli](/help/images/icons/edit.png)**[!UICONTROL Modifica dettagli ]**per [aggiornare](update-accounts.md) i dettagli di un account di destinazione esistente.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Elimina](/help/images/icons/delete.png)**[!UICONTROL Elimina ]**per [eliminare](delete-destination-account.md) un account di destinazione esistente.
 
 ![Scheda Account](../assets/ui/workspace/accounts-tab.png)
 
 | Elemento | Descrizione |
 |---|---|
-| [!UICONTROL Nome] | Il nome assegnato all&#39;account di destinazione durante [la configurazione](connect-destination.md#authenticate) della destinazione. |
+| [!UICONTROL Nome] | Il nome assegnato all&#39;account di destinazione durante [la configurazione](connect-destination.md#authenticate) della destinazione. Selezionare l&#39;intestazione di colonna per accedere alle opzioni di ordinamento (**[!UICONTROL Ordinamento crescente]**, **[!UICONTROL Ordinamento decrescente]**). |
 | [!UICONTROL Destinazione] | Connettore di destinazione per il quale è stata impostata la connessione. |
 | [!UICONTROL Tipo di connessione] | Rappresenta il tipo di connessione dell’account al bucket di archiviazione o alla destinazione. A seconda della destinazione, le opzioni di autenticazione sono: <ul><li>Per le destinazioni di e-mail marketing: può essere S3, FTP o BLOB di Azure.</li><li>Per destinazioni pubblicitarie in tempo reale: server-to-server</li><li>Per le destinazioni dell’archiviazione cloud Amazon S3: chiave di accesso </li><li>Per le destinazioni di archiviazione cloud SFTP: autenticazione di base per SFTP</li><li>Autenticazione OAuth 1 o OAuth 2</li><li>Autenticazione token Bearer</li></ul> |
 | [!UICONTROL Nome utente] | Il nome utente selezionato nel flusso di lavoro [connetti destinazione](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connessioni] | Rappresenta il numero di flussi di dati di destinazione univoci e riusciti connessi alle informazioni di base create per una destinazione. |
 | [!UICONTROL Data di autorizzazione] | La data in cui la connessione a questa destinazione è stata autorizzata. |
-| [!UICONTROL Data di scadenza] | Data di scadenza dell&#39;autorizzazione di connessione a questa destinazione. <br>**Importante**: questa colonna è attualmente disponibile solo per le connessioni [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). |
+| [!UICONTROL Data di scadenza] | Data di scadenza dell&#39;autorizzazione di connessione a questa destinazione. <br> Icona di avviso ![Icona di avviso account scaduto.](/help/images/icons/alert-expiration.png) viene visualizzato prima della data di scadenza per avvisarti che la connessione scadrà e potrebbe richiedere il rinnovo. I flussi di dati per le connessioni scadute vengono interrotti e devi ripetere l’autenticazione per riprendere i flussi di lavoro di attivazione. <br>**Importante**: questa colonna è attualmente disponibile solo per le connessioni [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
