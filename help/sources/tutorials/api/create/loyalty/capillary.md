@@ -1,16 +1,20 @@
 ---
 title: Connettere Capillary ad Experience Platform utilizzando l’API del servizio Flusso
 description: Scopri come collegare Capillary ad Experience Platform utilizzando le API.
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: Beta
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1150'
 ht-degree: 2%
 
 ---
 
 # Connetti [!DNL Capillary Streaming Events] ad Experience Platform utilizzando l&#39;API [!DNL Flow Service]
+
+>[!AVAILABILITY]
+>
+>L&#39;origine [!DNL Capillary Streaming Events] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
 Leggi questa guida per scoprire come utilizzare [!DNL Capillary Streaming Events] e l&#39;[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/) per inviare dati dal tuo account [!DNL Capillary] a Adobe Experience Platform.
 
@@ -230,9 +234,9 @@ Le transazioni acquisiscono le attività commerciali. Visualizza il seguente pay
 
 >[!ENDTABS]
 
-### Eventi supportati
+<!--### Supported Events
 
-L&#39;origine [!DNL Capillary] supporta i seguenti eventi:
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ L&#39;origine [!DNL Capillary] supporta i seguenti eventi:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### Migrazione dei dati storici
 
@@ -319,11 +322,15 @@ Mappa i campi Capillary ai campi dello schema XDM corrispondenti come segue:
 
 | Schema di origine | Schema di destinazione |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>È possibile scaricare [Eventi e mappature profilo](../../../../images/tutorials/create/capillary/mappings.zip) per [!DNL Capillary] e [importare i file in Preparazione dati](../../../../../data-prep/ui/mapping.md#import-mapping) quando si è pronti per mappare i dati.
 
 ### Creare un flusso di dati {#flow}
 
@@ -376,7 +383,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce il flusso di dati con l’ID corrispondente.
+In caso di esito positivo, la risposta restituisce il flusso di dati con l’ID del flusso di dati corrispondente.
 
 ```json
 {

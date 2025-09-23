@@ -1,16 +1,20 @@
 ---
-title: Collegare il capillare ad Experience Platform tramite l’interfaccia utente
+title: Collegare Capillare ad Experience Platform tramite l’interfaccia utente
 description: Scopri come collegare Capillary ad Experience Platform utilizzando l’interfaccia utente
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+badge: Beta
+exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '827'
 ht-degree: 5%
 
 ---
 
-# Connetti [!DNL Capillary] ad Experience Platform tramite l&#39;interfaccia utente
+# Connetti [!DNL Capillary Streaming Events] ad Experience Platform tramite l&#39;interfaccia utente
+
+>[!AVAILABILITY]
+>
+>L&#39;origine [!DNL Capillary Streaming Events] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
 Leggere questa guida per scoprire come collegare il database [!DNL Capillary] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente di Experience Platform.
 
@@ -74,13 +78,17 @@ Una volta configurato il set di dati, devi quindi fornire dettagli sul flusso di
 | --- | --- |
 | Nome flusso di dati | Nome del flusso di dati.  Per impostazione predefinita, viene utilizzato il nome del file che si sta importando. |
 | Descrizione | (Facoltativo) Breve descrizione del flusso di dati. |
-| Avvisi | Experience Platform può generare avvisi basati su eventi a cui gli utenti possono abbonarsi; queste opzioni rappresentano un flusso di dati in esecuzione per attivarli.  Per ulteriori informazioni, leggere la [panoramica degli avvisi](../../alerts.md) <ul><li>**Inizio esecuzione flusso di dati origini**: selezionare questo avviso per ricevere una notifica all&#39;inizio dell&#39;esecuzione del flusso di dati.</li><li>**Esecuzione del flusso di dati origini completata**: selezionare questo avviso per ricevere una notifica se il flusso di dati termina senza errori.</li><li>**Errore di esecuzione del flusso di dati di origini**: selezionare questo avviso per ricevere una notifica se l&#39;esecuzione del flusso di dati termina con errori.</li></ul> |
+| Avvisi | Experience Platform può generare avvisi basati su eventi a cui gli utenti possono abbonarsi; queste opzioni consentono a un flusso di dati in esecuzione di attivarli.  Per ulteriori informazioni, leggere la [panoramica degli avvisi](../../alerts.md) <ul><li>**Inizio esecuzione flusso di dati origini**: selezionare questo avviso per ricevere una notifica all&#39;inizio dell&#39;esecuzione del flusso di dati.</li><li>**Esecuzione del flusso di dati origini completata**: selezionare questo avviso per ricevere una notifica se il flusso di dati termina senza errori.</li><li>**Errore di esecuzione del flusso di dati di origini**: selezionare questo avviso per ricevere una notifica se l&#39;esecuzione del flusso di dati termina con errori.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Mappatura
 
-Utilizza l’interfaccia di mappatura per mappare i dati di origine sui campi dello schema appropriati prima di acquisire i dati in Experience Platform.  Per ulteriori informazioni, leggere la [guida alla mappatura nell&#39;interfaccia utente](../../../../../data-prep/ui/mapping.md).
+Utilizza l’interfaccia di mappatura per mappare i dati di origine sui campi dello schema appropriati prima di acquisire i dati in Experience Platform. Per ulteriori informazioni, leggere la [guida alla mappatura nell&#39;interfaccia utente](../../../../../data-prep/ui/mapping.md).
+
+>[!TIP]
+>
+>È possibile scaricare [Eventi e mappature profilo](../../../../images/tutorials/create/capillary/mappings.zip) per [!DNL Capillary] e [importare i file in Preparazione dati](../../../../../data-prep/ui/mapping.md#import-mapping) quando si è pronti per mappare i dati.
 
 ![Interfaccia di mappatura per Capillary.](../../../../images/tutorials/create/capillary/mappings.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a236019dc3478c32ee035bfd337096346780d14b
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1666'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Origine | Categoria | Tipo di acquisizione | Cloud |
 | --- | --- | --- | --- |
@@ -218,6 +218,14 @@ Per acquisire i dati dal sistema locale ad Experience Platform, puoi utilizzare 
 | [Caricamento file locale](connectors/local-system/local-file-upload.md) | Batch | Azure |
 
 {style="table-layout:auto"}
+
+### Fedeltà {#loyalty}
+
+Per acquisire dati fedeltà ad Experience Platform, puoi utilizzare le seguenti origini.
+
+| Origine | Tipo di acquisizione | Cloud |
+| --- | --- | --- |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
 
 ### Marketing Automation {#marketing-automation}
 
