@@ -80,5 +80,5 @@ Utilizzare questi valori per configurare il webhook nella **console di inoltro**
 
 ## Risorse aggiuntive
 
-* [Creare una nuova specifica di connessione utilizzando l&#39;API del servizio Flusso](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Connetti alla tua origine tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Creare una nuova specifica di connessione utilizzando l&#39;API del servizio Flusso](https://experienceleague.adobe.com/it/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Connetti alla tua origine tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/it/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
