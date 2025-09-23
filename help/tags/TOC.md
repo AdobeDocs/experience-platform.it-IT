@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
+source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '788'
 ht-degree: 44%
 
 ---
@@ -202,6 +202,8 @@ ht-degree: 44%
       * [Sondaggio SDI](https://exchange.adobe.com/apps/ec/102991)
       * [Toolkit SDI](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+      * [!DNL Snap Pixel] {#snap-pixel}
+         * [Panoramica](./extensions/client/snap-pixel/overview.md)
       * [Estensione archiviazione](https://exchange.adobe.com/apps/ec/102990)
       * [TAG per Orizzonte Ciclo](https://exchange.adobe.com/apps/ec/106092)
       * [Collezione Tealium](https://exchange.adobe.com/apps/ec/104217)
