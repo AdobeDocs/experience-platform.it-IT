@@ -4,10 +4,10 @@ title: Guida all’interfaccia utente per gli avvisi
 description: Scopri come gestire gli avvisi nell’interfaccia utente di Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 7%
+source-wordcount: '814'
+ht-degree: 8%
 
 ---
 
@@ -96,10 +96,12 @@ Le soglie di avviso possono essere personalizzate per i seguenti tipi di avviso:
 | Ritardo esecuzione flusso destinazione | Soglia di ritardo |
 | Ritardo di esecuzione del flusso di Identity Service | Soglia di ritardo |
 | Ritardo esecuzione flusso profili | Soglia di ritardo |
+| Tasso di acquisizione del profilo di streaming errata superato | Soglia di errore |
+| Frequenza di salto acquisizione streaming profilo superata | Soglia di errore |
 | Ritardo esecuzione flusso origini | Soglia di ritardo |
+| Tasso di errori di acquisizione delle origini superato | Soglia di errore |
 | Ritardo esecuzione query | Soglia di ritardo |
 | Tasso di attivazione ignorata superato | Soglia di errore |
-| Tasso di errori di acquisizione delle origini superato | Soglia di errore |
 
 Selezionare i puntini di sospensione (**...**) accanto al nome di una regola. In un elenco a discesa vengono visualizzati i controlli. Seleziona **[!UICONTROL Modifica]**.
 
