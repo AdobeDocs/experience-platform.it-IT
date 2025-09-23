@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia
 title: Personalizzazione dei dettagli del profilo nell’interfaccia utente
 description: Questa guida fornisce istruzioni dettagliate per personalizzare il modo in cui i dati Real-Time Customer Profile vengono visualizzati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e253be0c4e02b82bfc8926ac4531589782b9c8fe
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ Dopo aver scelto di modificare il dashboard, puoi riordinare le schede seleziona
 ![Il pulsante di ridimensionamento è evidenziato nella scheda Attributi di base.](../images/profile-customization/resize.png)
 
 La scheda selezionata si adatta alle dimensioni desiderate e le schede circostanti vengono riposizionate in modo dinamico. Questo può causare lo spostamento di alcune schede in righe aggiuntive, che richiedono lo scorrimento verso il basso per visualizzare tutte le schede. Ad esempio, quando la scheda &quot;[!UICONTROL Attributi di base]&quot; viene ridimensionata, la scheda &quot;[!UICONTROL Identità collegate]&quot; non è più visibile nella riga superiore e ora viene visualizzata in una nuova seconda riga all&#39;interno del profilo (non visualizzata). Per restituire la scheda &quot;[!UICONTROL Identità collegate]&quot; alla riga superiore, puoi trascinarla nella posizione corrente della scheda &quot;[!UICONTROL Preferenze canale]&quot;.
-
-![Una scheda ridimensionata è evidenziata.](../images/profile-customization/resized.png)
 
 ## Modificare e rimuovere schede
 
@@ -70,8 +68,6 @@ Quando ritorni alla schermata **[!UICONTROL Modifica widget]**, l&#39;elenco deg
 
 Dopo il salvataggio, si torna alla scheda **[!UICONTROL Dettagli]** in cui sono visibili la scheda e gli attributi aggiornati.
 
-![I nuovi attributi aggiunti vengono visualizzati nella scheda all&#39;interno della dashboard del profilo.](../images/profile-customization/added-attributes.png)
-
 ## Aggiungi una nuova scheda {#add-a-new-card}
 
 Per personalizzare ulteriormente l’aspetto dei profili all’interno di Experience Platform, puoi scegliere di aggiungere nuove schede al dashboard e selezionare gli attributi che desideri visualizzare su tali schede. Per iniziare, selezionare **[!UICONTROL Modifica dashboard]** nella scheda **[!UICONTROL Dettagli]**.
@@ -99,8 +95,6 @@ Per salvare la nuova carta devi prima fornire un **[!UICONTROL titolo carta]**, 
 ![Il nuovo widget viene visualizzato in anteprima nella schermata Modifica widget.](../images/profile-customization/new-widget.png)
 
 Dopo il salvataggio, si torna alla scheda **[!UICONTROL Dettagli]** in cui sono visibili la nuova scheda e gli attributi.
-
-![Il nuovo widget è stato aggiunto al dashboard Profilo.](../images/profile-customization/added-widget.png)
 
 ## Ripristina schede predefinite
 

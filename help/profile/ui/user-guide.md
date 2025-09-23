@@ -3,10 +3,10 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
 workflow-type: tm+mt
-source-wordcount: '2219'
-ht-degree: 3%
+source-wordcount: '1990'
+ht-degree: 4%
 
 ---
 
@@ -38,43 +38,15 @@ Per ulteriori informazioni, visita la [guida del dashboard dei profili](../../da
 
 ![Viene visualizzato il dashboard dei profili.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## [!UICONTROL Sfoglia] metriche scheda
+## Scheda [!UICONTROL Sfoglia]
 
-Seleziona la scheda **[!UICONTROL Sfoglia]** per visualizzare diverse metriche relative ai dati del profilo della tua organizzazione. È inoltre possibile utilizzare questa scheda per sfogliare l’archivio profili utilizzando un criterio di unione o un’identità, come descritto nella sezione successiva di questa guida.
+Nella scheda **[!UICONTROL Sfoglia]** puoi visualizzare i profili in una visualizzazione **scheda** o in una visualizzazione **grafico** selezionando l&#39;opzione.
 
-Sul lato destro della scheda **[!UICONTROL Sfoglia]** si trova il [conteggio profili](#profile-count) e un elenco di [profili per spazio dei nomi](#profiles-by-namespace).
+![L&#39;opzione di visualizzazione scheda e grafico è evidenziata.](../images/user-guide/card-graph-view.png)
 
->[!NOTE]
->
->Queste metriche di profilo possono variare rispetto alle metriche visualizzate nel [dashboard del profilo](#profile-dashboard) perché vengono valutate utilizzando il criterio di unione predefinito della tua organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione, tra cui la definizione di un criterio di unione predefinito, vedere la [panoramica dei criteri di unione](../merge-policies/overview.md).
+Inoltre, puoi sfogliare i profili utilizzando un criterio di unione o cercare profili specifici utilizzando uno spazio dei nomi e un valore di identità.
 
-Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ultimo aggiornamento, che mostrano quando le metriche sono state valutate l’ultima volta.
-
-![Le metriche del profilo vengono visualizzate ed evidenziate.](../images/user-guide/browse-metrics.png)
-
-### Conteggio dei profili {#profile-count}
-
-Il conteggio dei profili mostra il numero totale di profili di cui dispone l’organizzazione in Experience Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
-
-Il conteggio dei profili include anche profili con attributi (dati record) e profili contenenti solo dati di serie temporali (eventi), come i profili di Adobe Analytics. Il conteggio dei profili viene aggiornato regolarmente per fornire un numero totale aggiornato di profili all’interno di Experience Platform.
-
-#### Aggiornamento della metrica del conteggio dei profili
-
-Quando l&#39;acquisizione dei record nell&#39;archivio [!DNL Profile] aumenta o diminuisce il conteggio di oltre il 3%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 3% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o riduzione del 3%, viene eseguito un processo per aggiornare il conteggio dei profili.
-
-### [!UICONTROL Profili per spazio dei nomi] {#profiles-by-namespace}
-
-La metrica **[!UICONTROL Profili per spazio dei nomi]** visualizza il conteggio totale e il raggruppamento degli spazi dei nomi in tutti i profili uniti nell&#39;archivio profili. Il numero totale di profili per spazio dei nomi (in altre parole, la somma dei valori mostrati per ciascuno spazio dei nomi) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente verranno associati più spazi dei nomi.
-
-#### Aggiornamento dei [!UICONTROL profili per spazio dei nomi]
-
-Analogamente alla metrica [conteggio profili](#profile-count), quando l&#39;acquisizione dei record nell&#39;archivio [!DNL Profile] aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare le metriche dello spazio dei nomi. Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 5% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l&#39;acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell&#39;archivio [!DNL Profile], se viene raggiunta la soglia di aumento o di diminuzione del 5%, viene eseguito un processo per aggiornare le metriche.
-
-## Utilizza la scheda [!UICONTROL Sfoglia] per visualizzare i profili
-
-Nella scheda **[!UICONTROL Sfoglia]** è possibile visualizzare i profili di esempio utilizzando un criterio di unione o cercare profili specifici utilizzando uno spazio dei nomi e un valore di identità.
-
-![Vengono visualizzati i profili appartenenti all&#39;organizzazione.](../images/user-guide/none-selected.png)
+![Vengono visualizzati i profili appartenenti all&#39;organizzazione.](../images/user-guide/profile-browse.png)
 
 ### Sfoglia per [!UICONTROL criterio di unione]
 
@@ -94,7 +66,7 @@ I profili visualizzati rappresentano un campione di un massimo di 20 profili dal
 
 Per visualizzare i dettagli di uno dei profili di esempio, selezionare **[!UICONTROL ID profilo]**. Per ulteriori informazioni, vedere la sezione più avanti in questa guida su [visualizzazione dei dettagli del profilo](#profile-detail).
 
-![Vengono visualizzati i profili di esempio corrispondenti ai criteri di unione.](../images/user-guide/sample-profiles.png)
+![Vengono visualizzati i profili di esempio corrispondenti ai criteri di unione.](../images/user-guide/profile-browse-table.png)
 
 Per ulteriori informazioni sui criteri di unione e sul loro ruolo in Experience Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
@@ -120,13 +92,13 @@ Dopo aver selezionato uno spazio dei nomi [!UICONTROL Identity] e essere tornato
 >
 >Questo valore è specifico di un singolo profilo cliente e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, la selezione dello spazio dei nomi dell’identità &quot;E-mail&quot; richiederebbe un valore di identità sotto forma di un indirizzo e-mail valido.
 
-![Il valore di identità in base al quale si desidera filtrare è evidenziato.](../images/user-guide/filter-identity-value.png)
+![Il valore di identità in base al quale si desidera filtrare è evidenziato.](../images/user-guide/browse-identity.png)
 
-Una volta immesso il valore, selezionare **[!UICONTROL Visualizza]** e viene restituito un singolo profilo corrispondente al valore. Seleziona **[!UICONTROL ID profilo]** per visualizzare i dettagli del profilo.
+Una volta immesso il valore, selezionare **[!UICONTROL Visualizza]** e viene restituito un singolo profilo corrispondente al valore. Seleziona **[!UICONTROL ID profilo]** per visualizzare un profilo.
 
 ![Il profilo che corrisponde al valore di identità è evidenziato.](../images/user-guide/filtered-identity-value.png)
 
-## Visualizzare i dettagli del profilo {#profile-detail}
+## Visualizza profilo {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
@@ -135,17 +107,55 @@ Una volta immesso il valore, selezionare **[!UICONTROL Visualizza]** e viene res
 
 Dopo aver selezionato un **[!UICONTROL ID profilo]**, viene aperta la scheda **[!UICONTROL Dettagli]**. Le informazioni di profilo visualizzate nella scheda **[!UICONTROL Dettagli]** sono state unite da più frammenti di profilo per formare un&#39;unica vista del singolo cliente. Ciò include i dettagli del cliente come attributi di base, identità collegate e preferenze di canale.
 
+Inoltre, puoi visualizzare altri dettagli sui profili come i suoi [attributi](#attributes), [eventi](#events) e [appartenenza a un pubblico](#audience-membership).
+
+### Scheda Dettagli {#profile-detail}
+
+La scheda **[!UICONTROL Dettagli]** fornisce informazioni più dettagliate sul profilo selezionato ed è suddivisa in quattro sezioni: Approfondimenti profilo cliente, widget insight di IA, widget personalizzabili e widget classificati automaticamente.
+
+![Viene visualizzata la pagina dei dettagli del profilo.](../images/user-guide/profile-details.png)
+
+Inoltre, puoi scegliere se visualizzare o meno le informazioni generate dall’intelligenza artificiale, mostrare i dettagli dell’hub rispetto a Edge, nonché visualizzare i dettagli in visualizzazione grafico.
+
+![Sono evidenziati gli interruttori elencati sopra (approfondimenti generati dall&#39;intelligenza artificiale, dati Hub o Edge e vista a schede o grafico).](../images/user-guide/profile-toggles.png)
+
+#### Informazioni del profilo cliente {#customer-profile-insights}
+
+Nella sezione **[!UICONTROL Informazioni sul profilo cliente]** viene visualizzata una breve introduzione agli attributi del profilo. Ciò include l’ID profilo, l’e-mail, il numero di telefono, il genere, la data di nascita, nonché le identità e le appartenenze al pubblico del profilo.
+
+![Viene visualizzata la sezione Informazioni sul profilo cliente.](../images/user-guide/customer-profile-insights.png)
+
+#### Widget per insight da IA {#ai-insight-widgets}
+
+Nella sezione **[!UICONTROL Widget insight di IA]** sono visualizzati i widget generati dall&#39;intelligenza artificiale. Questi widget forniscono informazioni rapide sul profilo, in base ai dati del profilo, tra cui dati demografici (come età, genere o posizione), comportamenti degli utenti (come cronologia acquisti, attività sul sito web o coinvolgimento con i social media) nonché dati psicografici (come interessi, preferenze o scelte di stile di vita). Tutti i widget di intelligenza artificiale utilizzano dati **già** presenti nel profilo.
+
+![Viene visualizzata la sezione widget insight di IA.](../images/user-guide/ai-insight-widgets.png)
+
+#### Widget personalizzabili {#customizable-widgets}
+
+Nella sezione **[!UICONTROL Widget personalizzabili]** sono visualizzati widget personalizzabili in base alle esigenze aziendali. È possibile raggruppare gli attributi in widget separati, rimuovere widget indesiderati o modificare il layout dei widget.
+
 I campi predefiniti visualizzati possono anche essere modificati a livello di organizzazione per visualizzare gli attributi di profilo preferiti. Per ulteriori informazioni sulla personalizzazione di questi campi, incluse le istruzioni dettagliate per l&#39;aggiunta e la rimozione degli attributi e il ridimensionamento dei pannelli del dashboard, leggere la [guida alla personalizzazione dei dettagli del profilo](profile-customization.md).
 
-![La scheda Dettagli è evidenziata. Vengono visualizzati i dettagli del profilo.](../images/user-guide/profile-detail-row-name.png)
+![Viene visualizzata la sezione dei widget personalizzabili.](../images/user-guide/customizable-widgets.png)
 
 Puoi anche scegliere di visualizzare o meno i nomi degli attributi come nomi visualizzati e i relativi nomi dei percorsi dei campi. Per passare da una visualizzazione all&#39;altra, selezionare l&#39;opzione **[!UICONTROL Mostra nomi visualizzati]**.
 
-![L&#39;opzione Mostra nomi visualizzati è evidenziata e i nomi visualizzati sono visualizzati sotto gli attributi.](../images/user-guide/profile-detail.png)
+![L&#39;opzione Mostra nomi visualizzati è evidenziata.](../images/user-guide/show-display-names.png)
 
-Per visualizzare informazioni aggiuntive relative al singolo profilo cliente, seleziona una delle altre schede disponibili. Queste schede includono attributi, eventi e la scheda Appartenenza al pubblico che mostra i tipi di pubblico per i quali il profilo è attualmente qualificato.
+#### Widget con classificazione automatica {#auto-classified-widgets}
 
-### Scheda Attributi
+La sezione **[!UICONTROL Widget classificati automaticamente]** visualizza widget che sfruttano lo schema di unione per determinare i gruppi di campi di origine a cui appartiene un attributo, fornendo un contesto più chiaro da dove provengono i dati. È possibile utilizzare la barra di ricerca per cercare più facilmente le parole chiave all&#39;interno dei widget.
+
+Questi widget combinano sia dati evento (con il widget Eventi di esperienza) che dati attributo, consentendo di avere una visualizzazione unificata del profilo. Puoi utilizzare questi widget per esplorare la struttura dei dati del tuo profilo per strutturare meglio i [widget personalizzabili](#customizable-widgets).
+
+>[!NOTE]
+>
+>Se sono presenti più gruppi di campi di origine, i widget utilizzeranno solo **una** delle opzioni disponibili.
+
+![Viene visualizzata la sezione dei widget classificati automaticamente.](../images/user-guide/auto-classified-widgets.png)
+
+### Scheda Attributi {#attributes}
 
 La scheda **[!UICONTROL Attributi]** fornisce una vista a elenco che riepiloga tutti gli attributi correlati a un singolo profilo, dopo l&#39;applicazione del criterio di unione specificato.
 
@@ -159,7 +169,7 @@ Per visualizzare gli attributi disponibili in Edge, seleziona **[!UICONTROL Edge
 
 Per ulteriori informazioni sui profili Edge, consulta la [documentazione sui profili Edge](../edge-profiles.md).
 
-### Scheda Eventi
+### Scheda Eventi {#events}
 
 La scheda **[!UICONTROL Eventi]** contiene i dati dei 100 eventi ExperienceEvent più recenti associati al cliente. Questi dati possono includere aperture e-mail, attività del carrello e visualizzazioni di pagina. Se si seleziona **[!UICONTROL Visualizza tutto]** per un singolo evento, vengono acquisiti campi e valori aggiuntivi come parte dell&#39;evento.
 
@@ -167,7 +177,7 @@ La scheda **[!UICONTROL Eventi]** contiene i dati dei 100 eventi ExperienceEvent
 
 ![La scheda Eventi è evidenziata. Vengono visualizzati gli eventi del profilo.](../images/user-guide/events.png)
 
-### Scheda Appartenenza al pubblico
+### Scheda Appartenenza al pubblico {#audience-membership}
 
 Nella scheda **[!UICONTROL Appartenenza al pubblico]** viene visualizzato un elenco con il nome e la descrizione dei tipi di pubblico a cui appartiene attualmente il singolo profilo cliente. Questo elenco viene aggiornato automaticamente quando il profilo si qualifica o scade dai tipi di pubblico. Il numero totale di tipi di pubblico per i quali il profilo è attualmente qualificato viene visualizzato sul lato destro della scheda.
 
