@@ -2,10 +2,10 @@
 title: Registra richieste di eliminazione (flusso di lavoro interfaccia utente)
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
+source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 7%
+source-wordcount: '2420'
+ht-degree: 5%
 
 ---
 
@@ -204,6 +204,69 @@ Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro che viene vis
 >Per informazioni dettagliate sull&#39;elaborazione delle eliminazioni dei record dopo l&#39;esecuzione, consultare la sezione della panoramica relativa a [timeline e trasparenza](../home.md#record-delete-transparency).
 
 ![Scheda [!UICONTROL Record] dell&#39;area di lavoro [!UICONTROL Ciclo di vita dati] con la nuova richiesta evidenziata.](../images/ui/record-delete/request-log.png)
+
+## Eliminazione di record dai set di dati basati su modelli {#model-based-record-delete}
+
+Se il set di dati da cui stai eliminando è uno schema basato su modello, controlla le seguenti considerazioni per assicurarti che i record vengano rimossi correttamente e non riacquisiti a causa di mancata corrispondenza tra Experience Platform e il sistema di origine.
+
+### Comportamento eliminazione record
+
+La tabella seguente illustra il comportamento delle eliminazioni di record in Experience Platform e nei sistemi di origine, a seconda del metodo di acquisizione e della modifica della configurazione di acquisizione dei dati.
+
+| Formato | Comportamento |
+|---------------------|--------------------------------------------------------------------------|
+| Eliminazione piattaforma | I record vengono rimossi dal set di dati e dal data lake di Experience Platform. |
+| Conservazione Source | I record rimangono nel sistema di origine a meno che non vengano esplicitamente eliminati. |
+| Impatto dell&#39;aggiornamento completo | Se utilizzi l’aggiornamento completo, i record eliminati possono essere riacquisiti a meno che non vengano rimossi o esclusi dall’origine. |
+| Modificare il comportamento di acquisizione dei dati | I record contrassegnati con `_change_request_type = 'd'` vengono eliminati durante l&#39;acquisizione. I record non contrassegnati possono essere riacquisiti. |
+
+Per evitare la riacquisizione, applica lo stesso approccio di eliminazione sia nel sistema di origine che in Experience Platform, rimuovendo i record da entrambi i sistemi o includendo `_change_request_type = 'd'` per i record che intendi eliminare.
+
+### Modificare le colonne di acquisizione e controllo dei dati
+
+Gli schemi basati su modello che utilizzano Origini con acquisizione dati di modifica possono utilizzare la colonna di controllo `_change_request_type` per distinguere le eliminazioni dagli upsert. Durante l&#39;acquisizione, i record contrassegnati con `d` vengono eliminati dal set di dati, mentre quelli contrassegnati con `u` o senza la colonna vengono trattati come upsert. La colonna `_change_request_type` viene letta solo al momento dell’acquisizione e non viene memorizzata nello schema di destinazione o mappata su campi XDM.
+
+>[!NOTE]
+>
+>L’eliminazione dei record tramite l’interfaccia utente del ciclo di vita dei dati non influisce sul sistema di origine. Per rimuovere dati da entrambe le posizioni, eliminali sia in Experience Platform che nell’origine.
+
+### Metodi di eliminazione aggiuntivi per gli schemi basati su modelli
+
+Oltre al flusso di lavoro standard per l’eliminazione dei record, gli schemi basati su modelli supportano metodi aggiuntivi per casi d’uso specifici:
+
+* **Approccio del set di dati di copia sicura**: duplica il set di dati di produzione e applica le eliminazioni alla copia per il test controllato o la riconciliazione prima di applicare le modifiche ai dati di produzione.
+* **Caricamento batch solo eliminazioni**: carica un file contenente solo operazioni di eliminazione per l&#39;igiene di destinazione quando devi rimuovere record specifici senza influire su altri dati.
+
+### Supporto dei descrittori per le operazioni di igiene {#descriptor-support}
+
+I descrittori di schema basati su modelli forniscono metadati essenziali per operazioni di igiene precise:
+
+* **Descrittore della chiave primaria**: identifica i record in modo univoco per gli aggiornamenti o le eliminazioni mirati, assicurando che vengano interessati i record corretti.
+* **Descrittore versione**: assicura che le eliminazioni e gli aggiornamenti vengano applicati nell&#39;ordine cronologico corretto, evitando operazioni fuori sequenza.
+* **Descrittore marca temporale (schemi di serie temporali)**: allinea le operazioni di eliminazione con le ore di occorrenza degli eventi anziché con le ore di acquisizione.
+
+>[!NOTE]
+>
+>I processi di igiene operano a livello di set di dati. Per i set di dati abilitati per il profilo, potrebbero essere necessari flussi di lavoro di profilo aggiuntivi per mantenere la coerenza tra Real-Time Customer Profile.
+
+### Conservazione pianificata per schemi basati su modelli
+
+Per un&#39;igiene automatizzata basata sull&#39;età dei dati anziché su identità specifiche, consulta [Gestire la conservazione dei set di dati Experience Event (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) per la conservazione pianificata a livello di riga nel data lake.
+
+>[!NOTE]
+>
+>La scadenza a livello di riga è supportata solo per i set di dati che utilizzano il comportamento delle serie temporali.
+
+### Best practice per l’eliminazione dei record basati su modelli
+
+Per evitare il re-inserimento involontario e mantenere la coerenza dei dati tra i sistemi, segui queste best practice:
+
+* **Coordinare le eliminazioni**: allinea le eliminazioni dei record con la configurazione di acquisizione dei dati di modifica e la strategia di gestione dei dati di origine.
+* **Monitorare i flussi di acquisizione dei dati delle modifiche**: dopo aver eliminato i record in Platform, monitorare i flussi di dati e verificare che il sistema di origine rimuova gli stessi record o li includa con `_change_request_type = 'd'`.
+* **Pulizia dell&#39;origine**: per le origini che utilizzano l&#39;acquisizione con aggiornamento completo o per quelle che non supportano le eliminazioni tramite l&#39;acquisizione di dati di modifica, eliminare i record direttamente dal sistema di origine per evitare la riacquisizione.
+
+Per ulteriori dettagli sui requisiti dello schema, consulta [requisiti del descrittore dello schema basato su modello](../../xdm/schema/model-based.md#model-based-schemas).\
+Per informazioni sul funzionamento di Change Data Capture con le origini, vedere [Abilitare Change Data Capture nelle origini](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
 
 ## Passaggi successivi
 

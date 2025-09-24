@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
 source-wordcount: '4497'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -57,7 +57,7 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campagne orchestrate"
->abstract="Abilita questo pulsante di attivazione per consentire l’utilizzo del set di dati selezionato nelle campagne orchestrate di Adobe Journey Optimizer. Il set di dati deve utilizzare uno schema relazionale ed è possibile creare un solo set di dati per schema."
+>abstract="Abilita questa opzione per consentire l’utilizzo del set di dati selezionato nelle campagne orchestrate di Adobe Journey Optimizer. Il set di dati deve utilizzare uno schema basato su modello ed è possibile creare un solo set di dati per schema."
 
 Nell&#39;interfaccia utente [!DNL Experience Platform], seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra per aprire il dashboard **[!UICONTROL Set di dati]**. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
 

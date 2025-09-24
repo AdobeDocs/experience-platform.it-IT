@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1696'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Origine | Categoria | Tipo di acquisizione | Cloud |
 | --- | --- | --- | --- |
@@ -306,7 +306,11 @@ Con il controllo degli accessi basato su attributi, puoi applicare configurazion
 
 - Applica le etichette ai campi dello schema per definire l’accesso a specifici campi dello schema nella tua organizzazione. Una volta stabilito l’accesso a campi dello schema specifici, gli utenti potranno creare mappature solo per i campi a cui hanno accesso.
 - Gli utenti che non dispongono dei ruoli appropriati non potranno creare o aggiornare flussi di dati con mappature che coinvolgono campi schema inaccessibili. Inoltre, gli utenti non autorizzati non possono aggiornare, eliminare, abilitare o disabilitare flussi di dati esistenti con campi schema inaccessibili.
-- Inoltre, un flusso di dati deve avere esattamente lo stesso ID schema e la stessa versione nella mappatura, nel set di dati di destinazione e nella connessione di destinazione.
+- Inoltre, un flusso di dati deve avere esattamente lo stesso ID schema e la stessa versione nella mappatura, nel set di dati di destinazione e nella connessione di destinazione. Ciò si applica sia agli schemi XDM standard che agli schemi basati su modelli.
+
+>[!NOTE]
+>
+>Gli schemi basati su modelli hanno requisiti aggiuntivi, tra cui i campi della chiave primaria e dell’identificatore della versione. Per ulteriori informazioni, vedere la [panoramica dello schema basata su modello](../xdm/schema/model-based.md).
 
 Per ulteriori informazioni sul controllo degli accessi basato su attributi, leggere la [panoramica sul controllo degli accessi basato su attributi](../access-control/abac/overview.md).
 

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;modello dati;modello dati;modello dati;modello dati;registro schema;schema;schema;schemi;schemi;creare
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;modello dati;modello dati;modello dati;modello dati;registro schema;schema;schema;schema;schemi;creare;;home;popular topic;api;API;XDM;XDM system;experience data model;Experience data model;data model;data model;Data model;schema registry;schema Registry;schema;schema;schema;schemi;creare
 solution: Experience Platform
 title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API Schema Registry consente di gestire in modo programmatico gli schemi XDM all’interno dell’applicazione Experience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 3%
+source-wordcount: '2095'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONTAINER_ID}` | Contenitore che ospita gli schemi da recuperare: `global` per gli schemi creati dall&#39;Adobe o `tenant` per gli schemi di proprietà dell&#39;organizzazione. |
+| `{CONTAINER_ID}` | Contenitore che ospita gli schemi da recuperare: `global` per gli schemi creati da Adobe o `tenant` per gli schemi di proprietà dell&#39;organizzazione. |
 | `{QUERY_PARAMS}` | Parametri di query facoltativi in base ai quali filtrare i risultati. Per un elenco dei parametri disponibili, vedere il [documento di appendice](./appendix.md#query). |
 
 {style="table-layout:auto"}
@@ -99,7 +99,7 @@ La richiesta precedente ha utilizzato l&#39;intestazione `application/vnd.adobe.
 
 ## Cercare uno schema {#lookup}
 
-Per cercare uno schema specifico, devi eseguire una richiesta di GET che includa l’ID dello schema nel percorso.
+Per cercare uno schema specifico, effettua una richiesta GET che include l’ID dello schema nel percorso.
 
 **Formato API**
 
@@ -109,7 +109,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONTAINER_ID}` | Contenitore che ospita lo schema da recuperare: `global` per uno schema creato da un Adobe o `tenant` per uno schema di proprietà dell&#39;organizzazione. |
+| `{CONTAINER_ID}` | Contenitore che ospita lo schema da recuperare: `global` per uno schema creato da Adobe o `tenant` per uno schema di proprietà dell&#39;organizzazione. |
 | `{SCHEMA_ID}` | `meta:altId` o `$id` con codifica URL dello schema che si desidera cercare. |
 
 {style="table-layout:auto"}
@@ -198,6 +198,8 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema. I ca
 
 Il processo di composizione dello schema inizia assegnando una classe. La classe definisce gli aspetti comportamentali chiave dei dati (record o serie temporali), nonché i campi minimi necessari per descrivere i dati che verranno acquisiti.
 
+Per istruzioni sulla creazione di uno schema senza classi o gruppi di campi, noto come schema basato su modello, vedere la sezione [Creare uno schema basato su modello](#create-model-based-schema).
+
 >[!NOTE]
 >
 >La chiamata di esempio seguente è solo un esempio di base di come creare uno schema nell’API, con i requisiti minimi di composizione di una classe e nessun gruppo di campi. Per i passaggi completi su come creare uno schema nell&#39;API, incluso come assegnare campi utilizzando gruppi di campi e tipi di dati, consulta l&#39;[esercitazione per la creazione di schemi](../tutorials/create-schema-api.md).
@@ -275,17 +277,203 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e 
 }
 ```
 
-L&#39;esecuzione di una richiesta di GET per [elencare tutti gli schemi](#list) nel contenitore tenant includerebbe ora il nuovo schema. È possibile eseguire una [richiesta di ricerca (GET)](#lookup) utilizzando l&#39;URI `$id` con codifica URL per visualizzare direttamente il nuovo schema.
+L&#39;esecuzione di una richiesta GET per [elencare tutti gli schemi](#list) nel contenitore tenant includerebbe ora il nuovo schema. È possibile eseguire una [richiesta di ricerca (GET)](#lookup) utilizzando l&#39;URI `$id` codificato dall&#39;URL per visualizzare direttamente il nuovo schema.
 
 Per aggiungere campi aggiuntivi a uno schema, è possibile eseguire un&#39;operazione [PATCH](#patch) per aggiungere gruppi di campi agli array `allOf` e `meta:extends` dello schema.
 
-## Aggiornare uno schema {#put}
+## Crea uno schema basato su modelli {#create-model-based-schema}
 
-Puoi sostituire un intero schema tramite un’operazione PUT, essenzialmente riscrivendo la risorsa. Quando si aggiorna uno schema tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per [la creazione di un nuovo schema](#create) in una richiesta POST.
+>[!AVAILABILITY]
+>
+>Data Mirror e gli schemi basati su modelli sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
+
+Creare uno schema basato su modello effettuando una richiesta POST all&#39;endpoint `/schemas`. Gli schemi basati su modelli memorizzano dati strutturati in stile relazionale **senza** classi o gruppi di campi. Definisci i campi direttamente sullo schema e identifica lo schema come basato su modello utilizzando un tag di comportamento logico.
+
+>[!IMPORTANT]
+>
+>Per creare uno schema basato su modello, impostare `meta:extends` su `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Questo è un **identificatore di comportamento logico** (non un comportamento fisico o una classe). **non** fare riferimento a classi o gruppi di campi in `allOf` e **non** includere classi o gruppi di campi in `meta:extends`.
+
+Creare prima lo schema con `POST /tenant/schemas`. Aggiungere quindi i descrittori richiesti con l&#39;API dei descrittori [(`POST /tenant/descriptors`)](../api/descriptors.md):
+
+- [Descrittore chiave primaria](../api/descriptors.md#primary-key-descriptor): un campo chiave primaria deve essere al **livello radice** e **contrassegnato come obbligatorio**.
+- [Descrittore versione](../api/descriptors.md#version-descriptor): **Obbligatorio** quando esiste una chiave primaria.
+- [Descrittore di relazione](../api/descriptors.md#relationship-descriptor): facoltativo, definisce i join; cardinalità non applicata al momento dell&#39;acquisizione.
+- [Descrittore marca temporale](../api/descriptors.md#timestamp-descriptor): per gli schemi di serie temporali, la chiave primaria deve essere una chiave **composita** che include il campo marca temporale.
 
 >[!NOTE]
 >
->Se si desidera aggiornare solo una parte di uno schema anziché sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di uno schema[&#128279;](#patch).
+>Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[!UICOTRNOL Identificatore versione]&quot; e &quot;[!UICOTRNOL Identificatore marca temporale]&quot;.
+
+<!-- >[!AVAILABILITY]
+>
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+
+>[!CAUTION]
+>
+>Gli schemi basati su modelli sono **non compatibili con gli schemi di unione**. Non applicare il tag `union` a `meta:immutableTags` quando si utilizzano schemi basati su modelli. Questa configurazione è bloccata nell’interfaccia utente, ma non è attualmente bloccata dall’API. Per ulteriori informazioni sul comportamento dello schema di unione, consulta la [guida dell&#39;endpoint Unions](./unions.md).
+
+**Formato API**
+
+```http
+POST /tenant/schemas
+```
+
+**Richiesta**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+### Proprietà corpo della richiesta
+
+| Proprietà | Tipo | Descrizione |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title` | Stringa | Nome visualizzato dello schema. |
+| `description` | Stringa | Breve spiegazione dello scopo dello schema. |
+| `type` | Stringa | Deve essere `"object"` per gli schemi basati su modelli. |
+| `definitions` | Oggetto | Contiene gli oggetti a livello di radice che definiscono i campi dello schema. |
+| `definitions.<name>.properties` | Oggetto | Nomi di campi e tipi di dati. |
+| `allOf` | Array | Fa riferimento alla definizione dell&#39;oggetto a livello di radice (ad esempio, `#/definitions/marketing_customers`). |
+| `meta:extends` | Array | Deve includere `"https://ns.adobe.com/xdm/data/adhoc-v2"` per identificare lo schema come basato su modello. |
+| `meta:behaviorType` | Stringa | Imposta su `"record"`. Usa `"time-series"` solo se abilitato e appropriato. |
+
+>[!IMPORTANT]
+>
+>L’evoluzione dello schema per gli schemi basati su modelli segue le stesse regole aggiuntive degli schemi standard. Puoi aggiungere nuovi campi con una richiesta PATCH. Le modifiche, come la ridenominazione o la rimozione di campi, sono consentite solo se nel set di dati non sono stati acquisiti dati.
+
+**Risposta**
+
+In caso di esito positivo, la richiesta restituisce **HTTP 201 (creato)** e lo schema creato.
+
+>[!NOTE]
+>
+>Gli schemi basati su modelli non ereditano i campi predefiniti (ad esempio, id, timestamp o eventType). Definisci tutti i campi obbligatori in modo esplicito nello schema.
+
+**Risposta di esempio**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### Proprietà del corpo della risposta
+
+| Proprietà | Tipo | Descrizione |
+| ------------------- | ------ | -------------------------- |
+| `$id` | Stringa | URL univoco dello schema creato. Da utilizzare nelle chiamate API successive. |
+| `meta:altId` | Stringa | Identificatore alternativo dello schema. |
+| `meta:resourceType` | Stringa | Tipo di risorsa (sempre `"schemas"`). |
+| `version` | Stringa | Versione dello schema assegnata al momento della creazione. |
+| `title` | Stringa | Nome visualizzato dello schema. |
+| `description` | Stringa | Breve spiegazione dello scopo dello schema. |
+| `type` | Stringa | Il tipo di schema. |
+| `definitions` | Oggetto | Definisce gli oggetti o i gruppi di campi riutilizzabili utilizzati nello schema. Questo include in genere la struttura dati principale ed è indicato nell&#39;array `allOf` per definire la directory principale dello schema. |
+| `allOf` | Array | Specifica l&#39;oggetto principale dello schema facendo riferimento a una o più definizioni (ad esempio, `#/definitions/marketing_customers`). |
+| `meta:extends` | Array | Identifica lo schema come basato su modello (`adhoc-v2`). |
+| `meta:behaviorType` | Stringa | Tipo di comportamento (`record` o `time-series`, se abilitato). |
+| `meta:containerId` | Stringa | Contenitore in cui è memorizzato lo schema (ad esempio, `tenant`). |
+
+Per aggiungere campi a uno schema basato su modello dopo la creazione, effettuare una [richiesta PATCH](#patch). Gli schemi basati su modelli non ereditano o evolvono automaticamente. Modifiche strutturali come la ridenominazione o l’eliminazione di campi sono consentite solo se nel set di dati non sono stati acquisiti dati. Una volta che i dati esistono, sono supportate solo **modifiche aggiuntive** (come l&#39;aggiunta di nuovi campi).
+
+È possibile aggiungere nuovi campi a livello di radice (all&#39;interno della definizione radice o della radice `properties`), ma non è possibile rimuovere, rinominare o modificare il tipo di campi esistenti.
+
+>[!CAUTION]
+>
+>L’evoluzione dello schema diventa limitata dopo che un set di dati è stato inizializzato utilizzando lo schema. Pianifica in anticipo i nomi e i tipi di campo: una volta acquisiti i dati, non è più possibile eliminare o modificare i campi.
+
+## Aggiornare uno schema {#put}
+
+Puoi sostituire un intero schema tramite un’operazione PUT, essenzialmente riscrivendo la risorsa. Quando si aggiorna uno schema tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per [creare un nuovo schema](#create) in una richiesta POST.
+
+>[!NOTE]
+>
+>Se si desidera aggiornare solo una parte di uno schema anziché sostituirla completamente, vedere la sezione relativa all&#39;aggiornamento di una parte di uno schema[.](#patch)
 
 **Formato API**
 

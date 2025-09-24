@@ -5,10 +5,10 @@ title: Creare un flusso di dati per le origini di archiviazione cloud utilizzand
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’archiviazione cloud di terze parti e inviarli ad Experience Platform utilizzando i connettori e le API di origine.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1792'
-ht-degree: 3%
+source-wordcount: '1834'
+ht-degree: 2%
 
 ---
 
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Facoltativo) Proprietà che definisce il tipo di file compresso da acquisire. I tipi di file compressi supportati sono: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` e `tar`. **Nota**: la proprietà `compressionType` può essere utilizzata solo durante l&#39;acquisizione di file delimitati o JSON. |
 | `params.path` | Percorso del file di origine a cui si sta effettuando l&#39;accesso. Questo parametro punta a un singolo file o a un&#39;intera cartella.  **Nota**: è possibile utilizzare un asterisco al posto del nome del file per specificare l&#39;acquisizione di un&#39;intera cartella. Ad esempio: `/acme/summerCampaign/*.csv` acquisirà l&#39;intera cartella `/acme/summerCampaign/`. |
 | `params.type` | Tipo di file del file di dati di origine che si sta acquisendo. Utilizzare il tipo `file` per acquisire un singolo file e il tipo `folder` per acquisire un&#39;intera cartella. |
-| `params.cdcEnabled` | Valore booleano che indica se l&#39;acquisizione della cronologia delle modifiche è abilitata o meno. Questa proprietà è supportata dalle seguenti origini di archiviazione cloud: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> Per ulteriori informazioni, leggere la guida sull&#39;utilizzo di [modifica acquisizione dati nelle origini](../change-data-capture.md). |
+| `params.cdcEnabled` | Valore booleano che indica se l’acquisizione della cronologia delle modifiche è abilitata. Se utilizzata con schemi basati su modello, l&#39;acquisizione dati di modifica si basa sulla colonna di controllo `_change_request_type` (`u` — upsert, `d` — delete), valutata durante l&#39;acquisizione ma non memorizzata nello schema di destinazione. Questa proprietà è supportata dalle seguenti origini di archiviazione cloud: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Per una panoramica di questa funzionalità, vedere [Panoramica di Data Mirror](../../../../xdm/data-mirror/overview.md). Per informazioni dettagliate sull&#39;implementazione, leggere la guida sull&#39;utilizzo di [modifica acquisizione dati nelle origini](../change-data-capture.md) e il riferimento tecnico [schemi basati su modelli](../../../../xdm/schema/model-based.md). |
 | `connectionSpec.id` | ID della specifica di connessione associato all’origine di archiviazione cloud specifica. Per un elenco degli ID delle specifiche di connessione, vedere [appendice](#appendix). |
 
 **Risposta**

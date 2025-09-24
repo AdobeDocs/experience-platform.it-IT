@@ -5,9 +5,9 @@ title: Creare un flusso di dati utilizzando un Database Source nell’interfacci
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Experience Platform. Questo tutorial illustra come creare un flusso di dati per un’origine di database utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1698'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,16 @@ Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;inter
 
 Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../data-prep/ui/mapping.md).
 
+>[!NOTE]
+>
+>Quando esegui il mapping a schemi basati su modelli, assicurati che i dati di origine includano i campi obbligatori, ad esempio una chiave primaria e un identificatore di versione o un identificatore di marca temporale per gli schemi di serie temporali, .
+
+Le colonne di controllo come `_change_request_type`, utilizzate per l&#39;acquisizione dei dati di modifica, vengono lette durante l&#39;acquisizione ma non sono memorizzate nello schema di destinazione.
+
+Gli schemi basati su modelli supportano anche le relazioni tra set di dati utilizzando mappature di chiave primaria ed esterna.
+
+Per ulteriori informazioni, consulta la [panoramica di Data Mirror](../../../../xdm/data-mirror/overview.md) e il riferimento tecnico agli schemi basati su modelli [](../../../../xdm/schema/model-based.md).
+
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 
 ![mappatura](../../../images/tutorials/dataflow/table-based/mapping.png)
@@ -123,7 +133,7 @@ Per ulteriori informazioni sulle configurazioni di pianificazione, consulta la t
 Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
 * **[!UICONTROL Connessione]**: mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno di tale file di origine.
-* **[!UICONTROL Assegna set di dati e mappa i campi]**: mostra in quale set di dati vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+* **[!UICONTROL Assegna set di dati e mappa campi]**: visualizza il set di dati in cui verranno acquisiti i dati di origine e lo schema associato. Se utilizzi uno schema basato su modello, verifica che i campi obbligatori, come la chiave primaria e l’identificatore di versione, siano mappati correttamente. Inoltre, assicurati che tutte le colonne di controllo dell’acquisizione dati di modifica siano configurate correttamente. I set di dati che utilizzano schemi basati su modelli supportano più modelli di dati e abilitano [flussi di lavoro di acquisizione dati di modifica](../../api/change-data-capture.md).
 * **[!UICONTROL Pianificazione]**: mostra il periodo, la frequenza e l&#39;intervallo attivi della pianificazione di acquisizione.
 
 Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Fine]** e attendi che venga creato un po&#39; di tempo.

@@ -4,26 +4,41 @@ solution: Experience Platform
 title: Endpoint API per i descrittori
 description: L’endpoint /descriptors nell’API Schema Registry consente di gestire in modo programmatico i descrittori XDM all’interno dell’applicazione Experience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2888'
 ht-degree: 1%
 
 ---
 
 # Endpoint &quot;descriptors&quot;
 
-Gli schemi definiscono una visualizzazione statica delle entità dati, ma non forniscono dettagli specifici sul modo in cui i dati basati su tali schemi (ad esempio, i set di dati) possono relazionarsi tra loro. Adobe Experience Platform consente di descrivere queste relazioni e altri metadati interpretativi su uno schema utilizzando i descrittori.
+Gli schemi definiscono la struttura delle entità dati, ma non specificano la correlazione tra i set di dati creati da questi schemi. In Adobe Experience Platform, puoi utilizzare i descrittori per descrivere queste relazioni e aggiungere metadati interpretativi a uno schema.
 
-I descrittori degli schemi sono metadati a livello di tenant, ovvero sono univoci per l’organizzazione e tutte le operazioni dei descrittori hanno luogo nel contenitore tenant.
+I descrittori sono oggetti di metadati a livello di tenant applicati agli schemi in Adobe Experience Platform. Definiscono relazioni strutturali, chiavi e campi comportamentali (come marche temporali o controllo delle versioni) che influenzano il modo in cui i dati vengono convalidati, uniti o interpretati a valle.
 
-A ogni schema possono essere applicate una o più entità descrittive dello schema. Ogni entità descrittore dello schema include un descrittore `@type` e il `sourceSchema` a cui si applica. Una volta applicati, questi descrittori verranno applicati a tutti i set di dati creati utilizzando lo schema.
+Uno schema può avere uno o più descrittori. Ogni descrittore definisce un `@type` e il `sourceSchema` a cui si applica. Il descrittore si applica automaticamente a tutti i set di dati creati da tale schema.
+
+In Adobe Experience Platform, un descrittore è un metadati che aggiunge regole comportamentali o un significato strutturale a uno schema.
+Esistono diversi tipi di descrittori, tra cui:
+
+- [Descrittore identità](#identity-descriptor) - contrassegna un campo come identità
+- [Descrittore della chiave primaria](#primary-key-descriptor) - Impone l&#39;univocità
+- [Descrittore di relazione](#relationship-descriptor) - definisce un join chiave esterna
+- [Descrittore informazioni di visualizzazione alternativo](#friendly-name) - consente di rinominare un campo nell&#39;interfaccia utente
+- Descrittori [Version](#version-descriptor) e [timestamp](#timestamp-descriptor) - tenere traccia dell&#39;ordinamento degli eventi e del rilevamento delle modifiche
 
 L&#39;endpoint `/descriptors` nell&#39;API [!DNL Schema Registry] consente di gestire in modo programmatico i descrittori all&#39;interno dell&#39;applicazione Experience.
 
 ## Introduzione
 
 L&#39;endpoint utilizzato in questa guida fa parte dell&#39;[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+
+Oltre ai descrittori standard, [!DNL Schema Registry] supporta i tipi di descrittori per gli schemi basati su modelli, ad esempio **chiave primaria**, **versione** e **timestamp**. Questi applicano l’univocità, controllano il controllo delle versioni e definiscono i campi di serie temporali a livello di schema. Se non conosci gli schemi basati su modelli, controlla la [panoramica di Data Mirror](../data-mirror/overview.md) e la [documentazione tecnica sugli schemi basati su modelli](../schema/model-based.md) prima di continuare.
+
+>[!IMPORTANT]
+>
+>Per informazioni dettagliate su tutti i tipi di descrittori, vedere l&#39;[appendice](#defining-descriptors).
 
 ## Recuperare un elenco di descrittori {#list}
 
@@ -86,7 +101,7 @@ Quando si utilizza l&#39;intestazione `link` `Accept`, ogni descrittore viene vi
 
 ## Cercare un descrittore {#lookup}
 
-Se desideri visualizzare i dettagli di un descrittore specifico, puoi cercare (GET) un singolo descrittore utilizzando il suo `@id`.
+Per visualizzare i dettagli di un descrittore specifico, invia una richiesta GET utilizzando il relativo `@id`.
 
 **Formato API**
 
@@ -283,7 +298,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 Per confermare che il descrittore è stato eliminato, è possibile eseguire una [richiesta di ricerca](#lookup) rispetto al descrittore `@id`. La risposta restituisce lo stato HTTP 404 (non trovato) perché il descrittore è stato rimosso da [!DNL Schema Registry].
 
-## Appendice
+## Appendice {#appendix}
 
 La sezione seguente fornisce informazioni aggiuntive sull&#39;utilizzo dei descrittori nell&#39;API [!DNL Schema Registry].
 
@@ -299,9 +314,9 @@ Le sezioni seguenti forniscono una panoramica dei tipi di descrittori disponibil
 >
 >Non è possibile assegnare un’etichetta all’oggetto spazio dei nomi tenant, poiché il sistema applicherebbe tale etichetta a ogni campo personalizzato nella sandbox. È invece necessario specificare il nodo foglia sotto l’oggetto da etichettare.
 
-#### Descrittore di identità
+#### Descrittore di identità {#identity-descriptor}
 
-Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; di &quot;[!UICONTROL sourceSchema]&quot; è un campo [!DNL Identity] come descritto da [Servizio Adobe Experience Platform Identity](../../identity-service/home.md).
+Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; di &quot;[!UICONTROL sourceSchema]&quot; è un campo [!DNL Identity] come descritto da [Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -371,21 +386,36 @@ I descrittori di nomi descrittivi consentono a un utente di modificare i valori 
 
 #### Descrittore di relazione {#relationship-descriptor}
 
-I descrittori di relazione descrivono una relazione tra due schemi diversi, basata sulle proprietà descritte in `sourceProperty` e `destinationProperty`. Per ulteriori informazioni, vedere il tutorial su [definizione di una relazione tra due schemi](../tutorials/relationship-api.md).
+I descrittori di relazione descrivono una relazione tra due schemi diversi, basata sulle proprietà descritte in `xdm:sourceProperty` e `xdm:destinationProperty`. Per ulteriori informazioni, vedere il tutorial su [definizione di una relazione tra due schemi](../tutorials/relationship-api.md).
+
+Utilizzare queste proprietà per dichiarare la relazione tra un campo di origine (chiave esterna) e un campo di destinazione ([chiave primaria](#primary-key-descriptor) o chiave candidata).
+
+>[!TIP]
+>
+>Una **chiave esterna** è un campo nello schema di origine (definito da `xdm:sourceProperty`) che fa riferimento a un campo chiave in un altro schema. Una **chiave candidato** è un campo o un insieme di campi dello schema di destinazione che identifica in modo univoco un record e può essere utilizzata al posto della chiave primaria.
+
+L’API supporta due modelli:
+
+- `xdm:descriptorOneToOne`: relazione standard 1:1.
+- `xdm:descriptorRelationship`: modello generale per nuovi schemi basati su modelli e lavoro (supporta cardinalità, denominazione e destinazioni chiave non primarie).
+
+##### Relazione uno-a-uno (schemi standard)
+
+Usare questa opzione quando si mantengono integrazioni dello schema standard esistenti che si basano già su `xdm:descriptorOneToOne`.
 
 ```json
 {
   "@type": "xdm:descriptorOneToOne",
-  "xdm:sourceSchema":
-    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
   "xdm:sourceVersion": 1,
   "xdm:sourceProperty": "/parentField/subField",
-  "xdm:destinationSchema": 
-    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
   "xdm:destinationVersion": 1,
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
+
+Nella tabella seguente sono descritti i campi necessari per definire un descrittore di relazione uno-a-uno.
 
 | Proprietà | Descrizione |
 | --- | --- |
@@ -397,7 +427,143 @@ I descrittori di relazione descrivono una relazione tra due schemi diversi, basa
 | `xdm:destinationVersion` | Versione principale dello schema di riferimento. |
 | `xdm:destinationProperty` | (Facoltativo) Percorso di un campo di destinazione all’interno dello schema di riferimento. Se questa proprietà viene omessa, il campo di destinazione viene dedotto da tutti i campi che contengono un descrittore di identità di riferimento corrispondente (vedi sotto). |
 
-{style="table-layout:auto"}
+##### Relazione generale (schemi basati su modelli e consigliati per i nuovi progetti)
+
+Utilizza questo descrittore per tutte le nuove implementazioni e per gli schemi basati su modelli. Consente di definire la cardinalità della relazione (ad esempio uno a uno o molti a uno), specificare i nomi delle relazioni e collegarsi a un campo di destinazione che non sia la chiave primaria (chiave non primaria).
+
+Gli esempi seguenti mostrano come definire un descrittore di relazione generale.
+
+**Esempio minimo:**
+
+Questo esempio minimo include solo i campi obbligatori per definire una relazione molti-a-uno tra due schemi.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:sourceVersion": 1,
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:cardinality": "M:1"
+}
+```
+
+**Esempio con tutti i campi facoltativi:**
+
+Questo esempio include tutti i campi facoltativi, ad esempio i nomi delle relazioni, i titoli visualizzati e un campo di destinazione esplicito non di chiave primaria.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:destinationProperty": "/customer_id",
+  "xdm:sourceToDestinationName": "CampaignToCustomer",
+  "xdm:destinationToSourceName": "CustomerToCampaign",
+  "xdm:sourceToDestinationTitle": "Customer campaigns",
+  "xdm:destinationToSourceTitle": "Campaign customers",
+  "xdm:cardinality": "M:1"
+}
+```
+
+##### Scelta di un descrittore di relazione
+
+Per decidere quale descrittore di relazione applicare, utilizza le seguenti linee guida:
+
+| Situazione | Descrittore da utilizzare |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| Nuovi schemi basati su modelli o lavoro | `xdm:descriptorRelationship` |
+| Mappatura 1:1 esistente negli schemi standard | Continua a utilizzare `xdm:descriptorOneToOne` a meno che non siano necessarie funzionalità supportate solo da `xdm:descriptorRelationship`. |
+| Esigenza di cardinalità molti-a-uno o facoltativa (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
+| Nomi di relazioni o titoli necessari per la leggibilità dell’interfaccia utente/a valle | `xdm:descriptorRelationship` |
+| È necessaria una destinazione di destinazione che non sia un&#39;identità | `xdm:descriptorRelationship` |
+
+>[!NOTE]
+>
+>Per i descrittori `xdm:descriptorOneToOne` esistenti negli schemi standard, continuare a utilizzarli a meno che non siano necessarie funzionalità quali destinazioni di destinazione di identità non primarie, denominazione personalizzata o opzioni di cardinalità espansa.
+
+##### Confronto delle funzionalità
+
+Nella tabella seguente vengono confrontate le funzionalità dei due tipi di descrittori:
+
+| Funzionalità | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship` |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| Cardinalità | 1:1 | 1:1, 1:0, M:1, M:0 (informativo) |
+| Destinazione | Campo identità/esplicito | Chiave primaria per impostazione predefinita o chiave non primaria tramite `xdm:destinationProperty` |
+| Denominazione dei campi | Non supportato | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` e titoli |
+| Adattamento relazionale | Limitato | Pattern principale per schemi basati su modello |
+
+##### Vincoli e convalida
+
+Segui questi requisiti e raccomandazioni durante la definizione di un descrittore di relazione generale:
+
+- Per gli schemi basati su modelli, inserisci il campo sorgente (chiave esterna) a livello principale. Attualmente si tratta di una limitazione tecnica per l’acquisizione, non solo di una raccomandazione sulle best practice.
+- Assicurati che i tipi di dati dei campi di origine e di destinazione siano compatibili (numerico, data, booleano, stringa).
+- Ricordate che la cardinalità è informativa; l&#39;archiviazione non la applica. Specificare la cardinalità nel formato `<source>:<destination>`. I valori accettati sono: `1:1`, `1:0`, `M:1` o `M:0`.
+
+#### Descrittore della chiave primaria {#primary-key-descriptor}
+
+Il descrittore di chiave primaria (`xdm:descriptorPrimaryKey`) applica vincoli di univocità e non Null a uno o più campi di uno schema.
+
+```json
+{
+  "@type": "xdm:descriptorPrimaryKey",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": ["/orderId", "/orderLineId"]
+}
+```
+
+| Proprietà | Descrizione |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `@type` | Deve essere `xdm:descriptorPrimaryKey`. |
+| `xdm:sourceSchema` | URI `$id` dello schema. |
+| `xdm:sourceProperty` | Puntatori JSON per i campi chiave primaria. Utilizza un array per le chiavi composite. Per gli schemi di serie temporali, la chiave composita deve includere il campo timestamp per garantire l’univocità tra i record evento. |
+
+#### Descrittore versione {#version-descriptor}
+
+>[!NOTE]
+>
+>Nell&#39;editor dello schema dell&#39;interfaccia utente, il descrittore di versione viene visualizzato come &quot;[!UICOTRNOL Identificatore versione]&quot;.
+
+Il descrittore di versione (`xdm:descriptorVersion`) designa un campo per rilevare e impedire conflitti da eventi di modifica fuori ordine.
+
+```json
+{
+  "@type": "xdm:descriptorVersion",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/versionNumber"
+}
+```
+
+| Proprietà | Descrizione |
+| -------------------- | ------------------------------------------------------------- |
+| `@type` | Deve essere `xdm:descriptorVersion`. |
+| `xdm:sourceSchema` | URI `$id` dello schema. |
+| `xdm:sourceProperty` | Puntatore JSON al campo della versione. Deve essere contrassegnato `required`. |
+
+#### Descrittore marca temporale {#timestamp-descriptor}
+
+>[!NOTE]
+>
+>Nell&#39;Editor schema dell&#39;interfaccia utente, il descrittore timestamp viene visualizzato come &quot;[!UICOTRNOL Identificatore timestamp].&quot;
+
+Il descrittore timestamp (`xdm:descriptorTimestamp`) indica un campo data-ora come timestamp per gli schemi con `"meta:behaviorType": "time-series"`.
+
+```json
+{
+  "@type": "xdm:descriptorTimestamp",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/eventTime"
+}
+```
+
+| Proprietà | Descrizione |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `@type` | Deve essere `xdm:descriptorTimestamp`. |
+| `xdm:sourceSchema` | URI `$id` dello schema. |
+| `xdm:sourceProperty` | Puntatore JSON per il campo timestamp. Deve essere contrassegnato `required` e di tipo `date-time`. |
 
 ##### Descrittore di relazione B2B {#B2B-relationship-descriptor}
 
@@ -427,7 +593,7 @@ Real-Time CDP B2B edition introduce un modo alternativo di definire le relazioni
 | `xdm:sourceProperty` | Percorso del campo nello schema di origine in cui viene definita la relazione. Deve iniziare con &quot;/&quot; e non finire con &quot;/&quot;. Non includere &quot;properties&quot; nel percorso (ad esempio, &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:destinationSchema` | URI `$id` dello schema di riferimento con cui questo descrittore definisce una relazione. |
 | `xdm:destinationVersion` | Versione principale dello schema di riferimento. |
-| `xdm:destinationProperty` | (Facoltativo) Percorso di un campo di destinazione all&#39;interno dello schema di riferimento, che deve essere l&#39;ID primario dello schema. Se questa proprietà viene omessa, il campo di destinazione viene dedotto da tutti i campi che contengono un descrittore di identità di riferimento corrispondente (vedi sotto). |
+| `xdm:destinationProperty` | (Facoltativo) Percorso di un campo di destinazione all’interno dello schema di riferimento. Questo deve risolvere nell&#39;ID primario dello schema o in un altro campo con un tipo di dati compatibile a `xdm:sourceProperty`. Se omesso, la relazione potrebbe non funzionare come previsto. |
 | `xdm:destinationNamespace` | Lo spazio dei nomi dell’ID primario dallo schema di riferimento. |
 | `xdm:destinationToSourceTitle` | Nome visualizzato della relazione tra lo schema di riferimento e lo schema di origine. |
 | `xdm:sourceToDestinationTitle` | Nome visualizzato della relazione tra lo schema di origine e lo schema di riferimento. |
@@ -461,7 +627,7 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 
 #### Descrittore di campo obsoleto
 
-È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione `Accept` [corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
+È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione [ `Accept`corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
 
 ```json
 {

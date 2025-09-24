@@ -1,56 +1,123 @@
 ---
 title: Abilitare Change Data Capture per le connessioni di origine nell’API
 description: Scopri come abilitare l’acquisizione dei dati di modifica per le connessioni di origine nell’API
-source-git-commit: d8b4557424e1f29dfdd8893932aef914226dd60d
+exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
+source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
 
 # Abilitare Change Data Capture per le connessioni di origine nell’API
 
-Change data capture (Cambia acquisizione dati) nelle origini Adobe Experience Platform è una funzionalità che puoi utilizzare per mantenere la sincronizzazione dei dati in tempo reale tra i sistemi di origine e di destinazione.
+Utilizza l’acquisizione dei dati di modifica nelle origini Adobe Experience Platform per mantenere sincronizzati i sistemi di origine e di destinazione quasi in tempo reale.
 
-Al momento, Experience Platform supporta **copia dati incrementale**, che garantisce che i record appena creati o aggiornati nel sistema di origine vengano periodicamente copiati nei set di dati acquisiti. Questo processo si basa sull&#39;utilizzo della **colonna timestamp**, ad esempio `LastModified`, per tenere traccia delle modifiche e acquisire **solo i dati appena inseriti o aggiornati**. Tuttavia, questo metodo non tiene conto dei record eliminati, il che può causare incoerenze nei dati nel tempo.
+Experience Platform attualmente supporta **copia dati incrementale**, che trasferisce periodicamente i record appena creati o aggiornati dal sistema di origine ai set di dati acquisiti. Questo metodo si basa su una **colonna timestamp** per tenere traccia delle modifiche, ma non rileva le eliminazioni, il che può causare incongruenze nei dati nel tempo.
 
-Con l’acquisizione dei dati di modifica, un dato flusso acquisisce e applica tutte le modifiche, inclusi inserimenti, aggiornamenti ed eliminazioni. Allo stesso modo, i set di dati di Experience Platform rimangono completamente sincronizzati con il sistema di origine.
+Cambia invece acquisisce ed applica inserti, aggiornamenti ed eliminazioni quasi in tempo reale. Questo monitoraggio completo delle modifiche assicura che i set di dati rimangano completamente allineati al sistema di origine e fornisce una cronologia completa delle modifiche, oltre a ciò che supporta la copia incrementale. Tuttavia, le operazioni di eliminazione richiedono una considerazione particolare in quanto influiscono su tutte le applicazioni che utilizzano i set di dati di destinazione.
 
-È possibile utilizzare l&#39;acquisizione dati di modifica per le origini seguenti:
+La modifica dell&#39;acquisizione dati in Experience Platform richiede **[Data Mirror](../../../xdm/data-mirror/overview.md)** con [schemi basati su modello](../../../xdm/schema/model-based.md) (detti anche schemi relazionali). È possibile fornire i dati di modifica a Data Mirror in due modi:
 
-## [!DNL Amazon S3]
+* **[Rilevamento delle modifiche manuale](#file-based-sources)**: includi una colonna `_change_request_type` nel set di dati per le origini che non generano in modo nativo record di acquisizione dati di modifica
+* **[Esportazioni native di acquisizione dati di modifica](#database-sources)**: utilizza i record di acquisizione dati di modifica esportati direttamente dal sistema di origine
 
-Verificare che `_change_request_type` sia presente nel file [!DNL Amazon S3] che si intende acquisire in Experience Platform. Inoltre, è necessario assicurarsi che i seguenti valori validi siano inclusi nel file:
+Entrambi gli approcci richiedono Data Mirror con schemi basati su modelli per preservare le relazioni e applicare l’univocità.
 
-* `u`: per inserimenti e aggiornamenti
-* `d`: per eliminazioni.
+## Data Mirror con schemi basati su modelli
 
-Se `_change_request_type` non è presente nel file, verrà utilizzato il valore predefinito di `u`.
+>[!AVAILABILITY]
+>
+>Data Mirror e gli schemi basati su modelli sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
 
-Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la connessione di origine [!DNL Amazon S3], leggere la seguente documentazione:
+>[!NOTE]
+>
+>**Utenti di campagne orchestrate**: utilizza le funzionalità di Data Mirror descritte in questo documento per lavorare con i dati dei clienti mantenendo l&#39;integrità referenziale. Anche se l&#39;origine non utilizza la formattazione di acquisizione dati di modifica, Data Mirror supporta funzioni relazionali quali l&#39;imposizione della chiave primaria, gli aggiornamenti a livello di record e le relazioni tra schemi. Queste funzioni garantiscono una modellazione dei dati coerente e affidabile tra i set di dati connessi.
 
-* [Crea una [!DNL Amazon S3] connessione di base](../api/create/cloud-storage/s3.md).
-* [Creare una connessione di origine per un&#39;archiviazione cloud](../api/collect/cloud-storage.md#create-a-source-connection).
+Data Mirror utilizza schemi basati su modelli per estendere l’acquisizione dei dati sulle modifiche e abilitare funzionalità avanzate di sincronizzazione del database. Per una panoramica di Data Mirror, vedere [Panoramica di Data Mirror](../../../xdm/data-mirror/overview.md).
 
-## [!DNL Azure Blob]
+Gli schemi basati su modelli estendono Experience Platform per applicare l’univocità della chiave primaria, tenere traccia delle modifiche a livello di riga e definire relazioni a livello di schema. Con l’acquisizione dei dati di modifica, vengono applicati inserti, aggiornamenti ed eliminazioni direttamente nel data lake, riducendo la necessità di estrarre, trasformare, caricare (ETL) o riconciliazione manuale.
 
-Verificare che `_change_request_type` sia presente nel file [!DNL Azure Blob] che si intende acquisire in Experience Platform. Inoltre, è necessario assicurarsi che i seguenti valori validi siano inclusi nel file:
+Per ulteriori informazioni, vedere [Panoramica sugli schemi basati su modelli](../../../xdm/schema/model-based.md).
 
-* `u`: per inserimenti e aggiornamenti
-* `d`: per eliminazioni.
+### Requisiti dello schema basati su modello per l&#39;acquisizione dei dati di modifica
 
-Se `_change_request_type` non è presente nel file, verrà utilizzato il valore predefinito di `u`.
+Prima di utilizzare uno schema basato su modello con l’acquisizione dei dati di modifica, configura i seguenti identificatori:
 
-Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la connessione di origine [!DNL Azure Blob], leggere la seguente documentazione:
+* Identificare in modo univoco ogni record con una chiave primaria.
+* Applica gli aggiornamenti in sequenza utilizzando un identificatore di versione.
+* Per gli schemi di serie temporali, aggiungi un identificatore di marca temporale.
 
-* [Crea una [!DNL Azure Blob] connessione di base](../api/create/cloud-storage/blob.md).
-* [Creare una connessione di origine per un&#39;archiviazione cloud](../api/collect/cloud-storage.md#create-a-source-connection).
+### Gestione colonne di controllo {#control-column-handling}
 
-## [!DNL Azure Databricks]
+Utilizzare la colonna `_change_request_type` per specificare la modalità di elaborazione di ogni riga:
 
-È necessario abilitare **cambiare feed dati** nella tabella [!DNL Azure Databricks] per utilizzare l&#39;acquisizione dati di modifica nella connessione di origine.
+* `u` — upsert (impostazione predefinita se la colonna è assente)
+* `d` — elimina
 
-Utilizzare i comandi seguenti per abilitare esplicitamente l&#39;opzione di modifica del feed dati in [!DNL Azure Databricks]
+Questa colonna viene valutata solo durante l’acquisizione e non viene memorizzata o mappata su campi XDM.
+
+### Flusso di lavoro {#workflow}
+
+Per abilitare l’acquisizione dei dati di modifica con uno schema basato su modello:
+
+1. Crea uno schema basato su modello.
+2. Aggiungi i descrittori richiesti:
+   * [Descrittore della chiave primaria](../../../xdm/api/descriptors.md#primary-key-descriptor)
+   * [Descrittore versione](../../../xdm/api/descriptors.md#version-descriptor)
+   * [Descrittore marca temporale](../../../xdm/api/descriptors.md#timestamp-descriptor) (solo serie temporali)
+3. Crea un set di dati dallo schema e abilita l’acquisizione dei dati di modifica.
+4. Solo per l’acquisizione basata su file: se devi specificare esplicitamente le operazioni di eliminazione, aggiungi la colonna `_change_request_type` ai file di origine. Le configurazioni di esportazione CDC gestiscono automaticamente questa situazione per le origini del database.
+5. Completa l’impostazione della connessione di origine per abilitare l’acquisizione.
+
+>[!NOTE]
+>
+>La colonna `_change_request_type` è necessaria solo per le origini basate su file (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) quando si desidera controllare in modo esplicito il comportamento di modifica a livello di riga. Per le origini di database con funzionalità CDC native, le operazioni di modifica vengono gestite automaticamente tramite le configurazioni di esportazione CDC. Per impostazione predefinita, l’acquisizione basata su file prevede l’esecuzione di operazioni upsert. È sufficiente aggiungere questa colonna per specificare le operazioni di eliminazione nei caricamenti di file.
+
+>[!IMPORTANT]
+>
+>**È richiesta la pianificazione dell&#39;eliminazione dei dati**. Tutte le applicazioni che utilizzano schemi basati su modelli devono comprendere le implicazioni relative all&#39;eliminazione prima di implementare l&#39;acquisizione dei dati di modifica. Pianifica in che modo le eliminazioni influiranno sui set di dati correlati, sui requisiti di conformità e sui processi a valle. Consulta [considerazioni sull&#39;igiene dei dati](../../../hygiene/ui/record-delete.md#model-based-record-delete) per maggiori informazioni.
+
+## Fornitura di dati di modifica per origini basate su file {#file-based-sources}
+
+>[!IMPORTANT]
+>
+>L&#39;acquisizione dei dati di modifica basata su file richiede Data Mirror con schemi basati su modelli. Prima di seguire i passaggi di formattazione dei file riportati di seguito, assicurati di aver completato il [flusso di lavoro di installazione di Data Mirror](#workflow) descritto in precedenza in questo documento. I passaggi seguenti descrivono come formattare i file di dati per includere le informazioni di rilevamento delle modifiche che verranno elaborate da Data Mirror.
+
+Per le origini basate su file ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] e [!DNL SFTP]), includere una colonna `_change_request_type` nei file.
+
+Utilizza i valori `_change_request_type` definiti nella sezione precedente [Gestione colonna di controllo](#control-column-handling).
+
+>[!IMPORTANT]
+>
+>Solo per **origini basate su file**, alcune applicazioni potrebbero richiedere una colonna `_change_request_type` con `u` (upsert) o `d` (delete) per convalidare le funzionalità di rilevamento delle modifiche. Ad esempio, la funzionalità **Campagne orchestrate** di Adobe Journey Optimizer richiede questa colonna per abilitare l&#39;interruttore &quot;Campagna orchestrata&quot; e consentire la selezione del set di dati per il targeting. I requisiti di convalida specifici dell’applicazione possono variare.
+
+Segui i passaggi specifici per l’origine riportati di seguito.
+
+### Origini archiviazione cloud {#cloud-storage-sources}
+
+Abilita l’acquisizione dei dati di modifica per le origini di archiviazione cloud seguendo questi passaggi:
+
+1. Creare una connessione di base per l&#39;origine:
+
+   | Origine | Guida alla connessione di base |
+   |---|---|
+   | [!DNL Amazon S3] | [Crea una [!DNL Amazon S3] connessione di base](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [Crea una [!DNL Azure Blob] connessione di base](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [Crea una [!DNL Google Cloud Storage] connessione di base](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [Crea una [!DNL SFTP] connessione di base](../api/create/cloud-storage/sftp.md) |
+
+2. [Creare una connessione di origine per un&#39;archiviazione cloud](../api/collect/cloud-storage.md#create-a-source-connection).
+
+Tutte le origini di archiviazione cloud utilizzano lo stesso formato di colonna `_change_request_type` descritto nella sezione [Origini basate su file](#file-based-sources) precedente.
+
+## Origini del database {#database-sources}
+
+### [!DNL Azure Databricks]
+
+Per utilizzare Change Data Capture con [!DNL Azure Databricks], è necessario abilitare **change Data Feed** nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
+
+Utilizzare i seguenti comandi per abilitare il feed di dati di modifica nelle tabelle:
 
 **Nuova tabella**
 
@@ -83,20 +150,20 @@ Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la 
 * [Crea una [!DNL Azure Databricks] connessione di base](../api/create/databases/databricks.md).
 * [Creare una connessione di origine per un database](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Data Landing Zone]
+### [!DNL Data Landing Zone]
 
-È necessario abilitare **cambiare feed dati** nella tabella [!DNL Data Landing Zone] per utilizzare l&#39;acquisizione dati di modifica nella connessione di origine.
-
-Utilizzare i comandi seguenti per abilitare esplicitamente l&#39;opzione di modifica del feed dati in [!DNL Data Landing Zone].
+Per utilizzare Change Data Capture con [!DNL Data Landing Zone], è necessario abilitare **change Data Feed** nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
 
 Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la connessione di origine [!DNL Data Landing Zone], leggere la seguente documentazione:
 
 * [Crea una [!DNL Data Landing Zone] connessione di base](../api/create/cloud-storage/data-landing-zone.md).
 * [Creare una connessione di origine per un&#39;archiviazione cloud](../api/collect/cloud-storage.md#create-a-source-connection).
 
-## [!DNL Google BigQuery]
+### [!DNL Google BigQuery]
 
-Per utilizzare l&#39;acquisizione dati di modifica nella connessione di origine [!DNL Google BigQuery]. Passare alla pagina [!DNL Google BigQuery] nella console [!DNL Google Cloud] e impostare `enable_change_history` su `TRUE`. Questa proprietà abilita la cronologia delle modifiche per la tabella dati.
+Per utilizzare Change Data Capture con [!DNL Google BigQuery], è necessario abilitare la cronologia delle modifiche nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
+
+Per abilitare la cronologia delle modifiche nella connessione di origine [!DNL Google BigQuery], passare alla pagina [!DNL Google BigQuery] nella console [!DNL Google Cloud] e impostare `enable_change_history` su `TRUE`. Questa proprietà abilita la cronologia delle modifiche per la tabella dati.
 
 Per ulteriori informazioni, leggere la guida sulle [istruzioni del linguaggio di definizione dei dati in [!DNL GoogleSQL]](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
@@ -105,39 +172,9 @@ Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la 
 * [Crea una [!DNL Google BigQuery] connessione di base](../api/create/databases/bigquery.md).
 * [Creare una connessione di origine per un database](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Google Cloud Storage]
+### [!DNL Snowflake]
 
-Verificare che `_change_request_type` sia presente nel file [!DNL Google Cloud Storage] che si intende acquisire in Experience Platform. Inoltre, è necessario assicurarsi che i seguenti valori validi siano inclusi nel file:
-
-* `u`: per inserimenti e aggiornamenti
-* `d`: per eliminazioni.
-
-Se `_change_request_type` non è presente nel file, verrà utilizzato il valore predefinito di `u`.
-
-Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la connessione di origine [!DNL Google Cloud Storage], leggere la seguente documentazione:
-
-* [Crea una [!DNL Google Cloud Storage] connessione di base](../api/create/cloud-storage/google.md).
-* [Creare una connessione di origine per un&#39;archiviazione cloud](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL SFTP]
-
-Verificare che `_change_request_type` sia presente nel file [!DNL SFTP] che si intende acquisire in Experience Platform. Inoltre, è necessario assicurarsi che i seguenti valori validi siano inclusi nel file:
-
-* `u`: per inserimenti e aggiornamenti
-* `d`: per eliminazioni.
-
-Se `_change_request_type` non è presente nel file, verrà utilizzato il valore predefinito di `u`.
-
-Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la connessione di origine [!DNL SFTP], leggere la seguente documentazione:
-
-* [Crea una [!DNL SFTP] connessione di base](../api/create/cloud-storage/sftp.md).
-* [Creare una connessione di origine per un&#39;archiviazione cloud](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL Snowflake]
-
-Devi abilitare il **rilevamento delle modifiche** nelle tabelle [!DNL Snowflake] per utilizzare l&#39;acquisizione dei dati di modifica nelle connessioni di origine.
+Per utilizzare Change Data Capture con [!DNL Snowflake], è necessario abilitare **rilevamento modifiche** nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
 
 In [!DNL Snowflake], abilitare il rilevamento delle modifiche utilizzando `ALTER TABLE` e impostando `CHANGE_TRACKING` su `TRUE`.
 
@@ -151,4 +188,3 @@ Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la 
 
 * [Crea una [!DNL Snowflake] connessione di base](../api/create/databases/snowflake.md).
 * [Creare una connessione di origine per un database](../api/collect/database-nosql.md#create-a-source-connection).
-

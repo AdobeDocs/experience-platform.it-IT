@@ -3,9 +3,9 @@ description: Scopri come utilizzare i modelli nell’interfaccia utente di Adobe
 title: Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2314'
 ht-degree: 10%
 
 ---
@@ -65,6 +65,12 @@ Viene visualizzata una finestra pop-up con la possibilità di sfogliare i modell
 
 * **Sfoglia modelli**: i modelli di origine creano automaticamente schemi, identità, set di dati e flussi di dati con le relative regole di mappatura. Puoi personalizzare queste risorse in base alle esigenze.
 * **Usa le risorse esistenti**: acquisisci i dati utilizzando i set di dati e gli schemi esistenti creati. Se necessario, puoi anche creare nuovi set di dati e schemi.
+
+>[!NOTE]
+>
+>I modelli possono generare automaticamente schemi basati su modelli quando si lavora con origini che richiedono flussi di lavoro di acquisizione dati di modifica o che supportano più modelli di dati. Questi schemi abilitano le funzionalità di Data Mirror per la sincronizzazione dei dati in tempo reale.\
+>Quando si utilizzano modelli con schemi basati su modelli, le risorse generate automaticamente includono i campi obbligatori di chiave primaria, identificatore di versione e identificatore di marca temporale.\
+>Per ulteriori informazioni, consulta la [panoramica di Data Mirror](../../../xdm/data-mirror/overview.md) e [riferimento tecnico agli schemi basati su modelli](../../../xdm/schema/model-based.md).
 
 Per utilizzare le risorse generate automaticamente, seleziona **[!UICONTROL Sfoglia modelli]**, quindi seleziona **[!UICONTROL Seleziona]**.
 

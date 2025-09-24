@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '4178'
-ht-degree: 2%
+source-wordcount: '4873'
+ht-degree: 1%
 
 ---
 
@@ -27,15 +27,96 @@ Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzi
 
 ## Crea un nuovo schema {#create}
 
+Nell&#39;area di lavoro [!UICONTROL Schemi], seleziona **[!UICONTROL Crea schema]** nell&#39;angolo in alto a destra. Viene visualizzato il menu a discesa &#39;Seleziona tipo di schema&#39; con le opzioni per gli schemi [!UICONTROL Standard] o [!UICONTROL Basati su modello].
+
+![L&#39;area di lavoro Schemi con [!UICONTROL Crea schema] evidenziata e il menu a discesa &#39;Seleziona tipo di schema&#39; visualizzato](../../images/ui/resources/schemas/create-schema.png).
+
+## Crea uno schema basato su modelli {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirror e gli schemi basati su modelli sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
+
+Seleziona **[!UICONTROL Basato su modello]** per definire schemi strutturati basati su modello con un controllo preciso sui record. Gli schemi basati su modelli supportano l&#39;applicazione della chiave primaria, il controllo delle versioni a livello di record e le relazioni a livello di schema tramite chiavi primarie ed esterne. Sono ottimizzati anche per l’acquisizione incrementale tramite l’acquisizione di dati di modifica e supportano più modelli di dati utilizzati nelle implementazioni di Orchestrazione di Campaign, Data Distiller e B2B.
+
+Per ulteriori informazioni, consulta la panoramica su [Data Mirror](../../data-mirror/overview.md) o [Schema basato su modello](../../schema/model-based.md).
+
+### Crea manualmente {#create-manually}
+
+>[!AVAILABILITY]
+>
+>Il caricamento di file DDL è disponibile solo per i titolari di licenze di Adobe Journey Optimizer Orchestrated Campaign. L’interfaccia utente potrebbe apparire in modo diverso.
+
+Viene visualizzata la finestra di dialogo **[!UICONTROL Crea schema basato su modello]**. È possibile scegliere **[!UICONTROL Crea manualmente]** o [**[!UICONTROL Carica file DDL]**](#upload-ddl-file) per definire la struttura dello schema.
+
+Nella finestra di dialogo **[!UICONTROL Crea schema basato su modello]**, seleziona **[!UICONTROL Crea manualmente]**, quindi seleziona **[!UICONTROL Avanti]**.
+
+![Finestra di dialogo Crea schema basato su modello con l&#39;opzione Crea selezionato manualmente ed evidenziata Successivo.](../../images/ui/resources/schemas/relational-dialog.png)
+
+Viene visualizzata la pagina **[!UICONTROL Dettagli schema basati su modello]**. Inserisci un nome visualizzato per lo schema e una descrizione facoltativa, quindi seleziona **[!UICONTROL Fine]** per creare lo schema.
+
+![Visualizzazione dettagli schema basata su modello con [!UICONTROL Nome visualizzato schema], [!UICONTROL Descrizione] e [!UICONTROL Fine] evidenziati.](../../images/ui/resources/schemas/relational-details.png)
+
+Viene aperto l’Editor schema con un’area di lavoro vuota per definire la struttura dello schema. Puoi aggiungere i campi come di consueto.
+
+#### Aggiungi un campo di identificazione della versione {#add-version-identifier}
+
+Per abilitare il tracciamento delle versioni e supportare l’acquisizione dei dati di modifica, devi designare un campo di identificazione della versione nello schema. Nell&#39;Editor schema selezionare l&#39;icona più (![A più.](/help/images/icons/plus.png)) accanto al nome dello schema per aggiungere un nuovo campo.
+
+Immettere un nome di campo come `updateSequence` e scegliere un tipo di dati **[!UICONTROL DateTime]** o **[!UICONTROL Number]**.
+
+Nella barra a destra, abilita la casella di controllo **[!UICONTROL Identificatore versione]**, quindi seleziona **[!UICONTROL Applica]** per confermare il campo.
+
+![È stato aggiunto l&#39;Editor di schema con un campo DateTime denominato `updateSequence` e la casella di controllo Identificatore versione selezionata.](../../images/ui/resources/schemas/add-version-identifier.png)
+
+>[!IMPORTANT]
+>
+>Uno schema basato su modello deve includere un campo di identificazione della versione per supportare gli aggiornamenti a livello di record e modificare l’acquisizione dei dati.
+
+Per definire le relazioni, selezionare **[!UICONTROL Aggiungi relazione]** nell&#39;Editor schema per creare relazioni chiave primaria/esterna a livello di schema. Per ulteriori informazioni, consulta il tutorial su [aggiunta di relazioni a livello di schema](../../tutorials/relationship-ui.md#relationship-field).
+
+Quindi, passare a [definire le chiavi primarie](../fields/identity.md#define-a-identity-field) e [aggiungere campi aggiuntivi](#add-field-groups) in base alle esigenze. Per istruzioni su come abilitare l&#39;acquisizione dei dati di modifica nelle origini di Experience Platform, consulta la [guida all&#39;acquisizione dei dati di modifica](../../../sources/tutorials/api/change-data-capture.md).
+
 >[!NOTE]
 >
->Questa sezione illustra come creare manualmente un nuovo schema nell’interfaccia utente. Se si acquisiscono dati CSV in Experience Platform, è possibile utilizzare gli algoritmi di Machine Learning (ML) per **generare uno schema dai dati CSV di esempio**. Questo flusso di lavoro corrisponde al formato dei dati e crea automaticamente un nuovo schema basato sulla struttura e sul contenuto del file CSV. Per ulteriori informazioni su questo flusso di lavoro, consulta la [Guida alla creazione di schemi assistiti da ML](../ml-assisted-schema-creation.md).
+>Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL  delle proprietà dello schema] indica che si tratta di uno schema [!UICONTROL basato su modello]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
+>>![L&#39;area di lavoro dell&#39;Editor di schema mostra una struttura di schema basata su modello vuota con il tipo basato su modello evidenziato.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
-Nell&#39;area di lavoro [!UICONTROL Schemi], seleziona **[!UICONTROL Crea schema]** nell&#39;angolo in alto a destra.
+### Carica un file DDL {#upload-ddl-file}
 
-![Area di lavoro Schemi con [!UICONTROL Crea schema] evidenziato.](../../images/ui/resources/schemas/create-schema.png)
+>[!AVAILABILITY]
+>
+>Il caricamento di file DDL è disponibile solo per i titolari di licenze di Adobe Journey Optimizer Orchestrated Campaign.
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Crea schema]. In questa finestra di dialogo, puoi scegliere di creare manualmente uno schema aggiungendo campi e gruppi di campi, oppure puoi caricare un file CSV e utilizzare algoritmi ML per generare uno schema. Seleziona un flusso di lavoro per la creazione di uno schema dalla finestra di dialogo.
+Utilizza questo flusso di lavoro per definire lo schema caricando un file DDL. Nella finestra di dialogo **[!UICONTROL Crea schema basato su modello]**, seleziona **[!UICONTROL Carica file DDL]**, quindi trascina un file DDL locale dal sistema o seleziona **[!UICONTROL Scegli file]**. Experience Platform convalida lo schema e visualizza un segno di spunta verde se il caricamento del file ha esito positivo. Seleziona **[!UICONTROL Avanti]** per confermare il caricamento.
+
+![Finestra di dialogo Crea schema basato su modello con [!UICONTROL Carica file DDL] selezionato ed [!UICONTROL Successivo] evidenziato.](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+Viene visualizzata la finestra di dialogo [!UICONTROL Seleziona entità e campi da importare], che consente di visualizzare l&#39;anteprima dello schema. Rivedi la struttura dello schema e utilizza i pulsanti di scelta e le caselle di controllo per garantire che ogni entità abbia una chiave primaria e un identificatore di versione specificati.
+
+>[!IMPORTANT]
+>
+>La struttura della tabella deve contenere una **chiave primaria** e un **identificatore di versione**, ad esempio un campo `updateSequence` di tipo datetime o number.
+>
+>Per modificare l&#39;acquisizione dei dati, è necessaria anche una colonna speciale denominata `_change_request_type` di tipo String per abilitare l&#39;elaborazione incrementale. Questo campo indica il tipo di modifica dei dati, ad esempio `u` (upsert) o `d` (delete).
+
+Sebbene sia necessario durante l&#39;acquisizione, le colonne di controllo come `_change_request_type` non vengono memorizzate nello schema e non vengono visualizzate nella struttura dello schema finale. Se tutto sembra corretto, seleziona **[!UICONTROL Fine]** per creare lo schema.
+
+>[!NOTE]
+>
+>La dimensione massima supportata per un caricamento DDL è 10 MB.
+
+![Visualizzazione di revisione dello schema basata sul modello con campi importati visualizzati ed evidenziati [!UICONTROL Fine].](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+Lo schema viene aperto nell’Editor di schema, dove è possibile regolare la struttura prima di salvare.
+
+Quindi, procedi a [aggiungi ulteriori campi](#add-field-groups) e [aggiungi ulteriori relazioni a livello di schema](../../tutorials/relationship-ui.md#relationship-field) secondo necessità.
+
+Per istruzioni su come abilitare l&#39;acquisizione dei dati di modifica nelle origini di Experience Platform, consulta la [guida all&#39;acquisizione dei dati di modifica](../../../sources/tutorials/api/change-data-capture.md).
+
+## Creazione schema standard {#standard-based-creation}
+
+Se si seleziona Tipo di schema standard dal menu a discesa &#39;Seleziona tipo di schema&#39;, viene visualizzata la finestra di dialogo [!UICONTROL Crea schema]. In questa finestra di dialogo, puoi scegliere di creare manualmente uno schema aggiungendo campi e gruppi di campi, oppure puoi caricare un file CSV e utilizzare algoritmi ML per generare uno schema. Seleziona un flusso di lavoro per la creazione di uno schema dalla finestra di dialogo.
 
 ![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
@@ -172,7 +253,7 @@ Dopo aver aggiunto un gruppo di campi a uno schema, puoi rimuovere i campi globa
 >[!IMPORTANT]
 >
 >Se si seleziona **[!UICONTROL Rimuovi]**, il campo verrà eliminato dal gruppo di campi stesso, con effetti su *tutti* gli schemi che utilizzano tale gruppo di campi.
->&#x200B;>Non utilizzare questa opzione a meno che non si desideri **rimuovere il campo da ogni schema che include il gruppo di campi**.
+>>Non utilizzare questa opzione a meno che non si desideri **rimuovere il campo da ogni schema che include il gruppo di campi**.
 
 Per eliminare un campo dal gruppo di campi, selezionalo nell&#39;area di lavoro e seleziona **[!UICONTROL Rimuovi]** nella barra a destra. Questo esempio mostra il campo `taxId` dal gruppo **[!UICONTROL Dettagli demografici]**.
 
