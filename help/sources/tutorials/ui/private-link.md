@@ -1,13 +1,10 @@
 ---
 title: Supporto Di Collegamenti Privati Per Le Origini Nell’Interfaccia Utente
 description: Scopri come utilizzare i collegamenti privati di Azure per le origini nell’interfaccia utente di Experience Platform.
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -16,16 +13,29 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Questa funzione è in versione beta ed è attualmente supportata solo per le seguenti sorgenti:
+>Questa funzione è supportata dalle seguenti origini:
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Il supporto per Private Link è attualmente disponibile solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
 
 Puoi utilizzare la funzione Collegamenti privati per creare endpoint privati per le origini Adobe Experience Platform a cui connetterti. Connetti in modo sicuro le origini a una rete virtuale utilizzando indirizzi IP privati, eliminando la necessità di IP pubblici e riducendo la superficie di attacco. Semplifica la configurazione della rete eliminando la necessità di configurazioni complesse di firewall o Network Address Translation, garantendo al contempo che il traffico dati raggiunga solo i servizi approvati.
 
 Leggi questa guida per scoprire come utilizzare l’area di lavoro origini nell’interfaccia utente di Experience Platform per creare e utilizzare un endpoint privato.
+
+>[!BEGINSHADEBOX]
+
+## Adesione all’utilizzo della licenza per il supporto del collegamento privato
+
+Le metriche di autorizzazione dell’utilizzo della licenza per il supporto del collegamento privato nelle origini sono le seguenti:
+
+* I clienti hanno diritto a un massimo di 2 TB all&#39;anno di trasferimento di dati tramite origini supportate ([!DNL Azure Blob Storage], [!DNL ADLS Gen2] e [!DNL Azure File Storage]), in tutte le sandbox e le organizzazioni.
+* Ogni organizzazione può avere un massimo di 10 endpoint per tutte le sandbox di produzione.
+* Ogni organizzazione può avere un massimo di 1 endpoint per tutte le sandbox di sviluppo.
+
+>[!ENDSHADEBOX]
 
 ## Creare un endpoint privato
 
@@ -45,7 +55,6 @@ Scegliere quindi l&#39;origine desiderata e immettere i valori per le proprietà
 | `subscriptionId` | ID associato all&#39;abbonamento [!DNL Azure]. Per ulteriori informazioni, leggere la guida di [!DNL Azure] in [recupero degli ID sottoscrizione e tenant da  [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | Il nome del gruppo di risorse in [!DNL Azure]. Un gruppo di risorse contiene risorse correlate per una soluzione [!DNL Azure]. Per ulteriori informazioni, leggere la guida di [!DNL Azure] in [gestione dei gruppi di risorse](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceGroup` | Nome della risorsa. In [!DNL Azure] una risorsa fa riferimento a istanze quali macchine virtuali, applicazioni Web e database. Per ulteriori informazioni, leggere la guida di [!DNL Azure] in [informazioni sul gestore delle risorse [!DNL Azure] ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | I nomi di dominio completi per l’origine. **NOTA**: questa proprietà è necessaria solo quando si utilizza l&#39;origine [!DNL Snowflake]. |
 
 {style="table-layout:auto"}
 
