@@ -96,7 +96,7 @@ Le colonne di controllo come `_change_request_type`, utilizzate per l&#39;acquis
 
 Gli schemi basati su modelli supportano anche le relazioni tra set di dati utilizzando mappature di chiave primaria ed esterna.
 
-Per ulteriori informazioni, consulta la [panoramica di Data Mirror](../../../../xdm/data-mirror/overview.md) e il riferimento tecnico agli schemi basati su modelli [](../../../../xdm/schema/model-based.md).
+Per ulteriori informazioni, consulta la [panoramica di Data Mirror](../../../../xdm/data-mirror/overview.md) e il riferimento tecnico agli schemi basati su modelli [&#128279;](../../../../xdm/schema/model-based.md).
 
 Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
 

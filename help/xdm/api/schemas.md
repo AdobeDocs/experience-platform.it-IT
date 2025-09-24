@@ -302,7 +302,7 @@ Creare prima lo schema con `POST /tenant/schemas`. Aggiungere quindi i descritto
 
 >[!NOTE]
 >
->Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[!UICOTRNOL Identificatore versione]&quot; e &quot;[!UICOTRNOL Identificatore marca temporale]&quot;.
+>Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[ !UICOTRNOL Identificatore versione]&quot; e &quot;[ !UICOTRNOL Identificatore marca temporale]&quot;.
 
 <!-- >[!AVAILABILITY]
 >

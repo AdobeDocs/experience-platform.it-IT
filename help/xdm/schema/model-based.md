@@ -71,7 +71,7 @@ Utilizzare un descrittore di chiave primaria per garantire che ogni record sia i
 
 >[!NOTE]
 >
->Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[!UICOTRNOL Identificatore versione]&quot; e &quot;[!UICOTRNOL Identificatore marca temporale]&quot;.
+>Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[ !UICOTRNOL Identificatore versione]&quot; e &quot;[ !UICOTRNOL Identificatore marca temporale]&quot;.
 
 **Esempio (campo singolo):**
 
