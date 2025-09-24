@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Scopri la classe XDM ExperienceEvent e le best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f00b195567c22f69c05909e76906c8770da4b9d0
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2783'
 ht-degree: 0%
 
 ---
@@ -60,11 +60,12 @@ Se trasferisci dati ad Experience Platform utilizzando una connessione di origin
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [&#128279;](../field-groups/name-updates.md).
+>I nomi di diversi gruppi di campi sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../field-groups/name-updates.md).
 
 Adobe fornisce diversi gruppi di campi standard da utilizzare con la classe [!DNL XDM ExperienceEvent]. Di seguito è riportato un elenco di alcuni gruppi di campi comunemente utilizzati per la classe:
 
 * [[!UICONTROL Estensione completa Adobe Analytics ExperienceEvent]](../field-groups/event/analytics-full-extension.md)
+* [[!UICONTROL Estensione completa Adobe Advertising Cloud ExperienceEvent]](../field-groups/event/advertising-full-extension.md)
 * [[!UICONTROL Trasferimenti saldo]](../field-groups/event/balance-transfers.md)
 * [[!UICONTROL Dettagli marketing campagna]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Azioni scheda]](../field-groups/event/card-actions.md)

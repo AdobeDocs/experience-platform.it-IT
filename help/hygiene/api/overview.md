@@ -3,9 +3,9 @@ title: Guida dell’API di igiene dei dati
 description: Scopri come correggere o eliminare in modo programmatico i dati personali memorizzati dai clienti in Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '432'
 ht-degree: 6%
 
 ---
@@ -43,9 +43,6 @@ La scadenza di un set di dati è un’azione &quot;elimina un set di dati&quot; 
 ## Eliminazioni record
 
 >[!IMPORTANT]
->
->Le richieste di eliminazione dei record sono disponibili solo per le organizzazioni che hanno acquistato **Adobe Healthcare Shield**.
->
 >
 >Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti degli interessati (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizzare [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 

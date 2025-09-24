@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Schemi basati su modelli
 description: Scopri gli schemi basati su modelli (detti anche schemi relazionali) in Adobe Experience Platform, che includono funzioni, campi obbligatori, relazioni e limitazioni.
 badge: Disponibilità limitata
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -37,7 +38,7 @@ Utilizzare gli schemi basati su modelli per:
 
 ## Differenze tra gli schemi basati su modelli e gli schemi XDM standard
 
-Gli schemi XDM standard in Experience Platform seguono uno dei tre comportamenti di dati seguenti: Record, Serie temporali o Ad hoc. Per definizioni e dettagli, vedi [Comportamenti dei dati XDM](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/home#data-behaviors).
+Gli schemi XDM standard in Experience Platform seguono uno dei tre comportamenti di dati seguenti: Record, Serie temporali o Ad hoc. Per definizioni e dettagli, vedi [Comportamenti dei dati XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 Nel modello tradizionale, gli schemi record e serie temporali partecipano a [schemi unione](../api/unions.md) (vedi anche la [guida dell&#39;interfaccia utente dello schema unione](../../profile/ui/union-schema.md)). Questi schemi si evolvono automaticamente quando [gruppi di campi](./composition.md#field-group) condivisi vengono aggiornati e i campi personalizzati devono essere nidificati in uno spazio dei nomi tenant. Anche se potente, questo modello può rallentare l’onboarding, produrre schemi eccessivamente complessi con campi non utilizzati e richiedere una mappatura o trasformazione dei dati aggiuntiva. Questi fattori aumentano la curva di apprendimento e il lavoro di manutenzione in corso.
 
@@ -71,7 +72,7 @@ Utilizzare un descrittore di chiave primaria per garantire che ogni record sia i
 
 >[!NOTE]
 >
->Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[ !UICOTRNOL Identificatore versione]&quot; e &quot;[ !UICOTRNOL Identificatore marca temporale]&quot;.
+>Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[!UICONTROL Identificatore versione]&quot; e &quot;[!UICONTROL Identificatore marca temporale]&quot;.
 
 **Esempio (campo singolo):**
 
@@ -210,4 +211,3 @@ Esamina le seguenti limitazioni prima di utilizzare gli schemi basati su modelli
 * Le relazioni sono limitate a uno a uno e a molti a uno.
 * La disponibilità dipende dall’abilitazione della licenza o della funzione.
 * Le chiavi primarie composite sono necessarie per gli schemi di serie temporali.
-

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API Schema Registry consente di gestire in modo programmatico gli schemi XDM all’interno dell’applicazione Experience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 4%
@@ -302,7 +302,7 @@ Creare prima lo schema con `POST /tenant/schemas`. Aggiungere quindi i descritto
 
 >[!NOTE]
 >
->Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[ !UICOTRNOL Identificatore versione]&quot; e &quot;[ !UICOTRNOL Identificatore marca temporale]&quot;.
+>Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[!UICONTROL Identificatore versione]&quot; e &quot;[!UICONTROL Identificatore marca temporale]&quot;.
 
 <!-- >[!AVAILABILITY]
 >

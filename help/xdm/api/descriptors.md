@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint API per i descrittori
 description: L’endpoint /descriptors nell’API Schema Registry consente di gestire in modo programmatico i descrittori XDM all’interno dell’applicazione Experience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 1%
@@ -525,7 +525,7 @@ Il descrittore di chiave primaria (`xdm:descriptorPrimaryKey`) applica vincoli d
 
 >[!NOTE]
 >
->Nell&#39;editor dello schema dell&#39;interfaccia utente, il descrittore di versione viene visualizzato come &quot;[ !UICOTRNOL Identificatore versione]&quot;.
+>Nell&#39;editor dello schema dell&#39;interfaccia utente, il descrittore di versione viene visualizzato come &quot;[!UICONTROL Identificatore versione]&quot;.
 
 Il descrittore di versione (`xdm:descriptorVersion`) designa un campo per rilevare e impedire conflitti da eventi di modifica fuori ordine.
 
@@ -547,7 +547,7 @@ Il descrittore di versione (`xdm:descriptorVersion`) designa un campo per rileva
 
 >[!NOTE]
 >
->Nell&#39;Editor schema dell&#39;interfaccia utente, il descrittore timestamp viene visualizzato come &quot;[ !UICOTRNOL Identificatore timestamp].&quot;
+>Nell&#39;Editor schema dell&#39;interfaccia utente, il descrittore timestamp viene visualizzato come &quot;[!UICONTROL Identificatore timestamp].&quot;
 
 Il descrittore timestamp (`xdm:descriptorTimestamp`) indica un campo data-ora come timestamp per gli schemi con `"meta:behaviorType": "time-series"`.
 
