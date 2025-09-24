@@ -3,9 +3,9 @@ title: Destinazione Data Landing Zone
 description: Scopri come connettersi alla Data Landing Zone per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4eef1804d6974fd54f5e74e0efe62257190f408b
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '2019'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Esporta set di dati {#export-datasets}
+## Esporta i set di dati {#export-datasets}
 
 Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
 
@@ -71,7 +71,7 @@ Durante l&#39;esportazione di *set di dati*, Experience Platform crea un file `.
 
 >[!AVAILABILITY]
 >
->Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Microsoft Azure. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Microsoft Azure. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 È possibile leggere e scrivere file nel contenitore tramite [!DNL Azure Storage Explorer] o l&#39;interfaccia della riga di comando.
 
@@ -210,7 +210,7 @@ Con il contenitore [!DNL Data Landing Zone] connesso a [!DNL Azure Storage Explo
 
 >[!AVAILABILITY]
 >
->Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Eseguire le operazioni seguenti per ottenere le credenziali per l&#39;istanza [!DNL Data Landing Zone] per la quale è stato eseguito il provisioning in AWS. Quindi, utilizzare un client di scelta per connettersi all&#39;istanza [!DNL Data Landing Zone].
 
@@ -282,7 +282,7 @@ La risposta seguente restituisce le informazioni sulle credenziali per la zona d
 > 
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
@@ -292,6 +292,8 @@ Verificare di aver connesso il contenitore [!DNL Data Landing Zone] a [!DNL Azur
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
+* **[!UICONTROL Chiave di crittografia]**: facoltativamente, è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
+  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell&#39;interfaccia utente.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 * **[!UICONTROL Nome]**: immettere il nome preferito per la destinazione.
 * **[!UICONTROL Descrizione]**: facoltativo. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione.
 * **[!UICONTROL Percorso cartella]**: immettere il percorso della cartella di destinazione che ospiterà i file esportati.
