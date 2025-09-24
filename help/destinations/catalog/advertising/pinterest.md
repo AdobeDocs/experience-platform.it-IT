@@ -2,10 +2,10 @@
 title: Connessione a elenco clienti Pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato il tuo sito o dagli utenti che hanno già interagito con i tuoi contenuti su Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b35687350dbbcebfc86acc90852d86870292142
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 3%
+source-wordcount: '829'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +26,7 @@ Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato
 
 ## Identità supportate {#supported-identities}
 
-La destinazione [!DNL Pinterest Customer List] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+La destinazione [!DNL Pinterest Customer List] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Nel [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione della destinazione, mappa le identità desiderate al campo di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest.
 
@@ -75,7 +75,9 @@ Quando [configura](../../ui/connect-destination.md) questa destinazione, devi fo
 
 ### Aggiorna credenziali di autenticazione {#refresh-authentication-credentials}
 
-I token Pinterest scadono ogni 30 giorni. Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
+I token Pinterest scadono ogni 30 giorni. Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../../ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../../ui/destinations-workspace.md#browse)**.
+
+Una volta scaduto il token, l’esportazione dei dati nella destinazione smette di funzionare. Per evitare questa situazione, eseguire nuovamente l&#39;autenticazione eseguendo le operazioni seguenti:
 
 1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**
 2. (Facoltativo) Utilizza i filtri disponibili nella pagina per visualizzare solo gli account Pinterest.
