@@ -1,7 +1,10 @@
 ---
 title: Collegare Relay ad Experience Platform nell’interfaccia utente
 description: Scopri come creare una connessione sorgente personalizzata del connettore di inoltro utilizzando l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: b16600888bd5e70dd97d67ceb265e3a1848d2a66
+hide: true
+hidefromtoc: true
+exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -80,5 +83,5 @@ Utilizzare questi valori per configurare il webhook nella **console di inoltro**
 
 ## Risorse aggiuntive
 
-* [Creare una nuova specifica di connessione utilizzando l&#39;API del servizio Flusso](https://experienceleague.adobe.com/it/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Connetti alla tua origine tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/it/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Creare una nuova specifica di connessione utilizzando l&#39;API del servizio Flusso](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Connetti alla tua origine tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

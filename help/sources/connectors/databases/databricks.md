@@ -1,26 +1,26 @@
 ---
-title: Azure Databricks
-description: Scopri i passaggi preliminari necessari per collegare i database di Azure ad Experience Platform.
+title: Databricks
+description: Scopri i passaggi preliminari necessari per collegare i database ad Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '628'
 ht-degree: 3%
 
 ---
 
-# [!DNL Azure Databricks]
+# [!DNL Databricks]
 
 >[!AVAILABILITY]
 >
->* L&#39;origine [!DNL Azure Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
+>* L&#39;origine [!DNL Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
 >
->* L&#39;origine [!DNL Azure Databricks] è in versione beta. Leggi i [termini e condizioni](../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
+>* L&#39;origine [!DNL Databricks] è in versione beta. Leggi i [termini e condizioni](../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
-[!DNL Azure Databricks] è una piattaforma basata su cloud progettata per l&#39;analisi dei dati, l&#39;apprendimento automatico e l&#39;intelligenza artificiale. È possibile utilizzare [!DNL Databricks] per l&#39;integrazione con [!DNL Azure] e fornire un ambiente olistico per la creazione, la distribuzione e la gestione di soluzioni di dati su larga scala.
+[!DNL Databricks] è una piattaforma basata su cloud progettata per l&#39;analisi dei dati, l&#39;apprendimento automatico e l&#39;intelligenza artificiale. È possibile utilizzare [!DNL Databricks] per integrare e fornire un ambiente olistico per la creazione, la distribuzione e la gestione di soluzioni di dati su larga scala.
 
 Utilizza l&#39;origine [!DNL Databricks] per connettere il tuo account e acquisire i dati di [!DNL Databricks] in Adobe Experience Platform.
 

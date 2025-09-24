@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1069'
 ht-degree: 34%
 
 ---
@@ -363,7 +363,7 @@ ht-degree: 34%
    - [Iscriversi agli avvisi delle origini](tutorials/ui/alerts.md)
    - [Salvare un flusso di dati come bozza](tutorials/ui/draft.md)
    - [Applicare le etichette di accesso a un flusso di dati](tutorials/ui/labels.md)
-   - [Creare un endpoint privato di Azure](tutorials/ui/private-link.md)
+   - [Creare un endpoint privato](tutorials/ui/private-link.md)
 - Origini self-service (SDK in batch) {#sdk}
    - [Panoramica](sources-sdk/overview.md)
    - Configurare le specifiche di connessione {#config}
