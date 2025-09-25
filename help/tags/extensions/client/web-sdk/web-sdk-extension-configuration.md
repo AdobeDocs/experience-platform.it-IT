@@ -42,7 +42,7 @@ Quando si crea una build di Web SDK personalizzata, questa viene utilizzata da t
 >[!IMPORTANT]
 >
 >La disabilitazione dei componenti di Web SDK può interrompere l&#39;implementazione esistente. Ogni volta che disattivi un componente, accertati di testare a fondo l’implementazione per assicurarti che tutte le funzionalità necessarie funzionino come previsto.
->>Quando disattivi un componente, non puoi più modificarne le impostazioni.
+>&#x200B;>Quando disattivi un componente, non puoi più modificarne le impostazioni.
 
 Per creare una build personalizzata di Web SDK utilizzando l’estensione tag Web SDK, segui la procedura riportata di seguito.
 
@@ -124,9 +124,10 @@ Questa sezione ti consente di definire il comportamento del Web SDK quando si tr
 * **[!UICONTROL Usa cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, SDK potrebbe non essere ancora in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, SDK memorizza l’identificatore solo nel dominio di prime parti.
 
   >[!IMPORTANT]
-  >>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
-  >>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
+  >&#x200B;>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
+  >&#x200B;>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
   >
+
 ## Configurare le impostazioni di personalizzazione {#personalization}
 
 Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato. In questo modo i visitatori potranno vedere solo la pagina personalizzata.
