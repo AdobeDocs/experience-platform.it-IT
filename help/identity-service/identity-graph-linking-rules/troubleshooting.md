@@ -2,9 +2,9 @@
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
 workflow-type: tm+mt
-source-wordcount: '3295'
+source-wordcount: '3451'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,27 @@ Esistono diversi motivi che contribuiscono al motivo per cui i frammenti di even
    * Ad esempio, un evento esperienza deve contenere sia `_id` che `timestamp`.
    * Inoltre, `_id` deve essere univoco per ogni evento (record).
 
-Nel contesto della priorità dello spazio dei nomi, Profile rifiuterà qualsiasi evento che contiene due o più identità con la priorità dello spazio dei nomi più elevata. Ad esempio, se GAID non è contrassegnato come spazio dei nomi univoco e sono presenti due identità con uno spazio dei nomi GAID e valori di identità diversi, l’evento non verrà memorizzato in Profilo.
+Nel contesto della priorità dello spazio dei nomi, Profile rifiuterà qualsiasi evento che contiene due o più identità con la priorità dello spazio dei nomi più elevata nell&#39;**evento in ingresso specificato**. Ad esempio, supponiamo che le impostazioni di identità siano configurate come segue:
+
+| Namespace | Univoco per grafico | Priorità |
+| --- | --- | --- |
+| CRMID | ✔️ | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+Per ogni scenario, supponiamo che gli eventi esperienza contengano i seguenti eventi:
+
+**Scenario 1: 2 GAID, 1 ECID**
+
+* In questo scenario, un evento esperienza in arrivo contiene 2 GAID e 1 ECID. Tra questi spazi dei nomi, GAID è configurato come spazio dei nomi con la priorità più elevata. Tuttavia, poiché sono presenti 2 GAID, il profilo **non** memorizza questo evento esperienza.
+
+**Scenario 2: 2 CRMID, 1 GAID**
+
+* In questo scenario, un evento esperienza in arrivo contiene 2 CRMID e 1 GAID. Tra questi spazi dei nomi, CRMID è configurato come spazio dei nomi con la priorità più elevata. Tuttavia, poiché sono presenti 2 GAID, il profilo **non** memorizza questo evento esperienza.
+
+**Scenario 3: 1 CRMID, 2 GAID**
+
+* In questo scenario, un evento esperienza in arrivo contiene 1 CRMID e 2 GAID. Tra questi spazi dei nomi, CRMID è configurato come spazio dei nomi con la priorità più elevata. Poiché esiste un solo CRMID, il profilo acquisirà gli eventi esperienza perché esiste una sola istanza dello spazio dei nomi con la priorità più elevata.
 
 **Risoluzione dei problemi**
 
@@ -320,7 +340,7 @@ Puoi utilizzare la seguente query nel set di dati di esportazione dello snapshot
 
 Questa sezione contiene un elenco di risposte alle domande frequenti su [!DNL Identity Graph Linking Rules].
 
-## Algoritmo di ottimizzazione identità {#identity-optimization-algorithm}
+## Algoritmo di ottimizzazione delle identità {#identity-optimization-algorithm}
 
 Leggi questa sezione per le risposte alle domande frequenti sull&#39;[Algoritmo di ottimizzazione delle identità](./identity-optimization-algorithm.md).
 
@@ -401,6 +421,6 @@ In generale, il test su una sandbox di sviluppo dovrebbe simulare i casi d’uso
 
 ### Come posso verificare che questa funzione funzioni come previsto?
 
-Utilizza lo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
+Utilizza lo strumento di simulazione del grafico [](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
 
 Per convalidare la funzionalità a livello di sandbox, fai riferimento alla sezione [!UICONTROL Conteggio dei grafici con più spazi dei nomi] nel dashboard delle identità.

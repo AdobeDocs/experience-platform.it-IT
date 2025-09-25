@@ -2,7 +2,7 @@
 title: Guida alle configurazioni delle regole di collegamento del grafico di identità
 description: Scopri i diversi tipi di implementazione che è possibile configurare utilizzando le Regole di collegamento del grafico di identità.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
+source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -133,6 +133,7 @@ Leggere questa sezione per le implementazioni intermedie di [!DNL Identity Graph
 >[!NOTE]
 >
 >Per completare le implementazioni di seguito, devi creare i seguenti spazi dei nomi personalizzati con i simboli di identità (distinzione maiuscole/minuscole) di:
+>
 >* `CRMID`
 >* `CChash` (spazio dei nomi personalizzato che rappresenta un numero di carta di credito con hash).
 
@@ -228,6 +229,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >Per completare le implementazioni di seguito, devi creare spazi dei nomi personalizzati con i simboli di identità (con distinzione tra maiuscole e minuscole) di:
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -477,6 +479,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >Per completare le implementazioni di seguito, devi creare spazi dei nomi personalizzati con i simboli di identità (con distinzione tra maiuscole e minuscole) di:
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`

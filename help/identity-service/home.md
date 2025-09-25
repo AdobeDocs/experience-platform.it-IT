@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;identità;identità;grafi XDM;servizio identità;servizio identità
 solution: Experience Platform
-title: Panoramica del servizio Identity
+title: Panoramica di Identity Service
 description: Il servizio Adobe Experience Platform Identity consente di ottenere una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi diversi e consentendo di fornire esperienze digitali personali e di impatto in tempo reale.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1574'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Prima di immergerti nei dettagli del servizio Identity, leggi la tabella seguent
 | Termine | Definizione |
 | --- | --- |
 | Identità | Un’identità è un dato univoco di un’entità. In genere si tratta di un oggetto reale, ad esempio una singola persona, un dispositivo hardware o un browser web (rappresentato da un cookie). Un&#39;identità completa è costituita da due elementi: uno spazio dei nomi **identity** e un **identity value**. |
-| Spazio dei nomi identità | Uno spazio dei nomi dell’identità è il contesto di una determinata identità. Ad esempio, uno spazio dei nomi di `Email` potrebbe corrispondere al valore di identità: **julien<span>@acme.com**. Analogamente, uno spazio dei nomi di `Phone` potrebbe corrispondere al valore di identità: `555-555-1234`. Per ulteriori informazioni, leggere la [panoramica dello spazio dei nomi delle identità](./features/namespaces.md). |
+| Spazio dei nomi identità | Uno spazio dei nomi delle identità è il contesto di una determinata identità. Ad esempio, uno spazio dei nomi di `Email` potrebbe corrispondere al valore di identità: **julien<span>@acme.com**. Analogamente, uno spazio dei nomi di `Phone` potrebbe corrispondere al valore di identità: `555-555-1234`. Per ulteriori informazioni, leggere la [panoramica dello spazio dei nomi delle identità](./features/namespaces.md). |
 | Valore identità | Un valore di identità è una stringa che rappresenta un’entità reale ed è categorizzata all’interno di Identity Service tramite uno spazio dei nomi. Ad esempio, il valore di identità (stringa) **julien<span>@acme.com** potrebbe essere classificato come uno spazio dei nomi `Email`. |
 | Tipo di identità | Un tipo di identità è un componente di uno spazio dei nomi di identità. Il tipo di identità indica se i dati di identità sono collegati o meno in un grafico delle identità. |
 | Collegamento | Un collegamento o un collegamento è un metodo per stabilire che due identità diverse rappresentano la stessa entità. Ad esempio, un collegamento tra &quot;`Email` = julien<span>@acme.com&quot; e &quot;`Phone` = 555-555-1234&quot; indica che entrambe le identità rappresentano la stessa entità. Ciò suggerisce che il cliente che ha interagito con il tuo marchio sia con l&#39;indirizzo e-mail di julien<span>@acme.com che con il numero di telefono di 555-555-1234 è lo stesso. |
@@ -74,6 +74,10 @@ Il servizio Identity fornisce le seguenti operazioni per raggiungere la sua miss
 
 ## Collegamento delle identità tramite il servizio Identity
 
+>[!IMPORTANT]
+>
+>Il servizio Identity distingue tra maiuscole e minuscole. Ad esempio, **abc<span>@gmail.com** e **ABC<span>@GMAIL.COM** verrebbero trattati come due identità e-mail separate.
+
 Quando lo spazio dei nomi dell’identità e i valori dell’identità corrispondono, viene stabilito un collegamento tra due identità.
 
 Un evento di accesso tipico **invia due identità** ad Experience Platform:
@@ -89,7 +93,7 @@ Prendi in considerazione l&#39;esempio seguente:
    * CRMID: ABC è lo spazio dei nomi e il valore che rappresenta l’utente, in qualità di utente autenticato.
    * ECID: 123 è lo spazio dei nomi e il valore che rappresenta l’utilizzo del browser web sul laptop.
 * Quindi, se accedi con le stesse credenziali allo stesso sito web di e-commerce, ma utilizzi il browser web sul telefono invece del browser web sul laptop, viene registrato un nuovo ECID in Identity Service.
-* Dietro le quinte, Identity Service elabora questo nuovo evento come `{CRM_ID:ABC, ECID:456}`, dove CRM_ID: ABC rappresenta l’ID cliente autenticato e ECID:456 rappresenta il browser Web sul dispositivo mobile.
+* Dietro le quinte, Identity Service elabora questo nuovo evento come `{CRM_ID:ABC, ECID:456}`, dove CRM_ID: ABC rappresenta l&#39;ID cliente autenticato e ECID:456 rappresenta il browser Web sul dispositivo mobile.
 
 Considerando gli scenari di cui sopra, il servizio Identity stabilisce un collegamento tra `{CRM_ID:ABC, ECID:123}` e `{CRM_ID:ABC, ECID:456}`. Questo determina un grafo di identità in cui &quot;possiedi&quot; tre identità: una per l’identificatore della persona (CRMID) e due per gli identificatori dei cookie (ECID).
 
@@ -101,7 +105,7 @@ Un grafo di identità è una mappa di relazioni tra diversi spazi dei nomi di id
 
 Il video seguente ha lo scopo di aiutarti a comprendere le identità e i grafici di identità.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422773?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Comprensione del ruolo del servizio Identity nell’infrastruttura Experience Platform
 
