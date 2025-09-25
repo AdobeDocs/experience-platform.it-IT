@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '2947'
+source-wordcount: '2970'
 ht-degree: 26%
 
 ---
@@ -13,6 +13,13 @@ ht-degree: 26%
 # Note sulla versione dell’estensione Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versione 2.33.0 - 24 settembre 2025
+
+**Nuove funzioni**
+
+- È stato aggiunto il supporto per la visualizzazione delle notifiche push
+- Contiene [versione 2.30.0](../../../../web-sdk/release-notes.md#2-30-0) di Adobe Experience Platform Web SDK.
 
 ## Versione 2.32.0 - 4 settembre 2025
 

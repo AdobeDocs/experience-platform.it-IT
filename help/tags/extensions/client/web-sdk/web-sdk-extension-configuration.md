@@ -2,9 +2,9 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experience Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3107'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Quando si crea una build di Web SDK personalizzata, questa viene utilizzata da t
 >[!IMPORTANT]
 >
 >La disabilitazione dei componenti di Web SDK può interrompere l&#39;implementazione esistente. Ogni volta che disattivi un componente, accertati di testare a fondo l’implementazione per assicurarti che tutte le funzionalità necessarie funzionino come previsto.
->&#x200B;>Quando disattivi un componente, non puoi più modificarne le impostazioni.
+>>Quando disattivi un componente, non puoi più modificarne le impostazioni.
 
 Per creare una build personalizzata di Web SDK utilizzando l’estensione tag Web SDK, segui la procedura riportata di seguito.
 
@@ -60,7 +60,8 @@ Per creare una build personalizzata di Web SDK utilizzando l’estensione tag We
    * **[!UICONTROL Bridge di Media Analytics]**: questo componente abilita Edge Network Streaming Media tramite l&#39;interfaccia di Media Analytics. La disattivazione di questo componente disattiva i seguenti elementi:
       * [Ottieni tracciamento Media Analytics](action-types.md#get-media-analytics-tracker) tipo di azione
    * **[!UICONTROL Personalization]**: questo componente abilita le integrazioni Adobe Target e Adobe Journey Optimizer. La disattivazione di questo componente disattiva i seguenti elementi:
-      * [Applica proposition action](action-types.md) type
+      * [Applica proposte](action-types.md#apply-propositions)tipo di azione
+   * **[!UICONTROL Notifiche push]**: questo componente abilita le notifiche push Web per Adobe Journey Optimizer.
    * **[!UICONTROL Motore di regole]**: questo componente abilita le decisioni su dispositivo di Adobe Journey Optimizer. La disattivazione di questo componente disattiva i seguenti elementi:
       * [Valuta il tipo di azione set di regole](action-types.md#evaluate-rulesets)
       * [Sottoscrivi elementi set di regole](event-types.md#subscribe-ruleset-items) tipo di evento
@@ -123,10 +124,9 @@ Questa sezione ti consente di definire il comportamento del Web SDK quando si tr
 * **[!UICONTROL Usa cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, SDK potrebbe non essere ancora in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, SDK memorizza l’identificatore solo nel dominio di prime parti.
 
   >[!IMPORTANT]
-  >&#x200B;>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
-  >&#x200B;>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
+  >>I cookie di terze parti non sono compatibili con la funzionalità [ID dispositivo di prima parte](../../../../web-sdk/identity/first-party-device-ids.md) in Web SDK.
+  >>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
   >
-
 ## Configurare le impostazioni di personalizzazione {#personalization}
 
 Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato. In questo modo i visitatori potranno vedere solo la pagina personalizzata.
