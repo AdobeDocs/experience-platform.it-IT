@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
+source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 59%
+source-wordcount: '1723'
+ht-degree: 58%
 
 ---
 
@@ -14,6 +14,15 @@ ht-degree: 59%
 >[!NOTE]
 >
 >Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## 25 settembre 2025
+
+v3.4.4
+
+* Aggiungi il campo `releaseNotesUrl` a extension.json con questa pagina come valore.
+* Dipendenze di audit.
+* Rimuovi il filato e metti il processo di creazione in linea con gli altri archivi open source.
+
 
 ## 8 maggio 2025
 
@@ -41,7 +50,7 @@ v3.4.1
       * Cambia
    * Condizioni
       * Cookie
-      * Landing Page
+      * Pagina di destinazione
       * Query String Parameter
       * Traffic Source
       * Variable
