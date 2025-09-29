@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2025
 description: Note sulla versione di Adobe Experience Platform di settembre 2025.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1415'
 ht-degree: 43%
 
 ---
@@ -41,10 +41,10 @@ Adobe Experience Platform Agent Orchestrator è il nuovo livello di agente in Ad
 
 | Funzione | Descrizione |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator è il nuovo livello di agente in Adobe Experience Platform. Progettata per sfruttare la ricca disponibilità di dati e le conoscenze dei clienti della piattaforma, Experience Platform Agent Orchestrator potenzia l&#39;intelligenza e il ragionamento alla base di esperti Adobe Experience Platform Agent appositamente creati, consentendo loro di eseguire attività complesse di processo decisionale e risoluzione dei problemi in modo rapido e su larga scala, il tutto con la supervisione umana. Quando fai domande o richiedi assistenza tramite il linguaggio naturale in un’interfaccia di conversazione come l’Assistente AI, Agent Orchestrator chiama automaticamente agenti specializzati per ottenere le risposte giuste. Agent Orchestrator ricorda la cronologia delle conversazioni e consente di basarsi sulle domande precedenti in modo naturale, senza dover ripetere il contesto, e combina le informazioni provenienti da più agenti per fornire risposte chiare e unificate. Per ulteriori informazioni, leggere la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
-| Audience Agent | Audience Agent consente di visualizzare informazioni approfondite sui tipi di pubblico, tra cui il rilevamento di modifiche significative nelle dimensioni del pubblico, il rilevamento di tipi di pubblico duplicati, l’esplorazione dell’inventario dei tipi di pubblico e il recupero delle dimensioni dei tipi di pubblico. Per ulteriori informazioni, leggere la [documentazione di Audience Agent](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator è il nuovo livello di agente in Adobe Experience Platform. Progettata per sfruttare la ricca disponibilità di dati e le conoscenze dei clienti della piattaforma, Experience Platform Agent Orchestrator potenzia l&#39;intelligenza e il ragionamento alla base di esperti Adobe Experience Platform Agent appositamente creati, consentendo loro di eseguire attività complesse di processo decisionale e risoluzione dei problemi in modo rapido e su larga scala, il tutto con la supervisione umana. Quando fai domande o richiedi assistenza tramite il linguaggio naturale in un’interfaccia di conversazione come l’Assistente AI, Agent Orchestrator chiama automaticamente agenti specializzati per ottenere le risposte giuste. Agent Orchestrator ricorda la cronologia delle conversazioni e consente di basarsi sulle domande precedenti in modo naturale, senza dover ripetere il contesto, e combina le informazioni provenienti da più agenti per fornire risposte chiare e unificate. Per ulteriori informazioni, leggere la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
+| Audience Agent | Audience Agent consente di visualizzare informazioni approfondite sui tipi di pubblico, tra cui il rilevamento di modifiche significative nelle dimensioni del pubblico, il rilevamento di tipi di pubblico duplicati, l’esplorazione dell’inventario dei tipi di pubblico e il recupero delle dimensioni dei tipi di pubblico. Per ulteriori informazioni, leggere la [documentazione di Audience Agent](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Per ulteriori informazioni, leggere la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/home).
+Per ulteriori informazioni, leggere la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Avvisi {#alerts}
 
@@ -139,10 +139,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | --- | --- |
 | Nuove origini in Disponibilità generale | Le seguenti origini sono ora in Disponibilità generale: Diversi connettori di origine sono stati aggiornati da Beta a GA: <ul><li>[Acquisizione dati Acxiom](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acquisizione dei dati di Acxiom Prospect](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Queste sorgenti sono ora completamente supportate e pronte per l’uso in produzione. |
 | Supporto dell&#39;autenticazione con coppia di chiavi [!DNL Snowflake] | Sicurezza avanzata per le connessioni Snowflake con supporto per l’autenticazione con coppia di chiavi. L’autenticazione di base (nome utente/password) diventerà obsoleta entro novembre 2025, pertanto si consiglia ai clienti di migrare all’autenticazione con coppia di chiavi per migliorare la sicurezza. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](../../sources/connectors/databases/snowflake.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Utilizza [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) per inviare dati fedeltà dal tuo account [!DNL Capillary] ad Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | Utilizza [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md) per eseguire lo streaming dei dati degli eventi dall&#39;integrazione di [!DNL Relay Network] in Experience Platform. |
 | Disponibilità generale del supporto per collegamenti privati nelle origini | È ora possibile utilizzare **collegamenti privati** per un gruppo selezionato di origini. Utilizza questa funzione per creare un endpoint privato a cui l’origine può connettersi. Con gli endpoint privati, puoi configurare connessioni e flussi di dati che bypassano l’Internet pubblico, garantendo maggiore sicurezza e isolamento della rete per i dati sensibili. Il supporto per i collegamenti privati è disponibile per le seguenti sorgenti: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Per ulteriori informazioni, leggere le guide sulla creazione di collegamenti privati [nell&#39;API](../../sources/tutorials/api/private-link.md) e [nell&#39;interfaccia utente](../../sources/tutorials/ui/private-link.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
-
-<!--
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
--->
