@@ -6,10 +6,10 @@ breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 22%
+source-wordcount: '241'
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 22%
    * [Installare il Web SDK utilizzando il pacchetto NPM](install/npm.md)
    * [Creare una build Web SDK personalizzata utilizzando il pacchetto NPM](install/create-custom-build.md)
 * Comandi {#commands}
-   * configura {#configure}
+   * configure {#configure}
       * [Panoramica](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
@@ -43,6 +43,7 @@ ht-degree: 22%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [prehidingStyle](commands/configure/prehidingstyle.md)
+      * [pushNotifications](commands/configure/pushnotifications.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -63,6 +64,7 @@ ht-degree: 22%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Configurare gli override dello stream di dati](commands/datastream-overrides.md)
    * [Risposte ai comandi](commands/command-responses.md)
