@@ -1,14 +1,14 @@
 ---
 title: Connessione Demandbase
 description: Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
+source-git-commit: 39012e2308af57af7c9193bdc4894f8f2e358606
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 17%
+source-wordcount: '762'
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 17%
 
 >[!AVAILABILITY]
 >
->&#x200B;>La funzionalità per attivare i tipi di pubblico dell&#39;account nella destinazione Demandbase è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time Customer Data Platform.
+>La funzionalità per attivare i tipi di pubblico dell&#39;account nella destinazione Demandbase è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time Customer Data Platform.
 
 Attiva profili per le campagne Demandbase per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base a [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) .
 
@@ -24,7 +24,7 @@ Attiva profili per le campagne Demandbase per il targeting, la personalizzazione
 
 Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
 
-Ad esempio, sfrutta l’ad-tech DSP di Demandbase per eseguire il targeting di ruoli o persone specifici all’interno di account chiave per la generazione di lead top-of-funnel, oppure per creare e incrementare i gruppi di acquisto. Utilizza la destinazione Demandbase per esplorare altri casi d’uso per eseguire il targeting efficace dei tuoi account.
+Ad esempio, sfrutta l’ad-tech DSP di Demandbase per eseguire il targeting di utenti tipo o ruoli specifici all’interno di account chiave per la generazione di lead top-of-funnel, oppure per creare e incrementare i gruppi di acquisto. Utilizza la destinazione Demandbase per esplorare altri casi d’uso per eseguire il targeting efficace dei tuoi account.
 
 Con questa integrazione, puoi anche personalizzare l’esperienza del sito web utilizzando la ricerca delle informazioni dell’account in tempo reale per ottimizzare il coinvolgimento.
 
@@ -93,6 +93,20 @@ Ora puoi attivare i tipi di pubblico in Demandbase.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attiva pubblico account](/help/destinations/ui/activate-account-audiences.md) per le istruzioni sull&#39;attivazione del pubblico account in questa destinazione.
+
+### Mappature obbligatorie {#mandatory-mappings}
+
+Quando si attivano i tipi di pubblico nella destinazione [!DNL Demandbase], è necessario configurare le seguenti mappature di campi obbligatorie nel passaggio di mappatura:
+
+| Campo di origine | Campo di destinazione | Descrizione |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | Nome dell’account |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | Dominio e-mail dell’organizzazione dell’account |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | Identificatore principale dell’account |
+
+![Mappature Demandbase](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+Queste mappature sono necessarie per il corretto funzionamento della destinazione e devono essere configurate prima di poter procedere con il flusso di lavoro di attivazione.
 
 ## Note aggiuntive e callout importanti {#additional-notes}
 
