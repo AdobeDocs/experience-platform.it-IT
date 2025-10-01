@@ -52,7 +52,7 @@ Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e fornisci
 
 Per utilizzare l&#39;[!UICONTROL autenticazione di base], selezionare **[!UICONTROL Autenticazione di base per Snowflake]** e fornire le credenziali per l&#39;account [!DNL Snowflake]. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e attendere alcuni istanti prima di stabilire la connessione.
 
-Per ulteriori informazioni su [!DNL Snowflake Streaming]raccolta delle credenziali richieste[, leggere la panoramica di ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+Per ulteriori informazioni su [!DNL Snowflake Streaming]raccolta delle credenziali richieste[, leggere la panoramica di &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
 ![La nuova interfaccia account nel flusso di lavoro origini, con l&#39;autenticazione di base selezionata.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
@@ -60,7 +60,7 @@ Per ulteriori informazioni su [!DNL Snowflake Streaming]raccolta delle credenzia
 
 Per utilizzare l&#39;[!UICONTROL autenticazione coppia di chiavi], selezionare **[!UICONTROL Autenticazione coppia di chiavi per Snowflake]** e fornire le credenziali per l&#39;account [!DNL Snowflake]. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e attendere alcuni istanti prima di stabilire la connessione.
 
-Per ulteriori informazioni su [!DNL Snowflake Streaming]raccolta delle credenziali richieste[, leggere la panoramica di ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+Per ulteriori informazioni su [!DNL Snowflake Streaming]raccolta delle credenziali richieste[, leggere la panoramica di &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
 ![Nuova interfaccia account nel flusso di lavoro di origine, autenticazione coppia di chiavi selezionata](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
