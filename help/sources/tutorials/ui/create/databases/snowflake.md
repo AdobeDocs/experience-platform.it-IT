@@ -4,10 +4,10 @@ type: Tutorial
 description: Scopri come creare una connessione sorgente Snowflake utilizzando l’interfaccia utente di Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 3%
+source-wordcount: '1250'
+ht-degree: 2%
 
 ---
 
@@ -111,17 +111,25 @@ Per ulteriori informazioni su questi valori, fare riferimento a [questo document
 
 Per creare un nuovo account [!DNL Snowflake] e connettersi ad Experience Platform su AWS, verificare di essere in una sandbox VA6 e quindi fornire le credenziali necessarie per l&#39;autenticazione.
 
+>[!BEGINTABS]
+
+>[!TAB Autenticazione coppia di chiavi]
+
+Per connettersi utilizzando coppie di chiavi, selezionare **[!UICONTROL Autenticazione coppia di chiavi]**, fornire le credenziali di autenticazione, quindi selezionare **[!UICONTROL Connetti all&#39;origine]**. Per ulteriori informazioni su queste credenziali, leggere la [[!DNL Snowflake] panoramica batch](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
+![Il nuovo passaggio di creazione dell&#39;account per l&#39;autenticazione con coppia di chiavi.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB Autenticazione di base]
+
+>[!WARNING]
+>
+>L&#39;autenticazione di base (o l&#39;autenticazione della chiave dell&#39;account) per l&#39;origine [!DNL Snowflake] diventerà obsoleta a novembre 2025. Devi passare all’autenticazione basata su coppia di chiavi per continuare a utilizzare l’origine e ad acquisire i dati dal database ad Experience Platform. Per ulteriori informazioni sulla deprecazione, leggere la [[!DNL Snowflake] guida alle best practice per ridurre i rischi di compromissione delle credenziali](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+Per connettersi utilizzando una combinazione di nome utente e password, selezionare **[!UICONTROL Autenticazione di base]**, fornire le credenziali di autenticazione, quindi selezionare **[!UICONTROL Connetti all&#39;origine]**. Per ulteriori informazioni su queste credenziali, leggere la [[!DNL Snowflake] panoramica batch](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
 ![Il nuovo passaggio dell&#39;account nel flusso di lavoro delle origini da cui è possibile connettere Snowflake ad Experience Platform su AWS.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-| Credenziali | Descrizione |
-| --- | --- |
-| Host | L&#39;URL host al quale il tuo account [!DNL Snowflake] si connette. |
-| Porta | Numero di porta utilizzato da [!DNL Snowflake] per la connessione a un server tramite Internet. |
-| Nome utente | Il nome utente associato al tuo account [!DNL Snowflake]. |
-| Password | La password associata al tuo account [!DNL Snowflake]. |
-| Database | Il database [!DNL Snowflake] da cui verranno estratti i dati. |
-| Schema | Il nome dello schema associato al database [!DNL Snowflake]. È necessario assicurarsi che anche l&#39;utente a cui si desidera concedere l&#39;accesso al database abbia accesso a questo schema. |
-| Data warehouse | Il data warehouse [!DNL Snowflake] in uso. |
+>[!ENDTABS]
 
 ### Ignora anteprima dei dati di esempio {#skip-preview-of-sample-data}
 
