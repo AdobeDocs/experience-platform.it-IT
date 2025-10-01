@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
 source-wordcount: '1507'
-ht-degree: 40%
+ht-degree: 93%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 40%
 >- [Composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
 
-**Data di rilascio: mercoledì 23 settembre 2025**
+**Data di rilascio: 23 settembre 2025**
 
 Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -35,16 +35,16 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 
 ## Agent Orchestrator {#agent-orchestrator}
 
-Adobe Experience Platform Agent Orchestrator è il nuovo livello di agente in Adobe Experience Platform.
+Agent Orchestrator di Adobe Experience Platform è il nuovo livello di agente in Adobe Experience Platform.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator è il nuovo livello di agente in Adobe Experience Platform. Progettata per sfruttare la ricca disponibilità di dati e le conoscenze dei clienti della piattaforma, Experience Platform Agent Orchestrator potenzia l&#39;intelligenza e il ragionamento alla base di esperti Adobe Experience Platform Agent appositamente creati, consentendo loro di eseguire attività complesse di processo decisionale e risoluzione dei problemi in modo rapido e su larga scala, il tutto con la supervisione umana. Quando fai domande o richiedi assistenza tramite il linguaggio naturale in un’interfaccia di conversazione come l’Assistente AI, Agent Orchestrator chiama automaticamente agenti specializzati per ottenere le risposte giuste. Agent Orchestrator ricorda la cronologia delle conversazioni e consente di basarsi sulle domande precedenti in modo naturale, senza dover ripetere il contesto, e combina le informazioni provenienti da più agenti per fornire risposte chiare e unificate. Per ulteriori informazioni, leggere la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
-| Audience Agent | Audience Agent consente di visualizzare informazioni approfondite sui tipi di pubblico, tra cui il rilevamento di modifiche significative nelle dimensioni del pubblico, il rilevamento di tipi di pubblico duplicati, l’esplorazione dell’inventario dei tipi di pubblico e il recupero delle dimensioni dei tipi di pubblico. Per ulteriori informazioni, leggere la [documentazione di Audience Agent](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Agent Orchestrator | Agent Orchestrator di Adobe Experience Platform è il nuovo livello di agente in Adobe Experience Platform. Progettato per sfruttare la ricca disponibilità di dati e le conoscenze della clientela della piattaforma, Agent Orchestrator di Experience Platform potenzia le informazioni e il ragionamento alla base degli Agenti esperti di Adobe Experience Platform appositamente creati, consentendo loro di eseguire complesse attività decisionali e di risoluzione dei problemi in modo rapido e su larga scala, sempre con intervento umano. Quando poni domande o richiedi assistenza tramite il linguaggio naturale in un’interfaccia conversazionale come l’Assistente IA, Agent Orchestrator richiama automaticamente ad agenti specializzati per ottenere le risposte giuste. Agent Orchestrator ricorda la cronologia delle conversazioni consentendoti di fare riferimento alle domande precedenti in modo naturale, senza dover ripetere il contesto, e combina gli insight provenienti da più agenti per fornire risposte chiare e unificate. Per ulteriori informazioni, consulta la [documentazione su Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
+| Agente Audience | Agente Audience consente di visualizzare gli insight sui tipi di pubblico, tra cui il rilevamento di modifiche significative nelle dimensioni, il rilevamento di duplicati, l’esplorazione dell’inventario e il recupero delle dimensioni. Per ulteriori informazioni, consulta la [documentazione su Agente Audience](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Per ulteriori informazioni, leggere la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/home).
+Per ulteriori informazioni, consulta la [documentazione su Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Avvisi {#alerts}
 
@@ -54,7 +54,7 @@ Experience Platform consente di iscriverti agli avvisi basati su eventi per vari
 
 | Funzione | Descrizione |
 | --- | --- |
-| Avvisi di acquisizione del profilo di streaming | Ora puoi iscriverti a due nuovi avvisi per l’acquisizione in streaming a livello di flusso di dati: <ul><li>Frequenza di errori di acquisizione in streaming superata</li><li>Frequenza di acquisizione streaming ignorata superata</li></ul> Gli avvisi e-mail o in piattaforma ti avviseranno quando vengono superate le soglie per la soglia predefinita o per una soglia personalizzata da te definita. Per ulteriori informazioni, consulta la guida [Avvisi profilo](../../observability/alerts/rules.md#profile). |
+| Avvisi di acquisizione del profilo di streaming | Ora puoi iscriverti a due nuovi avvisi per l’acquisizione in streaming a livello di flusso di dati: <ul><li>Tasso di acquisizione in streaming errata superato</li><li>Tasso di acquisizione in streaming ignorata superato</li></ul> Gli avvisi e-mail o nella piattaforma ti informeranno quando vengono superati i limiti per la soglia predefinita o personalizzata da te definita. Per ulteriori informazioni, consulta la guida [Avvisi del profilo](../../observability/alerts/rules.md#profile). |
 
 {style="table-layout:auto"}
 
@@ -68,16 +68,16 @@ Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insigh
 
 | Destinazione | Descrizione |
 | --- | --- |
-| Connettore [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) | È ora disponibile un nuovo connettore [!DNL Snowflake Batch] che fornisce un&#39;alternativa al connettore di streaming per casi d&#39;uso specifici. |
-| Supporto crittografia [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | È ora possibile allegare chiavi pubbliche in formato RSA per crittografare i file esportati, garantendo lo stesso livello di sicurezza fornito da altre destinazioni di archiviazione cloud per le informazioni riservate. |
-| Dettagli scadenza autenticazione per [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) destinazioni | Le informazioni sulla scadenza dell’autenticazione per le destinazioni [!DNL Pinterest] sono ora visibili direttamente nell’interfaccia di Experience Platform, per consentirti di visualizzare quando scadrà l’autenticazione e di rinnovarla prima che causi interruzioni nei flussi di dati. Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse)**. |
+| Connettore [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) [!BADGE Beta]{type=Informative} | È ora disponibile un nuovo connettore [!DNL Snowflake Batch] che fornisce un’alternativa al connettore di streaming per casi d’uso specifici. |
+| Supporto crittografia [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | È ora possibile allegare chiavi pubbliche con formattazione RSA per crittografare i file esportati, garantendo lo stesso livello di sicurezza fornito da altre destinazioni di archiviazione cloud per le informazioni sensibili. |
+| Dettagli sulla scadenza dell’autenticazione per destinazioni [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) | Le informazioni sulla scadenza dell’autenticazione per le destinazioni [!DNL Pinterest] sono ora visibili direttamente nell’interfaccia di Experience Platform, per consentirti di visualizzare quando scadrà l’autenticazione e di rinnovarla prima che causi interruzioni nei flussi di dati. Puoi monitorare le date di scadenza del token dalla colonna **[!UICONTROL Data di scadenza account]** nelle schede **[[!UICONTROL Account]](../../destinations/ui/destinations-workspace.md#accounts)** o **[[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse)**. |
 
 **Funzionalità nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Funzionalità avanzate di gestione delle destinazioni nell’interfaccia utente di Experience Platform | Migliora il flusso di lavoro di gestione della destinazione con nuove funzionalità di ordinamento nelle schede [[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse) e [[!UICONTROL Account]](../../destinations/ui/destinations-workspace.md#accounts). Ora puoi anche vedere un indicatore visivo quando l’autenticazione dell’account sta per scadere. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| Impostazioni larghezza colonne persistente | Le impostazioni della larghezza delle colonne ora persistono quando si esce da una pagina e si ritorna alla pagina. Ad esempio, se modifichi la larghezza di una colonna nella scheda [[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse), la larghezza personalizzata della colonna rimarrà invariata quando esci e torni a quella scheda. |
+| Funzionalità di gestione delle destinazioni migliorate nell’interfaccia utente di Experience Platform | Migliora il flusso di lavoro di gestione della destinazione con le nuove funzionalità di ricerca nelle schede [[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse) e [[!UICONTROL Account]](../../destinations/ui/destinations-workspace.md#accounts). Ora puoi anche visualizzare un indicatore visivo quando l’autenticazione dell’account sta per scadere. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| Impostazioni della larghezza delle colonne persistenti | Le impostazioni della larghezza delle colonne ora persistono quando esci da una pagina e ci toni successivamente. Ad esempio, se modifichi la larghezza di una colonna nella scheda [[!UICONTROL Sfoglia]](../../destinations/ui/destinations-workspace.md#browse), la larghezza personalizzata della colonna rimarrà invariata quando esci e torni in quella scheda. |
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
@@ -89,7 +89,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Schemi basati su modelli | Semplifica la modellazione dei dati con schemi basati su modelli. Ora puoi creare gli schemi più facilmente con esempi e indicazioni completi. Questa funzione è attualmente disponibile per i titolari di licenze di Campaign Orchestration e verrà estesa ai clienti Data Distiller in GA, rendendo la modellazione dei dati più accessibile ed efficiente. Questa funzione include il supporto per i dati della serie temporale e le funzionalità di acquisizione dei dati di modifica. |
+| Schemi basati su modelli | Semplifica la modellazione dei dati con schemi basati su modelli. Ora puoi creare gli schemi più facilmente con esempi e indicazioni completi. Questa funzione è attualmente disponibile per i titolari di licenze di orchestrazione della campagna e verrà estesa in disponibilità generale alla clientela di Data Distiller, rendendo la modellazione dei dati più accessibile ed efficiente. Questa funzione include il supporto per i dati della serie temporale e le funzionalità di acquisizione dei dati di modifica. |
 | Data Mirror | Acquisisci le modifiche a livello di riga dai data warehouse cloud (ad esempio, Snowflake, Databricks, BigQuery) in Adobe Experience Platform utilizzando schemi basati su modelli. Data Mirror elimina l&#39;ETL a monte e mantiene le relazioni, il controllo delle versioni e le eliminazioni eseguendo il mirroring delle strutture di database esistenti direttamente nel data lake. Sono supportate le serie temporali e il comportamento dello schema degli eventi di registrazione con le funzionalità di acquisizione dei dati di modifica. Questa funzione è attualmente disponibile per i titolari di licenze di Campaign Orchestration e verrà estesa tramite questa versione limitata, che include anche i clienti Customer Journey Analytics. Per ulteriori dettagli, consulta la [documentazione di Data Mirror](../../xdm/data-mirror/overview.md). Contatta il tuo rappresentante Adobe per accedere. |
 
 Per ulteriori informazioni, consulta la [panoramica su XDM](../../xdm/home.md).
@@ -102,9 +102,9 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Miglioramenti al visualizzatore di profili | La versione di settembre 2025 include i seguenti miglioramenti al visualizzatore profili. <ul><li>**Visualizzazione combinata**: attributi, eventi e informazioni sono stati combinati in un&#39;unica visualizzazione.</li><li>**Informazioni generate da IA**: la pagina dei dettagli del profilo ora visualizza le informazioni generate da IA, consentendo di conoscere i dettagli generati dal profilo. Queste informazioni possono includere informazioni quali i punteggi di tendenza e l’analisi delle tendenze.</li><li>**Aggiornamento stile**: la pagina dei dettagli del profilo è stata aggiornata visivamente.</li><li>**Sfoglia**: ora puoi esplorare i profili tramite un carosello interattivo basato su schede con funzionalità di ricerca e personalizzazione.</li></ul> |
+| Miglioramenti al visualizzatore del profilo | La versione di settembre 2025 include i seguenti miglioramenti al visualizzatore del profilo. <ul><li>**Vista combinata**: attributo, eventi e insight sono stati combinati in un’unica vista.</li><li>**Insight generati dall’IA**: la pagina dei dettagli del profilo ora mostra gli insight generati dall’IA, permettendoti di conoscere i dettagli generati dal profilo. Questi insight possono includere informazioni quali i punteggi di propensione e l’analisi delle tendenze.</li><li>**Aggiornamento dello stile**: la pagina dei dettagli del profilo è stata aggiornata visivamente.</li><li>**Sfoglia**: ora puoi esplorare i profili tramite un carosello interattivo basato su schede con funzionalità di ricerca e personalizzazione.</li></ul> |
 
-Per ulteriori informazioni, leggere la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni, consulta la [panoramica sul profilo cliente in tempo reale](../../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation-service}
 
@@ -114,14 +114,14 @@ Per ulteriori informazioni, leggere la [Panoramica del profilo cliente in tempo 
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Pubblico dell’account con eventi esperienza obsoleti | Dopo l’aggiornamento dell’architettura B2B, i tipi di pubblico dell’account con eventi di esperienza non sono più supportati. Invece, utilizza il nuovo approccio per segmenti: crea un pubblico Persone con eventi di esperienza, quindi fai riferimento a tale pubblico Persone durante la creazione di un pubblico Account. Questo fornisce un approccio più flessibile e gestibile alla creazione di tipi di pubblico B2B. |
+| Tipi di pubblico dell’account con funzione obsoleta degli eventi esperienza | Dopo l’aggiornamento dell’architettura B2B, i tipi di pubblico dell’account con eventi esperienza non sono più supportati. Utilizza, invece, il nuovo approccio ai segmenti: crea un pubblico Persone con eventi esperienza, quindi fai riferimento a tale pubblico Persone durante la creazione di un pubblico dell’account. Questo fornisce un approccio più flessibile e gestibile alla creazione di tipi di pubblico B2B. |
 
 **Aggiornamenti importanti**
 
 | Aggiornamento | Descrizione |
 | ------- | ----------- |
-| Le stime del pubblico vengono aggiornate automaticamente | Il miglioramento dell’aggiornamento automatico per le stime del pubblico è stato ripristinato. Le stime del pubblico continueranno a essere generate in Segment Builder, ma la funzionalità di aggiornamento automatico è stata rimossa. |
-| Pubblico esterno | A partire dal 30 settembre, i tipi di pubblico esterni verranno recuperati tramite la Ricerca unificata nel Generatore di segmenti. Se utilizzi Segment Match, puoi abilitare l’esperienza legacy in Segment Builder. |
+| Annullamento dell’aggiornamento automatico delle stime del pubblico | Il miglioramento dell’aggiornamento automatico per le stime del pubblico è stato annullato. Le stime del pubblico continueranno a essere generate nel Generatore dei segmenti, ma la funzionalità di aggiornamento automatico è stata rimossa. |
+| Pubblico esterno | A partire dal 30 settembre, i tipi di pubblico esterno verranno recuperati tramite la Ricerca unificata nel Generatore di segmenti. Se utilizzi la corrispondenza dei segmenti, puoi abilitare l’esperienza precedente nel Generatore dei segmenti. |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
@@ -133,10 +133,10 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuove origini in Disponibilità generale | Le seguenti origini sono ora in Disponibilità generale: Diversi connettori di origine sono stati aggiornati da Beta a GA: <ul><li>[Acquisizione dati Acxiom](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acquisizione dei dati di Acxiom Prospect](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Queste sorgenti sono ora completamente supportate e pronte per l’uso in produzione. |
-| Supporto dell&#39;autenticazione con coppia di chiavi [!DNL Snowflake] | Sicurezza avanzata per le connessioni Snowflake con supporto per l’autenticazione con coppia di chiavi. L’autenticazione di base (nome utente/password) diventerà obsoleta entro novembre 2025, pertanto si consiglia ai clienti di migrare all’autenticazione con coppia di chiavi per migliorare la sicurezza. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](../../sources/connectors/databases/snowflake.md). |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Utilizza [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) per inviare dati fedeltà dal tuo account [!DNL Capillary] ad Experience Platform. |
-| [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | Utilizza [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md) per eseguire lo streaming dei dati degli eventi dall&#39;integrazione di [!DNL Relay Network] in Experience Platform. |
-| Disponibilità generale del supporto per collegamenti privati nelle origini | È ora possibile utilizzare **collegamenti privati** per un gruppo selezionato di origini. Utilizza questa funzione per creare un endpoint privato a cui l’origine può connettersi. Con gli endpoint privati, puoi configurare connessioni e flussi di dati che bypassano l’Internet pubblico, garantendo maggiore sicurezza e isolamento della rete per i dati sensibili. Il supporto per i collegamenti privati è disponibile per le seguenti sorgenti: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Per ulteriori informazioni, leggere le guide sulla creazione di collegamenti privati [nell&#39;API](../../sources/tutorials/api/private-link.md) e [nell&#39;interfaccia utente](../../sources/tutorials/ui/private-link.md). |
+| Nuove origini in disponibilità generale | Le seguenti origini sono ora in disponibilità generale. Diversi connettori di origine sono stati aggiornati dalla versione Beta a alla disponibilità generale: <ul><li>[Acquisizione di dati Acxiom](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acquisizione di dati di potenziali clienti Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Queste origini sono ora completamente supportate e pronte per l’uso in produzione. |
+| Supporto dell’autenticazione con coppia di chiavi [!DNL Snowflake] | Sicurezza avanzata per le connessioni Snowflake con supporto per l’autenticazione con coppia di chiavi. L’autenticazione di base (nome utente/password) diventerà obsoleta entro novembre 2025, pertanto la clientela è invitata a migrare all’autenticazione con coppia di chiavi per migliorare la sicurezza. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](../../sources/connectors/databases/snowflake.md). |
+| [!DNL Capillary Streaming Events] [!BADGE Beta]{type=Informative} | Utilizza l’origine [[!DNL Capillary Streaming Events]  ](../../sources/connectors/loyalty/capillary.md) per inviare i dati di fidelizzazione dall’account [!DNL Capillary] ad Experience Platform. |
+| [!DNL Relay Connector] [!BADGE Beta]{type=Informative} | Utilizza [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md) per eseguire lo streaming dei dati degli eventi dall&#39;integrazione di [!DNL Relay Network] in Experience Platform. |
+| Disponibilità generale del supporto per collegamenti privati nelle origini | È ora possibile utilizzare **collegamenti privati** per un gruppo selezionato di origini. Utilizza questa funzione per creare un endpoint privato a cui l’origine può connettersi. Con gli endpoint privati, puoi configurare connessioni e flussi di dati che bypassano l’Internet pubblico, garantendo maggiore sicurezza e isolamento della rete per i dati sensibili. Il supporto per collegamenti privati è disponibile per le seguenti origini: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Per ulteriori informazioni, consulta le guide sulla creazione di collegamenti privati [nell’API](../../sources/tutorials/api/private-link.md) e [nell’interfaccia utente](../../sources/tutorials/ui/private-link.md). |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
