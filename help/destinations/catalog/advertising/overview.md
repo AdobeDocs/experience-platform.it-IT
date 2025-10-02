@@ -3,9 +3,9 @@ keywords: destinazioni pubblicitarie;destinazioni;destinazioni piattaforma pubbl
 title: Panoramica sulle destinazioni di Advertising
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi su tali piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: a0c1ddc5bcdd8b89e7605491441d56199f301e9e
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,6 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [Estensione DoubleClick Floodlight](doubleclick-floodlight.md)
 * [Estensione Facebook Pixel](facebook-pixel.md)
 * [Estensione OneTag lampeggiante](flashtalking.md)
-* [Estensione Google Ads](google-ads-extension.md)
 * [Estensione Google gtag](gtag-advertising.md)
 * [Estensione tag LinkedIn Insight](linkedin.md)
 * [Estensione per il tracciamento delle conversioni di Pinterest](pinterest-extension.md)
