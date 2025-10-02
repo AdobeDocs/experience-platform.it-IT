@@ -2,11 +2,12 @@
 title: Connessione streaming Snowflake
 description: Esporta dati nel tuo account Snowflake utilizzando inserzioni private.
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+source-git-commit: eed90a5ce988acafface0bac9191f1b3ae28f90c
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 5%
+source-wordcount: '1442'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Al momento il connettore destinazione è in versione Beta ed è disponibile solo per una clientela selezionata. Per richiedere l’accesso, contatta il tuo rappresentante Adobe.
+>Questo connettore di destinazione è in versione beta ed è disponibile solo per i clienti Real-Time CDP Ultimate. La funzionalità e la documentazione sono soggette a modifiche.
 
 ## Panoramica {#overview}
 
