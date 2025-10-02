@@ -2,9 +2,9 @@
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 568a0ba7707402496167145ce2673181b240496e
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1603'
 ht-degree: 6%
 
 ---
@@ -57,7 +57,7 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
    - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
 - La velocità effettiva combinata iniziale per l’acquisizione in streaming è di 1500 record al secondo (rps)
    - Questo throughput di streaming combinato misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo cliente in tempo reale, nelle sandbox di produzione e sviluppo.
-   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
@@ -169,6 +169,12 @@ Inoltre, puoi esaminare i flussi di dati e vedere se è possibile ottimizzare la
 | --- | --- | --- | --- |
 | Conversione da batch a streaming | I carichi di lavoro in batch convertiti in streaming possono aumentare in modo significativo il throughput, influendo sulle prestazioni e sull&#39;allocazione delle risorse. Ad esempio, l’esecuzione di un aggiornamento in blocco del profilo dopo un evento senza limiti di tariffa. | Le strategie di streaming non sono necessarie per i casi di utilizzo in batch in cui non è richiesta l’elaborazione a bassa latenza. | Valuta i requisiti del caso d’uso. Per il marketing in uscita in batch, puoi utilizzare [l&#39;acquisizione in batch](/help/ingestion/batch-ingestion/overview.md) invece dello streaming per gestire l&#39;acquisizione dei dati in modo più efficiente. |
 | Acquisizione di dati non necessaria | L’acquisizione di dati non necessari per la personalizzazione aumenta la velocità effettiva senza aggiungere valore e sprecare risorse. Ad esempio, acquisendo in profili tutto il traffico di Analytics, indipendentemente dalla rilevanza. | L’eccesso di dati non rilevanti crea rumore, rendendo più difficile l’identificazione dei punti di dati con impatto. Può anche causare attriti durante la definizione e la gestione di tipi di pubblico e profili. | Acquisisci solo i dati necessari per i tuoi casi d’uso. Assicurati di filtrare i dati non necessari.<ul><li>**Adobe Analytics**: utilizza [filtro a livello di riga](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) per ottimizzare l&#39;immissione di dati.</li><li>**Origini**: utilizza l&#39;API [[!DNL Flow Service] API per filtrare i dati a livello di riga](/help/sources/tutorials/api/filter.md) per le origini supportate come [!DNL Snowflake] e [!DNL Google BigQuery].</li></li>**Stream dati di Edge**: configura [flussi dati dinamici](/help/datastreams/configure-dynamic-datastream.md) per eseguire il filtro a livello di riga del traffico in arrivo da WebSDK.</li></ul> |
+
+## Panoramica video {#video}
+
+Il video seguente offre una panoramica di Capacity.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Domande frequenti {#faq}
 
