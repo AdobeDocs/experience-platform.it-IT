@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sui set di mappatura
 description: Scopri come utilizzare i set di mappatura con la preparazione dati di Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ Il seguente codice JSON è un esempio di un set di mappatura tipico:
 ## Configurazione delle origini di mappatura
 
 In una mappatura, `source` può essere un campo, un&#39;espressione o un valore statico. In base al tipo di origine fornito, il valore può essere estratto in vari modi.
+
+>[!TIP]
+>
+>Prima di iniziare l’acquisizione dei dati, attendi fino a 10 minuti dopo aver salvato le mappature per assicurarti che siano state completamente salvate.
 
 ### Campo nei dati a colonne
 
