@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del sistema XDM
 description: Risposte alle domande frequenti su Experience Data Model (XDM), compresi i passaggi per risolvere gli errori API più comuni.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2378'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Questo documento contiene le risposte alle domande più frequenti su [!DNL Experience Data Model] (XDM) e sul sistema XDM in Adobe Experience Platform, inclusa una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi Experience Platform, consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** è una specifica open-source che definisce schemi standardizzati per la gestione della customer experience. La metodologia su cui viene generato [!DNL Experience Platform], il **sistema XDM**, rende operativi [!DNL Experience Data Model] schemi per l&#39;utilizzo da parte dei servizi [!DNL Experience Platform]. **[!DNL Schema Registry]** fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere a **[!DNL Schema Library]** entro [!DNL Experience Platform]. Per ulteriori informazioni, consulta la [documentazione XDM](home.md).
+**[!DNL Experience Data Model](XDM)** è una specifica open-source che definisce schemi standardizzati per la gestione della customer experience. La metodologia su cui viene generato [!DNL Experience Platform], il **sistema XDM**, rende operativi [!DNL Experience Data Model] schemi per l&#39;utilizzo da parte dei servizi [!DNL Experience Platform]. **[!DNL Schema Registry]** fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere a **[!DNL Schema Library]** entro [!DNL Experience Platform]. Per ulteriori informazioni, consulta la [documentazione XDM](home.md).
 
 ## Domande frequenti
 
@@ -63,11 +63,13 @@ Per ulteriori informazioni sui tipi di campo, consulta il documento sui [vincoli
 
 XDM pone le seguenti restrizioni sull’utilizzo di questo tipo di dati:
 
-- I tipi di mappa DEVONO essere di tipo oggetto.
+- I tipi di mappa DEVONO essere di tipo `object`.
 - I tipi di mappa NON DEVONO avere proprietà definite (in altre parole, definiscono oggetti &quot;vuoti&quot;).
-- I tipi di mappa DEVONO includere un campo additionalProperties.type che descrive i valori che possono essere inseriti nella mappa, stringa o numero intero.
+- I tipi di mappa DEVONO includere un campo `additionalProperties.type` che descrive i valori che possono essere inseriti nella mappa, `string` o `integer`.
 - La segmentazione multi-entità può essere definita solo in base alle chiavi della mappa e non ai valori.
 - Le mappe non sono supportate per i tipi di pubblico dell’account.
+- Le mappe definite negli oggetti XDM personalizzati sono limitate a un singolo livello. Impossibile creare mappe nidificate. Questa restrizione non si applica alle mappe definite negli oggetti XDM standard.
+- Gli array di mappe non sono supportati.
 
 Per ulteriori dettagli, vedere le [restrizioni di utilizzo per gli oggetti mappa](./ui/fields/map.md#restrictions).
 
@@ -140,7 +142,7 @@ Lo schema non viene abilitato automaticamente per Real-Time Customer Profile. De
 
 ### Posso eliminare gli schemi abilitati per il profilo?
 
-Non puoi eliminare uno schema dopo che è stato abilitato per Real-Time Customer Profile. Una volta abilitato uno schema per il profilo, non è possibile disattivarlo o eliminarlo né rimuovere campi dallo schema. Pertanto, è fondamentale pianificare e verificare attentamente la configurazione dello schema prima di abilitarla per il profilo. Tuttavia, puoi eliminare un set di dati abilitato per il profilo. Le informazioni si trovano qui: <https://experienceleague.adobe.com/it/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Non puoi eliminare uno schema dopo che è stato abilitato per Real-Time Customer Profile. Una volta abilitato uno schema per il profilo, non è possibile disattivarlo o eliminarlo né rimuovere campi dallo schema. Pertanto, è fondamentale pianificare e verificare attentamente la configurazione dello schema prima di abilitarla per il profilo. Tuttavia, puoi eliminare un set di dati abilitato per il profilo. Le informazioni si trovano qui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Se non desideri più utilizzare uno schema abilitato per il profilo, è consigliabile rinominare lo schema per includere **Non utilizzare** o **Inattivo**.
 
