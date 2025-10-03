@@ -454,7 +454,7 @@ Facoltativamente, puoi anche aggiungere alcuni dettagli aggiuntivi al pubblico g
 
 >[!NOTE]
 >
->La scadenza dei dati personalizzati imposta il numero di giorni in cui i profili rimarranno **1} nell&#39;iscrizione al pubblico.** Una volta scaduta la scadenza dei dati, i profili escono dall’iscrizione al pubblico. Questo valore può essere impostato da 1 a 90 giorni.
+>La scadenza dei dati personalizzati imposta il numero di giorni in cui i profili rimarranno **1&rbrace; nell&#39;iscrizione al pubblico.** Una volta scaduta la scadenza dei dati, i profili escono dall’iscrizione al pubblico. Questo valore può essere impostato da 1 a 90 giorni.
 
 Dopo aver inserito i dettagli del pubblico, seleziona **[!UICONTROL Successivo]**.
 
