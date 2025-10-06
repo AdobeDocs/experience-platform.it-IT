@@ -1,13 +1,13 @@
 ---
 title: Connessione Demandbase People
 description: Utilizza questa destinazione per attivare i tipi di pubblico e arricchirli con i dati di terze parti Demandbase, per altri casi d’uso a valle nel marketing e nelle vendite.
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '819'
 ht-degree: 3%
 
 ---
-
 
 # Connessione Demandbase People {#demandbase-people}
 
@@ -99,6 +99,21 @@ Ora puoi attivare i tuoi tipi di pubblico in Demandbase People.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
+
+### Mappature obbligatorie {#mandatory-mappings}
+
+Quando si attivano i tipi di pubblico nella destinazione [!DNL Demandbase People], è necessario configurare le seguenti mappature di campi obbligatorie nel passaggio di mappatura:
+
+| Campo di origine | Campo di destinazione | Descrizione |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identificatore univoco della persona |
+| `xdm: person.name.lastName` | `xdm: lastName` | Cognome della persona |
+| `xdm: person.name.firstName` | `xdm: firstName` | Nome della persona |
+| `xdm: workEmail.address` | `Identity: email` | Indirizzo e-mail aziendale della persona |
+
+![Mappature persone Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+Queste mappature sono necessarie per il corretto funzionamento della destinazione e devono essere configurate prima di poter procedere con il flusso di lavoro di attivazione.
 
 ## Note aggiuntive e callout importanti {#additional-notes}
 
