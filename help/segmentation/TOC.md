@@ -5,10 +5,10 @@ breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 41%
+source-wordcount: '207'
+ht-degree: 43%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 41%
 
 - [Panoramica del servizio di segmentazione](home.md)
 - [Tipi di dati di segmentazione](data-types.md)
-- [Guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=it#segmentation-guardrails)
+- [Guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API di segmentazione {#api}
    - [Panoramica](api/overview.md)
    - [Introduzione](api/getting-started.md)
    - [Creare metadati di pubblico](api/create-audience.md)
    - [Tipi di pubblico](api/audiences.md)
    - [Processi di esportazione](api/export-jobs.md)
-   - [Pubblico esterno](api/external-audiences.md)
+   - [Tipi di pubblico esterni](api/external-audiences.md)
    - [Anteprime e stime](api/previews-and-estimates.md)
    - [Pianificazioni](api/schedules.md)
    - [Definizioni del segmento](api/segment-definitions.md)
@@ -62,7 +62,7 @@ ht-degree: 41%
    - [Segmentazione di più entità](tutorials/multi-entity-segmentation.md)
    - [Rispetto del consenso](tutorials/consents.md)
    - [Valutare una definizione di segmento](tutorials/evaluate-a-segment.md)
-   - [Importazione e utilizzo di tipi di pubblico esterni](tutorials/using-external-audiences.md)
+   - [Creazione di un pubblico esterno](tutorials/create-external-audience.md)
    - [Creare un set di dati per esportare i dati](tutorials/create-dataset-export-segment.md)
    - [Applicazione della conformità all’utilizzo dei dati per i tipi di pubblico](tutorials/governance.md)
 - Profile Query Language {#pql}

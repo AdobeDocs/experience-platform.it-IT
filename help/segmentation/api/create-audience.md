@@ -3,17 +3,17 @@ title: Crea endpoint API per pubblico
 description: Scopri come creare i metadati per un pubblico esterno utilizzando l’API.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '246'
 ht-degree: 7%
 
 ---
 
-
 # Crea endpoint di pubblico
 
-È possibile utilizzare l&#39;endpoint POST `/audiences` per creare i metadati per un pubblico esterno. Utilizza questo endpoint se l’acquisizione del pubblico verrà gestita in un servizio separato, ad esempio l’acquisizione batch.
+È possibile utilizzare l&#39;endpoint POST `/audiences` per creare i metadati per un pubblico esterno, in modo che il pubblico sia visibile in Audience Portal. Utilizza questo endpoint se l’acquisizione del pubblico verrà gestita in un servizio separato, ad esempio l’acquisizione batch.
 
 ## Introduzione
 
