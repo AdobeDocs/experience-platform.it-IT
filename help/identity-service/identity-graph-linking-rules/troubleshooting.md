@@ -2,7 +2,7 @@
 title: Guida alla risoluzione dei problemi per le regole di collegamento del grafico identità
 description: Scopri come risolvere i problemi comuni nelle regole di collegamento del grafico delle identità.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
+source-git-commit: 10cdbef8281ec43a21af9fead80345f1c78b9d2c
 workflow-type: tm+mt
 source-wordcount: '3451'
 ht-degree: 0%
@@ -162,11 +162,11 @@ Per ogni scenario, supponiamo che gli eventi esperienza contengano i seguenti ev
 
 **Scenario 2: 2 CRMID, 1 GAID**
 
-* In questo scenario, un evento esperienza in arrivo contiene 2 CRMID e 1 GAID. Tra questi spazi dei nomi, CRMID è configurato come spazio dei nomi con la priorità più elevata. Tuttavia, poiché sono presenti 2 GAID, il profilo **non** memorizza questo evento esperienza.
+* In questo scenario, un evento esperienza in arrivo contiene 2 CRMID e 1 GAID. Tra questi spazi dei nomi, CRMID è configurato come spazio dei nomi con la priorità più elevata. Tuttavia, poiché sono presenti 2 CRMID, il profilo **non** memorizza questo evento esperienza.
 
 **Scenario 3: 1 CRMID, 2 GAID**
 
-* In questo scenario, un evento esperienza in arrivo contiene 1 CRMID e 2 GAID. Tra questi spazi dei nomi, CRMID è configurato come spazio dei nomi con la priorità più elevata. Poiché esiste un solo CRMID, il profilo acquisirà gli eventi esperienza perché esiste una sola istanza dello spazio dei nomi con la priorità più elevata.
+* In questo scenario, un evento esperienza in arrivo contiene 1 CRMID e 2 GAID. Tra questi spazi dei nomi, CRMID è configurato come spazio dei nomi con la priorità più elevata. Poiché esiste un solo CRMID, il profilo acquisirà gli eventi esperienza perché esiste una sola identità dello spazio dei nomi con la priorità più elevata.
 
 **Risoluzione dei problemi**
 
@@ -421,6 +421,6 @@ In generale, il test su una sandbox di sviluppo dovrebbe simulare i casi d’uso
 
 ### Come posso verificare che questa funzione funzioni come previsto?
 
-Utilizza lo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
+Utilizza lo strumento di simulazione del grafico [](./graph-simulation.md) per verificare che la funzione funzioni a un singolo livello di grafico.
 
 Per convalidare la funzionalità a livello di sandbox, fai riferimento alla sezione [!UICONTROL Conteggio dei grafici con più spazi dei nomi] nel dashboard delle identità.
