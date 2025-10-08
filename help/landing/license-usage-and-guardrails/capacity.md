@@ -2,9 +2,9 @@
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1621'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 6%
 >   - Questa autorizzazione ti consente di **visualizzare** la home di capacità.
 >- **Gestione sandbox**
 >   - Questa autorizzazione ti consente di **modificare** le allocazioni di capacità.
+>   - Inoltre, all&#39;utente **deve** essere assegnato l&#39;accesso a tutte le sandbox per le quali si desidera modificare le allocazioni di capacità.
 >
 >Ulteriori informazioni sulle autorizzazioni in Experience Platform sono disponibili nella [panoramica sul controllo degli accessi](/help/access-control/home.md#permissions)
 >
@@ -57,7 +58,7 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
    - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
 - La velocità effettiva combinata iniziale per l’acquisizione in streaming è di 1500 record al secondo (rps)
    - Questo throughput di streaming combinato misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo cliente in tempo reale, nelle sandbox di produzione e sviluppo.
-   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
@@ -174,7 +175,7 @@ Inoltre, puoi esaminare i flussi di dati e vedere se è possibile ottimizzare la
 
 Il video seguente offre una panoramica di Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475281/?learn=on&enablevpops&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Domande frequenti {#faq}
 
