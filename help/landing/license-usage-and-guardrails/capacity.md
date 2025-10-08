@@ -58,7 +58,7 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
    - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
 - La velocità effettiva combinata iniziale per l’acquisizione in streaming è di 1500 record al secondo (rps)
    - Questo throughput di streaming combinato misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo cliente in tempo reale, nelle sandbox di produzione e sviluppo.
-   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
