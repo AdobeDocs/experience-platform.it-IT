@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti su Query Service e Data Distiller
 description: Questo documento contiene domande e risposte comuni relative a Query Service e Data Distiller. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
+source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
 workflow-type: tm+mt
-source-wordcount: '5186'
+source-wordcount: '5441'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Una possibile causa è la funzione di completamento automatico. La funzione elab
 ### Posso usare [!DNL Postman] per l&#39;API Query Service?
 
 +++Risposta
-Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/36258?captions=ita) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
@@ -573,18 +573,6 @@ Esistono tre approcci per limitare l’accesso. Essi sono i seguenti:
 Sì, sono supportate le modalità SSL. Consulta la [documentazione sulle modalità SSL](./clients/ssl-modes.md) per informazioni dettagliate sulle diverse modalità SSL disponibili e sul livello di protezione fornito.
 +++
 
-### Utilizziamo TLS 1.2 per tutte le connessioni dai client Power BI al servizio query?
-
-+++Risposta
-Sì. I dati in transito sono sempre conformi a HTTPS. La versione attualmente supportata è TLS1.2.
-+++
-
-### Una connessione effettuata sulla porta 80 utilizza ancora https?
-
-+++Risposta
-Sì, una connessione effettuata sulla porta 80 utilizza ancora SSL. È inoltre possibile utilizzare la porta 5432.
-+++
-
 ### Posso controllare l’accesso a set di dati e colonne specifici per una particolare connessione? Come si configura?
 
 +++Risposta
@@ -612,38 +600,76 @@ Sì, è possibile utilizzare il comando `CREATE VIEW` senza accedere a Data Dist
 ### È possibile utilizzare blocchi anonimi in DbVisualizer?
 
 +++Risposta
-Sì. Tuttavia, alcuni client di terze parti, come DbVisualizer, potrebbero richiedere un identificatore separato prima e dopo un blocco SQL per indicare che una parte di uno script deve essere gestita come una singola istruzione. Ulteriori dettagli sono disponibili nella [documentazione sui blocchi anonimi](./key-concepts/anonymous-block.md) o nella [documentazione ufficiale di DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
+Sì.  Tuttavia, alcuni client di terze parti, come DbVisualizer, potrebbero richiedere un identificatore separato prima e dopo un blocco SQL per indicare che una parte di uno script deve essere gestita come una singola istruzione. Ulteriori dettagli sono disponibili nella [documentazione sui blocchi anonimi](./key-concepts/anonymous-block.md) o nella [documentazione ufficiale di DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
++++
+
+## TLS, accesso alla porta e crittografia {#tls-port-questions}
+
+### Una connessione effettuata sulla porta 80 utilizza ancora la crittografia HTTPS e TLS?
+
++++Risposta
+Sì.  Le connessioni sulla porta 80 sono protette tramite la crittografia TLS e il servizio richiede l’imposizione TLS. Le connessioni HTTP semplici non sono accettate. È disponibile il supporto per la porta 80 per soddisfare determinati criteri di rete del cliente. Se l’organizzazione blocca la porta 80, utilizza invece la porta 5432. Entrambe le porte richiedono TLS e forniscono la stessa postura di sicurezza.
++++
+
+### Adobe Query Service espone i dati tramite HTTP non crittografato (porta 80)?
+
++++Risposta
+No. Le connessioni sulla porta 80 richiedono TLS ed eventuali richieste HTTP in formato non crittografato vengono rifiutate lato server. È supportata anche la porta 5432 ed è crittografata TLS.
++++
+
+### L’utilizzo della porta 80 per Query Service e Data Distiller è una configurazione legacy?
+
++++Risposta
+No. La porta 80 con TLS obbligatorio è una configurazione supportata progettata per i clienti con requisiti di rete specifici. Non è una modalità legacy o non sicura. Se l&#39;ambiente limita le connessioni in uscita sulla porta 80, utilizzare la porta 5432; entrambe le porte applicano TLS.
++++
+
+### Usiamo TLS 1.2 per tutte le connessioni dai client Power BI a Query Service?
+
++++Risposta
+Sì.  I dati in transito sono sempre protetti tramite HTTPS e la versione attualmente supportata è TLS 1.2. Tutte le connessioni Power BI a Query Service richiedono un trasporto crittografato.
++++
+
+### La porta 80 non è crittografata se utilizzata con Data Distiller?
+
++++Risposta
+No. Data Distiller applica TLS alla porta 80 e rifiuta eventuali richieste HTTP non crittografate. È supportata anche la porta 5432 ed è crittografata TLS.
++++
+
+### Esistono rischi o limitazioni quando si utilizza la porta 80 con Query Service o Data Distiller?
+
++++Risposta
+Sì.  TLS è applicato alla porta 80 e le connessioni non crittografate non sono supportate. Alcune organizzazioni bloccano il traffico in uscita sulla porta 80 a causa di restrizioni dei criteri. Se questo problema riguarda la rete, utilizzare la porta 5432. Entrambe le porte forniscono lo stesso livello di sicurezza perché TLS è obbligatorio in tutti i casi.
 +++
 
 ## Data Distiller {#data-distiller}
 
 ### Come viene monitorato l’utilizzo delle licenze di Data Distiller e dove posso visualizzare queste informazioni?
 
-+++Risposta\
++++Risposta  
 La metrica principale utilizzata per tenere traccia dell’utilizzo delle query batch è l’Ora di calcolo. Puoi accedere a queste informazioni e al tuo utilizzo corrente tramite la [Dashboard utilizzo licenze](../dashboards/guides/license-usage.md).
 +++
 
 ### Che cos&#39;è un&#39;ora di calcolo?
 
-+++Risposta\
++++Risposta  
 Le ore di calcolo sono la misura del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch.
 +++
 
 ### Come vengono misurate le ore di calcolo?
 
-+++Risposta\
++++Risposta  
 Le ore di calcolo vengono misurate cumulativamente in tutte le Sandbox autorizzate.
 +++
 
 ### Perché talvolta si nota una variazione nel consumo di ore di calcolo anche quando si esegue la stessa query consecutivamente?
 
-+++Risposta\
++++Risposta  
 Le ore di calcolo per una query possono variare a causa di più fattori. Tra questi, il volume di dati elaborato, la complessità delle operazioni di trasformazione all&#39;interno della query SQL e così via. Query Service ridimensiona il cluster in base ai parametri di cui sopra per ogni query, il che può portare a differenze nelle ore di calcolo.
 +++
 
 ### È normale notare una riduzione delle ore di calcolo quando eseguo la stessa query utilizzando gli stessi dati per un periodo di tempo prolungato? Perché potrebbe succedere?
 
-+++Risposta\
++++Risposta  
 L’infrastruttura back-end viene costantemente migliorata per ottimizzare l’utilizzo dell’Ora di calcolo e il tempo di elaborazione. Di conseguenza, potresti notare modifiche nel tempo man mano che vengono implementati miglioramenti delle prestazioni.
 +++
 
@@ -678,7 +704,7 @@ Questa sezione fornisce informazioni sull’esportazione di dati e sui limiti.
 ### Esiste un modo per estrarre i dati da Query Service dopo l’elaborazione delle query e salvare i risultati in un file CSV? {#export-csv}
 
 +++Risposta
-Sì. I dati possono essere estratti da Query Service ed è inoltre possibile memorizzare i risultati in formato CSV tramite un comando SQL.
+Sì.  I dati possono essere estratti da Query Service ed è inoltre possibile memorizzare i risultati in formato CSV tramite un comando SQL.
 
 Esistono due modi per salvare i risultati di una query quando si utilizza un client PSQL. È possibile utilizzare il comando `COPY TO` o creare un&#39;istruzione utilizzando il seguente formato:
 
@@ -765,7 +791,7 @@ Per ulteriori informazioni su come [connettersi ai client esterni con le credenz
 ### Sono previste restrizioni per i caratteri speciali per le password delle credenziali senza scadenza?
 
 +++Risposta
-Sì. Quando si imposta una password per le credenziali senza scadenza, è necessario includere almeno un numero, una lettera minuscola, una lettera maiuscola e un carattere speciale. Il simbolo del dollaro ($) non è supportato. Utilizza al suo posto caratteri speciali come !, @, #, ^ o &amp;.
+Sì.  Quando si imposta una password per le credenziali senza scadenza, è necessario includere almeno un numero, una lettera minuscola, una lettera maiuscola e un carattere speciale. Il simbolo del dollaro ($) non è supportato. Utilizza al suo posto caratteri speciali come !, @, #, ^ o &amp;.
 +++
 
 ### Che tipo di editor SQL di terze parti è possibile connettere a Query Service Editor?
