@@ -2,10 +2,10 @@
 title: Copiare le risorse
 description: Scopri come creare una nuova risorsa tag utilizzando le impostazioni di una risorsa tag esistente in Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 93%
+source-wordcount: '835'
+ht-degree: 87%
 
 ---
 
@@ -43,6 +43,10 @@ Dopo aver configurato il comportamento desiderato, fai clic su **[!UICONTROL Cop
 
 Quando crei una copia di una proprietà completa, ci sono alcuni aspetti del processo che dovresti capire.
 
+>[!IMPORTANT]
+>
+>Le risorse che utilizzano il tipo di variabile di aggiornamento dell’elemento dati richiederanno passaggi aggiuntivi dopo la copia. Modifica ogni azione di aggiornamento della variabile, apporta una modifica a qualsiasi valore nei dati o nell’oggetto XDM e salva le modifiche. La libreria pubblicata dovrebbe quindi funzionare come previsto. In caso di domande su questo processo, contatta l’Assistenza tecnica.
+
 * Le impostazioni delle proprietà verranno copiate esattamente come sono (domini, impostazioni avanzate, ecc.)
 * Regole, elementi dati ed estensioni dall&#39;interno della proprietà di origine verranno copiati nella nuova proprietà target. Gli adattatori, gli ambienti e le librerie non verranno copiati.
 * Le estensioni richieste (necessarie da qualsiasi elemento dati o componente regola esistente) verranno copiate nella proprietà target anche se sono state disinstallate dalla proprietà di origine.
@@ -67,5 +71,5 @@ Tutte le regole e gli elementi dati vengono forniti da un&#39;estensione, quindi
  Prima di iniziare la copia, la finestra di dialogo Copia fornisce una spiegazione di ciò che verrà eseguito. La finestra di dialogo precedente è per una regola, ma lo stesso vale per gli elementi dati.
 
 1. **Le estensioni richieste da queste regole vengono copiate.** Questo permette di sapere che le estensioni richieste andranno di pari passo con la regola. Queste copie seguono le stesse regole di una normale copia dell&#39;estensione descritta in precedenza.
-1. **Le impostazioni dell&#39;estensione NON verranno copiate se questa è già installata.** Ciò significa che se le estensioni necessarie esistono già nella proprietà di destinazione, l&#39;estensione rimane invariata. Se desideri copiare anche le impostazioni di estensione puoi utilizzare l&#39;interruttore **Sostituisci le impostazioni dell&#39;estensione nella proprietà di destinazione** e la spiegazione viene aggiornata di conseguenza.
+1. **Le impostazioni dell&#39;estensione NON verranno copiate se questa è già installata.** Ciò significa che se le estensioni necessarie esistono già nella proprietà di destinazione, l&#39;estensione rimane invariata. Se desideri copiare anche le impostazioni di estensione puoi utilizzare il pulsante di attivazione **Sostituisci le impostazioni dell&#39;estensione nella proprietà di destinazione** e la spiegazione viene aggiornata di conseguenza.
 1. **Gli elementi dati richiesti da queste regole NON verranno copiati.** Questa spiegazione si applica solo alle regole. Le regole si basano spesso su elementi dati per funzionare correttamente. Se copi una regola in una nuova proprietà, devi copiare anche gli elementi dati richiesti come azione separata.
