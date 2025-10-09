@@ -2,9 +2,9 @@
 title: Copiare le risorse
 description: Scopri come creare una nuova risorsa tag utilizzando le impostazioni di una risorsa tag esistente in Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
+source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '834'
 ht-degree: 87%
 
 ---
@@ -45,7 +45,7 @@ Quando crei una copia di una proprietà completa, ci sono alcuni aspetti del pro
 
 >[!IMPORTANT]
 >
->Le risorse che utilizzano il tipo di variabile di aggiornamento dell’elemento dati richiederanno passaggi aggiuntivi dopo la copia. Modifica ogni azione di aggiornamento della variabile, apporta una modifica a qualsiasi valore nei dati o nell’oggetto XDM e salva le modifiche. La libreria pubblicata dovrebbe quindi funzionare come previsto. In caso di domande su questo processo, contatta l’Assistenza tecnica.
+>Le risorse che utilizzano il tipo di variabile di aggiornamento dell’elemento dati richiederanno passaggi aggiuntivi dopo la copia. Modifica ogni azione di aggiornamento della variabile, apporta una modifica a qualsiasi valore nei dati o nell’oggetto XDM e salva le modifiche. La libreria pubblicata dovrebbe quindi funzionare come previsto. In caso di domande su questo processo, contatta il supporto tecnico.
 
 * Le impostazioni delle proprietà verranno copiate esattamente come sono (domini, impostazioni avanzate, ecc.)
 * Regole, elementi dati ed estensioni dall&#39;interno della proprietà di origine verranno copiati nella nuova proprietà target. Gli adattatori, gli ambienti e le librerie non verranno copiati.
