@@ -345,7 +345,7 @@ ht-degree: 0%
 
 **Criterio di unione**: i criteri di unione sono regole utilizzate da Experience Platform per determinare come combinare i frammenti di dati dei clienti provenienti da più origini per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina i dati a cui assegnare la priorità per l’inclusione nel profilo.
 
-**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) migliora i diritti di privacy per i consumatori relativi ai dati di integrità. Impone la divulgazione, il consenso dei consumatori e i diritti di cancellazione per i dati sanitari e vieta la vendita di dati sanitari senza autorizzazione. Inoltre, la legge rende illegale l&#39;uso di recinti geografici intorno alle strutture sanitarie.
+**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) migliora i diritti di privacy per i consumatori relativi ai dati di integrità. Impone la divulgazione, il consenso dei consumatori e i diritti di cancellazione per i dati sanitari e vieta la vendita di dati sanitari senza autorizzazione. Inoltre, la legge rende illegale l&#39;uso di recinti geografici intorno alle strutture sanitarie.
 
 **Mixin**: vedere &quot;Gruppo di campi schema&quot;.
 

@@ -41,7 +41,7 @@ Un criterio di governance dei dati è definito dai seguenti elementi:
 1. Un’azione di marketing specifica
 1. Etichette di utilizzo dati per cui l&#39;esecuzione dell&#39;azione è limitata
 
-Per informazioni su come gestire i criteri nell&#39;API, consulta la [guida dell&#39;endpoint ](./policies.md)
+Per informazioni su come gestire i criteri nell&#39;API, consulta la [guida dell&#39;endpoint &#x200B;](./policies.md)
 
 ## Valutazione
 

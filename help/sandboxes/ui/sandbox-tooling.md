@@ -180,7 +180,7 @@ Vengono visualizzate le opzioni per creare nuovi o utilizzare quelli esistenti. 
 
 Nella finestra di dialogo **[!UICONTROL Gruppo di campi]** viene visualizzato un elenco di gruppi di campi disponibili per l&#39;oggetto. Seleziona i gruppi di campi richiesti, quindi seleziona **[!UICONTROL Salva]**.
 
-![Elenco di campi visualizzato nella finestra di dialogo [!UICONTROL Gruppo di campi], che evidenzia la selezione [!UICONTROL Salva]. ](../images/ui/sandbox-tooling/field-group-list.png)
+![Elenco di campi visualizzato nella finestra di dialogo [!UICONTROL Gruppo di campi], che evidenzia la selezione [!UICONTROL Salva]. &#x200B;](../images/ui/sandbox-tooling/field-group-list.png)
 
 Sei tornato alla pagina [!UICONTROL Oggetto pacchetto e dipendenze]. Da qui, selezionare **[!UICONTROL Fine]** per completare l&#39;importazione del pacchetto.
 

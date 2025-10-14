@@ -39,7 +39,7 @@ Prima di poter trasferire i dati di [!DNL SAP Commerce] ad Experience Platform, 
 * Chiave del servizio [!DNL SAP]. La chiave del servizio [!DNL SAP] ti consente di accedere all&#39;API [!DNL SAP Subscription Billing] tramite Experience Platform. [!DNL SAP Commerce] richiede quanto segue:
    * ID client
    * Segreto client
-   * URL. Schema URL: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato successivamente per ottenere i valori per `region` e `tokenEndpoint` quando [crei una connessione di base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) utilizzando l&#39;API o quando [connetti il tuo account [!DNL SAP Commerce] ](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) tramite l&#39;interfaccia utente di Experience Platform.
+   * URL. Schema URL: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato successivamente per ottenere i valori per `region` e `tokenEndpoint` quando [crei una connessione di base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) utilizzando l&#39;API o quando [connetti il tuo account [!DNL SAP Commerce] &#x200B;](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) tramite l&#39;interfaccia utente di Experience Platform.
 
 +++Seleziona per visualizzare un esempio della chiave del servizio
 

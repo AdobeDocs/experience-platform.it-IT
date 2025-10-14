@@ -21,7 +21,7 @@ Questo documento descrive la struttura e il caso d&#39;uso del gruppo di campi d
 
 >[!NOTE]
 >
->Puoi anche cercare questo gruppo di campi [ nell&#39;interfaccia utente di Experience Platform](../../ui/explore.md) o visualizzare lo schema completo nel [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>Puoi anche cercare questo gruppo di campi [&#x200B; nell&#39;interfaccia utente di Experience Platform](../../ui/explore.md) o visualizzare lo schema completo nel [archivio XDM pubblico](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Struttura del gruppo di campi
 

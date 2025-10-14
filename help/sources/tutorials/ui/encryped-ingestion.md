@@ -133,7 +133,7 @@ Autenticazione con l’origine dell’archiviazione cloud desiderata. Durante il
 
 Quindi, seleziona un file di esempio dai dati di origine. Poiché i dati sono crittografati, Experience Platform richiederà un file di esempio per creare uno schema XDM da mappare ai dati di origine.
 
-![Il file è crittografato? e il pulsante Seleziona file di esempio selezionato. ](../../images/tutorials/edi/select_sample_file.png)
+![Il file è crittografato? e il pulsante Seleziona file di esempio selezionato. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
 
 Dopo aver selezionato il file di esempio, configura le impostazioni dei dati, ad esempio il formato di dati, il delimitatore e il tipo di compressione corrispondenti. Attendere alcuni minuti per il rendering completo dell&#39;interfaccia di anteprima, quindi selezionare **[!UICONTROL Salva]**.
 

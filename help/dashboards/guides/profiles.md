@@ -285,7 +285,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 
 Il widget **[!UICONTROL Conteggio profili]** visualizza il numero totale di profili uniti nell&#39;archivio profili al momento dello snapshot. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un singolo profilo per ogni singolo utente.
 
-Per ulteriori informazioni, consulta la sezione [ sui criteri di unione più indietro in questo documento](#merge-policies).
+Per ulteriori informazioni, consulta la sezione [&#x200B; sui criteri di unione più indietro in questo documento](#merge-policies).
 
 >[!NOTE]
 >

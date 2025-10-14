@@ -108,5 +108,5 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 Seguendo questa esercitazione, hai creato una connessione di base [!DNL Apache Hive] su [!DNL Azure HDInsights] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

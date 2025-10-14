@@ -17,7 +17,7 @@ Questo documento descrive i passaggi per la connessione dello strumento di datab
 
 ## Introduzione
 
-Questa guida richiede che tu abbia già accesso all&#39;app desktop [!DNL DbVisualizer] e che tu abbia familiarità con le modalità di navigazione nella relativa interfaccia. Per scaricare l&#39;app desktop [!DNL DbVisualizer] o per ulteriori informazioni, consulta la [documentazione ufficiale [!DNL DbVisualizer] ](https://www.dbvis.com/download/).
+Questa guida richiede che tu abbia già accesso all&#39;app desktop [!DNL DbVisualizer] e che tu abbia familiarità con le modalità di navigazione nella relativa interfaccia. Per scaricare l&#39;app desktop [!DNL DbVisualizer] o per ulteriori informazioni, consulta la [documentazione ufficiale [!DNL DbVisualizer] &#x200B;](https://www.dbvis.com/download/).
 
 Per acquisire le credenziali necessarie per la connessione di [!DNL &#x200B; DbVisualizer] ad Experience Platform, è necessario avere accesso all&#39;area di lavoro Query nell&#39;interfaccia utente di Experience Platform. Se al momento non disponi dell’accesso all’area di lavoro Query, contatta l’amministratore dell’organizzazione.
 

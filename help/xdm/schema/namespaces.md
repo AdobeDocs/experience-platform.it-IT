@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->In XDM, lo spazio dei nomi (l’argomento di questa pagina) viene utilizzato per distinguere i campi in uno schema. Questo è diverso dal concetto di spazio dei nomi delle identità in Identity Service, in cui lo spazio dei nomi viene utilizzato per distinguere i valori di identità. Per ulteriori informazioni, consulta la documentazione sullo spazio dei nomi [ in Identity Service](../../identity-service/features/namespaces.md).
+>In XDM, lo spazio dei nomi (l’argomento di questa pagina) viene utilizzato per distinguere i campi in uno schema. Questo è diverso dal concetto di spazio dei nomi delle identità in Identity Service, in cui lo spazio dei nomi viene utilizzato per distinguere i valori di identità. Per ulteriori informazioni, consulta la documentazione sullo spazio dei nomi [&#x200B; in Identity Service](../../identity-service/features/namespaces.md).
 
 A tutti i campi degli schemi Experience Data Model (XDM) è associato uno spazio dei nomi. Questi spazi dei nomi ti consentono di estendere gli schemi ed evitare conflitti di campi in quanto diversi componenti dello schema vengono uniti. Questo documento fornisce una panoramica degli spazi dei nomi in XDM e di come sono rappresentati nell&#39;API [Schema Registry](../api/overview.md).
 

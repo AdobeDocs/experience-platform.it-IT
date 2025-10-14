@@ -94,7 +94,7 @@ Le sezioni seguenti illustrano i diversi modi in cui è possibile caricare le li
 Sono contemplati i seguenti metodi:
 
 - [Implementazione di librerie di terze parti](#implementing-third-party-libraries)
-   - [Prerequisiti ](#prerequisites)
+   - [Prerequisiti &#x200B;](#prerequisites)
    - [Processo di caricamento del codice di base](#base-code-loading-process)
       - [Esempio di codice di base](#base-code-example)
    - [Opzioni di implementazione dei tag](#tags-implementation-options)

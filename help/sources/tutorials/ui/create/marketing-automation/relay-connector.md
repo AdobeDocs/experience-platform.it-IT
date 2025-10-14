@@ -53,7 +53,7 @@ Dopo il caricamento dei dati, puoi utilizzare la sezione [!UICONTROL Anteprima d
 
 Quindi, utilizza l&#39;interfaccia *[!UICONTROL Dettagli flusso di dati]* per fornire un **nome** e una **descrizione opzionale** per il flusso di dati. Selezionare inoltre il **[!UICONTROL set di dati di destinazione]** che si desidera utilizzare. Puoi creare un nuovo set di dati o utilizzare un set di dati esistente.
 
-![Interfaccia dettagli flusso di dati. ](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![Interfaccia dettagli flusso di dati. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Mappatura
 

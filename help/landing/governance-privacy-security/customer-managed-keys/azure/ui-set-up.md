@@ -28,7 +28,7 @@ Per abilitare CMK, l&#39;insieme di credenziali delle chiavi [[!DNL Azure] deve 
 * [Abilita protezione eliminazione](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Abilita eliminazione temporanea](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configurare l&#39;accesso utilizzando [!DNL Azure] il controllo dell&#39;accesso basato su ruolo](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Configura un insieme di credenziali delle chiavi  [!DNL Azure] ](./azure-key-vault-config.md)
+* [Configura un insieme di credenziali delle chiavi  [!DNL Azure] &#x200B;](./azure-key-vault-config.md)
 
 ## Configurare l’app CMK {#register-app}
 

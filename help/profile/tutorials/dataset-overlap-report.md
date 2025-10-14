@@ -53,7 +53,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione dei set di dati. Il report include un oggetto `data`, contenente elenchi separati da virgole di set di dati e il rispettivo conteggio dei profili. Per informazioni dettagliate su come leggere il report, vedere la sezione relativa all&#39;interpretazione dei dati del report di sovrapposizione dei set di dati [ più avanti in questa esercitazione.](#interpret-the-report)
+In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione dei set di dati. Il report include un oggetto `data`, contenente elenchi separati da virgole di set di dati e il rispettivo conteggio dei profili. Per informazioni dettagliate su come leggere il report, vedere la sezione relativa all&#39;interpretazione dei dati del report di sovrapposizione dei set di dati [&#x200B; più avanti in questa esercitazione.](#interpret-the-report)
 
 ```json
 {

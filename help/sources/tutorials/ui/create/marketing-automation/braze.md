@@ -86,7 +86,7 @@ Una volta aggiunto il nuovo campo calcolato, seleziona **[!UICONTROL Mappa campo
 >
 >I timestamp di brasatura non sono espressi in millisecondi, ma in secondi. Affinché i timestamp in Experience Platform vengano rispecchiati accuratamente, devi creare campi calcolati in millisecondi. Un calcolo di &quot;tempo * 1000&quot; convertirà correttamente in millisecondi, adatti per la mappatura a un campo marca temporale in Experience Platform.
 >
->![Creazione di un campo calcolato per la marca temporale ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Creazione di un campo calcolato per la marca temporale &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![Mappatura senza errori.](../../../../images/tutorials/create/braze/completed_mapping.png)
 

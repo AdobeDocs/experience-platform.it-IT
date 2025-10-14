@@ -96,7 +96,7 @@ Dopo la pubblicazione, il playbook estrae e associa automaticamente lo schema de
 
 Tutti i playbook creati sono disponibili nella scheda **Playbook**.
 
-![ scheda &quot;Playbook&quot; con l&#39;elenco dei playbook creati.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+![&#x200B; scheda &quot;Playbook&quot; con l&#39;elenco dei playbook creati.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
 È possibile selezionare qualsiasi playbook dal catalogo per creare istanze da riutilizzare. Consulta la documentazione per [scoprire come creare istanze](/help/use-case-playbooks/playbooks/create-share-reuse.md).
 

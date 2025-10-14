@@ -225,4 +225,4 @@ Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando 
 
 Dopo aver letto questo documento, ti verranno presentati i concetti importanti relativi all&#39;elaborazione delle richieste di accesso a dati personali in [!DNL Experience Platform]. Per comprendere meglio come gestire i dati di identità e creare processi relativi alla privacy, continua a leggere la documentazione fornita in questa guida.
 
-Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [ nel data lake](../catalog/privacy.md).
+Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [&#x200B; nel data lake](../catalog/privacy.md).

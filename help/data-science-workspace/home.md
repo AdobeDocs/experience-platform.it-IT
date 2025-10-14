@@ -199,4 +199,4 @@ Per ulteriori informazioni, ad esempio un flusso di lavoro giornaliero completo,
 
 Il video seguente è stato progettato per supportare la comprensione di [!DNL Data Science Workspace].
 
->[!VIDEO](https://video.tv.adobe.com/v/3412912?quality=12&amp;enable10seconds=on&amp;speedcontrol=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3412912?quality=12&enable10seconds=on&speedcontrol=on&captions=ita)

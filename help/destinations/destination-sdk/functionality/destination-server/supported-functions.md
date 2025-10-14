@@ -27,7 +27,7 @@ Il modello di trasformazione dei messaggi viene utilizzato nella [configurazione
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere i concetti e le funzioni di questa pagina di riferimento, leggere prima il documento [message format](message-format.md). È necessario conoscere la struttura [ di un profilo](message-format.md#profile-structure) in Experience Platform prima di poter utilizzare i modelli [!DNL Pebble] per trasformare e i dati esportati.
+Per comprendere i concetti e le funzioni di questa pagina di riferimento, leggere prima il documento [message format](message-format.md). È necessario conoscere la struttura [&#x200B; di un profilo](message-format.md#profile-structure) in Experience Platform prima di poter utilizzare i modelli [!DNL Pebble] per trasformare e i dati esportati.
 
 Prima di passare alle funzioni descritte di seguito, esaminare gli esempi di modelli nella sezione [Utilizzo di un linguaggio di modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico](message-format.md#using-templating). Gli esempi qui presenti iniziano con una struttura molto semplice e aumentano di complessità.
 

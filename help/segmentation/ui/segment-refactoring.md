@@ -24,7 +24,7 @@ Prima della versione di gennaio 2024, tutti i vincoli di tempo a livello di rego
 
 In precedenza, a un singolo evento potevano essere associate più regole di vincoli di tempo. Con questo aggiornamento recente, il tentativo di aggiungere un vincolo di tempo a una regola genera ora un **errore**.
 
-![Il vincolo di tempo a livello di regola è evidenziato. Viene evidenziato anche l’errore che si verifica successivamente. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![Il vincolo di tempo a livello di regola è evidenziato. Viene evidenziato anche l’errore che si verifica successivamente. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 I vincoli di tempo possono ora essere applicati solo a livello di area di lavoro o di scheda.
 

@@ -216,7 +216,7 @@ In alternativa, è possibile visualizzare una versione basata su codice di una r
 
 La vista Codice fornisce un pulsante che consente di copiare il valore della definizione del segmento da utilizzare nelle chiamate API. Per ottenere la versione più recente della definizione del segmento, assicurati di aver salvato le modifiche più recenti alla definizione del segmento.
 
-![Il pulsante Copia codice è evidenziato e consente di ](../images/ui/segment-builder/copy-code.png)
+![Il pulsante Copia codice è evidenziato e consente di &#x200B;](../images/ui/segment-builder/copy-code.png)
 
 ### Funzioni di aggregazione
 

@@ -23,12 +23,12 @@ Per visualizzare e visitare la sezione [!UICONTROL Crittografia] in Adobe Experi
 
 Per ulteriori informazioni sull&#39;assegnazione di ruoli e autorizzazioni in Experience Platform, consulta la [documentazione sulla configurazione delle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=it).
 
-Per abilitare CMK per le istanze Experience Platform ospitate da Azure, è necessario configurare l&#39;insieme di credenziali delle chiavi [[!DNL Azure] ](./azure-key-vault-config.md) con le impostazioni seguenti:
+Per abilitare CMK per le istanze Experience Platform ospitate da Azure, è necessario configurare l&#39;insieme di credenziali delle chiavi [[!DNL Azure] &#x200B;](./azure-key-vault-config.md) con le impostazioni seguenti:
 
 * [Abilita protezione eliminazione](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Abilita eliminazione temporanea](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configurare l&#39;accesso utilizzando [!DNL Azure] il controllo dell&#39;accesso basato su ruolo](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Configura un insieme di credenziali delle chiavi  [!DNL Azure] ](./azure-key-vault-config.md)
+* [Configura un insieme di credenziali delle chiavi  [!DNL Azure] &#x200B;](./azure-key-vault-config.md)
 
 ## Configurare l’app CMK {#register-app}
 

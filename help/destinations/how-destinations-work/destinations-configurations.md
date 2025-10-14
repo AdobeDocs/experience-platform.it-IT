@@ -44,13 +44,13 @@ Le impostazioni disponibili per gli utenti durante la connessione a una destinaz
 
 Ad esempio, per [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations), uno sviluppatore di destinazione può configurare quali identità accetta la propria destinazione e solo quelle identità verranno visualizzate all&#39;utente in [passaggio di mappatura del flusso di lavoro di attivazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), come mostrato di seguito:
 
-![Registrazione schermata della selezione identità per il campo di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Registrazione schermata della selezione identità per il campo di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione. &#x200B;](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 Analogamente, per [destinazioni basate su file](/help/destinations/destination-types.md#file-based), lo sviluppatore di destinazione può determinare quali [opzioni di aggiunta del nome file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) desidera rendere disponibili per la propria destinazione o quali [opzioni di formattazione file](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) desidera rendere disponibili e l&#39;utente potrà selezionare solo tra queste opzioni, come illustrato di seguito:
 
 ![Registrazione dello schermo dell&#39;opzione di formattazione del file durante la connessione a una destinazione basata su file.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Registrazione dello schermo dell&#39;opzione di aggiunta del nome file nel passaggio di pianificazione del flusso di lavoro di attivazione. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Registrazione dello schermo dell&#39;opzione di aggiunta del nome file nel passaggio di pianificazione del flusso di lavoro di attivazione. &#x200B;](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 Ulteriori informazioni sulle diverse opzioni e passaggi disponibili nel flusso di lavoro di attivazione:
 

@@ -250,7 +250,7 @@ Per configurare la destinazione in modo da supportare l&#39;attivazione di [tipi
 }
 ```
 
-Per ulteriori informazioni sulla funzionalità [, consulta le descrizioni delle proprietà nella ](#attributes-schema)tabella`segmentNamespaceDenyList` più avanti in questa pagina.
+Per ulteriori informazioni sulla funzionalità [, consulta le descrizioni delle proprietà nella &#x200B;](#attributes-schema)tabella`segmentNamespaceDenyList` più avanti in questa pagina.
 
 ## Passaggi successivi {#next-steps}
 

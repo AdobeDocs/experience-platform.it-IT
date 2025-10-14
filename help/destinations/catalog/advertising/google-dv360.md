@@ -32,7 +32,7 @@ Osservare i dettagli seguenti specifici per [!DNL Google Display & Video 360] de
 
 >[!IMPORTANT]
 >
->Se desideri creare la tua prima destinazione con Google Display &amp; Video 360 e non hai abilitato in passato la funzionalità di sincronizzazione ID [1&rbrace; nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) Se in precedenza avevi configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+>Se desideri creare la tua prima destinazione con Google Display &amp; Video 360 e non hai abilitato in passato la funzionalità di sincronizzazione ID [1&rbrace; nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) Se in precedenza avevi configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 ## Identità supportate {#supported-identities}
 

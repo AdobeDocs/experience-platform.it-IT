@@ -44,9 +44,9 @@ Per esportare i dati da Experience Platform al tuo account [!DNL Marketing Cloud
 
 Per continuare, è obbligatorio un account [!DNL Marketing Cloud Account Engagement] con una sottoscrizione al prodotto [Marketing Cloud Account Engagement](https://www.salesforce.com/products/marketing-cloud/marketing-automation/).
 
-L&#39;account [!DNL Salesforce] deve avere [!DNL Salesforce] `Account Engagement Administrator role`. È necessario per [creare campi prospect personalizzati](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5).
+L&#39;account [!DNL Salesforce] deve avere [!DNL Salesforce] `Account Engagement Administrator role`. È necessario per [creare campi prospect personalizzati](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
 
-Infine, il tuo account dovrebbe anche essere in grado di accedere a [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&amp;type=5).
+Infine, il tuo account dovrebbe anche essere in grado di accedere a [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5).
 
 Rivolgiti al [[!DNL Salesforce] Supporto](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) o all&#39;amministratore dell&#39;account [!DNL Salesforce] se non disponi di un account o se nell&#39;account manca l&#39;abbonamento [!DNL Marketing Cloud Account Engagement] o [!DNL Account Engagement Administrator role].
 
@@ -68,7 +68,7 @@ Consulta i [!DNL Marketing Cloud Account Engagement] [limiti di tasso](https://d
 
 >[!IMPORTANT]
 >
->Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha limitato l&#39;accesso agli intervalli IP attendibili, è necessario contattarli per inserire nell&#39;elenco Consentiti [gli IP di Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md). Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5).
+>Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha limitato l&#39;accesso agli intervalli IP attendibili, è necessario contattarli per inserire nell&#39;elenco Consentiti [gli IP di Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md). Se hai bisogno di ulteriori indicazioni, consulta la documentazione [!DNL Salesforce] [Limita l&#39;accesso agli intervalli IP attendibili per un&#39;app connessa](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5).
 
 ## Identità supportate {#supported-identities}
 

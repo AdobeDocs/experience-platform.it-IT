@@ -263,5 +263,5 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 Dopo aver creato una connessione tra il database [!DNL PostgreSQL] e Experience Platform, è ora possibile procedere con i passaggi successivi e portare i dati di [!DNL PostgreSQL] in Experience Platform. Per ulteriori informazioni, consulta la seguente documentazione:
 
-* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

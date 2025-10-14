@@ -105,5 +105,5 @@ In caso di esito positivo, la risposta restituisce la connessione appena creata,
 
 Seguendo questa esercitazione, è stata creata una connessione di base [!DNL Shopify] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare dati E-Commerce in Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/ecommerce.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
+* [Crea un flusso di dati per portare dati E-Commerce in Experience Platform utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../collect/ecommerce.md)

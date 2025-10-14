@@ -55,9 +55,9 @@ Quando si attivano i tipi di pubblico nella destinazione [!DNL (API) Salesforce 
 
 [!DNL Salesforce] richiede questo valore per leggere e interpretare correttamente i tipi di pubblico provenienti da Experience Platform e per aggiornare il loro stato di pubblico entro [!DNL Salesforce Marketing Cloud]. Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
-Per ogni pubblico attivato da Experience Platform a [!DNL Salesforce], è necessario disporre di un attributo di tipo `Text` collegato all&#39;estensione dati [!DNL Email Demographics] all&#39;interno di [!DNL Salesforce Marketing Cloud]. Utilizzare [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] per creare gli attributi. Per informazioni sulla creazione degli attributi, consulta la documentazione di [!DNL Salesforce Marketing Cloud] per [creare gli attributi](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US).
+Per ogni pubblico attivato da Experience Platform a [!DNL Salesforce], è necessario disporre di un attributo di tipo `Text` collegato all&#39;estensione dati [!DNL Email Demographics] all&#39;interno di [!DNL Salesforce Marketing Cloud]. Utilizzare [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] per creare gli attributi. Per informazioni sulla creazione degli attributi, consulta la documentazione di [!DNL Salesforce Marketing Cloud] per [creare gli attributi](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US).
 
-I nomi dei campi attributo vengono utilizzati per il campo di destinazione [!DNL (API) Salesforce Marketing Cloud] durante il passaggio **[!UICONTROL Mappatura]**. Puoi definire il carattere del campo con un massimo di 4000 caratteri, in base ai requisiti aziendali. Per ulteriori informazioni sui tipi di attributo, vedere la pagina della documentazione [!DNL Salesforce Marketing Cloud] [Tipi di dati estensioni](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5).
+I nomi dei campi attributo vengono utilizzati per il campo di destinazione [!DNL (API) Salesforce Marketing Cloud] durante il passaggio **[!UICONTROL Mappatura]**. Puoi definire il carattere del campo con un massimo di 4000 caratteri, in base ai requisiti aziendali. Per ulteriori informazioni sui tipi di attributo, vedere la pagina della documentazione [!DNL Salesforce Marketing Cloud] [Tipi di dati estensioni](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5).
 
 Di seguito è riportato un esempio della schermata di progettazione dati in [!DNL Salesforce Marketing Cloud], in cui verrà aggiunto l&#39;attributo:
 ![Progettazione dati interfaccia utente di Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png)
@@ -96,7 +96,7 @@ Poiché questa destinazione richiede l&#39;accesso a `[!DNL data extension]`, è
 Per limitare il livello di accesso, è inoltre possibile sostituire l&#39;accesso individuale utilizzando privilegi granulari.
 ![L&#39;interfaccia utente di Salesforce Marketing Cloud mostra l&#39;estensione dei dati e-mail con autorizzazioni granulari.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
-Per istruzioni dettagliate, consultare le pagine [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) e [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5).
+Per istruzioni dettagliate, consultare le pagine [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_marketing_cloud_roles.htm&type=5) e [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_roles.htm&type=5).
 
 #### Raccogli [!DNL Salesforce Marketing Cloud] credenziali {#gather-credentials}
 
@@ -118,7 +118,7 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
    * Nella pagina [Panoramica API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) sono riportati ulteriori limiti.
    * Fai riferimento a [qui](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits) per una pagina che raccoglie questi dettagli.
 * Il numero di *campi personalizzati consentiti per oggetto* varia in base alla tua edizione di Salesforce.
-   * Per ulteriori informazioni, consulta la [!DNL Salesforce] [documentazione](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&amp;type=5).
+   * Per ulteriori informazioni, consulta la [!DNL Salesforce] [documentazione](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5).
    * Se hai raggiunto il limite definito per *campi personalizzati consentiti per oggetto* entro [!DNL Salesforce Marketing Cloud], dovrai
       * Rimuovere gli attributi precedenti prima di aggiungere nuovi attributi in [!DNL Salesforce Marketing Cloud].
       * Aggiorna o rimuovi eventuali tipi di pubblico attivati nelle destinazioni di Experience Platform che utilizzano questi nomi di attributi meno recenti come valore fornito per **[!UICONTROL ID mappatura]** durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).
@@ -129,7 +129,7 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| contactKey | Chiave contatto [!DNL Salesforce Marketing Cloud]. Per ulteriori informazioni, consulta la [!DNL Salesforce Marketing Cloud] [documentazione](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5). | Obbligatorio |
+| contactKey | Chiave contatto [!DNL Salesforce Marketing Cloud]. Per ulteriori informazioni, consulta la [!DNL Salesforce Marketing Cloud] [documentazione](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5). | Obbligatorio |
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
@@ -293,7 +293,7 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
    * Per correggere questo errore, verificare che l&#39;ID **[!UICONTROL mapping]** fornito nel flusso di lavoro di attivazione per la destinazione [!DNL (API) Salesforce Marketing Cloud] corrisponda esattamente al nome dell&#39;attributo creato in [!DNL Salesforce Marketing Cloud]. Consulta la sezione [Creare un attributo all&#39;interno di [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) per maggiori informazioni.
 
 * Quando si attiva un segmento, è possibile che venga visualizzato un messaggio di errore: `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * Per risolvere l&#39;errore, contattare l&#39;amministratore dell&#39;account [!DNL Salesforce Marketing Cloud] per aggiungere [indirizzi IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) agli intervalli IP attendibili degli account [!DNL Salesforce Marketing Cloud]. Se hai bisogno di ulteriori indicazioni, consulta la [!DNL Salesforce Marketing Cloud] [Indirizzi IP per l&#39;inclusione nei Inserisce nell&#39;elenco Consentiti di Marketing Cloud](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&amp;type=5) in presenza di elementi di riferimento.
+   * Per risolvere l&#39;errore, contattare l&#39;amministratore dell&#39;account [!DNL Salesforce Marketing Cloud] per aggiungere [indirizzi IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) agli intervalli IP attendibili degli account [!DNL Salesforce Marketing Cloud]. Se hai bisogno di ulteriori indicazioni, consulta la [!DNL Salesforce Marketing Cloud] [Indirizzi IP per l&#39;inclusione nei Inserisce nell&#39;elenco Consentiti di Marketing Cloud](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5) in presenza di elementi di riferimento.
 
 ## Risorse aggiuntive {#additional-resources}
 

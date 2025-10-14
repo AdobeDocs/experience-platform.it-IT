@@ -112,7 +112,7 @@ Utilizza l’endpoint API di igiene dei dati `/ttl/{DATASET_ID}` per pianificare
 
 Per ulteriori informazioni, consulta la documentazione dell&#39;[API di igiene dei dati](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) di Adobe Developer.
 
-Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [ &lbrace;API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
+Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [&#x200B; &lbrace;API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_ID}` | Stringa generata dal sistema che identifica in modo univoco un set di dati. Per trovare un ID di set di dati, utilizza l&#39;endpoint `/datasets`. Per istruzioni su come filtrare le risposte per i set di dati rilevanti, consulta la [guida API per oggetti catalogo ](../api/list-objects.md). |
+| `{DATASET_ID}` | Stringa generata dal sistema che identifica in modo univoco un set di dati. Per trovare un ID di set di dati, utilizza l&#39;endpoint `/datasets`. Per istruzioni su come filtrare le risposte per i set di dati rilevanti, consulta la [guida API per oggetti catalogo &#x200B;](../api/list-objects.md). |
 
 **Richiesta**
 

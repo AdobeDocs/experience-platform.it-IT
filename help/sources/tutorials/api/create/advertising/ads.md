@@ -109,5 +109,5 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 
 Seguendo questa esercitazione, hai creato una connessione di base [!DNL Google Ads] utilizzando l&#39;API [!DNL Flow Service] e hai connesso l&#39;account [!DNL Google Ads] ad Experience Platform. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati pubblicitari su Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/advertising.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati pubblicitari su Experience Platform utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../collect/advertising.md)

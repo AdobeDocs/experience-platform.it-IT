@@ -62,7 +62,7 @@ I flussi di dati sono una rappresentazione dei processi di dati che spostano i d
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuovo dashboard di monitoraggio | Ora puoi utilizzare il dashboard di monitoraggio per garantire trasparenza tra i servizi e informazioni fruibili per l’inserimento dei dati sorgente. Il nuovo dashboard di monitoraggio fornisce una visualizzazione completa dei dati elaborati da [!DNL Data Lake] a [!DNL Identity Service] e a [!DNL Profile], consentendo al contempo di monitorare i tassi di acquisizione, i successi e gli errori. Per ulteriori informazioni, consulta l&#39;esercitazione sul monitoraggio dei flussi di dati di origine [ nell&#39;interfaccia utente](../../dataflows/ui/monitor-sources.md). |
+| Nuovo dashboard di monitoraggio | Ora puoi utilizzare il dashboard di monitoraggio per garantire trasparenza tra i servizi e informazioni fruibili per l’inserimento dei dati sorgente. Il nuovo dashboard di monitoraggio fornisce una visualizzazione completa dei dati elaborati da [!DNL Data Lake] a [!DNL Identity Service] e a [!DNL Profile], consentendo al contempo di monitorare i tassi di acquisizione, i successi e gli errori. Per ulteriori informazioni, consulta l&#39;esercitazione sul monitoraggio dei flussi di dati di origine [&#x200B; nell&#39;interfaccia utente](../../dataflows/ui/monitor-sources.md). |
 
 Per informazioni più generali sui flussi di dati, consulta la [panoramica sui flussi di dati](../../dataflows/home.md).
 

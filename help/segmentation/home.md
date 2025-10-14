@@ -96,7 +96,7 @@ I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se des
 >abstract="La segmentazione Edge è la capacità di valutare all’istante i segmenti in Experience Platform sulla rete Edge, abilitando i casi d’uso di personalizzazione sulla stessa pagina e sulla pagina successiva."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=it" text="Guida alla segmentazione Edge"
 
-La segmentazione di Edge consente di valutare i segmenti in Experience Platform [ istantaneamente in Edge Network](../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+La segmentazione di Edge consente di valutare i segmenti in Experience Platform [&#x200B; istantaneamente in Edge Network](../landing/edge-and-hub-comparison.md), abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
 Per ulteriori informazioni sulla segmentazione Edge, consulta la [panoramica sulla segmentazione Edge](./methods/edge-segmentation.md).
 

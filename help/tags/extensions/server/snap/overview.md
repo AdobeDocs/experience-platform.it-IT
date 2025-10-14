@@ -69,7 +69,7 @@ Per inviare dati all&#39;estensione API per conversioni [!DNL Snapchat], creare 
 
 Ad esempio, se crei un elemento dati che fa riferimento a `snapClickId` nello schema mostrato di seguito:
 
-![Immagine che mostra lo schema ](../../../images/extensions/server/snap/schema.png)
+![Immagine che mostra lo schema &#x200B;](../../../images/extensions/server/snap/schema.png)
 
 È necessario configurare l&#39;elemento dati perché `snapClickId` si trova in `_snap.inc.exchange` nello schema XDM.
 

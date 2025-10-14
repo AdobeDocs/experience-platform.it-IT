@@ -692,5 +692,5 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione sorg
 
 Seguendo questa esercitazione, è stata creata una connessione di base [!DNL Microsoft Dynamics] utilizzando l&#39;API [!DNL Flow Service]. Puoi utilizzare questo ID connessione di base nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati CRM in Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/crm.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati CRM in Experience Platform utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../collect/crm.md)
