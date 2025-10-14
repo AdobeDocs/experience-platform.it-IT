@@ -3,9 +3,9 @@ title: Panoramica del connettore Source di Azure Event Hubs
 description: Scopri come collegare gli hub eventi di Azure a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 02c777b5db9734cf45b35f131d83c35c5ce670fb
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,9 @@ Per aumentare la velocità di acquisizione sul lato Experience Platform, Experie
 
 ## Utilizzare una rete virtuale per connettersi a [!DNL Event Hubs] ad Experience Platform
 
-È possibile configurare una rete virtuale per connettere [!DNL Event Hubs] ad Experience Platform mentre le misure firewall sono abilitate. Per configurare una rete virtuale, passare a questo [[!DNL Event Hubs] documento del set di regole di rete](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) e seguire i passaggi elencati di seguito:
+Experience Platform supporta la connessione a [!DNL Event Hubs] tramite una rete virtuale. In questo modo è possibile trasferire i dati tramite una connessione privata protetta anziché tramite Internet pubblico. È possibile inserire nell&#39;elenco Consentiti il VNet di Experience Platform per indirizzare in modo sicuro il traffico [!DNL Event Hubs] attraverso la backbone privata [!DNL Azure] mantenendo le protezioni firewall esistenti.
+
+Per configurare una rete virtuale, passare a questo [[!DNL Event Hubs] documento del set di regole di rete](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) e seguire i passaggi elencati di seguito:
 
 * Seleziona **Prova** dal pannello API REST;
 * Autentica il tuo account [!DNL Azure] utilizzando le tue credenziali nello stesso browser;
