@@ -265,7 +265,7 @@ Sì. Le [regole per la governance dei dati e i criteri di consenso](../data-gove
 ### Le destinazioni [!DNL Adobe Target] e [!DNL Custom Personalization] [!DNL HIPAA] sono conformi?
 
 +++Risposta
-[!DNL Adobe Target] non è conforme a [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). I clienti devono verificare con i propri team legali la disponibilità di [!DNL HIPPA] per i canali di ottimizzazione personalizzati prima di utilizzare la personalizzazione Edge tramite [!DNL Adobe Target] o le destinazioni [!DNL Custom Personalization].
+[!DNL Adobe Target] non è conforme a [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/it/solutions/industries/healthcare.html). I clienti devono verificare con i propri team legali la disponibilità di [!DNL HIPPA] per i canali di ottimizzazione personalizzati prima di utilizzare la personalizzazione Edge tramite [!DNL Adobe Target] o le destinazioni [!DNL Custom Personalization].
 
 Per i casi d&#39;uso in cui la gestione dei criteri di consenso deve essere applicata su larga scala, i clienti devono acquistare [!DNL Adobe Privacy & Security Shield]. Le funzionalità di [!DNL Adobe Privacy & Security Shield] sono vendute come suite avanzata di funzionalità e non possono essere acquistate separatamente.
 

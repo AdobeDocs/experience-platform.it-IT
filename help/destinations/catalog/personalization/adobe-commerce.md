@@ -23,7 +23,7 @@ Per utilizzare questa connessione di destinazione, assicurati di avere accesso a
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Con l&#39;accesso alla console per sviluppatori, puoi visualizzare le informazioni sull&#39;account del servizio e sulle credenziali necessarie per [completare la configurazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=it#configure-the-extension) dell&#39;estensione in Adobe Commerce.
-- [Adobe Commerce Cloud versione 2.4.4 o successiva](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud versione 2.4.4 o successiva](https://business.adobe.com/it/products/magento/magento-commerce.html)
 
 In Experience Platform, crea quanto segue:
 
