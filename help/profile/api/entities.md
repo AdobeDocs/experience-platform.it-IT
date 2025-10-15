@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform consente di accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l’interfaccia utente di. Questa guida illustra come accedere alle entità, più comunemente note come "profili", utilizzando l’API di profilo.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
+source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2141'
 ht-degree: 3%
 
 ---
@@ -66,6 +66,10 @@ Per accedere a un&#39;entità profilo, **devi** fornire i seguenti parametri di 
 - `schema.name`: nome dello schema XDM dell&#39;entità. In questo caso d&#39;uso, `schema.name=_xdm.context.profile`.
 - `entityId`: ID dell&#39;entità da recuperare.
 - `entityIdNS`: spazio dei nomi dell&#39;entità che si sta tentando di recuperare. Questo valore deve essere fornito se `entityId` è **not** un XID.
+
+Inoltre, l&#39;utilizzo del seguente parametro di query è *altamente* consigliato:
+
+- `mergePolicyId`: ID del criterio di unione con cui filtrare i dati. Se non viene specificato alcun criterio di unione, verrà utilizzato il criterio di unione predefinito della tua organizzazione.
 
 Un elenco completo dei parametri validi è fornito nella sezione [parametri di query](#query-parameters) dell&#39;appendice.
 
@@ -180,6 +184,10 @@ Per accedere ai dati dell&#39;account B2B, **devi** fornire i seguenti parametri
 - `entityId`: ID dell&#39;entità da recuperare.
 - `entityIdNS`: spazio dei nomi dell&#39;entità che si sta tentando di recuperare. Questo valore deve essere fornito se `entityId` è **not** un XID.
 
+Inoltre, l&#39;utilizzo del seguente parametro di query è *altamente* consigliato:
+
+- `mergePolicyId`: ID del criterio di unione con cui filtrare i dati. Se non viene specificato alcun criterio di unione, verrà utilizzato il criterio di unione predefinito della tua organizzazione.
+
 Un elenco completo dei parametri validi è fornito nella sezione [parametri di query](#query-parameters) dell&#39;appendice.
 
 **Richiesta**
@@ -271,6 +279,10 @@ Per accedere a un&#39;entità opportunità B2B, **devi** fornire i seguenti para
 - `schema.name`: nome dello schema XDM dell&#39;entità. In questo caso d&#39;uso, `schema.name=_xdm.context.opportunity`.
 - `entityId`: ID dell&#39;entità da recuperare.
 - `entityIdNS`: spazio dei nomi dell&#39;entità che si sta tentando di recuperare. Questo valore deve essere fornito se `entityId` è **not** un XID.
+
+Inoltre, l&#39;utilizzo del seguente parametro di query è *altamente* consigliato:
+
+- `mergePolicyId`: ID del criterio di unione con cui filtrare i dati. Se non viene specificato alcun criterio di unione, verrà utilizzato il criterio di unione predefinito della tua organizzazione.
 
 Un elenco completo dei parametri validi è fornito nella sezione [parametri di query](#query-parameters) dell&#39;appendice.
 
@@ -1207,7 +1219,9 @@ In caso di esito positivo, la risposta restituisce la pagina successiva di risul
 
 >[!IMPORTANT]
 >
->Le richieste di eliminazione per le seguenti entità B2B sono diventate obsolete:
+>L’endpoint dell’entità di eliminazione diventerà obsoleto entro la fine di ottobre 2025. Se desideri eseguire operazioni di eliminazione dei record, puoi utilizzare il [flusso di lavoro API di eliminazione dei record del ciclo di vita dei dati](/help/hygiene/api/workorder.md) o il [flusso di lavoro interfaccia utente di eliminazione dei record del ciclo di vita dei dati](/help/hygiene/ui/record-delete.md).
+>
+>Inoltre, le richieste di eliminazione per le seguenti entità B2B sono già state dichiarate obsolete:
 >
 >- Account
 >- Relazione account-persona
@@ -1276,7 +1290,7 @@ I seguenti parametri vengono utilizzati nel percorso per le richieste GET all&#3
 | `relatedEntityId` | Se `schema.name` è `_xdm.context.experienceevent`, questo valore **deve** specificare l&#39;ID dell&#39;entità profilo correlata. Questo valore segue le stesse regole di `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | Se `schema.name` è &quot;_xdm.context.experienceevent&quot;, questo valore deve specificare lo spazio dei nomi identità per l&#39;entità specificata in `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
 | `fields` | Filtra i dati restituiti nella risposta. Utilizzare questa opzione per specificare i valori dei campi dello schema da includere nei dati recuperati. Per più campi, separa i valori con una virgola senza spazi tra. | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Identifica il criterio di unione in base al quale gestire i dati restituiti. Se non ne è specificato uno nella chiamata, verrà utilizzato lo schema predefinito della tua organizzazione. Se non è stato configurato alcun criterio di unione predefinito, l’impostazione predefinita è nessuna unione di profili e nessuna unione di identità. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *Consigliato* identifica il criterio di unione in base al quale gestire i dati restituiti. Se non ne è specificato uno nella chiamata, verrà utilizzato lo schema predefinito della tua organizzazione. Se non è stato definito alcun criterio di unione predefinito per lo schema richiesto, l’API restituirà un codice di stato di errore HTTP 422. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | Ordinamento delle entità recuperate per marca temporale. Scritto come `(+/-)timestamp`, il valore predefinito è `+timestamp`. | `orderby=-timestamp` |
 | `startTime` | Specifica l&#39;ora di inizio per filtrare le entità (in millisecondi). | `startTime=1539838505` |
 | `endTime` | Specifica l&#39;ora di fine per filtrare le entità (in millisecondi). | `endTime=1539838510` |

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2025
 description: Note sulla versione di Adobe Experience Platform di agosto 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: fe8456823d0e7f1b60ea647e044747cfee4bc4c5
 workflow-type: tm+mt
-source-wordcount: '1508'
-ht-degree: 92%
+source-wordcount: '1614'
+ht-degree: 86%
 
 ---
 
@@ -104,6 +104,12 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 | ------- | ----------- |
 | Miglioramenti al visualizzatore del profilo di [!BADGE Alpha]{type=Informative} | La versione di settembre 2025 include i seguenti miglioramenti al visualizzatore del profilo. <ul><li>**Vista combinata**: attributo, eventi e insight sono stati combinati in un’unica vista.</li><li>**Insight generati dall’IA**: la pagina dei dettagli del profilo ora mostra gli insight generati dall’IA, permettendoti di conoscere i dettagli generati dal profilo. Questi insight possono includere informazioni quali i punteggi di propensione e l’analisi delle tendenze.</li><li>**Aggiornamento dello stile**: la pagina dei dettagli del profilo è stata aggiornata visivamente.</li><li>**Sfoglia**: ora puoi esplorare i profili tramite un carosello interattivo basato su schede con funzionalità di ricerca e personalizzazione.</li></ul> |
 
+**Aggiornamenti importanti**
+
+| Aggiornamento | Descrizione |
+| ------ | ----------- |
+| API di eliminazione profilo obsoleta | L&#39;API di eliminazione del profilo [](/help/profile/api/entities.md#delete-entity) diventerà obsoleta entro la fine di ottobre 2025. Se desideri eseguire operazioni di eliminazione dei record, puoi utilizzare il [flusso di lavoro API di eliminazione dei record del ciclo di vita dei dati](/help/hygiene/api/workorder.md) o il [flusso di lavoro interfaccia utente di eliminazione dei record del ciclo di vita dei dati](/help/hygiene/ui/record-delete.md). I flussi di lavoro del ciclo di vita dei dati forniscono il tracciamento del ciclo di vita end-to-end, nonché le quote mensili che è possibile visualizzare e gestire. <br/><br/>Dopo che l&#39;endpoint è stato dichiarato obsoleto, tutti gli utenti che lo utilizzano continueranno ad avere accesso a questo endpoint. La fine del ciclo di vita di questo evento sarà annunciata separatamente. In caso di domande, contatta l’Assistenza clienti Adobe. |
+
 Per ulteriori informazioni, consulta la [panoramica sul profilo cliente in tempo reale](../../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation-service}
@@ -135,7 +141,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | --- | --- |
 | Nuove origini in disponibilità generale | Le seguenti origini sono ora in disponibilità generale. Diversi connettori di origine sono stati aggiornati dalla versione Beta a alla disponibilità generale: <ul><li>[Acquisizione di dati Acxiom](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acquisizione di dati di potenziali clienti Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Queste origini sono ora completamente supportate e pronte per l’uso in produzione. |
 | Supporto dell’autenticazione con coppia di chiavi [!DNL Snowflake] | Sicurezza avanzata per le connessioni Snowflake con supporto per l’autenticazione con coppia di chiavi. L’autenticazione di base (nome utente/password) diventerà obsoleta entro novembre 2025, pertanto la clientela è invitata a migrare all’autenticazione con coppia di chiavi per migliorare la sicurezza. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](../../sources/connectors/databases/snowflake.md). |
-| [!DNL Capillary Streaming Events] [!BADGE Beta]{type=Informative} | Utilizza l’origine [[!DNL Capillary Streaming Events]  &#x200B;](../../sources/connectors/loyalty/capillary.md) per inviare i dati di fidelizzazione dall’account [!DNL Capillary] ad Experience Platform. |
+| [!DNL Capillary Streaming Events] [!BADGE Beta]{type=Informative} | Utilizza l’origine [[!DNL Capillary Streaming Events]  ](../../sources/connectors/loyalty/capillary.md) per inviare i dati di fidelizzazione dall’account [!DNL Capillary] ad Experience Platform. |
 | [!DNL Relay Connector] [!BADGE Beta]{type=Informative} | Utilizza [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md) per eseguire lo streaming dei dati degli eventi dall&#39;integrazione di [!DNL Relay Network] in Experience Platform. |
 | Disponibilità generale del supporto per collegamenti privati nelle origini | È ora possibile utilizzare **collegamenti privati** per un gruppo selezionato di origini. Utilizza questa funzione per creare un endpoint privato a cui l’origine può connettersi. Con gli endpoint privati, puoi configurare connessioni e flussi di dati che bypassano l’Internet pubblico, garantendo maggiore sicurezza e isolamento della rete per i dati sensibili. Il supporto per collegamenti privati è disponibile per le seguenti origini: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Per ulteriori informazioni, consulta le guide sulla creazione di collegamenti privati [nell’API](../../sources/tutorials/api/private-link.md) e [nell’interfaccia utente](../../sources/tutorials/ui/private-link.md). |
 
