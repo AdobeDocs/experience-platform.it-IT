@@ -2,9 +2,9 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
+source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '3068'
+source-wordcount: '2935'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,12 @@ In Experience Platform sono disponibili diversi tipi di destinazione, come illus
 
 >[!IMPORTANT]
 >
->* Nota la modifica del comportamento di esportazione introdotta a settembre 2025 per [destinazioni enterprise](#enterprise-behavior)
->* Questa pagina della documentazione descrive solo il comportamento di esportazione del profilo per le connessioni evidenziate nella parte inferiore del diagramma.
+>Questa pagina della documentazione descrive solo il comportamento di esportazione del profilo per le connessioni evidenziate nella parte inferiore del diagramma.
+
+<!--
+>* Note the export behavior change introduced in September 2025 for [enterprise destinations](#enterprise-behavior)
+>* This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
+-->
 
 ![Diagramma dei tipi di destinazioni](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
@@ -63,7 +67,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni Enterprise, anche le modifiche apportate alle identità di un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>**Nota**: il comportamento di esportazione per le destinazioni Enterprise è stato aggiornato con la versione di settembre 2025. Il nuovo comportamento evidenziato di seguito si applica attualmente solo alle nuove destinazioni Enterprise create dopo questa versione. Per le destinazioni Enterprise esistenti, puoi continuare a utilizzare il vecchio comportamento di esportazione o contattare Adobe per migrare al nuovo comportamento in cui vengono esportati solo i tipi di pubblico mappati. Tutte le organizzazioni verranno gradualmente migrate al nuovo comportamento nel 2026. <br><br> <span class="preview"> **Nuovo comportamento di esportazione**: i segmenti mappati alla destinazione e modificati verranno inclusi nell&#39;oggetto `segmentMembership`. In alcuni scenari potrebbero essere esportati utilizzando più chiamate. Inoltre, in alcuni scenari, alcuni segmenti che non sono stati modificati potrebbero essere inclusi nella chiamata. In ogni caso, verranno esportati solo i segmenti mappati nel flusso di dati.</span></li><br>**Comportamento precedente**: l&#39;oggetto `segmentMembership` include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o di uscita da un segmento. Altri segmenti non mappati per i quali il profilo qualificato può far parte dell&#39;esportazione di destinazione, se questi segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del segmento mappato nel flusso di dati di attivazione.<li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta il mapping delle identità nella destinazione Enterprise).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni Enterprise, anche le modifiche apportate alle identità di un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del segmento mappato nel flusso di dati di attivazione. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta il mapping delle identità nella destinazione Enterprise).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -77,8 +81,7 @@ Ad esempio, considera questo flusso di dati come una destinazione HTTP in cui tr
 
 ![flusso di dati di destinazione organizzazione](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Un&#39;esportazione di profilo nella destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti mappati*. Nell&#39;esportazione dei dati, nell&#39;oggetto `segmentMembership`, potrebbero essere visualizzati altri tipi di pubblico mappati, se quel particolare profilo è un membro di essi e se questi condividono lo stesso criterio di unione del pubblico che ha attivato l&#39;esportazione. Se un profilo è idoneo per il pubblico **Customer with DeLorean Cars** ed è anche membro dei segmenti **Basic Site Active and City - Dallas**, anche questi altri due tipi di pubblico saranno presenti nell&#39;oggetto `segmentMembership` dell&#39;esportazione dei dati, perché sono mappati nel flusso di dati, se condividono lo stesso criterio di unione con il segmento **Customer with DeLorean Cars**.
-
+Un&#39;esportazione di profilo nella destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti mappati*. Tuttavia, nell&#39;esportazione dei dati, nell&#39;oggetto `segmentMembership`, potrebbero essere visualizzati altri tipi di pubblico non mappati, se quel particolare profilo è un membro di essi e se questi condividono lo stesso criterio di unione del pubblico che ha attivato l&#39;esportazione. Se un profilo è idoneo per il pubblico **Cliente con auto DeLorean** ma è anche membro dei segmenti **Video &quot;Ritorno al futuro&quot;** e **Fantascienza**, anche questi altri due tipi di pubblico saranno presenti nell&#39;oggetto `segmentMembership` dell&#39;esportazione dati, anche se non sono mappati nel flusso di dati, se condividono lo stesso criterio di unione con il segmento **Cliente con auto DeLorean**.
 
 Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro attributi mappati in precedenza determineranno un’esportazione di destinazione e uno qualsiasi dei quattro attributi mappati presenti nel profilo sarà presente nell’esportazione di dati.
 
