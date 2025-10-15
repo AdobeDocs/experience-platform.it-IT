@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 33%
+source-wordcount: '1008'
+ht-degree: 31%
 
 ---
 
@@ -57,7 +57,9 @@ Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insigh
 | Destinazione | Descrizione |
 | --- | --- |
 | [!DNL AdForm] | Utilizzare questa destinazione per inviare i tipi di pubblico di Adobe Real-Time CDP a [!DNL AdForm] per l&#39;attivazione in base all&#39;Experience Cloud ID (ECID) e all&#39;ID Fusion di [!DNL AdForm]. ID Fusion di [!DNL AdForm] è un servizio di risoluzione ID che consente di attivare i tipi di pubblico di prime parti in base all&#39;Experience Cloud ID (ECID). |
-| `Amazon Ads` | Sono stati aggiunti identificatori personali aggiuntivi di supporto, ad esempio `firstName`, `lastName`, `street`, `city`, `state`, `zip` e `country`. La mappatura di questi campi come identità di destinazione può migliorare le percentuali di corrispondenza del pubblico. |
+| [!DNL Amazon Ads] | Sono stati aggiunti identificatori personali aggiuntivi di supporto, ad esempio `firstName`, `lastName`, `street`, `city`, `state`, `zip` e `country`. La mappatura di questi campi come identità di destinazione può migliorare le percentuali di corrispondenza del pubblico. |
+| [!DNL Snowflake Batch] (disponibilità limitata) | Crea una condivisione dati live di [!DNL Snowflake] per ricevere aggiornamenti giornalieri sul pubblico direttamente come tabelle condivise nel tuo account. Questa integrazione è attualmente disponibile per le organizzazioni dei clienti con provisioning nell&#39;area VA7. |
+| [!DNL Snowflake Streaming] (disponibilità limitata) | Crea una condivisione dati live di [!DNL Snowflake] per ricevere aggiornamenti del pubblico in streaming direttamente come tabelle condivise nel tuo account. Questa integrazione è attualmente disponibile per le organizzazioni dei clienti con provisioning nell&#39;area VA7. |
 
 **Funzionalità nuove o aggiornate**
 
