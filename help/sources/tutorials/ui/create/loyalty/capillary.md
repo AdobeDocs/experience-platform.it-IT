@@ -29,7 +29,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 
 >[!NOTE]
 >
->Per informazioni sulla configurazione richiesta per l&#39;origine [[!DNL Capillary Streaming Events] , leggere la ](../../../../connectors/loyalty/capillary.md)panoramica[!DNL Capillary].
+>Per informazioni sulla configurazione richiesta per l&#39;origine [[!DNL Capillary Streaming Events] , leggere la &#x200B;](../../../../connectors/loyalty/capillary.md)panoramica[!DNL Capillary].
 
 ## Navigare nel catalogo delle origini
 
