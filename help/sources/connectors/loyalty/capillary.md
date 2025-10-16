@@ -3,10 +3,10 @@ title: Panoramica degli eventi di streaming capillare
 description: Scopri come inviare dati da Capillary ad Experience Platform.
 badge: Beta
 exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: 428aed259343f56a2bf493b40ff2388340fffb7b
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 4%
+source-wordcount: '554'
+ht-degree: 1%
 
 ---
 
@@ -26,51 +26,41 @@ Integrando [!DNL Capillary] con Experience Platform, è possibile:
 
 ## Prerequisiti
 
-Prima di connettere [!DNL Capillary] a Adobe Experience Platform, assicurati di disporre di:
+Prima di connettere [!DNL Capillary] a Adobe Experience Platform, assicurati di disporre dei seguenti elementi:
 
 * Un **ID organizzazione Adobe** valido e l&#39;accesso a una sandbox Experience Platform abilitata.
-* **[!DNL Capillary]credenziali di origine** (ID client e segreto client).
-* Le autorizzazioni necessarie in Adobe Admin Console per creare origini e flussi di dati.
+* Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Capillary]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
 
-### Raccogli le credenziali richieste
+### Crea uno schema
 
-Per connettere l&#39;account [!DNL Capillary] ad Experience Platform è necessario fornire i valori per le credenziali seguenti:
+È necessario creare uno schema Experience Data Model (XDM) per descrivere un set di dati che può memorizzare i possibili campi e tipi di dati che verranno inviati da [!DNL Capillary].
 
-| Credenziali | Descrizione | Esempio |
-| --- | --- | --- |
-| ID client | Identificatore client per l&#39;origine [!DNL Capillary]. | `321c8a8fee0d4a06838d46f9d3109e8a` |
-| Segreto client | Segreto client rilasciato con l’ID client | `xxxxxxxxxxxxxxxxxx` |
-| ID organizzazione | Il tuo Adobe Organization ID | `0A7D42FC5DB9D3360A495FD3@AdobeOrg` |
+1. Accedi a Adobe Experience Platform e accedi ad Experience Platform tramite l’accesso dell’organizzazione.
+2. Nel pannello di navigazione a sinistra, seleziona **[!UICONTROL Schemi]** per aprire l&#39;area di lavoro [!UICONTROL Schemi].
+3. Seleziona **[!UICONTROL Crea schema]** nell&#39;angolo superiore destro.
+4. Nella finestra di dialogo per la creazione dello schema, scegli tra **[!UICONTROL Creazione manuale]** (Aggiungi tu stesso campi e gruppi di campi) o **[!UICONTROL Creazione assistita da ML]** (Carica un file CSV e utilizza l&#39;apprendimento automatico per generare uno schema consigliato).
+5. Scegli una classe base per lo schema (ad esempio XDM Individual Profile, XDM ExperienceEvent o Altro). Se selezioni **[!UICONTROL Altro]**, puoi scegliere tra le classi personalizzate o standard disponibili.
+6. Immetti un nome e una descrizione descrittivi per lo schema.
+7. Utilizza l’Editor schema per: aggiungere gruppi di campi (blocchi di campi riutilizzabili), definire singoli campi (personalizzare nomi, tipi di dati e opzioni) e, facoltativamente, creare tipi di dati o gruppi di campi personalizzati se quelli esistenti non soddisfano le tue esigenze.
+8. Rivedi la struttura dello schema nell’area di lavoro. Seleziona **[!UICONTROL Fine]** per creare lo schema.
+9. (Facoltativo) Modifica i campi, aggiungi le descrizioni e regola i gruppi di campi in base alle esigenze nell’Editor di schema.
 
-Per ulteriori informazioni sulla generazione dei token di accesso, leggere la [guida all&#39;autenticazione di Adobe](https://developer.adobe.com/developer-console/docs/guides/authentication/).
+Per istruzioni dettagliate su come creare uno schema XDM, consulta la guida in [creazione di uno schema tramite l&#39;editor schema](../../../xdm/tutorials/create-schema-ui.md).
 
-### Generare un token di accesso
+### Creare un set di dati
 
-Quindi, utilizza l’ID client e il segreto client per generare un token di accesso da Adobe.
+Successivamente, devi creare un set di dati che faccia riferimento allo schema appena creato.
 
-**Richiesta**
+1. Nell&#39;interfaccia utente di Experience Platform, seleziona [!UICONTROL Set di dati] nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Set di dati].
+2. Seleziona **[!UICONTROL Crea set di dati]** in alto a destra.
+3. Nelle opzioni di creazione, seleziona **[!UICONTROL Crea set di dati dallo schema]**.
+4. Dall’elenco, cerca e seleziona lo schema XDM creato in precedenza. Dopo aver individuato lo schema, seleziona **[!UICONTROL Avanti]**.
+5. Immetti un nome univoco e descrittivo per il set di dati.
+6. Facoltativamente, aggiungi una descrizione che consenta agli utenti futuri di identificare il set di dati.
+7. Seleziona **[!UICONTROL Fine]** per creare il set di dati.
 
-```shell
-curl -X POST 'https://ims-na1.adobelogin.com/ims/token' \
-  -d 'client_id={CLIENT_ID}' \
-  -d 'client_secret={CLIENT_SECRET}' \
-  -d 'grant_type=client_credentials' \
-  -d 'scope=openid AdobeID read_organizations additional_info.projectedProductContext session'
-```
+Per istruzioni dettagliate su come creare un set di dati, consulta la [guida dell&#39;interfaccia utente dei set di dati](../../../catalog/datasets/user-guide.md).
 
-**Risposta**
+## Connetti [!DNL Capillary Streaming Events] ad Experience Platform
 
-```json
-{
-  "access_token": "eyJhbGciOi...",
-  "token_type": "bearer",
-  "expires_in": 86399994
-}
-```
-
-## Passaggi successivi
-
-Dopo aver completato la configurazione dei prerequisiti per [!DNL Capillary], leggi la seguente documentazione per scoprire come collegare il tuo account e avviare lo streaming dei dati da [!DNL Capillary] ad Experience Platform.
-
-* [Connetti [!DNL Capillary Streaming Events] ad Experience Platform utilizzando l&#39;API](../../tutorials/api/create/loyalty/capillary.md)
-* [Connetti [!DNL Capillary Streaming Events] ad Experience Platform tramite l&#39;interfaccia utente](../../tutorials/ui/create/loyalty/capillary.md)
+Dopo aver completato la configurazione dei prerequisiti per [!DNL Capillary], leggi l&#39;[[!DNL Capillary Streaming Events] esercitazione dell&#39;interfaccia utente](../../tutorials/ui/create/loyalty/capillary.md) per scoprire come collegare il tuo account e inviare dati da [!DNL Capillary] ad Experience Platform.

@@ -3,10 +3,10 @@ title: Collegare Capillare ad Experience Platform tramite l’interfaccia utente
 description: Scopri come collegare Capillary ad Experience Platform utilizzando l’interfaccia utente
 badge: Beta
 exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: 428aed259343f56a2bf493b40ff2388340fffb7b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 5%
+source-wordcount: '855'
+ht-degree: 4%
 
 ---
 
@@ -27,6 +27,10 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
    * [Esercitazione sull&#39;editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;editor di schemi.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
+>[!NOTE]
+>
+>Per informazioni sulla configurazione richiesta per l&#39;origine [[!DNL Capillary Streaming Events] , leggere la ](../../../../connectors/loyalty/capillary.md)panoramica[!DNL Capillary].
+
 ## Navigare nel catalogo delle origini
 
 Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Origini]*. Selezionare la categoria appropriata nel pannello *[!UICONTROL Categorie]* In alternativa, utilizzare la barra di ricerca per passare all&#39;origine specifica che si desidera utilizzare.
@@ -42,6 +46,10 @@ Per utilizzare [!DNL Capillary], seleziona la scheda di origine **[!UICONTROL Ev
 ## Selezionare i dati
 
 Quindi, utilizza l&#39;interfaccia *[!UICONTROL Seleziona dati]* per caricare un file JSON di esempio per definire lo schema di origine. Durante questo passaggio, puoi utilizzare l’interfaccia di anteprima per visualizzare la struttura del file del payload. Al termine, selezionare **[!UICONTROL Avanti]**.
+
+>[!TIP]
+>
+>È possibile scaricare gli [eventi e schemi di profilo](../../../../images/tutorials/create/capillary/schemas.zip) per [!DNL Capillary] da utilizzare nell&#39;interfaccia di selezione dei dati.
 
 ![Il passaggio di dati di selezione del flusso di lavoro origini](../../../../images/tutorials/create/capillary/select-data.png)
 
