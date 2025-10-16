@@ -1,23 +1,22 @@
 ---
 title: Collegare Google Ads ad Experience Platform tramite l’interfaccia utente
 description: Scopri come collegare il tuo account Google Ads a Adobe Experience Platform nell’interfaccia utente.
+badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 906da82a8940233b3eb226d376c454b477514bc5
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 0%
+source-wordcount: '893'
+ht-degree: 1%
 
 ---
 
 # Connetti [!DNL Google Ads] ad Experience Platform tramite l&#39;interfaccia utente
 
->[!WARNING]
->
->L&#39;origine [!DNL Google Ads] non è attualmente disponibile nell&#39;interfaccia utente. Puoi continuare a acquisire i dati di [!DNL Google Ads] in Experience Platform [utilizzando l&#39;API](../../../api/create/advertising/ads.md).
-
 >[!NOTE]
 >
->L&#39;origine [!DNL Google Ads] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, vedere [Panoramica origini](../../../../home.md#terms-and-conditions).
+> L&#39;origine [!DNL Google Ads] è attualmente in versione beta e supporta solo l&#39;acquisizione una tantum. È possibile utilizzare [il metodo API](../../../api/create/advertising/ads.md) per eseguire l&#39;inserimento incrementale dei dati di [!DNL Google Ads] in Experience Platform.
+>
+>Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, vedere [Panoramica origini](../../../../home.md#terms-and-conditions).
 
 Leggi questa guida per scoprire come collegare l&#39;account [!DNL Google Ads] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente di Experience Platform.
 
@@ -64,7 +63,7 @@ Per creare un nuovo account, selezionare **[!UICONTROL Nuovo account]**, quindi 
 * **Aggiorna token**: il token di aggiornamento fa parte dell&#39;autenticazione [!DNL OAuth2]. Questo token ti consente di rigenerare i token di accesso dopo la scadenza.
 * **ID client**: l&#39;ID client viene utilizzato insieme al segreto client nell&#39;ambito dell&#39;autenticazione [!DNL OAuth2]. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Google].
 * **Segreto client**: il segreto client viene utilizzato insieme all&#39;ID client nell&#39;ambito dell&#39;autenticazione [!DNL OAuth2]. Insieme, l&#39;ID client e il segreto client consentono all&#39;applicazione di funzionare per conto dell&#39;account identificando l&#39;applicazione in [!DNL Google].
-* Versione API **[!DNL Google Ads]**: versione API corrente supportata da [!DNL Google Ads]. Mentre la versione più recente è `v18`, la versione più recente supportata su Experience Platform è `v17`.
+* Versione API **[!DNL Google Ads]**: versione API corrente supportata da [!DNL Google Ads]. Sebbene la versione più recente dell&#39;API [!DNL Google Ads] sia la v21, Experience Platform attualmente supporta la versione v19 e successive. Assicurati di utilizzare una di queste versioni supportate per garantire la compatibilità.
 
 Dopo aver immesso le credenziali, selezionare **[!UICONTROL Connetti all&#39;origine]** e attendere alcuni istanti per l&#39;elaborazione della connessione. Al termine, selezionare **[!UICONTROL Avanti]**.
 
@@ -72,7 +71,7 @@ Dopo aver immesso le credenziali, selezionare **[!UICONTROL Connetti all&#39;ori
 
 ## Selezionare i dati {#select-data}
 
-Con [!DNL Google Ads], devi fornire l&#39;elenco di attributi per l&#39;acquisizione durante la fase di selezione dei dati del flusso di lavoro. Per recuperare questi attributi, è necessario utilizzare [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder).
+Con [!DNL Google Ads], devi fornire l&#39;elenco di attributi per l&#39;acquisizione durante la fase di selezione dei dati del flusso di lavoro. Per recuperare questi attributi, è necessario utilizzare [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder).
 
 In [!DNL Google Ads Query Builder], passare al tipo di risorsa che si desidera utilizzare e quindi utilizzare il selettore degli attributi per selezionare gli attributi, i segmenti e le metriche.
 
