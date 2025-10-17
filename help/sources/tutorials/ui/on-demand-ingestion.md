@@ -2,9 +2,9 @@
 title: Acquisizione su richiesta per flussi di dati di origini nell’interfaccia utente
 description: Scopri come creare flussi di dati on-demand per le connessioni sorgente utilizzando l’interfaccia utente di Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fabacf273fb5774ddcee42d0cdcf12281eb0216b
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ In questo documento vengono descritti i passaggi per la creazione di flussi di d
 
 **Cos&#39;è un&#39;esecuzione di flusso?**
 
-Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso di dati. Ad esempio, se un flusso di dati è pianificato per essere eseguito ogni ora alle 09:00, alle 00:00 e alle 00:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
+Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso di dati. Ad esempio, se un flusso di dati è pianificato per essere eseguito ogni ora alle 9:00, alle 10:00 e alle 11:00, avrai tre istanze di un flusso eseguito. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
 >[!ENDSHADEBOX]
 
@@ -58,6 +58,10 @@ Seleziona **[!UICONTROL Pianifica]** e attendi alcuni istanti per l&#39;attivazi
 ![Finestra di configurazione della pianificazione per l&#39;acquisizione su richiesta.](../../images/tutorials/on-demand/configure-schedule.png)
 
 Seleziona il nome del flusso di dati per visualizzare l’attività del flusso di dati. Qui verrà visualizzato un elenco delle esecuzioni del flusso di dati che sono state elaborate. È possibile eseguire nuovamente singole iterazioni del flusso di dati indipendentemente dal fatto che abbiano avuto esito negativo o positivo. Per le iterazioni di esecuzione non riuscite, è possibile utilizzare **[!UICONTROL Riprova]** per avviare nuovamente l&#39;esecuzione dopo aver diagnosticato e risolto eventuali errori riscontrati durante il processo di creazione.
+
+>[!TIP]
+>
+>Se si riprova un’esecuzione del flusso, verranno elaborati solo i file con timestamp che rientrano nell’intervallo dell’esecuzione originale.
 
 ![Un elenco di flussi elaborati viene eseguito per un flusso di dati selezionato.](../../images/tutorials/on-demand/processed.png)
 
