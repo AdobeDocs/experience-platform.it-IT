@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
+source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '791'
 ht-degree: 44%
 
 ---
@@ -306,6 +306,7 @@ ht-degree: 44%
    * [Hosting di librerie di terze parti](./extension-dev/third-party-libraries.md)
    * [Variabile libera “turbine”](./extension-dev/turbine.md)
    * [Standard di compatibilità con le versioni precedenti](./extension-dev/backwards-compatibility.md)
+   * [Estensioni private condivise](./extension-dev/shared-private-extensions.md)
 * API Reactor {#api}
    * [Panoramica](./api/overview.md)
    * [Autenticazione e accesso all’API di Reactor](./api/getting-started.md)
