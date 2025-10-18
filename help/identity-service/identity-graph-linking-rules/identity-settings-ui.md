@@ -19,7 +19,7 @@ Le impostazioni di identità sono una funzione dell’interfaccia utente di Adob
 
 Per ulteriori informazioni sull&#39;utilizzo dell&#39;interfaccia [!DNL Graph Simulation] nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475970/?captions=ita&learn=on&enablevpops)
 
 Leggi questa guida per scoprire come configurare le impostazioni di identità nell’interfaccia utente.
 

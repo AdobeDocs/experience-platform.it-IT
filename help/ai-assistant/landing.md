@@ -234,8 +234,8 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali di AI Ass
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3436470/?learn=on" title="Ottenere l’accesso all’Assistente AI" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1732633204686" alt="Ottenere l’accesso all’Assistente AI"
+                    <a href="https://video.tv.adobe.com/v/3475927/?captions=ita&learn=on" title="Ottenere l’accesso all’Assistente AI" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475927/?captions=ita&format=jpeg&nocache=1732633204686" alt="Ottenere l’accesso all’Assistente AI"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -243,12 +243,12 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali di AI Ass
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" title="Ottenere l’accesso all’Assistente AI">Accedi all'Assistente AI</a>
+                        <a href="https://video.tv.adobe.com/v/3475927/?captions=ita&learn=on" target="_blank" rel="referrer" title="Ottenere l’accesso all’Assistente AI">Accedi all'Assistente AI</a>
                     </p>
                     <p class="is-size-6">Guarda questo video per scoprire come utilizzare l'interfaccia [!DNL Permissions] per accedere all'Assistente AI.</p>
                 </div>
                 <div style="display: flex; flex-direction: row;">
-                  <a href="https://video.tv.adobe.com/v/3436470/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                  <a href="https://video.tv.adobe.com/v/3475927/?captions=ita&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Osserva</span>
                   </a>
                   <a href="./access.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
@@ -271,8 +271,8 @@ Guarda i video seguenti per scoprire i casi di utilizzo dell’Assistente di int
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://video.tv.adobe.com/v/3438032/?learn=on" title="Riduzione dei tempi di onboarding" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1732633205780" alt="Riduzione dei tempi di onboarding"
+                    <a href="https://video.tv.adobe.com/v/3475938/?captions=ita&learn=on" title="Riduzione dei tempi di onboarding" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475938/?captions=ita&format=jpeg&nocache=1732633205780" alt="Riduzione dei tempi di onboarding"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -280,11 +280,11 @@ Guarda i video seguenti per scoprire i casi di utilizzo dell’Assistente di int
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" title="Riduzione dei tempi di onboarding">Riduzione del tempo di onboarding</a>
+                        <a href="https://video.tv.adobe.com/v/3475938/?captions=ita&learn=on" target="_blank" rel="referrer" title="Riduzione dei tempi di onboarding">Riduzione del tempo di onboarding</a>
                     </p>
                     <p class="is-size-6">Guarda questo video per scoprire come utilizzare la conoscenza del prodotto di AI Assistant per ridurre i tempi di onboarding.</p>
                 </div>
-                <a href="https://video.tv.adobe.com/v/3438032/?learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://video.tv.adobe.com/v/3475938/?captions=ita&learn=on" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Osserva</span>
                 </a>
             </div>

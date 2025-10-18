@@ -101,7 +101,7 @@ Guarda i video seguenti per scoprire alcuni degli aspetti fondamentali delle reg
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Regole di collegamento del grafo delle identità - Impostazioni identità" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Regole di collegamento del grafo delle identità - Impostazioni identità"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475970/?captions=ita&format=jpeg&nocache=1747851655218" alt="Regole di collegamento del grafo delle identità - Impostazioni identità"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
