@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
+source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1073'
 ht-degree: 34%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 34%
       - [Connettore caricamento file locale](connectors/local-system/local-file-upload.md)
    - Fedeltà {#loyalty}
       - [Eventi di streaming capillari](connectors/loyalty/capillary.md)
+      - [Talon.One](connectors/loyalty/talon-one.md)
    - Marketing automation {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -315,6 +316,8 @@ ht-degree: 34%
          - [Caricamento file locale](tutorials/ui/create/local-system/local-file-upload.md)
       - Fedeltà {#loyalty}
          - [Eventi di streaming capillari](tutorials/ui/create/loyalty/capillary.md)
+         - [Eventi di streaming Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
+         - [Connettore Source per batch Talon.One](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Marketing automation {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
