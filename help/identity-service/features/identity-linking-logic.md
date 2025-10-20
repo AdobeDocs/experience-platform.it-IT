@@ -2,9 +2,9 @@
 title: Logica di collegamento del servizio Identity
 description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '966'
 ht-degree: 2%
 
 ---
@@ -22,6 +22,10 @@ Esistono due tipi di identità collegate:
 
 * **Record profilo**: queste identità provengono in genere da sistemi CRM.
 * **Eventi esperienza**: queste identità provengono in genere dall&#39;implementazione WebSDK o dall&#39;origine Adobe Analytics.
+
+>[!IMPORTANT]
+>
+>Il servizio Identity distingue tra maiuscole e minuscole. Ad esempio, **abc<span>@gmail.com** e **ABC<span>@GMAIL.COM** verrebbero trattati come due identità e-mail separate.
 
 ## Significato semantico della creazione di collegamenti
 
@@ -54,7 +58,7 @@ Per una rappresentazione visiva del funzionamento della logica di collegamento d
 Supponiamo di avere un grafo di identità esistente con tre identità collegate:
 
 * TEL. (555)-555-1234
-* E-MAIL:julien<span>@acme.com
+* INVIA E-MAIL A :julien<span>@acme.com
 * CRMID:60013ABC
 
 ![grafico esistente](../images/identity-settings/existing-graph.png)
@@ -70,7 +74,7 @@ Una coppia di identità viene acquisita nel grafico e questa coppia contiene:
 
 >[!TAB Grafico aggiornato]
 
-Il servizio Identity riconosce che CRMID:60013ABC esiste già nel grafico, pertanto collega solo il nuovo ECID
+Identity Service riconosce che CRMID:60013ABC esiste già nel grafo e quindi collega solo il nuovo ECID
 
 ![grafico aggiornato](../images/identity-settings/updated-graph.png)
 
@@ -94,7 +98,7 @@ In qualità di ingegnere dati, acquisisci il seguente set di dati CRM (record pr
 
 Hai anche implementato Web SDK e acquisito un set di dati Web SDK (Experience Event) con le seguenti tabelle di dati:
 
-| Timestamp | Identità nell’evento* | Evento |
+| Marca temporale | Identità nell’evento* | Evento |
 | --- | --- | --- |
 | `t=1` | ECID:38652 | Visualizza home page |
 | `t=2` | ECID:38652, CRMID:31260XYZ | Cerca scarpe |
@@ -133,25 +137,25 @@ In `timestamp=0`, si dispone di due grafici delle identità per due clienti dive
 
 >[!TAB timestamp=1]
 
-In `timestamp=1`, un cliente utilizza un laptop per visitare il sito Web di e-commerce, visualizzare la home page e navigare in modo anonimo. Questo evento di navigazione anonimo è identificato come ECID:38652. Poiché il servizio Identity memorizza solo gli eventi con almeno due identità, queste informazioni non vengono memorizzate.
+In `timestamp=1`, un cliente utilizza un laptop per visitare il sito Web di e-commerce, visualizzare la home page e navigare in modo anonimo. Questo evento di esplorazione anonimo è identificato come ECID:38652. Poiché il servizio Identity memorizza solo gli eventi con almeno due identità, queste informazioni non vengono memorizzate.
 
 ![timestamp-one](../images/identity-settings/timestamp-one.png)
 
 >[!TAB timestamp=2]
 
-In `timestamp=2`, un cliente utilizza lo stesso laptop per visitare il sito Web di e-commerce. Accedono con la combinazione di nome utente e password e cercano le scarpe. Identity Service identifica l’account del cliente quando effettua l’accesso perché corrisponde al suo identificatore CRMID: 31260XYZ. Inoltre, Identity Service mette in relazione ECID:38562 con CRMID:31260XYZ, poiché entrambi utilizzano lo stesso browser sullo stesso dispositivo.
+In `timestamp=2`, un cliente utilizza lo stesso laptop per visitare il sito Web di e-commerce. Accedono con la combinazione di nome utente e password e cercano le scarpe. Identity Service identifica l’account del cliente quando effettua l’accesso perché corrisponde al suo identificatore CRMID: 31260XYZ. Inoltre, Identity Service mette in relazione ECID:38562 con CRMID:31260XYZ poiché entrambi utilizzano lo stesso browser sullo stesso dispositivo.
 
 ![timestamp-due](../images/identity-settings/timestamp-two.png)
 
 >[!TAB timestamp=3]
 
-In `timestamp=3` un cliente utilizza un tablet per visitare il sito Web di e-commerce e navigare in modo anonimo. Questo evento di navigazione anonimo è identificato come ECID:44675. Poiché il servizio Identity memorizza solo gli eventi con almeno due identità, queste informazioni non vengono memorizzate.
+In `timestamp=3` un cliente utilizza un tablet per visitare il sito Web di e-commerce e navigare in modo anonimo. Questo evento di esplorazione anonimo è identificato come ECID:44675. Poiché il servizio Identity memorizza solo gli eventi con almeno due identità, queste informazioni non vengono memorizzate.
 
 ![timestamp-tre](../images/identity-settings/timestamp-three.png)
 
 >[!TAB timestamp=4]
 
-In `timestamp=4`, un cliente utilizza lo stesso tablet, accede al proprio account (CRMID:31260XYZ) e visualizza la cronologia degli acquisti. Questo evento collega il relativo CRMID:31260XYZ all’identificatore del cookie assegnato all’attività di navigazione anonima, ECID:44675, e collega ECID:44675 al grafico delle identità del cliente 2.
+Alle `timestamp=4`, un cliente utilizza lo stesso tablet, accede al proprio account (CRMID:31260XYZ) e visualizza la cronologia degli acquisti. Questo evento collega il relativo CRMID:31260XYZ all&#39;identificatore del cookie assegnato all&#39;attività di navigazione anonima, ECID:44675, e collega ECID:44675 al grafo delle identità del cliente due.
 
 ![timestamp-quattro](../images/identity-settings/timestamp-four.png)
 
