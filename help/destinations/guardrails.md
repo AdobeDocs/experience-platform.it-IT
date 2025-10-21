@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: 0a9782b6018e5c5405c79ce37d969754d7b99fd6
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1712'
 ht-degree: 2%
 
 ---
@@ -105,7 +105,7 @@ I guardrail riportati di seguito si applicano all&#39;attivazione tramite [desti
 
 ### Esportazioni di set di dati {#dataset-exports}
 
-Le esportazioni di set di dati sono attualmente supportate in un **[!UICONTROL Primo modello completo e quindi incrementale]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). I guardrail descritti in questa sezione *si applicano alla prima esportazione completa* che si verifica dopo la configurazione di un flusso di lavoro di esportazione del set di dati.
+Le esportazioni di set di dati sono attualmente supportate in un **[!UICONTROL First Full and then Incremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). I guardrail descritti in questa sezione *si applicano alla prima esportazione completa* che si verifica dopo la configurazione di un flusso di lavoro di esportazione del set di dati.
 
 <!--
 
@@ -121,11 +121,9 @@ Le esportazioni di set di dati sono attualmente supportate in un **[!UICONTROL P
 
 I guardrail di esportazione dei set di dati si applicano a due tipi di set di dati esportati da Experience Platform, come descritto di seguito:
 
-**Set di dati basati sullo schema XDM Experience Events**
-Nel caso di set di dati basati sullo schema XDM Experience Events, lo schema del set di dati include una colonna *timestamp* di livello principale. I dati vengono acquisiti in modalità di sola aggiunta.
+**Set di dati basati sullo schema XDM Experience Events e set di dati basati su qualsiasi altro schema**
 
-**Set di dati basati sullo schema Profilo individuale XDM**
-Nel caso di set di dati basati sullo schema Profilo individuale XDM, lo schema del set di dati non include una colonna *timestamp* di livello principale. I dati vengono acquisiti in modalità upsert.
+Nel caso di set di dati basati sullo schema XDM Experience Events, lo schema di set di dati include una colonna timestamp di livello principale. I dati vengono acquisiti in modalità di sola aggiunta. Nel caso di set di dati basati su qualsiasi altro schema, lo schema del set di dati può includere una colonna di marca temporale e i dati vengono acquisiti in modo upsert.
 
 Il soft guardrail riportato di seguito si applica a tutti i set di dati esportati da Experience Platform. Consulta anche i guardrail rigidi riportati di seguito, specifici per set di dati e tipi di compressione diversi.
 
@@ -146,7 +144,7 @@ Per le esportazioni di set di dati pianificate o ricorrenti, i guardrail riporta
 | Tipo di set di dati | Guardrail | Tipo di guardrail | Descrizione |
 ---------|----------|---------|-------|
 | Set di dati basati sullo schema **XDM Experience Events** | Ultimi 365 giorni di dati | Guarddrail imposto dal sistema | Vengono esportati i dati dell&#39;ultimo anno di calendario. |
-| Set di dati basati sullo schema **Profilo individuale XDM** | Dieci miliardi di record in tutti i file esportati in un flusso di dati | Guarddrail imposto dal sistema | Il numero di record del set di dati deve essere inferiore a dieci miliardi per i file JSON o parquet compressi e a un milione per i file parquet non compressi, altrimenti l’esportazione non riesce. Riduci le dimensioni del set di dati che stai tentando di esportare se è più grande della soglia consentita. |
+| Set di dati basati su **qualsiasi schema diverso dallo schema XDM Experience Events** | Dieci miliardi di record in tutti i file esportati in un flusso di dati | Guarddrail imposto dal sistema | Il numero di record del set di dati deve essere inferiore a dieci miliardi per i file JSON o parquet compressi e a un milione per i file parquet non compressi, altrimenti l’esportazione non riesce. Riduci le dimensioni del set di dati che stai tentando di esportare se è più grande della soglia consentita. |
 
 {style="table-layout:auto"}
 
@@ -169,7 +167,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-Ulteriori informazioni sull&#39;esportazione di [set di dati](/help/destinations/ui/export-datasets.md).
+Ulteriori informazioni sull’[esportazione dei set di dati](/help/destinations/ui/export-datasets.md).
 
 
 ### Guardrail Destination SDK {#destination-sdk-guardrails}
@@ -198,7 +196,7 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
