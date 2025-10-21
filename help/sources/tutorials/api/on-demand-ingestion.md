@@ -3,20 +3,24 @@ keywords: Experience Platform;home;argomenti popolari;servizio di flusso;
 title: Creare un’esecuzione del flusso per l’acquisizione su richiesta utilizzando l’API del servizio Flusso
 description: Scopri come creare un’esecuzione del flusso per l’acquisizione on-demand utilizzando l’API del servizio Flusso
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '823'
 ht-degree: 2%
 
 ---
 
 # Creare un&#39;esecuzione di flusso per l&#39;acquisizione su richiesta utilizzando l&#39;API [!DNL Flow Service]
 
-Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso. Ad esempio, se un flusso è pianificato per essere eseguito ogni ora alle 9:00, alle 10:00 e alle 11:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
+Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso. Ad esempio, se un flusso è pianificato per essere eseguito ogni ora alle 9:00, alle 10:00 e alle 11:00, sono disponibili tre istanze di un flusso eseguito. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
 L’acquisizione su richiesta consente di creare un flusso eseguito su un determinato flusso di dati. Questo consente agli utenti di creare un’esecuzione del flusso, basata su parametri specifici, e un ciclo di acquisizione, senza token di servizio. Il supporto per l’acquisizione su richiesta è disponibile solo per le origini batch.
 
 Questo tutorial illustra i passaggi per utilizzare l&#39;acquisizione su richiesta e creare un&#39;esecuzione del flusso utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>Se si riprova un’esecuzione del flusso, verranno elaborati solo i file con timestamp che rientrano nell’intervallo dell’esecuzione originale.
 
 ## Introduzione
 
