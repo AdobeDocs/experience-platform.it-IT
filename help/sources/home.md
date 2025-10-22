@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1666'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Origine | Categoria | Tipo di acquisizione | Cloud |
 | --- | --- | --- | --- |
@@ -282,15 +282,15 @@ Per acquisire i dati del protocollo in Experience Platform, puoi utilizzare le s
 
 ## Controllo degli accessi per le origini nell’acquisizione dei dati
 
-Le autorizzazioni per le origini nell’acquisizione dei dati possono essere gestite all’interno di Adobe Admin Console. Puoi accedere alle autorizzazioni tramite la scheda **[!UICONTROL Autorizzazioni]** in un particolare profilo di prodotto. Dal pannello **[!UICONTROL Modifica autorizzazioni]**, puoi accedere alle autorizzazioni relative alle origini tramite la voce di menu **[!UICONTROL Acquisizione dati]**. L&#39;autorizzazione **[!UICONTROL Visualizza origini]** consente l&#39;accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalogo]** e alle origini autenticate nella scheda **[!UICONTROL Sfoglia]**, mentre l&#39;autorizzazione **[!UICONTROL Gestisci origini]** consente l&#39;accesso completo alle origini di lettura, creazione, modifica e disabilitazione.
+Le autorizzazioni per le origini nell’acquisizione dei dati possono essere gestite all’interno di Adobe Admin Console. È possibile accedere alle autorizzazioni tramite la scheda **[!UICONTROL Permissions]** in un particolare profilo di prodotto. Dal pannello **[!UICONTROL Edit Permissions]**, è possibile accedere alle autorizzazioni relative alle origini tramite la voce di menu **[!UICONTROL data ingestion]**. L&#39;autorizzazione **[!UICONTROL View Sources]** consente l&#39;accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalog]** e alle origini autenticate nella scheda **[!UICONTROL Browse]**, mentre l&#39;autorizzazione **[!UICONTROL Manage Sources]** consente l&#39;accesso completo alle origini di lettura, creazione, modifica e disabilitazione.
 
 La tabella seguente illustra il comportamento dell’interfaccia utente in base a diverse combinazioni di queste autorizzazioni:
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ----|
-| **[!UICONTROL Visualizza origini]** su | Concedi l’accesso in sola lettura alle origini in ciascun tipo di origine nella scheda Catalogo, nonché nelle schede Sfoglia, Account e Flusso di dati. |
-| **[!UICONTROL Gestisci origini]** su | Oltre alle funzioni incluse in **[!UICONTROL Visualizza origini]**, consente l&#39;accesso all&#39;opzione **[!UICONTROL Connetti Source]** in **[!UICONTROL Catalogo]** e all&#39;opzione **[!UICONTROL Seleziona dati]** in **[!UICONTROL Sfoglia]**. **[!UICONTROL Gestisci origini]** consente inoltre di abilitare o disabilitare **[!UICONTROL Flussi dati]** e di modificarne le pianificazioni. |
-| **[!UICONTROL Visualizza origini]** disattivato e **[!UICONTROL Gestisci origini]** disattivato | Revoca l&#39;accesso alle origini. |
+| **[!UICONTROL View Sources]** il | Concedi l’accesso in sola lettura alle origini in ciascun tipo di origine nella scheda Catalogo, nonché nelle schede Sfoglia, Account e Flusso di dati. |
+| **[!UICONTROL Manage Sources]** il | Oltre alle funzioni incluse in **[!UICONTROL View Sources]**, concede l&#39;accesso all&#39;opzione **[!UICONTROL Connect Source]** in **[!UICONTROL Catalog]** e all&#39;opzione **[!UICONTROL Select Data]** in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** consente inoltre di abilitare o disabilitare **[!UICONTROL DataFlows]** e di modificarne le pianificazioni. |
+| **[!UICONTROL View Sources]** disattivato e **[!UICONTROL Manage Sources]** disattivato | Revoca l&#39;accesso alle origini. |
 
 Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite le autorizzazioni Adobe, leggere la [panoramica sul controllo degli accessi](../access-control/home.md).
 
@@ -308,11 +308,11 @@ Con il controllo degli accessi basato su attributi, puoi applicare configurazion
 
 - Applica le etichette ai campi dello schema per definire l’accesso a specifici campi dello schema nella tua organizzazione. Una volta stabilito l’accesso a campi dello schema specifici, gli utenti potranno creare mappature solo per i campi a cui hanno accesso.
 - Gli utenti che non dispongono dei ruoli appropriati non potranno creare o aggiornare flussi di dati con mappature che coinvolgono campi schema inaccessibili. Inoltre, gli utenti non autorizzati non possono aggiornare, eliminare, abilitare o disabilitare flussi di dati esistenti con campi schema inaccessibili.
-- Inoltre, un flusso di dati deve avere esattamente lo stesso ID schema e la stessa versione nella mappatura, nel set di dati di destinazione e nella connessione di destinazione. Ciò si applica sia agli schemi XDM standard che agli schemi basati su modelli.
+- Inoltre, un flusso di dati deve avere esattamente lo stesso ID schema e la stessa versione nella mappatura, nel set di dati di destinazione e nella connessione di destinazione. Questo vale sia per gli schemi XDM standard che per gli schemi relazionali.
 
 >[!NOTE]
 >
->Gli schemi basati su modelli hanno requisiti aggiuntivi, tra cui i campi della chiave primaria e dell’identificatore della versione. Per ulteriori informazioni, vedere la [panoramica dello schema basata su modello](../xdm/schema/model-based.md).
+>Gli schemi relazionali hanno requisiti aggiuntivi, inclusi i campi chiave primaria e identificatore di versione. Per ulteriori informazioni, vedere [panoramica dello schema relazionale](../xdm/schema/relational.md).
 
 Per ulteriori informazioni sul controllo degli accessi basato su attributi, leggere la [panoramica sul controllo degli accessi basato su attributi](../access-control/abac/overview.md).
 

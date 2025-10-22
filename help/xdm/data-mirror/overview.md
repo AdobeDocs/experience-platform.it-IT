@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;mirroring dati;schema basato su modello;schema relazionale;cambiare acquisizione dati;sincronizzazione database;chiave primaria;relazioni;;data mirror;model-based schema;change data capture;database sync;primary key;relations
+keywords: Experience Platform;mirroring dati;schema relazionale;cambiare acquisizione dati;sincronizzazione database;chiave primaria;relazioni;;data mirror;relational schema;change data capture;database sync;primary key;relations
 solution: Experience Platform
 title: Panoramica di Data Mirror
-description: Scopri come Data Mirror consente l’acquisizione delle modifiche a livello di riga dai database esterni in Adobe Experience Platform utilizzando schemi basati su modelli con univocità, relazioni e controllo delle versioni applicate.
+description: Scopri come Data Mirror consente l’acquisizione delle modifiche a livello di riga dai database esterni in Adobe Experience Platform utilizzando schemi relazionali con univocità, relazioni e controllo delle versioni applicate.
 badge: Disponibilità limitata
-source-git-commit: 6ce214073f625a253fcc5bb14dfdb6a4a61e6e7b
+exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -15,9 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Data Mirror e gli schemi basati su modelli sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
+>Data Mirror e gli schemi relazionali sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
 
-Data Mirror è una funzionalità di Adobe Experience Platform che consente l’acquisizione delle modifiche a livello di riga dai database esterni nel data lake utilizzando schemi basati su modelli. Mantiene le relazioni tra i dati, applica l’univocità e supporta il controllo delle versioni senza richiedere processi ETL (Extract, Transform, Load) a monte.
+>[!NOTE]
+>
+>Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. La funzionalità rimane invariata.
+
+Data Mirror è una funzionalità di Adobe Experience Platform che consente l’acquisizione delle modifiche a livello di riga dai database esterni nel data lake utilizzando schemi relazionali. Mantiene le relazioni tra i dati, applica l’univocità e supporta il controllo delle versioni senza richiedere processi ETL (Extract, Transform, Load) a monte.
 
 Utilizzare Data Mirror per sincronizzare inserimenti, aggiornamenti ed eliminazioni (dati mutabili) da sistemi esterni come [!DNL Snowflake], [!DNL Databricks] o [!DNL BigQuery] direttamente in Experience Platform. In questo modo è possibile preservare la struttura del modello di database esistente e l’integrità dei dati durante l’inserimento dei dati in Platform.
 
@@ -33,7 +38,7 @@ Data Mirror offre le seguenti funzionalità essenziali per la sincronizzazione d
 
 Utilizza Data Mirror per acquisire le modifiche direttamente dai sistemi di origine, applicare l’integrità dello schema e rendere i dati disponibili per le attività di analisi, orchestrazione del percorso e flussi di lavoro di conformità. Data Mirror elimina i complessi processi ETL a monte e accelera l&#39;implementazione consentendo il mirroring diretto dei modelli di database esistenti.
 
-Pianifica l’eliminazione e i requisiti di igiene dei dati quando implementi schemi basati su modelli con Data Mirror. Tutte le applicazioni devono considerare in che modo le eliminazioni influiscono sui set di dati correlati, sui flussi di lavoro di conformità e sui processi a valle prima della distribuzione.
+Pianifica i requisiti di eliminazione e igiene dei dati durante l’implementazione di schemi relazionali con Data Mirror. Tutte le applicazioni devono considerare in che modo le eliminazioni influiscono sui set di dati correlati, sui flussi di lavoro di conformità e sui processi a valle prima della distribuzione.
 
 ## Prerequisiti {#prerequisites}
 
@@ -42,12 +47,12 @@ Prima di iniziare, è necessario comprendere i seguenti componenti di Experience
 * [Creare schemi nell&#39;interfaccia utente di Experience Platform](../ui/resources/schemas.md) o [API](../api/schemas.md)
 * [Configurare le connessioni di origine cloud](../../sources/home.md#cloud-storage)
 * [Applica concetti di acquisizione dati di modifica](../../sources/tutorials/api/change-data-capture.md) (upsert, deletes)
-* Distinguere tra [standard](../schema/composition.md) e [schemi basati su modelli](../schema/model-based.md)
+* Distinguere tra [standard](../schema/composition.md) e [schemi relazionali](../schema/relational.md)
 * [Definire le relazioni strutturali con i descrittori](../api/descriptors.md)
 
 ### Requisiti di implementazione
 
-L’istanza di Platform e i dati di origine devono soddisfare requisiti specifici affinché Data Mirror funzioni correttamente. Data Mirror richiede **schemi basati su modelli**, ovvero strutture di dati flessibili con vincoli imposti. Al momento, Data Mirror funziona principalmente con schemi basati su modelli, anche se l’integrazione con schemi XDM standard sarà supportata tramite le prossime funzionalità di oggetti personalizzati B2B (pianificate per ottobre 2025).
+L’istanza di Platform e i dati di origine devono soddisfare requisiti specifici affinché Data Mirror funzioni correttamente. Data Mirror richiede **schemi relazionali**, che sono strutture di dati flessibili con vincoli imposti.
 
 Includi **chiave primaria e descrittore di versione** in tutti gli schemi. Se utilizzi uno schema di serie temporali, è necessario anche un descrittore **timestamp**.
 
@@ -61,17 +66,17 @@ A differenza degli approcci di acquisizione standard, Data Mirror mantiene la st
 
 ### Definire la struttura dello schema
 
-Crea [schemi basati su modelli](../schema/model-based.md) con i descrittori richiesti (metadati che definiscono il comportamento e i vincoli dello schema). Scegli un metodo che si adatti al flusso di lavoro del team, sia tramite l’interfaccia utente che direttamente tramite l’API.
+Crea [schemi relazionali](../schema/relational.md) con i descrittori richiesti (metadati che definiscono il comportamento e i vincoli dello schema). Scegli un metodo che si adatti al flusso di lavoro del team, sia tramite l’interfaccia utente che direttamente tramite l’API.
 
-* **Approccio dell&#39;interfaccia utente**: [Creare schemi basati su modello nell&#39;Editor schema](../ui/resources/schemas.md#create-model-based-schema)
-* **Approccio API**: [Creare schemi tramite API Registro schemi](../api/schemas.md#create-model-based-schema)
+* **Approccio dell&#39;interfaccia utente**: [Creare schemi relazionali nell&#39;Editor schema](../ui/resources/schemas.md#create-relational-schema)
+* **Approccio API**: [Creare schemi tramite API Registro schemi](../api/schemas.md#create-relational-schema)
 
 ### Mappare le relazioni e definire la gestione dei dati
 
 Definisci le connessioni tra i set di dati utilizzando i descrittori di relazione. Gestisci le relazioni e mantieni la qualità dei dati nei diversi set di dati. Queste attività garantiscono join coerenti e supportano la conformità ai requisiti di igiene dei dati.
 
 * **Relazioni schema**: [Definire le relazioni tra i set di dati utilizzando i descrittori](../api/descriptors.md)
-* **Igiene dei record**: [Gestisci eliminazioni record di precisione](../../hygiene/ui/record-delete.md#model-based-record-delete)
+* **Igiene dei record**: [Gestisci eliminazioni record di precisione per set di dati basati su schemi relazionali](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### Configurare la connessione sorgente
 
@@ -93,7 +98,7 @@ Esamina i casi d’uso comuni elencati di seguito in cui Data Mirror supporta la
 
 ### Modellazione dati relazionali
 
-Utilizzare [schemi basati su modelli](../schema/model-based.md) (detti anche schemi relazionali) in Data Mirror per rappresentare entità, inserire, aggiornare ed eliminare elementi a livello di riga e mantenere le relazioni chiave primaria ed esterna esistenti nelle origini dati. Questo approccio porta i principi di modellazione dei dati relazionali in Experience Platform e garantisce la coerenza strutturale tra i diversi set di dati.
+Utilizzare [schemi relazionali](../schema/relational.md) in Data Mirror per rappresentare entità, inserire, aggiornare ed eliminare elementi a livello di riga e mantenere le relazioni chiave primaria ed esterna esistenti nelle origini dati. Questo approccio porta i principi di modellazione dei dati relazionali in Experience Platform e garantisce la coerenza strutturale tra i diversi set di dati.
 
 ### Sincronizzazione da magazzino a lago
 
@@ -121,11 +126,11 @@ Esamina queste considerazioni chiave per garantire che l’implementazione sia a
 
 ### Requisiti per la cancellazione dei dati e l’igiene
 
-Tutte le applicazioni che utilizzano schemi basati su modelli e Data Mirror devono comprendere le implicazioni relative all’eliminazione dei dati. Gli schemi basati su modelli consentono eliminazioni precise a livello di record che possono influire sui dati correlati tra i set di dati connessi. Queste funzionalità di eliminazione influiscono sull’integrità dei dati, sulla conformità e sul comportamento delle applicazioni a valle, indipendentemente dal caso d’uso specifico. Rivedi [requisiti di igiene dei dati](../../hygiene/ui/record-delete.md#model-based-record-delete) e pianifica gli scenari di eliminazione prima dell&#39;implementazione.
+Tutte le applicazioni che utilizzano schemi relazionali e Data Mirror devono comprendere le implicazioni relative all’eliminazione dei dati. Gli schemi relazionali consentono eliminazioni precise a livello di record che possono influire sui dati correlati tra i set di dati connessi. Queste funzionalità di eliminazione influiscono sull’integrità dei dati, sulla conformità e sul comportamento delle applicazioni a valle, indipendentemente dal caso d’uso specifico. Rivedi [requisiti di igiene dei dati per i set di dati basati su schemi relazionali](../../hygiene/ui/record-delete.md#relational-record-delete) e pianifica gli scenari di eliminazione prima dell&#39;implementazione.
 
 ### Selezione del comportamento dello schema
 
-Per impostazione predefinita, gli schemi basati su modelli **registrano il comportamento**, che acquisisce lo stato dell&#39;entità (clienti, account, ecc.). Se hai bisogno di **comportamento della serie temporale** per il tracciamento degli eventi, devi configurarlo esplicitamente.
+Per impostazione predefinita, gli schemi relazionali presentano il comportamento **record**, che acquisisce lo stato dell&#39;entità (clienti, account, ecc.). Se hai bisogno di **comportamento della serie temporale** per il tracciamento degli eventi, devi configurarlo esplicitamente.
 
 ### Confronto dei metodi di acquisizione
 
@@ -146,8 +151,8 @@ Data Mirror supporta **relazioni uno-a-uno** e **molti-a-uno** tramite descritto
 Dopo aver esaminato questa panoramica, dovresti essere in grado di determinare se Data Mirror si adatta al tuo caso d’uso e comprendere i requisiti per l’implementazione. Per iniziare:
 
 1. **Gli architetti di dati** devono valutare il modello di dati per assicurarsi che supporti le chiavi primarie, il controllo delle versioni e le funzionalità di rilevamento delle modifiche.
-2. **Le parti interessate** devono confermare che la licenza include il supporto dello schema basato su modello e le edizioni Experience Platform richieste.
+2. **Le parti interessate** devono confermare che la licenza include il supporto per schemi relazionali e le edizioni Experience Platform richieste.
 3. **I progettisti di schemi** devono pianificare la struttura dello schema per identificare i descrittori richiesti, le relazioni tra i campi e le esigenze di governance dei dati.
 4. **I team di implementazione** devono scegliere un metodo di acquisizione basato sui sistemi di origine, sui requisiti in tempo reale e sui flussi di lavoro operativi.
 
-Per informazioni dettagliate sull&#39;implementazione, consulta la [documentazione sugli schemi basati su modelli](../schema/model-based.md).
+Per informazioni dettagliate sull&#39;implementazione, consulta la [documentazione sugli schemi relazionali](../schema/relational.md).

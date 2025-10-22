@@ -3,7 +3,7 @@ title: Creare un flusso di dati per le origini del database utilizzando l’API 
 type: Tutorial
 description: Scopri come utilizzare l’API del servizio Flusso per creare un flusso di dati e acquisire i dati dal database in Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 3%
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | ID di connessione dell&#39;origine del database. |
 | `params.tableName` | Percorso del file di origine. |
-| `params.cdcEnabled` | Valore booleano che indica se l’acquisizione della cronologia delle modifiche è abilitata. Se utilizzato con schemi basati su modelli, change data capture tiene traccia di inserimenti, aggiornamenti ed eliminazioni per mantenere il set di dati di destinazione sincronizzato con il sorgente. Questa proprietà è supportata dalle origini di database seguenti: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Per una panoramica di questa funzionalità, vedere [Panoramica di Data Mirror](../../../../xdm/data-mirror/overview.md). Per informazioni dettagliate sull&#39;implementazione, vedere [change data capture in sources guide](../change-data-capture.md) e [model-based schemas technical reference](../../../../xdm/schema/model-based.md). |
+| `params.cdcEnabled` | Valore booleano che indica se l’acquisizione della cronologia delle modifiche è abilitata. Se utilizzato con schemi relazionali, change data capture tiene traccia di inserimenti, aggiornamenti ed eliminazioni per mantenere il set di dati di destinazione sincronizzato con la sorgente. Questa proprietà è supportata dalle origini di database seguenti: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Per una panoramica di questa funzionalità, vedere [Panoramica di Data Mirror](../../../../xdm/data-mirror/overview.md). Per informazioni dettagliate sull&#39;implementazione, vedere [change data capture in sources guide](../change-data-capture.md) e [relational schemas technical reference](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | ID della specifica di connessione dell&#39;origine del database. Per un elenco degli ID delle specifiche del database, vedere l&#39;[appendice](#appendix). |
 
 **Risposta**

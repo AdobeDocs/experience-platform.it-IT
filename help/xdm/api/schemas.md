@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API Schema Registry consente di gestire in modo programmatico gli schemi XDM all’interno dell’applicazione Experience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2122'
 ht-degree: 4%
 
 ---
@@ -198,7 +198,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dello schema. I ca
 
 Il processo di composizione dello schema inizia assegnando una classe. La classe definisce gli aspetti comportamentali chiave dei dati (record o serie temporali), nonché i campi minimi necessari per descrivere i dati che verranno acquisiti.
 
-Per istruzioni sulla creazione di uno schema senza classi o gruppi di campi, noto come schema basato su modello, vedere la sezione [Creare uno schema basato su modello](#create-model-based-schema).
+Per istruzioni sulla creazione di uno schema senza classi o gruppi di campi, noto come schema relazionale, vedere la sezione [Creare uno schema relazionale](#create-relational-schema).
 
 >[!NOTE]
 >
@@ -281,17 +281,21 @@ L&#39;esecuzione di una richiesta GET per [elencare tutti gli schemi](#list) nel
 
 Per aggiungere campi aggiuntivi a uno schema, è possibile eseguire un&#39;operazione [PATCH](#patch) per aggiungere gruppi di campi agli array `allOf` e `meta:extends` dello schema.
 
-## Crea uno schema basato su modelli {#create-model-based-schema}
+## Crea uno schema relazionale {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
->Data Mirror e gli schemi basati su modelli sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
+>Data Mirror e gli schemi relazionali sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
 
-Creare uno schema basato su modello effettuando una richiesta POST all&#39;endpoint `/schemas`. Gli schemi basati su modelli memorizzano dati strutturati in stile relazionale **senza** classi o gruppi di campi. Definisci i campi direttamente sullo schema e identifica lo schema come basato su modello utilizzando un tag di comportamento logico.
+>[!NOTE]
+>
+>Nelle versioni precedenti della documentazione API di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. La funzionalità rimane la stessa, solo la terminologia è cambiata per maggiore chiarezza.
+
+Creare uno schema relazionale effettuando una richiesta POST all&#39;endpoint `/schemas`. Gli schemi relazionali memorizzano dati strutturati in stile relazionale **senza** classi o gruppi di campi. Definisci i campi direttamente sullo schema e identifica lo schema come relazionale utilizzando un tag di comportamento logico.
 
 >[!IMPORTANT]
 >
->Per creare uno schema basato su modello, impostare `meta:extends` su `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Questo è un **identificatore di comportamento logico** (non un comportamento fisico o una classe). **non** fare riferimento a classi o gruppi di campi in `allOf` e **non** includere classi o gruppi di campi in `meta:extends`.
+>Per creare uno schema relazionale, impostare `meta:extends` su `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Questo è un **identificatore di comportamento logico** (non un comportamento fisico o una classe). **non** fare riferimento a classi o gruppi di campi in `allOf` e **non** includere classi o gruppi di campi in `meta:extends`.
 
 Creare prima lo schema con `POST /tenant/schemas`. Aggiungere quindi i descrittori richiesti con l&#39;API dei descrittori [(`POST /tenant/descriptors`)](../api/descriptors.md):
 
@@ -302,15 +306,11 @@ Creare prima lo schema con `POST /tenant/schemas`. Aggiungere quindi i descritto
 
 >[!NOTE]
 >
->Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[!UICONTROL Identificatore versione]&quot; e &quot;[!UICONTROL Identificatore marca temporale]&quot;.
-
-<!-- >[!AVAILABILITY]
->
->Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+>Nell&#39;Editor schema dell&#39;interfaccia utente, i descrittori di versione e di marca temporale vengono visualizzati rispettivamente come &quot;[!UICONTROL Version identifier]&quot; e &quot;[!UICONTROL Timestamp identifier]&quot;.
 
 >[!CAUTION]
 >
->Gli schemi basati su modelli sono **non compatibili con gli schemi di unione**. Non applicare il tag `union` a `meta:immutableTags` quando si utilizzano schemi basati su modelli. Questa configurazione è bloccata nell’interfaccia utente, ma non è attualmente bloccata dall’API. Per ulteriori informazioni sul comportamento dello schema di unione, consulta la [guida dell&#39;endpoint Unions](./unions.md).
+>Gli schemi relazionali sono **non compatibili con gli schemi di unione**. Non applicare il tag `union` a `meta:immutableTags` quando si utilizzano schemi relazionali. Questa configurazione è bloccata nell’interfaccia utente, ma non è attualmente bloccata dall’API. Per ulteriori informazioni sul comportamento dello schema di unione, consulta la [guida dell&#39;endpoint Unions](./unions.md).
 
 **Formato API**
 
@@ -377,16 +377,16 @@ curl --request POST \
 | ------------------------------- | ------ | --------------------------------------------------------- |
 | `title` | Stringa | Nome visualizzato dello schema. |
 | `description` | Stringa | Breve spiegazione dello scopo dello schema. |
-| `type` | Stringa | Deve essere `"object"` per gli schemi basati su modelli. |
+| `type` | Stringa | Deve essere `"object"` per gli schemi relazionali. |
 | `definitions` | Oggetto | Contiene gli oggetti a livello di radice che definiscono i campi dello schema. |
 | `definitions.<name>.properties` | Oggetto | Nomi di campi e tipi di dati. |
 | `allOf` | Array | Fa riferimento alla definizione dell&#39;oggetto a livello di radice (ad esempio, `#/definitions/marketing_customers`). |
-| `meta:extends` | Array | Deve includere `"https://ns.adobe.com/xdm/data/adhoc-v2"` per identificare lo schema come basato su modello. |
+| `meta:extends` | Array | Deve includere `"https://ns.adobe.com/xdm/data/adhoc-v2"` per identificare lo schema come relazionale. |
 | `meta:behaviorType` | Stringa | Imposta su `"record"`. Usa `"time-series"` solo se abilitato e appropriato. |
 
 >[!IMPORTANT]
 >
->L’evoluzione dello schema per gli schemi basati su modelli segue le stesse regole aggiuntive degli schemi standard. Puoi aggiungere nuovi campi con una richiesta PATCH. Le modifiche, come la ridenominazione o la rimozione di campi, sono consentite solo se nel set di dati non sono stati acquisiti dati.
+>L’evoluzione dello schema per gli schemi relazionali segue le stesse regole aggiuntive degli schemi standard. Puoi aggiungere nuovi campi con una richiesta PATCH. Le modifiche, come la ridenominazione o la rimozione di campi, sono consentite solo se nel set di dati non sono stati acquisiti dati.
 
 **Risposta**
 
@@ -394,7 +394,7 @@ In caso di esito positivo, la richiesta restituisce **HTTP 201 (creato)** e lo s
 
 >[!NOTE]
 >
->Gli schemi basati su modelli non ereditano i campi predefiniti (ad esempio, id, timestamp o eventType). Definisci tutti i campi obbligatori in modo esplicito nello schema.
+>Gli schemi relazionali non ereditano campi predefiniti (ad esempio, id, timestamp o eventType). Definisci tutti i campi obbligatori in modo esplicito nello schema.
 
 **Risposta di esempio**
 
@@ -455,11 +455,11 @@ In caso di esito positivo, la richiesta restituisce **HTTP 201 (creato)** e lo s
 | `type` | Stringa | Il tipo di schema. |
 | `definitions` | Oggetto | Definisce gli oggetti o i gruppi di campi riutilizzabili utilizzati nello schema. Questo include in genere la struttura dati principale ed è indicato nell&#39;array `allOf` per definire la directory principale dello schema. |
 | `allOf` | Array | Specifica l&#39;oggetto principale dello schema facendo riferimento a una o più definizioni (ad esempio, `#/definitions/marketing_customers`). |
-| `meta:extends` | Array | Identifica lo schema come basato su modello (`adhoc-v2`). |
+| `meta:extends` | Array | Identifica lo schema come relazionale (`adhoc-v2`). |
 | `meta:behaviorType` | Stringa | Tipo di comportamento (`record` o `time-series`, se abilitato). |
 | `meta:containerId` | Stringa | Contenitore in cui è memorizzato lo schema (ad esempio, `tenant`). |
 
-Per aggiungere campi a uno schema basato su modello dopo la creazione, effettuare una [richiesta PATCH](#patch). Gli schemi basati su modelli non ereditano o evolvono automaticamente. Modifiche strutturali come la ridenominazione o l’eliminazione di campi sono consentite solo se nel set di dati non sono stati acquisiti dati. Una volta che i dati esistono, sono supportate solo **modifiche aggiuntive** (come l&#39;aggiunta di nuovi campi).
+Per aggiungere campi a uno schema relazionale dopo la creazione, effettuare una [richiesta PATCH](#patch). Gli schemi relazionali non ereditano o evolvono automaticamente. Modifiche strutturali come la ridenominazione o l’eliminazione di campi sono consentite solo se nel set di dati non sono stati acquisiti dati. Una volta che i dati esistono, sono supportate solo **modifiche aggiuntive** (come l&#39;aggiunta di nuovi campi).
 
 È possibile aggiungere nuovi campi a livello di radice (all&#39;interno della definizione radice o della radice `properties`), ma non è possibile rimuovere, rinominare o modificare il tipo di campi esistenti.
 

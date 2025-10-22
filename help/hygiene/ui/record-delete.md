@@ -2,16 +2,16 @@
 title: Registra richieste di eliminazione (flusso di lavoro interfaccia utente)
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
+source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
 workflow-type: tm+mt
-source-wordcount: '2420'
-ht-degree: 5%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
 # Registrare le richieste di eliminazione (flusso di lavoro dell’interfaccia utente) {#record-delete}
 
-Utilizza l&#39;area di lavoro [[!UICONTROL Ciclo di vita dati]](./overview.md) per eliminare i record in Adobe Experience Platform in base alle loro identità primarie. Questi record possono essere associati a singoli consumatori o a qualsiasi altra entità inclusa nel grafico delle identità.
+Utilizzare l&#39;area di lavoro [[!UICONTROL Data Lifecycle]](./overview.md) per eliminare i record in Adobe Experience Platform in base alle identità primarie. Questi record possono essere associati a singoli consumatori o a qualsiasi altra entità inclusa nel grafico delle identità.
 
 >[!IMPORTANT]
 >
@@ -31,35 +31,35 @@ Per ulteriori informazioni sulle identità in Experience Platform, consulta la s
 
 ## Creare una richiesta {#create-request}
 
-Per avviare il processo, seleziona **[!UICONTROL Ciclo di vita dati]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform. Viene visualizzata l&#39;area di lavoro [!UICONTROL Richieste del ciclo di vita dei dati]. Quindi, seleziona **[!UICONTROL Crea richiesta]** dalla pagina principale nell&#39;area di lavoro.
+Per avviare il processo, seleziona **[!UICONTROL Data Lifecycle]** nel menu di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform. Verrà visualizzata l&#39;area di lavoro [!UICONTROL Data lifecycle requests]. Selezionare **[!UICONTROL Create request]** dalla pagina principale nell&#39;area di lavoro.
 
-![L&#39;area di lavoro [!UICONTROL Richieste del ciclo di vita dei dati] con [!UICONTROL Crea richiesta] selezionata.](../images/ui/record-delete/create-request-button.png)
+![L&#39;area di lavoro [!UICONTROL Data lifecycle requests] con [!UICONTROL Create request] selezionato.](../images/ui/record-delete/create-request-button.png)
 
-Viene visualizzato il flusso di lavoro per la creazione delle richieste. Per impostazione predefinita, l&#39;opzione **[!UICONTROL Elimina record]** è selezionata nella sezione **[!UICONTROL Azione richiesta]**. Lascia selezionata questa opzione.
+Viene visualizzato il flusso di lavoro per la creazione delle richieste. Per impostazione predefinita, l&#39;opzione **[!UICONTROL Delete record]** è selezionata nella sezione **[!UICONTROL Requested Action]**. Lascia selezionata questa opzione.
 
 >[!IMPORTANT]
 > 
 >Per migliorare l’efficienza e ridurre i costi delle operazioni relative ai set di dati, le organizzazioni che sono state spostate nel formato Delta possono eliminare i dati dal servizio Identity, dal profilo cliente in tempo reale e dal data lake. Questo tipo di utente viene definito delta-migrato. Gli utenti delle organizzazioni con migrazione differita possono scegliere di eliminare i record da un singolo set di dati o da tutti. Gli utenti di organizzazioni che non sono stati sottoposti a migrazione delta non possono eliminare selettivamente i record da un singolo set di dati o da tutti i set di dati, come illustrato nell’immagine seguente. In questo caso, passare alla sezione [Fornisci identità](#provide-identities) della guida.
 
-![Il flusso di lavoro per la creazione delle richieste con l&#39;opzione [!UICONTROL Elimina record] selezionata ed evidenziata.](../images/ui/record-delete/delete-record.png)
+![Il flusso di lavoro di creazione delle richieste con l&#39;opzione [!UICONTROL Delete record] selezionata ed evidenziata.](../images/ui/record-delete/delete-record.png)
 
 ## Seleziona set di dati {#select-dataset}
 
 Il passaggio successivo consiste nel determinare se eliminare record da un singolo set di dati o da tutti i set di dati. A seconda della configurazione dell’organizzazione, l’opzione di selezione del set di dati potrebbe non essere disponibile. Se non trovi questa opzione, continua con la sezione [Fornisci identità](#provide-identities) della guida.
 
-Nella sezione **[!UICONTROL Dettagli record]**, seleziona un pulsante di scelta per scegliere un set di dati specifico o tutti i set di dati.
+Nella sezione **[!UICONTROL Record Details]**, seleziona un pulsante di scelta per scegliere un set di dati specifico o tutti i set di dati.
 
-Per eliminare da un set di dati specifico, selezionare **[!UICONTROL Seleziona set di dati]**, quindi selezionare l&#39;icona del database (![Icona del database](/help/images/icons/database.png)). Nella finestra di dialogo visualizzata, scegli un set di dati e seleziona **[!UICONTROL Fine]** per confermare.
+Per eliminare da un set di dati specifico, selezionare **[!UICONTROL Select dataset]**, quindi selezionare l&#39;icona del database (![Icona del database](/help/images/icons/database.png)). Nella finestra di dialogo visualizzata, scegli un set di dati e seleziona **[!UICONTROL Done]** per confermare.
 
-![Finestra di dialogo [!UICONTROL Seleziona set di dati] con un set di dati selezionato ed evidenziato [!UICONTROL Fine].](../images/ui/record-delete/select-dataset.png)
+![Finestra di dialogo [!UICONTROL Select dataset] con un set di dati selezionato ed evidenziato [!UICONTROL Done].](../images/ui/record-delete/select-dataset.png)
 
-Per eliminare da tutti i set di dati, selezionare **[!UICONTROL Tutti i set di dati]**. Questa opzione aumenta l’ambito dell’operazione e richiede di fornire tutti i tipi di identità pertinenti.
+Per eliminare da tutti i set di dati, selezionare **[!UICONTROL All datasets]**. Questa opzione aumenta l’ambito dell’operazione e richiede di fornire tutti i tipi di identità pertinenti.
 
-![Finestra di dialogo [!UICONTROL Seleziona set di dati] con l&#39;opzione [!UICONTROL Tutti i set di dati] selezionata.](../images/ui/record-delete/all-datasets.png)
+![La finestra di dialogo [!UICONTROL Select dataset] con l&#39;opzione [!UICONTROL All datasets] selezionata.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Selezionando **[!UICONTROL Tutti i set di dati]**, l&#39;operazione viene estesa a tutti i set di dati dell&#39;organizzazione. Ogni set di dati può utilizzare un tipo di identità primaria diverso. Devi fornire **tutti i tipi di identità richiesti** per garantire una corrispondenza accurata.
+>Se si seleziona **[!UICONTROL All datasets]**, l&#39;operazione verrà estesa a tutti i set di dati dell&#39;organizzazione. Ogni set di dati può utilizzare un tipo di identità primaria diverso. Devi fornire **tutti i tipi di identità richiesti** per garantire una corrispondenza accurata.
 >
 >Se manca un tipo di identità, alcuni record potrebbero essere ignorati durante l’eliminazione. Questa operazione può rallentare l&#39;elaborazione e portare a **risultati parziali**.
 
@@ -86,7 +86,7 @@ Come tutti i campi di identità in Experience Platform, uno spazio dei nomi di i
 
 >[!TIP]
 >
->Se non conosci lo spazio dei nomi delle identità per un particolare set di dati, puoi trovarlo nell’interfaccia utente di Experience Platform. Nell&#39;area di lavoro **[!UICONTROL Set di dati]** selezionare il set di dati in questione dall&#39;elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. Lo spazio dei nomi dell’identità viene visualizzato insieme al nome e alla descrizione dello schema.
+>Se non conosci lo spazio dei nomi delle identità per un particolare set di dati, puoi trovarlo nell’interfaccia utente di Experience Platform. Nell&#39;area di lavoro **[!UICONTROL Datasets]**, selezionare il set di dati in questione dall&#39;elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. Lo spazio dei nomi dell’identità viene visualizzato insieme al nome e alla descrizione dello schema.
 >
 >![Dashboard dei set di dati con un set di dati selezionato e una finestra di dialogo schema aperta dal pannello dei dettagli del set di dati. L&#39;ID primario del set di dati è evidenziato.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -97,7 +97,7 @@ Esistono due opzioni per fornire le identità quando si eliminano i record:
 
 ### Caricare un file JSON {#upload-json}
 
-Per caricare un file JSON, puoi trascinarlo e rilasciarlo nell&#39;area fornita, oppure selezionare **[!UICONTROL Scegli i file]** da sfogliare e selezionare dalla directory locale.
+Per caricare un file JSON, puoi trascinare e rilasciare il file nell&#39;area fornita, oppure selezionare **[!UICONTROL Choose files]** per sfogliare e selezionare dalla directory locale.
 
 ![Il flusso di lavoro per la creazione delle richieste con l&#39;interfaccia Scegli file e trascina per caricare i file JSON è evidenziato.](../images/ui/record-delete/upload-json.png)
 
@@ -125,15 +125,15 @@ Una volta caricato il file, puoi continuare a [inviare la richiesta](#submit).
 
 ### Immetti manualmente le identità {#manual-identity}
 
-Per immettere le identità manualmente, selezionare **[!UICONTROL Aggiungi identità]**.
+Per immettere le identità manualmente, selezionare **[!UICONTROL Add identity]**.
 
-![Il flusso di lavoro per la creazione delle richieste con l&#39;opzione [!UICONTROL Aggiungi identità] evidenziata.](../images/ui/record-delete/add-identity.png)
+![Il flusso di lavoro di creazione delle richieste con l&#39;opzione [!UICONTROL Add identity] evidenziata.](../images/ui/record-delete/add-identity.png)
 
-Vengono visualizzati i controlli che consentono di immettere le identità una alla volta. In **[!UICONTROL spazio dei nomi identità]**, utilizza il menu a discesa per selezionare il tipo di identità. In **[!UICONTROL Valore identità primaria]**, fornire il valore dello spazio dei nomi identità per il record.
+Vengono visualizzati i controlli che consentono di immettere le identità una alla volta. In **[!UICONTROL identity namespace]**, utilizzare il menu a discesa per selezionare il tipo di identità. In **[!UICONTROL Primary Identity Value]**, fornire il valore dello spazio dei nomi identità per il record.
 
 ![Il flusso di lavoro per la creazione di richieste con un campo di identità aggiunto manualmente.](../images/ui/record-delete/identity-added.png)
 
-Per aggiungere altre identità, selezionare l&#39;icona più (![A icona più.](/help/images/icons/tree-expand-all.png)) accanto a una delle righe oppure selezionare **[!UICONTROL Aggiungi identità]**.
+Per aggiungere altre identità, selezionare l&#39;icona più (![A icona più.](/help/images/icons/tree-expand-all.png)) accanto a una delle righe oppure selezionare **[!UICONTROL Add identity]**.
 
 ![Flusso di lavoro per la creazione di richieste con l&#39;icona più e l&#39;icona Aggiungi identità evidenziate.](../images/ui/record-delete/more-identities.png)
 
@@ -185,29 +185,33 @@ Se l’organizzazione richiede limiti più elevati, contatta il rappresentante A
 
 ## Inviare la richiesta {#submit}
 
-Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Impostazioni richiesta]**, fornisci un nome e una descrizione facoltativa per la richiesta prima di selezionare **[!UICONTROL Invia]**.
+Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Request settings]**, fornisci un nome e una descrizione facoltativa per la richiesta prima di selezionare **[!UICONTROL Submit]**.
 
 >[!TIP]
 >
 >Puoi inviare fino a 10.000 identità per richiesta tramite l’interfaccia utente. Per inviare volumi più grandi (fino a 100.000 ID per richiesta), utilizza il [metodo API](../api/workorder.md#create).
 
-![I campi [!UICONTROL Name] e [!UICONTROL Description] dell&#39;impostazione della richiesta sono evidenziati da [!UICONTROL Submit].](../images/ui/record-delete/submit.png)
+![I campi [!UICONTROL Name] e [!UICONTROL Description] dell&#39;impostazione della richiesta sono evidenziati con [!UICONTROL Submit].](../images/ui/record-delete/submit.png)
 
-Viene visualizzata una finestra di dialogo [!UICONTROL Conferma richiesta] per indicare che le identità non possono essere recuperate una volta eliminate. Seleziona **[!UICONTROL Invia]** per confermare l&#39;elenco di identità di cui desideri eliminare i dati.
+Viene visualizzata una finestra di dialogo [!UICONTROL Confirm request] per indicare che le identità non possono essere recuperate una volta eliminate. Selezionare **[!UICONTROL Submit]** per confermare l&#39;elenco di identità di cui si desidera eliminare i dati.
 
-![Finestra di dialogo [!UICONTROL Conferma richiesta].](../images/ui/record-delete/confirm-request.png)
+![Finestra di dialogo [!UICONTROL Confirm request].](../images/ui/record-delete/confirm-request.png)
 
-Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro che viene visualizzato nella scheda [!UICONTROL Record] dell&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati]. Da qui è possibile monitorare lo stato dell&#39;ordine di lavoro durante l&#39;elaborazione della richiesta.
+Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro che viene visualizzato nella scheda [!UICONTROL Record] dell&#39;area di lavoro [!UICONTROL Data Lifecycle]. Da qui è possibile monitorare lo stato dell&#39;ordine di lavoro durante l&#39;elaborazione della richiesta.
 
 >[!NOTE]
 >
 >Per informazioni dettagliate sull&#39;elaborazione delle eliminazioni dei record dopo l&#39;esecuzione, consultare la sezione della panoramica relativa a [timeline e trasparenza](../home.md#record-delete-transparency).
 
-![Scheda [!UICONTROL Record] dell&#39;area di lavoro [!UICONTROL Ciclo di vita dati] con la nuova richiesta evidenziata.](../images/ui/record-delete/request-log.png)
+![Scheda [!UICONTROL Record] dell&#39;area di lavoro [!UICONTROL Data Lifecycle] con la nuova richiesta evidenziata.](../images/ui/record-delete/request-log.png)
 
-## Eliminazione di record dai set di dati basati su modelli {#model-based-record-delete}
+## Eliminazione di record dai set di dati basati su schemi relazionali {#relational-record-delete}
 
-Se il set di dati da cui stai eliminando è uno schema basato su modello, controlla le seguenti considerazioni per assicurarti che i record vengano rimossi correttamente e non riacquisiti a causa di mancata corrispondenza tra Experience Platform e il sistema di origine.
+Se il set di dati da cui stai eseguendo l’eliminazione si basa su uno schema relazionale, controlla le seguenti considerazioni per assicurarti che i record vengano rimossi correttamente e non riacquisiti a causa di mancata corrispondenza tra Experience Platform e il sistema di origine.
+
+>[!NOTE]
+>
+>Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. La funzionalità e il comportamento di eliminazione rimangono gli stessi.
 
 ### Comportamento eliminazione record
 
@@ -224,22 +228,22 @@ Per evitare la riacquisizione, applica lo stesso approccio di eliminazione sia n
 
 ### Modificare le colonne di acquisizione e controllo dei dati
 
-Gli schemi basati su modello che utilizzano Origini con acquisizione dati di modifica possono utilizzare la colonna di controllo `_change_request_type` per distinguere le eliminazioni dagli upsert. Durante l&#39;acquisizione, i record contrassegnati con `d` vengono eliminati dal set di dati, mentre quelli contrassegnati con `u` o senza la colonna vengono trattati come upsert. La colonna `_change_request_type` viene letta solo al momento dell’acquisizione e non viene memorizzata nello schema di destinazione o mappata su campi XDM.
+Gli schemi relazionali che utilizzano Origini con acquisizione dati di modifica possono utilizzare la colonna di controllo `_change_request_type` per distinguere le eliminazioni dagli upsert. Durante l&#39;acquisizione, i record contrassegnati con `d` vengono eliminati dal set di dati, mentre quelli contrassegnati con `u` o senza la colonna vengono trattati come upsert. La colonna `_change_request_type` viene letta solo al momento dell’acquisizione e non viene memorizzata nello schema di destinazione o mappata su campi XDM.
 
 >[!NOTE]
 >
 >L’eliminazione dei record tramite l’interfaccia utente del ciclo di vita dei dati non influisce sul sistema di origine. Per rimuovere dati da entrambe le posizioni, eliminali sia in Experience Platform che nell’origine.
 
-### Metodi di eliminazione aggiuntivi per gli schemi basati su modelli
+### Metodi di eliminazione aggiuntivi per gli schemi relazionali
 
-Oltre al flusso di lavoro standard per l’eliminazione dei record, gli schemi basati su modelli supportano metodi aggiuntivi per casi d’uso specifici:
+Oltre al flusso di lavoro standard per l’eliminazione dei record, gli schemi relazionali supportano metodi aggiuntivi per casi d’uso specifici:
 
 * **Approccio del set di dati di copia sicura**: duplica il set di dati di produzione e applica le eliminazioni alla copia per il test controllato o la riconciliazione prima di applicare le modifiche ai dati di produzione.
 * **Caricamento batch solo eliminazioni**: carica un file contenente solo operazioni di eliminazione per l&#39;igiene di destinazione quando devi rimuovere record specifici senza influire su altri dati.
 
 ### Supporto dei descrittori per le operazioni di igiene {#descriptor-support}
 
-I descrittori di schema basati su modelli forniscono metadati essenziali per operazioni di igiene precise:
+I descrittori degli schemi relazionali forniscono metadati essenziali per operazioni di igiene precise:
 
 * **Descrittore della chiave primaria**: identifica i record in modo univoco per gli aggiornamenti o le eliminazioni mirati, assicurando che vengano interessati i record corretti.
 * **Descrittore versione**: assicura che le eliminazioni e gli aggiornamenti vengano applicati nell&#39;ordine cronologico corretto, evitando operazioni fuori sequenza.
@@ -249,7 +253,7 @@ I descrittori di schema basati su modelli forniscono metadati essenziali per ope
 >
 >I processi di igiene operano a livello di set di dati. Per i set di dati abilitati per il profilo, potrebbero essere necessari flussi di lavoro di profilo aggiuntivi per mantenere la coerenza tra Real-Time Customer Profile.
 
-### Conservazione pianificata per schemi basati su modelli
+### Fidelizzazione pianificata per schemi relazionali
 
 Per un&#39;igiene automatizzata basata sull&#39;età dei dati anziché su identità specifiche, consulta [Gestire la conservazione dei set di dati Experience Event (TTL)](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) per la conservazione pianificata a livello di riga nel data lake.
 
@@ -257,7 +261,7 @@ Per un&#39;igiene automatizzata basata sull&#39;età dei dati anziché su identi
 >
 >La scadenza a livello di riga è supportata solo per i set di dati che utilizzano il comportamento delle serie temporali.
 
-### Best practice per l’eliminazione dei record basati su modelli
+### Best practice per l’eliminazione dei record relazionali
 
 Per evitare il re-inserimento involontario e mantenere la coerenza dei dati tra i sistemi, segui queste best practice:
 
@@ -265,8 +269,9 @@ Per evitare il re-inserimento involontario e mantenere la coerenza dei dati tra 
 * **Monitorare i flussi di acquisizione dei dati delle modifiche**: dopo aver eliminato i record in Platform, monitorare i flussi di dati e verificare che il sistema di origine rimuova gli stessi record o li includa con `_change_request_type = 'd'`.
 * **Pulizia dell&#39;origine**: per le origini che utilizzano l&#39;acquisizione con aggiornamento completo o per quelle che non supportano le eliminazioni tramite l&#39;acquisizione di dati di modifica, eliminare i record direttamente dal sistema di origine per evitare la riacquisizione.
 
-Per ulteriori dettagli sui requisiti dello schema, consulta [requisiti del descrittore dello schema basato su modello](../../xdm/schema/model-based.md#model-based-schemas).\
-Per informazioni sul funzionamento di Change Data Capture con le origini, vedere [Abilitare Change Data Capture nelle origini](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
+Per ulteriori dettagli sui requisiti dello schema, vedi [requisiti del descrittore dello schema relazionale](../../xdm/schema/relational.md#relational-schemas).
+
+Per informazioni sul funzionamento di Change Data Capture con le origini, vedere [Abilitare Change Data Capture nelle origini](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
 ## Passaggi successivi
 

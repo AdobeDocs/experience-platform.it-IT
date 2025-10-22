@@ -3,9 +3,9 @@ description: Scopri come utilizzare i modelli nell’interfaccia utente di Adobe
 title: Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: f9e3c19fdfd4ca0e03fdf3b3a7b5e82b72490dbc
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2271'
 ht-degree: 10%
 
 ---
@@ -53,11 +53,11 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 >abstract="Seleziona il tipo di azienda appropriato per il tuo caso d’uso. L’accesso può variare a seconda dell’account di abbonamento Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it" text="Panoramica di Real-Time CDP"
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources] e visualizzare un catalogo delle origini disponibili in Experience Platform.
 
-Utilizza il menu *[!UICONTROL Categorie]* per filtrare le origini per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
+Utilizzare il menu *[!UICONTROL Categories]* per filtrare le origini per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
-Vai alla categoria [!UICONTROL Applicazioni Adobe] per visualizzare la scheda di origine [!DNL Marketo Engage], quindi seleziona [!UICONTROL Aggiungi dati] per iniziare.
+Andare alla categoria [!UICONTROL Adobe applications] per visualizzare la scheda di origine [!DNL Marketo Engage], quindi selezionare [!UICONTROL Add data] per iniziare.
 
 ![Catalogo dell&#39;area di lavoro origini con l&#39;origine Marketo Engage evidenziata.](../../images/tutorials/templates/catalog.png)
 
@@ -68,11 +68,11 @@ Viene visualizzata una finestra pop-up con la possibilità di sfogliare i modell
 
 >[!NOTE]
 >
->I modelli possono generare automaticamente schemi basati su modelli quando si lavora con origini che richiedono flussi di lavoro di acquisizione dati di modifica o che supportano più modelli di dati. Questi schemi abilitano le funzionalità di Data Mirror per la sincronizzazione dei dati in tempo reale.\
->Quando si utilizzano modelli con schemi basati su modelli, le risorse generate automaticamente includono i campi obbligatori di chiave primaria, identificatore di versione e identificatore di marca temporale.\
->Per ulteriori informazioni, consulta la [panoramica di Data Mirror](../../../xdm/data-mirror/overview.md) e [riferimento tecnico agli schemi basati su modelli](../../../xdm/schema/model-based.md).
+>I modelli possono generare automaticamente schemi relazionali quando si lavora con origini che richiedono flussi di lavoro di acquisizione dati di modifica o che supportano più modelli di dati. Questi schemi abilitano le funzionalità di Data Mirror per la sincronizzazione dei dati in tempo reale.\
+>Quando si utilizzano modelli con schemi relazionali, le risorse generate automaticamente includono i campi obbligatori di chiave primaria, identificatore di versione e identificatore di marca temporale.\
+>Per ulteriori informazioni, consulta la [panoramica di Data Mirror](../../../xdm/data-mirror/overview.md) e [riferimento tecnico agli schemi relazionali](../../../xdm/schema/relational.md).
 
-Per utilizzare le risorse generate automaticamente, seleziona **[!UICONTROL Sfoglia modelli]**, quindi seleziona **[!UICONTROL Seleziona]**.
+Per utilizzare le risorse generate automaticamente, seleziona **[!UICONTROL Browse templates]**, quindi seleziona **[!UICONTROL Select]**.
 
 ![Finestra popup con opzioni per sfogliare i modelli o utilizzare risorse esistenti.](../../images/tutorials/templates/browse-templates.png)
 
@@ -84,13 +84,13 @@ Viene visualizzato il passaggio di autenticazione, in cui viene richiesto di cre
 
 >[!TAB Usa un account esistente]
 
-Per utilizzare un account esistente, selezionare [!UICONTROL Account esistente], quindi selezionare l&#39;account che si desidera utilizzare dall&#39;elenco visualizzato.
+Per utilizzare un account esistente, selezionare [!UICONTROL Existing account], quindi selezionare l&#39;account che si desidera utilizzare dall&#39;elenco visualizzato.
 
 ![Pagina di selezione per un account esistente con un elenco di account esistenti a cui è possibile accedere.](../../images/tutorials/templates/existing-account.png)
 
 >[!TAB Crea un nuovo account]
 
-Per creare un nuovo account, selezionare **[!UICONTROL Nuovo account]**, quindi specificare i dettagli della connessione di origine e le credenziali di autenticazione dell&#39;account. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e attendere un po&#39; di tempo per stabilire la nuova connessione.
+Per creare un nuovo account, selezionare **[!UICONTROL New account]**, quindi fornire i dettagli della connessione di origine e le credenziali di autenticazione dell&#39;account. Al termine, selezionare **[!UICONTROL Connect to source]** e attendere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![Pagina di autenticazione per un nuovo account con i dettagli della connessione di origine e le credenziali di autenticazione dell&#39;account.](../../images/tutorials/templates/new-account.png)
 
@@ -184,11 +184,11 @@ A seconda del tipo di azienda selezionato, viene visualizzato un elenco di model
 
 ![Elenco di modelli con l&#39;icona di anteprima evidenziata.](../../images/tutorials/templates/templates.png)
 
-Viene visualizzata la finestra di anteprima che consente di esplorare e controllare i dati di esempio dal modello. Al termine, selezionare **[!UICONTROL Ottenuto]**.
+Viene visualizzata la finestra di anteprima che consente di esplorare e controllare i dati di esempio dal modello. Al termine, selezionare **[!UICONTROL Got it]**.
 
 ![Finestra dei dati di esempio per l&#39;anteprima.](../../images/tutorials/templates/preview-sample-data.png)
 
-Quindi, seleziona dall’elenco il modello da utilizzare. Puoi selezionare più modelli e creare più flussi di dati contemporaneamente. Tuttavia, un modello può essere utilizzato solo una volta per account. Dopo aver selezionato i modelli, seleziona **[!UICONTROL Fine]** e attendi alcuni istanti per la generazione delle risorse.
+Quindi, seleziona dall’elenco il modello da utilizzare. Puoi selezionare più modelli e creare più flussi di dati contemporaneamente. Tuttavia, un modello può essere utilizzato solo una volta per account. Dopo aver selezionato i modelli, seleziona **[!UICONTROL Finish]** e attendi che vengano generati alcuni istanti per le risorse.
 
 Se selezioni uno o più elementi parziali dall’elenco dei modelli disponibili, tutti gli schemi B2B e gli spazi dei nomi di identità verranno comunque generati per garantire che le relazioni B2B tra gli schemi siano configurate correttamente.
 
@@ -210,7 +210,7 @@ In alternativa, puoi impostare la frequenza di acquisizione su **Minuti**, **Ore
 
 Durante questo passaggio, puoi anche abilitare **backfill** e definire una colonna per l&#39;acquisizione incrementale dei dati. La retrocompilazione viene utilizzata per acquisire i dati storici, mentre la colonna definita per l’acquisizione incrementale consente di distinguere i nuovi dati dai dati esistenti.
 
-Dopo aver completato la configurazione della pianificazione di acquisizione, seleziona **[!UICONTROL Fine]**.
+Dopo aver completato la configurazione della pianificazione di acquisizione, seleziona **[!UICONTROL Finish]**.
 
 ![Interfaccia di pianificazione per i modelli Dynamics e Salesforce con retrocompilazione abilitata.](../../images/tutorials/templates/backfill.png)
 
@@ -221,17 +221,17 @@ Dopo aver completato la configurazione della pianificazione di acquisizione, sel
 >title="Esamina le risorse generate automaticamente"
 >abstract="La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di uscire dalla pagina, una notifica ti chiederà di tornare una volta completate le risorse. Puoi esaminare le risorse generate e configurare ulteriormente il flusso di dati in qualsiasi momento."
 
-Nella pagina [!UICONTROL Esamina risorse modello] sono visualizzate le risorse generate automaticamente come parte del modello. In questa pagina puoi visualizzare gli schemi, i set di dati, gli spazi dei nomi delle identità e i flussi di dati generati automaticamente associati alla connessione sorgente. La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di uscire dalla pagina, una notifica ti chiederà di tornare una volta completate le risorse. Puoi esaminare le risorse generate e configurare ulteriormente il flusso di dati in qualsiasi momento.
+Nella pagina [!UICONTROL Review template assets] vengono visualizzate le risorse generate automaticamente come parte del modello. In questa pagina puoi visualizzare gli schemi, i set di dati, gli spazi dei nomi delle identità e i flussi di dati generati automaticamente associati alla connessione sorgente. La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di uscire dalla pagina, una notifica ti chiederà di tornare una volta completate le risorse. Puoi esaminare le risorse generate e configurare ulteriormente il flusso di dati in qualsiasi momento.
 
-Per impostazione predefinita, i flussi di dati generati automaticamente sono impostati su uno stato di bozza per consentire ulteriori personalizzazioni nelle configurazioni, ad esempio le regole di mappatura o le frequenze pianificate. Seleziona i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi seleziona **[!UICONTROL Anteprima mappature]** per visualizzare i set di mappatura creati per il flusso di dati bozza.
+Per impostazione predefinita, i flussi di dati generati automaticamente sono impostati su uno stato di bozza per consentire ulteriori personalizzazioni nelle configurazioni, ad esempio le regole di mappatura o le frequenze pianificate. Selezionare i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi selezionare **[!UICONTROL Preview mappings]** per visualizzare i set di mappatura creati per il flusso di dati bozza.
 
 ![Finestra a discesa con l&#39;opzione Anteprima mappature selezionata.](../../images/tutorials/templates/preview.png)
 
-Viene visualizzata una pagina di anteprima che consente di esaminare la relazione di mappatura tra i campi dei dati di origine e i campi dello schema di destinazione. Dopo aver visualizzato le mappature del flusso di dati. Seleziona **[!UICONTROL Ottenuto.]**
+Viene visualizzata una pagina di anteprima che consente di esaminare la relazione di mappatura tra i campi dei dati di origine e i campi dello schema di destinazione. Dopo aver visualizzato le mappature del flusso di dati. Seleziona **[!UICONTROL Got it.]**
 
 ![Finestra di anteprima della mappatura.](../../images/tutorials/templates/preview-mappings.png)
 
-Puoi aggiornare i flussi di dati in qualsiasi momento dopo l’esecuzione. Selezionare i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi selezionare **[!UICONTROL Aggiorna flusso di dati]**. Viene visualizzata la pagina del flusso di lavoro delle origini, in cui è possibile aggiornare i dettagli del flusso di dati, incluse le impostazioni per l’acquisizione parziale, la diagnostica degli errori, le notifiche di avviso e la mappatura del flusso di dati.
+Puoi aggiornare i flussi di dati in qualsiasi momento dopo l’esecuzione. Selezionare i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi selezionare **[!UICONTROL Update dataflow]**. Viene visualizzata la pagina del flusso di lavoro delle origini, in cui è possibile aggiornare i dettagli del flusso di dati, incluse le impostazioni per l’acquisizione parziale, la diagnostica degli errori, le notifiche di avviso e la mappatura del flusso di dati.
 
 Puoi utilizzare la vista dell’editor schema per apportare aggiornamenti allo schema generato automaticamente. Per ulteriori informazioni, visita la guida in [utilizzo dell&#39;editor schema](../../../xdm/tutorials/create-schema-ui.md).
 
@@ -239,29 +239,29 @@ Puoi utilizzare la vista dell’editor schema per apportare aggiornamenti allo s
 
 >[!TIP]
 >
->Puoi accedere al flusso di dati bozza tramite la pagina del catalogo [!UICONTROL Flussi di dati] nell&#39;area di lavoro origini. Seleziona **[!UICONTROL Flussi dati]** dall&#39;intestazione superiore, quindi seleziona dall&#39;elenco il flusso di dati che desideri aggiornare.
+>Puoi accedere al flusso di dati della bozza tramite la pagina del catalogo [!UICONTROL Dataflows] nell&#39;area di lavoro origini. Seleziona **[!UICONTROL Dataflows]** dall&#39;intestazione superiore, quindi seleziona dall&#39;elenco il flusso di dati che desideri aggiornare.
 >
 >![Elenco dei flussi di dati esistenti nel catalogo dei flussi di dati dell&#39;area di lavoro di origine.](../../images/tutorials/templates/dataflows.png)
 
 ### Pubblicare il flusso di dati
 
-Inizia il processo di pubblicazione passando dal flusso di lavoro origini. Dopo aver selezionato [!UICONTROL Flusso di dati di aggiornamento], si passa al passaggio *[!UICONTROL Aggiungi dati]* del flusso di lavoro. Seleziona **[!UICONTROL Avanti]** per procedere.
+Inizia il processo di pubblicazione passando dal flusso di lavoro origini. Dopo aver selezionato [!UICONTROL Update dataflow], si passa al passaggio *[!UICONTROL Add data]* del flusso di lavoro. Selezionare **[!UICONTROL Next]** per continuare.
 
 ![Passaggio Aggiungi dati per un flusso di dati bozza](../../images/tutorials/templates/continue-draft.png)
 
-Quindi, conferma i dettagli del flusso di dati e configura le impostazioni per la diagnostica degli errori, l’acquisizione parziale e le notifiche di avviso. Al termine, selezionare **[!UICONTROL Avanti]**.
+Quindi, conferma i dettagli del flusso di dati e configura le impostazioni per la diagnostica degli errori, l’acquisizione parziale e le notifiche di avviso. Al termine, selezionare **[!UICONTROL Next]**.
 
 ![Passaggio dei dettagli del flusso di dati per un flusso di dati bozza.](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->Puoi selezionare **[!UICONTROL Salva come bozza]** in qualsiasi momento per interrompere e salvare le modifiche apportate al flusso di dati.
+>Puoi selezionare **[!UICONTROL Save as draft]** in qualsiasi momento per interrompere e salvare le modifiche apportate al flusso di dati.
 
 Viene visualizzato il passaggio di mappatura. Durante questo passaggio, puoi riconfigurare le configurazioni di mappatura del flusso di dati. Per una guida completa sulle funzioni di preparazione dei dati utilizzate per la mappatura, visita la [guida dell&#39;interfaccia utente di preparazione dei dati](../../../data-prep/ui/mapping.md).
 
 ![Passaggio di mappatura per un flusso di dati bozza.](../../images/tutorials/templates/mapping.png)
 
-Infine, controlla i dettagli del flusso di dati e seleziona **[!UICONTROL Salva e acquisisci]** per pubblicare la bozza.
+Infine, controlla i dettagli del flusso di dati e seleziona **[!UICONTROL Save & ingest]** per pubblicare la bozza.
 
 ![Passaggio di revisione per un flusso di dati bozza.](../../images/tutorials/templates/review.png)
 

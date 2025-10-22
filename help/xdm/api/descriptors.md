@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i descrittori
 description: L’endpoint /descriptors nell’API Schema Registry consente di gestire in modo programmatico i descrittori XDM all’interno dell’applicazione Experience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,11 @@ L&#39;endpoint `/descriptors` nell&#39;API [!DNL Schema Registry] consente di ge
 
 L&#39;endpoint utilizzato in questa guida fa parte dell&#39;[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-Oltre ai descrittori standard, [!DNL Schema Registry] supporta i tipi di descrittori per gli schemi basati su modelli, ad esempio **chiave primaria**, **versione** e **timestamp**. Questi applicano l’univocità, controllano il controllo delle versioni e definiscono i campi di serie temporali a livello di schema. Se non conosci gli schemi basati su modelli, controlla la [panoramica di Data Mirror](../data-mirror/overview.md) e la [documentazione tecnica sugli schemi basati su modelli](../schema/model-based.md) prima di continuare.
+Oltre ai descrittori standard, [!DNL Schema Registry] supporta i tipi di descrittori per gli schemi relazionali, ad esempio **chiave primaria**, **versione** e **timestamp**. Questi applicano l’univocità, controllano il controllo delle versioni e definiscono i campi di serie temporali a livello di schema. Se non conosci gli schemi relazionali, controlla la [panoramica di Data Mirror](../data-mirror/overview.md) e la [documentazione tecnica sugli schemi relazionali](../schema/relational.md) prima di continuare.
+
+>[!NOTE]
+>
+>Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. La funzionalità del descrittore e gli endpoint API rimangono invariati. Per maggiore chiarezza, è stata aggiornata solo la terminologia.
 
 >[!IMPORTANT]
 >
@@ -397,7 +401,7 @@ Utilizzare queste proprietà per dichiarare la relazione tra un campo di origine
 L’API supporta due modelli:
 
 - `xdm:descriptorOneToOne`: relazione standard 1:1.
-- `xdm:descriptorRelationship`: modello generale per nuovi schemi basati su modelli e lavoro (supporta cardinalità, denominazione e destinazioni chiave non primarie).
+- `xdm:descriptorRelationship`: modello generale per nuovi schemi relazionali e di lavoro (supporta cardinalità, denominazione e destinazioni chiave non primarie).
 
 ##### Relazione uno-a-uno (schemi standard)
 
@@ -427,9 +431,9 @@ Nella tabella seguente sono descritti i campi necessari per definire un descritt
 | `xdm:destinationVersion` | Versione principale dello schema di riferimento. |
 | `xdm:destinationProperty` | (Facoltativo) Percorso di un campo di destinazione all’interno dello schema di riferimento. Se questa proprietà viene omessa, il campo di destinazione viene dedotto da tutti i campi che contengono un descrittore di identità di riferimento corrispondente (vedi sotto). |
 
-##### Relazione generale (schemi basati su modelli e consigliati per i nuovi progetti)
+##### Relazione generale (schemi relazionali e consigliati per nuovi progetti)
 
-Utilizza questo descrittore per tutte le nuove implementazioni e per gli schemi basati su modelli. Consente di definire la cardinalità della relazione (ad esempio uno a uno o molti a uno), specificare i nomi delle relazioni e collegarsi a un campo di destinazione che non sia la chiave primaria (chiave non primaria).
+Utilizza questo descrittore per tutte le nuove implementazioni e per gli schemi relazionali. Consente di definire la cardinalità della relazione (ad esempio uno a uno o molti a uno), specificare i nomi delle relazioni e collegarsi a un campo di destinazione che non sia la chiave primaria (chiave non primaria).
 
 Gli esempi seguenti mostrano come definire un descrittore di relazione generale.
 
@@ -474,7 +478,7 @@ Per decidere quale descrittore di relazione applicare, utilizza le seguenti line
 
 | Situazione | Descrittore da utilizzare |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| Nuovi schemi basati su modelli o lavoro | `xdm:descriptorRelationship` |
+| Nuovi schemi lavorativi o relazionali | `xdm:descriptorRelationship` |
 | Mappatura 1:1 esistente negli schemi standard | Continua a utilizzare `xdm:descriptorOneToOne` a meno che non siano necessarie funzionalità supportate solo da `xdm:descriptorRelationship`. |
 | Esigenza di cardinalità molti-a-uno o facoltativa (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
 | Nomi di relazioni o titoli necessari per la leggibilità dell’interfaccia utente/a valle | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ Nella tabella seguente vengono confrontate le funzionalità dei due tipi di desc
 | Cardinalità | 1:1 | 1:1, 1:0, M:1, M:0 (informativo) |
 | Destinazione | Campo identità/esplicito | Chiave primaria per impostazione predefinita o chiave non primaria tramite `xdm:destinationProperty` |
 | Denominazione dei campi | Non supportato | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` e titoli |
-| Adattamento relazionale | Limitato | Pattern principale per schemi basati su modello |
+| Adattamento relazionale | Limitato | Pattern principale per schemi relazionali |
 
 ##### Vincoli e convalida
 
 Segui questi requisiti e raccomandazioni durante la definizione di un descrittore di relazione generale:
 
-- Per gli schemi basati su modelli, inserisci il campo sorgente (chiave esterna) a livello principale. Attualmente si tratta di una limitazione tecnica per l’acquisizione, non solo di una raccomandazione sulle best practice.
+- Per gli schemi relazionali, inserisci il campo sorgente (chiave esterna) a livello principale. Attualmente si tratta di una limitazione tecnica per l’acquisizione, non solo di una raccomandazione sulle best practice.
 - Assicurati che i tipi di dati dei campi di origine e di destinazione siano compatibili (numerico, data, booleano, stringa).
 - Ricordate che la cardinalità è informativa; l&#39;archiviazione non la applica. Specificare la cardinalità nel formato `<source>:<destination>`. I valori accettati sono: `1:1`, `1:0`, `M:1` o `M:0`.
 
@@ -525,7 +529,7 @@ Il descrittore di chiave primaria (`xdm:descriptorPrimaryKey`) applica vincoli d
 
 >[!NOTE]
 >
->Nell&#39;editor dello schema dell&#39;interfaccia utente, il descrittore di versione viene visualizzato come &quot;[!UICONTROL Identificatore versione]&quot;.
+>Nell&#39;Editor schema dell&#39;interfaccia utente, il descrittore di versione viene visualizzato come &quot;[!UICONTROL Version identifier]&quot;.
 
 Il descrittore di versione (`xdm:descriptorVersion`) designa un campo per rilevare e impedire conflitti da eventi di modifica fuori ordine.
 
@@ -547,7 +551,7 @@ Il descrittore di versione (`xdm:descriptorVersion`) designa un campo per rileva
 
 >[!NOTE]
 >
->Nell&#39;Editor schema dell&#39;interfaccia utente, il descrittore timestamp viene visualizzato come &quot;[!UICONTROL Identificatore timestamp].&quot;
+>Nell&#39;Editor schema dell&#39;interfaccia utente, il descrittore timestamp viene visualizzato come &quot;[!UICONTROL Timestamp identifier]&quot;.
 
 Il descrittore timestamp (`xdm:descriptorTimestamp`) indica un campo data-ora come timestamp per gli schemi con `"meta:behaviorType": "time-series"`.
 
@@ -627,7 +631,7 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 
 #### Descrittore di campo obsoleto
 
-È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione [&#x200B; `Accept`corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
+È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione [ `Accept`corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
 
 ```json
 {

@@ -2,9 +2,9 @@
 title: Abilitare Change Data Capture per le connessioni di origine nell’API
 description: Scopri come abilitare l’acquisizione dei dati di modifica per le connessioni di origine nell’API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -17,32 +17,36 @@ Experience Platform attualmente supporta **copia dati incrementale**, che trasfe
 
 Cambia invece acquisisce ed applica inserti, aggiornamenti ed eliminazioni quasi in tempo reale. Questo monitoraggio completo delle modifiche assicura che i set di dati rimangano completamente allineati al sistema di origine e fornisce una cronologia completa delle modifiche, oltre a ciò che supporta la copia incrementale. Tuttavia, le operazioni di eliminazione richiedono una considerazione particolare in quanto influiscono su tutte le applicazioni che utilizzano i set di dati di destinazione.
 
-La modifica dell&#39;acquisizione dati in Experience Platform richiede **[Data Mirror](../../../xdm/data-mirror/overview.md)** con [schemi basati su modello](../../../xdm/schema/model-based.md) (detti anche schemi relazionali). È possibile fornire i dati di modifica a Data Mirror in due modi:
+La modifica dell&#39;acquisizione dati in Experience Platform richiede **[Data Mirror](../../../xdm/data-mirror/overview.md)** con [schemi relazionali](../../../xdm/schema/relational.md). È possibile fornire i dati di modifica a Data Mirror in due modi:
 
 * **[Rilevamento delle modifiche manuale](#file-based-sources)**: includi una colonna `_change_request_type` nel set di dati per le origini che non generano in modo nativo record di acquisizione dati di modifica
 * **[Esportazioni native di acquisizione dati di modifica](#database-sources)**: utilizza i record di acquisizione dati di modifica esportati direttamente dal sistema di origine
 
-Entrambi gli approcci richiedono Data Mirror con schemi basati su modelli per preservare le relazioni e applicare l’univocità.
+Entrambi gli approcci richiedono Data Mirror con schemi relazionali per preservare le relazioni e applicare l’univocità.
 
-## Data Mirror con schemi basati su modelli
+## Data Mirror con schemi relazionali
 
 >[!AVAILABILITY]
 >
->Data Mirror e gli schemi basati su modelli sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
+>Data Mirror e gli schemi relazionali sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
+
+>[!NOTE]
+>
+>Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. Le funzionalità e le modifiche apportate alle funzionalità di acquisizione dei dati rimangono invariate.
 
 >[!NOTE]
 >
 >**Utenti di campagne orchestrate**: utilizza le funzionalità di Data Mirror descritte in questo documento per lavorare con i dati dei clienti mantenendo l&#39;integrità referenziale. Anche se l&#39;origine non utilizza la formattazione di acquisizione dati di modifica, Data Mirror supporta funzioni relazionali quali l&#39;imposizione della chiave primaria, gli aggiornamenti a livello di record e le relazioni tra schemi. Queste funzioni garantiscono una modellazione dei dati coerente e affidabile tra i set di dati connessi.
 
-Data Mirror utilizza schemi basati su modelli per estendere l’acquisizione dei dati sulle modifiche e abilitare funzionalità avanzate di sincronizzazione del database. Per una panoramica di Data Mirror, vedere [Panoramica di Data Mirror](../../../xdm/data-mirror/overview.md).
+Data Mirror utilizza gli schemi relazionali per estendere l’acquisizione dei dati sulle modifiche e abilitare funzionalità avanzate di sincronizzazione del database. Per una panoramica di Data Mirror, vedere [Panoramica di Data Mirror](../../../xdm/data-mirror/overview.md).
 
-Gli schemi basati su modelli estendono Experience Platform per applicare l’univocità della chiave primaria, tenere traccia delle modifiche a livello di riga e definire relazioni a livello di schema. Con l’acquisizione dei dati di modifica, vengono applicati inserti, aggiornamenti ed eliminazioni direttamente nel data lake, riducendo la necessità di estrarre, trasformare, caricare (ETL) o riconciliazione manuale.
+Gli schemi relazionali estendono Experience Platform per applicare l’univocità della chiave primaria, tenere traccia delle modifiche a livello di riga e definire relazioni a livello di schema. Con l’acquisizione dei dati di modifica, vengono applicati inserti, aggiornamenti ed eliminazioni direttamente nel data lake, riducendo la necessità di estrarre, trasformare, caricare (ETL) o riconciliazione manuale.
 
-Per ulteriori informazioni, vedere [Panoramica sugli schemi basati su modelli](../../../xdm/schema/model-based.md).
+Per ulteriori informazioni, vedere [Panoramica sugli schemi relazionali](../../../xdm/schema/relational.md).
 
-### Requisiti dello schema basati su modello per l&#39;acquisizione dei dati di modifica
+### Requisiti dello schema relazionale per l’acquisizione dei dati di modifica
 
-Prima di utilizzare uno schema basato su modello con l’acquisizione dei dati di modifica, configura i seguenti identificatori:
+Prima di utilizzare uno schema relazionale con Change Data Capture, configura i seguenti identificatori:
 
 * Identificare in modo univoco ogni record con una chiave primaria.
 * Applica gli aggiornamenti in sequenza utilizzando un identificatore di versione.
@@ -59,9 +63,9 @@ Questa colonna viene valutata solo durante l’acquisizione e non viene memorizz
 
 ### Flusso di lavoro {#workflow}
 
-Per abilitare l’acquisizione dei dati di modifica con uno schema basato su modello:
+Per abilitare l&#39;acquisizione dei dati di modifica con uno schema relazionale:
 
-1. Crea uno schema basato su modello.
+1. Creare uno schema relazionale.
 2. Aggiungi i descrittori richiesti:
    * [Descrittore della chiave primaria](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Descrittore versione](../../../xdm/api/descriptors.md#version-descriptor)
@@ -76,13 +80,13 @@ Per abilitare l’acquisizione dei dati di modifica con uno schema basato su mod
 
 >[!IMPORTANT]
 >
->**È richiesta la pianificazione dell&#39;eliminazione dei dati**. Tutte le applicazioni che utilizzano schemi basati su modelli devono comprendere le implicazioni relative all&#39;eliminazione prima di implementare l&#39;acquisizione dei dati di modifica. Pianifica in che modo le eliminazioni influiranno sui set di dati correlati, sui requisiti di conformità e sui processi a valle. Consulta [considerazioni sull&#39;igiene dei dati](../../../hygiene/ui/record-delete.md#model-based-record-delete) per maggiori informazioni.
+>**È richiesta la pianificazione dell&#39;eliminazione dei dati**. Tutte le applicazioni che utilizzano schemi relazionali devono comprendere le implicazioni relative all’eliminazione prima di implementare l’acquisizione dei dati di modifica. Pianifica in che modo le eliminazioni influiranno sui set di dati correlati, sui requisiti di conformità e sui processi a valle. Consulta [considerazioni sull&#39;igiene dei dati](../../../hygiene/ui/record-delete.md#relational-record-delete) per maggiori informazioni.
 
 ## Fornitura di dati di modifica per origini basate su file {#file-based-sources}
 
 >[!IMPORTANT]
 >
->L&#39;acquisizione dei dati di modifica basata su file richiede Data Mirror con schemi basati su modelli. Prima di seguire i passaggi di formattazione dei file riportati di seguito, assicurati di aver completato il [flusso di lavoro di installazione di Data Mirror](#workflow) descritto in precedenza in questo documento. I passaggi seguenti descrivono come formattare i file di dati per includere le informazioni di rilevamento delle modifiche che verranno elaborate da Data Mirror.
+>L&#39;acquisizione dei dati di modifica basata su file richiede Data Mirror con schemi relazionali. Prima di seguire i passaggi di formattazione dei file riportati di seguito, assicurati di aver completato il [flusso di lavoro di installazione di Data Mirror](#workflow) descritto in precedenza in questo documento. I passaggi seguenti descrivono come formattare i file di dati per includere le informazioni di rilevamento delle modifiche che verranno elaborate da Data Mirror.
 
 Per le origini basate su file ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] e [!DNL SFTP]), includere una colonna `_change_request_type` nei file.
 
@@ -115,7 +119,7 @@ Tutte le origini di archiviazione cloud utilizzano lo stesso formato di colonna 
 
 ### [!DNL Azure Databricks]
 
-Per utilizzare Change Data Capture con [!DNL Azure Databricks], è necessario abilitare **change Data Feed** nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
+Per utilizzare Change Data Capture con [!DNL Azure Databricks], è necessario abilitare **change Data Feed** nelle tabelle di origine e configurare Data Mirror con schemi relazionali in Experience Platform.
 
 Utilizzare i seguenti comandi per abilitare il feed di dati di modifica nelle tabelle:
 
@@ -152,7 +156,7 @@ Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la 
 
 ### [!DNL Data Landing Zone]
 
-Per utilizzare Change Data Capture con [!DNL Data Landing Zone], è necessario abilitare **change Data Feed** nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
+Per utilizzare Change Data Capture con [!DNL Data Landing Zone], è necessario abilitare **change Data Feed** nelle tabelle di origine e configurare Data Mirror con schemi relazionali in Experience Platform.
 
 Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la connessione di origine [!DNL Data Landing Zone], leggere la seguente documentazione:
 
@@ -161,7 +165,7 @@ Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la 
 
 ### [!DNL Google BigQuery]
 
-Per utilizzare Change Data Capture con [!DNL Google BigQuery], è necessario abilitare la cronologia delle modifiche nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
+Per utilizzare Change Data Capture con [!DNL Google BigQuery], è necessario abilitare la cronologia delle modifiche nelle tabelle di origine e configurare Data Mirror con schemi relazionali in Experience Platform.
 
 Per abilitare la cronologia delle modifiche nella connessione di origine [!DNL Google BigQuery], passare alla pagina [!DNL Google BigQuery] nella console [!DNL Google Cloud] e impostare `enable_change_history` su `TRUE`. Questa proprietà abilita la cronologia delle modifiche per la tabella dati.
 
@@ -174,7 +178,7 @@ Per i passaggi su come abilitare l&#39;acquisizione dei dati di modifica per la 
 
 ### [!DNL Snowflake]
 
-Per utilizzare Change Data Capture con [!DNL Snowflake], è necessario abilitare **rilevamento modifiche** nelle tabelle di origine e configurare Data Mirror con schemi basati su modelli in Experience Platform.
+Per utilizzare Change Data Capture con [!DNL Snowflake], è necessario abilitare **rilevamento modifiche** nelle tabelle di origine e configurare Data Mirror con schemi relazionali in Experience Platform.
 
 In [!DNL Snowflake], abilitare il rilevamento delle modifiche utilizzando `ALTER TABLE` e impostando `CHANGE_TRACKING` su `TRUE`.
 
