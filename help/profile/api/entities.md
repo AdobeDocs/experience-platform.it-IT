@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform consente di accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l’interfaccia utente di. Questa guida illustra come accedere alle entità, più comunemente note come "profili", utilizzando l’API di profilo.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
+source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2211'
 ht-degree: 3%
 
 ---
@@ -20,15 +20,22 @@ Adobe Experience Platform consente di accedere ai dati di [!DNL Real-Time Custom
 
 L&#39;endpoint API utilizzato in questa guida fa parte di [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, consulta la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
->[!BEGINSHADEBOX]
-
 ## Risoluzione entità
 
 Come parte dell’aggiornamento dell’architettura, Adobe sta introducendo la risoluzione delle entità per account e opportunità, utilizzando la corrispondenza degli ID deterministici basata sui dati più recenti. Il processo di risoluzione delle entità viene eseguito quotidianamente durante la segmentazione batch, prima di valutare tipi di pubblico con più entità con attributi B2B.
 
 Questo miglioramento consente ad Experience Platform di identificare e unificare più record che rappresentano la stessa entità, migliorando la coerenza dei dati e consentendo una segmentazione del pubblico più accurata.
 
-In precedenza, Account e opportunità si basavano su una risoluzione basata su un grafico di identità che collegava le identità, incluse tutte le acquisizioni storiche. Nel nuovo approccio di risoluzione delle entità, le identità sono collegate solo in base ai dati più recenti
+In precedenza, Account e opportunità si basavano su una risoluzione basata su un grafico di identità che collegava le identità, incluse tutte le acquisizioni storiche. Nel nuovo approccio di risoluzione delle entità, le identità sono collegate solo in base ai dati più recenti.
+
+- Conto e opportunità sono entità risolte con un’unione basata sulla precedenza temporale:
+   - Account: identità che utilizzano lo spazio dei nomi `b2b_account`.
+   - Opportunità: identità che utilizzano lo spazio dei nomi `b2b_opportunity`.
+- Tutte le altre entità sono semplicemente unificate e solo le sovrapposizioni di identità primarie vengono unite con l’unione basata sulla precedenza temporale.
+
+>[!NOTE]
+>
+>La risoluzione entità supporta solo `b2b_account` e `b2b_opportunity`. Le identità provenienti da altri spazi dei nomi non vengono utilizzate nella risoluzione delle entità. Se utilizzi spazi dei nomi personalizzati, non potrai trovare account e opportunità.
 
 ### Come funziona la risoluzione delle entità?
 
@@ -36,8 +43,6 @@ In precedenza, Account e opportunità si basavano su una risoluzione basata su u
 - **Dopo**: se il numero DUNS è stato utilizzato come identità aggiuntiva e il numero DUNS dell&#39;account è stato aggiornato in un sistema di origine come CRM, l&#39;ID account viene collegato solo al nuovo numero DUNS, riflettendo in tal modo lo stato corrente dell&#39;account in modo più accurato.
 
 In seguito a questo aggiornamento, l&#39;API [!DNL Profile Access] riflette ora la visualizzazione del profilo di unione più recente dopo il completamento di un processo di risoluzione entità. Inoltre, i dati coerenti forniscono casi di utilizzo come segmentazione, attivazione e analisi con una maggiore precisione e coerenza dei dati.
-
->[!ENDSHADEBOX]
 
 ## Recuperare un’entità {#retrieve-entity}
 
