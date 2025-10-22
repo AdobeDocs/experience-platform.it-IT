@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Privacy Service
 description: Inizia a utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 20%
+source-wordcount: '223'
+ht-degree: 21%
 
 ---
 
@@ -30,14 +30,14 @@ L’interfaccia utente di Privacy Service consente di coordinare le richieste di
 >
 >È necessario disporre di un Adobe ID per l&#39;autenticazione nell&#39;interfaccia utente [!DNL Privacy Service].
 
-Per accedere all&#39;interfaccia utente, accedi a [Adobe Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Interfaccia utente Privacy]** nel menu di accesso rapido.
+Per accedere all&#39;interfaccia utente, accedere a [Adobe Experience Cloud](https://experience.adobe.com/) e selezionare **[!UICONTROL Privacy Service]** nel menu di accesso rapido.
 
-![Dashboard di Experience Cloud con interfaccia utente Privacy evidenziata.](../images/ui-overview/quick-access.png)
+![Dashboard di Experience Cloud con Privacy Service evidenziato.](../images/ui-overview/quick-access.png)
 
 
 ### Accesso da [!DNL Experience Platform]
 
-Se hai accesso all&#39;interfaccia utente di Adobe Experience Platform, puoi anche accedere all&#39;interfaccia utente [!DNL Privacy Service] tramite la scheda **[!UICONTROL Richieste]** nel menu di navigazione a sinistra.
+Se hai accesso all&#39;interfaccia utente di Adobe Experience Platform, puoi anche accedere all&#39;interfaccia utente di [!DNL Privacy Service] tramite la scheda **[!UICONTROL Requests]** nell&#39;area di navigazione a sinistra.
 
 ![L&#39;interfaccia utente di Adobe Experience Platform con le richieste evidenziate nella barra di navigazione a sinistra.](../images/ui-overview/platform.png)
 

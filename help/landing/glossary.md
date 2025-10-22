@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario di Adobe Experience Platform
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '8009'
+source-wordcount: '8170'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 **Attributi**: gli attributi sono caratteristiche specificate che rappresentano un profilo.
 
-**Unione attributi**: quando si definisce un criterio di unione utilizzando Real-Time Customer Profile API, l&#39;oggetto `attributeMerge` indica il modo in cui il criterio di unione assegnerà priorità agli attributi di profilo in caso di conflitti di dati. Equivale a selezionare un [!UICONTROL metodo di unione] durante la definizione di un criterio di unione nell&#39;interfaccia utente di Experience Platform.
+**Unione attributi**: quando si definisce un criterio di unione utilizzando Real-Time Customer Profile API, l&#39;oggetto `attributeMerge` indica il modo in cui il criterio di unione assegnerà priorità agli attributi di profilo in caso di conflitti di dati. Equivale a selezionare [!UICONTROL Merge method] quando si definisce un criterio di unione nell&#39;interfaccia utente di Experience Platform.
 
 **IA per l&#39;attribuzione**: [!DNL Attribution AI] è un servizio intelligente basato su Adobe Sensei che fornisce funzionalità algoritmiche di attribuzione multicanale per l&#39;intero ciclo di vita del cliente.
 
@@ -281,7 +281,7 @@ ht-degree: 0%
 
 **Etichette di identità (&quot;I&quot;)**: le etichette di utilizzo dei dati di identità (&quot;I&quot;) vengono utilizzate per categorizzare i dati che possono identificare o contattare una persona specifica.
 
-**Grafo identità**: un grafo identità è una mappa delle relazioni tra identità collegate e unite esistenti per un singolo cliente. Ogni grafo di identità viene aggiornato quasi in tempo reale con l’attività del cliente. La struttura comune delle relazioni di identità nei dati è rappresentata dal [!UICONTROL grafico privato], che funge da blueprint strutturale per ogni singolo grafico di identità.
+**Grafo identità**: un grafo identità è una mappa delle relazioni tra identità collegate e unite esistenti per un singolo cliente. Ogni grafo di identità viene aggiornato quasi in tempo reale con l’attività del cliente. La struttura comune delle relazioni di identità nei dati è rappresentata da [!UICONTROL Private Graph], che funge da blueprint strutturale per ogni singolo grafico di identità.
 
 **Spazio dei nomi identità**: uno spazio dei nomi identità definisce il contesto di un identificatore, ad esempio un indirizzo e-mail o un ID CRM.
 
@@ -351,6 +351,8 @@ ht-degree: 0%
 
 **Modulo**: nel contesto dei tag, un modulo è uno snippet di JavaScript eseguibile fornito da un&#39;estensione, che esegue azioni in un ambiente client senza dover creare una regola.
 
+**MODPA**: la [!DNL Maryland Online Data Privacy Act] (MODPA) del 2024 concede ai residenti del Maryland diritti che includono accesso, correzione, eliminazione e portabilità dei dati. I residenti possono rinunciare alla pubblicità mirata, alla vendita di dati personali e alla profilazione. I titolari del trattamento devono fornire le comunicazioni sulla privacy e condurre valutazioni sulla protezione dei dati per il trattamento ad alto rischio. Il MODPA si distingue per il divieto di recinti geografici attorno alle strutture di salute mentale o riproduttiva. La legge si applica alle entità che elaborano dati da più di 35.000 consumatori, o a quelle che elaborano dati da più di 10.000 consumatori e derivano oltre il 20% dei loro ricavi dalla vendita di tali dati. Viene fatto rispettare dal Procuratore Generale del Maryland.
+
 ## N
 
 **[!DNL New Zealand Privacy Act]**: [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controlla come le agenzie possono raccogliere, utilizzare, divulgare, archiviare e consentire l&#39;accesso alle informazioni personali di cittadini e organizzazioni della Nuova Zelanda. Nel 2020 l&#39;ultima versione della legge ha introdotto aggiornamenti significativi a tali leggi sulla privacy, tra cui nuove infrazioni, aumento delle ammende, notifiche obbligatorie per le violazioni dei dati e aumento dei poteri del commissario per la privacy.
@@ -377,17 +379,15 @@ ht-degree: 0%
 
 ## P
 
-**Acquisizione parziale**: l&#39;acquisizione parziale consente l&#39;acquisizione di record validi di dati batch entro una soglia di errore specificata. È possibile scaricare o accedere alla diagnostica degli errori per i record non riusciti in [!UICONTROL Monitoraggio] o [!UICONTROL Panoramica sull&#39;esecuzione del flusso di dati origini].
+**Acquisizione parziale**: l&#39;acquisizione parziale consente l&#39;acquisizione di record validi di dati batch entro una soglia di errore specificata. È possibile scaricare o accedere alla diagnostica degli errori per i record non riusciti nella panoramica dell&#39;esecuzione del flusso di dati [!UICONTROL Monitoring] o [!UICONTROL Sources].
 
 **File Parquet**: un file Parquet è un formato di file di archiviazione a colonne con strutture di dati nidificate complesse. I file Parquet sono necessari per aggiungere dati per popolare un set di dati di schema.
 
 **PDPA**: la [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) è stata introdotta per proteggere i proprietari di dati thailandesi dalla raccolta, dall&#39;utilizzo o dalla divulgazione illegali dei loro dati personali. Ispirandosi al regolamento generale sulla protezione dei dati (RGPD) dell&#39;Unione Europea, il regolamento garantisce ai cittadini thailandesi il diritto di richiedere l&#39;accesso o la cancellazione dei propri dati personali memorizzati.
 
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **Offerte personalizzate**: un&#39;offerta personalizzata è un messaggio di marketing personalizzabile basato su regole e vincoli di idoneità.
+
+**PIPA** (Corea del Sud): [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regola l&#39;elaborazione e la protezione dei dati personali per i residenti della Corea del Sud. PIPA concede diritti di essere informato, accedere, ottenere copie e richiedere la correzione, la cancellazione o la sospensione del trattamento. I titolari del trattamento dei dati personali devono specificare le finalità della raccolta, trattare i dati in modo lecito nella misura minima necessaria e garantire l’accuratezza dei dati. PIPA ha inoltre istituito la Commissione per la protezione delle informazioni personali con il compito di indagare e applicare le normative sulla protezione dei dati personali.
 
 **Posizionamenti**: per posizionamento si intende la posizione e/o il contesto in cui un’offerta viene visualizzata da un utente finale.
 

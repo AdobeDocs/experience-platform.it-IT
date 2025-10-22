@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: ccde37961bd98275030db98440800925d3a6703e
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '2630'
+source-wordcount: '2790'
 ht-degree: 0%
 
 ---
@@ -111,6 +111,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 **[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): a decorrere dal 31 luglio 2025, l&#39;MCDPA conferisce ai residenti del Minnesota i diritti di accesso, correzione, eliminazione e recupero dei propri dati personali, nonché di rinuncia alle vendite di dati, alla pubblicità mirata e a determinati profili. Si applica alle aziende che operano nel Minnesota o che eseguono il targeting dei dati di più di 100.000 consumatori all&#39;anno (esclusi i dati solo pagamento), o di più di 25.000 consumatori se più del 25% dei ricavi proviene dalle vendite di dati. Le entità coperte devono implementare misure di sicurezza dei dati ragionevoli e condurre valutazioni dei rischi. Il procuratore generale del Minnesota applica la legge e può emettere multe fino a $ 7.500 per violazione. Tuttavia, le aziende hanno tempo fino al 31 gennaio 2026 per correggere eventuali violazioni prima di applicare le sanzioni.
 
+**MODPA**: [!DNL Maryland Online Data Privacy Act] concede ai residenti diritti che includono accesso, correzione, eliminazione e portabilità dei dati. I residenti possono rinunciare al trattamento dei dati per pubblicità mirata, vendite di dati personali e profilazione. La legge proibisce la recinzione intorno alle strutture per la salute mentale o riproduttiva. La legge si applica alle entità che elaborano dati da più di 35.000 consumatori, o a quelle che elaborano dati da più di 10.000 consumatori e derivano oltre il 20% dei loro ricavi dalla vendita di tali dati. L&#39;applicazione è gestita dal Procuratore Generale del Maryland, con multe e sanzioni applicabili per le violazioni.
+
 **[!DNL Montana Consumer Data Privacy Act]**: Questa legge conferisce ai residenti del Montana il diritto di accedere ai propri dati personali, di correggerli, cancellarli e richiederne copia. L&#39;MCDPA si applica alle aziende che trattano dati per oltre 50.000 consumatori del Montana e sottolinea la protezione dei dati personali sensibili, come le informazioni biometriche e genetiche. Impone trasparenza sulle pratiche di raccolta, condivisione e vendita dei dati.
 
 ## N
@@ -133,6 +135,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 **Dati personali**: qualsiasi informazione correlata a una persona fisica o a una &quot;persona interessata&quot; che può essere utilizzata per identificare direttamente o indirettamente la persona.
 
 **Violazione dei dati personali**: una violazione della sicurezza che comporta l&#39;accesso accidentale o illecito, la distruzione, l&#39;uso improprio e così via di dati personali.
+
+**PIPA** (Corea del Sud): [!DNL Personal Information Protection Act] regola l&#39;elaborazione e la protezione dei dati personali per i residenti della Corea del Sud. Il PIPA garantisce ai residenti il diritto di essere informati, di accedere, di ottenere copie e di richiedere la correzione, la cancellazione o la sospensione del trattamento. I titolari del trattamento devono specificare le finalità di raccolta, trattare i dati in modo lecito nella misura minima necessaria e garantire l’accuratezza dei dati. La legge ha inoltre istituito la Commissione per la protezione delle informazioni personali ai fini dell&#39;applicazione, che può infliggere ammende e sanzioni amministrative in caso di inosservanza.
 
 **Privacy by design**: un principio che richiede l&#39;inclusione della protezione dei dati sin dall&#39;inizio della progettazione dei sistemi, piuttosto che un&#39;aggiunta.
 
