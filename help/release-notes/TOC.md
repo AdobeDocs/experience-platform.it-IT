@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Note sulla versione di Adobe Experience Platform
 breadcrumb-title: Note sulla versione di Experience Platform
 user-guide-description: Trova le note sulla versione mensili di Adobe Experience Platform.
-source-git-commit: 724bf0eeb8b7229acc4b3b48bb90f00cce219567
+source-git-commit: 199acd8d3bdbb0e89fc1ab881bff4d94063b7f78
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '178'
 ht-degree: 94%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 94%
 * [Note sulla versione corrente di Experience Platform](latest/latest.md)
 * [Note pre-release di Experience Platform](./pre-release-notes.md)
 * 2025 {#2025}
+   * [Ottobre 2025](2025/october-2025.md)
    * [Settembre 2025](2025/september-2025.md)
    * [Agosto 2025](2025/august-2025.md)
    * [Luglio 2025](2025/july-2025.md)
