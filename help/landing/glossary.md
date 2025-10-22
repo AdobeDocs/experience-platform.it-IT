@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario di Adobe Experience Platform
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '8170'
+source-wordcount: '8169'
 ht-degree: 0%
 
 ---
@@ -351,7 +351,7 @@ ht-degree: 0%
 
 **Modulo**: nel contesto dei tag, un modulo è uno snippet di JavaScript eseguibile fornito da un&#39;estensione, che esegue azioni in un ambiente client senza dover creare una regola.
 
-**MODPA**: la [!DNL Maryland Online Data Privacy Act] (MODPA) del 2024 concede ai residenti del Maryland diritti che includono accesso, correzione, eliminazione e portabilità dei dati. I residenti possono rinunciare alla pubblicità mirata, alla vendita di dati personali e alla profilazione. I titolari del trattamento devono fornire le comunicazioni sulla privacy e condurre valutazioni sulla protezione dei dati per il trattamento ad alto rischio. Il MODPA si distingue per il divieto di recinti geografici attorno alle strutture di salute mentale o riproduttiva. La legge si applica alle entità che elaborano dati da più di 35.000 consumatori, o a quelle che elaborano dati da più di 10.000 consumatori e derivano oltre il 20% dei loro ricavi dalla vendita di tali dati. Viene fatto rispettare dal Procuratore Generale del Maryland.
+**MODPA**: la [!DNL Maryland Online Data Privacy Act] (MODPA) del 2024 concede ai residenti del Maryland diritti che includono accesso, correzione, eliminazione e portabilità dei dati. I residenti possono rinunciare alla pubblicità mirata, alla vendita di dati personali e alla profilazione. I titolari del trattamento devono fornire avvisi sulla privacy e condurre valutazioni sulla protezione dei dati per il trattamento ad alto rischio. Il MODPA si distingue per il divieto di recinti geografici attorno alle strutture di salute mentale o riproduttiva. La legge si applica alle entità che elaborano dati da più di 35.000 consumatori, o a quelle che elaborano dati da più di 10.000 consumatori e derivano oltre il 20% dei loro ricavi dalla vendita di tali dati. Viene fatto rispettare dal Procuratore Generale del Maryland.
 
 ## N
 
