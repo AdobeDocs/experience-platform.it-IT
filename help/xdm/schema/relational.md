@@ -38,7 +38,7 @@ Utilizzare gli schemi relazionali per:
 
 ## Differenze tra gli schemi relazionali e gli schemi XDM standard
 
-Gli schemi XDM standard in Experience Platform seguono uno dei tre comportamenti di dati seguenti: Record, Serie temporali o Ad hoc. Per definizioni e dettagli, vedi [Comportamenti dei dati XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
+Gli schemi XDM standard in Experience Platform seguono uno dei tre comportamenti di dati seguenti: Record, Serie temporali o Ad hoc. Per definizioni e dettagli, vedi [Comportamenti dei dati XDM](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/home#data-behaviors).
 
 Nel modello tradizionale, gli schemi record e serie temporali partecipano a [schemi unione](../api/unions.md) (vedi anche la [guida dell&#39;interfaccia utente dello schema unione](../../profile/ui/union-schema.md)). Questi schemi si evolvono automaticamente quando [gruppi di campi](./composition.md#field-group) condivisi vengono aggiornati e i campi personalizzati devono essere nidificati in uno spazio dei nomi tenant. Anche se potente, questo modello può rallentare l’onboarding, produrre schemi eccessivamente complessi con campi non utilizzati e richiedere una mappatura o trasformazione dei dati aggiuntiva. Questi fattori aumentano la curva di apprendimento e il lavoro di manutenzione in corso.
 
