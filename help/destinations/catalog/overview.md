@@ -1,18 +1,18 @@
 ---
 keywords: Catalogo;catalogo
 title: Panoramica del catalogo delle destinazioni
-description: Il catalogo Destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Queste destinazioni includono soluzioni di Adobe, piattaforme pubblicitarie, piattaforme di sondaggio, piattaforme di marketing via e-mail e altro ancora.
+description: Il catalogo Destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Queste destinazioni includono soluzioni Adobe, piattaforme pubblicitarie, piattaforme di sondaggio, piattaforme di marketing via e-mail e altro ancora.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
 # Panoramica del catalogo delle destinazioni
 
-Il catalogo delle destinazioni fornisce un elenco delle piattaforme di destinazione disponibili che sono pronte per ricevere i dati. Queste piattaforme di destinazione includono soluzioni di Adobe, piattaforme pubblicitarie, piattaforme di sondaggio, piattaforme di marketing e-mail, estensioni di Experience Platform e altro ancora.
+Il catalogo delle destinazioni fornisce un elenco delle piattaforme di destinazione disponibili che sono pronte per ricevere i dati. Queste piattaforme di destinazione includono soluzioni Adobe, piattaforme pubblicitarie, piattaforme di sondaggio, piattaforme di marketing e-mail, estensioni Experience Platform e altro ancora.
 
 Sfoglia il catalogo per determinare quali piattaforme di destinazione sono migliori per i tuoi casi di utilizzo di pubblicità e personalizzazione, quindi imposta i flussi per attivare i tipi di pubblico per le destinazioni.
 
@@ -27,15 +27,15 @@ Sfoglia il catalogo per determinare quali piattaforme di destinazione sono migli
 
 In Adobe Experience Platform puoi attivare i dati in diverse categorie di destinazione. I link riportati di seguito forniscono ulteriori informazioni su ciascuna categoria di destinazione:
 
-- [Panoramica di [!UICONTROL destinazioni] di Adobe](adobe/overview.md)
-- [Panoramica di [!UICONTROL Advertising] [!UICONTROL destinazioni]](advertising/overview.md)
-- [Panoramica di [!UICONTROL Analytics] [!UICONTROL destinazioni]](analytics/overview.md)
-- [Panoramica di [!UICONTROL archiviazione cloud] [!UICONTROL destinazioni]](cloud-storage/overview.md)
-- [[!UICONTROL Panoramica di Data Management Platform] (DMP) [!UICONTROL destinazioni]](data-management/overview.md)
-- [[!UICONTROL Panoramica sul marketing via e-mail] [!UICONTROL destinazioni]](email-marketing/overview.md)
-- [Panoramica di [!UICONTROL Mobile engagement] [!UICONTROL destinations]](mobile-engagement/overview.md)
-- [Panoramica di [!UICONTROL Personalization] [!UICONTROL destinazioni]](personalization/overview.md)
-- [Panoramica di [!UICONTROL Social] [!UICONTROL destinazioni]](social/overview.md)
-- [[!UICONTROL Streaming] [!UICONTROL destinazioni] (collegamenti alla destinazione HTTP)](streaming/http-destination.md)
-- [Panoramica di [!UICONTROL Sondaggio] [!UICONTROL destinazioni]](survey/overview.md)
-- [[!UICONTROL Voce del cliente] [!UICONTROL destinazioni] panoramica](voice/overview.md)
+- [Panoramica di Adobe [!UICONTROL destinations]](adobe/overview.md)
+- [[!UICONTROL Advertising] [!UICONTROL destinations] panoramica](advertising/overview.md)
+- [[!UICONTROL Analytics] [!UICONTROL destinations] panoramica](analytics/overview.md)
+- [[!UICONTROL Cloud storage] [!UICONTROL destinations] panoramica](cloud-storage/overview.md)
+- [Panoramica di [!UICONTROL Data Management Platform] (DMP) [!UICONTROL destinations]](data-management/overview.md)
+- [[!UICONTROL Email marketing] [!UICONTROL destinations] panoramica](email-marketing/overview.md)
+- [[!UICONTROL Mobile engagement] [!UICONTROL destinations] panoramica](mobile-engagement/overview.md)
+- [[!UICONTROL Personalization] [!UICONTROL destinations] panoramica](personalization/overview.md)
+- [[!UICONTROL Social] [!UICONTROL destinations] panoramica](social/overview.md)
+- [[!UICONTROL Streaming] [!UICONTROL destinations] (collegamenti alla destinazione HTTP)](streaming/http-destination.md)
+- [[!UICONTROL Survey] [!UICONTROL destinations] panoramica](survey/overview.md)
+- [[!UICONTROL Voice of the Customer] [!UICONTROL destinations] panoramica](voice/overview.md)
