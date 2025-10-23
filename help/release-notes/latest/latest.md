@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform di ottobre 2025
 description: Note sulla versione di Adobe Experience Platform di ottobre 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 199acd8d3bdbb0e89fc1ab881bff4d94063b7f78
+source-git-commit: 57cb9f5e57c83576a125ec2de5eb3e4526d5b572
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '1004'
 ht-degree: 25%
 
 ---
@@ -25,9 +25,22 @@ ht-degree: 25%
 
 Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Agent Orchestrator](#agent-orchestrator)
 - [Avvisi](#alerts)
 - [Destinazioni](#destinations)
 - [Origini](#sources)
+
+## Agent Orchestrator {#agent-orchestrator}
+
+Agent Orchestrator di Adobe Experience Platform è il nuovo livello di agente in Adobe Experience Platform.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Agente Audience | Audience Agent ora supporta i tipi di pubblico basati sull’account per l’esplorazione del pubblico conversazionale e il rilevamento di tipi di pubblico duplicati. Per ulteriori informazioni, consulta la [documentazione su Agente Audience](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+
+Per ulteriori informazioni sugli agenti, leggere la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Avvisi {#alerts}
 
@@ -37,7 +50,7 @@ Experience Platform consente di iscriverti agli avvisi basati su eventi per vari
 
 | Funzione | Descrizione |
 | --- | --- |
-| Avviso sulla percentuale di errori della destinazione | È stato aggiunto un nuovo avviso per le destinazioni: **La frequenza degli errori di destinazione supera la soglia**. Questo avviso notifica quando il numero di record non riusciti durante l&#39;attivazione dei dati supera la soglia consentita, consentendo di rispondere rapidamente ai problemi di attivazione. Per ulteriori informazioni, consulta la documentazione sulle [regole di avvisi standard](../../observability/alerts/rules.md). |
+| Avviso di tasso di errore di attivazione | È stato aggiunto un nuovo avviso per le destinazioni: **La frequenza degli errori di attivazione supera la soglia**. Questo avviso notifica quando il numero di record non riusciti durante l&#39;attivazione dei dati supera la soglia consentita, consentendo di rispondere rapidamente ai problemi di attivazione. Per ulteriori informazioni, consulta la documentazione sulle [regole di avvisi standard](../../observability/alerts/rules.md). |
 
 {style="table-layout:auto"}
 
@@ -53,6 +66,8 @@ Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insigh
 | --- | --- |
 | [!DNL Adform] | Utilizzare questa destinazione per inviare i tipi di pubblico di Adobe Real-Time CDP a [!DNL Adform] per l&#39;attivazione in base all&#39;Experience Cloud ID (ECID) e all&#39;ID Fusion di [!DNL Adform]. ID Fusion di [!DNL Adform] è un servizio di risoluzione ID che consente di attivare i tipi di pubblico di prime parti in base all&#39;Experience Cloud ID (ECID). Leggi la [[!DNL Adform] documentazione](../../destinations/catalog/advertising/adform.md) per ulteriori informazioni |
 | [!DNL Amazon Ads] | È stato aggiunto un ulteriore supporto per gli identificatori personali. Sono inclusi campi come `firstName`, `lastName`, `street`, `city`, `state`, `zip` e `country`. La mappatura di questi campi come identità di destinazione può migliorare le percentuali di corrispondenza del pubblico. Per ulteriori informazioni, consulta la [[!DNL Amazon Ads] documentazione](../../destinations/catalog/advertising/amazon-ads.md). |
+| [!DNL Snowflake Batch] (disponibilità limitata) | Crea una condivisione dati live di [!DNL Snowflake] per ricevere aggiornamenti giornalieri sul pubblico direttamente come tabelle condivise nel tuo account. Questa integrazione è attualmente disponibile per le organizzazioni dei clienti con provisioning nell&#39;area VA7. Per ulteriori informazioni, consulta la [[!DNL Snowflake Batch] documentazione](../../destinations/catalog/warehouses/snowflake-batch.md). |
+| [!DNL Snowflake Streaming] (disponibilità limitata) | Crea una condivisione dati live di [!DNL Snowflake] per ricevere aggiornamenti del pubblico in streaming direttamente come tabelle condivise nel tuo account. Questa integrazione è attualmente disponibile per le organizzazioni dei clienti con provisioning nell&#39;area VA7. Per ulteriori informazioni, consulta la [[!DNL Snowflake Streaming] documentazione](../../destinations/catalog/warehouses/snowflake.md). |
 
 {style="table-layout:auto"}
 
@@ -60,7 +75,6 @@ Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insigh
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per la crittografia lato server di [!DNL AES256] in [!DNL Amazon S3] destinazioni | [!DNL Amazon S3] destinazioni ora supportano [!DNL AES256] crittografia lato server, fornendo maggiore sicurezza per i dati esportati. È possibile configurare questo metodo di crittografia durante la configurazione o l&#39;aggiornamento delle connessioni di destinazione [!DNL Amazon S3], assicurandosi che i dati vengano crittografati inattivi utilizzando gli algoritmi di crittografia [!DNL AES256] standard del settore. Per ulteriori informazioni, consulta la [[!DNL Amazon] documentazione](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html). |
 | [Diverse nuove destinazioni supportano il monitoraggio a livello di pubblico](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Le seguenti destinazioni supportano ora il monitoraggio a livello di pubblico: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>Coinvolgimento dell&#39;account [!DNL Salesforce Marketing Cloud]</li><li>[!DNL The Trade Desk]</li></ul> |
 | Correzione dei guardrail di esportazione del set di dati | È stata implementata una correzione ai guardrail di esportazione del set di dati. In precedenza, alcuni set di dati che includevano una colonna timestamp ma erano _non_ in base allo schema XDM Experience Events venivano trattati erroneamente come set di dati Experience Events, limitando le esportazioni a un intervallo di lookback di 365 giorni. Il guardrail di lookback documentato di 365 giorni ora si applica esclusivamente ai set di dati Experience Events. I set di dati che utilizzano uno schema diverso da XDM Experience Events sono ora governati dal guardrail di 10 miliardi di record. Alcuni clienti potrebbero notare un aumento delle esportazioni di set di dati che erroneamente rientravano nell’intervallo di lookback di 365 giorni. Questo consente di esportare set di dati per flussi di lavoro predittivi con un intervallo di lookback lungo. Per ulteriori informazioni, leggere le [protezioni di esportazione del set di dati](../../destinations/guardrails.md#dataset-exports). |
 | Generazione di rapporti migliorati a livello di pubblico per le destinazioni enterprise | Dopo questa versione, i clienti vedranno numeri di reporting del pubblico più precisi che includono solo i tipi di pubblico rilevanti per la destinazione selezionata. Questo aggiustamento di monitoraggio assicura che i rapporti includano solo i tipi di pubblico mappati sul flusso di dati, fornendo informazioni più chiare sull’effettiva attivazione dei dati. Questo non influisce sulla quantità di dati attivati, ma si tratta semplicemente di un miglioramento del monitoraggio per migliorare l’accuratezza della generazione di rapporti. |
@@ -68,11 +82,6 @@ Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insigh
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
-
-<!--
-| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
-| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
--->
 
 ## Origini {#sources}
 
