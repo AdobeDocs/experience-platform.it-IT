@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform di ottobre 2025
 description: Note sulla versione di Adobe Experience Platform di ottobre 2025.
-source-git-commit: 57cb9f5e57c83576a125ec2de5eb3e4526d5b572
+source-git-commit: 7f37ba35111f6fa96d1889d74a66e32302b8ab85
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 25%
+source-wordcount: '1068'
+ht-degree: 24%
 
 ---
 
@@ -77,15 +77,11 @@ Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insigh
 | [Diverse nuove destinazioni supportano il monitoraggio a livello di pubblico](../../dataflows/ui/monitor-destinations.md#audience-level-view) | Le seguenti destinazioni supportano ora il monitoraggio a livello di pubblico: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>Coinvolgimento dell&#39;account [!DNL Salesforce Marketing Cloud]</li><li>[!DNL The Trade Desk]</li></ul> |
 | Correzione dei guardrail di esportazione del set di dati | È stata implementata una correzione ai guardrail di esportazione del set di dati. In precedenza, alcuni set di dati che includevano una colonna timestamp ma erano _non_ in base allo schema XDM Experience Events venivano trattati erroneamente come set di dati Experience Events, limitando le esportazioni a un intervallo di lookback di 365 giorni. Il guardrail di lookback documentato di 365 giorni ora si applica esclusivamente ai set di dati Experience Events. I set di dati che utilizzano uno schema diverso da XDM Experience Events sono ora governati dal guardrail di 10 miliardi di record. Alcuni clienti potrebbero notare un aumento delle esportazioni di set di dati che erroneamente rientravano nell’intervallo di lookback di 365 giorni. Questo consente di esportare set di dati per flussi di lavoro predittivi con un intervallo di lookback lungo. Per ulteriori informazioni, leggere le [protezioni di esportazione del set di dati](../../destinations/guardrails.md#dataset-exports). |
 | Generazione di rapporti migliorati a livello di pubblico per le destinazioni enterprise | Dopo questa versione, i clienti vedranno numeri di reporting del pubblico più precisi che includono solo i tipi di pubblico rilevanti per la destinazione selezionata. Questo aggiustamento di monitoraggio assicura che i rapporti includano solo i tipi di pubblico mappati sul flusso di dati, fornendo informazioni più chiare sull’effettiva attivazione dei dati. Questo non influisce sulla quantità di dati attivati, ma si tratta semplicemente di un miglioramento del monitoraggio per migliorare l’accuratezza della generazione di rapporti. |
+| Flussi di dati disattivati dall’interfaccia utente a causa di etichette di accesso | Per risolvere il problema relativo alla visualizzazione di pagine vuote da parte di alcuni utenti a causa del fatto che i flussi di dati di destinazione a cui non avevano accesso erano completamente nascosti, l’interfaccia utente ora visualizza tali flussi di dati con restrizioni in uno stato di disattivazione anziché ometterli completamente. Per ulteriori dettagli, leggere la documentazione su [utilizzo delle etichette di accesso per gestire l&#39;accesso degli utenti ai flussi di dati di destinazione](../../access-control/abac/apply-access-labels-destinations.md#important-callouts-and-items-to-know). |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
-
-<!--
-| [!DNL Snowflake Batch] (Limited availability) | Create a live [!DNL Snowflake] data share to receive daily audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
-| [!DNL Snowflake Streaming] (Limited availability) | Create a live [!DNL Snowflake] data share to receive streaming audience updates directly as shared tables into your account. This integration is currently available for customer organizations provisioned in the VA7 region. |
--->
 
 ## Origini {#sources}
 

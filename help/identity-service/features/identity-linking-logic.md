@@ -2,7 +2,7 @@
 title: Logica di collegamento del servizio Identity
 description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 2%
@@ -23,10 +23,6 @@ Esistono due tipi di identità collegate:
 * **Record profilo**: queste identità provengono in genere da sistemi CRM.
 * **Eventi esperienza**: queste identità provengono in genere dall&#39;implementazione WebSDK o dall&#39;origine Adobe Analytics.
 
->[!IMPORTANT]
->
->Il servizio Identity distingue tra maiuscole e minuscole. Ad esempio, **abc<span>@gmail.com** e **ABC<span>@GMAIL.COM** verrebbero trattati come due identità e-mail separate.
-
 ## Significato semantico della creazione di collegamenti
 
 Un’identità rappresenta un’entità del mondo reale. Se esiste un collegamento stabilito tra due identità, ciò significa che le due identità sono associate l’una all’altra. Di seguito sono riportati alcuni esempi che illustrano questo concetto:
@@ -44,6 +40,7 @@ Un’identità è costituita da uno spazio dei nomi dell’identità e da un val
 
 * Uno spazio dei nomi di identità è il contesto di un dato valore di identità a. Esempi comuni di spazi dei nomi di identità includono CRMID, E-mail e Telefono.
 * Un valore di identità è la stringa che rappresenta un’entità del mondo reale. Ad esempio: &quot;julien<span>@acme.com&quot; può essere un valore di identità per uno spazio dei nomi E-mail e 555-555-1234 può essere un valore di identità corrispondente per uno spazio dei nomi Telefono.
+* Il servizio Identity distingue tra maiuscole e minuscole. Ad esempio, **julien<span>@gmail.com** e **JULIEN<span>@GMAIL.COM** verrebbero trattati come due identità e-mail separate.
 
 >[!TIP]
 >
