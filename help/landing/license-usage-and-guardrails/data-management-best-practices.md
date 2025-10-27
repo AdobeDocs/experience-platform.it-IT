@@ -2,9 +2,9 @@
 title: Best practice per l’adesione alle licenze di gestione dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
+source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2957'
 ht-degree: 1%
 
 ---
@@ -159,7 +159,7 @@ Utilizza la funzionalità di scadenza dei dati dei profili pseudonimi per rimuov
 
 ### Interfaccia utente del set di dati - Conservazione del set di dati di Experience Event {#data-retention}
 
-Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [&#128279;](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Scadenze eventi esperienza profilo {#event-expirations}
 
@@ -175,3 +175,99 @@ Di seguito è riportato un elenco di alcune best practice consigliate che è pos
 * Configura [Scadenze evento esperienza](../../catalog/datasets/user-guide.md#data-retention-policy) e [Scadenze dati profilo pseudonimo](../../profile/pseudonymous-profiles.md) per dati ad alta frequenza come i dati Web.
 * Configura i [criteri di conservazione TTL (Time-to-Live) per i set di dati Experience Event](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) nel data lake per rimuovere automaticamente i record obsoleti e ottimizzare l&#39;utilizzo dello spazio di archiviazione in linea con i diritti alla licenza.
 * Controlla periodicamente i [report sulla composizione del profilo](#profile-store-composition-reports) per conoscere la composizione dell&#39;archivio profili. Questo consente di comprendere le origini dati che contribuiscono maggiormente al consumo delle licenze.
+
+## Caso d’uso: conformità dell’utilizzo della licenza
+
+### Perché considerare questo caso d’uso
+
+Garantendo la conformità alle **disposizioni sull&#39;utilizzo delle licenze** per data lake e storage dei profili, è possibile evitare interruzioni, ottimizzare i costi e allineare i criteri di conservazione dei dati ai requisiti aziendali.
+
+### Prerequisiti e pianificazione
+
+Considera i seguenti prerequisiti nel processo di pianificazione:
+
+* **Accesso e autorizzazioni**:
+   * Assicurati di disporre dell&#39;autorizzazione **Gestisci set di dati** per utilizzare il TTL dell&#39;evento esperienza.
+   * Assicurati di avere **Gestione impostazioni profilo** per utilizzare il TTL del profilo pseudonimo.
+* **Informazioni sui criteri di conservazione dei dati**:
+   * Regole organizzative relative alla conservazione dei dati e alla conformità
+   * Esigenze aziendali per l’analisi dei dati e intervalli di lookback della segmentazione
+
+### Funzionalità dell’interfaccia utente, componenti di Experience Platform e prodotti Experience Cloud che utilizzerai
+
+Per implementare correttamente questo caso d’uso, devi utilizzare più aree di Adobe Experience Platform. Assicurati di disporre delle autorizzazioni di controllo dell’accesso basate su attributi necessarie per tutte queste aree, oppure chiedi all’amministratore di sistema di concederle.
+
+* Dashboard di utilizzo della licenza: visualizza l’utilizzo corrente dei diritti a livello sandbox.
+* Gestione dei dataset: monitoraggio e gestione dei criteri di conservazione a livello di dataset.
+* Tipi di pubblico (Real-Time Customer Profile): assicurati che le regole di segmentazione siano allineate alle finestre di conservazione dei dati nella finestra di lookback.
+* Monitoraggio e avvisi: tieni traccia degli aggiornamenti e ricevi informazioni approfondite sulle operazioni di conservazione dei set di dati.
+
+### Come utilizzare il caso d’uso: istruzioni dettagliate
+
+Leggi le sezioni seguenti, che includono collegamenti a ulteriore documentazione, per completare ciascuno dei passaggi descritti nella panoramica di alto livello precedente.
+
+**Verifica l&#39;utilizzo della licenza corrente**
+
+Innanzitutto, passa alla **dashboard sull&#39;utilizzo delle licenze** e controlla l&#39;utilizzo dei diritti a livello di sandbox.
+
+>[!BEGINTABS]
+
+>[!TAB Sandbox di produzione]
+
+Utilizzare l&#39;interfaccia [!UICONTROL Metrics] per visualizzare le metriche di utilizzo delle licenze. Per impostazione predefinita, l’interfaccia visualizza le informazioni per la sandbox di produzione.
+
+![L&#39;interfaccia utente del dashboard utilizzo licenze visualizza le metriche di utilizzo licenze per una sandbox di produzione.](../images/data-management/prod-sandbox.png)
+
+>[!TAB Sandbox di sviluppo]
+
+Seleziona [!UICONTROL Development] per visualizzare le metriche di utilizzo delle licenze relative alle sandbox di sviluppo.
+
+![L&#39;interfaccia utente del dashboard utilizzo licenze visualizza le metriche di utilizzo licenze per le sandbox di sviluppo.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+Per ulteriori informazioni, leggere la documentazione su [utilizzando il dashboard di utilizzo delle licenze](../../dashboards/guides/license-usage.md).
+
+**Analisi dell&#39;utilizzo dell&#39;archiviazione a livello di set di dati**
+
+Utilizza la **visualizzazione Sfoglia set di dati** per rivedere le metriche di utilizzo del set di dati sia per il data lake che per il profilo cliente in tempo reale. Selezionare le intestazioni di colonna per **[!UICONTROL Data Lake Storage]** o **[!UICONTROL Profile Storage]**, quindi selezionare **[!UICONTROL Sort Descending]** dal pannello a comparsa.
+
+>[!BEGINTABS]
+
+>[!TAB Archiviazione data lake]
+
+I set di dati nel data lake sono ordinati in base alla dimensione di archiviazione. Utilizza questa funzione per identificare i maggiori consumatori di storage nel data lake.
+
+![I set di dati nel data lake sono ordinati dal più grande al più piccolo.](../images/data-management/data-lake-storage.png)
+
+>[!TAB Archiviazione profili]
+
+I set di dati nel profilo sono ordinati in base alla dimensione di archiviazione. Utilizza questa funzione per identificare i principali utenti dello storage nel profilo.
+
+![I set di dati nel profilo sono ordinati dal più grande al più piccolo.](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**Valuta e configura la regola di conservazione**
+
+Quindi, verifica se i set di dati dispongono dei criteri di conservazione appropriati in base ai limiti di licenza e ai requisiti di business per Analytics e Segmentazione. Per visualizzare i criteri di conservazione di un set di dati, selezionare i puntini di sospensione (`...`) accanto al set di dati, quindi selezionare **[!UICONTROL Set data retention policy]**.
+
+![Pannello popup con opzioni del set di dati, incluso &quot;Imposta criteri di conservazione dei dati&quot;](../images/data-management/set-retention-policy.png)
+
+Viene visualizzata l&#39;interfaccia *[!UICONTROL Set dataset retention]*. Utilizzare questa interfaccia per configurare un criterio di conservazione per il set di dati. Puoi utilizzarlo anche per visualizzare lo spazio di archiviazione che il set di dati occupa nel data lake o nel profilo.
+
+![Interfaccia &quot;set dataset retention&quot;.](../images/data-management/dataset-retention.png)
+
+Puoi analizzare ulteriormente l’impatto sulla conservazione del set di dati utilizzando la funzione di previsione dell’impatto. Selezionare **[!UICONTROL View ExperienceEvent data distribution]** per visualizzare un grafico che visualizza la finestra di conservazione e la percentuale totale di archiviazione impostata per la scadenza.
+
+Al termine, selezionare **[!UICONTROL Save]**
+
+![Impact Forecaster dall&#39;interfaccia di conservazione dei set di dati.](../images/data-management/impact-forecaster.png)
+
+**Convalida modifiche di conservazione**
+
+Dopo aver applicato i criteri di conservazione, è possibile utilizzare i seguenti strumenti per convalidare le modifiche:
+
+* [Metriche di utilizzo del set di dati](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) nella visualizzazione Esplora set di dati.
+* Il [dashboard di monitoraggio](../../dataflows/ui/monitor.md) per visualizzare e analizzare l&#39;impatto della conservazione.
+* Il [dashboard utilizzo licenze](../../dashboards/guides/license-usage.md) per visualizzare snapshot giornalieri, tendenze predittive e informazioni a livello di sandbox.
