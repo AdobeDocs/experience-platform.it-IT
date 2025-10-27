@@ -1,8 +1,8 @@
 ---
 title: Adform
 description: Adform è uno dei principali fornitori di soluzioni di acquisto e vendita di contenuti multimediali a livello di programmazione. Collegando Adform a Adobe Experience Platform, puoi attivare i tipi di pubblico di prime parti tramite Adform basato sull’Experience Cloud ID (ECID).
-last-substantial-update: 2025-10-22T00:00:00Z
-source-git-commit: f7fd7a83f6d047877697b72e78ac0d4b08c0ff00
+last-substantial-update: 2025-10-23T00:00:00Z
+source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 3%
@@ -28,16 +28,16 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione Adform, ec
 
 Utilizza questa destinazione per inviare i tipi di pubblico di Adobe Real-Time CDP ad Adform per l’attivazione basata su Experience Cloud ID (ECID) e sulla Fusione ID di Adobe. ID Fusion di Adform è il servizio di risoluzione ID di Adform che consente di attivare i tipi di pubblico di prime parti in base all’Experience Cloud ID (ECID).
 
-Un caso comune è il retargeting dei visitatori del sito web per il sito web o l’app in base all’Experience Cloud ID (ECID). È sufficiente inviare l&#39;Experience Cloud ID (ECID) ad Adform tramite le estensioni Adform [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [lato client](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/analytics/adform) prontamente disponibili. Dopodiché puoi condividere i tipi di pubblico con Adform tramite la destinazione Adform per l’attivazione, esclusivamente in base all’Experience Cloud ID (ECID).
+Un caso comune è il retargeting dei visitatori del sito web per il sito web o l’app in base all’Experience Cloud ID (ECID). È sufficiente inviare l&#39;Experience Cloud ID (ECID) ad Adform tramite le estensioni Adform [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [lato client](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) prontamente disponibili. Dopodiché puoi condividere i tipi di pubblico con Adform tramite la destinazione Adform per l’attivazione, esclusivamente in base all’Experience Cloud ID (ECID).
 
 ## Prerequisiti {#prerequisites}
 
 * Per utilizzare questa destinazione devi essere già un cliente Adform.
 * Devi disporre delle credenziali Adform Audience Base Data Connection.
    * Se non disponi delle credenziali Adform Audience Base Data Connection, contatta il tuo rappresentante Adform.
-* Per una corretta sincronizzazione è necessario disporre di una connessione [Streaming eventi](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [lato client](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/analytics/adform) dalle entità ad Adform Site Tracking.
+* Per una corretta sincronizzazione è necessario disporre di una connessione [Streaming eventi](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [lato client](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) dalle entità ad Adform Site Tracking.
    * Se non disponi di una connessione lato client o streaming di eventi dalle entità ad Adform Site Tracking, contatta il tuo rappresentante Adform.
-   * Adform fornisce estensioni Adobe Experience Cloud sia per [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) che per [client-side](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform fornisce estensioni Adobe Experience Cloud sia per [Event Streaming](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) che per [client-side](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Identità supportate {#supported-identities}
@@ -76,7 +76,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 

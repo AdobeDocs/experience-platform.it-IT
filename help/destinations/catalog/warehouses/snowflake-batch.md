@@ -1,9 +1,10 @@
 ---
 title: Connessione batch Snowflake
 description: Crea una condivisione dati live di Snowflake per ricevere aggiornamenti giornalieri sul pubblico direttamente come tabelle condivise nel tuo account.
+last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 59df2c6a0fb5d9dbdd10b52d82fb6b94f5083c3a
+source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 3%
