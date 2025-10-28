@@ -4,9 +4,9 @@ title: Anteprima endpoint API di stato campione (anteprima profilo)
 description: L’endpoint per lo stato di anteprima del campione dell’API Real-Time Customer Profile ti consente di visualizzare in anteprima l’ultimo campione riuscito dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano la sovrapposizione dei set di dati, la sovrapposizione delle identità e i profili non uniti.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2904'
 ht-degree: 1%
 
 ---
@@ -37,12 +37,12 @@ Per ulteriori informazioni sui profili e sul loro ruolo in Experience Platform, 
 
 ## Modalità di attivazione del processo di esempio
 
-Poiché i dati abilitati per Real-Time Customer Profile vengono acquisiti in [!DNL Experience Platform], vengono memorizzati nell&#39;archivio dati del profilo. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
+Poiché i dati abilitati per Real-Time Customer Profile vengono acquisiti in [!DNL Experience Platform], vengono memorizzati nell&#39;archivio dati del profilo. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 3%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
 
-* Per **flussi di lavoro di dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o di diminuzione del 5% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
-* Per l&#39;**acquisizione batch**, entro 15 minuti dalla corretta acquisizione di un batch nell&#39;archivio profili, se viene raggiunta la soglia di aumento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
+* Per **flussi di lavoro di dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o di diminuzione del 3% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
+* Per l&#39;**acquisizione batch**, entro 15 minuti dalla corretta acquisizione di un batch nell&#39;archivio profili, se viene raggiunta la soglia di aumento o riduzione del 3%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
 
-Il conteggio dei profili e i profili per metrica dello spazio dei nomi sono disponibili anche nella sezione [!UICONTROL Profili] dell&#39;interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo tramite l&#39;interfaccia utente, visitare la [[!DNL Profile] guida dell&#39;interfaccia utente](../ui/user-guide.md).
+Il conteggio dei profili e i profili per metrica dello spazio dei nomi sono disponibili anche nella sezione [!UICONTROL Profiles] dell’interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo tramite l&#39;interfaccia utente, visitare la [[!DNL Profile] guida dell&#39;interfaccia utente](../ui/user-guide.md).
 
 ## Visualizza ultimo stato del campione {#view-last-sample-status}
 
@@ -299,7 +299,7 @@ La risposta include un array `data`, con singoli oggetti contenenti i dettagli d
 | `fullIDsFragmentCount` | Numero totale di frammenti di profilo nello spazio dei nomi. |
 | `fullIDsCount` | Numero totale di profili uniti nello spazio dei nomi. |
 | `fullIDsPercentage` | Il `fullIDsCount` come percentuale del totale dei profili uniti (il valore `totalRows` restituito nel [ultimo stato campione](#view-last-sample-status)), espresso in formato decimale. |
-| `code` | `code` per lo spazio dei nomi. Questo è possibile quando si lavora con spazi dei nomi utilizzando l&#39;[API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche indicato come [!UICONTROL simbolo di identità] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
+| `code` | `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con gli spazi dei nomi utilizzando l&#39;[API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche indicato come [!UICONTROL Identity symbol] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
 | `value` | Il valore `id` per lo spazio dei nomi. Questo problema si verifica quando si lavora con spazi dei nomi utilizzando l&#39;[API del servizio Identity](../../identity-service/api/list-namespaces.md). |
 
 ## Generare il rapporto di sovrapposizione del set di dati
@@ -445,7 +445,7 @@ In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il 
 | Proprietà | Descrizione |
 |---|---|
 | `data` | L&#39;oggetto `data` contiene elenchi separati da virgole con combinazioni univoche di codici dello spazio dei nomi delle identità e dei rispettivi conteggi dei profili. |
-| Codici dello spazio dei nomi | `code` è un formato breve per ogni nome spazio dei nomi delle identità. È possibile trovare una mappatura di ogni `code` al relativo `name` utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). `code` è anche indicato come [!UICONTROL simbolo di identità] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
+| Codici dello spazio dei nomi | `code` è un formato breve per ogni nome spazio dei nomi delle identità. È possibile trovare una mappatura di ogni `code` al relativo `name` utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). Nell&#39;interfaccia utente di Experience Platform, `code` è anche denominato [!UICONTROL Identity symbol]. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Il timestamp del rapporto. Se durante la richiesta è stato fornito un parametro `date`, il rapporto restituito si riferisce alla data specificata. Se non viene fornito alcun parametro `date`, viene restituito il report più recente. |
 
 ### Interpretazione del rapporto di sovrapposizione dello spazio dei nomi delle identità
