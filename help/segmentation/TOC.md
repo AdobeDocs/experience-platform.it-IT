@@ -5,9 +5,9 @@ breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
 role: User
-source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
+source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '210'
 ht-degree: 43%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [Panoramica del servizio di segmentazione](home.md)
 - [Tipi di dati di segmentazione](data-types.md)
-- [Guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=it#segmentation-guardrails)
+- [Guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API di segmentazione {#api}
    - [Panoramica](api/overview.md)
    - [Introduzione](api/getting-started.md)
@@ -35,6 +35,7 @@ ht-degree: 43%
    - [Dashboard del pubblico](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
    - [Composizione del pubblico](ui/audience-composition.md)
+   - [Miglioramenti alla composizione del pubblico](ui/composition-enchancements.md)
    - [Generatore di segmenti](ui/segment-builder.md)
    - [Composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/home)
    - [Ignora aggiornamento vincoli di tempo annuale](ui/ignore-year.md)
