@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 description: La governance dei dati di Adobe Experience Platform fornisce un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che possono essere eseguite nell’area di lavoro Criteri nell’interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
-source-wordcount: '1769'
-ht-degree: 16%
+source-wordcount: '2380'
+ht-degree: 11%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 16%
 >title="Integrare e applicare il consenso dei clienti nei dati di profilo"
 >abstract="<h2>Descrizione</h2><p>Con Experience Platform è possibile integrare i dati di consenso raccolti dalla clientela nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se tali dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
 
-Questo documento illustra come utilizzare l&#39;area di lavoro **[!UICONTROL Criteri]** nell&#39;interfaccia utente di Adobe Experience Platform per creare e gestire i criteri di utilizzo dei dati.
+Questo documento illustra come utilizzare l&#39;area di lavoro **[!UICONTROL Policies]** nell&#39;interfaccia utente di Adobe Experience Platform per creare e gestire i criteri di utilizzo dei dati.
 
 >[!NOTE]
 >
@@ -37,11 +37,11 @@ Questa guida richiede una buona conoscenza dei seguenti concetti di [!DNL Experi
 
 ## Visualizza criteri esistenti {#view-policies}
 
-Nell&#39;interfaccia utente [!DNL Experience Platform], selezionare **[!UICONTROL Criteri]** per aprire l&#39;area di lavoro **[!UICONTROL Criteri]**. Nella scheda **[!UICONTROL Sfoglia]** puoi visualizzare un elenco di criteri disponibili, incluse le etichette, le azioni di marketing e lo stato associati.
+Nell&#39;interfaccia utente [!DNL Experience Platform], selezionare **[!UICONTROL Policies]** per aprire l&#39;area di lavoro **[!UICONTROL Policies]**. Nella scheda **[!UICONTROL Browse]** è disponibile un elenco dei criteri disponibili, incluse le etichette, le azioni di marketing e lo stato associati.
 
 ![](../images/policies/browse-policies.png)
 
-Se hai accesso ai criteri di consenso, seleziona l&#39;opzione **[!UICONTROL Criteri di consenso]** per visualizzarli nella scheda [!UICONTROL Sfoglia].
+Se hai accesso ai criteri di consenso, seleziona l&#39;opzione **[!UICONTROL Consent policies]** per visualizzarli nella scheda [!UICONTROL Browse].
 
 ![](../images/policies/consent-policy-toggle.png)
 
@@ -51,15 +51,13 @@ Selezionare un criterio elencato per visualizzarne la descrizione e il tipo. Se 
 
 ## Creare un criterio personalizzato {#create-policy}
 
-Per creare un nuovo criterio di utilizzo dati personalizzato, seleziona **[!UICONTROL Crea criterio]** nell&#39;angolo in alto a destra della scheda **[!UICONTROL Sfoglia]** nell&#39;area di lavoro **[!UICONTROL Criteri]**.
+Per creare un nuovo criterio di utilizzo dati personalizzato, selezionare **[!UICONTROL Create policy]** nell&#39;angolo superiore destro della scheda **[!UICONTROL Browse]** nell&#39;area di lavoro **[!UICONTROL Policies]**.
 
 ![](../images/policies/create-policy-button.png)
 
-A seconda che tu faccia parte della versione beta dei criteri di consenso, si verifica una delle seguenti situazioni:
+Viene visualizzata la finestra di dialogo [!UICONTROL Choose type of policy]. Seleziona un [criterio di consenso](#consent-policy) o un [criterio di governance dei dati](#create-governance-policy).
 
-* Se non fai parte della versione beta, vieni immediatamente portato al flusso di lavoro per [creare un criterio di governance dei dati](#create-governance-policy).
-* Se fai parte della versione beta, una finestra di dialogo fornisce un&#39;opzione aggiuntiva per [creare un criterio di consenso](#consent-policy).
-  ![](../images/policies/choose-policy-type.png)
+![Finestra di dialogo Scegli il tipo di criterio.](../images/policies/choose-policy-type.png)
 
 ### Utilizzare insieme la governance dei dati e i criteri di consenso {#combine-policies}
 
@@ -75,15 +73,15 @@ Utilizzando questo comportamento, puoi impostare una combinazione di criteri e r
 
 ### Creare criteri di governance dei dati {#create-governance-policy}
 
-Viene visualizzato il flusso di lavoro **[!UICONTROL Crea criterio]**. Per iniziare, specifica un nome e una descrizione per il nuovo criterio.
+Verrà visualizzato il flusso di lavoro **[!UICONTROL Create policy]**. Per iniziare, specifica un nome e una descrizione per il nuovo criterio.
 
 ![](../images/policies/create-policy-description.png)
 
-Quindi, seleziona le etichette di utilizzo dei dati su cui basare il criterio. Quando selezioni più etichette, puoi scegliere se i dati devono contenere tutte le etichette o solo una di esse affinché il criterio venga applicato. Al termine, seleziona **[!UICONTROL Avanti]**.
+Quindi, seleziona le etichette di utilizzo dei dati su cui basare il criterio. Quando selezioni più etichette, puoi scegliere se i dati devono contenere tutte le etichette o solo una di esse affinché il criterio venga applicato. Al termine, fai clic su **[!UICONTROL Next]**.
 
 ![](../images/policies/add-labels.png)
 
-Viene visualizzato il passaggio **[!UICONTROL Seleziona azioni di marketing]**. Scegli le azioni di marketing appropriate dall&#39;elenco fornito, quindi seleziona **[!UICONTROL Successivo]** per continuare.
+Viene visualizzato il passaggio **[!UICONTROL Select marketing actions]**. Scegliere le azioni di marketing appropriate dall&#39;elenco fornito, quindi selezionare **[!UICONTROL Next]** per continuare.
 
 >[!NOTE]
 >
@@ -91,11 +89,11 @@ Viene visualizzato il passaggio **[!UICONTROL Seleziona azioni di marketing]**. 
 
 ![](../images/policies/add-marketing-actions.png)
 
-Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere i dettagli del nuovo criterio prima di crearlo. Una volta che sei soddisfatto, seleziona **[!UICONTROL Fine]** per creare il criterio.
+Viene visualizzato il passaggio **[!UICONTROL Review]**, che consente di rivedere i dettagli del nuovo criterio prima di crearlo. Una volta che sei soddisfatto, seleziona **[!UICONTROL Finish]** per creare il criterio.
 
 ![](../images/policies/policy-review.png)
 
-Viene visualizzata di nuovo la scheda **[!UICONTROL Sfoglia]**, in cui ora i criteri appena creati sono elencati nello stato &quot;Bozza&quot;. Per abilitare il criterio, vedere la sezione successiva.
+Viene visualizzata di nuovo la scheda **[!UICONTROL Browse]**, in cui ora i criteri appena creati sono elencati nello stato &quot;Bozza&quot;. Per abilitare il criterio, vedere la sezione successiva.
 
 ![](../images/policies/created-policy.png)
 
@@ -119,18 +117,22 @@ Per utilizzare i criteri di consenso, devi disporre di attributi di consenso pre
 I criteri di consenso sono composti da due componenti logici:
 
 * **[!UICONTROL If]**: la condizione che attiverà il controllo dei criteri. Ciò può essere basato sull’esecuzione di una determinata azione di marketing, sulla presenza di determinate etichette di utilizzo dei dati o su una combinazione delle due.
-* **[!UICONTROL Then]**: attributi di consenso che devono essere presenti affinché un profilo sia incluso nell&#39;azione che ha attivato il criterio.
+* **[!UICONTROL Then]**: gli attributi di consenso che devono essere presenti affinché un profilo sia incluso nell&#39;azione che ha attivato il criterio.
+
+>[!NOTE]
+>
+>I criteri di consenso supportano la creazione di regole avanzate con vari tipi di campi e operatori. Per un riferimento completo ai tipi di campo, agli operatori e agli esempi di creazione di regole supportati, vedere [Riferimento alle regole dei criteri di consenso](./consent-policy-rule-building-reference.md).
 
 #### Configurare le condizioni {#consent-conditions}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="Condizione “Se”"
->abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette per la governance dei dati o una combinazione di entrambe."
+>abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette di governance dei dati o una combinazione di entrambe. Utilizza la logica AND/OR per creare relazioni condizionali complesse tra più condizioni."
 
-Nella sezione **[!UICONTROL If]** selezionare le azioni di marketing e/o le etichette di utilizzo dei dati che devono attivare questo criterio. Seleziona **[!UICONTROL Visualizza tutto]** e **[!UICONTROL Seleziona etichette]** per visualizzare rispettivamente l&#39;elenco completo delle azioni di marketing e delle etichette disponibili.
+Nella sezione **[!UICONTROL If]**, seleziona le azioni di marketing e/o le etichette di utilizzo dei dati che devono attivare questo criterio. Selezionare **[!UICONTROL View all]** e **[!UICONTROL Select labels]** per visualizzare l&#39;elenco completo delle azioni di marketing e delle etichette disponibili, rispettivamente.
 
-Dopo aver aggiunto almeno una condizione, è possibile selezionare **[!UICONTROL Aggiungi condizione]** per continuare ad aggiungere ulteriori condizioni in base alle esigenze, scegliendo il tipo di condizione appropriato dal menu a discesa.
+Dopo aver aggiunto almeno una condizione, è possibile selezionare **[!UICONTROL Add condition]** per continuare ad aggiungere altre condizioni in base alle esigenze, scegliendo il tipo di condizione appropriato dal menu a discesa.
 
 ![](../images/policies/add-condition.png)
 
@@ -143,29 +145,89 @@ Se selezioni più di una condizione, puoi utilizzare l’icona che appare tra di
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Condizione “Allora”"
->abstract="Una volta definita la condizione “Se”, utilizza la sezione “Allora” per selezionare almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili vengano inclusi nell’azione gestita da questo criterio."
+>abstract="Una volta definita la condizione “Se”, utilizza la sezione “Allora” per selezionare almeno un attributo di consenso dallo schema di unione. È necessario spostarsi tra i campi contenitore (Oggetto, Mappa, Array) per raggiungere i campi primitivi (Stringa, Numero, Booleano ecc.) per la creazione di regole. Questo campo primitivo è l’attributo che deve essere presente affinché i profili possano essere inclusi nell’azione disciplinata da questo criterio."
 
-Nella sezione **[!UICONTROL Then]**, seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili possano essere inclusi nell’azione disciplinata da questo criterio. Puoi scegliere una delle opzioni fornite dall&#39;elenco oppure selezionare **[!UICONTROL Visualizza tutto]** per scegliere l&#39;attributo direttamente dallo schema di unione.
+Nella sezione **[!UICONTROL Then]**, seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili possano essere inclusi nell’azione disciplinata da questo criterio. Puoi scegliere una delle opzioni suggerite oppure selezionare **[!UICONTROL View all]** per scegliere l&#39;attributo direttamente dallo schema di unione.
 
-Quando selezioni l’attributo di consenso, scegli i valori per l’attributo che desideri che venga verificato da questo criterio.
+>[!NOTE]
+>
+>I criteri di consenso supportano tipi di campi primitivi (stringa, numero, booleano, data) e tipi di contenitori (oggetto, mappa, array). Puoi passare ai contenitori per selezionare attributi specifici e applicare la logica AND/OR per combinare le regole. Per un riferimento completo ai tipi di campo, agli operatori e agli esempi di creazione di regole supportati, vedi il [riferimento per la creazione di regole dei criteri di consenso](./consent-policy-rule-building-reference.md).
 
-![](../images/policies/select-schema-field.png)
+![L&#39;interfaccia utente del generatore di criteri di consenso mostra le sezioni If e Then, con Visualizza tutto evidenziato.](../images/policies/view-all.png)
 
-Dopo aver selezionato almeno un attributo di consenso, il pannello **[!UICONTROL Proprietà criterio]** viene aggiornato per mostrare la stima del numero di profili consentiti in base a questo criterio, inclusa la percentuale dell&#39;archivio profili totale. Questa stima viene aggiornata automaticamente quando si regola la configurazione dei criteri.
+Se si seleziona **[!UICONTROL View all]**, viene visualizzata la finestra di dialogo **[!UICONTROL Select consent attribute]**. Seleziona gli attributi di consenso da verificare per questo criterio. In alternativa, in questa finestra di dialogo è possibile selezionare **[!UICONTROL Advanced Schema search]** per scegliere un campo primitivo nidificato da valutare come parte del criterio. Seleziona **[!UICONTROL Done]** per confermare le impostazioni.
 
-![](../images/policies/audience-preview.png)
+![La finestra di dialogo Seleziona attributo di consenso con un attributo è stata evidenziata ed è stata completata.](../images/policies/select-consent-attribute.png)
 
-Per aggiungere altri attributi di consenso al criterio, seleziona **[!UICONTROL Aggiungi risultato]**.
+### Ricerca avanzata dello schema {#advanced-schema-search}
 
-![](../images/policies/add-result.png)
+Nella finestra di dialogo **[!UICONTROL Select consent attribute]**, seleziona **[!UICONTROL Advanced Schema search]** per aprire la finestra di dialogo **[!UICONTROL Select union schema field]**. Da questa vista, selezionare attributi a livello di radice o attributi nidificati di tipi di campi primitivi come stringa, numero, booleano e data, nonché tipi di contenitori come oggetto, mappa e matrice.
 
-Puoi continuare ad aggiungere e modificare le condizioni e gli attributi di consenso al criterio in base alle esigenze. Se la configurazione è soddisfacente, fornire un nome e una descrizione facoltativa per il criterio prima di selezionare **[!UICONTROL Salva]**.
+![Percorso di clic per spostarsi nella ricerca avanzata dello schema.](../images/policies/consent-advanced-schema-search.gif)
+
+#### Campi a valore fisso per una condizione criterio {#fixed-value-fields}
+
+Quando selezioni un campo a valore fisso come condizione dei criteri, nel pannello [!UICONTROL Selected attributes] vengono visualizzati i valori predefiniti definiti nello schema di dati.
+
+>[!NOTE]
+>
+>Se un campo è configurato con un set fisso di valori (ad esempio, come enum o altro vocabolario controllato), il generatore di criteri applica tale vincolo per garantire che le condizioni vengano valutate solo in base a dati validi e standardizzati.
+
+Per mantenere la qualità e la coerenza dei dati, l’interfaccia utente riproduce questi valori come caselle di controllo selezionabili anziché come campi di testo libero. Questo approccio riduce la convalida manuale e aiuta i criteri di consenso a valutare i dati in modo affidabile.
+
+Per definire la condizione, selezionare le caselle di controllo relative ai valori che si desidera vengano valutati dal criterio.
+
+![Finestra di dialogo &#39;Seleziona campo schema di unione&#39; con un campo del diagramma schema e le caselle di controllo disponibili a valore fisso evidenziate.](../images/policies/select-schema-field.png)
+
+#### Mappare i campi del tipo di dati per una condizione di criterio {#map-data-type-fields}
+
+Quando selezioni un campo primitivo contenuto in un tipo di dati Mappa, nel pannello **[!UICONTROL Selected attributes]** vengono visualizzate opzioni di configurazione aggiuntive. Utilizza queste opzioni per configurare i controlli del consenso tra più chiavi senza la necessità di un criterio separato per ciascuna chiave. Questo metodo di configurazione semplifica la gestione dei criteri riducendo il numero di criteri da creare.
+
+![La sezione relativa alla mappatura dei criteri di consenso è evidenziata nel pannello degli attributi.](../images/policies/consent-policies-map.png)
+
+##### Configurare gli attributi del tipo di dati mappa {#configure-map-attributes}
+
+Per configurare un attributo di tipo mappa, effettua le seguenti operazioni:
+
+Nel diagramma schema di unione selezionare un campo primitivo, ad esempio una stringa o un numero, contenuto in un tipo di dati Mappa. Il pannello **[!UICONTROL Selected attributes]** viene aggiornato per visualizzare ulteriori opzioni di configurazione per tale campo.
+
+![Sono state aggiornate le opzioni di attributo per un campo primitivo contenuto in un tipo di dati Mappa.](../images/policies/select-union-schema-field.png)
+
+Nel pannello **[!UICONTROL Selected attributes]** configurare il modo in cui i criteri valutano i tasti mappa selezionando o deselezionando la casella di controllo **[!UICONTROL Find any matching item]**.
+
+| Opzione | Azione | Comportamento dei criteri |
+| --- | --- | --- |
+| La casella di controllo **[!UICONTROL Find any matching item]** è **selezionata** | Il campo di testo **[!UICONTROL within]** è disabilitato. | Il criterio controlla **ogni chiave** all&#39;interno della mappa. Qualsiasi chiave in cui il campo nidificato soddisfa la condizione del valore viene considerata una corrispondenza per il criterio. Ciò è utile per applicare la conformità globale tra gli attributi con chiave dinamica. |
+| La casella di controllo **[!UICONTROL Find any matching item]** è **deselezionata** | Immettere un nome chiave specifico nel campo di testo **[!UICONTROL within]**. | Il criterio controlla solo la chiave di mappa specificata nel campo **[!UICONTROL within]**. Vengono associati solo i profili in cui il campo nidificato per una chiave specifica soddisfa il valore definito. Questo è utile per i criteri che si riferiscono a un programma specifico o a una chiave di frequenza (ad esempio, `frequencyMap.m1`). |
+
+Immettere il valore per il campo primitivo selezionato che il criterio deve valutare. Ad esempio, se il tipo di campo è `Integer`, immettere un valore numerico.
+
+![Barra laterale attributi selezionati con le opzioni di configurazione della mappa evidenziate.](../images/policies/within-option.png)
+
+Seleziona **[!UICONTROL Select]** per confermare la configurazione e tornare al generatore di criteri.
+
+Dopo aver selezionato almeno un attributo di consenso, il pannello **[!UICONTROL Policy properties]** viene aggiornato per mostrare il numero stimato di profili inclusi in questo criterio, insieme alla percentuale di profili interessati nell&#39;archivio profili. Il conteggio stimato dei profili viene aggiornato automaticamente quando si modifica la configurazione dei criteri.
+
+![L&#39;interfaccia utente del generatore di criteri mostra una condizione Then configurata con la barra a destra delle proprietà dei criteri che mostra il conteggio dei profili qualificati stimati.](../images/policies/audience-preview.png)
+
+Per aggiungere altri attributi di consenso, selezionare **[!UICONTROL Add result]**. In questo modo viene creata un’altra regola per l’inclusione di profili basati su tali attributi.
+
+![L&#39;interfaccia utente del generatore dei criteri di consenso con l&#39;opzione Aggiungi risultato evidenziata.](../images/policies/add-result.png)
+
+>[!NOTE]
+>
+>Per modificare un attributo esistente, selezionare il nome dell&#39;attributo e quindi l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)). Viene visualizzata la finestra di dialogo **[!UICONTROL Select union schema field]** in cui è possibile apportare modifiche.
+>
+>![L&#39;interfaccia utente di Generatore criteri di consenso con l&#39;attributo di consenso e l&#39;icona di modifica evidenziati.](../images/policies/edit-then-attributes.png)
+
+Continua ad aggiungere o modificare le condizioni e gli attributi di consenso fino a quando il criterio non soddisfa i tuoi requisiti. Al termine, immettere un nome e una descrizione (facoltativa), quindi selezionare **[!UICONTROL Save]** per creare il criterio.
 
 ![](../images/policies/name-and-save.png)
 
-Il criterio di consenso è stato creato e il relativo stato è impostato su [!UICONTROL Disabilitato] per impostazione predefinita. Per abilitare subito il criterio, seleziona l&#39;opzione **[!UICONTROL Stato]** nella barra a destra.
+Il criterio di consenso è stato creato e il relativo stato è impostato su [!UICONTROL Disabled] per impostazione predefinita. Per abilitare subito il criterio, seleziona l&#39;opzione **[!UICONTROL Status]** nella barra a destra.
 
 ![](../images/policies/enable-consent-policy.png)
+
 
 #### Verificare l’applicazione dei criteri
 
@@ -175,27 +237,27 @@ Dopo aver creato e abilitato un criterio di consenso, puoi visualizzare in antep
 
 Tutti i criteri di utilizzo dei dati (inclusi i criteri core forniti da Adobe) sono disabilitati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l’applicazione, devi abilitarlo manualmente tramite l’API o l’interfaccia utente.
 
-È possibile abilitare o disabilitare i criteri dalla scheda **[!UICONTROL Sfoglia]** nell&#39;area di lavoro **[!UICONTROL Criteri]**. Seleziona un criterio personalizzato dall’elenco per visualizzarne i dettagli a destra. In **[!UICONTROL Stato]**, selezionare il pulsante di attivazione/disattivazione per attivare o disattivare il criterio.
+È possibile abilitare o disabilitare i criteri dalla scheda **[!UICONTROL Browse]** nell&#39;area di lavoro **[!UICONTROL Policies]**. Seleziona un criterio personalizzato dall’elenco per visualizzarne i dettagli a destra. In **[!UICONTROL Status]** selezionare il pulsante di attivazione/disattivazione per attivare o disattivare il criterio.
 
 ![](../images/policies/enable-policy.png)
 
 ## Visualizzare le azioni di marketing {#view-marketing-actions}
 
-Nell&#39;area di lavoro **[!UICONTROL Criteri]**, seleziona la scheda **[!UICONTROL Azioni di marketing]** per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione.
+Nell&#39;area di lavoro **[!UICONTROL Policies]**, seleziona la scheda **[!UICONTROL Marketing actions]** per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione.
 
 ![](../images/policies/marketing-actions.png)
 
 ## Creare un’azione di marketing {#create-marketing-action}
 
-Per creare una nuova azione di marketing personalizzata, seleziona **[!UICONTROL Crea azione di marketing]** nell&#39;angolo superiore destro della scheda **[!UICONTROL Azioni di marketing]** nell&#39;area di lavoro **[!UICONTROL Criteri]**.
+Per creare una nuova azione di marketing personalizzata, selezionare **[!UICONTROL Create marketing action]** nell&#39;angolo superiore destro della scheda **[!UICONTROL Marketing actions]** nell&#39;area di lavoro **[!UICONTROL Policies]**.
 
 ![](../images/policies/create-marketing-action.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Crea azione di marketing]**. Immetti un nome e una descrizione per l&#39;azione di marketing, quindi seleziona **[!UICONTROL Crea]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Create marketing action]**. Immettere un nome e una descrizione per l&#39;azione di marketing, quindi selezionare **[!UICONTROL Create]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-L&#39;azione appena creata viene visualizzata nella scheda **[!UICONTROL Azioni di marketing]**. È ora possibile utilizzare l&#39;azione di marketing durante [la creazione di nuovi criteri di utilizzo dei dati](#create-policy).
+L&#39;azione appena creata viene visualizzata nella scheda **[!UICONTROL Marketing actions]**. È ora possibile utilizzare l&#39;azione di marketing durante [la creazione di nuovi criteri di utilizzo dei dati](#create-policy).
 
 ![](../images/policies/created-marketing-action.png)
 
@@ -205,11 +267,11 @@ L&#39;azione appena creata viene visualizzata nella scheda **[!UICONTROL Azioni 
 >
 >È possibile modificare solo le azioni di marketing personalizzate definite dall’organizzazione. Le azioni di marketing definite da Adobe non possono essere modificate o eliminate.
 
-Nell&#39;area di lavoro **[!UICONTROL Criteri]**, seleziona la scheda **[!UICONTROL Azioni di marketing]** per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione. Seleziona un’azione di marketing personalizzata dall’elenco, quindi utilizza i campi forniti nella sezione di destra per modificarne i dettagli.
+Nell&#39;area di lavoro **[!UICONTROL Policies]**, seleziona la scheda **[!UICONTROL Marketing actions]** per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione. Seleziona un’azione di marketing personalizzata dall’elenco, quindi utilizza i campi forniti nella sezione di destra per modificarne i dettagli.
 
 ![](../images/policies/edit-marketing-action.png)
 
-Se l&#39;azione di marketing non è utilizzata da criteri di utilizzo esistenti, è possibile eliminarla selezionando **[!UICONTROL Elimina azione di marketing]**.
+Se l&#39;azione di marketing non è utilizzata da criteri di utilizzo esistenti, è possibile eliminarla selezionando **[!UICONTROL Delete marketing action]**.
 
 >[!NOTE]
 >
@@ -223,4 +285,4 @@ Questo documento fornisce una panoramica su come gestire i criteri di utilizzo d
 
 Il seguente video fornisce una dimostrazione di come utilizzare i criteri di utilizzo nell&#39;interfaccia utente [!DNL Experience Platform]:
 
->[!VIDEO](https://video.tv.adobe.com/v/37131?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
