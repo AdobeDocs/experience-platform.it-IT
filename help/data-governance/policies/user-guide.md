@@ -285,4 +285,4 @@ Questo documento fornisce una panoramica su come gestire i criteri di utilizzo d
 
 Il seguente video fornisce una dimostrazione di come utilizzare i criteri di utilizzo nell&#39;interfaccia utente [!DNL Experience Platform]:
 
->[!VIDEO](https://video.tv.adobe.com/v/37131?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
