@@ -1,13 +1,13 @@
 ---
 title: Condivisione di pacchetti di estensione privati nell’API di Reactor
 description: Scopri come autorizzare altre aziende a condividere pacchetti di estensione privati nell’API di Reactor.
-source-git-commit: ea9a2bb00d3ce59e28ea4cda0d30945e77aa95cb
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 3%
 
 ---
-
 
 # Condivisione di pacchetti di estensione privati
 
@@ -82,7 +82,7 @@ PATCH //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORIZ
 
 **Richiesta**
 
-La seguente richiesta PATCH imposta `state` di un&#39;autorizzazione su `approved`.
+La richiesta PATCH seguente imposta `state` di un&#39;autorizzazione su `approved`.
 
 ```shell
 curl -X PATCH \
@@ -94,10 +94,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```

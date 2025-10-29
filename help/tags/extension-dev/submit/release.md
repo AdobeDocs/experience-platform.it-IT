@@ -2,10 +2,10 @@
 title: Rilasciare un’estensione
 description: Scopri come rilasciare un’estensione tag in Adobe Experience Platform in modo privato o pubblico.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 2152cf98d9809654cca7abd7b8469a72e8387b2a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 67%
+source-wordcount: '478'
+ht-degree: 64%
 
 ---
 
@@ -37,11 +37,11 @@ npx @adobe/reactor-releaser
 `npx` consente di scaricare ed eseguire un pacchetto npm senza installarlo sul computer. Questo è il modo più semplice per eseguire il releaser.
 
 >[!NOTE]
-> Per impostazione predefinita, il releaser richiede credenziali di Adobe I/O per un flusso OAuth da server a server. Le credenziali legacy di `jwt-auth`
-> può essere utilizzato eseguendo `npx @adobe/reactor-releaser@v3.1.3` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
-> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> Per impostazione predefinita, il releaser richiede le credenziali di Adobe I/O per un flusso OAuth da server a server. Le credenziali legacy di `jwt-auth`
+> > può essere utilizzato eseguendo `npx @adobe/reactor-releaser@v3.1.3` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
+> > per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
-Il releaser richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l’organizzazione adatta dal menu a discesa, individua l’integrazione corretta e seleziona **[!UICONTROL Visualizza]**.
+Il releaser richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l&#39;organizzazione adatta dal menu a discesa, individua l&#39;integrazione corretta e seleziona **[!UICONTROL View]**.
 
 - Qual è `clientId`? è disponibile nella console I/O; usa Copia/Incolla.
 - Qual è `clientSecret`? è disponibile nella console I/O; usa Copia/Incolla.
@@ -49,7 +49,7 @@ Il releaser richiede di inserire solo alcune informazioni. È possibile recupera
 Il releaser leggerà i campi `name` e `platform` dal manifesto dell&#39;estensione ed eseguirà una query sull&#39;API per un pacchetto di estensione corrispondente nella disponibilità di sviluppo.
 Il releaser ti chiederà quindi di confermare di aver trovato il pacchetto di estensione corretto da rilasciare a disponibilità privata.
 
-Se desideri rilasciare l’estensione a disponibilità privata utilizzando direttamente le API, consulta la chiamata di esempio per [rilasciare il pacchetto di un’estensione in forma privata](../../api/endpoints/extension-packages.md/#private-release). nella documentazione delle API.
+Se desideri rilasciare l’estensione a disponibilità privata utilizzando direttamente le API, consulta la chiamata di esempio per [rilasciare il pacchetto di un’estensione in forma privata](/help/tags/api/endpoints/extension-packages.md#private-release). nella documentazione delle API.
 
 ## Rilascio pubblico
 

@@ -5,10 +5,10 @@ title: Eliminare un account di destinazione utilizzando l’API del servizio Flu
 type: Tutorial
 description: Scopri come eliminare un account di destinazione utilizzando l’API del servizio Flusso.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 16%
+source-wordcount: '762'
+ht-degree: 21%
 
 ---
 
@@ -35,11 +35,11 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogliere i valori per le intestazioni richieste {#gather-values-for-required-headers}
 
-Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API di [!DNL Experience Platform], prima è necessario completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -64,7 +64,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 Il primo passaggio nell’eliminazione di un account di destinazione consiste nell’individuare l’ID di connessione corrispondente all’account di destinazione che desideri eliminare.
 
-Nell&#39;interfaccia utente di Experience Platform, passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]** e seleziona l&#39;account da eliminare selezionando il numero nella colonna **[!UICONTROL Destinazioni]**.
+Nell&#39;interfaccia utente di Experience Platform, passa a **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** e seleziona l&#39;account da eliminare selezionando il numero nella colonna **[!UICONTROL Destinations]**.
 
 ![Seleziona account di destinazione da eliminare](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -147,7 +147,8 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Prima di eliminare l’account di destinazione, devi eliminare tutti i flussi di dati esistenti dall’account di destinazione.
->Per eliminare i flussi di dati esistenti, consulta le pagine seguenti:
+>>Per eliminare i flussi di dati esistenti, consulta le pagine seguenti:
+>
 >* [Utilizza l&#39;interfaccia utente di Experience Platform](../ui/delete-destinations.md) per eliminare i flussi di dati esistenti;
 >* [Utilizzare l&#39;API del servizio Flusso](delete-destination-dataflow.md) per eliminare i flussi di dati esistenti.
 

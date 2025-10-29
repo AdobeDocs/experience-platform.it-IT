@@ -5,10 +5,10 @@ title: Acquisire dati Parquet da un sistema di archiviazione cloud di terze part
 type: Tutorial
 description: Questa esercitazione utilizza l’API Flow Service per illustrarti i passaggi necessari per acquisire i dati di Apache Parquet da un sistema di archiviazione cloud di terze parti.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 10%
+source-wordcount: '1072'
+ht-degree: 13%
 
 ---
 
@@ -29,11 +29,11 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Lettura delle chiamate API di esempio
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API di [!DNL Experience Platform], prima è necessario completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ Ottenere e archiviare l&#39;identificatore univoco (`$id`) della connessione, qu
 
 Per poter utilizzare i dati di origine in [!DNL Experience Platform], è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle proprie esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati [!DNL Experience Platform] in cui sono contenuti i dati di origine.
 
-Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], nell&#39;esercitazione dell&#39;editor di schemi [&#128279;](../../../xdm/tutorials/create-schema-ui.md) vengono fornite istruzioni dettagliate per l&#39;esecuzione di azioni simili nell&#39;editor di schemi.
+Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], nell&#39;esercitazione dell&#39;editor di schemi [](../../../xdm/tutorials/create-schema-ui.md) vengono fornite istruzioni dettagliate per l&#39;esecuzione di azioni simili nell&#39;editor di schemi.
 
 **Formato API**
 
@@ -259,7 +259,10 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 Per acquisire dati esterni in [!DNL Experience Platform], è necessario prima acquisire una connessione a un set di dati [!DNL Experience Platform].
 
-Per creare una connessione a un dataset base, segui i passaggi descritti nell&#39;esercitazione [connessione a un dataset base](./create-dataset-base-connection.md).
+<!--
+broken link. this file not in TOC.
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](./create-dataset-base-connection.md).
+-->
 
 Continua seguendo i passaggi descritti nella guida per sviluppatori fino a creare una connessione a un set di dati. Ottenere e archiviare l&#39;identificatore univoco (`$id`) e utilizzarlo come ID connessione di base nel passaggio successivo per creare una connessione di destinazione.
 

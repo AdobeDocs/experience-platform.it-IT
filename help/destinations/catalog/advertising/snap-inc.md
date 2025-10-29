@@ -2,10 +2,10 @@
 title: Connessione Snap Inc
 description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 3%
+source-wordcount: '1031'
+ht-degree: 2%
 
 ---
 
@@ -39,7 +39,7 @@ Per utilizzare questa destinazione, è necessario disporre di un account Snapcha
 
 La destinazione *Snap Inc* supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
-Tutti gli identificatori inviati alla destinazione *Snap Inc* devono avere un hash in formato SHA-256. Per eseguire l&#39;hashing degli identificatori di testo normale prima di inviarli alla destinazione, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** durante la mappatura degli identificatori di destinazione per la destinazione.
+Tutti gli identificatori inviati alla destinazione *Snap Inc* devono avere un hash in formato SHA-256. Per eseguire l&#39;hashing degli identificatori di testo normale prima di inviarli alla destinazione, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** durante la mappatura degli identificatori di destinazione per la destinazione.
 
 >[!WARNING]
 > 
@@ -76,8 +76,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Snap Inc. |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Audience export]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Snap Inc. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -86,14 +86,14 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
 Per eseguire l’autenticazione nella destinazione, effettua le seguenti operazioni:
 
 1. Trova la destinazione *Snap Inc* dal catalogo di destinazione di Adobe Experience Platform e seleziona **Configura**.
-2. Selezionare **[!UICONTROL Connetti alla destinazione]**. Verrai reindirizzato alla seguente schermata:
+2. Seleziona **[!UICONTROL Connect to destination]**. Verrai reindirizzato alla seguente schermata:
    ![Schermata di autenticazione 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Immetti le credenziali di Snapchat e seleziona **Accedi**.
 4. Verranno visualizzati i dati di Snapchat a cui Adobe Experience Platform potrà accedere. Selezionare **Continua** per continuare il processo di connessione.
@@ -106,11 +106,11 @@ Dopo aver selezionato Continua, attendi di essere reindirizzato a Adobe Experien
 
 ![Dettagli destinazione](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
-Per configurare i dettagli per la destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Successivo]**.
+Per configurare i dettagli per la destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Next]**.
 
-* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account]**: l&#39;ID account dell&#39;annuncio associato all&#39;account dell&#39;annuncio in cui si desidera importare i tipi di pubblico. Per ulteriori informazioni su come trovare questo elemento, fare riferimento a [questa documentazione nel Centro assistenza commerciale Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Account ID]**: l&#39;ID account dell&#39;annuncio associato all&#39;account dell&#39;annuncio in cui importare i tipi di pubblico. Per ulteriori informazioni su come trovare questo elemento, fare riferimento a [questa documentazione nel Centro assistenza commerciale Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
@@ -120,14 +120,14 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e se
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
@@ -140,7 +140,7 @@ Dopo aver attivato i tipi di pubblico nella destinazione *Snap Inc*, potrai visu
 
 ![Tipi di pubblico](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=it#evaluate-segments).
+Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

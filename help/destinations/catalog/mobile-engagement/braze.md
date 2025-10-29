@@ -4,9 +4,9 @@ title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2440a4d4ec5d572d1d44228fe99914a01e19d60d
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1068'
 ht-degree: 2%
 
 ---
@@ -61,8 +61,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura dei campi.[!DNL Adobe Experience Platform] tipi di pubblico esportati in [!DNL Braze] con l&#39;attributo `AdobeExperiencePlatformSegments`. |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura dei campi.[!DNL Adobe Experience Platform] tipi di pubblico esportati in [!DNL Braze] con l&#39;attributo `AdobeExperiencePlatformSegments`. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -71,36 +71,36 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Braze token account]**: questa è la tua chiave [!DNL Braze] [!DNL API]. Le istruzioni dettagliate su come ottenere la chiave [!DNL API] sono disponibili qui: [Panoramica chiave REST API](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Braze account token]**: questa è la tua chiave [!DNL Braze] [!DNL API]. Le istruzioni dettagliate su come ottenere la chiave [!DNL API] sono disponibili qui: [Panoramica chiave REST API](https://www.braze.com/docs/api/api_key/).
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: immetti un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: immetti una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Istanza endpoint]**: chiedi al tuo rappresentante [!DNL Braze] quale istanza endpoint utilizzare.
+* **[!UICONTROL Name]**: immettere un nome con cui riconoscere questa destinazione in futuro.
+* **[!UICONTROL Description]**: immettere una descrizione che consenta di identificare questa destinazione in futuro.
+* **[!UICONTROL Endpoint Instance]**: chiedi al tuo rappresentante [!DNL Braze] quale istanza endpoint utilizzare.
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md).
 
@@ -112,36 +112,38 @@ La mappatura consiste nella creazione di un collegamento tra i campi dello schem
 
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Braze], effettua le seguenti operazioni:
 
-Nel passaggio [!UICONTROL Mapping], fare clic su **[!UICONTROL Aggiungi nuovo mapping]**.
+Nel passaggio [!UICONTROL Mapping], fare clic su **[!UICONTROL Add new mapping]**.
 
 ![Mappatura per aggiunta destinazione Braze](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-Nella sezione [!UICONTROL Campo Source] fare clic sul pulsante freccia accanto al campo vuoto.
+Nella sezione [!UICONTROL Source Field] fare clic sul pulsante freccia accanto al campo vuoto.
 
 ![Mappatura Source destinazione Braze](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-Nella finestra [!UICONTROL Seleziona campo di origine] è possibile scegliere tra due categorie di campi XDM:
-* [!UICONTROL Seleziona attributi]: utilizza questa opzione per mappare un campo specifico dallo schema XDM a un attributo [!DNL Braze].
+Nella finestra [!UICONTROL Select source field] è possibile scegliere tra due categorie di campi XDM:
+
+* [!UICONTROL Select attributes]: utilizzare questa opzione per mappare un campo specifico dallo schema XDM a un attributo [!DNL Braze].
 
 ![Mappatura destinazione Braze Attributo Source](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Seleziona lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare uno spazio dei nomi dell&#39;identità [!DNL Experience Platform] a uno spazio dei nomi [!DNL Braze].
+* [!UICONTROL Select identity namespace]: utilizzare questa opzione per mappare uno spazio dei nomi di identità [!DNL Experience Platform] a uno spazio dei nomi [!DNL Braze].
 
 ![Mappatura destinazione Braze Spazio dei nomi Source](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Scegli il campo di origine, quindi fai clic su **[!UICONTROL Seleziona]**.
+Scegli il campo di origine, quindi fai clic su **[!UICONTROL Select]**.
 
-Nella sezione [!UICONTROL Campo di destinazione], fai clic sull&#39;icona di mappatura a destra del campo.
+Nella sezione [!UICONTROL Target Field], fai clic sull&#39;icona di mappatura a destra del campo.
 
 ![Mappatura destinazione Braze](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-Nella finestra [!UICONTROL Seleziona campo di destinazione] è possibile scegliere tra due categorie di campi di destinazione:
-* [!UICONTROL Seleziona lo spazio dei nomi dell&#39;identità]: utilizzare questa opzione per mappare gli spazi dei nomi dell&#39;identità [!DNL Experience Platform] agli spazi dei nomi dell&#39;identità [!DNL Braze].
-* [!UICONTROL Seleziona attributi personalizzati]: utilizza questa opzione per mappare gli attributi XDM agli attributi [!DNL Braze] personalizzati definiti nell&#39;account [!DNL Braze]. <br> È inoltre possibile utilizzare questa opzione per rinominare gli attributi XDM esistenti in [!DNL Braze]. Ad esempio, il mapping di un attributo XDM `lastName` a un attributo `Last_Name` personalizzato in [!DNL Braze] creerà l&#39;attributo `Last_Name` in [!DNL Braze], se non esiste già, e mapperà l&#39;attributo XDM `lastName` a esso.
+Nella finestra [!UICONTROL Select target field] è possibile scegliere tra due categorie di campi di destinazione:
+
+* [!UICONTROL Select identity namespace]: utilizzare questa opzione per mappare gli spazi dei nomi di identità [!DNL Experience Platform] a [!DNL Braze].
+* [!UICONTROL Select custom attributes]: utilizzare questa opzione per mappare gli attributi XDM agli attributi [!DNL Braze] personalizzati definiti nell&#39;account [!DNL Braze]. <br> È inoltre possibile utilizzare questa opzione per rinominare gli attributi XDM esistenti in [!DNL Braze]. Ad esempio, il mapping di un attributo XDM `lastName` a un attributo `Last_Name` personalizzato in [!DNL Braze] creerà l&#39;attributo `Last_Name` in [!DNL Braze], se non esiste già, e mapperà l&#39;attributo XDM `lastName` a esso.
 
 ![Sfumatura campi di mappatura destinazione](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Scegli il campo di destinazione, quindi fai clic su **[!UICONTROL Seleziona]**.
+Scegli il campo di destinazione, quindi fai clic su **[!UICONTROL Select]**.
 
 Ora dovresti visualizzare la mappatura dei campi nell’elenco.
 

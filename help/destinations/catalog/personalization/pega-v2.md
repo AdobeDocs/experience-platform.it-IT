@@ -1,9 +1,10 @@
 ---
 title: (V2) Connessione del pubblico in tempo reale Pega CDH
 description: Utilizza la destinazione del pubblico in tempo reale Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull’iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni sulle migliori azioni successive.
-source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
+exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1000'
 ht-degree: 3%
 
 ---
@@ -55,8 +56,8 @@ Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Expe
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Esporta tutti i membri di un pubblico con identificatore (*CustomerID*), attributi (cognome, nome, posizione, ecc.) e dati di appartenenza al pubblico. |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | Esporta tutti i membri di un pubblico con identificatore (*CustomerID*), attributi (cognome, nome, posizione, ecc.) e dati di appartenenza al pubblico. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni sempre basate su API. Non appena un profilo viene aggiornato in Experience Platform, in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Per ulteriori informazioni, consulta [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -71,11 +72,11 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione Pega CDH, utilizzando OAuth 2 con autenticazione delle credenziali client](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
-Compila i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**:
+Compila i campi seguenti e seleziona **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL URL token di accesso]**: l&#39;URL del token di accesso OAuth 2 nell&#39;istanza [!DNL Pega Customer Decision Hub].
-* **[!UICONTROL ID client]**: OAuth 2 [!DNL client ID] generato nell&#39;istanza [!DNL Pega Customer Decision Hub].
-* **[!UICONTROL Segreto client]**: OAuth 2 [!DNL client secret] generato nell&#39;istanza [!DNL Pega Customer Decision Hub].
+* **[!UICONTROL Access Token URL]**: URL del token di accesso OAuth 2 nell&#39;istanza [!DNL Pega Customer Decision Hub].
+* **[!UICONTROL Client ID]**: OAuth 2 [!DNL client ID] generato nell&#39;istanza [!DNL Pega Customer Decision Hub].
+* **[!UICONTROL Client Secret]**: OAuth 2 [!DNL client secret] generato nell&#39;istanza [!DNL Pega Customer Decision Hub].
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -83,25 +84,25 @@ Dopo aver stabilito la connessione di autenticazione a [!DNL Pega Customer Decis
 
 ![Immagine della schermata dell&#39;interfaccia utente che mostra i campi completati per i dettagli della destinazione Pega CDH](../../assets/catalog/personalization/pega/pega-connect-destination-v2.png)
 
-Per configurare i dettagli per la destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Successivo]**.
+Per configurare i dettagli per la destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Next]**.
 
-* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Nome host Pega CDH]**: il nome host Pega Customer Decision Hub in cui il profilo viene esportato come dati JSON.
-* **[!UICONTROL Alias applicazione]**: l&#39;alias applicazione configurato per l&#39;account Customer Decision Hub. Per ulteriori informazioni, vedere [Aggiunta di un alias URL applicazione](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html) nell&#39;istanza [!DNL Pega Customer Decision Hub].
+* **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Pega CDH Host Name]**: nome host Pega Customer Decision Hub in cui il profilo viene esportato come dati JSON.
+* **[!UICONTROL Application alias]**: alias dell&#39;applicazione configurato per l&#39;account Customer Decision Hub. Per ulteriori informazioni, vedere [Aggiunta di un alias URL applicazione](https://docs.pega.com/bundle/platform/page/platform/user-experience/adding-application-url-alias.html) nell&#39;istanza [!DNL Pega Customer Decision Hub].
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attiva dati pubblico nelle destinazioni di esportazione del profilo di streaming](../../ui/activate-streaming-profile-destinations.md).
 
 ### Mappatura {#mapping}
 
-Nel passaggio [!UICONTROL Mappatura], seleziona un identificatore univoco dallo schema di unione e dagli altri campi XDM da esportare nella destinazione.
+Nel passaggio [!UICONTROL Mapping], seleziona un identificatore univoco dallo schema di unione e dagli altri campi XDM da esportare nella destinazione.
 
 ### Esempio di mappatura: attivazione degli aggiornamenti del profilo in [!DNL Pega Customer Decision Hub] {#mapping-example}
 

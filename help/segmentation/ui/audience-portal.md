@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 06b2bc91524299505bde4e5ee30e03cfc6a3c7ba
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '4545'
+source-wordcount: '4341'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ In Audience Portal, puoi eseguire le seguenti attività:
 
 >[!ENDSHADEBOX]
 
-Per aprire Audience Portal, seleziona la scheda **[!UICONTROL Sfoglia]** nella sezione Segmentazione.
+Per aprire Audience Portal, seleziona la scheda **[!UICONTROL Browse]** nella sezione Segmentazione.
 
 ## Elenco dei tipi di pubblico {#list}
 
@@ -55,22 +55,22 @@ Per impostazione predefinita, Audience Portal visualizza un elenco di tutti i ti
 
 Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Selezionando questa opzione viene visualizzato un elenco delle azioni rapide disponibili per il pubblico. Questo elenco di azioni è diverso in base all’origine del pubblico.
 
-![L&#39;elenco delle azioni rapide viene visualizzato per i tipi di pubblico con origine [!UICONTROL Composizione pubblico].](../images/ui/audience-portal/browse-audience-composition-details.png)
+![L&#39;elenco delle azioni rapide viene visualizzato per i tipi di pubblico con origine [!UICONTROL Audience composition].](../images/ui/audience-portal/browse-audience-composition-details.png)
 
 | Azione | Origini | Descrizione |
 | ------ | ------- | ----------- |
-| [!UICONTROL Modifica] | Servizio di segmentazione | Apre Segment Builder (Generatore di segmenti) per modificare il pubblico. Tieni presente che se il pubblico è stato creato tramite l&#39;API, **non** sarà in grado di modificarlo utilizzando Segment Builder. Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, leggere la [Guida dell&#39;interfaccia utente del Generatore di segmenti](./segment-builder.md). |
-| [!UICONTROL Apri composizione] | Composizione del pubblico | Apre la composizione Pubblico per visualizzare il pubblico. Per ulteriori informazioni sulla composizione del pubblico, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./audience-composition.md). |
-| [!UICONTROL Attiva nella destinazione] | Servizio di segmentazione | Attiva il pubblico in una destinazione. Per informazioni più dettagliate sull&#39;attivazione di un pubblico in una destinazione, leggere la [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Condividi con i partner] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Condivide il pubblico con altri utenti di Experience Platform. Per ulteriori informazioni su questa funzione, consulta la [Panoramica sulla corrispondenza dei segmenti](./segment-match/overview.md). |
-| [!UICONTROL Gestione tag] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce i tag definiti dall’utente che appartengono al pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
-| [!UICONTROL Sposta nella cartella] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
-| [!UICONTROL Copia] | Servizio di segmentazione | Duplica il pubblico selezionato. Ulteriori informazioni su questa funzione sono disponibili nelle [Domande frequenti sulla segmentazione](../faq.md#copy). |
-| [!UICONTROL Applica etichette di accesso] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Pubblica] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
-| [!UICONTROL Disattivare] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Tieni presente che per disattivare un pubblico, **non può** essere attivato in **qualsiasi** destinazione (comprese le destinazioni non Experience Platform) o far parte di **qualsiasi** altro pubblico. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
-| [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. I tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti in altri tipi di pubblico **non possono** essere eliminati. Per ulteriori informazioni sull&#39;eliminazione del pubblico, leggere le [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
-| [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggere la [guida agli strumenti della sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Edit] | Servizio di segmentazione | Apre Segment Builder (Generatore di segmenti) per modificare il pubblico. Tieni presente che se il pubblico è stato creato tramite l&#39;API, **non** sarà in grado di modificarlo utilizzando Segment Builder. Per ulteriori informazioni sull&#39;utilizzo del Generatore di segmenti, leggere la [Guida dell&#39;interfaccia utente del Generatore di segmenti](./segment-builder.md). |
+| [!UICONTROL Open composition] | Composizione del pubblico | Apre la composizione Pubblico per visualizzare il pubblico. Per ulteriori informazioni sulla composizione del pubblico, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./audience-composition.md). |
+| [!UICONTROL Activate to destination] | Servizio di segmentazione | Attiva il pubblico in una destinazione. Per informazioni più dettagliate sull&#39;attivazione di un pubblico in una destinazione, leggere la [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Share with partners] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Condivide il pubblico con altri utenti di Experience Platform. Per ulteriori informazioni su questa funzione, consulta la [Panoramica sulla corrispondenza dei segmenti](./segment-match/overview.md). |
+| [!UICONTROL Manage tags] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce i tag definiti dall’utente che appartengono al pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
+| [!UICONTROL Move to folder] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, leggere la sezione relativa al filtro e all&#39;assegnazione di tag [1.](#manage-audiences) |
+| [!UICONTROL Copy] | Servizio di segmentazione | Duplica il pubblico selezionato. Ulteriori informazioni su questa funzione sono disponibili nelle [Domande frequenti sulla segmentazione](../faq.md#copy). |
+| [!UICONTROL Apply access labels] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Publish] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
+| [!UICONTROL Deactivate] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Tieni presente che per disattivare un pubblico, **non può** essere attivato in **qualsiasi** destinazione (comprese le destinazioni non Experience Platform) o far parte di **qualsiasi** altro pubblico. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consulta la sezione [stato del ciclo di vita nelle Domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
+| [!UICONTROL Delete] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. I tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti in altri tipi di pubblico **non possono** essere eliminati. Per ulteriori informazioni sull&#39;eliminazione del pubblico, leggere le [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
+| [!UICONTROL Add to package] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggere la [guida agli strumenti della sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
@@ -78,15 +78,15 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 
 Nella parte superiore della pagina sono presenti opzioni per aggiungere tutti i tipi di pubblico a una pianificazione, importare un pubblico, creare un nuovo pubblico e visualizzare un riepilogo della valutazione del pubblico.
 
-L&#39;attivazione di **[!UICONTROL Pianifica tutti i tipi di pubblico]** abiliterà la segmentazione pianificata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione [segmentazione pianificata di questa guida utente](#scheduled-segmentation).
+L&#39;attivazione di **[!UICONTROL Schedule all audiences]** abiliterà la segmentazione pianificata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione [segmentazione pianificata di questa guida utente](#scheduled-segmentation).
 
-Selezionando **[!UICONTROL Importa pubblico]** potrai importare un pubblico generato esternamente. Per ulteriori informazioni sull&#39;importazione di tipi di pubblico, leggere la sezione relativa all&#39;[importazione di un pubblico nella guida utente](#import-audience).
+Selezionando **[!UICONTROL Import audience]** potrai importare un pubblico generato esternamente. Per ulteriori informazioni sull&#39;importazione di tipi di pubblico, leggere la sezione relativa all&#39;[importazione di un pubblico nella guida utente](#import-audience).
 
-Selezionando **[!UICONTROL Crea pubblico]** potrai creare un pubblico. Per ulteriori informazioni sulla creazione di tipi di pubblico, consulta la sezione relativa alla [creazione di un pubblico nella guida utente](#create-audience).
+Selezionando **[!UICONTROL Create audience]** potrai creare un pubblico. Per ulteriori informazioni sulla creazione di tipi di pubblico, consulta la sezione relativa alla [creazione di un pubblico nella guida utente](#create-audience).
 
 ![La barra di navigazione superiore nella pagina di navigazione del pubblico è evidenziata. Questa barra contiene un pulsante per creare un pubblico e un pulsante per importare un pubblico.](../images/ui/audience-portal/browse-audiences-top.png)
 
-È possibile selezionare **[!UICONTROL Riepilogo valutazione]** per visualizzare un grafico a torta che mostra un riepilogo delle valutazioni del pubblico.
+È possibile selezionare **[!UICONTROL Evaluation summary]** per visualizzare un grafico a torta che mostra un riepilogo delle valutazioni del pubblico.
 
 ![Il pulsante Riepilogo valutazione è evidenziato.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
@@ -100,29 +100,29 @@ Puoi aggiungere campi aggiuntivi a Audience Portal selezionando ![l&#39;icona de
 
 | Campo | Descrizione |
 | ----- | ----------- |
-| [!UICONTROL Nome] | Il nome del pubblico. |
-| [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
-| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/it/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
-| [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive` e `Published`. Ulteriori informazioni sugli stati del ciclo di vita, compreso il significato dei diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, sono disponibili nella sezione [lifecycle status delle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
-| [!UICONTROL Frequenza aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Non pianificato]. |
-| [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
-| [!UICONTROL Creato] | La data e l’ora in UTC in cui è stato creato il pubblico. |
-| [!UICONTROL Ultimo aggiornamento] | La data e l’ora, in UTC, in cui il pubblico è stato aggiornato l’ultima volta. |
-| [!UICONTROL Tag] | I tag definiti dall’utente che appartengono al pubblico. Ulteriori informazioni su questi tag sono disponibili nella sezione [sui tag](#tags). |
-| [!UICONTROL Descrizione] | Descrizione del pubblico. |
-| [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
-| [!UICONTROL Etichette di accesso] | Le etichette di accesso per il pubblico. Le etichette di accesso consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Queste etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta di come gestire i dati. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Raggruppamento] | Il raggruppamento dello stato del profilo per il pubblico. Di seguito è riportata una descrizione più dettagliata del raggruppamento dello stato del profilo. |
+| [!UICONTROL Name] | Il nome del pubblico. |
+| [!UICONTROL Profile count] | Il numero totale di profili idonei per il pubblico. |
+| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Lifecycle status] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive` e `Published`. Ulteriori informazioni sugli stati del ciclo di vita, compreso il significato dei diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, sono disponibili nella sezione [lifecycle status delle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
+| [!UICONTROL Update frequency] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Not Scheduled]. |
+| [!UICONTROL Last updated by] | Nome dell’ultima persona che ha aggiornato il pubblico. |
+| [!UICONTROL Created] | La data e l’ora in UTC in cui è stato creato il pubblico. |
+| [!UICONTROL Last updated] | La data e l’ora, in UTC, in cui il pubblico è stato aggiornato l’ultima volta. |
+| [!UICONTROL Tags] | I tag definiti dall’utente che appartengono al pubblico. Ulteriori informazioni su questi tag sono disponibili nella sezione [sui tag](#tags). |
+| [!UICONTROL Description] | Descrizione del pubblico. |
+| [!UICONTROL Created by] | Nome della persona che ha creato il pubblico. |
+| [!UICONTROL Access labels] | Le etichette di accesso per il pubblico. Le etichette di accesso consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Queste etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta di come gestire i dati. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Breakdown] | Il raggruppamento dello stato del profilo per il pubblico. Di seguito è riportata una descrizione più dettagliata del raggruppamento dello stato del profilo. |
 
-Se il raggruppamento è selezionato, la visualizzazione mostra un grafico a barre che delinea la percentuale di profili che appartengono a ciascuno dei seguenti stati di profilo calcolati: [!UICONTROL Realizzato], [!UICONTROL Esistente] e [!UICONTROL Uscente]. Inoltre, il raggruppamento mostrato nella scheda [!UICONTROL Sfoglia] rappresenta il raggruppamento più preciso dello stato di definizione del segmento. Se questo numero è diverso da quello indicato nella scheda [!UICONTROL Panoramica], è necessario utilizzare i numeri della scheda [!UICONTROL Sfoglia] come origine corretta delle informazioni, poiché i numeri della scheda [!UICONTROL Panoramica] vengono aggiornati solo una volta al giorno.
+Se è selezionato il raggruppamento, la visualizzazione mostra un grafico a barre che delinea la percentuale di profili che appartengono a ciascuno dei seguenti stati di profilo calcolati: [!UICONTROL Realized], [!UICONTROL Existing] e [!UICONTROL Exiting]. Inoltre, il raggruppamento mostrato nella scheda [!UICONTROL Browse] è il raggruppamento più accurato dello stato di definizione del segmento. Se questo numero è diverso da quello indicato nella scheda [!UICONTROL Overview], è necessario utilizzare i numeri della scheda [!UICONTROL Browse] come origine corretta delle informazioni, poiché i numeri della scheda [!UICONTROL Overview] vengono aggiornati una sola volta al giorno.
 
 | Stato | Descrizione |
 | ------ | ----------- |
-| [!UICONTROL Realizzato] | Il numero di profili che **hanno qualificato** per il pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
-| [!UICONTROL Esistente] | Numero di profili **rimasti** nel pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. Questo campo è **calcolato** e non viene visualizzato nell&#39;oggetto [`segmentMembership`](../../xdm/field-groups/profile/segmentation.md). |
-| [!UICONTROL Uscita] | Il numero di profili che **sono usciti** dal pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
+| [!UICONTROL Realized] | Il numero di profili che **hanno qualificato** per il pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
+| [!UICONTROL Existing] | Numero di profili **rimasti** nel pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. Questo campo è **calcolato** e non viene visualizzato nell&#39;oggetto [`segmentMembership`](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Exiting] | Il numero di profili che **sono usciti** dal pubblico nelle ultime 24 ore dall&#39;ultima esecuzione del processo di segmentazione batch. |
 
-Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche la larghezza delle colonne visualizzate. Per eseguire questa operazione, trascinare l&#39;area tra le colonne o selezionare l&#39;![icona freccia](/help/images/icons/chevron-down.png) della colonna da ridimensionare, seguita da **[!UICONTROL Ridimensiona colonna]**.
+Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche la larghezza delle colonne visualizzate. A tale scopo, trascinare l&#39;area tra le colonne o selezionare l&#39;![icona freccia](/help/images/icons/chevron-down.png) della colonna da ridimensionare, seguita da **[!UICONTROL Resize column]**.
 
 ![Il pulsante Ridimensiona colonna è evidenziato.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -130,7 +130,7 @@ Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche
 
 Per migliorare l’efficienza del lavoro, puoi cercare i tipi di pubblico esistenti, aggiungere tag definiti dall’utente ai tipi di pubblico, inserire i tipi di pubblico nelle cartelle e filtrare quelli visualizzati.
 
-#### Ricerca {#search}
+#### Ricerca {#searching}
 
 È possibile eseguire ricerche nei tipi di pubblico esistenti in un massimo di 9 lingue diverse con [!DNL Unified Search].
 
@@ -138,28 +138,28 @@ Per utilizzare [!DNL Unified Search], aggiungere il termine che si desidera cerc
 
 ![La barra di ricerca è evidenziata.](../images/ui/audience-portal/browse-audience-search.png)
 
-Per ulteriori informazioni su [!DNL Unified Search], incluse le funzionalità supportate, leggere la [documentazione di Ricerca unificata](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=it).
+Per ulteriori informazioni su [!DNL Unified Search], incluse le funzionalità supportate, leggere la [documentazione di Ricerca unificata](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 #### Tag {#tags}
 
 Puoi aggiungere tag definiti dall’utente per descrivere, trovare e gestire meglio i tipi di pubblico.
 
-Per aggiungere un tag, seleziona **[!UICONTROL Gestisci tag]** per il pubblico a cui desideri assegnare il tag.
+Per aggiungere un tag, selezionare **[!UICONTROL Manage tags]** per il pubblico a cui si desidera assegnare il tag.
 
-![Il pulsante [!UICONTROL Gestisci tag] è selezionato per un pubblico specificato.](../images/ui/audience-portal/browse-manage-tags.png)
+![Il pulsante [!UICONTROL Manage tags] è selezionato per un pubblico specificato.](../images/ui/audience-portal/browse-manage-tags.png)
 
-Viene visualizzato il popover **[!UICONTROL Gestione tag]**. In questo popover è possibile selezionare un tag categorizzato o un tag non categorizzato.
+Verrà visualizzato il popover **[!UICONTROL Manage tags]**. In questo popover è possibile selezionare un tag categorizzato o un tag non categorizzato.
 
 | Tipo di tag | Descrizione |
 | -------- | ----------- |
 | Categorizzato | Tag creato e gestito dagli amministratori dell’organizzazione. |
-| Non categorizzato | Un tag creato all&#39;interno del popover [!UICONTROL Gestione tag]. Chiunque può creare o gestire questi tipi di tag. |
+| Non categorizzato | Un tag creato all&#39;interno del popover [!UICONTROL Manage tags]. Chiunque può creare o gestire questi tipi di tag. |
 
-![Viene visualizzato il popover [!UICONTROL Gestione tag]. Le opzioni per la scelta di un&#39;opzione categorizzata o non categorizzata sono evidenziate.](../images/ui/audience-portal/create-tag.png)
+![Viene visualizzato il popover [!UICONTROL Manage tags]. Le opzioni per la scelta di un&#39;opzione categorizzata o non categorizzata sono evidenziate.](../images/ui/audience-portal/create-tag.png)
 
-Dopo aver aggiunto al pubblico tutti i tag che desideri allegare, seleziona **[!UICONTROL Salva]**.
+Dopo aver aggiunto tutti i tag che desideri allegare al pubblico, seleziona **[!UICONTROL Save]**.
 
-![Nella finestra a comparsa [!UICONTROL Gestisci tag], i tag aggiunti sono evidenziati.](../images/ui/audience-portal/created-tags.png)
+![Nella finestra a comparsa [!UICONTROL Manage tags], i tag aggiunti sono evidenziati.](../images/ui/audience-portal/created-tags.png)
 
 Per ulteriori informazioni sulla creazione e la gestione dei tag, leggere la [Guida alla gestione dei tag](../../administrative-tags/ui/managing-tags.md).
 
@@ -167,23 +167,23 @@ Per ulteriori informazioni sulla creazione e la gestione dei tag, leggere la [Gu
 
 Puoi inserire i tipi di pubblico all’interno delle cartelle per una migliore gestione dell’audience.
 
-Per creare una cartella in cui inserire il pubblico, seleziona **[!UICONTROL Crea cartella]**.
+Per creare una cartella in cui inserire il pubblico, selezionare **[!UICONTROL Create folder]**.
 
 ![Il pulsante Crea cartella è evidenziato.](../images/ui/audience-portal/create-folder.png)
 
 >[!NOTE]
 >
->Puoi creare una cartella solo se ti trovi in un’altra cartella. Ciò significa che **non puoi** creare una cartella se hai selezionato **[!UICONTROL Tutti i tipi di pubblico]** nella barra di navigazione a sinistra.
+>Puoi creare una cartella solo se ti trovi in un’altra cartella. Ciò significa che **non puoi** creare una cartella se hai selezionato **[!UICONTROL All Audiences]** nella barra di navigazione a sinistra.
 
-Viene visualizzato un messaggio che consente di denominare la cartella appena creata. Seleziona **[!UICONTROL Salva]** dopo aver denominato la cartella per completare la creazione. Tieni presente che i nomi **devono** essere univoci per la cartella principale.
+Viene visualizzato un messaggio che consente di denominare la cartella appena creata. Seleziona **[!UICONTROL Save]** dopo aver denominato la cartella per completare la creazione. Tieni presente che i nomi **devono** essere univoci per la cartella principale.
 
 ![Il pulsante Salva nella finestra di dialogo per la creazione della cartella è evidenziato.](../images/ui/audience-portal/create-folder-dialog.png)
 
-Per spostare un pubblico in una cartella, selezionare **[!UICONTROL Sposta nella cartella]** del pubblico da spostare.
+Per spostare un pubblico in una cartella, selezionare **[!UICONTROL Move to folder]** per il pubblico che si desidera spostare.
 
-![Il pulsante [!UICONTROL Sposta nella cartella] è selezionato per un pubblico specifico.](../images/ui/audience-portal/browse-move-to-folder.png)
+![Il pulsante [!UICONTROL Move to folder] è selezionato per un pubblico specifico.](../images/ui/audience-portal/browse-move-to-folder.png)
 
-Viene visualizzato il popover **Sposta pubblico nella cartella**. Seleziona la cartella in cui vuoi spostare il pubblico, quindi seleziona **[!UICONTROL Salva]**.
+Viene visualizzato il popover **Sposta pubblico nella cartella**. Selezionare la cartella in cui spostare il pubblico, quindi selezionare **[!UICONTROL Save]**.
 
 ![Viene visualizzato il popover Sposta pubblico in cartella. Viene evidenziata la cartella in cui verrà spostato il pubblico.](../images/ui/audience-portal/move-to-folder.png)
 
@@ -203,13 +203,13 @@ Viene visualizzato l’elenco dei filtri disponibili.
 
 | Filtro | Descrizione |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/it/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
-| [!UICONTROL Ha un tag] | Consente di filtrare per tag. È possibile selezionare tra **[!UICONTROL Ha qualsiasi tag]** e **[!UICONTROL Ha tutti i tag]**. Quando **[!UICONTROL ha qualsiasi tag]** è selezionato, i tipi di pubblico filtrati includeranno **qualsiasi** dei tag aggiunti. Quando **[!UICONTROL Contiene tutti i tag]** è selezionato, i tipi di pubblico filtrati devono includere **tutti** i tag aggiunti. |
-| [!UICONTROL Stato del ciclo di vita] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili includono [!UICONTROL Eliminato], [!UICONTROL Bozza], [!UICONTROL Inattivo] e [!UICONTROL Pubblicato]. |
-| [!UICONTROL Frequenza aggiornamento] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico (metodo di valutazione). Le opzioni disponibili includono [!UICONTROL Batch], [!UICONTROL Streaming] e [!UICONTROL Edge] |
-| [!UICONTROL Creato da] | Consente di filtrare in base alla persona che ha creato il pubblico. |
-| [!UICONTROL Data di creazione] | Consente di filtrare in base alla data di creazione del pubblico. Puoi scegliere un intervallo di date da filtrare al momento della creazione del pubblico. |
-| [!UICONTROL Data di modifica] | Consente di filtrare in base all’ultima data modificata del pubblico. Puoi scegliere un intervallo di date per filtrare quando il pubblico è stato modificato l’ultima volta. |
+| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Has any tag] | Consente di filtrare per tag. È possibile selezionare tra **[!UICONTROL Has any tag]** e **[!UICONTROL Has all tags]**. Quando **[!UICONTROL Has any tag]** è selezionato, i tipi di pubblico filtrati includeranno **qualsiasi** dei tag aggiunti. Quando **[!UICONTROL Has all tags]** è selezionato, i tipi di pubblico filtrati devono includere **tutti** i tag aggiunti. |
+| [!UICONTROL Lifecycle status] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili sono [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] e [!UICONTROL Published]. |
+| [!UICONTROL Update frequency] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico (metodo di valutazione). Le opzioni disponibili includono [!UICONTROL Batch], [!UICONTROL Streaming] e [!UICONTROL Edge] |
+| [!UICONTROL Created by] | Consente di filtrare in base alla persona che ha creato il pubblico. |
+| [!UICONTROL Creation date] | Consente di filtrare in base alla data di creazione del pubblico. Puoi scegliere un intervallo di date da filtrare al momento della creazione del pubblico. |
+| [!UICONTROL Modified date] | Consente di filtrare in base all’ultima data modificata del pubblico. Puoi scegliere un intervallo di date per filtrare quando il pubblico è stato modificato l’ultima volta. |
 
 ![I filtri disponibili vengono visualizzati ed evidenziati nella pagina Sfoglia tipi di pubblico.](../images/ui/audience-portal/filter-audiences.png)
 
@@ -231,7 +231,7 @@ La valutazione flessibile del pubblico consente di eseguire un processo di segme
 
 ## Dettagli del pubblico {#audience-details}
 
-Per visualizzare ulteriori dettagli su un pubblico specifico, selezionare il nome di un pubblico nella scheda **[!UICONTROL Sfoglia]**.
+Per visualizzare ulteriori dettagli su un pubblico specifico, selezionare il nome di un pubblico nella scheda **[!UICONTROL Browse]**.
 
 Viene visualizzata la pagina dei dettagli del pubblico. In alto è riportato un riepilogo del pubblico, informazioni sulle dimensioni del pubblico qualificato e le destinazioni per le quali il segmento viene attivato.
 
@@ -239,15 +239,15 @@ Viene visualizzata la pagina dei dettagli del pubblico. In alto è riportato un 
 
 ### Riepilogo del pubblico {#audience-summary}
 
-La sezione **[!UICONTROL Riepilogo del pubblico]** fornisce informazioni quali ID, nome, descrizione, origine e dettagli degli attributi.
+La sezione **[!UICONTROL Audience summary]** fornisce informazioni quali ID, nome, descrizione, origine e dettagli degli attributi.
 
 Inoltre, puoi attivare il pubblico su una destinazione, applicare etichette di accesso o modificare/aggiornare il pubblico.
 
-Selezionando **[!UICONTROL Attiva nella destinazione]** puoi attivare il pubblico in una destinazione. Per informazioni più dettagliate sull&#39;attivazione di un pubblico in una destinazione, leggere la [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md).
+Selezionando **[!UICONTROL Activate to destination]** puoi attivare il pubblico in una destinazione. Per informazioni più dettagliate sull&#39;attivazione di un pubblico in una destinazione, leggere la [panoramica sull&#39;attivazione](../../destinations/ui/activation-overview.md).
 
 ![Il pulsante Attiva nella destinazione è evidenziato.](../images/ui/audience-portal/audience-details-activate.png)
 
-Selezionando **[!UICONTROL Applica etichette di accesso]** puoi gestire le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md).
+La selezione di **[!UICONTROL Apply access labels]** consente di gestire le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md).
 
 ![Il pulsante Applica etichette di accesso è evidenziato.](../images/ui/audience-portal/audience-details-access-labels.png)
 
@@ -255,31 +255,31 @@ Selezionando **[!UICONTROL Applica etichette di accesso]** puoi gestire le etich
 
 >[!TAB Composizione del pubblico]
 
-![Viene visualizzata la pagina dei dettagli del pubblico, con il pulsante [!UICONTROL Apri composizione] evidenziato.](../images/ui/audience-portal/audience-details-open-composition.png)
+![Viene visualizzata la pagina dei dettagli del pubblico, con il pulsante [!UICONTROL Open composition] evidenziato.](../images/ui/audience-portal/audience-details-open-composition.png)
 
-Selezionando **[!UICONTROL Apri composizione]** puoi visualizzare il pubblico in Composizione pubblico. Per ulteriori informazioni sulla composizione del pubblico, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./audience-composition.md).
+La selezione di **[!UICONTROL Open composition]** consente di visualizzare il pubblico in Composizione pubblico. Per ulteriori informazioni sulla composizione del pubblico, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./audience-composition.md).
 
 >[!TAB Caricamento personalizzato]
 
-![Viene visualizzata la pagina dei dettagli del pubblico, con il pulsante [!UICONTROL Aggiorna pubblico] evidenziato.](../images/ui/audience-portal/audience-details-update-audience.png)
+![Viene visualizzata la pagina dei dettagli del pubblico, con il pulsante [!UICONTROL Update audience] evidenziato.](../images/ui/audience-portal/audience-details-update-audience.png)
 
-Selezionando **[!UICONTROL Aggiorna pubblico]** puoi ricaricare un pubblico generato esternamente. Per ulteriori informazioni sull&#39;importazione di un pubblico generato esternamente, leggere la sezione relativa all&#39;[importazione di un pubblico](#import-audience).
+La selezione di **[!UICONTROL Update audience]** consente di ricaricare un pubblico generato esternamente. Per ulteriori informazioni sull&#39;importazione di un pubblico generato esternamente, leggere la sezione relativa all&#39;[importazione di un pubblico](#import-audience).
 
 >[!TAB Servizio di segmentazione]
 
-![Viene visualizzata la pagina dei dettagli del pubblico, con il pulsante [!UICONTROL Modifica pubblico] evidenziato.](../images/ui/audience-portal/audience-details-edit-audience.png)
+![Viene visualizzata la pagina dei dettagli del pubblico, con il pulsante [!UICONTROL Edit audience] evidenziato.](../images/ui/audience-portal/audience-details-edit-audience.png)
 
-Selezionando **[!UICONTROL Modifica pubblico]** puoi modificare il pubblico nel Generatore di segmenti. Per ulteriori informazioni sull&#39;utilizzo dell&#39;area di lavoro [!DNL Segment Builder], leggere la [[!DNL Segment Builder] guida utente](./segment-builder.md).
+Selezionando **[!UICONTROL Edit audience]** puoi modificare il pubblico nel Generatore di segmenti. Per ulteriori informazioni sull&#39;utilizzo dell&#39;area di lavoro [!DNL Segment Builder], leggere la [[!DNL Segment Builder] guida utente](./segment-builder.md).
 
 >[!ENDTABS]
 
-Selezionando **[!UICONTROL Modifica proprietà]** potrai modificare i dettagli di base del pubblico, come il nome, la descrizione e i tag.
+Selezionando **[!UICONTROL Edit properties]** potrai modificare i dettagli di base del pubblico, come il nome, la descrizione e i tag.
 
 ![Il pulsante Modifica proprietà è evidenziato nella pagina dei dettagli del pubblico.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Totale pubblico {#audience-total}
 
-Per i tipi di pubblico e le composizioni generati da Experience Platform, la sezione **[!UICONTROL Pubblico totale]** mostra il numero totale di profili idonei per il pubblico.
+Per i tipi di pubblico e le composizioni generati da Experience Platform, la sezione **[!UICONTROL Audience total]** mostra il numero totale di profili idonei per il pubblico.
 
 >[!NOTE]
 >
@@ -289,7 +289,7 @@ Le stime vengono generate utilizzando una dimensione campione dei dati di campio
 
 ### Dettagli dell’acquisizione {#ingestion-details}
 
-Per i tipi di pubblico con origine **[!UICONTROL Caricamento personalizzato]**, la sezione **[!UICONTROL Dettagli acquisizione]** mostra sia il totale del profilo che i dettagli del set di dati in cui è stato acquisito il pubblico generato esternamente.
+Per i tipi di pubblico con origine **[!UICONTROL Custom upload]**, la sezione **[!UICONTROL Ingestion details]** mostra sia il totale del profilo che i dettagli del set di dati in cui è stato acquisito il pubblico generato esternamente.
 
 >[!NOTE]
 >
@@ -315,7 +315,7 @@ Per i tipi di pubblico con origine **[!UICONTROL Caricamento personalizzato]**, 
 
 ### Destinazioni attivate {#activated-destinations}
 
-La sezione **[!UICONTROL Destinazioni attivate]** mostra le destinazioni per le quali questo pubblico è attivato.
+La sezione **[!UICONTROL Activated destinations]** mostra le destinazioni per le quali questo pubblico è attivato.
 
 >[!NOTE]
 >
@@ -356,7 +356,7 @@ La valutazione on-demand comporta l’utilizzo dell’API per eseguire valutazio
 
 ### Abilita segmentazione pianificata {#enable-scheduled-segmentation}
 
-Abilitare i tipi di pubblico per la valutazione pianificata può essere fatto utilizzando l’interfaccia utente o l’API. Nell&#39;interfaccia utente, torna alla scheda **[!UICONTROL Sfoglia]** in **[!UICONTROL Tipi di pubblico]** e attiva **[!UICONTROL Pianifica tutti i tipi di pubblico]**. In questo modo tutti i tipi di pubblico verranno valutati in base alla pianificazione impostata dall’organizzazione.
+Abilitare i tipi di pubblico per la valutazione pianificata può essere fatto utilizzando l’interfaccia utente o l’API. Nell&#39;interfaccia utente, tornare alla scheda **[!UICONTROL Browse]** in **[!UICONTROL Audiences]** e attivare **[!UICONTROL Schedule all audiences]**. In questo modo tutti i tipi di pubblico verranno valutati in base alla pianificazione impostata dall’organizzazione.
 
 >[!NOTE]
 >
@@ -368,7 +368,7 @@ Al momento è possibile creare pianificazioni solo utilizzando l’API. Per i pa
 
 ## Creazione di un pubblico {#create-audience}
 
-Puoi selezionare **[!UICONTROL Crea pubblico]** per creare un pubblico.
+È possibile selezionare **[!UICONTROL Create audience]** per creare un pubblico.
 
 ![Nella pagina Sfoglia pubblico è evidenziato il pulsante Crea pubblico.](../images/ui/audience-portal/browse-create-audience.png)
 
@@ -378,13 +378,13 @@ Viene visualizzato un popover che consente di scegliere se comporre un pubblico 
 
 ### Composizione del pubblico {#audience-composition}
 
-Selezionando **[!UICONTROL Componi pubblico]** puoi passare alla composizione del pubblico. Questa area di lavoro offre controlli intuitivi per la creazione e la modifica di tipi di pubblico, ad esempio il trascinamento della selezione utilizzato per rappresentare azioni diverse. Per ulteriori informazioni sulla creazione di tipi di pubblico, consulta la [guida alla composizione del pubblico](./audience-composition.md).
+Se selezioni **[!UICONTROL Compose audiences]**, accedi a Composizione pubblico. Questa area di lavoro offre controlli intuitivi per la creazione e la modifica di tipi di pubblico, ad esempio il trascinamento della selezione utilizzato per rappresentare azioni diverse. Per ulteriori informazioni sulla creazione di tipi di pubblico, consulta la [guida alla composizione del pubblico](./audience-composition.md).
 
 ![Viene visualizzata l&#39;area di lavoro di composizione del pubblico.](../images/ui/audience-portal/audience-composition.png)
 
 ### Generatore di segmenti {#segment-builder}
 
-Selezionando **[!UICONTROL Genera regola]** puoi passare al Generatore di segmenti. Questa area di lavoro fornisce controlli intuitivi per la creazione e la modifica delle definizioni dei segmenti, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati. Per ulteriori informazioni sulla creazione delle definizioni dei segmenti, consulta la [guida del Generatore di segmenti](./segment-builder.md)
+Selezionando **[!UICONTROL Build rule]** si accede al Generatore di segmenti. Questa area di lavoro fornisce controlli intuitivi per la creazione e la modifica delle definizioni dei segmenti, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati. Per ulteriori informazioni sulla creazione delle definizioni dei segmenti, consulta la [guida del Generatore di segmenti](./segment-builder.md)
 
 ![Viene visualizzata l&#39;area di lavoro del Generatore di segmenti.](../images/ui/audience-portal/segment-builder.png)
 
@@ -411,15 +411,15 @@ Ulteriori informazioni su Data Distiller sono disponibili nella [guida alla crea
 
 >[!IMPORTANT]
 >
->Per importare un pubblico generato esternamente, **devi** disporre delle seguenti autorizzazioni: [!UICONTROL Visualizza segmenti], [!UICONTROL Gestisci segmenti] e [!UICONTROL Importa pubblico]. Per ulteriori informazioni su queste autorizzazioni, leggere la [panoramica sul controllo degli accessi](../../access-control/home.md#permissions).
+>Per importare un pubblico generato esternamente, **è necessario** disporre delle seguenti autorizzazioni: [!UICONTROL View segments], [!UICONTROL Manage segments] e [!UICONTROL Import audience]. Per ulteriori informazioni su queste autorizzazioni, leggere la [panoramica sul controllo degli accessi](../../access-control/home.md#permissions).
 
-Puoi selezionare **[!UICONTROL Importa pubblico]** per importare un pubblico generato esternamente.
+È possibile selezionare **[!UICONTROL Import audience]** per importare un pubblico generato esternamente.
 
 ![Nella pagina Sfoglia pubblico è evidenziato il pulsante Importa pubblico.](../images/ui/audience-portal/browse-import-audience.png)
 
-Viene visualizzato il flusso di lavoro **[!UICONTROL Importa CSV]** del pubblico. Puoi selezionare un file CSV da importare come pubblico generato esternamente.
+Verrà visualizzato il flusso di lavoro **[!UICONTROL Import audience CSV]**. Puoi selezionare un file CSV da importare come pubblico generato esternamente.
 
-![Nel flusso di lavoro [!UICONTROL Importa CSV pubblico], è evidenziata la casella [!UICONTROL Trascina i file], che mostra dove puoi caricare il pubblico generato esternamente.](../images/ui/audience-portal/import-audience-csv.png)
+![Nel flusso di lavoro [!UICONTROL Import audience CSV], la casella [!UICONTROL Drag and drop files] è evidenziata e mostra dove puoi caricare il pubblico generato esternamente.](../images/ui/audience-portal/import-audience-csv.png)
 
 >[!NOTE]
 >
@@ -429,15 +429,15 @@ Viene visualizzato il flusso di lavoro **[!UICONTROL Importa CSV]** del pubblico
 >
 >Ad esempio, il valore della prima riga può essere &quot;FirstName&quot; o &quot;First_Name&quot;, ma non può essere &quot;First Name&quot; o &quot;First-Name&quot;.
 
-Dopo aver selezionato il file CSV da importare, viene visualizzato un elenco di dati di esempio per questo pubblico generato esternamente. Dopo aver verificato la correttezza dei dati di esempio, seleziona **[!UICONTROL Avanti]**.
+Dopo aver selezionato il file CSV da importare, viene visualizzato un elenco di dati di esempio per questo pubblico generato esternamente. Dopo aver verificato la correttezza dei dati di esempio, selezionare **[!UICONTROL Next]**.
 
 ![Vengono visualizzati dati di esempio per il pubblico generato esternamente.](../images/ui/audience-portal/import-audience-sample-data.png)
 
-Viene visualizzata la pagina **[!UICONTROL Dettagli pubblico]**. Puoi aggiungere informazioni sul pubblico, tra cui nome, descrizione, identità primaria e valore dello spazio dei nomi dell’identità.
+Viene visualizzata la pagina **[!UICONTROL Audience details]**. Puoi aggiungere informazioni sul pubblico, tra cui nome, descrizione, identità primaria e valore dello spazio dei nomi dell’identità.
 
 Quando importi il pubblico generato esternamente, devi selezionare una delle colonne da usare come campo di identità principale e specificare il valore dello spazio dei nomi. Tieni presente che tutti i campi rimanenti verranno considerati **attributi payload**. Questi attributi sono considerati **non durevoli**, in quanto verranno associati a questo pubblico solo a scopo di personalizzazione e sono **non** connessi al profilo.
 
-![Viene visualizzata la pagina [!UICONTROL Dettagli pubblico].](../images/ui/audience-portal/import-audience-audience-details.png)
+![Viene visualizzata la pagina [!UICONTROL Audience details].](../images/ui/audience-portal/import-audience-audience-details.png)
 
 Facoltativamente, puoi anche aggiungere alcuni dettagli aggiuntivi al pubblico generato esternamente, ad esempio assegnargli un ID esterno, definirne il criterio di unione, modificarne il tipo di dati di colonna o applicare una scadenza di dati personalizzata.
 
@@ -454,17 +454,17 @@ Facoltativamente, puoi anche aggiungere alcuni dettagli aggiuntivi al pubblico g
 
 >[!NOTE]
 >
->La scadenza dei dati personalizzati imposta il numero di giorni in cui i profili rimarranno **1&rbrace; nell&#39;iscrizione al pubblico.** Una volta scaduta la scadenza dei dati, i profili escono dall’iscrizione al pubblico. Questo valore può essere impostato da 1 a 90 giorni.
+>La scadenza dei dati personalizzati imposta il numero di giorni in cui i profili rimarranno **1} nell&#39;iscrizione al pubblico.** Una volta scaduta la scadenza dei dati, i profili escono dall’iscrizione al pubblico. Questo valore può essere impostato da 1 a 90 giorni.
 
-Dopo aver inserito i dettagli del pubblico, seleziona **[!UICONTROL Successivo]**.
+Dopo aver inserito i dettagli del pubblico, seleziona **[!UICONTROL Next]**.
 
-![Il pulsante [!UICONTROL Avanti] è evidenziato nella pagina [!UICONTROL Dettagli pubblico].](../images/ui/audience-portal/import-audience-filled-details.png)
+![Il pulsante [!UICONTROL Next] è evidenziato nella pagina [!UICONTROL Audience details].](../images/ui/audience-portal/import-audience-filled-details.png)
 
-Viene visualizzata la pagina **[!UICONTROL Rivedi]**. Puoi rivedere i dettagli del pubblico appena importato generato esternamente.
+Viene visualizzata la pagina **[!UICONTROL Review]**. Puoi rivedere i dettagli del pubblico appena importato generato esternamente.
 
-![Viene visualizzata la pagina [!UICONTROL Rivedi], che mostra i dettagli del pubblico generato esternamente appena importato.](../images/ui/audience-portal/import-audience-review-details.png)
+![Viene visualizzata la pagina [!UICONTROL Review] con i dettagli del pubblico generato esternamente appena importato.](../images/ui/audience-portal/import-audience-review-details.png)
 
-Dopo aver confermato che i dettagli sono corretti, seleziona **[!UICONTROL Fine]** per importare il pubblico generato esternamente in Adobe Experience Platform.
+Dopo aver confermato che i dettagli sono corretti, selezionare **[!UICONTROL Finish]** per importare il pubblico generato esternamente in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >

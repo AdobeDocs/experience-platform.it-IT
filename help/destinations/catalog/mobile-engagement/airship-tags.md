@@ -3,9 +3,9 @@ keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
 description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 5a2f1c87381c39d6d15f569523cfb3b00d02b34b
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '934'
 ht-degree: 2%
 
 ---
@@ -52,8 +52,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori utilizzati nella destinazione Tag dirigibili. |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Audience export]** | Stai esportando tutti i membri di un pubblico con gli identificatori utilizzati nella destinazione Tag dirigibili. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -72,13 +72,13 @@ Per istruzioni sulla creazione del gruppo di tag, consulta [Gestisci gruppi di t
 
 ## Genera token Bearer
 
-Vai a **[!UICONTROL Impostazioni]**&quot; **[!UICONTROL API e integrazioni]** nel [Dashboard per dirigibili](https://go.airship.com) e seleziona **[!UICONTROL Token]** nel menu a sinistra.
+Vai a **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** nel [Dashboard dirigibile](https://go.airship.com) e seleziona **[!UICONTROL Tokens]** nel menu a sinistra.
 
-Fai clic su **[!UICONTROL Crea token]**.
+Fai clic su **[!UICONTROL Create Token]**.
 
 Specifica un nome descrittivo per il token, ad esempio &quot;Destinazione tag Adobe&quot;, e seleziona &quot;Accesso completo&quot; per il ruolo.
 
-Fai clic su **[!UICONTROL Crea token]** e salva i dettagli come riservati.
+Fare clic su **[!UICONTROL Create Token]** e salvare i dettagli come riservati.
 
 ## Casi d’uso
 
@@ -98,41 +98,41 @@ Ad esempio, un retailer imposta un pubblico specifico per il marchio jeans in Ex
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Token Bearer]**: il token Bearer generato dal dashboard [!DNL Airship].
+* **[!UICONTROL Bearer token]**: il token Bearer generato dal dashboard [!DNL Airship].
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: immettere un nome che consenta di identificare la destinazione.
-* **[!UICONTROL Descrizione]**: immettere una descrizione per questa destinazione.
-* **[!UICONTROL Dominio]**: selezionare un data center statunitense o dell&#39;UE, a seconda del data center [!DNL Airship] applicabile a questa destinazione.
+* **[!UICONTROL Name]**: immettere un nome che consenta di identificare la destinazione.
+* **[!UICONTROL Description]**: immettere una descrizione per questa destinazione.
+* **[!UICONTROL Domain]**: selezionare un data center USA o UE, a seconda del data center [!DNL Airship] applicabile a questa destinazione.
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md).
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 
-I tag [!DNL Airship] possono essere impostati su un canale, che rappresenta un&#39;istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail in **[!UICONTROL Attributi Source]** e mappali all&#39;utente denominato [!DNL Airship] nella colonna di destra in **[!UICONTROL Identità Target]**, come illustrato di seguito.
+I tag [!DNL Airship] possono essere impostati su un canale, che rappresenta un&#39;istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail in **[!UICONTROL Source Attributes]** e mappalo sull&#39;utente denominato [!DNL Airship] nella colonna di destra in **[!UICONTROL Target Identities]**, come mostrato di seguito.
 
 ![Mapping utente denominato](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 

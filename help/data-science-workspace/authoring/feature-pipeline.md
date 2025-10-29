@@ -4,7 +4,7 @@ title: Creare una pipeline di feature utilizzando il SDK di authoring del modell
 type: Tutorial
 description: Adobe Experience Platform consente di creare e creare pipeline di funzioni personalizzate per eseguire attività di progettazione delle funzioni su larga scala tramite Sensei Machine Learning Framework Runtime. Questo documento descrive le varie classi presenti in una pipeline di funzioni e fornisce un tutorial dettagliato per la creazione di una pipeline di funzioni personalizzata tramite Model Authoring SDK in PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
@@ -40,6 +40,7 @@ Durante l’esecuzione di una pipeline di funzioni si verifica il seguente fluss
 ## Introduzione
 
 Per eseguire una composizione in qualsiasi organizzazione, è necessario quanto segue:
+
 - Un set di dati di input.
 - Lo schema del set di dati.
 - Schema trasformato e set di dati vuoto basato su tale schema.

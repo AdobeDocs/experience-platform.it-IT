@@ -4,7 +4,7 @@ description: Crea una condivisione dati live di Snowflake per ricevere aggiornam
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 3%
@@ -113,7 +113,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
+|---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Audience export]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione [!DNL Snowflake]. |
 | Frequenza di esportazione | **[!UICONTROL Batch]** | Questa destinazione fornisce istantanee periodiche dell’iscrizione completa al pubblico tramite la condivisione dei dati di Snowflake. Ogni istantanea sostituisce i dati precedenti, garantendo sempre la visualizzazione completa più recente del pubblico. |
 

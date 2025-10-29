@@ -1,7 +1,8 @@
 ---
 title: Prevedere l'abbandono dei clienti con la regressione logistica basata su SQL
 description: Scopri come prevedere l’abbandono dei clienti utilizzando la regressione logistica basata su SQL. Questa guida tratta l’intero processo, dalla creazione di modelli alla valutazione e previsione. Ottieni informazioni fruibili dal comportamento di acquisto dei clienti per implementare strategie di conservazione proattive e ottimizzare le decisioni aziendali.
-source-git-commit: 95c7ad3f8eb86cacd42077008824eea9e25b4db0
+exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 1%
@@ -45,7 +46,7 @@ Per generare previsioni di abbandono dei clienti, il modello dipende dai campi c
 | `timestamp` | La data e l’ora esatte di ogni evento di acquisto. |
 | `commerce.order.purchaseID` | Valore obbligatorio che conferma un acquisto completato. |
 
-Il set di dati deve contenere record cronologici strutturati delle transazioni dei clienti, con ogni riga che rappresenta un evento di acquisto. Ogni evento deve includere marche temporali in un formato data-ora appropriato compatibile con la funzione SQL `DATEDIFF` (ad esempio, YYYY-MM-DD HH:MI:SS). Inoltre, ogni record deve contenere un ID Experience Cloud (`ECID`) valido nel campo `identityMap` per identificare in modo univoco i clienti.
+Il set di dati deve contenere record cronologici strutturati delle transazioni dei clienti, con ogni riga che rappresenta un evento di acquisto. Ogni evento deve includere marche temporali in un formato data-ora appropriato compatibile con la funzione SQL `DATEDIFF` (ad esempio, YYYY-MM-DD HH:MI:SS). Inoltre, ogni record deve contenere un Experience Cloud ID (`ECID`) valido nel campo `identityMap` per identificare in modo univoco i clienti.
 
 >[!TIP]
 >
@@ -128,7 +129,7 @@ Il set di dati di output contiene metriche relative al cliente e il relativo sta
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
---------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+|--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
   100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
   100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
   100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
@@ -203,7 +204,7 @@ L’output di valutazione include metriche delle prestazioni chiave, come AUC-RO
 
 ```console
  auc_roc | accuracy | precision | recall 
----------+----------+-----------+--------
+|---------+----------+-----------+--------
 1        | 0.99998  |  1        |  1      
 ```
 
@@ -279,7 +280,7 @@ Il set di dati di output include le funzioni chiave del cliente e lo stato di ab
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
------------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+|-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
  2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
  1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
  1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0

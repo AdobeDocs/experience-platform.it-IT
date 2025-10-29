@@ -5,7 +5,7 @@ title: Formazione e valutazione di un modello tramite l’API di apprendimento a
 type: Tutorial
 description: Questo tutorial illustra come creare, addestrare e valutare un modello utilizzando le chiamate API di apprendimento automatico di Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Questo tutorial illustra come creare, addestrare e valutare un modello utilizzan
 
 Segui [Importa una ricetta in pacchetti utilizzando l&#39;API](./import-packaged-recipe-api.md) per creare un motore, necessario per addestrare e valutare un modello utilizzando l&#39;API.
 
-Segui l&#39;[esercitazione sull&#39;autenticazione API Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per iniziare ad effettuare chiamate API.
+Segui l&#39;[esercitazione sull&#39;autenticazione API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per iniziare ad effettuare chiamate API.
 
 Dall’esercitazione ora dovrebbero essere presenti i seguenti valori:
 
@@ -401,7 +401,7 @@ curl -X GET \
 
 **Risposta**
 
-La chiamata di GET fornirà lo stato nel parametro `state` come mostrato di seguito:
+La chiamata GET fornirà lo stato nel parametro `state` come mostrato di seguito:
 
 ```JSON
 {
@@ -438,6 +438,7 @@ La chiamata di GET fornirà lo stato nel parametro `state` come mostrato di segu
 `{EXPERIMENT_ID}`: ID che rappresenta l&#39;esperimento in cui si trova l&#39;esecuzione dell&#39;esperimento.
 
 Oltre allo stato `DONE`, gli altri stati includono:
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`

@@ -4,9 +4,9 @@ description: Zeta Marketing Platform (ZMP) è un sistema basato su cloud che con
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1327'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Un inserzionista mira a indirizzare gli utenti all’interno di tipi di pubblico
 > Per la destinazione di Zeta Marketing Platform è necessario mappare uno spazio dei nomi dell&#39;identità di origine all&#39;identità di destinazione ZMP `uid`. Questo aiuta la Zeta Marketing Platform a differenziare in modo univoco ogni profilo.
 
 | Identità di destinazione | Descrizione | Considerazioni | Note |
----------|----------|----------|----------|
+|---------|----------|----------|----------|
 | uid | ID univoco utilizzato da ZMP per differenziare i profili dei clienti | Obbligatorio | Scegliere lo spazio dei nomi dell&#39;identità standard `Email` se si desidera identificare profili univoci utilizzando i relativi indirizzi e-mail. In alternativa, puoi scegliere di mappare lo spazio dei nomi personalizzato su `uid` se i profili cliente non hanno un messaggio e-mail. |
 | email_md5_id | Invia un messaggio e-mail MD5 che rappresenta ogni profilo cliente | Facoltativo | Scegli questa identità di destinazione quando intendi identificare in modo univoco i profili dei clienti utilizzando i valori e-mail MD5. È essenziale che gli indirizzi e-mail siano già in formato MD5 in Experience Platform, in quanto Experience Platform non converte il testo normale in MD5. In questo scenario, impostare `uid` (obbligatorio) sugli stessi valori di e-mail MD5 o su un altro spazio dei nomi di identità appropriato. |
 
@@ -76,7 +76,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
+|---------|----------|---------|
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -85,15 +85,15 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Gestione destinazioni]** [controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Manage Destinations]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Nome utente]**: `api`
+* **[!UICONTROL Username]**: `api`
 * **[!UICONTROL Password]**: la chiave API REST ZMP. Puoi trovare la tua chiave REST API accedendo al tuo account ZMP e passando alla sezione **Impostazioni** > **Integrazioni** > **Chiavi e app**. Per ulteriori dettagli, consulta la [documentazione ZMP](https://knowledgebase.zetaglobal.com/kb/integrations).
 
 ### Inserire i dettagli della destinazione {#destination-details}
@@ -101,23 +101,24 @@ Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligat
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
 ![Immagine che mostra la configurazione ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
-* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID sito account ZMP]**: **ID sito** ZMP a cui desideri inviare i tipi di pubblico. Per visualizzare l&#39;ID sito, vai alla sezione **Impostazioni** > **Integrazioni** > **Chiavi e app**. Ulteriori informazioni sono disponibili [qui](https://knowledgebase.zetaglobal.com/kb/integrations).
-* **[!UICONTROL Segmento ZMP]**: il segmento dell&#39;elenco clienti nell&#39;account ID sito ZMP che desideri aggiornare con il pubblico di Experience Platform.
+
+* **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL ZMP Account Site Id]**: **ID sito** ZMP a cui desideri inviare i tipi di pubblico. Per visualizzare l&#39;ID sito, vai alla sezione **Impostazioni** > **Integrazioni** > **Chiavi e app**. Ulteriori informazioni sono disponibili [qui](https://knowledgebase.zetaglobal.com/kb/integrations).
+* **[!UICONTROL ZMP Segment]**: il segmento dell&#39;elenco clienti nell&#39;account ID sito ZMP che desideri aggiornare con il pubblico di Experience Platform.
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizzare i profili]** e **[!UICONTROL Visualizzare i segmenti]** [accedere alle autorizzazioni di controllo](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione.
 
@@ -126,10 +127,12 @@ Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmen
 Di seguito è riportato un esempio di mapping di identità corretto durante l&#39;esportazione dei profili in [!DNL Zeta Marketing Platform].
 
 Selezione dei campi di origine:
+
 * Selezionare uno spazio dei nomi dell&#39;identità di origine (personalizzato o standard, ad esempio `Email`) che identifica in modo univoco un profilo in Adobe Experience Platform e [!DNL Zeta Marketing Platform].
 * Selezionare gli attributi del profilo di origine XDM da esportare e aggiornare in [!DNL Zeta Marketing Platform].
 
 Selezione dei campi di destinazione:
+
 * (Obbligatorio) Seleziona `uid` come identità di destinazione per la quale mappi uno spazio dei nomi dell&#39;identità di origine.
 * (Facoltativo) Selezionare `email_md5_id` come identità di destinazione per la quale è stato mappato lo spazio dei nomi dell&#39;identità di origine che rappresenta i valori di posta elettronica md5. È essenziale che gli indirizzi e-mail siano già in formato MD5 in Experience Platform, in quanto Experience Platform non converte il testo normale in MD5
 * Se necessario, seleziona eventuali mappature di destinazione aggiuntive.

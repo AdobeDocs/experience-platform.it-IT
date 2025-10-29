@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Accesso ai dati nei notebook Jupyterlab
 description: Questa guida si concentra sull’utilizzo di Jupyter Notebooks, integrati in Data Science Workspace per accedere ai tuoi dati.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3274'
 ht-degree: 3%
 
 ---
@@ -154,12 +154,12 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Scrivere su un set di dati in Python {#write-python}
 
-Per scrivere su un set di dati nel notebook JupyterLab, seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Seleziona **[!UICONTROL Set di dati]** e fai clic con il pulsante destro del mouse, quindi seleziona l&#39;opzione **[!UICONTROL Scrivi dati nel blocco appunti]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Per scrivere su un set di dati nel notebook JupyterLab, seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]**. Selezionare **[!UICONTROL Datasets]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Write Data in Notebook]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Utilizza **[!UICONTROL Scrivi dati in blocco appunti]** per generare una cella di scrittura con il set di dati selezionato.
-- Utilizza **[!UICONTROL Esplora dati nel blocco appunti]** per generare una cella di lettura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura con il set di dati selezionato.
 - Utilizza **[!UICONTROL Query Data in Notebook]** per generare una cella di query di base con il set di dati selezionato.
 
 In alternativa, è possibile copiare e incollare la seguente cella di codice. Sostituire sia `{DATASET_ID}` che `{PANDA_DATAFRAME}`.
@@ -179,7 +179,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Prima di utilizzare [!DNL Query Service] in [!DNL JupyterLab], verificare di avere una buona conoscenza della sintassi [[!DNL Query Service] SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-Per eseguire una query sui dati tramite [!DNL Query Service] è necessario specificare il nome del set di dati di destinazione. Puoi generare le celle di codice necessarie trovando il set di dati desiderato utilizzando **[!UICONTROL Esplora dati]**. Fai clic con il pulsante destro del mouse sull&#39;elenco dei set di dati e fai clic su **[!UICONTROL Esegui query sui dati nel blocco appunti]** per generare due celle di codice nel blocco appunti. Queste due celle sono descritte più dettagliatamente di seguito.
+Per eseguire una query sui dati tramite [!DNL Query Service] è necessario specificare il nome del set di dati di destinazione. È possibile generare le celle di codice necessarie trovando il set di dati desiderato utilizzando **[!UICONTROL Data explorer]**. Fare clic con il pulsante destro del mouse sull&#39;elenco dei set di dati e fare clic su **[!UICONTROL Query Data in Notebook]** per generare due celle di codice nel blocco appunti. Queste due celle sono descritte più dettagliatamente di seguito.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Scrittura in un set di dati in R {#write-r}
 
-Per scrivere su un set di dati nel notebook JupyterLab, seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Seleziona **[!UICONTROL Set di dati]** e fai clic con il pulsante destro del mouse, quindi seleziona l&#39;opzione **[!UICONTROL Scrivi dati nel blocco appunti]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Per scrivere su un set di dati nel notebook JupyterLab, seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]**. Selezionare **[!UICONTROL Datasets]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Write Data in Notebook]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Utilizza **[!UICONTROL Scrivi dati in blocco appunti]** per generare una cella di scrittura con il set di dati selezionato.
-- Utilizza **[!UICONTROL Esplora dati nel blocco appunti]** per generare una cella di lettura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura con il set di dati selezionato.
 
 In alternativa, è possibile copiare e incollare la seguente cella di codice:
 
@@ -402,10 +402,10 @@ Comando magico [!DNL Data Science Workspace] personalizzato per la lettura o la 
 
 Puoi generare automaticamente gli esempi di cui sopra in JupyterLab buy utilizzando il seguente metodo:
 
-Seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Seleziona **[!UICONTROL Set di dati]** e fai clic con il pulsante destro del mouse, quindi seleziona l&#39;opzione **[!UICONTROL Scrivi dati nel blocco appunti]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]**. Selezionare **[!UICONTROL Datasets]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Write Data in Notebook]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
 
-- Utilizza **[!UICONTROL Esplora dati nel blocco appunti]** per generare una cella di lettura.
-- Utilizza **[!UICONTROL Scrivi dati in blocco appunti]** per generare una cella di scrittura.
+- Utilizza **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura.
+- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -534,10 +534,12 @@ df1.show(10)
 
 Puoi generare automaticamente l’esempio precedente in JupyterLab buy utilizzando il seguente metodo:
 
-Seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Seleziona **[!UICONTROL Set di dati]** e fai clic con il pulsante destro del mouse, quindi seleziona l&#39;opzione **[!UICONTROL Esplora dati nel blocco appunti]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Seleziona la scheda Icona dati (evidenziata di seguito) nell’area di navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]**. Selezionare **[!UICONTROL Datasets]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Explore Data in Notebook]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+
 E
-- Utilizza **[!UICONTROL Esplora dati nel blocco appunti]** per generare una cella di lettura.
-- Utilizza **[!UICONTROL Scrivi dati in blocco appunti]** per generare una cella di scrittura.
+
+- Utilizza **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura.
+- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 

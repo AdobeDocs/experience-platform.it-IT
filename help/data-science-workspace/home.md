@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di Data Science Workspace
 description: Questa guida fornisce una panoramica dei concetti chiave relativi a Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '2411'
 ht-degree: 0%
@@ -33,6 +33,7 @@ Le aziende odierne danno la massima priorità al data mining per previsioni e ap
 Per quanto importante, passare dai dati alle informazioni può comportare costi elevati. In genere, per sviluppare modelli di apprendimento automatico, o ricette, che alimentano i servizi intelligenti, è necessario ricorrere a data scientist qualificati che conducano ricerche di dati intensive e dispendiose in termini di tempo. Il processo è lungo, la tecnologia è complessa e i data scientist competenti possono essere difficili da trovare.
 
 Con [!DNL Data Science Workspace], Adobe Experience Platform ti consente di portare un&#39;intelligenza artificiale incentrata sull&#39;esperienza in tutta l&#39;azienda, semplificando e accelerando il trasferimento dei dati a insights-to-code con:
+
 - Un framework di apprendimento automatico e runtime
 - Accesso integrato ai dati memorizzati in Adobe Experience Platform
 - Schema dati unificato basato su [!DNL Experience Data Model] (XDM)
@@ -199,4 +200,4 @@ Per ulteriori informazioni, ad esempio un flusso di lavoro giornaliero completo,
 
 Il video seguente è stato progettato per supportare la comprensione di [!DNL Data Science Workspace].
 
->[!VIDEO](https://video.tv.adobe.com/v/3412912?quality=12&enable10seconds=on&speedcontrol=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)

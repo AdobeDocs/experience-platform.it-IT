@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;servizio qu
 title: Visualizzare un rapporto di aggregazione per un visitatore specifico
 description: Il documento seguente fornisce esempi di query che coinvolgono eventi di esperienza in Adobe Experience Platform Query Service.
 exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%
@@ -16,7 +16,7 @@ Questo documento fornisce un esempio SQL per aggregare dati da più proprietà d
 
 Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando Query Service con [!DNL Experience Events], puoi tenere traccia in modo efficace delle tendenze comportamentali tra i tuoi utenti. Il documento seguente fornisce esempi di query che coinvolgono [!DNL Experience Events].
 
-## Finalità
+## Obiettivo
 
 Nell&#39;esempio SQL seguente viene illustrato come visualizzare un report aggregato di vari valori di analisi per un utente specificato.
 
@@ -43,7 +43,7 @@ I risultati della query vengono visualizzati nella tabella seguente.
 
 ```console
                id                 | pageViews |   A   |   B   |   C   | viewedParkas
-----------------------------------+-----------+-------+-------+-------+--------------
+|----------------------------------+-----------+-------+-------+-------+--------------
 457C3510571E5930-69AA721C4CBF9339 |     706.0 | 83.0  |  7.0  | 38.0  |          22
 ```
 

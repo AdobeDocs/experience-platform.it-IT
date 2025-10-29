@@ -3,7 +3,7 @@ title: Rendering di contenuti personalizzati tramite Adobe Experience Platform W
 description: Scopri come eseguire il rendering di contenuti personalizzati con Adobe Experience Platform Web SDK.
 keywords: personalizzazione;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Adobe Experience Platform Web SDK supporta il recupero di contenuti personalizza
 
 Inoltre, il Web SDK potenzia le funzionalità di personalizzazione della stessa pagina e della pagina successiva tramite destinazioni di personalizzazione Adobe Experience Platform, come [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e la [connessione di personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md). Per informazioni su come configurare Experience Platform per la personalizzazione della stessa pagina e della pagina successiva, consulta la [guida dedicata](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-I contenuti creati nel [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=it) di Adobe Target e nell&#39;[interfaccia utente delle campagne web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=it) di Adobe Journey Optimizer possono essere recuperati e renderizzati automaticamente da SDK. Il contenuto creato nel [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=it) di Adobe Target, nel [Canale esperienza basato su codice](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/code-based-experience/get-started-code-based) di Adobe Journey Optimizer o in Offer Decisioning non può essere renderizzato automaticamente da SDK. Devi invece richiedere questo contenuto utilizzando SDK, quindi eseguire manualmente il rendering del contenuto.
+I contenuti creati nel [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) di Adobe Target e nell&#39;[interfaccia utente delle campagne web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) di Adobe Journey Optimizer possono essere recuperati e renderizzati automaticamente da SDK. Il contenuto creato nel [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) di Adobe Target, nel [Canale esperienza basato su codice](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) di Adobe Journey Optimizer o in Offer Decisioning non può essere renderizzato automaticamente da SDK. Devi invece richiedere questo contenuto utilizzando SDK, quindi eseguire manualmente il rendering del contenuto.
 
 ## Rendering automatico del contenuto {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Caso d’uso 2: proposte di rendering prive di selettore
 
-Questo caso d&#39;uso si applica alle esperienze create utilizzando [!DNL Target Form-based Experience Composer] o il [canale di esperienza basato su codice](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/code-based-experience/get-started-code-based) di Adobe Journey Optimizer.
+Questo caso d&#39;uso si applica alle esperienze create utilizzando [!DNL Target Form-based Experience Composer] o il [canale di esperienza basato su codice](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) di Adobe Journey Optimizer.
 
 È necessario fornire il selettore, l&#39;azione e l&#39;ambito nella chiamata `applyPropositions`.
 
@@ -388,9 +388,9 @@ alloy("sendEvent", {
                     "_experience": {
                         "decisioning": {
                             "propositions": [{
-                              	"id": id,
+                                "id": id,
                                 "scope": scope,
-                              	"scopeDetails": scopeDetails
+                                  "scopeDetails": scopeDetails
                             }],
                             "propositionEventType": {
                                 "display": 1

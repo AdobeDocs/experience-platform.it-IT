@@ -2,7 +2,7 @@
 title: Esempi di set di dati
 description: I set di dati di esempio di Query Service consentono di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query. Questa guida fornisce informazioni su come gestire gli esempi per l’elaborazione approssimativa delle query
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -18,12 +18,12 @@ Poiché molti utenti non hanno bisogno di una risposta esatta per un’operazion
 Per facilitare la gestione degli esempi per l’elaborazione approssimativa delle query, Query Service supporta le seguenti operazioni per gli esempi di set di dati:
 
 - [Esempi di set di dati](#dataset-samples)
-   - [Introduzione {#get-started}](#getting-started-get-started)
-   - [Crea un esempio di set di dati casuale uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [Facoltativamente specificare un criterio di filtro {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [Visualizza l&#39;elenco di campioni {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [Eseguire una query sul set di dati di esempio {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
-   - [Elimina esempi di set di dati {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
+   - [Introduzione](#getting-started-get-started)
+   - [Creare un esempio di set di dati casuale uniforme](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Facoltativamente, specifica un criterio di filtro](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Visualizza l’elenco degli esempi](#view-the-list-of-samples-view-list-of-samples)
+   - [Eseguire una query sul set di dati di esempio](#query-the-sample-dataset-query-sample-datasets)
+   - [Eliminare gli esempi di set di dati](#delete-dataset-samples-delete-a-sample)
 
 ## Introduzione {#get-started}
 
@@ -83,7 +83,7 @@ L’elenco degli esempi di set di dati viene visualizzato nel formato dell’ese
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

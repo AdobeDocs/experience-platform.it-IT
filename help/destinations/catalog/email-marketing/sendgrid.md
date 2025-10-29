@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;sendgrid;sendgrid destinazione
 title: Connessione SendGrid
 description: La destinazione SendGrid consente di esportare i dati di prime parti e di attivarli in SendGrid in base alle esigenze aziendali.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1475'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ Prima di iniziare a configurare la destinazione sono necessari i seguenti elemen
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
+Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ SendGrid supporta l&#39;attivazione delle identità descritte nella tabella segu
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| e-mail | Indirizzo e-mail | Nota che gli indirizzi e-mail con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine di Experience Platform contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hash automatico dei dati all&#39;attivazione.<br/><br/> Si noti che **SendGrid** non supporta indirizzi e-mail con hash, pertanto solo i dati di testo normale senza trasformazione vengono inviati alla destinazione. |
+| e-mail | Indirizzo e-mail | Nota che gli indirizzi e-mail con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine di Experience Platform contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Experience Platform] esegua automaticamente l&#39;hash dei dati all&#39;attivazione.<br/><br/> Si noti che **SendGrid** non supporta indirizzi e-mail con hash, pertanto solo i dati di testo normale senza trasformazione vengono inviati alla destinazione. |
 
 {style="table-layout:auto"}
 
@@ -57,8 +57,8 @@ SendGrid supporta l&#39;attivazione delle identità descritte nella tabella segu
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -75,7 +75,7 @@ I team di marketing che utilizzano SendGrid possono creare una mailing list all�
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
@@ -98,10 +98,10 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
-Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
-* **[!UICONTROL Nome]**: il nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione facoltativa che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Description]**: descrizione facoltativa che consentirà di identificare questa destinazione in futuro.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
@@ -109,14 +109,14 @@ Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-p
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
@@ -125,7 +125,7 @@ Per informazioni specifiche su questa destinazione, fai riferimento alle immagin
 1. Seleziona uno o più tipi di pubblico da esportare in SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
-1. Nel passaggio **[!UICONTROL Mappatura]**, dopo aver selezionato **[!UICONTROL Aggiungi nuova mappatura]**, viene visualizzata la pagina di mappatura per mappare i campi XDM di origine ai campi di destinazione dell&#39;API SendGrid. Le immagini seguenti mostrano come mappare gli spazi dei nomi delle identità tra Experience Platform e SendGrid. Assicurati che il campo **[!UICONTROL Source]** *E-mail* sia mappato al campo **[!UICONTROL Target]** *external_id* come mostrato di seguito.
+1. Nel passaggio **[!UICONTROL Mapping]**, dopo aver selezionato **[!UICONTROL Add new mapping]**, viene visualizzata la pagina di mappatura per mappare i campi XDM di origine ai campi di destinazione dell&#39;API SendGrid. Le immagini seguenti mostrano come mappare gli spazi dei nomi delle identità tra Experience Platform e SendGrid. Assicurati che l&#39;**[!UICONTROL Source field]** *E-mail* sia mappato all&#39;**[!UICONTROL Target field]** *external_id* come mostrato di seguito.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
@@ -135,10 +135,10 @@ Per informazioni specifiche su questa destinazione, fai riferimento alle immagin
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
-1. Dopo aver completato i mapping, seleziona **[!UICONTROL Avanti]** per passare alla schermata di revisione.
+1. Dopo aver completato i mapping, selezionare **[!UICONTROL Next]** per passare alla schermata di revisione.
    ![](../../assets/catalog/email-marketing/sendgrid/22.png)
 
-1. Seleziona **[!UICONTROL Fine]** per completare l&#39;installazione.
+1. Selezionare **[!UICONTROL Finish]** per completare la configurazione.
    ![](../../assets/catalog/email-marketing/sendgrid/23.jpg)
 
 Di seguito è riportato l&#39;elenco completo dei mapping di attributi supportati che è possibile impostare per [SendGrid Marketing Contacts > Add or Update Contact API](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact).
@@ -160,10 +160,10 @@ Di seguito è riportato l&#39;elenco completo dei mapping di attributi supportat
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-1. Seleziona **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** per passare all&#39;elenco delle destinazioni.
+1. Selezionare **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** per passare all&#39;elenco delle destinazioni.
    ![](../../assets/catalog/email-marketing/sendgrid/25.jpg)
 
-1. Selezionare la destinazione e verificare che lo stato sia **[!UICONTROL abilitato]**.
+1. Selezionare la destinazione e verificare che lo stato sia **[!UICONTROL enabled]**.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
 1. Passa alla scheda **[!DNL Activation data]**, quindi seleziona un nome di pubblico.
@@ -189,6 +189,7 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 ## Risorse aggiuntive {#additional-resources}
 
 Questa destinazione SendGrid sfrutta le seguenti API:
+
 * [Elenchi marketing SendGrid > Crea API elenco](https://docs.sendgrid.com/api-reference/lists/create-list)
 * [Contatti di marketing SendGrid > Aggiungi o aggiorna API contatto](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact)
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '6028'
-ht-degree: 2%
+source-wordcount: '6009'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +45,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concatena | Concatena le stringhe specificate. | <ul><li>STRING: le stringhe che verranno concatenate.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Ciao, &quot;, &quot;ci&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | esplodere | Divide la stringa in base a un regex e restituisce un array di parti. Facoltativamente, può includere regex per dividere la stringa. Per impostazione predefinita, la suddivisione viene risolta in &quot;,&quot;. I seguenti delimitatori **hanno bisogno** di un escape con `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` Se includi più caratteri come delimitatore, il delimitatore verrà trattato come un delimitatore con più caratteri. | <ul><li>STRING: **Obbligatorio** La stringa da dividere.</li><li>REGEX: *Facoltativo* L&#39;espressione regolare che può essere utilizzata per dividere la stringa.</li></ul> | esplodi(STRING, REGEX) | esplodi(&quot;Salve!&quot;, &quot;&quot;) | `["Hi,", "there"]` |
@@ -70,7 +70,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 ### Funzioni espressione regolare
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Estrae gruppi dalla stringa di input, in base a un&#39;espressione regolare. | <ul><li>STRING: **Required** La stringa da cui si stanno estraendo i gruppi.</li><li>REGEX: **Obbligatorio** L&#39;espressione regolare che si desidera associare al gruppo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Verifica se la stringa corrisponde all’espressione regolare immessa. | <ul><li>STRING: **Obbligatorio** La stringa da controllare corrisponde all&#39;espressione regolare.</li><li>REGEX: **Obbligatorio** Espressione regolare con cui si sta effettuando il confronto.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
@@ -83,7 +83,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | Accetta un input e genera un valore hash utilizzando l’algoritmo 1 di hash sicuro (SHA-1). | <ul><li>INPUT: **Obbligatorio** Il testo normale a cui applicare l&#39;hashing.</li><li>CHARSET: *Facoltativo* Il nome del set di caratteri. I valori possibili includono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24&#x200B;48690840c5dfcce3c80 |
 | sha256 | Accetta un input e produce un valore hash utilizzando Secure Hash Algorithm 256 (SHA-256). | <ul><li>INPUT: **Obbligatorio** Il testo normale a cui applicare l&#39;hashing.</li><li>CHARSET: *Facoltativo* Il nome del set di caratteri. I valori possibili includono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21&#x200B;ee6a39af698154a83a586ee270a0d372104 |
@@ -99,13 +99,13 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | Restituisce il protocollo dall&#39;URL specificato. Se l’input non è valido, restituisce null. | <ul><li>URL: **Obbligatorio** URL da cui estrarre il protocollo.</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(&quot;https://platform&#x200B;.adobe.com/home&quot;) | https |
 | get_url_host | Restituisce l’host dell’URL specificato. Se l’input non è valido, restituisce null. | <ul><li>URL: **Obbligatorio** URL da cui estrarre l&#39;host.</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform&#x200B;.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Restituisce la porta dell’URL specificato. Se l’input non è valido, restituisce null. | <ul><li>URL: **Obbligatorio** URL da cui estrarre la porta.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;) | 22 |
 | get_url_path | Restituisce il percorso dell’URL specificato. Per impostazione predefinita, viene restituito il percorso completo. | <ul><li>URL: **Obbligatorio** URL da cui estrarre il percorso.</li><li>FULL_PATH: *Facoltativo* Valore booleano che determina se viene restituito il percorso completo. Se impostato su false, viene restituita solo la fine del percorso.</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B;employee.csv&quot; |
-| get_url_query_str | Restituisce la stringa di query di un URL specificato come mappa del nome della stringa di query e del valore della stringa di query. | <ul><li>URL: **Obbligatorio** L&#39;URL da cui stai tentando di ottenere la stringa di query.</li><li>ANCORAGGIO: **Obbligatorio** Determina l&#39;operazione che verrà eseguita con l&#39;ancoraggio nella stringa query. Può essere uno dei tre valori seguenti: &quot;keep&quot;, &quot;remove&quot; o &quot;append&quot;.<br><br>Se il valore è &quot;keep&quot;, l&#39;ancoraggio verrà collegato al valore restituito.<br>Se il valore è &quot;remove&quot;, l&#39;ancoraggio verrà rimosso dal valore restituito.<br>Se il valore è &quot;append&quot;, l&#39;ancoraggio verrà restituito come valore separato.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str&#x200B; &#x200B; &#x200B;(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | Restituisce la stringa di query di un URL specificato come mappa del nome della stringa di query e del valore della stringa di query. | <ul><li>URL: **Obbligatorio** L&#39;URL da cui stai tentando di ottenere la stringa di query.</li><li>ANCORAGGIO: **Obbligatorio** Determina l&#39;operazione che verrà eseguita con l&#39;ancoraggio nella stringa query. Può essere uno dei tre valori seguenti: &quot;keep&quot;, &quot;remove&quot; o &quot;append&quot;.<br><br>Se il valore è &quot;keep&quot;, l&#39;ancoraggio verrà collegato al valore restituito.<br>Se il valore è &quot;remove&quot;, l&#39;ancoraggio verrà rimosso dal valore restituito.<br>Se il valore è &quot;append&quot;, l&#39;ancoraggio verrà restituito come valore separato.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str&#x200B; &#x200B; &#x200B;(&quot;foo://example.com:8042/over/?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 | get_url_encoded | Questa funzione accetta un URL come input e sostituisce o codifica i caratteri speciali con caratteri ASCII. Per ulteriori informazioni sui caratteri speciali, leggere l&#39;[elenco dei caratteri speciali](#special-characters) nell&#39;appendice di questo documento. | <ul><li>URL: **Obbligatorio** URL di input con caratteri speciali che si desidera sostituire o codificare con caratteri ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
 | get_url_decoded | Questa funzione accetta un URL come input e decodifica i caratteri ASCII in caratteri speciali.  Per ulteriori informazioni sui caratteri speciali, leggere l&#39;[elenco dei caratteri speciali](#special-characters) nell&#39;appendice di questo documento. | <ul><li>URL: **Obbligatorio** URL di input con caratteri ASCII da decodificare in caratteri speciali.</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
@@ -117,7 +117,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella. Ulteriori informazioni sulla funzione `date` sono disponibili nella sezione delle date della [guida alla gestione del formato dei dati](./data-handling.md#dates).
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera l&#39;ora corrente. | | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Recupera l’ora Unix corrente. | | timestamp() | timestamp() | 1571850624571 |
@@ -140,7 +140,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | Controlla se un oggetto è vuoto. | <ul><li>INPUT: **Obbligatorio** L&#39;oggetto che si sta tentando di controllare è vuoto.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | array_a_oggetto | Crea un elenco di oggetti. | <ul><li>INPUT: **Obbligatorio** Raggruppamento di coppie chiave-matrice.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
@@ -167,7 +167,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Restituisce il primo oggetto non nullo in una matrice specificata. | <ul><li>INPUT: **Obbligatorio** Matrice di cui trovare il primo oggetto non nullo.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | primo | Recupera il primo elemento dell’array specificato. | <ul><li>INPUT: **Obbligatorio** Array di cui trovare il primo elemento.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
@@ -191,7 +191,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | array_to_map | Questa funzione accetta un array di oggetti e una chiave come input e restituisce una mappa del campo della chiave con il valore come chiave e l’elemento dell’array come valore. | <ul><li>INPUT: **Obbligatorio** Matrice di oggetti di cui trovare il primo oggetto non nullo.</li><li>KEY: **Obbligatorio** La chiave deve essere un nome di campo nella matrice dell&#39;oggetto e l&#39;oggetto deve essere un valore.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Leggi l&#39;[appendice](#object_to_map) per un esempio di codice. |
 | object_to_map | Questa funzione prende un oggetto come argomento e restituisce una mappa di coppie chiave-valore. | <ul><li>INPUT: **Obbligatorio** Matrice di oggetti di cui trovare il primo oggetto non nullo.</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address) dove input è &quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;,City : \&quot;san jose\&quot;,State : \&quot;CA\&quot;,type: \&quot;office\&quot;}&quot; | Restituisce una mappa con le coppie nome campo e valore specificate o null se l&#39;input è null. Ad esempio: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
@@ -205,7 +205,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decodificare | Dato un tasto e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se viene trovata una chiave oppure restituisce un valore predefinito se presente nell’array. | <ul><li>CHIAVE: **Obbligatoria** Chiave da associare.</li><li>OPTIONS: **Obbligatorio** Matrice semplificata di coppie chiave/valore. Facoltativamente, è possibile inserire un valore predefinito alla fine.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se il codice stato dato è &quot;ca&quot;, &quot;California&quot;.<br>Se il codice stato specificato è &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode non corrisponde a &quot;N/D&quot;. |
 | iif | Valuta una determinata espressione booleana e restituisce il valore specificato in base al risultato. | <ul><li>ESPRESSIONE: **Obbligatoria** L&#39;espressione booleana in fase di valutazione.</li><li>TRUE_VALUE: **Obbligatorio** Il valore restituito se l&#39;espressione restituisce true.</li><li>FALSE_VALUE: **Obbligatorio** Il valore restituito se l&#39;espressione restituisce false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Vero&quot; |
@@ -218,7 +218,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Restituisce il minimo degli argomenti specificati. Utilizza l’ordinamento naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti possono essere confrontati tra loro.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Restituisce il massimo degli argomenti specificati. Utilizza l’ordinamento naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti possono essere confrontati tra loro.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
@@ -231,7 +231,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | Converte una stringa in un BigInteger. | <ul><li>STRING: **Obbligatorio** Stringa da convertire in BigInteger.</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000,34 |
 | to_decimal | Converte una stringa in un valore Double. | <ul><li>STRING: **Obbligatorio** Stringa da convertire in Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
@@ -246,9 +246,9 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | Deserializza il contenuto JSON dalla stringa specificata. | <ul><li>STRING: **Required** Stringa JSON da deserializzare.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}}) | Oggetto che rappresenta il JSON. |
+| json_to_object | Deserializza il contenuto JSON dalla stringa specificata. | <ul><li>STRING: **Required** Stringa JSON da deserializzare.</li></ul> | json_to_object&#x200B;(STRING) | `json_to_object&#x200B;({"info":{"firstName":"John","lastName": "Doe"}})` | Oggetto che rappresenta il JSON. |
 
 {style="table-layout:auto"}
 
@@ -258,7 +258,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Genera un ID pseudo-casuale. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | Questa funzione prende una stringa FPID e la converte in un ECID da utilizzare nelle applicazioni Adobe Experience Platform e Adobe Experience Cloud. | <ul><li>STRING: **Required** Stringa FPID da convertire in ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
@@ -278,7 +278,7 @@ Per ulteriori informazioni sui valori dei campi dispositivo, leggere l&#39;[elen
 >
 >Scorri verso sinistra o destra per visualizzare l’intero contenuto della tabella.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Estrae il nome del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell&#39;agente utente.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Estrae la versione principale del sistema operativo dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell&#39;agente utente.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | IOS 5 |
@@ -297,7 +297,7 @@ Per ulteriori informazioni sui valori dei campi dispositivo, leggere l&#39;[elen
 >
 >Per i flussi Web SDK e Adobe Analytics puoi utilizzare solo le seguenti funzioni di analisi.
 
-| Funzione | Descrizione | Elemento “parameters” | Sintassi | Espressione | Output di esempio |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | aa_get_event_id | Estrae l’ID evento da una stringa evento Analytics. | <ul><li>EVENT_STRING: **Obbligatorio** Stringa dell&#39;evento Analytics separato da virgole.</li><li>EVENT_NAME: **Obbligatorio** Il nome dell&#39;evento da cui estrarre e ID.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
 | aa_get_event_value | Estrae il valore dell’evento da una stringa dell’evento Analytics. Se il valore dell’evento non è specificato, viene restituito 1. | <ul><li>EVENT_STRING: **Obbligatorio** Stringa dell&#39;evento Analytics separato da virgole.</li><li>EVENT_NAME: **Obbligatorio** Nome dell&#39;evento da cui estrarre un valore.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
@@ -305,7 +305,7 @@ Per ulteriori informazioni sui valori dei campi dispositivo, leggere l&#39;[elen
 | aa_get_product_names | Estrae il nome del prodotto da una stringa di prodotti Analytics. | <ul><li>PRODUCTS_STRING: **Obbligatorio** Stringa di prodotti Analytics.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(&quot;;Esempio di prodotto 1;1;3.50,Esempio di categoria 2;Esempio di prodotto 2;1;5.99&quot;) | [&quot;Prodotto di esempio 1&quot;,&quot;Prodotto di esempio 2&quot;] |
 | aa_get_product_quantity | Estrae le quantità da una stringa di prodotti Analytics. | <ul><li>PRODUCTS_STRING: **Obbligatorio** Stringa di prodotti Analytics.</li></ul> | aa_get_product_quantity(PRODUCTS_STRING) | aa_get_product_quantity(&quot;;Esempio di prodotto 1;1;3.50,Esempio di categoria 2;Esempio di prodotto 2&quot;) | [&quot;1&quot;, null] |
 | aa_get_product_price | Estrae il prezzo da una stringa di prodotti Analytics. | <ul><li>PRODUCTS_STRING: **Obbligatorio** Stringa di prodotti Analytics.</li></ul> | aa_get_product_price(PRODUCTS_STRING) | aa_get_product_price(&quot;;Esempio di prodotto 1;1;3.50,Esempio di categoria 2;Esempio di prodotto 2&quot;) | [&quot;3.50&quot;, null] |
-| aa_get_product_event_values | Estrae i valori per l’evento denominato dalla stringa prodotti come array di stringhe. | <ul><li>PRODUCTS_STRING: **Obbligatorio** Stringa di prodotti Analytics.</li><li>EVENT_NAME: **Obbligatorio** Il nome dell&#39;evento da cui estrarre i valori.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(&quot;;Esempio di prodotto 1;1;4.20;event1=2.3\|event2=5:1; Esempio di prodotto 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
+| aa_get_product_event_values | Estrae i valori per l’evento denominato dalla stringa prodotti come array di stringhe. | <ul><li>PRODUCTS_STRING: **Obbligatorio** Stringa di prodotti Analytics.</li><li>EVENT_NAME: **Obbligatorio** Il nome dell&#39;evento da cui estrarre i valori.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(&quot;;Esempio di prodotto 1;1;4.20;event1=2.3\|event2=5:1,;Esempio di prodotto 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
 | aa_get_product_evars | Estrae i valori evar per l’evento denominato dalla stringa prodotti come array di stringhe. | <ul><li>PRODUCTS_STRING: **Obbligatorio** Stringa di prodotti Analytics.</li><li>EVAR_NAME: **Obbligatorio** Il nome eVar da estrarre.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(&quot;;Esempio di prodotto;1;6.69;;eVar1=valore merchandising&quot;, &quot;eVar1&quot;) | [&quot;Valore merchandising&quot;] |
 
 {style="table-layout:auto"}
@@ -387,11 +387,11 @@ La tabella seguente delinea un elenco di caratteri riservati e dei corrispondent
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

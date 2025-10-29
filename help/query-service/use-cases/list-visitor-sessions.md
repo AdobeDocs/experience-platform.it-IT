@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;servizio qu
 title: Elencare le visualizzazioni di pagina di un utente
 description: Scopri come scrivere query che utilizzano Eventi esperienza per creare un elenco delle ultime 100 pagine utilizzate da un utente specifico.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 1%
@@ -16,7 +16,7 @@ Questo documento fornisce un esempio del codice SQL necessario per elencare le v
 
 Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando Query Service con [!DNL Experience Events], puoi tenere traccia in modo efficace delle tendenze comportamentali tra i tuoi utenti. Il documento seguente fornisce esempi di query che coinvolgono [!DNL Experience Events].
 
-## Finalità
+## Obiettivo
 
 Nell&#39;esempio seguente vengono elencate le ultime 100 pagine visualizzate da un utente specifico.
 
@@ -40,7 +40,7 @@ I risultati di questa query sono riportati di seguito.
 
 ```console
       timestamp       |  referrerType  |                            referrer                                |                 pageName            |  A  |  B  |  C  | pageViews
-----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
+|----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
 2019-11-08 17:15:28.0 | typed_bookmark |                                                                    |                                     |     |     |     |
 2019-11-08 17:53:05.0 | social         | http://www.reddit.com                                              | Home                                |     |     |     |          1.0
 2019-11-08 17:53:45.0 | typed_bookmark |                                                                    | Kids                                |     |     |     |          1.0

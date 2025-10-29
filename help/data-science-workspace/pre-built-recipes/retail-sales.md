@@ -1,34 +1,35 @@
 ---
-keywords: Experience Platform; ricetta di vendita al dettaglio; Data Science Area di lavoro; argomenti popolari; Ricette; pre versione ricetta
+keywords: Experience Platform;vendita al dettaglio ricetta;Data Science Workspace;argomenti popolari;ricette;ricetta pre-build
 solution: Experience Platform
-title: Ricetta di vendita al dettaglio
-description: La ricetta delle vendite al dettaglio consente di prevedere i previsione di vendita per tutti i negozi seminati per un determinato periodo di tempo. Con un modello di previsione accurato, il rivenditore sarebbe in grado di trovare la relazione tra domanda e politiche dei prezzi e prendere decisioni sui prezzi ottimizzate per massimizzare le vendite e le entrate.
+title: Ricetta vendita al dettaglio
+description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi con seeding per un determinato periodo di tempo. Grazie a un accurato modello di previsione, retailer è in grado di individuare la relazione tra la domanda e le politiche di prezzo e di ottimizzare le decisioni di prezzo per massimizzare le vendite e i ricavi.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
 
 ---
 
-# Ricetta di vendita al dettaglio
+# Ricetta vendite al dettaglio
 
 >[!NOTE]
 >
->Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>Data Science Workspace non è più disponibile per l’acquisto.
 >
->Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
-La ricetta delle vendite al dettaglio consente di prevedere i previsione di vendita per tutti i negozi seminati per un determinato periodo di tempo. Con un modello di previsione accurato, il rivenditore sarebbe in grado di trovare la relazione tra domanda e politiche dei prezzi e prendere decisioni sui prezzi ottimizzate per massimizzare le vendite e le entrate.
+La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi con seeding per un determinato periodo di tempo. Grazie a un accurato modello di previsione, retailer è in grado di individuare la relazione tra la domanda e le politiche di prezzo e di ottimizzare le decisioni di prezzo per massimizzare le vendite e i ricavi.
 
 Il seguente documento risponderà a domande quali:
+
 * Per chi è costruita questa ricetta?
 * Che cosa fa questa ricetta?
 * Come si inizia?
 
 ## Per chi è costruita questa ricetta?
 
-Un retailer deve affrontare molte sfide per rimanere competitivo nel mercato attuale. Il tuo marchio cerca di aumentare le vendite annuali per i tuoi marchio di vendita al dettaglio, ma ci sono molte decisioni da prendere per ridurre al minimo i costi operativi. Un&#39;offerta eccessiva aumenta i costi di inventario, mentre un&#39;offerta insufficiente aumenta il rischio di perdere clienti verso altre marche. Hai bisogno di ordinare più forniture per i prossimi mesi? Come decidi il prezzo ottimale per i tuoi prodotti per mantenere gli obiettivi di vendita settimanali?
+Un retailer deve affrontare molte sfide per rimanere competitivo nel mercato attuale. Il tuo marchio cerca di incrementare le vendite annuali per il tuo marchio retail, ma devi prendere diverse decisioni per ridurre al minimo i costi operativi. Un&#39;offerta eccessiva aumenta i costi di inventario, mentre un&#39;offerta insufficiente aumenta il rischio di perdere clienti verso altre marche. È necessario ordinare più forniture per i prossimi mesi? Come puoi decidere un prezzo ottimale per i tuoi prodotti per mantenere gli obiettivi di vendita settimanali?
 
 ## Che cosa fa questa ricetta?
 
@@ -36,25 +37,25 @@ La ricetta Retail Sales Forecasting utilizza l’apprendimento automatico per pr
 
 ## Come si inizia?
 
-Puoi iniziare seguendo questo [esercitazione](../jupyterlab/create-a-model.md).
+Per iniziare, segui questa [esercitazione](../jupyterlab/create-a-model.md).
 
-Questo esercitazione esaminerà la creazione della ricetta di vendita al dettaglio in un Jupyter Notebook e l&#39;utilizzo del blocco appunti per workflow per creare la ricetta in Adobe Experience Platform.
+Questo tutorial illustra come creare la ricetta per la vendita al dettaglio in un notebook Jupyter e come utilizzare il flusso di lavoro blocco appunti per la composizione per creare la ricetta in Adobe Experience Platform.
 
 ## Schema dati
 
-Questa ricetta utilizza [schemi](../../xdm/schema/field-dictionary.md) XDM per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
+Questa ricetta utilizza [schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
 
 | Nome campo | Tipo |
 | --- | --- |
-| dattero | Stringa |
-| negozio | Intero |
+| data | Stringa |
+| archiviare | Intero |
 | storeType | Stringa |
 | weeklySales | Numero |
 | storeSize | Intero |
 | temperatura | Numero |
 | regionalFuelPrice | Numero |
 | markdown | Numero |
-| Cpi | Numero |
+| cpi | Numero |
 | disoccupazione | Numero |
 | isHoliday | Booleano |
 
@@ -65,7 +66,7 @@ Innanzitutto, viene caricato il set di dati di formazione nello schema *DSWRetai
 
 Il processo prevede tre elementi: una funzione di perdita, un allievo debole e un modello additivo.
 
-La funzione di perdita si riferisce a un misurare di quanto bene fa un modello di previsione in termini di essere in grado di prevedere il risultato atteso - la regressione dei minimi quadrati viene utilizzata in questa ricetta.
+La funzione di perdita si riferisce a una misura di quanto un modello predittivo faccia in termini di capacità di prevedere il risultato atteso; in questa ricetta viene utilizzata la regressione dei minimi quadrati.
 
 Nel potenziamento del gradiente, come allievo debole viene utilizzato un albero decisionale. In genere, gli alberi con un numero limitato di livelli, nodi e divisioni vengono utilizzati per garantire che l’allievo rimanga debole.
 

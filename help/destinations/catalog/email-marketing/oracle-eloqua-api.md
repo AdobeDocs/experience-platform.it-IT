@@ -3,9 +3,9 @@ title: (API) Connessione Oracle Eloqua
 description: La destinazione Oracle Eloqua (API) consente di esportare i dati dell’account e attivarli in Oracle Eloqua in base alle esigenze aziendali.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '1967'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;operazione [Aggiorna un contatto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) dall&#39;API REST [!DNL Oracle Eloqua], che consente di **aggiornare le identità** all&#39;interno di un pubblico in [!DNL Oracle Eloqua].
 
-[!DNL Oracle Eloqua] utilizza l&#39;autenticazione di base [&#128279;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) per comunicare con l&#39;API REST [!DNL Oracle Eloqua]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Oracle Eloqua] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
+[!DNL Oracle Eloqua] utilizza l&#39;autenticazione di base [](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) per comunicare con l&#39;API REST [!DNL Oracle Eloqua]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Oracle Eloqua] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
 
 ## Casi d’uso {#use-cases}
 
@@ -27,7 +27,7 @@ Il reparto marketing di una piattaforma online desidera trasmettere una campagna
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Oracle Eloqua], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Oracle Eloqua], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
@@ -43,7 +43,7 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 
 | Credenziali | Descrizione |
 | --- | --- |
-| `Company Name` | Il nome società associato al tuo account [!DNL Oracle Eloqua]. <br>In seguito, utilizzerai `Company Name` e [!DNL Oracle Eloqua] `Username` come stringa concatenata da utilizzare come **[!UICONTROL Nome utente]** durante l&#39;autenticazione [nella destinazione](#authenticate). |
+| `Company Name` | Il nome società associato al tuo account [!DNL Oracle Eloqua]. <br>In seguito utilizzerai `Company Name` e [!DNL Oracle Eloqua] `Username` come stringa concatenata da utilizzare come **[!UICONTROL Username]** durante l&#39;autenticazione [nella destinazione](#authenticate). |
 | `Username` | Il nome utente dell&#39;account [!DNL Oracle Eloqua]. |
 | `Password` | La password del tuo account [!DNL Oracle Eloqua]. |
 | `Pod` | [!DNL Oracle Eloqua] supporta più data center, ciascuno con un nome di dominio univoco. [!DNL Oracle Eloqua] si riferisce a questi come &quot;pod&quot;, sono attualmente sette in totale: p01, p02, p03, p04, p06, p07 e p08. Per ottenere il POD a cui accedi, accedi a [!DNL Oracle Eloqua] e annota l&#39;URL nel browser dopo aver effettuato l&#39;accesso. Ad esempio, se l&#39;URL del browser è `secure.p01.eloqua.com`, `pod` è `p01`. Per ulteriori informazioni, consultare la pagina [determinazione del POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua). |
@@ -54,7 +54,7 @@ Consulta [Accesso a [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] campi di contatto personalizzati vengono creati automaticamente utilizzando i nomi dei tipi di pubblico selezionati durante il passaggio **[!UICONTROL Seleziona segmenti]**.
+>* [!DNL Oracle Eloqua] campi di contatto personalizzati vengono creati automaticamente utilizzando i nomi dei tipi di pubblico selezionati durante il passaggio **[!UICONTROL Select segments]**.
 
 * [!DNL Oracle Eloqua] ha un limite massimo di 250 campi contatto personalizzati.
 * Prima di esportare nuovi tipi di pubblico, assicurati che il numero di tipi di pubblico di Experience Platform e il numero di tipi di pubblico esistenti entro [!DNL Oracle Eloqua] non superino questo limite.
@@ -76,8 +76,8 @@ Consulta [Accesso a [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Experience Platform, lo stato del segmento [!DNL Oracle Eloqua] corrispondente viene aggiornato da Experience Platform in base allo stato del pubblico.</li></ul> |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Experience Platform, lo stato del segmento [!DNL Oracle Eloqua] corrispondente viene aggiornato da Experience Platform in base allo stato del pubblico.</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -86,11 +86,11 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-All&#39;interno di **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, cerca [!DNL (API) Oracle Eloqua]. In alternativa, puoi trovarlo nella categoria **[!UICONTROL E-mail marketing]**.
+Entro **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, cerca [!DNL (API) Oracle Eloqua]. In alternativa, è possibile individuarlo nella categoria **[!UICONTROL Email Marketing]**.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
@@ -100,13 +100,14 @@ All&#39;interno di **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, ce
 >abstract="Compila questo campo con il nome della tua società e il nome utente di Oracle Eloqua nel modulo `{COMPANY_NAME}\{USERNAME}`"
 
 Compila i campi obbligatori di seguito. Per ulteriori informazioni, consulta la sezione [Raccogli [!DNL Oracle Eloqua] credenziali](#gather-credentials).
-* **[!UICONTROL Password]**: la password del tuo account [!DNL Oracle Eloqua].
-* **[!UICONTROL Nome utente]**: una stringa concatenata composta dal nome dell&#39;azienda [!DNL Oracle Eloqua] e dal nome utente [!DNL Oracle Eloqua].<br>Il valore concatenato è `{COMPANY_NAME}\{USERNAME}`.<br> Nota: non utilizzare parentesi graffe o spazi e mantenere `\`. <br>Ad esempio, se il nome società [!DNL Oracle Eloqua] è `MyCompany` e il nome utente [!DNL Oracle Eloqua] è `Username`, il valore concatenato che utilizzerai nel campo **[!UICONTROL Nome utente]** è `MyCompany\Username`.
 
-Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL Connetti alla destinazione]**.
+* **[!UICONTROL Password]**: password dell&#39;account [!DNL Oracle Eloqua].
+* **[!UICONTROL Username]**: Stringa concatenata composta dal nome della società [!DNL Oracle Eloqua] e dal nome utente [!DNL Oracle Eloqua].<br>Il valore concatenato è `{COMPANY_NAME}\{USERNAME}`.<br> Nota: non utilizzare parentesi graffe o spazi e mantenere `\`. <br>Ad esempio, se il nome società [!DNL Oracle Eloqua] è `MyCompany` e il nome utente [!DNL Oracle Eloqua] è `Username`, il valore concatenato che utilizzerai nel campo **[!UICONTROL Username]** è `MyCompany\Username`.
+
+Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL Connect to destination]**.
 ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
-Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
+Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connected]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -120,22 +121,22 @@ Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzat
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 ![Schermata dell&#39;interfaccia utente di Experience Platform con i dettagli della destinazione.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
-* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Pod]**: per ottenere i `pod` a cui sei connesso, accedi a [!DNL Oracle Eloqua] e annota l&#39;URL nel browser dopo aver effettuato l&#39;accesso. Ad esempio, se l&#39;URL del browser è `secure.p01.eloqua.com` il valore `pod` da selezionare è `p01`. Consulta la sezione [Raccogliere [!DNL Oracle Eloqua] credenziali](#gather-credentials) per ulteriori informazioni.
+* **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Pod]**: per ottenere quale `pod` sei connesso, accedi a [!DNL Oracle Eloqua] e annota l&#39;URL nel browser dopo aver effettuato l&#39;accesso. Ad esempio, se l&#39;URL del browser è `secure.p01.eloqua.com` il valore `pod` da selezionare è `p01`. Consulta la sezione [Raccogliere [!DNL Oracle Eloqua] credenziali](#gather-credentials) per ulteriori informazioni.
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
@@ -145,9 +146,9 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 
 Per mappare i campi XDM ai campi di destinazione [!DNL Oracle Eloqua], effettua le seguenti operazioni:
 
-1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Viene visualizzata una nuova riga di mappatura.
-1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM oppure scegli lo spazio dei nomi **[!UICONTROL Seleziona identità]** e seleziona un&#39;identità.
-1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità oppure scegli **[!UICONTROL Seleziona attributi personalizzati]** e digita il nome dell&#39;attributo desiderato nel campo **[!UICONTROL Nome attributo]**. Il nome attributo specificato deve corrispondere a un attributo contatto esistente in [!DNL Oracle Eloqua]. Vedere [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) per i nomi di attributo esatti utilizzabili in [!DNL Oracle Eloqua].
+1. Nel passaggio **[!UICONTROL Mapping]**, selezionare **[!UICONTROL Add new mapping]**. Viene visualizzata una nuova riga di mappatura.
+1. Nella finestra **[!UICONTROL Select source field]**, scegli la categoria **[!UICONTROL Select attributes]** e seleziona l&#39;attributo XDM oppure scegli **[!UICONTROL Select identity namespace]** e seleziona un&#39;identità.
+1. Nella finestra **[!UICONTROL Select target field]**, scegliere **[!UICONTROL Select identity namespace]** e selezionare un&#39;identità oppure scegliere **[!UICONTROL Select custom attributes]** e digitare il nome dell&#39;attributo desiderato nel campo **[!UICONTROL Attribute name]**. Il nome attributo specificato deve corrispondere a un attributo contatto esistente in [!DNL Oracle Eloqua]. Vedere [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) per i nomi di attributo esatti utilizzabili in [!DNL Oracle Eloqua].
 
    * Ripeti questi passaggi per aggiungere i mapping di attributi richiesti e desiderati tra lo schema del profilo XDM e [!DNL Oracle Eloqua]:
 
@@ -165,13 +166,12 @@ Per mappare i campi XDM ai campi di destinazione [!DNL Oracle Eloqua], effettua 
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Di seguito è riportato un esempio con le mappature di cui sopra:
-
      ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform con mappature di attributi.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
->* Gli attributi specificati nel campo **[!UICONTROL Target]** devono essere denominati esattamente come specificato in [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html), in quanto formeranno il corpo della richiesta.
->* Gli attributi specificati nel campo **[!UICONTROL Source]** non seguono alcuna restrizione di questo tipo. È possibile eseguirne la mappatura in base alle proprie esigenze. Tuttavia, se il formato dei dati non è corretto al momento del push in [!DNL Oracle Eloqua], si verificherà un errore. Ad esempio, è possibile mappare il **[!UICONTROL campo Source]** spazio dei nomi dell&#39;identità `contact key`, `ABC ID` ecc. al **[!UICONTROL campo di destinazione]**: `EloquaId` dopo aver verificato che i valori ID corrispondano al formato accettato da [!DNL Oracle Eloqua].
+>* Gli attributi specificati in **[!UICONTROL Target field]** devono essere denominati esattamente come specificato in [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html), in quanto formeranno il corpo della richiesta.
+>* Gli attributi specificati in **[!UICONTROL Source field]** non seguono alcuna restrizione di questo tipo. È possibile eseguirne la mappatura in base alle proprie esigenze. Tuttavia, se il formato dei dati non è corretto al momento del push in [!DNL Oracle Eloqua], si verificherà un errore. Ad esempio, è possibile mappare lo spazio dei nomi dell&#39;identità **[!UICONTROL Source field]** `contact key`, `ABC ID` ecc. a **[!UICONTROL Target field]** : `EloquaId` dopo aver verificato che i valori ID corrispondano al formato accettato da [!DNL Oracle Eloqua].
 >* Il mapping `EloquaID` è obbligatorio per aggiornare gli attributi corrispondenti all&#39;identità.
 >* Il mapping `emailAddress` è obbligatorio. Senza di esso, l’API genera un errore come mostrato di seguito:
 >
@@ -190,7 +190,7 @@ Per mappare i campi XDM ai campi di destinazione [!DNL Oracle Eloqua], effettua 
 >}
 >```
 
-Al termine della fornitura dei mapping per la connessione di destinazione, selezionare **[!UICONTROL Avanti]**.
+Al termine della fornitura delle mappature per la connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 >[!NOTE]
 >
@@ -200,14 +200,14 @@ Al termine della fornitura dei mapping per la connessione di destinazione, selez
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-1. Seleziona **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** e passa all&#39;elenco delle destinazioni.
-1. Quindi, seleziona la destinazione e passa alla scheda **[!UICONTROL Dati attivazione]**, quindi seleziona un nome di pubblico.
+1. Selezionare **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e passare all&#39;elenco delle destinazioni.
+1. Selezionare quindi la destinazione e passare alla scheda **[!UICONTROL Activation data]**, quindi selezionare un nome di pubblico.
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra i dati di attivazione delle destinazioni.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio all’interno del segmento.
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra il segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Accedi al sito Web [!DNL Oracle Eloqua], quindi passa alla pagina **[!UICONTROL Panoramica contatti]** per verificare se i profili del pubblico sono stati aggiunti. Per visualizzare lo stato del pubblico, approfondisci una pagina **[!UICONTROL Dettagli contatto]** e verifica se il campo del contatto con il nome del pubblico selezionato come prefisso è stato creato.
+1. Accedi al sito Web [!DNL Oracle Eloqua], quindi passa alla pagina **[!UICONTROL Contacts Overview]** per verificare se i profili del pubblico sono stati aggiunti. Per visualizzare lo stato del pubblico, espandere una pagina **[!UICONTROL Contact Detail]** e verificare se è stato creato il campo del contatto con il nome del pubblico selezionato come prefisso.
 
 ![Schermata dell&#39;interfaccia utente di Oracle Eloqua che mostra la pagina Dettagli contatto con il campo contatto personalizzato creato con il nome del pubblico.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
@@ -237,7 +237,7 @@ Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla 
 
 | Mese di rilascio | Tipo di aggiornamento | Descrizione |
 |---|---|---|
-| Aprile 2023 | Aggiornamento della documentazione | <ul><li>Abbiamo aggiornato la sezione [casi d&#39;uso](#use-cases) con un esempio più chiaro di quando i clienti trarrebbero vantaggio dall&#39;utilizzo di questa destinazione.</li> <li>La sezione [mapping](#mapping-considerations-example) è stata aggiornata con chiari esempi di mapping obbligatori e facoltativi.</li> <li>La sezione [Connetti alla destinazione](#connect) è stata aggiornata con un esempio su come creare il valore concatenato per il campo **[!UICONTROL Nome utente]** utilizzando il nome società [!DNL Oracle Eloqua] e il nome utente [!DNL Oracle Eloqua]. (PLATIR-28343)</li><li>Sono state aggiornate le sezioni [Gather [!DNL Oracle Eloqua] credentials](#gather-credentials) e [Fill in destination details](#destination-details) con indicazioni sulla selezione di [!DNL Oracle Eloqua] **[!UICONTROL Pod]**. Il valore *&quot;Pod&quot;* viene utilizzato dalla destinazione per creare l&#39;URL di base per le chiamate API. La sezione [[!DNL Oracle Eloqua] prerequisiti](#prerequisites-destination) è stata inoltre aggiornata con indicazioni sull&#39;assegnazione di *&quot;Utenti avanzati - Autorizzazioni di marketing&quot;* come *&quot;Gruppi di sicurezza&quot;* obbligatori per l&#39;istanza [!DNL Oracle Eloqua].</li></ul> |
+| Aprile 2023 | Aggiornamento della documentazione | <ul><li>Abbiamo aggiornato la sezione [casi d&#39;uso](#use-cases) con un esempio più chiaro di quando i clienti trarrebbero vantaggio dall&#39;utilizzo di questa destinazione.</li> <li>La sezione [mapping](#mapping-considerations-example) è stata aggiornata con chiari esempi di mapping obbligatori e facoltativi.</li> <li>La sezione [Connetti alla destinazione](#connect) è stata aggiornata con un esempio su come creare il valore concatenato per il campo **[!UICONTROL Username]** utilizzando il nome società [!DNL Oracle Eloqua] e il nome utente [!DNL Oracle Eloqua]. (PLATIR-28343)</li><li>Sono state aggiornate le sezioni [Gather [!DNL Oracle Eloqua] credentials](#gather-credentials) e [Fill in destination details](#destination-details) con indicazioni sulla selezione di [!DNL Oracle Eloqua] **[!UICONTROL Pod]**. Il valore *&quot;Pod&quot;* viene utilizzato dalla destinazione per creare l&#39;URL di base per le chiamate API. La sezione [[!DNL Oracle Eloqua] prerequisiti](#prerequisites-destination) è stata inoltre aggiornata con indicazioni sull&#39;assegnazione di *&quot;Utenti avanzati - Autorizzazioni di marketing&quot;* come *&quot;Gruppi di sicurezza&quot;* obbligatori per l&#39;istanza [!DNL Oracle Eloqua].</li></ul> |
 | Marzo 2023 | Versione iniziale | Versione di destinazione iniziale e pubblicazione della documentazione. |
 
 {style="table-layout:auto"}

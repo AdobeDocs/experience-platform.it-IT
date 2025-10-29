@@ -4,7 +4,7 @@ title: Funzioni generali di accessibilità in Experience Platform
 type: Documentation
 description: Scopri le funzioni generali di accessibilità supportate da Adobe Experience Platform, tra cui navigazione da tastiera, palette di colori e contrasto e supporto per la tecnologia di assistenza.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
@@ -24,6 +24,7 @@ Gli utenti con disabilità si affidano spesso a hardware e software, noti come t
 Experience Platform si impegna a supportare l’accessibilità completa da tastiera.
 
 I seguenti elementi di navigazione facilitano l’accessibilità:
+
 * Il tasto TAB consente di spostarsi tra gli elementi dell’interfaccia utente, le sezioni e i gruppi di menu.
 * I tasti freccia si spostano all&#39;interno dei gruppi di menu per impostare lo stato attivo sui singoli elementi attivi.
 * Maiusc + Tab si sposta all&#39;indietro nell&#39;ordine di tabulazione.

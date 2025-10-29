@@ -2,7 +2,7 @@
 title: Creare set di dati derivati con SQL
 description: Scopri come utilizzare SQL per creare un set di dati derivato abilitato per il profilo e come utilizzare il set di dati per Real-time Customer Profile e Segmentation Service.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -167,7 +167,7 @@ Di seguito è riportato un esempio dell&#39;output di questo comando:
 
 ```sql
        name          |        dataSetId         |     dataSet    | description | labels 
----------------------+--------------------------+----------------+-------------+----------
+|---------------------+--------------------------+----------------+-------------+----------
  luma_midvalues      | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
  luma_postvalues     | 5c86b896b3c162151785b43c | Luma midValues |             | false
  table_with_a_decile | 5c86b896b3c162151785b43c | Luma midValues |             | 'UPSERT', 'PROFILE'
@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >La creazione del gruppo di campi tramite SQL non riuscirà se il flag `label` non viene fornito nell&#39;istruzione o se il gruppo di campi esiste già.
->Verificare che la query includa una clausola `IF NOT EXISTS` per evitare che la query non riesca perché il gruppo di campi esiste già.
+>>Verificare che la query includa una clausola `IF NOT EXISTS` per evitare che la query non riesca perché il gruppo di campi esiste già.
 
 Un esempio reale potrebbe essere simile a quello riportato di seguito.
 
@@ -227,7 +227,7 @@ Di seguito è riportato un esempio dell&#39;output di questo comando:
 
 ```sql
        name                      |        fieldgroupId                             |     owner      |
----------------------------------+-------------------------------------------------+-----------------
+|---------------------------------+-------------------------------------------------+-----------------
  AEP Mobile Lifecycle Details    | _experience.aep-mobile-lifecycle-details        | Luma midValues |
  AEP Web SDK ExperienceEvent     | _experience.aep-web-sdk-experienceevent         | Luma midValues |
  AJO Classification Fields       | _experience.journeyOrchestration.classification | Luma midValues |

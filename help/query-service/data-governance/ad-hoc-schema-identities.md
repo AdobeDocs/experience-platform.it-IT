@@ -2,7 +2,7 @@
 title: Impostare le identità primarie in un set di dati ad hoc
 description: Adobe Experience Platform Query Service consente di impostare un’identità o un’identità primaria per i campi di set di dati dello schema ad hoc direttamente tramite il comando SQL ALTER TABLE. Nel documento viene illustrato come utilizzare il comando ALTER TABLE per impostare un'identità primaria o secondaria.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Di seguito è riportato un esempio di tabella restituita.
 
 ```console
  tableName | columnName | datatype | namespace | ifPrimary
------------+------------+----------+-----------+----------
+|-----------+------------+----------+-----------+----------
 (0 rows)
 ```
 
@@ -78,4 +78,4 @@ L’elenco seguente spiega considerazioni importanti per l’aggiornamento delle
 
 * Per specificare una colonna come identità, **è necessario** definire anche lo spazio dei nomi da mantenere come metadati per la colonna.
 * XDM non supporta la specifica di un nome di colonna nell’attributo namespace.
-* Se lo schema utilizza il campo XDM `identityMap`, l&#39;oggetto **principale o di primo livello `identityMap` deve** essere etichettato come identità o identità primaria.
+* Se lo schema utilizza il campo XDM `identityMap`, l&#39;oggetto `identityMap` principale o di primo livello **deve** essere etichettato come identità o identità primaria.

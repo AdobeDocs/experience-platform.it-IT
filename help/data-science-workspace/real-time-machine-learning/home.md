@@ -1,86 +1,87 @@
 ---
-keywords: Experience Platform; guida per sviluppatori; Data Science Area di lavoro; argomenti popolari; Machine learning in tempo reale;
+keywords: Experience Platform;guida per sviluppatori;Data Science Workspace;argomenti popolari;apprendimento automatico in tempo reale;
 solution: Experience Platform
-title: Panoramica di Machine Learning in tempo reale
-description: Il machine learning in tempo reale può migliorare notevolmente la pertinenza dell'esperienza digitale contenuto per gli utenti finali. Ciò è reso possibile sfruttando l'inferenza in tempo reale e l'apprendimento continuo sulla rete Edge Experience Platform.
+title: Panoramica dell’apprendimento automatico in tempo reale
+description: Il machine learning in tempo reale può migliorare notevolmente la rilevanza dei contenuti delle esperienze digitali per gli utenti finali. Ciò è possibile sfruttando le inferenze in tempo reale e l’apprendimento continuo nell’Edge Network di Experience Platform.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '574'
 ht-degree: 1%
 
 ---
 
-# Panoramica di Machine Learning in tempo reale (Alpha)
+# Panoramica di Apprendimento automatico in tempo reale (Alpha)
 
 >[!NOTE]
 >
->Data Science Area di lavoro non è più disponibile per l&#39;acquisto.
+>Data Science Workspace non è più disponibile per l’acquisto.
 >
->Questa documentazione è destinata ai clienti esistenti con precedenti diritti a Data Science Area di lavoro.
+>Questa documentazione è destinata ai clienti esistenti che dispongono di diritti precedenti su Data Science Workspace.
 
 >[!IMPORTANT]
 >
->L&#39;apprendimento automatico in tempo reale non è ancora disponibile per tutti gli utenti. Questa funzione è in versione alpha ed è ancora in fase di test. Questo documento è soggetto a modifiche.
+>Real-time Machine Learning non è ancora disponibile per tutti gli utenti. Questa funzione è in formato alfa ed è ancora in fase di test. Questo documento è soggetto a modifiche.
 
-Il machine learning in tempo reale può migliorare notevolmente la pertinenza dell&#39;esperienza digitale contenuto per gli utenti finali. Ciò è reso possibile sfruttando l&#39;inferenza in tempo reale e l&#39;apprendimento [!DNL Experience Platform Edge Network]continuo su .
+Il machine learning in tempo reale può migliorare notevolmente la rilevanza dei contenuti delle esperienze digitali per gli utenti finali. Ciò è possibile sfruttando l&#39;inferenza in tempo reale e l&#39;apprendimento continuo in [!DNL Experience Platform Edge Network].
 
-Una combinazione di elaborazione senza soluzione di continuità sia sull&#39;Hub che sull&#39;Hub riduce drasticamente la latenza tradizionalmente coinvolta nell&#39;alimentazione [!DNL Edge] di esperienze iper-personalizzate che siano sia rilevanti che dinamico. Pertanto, l&#39;apprendimento automatico in tempo reale fornisce inferenze con latenza incredibilmente bassa per il processo decisionale sincrono. Gli esempi includono il rendering di una pagina Web personalizzata contenuto o l&#39;emergere di un&#39;offerta o di uno sconto per ridurre il tasso di abbandono e aumentare le conversioni su un web store.
+Una combinazione di elaborazione perfetta sia sull&#39;hub che su [!DNL Edge] riduce notevolmente la latenza tradizionalmente associata all&#39;elaborazione di esperienze iper-personalizzate che sono sia rilevanti che reattive. Pertanto, il machine learning in tempo reale fornisce inferenze con latenza incredibilmente bassa per il processo decisionale sincrono. Alcuni esempi includono il rendering di contenuti personalizzati di pagine web o l’esposizione di un’offerta o di uno sconto per ridurre l’abbandono e aumentare le conversioni in un negozio web.
 
-## Architettura di Machine Learning in tempo reale {#architecture}
+## Architettura di apprendimento automatico in tempo reale {#architecture}
 
-I seguenti diagrammi forniscono una panoramica dell’architettura di machine learning in tempo reale. Attualmente, alpha ha una versione più semplificata.
+I seguenti diagrammi forniscono una panoramica dell’architettura di machine learning in tempo reale. Attualmente, l&#39;alfa ha una versione più semplificata.
 
 ![arco alfa](../images/rtml/alpha-arch.png)
 
 ![Panoramica semplificata](../images/rtml/end-to-end-arch.png)
 
-## workflow di Machine Learning in tempo reale
+## Flusso di lavoro di apprendimento automatico in tempo reale
 
-La workflow seguente delinea i passaggi e i risultati tipici coinvolti nella creazione e nell&#39;utilizzo di un modello di Machine Learning in tempo reale.
+Il flusso di lavoro seguente illustra i passaggi e i risultati tipici necessari per la creazione e l’utilizzo di un modello di apprendimento automatico in tempo reale.
 
-### Assimilazione e preparazione dei dati
+### Acquisizione dei dati e preparativi
 
-I dati vengono assimilati e trasformati con ( [!DNL Experience Data Model] XDM) su Adobe Experience Platform. Questi dati vengono utilizzati per training del modello. Per ulteriori informazioni su XDM, visita la [panoramica](../../xdm/home.md) di XDM.
+I dati vengono acquisiti e trasformati con [!DNL Experience Data Model] (XDM) in Adobe Experience Platform. Questi dati vengono utilizzati per l’apprendimento dei modelli. Per ulteriori informazioni su XDM, visita la [panoramica XDM](../../xdm/home.md).
 
 ### Authoring
 
-Crea un modello di Machine Learning in tempo reale creandolo da zero o inserendolo come modello ONNX serializzato pre-addestrato in Adobe Experience Platform notebook Jupyter.
+Crea un modello di apprendimento automatico in tempo reale creandolo da zero o inserendolo come modello ONNX serializzato pre-addestrato nei notebook Adobe Experience Platform Jupyter.
 
-### Spiegamento
+### Distribuzione
 
-Distribuisci il tuo modello nel [!DNL Edge Network] per creare un servizio di Machine Learning in tempo reale nella [!UICONTROL raccolta] di servizi usando l&#39;endpoint API di stima.
+Distribuire il modello in [!DNL Edge Network] per creare un servizio di machine learning in tempo reale in [!UICONTROL Service Gallery] utilizzando l&#39;endpoint API di previsione.
 
 ### Inferenza
 
-Usa l&#39;endpoint REST API di stima per generare informazioni dettagliate sul machine learning in tempo reale.
+Utilizza l’endpoint API REST per la previsione per generare informazioni di apprendimento automatico in tempo reale.
 
 ### Consegna
 
-Gli addetti al marketing possono quindi definire segmenti e regole che mappano i punteggi di Machine Learning in tempo reale alle esperienze con Adobe Target. Ciò consente ai visitatori del sito web del tuo marchio di vedere un&#39;esperienza iper-personalizzata della stessa pagina o della pagina successiva in tempo reale.
+Gli addetti al marketing possono quindi definire segmenti e regole che mappano i punteggi di Machine Learning in tempo reale alle esperienze utilizzando Adobe Target. Questo consente ai visitatori del sito web del tuo marchio di visualizzare in tempo reale un’esperienza iper-personalizzata della stessa pagina o di quella successiva.
 
 ## Funzionalità corrente
 
-L&#39;apprendimento automatico in tempo reale è attualmente in alpha. Le funzionalità descritte di seguito sono soggette a modifiche man mano che vengono rese disponibili ulteriori funzionalità e nodi.
+L’apprendimento automatico in tempo reale è attualmente in formato alfa. Le funzionalità descritte di seguito sono soggette a modifiche in quanto sono disponibili più funzioni e nodi.
 
 >[!NOTE]
 >
 > Limitazioni di Alpha:
-> - Attualmente sono supportati solo i modelli basati su ONNX.
+>
+> - Attualmente, sono supportati solo i modelli basati su ONNX.
 > - Impossibile serializzare le funzioni utilizzate nei nodi. Ad esempio, una funzione lambda utilizzata in un nodo Pandas.
 > - La sospensione è di 20 secondi dopo l&#39;esecuzione manuale della distribuzione di [!DNL Edge].
-> - Per l&#39;apprendimento profondo, i dati devono essere inviati in modo tale che quando si chiama `df.values` venga restituito un array accettabile per il modello DL. Questo perché il nodo di punteggio del modello ONNX utilizza `df.values` e invia l&#39;output per assegnare un punteggio rispetto al modello.
+> - Per l&#39;apprendimento profondo, i dati devono essere inviati in modo tale che quando si chiama `df.values` venga restituito un array accettabile per il modello DL. Questo perché il nodo del punteggio del modello ONNX utilizza `df.values` e invia l&#39;output per il punteggio rispetto al modello.
 
 
-### Tratti somatici:
+### Caratteristiche:
 
-| | Alfa (maggio) |
+| | Alpha (maggio) |
 | --- | --- |
-| **Funzioni** | - Utilizzo del modello di notebook RTML, creazione, test e distribuire un modello di apprendimento automatico personalizzato. <br> - Supporto per l&#39;importazione di modelli di apprendimento automatico pre-addestrati. <br> - SDK di apprendimento automatico in tempo reale. <br> - Set iniziale di nodi di authoring. <br> - Implementato in Adobe Experience Platform Hub. |
+| **Funzioni** | - Utilizzo del modello di notebook RTML, creazione, test e distribuzione di un modello di apprendimento automatico personalizzato. <br> - Supporto per l&#39;importazione di modelli di apprendimento automatico preformati. <br> - SDK di apprendimento automatico in tempo reale. <br> - Set iniziale di nodi di creazione. <br> - Distribuito nell&#39;hub Adobe Experience Platform. |
 | **Disponibilità** | America del Nord |
-| **Creazione dei nodi** | - Panda <br> - ScikitLearn <br> - ONNXNode <br> - Spalato <br> - ModelUpload <br> - OneHotEncoder |
+| **Authoring dei nodi** | - Panda <br> - ScikitLearn <br> - ONNXNode <br> - Divisione <br> - Caricamento modello <br> - OneHotEncoder |
 | **Tempi di esecuzione del punteggio** | ONNX |
 
 ## Passaggi successivi
 
-Per iniziare, segui la [guida introduttiva](./getting-started.md). Questa guida illustra come configurare tutti i prerequisiti necessari per la creazione di un modello di Machine Learning in tempo reale.
+Per iniziare, segui la [guida introduttiva](./getting-started.md). Questa guida illustra come impostare tutti i prerequisiti necessari per la creazione di un modello di apprendimento automatico in tempo reale.

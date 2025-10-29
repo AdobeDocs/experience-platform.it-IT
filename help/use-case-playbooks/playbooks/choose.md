@@ -4,16 +4,16 @@ title: Scegli tra una selezione di playbook
 description: Scopri come scegliere il playbook corretto per il tuo caso d’uso abilitare i playbook.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 88%
+source-wordcount: '738'
+ht-degree: 83%
 
 ---
 
 # Scegli tra una selezione di playbook
 
-Per utilizzare un playbook, seleziona **[!UICONTROL Playbook]** dal menu di navigazione a sinistra. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
+Per utilizzare un playbook, selezionare **[!UICONTROL Playbooks]** dal menu di navigazione a sinistra. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
 
 ## Ricerca e filtro {#search-and-filter}
 
@@ -35,7 +35,7 @@ Prova i filtri e l’opzione di ricerca per trovare il playbook più adatto alle
 
 ## Visualizzare i playbook e generare le risorse {#view-playbook-generate-assets}
 
-Prima di impostare un playbook e crearne delle istanze, è bene esaminarlo per verificare che sia adatto alle tue esigenze. Per aiutarti a comprendere meglio i relativi casi d’uso, tutti i playbook contengono le sezioni elencate di seguito. Quando è il momento di procedere e generare le risorse, seleziona **[!UICONTROL Crea istanza]**.
+Prima di impostare un playbook e crearne delle istanze, è bene esaminarlo per verificare che sia adatto alle tue esigenze. Per aiutarti a comprendere meglio i relativi casi d’uso, tutti i playbook contengono le sezioni elencate di seguito. Quando sei pronto a procedere e generare risorse, seleziona **[!UICONTROL Create Instance]**.
 
 ### Mappa concettuale {#mindmap}
 
@@ -55,10 +55,10 @@ La mappa concettuale inizia con una definizione della persona a cui si rivolge i
 Esamina la sezione di riepilogo per capire quali risorse vengono generate una volta create le istanze dal playbook. Le risorse generate per ogni playbook sono personalizzate in base al caso d’uso abilitato dal playbook. Di seguito trovi ulteriori informazioni su tutti gli elementi nella sezione di riepilogo.
 
 | Elemento | Descrizione |
----------|----------|
-| **[!UICONTROL Pubblico target]** | Descrive le persone a cui intendi rivolgerti tramite il playbook per questo specifico caso d’uso. |
-| **[!UICONTROL Canali marketing]** | Descrive i canali utilizzati per contattare le persone target nel playbook. |
-| **[!UICONTROL Risorse tecniche]** | Elenco delle risorse tecniche generate dopo la creazione delle istanze del playbook. Le risorse generate dipendono dal playbook, a seconda del suo caso d’uso. Alcuni playbook possono generare schemi, segmenti e percorsi. Altri possono generare destinazioni. Per ulteriori informazioni, consulta la sezione [Comprendere le risorse generate](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) più avanti, nella guida su come creare e riutilizzare le istanze. |
+|---------|----------|
+| **[!UICONTROL Target audience]** | Descrive le persone a cui intendi rivolgerti tramite il playbook per questo specifico caso d’uso. |
+| **[!UICONTROL Marketing Channels]** | Descrive i canali utilizzati per contattare le persone target nel playbook. |
+| **[!UICONTROL Technical assets]** | Elenco delle risorse tecniche generate dopo la creazione delle istanze del playbook. Le risorse generate dipendono dal playbook, a seconda del suo caso d’uso. Alcuni playbook possono generare schemi, segmenti e percorsi. Altri possono generare destinazioni. Per ulteriori informazioni, consulta la sezione [Comprendere le risorse generate](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) più avanti, nella guida su come creare e riutilizzare le istanze. |
 
 {style="table-layout:auto"}
 
@@ -70,11 +70,11 @@ Scorri verso il basso fino alla sezione delle istanze per una panoramica delle i
 
 | Elemento | Descrizione |
 |---------|----------|
-| **[!UICONTROL Nome]** | Il nome dell’istanza in base al playbook. Puoi personalizzare il nome e la descrizione di un’istanza. Per ulteriori informazioni, consulta la sezione su [come modificare i metadati di un’istanza](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata). |
-| **[!UICONTROL Stato]** | Indica lo stato dell’istanza. Un’istanza **[!UICONTROL inviata]** è pronta per essere utilizzata. |
-| **[!UICONTROL Creato]** | Indica quando è stata creata l’istanza. |
-| **[!UICONTROL Creato da]** | Indica chi ha creato l’istanza. |
-| **[!UICONTROL Ultima modifica]** | Indica quando è stata apportata l’ultima modifica all’istanza. |
+| **[!UICONTROL Name]** | Il nome dell’istanza in base al playbook. Puoi personalizzare il nome e la descrizione di un’istanza. Per ulteriori informazioni, consulta la sezione su [come modificare i metadati di un’istanza](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata). |
+| **[!UICONTROL Status]** | Indica lo stato dell’istanza. Un&#39;istanza **[!UICONTROL submitted]** è pronta per l&#39;uso. |
+| **[!UICONTROL Created]** | Indica quando è stata creata l’istanza. |
+| **[!UICONTROL Created By]** | Indica chi ha creato l’istanza. |
+| **[!UICONTROL Last Modified]** | Indica quando è stata apportata l’ultima modifica all’istanza. |
 
 {style="table-layout:auto"}
 
@@ -82,4 +82,4 @@ Scorri verso il basso fino alla sezione delle istanze per una panoramica delle i
 
 ## Passaggi successivi: creare un’istanza del playbook {#next-steps-create-instance}
 
-Quando è tutto pronto per procedere con un playbook e creare un’istanza, seleziona **[!UICONTROL Crea istanza]** per procedere con il playbook e generare risorse tecniche. Per ulteriori informazioni, consulta la guida su [come creare, condividere e riutilizzare le istanze del playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Quando si è pronti a procedere con un playbook e creare un&#39;istanza, selezionare **[!UICONTROL Create Instance]** per continuare con il playbook e generare risorse tecniche. Per ulteriori informazioni, consulta la guida su [come creare, condividere e riutilizzare le istanze del playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md).

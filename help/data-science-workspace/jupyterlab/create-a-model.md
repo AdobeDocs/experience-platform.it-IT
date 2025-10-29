@@ -5,9 +5,9 @@ title: Creare un modello utilizzando JupyterLab Notebooks
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per creare una ricetta utilizzando il modello per la generazione di formule dei notebook JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -35,23 +35,23 @@ Prima di procedere con questa esercitazione, è necessario creare gli schemi e i
 
 ## Introduzione all&#39;ambiente del blocco appunti [!DNL JupyterLab]
 
-La creazione di una ricetta da zero può essere eseguita entro [!DNL Data Science Workspace]. Per iniziare, passa a [Adobe Experience Platform](https://platform.adobe.com) e seleziona la scheda **[!UICONTROL Blocchi appunti]** a sinistra. Per creare un nuovo blocco appunti, selezionare il modello di Generatore di ricette da [!DNL JupyterLab Launcher].
+La creazione di una ricetta da zero può essere eseguita entro [!DNL Data Science Workspace]. Per iniziare, passa a [Adobe Experience Platform](https://platform.adobe.com) e seleziona la scheda **[!UICONTROL Notebooks]** a sinistra. Per creare un nuovo blocco appunti, selezionare il modello di Generatore di ricette da [!DNL JupyterLab Launcher].
 
-Il blocco appunti [!UICONTROL Generatore di ricette] consente di eseguire attività di formazione e punteggio all&#39;interno del blocco appunti. Questo offre la flessibilità di apportare modifiche ai metodi `train()` e `score()` tra l&#39;esecuzione di esperimenti sui dati di apprendimento e punteggio. Una volta soddisfatti dei risultati di formazione e punteggio, puoi creare una ricetta e pubblicarla ulteriormente come modello utilizzando la ricetta per modellare la funzionalità.
+Il blocco appunti [!UICONTROL Recipe Builder] consente di eseguire esecuzioni di formazione e punteggio all&#39;interno del blocco appunti. Questo offre la flessibilità di apportare modifiche ai metodi `train()` e `score()` tra l&#39;esecuzione di esperimenti sui dati di apprendimento e punteggio. Una volta soddisfatti dei risultati di formazione e punteggio, puoi creare una ricetta e pubblicarla ulteriormente come modello utilizzando la ricetta per modellare la funzionalità.
 
 >[!NOTE]
 >
->Il blocco appunti di [!UICONTROL Generatore di ricette] supporta l&#39;utilizzo di tutti i formati di file, ma attualmente la funzionalità di creazione di ricette supporta solo [!DNL Python].
+>Il blocco appunti [!UICONTROL Recipe Builder] supporta l&#39;utilizzo di tutti i formati di file, ma attualmente la funzionalità di creazione delle ricette supporta solo [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-Quando si seleziona il blocco appunti [!UICONTROL Generatore di ricette] dal modulo di avvio, il blocco appunti viene aperto in una nuova scheda.
+Quando si seleziona il blocco appunti [!UICONTROL Recipe Builder] dal modulo di avvio, il blocco appunti viene aperto in una nuova scheda.
 
-Nella nuova scheda del blocco appunti nella parte superiore, viene caricata una barra degli strumenti contenente tre azioni aggiuntive: **[!UICONTROL Addestra]**, **[!UICONTROL Punteggio]** e **[!UICONTROL Crea ricetta]**. Queste icone vengono visualizzate solo nel blocco appunti [!UICONTROL Generatore di ricette]. Ulteriori informazioni su queste azioni sono fornite [nella sezione formazione e punteggio](#training-and-scoring) dopo aver creato la ricetta nel blocco appunti.
+Nella nuova scheda del blocco appunti nella parte superiore, viene caricata una barra degli strumenti contenente tre azioni aggiuntive: **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Queste icone vengono visualizzate solo nel blocco appunti [!UICONTROL Recipe Builder]. Ulteriori informazioni su queste azioni sono fornite [nella sezione formazione e punteggio](#training-and-scoring) dopo aver creato la ricetta nel blocco appunti.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Introduzione al blocco appunti [!UICONTROL Generatore di ricette]
+## Introduzione al blocco appunti [!UICONTROL Recipe Builder]
 
 Nella cartella delle risorse fornita è presente un modello di propensione Luma `propensity_model.ipynb`. Utilizzando l’opzione carica notebook in JupyterLab, carica il modello fornito e apri il notebook.
 
@@ -69,7 +69,7 @@ Il resto di questo tutorial riguarda i seguenti file predefiniti nel notebook de
 
 Il seguente tutorial video spiega il notebook con modello di propensione Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452500?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### File dei requisiti {#requirements-file}
 
@@ -139,6 +139,7 @@ Per un&#39;esercitazione approfondita sull&#39;utilizzo del caricatore dati `pla
 ### Sorgenti esterne {#external-sources}
 
 Questa sezione mostra come importare un file JSON o CSV in un oggetto panda. La documentazione ufficiale della libreria dei panda è disponibile qui:
+
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [read_json](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -178,6 +179,7 @@ def load(config_properties):
 >[!NOTE]
 >
 >Come indicato nella [sezione File di configurazione](#configuration-files), i seguenti parametri di configurazione sono impostati quando si accede ai dati da Experience Platform utilizzando `client_context = get_client_context(config_properties)`:
+>
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -257,7 +259,7 @@ Il file `datasaver.py` contiene la funzione `save()` e viene utilizzato per salv
 
 Una volta apportate le modifiche al blocco appunti e si desidera addestrare la composizione, è possibile selezionare i pulsanti associati nella parte superiore della barra per creare un&#39;esecuzione di addestramento nella cella. Dopo aver selezionato il pulsante, nel blocco appunti viene visualizzato un registro di comandi e output dello script di addestramento (nella cella `evaluator.py`). Conda installa prima tutte le dipendenze, quindi viene avviato l’addestramento.
 
-È necessario eseguire l’apprendimento almeno una volta prima di poter eseguire il punteggio. Selezionando il pulsante **[!UICONTROL Esegui punteggio]** verrà visualizzato il punteggio del modello addestrato generato durante l&#39;apprendimento. Lo script di punteggio viene visualizzato in `datasaver.py`.
+È necessario eseguire l’apprendimento almeno una volta prima di poter eseguire il punteggio. Selezionando il pulsante **[!UICONTROL Run Scoring]** si otterrà un punteggio sul modello addestrato generato durante l&#39;apprendimento. Lo script di punteggio viene visualizzato in `datasaver.py`.
 
 Per motivi di debug, se si desidera visualizzare l&#39;output nascosto, aggiungere `debug` alla fine della cella di output ed eseguirlo nuovamente.
 
@@ -265,15 +267,15 @@ Per motivi di debug, se si desidera visualizzare l&#39;output nascosto, aggiunge
 
 ## Creare una ricetta {#create-recipe}
 
-Una volta completata la modifica della ricetta e quando si è soddisfatti dell&#39;output di formazione/punteggio, è possibile creare una ricetta dal blocco appunti selezionando **[!UICONTROL Crea ricetta]** in alto a destra.
+Una volta completata la modifica della ricetta e quando si è soddisfatti dell&#39;output di formazione/punteggio, è possibile creare una ricetta dal blocco appunti selezionando **[!UICONTROL Create Recipe]** in alto a destra.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Dopo aver selezionato **[!UICONTROL Crea ricetta]**, viene richiesto di immettere un nome per la ricetta. Questo nome rappresenta la ricetta effettiva creata il [!DNL Experience Platform].
+Dopo aver selezionato **[!UICONTROL Create Recipe]**, viene richiesto di immettere un nome per la ricetta. Questo nome rappresenta la ricetta effettiva creata il [!DNL Experience Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Dopo aver selezionato **[!UICONTROL Ok]**, inizia il processo di creazione della ricetta. Questa operazione può richiedere del tempo e al posto del pulsante Crea composizione viene visualizzata una barra di avanzamento. Al termine, puoi selezionare il pulsante **[!UICONTROL Visualizza ricette]** per passare alla scheda **[!UICONTROL Ricette]** in **[!UICONTROL Modelli ML]**
+Dopo aver selezionato **[!UICONTROL Ok]**, inizia il processo di creazione della ricetta. Questa operazione può richiedere del tempo e al posto del pulsante Crea composizione viene visualizzata una barra di avanzamento. Una volta completato, è possibile selezionare il pulsante **[!UICONTROL View Recipes]** per passare alla scheda **[!UICONTROL Recipes]** in **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 

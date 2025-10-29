@@ -2,9 +2,9 @@
 title: Caricare e implementare test end-to-end per un’estensione
 description: Scopri come convalidare, caricare e testare l’estensione in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2344'
 ht-degree: 84%
 
 ---
@@ -63,10 +63,10 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Per impostazione predefinita, lo strumento Uploader richiede le credenziali di Adobe I/O per un flusso OAuth da server a server. Le credenziali legacy di `jwt-auth`
-> può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
-> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> > può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
+> > per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-Lo strumento di caricamento richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l’organizzazione adatta dal menu a discesa, individua l’integrazione corretta e seleziona **[!UICONTROL Visualizza]**.
+Lo strumento di caricamento richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l&#39;organizzazione adatta dal menu a discesa, individua l&#39;integrazione corretta e seleziona **[!UICONTROL View]**.
 
 - Qual è `clientId`? è disponibile nella console I/O; usa Copia/Incolla.
 - Qual è `clientSecret`? è disponibile nella console I/O; usa Copia/Incolla.
@@ -82,11 +82,11 @@ Il pacchetto dell’estensione verrà quindi caricato e lo strumento Uploader ti
 >
 >Se pensi di dover eseguire spesso lo strumento di caricamento, inserire tutte queste informazioni ogni volta può risultare laborioso. È possibile trasmettere questi elementi anche come argomenti dalla riga di comando. Per ulteriori informazioni, consulta la sezione sugli [argomenti della riga di comando](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) nella documentazione NPM.
 
-Se desideri gestire il caricamento dell&#39;estensione utilizzando direttamente le API, consulta l&#39;esempio di chiamate per [creare](../../api/endpoints/extension-packages.md/#create) o [aggiornare](../../api/endpoints/extension-packages.md#update) un pacchetto di estensione nella documentazione delle API.
+Se desideri gestire il caricamento dell&#39;estensione utilizzando direttamente le API, consulta l&#39;esempio di chiamate per [creare](../../api/endpoints/extension-packages.md#create) o [aggiornare](../../api/endpoints/extension-packages.md#update) un pacchetto di estensione nella documentazione delle API.
 
 ## Creare una proprietà di sviluppo {#property}
 
-Dopo aver effettuato l&#39;accesso all&#39;interfaccia utente e aver selezionato **[!UICONTROL Tag]** nel menu di navigazione a sinistra, viene visualizzata la schermata [!UICONTROL Proprietà]. Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
+Dopo aver effettuato l&#39;accesso all&#39;interfaccia utente e aver selezionato **[!UICONTROL Tags]** nel menu di navigazione a sinistra, viene visualizzata la schermata [!UICONTROL Properties]. Una proprietà è un contenitore per i tag da distribuire e può essere utilizzata in uno o più siti.
 
 ![](../images/getting-started/properties-screen.png)
 

@@ -3,9 +3,9 @@ title: Categorie di interesse Mailchimp
 description: Mailchimp (noto anche come Intuit Mailchimp) è un popolare piattaforma di automazione del marketing e servizio di e-mail marketing utilizzato dalle aziende per gestire e parlare con i contatti (clienti, clienti o altre parti interessate) utilizzando mailing list e campagne di e-mail marketing. Utilizza questo connettore per ordinare i contatti in base ai loro interessi e preferenze.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2218'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experi
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Mailchimp Interest Categories], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Mailchimp Interest Categories], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti per la destinazione [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -74,7 +74,7 @@ Per ulteriori informazioni, consulta la [[!DNL Mailchimp] documentazione di base
 
 Ciascuno dei tipi di pubblico di [!DNL Mailchimp] può contenere fino a 60 nomi di gruppo (o categorie di interesse) in un singolo gruppo o in più gruppi all&#39;interno dello stesso pubblico. Per eventuali chiarimenti richiesti, consulta [!DNL Mailchimp] [gruppi](https://mailchimp.com/help/getting-started-with-groups/). Quando si raggiunge questo limite, viene visualizzato un messaggio di errore `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` dall&#39;API [!DNL Mailchimp].
 
-Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], consultare inoltre [!DNL Mailchimp] [limiti di tariffa](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits).
+Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], consultare inoltre [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
 
 ## Identità supportate {#supported-identities}
 
@@ -91,8 +91,8 @@ Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], c
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Experience Platform, lo stato del segmento [!DNL Mailchimp Interest Categories] corrispondente viene aggiornato da Experience Platform in base allo stato del pubblico.</li></ul> |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati *(ad esempio: indirizzo e-mail, numero di telefono, cognome)*, in base al mapping dei campi.</li><li> Per ogni pubblico selezionato in Experience Platform, lo stato del segmento [!DNL Mailchimp Interest Categories] corrispondente viene aggiornato da Experience Platform in base allo stato del pubblico.</li></ul> |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -101,26 +101,26 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-In **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, cerca [!DNL Mailchimp Interest Categories]. In alternativa, puoi trovarlo nella categoria **[!UICONTROL E-mail marketing]**.
+Entro **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, cerca [!DNL Mailchimp Interest Categories]. In alternativa, è possibile individuarlo nella categoria **[!UICONTROL Email marketing]**.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
 | Campo | Descrizione |
 | --- | --- |
-| **[!UICONTROL Nome utente]** | Nome utente [!DNL Mailchimp Interest Categories]. |
+| **[!UICONTROL Username]** | Nome utente [!DNL Mailchimp Interest Categories]. |
 | **[!UICONTROL Password]** | La [!DNL Mailchimp] **chiave API**, annotata nella sezione [Raccogli [!DNL Mailchimp] credenziali](#gather-credentials).<br> La chiave API assume la forma di `{KEY}-{DC}`, dove la parte `{KEY}` fa riferimento al valore annotato nella sezione [[!DNL Mailchimp] Chiave API](#gather-credentials) e la parte `{DC}` fa riferimento al [[!DNL Mailchimp] datacenter](#identify-data-center). <br>È possibile fornire la porzione `{KEY}` o l&#39;intero modulo.<br> Ad esempio, se la chiave API è <br>*`0123456789abcdef0123456789abcde-us14`*,<br> puoi fornire *`0123456789abcdef0123456789abcde`*o *`0123456789abcdef0123456789abcde-us14`*come valore. |
 
 {style="table-layout:auto"}
 
 ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
-Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
+Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connected]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -130,30 +130,30 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 | Campo | Descrizione |
 | --- | --- |
-| **[!UICONTROL Nome]** | Un nome con cui riconoscerai questa destinazione in futuro. |
-| **[!UICONTROL Descrizione]** | Una descrizione che ti aiuterà a identificare questa destinazione in futuro. |
+| **[!UICONTROL Name]** | Un nome con cui riconoscerai questa destinazione in futuro. |
+| **[!UICONTROL Description]** | Una descrizione che ti aiuterà a identificare questa destinazione in futuro. |
 | **[!UICONTROL Data center]** | Il tuo account [!DNL Mailchimp] `data center`. Per ulteriori informazioni, consulta la sezione [Identificare [!DNL Mailchimp] il centro dati](#identify-data-center). |
-| **[!UICONTROL Nome pubblico (selezionare prima il centro dati)]** | Dopo aver selezionato il **[!UICONTROL centro dati]**, questo menu a discesa viene compilato automaticamente con i nomi del pubblico del tuo account [!DNL Mailchimp]. Seleziona il pubblico da aggiornare con i dati di Experience Platform. |
-| **[!UICONTROL Categoria di interesse (selezionare prima il centro dati e il nome del pubblico)]** | Dopo aver selezionato **[!UICONTROL Nome pubblico]**, questo menu a discesa viene compilato automaticamente con i nomi delle categorie dei gruppi di interesse dell&#39;account [!DNL Mailchimp]. Seleziona il nome della categoria da aggiornare con i dati di Experience Platform. |
+| **[!UICONTROL Audience Name (Please select Data center first)]** | Dopo aver selezionato **[!UICONTROL Data center]**, questo menu a discesa viene compilato automaticamente con i nomi del pubblico del tuo account [!DNL Mailchimp]. Seleziona il pubblico da aggiornare con i dati di Experience Platform. |
+| **[!UICONTROL Interest Category (Please select Data center and Audience Name first)]** | Dopo aver selezionato **[!UICONTROL Audience Name]**, questo menu a discesa viene compilato automaticamente con i nomi delle categorie dei gruppi di interesse del tuo account [!DNL Mailchimp]. Seleziona il nome della categoria da aggiornare con i dati di Experience Platform. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> Se la chiave API fornita nel campo **[!UICONTROL Password]** o il valore **[!UICONTROL Data center]** non sono corretti, l&#39;interfaccia utente visualizza una risposta di errore API [!DNL Mailchimp]: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* come illustrato di seguito. In questo caso, non puoi selezionare un valore dal campo **[!UICONTROL Nome pubblico (seleziona prima il centro dati)]**. Per correggere questo errore, specifica i valori corretti.
+> Se la chiave API fornita nel campo **[!UICONTROL Password]** o il valore **[!UICONTROL Data center]** non sono corretti, l&#39;interfaccia utente visualizza una risposta di errore API [!DNL Mailchimp]: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* come illustrato di seguito. In questo caso, non è possibile selezionare un valore dal campo **[!UICONTROL Audience Name (Please select Data center first)]**. Per correggere questo errore, specifica i valori corretti.
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
@@ -163,9 +163,9 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Mailchimp Interest Categories], effettua le seguenti operazioni:
 
-1. Nel passaggio **[!UICONTROL Mapping]**, seleziona **[!UICONTROL Aggiungi nuovo mapping]**. Ora è possibile visualizzare una nuova riga di mappatura sullo schermo.
-1. Nella finestra **[!UICONTROL Seleziona campo di origine]**, scegli la categoria **[!UICONTROL Seleziona attributi]** e seleziona l&#39;attributo XDM oppure scegli lo spazio dei nomi **[!UICONTROL Seleziona identità]** e seleziona un&#39;identità.
-1. Nella finestra **[!UICONTROL Seleziona campo di destinazione]**, scegli **[!UICONTROL Seleziona spazio dei nomi identità]** e seleziona un&#39;identità oppure scegli **[!UICONTROL Seleziona attributi]** categoria e seleziona dall&#39;elenco di attributi popolati dall&#39;API [!DNL Mailchimp]. *Tutti gli attributi personalizzati aggiunti al pubblico [!DNL Mailchimp] selezionato saranno disponibili per la selezione come campi di destinazione.*
+1. Nel passaggio **[!UICONTROL Mapping]**, selezionare **[!UICONTROL Add new mapping]**. Ora è possibile visualizzare una nuova riga di mappatura sullo schermo.
+1. Nella finestra **[!UICONTROL Select source field]**, scegli la categoria **[!UICONTROL Select attributes]** e seleziona l&#39;attributo XDM oppure scegli **[!UICONTROL Select identity namespace]** e seleziona un&#39;identità.
+1. Nella finestra **[!UICONTROL Select target field]**, scegli **[!UICONTROL Select identity namespace]** e seleziona un&#39;identità oppure scegli la categoria **[!UICONTROL Select attributes]** e seleziona dall&#39;elenco di attributi popolati dall&#39;API [!DNL Mailchimp]. *Tutti gli attributi personalizzati aggiunti al pubblico [!DNL Mailchimp] selezionato saranno disponibili per la selezione come campi di destinazione.*
 
    Di seguito sono indicate le mappature disponibili tra lo schema del profilo XDM e [!DNL Mailchimp Interest Categories]:
 
@@ -194,7 +194,7 @@ Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Mailchimp I
    Di seguito è riportato un esempio con le mappature completate:
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra le mappature dei campi.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
-Dopo aver fornito le mappature per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i mapping per la connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
@@ -219,7 +219,7 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 
 ### Errore riscontrato se la chiave API [!DNL Mailchimp] o i valori del centro dati non sono corretti {#incorrect-credentials-error}
 
-Se la chiave API fornita nel campo **[!UICONTROL Password]** o il valore **[!UICONTROL Data center]** non sono corretti, l&#39;interfaccia utente visualizza una risposta di errore API [!DNL Mailchimp]: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* come illustrato di seguito. In questo caso, non è possibile selezionare un valore dal campo **[!UICONTROL Nome pubblico (selezionare prima il centro dati)]**.
+Se la chiave API fornita nel campo **[!UICONTROL Password]** o il valore **[!UICONTROL Data center]** non sono corretti, l&#39;interfaccia utente visualizza una risposta di errore API [!DNL Mailchimp]: *`No options are available. Please verify the values selected for the following dependent fields: dataCenter`* come illustrato di seguito. In questo caso, non è possibile selezionare un valore dal campo **[!UICONTROL Audience Name (Please select Data center first)]**.
 
 ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;errore se la chiave API Mailchimp o i valori del datacenter non sono corretti.](../../assets/catalog/email-marketing/mailchimp-interest-categories/error.png)
 
@@ -237,6 +237,7 @@ Per un elenco completo dei codici di stato e di errore con relative spiegazioni,
 ## Risorse aggiuntive {#additional-resources}
 
 Di seguito sono riportate ulteriori informazioni utili dalla documentazione di [!DNL Mailchimp]:
+
 * [Guida introduttiva a [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Guida introduttiva ai tipi di pubblico](https://mailchimp.com/help/getting-started-audience/)
 * [Crea un pubblico](https://mailchimp.com/help/create-audience/)

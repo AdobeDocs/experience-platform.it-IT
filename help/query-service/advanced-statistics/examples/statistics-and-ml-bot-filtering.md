@@ -1,7 +1,8 @@
 ---
 title: Filtraggio dei bot tramite statistiche e apprendimento automatico
 description: Scopri come utilizzare le statistiche di Data Distiller e l’apprendimento automatico per identificare e filtrare le attività bot, in modo da garantire analisi accurate e una maggiore integrità dei dati.
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -18,7 +19,7 @@ Questo documento fornisce una guida completa per identificare e filtrare le atti
 
 L’attività dei bot può essere identificata rilevando picchi nelle azioni degli utenti entro intervalli di tempo specifici. Ad esempio, un numero eccessivo di clic eseguiti da un singolo utente in un breve arco di tempo potrebbe indicare un comportamento da bot. I due attributi chiave utilizzati nel filtro dei bot sono:
 
-- **ECID (ID visitatore Experience Cloud):** un ID universale e costante che identifica i visitatori.
+- **ECID (ID visitatore di Experience Cloud):** un ID universale e costante che identifica i visitatori.
 - **Timestamp:** l&#39;ora e la data in cui si verifica un&#39;attività sul sito Web.
 
 Gli esempi seguenti mostrano come utilizzare le tecniche di SQL e machine learning per identificare, perfezionare e prevedere le attività bot. Utilizza questi metodi per migliorare l’integrità dei dati e garantire analisi utilizzabili.
@@ -209,7 +210,7 @@ Nei risultati visualizzati di seguito, il modello `bot_filtering_model` è stato
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ La risposta include metriche quali precisione, richiamo e AUC-ROC. I risultati c
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ La risposta include previsioni per ogni utente (`id`) insieme a dettagli sull&#3
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

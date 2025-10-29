@@ -5,9 +5,9 @@ title: Analizzare I Dati Utilizzando I Notebook
 type: Tutorial
 description: Questo tutorial si concentra su come utilizzare Jupyter Notebooks, integrato in Data Science Workspace, per accedere, esplorare e visualizzare i tuoi dati.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Per impostazione predefinita, la ricetta Tensorflow funziona in un cluster GPU e
 
 ### Crea un nuovo blocco appunti
 
-Nell&#39;interfaccia utente di [!DNL Adobe Experience Platform], seleziona [!UICONTROL Data Science] nel menu principale per passare a Data Science Workspace. Da questa pagina, selezionare [!DNL JupyterLab] per aprire il modulo di avvio [!DNL JupyterLab]. Dovresti visualizzare una pagina simile a questa.
+Nell&#39;interfaccia utente [!DNL Adobe Experience Platform], seleziona [!UICONTROL Data Science] nel menu principale per passare a Data Science Workspace. Da questa pagina, selezionare [!DNL JupyterLab] per aprire il modulo di avvio [!DNL JupyterLab]. Dovresti visualizzare una pagina simile a questa.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
@@ -84,7 +84,7 @@ Ora si passa all&#39;accesso ai dati [!DNL Experience Platform].
 
 Per questa sezione viene utilizzato il set di dati Vendite al dettaglio, che è lo stesso set di dati utilizzato nel blocco appunti di esempio Vendite al dettaglio.
 
-In Jupyter Notebook, puoi accedere ai tuoi dati dalla scheda **Dati** ![Dati](../images/jupyterlab/analyze-data/dataset-tab.png) a sinistra. Selezionando la scheda, vengono fornite due cartelle. Selezionare la cartella **[!UICONTROL Set di dati]**.
+In Jupyter Notebook, puoi accedere ai tuoi dati dalla scheda **Dati** ![Dati](../images/jupyterlab/analyze-data/dataset-tab.png) a sinistra. Selezionando la scheda, vengono fornite due cartelle. Selezionare la cartella **[!UICONTROL Datasets]**.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -120,6 +120,7 @@ Se si riavvia il kernel e si eseguono di nuovo tutte le celle, si dovrebbero ott
 ### Esplora i tuoi dati
 
 Ora che possiamo accedere ai tuoi dati, concentriamoci sui dati stessi utilizzando statistiche e visualizzazioni. Il set di dati che utilizziamo è un set di dati di vendita al dettaglio che fornisce informazioni varie su 45 diversi negozi in un dato giorno. Alcune caratteristiche per un dato `date` e `store` includono:
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,6 +162,7 @@ Ciò significa che 22 archivi sono di `storeType` `A`, 17 sono `storeType` `B` e
 #### Visualizzazione dati
 
 Ora che conosciamo i valori dei nostri frame di dati, vogliamo integrarli con le visualizzazioni per rendere le cose più chiare e più facili da identificare. I grafici sono utili anche per trasmettere i risultati a un pubblico. Alcune librerie [!DNL Python] utili per la visualizzazione includono:
+
 - [Matplotlib](https://matplotlib.org/)
 - [panda](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -201,8 +203,9 @@ Osservate la diagonale di 1 in basso rispetto al centro. Questo mostra che quand
 ## Passaggi successivi
 
 Questo tutorial illustra come creare un nuovo blocco appunti Jupyter in Data Science Workspace e come accedere ai dati sia esternamente che da [!DNL Adobe Experience Platform]. Nello specifico, abbiamo esaminato i seguenti passaggi:
+
 - Crea un nuovo Jupyter Notebook
 - Accedere a set di dati e schemi
-- Esplora i set di dati
+- Scopri i set di dati
 
 Ora puoi passare alla [sezione successiva](../models-recipes/package-source-files-recipe.md) per creare un pacchetto di una ricetta e importarla in Data Science Workspace.

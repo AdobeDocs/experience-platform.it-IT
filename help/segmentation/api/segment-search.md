@@ -3,9 +3,9 @@ title: Endpoint API di ricerca segmenti
 description: Nell’API del servizio di segmentazione di Adobe Experience Platform, la ricerca dei segmenti viene utilizzata per cercare i campi contenuti in diverse origini dati e restituirli quasi in tempo reale. Questa guida fornisce informazioni utili per comprendere meglio la Ricerca di segmenti e include chiamate API di esempio per eseguire azioni di base utilizzando l’API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1178'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ GET /search/namespaces?schema.name={SCHEMA}
 GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} rappresenta il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
 | `s={SEARCH_TERM}` | *(Facoltativo)* Dove {SEARCH_TERM} rappresenta una query conforme all&#39;implementazione di Microsoft della sintassi di ricerca di [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se non viene specificato alcun termine di ricerca, verranno restituiti tutti i record associati a `schema.name`. Una spiegazione più dettagliata è disponibile nell&#39;[appendice](#appendix) di questo documento. |
@@ -95,7 +95,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&s={SEARCH_TERM}
 GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
 | `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui si desidera eseguire la ricerca. |
@@ -166,7 +166,7 @@ Questo endpoint di ricerca può essere utilizzato per ottenere informazioni stru
 GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
 | `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui si desidera eseguire la ricerca. |
@@ -223,9 +223,11 @@ Dopo aver letto questa guida hai acquisito una migliore comprensione del funzion
 
 ## Appendice {#appendix}
 
-Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca sono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Ad esempio, per cercare una definizione di segmento denominata AAM o [!DNL Platform], è necessario utilizzare la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
+Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca sono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Pertanto, ad esempio, per cercare una definizione di segmento denominata AAM o [!DNL Platform], è necessario utilizzare la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
 
->  Per le best practice, l&#39;espressione di ricerca deve essere codificata come HTML, come nell&#39;esempio precedente.
+>[!NOTE]
+>
+>Per le best practice, l’espressione di ricerca deve essere codificata in HTML, come nell’esempio mostrato sopra.
 
 ### Cerca campo {#search-fields}
 
@@ -244,7 +246,9 @@ Nella tabella seguente sono elencati i campi in cui è possibile eseguire ricerc
 
 Nella tabella seguente sono elencate le specifiche del funzionamento delle query di ricerca quando si utilizza l’API di ricerca dei segmenti.
 
->  Gli esempi seguenti vengono visualizzati in un formato non codificato da HTML per una maggiore chiarezza. Per best practice, HTML codifica l’espressione di ricerca.
+>[!NOTE]
+>
+>Gli esempi seguenti sono mostrati in un formato non codificato HTML per una maggiore chiarezza. Per best practice, HTML codifica l’espressione di ricerca.
 
 | Espressione di ricerca di esempio | Descrizione |
 | ------------------------- | ----------- |

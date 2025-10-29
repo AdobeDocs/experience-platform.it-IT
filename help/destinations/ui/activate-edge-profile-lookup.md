@@ -3,10 +3,10 @@ title: Cercare gli attributi del profilo edge in tempo reale
 description: Scopri come cercare gli attributi del profilo Edge in tempo reale utilizzando la destinazione Personalization personalizzata e l’API di Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1911'
-ht-degree: 2%
+source-wordcount: '1843'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ Questa pagina descrive i passaggi da seguire per cercare i dati del profilo edge
 Quando configuri il caso d’uso descritto in questa pagina, utilizzerai i seguenti componenti di Experience Platform:
 
 * [Datastream](../../datastreams/overview.md): un datastream riceve i dati evento in arrivo da Web SDK e risponde con i dati del profilo Edge.
-* [Criteri di unione](../../segmentation/ui/segment-builder.md#merge-policies): verrà creato un criterio di unione [!UICONTROL Attivo su Edge] per garantire che i profili edge utilizzino i dati di profilo corretti.
+* [Criteri di unione](../../segmentation/ui/segment-builder.md#merge-policies): creerai un criterio di unione [!UICONTROL Active-On-Edge] per garantire che i profili edge utilizzino i dati di profilo corretti.
 * [Connessione Personalization personalizzata](../catalog/personalization/custom-personalization.md): verrà configurata una nuova connessione di personalizzazione personalizzata che invierà gli attributi del profilo a Edge Network.
 * [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/): utilizzerai la funzionalità dell&#39;API Edge Network [raccolta dati interattiva](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) per recuperare rapidamente gli attributi del profilo dai profili edge.
 
@@ -43,18 +43,18 @@ I casi di utilizzo della ricerca di profili Edge sono soggetti ai guardrail di p
 
 ## Passaggio 1: creare e configurare un flusso di dati {#create-datastream}
 
-Segui i passaggi descritti nella documentazione relativa alla [configurazione dello stream di dati](../../datastreams/configure.md#create-a-datastream) per creare un nuovo stream di dati con le seguenti impostazioni del **[!UICONTROL servizio]**:
+Segui i passaggi descritti nella documentazione relativa alla [configurazione dello stream di dati](../../datastreams/configure.md#create-a-datastream) per creare un nuovo stream di dati con le seguenti impostazioni **[!UICONTROL Service]**:
 
-* **[!UICONTROL Servizio]**: [!UICONTROL Adobe Experience Platform]
-* **[!UICONTROL Destinazioni Personalization]**: abilitato
-* **[!UICONTROL Segmentazione Edge]**: se hai bisogno della segmentazione Edge, abilita questa opzione. Se ti interessa cercare solo gli attributi del profilo sul server Edge di, ma non desideri eseguire alcuna segmentazione in base ai profili Edge di, lascia questa opzione disabilitata.
+* **[!UICONTROL Service]**: [!UICONTROL Adobe Experience Platform]
+* **[!UICONTROL Personalization Destinations]**: abilitato
+* **[!UICONTROL Edge Segmentation]**: se è necessaria la segmentazione Edge, abilitare questa opzione. Se ti interessa cercare solo gli attributi del profilo sul server Edge di, ma non desideri eseguire alcuna segmentazione in base ai profili Edge di, lascia questa opzione disabilitata.
 
 
-  <!-- >[!IMPORTANT]
-    >
-    >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
+<!-- >[!IMPORTANT]
+>
+>Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la schermata di configurazione dello stream di dati.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+    ![Immagine dell’interfaccia utente di Experience Platform che mostra la schermata di configurazione dello stream di dati.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Passaggio 2: configurare i tipi di pubblico per la valutazione Edge {#audience-edge-evaluation}
@@ -63,7 +63,7 @@ La ricerca degli attributi del profilo sul server Edge richiede la configurazion
 
 Assicurarsi che il criterio di unione [Attivo su Edge](../../segmentation/ui/segment-builder.md#merge-policies) sia impostato come predefinito per i tipi di pubblico che si intende attivare. Il criterio di unione [!DNL Active-On-Edge] garantisce che i tipi di pubblico vengano valutati costantemente [sul server Edge](../../segmentation/methods/edge-segmentation.md) e siano disponibili per casi di utilizzo di personalizzazione in tempo reale.
 
-Segui le istruzioni relative alla [creazione di un criterio di unione](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare il criterio di unione **[!UICONTROL Attivo su Edge]**.
+Segui le istruzioni relative alla [creazione di un criterio di unione](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e assicurati di attivare/disattivare **[!UICONTROL Active-On-Edge Merge Policy]**.
 
 >[!IMPORTANT]
 >
@@ -71,13 +71,13 @@ Segui le istruzioni relative alla [creazione di un criterio di unione](../../pro
 
 ## Passaggio 3: inviare i dati degli attributi del profilo ad Edge Network{#configure-custom-personalization-connection}
 
-Per cercare in tempo reale i profili edge, inclusi gli attributi e i dati di iscrizione al pubblico, è necessario rendere disponibili i dati in Edge Network. A questo scopo, devi creare una connessione a una destinazione di **[!UICONTROL Personalization personalizzato con attributi]** e attivare i tipi di pubblico, inclusi gli attributi che desideri cercare nei profili edge.
+Per cercare in tempo reale i profili edge, inclusi gli attributi e i dati di iscrizione al pubblico, è necessario rendere disponibili i dati in Edge Network. A questo scopo, devi creare una connessione a una destinazione **[!UICONTROL Custom Personalization With Attributes]** e attivare i tipi di pubblico, inclusi gli attributi che desideri cercare nei profili edge.
 
 +++ Configurare una connessione Personalization con attributi personalizzata
 
 Segui l&#39;esercitazione [creazione connessione di destinazione](../ui/connect-destination.md) per istruzioni dettagliate su come creare una nuova connessione di destinazione.
 
-Durante la configurazione della nuova destinazione, seleziona lo stream di dati creato nel [passaggio 1](#create-datastream) nel campo **[!UICONTROL ID stream di dati]**. Per **[!UICONTROL Integration alias]** è possibile utilizzare qualsiasi valore che consenta di identificare questa connessione di destinazione in futuro, come il nome della destinazione.
+Durante la configurazione della nuova destinazione, seleziona lo stream di dati creato nel [passaggio 1](#create-datastream) nel campo **[!UICONTROL Datastream ID]**. Per **[!UICONTROL Integration alias]** è possibile utilizzare qualsiasi valore che ti consenta di identificare questa connessione di destinazione in futuro, come il nome della destinazione.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la schermata di configurazione personalizzata di Personalization With Attributes.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
@@ -85,51 +85,51 @@ Durante la configurazione della nuova destinazione, seleziona lo stream di dati 
 
 +++Attiva i tipi di pubblico nella connessione Personalization personalizzato con attributi
 
-Dopo aver creato una connessione **[!UICONTROL Personalization personalizzato con attributi]**, puoi inviare i dati del profilo ad Edge Network.
+Dopo aver creato una connessione **[!UICONTROL Custom Personalization With Attributes]**, puoi inviare i dati del profilo ad Edge Network.
 
 >[!IMPORTANT]
 > 
-> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessari **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-1. Vai a **[!UICONTROL Connessioni > Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
+1. Passare a **[!UICONTROL Connections > Destinations]** e selezionare la scheda **[!UICONTROL Catalog]**.
 
    ![Scheda Catalogo di destinazione evidenziata nell&#39;interfaccia utente di Experience Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
-1. Trova la scheda di destinazione **[!UICONTROL Personalization personalizzato con attributi]**, quindi seleziona **[!UICONTROL Attiva pubblico]**, come illustrato nell&#39;immagine seguente.
+1. Trova la scheda di destinazione **[!UICONTROL Custom Personalization With Attributes]**, quindi seleziona **[!UICONTROL Activate audiences]**, come illustrato nell&#39;immagine seguente.
 
    ![Attiva controllo del pubblico evidenziato in una scheda di destinazione nel catalogo.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
-1. Seleziona la connessione di destinazione configurata in precedenza, quindi seleziona **[!UICONTROL Avanti]**.
+1. Selezionare la connessione di destinazione configurata in precedenza, quindi selezionare **[!UICONTROL Next]**.
 
    ![Selezionare il passaggio di destinazione nel flusso di lavoro di attivazione.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. Seleziona i tipi di pubblico. Utilizza le caselle di controllo a sinistra dei nomi del pubblico per selezionare i tipi di pubblico che desideri attivare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**.
+1. Seleziona i tipi di pubblico. Utilizzare le caselle di controllo a sinistra dei nomi di pubblico per selezionare i tipi di pubblico che si desidera attivare nella destinazione, quindi selezionare **[!UICONTROL Next]**.
 
    Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-   * **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
-   * **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Segmentation Service]**: pubblico generato in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
+   * **[!UICONTROL Custom upload]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
    * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
      ![Selezionare il passaggio dei tipi di pubblico del flusso di lavoro di attivazione evidenziando diversi tipi di pubblico.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 1. Selezionare gli attributi di profilo che si desidera rendere disponibili per i profili di spigolo.
 
-   * **Selezionare gli attributi di origine**. Per aggiungere gli attributi di origine, seleziona il controllo **[!UICONTROL Aggiungi nuovo campo]** nella colonna **[!UICONTROL Campo Source]** e cerca o passa al campo attributo XDM desiderato, come illustrato di seguito.
+   * **Selezionare gli attributi di origine**. Per aggiungere attributi di origine, selezionare il controllo **[!UICONTROL Add new field]** nella colonna **[!UICONTROL Source field]** e cercare o passare al campo attributo XDM desiderato, come illustrato di seguito.
 
      ![Registrazione schermata che mostra come selezionare un attributo di destinazione nel passaggio di mappatura.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
-   * **Selezionare gli attributi di destinazione**. Per aggiungere attributi di destinazione, selezionare il controllo **[!UICONTROL Aggiungi nuovo campo]** nella colonna **[!UICONTROL Campo di destinazione]** e digitare il nome dell&#39;attributo personalizzato a cui si desidera mappare l&#39;attributo di origine.
+   * **Selezionare gli attributi di destinazione**. Per aggiungere attributi di destinazione, selezionare il controllo **[!UICONTROL Add new field]** nella colonna **[!UICONTROL Target field]** e digitare il nome dell&#39;attributo personalizzato a cui si desidera mappare l&#39;attributo di origine.
 
      ![Registrazione schermata che mostra come selezionare un attributo XDM nel passaggio di mappatura](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 
 
-Al termine della mappatura degli attributi del profilo, selezionare **[!UICONTROL Avanti]**.
+Al termine della mappatura degli attributi del profilo, selezionare **[!UICONTROL Next]**.
 
-Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare i dati del profilo ad Edge Network.
+Nella pagina **[!UICONTROL Review]** è disponibile un riepilogo della selezione. Seleziona **[!UICONTROL Cancel]** per interrompere il flusso, **[!UICONTROL Back]** per modificare le impostazioni o **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare i dati del profilo ad Edge Network.
 
 ![Riepilogo selezioni nel passaggio di revisione.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
@@ -137,11 +137,11 @@ Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezi
 
 +++Valutazione dei criteri di consenso
 
-Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Leggi informazioni sulla [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
+Se la tua organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL View applicable consent policies]** per vedere quali criteri di consenso sono applicati e quanti profili sono inclusi nell&#39;attivazione come risultato di tali criteri. Leggi informazioni sulla [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
 **Controlli dei criteri di utilizzo dati**
 
-Nel passaggio **[!UICONTROL Rivedi]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
+Nel passaggio **[!UICONTROL Review]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
 
 ![Esempio di violazione dei criteri per i dati.](../assets/common/data-policy-violation.png)
 
@@ -149,12 +149,12 @@ Nel passaggio **[!UICONTROL Rivedi]**, Experience Platform controlla anche event
 
 +++Filtrare i tipi di pubblico
 
-Nel passaggio **[!UICONTROL Rivedi]** puoi utilizzare i filtri disponibili nella pagina per visualizzare solo i tipi di pubblico la cui pianificazione o mappatura è stata aggiornata come parte di questo flusso di lavoro. Puoi anche scegliere quali colonne della tabella visualizzare.
+Nel passaggio **[!UICONTROL Review]** è possibile utilizzare i filtri disponibili nella pagina per visualizzare solo i tipi di pubblico la cui pianificazione o mappatura è stata aggiornata come parte di questo flusso di lavoro. Puoi anche scegliere quali colonne della tabella visualizzare.
 
 ![Registrazione dello schermo che mostra i filtri del pubblico disponibili nel passaggio di revisione.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
 
-Se si è soddisfatti della selezione e non sono state rilevate violazioni dei criteri, selezionare **[!UICONTROL Fine]** per confermare la selezione.
+Se si è soddisfatti della selezione e non sono state rilevate violazioni dei criteri, selezionare **[!UICONTROL Finish]** per confermare la selezione.
 
 +++
 
@@ -167,7 +167,7 @@ Il passaggio successivo consiste nel configurare la soluzione di personalizzazio
 >[!IMPORTANT]
 >
 >Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario recuperare gli attributi del profilo tramite l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Inoltre, per autenticare le chiamate API, è necessario recuperare gli attributi del profilo tramite l&#39;endpoint [raccolta dati interattiva](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) dell&#39;API Edge Network.
-><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al pubblico e gli attributi di profilo non saranno disponibili.
+>><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al pubblico e gli attributi di profilo non saranno disponibili.
 
 Lo stream di dati configurato nel [passaggio 1](#create-datastream) è ora pronto per accettare i dati dell&#39;evento in arrivo e rispondere con le informazioni del profilo Edge.
 

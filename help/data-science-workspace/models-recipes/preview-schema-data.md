@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;anteprima dati schema;Data Science Workspace;argomenti popolari
+keywords: Experience Platform;anteprima dati schema;Data Science Workspace;argomenti più comuni
 solution: Experience Platform
 title: Anteprima dello schema e del set di dati di vendita al dettaglio
 type: Tutorial
 description: Il seguente documento illustra l’anteprima di schemi e set di dati su Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '255'
 ht-degree: 3%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 3%
 
 Al completamento dello script di avvio dall&#39;esercitazione [Retail Sales Schema and dataset](./create-retails-sales-dataset.md). Gli schemi e i set di dati di output possono essere visualizzati su [!DNL Experience Platform]. Per visualizzare gli schemi e i set di dati, effettua le seguenti operazioni:
 
-Selezionare la scheda **[!UICONTROL Schemi]** nella barra di navigazione a sinistra e individuare lo schema di input creato dallo script di bootstrap. Il nome dello schema corrisponderà a quanto definito in `config.yaml` dal passaggio precedente. Per visualizzare i dettagli dello schema e la relativa composizione, fai clic su di essa.
+Selezionare la scheda **[!UICONTROL Schemas]** nella barra di navigazione a sinistra e trovare lo schema di input creato dallo script di bootstrap. Il nome dello schema corrisponderà a quanto definito in `config.yaml` dal passaggio precedente. Per visualizzare i dettagli dello schema e la relativa composizione, fai clic su di essa.
 
 ![](../images/models-recipes/access-data/schema.PNG)
 
-Selezionare la scheda **[!UICONTROL Set di dati]** nella barra di navigazione a sinistra e aprire il set di dati di input creato selezionando il nome del set di dati. Il nome del set di dati corrisponde a quanto definito in `config.yaml` dal passaggio precedente.
+Selezionare la scheda **[!UICONTROL Datasets]** nella barra di navigazione a sinistra e aprire il set di dati di input creato selezionando il nome del set di dati. Il nome del set di dati corrisponde a quanto definito in `config.yaml` dal passaggio precedente.
 
 ![](../images/models-recipes/access-data/dataset.PNG)
 
-Seleziona **[!UICONTROL Anteprima set di dati]** in alto a destra per visualizzare in anteprima un sottoinsieme del set di dati.
+Seleziona **[!UICONTROL Preview Dataset]** in alto a destra per visualizzare in anteprima un sottoinsieme del set di dati.
 
 ![](../images/models-recipes/access-data/preview.PNG)
 
@@ -39,6 +39,7 @@ Seleziona **[!UICONTROL Anteprima set di dati]** in alto a destra per visualizza
 Sono stati acquisiti correttamente i dati di esempio di Retail Sales in [!DNL Experience Platform] utilizzando lo script di bootstrap fornito.
 
 Per continuare a lavorare con i dati acquisiti:
+
 - [Analizza i tuoi dati utilizzando Jupyter Notebook](../jupyterlab/analyze-your-data.md)
    - Utilizza Jupyter Notebooks in [!DNL Data Science Workspace] per accedere, esplorare, visualizzare e comprendere i tuoi dati.
 - [Creare pacchetti di file di origine in una ricetta](./package-source-files-recipe.md)

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;servizio qu
 title: Elencare i visitatori in base al loro numero di visualizzazioni di pagina
 description: Scopri come scrivere query che utilizzano gli eventi esperienza per recuperare un elenco di visitatori organizzati in base al numero di visualizzazioni di pagina.
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -16,7 +16,7 @@ Questo documento fornisce un esempio del codice SQL necessario per recuperare un
 
 Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando Query Service con [!DNL Experience Events], puoi tenere traccia in modo efficace delle tendenze comportamentali tra i tuoi utenti. Il documento seguente fornisce esempi di query che coinvolgono [!DNL Experience Events].
 
-## Finalità
+## Obiettivo
 
 L’esempio seguente crea un rapporto che elenca i 10 ID degli utenti che hanno visualizzato più pagine.
 
@@ -34,7 +34,7 @@ I risultati della query vengono visualizzati nella tabella seguente.
 
 ```console
                id                  | pageViews
------------------------------------+-----------
+|-----------------------------------+-----------
  457C3510571E5930-69AA721C4CBF9339 |     706.0
  776F85658792C017-6491FE6570382A01 |     700.0
  6BEC9C6AB52E779F-28F5B023113F2C85 |     654.0

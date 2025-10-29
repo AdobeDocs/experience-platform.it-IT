@@ -2,7 +2,7 @@
 description: Scopri come utilizzare l’API di test di destinazione per verificare se la destinazione di streaming è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
 title: Test della destinazione di streaming con profili di esempio
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 In questa pagina sono elencate e descritte tutte le operazioni API che è possibile eseguire utilizzando l&#39;endpoint API `/authoring/testing/destinationInstance/`, per verificare se la destinazione è configurata correttamente e per verificare l&#39;integrità dei flussi di dati alla destinazione configurata. Per una descrizione delle funzionalità supportate da questo endpoint, leggere [Verifica la configurazione di destinazione](streaming-destination-testing-overview.md).
 
-Effettuare richieste all’endpoint di test con o senza l’aggiunta di profili alla chiamata. Se non invii profili alla richiesta, Adobe li genera internamente e li aggiunge alla richiesta.
+Effettuare richieste all’endpoint di test con o senza l’aggiunta di profili alla chiamata. Se non invii profili nella richiesta, Adobe li genererà internamente e li aggiungerà alla richiesta.
 
 È possibile utilizzare l&#39;[API di generazione profilo di esempio](sample-profile-generation-api.md) per creare profili da utilizzare nelle richieste all&#39;API di test di destinazione.
 
@@ -26,9 +26,9 @@ Effettuare richieste all’endpoint di test con o senza l’aggiunta di profili 
 
 >[!IMPORTANT]
 >
->* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=it) per ulteriori informazioni.
-> * Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=it).
->![Immagine dell&#39;interfaccia utente per ottenere l&#39;ID istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
+>* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) per ulteriori informazioni.
+>* Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>  >![Immagine dell&#39;interfaccia utente per ottenere l&#39;ID istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Guida introduttiva alle operazioni API di test della destinazione {#get-started}
 
@@ -157,8 +157,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme all
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `aggregationKey` | Include informazioni sui criteri di aggregazione configurati per la destinazione. Per ulteriori informazioni, leggere la documentazione relativa ai [Criteri di aggregazione](../../functionality/destination-configuration/aggregation-policy.md). |
-| `traceId` | Identificatore univoco dell&#39;operazione. Quando incontri degli errori, puoi condividere questo ID con il team di Adobi a scopo di risoluzione dei problemi. |
-| `results.httpCalls.request` | Include la richiesta inviata da Adobe alla destinazione. |
+| `traceId` | Identificatore univoco dell&#39;operazione. Quando incontri degli errori, puoi condividere questo ID con il team di Adobe a scopo di risoluzione dei problemi. |
+| `results.httpCalls.request` | Include la richiesta inviata da Adobe alla tua destinazione. |
 | `results.httpCalls.response` | Include la risposta ricevuta da Adobe dalla destinazione. |
 | `inputProfiles` | Include i profili esportati nella chiamata alla destinazione. I profili corrispondono allo schema di origine. |
 
@@ -326,4 +326,4 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, sai come verificare la destinazione. È ora possibile utilizzare l&#39;Adobe [processo di documentazione self-service](../../docs-framework/documentation-instructions.md) per creare una pagina di documentazione per la destinazione.
+Dopo aver letto questo documento, sai come verificare la destinazione. È ora possibile utilizzare il [processo di documentazione self-service](../../docs-framework/documentation-instructions.md) di Adobe per creare una pagina di documentazione per la destinazione.

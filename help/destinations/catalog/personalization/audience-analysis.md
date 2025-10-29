@@ -5,16 +5,16 @@ badgeLimitedAvailability: label="Disponibilità limitata" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: 4bd94c292a13a80405a3d726295ebd6eaf86aaaa
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '758'
 ht-degree: 3%
 
 ---
 
 # Destinazione di Audience Analysis
 
-La destinazione di [!UICONTROL Audience Analysis] ti consente di arricchire i dati del pubblico di Adobe Experience Platform in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it). Puoi selezionare i tipi di pubblico da includere nei dati arricchiti risultanti. Le qualifiche del pubblico sono quindi disponibili come dimensioni nel reporting di [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=it).
+La destinazione [!UICONTROL Audience Analysis] ti consente di arricchire i dati del pubblico di Adobe Experience Platform in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it). Puoi selezionare i tipi di pubblico da includere nei dati arricchiti risultanti. Le qualifiche del pubblico sono quindi disponibili come dimensioni nel reporting di [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
@@ -37,8 +37,8 @@ Audience Analysis supporta l’attivazione delle identità descritte nella tabel
 | GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
 | ECID | Experience Cloud ID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](/help/identity-service/features/ecid.md). |
-| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Applica trasformazione]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
 
 {style="table-layout:auto"}
@@ -59,8 +59,8 @@ Quando si utilizza questa destinazione sono supportati i seguenti tipi di pubbli
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Audience Analysis. |
+|---------|----------|---------|
+| Tipo di esportazione | **[!UICONTROL Audience export]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Audience Analysis. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -69,7 +69,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 > 
->Per creare la destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestione destinazioni]** [Controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per creare la destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per creare questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
 
@@ -77,36 +77,36 @@ Per creare questa destinazione, seguire i passaggi descritti nell&#39;esercitazi
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: nome della destinazione.
-* **[!UICONTROL Descrizione]**: descrizione della destinazione.
-* **[!UICONTROL ID dello stream di dati]**: l&#39;ID dello stream di dati che desideri arricchire con i tipi di pubblico idonei. È possibile ottenere questo ID nel [Gestore flussi di dati](/help/datastreams/overview.md).
-* **[!UICONTROL Alias integrazione]**: alias integrazione.
+* **[!UICONTROL Name]**: nome della destinazione.
+* **[!UICONTROL Description]**: descrizione della destinazione.
+* **[!UICONTROL Datastream ID]**: l&#39;ID dello stream di dati che desideri arricchire con i tipi di pubblico idonei. È possibile ottenere questo ID nel [Gestore flussi di dati](/help/datastreams/overview.md).
+* **[!UICONTROL Integration alias]**: alias di integrazione.
 
 ### Avvisi
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-* **[!UICONTROL Frequenza di attivazione ignorata superata]**: ricevi una notifica quando la frequenza di attivazione ignorata supera una soglia.
+* **[!UICONTROL Activation Skipped Rate Exceed]**: ricevere una notifica quando la frequenza di attivazione ignorata supera una soglia.
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ### Politiche di governance e azioni di esecuzione
 
 Questa sezione facoltativa ti consente di definire i criteri di governance dei dati e di garantire che i dati utilizzati siano conformi quando i tipi di pubblico vengono inviati e sono attivi.
 
-Dopo aver selezionato le azioni di marketing desiderate per la destinazione, selezionare **[!UICONTROL Crea]**.
+Dopo aver selezionato le azioni di marketing desiderate per la destinazione, selezionare **[!UICONTROL Create]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Una volta creata la destinazione, puoi attivare il pubblico desiderato per la destinazione.
 
-1. Se non sei già nella destinazione creata, puoi individuarla nuovamente passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]**.
-1. Seleziona **[!UICONTROL Attiva pubblico]**.
-1. Seleziona i tipi di pubblico desiderati per i quali desideri analizzare le qualifiche. Al termine, selezionare **[!UICONTROL Avanti]**.
-1. Rivedi la configurazione di destinazione e le impostazioni del pubblico, quindi seleziona **[!UICONTROL Fine]**.
+1. Se non sei già nella destinazione creata, puoi individuarla nuovamente passando a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
+1. Seleziona **[!UICONTROL Activate audiences]**.
+1. Seleziona i tipi di pubblico desiderati per i quali desideri analizzare le qualifiche. Al termine, selezionare **[!UICONTROL Next]**.
+1. Rivedi la configurazione di destinazione e le impostazioni del pubblico, quindi seleziona **[!UICONTROL Finish]**.
 
-Puoi aggiungere altri tipi di pubblico da analizzare in futuro tornando alla pagina **[!UICONTROL Attiva tipi di pubblico]**. Una volta attivati, i tipi di pubblico non possono essere rimossi.
+È possibile aggiungere altri tipi di pubblico da analizzare in futuro tornando alla pagina **[!UICONTROL Activate audiences]**. Una volta attivati, i tipi di pubblico non possono essere rimossi.

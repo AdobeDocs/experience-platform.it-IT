@@ -4,10 +4,10 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 8b2b40be94bb35f0c6117bfc1d51f8ce282f2b29
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '5220'
-ht-degree: 3%
+source-wordcount: '5208'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[&#128279;](/help/release-notes/latest/latest.md#destinations) di settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
+>**Elemento azione**: la versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -77,13 +77,13 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Autorizzazioni richieste {#permissions}
 
-Per esportare i set di dati, è necessario **[!UICONTROL Visualizzare le destinazioni]**, **[!UICONTROL Visualizzare i set di dati]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [accedere alle autorizzazioni di controllo](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per esportare i set di dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Attiva]** o **[!UICONTROL Esporta set di dati]**, si dispone delle autorizzazioni appropriate.
+Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Activate]** o **[!UICONTROL Export datasets]**, si dispone delle autorizzazioni appropriate.
 
 ### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli i valori per le intestazioni obbligatorie e facoltative {#gather-values-headers}
 
@@ -119,7 +119,7 @@ Prima di avviare il flusso di lavoro per esportare un set di dati, identifica la
 
 
 | Destinazione | Specifica di connessione | Specifica di flusso |
----------|----------|---------|
+|---------|----------|---------|
 | [!DNL Amazon S3] | `4fce964d-3f37-408f-9778-e597338a21ee` | `269ba276-16fc-47db-92b0-c1049a3c131f` |
 | [!DNL Azure Blob Storage] | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `95bd8965-fc8a-4119-b9c3-944c2c2df6d2` |
 | [!DNL Azure Data Lake Gen 2(ADLS Gen2)] | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
@@ -1632,7 +1632,7 @@ Utilizzando la specifica di cui sopra, puoi creare una richiesta di connessione 
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina di documentazione della destinazione [!DNL Amazon S3].
->Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1665,7 +1665,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -1685,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina di documentazione della destinazione [!DNL Azure Blob Storage].
->Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1719,7 +1719,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -1739,7 +1739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1771,7 +1771,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -1791,7 +1791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina di documentazione della destinazione [!DNL Data Landing Zone].
->Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1823,7 +1823,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -1843,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione [!DNL Google Cloud Storage].
->Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1877,7 +1877,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, consulta la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione SFTP.
->Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1929,7 +1929,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-+++Connessione Target - Risposta
++++Connessione di destinazione - Risposta
 
 ```json
 {
@@ -2401,7 +2401,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Risposta**
 
-+++Ottieni esecuzioni del flusso di dati - Risposta
++++Ottenere esecuzioni del flusso di dati - Risposta
 
 ```json
 {
