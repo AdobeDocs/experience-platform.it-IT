@@ -63,8 +63,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Per impostazione predefinita, lo strumento Uploader richiede le credenziali di Adobe I/O per un flusso OAuth da server a server. Le credenziali legacy di `jwt-auth`
-> > può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
-> > per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> &#x200B;> può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
+> &#x200B;> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
 Lo strumento di caricamento richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l&#39;organizzazione adatta dal menu a discesa, individua l&#39;integrazione corretta e seleziona **[!UICONTROL View]**.
 

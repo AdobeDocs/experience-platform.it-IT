@@ -189,7 +189,7 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 >[!IMPORTANT]
 >
 >La creazione del gruppo di campi tramite SQL non riuscirà se il flag `label` non viene fornito nell&#39;istruzione o se il gruppo di campi esiste già.
->>Verificare che la query includa una clausola `IF NOT EXISTS` per evitare che la query non riesca perché il gruppo di campi esiste già.
+>&#x200B;>Verificare che la query includa una clausola `IF NOT EXISTS` per evitare che la query non riesca perché il gruppo di campi esiste già.
 
 Un esempio reale potrebbe essere simile a quello riportato di seguito.
 

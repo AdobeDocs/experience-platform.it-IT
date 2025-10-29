@@ -77,7 +77,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 >[!NOTE]
 >
 >L&#39;inserimento nell&#39;elenco Consentiti è obbligatorio prima di configurare la prima destinazione [!DNL Google Ads] in Experience Platform. Prima di creare una destinazione, assicurati che il processo di inserimento nell&#39;elenco Consentiti descritto di seguito sia stato completato da [!DNL Google].
->>Eccezione a questa regola per [clienti Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html). Se hai già creato una connessione a questa destinazione di Google in Audience Manager, non è necessario eseguire nuovamente il processo di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
+>&#x200B;>Eccezione a questa regola per [clienti Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html). Se hai già creato una connessione a questa destinazione di Google in Audience Manager, non è necessario eseguire nuovamente il processo di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
 Prima di creare la destinazione [!DNL Google Ads] in Experience Platform, è necessario contattare [!DNL Google] per inserire Adobe nell&#39;elenco dei provider di dati consentiti e per aggiungere il proprio account al inserisco nell&#39;elenco Consentiti di. Contattare [!DNL Google] e fornire le informazioni seguenti:
 
@@ -131,6 +131,6 @@ Durante la configurazione di questa destinazione, potrebbe venire visualizzato i
 
 Questo errore si verifica quando gli account cliente non sono conformi ai [prerequisiti](#prerequisites) o quando i clienti tentano di configurare la destinazione senza un account [!DNL Google Ads] esistente.
 
-[!DNL Google] ha dichiarato obsolete le nuove integrazioni di cookie [!DNL Google Ads] con fornitori di terze parti. Inserire nell&#39;elenco Consentiti Per eseguire i passaggi di [](#allow-listing), è necessario disporre di un&#39;integrazione esistente con [!DNL Google Ads].
+[!DNL Google] ha dichiarato obsolete le nuove integrazioni di cookie [!DNL Google Ads] con fornitori di terze parti. Inserire nell&#39;elenco Consentiti Per eseguire i passaggi di [&#128279;](#allow-listing), è necessario disporre di un&#39;integrazione esistente con [!DNL Google Ads].
 
 L&#39;approccio consigliato per l&#39;utilizzo di [!DNL Google Ads] consiste nella configurazione di un&#39;integrazione di [[!DNL Google Customer Match]](google-customer-match.md).

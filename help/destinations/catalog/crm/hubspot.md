@@ -51,8 +51,8 @@ Se non hai un&#39;app privata, segui la documentazione per [creare un&#39;app pr
 >[!IMPORTANT]
 >
 > All&#39;app privata devono essere assegnati gli ambiti seguenti:
-> > `crm.objects.contacts.write`, `crm.objects.contacts.read`
-> > `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> &#x200B;> `crm.objects.contacts.write`, `crm.objects.contacts.read`
+> &#x200B;> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |

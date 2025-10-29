@@ -160,7 +160,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio all’interno del segmento.
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra il segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Accedi al sito Web [!DNL Zendesk], quindi passa alla pagina **[!UICONTROL Contacts]** per verificare se i profili del pubblico sono stati aggiunti. Questo elenco può essere configurato in modo da visualizzare le colonne per i campi aggiuntivi creati con gli stati audience**[!UICONTROL Mapping ID]** e pubblico.
+1. Accedi al sito Web [!DNL Zendesk], quindi passa alla pagina **[!UICONTROL Contacts]** per verificare se i profili del pubblico sono stati aggiunti. Questo elenco può essere configurato in modo da visualizzare le colonne per i campi aggiuntivi creati con gli stati audience&#x200B;**[!UICONTROL Mapping ID]** e pubblico.
    ![Schermata dell&#39;interfaccia utente di Zendesk che mostra la pagina Contatti con i campi aggiuntivi creati con il nome del pubblico.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. In alternativa, è possibile eseguire il drill-down in una singola pagina **[!UICONTROL Person]** e controllare la sezione **[!UICONTROL Additional fields]** che mostra il nome e lo stato del pubblico.

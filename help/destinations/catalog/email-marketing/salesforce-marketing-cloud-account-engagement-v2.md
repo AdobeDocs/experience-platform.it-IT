@@ -24,8 +24,8 @@ Questa destinazione utilizza [[!DNL Salesforce Import API v5]](https://developer
 >[!IMPORTANT]
 > 
 > Versione V2 della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Questa versione sostituisce la destinazione precedente ed è attualmente in versione Alpha.
-> > <br>
-> > Se utilizzi la versione precedente della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), devi eseguire la migrazione a questa versione V2 prima del **gennaio 2026**. Dopo gennaio 2026, Adobe disattiverà la versione precedente e non sarà più disponibile.
+> &#x200B;> <br>
+> &#x200B;> Se utilizzi la versione precedente della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), devi eseguire la migrazione a questa versione V2 prima del **gennaio 2026**. Dopo gennaio 2026, Adobe disattiverà la versione precedente e non sarà più disponibile.
 
 
 ## Casi d’uso {#use-cases}

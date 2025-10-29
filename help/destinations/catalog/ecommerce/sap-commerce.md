@@ -289,7 +289,7 @@ A tale scopo, selezionare ogni segmento, quindi immettere il nome del riferiment
 >[!IMPORTANT]
 >
 > Non utilizzare l’etichetta di riferimento personalizzata come valore.
-> >![Immagine che indica che non si deve utilizzare il valore dell&#39;etichetta di riferimento personalizzata per la mappatura.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
+> &#x200B;>![Immagine che indica che non si deve utilizzare il valore dell&#39;etichetta di riferimento personalizzata per la mappatura.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
 
 Se ad esempio il pubblico Experience Platform selezionato è `sap_audience1` e si desidera che il relativo stato venga aggiornato nel riferimento personalizzato [!DNL SAP Subscription Billing] `SAP_1`, specificare questo valore nel campo [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]**.
 

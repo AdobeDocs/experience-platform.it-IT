@@ -147,7 +147,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Prima di eliminare l’account di destinazione, devi eliminare tutti i flussi di dati esistenti dall’account di destinazione.
->>Per eliminare i flussi di dati esistenti, consulta le pagine seguenti:
+>&#x200B;>Per eliminare i flussi di dati esistenti, consulta le pagine seguenti:
 >
 >* [Utilizza l&#39;interfaccia utente di Experience Platform](../ui/delete-destinations.md) per eliminare i flussi di dati esistenti;
 >* [Utilizzare l&#39;API del servizio Flusso](delete-destination-dataflow.md) per eliminare i flussi di dati esistenti.

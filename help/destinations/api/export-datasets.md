@@ -19,7 +19,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
+>**Elemento azione**: la versione di Experience Platform[&#x200B; di &#x200B;](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -1632,7 +1632,7 @@ Utilizzando la specifica di cui sopra, puoi creare una richiesta di connessione 
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina di documentazione della destinazione [!DNL Amazon S3].
->>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1685,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina di documentazione della destinazione [!DNL Azure Blob Storage].
->>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1739,7 +1739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1791,7 +1791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina di documentazione della destinazione [!DNL Data Landing Zone].
->>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1843,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione [!DNL Google Cloud Storage].
->>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, consulta la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione SFTP.
->>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
