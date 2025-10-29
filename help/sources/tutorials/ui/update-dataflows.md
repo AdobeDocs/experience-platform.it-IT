@@ -2,10 +2,10 @@
 description: Scopri come aggiornare un flusso di dati di origini esistente nell’interfaccia utente di Experience Platform.
 title: Aggiornare un flusso di dati di connessione Source nell’interfaccia utente
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 8%
+source-wordcount: '885'
+ht-degree: 7%
 
 ---
 
@@ -27,7 +27,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 >title="Scadenza set di dati"
 >abstract="Questa colonna indica il numero di giorni rimanenti al set di dati di destinazione prima della scadenza automatica.<br>Un flusso di dati avrà esito negativo se il set di dati di destinazione è scaduto. Per evitare che un flusso di dati sia di esito negativo, assicurati che la scadenza del set di dati di destinazione sia impostata sulla data corretta. Consulta la documentazione per scoprire come aggiornare le date di scadenza."
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Flussi dati]** dall&#39;intestazione superiore.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Sources]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Dataflows]** dall&#39;intestazione superiore.
 
 ![Catalogo delle origini con la scheda intestazione dei flussi di dati selezionata.](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -35,13 +35,13 @@ Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Orig
 >
 >Puoi ordinare e filtrare i flussi di dati utilizzando le funzionalità di filtro. Per ulteriori informazioni, leggere la guida su [filtraggio degli oggetti di origine nell&#39;interfaccia utente](./filter.md).
 
-Nella pagina [!UICONTROL Flussi dati] viene visualizzato un elenco di tutti i flussi di dati esistenti nell&#39;organizzazione. Individuare il flusso di dati che si desidera aggiornare, quindi selezionare i puntini di sospensione (`...`) accanto ad esso. Viene visualizzato un menu a discesa con un elenco di opzioni tra cui puoi scegliere per effettuare configurazioni aggiuntive al flusso di dati esistente.
+Nella pagina [!UICONTROL Dataflows] viene visualizzato un elenco di tutti i flussi di dati esistenti nell&#39;organizzazione. Individuare il flusso di dati che si desidera aggiornare, quindi selezionare i puntini di sospensione (`...`) accanto ad esso. Viene visualizzato un menu a discesa con un elenco di opzioni tra cui puoi scegliere per effettuare configurazioni aggiuntive al flusso di dati esistente.
 
-Per aggiornare il flusso di dati, seleziona **[!UICONTROL Aggiorna flusso di dati]**.
+Per aggiornare il flusso di dati, selezionare **[!UICONTROL Update dataflow]**.
 
 ![Menu a discesa in cui sono elencate le opzioni per l&#39;aggiornamento dei flussi di dati.](../../images/tutorials/update-dataflows/dropdown_update.png)
 
-Si viene indirizzati al flusso di lavoro di origine in cui è possibile procedere all&#39;aggiornamento di aspetti del flusso di dati, inclusi i relativi dettagli nel passaggio [!UICONTROL Fornisci dettagli flusso di dati].
+Si viene indirizzati al flusso di lavoro di origine in cui è possibile procedere all&#39;aggiornamento di alcuni aspetti del flusso di dati, inclusi i relativi dettagli nel passaggio [!UICONTROL Provide dataflow details].
 
 ### Aggiorna mappatura {#update-mapping}
 
@@ -61,21 +61,30 @@ Dopo aver aggiornato le mappature del flusso di dati, puoi procedere con l’agg
 
 Puoi anche aggiornare la pianificazione dell’acquisizione del flusso di dati utilizzando l’opzione di aggiornamento in linea fornita nella pagina dei flussi di dati.
 
-Dalla pagina dei flussi di dati, seleziona i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi seleziona **[!UICONTROL Modifica pianificazione]** dal menu a discesa visualizzato.
+Dalla pagina dei flussi di dati, selezionare i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi selezionare **[!UICONTROL Edit schedule]** dal menu a discesa visualizzato.
 
 ![Passaggio di pianificazione del flusso di lavoro origini. Utilizzare questo passaggio per aggiornare la pianificazione del flusso di dati.](../../images/tutorials/update-dataflows/dropdown_edit.png)
 
-La finestra di dialogo **[!UICONTROL Modifica pianificazione]** offre opzioni per aggiornare la frequenza di acquisizione e la frequenza di intervallo del flusso di dati. Dopo aver impostato i valori di frequenza e intervallo aggiornati, selezionare **[!UICONTROL Salva]**.
+La finestra di dialogo **[!UICONTROL Edit schedule]** fornisce opzioni per aggiornare la frequenza di acquisizione e la frequenza di intervallo del flusso di dati. Dopo aver impostato i valori di frequenza e intervallo aggiornati, selezionare **[!UICONTROL Save]**.
 
 ![Finestra popup che consente di modificare la pianificazione di acquisizione del flusso di dati.](../../images/tutorials/update-dataflows/edit_schedule.png)
 
+Leggi la sezione seguente per informazioni dettagliate sul funzionamento delle pianificazioni di acquisizione settimanali.
+
+#### Informazioni sulla pianificazione dell’acquisizione settimanale {#weekly}
+
+Quando scegli di impostare il flusso di dati in modo che venga eseguito secondo una pianificazione settimanale, il flusso di dati viene eseguito in base a uno dei seguenti scenari:
+
+* Se l’origine dati è stata creata ma non sono ancora stati acquisiti dati, il primo flusso di dati settimanale verrà eseguito 7 giorni dopo la data di creazione dell’origine. Questo intervallo di 7 giorni inizia sempre da quando è stata creata l’origine, indipendentemente da quando hai impostato la pianificazione. Dopo l’esecuzione iniziale, il flusso di dati continuerà a essere eseguito settimanalmente in base alla pianificazione configurata.
+* Se i dati dell’origine sono stati precedentemente acquisiti e li pianifichi di nuovo per l’acquisizione settimanale, il flusso di dati successivo verrà eseguito 7 giorni dopo l’acquisizione riuscita più recente.
+
 ### Disabilita flusso di dati
 
-Puoi disattivare il flusso di dati utilizzando lo stesso menu a discesa. Per disabilitare il flusso di dati, seleziona **[!UICONTROL Disabilita flusso di dati]**.
+Puoi disattivare il flusso di dati utilizzando lo stesso menu a discesa. Per disattivare il flusso di dati, selezionare **[!UICONTROL Disable dataflow]**.
 
 ![Menu a discesa con opzione per disabilitare il flusso di dati.](../../images/tutorials/update-dataflows/dropdown_disable.png)
 
-Selezionare [!UICONTROL Disattiva] dalla finestra popup visualizzata.
+Selezionare [!UICONTROL Disable] dalla finestra popup visualizzata.
 
 ![Finestra popup in cui confermare di voler disabilitare il flusso di dati.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 

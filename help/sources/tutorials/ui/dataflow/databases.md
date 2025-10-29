@@ -5,9 +5,9 @@ title: Creare un flusso di dati utilizzando un Database Source nell’interfacci
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Experience Platform. Questo tutorial illustra come creare un flusso di dati per un’origine di database utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 6de14e210b78b321ed7d2c4c30769c260694f474
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -120,13 +120,20 @@ Per ulteriori informazioni sulle configurazioni di pianificazione, consulta la t
 
 | Configurazione pianificazione | Descrizione |
 | --- | --- |
-| Frequenza | Configura la frequenza per indicare la frequenza con cui deve essere eseguito il flusso di dati. Puoi impostare la frequenza su: <ul><li>**Una volta**: imposta la frequenza su `once` per creare un&#39;acquisizione unica. Le configurazioni di intervallo e backfill non sono disponibili quando crei un flusso di dati di acquisizione una tantum. Per impostazione predefinita, la frequenza di pianificazione è impostata su una volta.</li><li>**Minuti**: imposta la frequenza su `minute` per pianificare il flusso di dati in modo da acquisire i dati al minuto.</li><li>**Ora**: imposta la frequenza su `hour` per pianificare il flusso di dati per acquisire i dati su base oraria.</li><li>**Giorno**: imposta la frequenza su `day` per pianificare il flusso di dati in modo da acquisire i dati su base giornaliera.</li><li>**Settimana**: imposta la frequenza su `week` per pianificare il flusso di dati in modo da acquisire i dati su base settimanale.</li></ul> |
+| Frequenza | Configura la frequenza per indicare la frequenza con cui deve essere eseguito il flusso di dati. Puoi impostare la frequenza su: <ul><li>**Una volta**: imposta la frequenza su `once` per creare un&#39;acquisizione unica. Le configurazioni di intervallo e backfill non sono disponibili quando crei un flusso di dati di acquisizione una tantum. Per impostazione predefinita, la frequenza di pianificazione è impostata su una volta.</li><li>**Minuti**: imposta la frequenza su `minute` per pianificare il flusso di dati in modo da acquisire i dati al minuto.</li><li>**Ora**: imposta la frequenza su `hour` per pianificare il flusso di dati per acquisire i dati su base oraria.</li><li>**Giorno**: imposta la frequenza su `day` per pianificare il flusso di dati in modo da acquisire i dati su base giornaliera.</li><li>**Settimana**: imposta la frequenza su `week` per pianificare il flusso di dati in modo da acquisire i dati su base settimanale. Per ulteriori informazioni, consulta la sezione su [informazioni sulla pianificazione dell’acquisizione settimanale] (#weekly).</li></ul> |
 | Intervallo | Dopo aver selezionato una frequenza, puoi configurare l’impostazione dell’intervallo per stabilire l’intervallo di tempo tra ogni acquisizione. Ad esempio, se imposti la frequenza su giorno e configuri l’intervallo su 15, il flusso di dati verrà eseguito ogni 15 giorni. Impossibile impostare l&#39;intervallo su zero. Il valore dell&#39;intervallo minimo accettato per ciascuna frequenza è il seguente:<ul><li>**Una volta**: n/d</li><li>**Minuto**: 15</li><li>**Ora**: 1</li><li>**Giorno**: 1</li><li>**Settimana**: 1</li></ul> |
 | Ora di inizio | La marca temporale per l’esecuzione prevista, presentata in fuso orario UTC. |
 | Retrocompilazione | La retrocompilazione determina quali dati vengono inizialmente acquisiti. Se la retrocompilazione è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se la retrocompilazione è disattivata, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non verranno acquisiti. |
 | Carica dati incrementali per | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Il campo selezionato per **[!UICONTROL Load incremental data by]** deve avere i valori data-ora nel fuso orario UTC per caricare correttamente i dati incrementali. Tutte le origini batch basate su tabelle selezionano i dati incrementali confrontando un valore di timestamp della colonna delta con il tempo UTC della finestra di esecuzione del flusso corrispondente e quindi copiando i dati dall&#39;origine, se vengono trovati nuovi dati all&#39;interno della finestra di tempo UTC. |
 
 ![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
+
+### Informazioni sulla pianificazione dell’acquisizione settimanale {#weekly}
+
+Quando scegli di impostare il flusso di dati in modo che venga eseguito secondo una pianificazione settimanale, il flusso di dati viene eseguito in base a uno dei seguenti scenari:
+
+* Se l’origine dati è stata creata ma non sono ancora stati acquisiti dati, il primo flusso di dati settimanale verrà eseguito 7 giorni dopo la data di creazione dell’origine. Questo intervallo di 7 giorni inizia sempre da quando è stata creata l’origine, indipendentemente da quando hai impostato la pianificazione. Dopo l’esecuzione iniziale, il flusso di dati continuerà a essere eseguito settimanalmente in base alla pianificazione configurata.
+* Se i dati dell’origine sono stati precedentemente acquisiti e li pianifichi di nuovo per l’acquisizione settimanale, il flusso di dati successivo verrà eseguito 7 giorni dopo l’acquisizione riuscita più recente.
 
 ## Verifica il flusso di dati
 
