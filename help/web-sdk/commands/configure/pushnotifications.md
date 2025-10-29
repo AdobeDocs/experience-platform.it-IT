@@ -1,9 +1,9 @@
 ---
 title: pushNotifications
 description: Configura le notifiche push per Web SDK per abilitare i messaggi push basati su browser.
-source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
+source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -58,15 +58,15 @@ Di seguito è riportato un esempio di installazione di service worker:
 Per abilitare e configurare le notifiche push, segui la procedura riportata di seguito:
 
 1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
-1. Passa a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Passa a **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Seleziona la proprietà tag desiderata.
-1. Passa a **[!UICONTROL Estensioni]**, quindi fai clic su **[!UICONTROL Configura]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
-1. Dalla sezione **[!UICONTROL Componenti di compilazione personalizzati]**, abilita **[!UICONTROL Notifiche push]**.
-1. Scorri verso il basso per individuare la sezione [!UICONTROL Notifiche push].
-1. Immetti la chiave pubblica VAPID nel campo **[!UICONTROL Chiave pubblica VAPID]**.
-1. Immetti l&#39;ID applicazione nel campo **[!UICONTROL ID applicazione]**.
-1. Immetti l&#39;ID del set di dati di tracciamento nel campo **[!UICONTROL ID set di dati di tracciamento]**.
-1. Fai clic su **[!UICONTROL Salva]**, quindi pubblica le modifiche.
+1. Passa a **[!UICONTROL Extensions]**, quindi fai clic su **[!UICONTROL Configure]** nella scheda [!UICONTROL Adobe Experience Platform Web SDK].
+1. Dalla sezione **[!UICONTROL Custom build components]**, abilita **[!UICONTROL Push notifications]**.
+1. Scorrere verso il basso per individuare la sezione [!UICONTROL Push Notifications].
+1. Immettere la chiave pubblica VAPID nel campo **[!UICONTROL VAPID Public Key]**.
+1. Immettere l&#39;ID applicazione nel campo **[!UICONTROL Application ID]**.
+1. Immetti l&#39;ID del set di dati di tracciamento nel campo **[!UICONTROL Tracking Dataset ID]**.
+1. Fai clic su **[!UICONTROL Save]**, quindi pubblica le modifiche.
 
 >[!NOTE]
 >
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver configurato le notifiche push, utilizzare il comando [`sendPushSubscription`](../sendPushSubscription.md) per registrare le sottoscrizioni push con Adobe Experience Platform.
+Dopo aver configurato le notifiche push, utilizzare il comando [`sendPushSubscription`](../sendpushsubscription.md) per registrare le sottoscrizioni push con Adobe Experience Platform.

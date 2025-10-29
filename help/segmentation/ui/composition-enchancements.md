@@ -3,7 +3,7 @@ title: Miglioramenti alla composizione del pubblico
 description: Scopri i miglioramenti apportati alla composizione del pubblico con un arricchimento del pubblico e un’attivazione più rapida.
 hide: true
 hidefromtoc: true
-source-git-commit: 9c790f0b47161301fa8c02c4afb7edfb925e1499
+source-git-commit: 065990790307124e0992731139abe9641a742a1b
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -48,12 +48,16 @@ Tieni presenti i dettagli e i guardrail seguenti quando utilizzi l’arricchimen
 - Il primo blocco utilizzato nella composizione **deve** essere un pubblico basato su regole.
 - **impossibile** utilizzare altre operazioni all&#39;interno della composizione.
 - Dopo la pubblicazione, **non puoi** modificare la composizione sul pubblico basato su regole.
+
    - È *possibile* copiare la composizione in una bozza e modificare la bozza se si desidera apportare modifiche alla composizione di base o al pubblico basato su regole.
+
 - È possibile utilizzare solo **un** array di oggetti per generare il payload di arricchimento all&#39;interno di un singolo pubblico
+
    - L&#39;array di payload può essere nidificato all&#39;interno di un oggetto (fino a sette livelli nello schema del profilo), ma **non può essere** contenuto in un altro array.
    - L&#39;array di payload **deve** avere un massimo di 50 righe.
    - Tutti gli output di colonne all&#39;interno del payload **devono** essere di tipo primitivo.
    - Viene eseguito l&#39;output solo delle prime **venti** colonne dell&#39;array.
+
 - Al momento sono disponibili solo **dieci** composizioni di pubblico
 
 ## Attivazione più rapida {#faster-activation}
