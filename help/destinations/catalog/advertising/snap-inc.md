@@ -140,7 +140,7 @@ Dopo aver attivato i tipi di pubblico nella destinazione *Snap Inc*, potrai visu
 
 ![Tipi di pubblico](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=it#evaluate-segments).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
