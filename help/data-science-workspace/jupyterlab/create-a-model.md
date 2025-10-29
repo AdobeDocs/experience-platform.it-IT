@@ -69,7 +69,7 @@ Il resto di questo tutorial riguarda i seguenti file predefiniti nel notebook de
 
 Il seguente tutorial video spiega il notebook con modello di propensione Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452500?captions=ita)
 
 ### File dei requisiti {#requirements-file}
 
