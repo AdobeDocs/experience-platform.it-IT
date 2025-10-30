@@ -434,7 +434,7 @@ Experience Platform offre alle aziende un solido framework per centralizzare, ge
 
    - È necessario valutare attentamente se distribuire **più ID organizzazione o più sandbox** in base alla residenza dei dati, alla conformità e alle esigenze operative.
 
-   - **Gli ID organizzazione** offrono isolamento completo**, mentre le impostazioni con più sandbox forniscono flessibilità operativa all&#39;interno di un framework di governance condiviso**.
+   - **Gli ID organizzazione** offrono isolamento completo&#x200B;**, mentre le impostazioni con più sandbox forniscono flessibilità operativa all&#39;interno di un framework di governance condiviso**.
 
 ## Considerazioni finali
 

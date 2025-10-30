@@ -27,7 +27,7 @@ Per configurare l&#39;API degli eventi Web [!DNL TikTok] in modo che utilizzi l&
 3. Seleziona **[!UICONTROL Set Up Web Events]**.
 4. Seleziona **[!UICONTROL Partner Setup]** come metodo di connessione.
 
-Per ulteriori informazioni su come impostare il pixel [, consulta la ](https://ads.tiktok.com/help/article/get-started-pixel)Guida introduttiva ai pixel[!DNL TikTok].
+Per ulteriori informazioni su come impostare il pixel [, consulta la &#x200B;](https://ads.tiktok.com/help/article/get-started-pixel)Guida introduttiva ai pixel[!DNL TikTok].
 
 Puoi generare un token di accesso una volta che il pixel è stato creato correttamente. A tale scopo, passare al Pixel e selezionare la scheda **[!UICONTROL Settings]**. In API eventi, selezionare **[!UICONTROL Generate Access Token]**.
 

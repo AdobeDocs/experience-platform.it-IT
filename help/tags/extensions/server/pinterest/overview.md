@@ -33,7 +33,7 @@ Per ulteriori informazioni sui casi d&#39;uso specifici di [!DNL Pinterest], con
 
 Per utilizzare questa estensione, è necessario disporre di un [!DNL Pinterest] [account aziendale](https://help.pinterest.com/en/business/article/get-a-business-account) valido. Vai alla [[!DNL Pinterest] pagina di registrazione](https://www.pinterest.com/business/create/) per registrarti e creare un account, se non ne hai già uno.
 
-Sarà inoltre necessario un account sviluppatore [!DNL Pinterest], che dovrà essere associato all&#39;account aziendale [!DNL Pinterest]. Per associare l&#39;account sviluppatore all&#39;account aziendale, fare riferimento all&#39;[[!DNL Pinterest ] account sviluppatore](https://developers.pinterest.com/account-setup/).
+Sarà inoltre necessario un account sviluppatore [!DNL Pinterest], che dovrà essere associato all&#39;account aziendale [!DNL Pinterest]. Per associare l&#39;account sviluppatore all&#39;account aziendale, fare riferimento all&#39;[[!DNL Pinterest &#x200B;] account sviluppatore](https://developers.pinterest.com/account-setup/).
 
 ### Raccogliere i dettagli di configurazione richiesti {#configuration-details}
 
@@ -82,8 +82,8 @@ Per creare la nuova regola sono necessari i seguenti dati evento:
 
 | Nome campo | Descrizione | Esempio |
 | --- | --- | --- | 
-| [!UICONTROL Event Name] | Tipo dell’evento utente. Questo può essere qualsiasi tipo di evento, tuttavia, per sfruttare [!DNL Pinterest Analytics] si consiglia di utilizzare [[!DNL Pinterest] codici evento](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;ast; estrazione <br> &amp;ast; add_to_cart <br> &amp;ast; visita_pagina <br> &amp;ast; iscrizione <br> &amp;ast; [Evento definito dall&#39;utente] |
-| [!UICONTROL Action Source] | L’origine che indica dove si è verificato l’evento di conversione. | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; Web <br> &amp;ast; offline |
+| [!UICONTROL Event Name] | Tipo dell’evento utente. Questo può essere qualsiasi tipo di evento, tuttavia, per sfruttare [!DNL Pinterest Analytics] si consiglia di utilizzare [[!DNL Pinterest] codici evento](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; estrazione <br> &ast; add_to_cart <br> &ast; visita_pagina <br> &ast; iscrizione <br> &ast; [Evento definito dall&#39;utente] |
+| [!UICONTROL Action Source] | L’origine che indica dove si è verificato l’evento di conversione. | &ast; app_android <br> &ast; app_ios <br> &ast; Web <br> &ast; offline |
 | [!UICONTROL Event Time] | Si riferisce all’ora dell’evento. Il formato di ora predefinito utilizzato è UNIX, nel formato `<seconds>.<miliseconds>` a seconda del fuso orario locale. Per ulteriori informazioni, consultare [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 indica 1433188255 secondi e 500 millisecondi dopo l&#39;epoca, oppure lunedì 1 giugno 2015 alle 19:00 GMT.:50: |
 | [!UICONTROL Event ID] | Una stringa di ID univoco che identifica questo evento e può essere utilizzata per la deduplicazione tra eventi acquisiti tramite l’API di conversione e il tracciamento di Pinterest. In caso contrario, è probabile che i dati dell’evento vengano conteggiati due volte e che venga segnalata l’inflazione metrica. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Event Properties] | Oggetto JSON contenente le proprietà personalizzate dell’evento. Scegli se fornire JSON non elaborato o utilizzare un set semplificato di input chiave-valore. | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |

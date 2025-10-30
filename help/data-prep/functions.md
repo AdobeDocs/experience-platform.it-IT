@@ -387,11 +387,11 @@ La tabella seguente delinea un elenco di caratteri riservati e dei corrispondent
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| [ | %5B |
+| &lbrack; | %5B |
 | | | %5C |
-| ] | %5D |
+| &rbrack; | %5D |
 | ^ | %5E |
-| ` | %60 |
+| &grave; | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

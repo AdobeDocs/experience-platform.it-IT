@@ -57,7 +57,7 @@ La funzione di convalida deve restituire un oggetto contenente quanto segue:
 | :--- | :--- | :--- |
 | `message` | Stringa | Il messaggio di convalida da visualizzare nei risultati di riepilogo. |
 | `events` | Array | Array di eventi UUID da segnalare come corrispondente o non corrispondente. |
-| `links` | Array | Array di `ValidationResultLink` oggetti per fare riferimento alla documentazione e ad altre risorse `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
+| `links` | Array | Array di `ValidationResultLink` oggetti per fare riferimento alla documentazione e ad altre risorse `{( type: 'doc'`&vert;`'product', url: String )}` |
 | `result` | Stringa | Questo è il risultato della convalida e deve essere una delle stringhe enumerate: “corrispondente”, “non corrispondente”, “sconosciuto” |
 
 ## Visualizzare i risultati della convalida

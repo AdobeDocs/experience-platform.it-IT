@@ -161,7 +161,7 @@ Il nuovo SDK [!DNL Experience Platform] supporta le operazioni seguenti:
 | Minore di (`<`) | `lt()` |
 | Minore o uguale a (`<=`) | `le()` |
 | E (`&`) | `And()` |
-| Oppure ( &amp;vert; ) | `Or()` |
+| Oppure ( &vert; ) | `Or()` |
 
 ## Filtra per colonne selezionate {#filter-by-selected-columns}
 
