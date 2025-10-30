@@ -40,7 +40,7 @@ La funzione di inserire nell&#39;elenco Consentiti IP funziona come segue:
 
 Per abilitare l’indirizzo IP alla inserisce nell&#39;elenco Consentiti per la tua organizzazione, segui la procedura riportata di seguito:
 
-1. Scarica e completa il modulo di inserisce nell&#39;elenco Consentiti dell&#39;indirizzo IP [](../images/assets/ip_allowlisting_aep.xlsx.zip).
+1. Scarica e completa il modulo di inserisce nell&#39;elenco Consentiti dell&#39;indirizzo IP [&#128279;](../images/assets/ip_allowlisting_aep.xlsx.zip).
 2. Apri un ticket di supporto e crea un file con l&#39;oggetto **AEP DCS &amp; Streaming Ingestion - IP richiesta di Inserire nell&#39;elenco Consentiti**. Allega il modulo compilato a questo ticket.
 3. Dopo aver inviato il ticket, l’Assistenza clienti di Adobe inoltrerà la richiesta al team di progettazione.
 4. Gli ingegneri abilitano la inserire nell&#39;elenco Consentiti dell&#39;e confermano l&#39;installazione.
