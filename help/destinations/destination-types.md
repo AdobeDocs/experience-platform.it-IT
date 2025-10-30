@@ -71,7 +71,7 @@ Ulteriori informazioni su come [configurare le destinazioni di personalizzazione
 
 Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/35693?captions=ita&quality=12)
 
 ## Tipi di pubblico esportati {#exported-audiences-types}
 
