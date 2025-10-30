@@ -80,7 +80,7 @@ Puoi definire i controlli di accesso con ruoli e autorizzazioni per controllare 
 
 Considera un data engineer che potrebbe non avere bisogno di accedere a tutte le funzionalità delle applicazioni basate su Experience Platform e piattaforma. In genere sono responsabili della creazione di definizioni di dati (schemi), della configurazione delle origini dati per l’acquisizione dei dati e della creazione di set di dati. Tuttavia, potrebbe non essere la stessa persona che crea e attiva i tipi di pubblico per esperienze cliente personalizzate. Per questo utente tipo, crea un ruolo, aggiungi le autorizzazioni appropriate e concedi l’accesso solo alle funzionalità richieste. Al contrario, un addetto al marketing non creerebbe schemi e acquisirebbe dati, ma piuttosto si concentrerebbe sulla creazione e l’attivazione di tipi di pubblico per abilitare esperienze cliente personalizzate.
 
-Se lo desideri, puoi aggiungere controlli di accesso granulari per limitare l’accesso a campi specifici nel profilo cliente unificato con funzionalità di controllo dell’accesso basato su attributi/controllo dell’accesso a livello di campo. Si tratta di meccanismi di governance in Experience Platform che consentono di limitare l’accesso agli attributi dei dati in base a etichette predefinite. Con il controllo degli accessi a livello di campo, è possibile gestire i dati personali identificabili e limitare l’accesso a tutti i flussi di lavoro di Experience Platform e delle applicazioni. Per ulteriori dettagli sulle funzionalità di controllo degli accessi, consulta la [documentazione sul controllo degli accessi](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
+Se lo desideri, puoi aggiungere controlli di accesso granulari per limitare l’accesso a campi specifici nel profilo cliente unificato con funzionalità di controllo dell’accesso basato su attributi/controllo dell’accesso a livello di campo. Si tratta di meccanismi di governance in Experience Platform che consentono di limitare l’accesso agli attributi dei dati in base a etichette predefinite. Con il controllo degli accessi a livello di campo, è possibile gestire i dati personali identificabili e limitare l’accesso a tutti i flussi di lavoro di Experience Platform e delle applicazioni. Per ulteriori dettagli sulle funzionalità di controllo degli accessi, consulta la [documentazione sul controllo degli accessi](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home).
 
 ![Controlli di accesso CDP, Configura autorizzazioni ruolo](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
@@ -102,7 +102,7 @@ Con la funzione di strumenti sandbox, puoi selezionare vari oggetti ed esportarl
 
 Puoi utilizzare le API di Experience Platform per automatizzare le distribuzioni sandbox e le attività di configurazione. Le API consentono il controllo programmabile per attività ripetitive come l’esportazione, l’importazione o la modifica di configurazioni sandbox, fornendo flessibilità se si preferiscono flussi di lavoro automatizzati.
 
-Per ulteriori dettagli sugli strumenti sandbox, consulta la [documentazione sugli strumenti sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Per ulteriori dettagli sugli strumenti sandbox, consulta la [documentazione sugli strumenti sandbox](https://experienceleague.adobe.com/it/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Crea pacchetto](./images/whitepaper/create-package.png) | ![Pacchetti elenco CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -229,7 +229,7 @@ Inoltre, puoi utilizzare Experience Platform Segment Match, una funzione in Plat
 
 Questo servizio di condivisione dei segmenti consente a due o più utenti di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
 
-Per ulteriori dettagli sulla funzione Segment Match, consulta la [documentazione di Segment Match](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+Per ulteriori dettagli sulla funzione Segment Match, consulta la [documentazione di Segment Match](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Una combinazione di approcci per le operazioni globali, regionali e specifici per il brand
 
