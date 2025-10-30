@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
-user-guide-description: Trasmetti i dati a Experience Platform tramite l’acquisizione in batch o in streaming.
+user-guide-description: Trasmetti i dati a Experience Platform tramite l’acquisizione in streaming o in batch.
 feature: Data Ingestion
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f1d851afae5ad271e3c7d9d887f614058a262874
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '146'
 ht-degree: 21%
 
 ---
@@ -20,14 +20,15 @@ ht-degree: 21%
    - [Panoramica](streaming-ingestion/overview.md)
    - [Connettore Kafka](streaming-ingestion/kafka.md)
    - [Risoluzione dei problemi](streaming-ingestion/troubleshooting.md)
-- Acquisizione batch{#batch}
+   - [INSERIRE NELL&#39;ELENCO CONSENTITI indirizzo IP](streaming-ingestion/allowlisting.md)
+- Acquisizione in batch{#batch}
    - [Guida introduttiva alle API di acquisizione batch](batch-ingestion/getting-started.md)
    - [Panoramica API](batch-ingestion/overview.md)
    - [Guida per gli sviluppatori API](batch-ingestion/api-overview.md)
    - [Acquisizione batch parziale](batch-ingestion/partial.md)
    - [Risoluzione dei problemi](batch-ingestion/troubleshooting.md)
 - Tutorial {#tutorials}
-   - Mappare un file CSV a XDM {#map-csv}
+   - Mappare un file CSV su XDM {#map-csv}
       - [Panoramica](./tutorials/map-csv/overview.md)
       - [Mappare un file CSV su uno schema esistente](./tutorials/map-csv/existing-schema.md)
       - [Mappare un file CSV utilizzando i consigli generati dall’intelligenza artificiale](./tutorials/map-csv/recommendations.md)
