@@ -2,7 +2,7 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare una destinazione prodotta per la revisione quando viene creata con Destination SDK.
 title: Inviare una destinazione prodotta per la revisione
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 0%
@@ -263,6 +263,7 @@ Se sei un fornitore di software indipendente (ISV) o un integratore di sistemi (
 Il catalogo delle destinazioni include un logo per ogni scheda di destinazione. Nell’e-mail inviata, includi un’immagine con il logo della tua destinazione.
 
 I requisiti dell&#39;immagine sono:
+
 * **Formato**: `SVG`
 * **Dimensioni**: meno di 2 MB
 

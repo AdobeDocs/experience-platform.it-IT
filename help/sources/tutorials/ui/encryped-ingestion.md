@@ -2,9 +2,9 @@
 title: Acquisire dati crittografati nel Workspace dell’interfaccia utente Sources
 description: Scopri come acquisire i dati crittografati nell’area di lavoro dell’interfaccia utente delle origini.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1414'
 ht-degree: 6%
 
 ---
@@ -51,19 +51,19 @@ Puoi creare la coppia di chiavi di crittografia tramite l’interfaccia utente d
 
 >[!ENDSHADEBOX]
 
-Nell&#39;interfaccia utente di Experience Platform, passa all&#39;area di lavoro origini e seleziona [!UICONTROL Coppie di chiavi] dall&#39;intestazione superiore.
+Nell&#39;interfaccia utente di Experience Platform, passa all&#39;area di lavoro origini e seleziona [!UICONTROL Key Pairs] dall&#39;intestazione superiore.
 
 ![Catalogo delle origini con l&#39;intestazione &quot;Coppie di chiavi&quot; selezionata.](../../images/tutorials/edi/catalog.png)
 
-Viene visualizzata una pagina in cui sono elencate le coppie di chiavi di crittografia esistenti nell&#39;organizzazione. Questa pagina fornisce informazioni su titolo, ID, tipo, algoritmo di crittografia, scadenza e stato di una determinata chiave. Per creare una nuova coppia di chiavi, selezionare **[!UICONTROL Crea chiave]**.
+Viene visualizzata una pagina in cui sono elencate le coppie di chiavi di crittografia esistenti nell&#39;organizzazione. Questa pagina fornisce informazioni su titolo, ID, tipo, algoritmo di crittografia, scadenza e stato di una determinata chiave. Per creare una nuova coppia di chiavi, selezionare **[!UICONTROL Create Key]**.
 
 ![Pagina Coppie di chiavi, con &quot;chiave di crittografia&quot; selezionata come tipo di chiave e il pulsante &quot;crea chiave&quot; selezionato.](../../images/tutorials/edi/encryption_key_page.png)
 
-Scegliere quindi il tipo di chiave che si desidera impostare. Per creare una chiave di crittografia, selezionare **[!UICONTROL Chiave di crittografia]**, quindi selezionare **[!UICONTROL Continua]**.
+Scegliere quindi il tipo di chiave che si desidera impostare. Per creare una chiave di crittografia, selezionare **[!UICONTROL Encryption Key]**, quindi selezionare **[!UICONTROL Continue]**.
 
 ![Finestra di creazione della chiave, con la chiave di crittografia selezionata.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Fornisci un titolo e una passphrase per la chiave di crittografia. La passphrase rappresenta un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experience Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. Al termine, selezionare **[!UICONTROL Crea]**.
+Fornisci un titolo e una passphrase per la chiave di crittografia. La passphrase rappresenta un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experience Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. Al termine, selezionare **[!UICONTROL Create]**.
 
 ![Finestra di creazione della chiave di crittografia, in cui sono specificati un titolo e una passphrase.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -71,7 +71,7 @@ In caso di esito positivo, viene visualizzata una nuova finestra in cui viene vi
 
 ![Finestra in cui vengono visualizzate le informazioni sulla coppia di chiavi di crittografia appena creata.](../../images/tutorials/edi/encryption_key_details.png)
 
-Per visualizzare le informazioni su una chiave di crittografia esistente, selezionare i puntini di sospensione (`...`) accanto al titolo della chiave. Seleziona **[!UICONTROL Dettagli chiave]** per visualizzare la chiave pubblica e l&#39;ID chiave. In alternativa, per eliminare la chiave di crittografia, selezionare **[!UICONTROL Elimina]**.
+Per visualizzare le informazioni su una chiave di crittografia esistente, selezionare i puntini di sospensione (`...`) accanto al titolo della chiave. Selezionare **[!UICONTROL Key details]** per visualizzare la chiave pubblica e l&#39;ID della chiave. In alternativa, per eliminare la chiave di crittografia, selezionare **[!UICONTROL Delete]**.
 
 ![Pagina delle coppie di chiavi, in cui viene visualizzato un elenco di chiavi di crittografia. L&#39;ellissi accanto a &quot;chiave di crittografia acme&quot; è selezionato e nel menu a discesa vengono visualizzate le opzioni per visualizzare i dettagli della chiave o eliminare le chiavi.](../../images/tutorials/edi/configuration_options.png)
 
@@ -90,11 +90,11 @@ Una chiave di verifica del segno è un altro meccanismo di crittografia che coin
 
 >[!ENDSHADEBOX]
 
-Per creare una chiave di verifica della firma, selezionare **[!UICONTROL Firma chiave di verifica]** nella finestra di selezione del tipo di chiave, quindi selezionare **[!UICONTROL Continua]**.
+Per creare una chiave di verifica della firma, selezionare **[!UICONTROL Sign Verification Key]** dalla finestra di selezione del tipo di chiave, quindi selezionare **[!UICONTROL Continue]**.
 
 ![Finestra di selezione del tipo di chiave in cui è selezionata la chiave di verifica della firma.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-Quindi, fornisci un titolo e una chiave PGP con codifica [!DNL Base64] come chiave pubblica, quindi seleziona **[!UICONTROL Crea]**.
+Quindi, fornisci un titolo e una chiave PGP con codifica [!DNL Base64] come chiave pubblica, quindi seleziona **[!UICONTROL Create]**.
 
 ![Finestra Crea chiave di verifica della firma.](../../images/tutorials/edi/create_sign_verification_key.png)
 
@@ -127,15 +127,15 @@ Puoi acquisire dati crittografati utilizzando le seguenti origini batch di archi
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Autenticazione con l’origine dell’archiviazione cloud desiderata. Durante il passaggio di selezione dei dati del flusso di lavoro, seleziona il file o la cartella crittografati che desideri acquisire e quindi abilita l&#39;interruttore **[!UICONTROL Il file è crittografato]**.
+Autenticazione con l’origine dell’archiviazione cloud desiderata. Durante il passaggio di selezione dei dati del flusso di lavoro, seleziona il file o la cartella crittografati che desideri acquisire, quindi attiva l&#39;opzione **[!UICONTROL Is the file encrypted]**.
 
 ![Il passaggio &quot;seleziona dati&quot; del flusso di lavoro origini, in cui viene selezionato un file di dati crittografato per l&#39;acquisizione.](../../images/tutorials/edi/select_data.png)
 
 Quindi, seleziona un file di esempio dai dati di origine. Poiché i dati sono crittografati, Experience Platform richiederà un file di esempio per creare uno schema XDM da mappare ai dati di origine.
 
-![Il file è crittografato? e il pulsante Seleziona file di esempio selezionato. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
+![Il file è crittografato? attivazione/disattivazione e pulsante Seleziona file di esempio selezionato](../../images/tutorials/edi/select_sample_file.png).
 
-Dopo aver selezionato il file di esempio, configura le impostazioni dei dati, ad esempio il formato di dati, il delimitatore e il tipo di compressione corrispondenti. Attendere alcuni minuti per il rendering completo dell&#39;interfaccia di anteprima, quindi selezionare **[!UICONTROL Salva]**.
+Dopo aver selezionato il file di esempio, configura le impostazioni dei dati, ad esempio il formato di dati, il delimitatore e il tipo di compressione corrispondenti. Attendere alcuni minuti per il rendering completo dell&#39;interfaccia di anteprima, quindi selezionare **[!UICONTROL Save]**.
 
 ![È stato selezionato un esempio per l&#39;acquisizione e l&#39;anteprima del file è completamente caricata.](../../images/tutorials/edi/file_preview.png)
 
@@ -147,7 +147,7 @@ Se hai utilizzato anche la coppia di chiavi di verifica della firma per fornire 
 
 ![Titolo della chiave di verifica della firma dell&#39;ID della chiave che corrisponde alla crittografia di verifica della firma.](../../images/tutorials/edi/custom_key_id.png)
 
-Al termine, seleziona **[!UICONTROL Avanti]**.
+Al termine, selezionare **[!UICONTROL Next]**.
 
 Completa i passaggi rimanenti nel flusso di lavoro sorgenti per completare la creazione del flusso di dati.
 

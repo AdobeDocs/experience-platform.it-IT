@@ -2,16 +2,16 @@
 title: Impaginazione delle risposte nell’API di Reactor
 description: Scopri come impaginare i risultati quando generi un elenco di risorse nell’API di Reactor.
 exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 100%
+ht-degree: 86%
 
 ---
 
 # Impaginazione delle risposte nell’API di Reactor
 
-Le risposte restituite dall’API di Reactor sono impaginate. La dimensione predefinita della pagina prevede 25 elementi. I dettagli sull’impaginazione sono riportati nella sezione `meta.pagination `dell’oggetto di risposta API:
+Le risposte restituite dall’API di Reactor sono impaginate. La dimensione predefinita della pagina prevede 25 elementi. I dettagli sull&#39;impaginazione sono riportati nella sezione `meta.pagination` dell&#39;oggetto di risposta API:
 
 ```json
 "meta": {

@@ -2,9 +2,9 @@
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1296'
 ht-degree: 3%
 
 ---
@@ -61,12 +61,12 @@ La tabella seguente illustra le autorizzazioni e le combinazioni di autorizzazio
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ---- |
-| **[!UICONTROL Visualizza destinazioni]** | Per accedere alla scheda delle destinazioni nell&#39;interfaccia utente di Experience Platform, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza destinazioni]** [controllo di accesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Gestisci destinazioni]** | Per connettersi alle destinazioni, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[[!UICONTROL Autorizzazioni per il controllo degli accessi]](/help/access-control/home.md#permissions) di Gestione destinazioni&rbrack;** &lbrack;. |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** | Per attivare i tipi di pubblico nelle destinazioni e abilitare il [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, sono necessari **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmenti senza mapping]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** | Per aggiungere o rimuovere tipi di pubblico dai flussi di dati esistenti senza avere accesso al [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Gestisci e attiva destinazioni set di dati]** | Per esportare i set di dati nelle destinazioni, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione e attivazione dei set di dati]** [per il controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Visualizza grafico identità]** | Per esportare *identità* nelle destinazioni, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]** | Per accedere alla scheda delle destinazioni nell&#39;interfaccia utente di Experience Platform, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Destinations]** [per il controllo degli accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Per connettersi alle destinazioni, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** | Per attivare i tipi di pubblico nelle destinazioni e abilitare il [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** | Per aggiungere o rimuovere tipi di pubblico dai flussi di dati esistenti senza avere accesso al [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Per esportare i set di dati nelle destinazioni, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage and Activate Dataset Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Identity Graph]** | Per esportare *identità* nelle destinazioni, è necessario disporre dell&#39;**[!UICONTROL View Identity Graph]** [autorizzazione di controllo dell&#39;accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Per ulteriori informazioni sul funzionamento delle destinazioni con i controlli 
 
 ## Rimozione del profilo dalle destinazioni {#profile-removal}
 
-Quando un profilo viene rimosso da un pubblico attivato su una destinazione, viene rimosso anche dal pubblico corrispondente nella piattaforma di destinazione. Ad esempio, se un profilo viene rimosso da un pubblico precedentemente attivato su LinkedIn, verrà rimosso dal [!UICONTROL pubblico corrispondente a LinkedIn] associato.
+Quando un profilo viene rimosso da un pubblico attivato su una destinazione, viene rimosso anche dal pubblico corrispondente nella piattaforma di destinazione. Ad esempio, se un profilo viene rimosso da un pubblico precedentemente attivato in LinkedIn, tale profilo verrà rimosso dal [!UICONTROL LinkedIn Matched Audience] associato.
 
 La rimozione del profilo dalle destinazioni (o rimozione dai segmenti) avviene con la stessa frequenza della segmentazione. Non appena un profilo viene rimosso da un pubblico in Experience Platform, il successivo flusso di dati pianificato per la destinazione riflette tale modifica e rimuove il profilo dal pubblico di destinazione.
 
@@ -118,7 +118,7 @@ Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso 
 * [Destinazioni di e-mail marketing](./catalog/email-marketing/overview.md)
 * [Destinazioni social](./catalog/social/overview.md)
 
-Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di lavoro di attivazione del pubblico, vedi il passaggio **[!UICONTROL Rivedi]** nelle seguenti guide:
+Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di lavoro di attivazione del pubblico, vedi il passaggio **[!UICONTROL Review]** nelle seguenti guide:
 
 * [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](./ui/activate-segment-streaming-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](./ui/activate-streaming-profile-destinations.md#review)

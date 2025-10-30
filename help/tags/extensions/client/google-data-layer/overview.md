@@ -2,9 +2,9 @@
 title: Estensione Google Data Layer
 description: Scopri l’estensione tag Google Client Data Layer in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 12%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 12%
 
 L’estensione Google Data Layer consente di utilizzare un livello dati Google nell’implementazione dei tag. L&#39;estensione può essere utilizzata in modo indipendente o simultaneo con le soluzioni Google e con la [Libreria helper del livello dati](https://github.com/google/data-layer-helper) open source di Google.
 
-La libreria helper fornisce funzionalità basate su eventi simili a quelle di Adobe Client Data Layer (ACDL). Gli elementi dati, le regole e le azioni dell&#39;estensione Google Data Layer forniscono funzionalità simili a quelle dell&#39;estensione [ACDL](../client-data-layer/overview.md).
+La libreria helper offre funzionalità basate su eventi simili a quelle di Adobe Client Data Layer (ACDL). Gli elementi dati, le regole e le azioni dell&#39;estensione Google Data Layer forniscono funzionalità simili a quelle dell&#39;estensione [ACDL](../client-data-layer/overview.md).
 
 ## Installazione
 
@@ -36,6 +36,7 @@ Il nome predefinito del livello dati è il nome predefinito di Google `dataLayer
 >[!NOTE]
 >
 >La parola _event_ viene sovraccaricata quando un livello dati basato su eventi viene utilizzato nei tag di Adobe Experience Platform. _Eventi_ può essere:
+>
 > - Eventi tag Adobe Experience Platform (libreria caricata e così via).
 > - Eventi JavaScript.
 > - Dati inviati al livello dati con la parola chiave _event_.
@@ -44,7 +45,7 @@ L’estensione consente di ascoltare le modifiche sul livello dati.
 
 >[!NOTE]
 >
->È importante comprendere l&#39;utilizzo della parola chiave _event_ quando i dati vengono inviati a un livello dati di Google, in modo simile al livello dati client di Adobe. La parola chiave _event_ modifica il comportamento del livello dati di Google e quindi di questa estensione.\
+>È importante comprendere l&#39;utilizzo della parola chiave _event_ quando i dati vengono inviati a un livello dati di Google, in modo simile a Adobe Client Data Layer. La parola chiave _event_ modifica il comportamento del livello dati di Google e quindi di questa estensione.\
 > Leggi la documentazione di Google o fai ricerche se non sei sicuro su questo punto.
 
 ### Tipi di evento Google

@@ -2,9 +2,9 @@
 description: Scopri come configurare lo schema partner per le destinazioni create con Destination SDK.
 title: Configurazione schema partner
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1912'
 ht-degree: 3%
 
 ---
@@ -167,6 +167,7 @@ Ad esempio, puoi applicare che il campo dell’indirizzo e-mail venga sempre inv
 >[!NOTE]
 >
 >Sono attualmente supportate le seguenti combinazioni di mappature richieste:
+>
 >* Puoi configurare un campo di origine e un campo di destinazione obbligatori. In questo caso, gli utenti non possono modificare o selezionare nessuno dei due campi e possono solo visualizzare la selezione.
 >* Puoi configurare solo un campo di destinazione richiesto. In questo caso, gli utenti saranno autorizzati a selezionare un campo di origine da mappare alla destinazione.
 >
@@ -203,7 +204,7 @@ L’esempio seguente mostra le mappature di origine e di destinazione richieste.
 
 {style="table-layout:auto"}
 
-Di conseguenza, entrambe le sezioni **[!UICONTROL Campo Source]** e **[!UICONTROL Campo Target]** nell&#39;interfaccia utente di Experience Platform sono disattivate.
+Di conseguenza, entrambe le sezioni **[!UICONTROL Source field]** e **[!UICONTROL Target field]** nell&#39;interfaccia utente di Experience Platform sono disattivate.
 
 ![Immagine delle mappature richieste nel flusso di attivazione dell&#39;interfaccia utente.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +234,7 @@ L’esempio seguente mostra una mappatura di destinazione richiesta. Se si speci
 
 {style="table-layout:auto"}
 
-Di conseguenza, la sezione **[!UICONTROL Campo di destinazione]** nell&#39;interfaccia utente di Experience Platform è disattivata, mentre la sezione **[!UICONTROL Campo di Source]** è attiva e gli utenti possono interagire con essa. Le opzioni **[!UICONTROL Chiave obbligatoria]** e **[!UICONTROL Chiave di deduplicazione]** sono attive e gli utenti non possono modificarle.
+Di conseguenza, la sezione **[!UICONTROL Target field]** nell&#39;interfaccia utente di Experience Platform è disattivata, mentre la sezione **[!UICONTROL Source field]** è attiva e gli utenti possono interagire con essa. Le opzioni **[!UICONTROL Mandatory key]** e **[!UICONTROL Deduplication key]** sono attive e gli utenti non possono modificarle.
 
 ![Immagine delle mappature richieste nel flusso di attivazione dell&#39;interfaccia utente.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
@@ -250,7 +251,7 @@ Per configurare la destinazione in modo da supportare l&#39;attivazione di [tipi
 }
 ```
 
-Per ulteriori informazioni sulla funzionalità [, consulta le descrizioni delle proprietà nella &#x200B;](#attributes-schema)tabella`segmentNamespaceDenyList` più avanti in questa pagina.
+Per ulteriori informazioni sulla funzionalità [, consulta le descrizioni delle proprietà nella ](#attributes-schema)tabella`segmentNamespaceDenyList` più avanti in questa pagina.
 
 ## Passaggi successivi {#next-steps}
 

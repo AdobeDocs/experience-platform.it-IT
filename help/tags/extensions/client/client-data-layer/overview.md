@@ -2,7 +2,7 @@
 title: Estensione Adobe Client Data Layer
 description: Scopri l’estensione per tag Adobe Client Data Layer in Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 91%
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## Installazione
 
-Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente di Experience Platform o nell’interfaccia utente di Data Collection e seleziona Adobe Client Data Layer.
+Per installare l’estensione, passa al catalogo delle estensioni nell’interfaccia utente di Experience Platform o di Data Collection e seleziona Adobe Client Data Layer.
 
 ![Visualizzazione dell’estensione ACDL nel catalogo](./images/catalog.png)
 
@@ -51,12 +51,12 @@ Se selezioni questa opzione, il listener di eventi ascolta qualsiasi modifica ap
 
 Il listener tiene traccia degli eventi push di esempio seguenti:
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 Il listener non tiene traccia dell’evento push di esempio seguente:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Ascolta tutti gli eventi
 
@@ -64,8 +64,8 @@ Se selezioni questa opzione, il listener di eventi ascolta qualsiasi evento invi
 
 Il listener tiene traccia degli eventi push di esempio seguenti:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 Il listener non tiene traccia dell’evento push di esempio seguente:
 

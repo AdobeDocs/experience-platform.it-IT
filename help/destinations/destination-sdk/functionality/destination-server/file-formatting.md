@@ -1,8 +1,8 @@
 ---
-description: Scopri come configurare le opzioni di formattazione dei file per le destinazioni basate su file create con Adobe Experience Platform Destination SDK, tramite l’endpoint "/destination-servers".
+description: Scopri come configurare le opzioni di formattazione dei file per le destinazioni basate su file create con Adobe Experience Platform Destination SDK tramite l’endpoint "/destination-servers".
 title: Configurazione formattazione file
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 2%
@@ -48,7 +48,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ## Parametri supportati {#supported-parameters}
 
-È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file della destinazione, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
+Puoi modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file della tua destinazione, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
 
 >[!NOTE]
 >
@@ -199,8 +199,8 @@ Di seguito è riportato un riferimento completo di tutte le opzioni di formattaz
 | `csvOptions.timestampFormat.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la stringa che indica un formato timestamp. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape del carattere virgolette. | `\` quando i caratteri di escape e le virgolette sono diversi. `\0` quando il carattere di escape e le virgolette sono uguali. | - | - |
 | `csvOptions.emptyValue.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta la rappresentazione di stringa di un valore vuoto. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Facoltativo | Indica il numero massimo di righe per file esportato, compreso tra 1.000.000 e 10.000.000. | 5.000.000 |
-| `includeFileManifest` | Facoltativo | Abilita il supporto per l&#39;esportazione di un manifesto di file insieme alle esportazioni di file. Il file JSON del manifesto contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto è denominato nel formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti: <ul><li>`flowRunId`: [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.</li><li>`scheduledTime`: ora in UTC in cui è stato esportato il file. </li><li>`exportResults.sinkPath`: il percorso nel percorso di archiviazione in cui è depositato il file esportato. </li><li>`exportResults.name`: nome del file esportato.</li><li>`size`: dimensione del file esportato, in byte.</li></ul> |
+| `maxFileRowCount` | Facoltativo | Indica il numero massimo di righe per file esportato, compreso tra 1.000.000 e 10.000.000. | 5.000.000 | - | - |
+| `includeFileManifest` | Facoltativo | Abilita il supporto per l&#39;esportazione di un manifesto di file insieme alle esportazioni di file. Il file JSON del manifesto contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto è denominato nel formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti: <ul><li>`flowRunId`: [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.</li><li>`scheduledTime`: ora in UTC in cui è stato esportato il file. </li><li>`exportResults.sinkPath`: il percorso nel percorso di archiviazione in cui è depositato il file esportato. </li><li>`exportResults.name`: nome del file esportato.</li><li>`size`: dimensione del file esportato, in byte.</li></ul> | - | - |
 
 {style="table-layout:auto"}
 
@@ -210,6 +210,6 @@ Dopo aver letto questo articolo, dovresti conoscere meglio il funzionamento dell
 
 Per ulteriori informazioni sugli altri componenti del server di destinazione, consulta i seguenti articoli:
 
-* [Specifiche del server per le destinazioni create con Destination SDK](server-specs.md)
+* [Specifiche server per le destinazioni create con Destination SDK](server-specs.md)
 * [Specifiche di modello](templating-specs.md)
 * [Formato del messaggio](message-format.md)

@@ -5,7 +5,7 @@ title: Inviare più messaggi in una singola richiesta HTTP
 type: Tutorial
 description: Questo documento fornisce un tutorial per inviare più messaggi a Adobe Experience Platform all’interno di una singola richiesta HTTP utilizzando l’acquisizione in streaming.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: 31c00e69dd92f7c3232e09f02da36c60cd8cf486
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Questo tutorial richiede una buona conoscenza di Adobe Experience Platform [!DNL
 - [Panoramica sull&#39;acquisizione dei dati](../home.md): descrive i concetti fondamentali di [!DNL Experience Platform Data Ingestion], inclusi i metodi di acquisizione e i connettori dati.
 - [Panoramica sull&#39;acquisizione in streaming](../streaming-ingestion/overview.md): flusso di lavoro e blocchi predefiniti per l&#39;acquisizione in streaming, ad esempio connessioni in streaming, set di dati, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent].
 
-Questo tutorial richiede inoltre di aver completato l&#39;esercitazione di autenticazione a Adobe Experience Platform[&#x200B; di &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API di [!DNL Experience Platform]. Il completamento del tutorial sull’autenticazione fornisce il valore per l’intestazione Authorization richiesta da tutte le chiamate API in questo tutorial. L’intestazione viene visualizzata nelle chiamate di esempio come segue:
+Questo tutorial richiede inoltre di aver completato l&#39;esercitazione di autenticazione a Adobe Experience Platform[ di ](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API di [!DNL Experience Platform]. Il completamento del tutorial sull’autenticazione fornisce il valore per l’intestazione Authorization richiesta da tutte le chiamate API in questo tutorial. L’intestazione viene visualizzata nelle chiamate di esempio come segue:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 
@@ -219,6 +219,7 @@ Prima di procedere con questa esercitazione, è consigliabile rivedere la guida 
 L’esempio seguente mostra cosa accade quando il batch include messaggi validi e non validi.
 
 Il payload della richiesta è un array di oggetti JSON che rappresentano l’evento nello schema XDM. Per la corretta convalida del messaggio è necessario soddisfare le seguenti condizioni:
+
 - Il campo `imsOrgId` nell&#39;intestazione del messaggio deve corrispondere alla definizione di ingresso. Se il payload della richiesta non include un campo `imsOrgId`, [!DNL Data Collection Core Service] (DCCS) aggiungerà automaticamente il campo.
 - L&#39;intestazione del messaggio deve fare riferimento a uno schema XDM esistente creato nell&#39;interfaccia utente [!DNL Experience Platform].
 - Il campo `datasetId` deve fare riferimento a un set di dati esistente in [!DNL Experience Platform] e il relativo schema deve corrispondere allo schema fornito nell&#39;oggetto `header` all&#39;interno di ogni messaggio incluso nel corpo della richiesta.

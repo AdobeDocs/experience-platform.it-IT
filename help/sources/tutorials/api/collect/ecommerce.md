@@ -5,7 +5,7 @@ title: Creare un flusso di dati per le origini di e-commerce utilizzando l’API
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un sistema eCommerce di terze parti e acquisirli in Experience Platform utilizzando i connettori e le API di origine.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 3%

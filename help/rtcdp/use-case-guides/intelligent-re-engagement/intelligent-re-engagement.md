@@ -3,9 +3,9 @@ title: Nuovo coinvolgimento intelligente
 description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente la clientela poco frequente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3896'
+source-wordcount: '3871'
 ht-degree: 4%
 
 ---
@@ -36,18 +36,18 @@ Costruirai schemi, set di dati e tipi di pubblico mentre lavori attraverso esemp
 
 Una volta completati i passaggi per implementare il caso d’uso, utilizzerai le seguenti funzionalità di Real-Time CDP e Adobe Journey Optimizer (elencate nell’ordine in cui verranno utilizzate). Assicurati di disporre delle [autorizzazioni di controllo degli accessi basate su attributi](/help/access-control/home.md) per tutte queste aree o richiedi all’amministratore di sistema di concedere le autorizzazioni necessarie.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=it) - Integra i dati tra le origini dati per alimentare la campagna. Questi dati vengono quindi utilizzati per creare i tipi di pubblico della campagna e far emergere elementi di dati personalizzati utilizzati nell’e-mail e nelle tessere delle promozioni web (ad esempio, nome o informazioni relative all’account). CDP viene utilizzato anche per attivare i tipi di pubblico tra e-mail e sul Web (tramite [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integra i dati tra le origini dati per alimentare la campagna. Questi dati vengono quindi utilizzati per creare i tipi di pubblico della campagna e far emergere elementi di dati personalizzati utilizzati nell’e-mail e nelle tessere delle promozioni web (ad esempio, nome o informazioni relative all’account). CDP viene utilizzato anche per attivare i tipi di pubblico tra e-mail e sul Web (tramite [!DNL Adobe Target]).
    * [Schemi](/help/xdm/home.md)
    * [Profili](/help/profile/home.md)
    * [Set di dati](/help/catalog/datasets/overview.md)
    * [Tipi di pubblico](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Destinazioni](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=it) - Consente di fornire ai clienti esperienze connesse, contestuali e personalizzate.
-   * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=it)
+   * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Tipi di pubblico/Eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=it)
-   * [Azioni Percorso](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it)
+   * [Azioni Percorso](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Come ottenere il caso d’uso {#achieve-use-case-instruction}
 
@@ -59,7 +59,7 @@ Di seguito è riportata una panoramica generale dei tre scenari di ricoinvolgime
 
 Lo scenario di navigazione dei prodotti abbandonati è incentrato sulla navigazione dei prodotti abbandonati sia sul sito web che sull’app mobile. Questo scenario si attiva quando un prodotto viene visualizzato ma non acquistato o aggiunto al carrello. In questo esempio, il brand engagement viene attivato dopo tre giorni se non ci sono aggiunte di elenchi nelle ultime 24 ore.<p>![Panoramica visiva di alto livello dello scenario di ricerca intelligente dei prodotti abbandonato dal cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Panoramica visiva di alto livello dello scenario di navigazione prodotto abbandonato e intelligente per il cliente."){width="1920" zoomable="yes"}</p>
 
-1. Puoi creare schemi e set di dati, quindi abilitare per [!UICONTROL Profilo].
+1. Puoi creare schemi e set di dati, quindi abilitare per [!UICONTROL Profile].
 2. Acquisisci i dati in Experience Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore Source di Analytics, ma potrebbe causare latenza del percorso.
 3. Acquisisci dati aggiuntivi abilitati per il profilo, che possono essere collegati al visitatore autenticato dell’app web e mobile tramite grafici di identità.
 4. Puoi creare tipi di pubblico mirati dall&#39;elenco dei profili per verificare se un **cliente** ha creato un coinvolgimento negli ultimi tre giorni.
@@ -71,10 +71,10 @@ Lo scenario di navigazione dei prodotti abbandonati è incentrato sulla navigazi
 
 Lo scenario del carrello abbandonato si applica quando i prodotti sono stati inseriti nel carrello ma non sono ancora stati acquistati sia sul sito web che sull’app mobile. Inoltre, le campagne Paid Media vengono avviate e interrotte utilizzando questo metodo.<p>![Panoramica visiva di alto livello dello scenario del carrello abbandonato dal cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Panoramica visiva di alto livello dello scenario del carrello abbandonato dal cliente."){width="1920" zoomable="yes"}</p>
 
-1. Si creano schemi e set di dati, l&#39;abilitazione per [!UICONTROL Profilo].
+1. Si creano schemi e set di dati, l&#39;abilitazione per [!UICONTROL Profile].
 2. Acquisisci i dati in Experience Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore Source di Analytics, ma potrebbe causare latenza del percorso.
 3. Acquisisci dati aggiuntivi abilitati per il profilo, che possono essere collegati al visitatore autenticato dell’app web e mobile tramite grafici di identità.
-4. Puoi creare tipi di pubblico mirati dall&#39;elenco dei profili per verificare se un **cliente** ha inserito un elemento nel carrello ma non ha completato l&#39;acquisto. L&#39;evento **[!UICONTROL Aggiungi al carrello]** avvia un timer che attende 30 minuti, quindi verifica la presenza di acquisti. Se non è stato effettuato alcun acquisto, il **cliente** viene aggiunto al pubblico **[!UICONTROL Abandon Cart]**.
+4. Puoi creare tipi di pubblico mirati dall&#39;elenco dei profili per verificare se un **cliente** ha inserito un elemento nel carrello ma non ha completato l&#39;acquisto. L&#39;evento **[!UICONTROL Add to cart]** avvia un timer che attende 30 minuti, quindi verifica la presenza di acquisti. Se non è stato effettuato alcun acquisto, il **cliente** viene aggiunto al pubblico **[!UICONTROL Abandon Cart]**.
 5. Si crea un percorso di carrello abbandonato in [!DNL Adobe Journey Optimizer].
 6. Se necessario, collabora con il **partner dati** per l&#39;attivazione dei tipi di pubblico nelle destinazioni desiderate per i file multimediali a pagamento.
 7. [!DNL Adobe Journey Optimizer] verifica il consenso e invia le varie azioni configurate.
@@ -83,7 +83,7 @@ Lo scenario del carrello abbandonato si applica quando i prodotti sono stati ins
 
 Lo scenario di conferma dell’ordine si concentra sugli acquisti di prodotti effettuati tramite il sito web e l’app mobile.<p>![Panoramica visiva di alto livello dello scenario di conferma dell&#39;ordine cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Panoramica visiva di alto livello dello scenario di conferma dell&#39;ordine cliente."){width="1920" zoomable="yes"}</p>
 
-1. Puoi creare schemi e set di dati, quindi abilitare per [!UICONTROL Profilo].
+1. Puoi creare schemi e set di dati, quindi abilitare per [!UICONTROL Profile].
 2. Acquisisci i dati in Experience Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore Source di Analytics, ma potrebbe causare latenza del percorso.
 3. Acquisisci dati aggiuntivi abilitati per il profilo, che possono essere collegati al visitatore autenticato dell’app web e mobile tramite grafici di identità.
 4. È possibile creare un percorso di conferma in [!DNL Adobe Journey Optimizer].
@@ -95,9 +95,9 @@ Per completare ciascuno dei passaggi descritti nelle panoramiche di alto livello
 
 ### Creare schemi e specificare gruppi di campi {#schema-design}
 
-Le risorse Experience Data Model (XDM) sono gestite nell&#39;area di lavoro [!UICONTROL Schemi] in [!DNL Adobe Experience Platform]. È possibile visualizzare ed esplorare le risorse di base fornite da [!DNL Adobe] (ad esempio i gruppi di campi) e creare risorse e schemi personalizzati per l&#39;organizzazione.
+Le risorse Experience Data Model (XDM) sono gestite nell&#39;area di lavoro [!UICONTROL Schemas] in [!DNL Adobe Experience Platform]. È possibile visualizzare ed esplorare le risorse di base fornite da [!DNL Adobe] (ad esempio i gruppi di campi) e creare risorse e schemi personalizzati per l&#39;organizzazione.
 
-Per ulteriori informazioni sulla creazione di [schemi](/help/xdm/home.md), vedere l&#39;esercitazione [crea schema.](/help/xdm/tutorials/create-schema-ui.md) e [Modellare i dati sull&#39;esperienza del cliente con XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=it).
+Per ulteriori informazioni sulla creazione di [schemi](/help/xdm/home.md), vedere l&#39;esercitazione [crea schema.](/help/xdm/tutorials/create-schema-ui.md) e [Modellare i dati sull&#39;esperienza del cliente con XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
 Per il caso di utilizzo del ricoinvolgimento vengono utilizzate quattro progettazioni di schemi. Ogni schema richiede la configurazione di campi specifici. Devi abilitare lo schema per essere incluso nel Profilo cliente in tempo reale. Per ulteriori informazioni sull&#39;abilitazione dello schema per l&#39;utilizzo in Real-Time Customer Profile, leggere [enable a schema for Real-Time Customer Profile](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile) (Abilitare uno schema per Real-Time Customer Profile).
 
@@ -105,9 +105,9 @@ Per il caso di utilizzo del ricoinvolgimento vengono utilizzate quattro progetta
 
 Questo schema viene utilizzato per strutturare e fare riferimento ai dati di profilo che compongono le informazioni sul cliente. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] tramite il sistema CRM o simile e sono necessari per fare riferimento ai dettagli dei clienti utilizzati per la personalizzazione, il consenso al marketing e le funzionalità avanzate di pubblico.
 
-Lo schema di attributi del cliente è rappresentato da una classe [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md), che include i seguenti gruppi di campi:
+Lo schema attributi del cliente è rappresentato da una classe [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md), che include i seguenti gruppi di campi:
 
-+++Dati di contatto personali (gruppo di campi)
++++Dettagli di contatto personali (gruppo di campi)
 
 [Dettagli contatto personale](/help/xdm/field-groups/profile/personal-contact-details.md) è un gruppo di campi di schema standard per la classe Profilo individuale XDM che descrive le informazioni di contatto per una singola persona.
 
@@ -118,13 +118,13 @@ Lo schema di attributi del cliente è rappresentato da una classe [[!UICONTROL X
 
 +++
 
-+++Dettagli di controllo del sistema Source esterno (gruppo di campi)
++++Dettagli controllo sistema Source esterno (gruppo di campi)
 
 [External Source System Audit Attributes](/help/xdm/data-types/external-source-system-audit-attributes.md) è un tipo di dati XDM (Experience Data Model) standard che acquisisce i dettagli di controllo di un sistema di origine esterno.
 
 +++
 
-+++Gruppi di campi di consenso e preferenze (gruppo di campi)
++++Gruppi di campi per consenso e preferenze (gruppo di campi)
 
 Il gruppo di campi [Consensi e preferenze](/help/xdm/field-groups//profile/consents.md) fornisce un singolo campo di tipo oggetto, Consensi, per acquisire informazioni sul consenso e sulle preferenze.
 
@@ -141,7 +141,7 @@ Il gruppo di campi [Consensi e preferenze](/help/xdm/field-groups//profile/conse
 
 +++Dettagli test profilo (gruppo di campi)
 
-Questo gruppo di campi ti consente di testare il percorso prima che venga pubblicato, utilizzando i profili di test. Per ulteriori informazioni sulla creazione di profili di test, leggere l&#39;esercitazione [creazione di profili di test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=it) e l&#39;esercitazione [verifica del percorso](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=it).
+Questo gruppo di campi ti consente di testare il percorso prima che venga pubblicato, utilizzando i profili di test. Per ulteriori informazioni sulla creazione di profili di test, leggere l&#39;esercitazione [creazione di profili di test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) e l&#39;esercitazione [verifica del percorso](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
@@ -197,7 +197,7 @@ Il gruppo di campi [Dettagli Commerce](/help/xdm/field-groups/event/commerce-det
 
 +++
 
-+++Dettagli di controllo del sistema Source esterno (gruppo di campi)
++++Dettagli controllo sistema Source esterno (gruppo di campi)
 
 External Source System Audit Attributes è un tipo di dati standard Experience Data Model (XDM) che acquisisce dettagli di audit su un sistema di origine esterno.
 
@@ -240,7 +240,7 @@ Il gruppo di campi [Dettagli Commerce](/help/xdm/field-groups/event/commerce-det
 
 +++
 
-+++Dati di contatto personali (gruppo di campi)
++++Dettagli di contatto personali (gruppo di campi)
 
 [Dettagli contatto personale](/help/xdm/field-groups/profile/personal-contact-details.md) è un gruppo di campi di schema standard per la classe Profilo individuale XDM che descrive le informazioni di contatto per una singola persona.
 
@@ -251,7 +251,7 @@ Il gruppo di campi [Dettagli Commerce](/help/xdm/field-groups/event/commerce-det
 
 +++
 
-+++Dettagli di controllo del sistema Source esterno (gruppo di campi)
++++Dettagli controllo sistema Source esterno (gruppo di campi) 
 
 External Source System Audit Attributes è un tipo di dati standard Experience Data Model (XDM) che acquisisce dettagli di audit su un sistema di origine esterno.
 
@@ -294,7 +294,7 @@ Il gruppo di campi [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/even
 
 +++
 
-+++Dettagli di controllo del sistema Source esterno (gruppo di campi)
++++Dettagli controllo sistema Source esterno (gruppo di campi)
 
 External Source System Audit Attributes è un tipo di dati standard Experience Data Model (XDM) che acquisisce dettagli di audit su un sistema di origine esterno.
 
@@ -314,11 +314,11 @@ Per ulteriori informazioni su come creare un [set di dati](/help/catalog/dataset
 
 >[!IMPORTANT]
 >
->Come requisito legale, è necessario dare ai clienti la possibilità di annullare l’abbonamento alla ricezione di comunicazioni da un marchio e garantire che questa scelta sia rispettata. Ulteriori informazioni sulle normative applicabili nella [Panoramica sulle normative sulla privacy](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=it).
+>Come requisito legale, è necessario dare ai clienti la possibilità di annullare l’abbonamento alla ricezione di comunicazioni da un marchio e garantire che questa scelta sia rispettata. Ulteriori informazioni sulle normative applicabili nella [Panoramica sulle normative sulla privacy](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
 #### Criteri di consenso
 
-Durante la creazione di un percorso di ricoinvolgimento, puoi aggiungere i seguenti [criteri di consenso](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=it):
+Durante la creazione di un percorso di ricoinvolgimento, puoi aggiungere i seguenti [criteri di consenso](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
 
 * Se `consents.marketing.email.val = "Y"` allora può inviare un&#39;e-mail
 * Se `consents.marketing.sms.val = "Y"` allora può inviare un SMS
@@ -346,7 +346,7 @@ Nessun [criterio di utilizzo dati](/help/data-governance/policies/overview.md) r
 
 Gli scenari di ricoinvolgimento utilizzano i tipi di pubblico per definire attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio profili, al fine di distinguere un gruppo di persone commerciabile dalla base clienti. I tipi di pubblico possono essere creati in più modi in [!DNL Adobe Experience Platform].
 
-Per ulteriori informazioni su come creare un pubblico, leggere la [guida dell&#39;interfaccia utente del servizio del pubblico](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=it#create-audience).
+Per ulteriori informazioni su come creare un pubblico, leggere la [guida dell&#39;interfaccia utente del servizio del pubblico](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Per ulteriori informazioni su come comporre direttamente [Tipi di pubblico](/help/segmentation/home.md), consulta la [Guida dell&#39;interfaccia utente Composizione pubblico](/help/segmentation/ui/audience-composition.md).
 
@@ -414,7 +414,7 @@ I seguenti eventi vengono utilizzati per lo scenario del carrello abbandonato in
 Durante la configurazione del pubblico sono necessari i campi e le condizioni seguenti:
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now AND <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now`
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
@@ -434,9 +434,9 @@ Questo percorso non richiede la creazione di tipi di pubblico.
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] non include tutti gli elementi visualizzati nei diagrammi. Tutti i [annunci multimediali a pagamento](/help/destinations/catalog/social/overview.md) sono creati in [!UICONTROL Destinazioni].
+>[!DNL Adobe Journey Optimizer] non include tutti gli elementi visualizzati nei diagrammi. Tutti i [annunci multimediali a pagamento](/help/destinations/catalog/social/overview.md) sono creati in [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it) ti aiuta a fornire ai tuoi clienti esperienze connesse, contestuali e personalizzate. Il percorso del cliente è l’intero processo di interazione del cliente con il marchio. Ogni percorso di casi d’uso richiede informazioni specifiche. Di seguito sono elencati i dati precisi necessari per ciascun percorso.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ti aiuta a fornire ai tuoi clienti esperienze connesse, contestuali e personalizzate. Il percorso del cliente è l’intero processo di interazione del cliente con il marchio. Ogni percorso di casi d’uso richiede informazioni specifiche. Di seguito sono elencati i dati precisi necessari per ciascun percorso.
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ Lo scenario di navigazione dei prodotti abbandonati è incentrato sulla navigazi
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=it).
+Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 1: Visualizzazioni prodotto
    * Schema: Transazioni digitali del cliente
@@ -534,7 +534,7 @@ Gli eventi consentono di attivare i percorsi in modo unitario per inviare messag
 
 +++
 
-+++Logica chiave area di lavoro Percorso
++++Logica chiave area di lavoro percorso
 
 La logica chiave dell’area di lavoro di percorso richiede di identificare eventi specifici e configurare le azioni da eseguire dopo che l’evento si è verificato.
 
@@ -571,7 +571,7 @@ Lo scenario del carrello abbandonato riguarda i prodotti che sono stati inseriti
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=it).
+Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: aggiungi al carrello
    * Schema: Transazioni digitali del cliente
@@ -666,7 +666,7 @@ Gli eventi consentono di attivare i percorsi in modo unitario per inviare messag
 
 +++
 
-+++Logica chiave area di lavoro Percorso
++++Logica chiave area di lavoro percorso
 
 La logica chiave dell’area di lavoro di percorso richiede di identificare eventi specifici e configurare le azioni da eseguire dopo che l’evento si è verificato.
 
@@ -704,7 +704,7 @@ Lo scenario di conferma dell’ordine si concentra sugli acquisti di prodotti ef
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=it).
+Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 4: Acquisti online
    * Schema: Transazioni digitali del cliente
@@ -734,7 +734,7 @@ Gli eventi consentono di attivare i percorsi in modo unitario per inviare messag
 
 +++
 
-+++Logica chiave area di lavoro Percorso
++++Logica chiave area di lavoro percorso
 
 La logica chiave dell’area di lavoro di percorso richiede di identificare eventi specifici e configurare le azioni da eseguire dopo che l’evento si è verificato.
 
@@ -755,7 +755,7 @@ La logica chiave dell’area di lavoro di percorso richiede di identificare even
 
 >[!ENDTABS]
 
-Per ulteriori informazioni sulla creazione di percorsi in [!DNL Adobe Journey Optimizer], leggere la [Guida introduttiva ai percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it).
+Per ulteriori informazioni sulla creazione di percorsi in [!DNL Adobe Journey Optimizer], leggere la [Guida introduttiva ai percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Impostazione di annunci multimediali a pagamento nelle destinazioni {#paid-media-ads}
 

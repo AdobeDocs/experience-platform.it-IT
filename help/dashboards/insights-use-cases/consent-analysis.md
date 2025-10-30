@@ -2,9 +2,9 @@
 title: Analisi e tracciamento del consenso
 description: Scopri come creare un dashboard di analisi del consenso per tenere traccia delle tendenze del consenso degli utenti nel tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1910'
+source-wordcount: '1805'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,15 @@ I casi d’uso trattati in questa guida sono la tendenza del consenso e la sovra
 
 ## Creare tipi di pubblico consentiti {#create-consent-audiences}
 
-Per creare una dashboard di consenso, devi innanzitutto creare un pubblico di tutti i profili che hanno acconsentito a contattare. Per passare al Generatore di segmenti di Real-Time Customer Data Platform, seleziona **[!UICONTROL Tipi di pubblico]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform. Dalla scheda [!UICONTROL Cliente] della dashboard [!UICONTROL Tipi di pubblico], seleziona **[!UICONTROL Crea pubblico]** in alto a destra della visualizzazione, quindi **[!UICONTROL Genera regole]**.
+Per creare una dashboard di consenso, devi innanzitutto creare un pubblico di tutti i profili che hanno acconsentito a contattare. Per passare al Generatore di segmenti di Real-Time Customer Data Platform, seleziona **[!UICONTROL Audiences]** nel menu di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform. Dalla scheda [!UICONTROL Customer] del dashboard [!UICONTROL Audiences], seleziona **[!UICONTROL Create audience]** in alto a destra della visualizzazione, quindi **[!UICONTROL Build rules]**.
 
-![Dashboard [!UICONTROL Tipi di pubblico] con [!UICONTROL Cliente], [!UICONTROL Tipi di pubblico] e [!UICONTROL Crea segmento] evidenziato.](../images/insights-use-cases/consent-analysis/create-audience.png)
+![Dashboard [!UICONTROL Audiences] con [!UICONTROL Customer], [!UICONTROL Audiences] e [!UICONTROL Create segment] evidenziati.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
-Viene visualizzato il Generatore di segmenti. Quindi, seleziona **[!UICONTROL Profilo individuale XDM]** dalle opzioni disponibili. Per ulteriori informazioni sull&#39;area di lavoro [generatore regole](../../segmentation/ui/segment-builder.md#rule-builder-canvas), vedere la documentazione.
+Viene visualizzato il Generatore di segmenti. Selezionare **[!UICONTROL XDM Individual Profile]** tra le opzioni disponibili. Per ulteriori informazioni sull&#39;area di lavoro [generatore regole](../../segmentation/ui/segment-builder.md#rule-builder-canvas), vedere la documentazione.
 
-![Generatore di segmenti con la cartella dell&#39;attributo [!UICONTROL Profilo individuale XDM] evidenziata.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
+![Generatore di segmenti con la cartella degli attributi [!UICONTROL XDM Individual Profile] evidenziata.](../images/insights-use-cases/consent-analysis/xdm-individual-profile.png)
 
-Individua gli attributi del consenso tra le opzioni disponibili. Selezionare **[!UICONTROL Consensi e preferenze]**.
+Individua gli attributi del consenso tra le opzioni disponibili. Seleziona **[!UICONTROL Consents and Preferences]**.
 
 >[!NOTE]
 >
@@ -40,27 +40,27 @@ Individua gli attributi del consenso tra le opzioni disponibili. Selezionare **[
 
 Ulteriori informazioni sono disponibili nella [gestione del consenso nella documentazione relativa alla segmentazione](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation).
 
-![Generatore di segmenti con la cartella degli attributi [!UICONTROL Consenso e preferenze] evidenziata.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
+![Generatore di segmenti con la cartella degli attributi [!UICONTROL Consent and Preferences] evidenziata.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
-Vengono visualizzate le varie opzioni relative al consenso e alle preferenze. Poiché questa dimostrazione si concentra sul consenso da contattare tramite vari canali di marketing, seleziona **[!UICONTROL Preferenze di marketing]**.
+Vengono visualizzate le varie opzioni relative al consenso e alle preferenze. Poiché questa dimostrazione si concentra sul consenso a contattare tramite vari canali di marketing, selezionare **[!UICONTROL Marketing Preferences]**.
 
-![Generatore di segmenti con la cartella [!UICONTROL Preferenze di marketing] evidenziata.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
+![Generatore di segmenti con la cartella [!UICONTROL Marketing Preferences] evidenziata.](../images/insights-use-cases/consent-analysis/marketing-preferences.png)
 
 Viene visualizzato l’elenco delle preferenze di marketing. Anche se questo caso d’uso di esempio si concentra su e-mail, SMS e chiamate, puoi creare informazioni approfondite per qualsiasi altra combinazione o per tutte le opzioni. Per creare un pubblico per ciascuno dei canali, esegui i passaggi seguenti.
 
-Per iniziare a configurare un pubblico, seleziona **[!UICONTROL Ricevi SMS]** / **[!UICONTROL Ricevi e-mail]** / **[!UICONTROL Ricevi chiamate]**.
+Per iniziare a configurare un pubblico, selezionare **[!UICONTROL Receive SMS]** / **[!UICONTROL Receive email]** / **[!UICONTROL Receive calls]**.
 
 ![I canali di contatto disponibili per il marketing sono evidenziati nel generatore di pubblico.](../images/insights-use-cases/consent-analysis/channels.png)
 
-Viene visualizzata la cartella [!UICONTROL Subscriptions]. Tra le opzioni disponibili, seleziona e trascina l&#39;attributo **[!UICONTROL Valore scelta]** nel riquadro centrale, quindi seleziona il valore desiderato dal menu a discesa. In questo caso, selezionare **Sì (consenso)**. Quindi, assegna un nome al pubblico in base alle tue esigenze aziendali e fornisci una descrizione semplice.
+Verrà visualizzata la cartella [!UICONTROL Subscriptions]. Tra le opzioni disponibili, selezionare e trascinare l&#39;attributo **[!UICONTROL Choice Value]** nel riquadro centrale, quindi selezionare il valore desiderato dal menu a discesa. In questo caso, selezionare **Sì (consenso)**. Quindi, assegna un nome al pubblico in base alle tue esigenze aziendali e fornisci una descrizione semplice.
 
 >[!NOTE]
 >
 >È previsto un limite al numero di tipi di pubblico che si consiglia di creare. Ulteriori informazioni sono disponibili nella [documentazione sui guardrail di segmentazione](../../profile/guardrails.md#segmentation-guardrails).
 
-![L&#39;attributo [!UICONTROL Valore scelta] con il valore [!UICONTROL Sì (consenso)] evidenziato nel generatore di segmenti. Vengono evidenziati anche il nome e la descrizione del pubblico.](../images/insights-use-cases/consent-analysis/choice-value.png)
+![L&#39;attributo [!UICONTROL Choice Value] con il valore [!UICONTROL Yes (opt-in)] è evidenziato nel generatore di segmenti. Vengono evidenziati anche il nome e la descrizione del pubblico.](../images/insights-use-cases/consent-analysis/choice-value.png)
 
-Dopo aver creato i tipi di pubblico necessari, questi sono elencati nella scheda [!UICONTROL Tipi di pubblico] [!UICONTROL Sfoglia].
+Dopo aver creato i tipi di pubblico necessari, questi sono elencati nella scheda [!UICONTROL Audiences] [!UICONTROL Browse].
 
 >[!NOTE]
 >
@@ -72,13 +72,13 @@ Adobe ha creato varie informazioni che sono automaticamente disponibili nelle da
 
 ## Sovrapposizione del pubblico {#audience-overlap}
 
-Per rivedere la sovrapposizione tra due tipi di pubblico di consenso, aggiungi [!UICONTROL Sovrapposizione pubblico per criterio di unione] alla dashboard Profili e seleziona i tipi di pubblico desiderati nei menu a discesa. Per ulteriori informazioni su insight, consulta la documentazione per istruzioni su come aggiungere un widget al dashboard [*Sovrapposizione del pubblico tramite criterio di unione*](../guides/profiles.md#audience-overlap-by-merge-policy).
+Per rivedere la sovrapposizione tra due tipi di pubblico di consenso, aggiungi [!UICONTROL Audience overlap by merge policy] al dashboard Profili e seleziona i tipi di pubblico desiderati nei menu a discesa. Per ulteriori informazioni su insight, consulta la documentazione per istruzioni su come aggiungere un widget al dashboard [*Sovrapposizione del pubblico tramite criterio di unione*](../guides/profiles.md#audience-overlap-by-merge-policy).
 
 <!-- Image needs updating to night mode -->
 
 ![Il dashboard Profili con il widget Sovrapposizione pubblico per criterio di unione è evidenziato. Il widget visualizza le sovrapposizioni tra due tipi di pubblico di consenso.](../images/insights-use-cases/consent-analysis/audience-overlap-by-merge-policy.png)
 
-Puoi visualizzare la sovrapposizione di tutti i tipi di pubblico in cui gli utenti hanno acconsentito a ricevere chiamate tra tutti gli altri tipi di pubblico, con il rapporto di sovrapposizione pubblico nel dashboard Tipi di pubblico. Per visualizzare la sovrapposizione dei tipi di pubblico per il consenso, passa innanzitutto alla scheda [!UICONTROL Tipi di pubblico] [!UICONTROL Panoramica]. Da qui, puoi aggiungere il widget [!UICONTROL Rapporto di sovrapposizione pubblico] alla dashboard Tipi di pubblico. Dopo la creazione del widget, seleziona il pubblico **[!UICONTROL Autorizzato dall&#39;utente]** dal menu a discesa Panoramica del pubblico nella parte superiore della pagina. Quindi, seleziona **[!UICONTROL Visualizza altro]** nel widget del report di sovrapposizione pubblico per visualizzare fino a 50 delle sovrapposizioni principali e fino a 50 delle sovrapposizioni minime per il segmento selezionato.
+Puoi visualizzare la sovrapposizione di tutti i tipi di pubblico in cui gli utenti hanno acconsentito a ricevere chiamate tra tutti gli altri tipi di pubblico, con il rapporto di sovrapposizione pubblico nel dashboard Tipi di pubblico. Per visualizzare la sovrapposizione dei tipi di pubblico per il consenso, passare innanzitutto alla scheda [!UICONTROL Audiences] [!UICONTROL Overview]. Da qui, puoi aggiungere il widget [!UICONTROL Audience overlap report] alla dashboard Tipi di pubblico. Dopo la creazione del widget, seleziona il pubblico **[!UICONTROL User consented to calls]** dal menu a discesa Panoramica del pubblico nella parte superiore della pagina. Quindi, seleziona **[!UICONTROL View more]** nel widget del report di sovrapposizione pubblico per visualizzare fino a 50 delle sovrapposizioni principali e fino a 50 delle sovrapposizioni minime per il segmento selezionato.
 
 <!-- Image needs updating to night mode -->
 
@@ -92,7 +92,7 @@ La finestra di dialogo Rapporto di sovrapposizione pubblico si espande per mostr
 
 ## Tendenze di dimensioni del pubblico {#audience-size-trends}
 
-Quando crei un pubblico basato sul consenso, viene automaticamente creata una tendenza fino a 12 mesi dalla data di creazione del pubblico. Per avere una tendenza completamente funzionale del consenso del cliente, aggiungi i seguenti widget alla pagina [!UICONTROL Segmenti] [!UICONTROL Panoramica]. Queste informazioni offrono un mezzo potente per monitorare come cambia il consenso nel tempo. Sono anche correlate a qualsiasi campagna eseguita in parallelo che potrebbe avere un impatto positivo o negativo sul consenso. Le descrizioni offerte per questi widget si applicano a un caso di utilizzo del consenso.
+Quando crei un pubblico basato sul consenso, viene automaticamente creata una tendenza fino a 12 mesi dalla data di creazione del pubblico. Per avere una tendenza completamente funzionale del consenso del cliente, aggiungere i seguenti widget alla pagina [!UICONTROL Segments] [!UICONTROL Overview]. Queste informazioni offrono un mezzo potente per monitorare come cambia il consenso nel tempo. Sono anche correlate a qualsiasi campagna eseguita in parallelo che potrebbe avere un impatto positivo o negativo sul consenso. Le descrizioni offerte per questi widget si applicano a un caso di utilizzo del consenso.
 
 - [Tendenza dimensione pubblico](../guides/audiences.md#audience-size-trend): questo widget offre un modo per monitorare come il rispettivo consenso è cambiato nel tempo.
 - [Tendenza di modifica della dimensione del pubblico](../guides/audiences.md#audience-size-change-trend): questo widget traccia quotidianamente la variazione del consenso del cliente. Ad esempio, se il conteggio del consenso del cliente è diminuito di 100.000, puoi vedere come si è verificata la modifica su base giornaliera.
@@ -104,7 +104,7 @@ Quando crei un pubblico basato sul consenso, viene automaticamente creata una te
 
 ## Dashboard panoramica di Audiences {#audiences-overview-dashboard}
 
-Dopo aver creato un pubblico correlato al consenso, ad esempio &quot;Utenti autorizzati agli SMS&quot;, puoi visualizzare informazioni chiave e personalizzate sul consenso relative al pubblico aggiungendo i widget appropriati alla dashboard Panoramica tipi di pubblico. Passa a [!UICONTROL Tipi di pubblico] [!UICONTROL Panoramica] e aggiungi i widget scelti dalla libreria widget. Qualsiasi widget aggiunto alla vista del dashboard può essere ridimensionato e spostato utilizzando la funzione [!UICONTROL Modifica dashboard]. La vista personalizzata può contenere informazioni come la tendenza nel tempo (fino a 12 mesi), le sovrapposizioni con altri tipi di pubblico e la composizione dell’identità del pubblico. Di seguito è riportata una visualizzazione di esempio.
+Dopo aver creato un pubblico correlato al consenso, ad esempio &quot;Utenti autorizzati agli SMS&quot;, puoi visualizzare informazioni chiave e personalizzate sul consenso relative al pubblico aggiungendo i widget appropriati alla dashboard Panoramica tipi di pubblico. Passa a [!UICONTROL Audiences] [!UICONTROL Overview] e aggiungi i widget scelti dalla libreria di widget. Qualsiasi widget aggiunto alla visualizzazione del dashboard può essere ridimensionato e spostato utilizzando la funzione [!UICONTROL Modify dashboard]. La vista personalizzata può contenere informazioni come la tendenza nel tempo (fino a 12 mesi), le sovrapposizioni con altri tipi di pubblico e la composizione dell’identità del pubblico. Di seguito è riportata una visualizzazione di esempio.
 
 ![Il dashboard dei tipi di pubblico con gli utenti che hanno acconsentito all&#39;invio di SMS è evidenziato nel menu a discesa del pubblico globale.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -112,11 +112,11 @@ Dopo aver creato un pubblico correlato al consenso, ad esempio &quot;Utenti auto
 
 Puoi anche creare widget personalizzati con dashboard definite dall’utente. La creazione di un widget personalizzato offre il controllo completo sul tipo di widget, insieme alla flessibilità necessaria per aggiungere filtri e molto altro, direttamente in Adobe Real-Time CDP.
 
-Ad esempio, se desideri presentare più tipi di pubblico per il consenso nello stesso grafico, in modo da poter vedere nel tempo come ciascuna delle tue preferenze di consenso è cambiata. Questo tipo di visualizzazione è possibile con dashboard definiti dall’utente in passaggi minimi e una configurazione una tantum. Selezionare innanzitutto **[!UICONTROL Dashboard]** nell&#39;area di navigazione a sinistra. Viene visualizzata l&#39;area di lavoro [!UICONTROL Dashboards]. Quindi selezionare **[!UICONTROL Crea dashboard]**. Le istruzioni complete su come [creare un dashboard e un widget personalizzato](../standard-dashboards.md) sono disponibili nella guida delle dashboard definite dall&#39;utente.
+Ad esempio, se desideri presentare più tipi di pubblico per il consenso nello stesso grafico, in modo da poter vedere nel tempo come ciascuna delle tue preferenze di consenso è cambiata. Questo tipo di visualizzazione è possibile con dashboard definiti dall’utente in passaggi minimi e una configurazione una tantum. Selezionare **[!UICONTROL Dashboards]** nel menu di navigazione a sinistra. Verrà visualizzata l&#39;area di lavoro [!UICONTROL Dashboards]. Quindi selezionare **[!UICONTROL Create dashboard]**. Le istruzioni complete su come [creare un dashboard e un widget personalizzato](../standard-dashboards.md) sono disponibili nella guida delle dashboard definite dall&#39;utente.
 
 ![Area di lavoro delle dashboard con dashboard e Crea dashboard evidenziati.](../images/standard-dashboards/create-dashboard.png)
 
-Quando [selezioni il modello dati](../standard-dashboards.md#select-data-model) nel compositore widget, seleziona `CDPInsights` seguito da **[!UICONTROL Successivo]**. Viene visualizzata la finestra di dialogo [!UICONTROL Seleziona tabella].
+Quando [selezioni il modello dati](../standard-dashboards.md#select-data-model) nel compositore widget, seleziona `CDPInsights` seguito da **[!UICONTROL Next]**. Viene visualizzata la finestra di dialogo [!UICONTROL Select table].
 
 ![Finestra di dialogo Seleziona modello dati con il modello CDPInsights evidenziato.](../images/standard-dashboards/select-data-model-dialog.png)
 
@@ -126,17 +126,17 @@ Nella vista successiva viene visualizzato un elenco delle tabelle disponibili ne
 
 Dopo aver popolato il compositore di widget con i dati della tabella scelta, effettua le seguenti operazioni:
 
-- [Cerca [!UICONTROL Attributi]](../standard-dashboards.md#add-filter-attributes) per `[!UICONTROL date]`, quindi utilizza l&#39;icona + per aggiungere l&#39;attributo `[!UICONTROL date]` all&#39;asse X dal menu a discesa.
+- [Cerca [!UICONTROL Attributes]](../standard-dashboards.md#add-filter-attributes) per `[!UICONTROL date]`, quindi utilizza l&#39;icona + per aggiungere l&#39;attributo `[!UICONTROL date]` all&#39;asse X dal menu a discesa.
   ![Il compositore widget con l&#39;icona del componente aggiuntivo e il menu a discesa evidenziati.](../images/standard-dashboards/attributes-dropdown.png)
-- Cerca [!UICONTROL Attributi] per `[!UICONTROL count_of_profiles]`, quindi utilizza l&#39;icona + per aggiungere l&#39;attributo `[!UICONTROL count_of_profiles]` all&#39;asse Y dal menu a discesa.
-- Seleziona l&#39;icona `...` (puntini di sospensione) nel campo [!UICONTROL Asse Y], quindi seleziona la funzione di aggregazione [!UICONTROL SUM] dal menu a discesa.
-  ![Il widget Compositore widget Tendenze di consenso con il modello dati, la tabella, il menu a discesa dell&#39;asse Y e la funzione SOMMA evidenziati. &#x200B;](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- Selezionare il menu a discesa [!UICONTROL Indicatori] e modificare il tipo di grafico in [!UICONTROL Linea].
-- Cerca [!UICONTROL Attributi] per `[!UICONTROL segment_name]`, quindi utilizza l&#39;icona + per aggiungere `segment_name` come [!UICONTROL Filtro] dal menu a discesa. Viene visualizzata la finestra di dialogo [!UICONTROL Filter: Segment_name]. Seleziona i tipi di pubblico creati in precedenza che si riferiscono al consenso. Per questo esempio, seleziona **[!UICONTROL Utenti autorizzati alle chiamate]**, **[!UICONTROL Utenti autorizzati agli SMS]** e **[!UICONTROL Utenti autorizzati all&#39;invio di e-mail]**, seguiti da **[!UICONTROL Applica]**.
-- Cerca [!UICONTROL Attributi] per `[!UICONTROL segment_name]`, quindi seleziona l&#39;icona + per aggiungere `segment_name` come [!UICONTROL Colore] dal menu a discesa.
-- Apri [il pannello [!UICONTROL Proprietà]](../standard-dashboards.md#widget-properties) e fornisci un [!UICONTROL Titolo widget] e un&#39;etichetta [!UICONTROL Asse] appropriati.
+- Cerca [!UICONTROL Attributes] per `[!UICONTROL count_of_profiles]`, quindi utilizza l&#39;icona + per aggiungere l&#39;attributo `[!UICONTROL count_of_profiles]` all&#39;asse Y dal menu a discesa.
+- Selezionare l&#39;icona `...` (puntini di sospensione) nel campo [!UICONTROL Y-axis], quindi selezionare la funzione di aggregazione [!UICONTROL SUM] dal menu a discesa.
+  ![Il widget Compositore widget Tendenze di consenso con il modello dati, la tabella, il menu a discesa dell&#39;asse Y e la funzione SOMMA evidenziati.](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+- Selezionare il menu a discesa [!UICONTROL Marks] e modificare il tipo di grafico in [!UICONTROL Line].
+- Cerca [!UICONTROL Attributes] per `[!UICONTROL segment_name]`, quindi utilizza l&#39;icona + per aggiungere `segment_name` come [!UICONTROL Filter] dal menu a discesa. Viene visualizzata la finestra di dialogo [!UICONTROL Filter: Segment_name]. Seleziona i tipi di pubblico creati in precedenza che si riferiscono al consenso. Per questo esempio, selezionare **[!UICONTROL Users Consented to Calls]**, **[!UICONTROL Users Consented to SMS]** e **[!UICONTROL Users Consented to Email]**, seguiti da **[!UICONTROL Apply]**.
+- Cerca [!UICONTROL Attributes] per `[!UICONTROL segment_name]`, quindi seleziona l&#39;icona + per aggiungere `segment_name` come [!UICONTROL Color] dal menu a discesa.
+- Apri [il pannello [!UICONTROL Properties]](../standard-dashboards.md#widget-properties) e fornisci [!UICONTROL Widget title] e [!UICONTROL Axis label] appropriati.
   ![Compositore widget con l&#39;icona delle proprietà e il titolo del widget evidenziati.](../images/standard-dashboards/properties-panel.png)
-- Seleziona **[!UICONTROL Salva e chiudi]** per confermare le impostazioni.
+- Seleziona **[!UICONTROL Save and close]** per confermare le impostazioni.
 
 >[!TIP]
 >

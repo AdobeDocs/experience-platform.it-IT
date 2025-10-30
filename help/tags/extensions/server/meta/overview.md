@@ -1,10 +1,10 @@
 ---
-title: Panoramica dell’estensione API Meta Conversions
+title: Panoramica dell’estensione API per conversioni Meta
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) ti consente di collegare i dati di marketing lato server alle tecnologie [!DNL Meta] per ottimizzare il targeting degli annunci, ridurre i costi per azione e misurare i risultati. Gli eventi sono collegati a un ID [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) e vengono elaborati in modo simile agli eventi lato client.
 
-Utilizzando l&#39;estensione [!DNL Meta Conversions API], puoi sfruttare le funzionalità dell&#39;API nelle regole di [inoltro eventi](../../../ui/event-forwarding/overview.md) per inviare dati a [!DNL Meta] dall&#39;Edge Network di Adobe Experience Platform. In questo documento viene illustrato come installare l&#39;estensione e utilizzarne le funzionalità in una [regola](../../../ui/managing-resources/rules.md) di inoltro eventi.
+Utilizzando l&#39;estensione [!DNL Meta Conversions API], puoi sfruttare le funzionalità dell&#39;API nelle regole di [inoltro eventi](../../../ui/event-forwarding/overview.md) per inviare dati a [!DNL Meta] da Adobe Experience Platform Edge Network. In questo documento viene illustrato come installare l&#39;estensione e utilizzarne le funzionalità in una [regola](../../../ui/managing-resources/rules.md) di inoltro eventi.
 
 ## Demo
 
@@ -37,17 +37,17 @@ Per utilizzare l&#39;estensione [!DNL Conversions API], è necessario avere acce
 
 ## Installare l’estensione
 
-Per installare l&#39;estensione [!DNL Meta Conversions API], passa all&#39;interfaccia utente di Data Collection o all&#39;interfaccia utente Experience Platform e seleziona **[!UICONTROL Inoltro eventi]** dal menu di navigazione a sinistra. Da qui, seleziona una proprietà a cui aggiungere l’estensione o creane una nuova.
+Per installare l&#39;estensione [!DNL Meta Conversions API], passa all&#39;interfaccia utente di Data Collection o all&#39;interfaccia utente di Experience Platform e seleziona **[!UICONTROL Event Forwarding]** dal menu di navigazione a sinistra. Da qui, seleziona una proprietà a cui aggiungere l’estensione o creane una nuova.
 
-Dopo aver selezionato o creato la proprietà desiderata, seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Catalogo]**. Cerca la scheda [!UICONTROL Meta Conversions API], quindi seleziona **[!UICONTROL Installa]**.
+Dopo aver selezionato o creato la proprietà desiderata, selezionare **[!UICONTROL Extensions]** nel menu di navigazione a sinistra, quindi selezionare la scheda **[!UICONTROL Catalog]**. Cerca la scheda [!UICONTROL Meta Conversions API], quindi seleziona **[!UICONTROL Install]**.
 
-![Opzione [!UICONTROL Installa] selezionata per l&#39;estensione [!UICONTROL Meta Conversions API] nell&#39;interfaccia utente di Data Collection.](../../../images/extensions/server/meta/install.png)
+![Opzione [!UICONTROL Install] selezionata per l&#39;estensione [!UICONTROL Meta Conversions API] nell&#39;interfaccia utente di Data Collection.](../../../images/extensions/server/meta/install.png)
 
 Nella vista di configurazione visualizzata, devi fornire l&#39;ID [!DNL Pixel] copiato in precedenza per collegare l&#39;estensione al tuo account. Puoi incollare l’ID direttamente nell’input, oppure puoi utilizzare un elemento dati.
 
 È inoltre necessario fornire un token di accesso per utilizzare specificamente [!DNL Conversions API]. Per informazioni su come ottenere questo valore, consulta la documentazione di [!DNL Conversions API] in [generazione di un token di accesso](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token).
 
-Al termine, seleziona **[!UICONTROL Salva]**
+Al termine, selezionare **[!UICONTROL Save]**
 
 ![L&#39;ID [!DNL Pixel] fornito come elemento dati nella vista di configurazione dell&#39;estensione.](../../../images/extensions/server/meta/configure.png)
 
@@ -55,27 +55,27 @@ L&#39;estensione è installata e ora puoi utilizzarne le funzionalità nelle reg
 
 ## Integrazione con l’estensione Facebook e Instagram {#facebook}
 
-L’integrazione tramite l’estensione Facebook e Instagram consente di eseguire rapidamente l’autenticazione nell’account Meta Business. In questo modo, l&#39;ID [!UICONTROL Pixel] e l&#39;API Meta Conversions [!UICONTROL Access Token] verranno automaticamente compilati, semplificando l&#39;installazione e la configurazione dell&#39;API Meta Conversions.
+L’integrazione tramite l’estensione Facebook e Instagram consente di eseguire rapidamente l’autenticazione nell’account aziendale Meta. In questo modo, [!UICONTROL Pixel ID] e l&#39;API di conversione Meta [!UICONTROL Access Token] vengono automaticamente compilati, semplificando l&#39;installazione e la configurazione dell&#39;API di conversione Meta.
 
 Viene visualizzata una finestra di dialogo per l&#39;autenticazione in Facebook e Instagram durante l&#39;installazione dell&#39;estensione [!UICONTROL Meta Conversions API].
 
-![La pagina di installazione dell&#39;estensione API [!UICONTROL Meta Conversions] evidenzia [!UICONTROL Connetti a Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+![La pagina di installazione di [!UICONTROL Meta Conversions API Extension] evidenzia [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
 Una finestra di dialogo per l’autenticazione in Facebook e Instagram viene visualizzata anche nell’interfaccia utente del flusso di lavoro con avvio rapido nell’inoltro degli eventi.
 
-![L&#39;interfaccia utente del flusso di lavoro con avvio rapido evidenzia [!UICONTROL Connetti a Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+![L&#39;interfaccia utente del flusso di lavoro con avvio rapido evidenzia [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
 ## Integrazione con Event Quality Match Score (EMQ) {#emq}
 
-L’integrazione con Event Quality Match Score (EMQ) consente di visualizzare facilmente l’efficacia dell’implementazione mostrando i punteggi EMQ. Questa integrazione riduce al minimo il passaggio a un altro contesto e consente di migliorare il successo delle implementazioni API di metaconversione. Questi punteggi evento vengono visualizzati nella schermata di configurazione dell&#39;estensione [!UICONTROL Meta Conversions API].
+L’integrazione con Event Quality Match Score (EMQ) consente di visualizzare facilmente l’efficacia dell’implementazione mostrando i punteggi EMQ. Questa integrazione riduce al minimo il cambio di contesto e consente di migliorare il successo delle implementazioni API per le conversioni di Meta. Questi punteggi di evento vengono visualizzati nella schermata di configurazione [!UICONTROL Meta Conversions API extension].
 
-![La pagina di configurazione dell&#39;estensione [!UICONTROL Meta Conversions API] evidenzia [!UICONTROL Visualizza punteggio EMQ].](../../../images/extensions/server/meta/emq-score.png)
+![La pagina di configurazione [!UICONTROL Meta Conversions API Extension] evidenzia [!UICONTROL View EMQ Score].](../../../images/extensions/server/meta/emq-score.png)
 
 ## Integrazione con LiveRamp (Alpha) {#alpha}
 
-[!DNL LiveRamp] clienti che hanno implementato la soluzione di traffico autenticato (ATS) di [!DNL LiveRamp] sui loro siti possono scegliere di condividere i RampID come parametro delle informazioni sul cliente. Collabora con il tuo account team [!DNL Meta] per partecipare al programma di Alpha per questa funzionalità.
+[!DNL LiveRamp] clienti che hanno implementato la soluzione di traffico autenticato (ATS) di [!DNL LiveRamp] sui loro siti possono scegliere di condividere i RampID come parametro delle informazioni sul cliente. Collabora con il tuo account team [!DNL Meta] per partecipare al programma Alpha per questa funzione.
 
-![La pagina di configurazione dell&#39;inoltro degli eventi Meta [!UICONTROL Rule] evidenzia [!UICONTROL Partner Name (alpha)] e [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![La pagina di configurazione dell&#39;inoltro eventi di Meta [!UICONTROL Rule] evidenzia [!UICONTROL Partner Name (alpha)] e [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configurare una regola di inoltro degli eventi {#rule}
 
@@ -85,26 +85,26 @@ In questa sezione viene illustrato come utilizzare l&#39;estensione [!DNL Conver
 >
 >Gli eventi devono essere [inviati in tempo reale](https://www.facebook.com/business/help/379226453470947?id=818859032317965) o il più vicino possibile al tempo reale per una migliore ottimizzazione della campagna pubblicitaria.
 
-Inizia a creare una nuova regola di inoltro degli eventi e configurane le condizioni come desiderato. Quando selezioni le azioni per la regola, seleziona **[!UICONTROL Estensione API di conversione metadati]** per l&#39;estensione, quindi seleziona **[!UICONTROL Invia evento API di conversione]** per il tipo di azione.
+Inizia a creare una nuova regola di inoltro degli eventi e configurane le condizioni come desiderato. Quando selezioni le azioni per la regola, seleziona **[!UICONTROL Meta Conversions API Extension]** per l&#39;estensione, quindi seleziona **[!UICONTROL Send Conversions API Event]** per il tipo di azione.
 
-![Tipo di azione [!UICONTROL Invia visualizzazione pagina] selezionato per una regola nell&#39;interfaccia utente di Data Collection.](../../../images/extensions/server/meta/select-action.png)
+![Tipo di azione [!UICONTROL Send Page View] selezionato per una regola nell&#39;interfaccia utente di Data Collection.](../../../images/extensions/server/meta/select-action.png)
 
 Vengono visualizzati i controlli che consentono di configurare i dati evento che verranno inviati a [!DNL Meta] tramite [!DNL Conversions API]. Queste opzioni possono essere immesse direttamente negli input forniti, oppure puoi selezionare elementi dati esistenti per rappresentare i valori. Le opzioni di configurazione sono suddivise in quattro sezioni principali, come descritto di seguito.
 
 | Sezione di configurazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Parametri evento server] | Informazioni generali sull&#39;evento, tra cui l&#39;ora in cui si è verificato e l&#39;azione di origine che l&#39;ha attivato. Per ulteriori informazioni sui [parametri evento standard](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event) accettati da [!DNL Conversions API], consultare la documentazione per gli sviluppatori di [!DNL Meta].<br><br>Se per l&#39;invio di eventi si utilizzano sia [!DNL Meta Pixel] che [!DNL Conversions API], assicurarsi di includere sia un **[!UICONTROL Nome evento]** (`event_name`) che un **[!UICONTROL ID evento]** (`event_id`) in ogni evento, poiché questi valori vengono utilizzati per la [deduplicazione evento](#deduplication).<br><br>Hai anche la possibilità di **[!UICONTROL abilitare l&#39;uso limitato dei dati]** per rispettare le rinunce dei clienti. Per informazioni dettagliate su questa funzione, consulta la documentazione di [!DNL Conversions API] sulle [opzioni di elaborazione dati](https://developers.facebook.com/docs/marketing-apis/data-processing-options/). |
-| [!UICONTROL Parametri informazioni cliente] | Dati di identità utente utilizzati per attribuire l’evento a un cliente. Per poter essere inviati all&#39;API, alcuni di questi valori devono avere un hash.<br><br>Per garantire una buona connessione API comune e un&#39;elevata qualità di corrispondenza eventi (EMQ), si consiglia di inviare tutti i [parametri accettati per le informazioni sul cliente](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) insieme agli eventi del server. Anche questi parametri dovrebbero avere [priorità in base alla loro importanza e al loro impatto su EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
-| [!UICONTROL Dati Personalizzati] | Dati aggiuntivi da utilizzare per l’ottimizzazione della consegna di annunci, forniti sotto forma di oggetto JSON. Per ulteriori informazioni sulle proprietà accettate per questo oggetto, consulta la [[!DNL Conversions API] documentazione](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data).<br><br>Se si invia un evento di acquisto, è necessario utilizzare questa sezione per fornire gli attributi richiesti `currency` e `value`. |
-| [!UICONTROL Evento di prova] | Questa opzione viene utilizzata per verificare se la configurazione sta causando la ricezione di eventi server da parte di [!DNL Meta] come previsto. Per utilizzare questa funzionalità, selezionare la casella di controllo **[!UICONTROL Invia come evento di test]** e quindi specificare il codice dell&#39;evento di test desiderato nell&#39;input seguente. Una volta distribuita la regola di inoltro degli eventi, se l&#39;estensione e l&#39;azione sono state configurate correttamente, è necessario visualizzare le attività nella visualizzazione **[!DNL Test Events]** in [!DNL Meta Events Manager]. |
+| [!UICONTROL Server Event Parameters] | Informazioni generali sull&#39;evento, tra cui l&#39;ora in cui si è verificato e l&#39;azione di origine che l&#39;ha attivato. Per ulteriori informazioni sui [!DNL Meta]parametri evento standard[ accettati da ](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event), consultare la documentazione per gli sviluppatori di [!DNL Conversions API].<br><br>Se si utilizzano sia [!DNL Meta Pixel] che [!DNL Conversions API] per inviare eventi, assicurarsi di includere sia un **[!UICONTROL Event Name]** (`event_name`) che un **[!UICONTROL Event ID]** (`event_id`) con ogni evento, poiché questi valori vengono utilizzati per la [deduplicazione eventi](#deduplication).<br><br>Hai anche la possibilità di **[!UICONTROL Enable Limited Data Use]** per rispettare le rinunce dei clienti. Per informazioni dettagliate su questa funzione, consulta la documentazione di [!DNL Conversions API] sulle [opzioni di elaborazione dati](https://developers.facebook.com/docs/marketing-apis/data-processing-options/). |
+| [!UICONTROL Customer Information Parameters] | Dati di identità utente utilizzati per attribuire l’evento a un cliente. Per poter essere inviati all&#39;API, alcuni di questi valori devono avere un hash.<br><br>Per garantire una buona connessione API comune e un&#39;elevata qualità di corrispondenza eventi (EMQ), si consiglia di inviare tutti i [parametri accettati per le informazioni sul cliente](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) insieme agli eventi del server. Anche questi parametri dovrebbero avere [priorità in base alla loro importanza e al loro impatto su EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
+| [!UICONTROL Custom Data] | Dati aggiuntivi da utilizzare per l’ottimizzazione della consegna di annunci, forniti sotto forma di oggetto JSON. Per ulteriori informazioni sulle proprietà accettate per questo oggetto, consulta la [[!DNL Conversions API] documentazione](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data).<br><br>Se si invia un evento di acquisto, è necessario utilizzare questa sezione per fornire gli attributi richiesti `currency` e `value`. |
+| [!UICONTROL Test Event] | Questa opzione viene utilizzata per verificare se la configurazione sta causando la ricezione di eventi server da parte di [!DNL Meta] come previsto. Per utilizzare questa funzionalità, selezionare la casella di controllo **[!UICONTROL Send as Test Event]** e quindi specificare il codice di un evento di test desiderato nell&#39;input seguente. Una volta distribuita la regola di inoltro degli eventi, se l&#39;estensione e l&#39;azione sono state configurate correttamente, è necessario visualizzare le attività nella visualizzazione **[!DNL Test Events]** in [!DNL Meta Events Manager]. |
 
 {style="table-layout:auto"}
 
-Al termine, seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l&#39;azione alla configurazione della regola.
+Al termine, selezionare **[!UICONTROL Keep Changes]** per aggiungere l&#39;azione alla configurazione della regola.
 
-![[!UICONTROL Selezione di Mantieni modifiche] per la configurazione dell&#39;azione.](../../../images/extensions/server/meta/keep-changes.png)
+![[!UICONTROL Keep Changes] selezionato per la configurazione dell&#39;azione.](../../../images/extensions/server/meta/keep-changes.png)
 
-Una volta soddisfatta la regola, selezionare **[!UICONTROL Salva nella libreria]**. Infine, pubblica un nuovo evento con inoltro di [build](../../../ui/publishing/builds.md) per abilitare le modifiche apportate alla libreria.
+Quando si è soddisfatti della regola, selezionare **[!UICONTROL Save to Library]**. Infine, pubblica un nuovo evento con inoltro di [build](../../../ui/publishing/builds.md) per abilitare le modifiche apportate alla libreria.
 
 ## Deduplicazione degli eventi {#deduplication}
 
@@ -114,22 +114,23 @@ Se invii tipi di evento diversi dal client e dal server senza alcuna sovrapposiz
 
 Quando invii eventi condivisi, accertati di includere un ID evento e un nome con ogni evento inviato sia dal client che dal server. Quando vengono ricevuti più eventi con lo stesso ID e nome, [!DNL Meta] utilizza automaticamente diverse strategie per deduplicarli e mantenere i dati più rilevanti. Per informazioni dettagliate su questo processo, consulta la documentazione [!DNL Meta] sulla [deduplicazione per [!DNL Meta Pixel] e [!DNL Conversions API] eventi](https://www.facebook.com/business/help/823677331451951?id=1205376682832142).
 
-## Flusso di lavoro di avvio rapido: estensione API Meta Conversions (Beta) {#quick-start}
+## Flusso di lavoro di avvio rapido: estensione API per conversioni Meta (Beta) {#quick-start}
 
 >[!IMPORTANT]
 >
->* La funzione di avvio rapido è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+>* La funzione di avvio rapido è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante Adobe.
 >* Questa funzione è destinata alle nuove implementazioni nette e al momento non supporta l’installazione automatica di estensioni e configurazioni su tag e proprietà di inoltro degli eventi esistenti.
 
 >[!NOTE]
 >
 >Qualsiasi client esistente può utilizzare i flussi di lavoro di avvio rapido per creare un’implementazione di riferimento che può essere utilizzata per i seguenti elementi:
+>
 >* Utilizzala come inizio di un’implementazione completamente nuova.
 >* Sfruttala come implementazione di riferimento da esaminare per vedere come è stata configurata e replicarla nelle implementazioni di produzione correnti.
 
-La funzione di avvio rapido consente di effettuare la configurazione con facilità ed efficienza con l’API Meta Conversions e le estensioni Meta Pixel. Questo strumento automatizza più passaggi eseguiti nei tag Adobe e nell’inoltro degli eventi, riducendo in modo significativo il tempo di configurazione.
+La funzione di avvio rapido consente di effettuare la configurazione con facilità ed efficienza con l’API Meta Conversions e le estensioni Meta Pixel. Questo strumento automatizza più passaggi eseguiti nei tag di Adobe e nell’inoltro degli eventi, riducendo in modo significativo il tempo di configurazione.
 
-Questa funzione installa e configura automaticamente sia l’API Meta Conversions che le estensioni Meta Pixel su un tag appena generato automaticamente e la proprietà di inoltro degli eventi con le regole e gli elementi dati necessari. Inoltre, installa e configura automaticamente Experience Platform Web SDK e Datastream. Infine, la funzione di avvio rapido pubblica automaticamente la libreria nell’URL designato in un ambiente di sviluppo, consentendo la raccolta dei dati lato client e l’inoltro degli eventi lato server in tempo reale tramite l’inoltro degli eventi e un Edge Network di Experience Platform.
+Questa funzione installa e configura automaticamente sia l’API di conversione di Meta che le estensioni Pixel di Meta su un tag appena generato automaticamente e una proprietà di inoltro degli eventi con le regole e gli elementi dati necessari. Inoltre, installa e configura automaticamente Experience Platform Web SDK e Datastream. Infine, la funzione di avvio rapido pubblica automaticamente la libreria nell’URL designato in un ambiente di sviluppo, consentendo la raccolta dei dati lato client e l’inoltro degli eventi lato server in tempo reale tramite l’inoltro degli eventi e Experience Platform Edge Network.
 
 Il video seguente fornisce un’introduzione alla funzione di avvio rapido.
 
@@ -141,42 +142,42 @@ Il video seguente fornisce un’introduzione alla funzione di avvio rapido.
 >
 >Questa funzione è progettata per aiutarti a iniziare con un’implementazione di inoltro degli eventi. Non fornirà un’implementazione end-to-end pienamente funzionale che tenga conto di tutti i casi d’uso.
 
-Questa configurazione installa automaticamente sia l’API Meta Conversions che le estensioni Meta Pixel. Questa implementazione ibrida è consigliata da Meta per raccogliere e inoltrare le conversioni di eventi lato server.
+Questa configurazione installa automaticamente sia l’API di conversione Meta che le estensioni Pixel di Meta. Questa implementazione ibrida è consigliata da Meta per raccogliere e inoltrare le conversioni degli eventi lato server.
 La funzione di configurazione rapida è progettata per aiutare i clienti a iniziare con un’implementazione di inoltro degli eventi e non è concepita per fornire un’implementazione completa e funzionale che tenga conto di tutti i casi d’uso.
 
-Per installare la funzionalità, selezionare **[!UICONTROL Inizia]** per **[!DNL Send Conversions Data to Meta]** nella pagina **[!UICONTROL Home]** della raccolta dati di Adobe Experience Platform.
+Per installare la funzionalità, selezionare **[!UICONTROL Get Started]** per **[!DNL Send Conversions Data to Meta]** nella pagina Raccolta dati di Adobe Experience Platform **[!UICONTROL Home]**.
 
 ![Home page della raccolta dati che mostra i dati delle conversioni in meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
 
-Immetti il **[!UICONTROL dominio]**, quindi seleziona **[!UICONTROL Successivo]**. Questo dominio verrà utilizzato come convenzione di denominazione per le proprietà, le regole, gli elementi dati, i flussi di dati e così via dei tag generati automaticamente e dell’inoltro degli eventi.
+Immetti **[!UICONTROL Domain]**, quindi seleziona **[!UICONTROL Next]**. Questo dominio verrà utilizzato come convenzione di denominazione per le proprietà, le regole, gli elementi dati, i flussi di dati e così via dei tag generati automaticamente e dell’inoltro degli eventi.
 
 ![schermata di benvenuto con richiesta del nome di dominio](../../../images/extensions/server/meta/welcome.png)
 
-Nella finestra di dialogo **[!UICONTROL Configurazione iniziale]**, immetti il **[!UICONTROL ID metadati]**, il **[!UICONTROL Token di accesso API di conversione metadati]** e il **[!UICONTROL Percorso livello dati]**, quindi seleziona **[!UICONTROL Avanti]**.
+Nella finestra di dialogo **[!UICONTROL Initial Setup]**, immetti **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]** e **[!UICONTROL Data Layer Path]**, quindi seleziona **[!UICONTROL Next]**.
 
 ![Finestra di dialogo per l&#39;installazione iniziale](../../../images/extensions/server/meta/initial-setup.png)
 
-Attendere alcuni minuti per il completamento del processo di installazione iniziale, quindi selezionare **[!UICONTROL Avanti]**.
+Attendere alcuni minuti per il completamento del processo di installazione iniziale, quindi selezionare **[!UICONTROL Next]**.
 
 ![Schermata di conferma del completamento dell&#39;installazione iniziale](../../../images/extensions/server/meta/setup-complete.png)
 
-Nella finestra di dialogo **[!UICONTROL Aggiungi codice nel sito]** copiare il codice fornito utilizzando la funzione di copia ![Copia](/help/images/icons/copy.png) e incollarlo in `<head>` del sito Web di origine. Una volta implementato, seleziona **[!UICONTROL Avvia convalida]**
+Dalla finestra di dialogo **[!UICONTROL Add Code on Your Site]** copia il codice fornito utilizzando la funzione di copia ![copia](/help/images/icons/copy.png) e incollalo nella `<head>` del sito Web di origine. Una volta implementato, seleziona **[!UICONTROL Start Validation]**
 
 ![Aggiungi il codice nella finestra di dialogo del sito](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-La finestra di dialogo [!UICONTROL Risultati convalida] visualizza i risultati dell&#39;implementazione dell&#39;estensione Meta. Seleziona **[!UICONTROL Avanti]**. Puoi visualizzare ulteriori risultati di convalida selezionando il collegamento **[!UICONTROL Assurance]**.
+Nella finestra di dialogo [!UICONTROL Validation Results] vengono visualizzati i risultati dell&#39;implementazione dell&#39;estensione Meta. Seleziona **[!UICONTROL Next]**. È inoltre possibile visualizzare ulteriori risultati di convalida selezionando il collegamento **[!UICONTROL Assurance]**.
 
 ![Finestra di dialogo dei risultati del test con i risultati dell&#39;implementazione](../../../images/extensions/server/meta/test-results.png)
 
-La visualizzazione della schermata **[!UICONTROL Passaggi successivi]** conferma il completamento dell&#39;installazione. Da qui puoi ottimizzare l’implementazione aggiungendo nuovi eventi, descritti nella sezione successiva.
+La visualizzazione della schermata **[!UICONTROL Next Steps]** conferma il completamento dell&#39;installazione. Da qui puoi ottimizzare l’implementazione aggiungendo nuovi eventi, descritti nella sezione successiva.
 
-Se non si desidera aggiungere altri eventi, selezionare **[!UICONTROL Chiudi]**.
+Se non si desidera aggiungere altri eventi, selezionare **[!UICONTROL Close]**.
 
 ![Finestra di dialogo Passaggi successivi](../../../images/extensions/server/meta/next-steps.png)
 
 #### Aggiunta di eventi aggiuntivi
 
-Per aggiungere nuovi eventi, selezionare **[!UICONTROL Modifica proprietà Web tag]**.
+Per aggiungere nuovi eventi, selezionare **[!UICONTROL Edit Your Tags Web Property]**.
 
 ![Finestra di dialogo Passaggi successivi in cui viene visualizzata la finestra di dialogo per la modifica della proprietà Web dei tag](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
 
@@ -186,19 +187,19 @@ Seleziona la regola che corrisponde al meta evento da modificare. **MetaConversi
 >
 >Se non vi è alcun evento, questa regola non verrà eseguita. Questo è vero per tutte le regole, con la regola **MetaConversion_PageView** che è l&#39;eccezione.
 
-Per aggiungere un evento, seleziona **[!UICONTROL Aggiungi]** sotto l&#39;intestazione [!UICONTROL Eventi].
+Per aggiungere un evento, selezionare **[!UICONTROL Add]** sotto l&#39;intestazione [!UICONTROL Events].
 
 ![La pagina delle proprietà dei tag non mostra eventi](../../../images/extensions/server/meta/edit-rule.png)
 
-Seleziona il [!UICONTROL Tipo evento]. In questo esempio, abbiamo selezionato l&#39;evento [!UICONTROL Click] e l&#39;abbiamo configurato per attivarlo quando viene selezionato **.add-to-cart-button**. Seleziona **[!UICONTROL Mantieni modifiche]**.
+Seleziona [!UICONTROL Event Type]. In questo esempio, abbiamo selezionato l&#39;evento [!UICONTROL Click] e l&#39;abbiamo configurato per attivarlo quando viene selezionato il **.add-to-cart-button**. Seleziona **[!UICONTROL Keep Changes]**.
 
 ![Schermata di configurazione evento con evento clic](../../../images/extensions/server/meta/event-configuration.png)
 
-Il nuovo evento è stato salvato. Seleziona **[!UICONTROL Seleziona una libreria di lavoro]** e seleziona la libreria in cui desideri creare.
+Il nuovo evento è stato salvato. Selezionare **[!UICONTROL Select a working library]** e selezionare la libreria in cui si desidera generare la raccolta.
 
 ![Selezionare un elenco a discesa della libreria di lavoro](../../../images/extensions/server/meta/working-library.png)
 
-Quindi, seleziona il menu a discesa accanto a **[!UICONTROL Salva nella libreria]** e seleziona **[!UICONTROL Salva nella libreria e genera]**. La modifica verrà pubblicata nella libreria.
+Selezionare quindi il menu a discesa accanto a **[!UICONTROL Save to Library]** e selezionare **[!UICONTROL Save to Library and Build]**. La modifica verrà pubblicata nella libreria.
 
 ![Seleziona Salva nella libreria e genera](../../../images/extensions/server/meta/save-and-build.png)
 

@@ -2,10 +2,10 @@
 title: Tipi di eventi per le estensioni Web
 description: Scopri come definire un modulo libreria per tipi di evento per un’estensione Web in Adobe Experience Platform.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 70%
+ht-degree: 72%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 In una regola di tag, un evento è un’attività che deve verificarsi affinché una regola venga attivata. Ad esempio, un’estensione web potrebbe fornire un tipo di evento &quot;gesture&quot; che controlla se si verifica un determinato movimento del mouse o del tocco. Quando si verifica il gesto, la logica dell’evento attiva la regola.
 
@@ -95,7 +95,7 @@ Ciò può essere utile agli addetti marketing che vogliono poter accedere a qual
 
 ### [!DNL element]
 
-Se esiste una relazione forte tra un elemento e l’evento che si è verificato, si consiglia di impostare la proprietà `element` sul nodo DOM dell’elemento. Ad esempio, se l’estensione fornisce un tipo di evento `click` e gli addetti al marketing possono configurarlo, la regola viene attivata solo se si fa clic su un elemento con l’ID `herobanner`. In questo caso, se l’utente seleziona il banner principale, si consiglia di chiamare `trigger` e impostare `element` sul nodo DOM del banner.
+Se esiste una relazione forte tra un elemento e l’evento che si è verificato, si consiglia di impostare la proprietà `element` sul nodo DOM dell’elemento. Ad esempio, se l’estensione fornisce un tipo di evento `click` e gli addetti al marketing possono configurarlo, la regola viene attivata solo se si fa clic su un elemento con l’ID `herobanner`. In questo caso, se l’utente seleziona il banner hero, si consiglia di chiamare `trigger` e impostare `element` sul nodo DOM del banner.
 
 ```js
 trigger({

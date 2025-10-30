@@ -5,10 +5,10 @@ title: Visualizzare i dati del set di dati utilizzando l’API di accesso ai dat
 type: Tutorial
 description: Scopri come individuare, accedere e scaricare i dati memorizzati all’interno di un set di dati utilizzando l’API di accesso ai dati in Adobe Experience Platform. Questo documento introduce alcune delle funzioni univoche dell’API di accesso ai dati, ad esempio il paging e i download parziali.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1365'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -24,7 +24,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive di cui hai bisogno per ef
 
 ### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogliere i valori per le intestazioni richieste
 
@@ -428,7 +428,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{FILE_ID} ` | Identificatore del file. |
+| `{FILE_ID}` | Identificatore del file. |
 | `{FILE_NAME}` | Il nome del file (ad esempio, profiles.parquet) |
 
 **Richiesta**

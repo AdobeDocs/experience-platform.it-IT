@@ -4,9 +4,9 @@ title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1522'
 ht-degree: 7%
 
 ---
@@ -36,30 +36,30 @@ Seguirai un esempio di flusso di lavoro di controllo degli accessi basato su att
 
 I professionisti del settore sanitario desiderano configurare l’accesso alle risorse dell’organizzazione.
 
-* Il tuo team di marketing interno deve essere in grado di accedere ai **[!UICONTROL dati PHI/ dati sanitari regolamentati]**.
-* L&#39;agenzia esterna non dovrebbe essere in grado di accedere ai dati **[!UICONTROL PHI/ dati sanitari regolamentati]**.
+* Il team marketing interno deve essere in grado di accedere ai dati di **[!UICONTROL PHI/ Regulated Health Data]**.
+* L&#39;agenzia esterna non dovrebbe essere in grado di accedere ai dati di **[!UICONTROL PHI/ Regulated Health Data]**.
 
 A questo scopo, devi configurare ruoli, risorse e criteri.
 
 Effettua le seguenti operazioni:
 
 * [Assegna un&#39;etichetta ai ruoli degli utenti](#label-roles): utilizza l&#39;esempio di un fornitore di assistenza sanitaria (ACME Business Group) il cui gruppo di marketing lavora con agenzie esterne.
-* [Assegna un&#39;etichetta alle risorse (campi dello schema e tipi di pubblico)](#label-resources): Assegna l&#39;etichetta **[!UICONTROL PHI/ Dati integrità regolamentati]** alle risorse dello schema e ai tipi di pubblico.
+* [Assegna un&#39;etichetta alle risorse (campi dello schema e tipi di pubblico)](#label-resources): Assegna l&#39;etichetta **[!UICONTROL PHI/ Regulated Health Data]** alle risorse e ai tipi di pubblico dello schema.
 * [Attiva i criteri che li collegheranno](#policy): abilita i criteri predefiniti per impedire l&#39;accesso ai campi dello schema e ai tipi di pubblico collegando le etichette delle risorse alle etichette del tuo ruolo. Gli utenti con etichette corrispondenti avranno quindi accesso al campo e al segmento dello schema in tutte le sandbox.
 
 ## Autorizzazioni
 
-[!UICONTROL Autorizzazioni] è l&#39;area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri per gestire le autorizzazioni per funzionalità e oggetti all&#39;interno di un&#39;applicazione di prodotto.
+[!UICONTROL Permissions] è l&#39;area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri per gestire le autorizzazioni per funzionalità e oggetti all&#39;interno di un&#39;applicazione di prodotto.
 
-Tramite [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare le autorizzazioni per le risorse desiderate per questi ruoli. [!UICONTROL Autorizzazioni] consente inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
+Tramite [!UICONTROL Permissions] è possibile creare e gestire i ruoli e assegnare le autorizzazioni per le risorse desiderate per tali ruoli. [!UICONTROL Permissions] consente inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
 
 Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Una volta che hai i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi utilizzando le tue credenziali Adobe. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Panoramica]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione. Seleziona **[!UICONTROL Autorizzazioni]** per aprire l&#39;area di lavoro per la tua integrazione con Experience Platform.
+Una volta che hai i privilegi di amministratore, vai a [Adobe Experience Cloud](https://experience.adobe.com/) e accedi utilizzando le tue credenziali Adobe. Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Overview]** per l&#39;organizzazione per la quale si dispone dei privilegi di amministratore. Questa pagina mostra i prodotti a cui la tua organizzazione è abbonata, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione. Seleziona **[!UICONTROL Permissions]** per aprire l&#39;area di lavoro per l&#39;integrazione Experience Platform.
 
 ![Immagine che mostra il prodotto Autorizzazioni selezionato in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia utente di Experience Platform, che si apre nella pagina **[!UICONTROL Panoramica]**.
+Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia utente di Experience Platform, che si apre nella pagina **[!UICONTROL Overview]**.
 
 ## Applicare etichette a un ruolo {#label-roles}
 
@@ -71,15 +71,15 @@ Viene visualizzata l&#39;area di lavoro Autorizzazioni per l&#39;interfaccia ute
 
 I ruoli sono modi per categorizzare i tipi di utenti che interagiscono con l’istanza Experience Platform e sono blocchi predefiniti delle policy di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.
 
-Per iniziare, seleziona **[!UICONTROL Ruoli]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Gruppo aziendale ACME]**.
+Per iniziare, seleziona **[!UICONTROL Roles]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL ACME Business Group]**.
 
 ![Immagine che mostra il business group ACME selezionato nei ruoli](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-Quindi, seleziona **[!UICONTROL Etichette]**, quindi seleziona **[!UICONTROL Aggiungi etichette]**.
+Selezionare **[!UICONTROL Labels]**, quindi **[!UICONTROL Add Labels]**.
 
 ![Immagine che mostra la selezione di Aggiungi etichette nella scheda Etichette](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Seleziona **[!UICONTROL RHD]** per aggiungere l&#39;etichetta per **[!UICONTROL PHI/Regulated Health Data]**, quindi seleziona **[!UICONTROL Salva]**.
+Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Selezionare **[!UICONTROL RHD]** per aggiungere l&#39;etichetta per **[!UICONTROL PHI/Regulated Health Data]**, quindi selezionare **[!UICONTROL Save]**.
 
 ![Immagine che mostra l&#39;etichetta RHD selezionata e salvata](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -91,19 +91,19 @@ Viene visualizzato un elenco di tutte le etichette dell’organizzazione. Selezi
 
 Dopo aver configurato un ruolo utente con l&#39;etichetta [!UICONTROL RHD], il passaggio successivo consiste nell&#39;aggiungere la stessa etichetta alle risorse che si desidera controllare per tale ruolo.
 
-Nella navigazione in alto, seleziona il **selettore di applicazioni**, rappresentato dall&#39;icona ![selettore di applicazioni](/help/images/icons/apps.png), quindi seleziona **[!UICONTROL Experience Platform]**.
+Dalla navigazione in alto, seleziona il **selettore di applicazioni**, rappresentato dall&#39;icona ![selettore di applicazioni](/help/images/icons/apps.png), quindi seleziona **[!UICONTROL Experience Platform]**.
 
 ![Immagine che mostra Experience Platform selezionato dal menu a discesa del commutatore dell&#39;applicazione](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
-Seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra, quindi seleziona **[!UICONTROL ACME Healthcare]** dall&#39;elenco degli schemi visualizzati.
+Selezionare **[!UICONTROL Schemas]** dal menu di navigazione a sinistra, quindi selezionare **[!UICONTROL ACME Healthcare]** dall&#39;elenco degli schemi visualizzati.
 
 ![Immagine che mostra lo schema ACME Healthcare selezionato dalla scheda Schemi](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Quindi, seleziona **[!UICONTROL Etichette]** per visualizzare un elenco con i campi associati allo schema. Da qui è possibile assegnare le etichette a uno o più campi alla volta. Selezionare i campi **[!UICONTROL BloodGlucose]** e **[!UICONTROL InsulinLevel]**, quindi selezionare **[!UICONTROL Applica etichette di accesso e governance dei dati]**.
+Quindi, seleziona **[!UICONTROL Labels]** per visualizzare un elenco che mostra i campi associati allo schema. Da qui è possibile assegnare le etichette a uno o più campi alla volta. Selezionare i campi **[!UICONTROL BloodGlucose]** e **[!UICONTROL InsulinLevel]**, quindi selezionare **[!UICONTROL Apply access and data governance labels]**.
 
 ![Immagine che mostra la selezione di BloodGlucose e InsulinLevel e la selezione delle etichette di accesso e governance dei dati](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Modifica etichette]**, che consente di scegliere le etichette da applicare ai campi dello schema. Per questo caso d&#39;uso, seleziona l&#39;etichetta **[!UICONTROL PHI/ Regulated Health Data]**, quindi seleziona **[!UICONTROL Salva]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Edit labels]**, che consente di scegliere le etichette da applicare ai campi dello schema. Per questo caso d&#39;uso, seleziona l&#39;etichetta **[!UICONTROL PHI/ Regulated Health Data]**, quindi seleziona **[!UICONTROL Save]**.
 
 ![Immagine che mostra l&#39;etichetta RHD selezionata e salvata](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
@@ -119,46 +119,46 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Modifica etichette]**, c
 
 Una volta completata l’etichettatura dei campi dello schema, puoi iniziare a etichettare i tipi di pubblico.
 
-Seleziona **[!UICONTROL Tipi di pubblico]** dalla barra di navigazione a sinistra nella sezione **[!UICONTROL Clienti]**. Viene visualizzato un elenco dei tipi di pubblico disponibili nell’organizzazione. In questo esempio, i due tipi di pubblico seguenti devono essere etichettati in quanto contengono dati sanitari sensibili:
+Seleziona **[!UICONTROL Audiences]** dal menu di navigazione a sinistra nella sezione **[!UICONTROL Customers]**. Viene visualizzato un elenco dei tipi di pubblico disponibili nell’organizzazione. In questo esempio, i due tipi di pubblico seguenti devono essere etichettati in quanto contengono dati sanitari sensibili:
 
 * Glucosio ematico > 100
 * Insulina &lt; 50
 
-Seleziona **[!UICONTROL Glucosio ematico >100]** (in base al nome del pubblico, non alla casella di controllo) per iniziare a etichettare il pubblico.
+Seleziona **[!UICONTROL Blood Glucose >100]** (in base al nome del pubblico, non alla casella di controllo) per iniziare a etichettare il pubblico.
 
 ![Immagine che mostra la glicemia >100 selezionata dalla scheda Tipi di pubblico](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
-Viene visualizzata la schermata **[!UICONTROL Dettagli]** del segmento. Seleziona **[!UICONTROL Gestisci accesso]**.
+Viene visualizzata la schermata del segmento **[!UICONTROL Details]**. Seleziona **[!UICONTROL Manage Access]**.
 
 ![Immagine che mostra la selezione dell&#39;accesso a Gestisci](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Applica etichette di accesso e governance dei dati]**, che consente di scegliere le etichette da applicare al pubblico. Per questo caso d&#39;uso, seleziona l&#39;etichetta **[!UICONTROL PHI/ Regulated Health Data]**, quindi seleziona **[!UICONTROL Salva]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Apply access and data governance labels]**, che consente di scegliere le etichette da applicare al pubblico. Per questo caso d&#39;uso, seleziona l&#39;etichetta **[!UICONTROL PHI/ Regulated Health Data]**, quindi seleziona **[!UICONTROL Save]**.
 
 ![Immagine che mostra la selezione dell&#39;etichetta RHD e il salvataggio in corso](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
-Ripetere i passaggi precedenti con **[!UICONTROL Insulina &lt;50]**.
+Ripetere i passaggi precedenti con **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> Assegnare le etichette create nell&#39;area di lavoro [!UICONTROL Autorizzazioni] (come le etichette dei segmenti di cui sopra) a vari oggetti in Adobe Journey Optimizer utilizzando [Controllo dell&#39;accesso a livello di oggetto](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/access-control/object-based-access).&quot;
+> Assegnare le etichette create nell&#39;area di lavoro [!UICONTROL Permissions] (come le etichette dei segmenti di cui sopra) a vari oggetti in Adobe Journey Optimizer utilizzando [Controllo dell&#39;accesso a livello di oggetto](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).&quot;
 
 ## Attivare il criterio di controllo degli accessi {#policy}
 
 I criteri di controllo di accesso predefiniti sfrutteranno le etichette per definire quali ruoli utente hanno accesso a risorse Experience Platform specifiche. In questo esempio, l’accesso ai campi dello schema e ai tipi di pubblico verrà negato in tutte le sandbox per gli utenti che non si trovano in un ruolo con le etichette corrispondenti nel campo dello schema.
 
-Per attivare il criterio di controllo degli accessi, selezionare [!UICONTROL Autorizzazioni] nell&#39;area di navigazione a sinistra, quindi selezionare **[!UICONTROL Criteri]**.
+Per attivare il criterio di controllo degli accessi, selezionare [!UICONTROL Permissions] dal menu di navigazione a sinistra, quindi selezionare **[!UICONTROL Policies]**.
 
 ![Elenco dei criteri visualizzato](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Selezionare quindi i puntini di sospensione (`...`) accanto a **[!UICONTROL Default-Field-Level-Access-Control-Policy]** e un elenco a discesa visualizza i controlli per modificare, attivare, eliminare o duplicare il ruolo. Seleziona **[!UICONTROL Attiva]** dal menu a discesa.
+Quindi, selezionare i puntini di sospensione (`...`) accanto a **[!UICONTROL Default-Field-Level-Access-Control-Policy]** e un menu a discesa visualizza i controlli per modificare, attivare, eliminare o duplicare il ruolo. Seleziona **[!UICONTROL Activate]** dal menu a discesa.
 
 ![Elenco a discesa per attivare i criteri](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-Viene visualizzata la finestra di dialogo attiva criterio, in cui viene richiesto di confermare l’attivazione. Seleziona **[!UICONTROL Conferma]**.
+Viene visualizzata la finestra di dialogo attiva criterio, in cui viene richiesto di confermare l’attivazione. Seleziona **[!UICONTROL Confirm]**.
 
 ![Attiva finestra di dialogo criteri](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-È stata ricevuta la conferma dell&#39;attivazione dei criteri e viene visualizzata di nuovo la pagina [!UICONTROL Criteri].
+È stata ricevuta la conferma dell&#39;attivazione dei criteri e si ritorna alla pagina [!UICONTROL Policies].
 
 ![Attiva conferma criterio](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
@@ -168,19 +168,19 @@ Viene visualizzata la finestra di dialogo attiva criterio, in cui viene richiest
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=it" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=it#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=it#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
@@ -237,7 +237,7 @@ Select **[!UICONTROL The following being false]** and then select **[!UICONTROL 
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
+![Image showing the Policy being activated](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## Passaggi successivi
 
@@ -247,4 +247,4 @@ Per ulteriori informazioni sul controllo degli accessi basato su attributi, vede
 
 Il video seguente ha lo scopo di illustrare il controllo degli accessi basato su attributi e illustra come configurare ruoli, risorse e criteri.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451846?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

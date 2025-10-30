@@ -2,9 +2,9 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 76e1edf7ed78cffdb8f858d5685836c452dd6dd3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3524'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ Nella tabella seguente sono elencati [!DNL Adobe Real-Time Customer Data Platfor
 | Piattaforma | Oggetto | Dettagli |
 | --- | --- | --- |
 | Customer Data Platform | Origini | <ul><li>Le credenziali dell’account di origine non vengono replicate nella sandbox di destinazione per motivi di sicurezza e sarà necessario aggiornarle manualmente.</li><li>Per impostazione predefinita, il flusso di dati di origine viene copiato in stato di bozza.</li></ul> |
-| Customer Data Platform | Tipi di pubblico | <ul><li>È supportato solo il tipo **[!UICONTROL Pubblico cliente]** **[!UICONTROL Servizio di segmentazione]**.</li><li>Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione.</li><li> Il sistema selezionerà automaticamente il criterio di unione predefinito nella sandbox di destinazione con la stessa classe XDM durante il controllo delle dipendenze dei criteri di unione.</li><li>Se durante l’importazione di tipi di pubblico viene rilevato un oggetto esistente con lo stesso nome, gli strumenti Sandbox riutilizzeranno sempre l’oggetto esistente per evitare la proliferazione degli oggetti.</li></ul> |
+| Customer Data Platform | Tipi di pubblico | <ul><li>È supportato solo il tipo **[!UICONTROL Customer Audience]** **[!UICONTROL Segmentation service]**.</li><li>Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione.</li><li> Il sistema selezionerà automaticamente il criterio di unione predefinito nella sandbox di destinazione con la stessa classe XDM durante il controllo delle dipendenze dei criteri di unione.</li><li>Se durante l’importazione di tipi di pubblico viene rilevato un oggetto esistente con lo stesso nome, gli strumenti Sandbox riutilizzeranno sempre l’oggetto esistente per evitare la proliferazione degli oggetti.</li></ul> |
 | Customer Data Platform | Identità | <ul><li>Durante la creazione nella sandbox di destinazione, il sistema deduplica automaticamente gli spazi dei nomi di identità standard di Adobe.</li><li>I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono prima essere spostati e abilitati per il profilo unificato.</li></ul> |
 | Customer Data Platform | Schemi/Gruppi di campi/Tipi di dati | <ul><li>Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione.</li><li>Puoi importare gli schemi in modo flessibile anche se l’opzione Profilo unificato non è abilitata. Il caso edge delle relazioni di schema non è incluso nel pacchetto.</li><li>Se durante l’importazione di schemi o gruppi di campi viene rilevato un oggetto esistente con lo stesso nome, gli strumenti Sandbox riutilizzeranno sempre l’oggetto esistente per evitare la proliferazione degli oggetti.</li></ul> |
 | Customer Data Platform | Set di dati | I set di dati vengono copiati con l’impostazione di profilo unificato disabilitata per impostazione predefinita. |
@@ -65,12 +65,12 @@ Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attu
 | [!DNL Adobe Journey Optimizer] | Pubblico | | Un pubblico può essere copiato come oggetto dipendente dell’oggetto percorso. Puoi selezionare Crea un nuovo pubblico o riutilizzarne uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Schema | | Gli schemi utilizzati nel percorso possono essere copiati come oggetti dipendenti. Puoi selezionare Crea un nuovo schema o riutilizzarne uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Criterio di unione | | I criteri di unione utilizzati nel percorso possono essere copiati come oggetti dipendenti. Nella sandbox di destinazione **non puoi** creare un nuovo criterio di unione. Puoi utilizzarne solo uno esistente. |
-| [!DNL Adobe Journey Optimizer] | Percorso | I seguenti oggetti utilizzati nel percorso vengono copiati come oggetti dipendenti. Durante il flusso di lavoro di importazione, puoi scegliere tra **[!UICONTROL Crea nuovo]** o **[!UICONTROL Usa esistente]** per ciascuno: <ul><li>Tipi di pubblico</li><li>Dettagli area di lavoro</li><li>Modelli di contenuto</li><li>Azioni personalizzate</li><li>Origini dati</li><li>Eventi</li><li>Gruppi di campi</li><li>Frammenti</li><li>Schemi</li></ul> | Quando selezioni **[!UICONTROL Usa esistente]** durante il processo di importazione per copiare un percorso in un&#39;altra sandbox, le azioni personalizzate esistenti che scegli **devono** corrispondere esattamente all&#39;azione personalizzata di origine. Se non corrispondono, il nuovo percorso genererà errori irrisolvibili.<br>Il percorso copia gli eventi e i dettagli dell&#39;evento utilizzati e crea una nuova versione nella sandbox di destinazione. |
+| [!DNL Adobe Journey Optimizer] | Percorso | I seguenti oggetti utilizzati nel percorso vengono copiati come oggetti dipendenti. Durante il flusso di lavoro di importazione, puoi scegliere **[!UICONTROL Create new]** o **[!UICONTROL Use existing]** per ciascuno: <ul><li>Tipi di pubblico</li><li>Dettagli area di lavoro</li><li>Modelli di contenuto</li><li>Azioni personalizzate</li><li>Origini dati</li><li>Eventi</li><li>Gruppi di campi</li><li>Frammenti</li><li>Schemi</li></ul> | Quando selezioni **[!UICONTROL Use existing]** durante il processo di importazione per copiare un percorso in un&#39;altra sandbox, le azioni personalizzate esistenti che scegli **devono** corrispondere esattamente all&#39;azione personalizzata di origine. Se non corrispondono, il nuovo percorso genererà errori irrisolvibili.<br>Il percorso copia gli eventi e i dettagli dell&#39;evento utilizzati e crea una nuova versione nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Azione | | I messaggi e-mail e push utilizzati nel percorso possono essere copiati come oggetti dipendenti. Le attività di azione del canale utilizzate nei campi del percorso, che vengono utilizzate per la personalizzazione nel messaggio, non vengono controllate per completezza. I blocchi di contenuto non vengono copiati.<br><br>È possibile copiare l&#39;azione di aggiornamento del profilo utilizzata nel percorso. Le azioni personalizzate possono essere aggiunte a un pacchetto in modo indipendente. Vengono copiati anche i dettagli delle azioni utilizzati nel percorso. Crea sempre una nuova versione nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Azioni personalizzate |  | Le azioni personalizzate possono essere aggiunte a un pacchetto in modo indipendente. Una volta assegnata a un percorso, un’azione personalizzata non può più essere modificata. Per apportare aggiornamenti alle azioni personalizzate, devi: <ul><li>spostare le azioni personalizzate prima di eseguire la migrazione di un percorso</li><li>aggiorna le configurazioni (come intestazioni di richiesta, parametri di query e autenticazione) per le azioni personalizzate dopo la migrazione</li><li>esegui la migrazione degli oggetti percorso con le azioni personalizzate aggiunte durante il primo passaggio</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Modello di contenuto | | Un modello di contenuto può essere copiato come oggetto dipendente dell&#39;oggetto percorso. I modelli autonomi consentono di riutilizzare facilmente i contenuti personalizzati nelle campagne e nei percorsi Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Frammento | Tutti i frammenti nidificati. | Un frammento può essere copiato come oggetto dipendente dell’oggetto percorso. I frammenti sono componenti riutilizzabili a cui è possibile fare riferimento in una o più e-mail in campagne e percorsi Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Funzione Decisioni | Prima di copiare gli oggetti Decisioning, nella sandbox di destinazione devono essere presenti i seguenti oggetti: <ul><li>Attributi di profilo utilizzati negli oggetti Decisioning</li><li>Gruppo di campi di Attributi offerta personalizzati</li><li>Gli schemi di flussi di dati utilizzati per gli attributi di contesto tra regole, classificazione o limite.</li></ul> | <ul><li>La copia delle formule di classificazione che utilizzano modelli AI non è attualmente supportata.</li><li>Gli elementi decisionali (elementi offerta) non vengono inclusi automaticamente. Per assicurarsi che siano trasferiti, aggiungili manualmente utilizzando l&#39;opzione **Aggiungi al pacchetto**.</li><li>I criteri che utilizzano una strategia di selezione richiedono l’aggiunta manuale degli elementi decisionali associati durante il processo di copia. I criteri che utilizzano elementi di decisione manuali o di fallback includeranno automaticamente tali elementi come dipendenze dirette.</li><li>Gli elementi decisionali devono essere copiati prima di qualsiasi altro oggetto correlato.</li></ul> |
 
 Attributi di profilo utilizzati negli oggetti Decisioning,
@@ -110,39 +110,39 @@ Questo esempio documenta il processo di esportazione di uno schema e di aggiunta
 
 ### Aggiungi oggetto a un nuovo pacchetto {#add-object-to-new-package}
 
-Seleziona **[!UICONTROL Schemi]** dal menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**, in cui sono elencati gli schemi disponibili. Quindi, selezionare i puntini di sospensione (`...`) accanto allo schema selezionato e un menu a discesa visualizza i controlli. Seleziona **[!UICONTROL Aggiungi al pacchetto]** dal menu a discesa.
+Selezionare **[!UICONTROL Schemas]** dal menu di navigazione a sinistra, quindi selezionare la scheda **[!UICONTROL Browse]** in cui sono elencati gli schemi disponibili. Quindi, selezionare i puntini di sospensione (`...`) accanto allo schema selezionato e un menu a discesa visualizza i controlli. Seleziona **[!UICONTROL Add to package]** dal menu a discesa.
 
-![Elenco di schemi che mostrano il menu a discesa che evidenzia il controllo [!UICONTROL Aggiungi al pacchetto].](../images/ui/sandbox-tooling/add-to-package.png)
+![Elenco di schemi che mostrano il menu a discesa che evidenzia il controllo [!UICONTROL Add to package].](../images/ui/sandbox-tooling/add-to-package.png)
 
-Dalla finestra di dialogo **[!UICONTROL Aggiungi al pacchetto]**, seleziona l&#39;opzione **[!UICONTROL Crea nuovo pacchetto]**. Fornisci un [!UICONTROL Nome] per il pacchetto e una [!UICONTROL Descrizione] facoltativa, quindi seleziona **[!UICONTROL Aggiungi]**.
+Dalla finestra di dialogo **[!UICONTROL Add to package]**, seleziona l&#39;opzione **[!UICONTROL Create new package]**. Fornisci [!UICONTROL Name] per il pacchetto e un [!UICONTROL Description] facoltativo, quindi seleziona **[!UICONTROL Add]**.
 
-![La finestra di dialogo [!UICONTROL Aggiungi al pacchetto] con [!UICONTROL Crea nuovo pacchetto] selezionato ed evidenziando [!UICONTROL Aggiungi].](../images/ui/sandbox-tooling/create-new-package.png)
+![Finestra di dialogo [!UICONTROL Add to package] con [!UICONTROL Create new package] selezionato ed evidenziazione di [!UICONTROL Add].](../images/ui/sandbox-tooling/create-new-package.png)
 
-Sei tornato all&#39;ambiente **[!UICONTROL Schemi]**. È ora possibile aggiungere altri oggetti al pacchetto creato seguendo i passaggi successivi elencati di seguito.
+Sei tornato all&#39;ambiente **[!UICONTROL Schemas]**. È ora possibile aggiungere altri oggetti al pacchetto creato seguendo i passaggi successivi elencati di seguito.
 
 ### Aggiungere un oggetto a un pacchetto esistente e pubblicarlo {#add-object-to-existing-package}
 
-Per visualizzare un elenco degli schemi disponibili, seleziona **[!UICONTROL Schemi]** dal menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Sfoglia]**. Selezionare quindi i puntini di sospensione (`...`) accanto allo schema selezionato per visualizzare le opzioni di controllo in un menu a discesa. Seleziona **[!UICONTROL Aggiungi al pacchetto]** dal menu a discesa.
+Per visualizzare un elenco degli schemi disponibili, selezionare **[!UICONTROL Schemas]** dal menu di navigazione a sinistra, quindi selezionare la scheda **[!UICONTROL Browse]**. Selezionare quindi i puntini di sospensione (`...`) accanto allo schema selezionato per visualizzare le opzioni di controllo in un menu a discesa. Seleziona **[!UICONTROL Add to package]** dal menu a discesa.
 
-![Elenco di schemi che mostrano il menu a discesa che evidenzia il controllo [!UICONTROL Aggiungi al pacchetto].](../images/ui/sandbox-tooling/add-to-package.png)
+![Elenco di schemi che mostrano il menu a discesa che evidenzia il controllo [!UICONTROL Add to package].](../images/ui/sandbox-tooling/add-to-package.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Aggiungi al pacchetto]**. Seleziona l&#39;opzione **[!UICONTROL Pacchetto esistente]**, quindi seleziona il menu a discesa **[!UICONTROL Nome pacchetto]** e il pacchetto richiesto. Infine, seleziona **[!UICONTROL Aggiungi]** per confermare le scelte.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Add to package]**. Seleziona l&#39;opzione **[!UICONTROL Existing package]**, quindi seleziona il menu a discesa **[!UICONTROL Package name]** e il pacchetto richiesto. Infine, selezionare **[!UICONTROL Add]** per confermare le scelte.
 
-![[!UICONTROL Finestra di dialogo Aggiungi al pacchetto], che mostra un pacchetto selezionato dal menu a discesa.](../images/ui/sandbox-tooling/add-to-existing-package.png)
+Finestra di dialogo ![[!UICONTROL Add to package], visualizzazione di un pacchetto selezionato dal menu a discesa.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-Viene elencato l&#39;elenco degli oggetti aggiunti al pacchetto. Per pubblicare il pacchetto e renderlo disponibile per l&#39;importazione in sandbox, selezionare **[!UICONTROL Pubblica]**.
+Viene elencato l&#39;elenco degli oggetti aggiunti al pacchetto. Per pubblicare il pacchetto e renderlo disponibile per l&#39;importazione in sandbox, selezionare **[!UICONTROL Publish]**.
 
-![Elenco di oggetti nel pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Pubblica].](../images/ui/sandbox-tooling/publish-package.png)
+![Elenco di oggetti nel pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package.png)
 
-Seleziona **[!UICONTROL Pubblica]** per confermare la pubblicazione del pacchetto.
+Selezionare **[!UICONTROL Publish]** per confermare la pubblicazione del pacchetto.
 
-![Finestra di dialogo di conferma della pubblicazione del pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Pubblica].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Finestra di dialogo di conferma della pubblicazione del pacchetto, con evidenziazione dell&#39;opzione [!UICONTROL Publish].](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
 >Una volta pubblicato, il contenuto del pacchetto non può essere modificato. Per evitare problemi di compatibilità, accertati che siano state selezionate tutte le risorse necessarie. Se è necessario apportare modifiche, è necessario creare un nuovo pacchetto.
 
-Sei tornato alla scheda **[!UICONTROL Pacchetti]** nell&#39;ambiente [!UICONTROL Sandbox], dove puoi vedere il nuovo pacchetto pubblicato.
+Si è tornati alla scheda **[!UICONTROL Packages]** nell&#39;ambiente [!UICONTROL Sandboxes], dove è possibile visualizzare il nuovo pacchetto pubblicato.
 
 ![Elenco dei pacchetti sandbox che evidenziano il nuovo pacchetto pubblicato.](../images/ui/sandbox-tooling/published-packages.png)
 
@@ -152,39 +152,39 @@ Sei tornato alla scheda **[!UICONTROL Pacchetti]** nell&#39;ambiente [!UICONTROL
 >
 >Tutte le azioni di importazione vengono registrate nei registri di audit.
 
-Per importare il pacchetto in una sandbox di destinazione, passa alla scheda Sandbox **[!UICONTROL Sfoglia]** e seleziona l&#39;opzione più (+) accanto al nome della sandbox.
+Per importare il pacchetto in una sandbox di destinazione, passa alla scheda Sandbox **[!UICONTROL Browse]** e seleziona l’opzione più (+) accanto al nome della sandbox.
 
-![Sandbox **[!UICONTROL Sfoglia]** scheda che evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-sandboxes.png)
+![Scheda sandbox **[!UICONTROL Browse]** che evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Dal menu a discesa, seleziona il **[!UICONTROL Nome pacchetto]** da importare nella sandbox di destinazione. Aggiungi un **[!UICONTROL nome processo]**, che verrà utilizzato per il monitoraggio futuro. Per impostazione predefinita, il profilo unificato viene disabilitato quando vengono importati gli schemi del pacchetto. Attiva **Abilita gli schemi per il profilo** per abilitare questo, quindi seleziona **[!UICONTROL Successivo]**.
+Utilizzando il menu a discesa, seleziona **[!UICONTROL Package name]** da importare nella sandbox di destinazione. Aggiungi **[!UICONTROL Job name]**, che verrà utilizzato per il monitoraggio futuro. Per impostazione predefinita, il profilo unificato viene disabilitato quando vengono importati gli schemi del pacchetto. Attiva **Abilita gli schemi per il profilo** per abilitare questo, quindi seleziona **[!UICONTROL Next]**.
 
-![La pagina dei dettagli di importazione mostra la selezione a discesa [!UICONTROL Nome pacchetto]](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
+![La pagina dei dettagli di importazione che mostra la selezione a discesa [!UICONTROL Package name]](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-La pagina [!UICONTROL Oggetto pacchetto e dipendenze] fornisce un elenco di tutte le risorse incluse nel pacchetto. Il sistema rileva automaticamente gli oggetti dipendenti necessari per la corretta importazione degli oggetti padre selezionati. Eventuali attributi mancanti vengono visualizzati nella parte superiore della pagina. Seleziona **[!UICONTROL Visualizza dettagli]** per un raggruppamento più dettagliato.
+La pagina [!UICONTROL Package object and dependencies] fornisce un elenco di tutte le risorse incluse in questo pacchetto. Il sistema rileva automaticamente gli oggetti dipendenti necessari per la corretta importazione degli oggetti padre selezionati. Eventuali attributi mancanti vengono visualizzati nella parte superiore della pagina. Seleziona **[!UICONTROL View details]** per un raggruppamento più dettagliato.
 
-![Nella pagina [!UICONTROL Oggetto pacchetto e dipendenze] sono presenti attributi mancanti.](../images/ui/sandbox-tooling/missing-attributes.png)
+![Nella pagina [!UICONTROL Package object and dependencies] sono presenti attributi mancanti.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Gli oggetti dipendenti possono essere sostituiti con quelli esistenti nella sandbox di destinazione, consentendo di riutilizzare gli oggetti esistenti anziché creare una nuova versione. Ad esempio, quando importi un pacchetto che include schemi, puoi riutilizzare gli spazi dei nomi dei gruppi di campi personalizzati e delle identità esistenti nella sandbox di destinazione. In alternativa, quando importi un pacchetto che include Percorsi, puoi riutilizzare i segmenti esistenti nella sandbox di destinazione.
 >
->Gli strumenti sandbox non supportano attualmente l’aggiornamento o la sovrascrittura di oggetti esistenti. È possibile scegliere di creare un nuovo oggetto o continuare a utilizzare l&#39;oggetto esistente senza modifiche. Se viene rilevato un oggetto esistente con lo stesso nome, gli strumenti Sandbox riutilizzeranno sempre l&#39;oggetto esistente, anche se si seleziona l&#39;opzione [!UICONTROL Crea nuovo] per evitare la proliferazione degli oggetti.
+>Gli strumenti sandbox non supportano attualmente l’aggiornamento o la sovrascrittura di oggetti esistenti. È possibile scegliere di creare un nuovo oggetto o continuare a utilizzare l&#39;oggetto esistente senza modifiche. Se viene rilevato un oggetto esistente con lo stesso nome, gli strumenti Sandbox riutilizzeranno sempre l&#39;oggetto esistente, anche se si seleziona l&#39;opzione [!UICONTROL Create new] per evitare la proliferazione degli oggetti.
 
 Per utilizzare un oggetto esistente, selezionare l&#39;icona della matita accanto all&#39;oggetto dipendente.
 
-![Nella pagina [!UICONTROL Oggetto pacchetto e dipendenze] è visualizzato l&#39;elenco delle risorse incluse nel pacchetto.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![Nella pagina [!UICONTROL Package object and dependencies] è visualizzato l&#39;elenco delle risorse incluse nel pacchetto.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
-Vengono visualizzate le opzioni per creare nuovi o utilizzare quelli esistenti. Seleziona **[!UICONTROL Usa esistente]**.
+Vengono visualizzate le opzioni per creare nuovi o utilizzare quelli esistenti. Seleziona **[!UICONTROL Use existing]**.
 
-![Pagina [!UICONTROL Oggetto pacchetto e dipendenze] contenente le opzioni dell&#39;oggetto dipendente [!UICONTROL Crea nuovo] e [!UICONTROL Usa esistente].](../images/ui/sandbox-tooling/use-existing-object.png)
+![La pagina [!UICONTROL Package object and dependencies] mostra le opzioni dell&#39;oggetto dipendente [!UICONTROL Create new] e [!UICONTROL Use existing].](../images/ui/sandbox-tooling/use-existing-object.png)
 
-Nella finestra di dialogo **[!UICONTROL Gruppo di campi]** viene visualizzato un elenco di gruppi di campi disponibili per l&#39;oggetto. Seleziona i gruppi di campi richiesti, quindi seleziona **[!UICONTROL Salva]**.
+La finestra di dialogo **[!UICONTROL Field group]** mostra un elenco di gruppi di campi disponibili per l&#39;oggetto. Selezionare i gruppi di campi richiesti, quindi selezionare **[!UICONTROL Save]**.
 
-![Elenco di campi visualizzato nella finestra di dialogo [!UICONTROL Gruppo di campi], che evidenzia la selezione [!UICONTROL Salva]. &#x200B;](../images/ui/sandbox-tooling/field-group-list.png)
+![Elenco di campi visualizzato nella finestra di dialogo [!UICONTROL Field group], che evidenzia la selezione [!UICONTROL Save].](../images/ui/sandbox-tooling/field-group-list.png)
 
-Sei tornato alla pagina [!UICONTROL Oggetto pacchetto e dipendenze]. Da qui, selezionare **[!UICONTROL Fine]** per completare l&#39;importazione del pacchetto.
+Sei tornato alla pagina [!UICONTROL Package object and dependencies]. Da qui, selezionare **[!UICONTROL Finish]** per completare l&#39;importazione del pacchetto.
 
-![Nella pagina [!UICONTROL Oggetto pacchetto e dipendenze] è visualizzato l&#39;elenco delle risorse incluse nel pacchetto, con l&#39;evidenziazione di [!UICONTROL Fine].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![Nella pagina [!UICONTROL Package object and dependencies] è visualizzato l&#39;elenco delle risorse incluse nel pacchetto, con l&#39;evidenziazione di [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## Esportare e importare un’intera sandbox
 
@@ -199,19 +199,19 @@ Puoi esportare tutti i tipi di oggetto supportati in un pacchetto sandbox comple
 
 ### Esportare un’intera sandbox {#export-entire-sandbox}
 
-Per esportare un&#39;intera sandbox, passa alla scheda [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]** e seleziona **[!UICONTROL Crea pacchetto]**.
+Per esportare un&#39;intera sandbox, passare alla scheda [!UICONTROL Sandboxes] **[!UICONTROL Packages]** e selezionare **[!UICONTROL Create package]**.
 
-![La scheda [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]** evidenzia [!UICONTROL Crea pacchetto].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+![La scheda [!UICONTROL Sandboxes] **[!UICONTROL Packages]** evidenzia [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-Selezionare **[!UICONTROL Tutta la sandbox]** per il [!UICONTROL Tipo di pacchetto] nella finestra di dialogo [!UICONTROL Crea pacchetto]. Fornisci un [!UICONTROL nome pacchetto] per il nuovo pacchetto e seleziona **[!UICONTROL Sandbox]** dal menu a discesa. Infine, seleziona **[!UICONTROL Crea]** per confermare le tue voci.
+Selezionare **[!UICONTROL Entire sandbox]** per [!UICONTROL Type of package] nella finestra di dialogo [!UICONTROL Create package]. Fornisci [!UICONTROL Package name] per il nuovo pacchetto e seleziona **[!UICONTROL Sandbox]** dal menu a discesa. Infine, selezionare **[!UICONTROL Create]** per confermare i dati immessi.
 
-![La finestra di dialogo [!UICONTROL Crea pacchetto] mostra i campi completati ed evidenzia [!UICONTROL Crea].](../images/ui/sandbox-tooling/create-package-dialog.png)
+![La finestra di dialogo [!UICONTROL Create package] mostra i campi completati ed evidenzia [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-Creazione del pacchetto completata. Selezionare **[!UICONTROL Pubblica]** per pubblicare il pacchetto.
+Creazione del pacchetto completata. Selezionare **[!UICONTROL Publish]** per pubblicare il pacchetto.
 
 ![Elenco dei pacchetti sandbox che evidenziano il nuovo pacchetto pubblicato.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-Sei tornato alla scheda **[!UICONTROL Pacchetti]** nell&#39;ambiente [!UICONTROL Sandbox], dove puoi vedere il nuovo pacchetto pubblicato.
+Si è tornati alla scheda **[!UICONTROL Packages]** nell&#39;ambiente [!UICONTROL Sandboxes], dove è possibile visualizzare il nuovo pacchetto pubblicato.
 
 ### Importare l’intero pacchetto sandbox {#import-entire-sandbox-package}
 
@@ -219,29 +219,29 @@ Sei tornato alla scheda **[!UICONTROL Pacchetti]** nell&#39;ambiente [!UICONTROL
 >
 >Tutti gli oggetti verranno importati nella sandbox di destinazione come nuovi oggetti. È consigliabile importare un pacchetto sandbox completo in una sandbox vuota.
 
-Per importare il pacchetto in una sandbox di destinazione, passa alla scheda [!UICONTROL Sandbox] **[!UICONTROL Sfoglia]** e seleziona l&#39;opzione più (+) accanto al nome della sandbox.
+Per importare il pacchetto in una sandbox di destinazione, passa alla scheda [!UICONTROL Sandboxes] **[!UICONTROL Browse]** e seleziona l&#39;opzione più (+) accanto al nome della sandbox.
 
-![Sandbox **[!UICONTROL Sfoglia]** scheda che evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+![Scheda sandbox **[!UICONTROL Browse]** che evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
 
-Utilizzando il menu a discesa, seleziona la sandbox completa utilizzando il menu a discesa **[!UICONTROL Nome pacchetto]**. Aggiungi un **[!UICONTROL Nome processo]**, che verrà utilizzato per il monitoraggio futuro e una **[!UICONTROL Descrizione processo]** facoltativa, quindi seleziona **[!UICONTROL Successivo]**.
+Utilizzando il menu a discesa, seleziona la sandbox completa utilizzando il menu a discesa **[!UICONTROL Package name]**. Aggiungi un **[!UICONTROL Job name]**, che verrà utilizzato per il monitoraggio futuro e un **[!UICONTROL Job description]** facoltativo, quindi seleziona **[!UICONTROL Next]**.
 
-![La pagina dei dettagli di importazione mostra la selezione a discesa [!UICONTROL Nome pacchetto]](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+![La pagina dei dettagli di importazione che mostra la selezione a discesa [!UICONTROL Package name]](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
 
 >[!NOTE]
 >
 >È necessario disporre delle autorizzazioni complete per tutti gli oggetti inclusi nel pacchetto. Se non disponi delle autorizzazioni necessarie, l’operazione di importazione non riuscirà e verranno visualizzati messaggi di errore.
 
-Si viene indirizzati alla pagina [!UICONTROL Oggetto pacchetto e dipendenze] in cui è possibile visualizzare il numero di oggetti e dipendenze importati ed esclusi. Da qui, seleziona **[!UICONTROL Importa]** per completare l&#39;importazione del pacchetto.
+Viene visualizzata la pagina [!UICONTROL Package object and dependencies] in cui è possibile visualizzare il numero di oggetti e dipendenze importati ed esclusi. Da qui, selezionare **[!UICONTROL Import]** per completare l&#39;importazione del pacchetto.
 
-![Nella pagina [!UICONTROL Oggetto pacchetto e dipendenze] è visualizzato il messaggio in linea relativo a tipi di oggetto non supportati, con l&#39;evidenziazione di [!UICONTROL Importa].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+![Nella pagina [!UICONTROL Package object and dependencies] è visualizzato il messaggio in linea di tipi di oggetto non supportati, con l&#39;evidenziazione di [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
-Attendere il completamento dell&#39;importazione. Il tempo necessario per il completamento può variare a seconda del numero di oggetti nel pacchetto. Puoi monitorare il processo di importazione dalla scheda [!UICONTROL Sandbox] **[!UICONTROL Processi]**.
+Attendere il completamento dell&#39;importazione. Il tempo necessario per il completamento può variare a seconda del numero di oggetti nel pacchetto. È possibile monitorare il processo di importazione dalla scheda [!UICONTROL Sandboxes] **[!UICONTROL Jobs]**.
 
 ## Monitorare i dettagli di importazione {#view-import-details}
 
-Per visualizzare i dettagli importati, passare alla scheda [!UICONTROL Sandbox] **[!UICONTROL Processi]** e selezionare il pacchetto dall&#39;elenco. In alternativa, utilizza la barra di ricerca per cercare il pacchetto.
+Per visualizzare i dettagli importati, passare alla scheda [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** e selezionare il pacchetto dall&#39;elenco. In alternativa, utilizza la barra di ricerca per cercare il pacchetto.
 
-![La scheda [!UICONTROL Processi] delle sandbox evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/imports-tab.png)
+![La scheda sandbox [!UICONTROL Jobs] evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/imports-tab.png)
 
 <!--### View imported objects {#view-imported-objects}
 
@@ -255,17 +255,17 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-Seleziona **[!UICONTROL Visualizza riepilogo importazione]** dal riquadro dei dettagli a destra nella scheda **[!UICONTROL Processi]** nell&#39;ambiente Sandbox.
+Seleziona **[!UICONTROL View import summary]** dal riquadro dei dettagli a destra nella scheda **[!UICONTROL Jobs]** nell&#39;ambiente Sandbox.
 
-![La scheda sandbox [!UICONTROL Importazioni] evidenzia la selezione [!UICONTROL Visualizza dettagli importazione] nel riquadro di destra.](../images/ui/sandbox-tooling/view-import-details.png)
+![La scheda sandbox [!UICONTROL Imports] evidenzia la selezione di [!UICONTROL View import details] nel riquadro di destra.](../images/ui/sandbox-tooling/view-import-details.png)
 
-La finestra di dialogo **[!UICONTROL Riepilogo importazione]** mostra un raggruppamento delle importazioni con avanzamento in percentuale.
+La finestra di dialogo **[!UICONTROL Import summary]** mostra un raggruppamento delle importazioni con avanzamento in percentuale.
 
 >[!NOTE]
 >
 >È possibile visualizzare un elenco di oggetti passando a pagine di inventario specifiche.
 
-![La finestra di dialogo [!UICONTROL Dettagli importazione] mostra un raggruppamento dettagliato delle importazioni.](../images/ui/sandbox-tooling/import-details.png)
+![La finestra di dialogo [!UICONTROL Import details] mostra un raggruppamento dettagliato delle importazioni.](../images/ui/sandbox-tooling/import-details.png)
 
 Al termine dell’importazione, viene ricevuta una notifica nell’interfaccia utente di Experience Platform. Puoi accedere a queste notifiche dall’icona degli avvisi. Se un processo non riesce, puoi passare alla risoluzione dei problemi da qui.
 
@@ -304,31 +304,31 @@ Segui i passaggi seguenti per scoprire come utilizzare gli strumenti sandbox per
 
 Segui questi passaggi se il caso d’uso coinvolge oggetti esistenti nella sandbox di origine che richiedono aggiornamenti della configurazione, dopo essere già stati assemblati e importati in altre sandbox.
 
-Innanzitutto, aggiorna l’oggetto nella sandbox di origine. Ad esempio, passa all&#39;area di lavoro **[!UICONTROL Schemi]**, seleziona lo schema e aggiungi un nuovo gruppo di campi.
+Innanzitutto, aggiorna l’oggetto nella sandbox di origine. Passare ad esempio all&#39;area di lavoro **[!UICONTROL Schemas]**, selezionare lo schema e aggiungere un nuovo gruppo di campi.
 
 ![Area di lavoro dello schema con uno schema aggiornato.](../images/ui/sandbox-tooling/update-schema.png)
 
-Dopo aver aggiornato lo schema, passa a **[!UICONTROL Sandbox]**, seleziona **[!UICONTROL Pacchetti]**, quindi individua il pacchetto esistente.
+Dopo aver aggiornato lo schema, passa a **[!UICONTROL Sandboxes]**, seleziona **[!UICONTROL Packages]**, quindi individua il pacchetto esistente.
 
 ![Interfaccia strumenti sandbox con un pacchetto selezionato](../images/ui/sandbox-tooling/select-package.png)
 
-Utilizza l’interfaccia dei pacchetti per verificare le modifiche. Seleziona **[!UICONTROL Controlla aggiornamenti]** per visualizzare eventuali modifiche agli artefatti nel pacchetto. Quindi, seleziona **[!UICONTROL Visualizza diff]** per ricevere un riepilogo dettagliato di tutte le modifiche eseguite sugli artefatti.
+Utilizza l’interfaccia dei pacchetti per verificare le modifiche. Seleziona **[!UICONTROL Check for updates]** per visualizzare eventuali modifiche agli artefatti nel pacchetto. Quindi, seleziona **[!UICONTROL View diff]** per ricevere un riepilogo dettagliato di tutte le modifiche eseguite sugli artefatti.
 
 ![Interfaccia del pacchetto con il pulsante di visualizzazione differenze selezionato.](../images/ui/sandbox-tooling/view-diff.png)
 
-Viene visualizzata l&#39;interfaccia [!UICONTROL Visualizza diff]. Per informazioni sugli artefatti di origine e di destinazione e sulle modifiche da applicare, consulta questo pedaggio.
+Viene visualizzata l&#39;interfaccia [!UICONTROL View diff]. Per informazioni sugli artefatti di origine e di destinazione e sulle modifiche da applicare, consulta questo pedaggio.
 
 ![Riepilogo delle modifiche.](../images/ui/sandbox-tooling/summary-of-changes.png)
 
-Durante questo passaggio, puoi anche selezionare [!UICONTROL Riepiloga con IA] per un riepilogo dettagliato di tutte le modifiche.
+Durante questo passaggio, puoi anche selezionare [!UICONTROL Summarize with AI] per un riepilogo dettagliato di tutte le modifiche.
 
 ![Riepilogo con IA abilitata.](../images/ui/sandbox-tooling/ai-summary.png)
 
-Al termine dell&#39;operazione, selezionare **[!UICONTROL Aggiorna pacchetto]**, quindi selezionare **[!UICONTROL Conferma]** nella finestra popup visualizzata. Una volta completato il processo, puoi aggiornare la pagina e selezionare **[!UICONTROL Visualizza cronologia]** per verificare la versione del pacchetto.
+Al termine, selezionare **[!UICONTROL Update package]** e quindi **[!UICONTROL Confirm]** nella finestra popup visualizzata. Una volta completato il processo, puoi aggiornare la pagina e selezionare **[!UICONTROL View history]** per verificare la versione del pacchetto.
 
 ![Finestra di conferma.](../images/ui/sandbox-tooling/confirm-changes.png)
 
-Per importare le modifiche, torna alla directory [!UICONTROL Pacchetti] e seleziona i puntini di sospensione (`...`) accanto al pacchetto, quindi seleziona **[!UICONTROL Importa pacchetto]**. Experience Platform seleziona automaticamente [!UICONTROL Aggiorna oggetti esistenti]. Verificare le modifiche, quindi selezionare **[!UICONTROL Fine]**.
+Per importare le modifiche, tornare alla directory [!UICONTROL Packages] e selezionare i puntini di sospensione (`...`) accanto al pacchetto, quindi selezionare **[!UICONTROL Import package]**. Experience Platform seleziona automaticamente [!UICONTROL Update existing objects]. Verificare le modifiche, quindi selezionare **[!UICONTROL Finish]**.
 
 >[!NOTE]
 >
@@ -344,7 +344,7 @@ Segui questi passaggi se il tuo caso d’uso prevede l’applicazione di modific
 
 Innanzitutto, crea e pubblica un nuovo pacchetto con l’oggetto aggiornato.
 
-Quindi, importa il pacchetto nella sandbox di destinazione che contiene gli oggetti che desideri aggiornare. Durante il processo di importazione, selezionare **[!UICONTROL Aggiorna oggetti esistenti]**, quindi utilizzare il Navigatore oggetti per selezionare manualmente gli oggetti di destinazione a cui si desidera applicare gli aggiornamenti.
+Quindi, importa il pacchetto nella sandbox di destinazione che contiene gli oggetti che desideri aggiornare. Durante il processo di importazione, selezionare **[!UICONTROL Update existing objects]**, quindi utilizzare il Navigatore oggetti per selezionare manualmente gli oggetti di destinazione a cui si desidera applicare gli aggiornamenti.
 
 >[!NOTE]
 >
@@ -353,15 +353,15 @@ Quindi, importa il pacchetto nella sandbox di destinazione che contiene gli ogge
 
 ![Interfaccia dell&#39;obiettivo di importazione con segnaposto per gli oggetti di destinazione da aggiornare.](../images/ui/sandbox-tooling/update-existing-objects.png)
 
-Dopo aver identificato gli oggetti di destinazione da aggiornare, selezionare **[!UICONTROL Fine]**.
+Dopo aver identificato gli oggetti di destinazione da aggiornare, selezionare **[!UICONTROL Finish]**.
 
 ![Oggetti di destinazione selezionati.](../images/ui/sandbox-tooling/add-updated-objects.png)
 
-## Esercitazione video
+## Tutorial video
 
 Il video seguente illustra gli strumenti della sandbox e spiega come creare un nuovo pacchetto, pubblicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446095/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Passaggi successivi
 

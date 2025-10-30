@@ -4,7 +4,7 @@ title: Endpoint API per processi di segmento
 description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico i processi di segmento per la tua organizzazione.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 3%
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | Specifica l&#39;offset iniziale per i processi di segmento restituiti. | `start=1` |
 | `limit` | Specifica il numero di processi di segmento restituiti per pagina. | `limit=20` |
 | `status` | Filtra i risultati in base allo stato. I valori supportati sono NEW, QUEUED, PROCESSING, SUCCESSEDED, FAILED, CANCELING, CANCELED | `status=NEW` |
-| `sort` | Ordina i processi segmento restituiti. È scritto nel formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `sort` | Ordina i processi segmento restituiti. Scritto nel formato `[attributeName]:[desc|asc]`. `sort=creationTime:desc` |
 | `property` | Filtra i processi di segmentazione e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` - filtro sulla chiave oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtro all&#39;interno dell&#39;array</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
@@ -70,7 +70,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 >
 >La seguente risposta è stata troncata per motivi di spazio e mostrerà solo il primo processo restituito.
 
-+++ Una risposta di esempio durante il recupero di un elenco di processi di segmento.
++++ Una risposta di esempio durante il recupero di un elenco di processi di segmento. 
 
 ```json
 {

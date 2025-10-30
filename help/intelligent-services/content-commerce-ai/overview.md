@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull’assegnazione tag dei contenuti
 description: L’assegnazione tag dei contenuti è un insieme di servizi di intelligenza artificiale che ti consente di estrarre funzioni intelligenti dai contenuti, organizzare, semplificare il flusso dei contenuti e fornire ai clienti esperienze personalizzate di maggiore impatto.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 1%
@@ -31,16 +31,19 @@ Il contenuto è un componente essenziale di queste esperienze. Per rispondere me
 La visione generale dell’assegnazione tag dei contenuti è suddivisa in tre passaggi per realizzare il coinvolgimento ottimale dei clienti e massimizzare i KPI guidati dai clienti.
 
 **Passaggio 1: informazioni sul contenuto**
+
 - Estrai funzioni intelligenti e metadati.
 - Organizza il contenuto (tag, categorizza, raggruppa, deduplica).
 - Associa dati di contenuto alle risorse.
 
 **Passaggio 2: informazioni sul cliente**
+
 - Associa le azioni del cliente alle funzioni del contenuto.
 - Utilizza le preferenze e le affinità del cliente dai contenuti e dalle azioni.
 - Aggiungi le preferenze al profilo del cliente.
 
 **Passaggio 3: abilitazione dell&#39;ottimizzazione dell&#39;esperienza**
+
 - Utilizza il profilo del cliente per fornire esperienze migliorate e personalizzate, nella sessione e per le esperienze successive.
 - Utilizza le funzionalità di contenuto per ottenere informazioni approfondite sui comportamenti dei clienti su cui si basano i KPI.
 - Utilizza approfondimenti sui contenuti per migliorare la creazione, l’authoring e la selezione dei contenuti.

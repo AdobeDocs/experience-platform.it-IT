@@ -2,9 +2,9 @@
 title: Collegare Relay ad Experience Platform nell’interfaccia utente
 description: Scopri come creare una connessione sorgente personalizzata del connettore di inoltro utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '544'
 ht-degree: 1%
 
 ---
@@ -25,19 +25,19 @@ Leggi questa guida per scoprire come utilizzare [!DNL Relay Connector] nell&#39;
 
 ## Connetti l&#39;origine [!DNL Relay Connector]
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo o utilizzare l’opzione di ricerca per trovare un’origine specifica.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini con cui è possibile creare un account. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo o utilizzare l’opzione di ricerca per trovare un’origine specifica.
 
-Nella categoria *[!UICONTROL Marketing automation]*, selezionare la scheda di origine [!DNL Relay Connector] e selezionare **[!UICONTROL Aggiungi dati]**.
+Nella categoria *[!UICONTROL Marketing automation]*, selezionare la scheda di origine [!DNL Relay Connector] e selezionare **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando non esiste alcun account autenticato. Una volta autenticato un account, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Set up]** quando non esiste alcun account autenticato. Dopo l&#39;autenticazione di un account, questa opzione diventa **[!UICONTROL Add data]**.
 
 ![Pagina del catalogo dell&#39;area di lavoro di origine.](../../../../images/tutorials/create/relay-connector/relay-source.jpg)
 
 ### Selezionare i dati
 
-Viene visualizzata l&#39;interfaccia **[!UICONTROL Origine connettore di inoltro Connect]**. Utilizza l&#39;interfaccia *[!UICONTROL Seleziona dati]* per sfogliare o specificare lo schema dei dati di origine. In alternativa, puoi caricare un file JSON di esempio per definire lo schema sorgente.
+Viene visualizzata l&#39;interfaccia **[!UICONTROL Connect Relay Connector source]**. Utilizzare l&#39;interfaccia *[!UICONTROL Select data]* per sfogliare o specificare lo schema dei dati di origine. In alternativa, puoi caricare un file JSON di esempio per definire lo schema sorgente.
 
 >[!NOTE]
 >
@@ -45,15 +45,15 @@ Viene visualizzata l&#39;interfaccia **[!UICONTROL Origine connettore di inoltro
 
 ![Interfaccia dati selezionata](../../../../images/tutorials/create/relay-connector/upload-data.jpg)
 
-Dopo il caricamento dei dati, puoi utilizzare la sezione [!UICONTROL Anteprima dati di esempio] per visualizzare l&#39;anteprima dei dati.
+Dopo il caricamento dei dati, è possibile utilizzare la sezione [!UICONTROL Preview sample data] per visualizzare l&#39;anteprima dei dati.
 
 ![Dati caricati.](../../../../images/tutorials/create/relay-connector/uploaded-data.jpg)
 
 ### Dettagli del flusso di dati
 
-Quindi, utilizza l&#39;interfaccia *[!UICONTROL Dettagli flusso di dati]* per fornire un **nome** e una **descrizione opzionale** per il flusso di dati. Selezionare inoltre il **[!UICONTROL set di dati di destinazione]** che si desidera utilizzare. Puoi creare un nuovo set di dati o utilizzare un set di dati esistente.
+Quindi, utilizza l&#39;interfaccia *[!UICONTROL Dataflow details]* per fornire un **nome** e una **descrizione opzionale** per il flusso di dati. Selezionare inoltre **[!UICONTROL Target dataset]** che si desidera utilizzare. Puoi creare un nuovo set di dati o utilizzare un set di dati esistente.
 
-![Interfaccia dettagli flusso di dati. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![Interfaccia dei dettagli del flusso di dati.](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Mappatura
 
@@ -81,5 +81,5 @@ Utilizzare questi valori per configurare il webhook nella **console di inoltro**
 
 ## Risorse aggiuntive
 
-* [Creare una nuova specifica di connessione utilizzando l&#39;API del servizio Flusso](https://experienceleague.adobe.com/it/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Connetti alla tua origine tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/it/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Creare una nuova specifica di connessione utilizzando l&#39;API del servizio Flusso](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Connetti alla tua origine tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform per aziende con più marchi e aree geografiche
 description: Scopri come fornire ai team di implementazione gli strumenti e le informazioni necessari per navigare efficacemente tra le complessità di Adobe Experience Platform.
-source-git-commit: e930b070f18e220cc1fa97bb0183520d495f33be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '5325'
 ht-degree: 0%
@@ -28,14 +28,17 @@ Se gestisci un’azienda con più marchi e aree geografiche, probabilmente hai r
 Quando esplori le opzioni di implementazione, devi comprendere e considerare gli utenti tipo che interagiranno con Experience Platform e le applicazioni basate su piattaforma. Progettare la loro esperienza in base ai loro ruoli e interessi garantisce un’implementazione di successo. Di seguito sono riportati tre utenti tipo principali da considerare durante l’esplorazione delle opzioni:
 
 **Mary, l&#39;addetto marketing:**
+
 - Focus: acquisizione di clienti e personalizzazione delle esperienze su larga scala.
 - Obiettivi: creazione di profili completi, miglioramento dell’efficienza dei contenuti multimediali.
 
 **Ted, il tecnico**
+
 - Focus: gestione dei dati organizzativi.
 - Obiettivi: garanzia di conformità, gestione dei silos di dati, assistenza per varie linee di business.
 
 **Dan, architetto dei dati**
+
 - Focus: accuratezza e qualità dei dati.
 - Obiettivi: garantire la privacy e l’affidabilità dei dati, progettare schemi e modelli di dati, gestire le origini dati.
 
@@ -77,7 +80,7 @@ Puoi definire i controlli di accesso con ruoli e autorizzazioni per controllare 
 
 Considera un data engineer che potrebbe non avere bisogno di accedere a tutte le funzionalità delle applicazioni basate su Experience Platform e piattaforma. In genere sono responsabili della creazione di definizioni di dati (schemi), della configurazione delle origini dati per l’acquisizione dei dati e della creazione di set di dati. Tuttavia, potrebbe non essere la stessa persona che crea e attiva i tipi di pubblico per esperienze cliente personalizzate. Per questo utente tipo, crea un ruolo, aggiungi le autorizzazioni appropriate e concedi l’accesso solo alle funzionalità richieste. Al contrario, un addetto al marketing non creerebbe schemi e acquisirebbe dati, ma piuttosto si concentrerebbe sulla creazione e l’attivazione di tipi di pubblico per abilitare esperienze cliente personalizzate.
 
-Se lo desideri, puoi aggiungere controlli di accesso granulari per limitare l’accesso a campi specifici nel profilo cliente unificato con funzionalità di controllo dell’accesso basato su attributi/controllo dell’accesso a livello di campo. Si tratta di meccanismi di governance in Experience Platform che consentono di limitare l’accesso agli attributi dei dati in base a etichette predefinite. Con il controllo degli accessi a livello di campo, è possibile gestire i dati personali identificabili e limitare l’accesso a tutti i flussi di lavoro di Experience Platform e delle applicazioni. Per ulteriori dettagli sulle funzionalità di controllo degli accessi, consulta la [documentazione sul controllo degli accessi](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home).
+Se lo desideri, puoi aggiungere controlli di accesso granulari per limitare l’accesso a campi specifici nel profilo cliente unificato con funzionalità di controllo dell’accesso basato su attributi/controllo dell’accesso a livello di campo. Si tratta di meccanismi di governance in Experience Platform che consentono di limitare l’accesso agli attributi dei dati in base a etichette predefinite. Con il controllo degli accessi a livello di campo, è possibile gestire i dati personali identificabili e limitare l’accesso a tutti i flussi di lavoro di Experience Platform e delle applicazioni. Per ulteriori dettagli sulle funzionalità di controllo degli accessi, consulta la [documentazione sul controllo degli accessi](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
 ![Controlli di accesso CDP, Configura autorizzazioni ruolo](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
@@ -99,7 +102,7 @@ Con la funzione di strumenti sandbox, puoi selezionare vari oggetti ed esportarl
 
 Puoi utilizzare le API di Experience Platform per automatizzare le distribuzioni sandbox e le attività di configurazione. Le API consentono il controllo programmabile per attività ripetitive come l’esportazione, l’importazione o la modifica di configurazioni sandbox, fornendo flessibilità se si preferiscono flussi di lavoro automatizzati.
 
-Per ulteriori dettagli sugli strumenti sandbox, consulta la [documentazione sugli strumenti sandbox](https://experienceleague.adobe.com/it/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Per ulteriori dettagli sugli strumenti sandbox, consulta la [documentazione sugli strumenti sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Crea pacchetto](./images/whitepaper/create-package.png) | ![Pacchetti elenco CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,11 +229,11 @@ Inoltre, puoi utilizzare Experience Platform Segment Match, una funzione in Plat
 
 Questo servizio di condivisione dei segmenti consente a due o più utenti di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
 
-Per ulteriori dettagli sulla funzione Segment Match, consulta la [documentazione di Segment Match](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/ui/segment-match/overview).
+Per ulteriori dettagli sulla funzione Segment Match, consulta la [documentazione di Segment Match](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Una combinazione di approcci per le operazioni globali, regionali e specifici per il brand
 
-Molte aziende multimarca operano su scala globale e, come tali, cercano spesso una combinazione di approcci di gestione dei dati unificati e isolati. In questo scenario, cercano di separare i dati per più regioni o paesi. I brand all’interno dell’organizzazione possono aspettarsi di operare esclusivamente sui dati associati al proprio marchio specifico, il tutto all’interno degli stessi limiti di dati di una geografia o di un paese. Questo approccio consente la gestione centralizzata dei dati regionali o nazionali, facilitando al tempo stesso le operazioni di marketing e di dati specifiche per il brand. È un modello che combina i vantaggi della gestione unificata dei dati con la necessità di un isolamento specifico per il marchio e l’area geografica.
+Molte aziende multimarca operano su scala globale e, come tali, cercano spesso una combinazione di approcci di gestione dei dati unificati e isolati. In questo scenario, cercano di separare i dati per più regioni o paesi. I brand all’interno dell’organizzazione possono aspettarsi di operare esclusivamente sui dati associati al proprio marchio specifico, il tutto all’interno degli stessi limiti di dati di una geografia o di un paese. Questo approccio consente la gestione centralizzata dei dati regionali o nazionali, facilitando al tempo stesso le operazioni di marketing e di dati specifiche per il brand. Si tratta di un modello che combina i vantaggi della gestione unificata dei dati con la necessità di un isolamento specifico per il marchio e l’area geografica.
 
 Riconoscendo questi diversi requisiti, Experience Platform può essere configurato per fornire una soluzione di gestione dei dati altamente adattabile e flessibile, garantendo che le aziende con più marchi e aree geografiche possano rappresentare efficacemente la tua azienda all’interno della piattaforma. Che si tratti di massimizzare i dati collettivi dei clienti, mantenere un rigido isolamento dei dati o raggiungere un equilibrio tra i due, Experience Platform è in grado di soddisfare le diverse esigenze della tua azienda.
 
@@ -264,7 +267,7 @@ Ruoli e autorizzazioni utente:
 
 - Crea ruoli e concedi l’accesso solo a determinate funzioni per l’utente tipo corretto. Ad esempio, i ruoli utente &quot;**Addetto marketing—Germania**&quot; e &quot;**Addetto marketing—Francia**&quot; otterrebbero l&#39;autorizzazione solo per creare, visualizzare e gestire tipi di pubblico sui dati del paese abilitati da una combinazione di controllo dell&#39;accesso a livello di campo, controllo dell&#39;accesso a livello di oggetto e tipi di pubblico predefiniti.
 
-- Creare il ruolo &quot;**Technologist—Global**&quot; e concedere le autorizzazioni appropriate per creare e gestire schemi, set di dati, criteri, origini e così via. Questo ruolo sarebbe responsabile di tutte le operazioni di amministrazione e configurazione necessarie.
+- Crea il ruolo &quot;**Technologist—Global**&quot; e concedi le autorizzazioni giuste per creare e gestire schemi, set di dati, criteri, origini e così via. Questo ruolo sarebbe responsabile di tutte le operazioni di amministrazione e configurazione necessarie.
 
 ###### Progettazione dello schema e controllo dell&#39;accesso basato su attributi: controllo dell&#39;accesso a livello di campo
 
@@ -285,23 +288,23 @@ Schema profilo individuale XDM:
 ```
 \- PII
 \- Germany
-	\- name --> Label: "Germany"
-	\- email --> Label: "Germany"
-	\- birthdate --> Label: "Germany"
+    \- name --> Label: "Germany"
+    \- email --> Label: "Germany"
+    \- birthdate --> Label: "Germany"
 
 \- France
-	\- name --> Label: "France"
-	\- email --> Label: "France"
-	\- birthdate --> Label: "France"
+    \- name --> Label: "France"
+    \- email --> Label: "France"
+    \- birthdate --> Label: "France"
 
 \- Netherland
-	\- name --> Label: "Netherland", "Germany"
-	\- email --> Label: "Netherland", "Germany"
-	\- birthdate --> Label: "Netherland", "Germany"
+    \- name --> Label: "Netherland", "Germany"
+    \- email --> Label: "Netherland", "Germany"
+    \- birthdate --> Label: "Netherland", "Germany"
 
 \- Loyalty
-	\- member
-	\- registrationDate
+    \- member
+    \- registrationDate
 ```
 
 ###### Tipi di pubblico: utilizzare il controllo degli accessi basato su attributi: controllo degli accessi a livello di oggetto per controllare l’accesso a tipi di pubblico specifici per il marchio o il paese
@@ -358,7 +361,7 @@ In alcuni scenari, è possibile scegliere di distribuire applicazioni basate su 
 
 ### Che cos’è un ID organizzazione
 
-- Un ID organizzazione è l’implementazione da parte di Adobe di Federated ID e del protocollo OAuth 2.0.
+- Un ID organizzazione è l’implementazione di Adobe di Federated ID e del protocollo OAuth 2.0.
 
 - Un ID organizzazione è una raccolta di tutte le applicazioni, gli utenti e le autorizzazioni a cui un’organizzazione ha i diritti in base ai termini contrattuali di Adobe.
 
@@ -431,7 +434,7 @@ Experience Platform offre alle aziende un solido framework per centralizzare, ge
 
    - È necessario valutare attentamente se distribuire **più ID organizzazione o più sandbox** in base alla residenza dei dati, alla conformità e alle esigenze operative.
 
-   - **Gli ID organizzazione** offrono isolamento completo&#x200B;**, mentre le impostazioni con più sandbox forniscono flessibilità operativa all&#39;interno di un framework di governance condiviso**.
+   - **Gli ID organizzazione** offrono isolamento completo**, mentre le impostazioni con più sandbox forniscono flessibilità operativa all&#39;interno di un framework di governance condiviso**.
 
 ## Considerazioni finali
 

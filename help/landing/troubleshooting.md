@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 4%
@@ -73,11 +73,15 @@ Molte operazioni PATCH nelle API [!DNL Experience Platform] utilizzano [stringhe
 A seconda che si utilizzi l’interfaccia o l’API, si applicano i seguenti requisiti di sistema:
 
 **Per operazioni basate sull&#39;interfaccia utente:**
+
 - Un browser web moderno e standard. Sebbene sia consigliata l&#39;ultima versione di [!DNL Chrome], sono supportate anche le versioni principali corrente e precedenti di [!DNL Firefox], [!DNL Internet Explorer] e Safari.
+
    - Ogni volta che viene rilasciata una nuova versione principale, [!DNL Experience Platform] inizia a supportare la versione più recente, mentre il supporto per la terza versione più recente viene rimosso.
+
 - Tutti i browser devono avere cookie e JavaScript abilitati.
 
 **Per interazioni con API e sviluppatori:**
+
 - Un ambiente di sviluppo da sviluppare per le integrazioni REST, streaming e Webhook.
 
 ## Errori e risoluzione problemi {#errors-and-troubleshooting}
@@ -201,6 +205,7 @@ Questo messaggio di errore viene visualizzato quando una richiesta POST, PUT o P
 ```
 
 Questo messaggio di errore viene visualizzato in uno dei due casi seguenti:
+
 - Quando un&#39;intestazione dell&#39;ID organizzazione (`x-gw-ims-org-id`) errata o non valida viene passata in una richiesta API. Prima di riprovare, assicurati di includere l’ID corretto della tua organizzazione.
 - Quando l’account (rappresentato dalle credenziali di autenticazione fornite) non è associato a un profilo di prodotto per Experience Platform. Segui i passaggi su [generazione delle credenziali di accesso](./api-authentication.md#authentication-for-each-session) nell&#39;esercitazione sull&#39;autenticazione API di Experience Platform per aggiungere Experience Platform al tuo account e aggiornare di conseguenza le credenziali di autenticazione.
 
@@ -208,7 +213,7 @@ Questo messaggio di errore viene visualizzato in uno dei due casi seguenti:
 
 Di seguito è riportato un elenco di guide per la risoluzione dei problemi e documentazione di riferimento API per le API [!DNL Experience Platform]. Ogni guida alla risoluzione dei problemi fornisce le risposte alle domande frequenti e alle soluzioni ai problemi specifici dei singoli servizi [!DNL Experience Platform]. I documenti di riferimento API forniscono una guida completa a tutti gli endpoint disponibili per ciascun servizio e mostrano esempi di corpo della richiesta, risposte e codici di errore che potresti ricevere.
 
-| Servizio | Riferimento API | Risoluzione dei problemi |
+| Servizio | Documentazione delle API | Risoluzione dei problemi |
 | --- | --- | --- |
 | Controllo degli accessi | [API di controllo degli accessi](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guida alla risoluzione dei problemi relativi al controllo degli accessi](../access-control/troubleshooting-guide.md) |
 | Acquisizione dei dati Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guida alla risoluzione dei problemi di acquisizione in batch](../ingestion/batch-ingestion/troubleshooting.md) |

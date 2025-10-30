@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '6009'
 ht-degree: 1%
@@ -154,8 +154,8 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | map_has_keys | Se vengono forniti uno o più tasti di input, la funzione restituisce true. Se come input viene fornita una matrice di stringhe, la funzione restituisce true sulla prima chiave trovata. | <ul><li>MAP: **Obbligatorio** Dati mappa di input</li><li>CHIAVE: **Obbligatoria** La chiave può essere una singola stringa o una matrice di stringhe. Se viene fornito un altro tipo primitivo (dati/numero), viene trattato come una stringa.</li></ul> | map_has_keys(MAP, KEY) | Per un esempio di codice, consulta la [appendice](#map_has_keys). | |
 | add_to_map | Accetta almeno due input. È possibile fornire come input qualsiasi numero di mappe. La preparazione dati restituisce una singola mappa contenente tutte le coppie chiave-valore provenienti da tutti gli input. Se una o più chiavi sono ripetute (nella stessa mappa o su più mappe), la preparazione dati deduplica le chiavi in modo che la prima coppia chiave-valore persista nell’ordine in cui sono state passate nell’input. | MAP: **Obbligatorio** I dati della mappa di input. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Per un esempio di codice, consulta la [appendice](#add_to_map). | |
 | object_to_map (Sintassi 1) | Utilizza questa funzione per creare tipi di dati per mappe. | <ul><li>KEY: **Required** Le chiavi devono essere una stringa. Se vengono forniti altri valori primitivi come numeri interi o date, questi verranno automaticamente convertiti in stringhe e verranno trattati come stringhe.</li><li>ANY_TYPE: **Obbligatorio** fa riferimento a qualsiasi tipo di dati XDM supportato, ad eccezione di Mappe.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... ) | Per un esempio di codice, consulta la [appendice](#object_to_map). | |
-| object_to_map (Sintassi 2) | Utilizza questa funzione per creare tipi di dati per mappe. | <ul><li>OGGETTO: **Obbligatorio** È possibile fornire un oggetto o una matrice di oggetti in ingresso e puntare a un attributo all&#39;interno dell&#39;oggetto come chiave.</li></ul> | object_to_map(OBJECT) | Per un esempio di codice, consulta la [appendice](#object_to_map). |
-| object_to_map (Sintassi 3) | Utilizza questa funzione per creare tipi di dati per mappe. | <ul><li>OGGETTO: **Obbligatorio** È possibile fornire un oggetto o una matrice di oggetti in ingresso e puntare a un attributo all&#39;interno dell&#39;oggetto come chiave.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Per un esempio di codice, consulta la [appendice](#object_to_map). |
+| object_to_map (Sintassi 2) | Utilizza questa funzione per creare tipi di dati per mappe. | <ul><li>OGGETTO: **Obbligatorio** È possibile fornire un oggetto o una matrice di oggetti in ingresso e puntare a un attributo all&#39;interno dell&#39;oggetto come chiave.</li></ul> | object_to_map(OBJECT) | Per un esempio di codice, consulta la [appendice](#object_to_map). |  |
+| object_to_map (Sintassi 3) | Utilizza questa funzione per creare tipi di dati per mappe. | <ul><li>OGGETTO: **Obbligatorio** È possibile fornire un oggetto o una matrice di oggetti in ingresso e puntare a un attributo all&#39;interno dell&#39;oggetto come chiave.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Per un esempio di codice, consulta la [appendice](#object_to_map). |  |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | upsert_array_replace | Questa funzione viene utilizzata per sostituire gli elementi in un array. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>MATRICE: **Obbligatoria** Matrice che sostituisce la matrice nel profilo.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 | [!BADGE Solo destinazioni]{type=Informative} array_to_string | Unisce le rappresentazioni di stringa degli elementi in un array utilizzando il separatore specificato. Se l&#39;array è multidimensionale, viene appiattito prima di essere unito. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>SEPARATORE: **Obbligatorio** Separatore utilizzato per unire gli elementi nell&#39;array.</li><li>MATRICE: **Obbligatoria** Matrice da unire (dopo la conversione).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
 | [!BADGE Solo destinazioni]{type=Informative} filterArray* | Filtra l’array specificato in base a un predicato. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>MATRICE: **Obbligatoria** Matrice da filtrare</li><li>PREDICATE: **Obbligatorio** Il predicato da applicare a ciascun elemento dell&#39;array specificato. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
-| [!BADGE Solo destinazioni]{type=Informative} transformArray* | Trasforma l’array specificato in base a un predicato. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>MATRICE: **Obbligatoria** Matrice da trasformare.</li><li>PREDICATE: **Obbligatorio** Il predicato da applicare a ciascun elemento dell&#39;array specificato. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE Solo destinazioni]{type=Informative} transformArray* | Trasforma l’array specificato in base a un predicato. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>MATRICE: **Obbligatoria** Matrice da trasformare.</li><li>PREDICATE: **Obbligatorio** Il predicato da applicare a ciascun elemento dell&#39;array specificato. | transformArray(ARRAY, PREDICATE) | `transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
 | [!BADGE Solo destinazioni]{type=Informative} flattenArray* | Appiattisce la matrice (multidimensionale) specificata a una matrice unidimensionale. **Nota**: questa funzione viene utilizzata nelle destinazioni. Per ulteriori informazioni, consulta la [documentazione](../destinations/ui/export-arrays-maps-objects.md). | <ul><li>MATRICE: **Obbligatoria** Matrice da appiattire.</li></ul> | flattenArray(ARRAY) | flattenArray([[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
@@ -193,7 +193,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | Questa funzione accetta un array di oggetti e una chiave come input e restituisce una mappa del campo della chiave con il valore come chiave e l’elemento dell’array come valore. | <ul><li>INPUT: **Obbligatorio** Matrice di oggetti di cui trovare il primo oggetto non nullo.</li><li>KEY: **Obbligatorio** La chiave deve essere un nome di campo nella matrice dell&#39;oggetto e l&#39;oggetto deve essere un valore.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Leggi l&#39;[appendice](#object_to_map) per un esempio di codice. |
+| array_to_map | Questa funzione accetta un array di oggetti e una chiave come input e restituisce una mappa del campo della chiave con il valore come chiave e l’elemento dell’array come valore. | <ul><li>INPUT: **Obbligatorio** Matrice di oggetti di cui trovare il primo oggetto non nullo.</li><li>KEY: **Obbligatorio** La chiave deve essere un nome di campo nella matrice dell&#39;oggetto e l&#39;oggetto deve essere un valore.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Leggi l&#39;[appendice](#object_to_map) per un esempio di codice. |  |
 | object_to_map | Questa funzione prende un oggetto come argomento e restituisce una mappa di coppie chiave-valore. | <ul><li>INPUT: **Obbligatorio** Matrice di oggetti di cui trovare il primo oggetto non nullo.</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address) dove input è &quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;,City : \&quot;san jose\&quot;,State : \&quot;CA\&quot;,type: \&quot;office\&quot;}&quot; | Restituisce una mappa con le coppie nome campo e valore specificate o null se l&#39;input è null. Ad esempio: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 | to_map | Questa funzione prende un elenco di coppie chiave-valore e restituisce una mappa di coppie chiave-valore. | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;)&quot; | Restituisce una mappa con le coppie nome campo e valore specificate o null se l&#39;input è null. Ad esempio: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
@@ -261,7 +261,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Genera un ID pseudo-casuale. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
-| `fpid_to_ecid ` | Questa funzione prende una stringa FPID e la converte in un ECID da utilizzare nelle applicazioni Adobe Experience Platform e Adobe Experience Cloud. | <ul><li>STRING: **Required** Stringa FPID da convertire in ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
+| `fpid_to_ecid` | Questa funzione prende una stringa FPID e la converte in un ECID da utilizzare nelle applicazioni Adobe Experience Platform e Adobe Experience Cloud. | <ul><li>STRING: **Required** Stringa FPID da convertire in ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
@@ -387,11 +387,11 @@ La tabella seguente delinea un elenco di caratteri riservati e dei corrispondent
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

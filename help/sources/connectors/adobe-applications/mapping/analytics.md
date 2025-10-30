@@ -2,10 +2,10 @@
 title: Mappatura dei campi per il connettore Source di Adobe Analytics
 description: Mappa i campi Adobe Analytics ai campi XDM utilizzando il connettore Source di Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 316879afe8c94657156c768cdc14d4710da9fd35
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3914'
-ht-degree: 6%
+source-wordcount: '3854'
+ht-degree: 5%
 
 ---
 
@@ -23,10 +23,10 @@ Leggi la tabella seguente per informazioni sui parametri dei contenuti multimedi
 | --- | --- | --- | --- |
 | `videoname` | `mediaReporting.sessionDetails.friendlyName` | stringa | Il nome descrittivo (leggibile dall’uomo) del video. |
 | `videoaudioauthor` | `mediaReporting.sessionDetails.author` | stringa | Nome dell’autore del contenuto multimediale. |
-| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | stringa | Il nome dell’artista o del gruppo dell’album che esegue la registrazione musicale o il video. |
-| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | stringa | Il nome dell’album a cui appartiene la registrazione musicale o il video. |
-| `videolength` | `mediaReporting.sessionDetails.length ` | intero | Durata o runtime del video. |
-| `videoshowtype` | `mediaReporting.sessionDetails.showType` | stringa |
+| `videoaudioartist` | `mediaReporting.sessionDetails.artist` | stringa | Nome dell&#39;artista o del gruppo dell&#39;album che esegue la registrazione musicale o il video. |
+| `videoaudioalbum` | `mediaReporting.sessionDetails.album` | stringa | Il nome dell&#39;album a cui appartiene la registrazione musicale o il video. |
+| `videolength` | `mediaReporting.sessionDetails.length` | intero | Durata o runtime del video. |
+| `videoshowtype` | `mediaReporting.sessionDetails.showType` | stringa |  |
 | `video` | `mediaReporting.sessionDetails.name` | stringa | ID del video. |
 | `videoshow` | `mediaReporting.sessionDetails.show` | stringa | Nome del programma o della serie. Il nome del programma o della serie è necessario solo se lo spettacolo fa parte di una serie. |
 | `videostreamtype` | mediaReporting.sessionDetails.streamType | stringa | Il tipo di contenuti multimediali in streaming, ad esempio &quot;video&quot; o &quot;audio&quot;. |
@@ -34,12 +34,12 @@ Leggi la tabella seguente per informazioni sui parametri dei contenuti multimedi
 | `videoepisode` | `mediaReporting.sessionDetails.episode` | stringa | Numero dell’episodio. |
 | `videogenre` | `mediaReporting.sessionDetails.genreList[]` | stringa[] | Il genere del video. |
 | `videosessionid` | `mediaReporting.sessionDetails.ID` | stringa | Identificatore di un’istanza di un flusso di contenuto univoco per una singola riproduzione. |
-| `videoplayername` | `mediaReporting.sessionDetails.playerName ` | stringa | Nome del lettore video. |
+| `videoplayername` | `mediaReporting.sessionDetails.playerName` | stringa | Nome del lettore video. |
 | `videochannel` | `mediaReporting.sessionDetails.channel` | stringa | Il canale di distribuzione da cui è stato riprodotto il contenuto. |
 | `videocontenttype` | `mediaReporting.sessionDetails.contentType` | stringa | Tipo di consegna del flusso utilizzato per il contenuto. Viene automaticamente impostato su &quot;Video&quot; per tutte le visualizzazioni video. I valori consigliati includono: VOD, Live, Linear, UGC, DVOD, Radio, Podcast, Audiook e Song. |
 | `videonetwork` | `mediaReporting.sessionDetails.network` | stringa | Il nome della rete o del canale. |
 | `videofeedtype` | `mediaReporting.sessionDetails.feed` | stringa | Tipo di feed. Può rappresentare dati effettivi relativi al feed, ad esempio &quot;East HD&quot; o &quot;SD&quot;, oppure la sorgente del feed, ad esempio un URL. |
-| `videosegment` | `mediaReporting.sessionDetails.segment` | stringa |
+| `videosegment` | `mediaReporting.sessionDetails.segment` | stringa |  |
 | `videostart` | `mediaReporting.sessionDetails.isViewed` | booleano | Valore booleano che indica se il video è stato avviato o meno. Ciò si verifica una volta che l’utente seleziona il pulsante di riproduzione e conta anche in presenza di annunci pre-roll, buffering, errori e così via. |
 | `videoplay` | `mediaReporting.sessionDetails.isPlayed` | booleano | Valore booleano che indica se il primo fotogramma del file multimediale è stato avviato. Se l’utente abbandona durante gli annunci o il tempo di buffering, l’avvio del contenuto non è idoneo. |
 | `videotime` | `mediaReporting.sessionDetails.timePlayed` | intero | Durata (in secondi) di tutti gli eventi di `type=PLAY` sul contenuto principale. |
@@ -57,7 +57,7 @@ Leggi la tabella seguente per informazioni sui parametri dei contenuti multimedi
 | `videopausetime` | `mediaReporting.sessionDetails.pauseTime` | intero | Durata totale (in secondi) della sospensione della riproduzione da parte di un utente. |
 | `videomvpd` | `mediaReporting.sessionDetails.mvpd` | stringa | Un identificatore MVPD fornito tramite l’autenticazione Adobe. |
 | `videoauthorized` | `mediaReporting.sessionDetails.authorized` | stringa | Definisce che l’utente è stato autorizzato tramite l’autenticazione Adobe. |
-| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Definisce l’ora del giorno in cui il contenuto è stato trasmesso o riprodotto. |
+| `videodaypart` | `mediaReporting.sessionDetails.dayPart` | Definisce l’ora del giorno in cui il contenuto è stato trasmesso o riprodotto. |  |
 | `videoresume` | `mediaReporting.sessionDetails.hasResume` | booleano | Valore booleano che contrassegna ogni riproduzione ripresa dopo più di 30 minuti di buffer, pausa o interruzione. |
 | `videosegmentviews` | `mediaReporting.sessionDetails.hasSegmentView` | booleano | Valore booleano che indica che è stato visualizzato almeno un frame. Non è necessario che questo fotogramma sia il primo. |
 | `videoaudiolabel` | `mediaReporting.sessionDetails.label` | stringa | Nome dell&#39;etichetta discografica. |
@@ -133,7 +133,7 @@ Per informazioni sui parametri di qualità, leggi la tabella seguente.
 | --- | --- | --- | --- |
 | `videoqoebitrateaverage` | `mediaReporting.qoeDataDetails.bitrateAverage` | numero | Il bitrate medio (in kbps, numero intero). Questa metrica viene calcolata come media ponderata di tutti i valori di bitrate relativi alla durata di riproduzione che si è verificata durante una sessione di riproduzione. |
 | `videoqoebitratechange` | `mediaReporting.qoeDataDetails.hasBitrateChangeImpactedStreams` | booleano | Valore booleano che indica il numero di flussi in cui si sono verificate le modifiche del bitrate. Questa metrica è impostata su true solo se durante una sessione di riproduzione si è verificato almeno un evento di modifica del bitrate. |
-| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | intero |
+| `videoqoebitratechangecountevar` | `mediaReporting.qoeDataDetails.bitrateChangeCount` | intero |  |
 | `videoqoebitrateaverageevar` | `mediaReporting.qoeDataDetails.bitrateAverageBucket` | stringa | Il numero di modifiche del bitrate. Questo valore viene calcolato come somma di tutti gli eventi di modifica del bitrate che si sono verificati durante una sessione di riproduzione. |
 | `videoqoetimetostartevar` | `mediaReporting.qoeDataDetails.timeToStart` | intero | La durata, misurata in secondi, tra il caricamento del video e l’avvio del video. |
 | `videoqoedroppedframes` | `mediaReporting.qoeDataDetails.hasDroppedFrameImpactedStreams` | booleano | Valore booleano che indica il numero di flussi in cui i fotogrammi sono stati eliminati. Questa metrica è impostata su true solo se durante una sessione di riproduzione è stato eliminato almeno un fotogramma. |
@@ -155,7 +155,7 @@ Leggi questa sezione per informazioni sui campi di mappatura Analytics obsoleti.
 
 ### Campi di mappatura diretta
 
-+++Seleziona questa opzione per visualizzare una tabella dei campi di mappatura diretta obsoleti
++++Seleziona per visualizzare una tabella dei campi di mappatura diretta obsoleti
 
 | Feed dati | Campo XDM | Tipo XDM | Descrizione |
 | --- | --- | --- | --- |
@@ -182,7 +182,7 @@ Leggi questa sezione per informazioni sui campi di mappatura Analytics obsoleti.
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | stringa | Variabile utilizzata per popolare la dimensione Codice postale. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | stringa | Elenca tutte le lingue accettate, come indicato nell’intestazione HTTP Accept-Language. |
 | `homepage` | `web.webPageDetails.isHomePage` | booleano | Non più utilizzato. Indica se l’URL corrente è la home page del browser. |
-| `ipv6` | `environment.ipV6` | stringa |
+| `ipv6` | `environment.ipV6` | stringa |  |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | stringa | Versione di JavaScript supportata dal browser. |
 | `user_agent` | `environment.browserDetails.userAgent` | stringa | Stringa dell’agente utente inviata nell’intestazione HTTP. |
 | `mobileappid` | `application.name` | stringa | L&#39;ID dell&#39;app mobile, archiviato nel seguente formato: `[AppName][BundleVersion]`. |
@@ -196,21 +196,21 @@ Leggi questa sezione per informazioni sui campi di mappatura Analytics obsoleti.
 | `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | numero | Beacon principale di Mobile Services. |
 | `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | numero | Beacon secondario di Mobile Services. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | stringa | Beacon UUID di Mobile Services. |
-| `mobileinstalls` | `application.firstLaunches` | Oggetto | Viene attivato alla prima esecuzione dopo l’installazione o la reinstallazione | {id (stringa), valore (numero)} |
-| `mobileupgrades` | `application.upgrades` | Oggetto | Segnala il numero di aggiornamenti dell’app. Attiva alla prima esecuzione dopo l’aggiornamento o quando cambia il numero di versione. | {id (stringa), valore (numero)} |
-| `mobilelaunches` | `application.launches` | Oggetto | Il numero di volte in cui l&#39;app è stata avviata. | {id (stringa), valore (numero)} |
-| `mobilecrashes` | `application.crashes` | Oggetto |  | {id (stringa), valore (numero)} |
-| `mobilemessageclicks` | `directMarketing.clicks` | Oggetto |  | {id (stringa), valore (numero)} |
-| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Oggetto | | {id (stringa), valore (numero)} |
-| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Oggetto | | {id (stringa), valore (numero)} |
-| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Oggetto | Il tempo di avvio della qualità video. | {id (stringa), valore (numero)} |
-| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Oggetto | | {id (stringa), valore (numero)} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Oggetto | Conteggio buffer qualità video | {id (stringa), valore (numero)} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Oggetto | Tempo buffer qualità video | {id (stringa), valore (numero)} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Oggetto | Conteggio modifiche qualità video | {id (stringa), valore (numero)} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Oggetto | Bitrate medio della qualità video | {id (stringa), valore (numero)} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Oggetto | Conteggio errori qualità video | {id (stringa), valore (numero)} |
-| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Oggetto | | {id (stringa), valore (numero)} |
+| `mobileinstalls` | `application.firstLaunches` | Oggetto | Attivazione alla prima esecuzione dopo l&#39;installazione o la reinstallazione di `{id (string), value (number)}` |
+| `mobileupgrades` | `application.upgrades` | Oggetto | Segnala il numero di aggiornamenti dell’app. Attiva alla prima esecuzione dopo l’aggiornamento o quando cambia il numero di versione. | `{id (string), value (number)}` |
+| `mobilelaunches` | `application.launches` | Oggetto | Il numero di volte in cui l&#39;app è stata avviata.  `{id (string), value (number)}` |
+| `mobilecrashes` | `application.crashes` | Oggetto | `{id (string), value (number)}` |
+| `mobilemessageclicks` | `directMarketing.clicks` | Oggetto | `{id (string), value (number)}` |
+| `mobileplaceentry` | `placeContext.POIinteraction.poiEntries` | Oggetto | `{id (string), value (number)}` |
+| `mobileplaceexit` | `placeContext.POIinteraction.poiExits` | Oggetto | `{id (string), value (number)}` |
+| `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | Oggetto | Il tempo di avvio della qualità video. `{id (string), value (number)}` |
+| `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | Oggetto | `{id (string), value (number)}` |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | Oggetto | Conteggio buffer qualità video `{id (string), value (number)}` |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | Oggetto | Tempo buffer qualità video `{id (string), value (number)}` |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | Oggetto | Conteggio modifiche qualità video `{id (string), value (number)}` |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | Oggetto | Bitrate medio della qualità video `{id (string), value (number)}` |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | Oggetto | Conteggio errori qualità video `{id (string), value (number)}` |
+| `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | Oggetto | `{id (string), value (number)}` |
 
 {style="table-layout:auto"}
 

@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 25%
+source-wordcount: '887'
+ht-degree: 27%
 
 ---
 
@@ -54,7 +54,7 @@ Nuove norme legali e organizzative danno agli utenti il diritto di accedere ai p
 | Nuovi endpoint API | Il percorso di base per l&#39;API [!DNL Privacy Service] è stato aggiornato da `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
 | Nuova proprietà `regulation` obbligatoria | Quando si creano nuovi processi nell’API di [!DNL Privacy Service], è necessario fornire una proprietà `regulation` nel payload della richiesta per indicare in quale regolamento tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. |
 | Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] ora accetta le richieste di accesso/eliminazione da Adobe [!DNL Primetime Authentication], utilizzando `primetimeAuthentication` come valore di prodotto. |
-| Miglioramenti all’interfaccia utente di Privacy Service | Pagine di tracciamento del lavoro separate per le normative RGPD e CCPA. Nuovo **Tipo di regolamento &#x200B;** a discesa per passare dai dati di tracciamento per RGPD e CCPA e viceversa. |
+| Miglioramenti all’interfaccia utente di Privacy Service | Pagine di tracciamento del lavoro separate per le normative RGPD e CCPA. Nuovo elenco a discesa **Tipo di regolamento** per passare dai dati di tracciamento per GDPR a quelli per CCPA. |
 
 **Problemi noti**
 
@@ -80,8 +80,8 @@ Adobe Experience Platform può acquisire dati da origini esterne e allo stesso t
 
 | Categoria | Autorizzazione | Descrizione |
 |--- | --- | ---|
-| Acquisizione dei dati | Gestisci origini | Accesso per leggere, creare, modificare e disabilitare le origini. |
-| Acquisizione dei dati | Visualizza origini | Accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalogo]** e alle origini autenticate nella scheda **[!UICONTROL Sfoglia]**. |
+| Acquisizione dati | Gestisci origini | Accesso per leggere, creare, modificare e disabilitare le origini. |
+| Acquisizione dati | Visualizza origini | Accesso in sola lettura alle origini disponibili nella scheda **[!UICONTROL Catalog]** e alle origini autenticate nella scheda **[!UICONTROL Browse]**. |
 
 **Problemi noti**
 
@@ -104,7 +104,7 @@ In [Real-Time CDP](../../rtcdp/overview.md), le destinazioni sono integrazioni p
 | Categoria | Autorizzazione | Descrizione |
 |--- | --- | ---|
 | Destinazioni | Gestire le destinazioni | Accesso a destinazioni di lettura, creazione, modifica e disattivazione. |
-| Destinazioni | Visualizza destinazioni | Accesso in sola lettura alle destinazioni disponibili nella scheda **[!UICONTROL Catalogo]** e alle destinazioni autenticate nella scheda **Sfoglia**. |
+| Destinazioni | Visualizza destinazioni | Accesso in sola lettura alle destinazioni disponibili nella scheda **[!UICONTROL Catalog]** e alle destinazioni autenticate nella scheda **Sfoglia**. |
 | Destinazioni | Attivare le destinazioni | Possibilità di attivare i dati nelle destinazioni. Questa autorizzazione richiede l’aggiunta di &quot;Gestisci destinazioni&quot; o &quot;Visualizza destinazioni&quot; al profilo di prodotto. |
 
 **Problemi noti**

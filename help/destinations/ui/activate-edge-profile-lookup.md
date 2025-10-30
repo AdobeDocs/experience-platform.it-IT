@@ -3,9 +3,9 @@ title: Cercare gli attributi del profilo edge in tempo reale
 description: Scopri come cercare gli attributi del profilo Edge in tempo reale utilizzando la destinazione Personalization personalizzata e l’API di Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1839'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Segui i passaggi descritti nella documentazione relativa alla [configurazione de
 >
 >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-    ![Immagine dell’interfaccia utente di Experience Platform che mostra la schermata di configurazione dello stream di dati.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la schermata di configurazione dello stream di dati.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Passaggio 2: configurare i tipi di pubblico per la valutazione Edge {#audience-edge-evaluation}
@@ -89,7 +89,7 @@ Dopo aver creato una connessione **[!UICONTROL Custom Personalization With Attri
 
 >[!IMPORTANT]
 > 
-> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
@@ -124,8 +124,6 @@ Dopo aver creato una connessione **[!UICONTROL Custom Personalization With Attri
    * **Selezionare gli attributi di destinazione**. Per aggiungere attributi di destinazione, selezionare il controllo **[!UICONTROL Add new field]** nella colonna **[!UICONTROL Target field]** e digitare il nome dell&#39;attributo personalizzato a cui si desidera mappare l&#39;attributo di origine.
 
      ![Registrazione schermata che mostra come selezionare un attributo XDM nel passaggio di mappatura](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
-
-
 
 Al termine della mappatura degli attributi del profilo, selezionare **[!UICONTROL Next]**.
 
@@ -167,7 +165,8 @@ Il passaggio successivo consiste nel configurare la soluzione di personalizzazio
 >[!IMPORTANT]
 >
 >Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario recuperare gli attributi del profilo tramite l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Inoltre, per autenticare le chiamate API, è necessario recuperare gli attributi del profilo tramite l&#39;endpoint [raccolta dati interattiva](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) dell&#39;API Edge Network.
->&#x200B;><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al pubblico e gli attributi di profilo non saranno disponibili.
+>
+>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al pubblico e gli attributi di profilo non saranno disponibili.
 
 Lo stream di dati configurato nel [passaggio 1](#create-datastream) è ora pronto per accettare i dati dell&#39;evento in arrivo e rispondere con le informazioni del profilo Edge.
 

@@ -5,10 +5,10 @@ title: Convalida acquisizione in streaming
 type: Tutorial
 description: L’acquisizione in streaming ti consente di caricare i dati in Adobe Experience Platform utilizzando endpoint di streaming in tempo reale. Le API di acquisizione in streaming supportano due modalità di convalida, sincrona e asincrona.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '906'
-ht-degree: 11%
+ht-degree: 15%
 
 ---
 
@@ -25,11 +25,11 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 ### Lettura delle chiamate API di esempio
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API di [!DNL Experience Platform], prima è necessario completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -50,6 +50,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 ### Copertura di convalida
 
 [!DNL Streaming Validation Service] riguarda la convalida nelle seguenti aree:
+
 - Intervallo
 - Presenza
 - Enumerazione

@@ -2,10 +2,10 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le più recenti note sulla versione relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 93%
+source-wordcount: '771'
+ht-degree: 88%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 93%
 **Flussi di lavoro con avvio rapido (Beta)**
 
 Accedi ai nuovi flussi di lavoro di avvio rapido nell’area introduttiva dalla schermata iniziale della Raccolta dati. I seguenti flussi di lavoro sono ora disponibili per la clientela come Beta pubblico.
+
 * **[API di conversione metadati](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=it#quick-start)**: l’inoltro eventi consente alla clientela di raccogliere e inoltrare rapidamente i dati di evento lato server a Meta per le conversioni di annunci in alcuni semplici passaggi.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: è possibile implementare rapidamente Mobile SDK e convalidare gli eventi mobili di base in pochi semplici passaggi.
 
@@ -60,7 +61,7 @@ Sono state rilasciate nuove estensioni:
 
 ## 28 settembre 2022
 
-* **Integrazione con barra di navigazione a sinistra di Adobe Experience Platform**: tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente della raccolta dati (inclusi tag e inoltro eventi) sono ora disponibili anche tramite la barra di navigazione a sinistra nell’interfaccia utente di Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Experience Platform.
+* **Integrazione con navigazione a sinistra di Adobe Experience Platform**: tutte le funzionalità che in precedenza erano esclusive dell&#39;interfaccia utente di Data Collection (inclusi tag e inoltro eventi) sono ora disponibili anche tramite la navigazione a sinistra nell&#39;interfaccia utente di Experience Platform, nella categoria **[!UICONTROL Data Collection]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Experience Platform.
 * **Attribuzione utente in tag e inoltro eventi**: quando si elencano le proprietà disponibili in tag e inoltro eventi, per ogni proprietà elencata viene visualizzato l’ultimo aggiornamento e chi l’ha effettuato.
 * **[[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l’inoltro eventi**: è ora possibile inviare dati a [!DNL Snapchat Conversions API] utilizzando un’estensione [inoltro eventi](../../tags/ui/event-forwarding/overview.md). Per ulteriori informazioni su come autenticarsi e utilizzare l’API, consulta la [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html?lang=it).
 

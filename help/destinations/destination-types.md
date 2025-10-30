@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche di
 
 ## Connessioni {#connections}
 
-**[!UICONTROL Esportazione profilo]**, **[!UICONTROL Esportazione pubblico in streaming]** e **[!DNL Edge Personalization]** destinazioni in Adobe Experience Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il [Profilo cliente in tempo reale](../profile/home.md), applicano la segmentazione ed esportano tipi di pubblico e profili qualificati nelle destinazioni.
+Le destinazioni **[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]** e **[!DNL Edge Personalization]** in Adobe Experience Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il [Profilo cliente in tempo reale](../profile/home.md), applicano segmentazione ed esportano tipi di pubblico e profili qualificati nelle destinazioni.
 
 ## Destinazioni di esportazione profilo {#profile-export}
 
@@ -71,7 +71,7 @@ Ulteriori informazioni su come [configurare le destinazioni di personalizzazione
 
 Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
->[!VIDEO](https://video.tv.adobe.com/v/35693?quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ## Tipi di pubblico esportati {#exported-audiences-types}
 

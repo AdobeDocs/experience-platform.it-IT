@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Input e output in IA per l’attribuzione
 description: Il documento seguente illustra i diversi input e output utilizzati in IA per l’attribuzione.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Puoi configurare i punti di contatto utilizzando qualsiasi campo consigliato di 
 | Colonne consigliate | Necessario per |
 | --- | --- |
 | Campo di identità primaria | Punto di contatto/conversione |
-| Timestamp | Punto di contatto/conversione |
+| Marca temporale | Punto di contatto/conversione |
 | Canale._type | Punto di contatto |
 | Channel.mediaAction | Punto di contatto |
 | Channel.mediaType | Punto di contatto |
@@ -64,6 +64,7 @@ I set di dati dell’evento esperienza (EE) non devono disporre esplicitamente d
 >[!IMPORTANT]
 >
 > La quantità minima di dati necessaria per il funzionamento di IA per l’attribuzione è la seguente:
+>
 > - Devi fornire almeno 3 mesi (90 giorni) di dati per eseguire un buon modello.
 > - Sono necessarie almeno 1000 conversioni.
 
@@ -102,9 +103,10 @@ IA per l’attribuzione restituisce i punteggi di attribuzione nel livello più 
 
 >[!NOTE]
 >
-> Puoi visualizzare qualsiasi colonna di reporting desiderata dal set di dati di input nel set di dati di output del punteggio solo se si verifica una delle seguenti condizioni:
-> - La colonna per la generazione di rapporti è inclusa nella pagina di configurazione come parte della configurazione del punto di contatto o della definizione di conversione.
-> - La colonna di reporting è inclusa in colonne aggiuntive di set di dati di punteggio.
+>Puoi visualizzare qualsiasi colonna di reporting desiderata dal set di dati di input nel set di dati di output del punteggio solo se si verifica una delle seguenti condizioni:
+>
+>- La colonna per la generazione di rapporti è inclusa nella pagina di configurazione come parte della configurazione del punto di contatto o della definizione di conversione.
+>- La colonna di reporting è inclusa in colonne aggiuntive di set di dati di punteggio.
 
 La tabella seguente illustra i campi dello schema nell’output dell’esempio di punteggi non elaborati:
 
@@ -137,18 +139,18 @@ La tabella seguente illustra i campi dello schema nell’output dell’esempio d
 | identità (oggetto) | False | Contiene i dettagli dell&#39;utente utilizzato per generare il modello, ad esempio `id` e `namespace`. |
 | id (Stringa) | True | ID identità dell&#39;utente come ID cookie, Adobe Analytics ID (AAID) o Experience Cloud ID (ECID, noto anche come MCID o come ID visitatore) ecc. <br> **Esempio:** 17348762725408656344688320891369597404 |
 | namespace (String) | True | Spazio dei nomi identità utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aaid |
-| touchpointsDetail (array di oggetti) | True | L’elenco dei dettagli del punto di contatto che conducono alla conversione ordinata da | occorrenza del punto di contatto o marca temporale. |
+| touchpointsDetail (array di oggetti) | True | L’elenco dei dettagli del punto di contatto che conducono alla conversione ordinata per occorrenza del punto di contatto o marca temporale. |
 | touchpointName (stringa) | True | Nome del punto di contatto configurato durante la configurazione. <br> **Esempio:** PAID_SEARCH_CLICK |
 | punteggi (oggetto) | True | Contributo del punto di contatto a questa conversione come punteggio. Per ulteriori informazioni sui punteggi prodotti in questo oggetto, consulta la sezione [punteggi di attribuzione aggregati](#aggregated-attribution-scores). |
 | touchPoint (oggetto) | True | Metadati punto di contatto. Per ulteriori informazioni sui punteggi prodotti in questo oggetto, vedere la sezione [punteggi aggregati](#aggregated-scores). |
 
 ### Visualizzazione dei percorsi di punteggio non elaborati (UI) {#raw-score-path}
 
-Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemi]** nell&#39;interfaccia utente di Experience Platform, quindi cerca e seleziona lo schema dei punteggi di IA per l&#39;attribuzione dalla scheda **[!UICONTROL Sfoglia]**.
+Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemas]** nell&#39;interfaccia utente di Experience Platform, quindi cerca e seleziona lo schema dei punteggi di IA per l&#39;attribuzione dalla scheda **[!UICONTROL Browse]**.
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
-Quindi, seleziona un campo nella finestra **[!UICONTROL Struttura]** dell&#39;interfaccia utente. Verrà aperta la scheda **[!UICONTROL Proprietà campo]**. All&#39;interno di **[!UICONTROL Proprietà campo]** è il campo percorso mappato ai punteggi non elaborati.
+Quindi, selezionare un campo nella finestra **[!UICONTROL Structure]** dell&#39;interfaccia utente. Verrà aperta la scheda **[!UICONTROL Field properties]**. All&#39;interno di **[!UICONTROL Field properties]** è il campo del percorso mappato ai punteggi non elaborati.
 
 ![Scegli uno schema](./images/input-output/field_properties.png)
 

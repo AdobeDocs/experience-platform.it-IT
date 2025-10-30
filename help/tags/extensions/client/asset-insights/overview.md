@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione AEM Asset Insights
 description: Scopri le caratteristiche dell’estensione tag AEM Asset Insights in Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -28,22 +28,23 @@ I rapporti di AEM Assets in Analytics contengono tre dimensioni AEM:
 * Risorsa selezionata
 
 Sono inoltre disponibili due metriche:
+
 * Impression risorsa
 * Clic su risorsa.
 
-Prima di poter essere compilati da questa estensione, questi rapporti devono essere abilitati dall’amministratore di Analytics (fai clic su **[!UICONTROL Analytics] > [!UICONTROL Amministratore] > [!UICONTROL Suite di rapporti] > `<report suite>` > [!UICONTROL Modifica impostazioni] > [!UICONTROL AEM] > [!UICONTROL Rapporti di AEM Assets]**).
+Prima di poter essere compilati dall&#39;estensione, questi rapporti devono essere abilitati dalla funzione di amministratore di Analytics (seleziona **[!UICONTROL Analytics]> [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Edit Settings] > [!UICONTROL AEM] >[!UICONTROL AEM Assets Reporting]**).
 
 L’estensione tag “*Adobe Analytics*” per Adobe Experience Platform deve essere installata nella stessa proprietà web.
 
 ### Adobe Experience Manager (AEM)
 
-1. Abilita [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it). In AEM, seleziona **[!UICONTROL Strumenti > Risorse]**, quindi apri il pannello **[!UICONTROL Configurazione approfondimenti]**.
+1. Abilita [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it). In AEM, seleziona **[!UICONTROL Tools > Assets]**, quindi apri il pannello **[!UICONTROL Insights Configuration]**.
 
 1. Disabilita tracciamento UUID.
 
    >[!IMPORTANT]
    >
-   >Questa estensione *non* funziona se è selezionata l’impostazione di configurazione di AEM Assets **[!UICONTROL Disattiva tracciamento UUID]**. Per impostazione predefinita, questa impostazione è deselezionata.
+   >Questa estensione *non* funziona se è selezionata l’impostazione di configurazione **[!UICONTROL Disable UUID Tracking]** di AEM Assets. Per impostazione predefinita, questa impostazione è deselezionata.
 
    ![Disabilita tracciamento UUID](images/disableassets.jpg)
 

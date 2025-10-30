@@ -5,7 +5,7 @@ title: Creare un flusso di dati per le origini dei protocolli utilizzando l’AP
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’applicazione di protocolli e acquisirli in Experience Platform utilizzando connettori e API di origine.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1326'
 ht-degree: 3%

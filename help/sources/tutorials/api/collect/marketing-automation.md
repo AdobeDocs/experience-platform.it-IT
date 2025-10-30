@@ -5,7 +5,7 @@ title: Creare un flusso di dati per le origini di automazione marketing utilizza
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un sistema di automazione marketing e inserirli in Adobe Experience Platform utilizzando connettori e API di origine.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 3%

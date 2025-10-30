@@ -5,7 +5,7 @@ title: Trasmettere dati di serie temporali utilizzando le API Streaming Ingestio
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, che fanno parte delle API Adobe Experience Platform Data Ingestion Service.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 2%
@@ -402,7 +402,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 | -------- | ----------- |
 | `{CONNECTION_ID}` | `inletId` della connessione in streaming creata in precedenza. |
 | `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
-| `receivedTimeMs`: una marca temporale (epoca in millisecondi) che mostra l&#39;ora in cui è stata ricevuta la richiesta. |
+| `receivedTimeMs`: una marca temporale (epoca in millisecondi) che mostra l&#39;ora in cui è stata ricevuta la richiesta. |  |
 | `syncValidation.status` | Poiché è stato aggiunto il parametro di query `syncValidation=true`, verrà visualizzato questo valore. Se la convalida ha esito positivo, lo stato sarà `pass`. |
 
 ## Recuperare i dati delle serie temporali appena acquisiti

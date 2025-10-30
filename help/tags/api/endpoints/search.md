@@ -2,10 +2,10 @@
 title: Endpoint “search”
 description: Scopri come effettuare chiamate all’endpoint /search nell’API di Reactor.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '652'
-ht-degree: 97%
+ht-degree: 94%
 
 ---
 
@@ -33,8 +33,9 @@ L’ambito di tutte le query corrisponde all’azienda corrente e alle propriet�
 >[!IMPORTANT]
 >
 >Avvertenze ed eccezioni applicabili alla funzionalità di ricerca:
+>
 >* I metadati non sono ricercabili e non vengono restituiti nei risultati della ricerca.
->* I campi dello schema per i delegati del pacchetto di estensione (azioni, condizioni, ecc.) sono ricercabili come testo, ma non come struttura di dati nidificata.
+>* I campi dello schema per i delegati del pacchetto di estensione (azioni, condizioni, ecc.) possono essere cercati come testo e non come struttura di dati nidificata.
 >* Le query di intervallo al momento supportano solo i numeri interi.
 
 Per ulteriori informazioni su come utilizzare questa funzionalità, consulta la [guida alla ricerca](../guides/search.md).
@@ -45,7 +46,7 @@ L’endpoint utilizzato in questa guida fa parte dell’[API di Reactor](https:/
 
 ## Eseguire una ricerca {#perform}
 
-Per eseguire una ricerca, devi eseguire una richiesta POST.
+È possibile eseguire una ricerca effettuando una richiesta POST.
 
 **Formato API**
 
@@ -96,8 +97,8 @@ curl -X POST \
 | `from` | Numero di risultati oltre i quali veranno inclusi nella risposta. |
 | `size` | Quantità massima di risultati da restituire. I risultati non possono superare i 100 elementi. |
 | `query` | Oggetto che rappresenta la query di ricerca. Per ogni proprietà di questo oggetto, la chiave deve rappresentare un percorso di campo da considerare per la query; il valore deve essere un oggetto le cui sottoproprietà determinano per cosa viene eseguita la query.<br><br>Per ogni percorso di campo, puoi utilizzare le seguenti sottoproprietà:<ul><li>`exists`: restituisce true se il campo esiste nella risorsa.</li><li>`value`: restituisce true se il valore del campo corrisponde al valore di questa proprietà.</li><li>`value_operator`: logica booleana utilizzata per determinare come deve essere gestita una query `value`. I valori consentiti sono `AND` e `OR`. Se non specificato, viene utilizzata la logica `AND`. Per ulteriori informazioni, consulta la sezione relativa alla [logica dell’operatore dei valori](#value-operator)</li><li>`range`: restituisce true se il valore del campo rientra in un intervallo numerico specifico. L’intervallo stesso è determinato dalle seguenti sottoproprietà:<ul><li>`gt`: maggiore del valore specificato, escluso il valore specificato stesso.</li><li>`gte`: maggiore o uguale al valore specificato.</li><li>`lt`: minore del valore specificato, escluso il valore specificato stesso.</li><li>`lte`: minore o uguale al valore specificato.</li></ul></li></ul> |
-| `sort` | Matrice di oggetti che indica l’ordine in cui elencare i risultati. Ogni oggetto deve contenere una singola proprietà: la chiave rappresenta il percorso del campo in base al quale eseguire l’ordinamento; il valore rappresenta l’ordinamento (`asc` per crescente, `desc` per decrescente). |
-| `resource_types` | Matrice di stringhe che indica i tipi di risorse specifici da cercare. |
+| `sort` | Array oggetti che indica l’ordine in cui elencare i risultati. Ogni oggetto deve contenere una singola proprietà: la chiave rappresenta il percorso del campo in base al quale eseguire l’ordinamento; il valore rappresenta l’ordinamento (`asc` per crescente, `desc` per decrescente). |
+| `resource_types` | Array di stringhe che indica i tipi di risorse specifici da cercare. |
 
 {style="table-layout:auto"}
 

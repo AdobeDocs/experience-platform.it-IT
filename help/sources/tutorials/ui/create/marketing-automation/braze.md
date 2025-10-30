@@ -4,10 +4,10 @@ description: Scopri come creare un flusso di dati per l’account Braze utilizza
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '971'
+ht-degree: 1%
 
 ---
 
@@ -47,19 +47,19 @@ Se disponi già di una connessione [!DNL Braze], puoi saltare il resto del docum
 >
 >Se questa è la prima volta che crei una connessione [!DNL Braze Currents], devi creare uno schema Experience Data Model (XDM). Se hai già creato uno schema per [!DNL Braze Currents], puoi saltare questo passaggio e passare a [connettere il tuo account ad Experience Platform](#connect).
 
-Nell&#39;interfaccia utente di Experience Platform, utilizza il menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Schemi]** per accedere all&#39;area di lavoro [!UICONTROL Schemi]. Selezionare **[!UICONTROL Crea schema]**, quindi **[!UICONTROL Evento esperienza]**. Per continuare, selezionare **[!UICONTROL Avanti]**.
+Nell&#39;interfaccia utente di Experience Platform, utilizzare il menu di navigazione a sinistra, quindi selezionare **[!UICONTROL Schemas]** per accedere all&#39;area di lavoro [!UICONTROL Schemas]. Selezionare **[!UICONTROL Create schema]**, quindi **[!UICONTROL Experience Event]**. Per continuare, selezionare **[!UICONTROL Next]**.
 
 ![Uno schema completato.](../../../../images/tutorials/create/braze/schema.png)
 
-Immetti un nome e una descrizione per lo schema. Quindi, utilizza il pannello [!UICONTROL Composizione] per configurare gli attributi dello schema. In [!UICONTROL Gruppi di campi], seleziona **[!UICONTROL Aggiungi]** e aggiungi il gruppo di campi [!UICONTROL Evento utente corrente brasatura]. Al termine, selezionare **[!UICONTROL Salva]**.
+Immetti un nome e una descrizione per lo schema. Quindi, utilizza il pannello [!UICONTROL Composition] per configurare gli attributi dello schema. In [!UICONTROL Field groups], selezionare **[!UICONTROL Add]** e aggiungere il gruppo di campi [!UICONTROL Braze Currents User Event]. Al termine, selezionare **[!UICONTROL Save]**.
 
 Per ulteriori informazioni sugli schemi, leggere la guida a [creazione di schemi nell&#39;interfaccia utente](../../../../../xdm/tutorials/create-schema-ui.md).
 
 ## Connetti il tuo account [!DNL Braze] ad Experience Platform {#connect}
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria *Marketing Automation*, selezionare **[!UICONTROL Braze Current]**, quindi selezionare **[!UICONTROL Add data]**.
+Nella categoria *Marketing Automation* selezionare **[!UICONTROL Braze Currents]**, quindi **[!UICONTROL Add data]**.
 
 ![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con l&#39;origine Braze Currents selezionata.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -78,19 +78,19 @@ La mappatura presenterà i seguenti problemi che devono essere risolti.
 
 Nei dati di origine, *id* verrà mappato in modo errato a *_braze.appID*. È necessario modificare il campo di mappatura di destinazione in *_id* al livello radice dello schema. Quindi, assicurati che *properties.is_amp* sia mappato a *_braze.messaging.email.isAMP*.
 
-Eliminare quindi il mapping *time* su *timestamp*, quindi selezionare l&#39;icona di aggiunta (`+`) e selezionare **[!UICONTROL Aggiungi campo calcolato]**. Nella casella fornita, inserisci *time \* 1000* e seleziona **[!UICONTROL Salva]**.
+Eliminare quindi il mapping *time* in *timestamp*, quindi selezionare l&#39;icona di aggiunta (`+`) e selezionare **[!UICONTROL Add calculated field]**. Nella casella fornita, inserisci *ora \* 1000* e seleziona **[!UICONTROL Save]**.
 
-Una volta aggiunto il nuovo campo calcolato, seleziona **[!UICONTROL Mappa campo di destinazione]** accanto al nuovo campo di origine e mappalo su *timestamp* al livello principale dello schema. Selezionare **[!UICONTROL Convalida]** per assicurarsi di non avere altri errori.
+Una volta aggiunto il nuovo campo calcolato, seleziona **[!UICONTROL Map target field]** accanto al nuovo campo di origine e mappalo su *timestamp* al livello principale dello schema. Selezionare **[!UICONTROL Validate]** per verificare che non siano presenti altri errori.
 
 >[!IMPORTANT]
 >
 >I timestamp di brasatura non sono espressi in millisecondi, ma in secondi. Affinché i timestamp in Experience Platform vengano rispecchiati accuratamente, devi creare campi calcolati in millisecondi. Un calcolo di &quot;tempo * 1000&quot; convertirà correttamente in millisecondi, adatti per la mappatura a un campo marca temporale in Experience Platform.
 >
->![Creazione di un campo calcolato per la marca temporale &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Creazione di un campo calcolato per la marca temporale](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![Mappatura senza errori.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-Al termine, selezionare **[!UICONTROL Avanti]**. Utilizzare la pagina Revisione per confermare i dettagli del flusso di dati, quindi selezionare **[!UICONTROL Fine]**.
+Al termine, selezionare **[!UICONTROL Next]**. Utilizzare la pagina Revisione per confermare i dettagli del flusso di dati, quindi selezionare **[!UICONTROL Finish]**.
 
 ### Raccogli le credenziali richieste
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di acquisizione in batch
 description: Questa documentazione sarà utile per rispondere alle domande frequenti sulle API di acquisizione dati in batch di Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 1%
@@ -189,7 +189,7 @@ Un batch può, nel suo ciclo di vita, passare attraverso i seguenti stati:
 | Non attivo | x | Il batch è stato promosso correttamente, ma è stato ripristinato o è scaduto. Il batch non sarà più disponibile per il consumo a valle, ma i dati sottostanti rimarranno nel master fino a quando non saranno stati conservati, archiviati o altrimenti eliminati. |
 | Caricamento in corso | | Il client sta scrivendo dati per il batch. Il batch è **non** pronto per la promozione, al momento. |
 | Caricato | | Il client ha completato la scrittura dei dati per il batch. Il batch è pronto per la promozione. |
-| Mantenuto | | I dati sono stati estratti dal Master e in un archivio designato nel Data Lake Adobe. |
+| Mantenuto | | I dati sono stati estratti dall’archivio principale e in un archivio designato nell’Adobe Data Lake. |
 | Staging | | Il client ha segnalato correttamente il batch per la promozione e i dati vengono posizionati nell&#39;area intermedia per il consumo a valle. |
 | Nuovo tentativo | | Il client ha segnalato il batch per la promozione, ma a causa di un errore il batch viene ritentato da un servizio di monitoraggio batch. Questo stato può essere utilizzato per informare i client che potrebbe verificarsi un ritardo nell’acquisizione dei dati. |
 | Bloccato | | Il client ha segnalato il batch per la promozione, ma dopo `n` nuovi tentativi da parte di un servizio di monitoraggio batch, la promozione batch è stata arrestata. |
@@ -272,4 +272,4 @@ Esistono due motivi per cui le metriche potrebbero non essere disponibili nel ba
 | 200 | Il batch è stato accettato per l’elaborazione e passerà a uno stato finale, ad esempio Attivo o Non riuscito. Una volta inviato, il batch può essere monitorato utilizzando l&#39;endpoint `GetBatch`. |
 | 400 | Richiesta non valida. Restituito se in un batch sono presenti blocchi mancanti o sovrapposti. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

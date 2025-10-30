@@ -3,7 +3,7 @@ title: Panoramica del connettore Source di streaming Snowflake
 description: Scopri come creare una connessione di origine e un flusso di dati per acquisire i dati in streaming dall’istanza Snowflake a Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 3%
@@ -62,7 +62,7 @@ Per utilizzare l&#39;autenticazione con coppia di chiavi, è necessario generare
 
 | Credenziali | Descrizione |
 | --- | --- |
-| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Esempio: `orgname-account_name`. Per ulteriori informazioni, consulta la guida in [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] &#x200B;](./snowflake.md#retrieve-your-account-identifier). Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Esempio: `orgname-account_name`. Per ulteriori informazioni, consulta la guida in [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] ](./snowflake.md#retrieve-your-account-identifier). Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Il nome utente dell&#39;account [!DNL Snowflake]. |
 | `privateKey` | La chiave privata con codifica [!DNL Base64-] del tuo account [!DNL Snowflake]. Puoi generare chiavi private crittografate o non crittografate. Se utilizzi una chiave privata crittografata, devi fornire anche una passphrase di chiave privata durante l’autenticazione in Experience Platform. Per ulteriori informazioni, consulta la guida in [recupero della tua [!DNL Snowflake] chiave privata](./snowflake.md). |
 | `passphrase` | La passphrase è un ulteriore livello di sicurezza da utilizzare per l&#39;autenticazione con una chiave privata crittografata. Se si utilizza una chiave privata non crittografata, non è necessario fornire la passphrase. |
@@ -160,7 +160,7 @@ Per ulteriori informazioni sulla gestione di ruoli e privilegi, fare riferimento
 
 ## Convertire i campi ora Unix in data
 
-[!DNL Snowflake Streaming] analizza e scrive` DATE` campi come il numero di giorni dall&#39;epoca Unix (1970-01-01). Ad esempio, un valore `DATE` di 0 significa 1 gennaio 1970, mentre un valore di 1 significa 2 gennaio 1970. Pertanto, durante la preparazione del file per la creazione di mapping nell&#39;origine [!DNL Snowflake Streaming], assicurarsi che la colonna `DATE` sia rappresentata come numero intero.
+[!DNL Snowflake Streaming] analizza e scrive i campi `DATE` come il numero di giorni dall&#39;epoca Unix (1970-01-01). Ad esempio, un valore `DATE` di 0 significa 1 gennaio 1970, mentre un valore di 1 significa 2 gennaio 1970. Pertanto, durante la preparazione del file per la creazione di mapping nell&#39;origine [!DNL Snowflake Streaming], assicurarsi che la colonna `DATE` sia rappresentata come numero intero.
 
 È possibile utilizzare le [funzioni data e ora della preparazione dati](../../../data-prep/functions.md#date-and-time-functions) per convertire l&#39;ora Unix in campi data che possono essere acquisiti in Experience Platform. Ad esempio:
 

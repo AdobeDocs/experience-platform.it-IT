@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mappatura dei campi per Marketo Engage Source
 description: Le tabelle seguenti contengono le mappature tra i campi dei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3b21d952da603b519c9919b08467cd5c6091f235
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1451'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ Per ulteriori informazioni sulla classe XDM e sui gruppi di campi XDM, leggi la 
 
 >[!NOTE]
 >
->Il campo di origine `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` è un campo calcolato che deve essere aggiunto utilizzando l&#39;opzione **[!UICONTROL Aggiungi campo calcolato]** nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, leggere il tutorial su [aggiunta di campi calcolati](../../../../data-prep/ui/mapping.md#calculated-fields).
+>Il campo di origine `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` è un campo calcolato che deve essere aggiunto utilizzando l&#39;opzione **[!UICONTROL Add calculated field]** nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni, leggere il tutorial su [aggiunta di campi calcolati](../../../../data-prep/ui/mapping.md#calculated-fields).
 
 | Campo di origine Marketo | ID tipo di attività | Set di dati di Source | Campo di destinazione XDM | Note |
 | -------------------- | ---------------- | -------------- | ---------------- | ----- |
@@ -66,7 +66,7 @@ Per ulteriori informazioni sulla classe XDM e sui gruppi di campi XDM, leggi la 
 | primaryAttributeValueId quando activityTypeId in (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>MESSAGGIO 1099 → BLOCCATO</li><li>1003 → SPAM BLOCCATO SU SOURCE</li><li>1004 → SPAM BLOCCATO SU MESSAGGIO</li><li>INDIRIZZO E-MAIL → 2003 NON VALIDO</li><li>ERRORE INDIRIZZO E-MAIL → 2001</li><li>* → MOTIVO SCONOSCIUTO DEL MANCATO RECAPITO</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>MESSAGGIO → 3999 NON ACCETTATO</li><li>3001 → CASSETTA POSTALE PIENA</li><li>TIMEOUT → 3004</li><li>ERRORE DNS → 4003</li><li>MESSAGGIO → 4002 TROPPO GRANDE</li><li>4006 → VIOLAZIONE DEI CRITERI</li><li>4999 → GUASTO TRANSITORIO</li><li>9999 → RISPOSTA NON VALIDA RICEVUTA</li><li>* → MOTIVO SCONOSCIUTO PER MANCATO RECAPITO NON PERMANENTE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>MESSAGGIO 1099 → BLOCCATO</li><li>1003 → SPAM BLOCCATO SU SOURCE</li><li>1004 → SPAM BLOCCATO SU MESSAGGIO</li><li>INDIRIZZO E-MAIL → 2003 NON VALIDO</li><li>ERRORE INDIRIZZO E-MAIL → 2001</li><li>*` &rarr;`MOTIVO SCONOSCIUTO PER MANCATO RECAPITO</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>MESSAGGIO → 3999 NON ACCETTATO</li><li>3001 → CASSETTA POSTALE PIENA</li><li>TIMEOUT → 3004</li><li>ERRORE DNS → 4003</li><li>MESSAGGIO → 4002 TROPPO GRANDE</li><li>4006 → VIOLAZIONE DEI CRITERI</li><li>4999 → GUASTO TRANSITORIO</li><li>9999 → RISPOSTA NON VALIDA RICEVUTA</li><li>*→ MOTIVO SCONOSCIUTO PER MANCATO RECAPITO NON PERMANENTE</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |

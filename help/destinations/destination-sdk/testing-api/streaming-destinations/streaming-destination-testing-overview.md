@@ -2,7 +2,7 @@
 description: Scopri come utilizzare l’API di test di destinazione per testare la configurazione della destinazione di streaming prima di pubblicarla.
 title: Panoramica dell’API di test della destinazione di streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Panoramica dell’API di test della destinazione di streaming
 
-Come parte di Destination SDK, Adobe fornisce strumenti per sviluppatori per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione. Per informazioni su come creare un modello di trasformazione dei messaggi, leggere [Creare e verificare un modello di trasformazione dei messaggi](../../testing-api/streaming-destinations/create-template.md).
+Come parte di Destination SDK, Adobe fornisce strumenti di sviluppo per aiutarti a configurare e testare la destinazione. Questa pagina descrive come verificare la configurazione di destinazione. Per informazioni su come creare un modello di trasformazione dei messaggi, leggere [Creare e verificare un modello di trasformazione dei messaggi](../../testing-api/streaming-destinations/create-template.md).
 
 Per **verificare se la destinazione è configurata correttamente e per verificare l&#39;integrità dei flussi di dati nella destinazione configurata**, utilizzare lo *strumento di test della destinazione*. Con questo strumento, puoi verificare la configurazione di destinazione inviando messaggi all’endpoint API REST.
 
@@ -25,10 +25,12 @@ Di seguito è illustrato il modo in cui il test della destinazione si inserisce 
 Utilizza lo strumento di test di destinazione per verificare la configurazione di destinazione inviando messaggi all&#39;endpoint partner fornito nella [configurazione del server](../../authoring-api/destination-server/create-destination-server.md).
 
 Prima di utilizzare lo strumento, accertati di:
+
 * Configura la destinazione seguendo i passaggi descritti nel [flusso di lavoro di configurazione della destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) e
 * Stabilisci una connessione alla destinazione, come descritto in [Come ottenere l&#39;ID istanza di destinazione](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
 
 Con questo strumento, dopo aver configurato la destinazione, puoi:
+
 * Verifica se la destinazione è configurata correttamente;
 * Verifica l’integrità dei flussi di dati verso la destinazione configurata.
 
@@ -43,13 +45,14 @@ Puoi effettuare chiamate all’endpoint API di test di destinazione con o senza 
 Se non aggiungi profili alla richiesta, Adobe li genera internamente e li aggiunge alla richiesta. Se desideri generare profili da utilizzare in questa richiesta, consulta il [Riferimento API per la generazione di profili di esempio](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Devi generare profili basati sullo schema XDM di origine, come mostrato nel [riferimento API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Lo schema di origine è lo [schema di unione](../../../../profile/ui/union-schema.md) della sandbox in uso.
 
 La risposta contiene il risultato dell’elaborazione della richiesta di destinazione. La richiesta include tre sezioni principali:
+
 * La richiesta generata da Adobe per la destinazione.
 * La risposta ricevuta dalla destinazione.
-* L&#39;elenco dei profili inviati nella richiesta, sia che i profili siano stati [aggiunti dall&#39;utente nella richiesta](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), sia che siano stati generati da Adobe se [il corpo della richiesta di test della destinazione era vuoto](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+* L&#39;elenco dei profili inviati nella richiesta, sia che i profili siano stati [aggiunti dall&#39;utente nella richiesta](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), sia generati da Adobe se [il corpo della richiesta di test della destinazione era vuoto](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->L’Adobe può generare più coppie di richieste e risposte. Ad esempio, se invii 10 profili a una destinazione con un valore `maxUsersPerRequest` di 7, ci sarà una richiesta con 7 profili e un&#39;altra richiesta con 3 profili.
+>Adobe può generare più coppie di richieste e risposte. Ad esempio, se invii 10 profili a una destinazione con un valore `maxUsersPerRequest` di 7, ci sarà una richiesta con 7 profili e un&#39;altra richiesta con 3 profili.
 
 **Richiesta di esempio con parametro profiles nel corpo**
 
@@ -232,4 +235,4 @@ Per le descrizioni dei parametri di richiesta e risposta, fare riferimento a [Op
 
 ## Passaggi successivi
 
-Dopo aver testato la destinazione e aver confermato che è configurata correttamente, utilizza l&#39;[API di pubblicazione della destinazione](../../publishing-api/create-publishing-request.md) per inviare la configurazione all&#39;Adobe per la revisione.
+Dopo aver testato la destinazione e aver confermato che è configurata correttamente, utilizza l&#39;[API di pubblicazione della destinazione](../../publishing-api/create-publishing-request.md) per inviare la configurazione ad Adobe per la revisione.

@@ -2,7 +2,7 @@
 title: Impostazioni di esportazione comuni e configurabili nelle destinazioni
 description: Scopri quali impostazioni di esportazione nelle destinazioni sono configurabili a livello di destinazione e quali sono fisse e non possono essere modificate.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Questa pagina descrive o collega tutte le impostazioni di esportazione comuni e 
 
 ## Impostazioni di esportazione comuni tra i tipi di destinazione {#common-settings-across-destination-types}
 
-Il comportamento di esportazione della destinazione è coerente tra le destinazioni appartenenti a un tipo di destinazione per quanto riguarda *ciò che attiva un&#39;esportazione di destinazione* e *ciò che è incluso nelle esportazioni di destinazione*. Le esportazioni delle destinazioni vengono attivate dalle notifiche ricevute dal servizio [upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=it#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Il comportamento di esportazione della destinazione è coerente tra le destinazioni appartenenti a un tipo di destinazione per quanto riguarda *ciò che attiva un&#39;esportazione di destinazione* e *ciò che è incluso nelle esportazioni di destinazione*. Le esportazioni delle destinazioni vengono attivate dalle notifiche ricevute dal servizio [upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 Ciò che è incluso nelle esportazioni di destinazione varia leggermente tra i tipi di destinazione. Ulteriori informazioni sui [modelli comuni di comportamento di esportazione per tipo di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md). Queste impostazioni non possono essere modificate dagli sviluppatori o dagli utenti di Real-Time CDP.
 
@@ -31,8 +31,8 @@ Ciò che è incluso nelle esportazioni di destinazione varia leggermente tra i t
 
 Gli sviluppatori di destinazione possono utilizzare [Destination SDK](/help/destinations/destination-sdk/overview.md) per creare destinazioni personalizzate o prodotte (private o pubbliche). Destination SDK offre agli sviluppatori una grande flessibilità per configurare le destinazioni in base alle funzionalità a valle dei loro endpoint API e dei sistemi di ricezione dei file. In base alle funzionalità a valle, gli sviluppatori di destinazione dispongono delle seguenti opzioni di configurazione quando configurano una destinazione utilizzando Destination SDK:
 
-* Determina quali attributi e identità possono essere esportati da Experience Platform alla destinazione. Determina anche quali identità sono richieste dalle loro destinazioni per una corretta esportazione dei dati.
-* Imposta un criterio di aggregazione che determina il tempo di attesa dell’Experience Platform durante l’aggregazione dei messaggi HTTP da inviare alle integrazioni API. Gli sviluppatori di destinazione possono configurare diversi tipi di aggregazione per determinare quanti profili devono essere inclusi nei messaggi HTTP in uscita e per quanto tempo l’Experience Platform deve attendere fino all’invio del messaggio HTTP. Per informazioni dettagliate sulle [opzioni di configurazione dei criteri di aggregazione](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponibili per gli sviluppatori di destinazione, consulta la documentazione di Destination SDK.
+* Determina quali attributi e identità possono essere esportati da Experience Platform nella destinazione. Determina anche quali identità sono richieste dalle loro destinazioni per una corretta esportazione dei dati.
+* Imposta un criterio di aggregazione che determina il tempo di attesa di Experience Platform durante l’aggregazione dei messaggi HTTP da inviare alle integrazioni API. Gli sviluppatori di destinazione possono configurare diversi tipi di aggregazione per determinare quanti profili devono essere inclusi nei messaggi HTTP in uscita e per quanto tempo Experience Platform deve attendere fino all’invio del messaggio HTTP. Per informazioni dettagliate sulle [opzioni di configurazione dei criteri di aggregazione](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponibili per gli sviluppatori di destinazione, vedere la documentazione di Destination SDK.
 * Determina se le esportazioni di messaggi HTTP devono includere profili idonei per i segmenti, rimossi dai segmenti o entrambi.
 * Determinare il nome e le configurazioni di formattazione dei file da rendere disponibili agli utenti durante l&#39;esportazione dei file.
 
@@ -44,13 +44,13 @@ Le impostazioni disponibili per gli utenti durante la connessione a una destinaz
 
 Ad esempio, per [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations), uno sviluppatore di destinazione può configurare quali identità accetta la propria destinazione e solo quelle identità verranno visualizzate all&#39;utente in [passaggio di mappatura del flusso di lavoro di attivazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), come mostrato di seguito:
 
-![Registrazione schermata della selezione identità per il campo di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione. &#x200B;](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Registrazione schermata della selezione identità per il campo di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione.](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 Analogamente, per [destinazioni basate su file](/help/destinations/destination-types.md#file-based), lo sviluppatore di destinazione può determinare quali [opzioni di aggiunta del nome file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) desidera rendere disponibili per la propria destinazione o quali [opzioni di formattazione file](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) desidera rendere disponibili e l&#39;utente potrà selezionare solo tra queste opzioni, come illustrato di seguito:
 
 ![Registrazione dello schermo dell&#39;opzione di formattazione del file durante la connessione a una destinazione basata su file.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Registrazione dello schermo dell&#39;opzione di aggiunta del nome file nel passaggio di pianificazione del flusso di lavoro di attivazione. &#x200B;](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Registrazione dello schermo dell&#39;opzione di aggiunta del nome file nel passaggio di pianificazione del flusso di lavoro di attivazione.](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 Ulteriori informazioni sulle diverse opzioni e passaggi disponibili nel flusso di lavoro di attivazione:
 

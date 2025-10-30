@@ -4,9 +4,9 @@ title: Endpoint API Schedules
 description: Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente processi di segmentazione batch una volta al giorno.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2088'
 ht-degree: 3%
 
 ---
@@ -110,7 +110,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | `children.type` | Tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; ed &quot;export&quot;. |
 | `children.properties` | Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `children.properties.segments` | L&#39;utilizzo di `["*"]` garantisce l&#39;inclusione di tutti i segmenti. |
-| `children.schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
+| `children.schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;`0 0 1 * *`&quot; significa che questa pianificazione verrà eseguita ogni giorno all&#39;1. |
 | `children.state` | Stringa contenente lo stato della pianificazione. I due stati supportati sono &quot;active&quot; e &quot;inactive&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inattivo&quot;. |
 
 +++
@@ -127,7 +127,7 @@ POST /config/schedules
 
 **Richiesta**
 
-+++ Richiesta di esempio per creare una pianificazione.
++++ Richiesta di esempio per creare una pianificazione. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Obbligatorio.** Il tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; ed &quot;export&quot;. |
 | `properties` | **Obbligatorio.** Oggetto contenente proprietà aggiuntive relative alla pianificazione. |
 | `properties.segments` | **Obbligatorio quando `type` è uguale a &quot;batch_segmentation&quot;.** L&#39;utilizzo di `["*"]` garantisce l&#39;inclusione di tutti i segmenti. |
-| `schedule` | *Facoltativo.* Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
+| `schedule` | *Facoltativo.* Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;`0 0 1 * *`&quot; significa che questa pianificazione verrà eseguita ogni giorno all&#39;1. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
 | `state` | *Facoltativo.* Stringa contenente lo stato della pianificazione. I due stati supportati sono &quot;active&quot; e &quot;inactive&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inattivo&quot;. |
 
 +++
@@ -195,7 +195,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Recuperare una pianificazione specifica {#get}
 
-Per recuperare informazioni dettagliate su una pianificazione specifica, eseguire una richiesta di GET all&#39;endpoint `/config/schedules` e fornire l&#39;ID della pianificazione da recuperare nel percorso della richiesta.
+Per recuperare informazioni dettagliate su una pianificazione specifica, eseguire una richiesta GET all&#39;endpoint `/config/schedules` e fornire l&#39;ID della pianificazione da recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -209,7 +209,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Richiesta**
 
-+++ Richiesta di esempio per recuperare una pianificazione.
++++ Richiesta di esempio per recuperare una pianificazione. 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -257,7 +257,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `type` | Tipo di processo come stringa. I due tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `properties.segments` | L&#39;utilizzo di `["*"]` garantisce l&#39;inclusione di tutti i segmenti. |
-| `schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix). In questo esempio, &quot;0 0 1 * *&quot; significa che la pianificazione verrà eseguita ogni giorno all’1. |
+| `schedule` | Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix). In questo esempio, &quot;`0 0 1 * *`&quot; significa che questa pianificazione verrà eseguita ogni giorno all&#39;1. |
 | `state` | Stringa contenente lo stato della pianificazione. I due stati supportati sono `active` e `inactive`. Per impostazione predefinita, lo stato è impostato su `inactive`. |
 
 +++
@@ -317,7 +317,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 >[!TAB Aggiorna pianificazione cron]
 
-È possibile utilizzare un’operazione Patch JSON per aggiornare la pianificazione cron. Per aggiornare la pianificazione, dichiarare la proprietà `path` come `/schedule` e impostare `value` su una pianificazione cron valida. Per ulteriori informazioni sulla patch JSON, leggere la documentazione della patch [JSON](https://datatracker.ietf.org/doc/html/rfc6902). Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [&#128279;](#appendix).
+È possibile utilizzare un’operazione Patch JSON per aggiornare la pianificazione cron. Per aggiornare la pianificazione, dichiarare la proprietà `path` come `/schedule` e impostare `value` su una pianificazione cron valida. Per ulteriori informazioni sulla patch JSON, leggere la documentazione della patch [JSON](https://datatracker.ietf.org/doc/html/rfc6902). Per ulteriori informazioni sulle pianificazioni cron, leggere l&#39;appendice nel formato di espressione cron [](#appendix).
 
 >[!ENDTABS]
 
@@ -406,9 +406,9 @@ In una stringa di espressione cron, il primo campo rappresenta i secondi, il sec
 | Minutes | Sì | 0-59 | `, - * /` |
 | Ore | Sì | 0-23 | `, - * /` |
 | Giorno del mese | Sì | 1-31 | `, - * ? / L W` |
-| Mese | Sì | 1-12 GEN-DIC | `, - * /` |
+| Month | Sì | 1-12 GEN-DIC | `, - * /` |
 | Giorno della settimana | Sì | 1-7, SUN-SAT | `, - * ? / L #` |
-| Anno | No | Vuoto, 1970-2099 | `, - * /` |
+| Year | No | Vuoto, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
@@ -434,10 +434,10 @@ La tabella seguente mostra alcune stringhe di espressioni cron di esempio e ne s
 | Espressione | Spiegazione |
 | ---------- | ----------- |
 | `0 0 13 * * ?` | L&#39;evento si attiva ogni giorno alle 13. |
-| `0 30 9 * * ? 2022` | L’evento si attiva ogni giorno alle 9:30 del 2022. |
-| `0 * 18 * * ?` | L’evento si attiva ogni minuto, dalle 18:00 alle 18:59, tutti i giorni. |
+| `0 30 9 * * ? 2022` | L’evento verrà attivato ogni giorno alle 9:30AM nell’anno 2022. |
+| `0 * 18 * * ?` | L&#39;evento si attiva ogni minuto, dalle 18.00 alle 18.00, tutti i giorni.:59PM |
 | `0 0/10 17 * * ?` | L’evento si attiva ogni 10 minuti, dalle 17:00 alle 18:00, in qualsiasi giornata. |
-| `0 13,38 5 ? 6 WED` | L&#39;evento si attiverà alle 5:13 del mattino e alle 5:38 di ogni mercoledì di giugno. |
-| `0 30 12 ? * 4#3` | L&#39;evento si attiva alle 12:30 del terzo mercoledì di ogni mese. |
-| `0 30 12 ? * 6L` | L&#39;evento verrà attivato alle 12:30 dell&#39;ultimo venerdì di ogni mese. |
-| `0 45 11 ? * MON-THU` | L’evento si attiva alle 11:45 di ogni lunedì, martedì, mercoledì e giovedì. |
+| `0 13,38 5 ? 6 WED` | L&#39;evento verrà attivato alle 5:13AM e alle 5:38AM ogni mercoledì di giugno. |
+| `0 30 12 ? * 4#3` | L&#39;evento si attiva alle 12:30PM del terzo mercoledì di ogni mese. |
+| `0 30 12 ? * 6L` | L&#39;evento verrà attivato alle 12:30PM l&#39;ultimo venerdì di ogni mese. |
+| `0 45 11 ? * MON-THU` | L&#39;evento verrà attivato alle 11:45AM ogni lunedì, martedì, mercoledì e giovedì. |

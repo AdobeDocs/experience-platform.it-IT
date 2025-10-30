@@ -5,10 +5,10 @@ title: Endpoint API per query
 description: Le sezioni seguenti descrivono le chiamate che puoi effettuare utilizzando l’endpoint /queries nell’API del servizio di query.
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -40,7 +40,7 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;e
 | `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base alla creazione in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
 | `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata una data di inizio, la chiamata API restituirà prima la query creata più datata, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. I timestamp ISO di base assumono il formato di: `2020-09-07` per esprimere la data 7 settembre 2020. Un esempio più complesso verrebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30, ora standard orientale USA. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
-| `property` | Filtra i risultati in base ai campi. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state` e `id`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da) e `~` (contiene). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l&#39;ID specificato. |
+| `property` | Filtra i risultati in base ai campi. I filtri **devono** essere con escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state` e `id`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da) e `~` (contiene). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l&#39;ID specificato. |
 | `excludeSoftDeleted` | Indica se deve essere inclusa una query che è stata eliminata temporaneamente. Ad esempio, `excludeSoftDeleted=false` **includerà** query eliminate temporaneamente. (*Booleano, valore predefinito: true*) |
 | `excludeHidden` | Indica se devono essere visualizzate le query non guidate dall&#39;utente. Se questo valore è impostato su false, **includerà** query non guidate dall&#39;utente, ad esempio le definizioni CURSOR, FETCH o query di metadati. (*Booleano, valore predefinito: true*) |
 | `isPrevLink` | Il parametro di query `isPrevLink` viene utilizzato per l&#39;impaginazione. I risultati della chiamata API sono ordinati in base alla marca temporale `created` e alla proprietà `orderby`. Durante la navigazione nelle pagine dei risultati, `isPrevLink` è impostato su true quando si esegue il paging all&#39;indietro. Inverte l’ordine della query. Consulta i collegamenti &quot;successivo&quot; e &quot;precedente&quot; come esempi. |
@@ -120,7 +120,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 ### Creare una query
 
-È possibile creare una nuova query effettuando una richiesta POST all&#39;endpoint `/queries`.
+Per creare una nuova query, eseguire una richiesta POST all&#39;endpoint `/queries`.
 
 **Formato API**
 
@@ -329,7 +329,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `op` | Tipo di operazione da eseguire sulla risorsa. I valori accettati sono `cancel` e `soft_delete`. Per annullare la query, è necessario impostare il parametro op con il valore `cancel `. L’operazione di eliminazione temporanea interrompe la restituzione della query nelle richieste di GET, ma non la elimina. |
+| `op` | Tipo di operazione da eseguire sulla risorsa. I valori consentiti sono `cancel` e `soft_delete`. Per annullare la query, è necessario impostare il parametro op con il valore `cancel`. L’operazione di eliminazione temporanea interrompe la restituzione della query nelle richieste di GET, ma non la elimina dal sistema. |
 
 **Risposta**
 

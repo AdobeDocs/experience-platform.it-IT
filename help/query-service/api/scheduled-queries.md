@@ -5,9 +5,9 @@ title: Endpoint Schedules
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per le query pianificate con l’API Query Service.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Le query create con un account utente personale avranno esito negativo se l&#39;
 >
 >Considerazioni importanti durante la gestione delle query pianificate:<ul><li>Le query pianificate avranno esito negativo se l’account (tecnico o utente) utilizzato per crearle perde l’accesso o le autorizzazioni.</li><li>Le query pianificate devono essere disattivate prima di essere eliminate tramite l’API o l’interfaccia utente.</li><li>La pianificazione a tempo indeterminato senza una data di fine non è supportata. È sempre necessario specificare una data di fine.</li></ul>
 
-Per informazioni dettagliate sui requisiti dell&#39;account, sulla configurazione delle autorizzazioni e sulla gestione delle query pianificate, vedere la [documentazione sulle pianificazioni delle query](../ui/query-schedules.md#technical-account-user-requirements). Per istruzioni dettagliate sulla creazione e la configurazione di un account tecnico, consultare [Configurazione di Developer Console](https://experienceleague.adobe.com/it/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) e [Configurazione completa dell&#39;account tecnico](https://experienceleague.adobe.com/it/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Per informazioni dettagliate sui requisiti dell&#39;account, sulla configurazione delle autorizzazioni e sulla gestione delle query pianificate, vedere la [documentazione sulle pianificazioni delle query](../ui/query-schedules.md#technical-account-user-requirements). Per istruzioni dettagliate sulla creazione e la configurazione di un account tecnico, consultare [Configurazione di Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) e [Configurazione completa dell&#39;account tecnico](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Chiamate API di esempio
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | La query SQL da eseguire sulla pianificazione definita. |
 | `query.name` | Nome della query pianificata. |
 | `query.description` | Descrizione facoltativa per la query pianificata. |
-| `schedule.schedule` | Pianificazione cron per la query. Consulta [Crontab.guru](https://crontab.guru/) per informazioni interattive su come creare, convalidare e comprendere le espressioni cron. In questo esempio, &quot;30 * * *&quot; significa che la query verrà eseguita ogni ora al segno dei 30 minuti.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: la query viene eseguita una sola volta.</li><li>`@hourly`: la query viene eseguita ogni ora all&#39;inizio dell&#39;ora. Equivale all&#39;espressione cron `0 * * * *`.</li><li>`@daily`: la query viene eseguita una volta al giorno a mezzanotte. Equivale all&#39;espressione cron `0 0 * * *`.</li><li>`@weekly`: la query viene eseguita una volta alla settimana, la domenica, a mezzanotte. Equivale all&#39;espressione cron `0 0 * * 0`.</li><li>`@monthly`: la query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 * *`.</li><li>`@yearly`: la query viene eseguita una volta all&#39;anno, il 1° gennaio, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 1 *`. |
+| `schedule.schedule` | Pianificazione cron per la query. Consulta [Crontab.guru](https://crontab.guru/) per informazioni interattive su come creare, convalidare e comprendere le espressioni cron. In questo esempio, &quot;`30 * * * *`&quot; indica che la query verrà eseguita ogni ora al minuto 30.<br><br>In alternativa, è possibile utilizzare le seguenti espressioni abbreviate:<ul><li>`@once`: la query viene eseguita una sola volta.</li><li>`@hourly`: la query viene eseguita ogni ora all&#39;inizio dell&#39;ora. Equivale all&#39;espressione cron `0 * * * *`.</li><li>`@daily`: la query viene eseguita una volta al giorno a mezzanotte. Equivale all&#39;espressione cron `0 0 * * *`.</li><li>`@weekly`: la query viene eseguita una volta alla settimana, la domenica, a mezzanotte. Equivale all&#39;espressione cron `0 0 * * 0`.</li><li>`@monthly`: la query viene eseguita una volta al mese, il primo giorno del mese, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 * *`.</li><li>`@yearly`: la query viene eseguita una volta all&#39;anno, il 1° gennaio, a mezzanotte. Equivale all&#39;espressione cron `0 0 1 1 *`. |
 | `schedule.startDate` | Data di inizio per la query pianificata, scritta come timestamp UTC. |
 
 **Risposta**

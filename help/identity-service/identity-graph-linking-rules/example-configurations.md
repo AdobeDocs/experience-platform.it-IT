@@ -2,7 +2,7 @@
 title: Guida alle configurazioni delle regole di collegamento del grafico di identità
 description: Scopri i diversi tipi di implementazione che è possibile configurare utilizzando le Regole di collegamento del grafico di identità.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -407,6 +407,7 @@ Leggere questa sezione per le implementazioni avanzate di [!DNL Identity Graph L
 >[!NOTE]
 >
 >Per completare le implementazioni di seguito, devi creare spazi dei nomi personalizzati con i simboli di identità (con distinzione tra maiuscole e minuscole) di:
+>
 >* `CRMID`
 >* `loginID`
 

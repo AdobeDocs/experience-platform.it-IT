@@ -5,7 +5,7 @@ title: Creare un flusso di dati per le origini dei pagamenti utilizzando l’API
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’applicazione di pagamento e acquisirli in Experience Platform utilizzando connettori e API di origine.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 3%

@@ -2,7 +2,7 @@
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
 title: Formato del messaggio
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2489'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Prerequisiti - Concetti di Adobe Experience Platform {#prerequisites}
 
-Per comprendere il formato del messaggio e la configurazione e la trasformazione del profilo sul lato Adobe, acquisisci familiarità con i seguenti concetti di Experience Platform:
+Per comprendere il formato del messaggio e la configurazione e il processo di trasformazione del profilo sul lato Adobe, acquisisci familiarità con i seguenti concetti di Experience Platform:
 
 * **Experience Data Model (XDM)**. [Panoramica XDM](../../../../xdm/home.md) e [Come creare uno schema XDM in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Classe**. [Creare e modificare le classi nell&#39;interfaccia utente](../../../../xdm/ui/resources/classes.md).
@@ -55,11 +55,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Schema XDM di Source (1)**: questo elemento fa riferimento allo schema utilizzato dai clienti in Experience Platform. Ad Experience Platform, nel [passaggio di mappatura](../../../ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro attiva destinazione, i clienti mappano i campi dal proprio schema XDM allo schema di destinazione della destinazione (2).
+**Schema XDM di Source (1)**: questo elemento fa riferimento allo schema utilizzato dai clienti in Experience Platform. In Experience Platform, nel [passaggio di mappatura](../../../ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro attiva destinazione, i clienti mappano i campi dal proprio schema XDM allo schema di destinazione della destinazione (2).
 
 **Schema XDM di destinazione (2)**: in base allo schema JSON standard (3) del formato previsto della destinazione e agli attributi che la destinazione può interpretare, puoi definire gli attributi e le identità del profilo nello schema XDM di destinazione. Puoi eseguire questa operazione nella configurazione delle destinazioni, negli oggetti [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) e [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md).
 
-**Schema JSON standard degli attributi del profilo di destinazione (3)**: questo esempio rappresenta uno [schema JSON](https://json-schema.org/learn/miscellaneous-examples.html) di tutti gli attributi del profilo supportati dalla piattaforma e i relativi tipi (ad esempio: object, string, array). I campi di esempio che la destinazione potrebbe supportare potrebbero essere `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e così via. È necessario un [modello di trasformazione dei messaggi](#using-templating) per adattare i dati esportati in Experience Platform al formato previsto.
+**Schema JSON standard degli attributi del profilo di destinazione (3)**: questo esempio rappresenta uno [schema JSON](https://json-schema.org/learn/miscellaneous-examples.html) di tutti gli attributi del profilo supportati dalla piattaforma e i relativi tipi (ad esempio: object, string, array). I campi di esempio che la destinazione potrebbe supportare potrebbero essere `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e così via. È necessario un [modello di trasformazione dei messaggi](#using-templating) per adattare i dati esportati da Experience Platform al formato previsto.
 
 In base alle trasformazioni dello schema descritte in precedenza, ecco come cambia la configurazione di un profilo tra lo schema XDM di origine e uno schema di esempio sul lato partner:
 
@@ -94,7 +94,7 @@ Considerando il formato del messaggio, le trasformazioni corrispondenti sono le 
 
 | Attributo nello schema XDM del partner sul lato Adobe | Trasformazione | Attributo nel messaggio HTTP sul tuo lato |
 |---------|----------|---------|
-| `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
+| `_your_custom_schema.firstName` | `attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
@@ -114,7 +114,7 @@ I profili hanno 3 sezioni:
    * per *attributi a forma libera*, questi contengono un percorso `.value` se l&#39;attributo è presente nel profilo (vedi l&#39;attributo `lastName` dell&#39;esempio 1). Se non sono presenti nel profilo, non conterranno il percorso `.value` (vedi l&#39;attributo `firstName` dell&#39;esempio 1).
    * per *attributi predefiniti*, questi non contengono un percorso `.value`. Tutti gli attributi mappati presenti in un profilo saranno presenti nella mappa degli attributi. Quelli non presenti non saranno presenti (vedi l&#39;esempio 2 - l&#39;attributo `firstName` non esiste nel profilo).
 
-Di seguito sono riportati due Experienci Platform di profili:
+Di seguito sono riportati due esempi di profili in Experience Platform:
 
 ### Esempio 1 con `segmentMembership`, `identityMap` e attributi per gli attributi a forma libera {#example-1}
 
@@ -172,7 +172,7 @@ Di seguito sono riportati due Experienci Platform di profili:
 
 ## Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico {#using-templating}
 
-Adobe utilizza [modelli Pebble](https://pebbletemplates.io/), un linguaggio di modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), per trasformare i campi dallo schema XDM Experience Platform in un formato supportato dalla destinazione.
+Adobe utilizza [modelli Pebble](https://pebbletemplates.io/), un linguaggio di modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), per trasformare i campi dallo schema XDM di Experience Platform in un formato supportato dalla tua destinazione.
 
 Questa sezione fornisce diversi esempi di come vengono effettuate queste trasformazioni, dallo schema XDM di input fino al modello e all’output nei formati di payload accettati dalla destinazione. Gli esempi seguenti sono presentati dalla complessità crescente, come segue:
 
@@ -861,7 +861,7 @@ Profilo 2:
 
 Quando si utilizza l&#39;[aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, è possibile raggruppare i profili esportati nella destinazione in base a criteri quali ID pubblico, alias pubblico, appartenenza pubblico o spazi dei nomi di identità.
 
-Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione indicate in precedenza, come mostrato negli esempi nelle sezioni seguenti. Utilizza le chiavi di aggregazione per strutturare il messaggio HTTP esportato da Experience Platform in modo che corrisponda ai limiti di formato e frequenza previsti dalla destinazione.
+Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione indicate in precedenza, come mostrato negli esempi nelle sezioni seguenti. Utilizza le chiavi di aggregazione per strutturare il messaggio HTTP esportato da Experience Platform in modo che corrisponda ai limiti di formato e di frequenza previsti dalla destinazione.
 
 #### Usa chiave di aggregazione ID pubblico nel modello {#aggregation-key-segment-id}
 
@@ -1205,7 +1205,7 @@ La tabella seguente fornisce le descrizioni delle funzioni negli esempi preceden
 
 | Funzione | Descrizione | Esempio |
 |---------|----------|----------|
-| `input.profile` | Il profilo, rappresentato come [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue lo schema XDM del partner menzionato più sopra in questa pagina. |
+| `input.profile` | Il profilo, rappresentato come [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue lo schema XDM del partner menzionato più sopra in questa pagina. |  |
 | `hasSegments` | Questa funzione prende una mappa degli ID del pubblico dello spazio dei nomi come parametro. La funzione restituisce `true` se nella mappa è presente almeno un pubblico (indipendentemente dal suo stato) e `false` in caso contrario. Puoi utilizzare questa funzione per decidere se eseguire o meno l’iterazione su una mappa di tipi di pubblico. | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | Mappa dagli ID pubblico in uno specifico spazio dei nomi Adobe Experience Platform agli alias pubblico nel sistema del partner. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | Mappa i nomi del pubblico in spazi dei nomi specifici di Adobe Experience Platform ai nomi del pubblico nel sistema del partner. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
@@ -1228,6 +1228,6 @@ Dopo aver letto questo documento, ora sai come vengono trasformati i dati esport
 
 Per ulteriori informazioni sugli altri componenti del server di destinazione, consulta i seguenti articoli:
 
-* [Specifiche del server per le destinazioni create con Destination SDK](server-specs.md)
+* [Specifiche server per le destinazioni create con Destination SDK](server-specs.md)
 * [Specifiche di modello](templating-specs.md)
 * [Configurazione formattazione file](file-formatting.md)

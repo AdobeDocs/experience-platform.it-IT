@@ -1,9 +1,9 @@
 ---
 title: pushNotifications
 description: Configura le notifiche push per Web SDK per abilitare i messaggi push basati su browser.
-source-git-commit: 84faff58bac199c1113d7451f8cc865b6a870680
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
@@ -105,4 +105,4 @@ alloy("configure", {
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver configurato le notifiche push, utilizzare il comando [`sendPushSubscription`](../sendpushsubscription.md) per registrare le sottoscrizioni push con Adobe Experience Platform.
+Dopo aver configurato le notifiche push, utilizza il comando [sendPushSubscription](../sendpushsubscription.md) per registrare le sottoscrizioni push con Adobe Experience Platform.

@@ -4,9 +4,9 @@ title: Guida dell’interfaccia utente per i vincoli di tempo di segmentazione c
 description: Segment Builder offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 9%
 
 ---
@@ -24,7 +24,7 @@ Prima della versione di gennaio 2024, tutti i vincoli di tempo a livello di rego
 
 In precedenza, a un singolo evento potevano essere associate più regole di vincoli di tempo. Con questo aggiornamento recente, il tentativo di aggiungere un vincolo di tempo a una regola genera ora un **errore**.
 
-![Il vincolo di tempo a livello di regola è evidenziato. Viene evidenziato anche l’errore che si verifica successivamente. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
+![Il vincolo di tempo a livello di regola è evidenziato. Viene evidenziato anche l&#39;errore che si verifica in seguito.](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 I vincoli di tempo possono ora essere applicati solo a livello di area di lavoro o di scheda.
 
@@ -38,6 +38,6 @@ Quando applicate un vincolo di tempo a livello di area di lavoro, potete comunqu
 
 ![Il vincolo di tempo a livello di area di lavoro è evidenziato.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-Per applicare un vincolo di tempo a livello di scheda, selezionare la scheda a cui si desidera applicare il vincolo di tempo. Viene visualizzato il contenitore **[!UICONTROL Regole evento]**. Ora puoi selezionare il vincolo di tempo da applicare alla scheda.
+Per applicare un vincolo di tempo a livello di scheda, selezionare la scheda a cui si desidera applicare il vincolo di tempo. Viene visualizzato il contenitore **[!UICONTROL Event Rules]**. Ora puoi selezionare il vincolo di tempo da applicare alla scheda.
 
 ![Il vincolo di tempo a livello di scheda è evidenziato.](../images/ui/segment-refactoring/card-time-constraint.png)

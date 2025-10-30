@@ -2,10 +2,10 @@
 title: Monitorare l’acquisizione del profilo di streaming
 description: Scopri come utilizzare la dashboard di monitoraggio per monitorare l’acquisizione del profilo di streaming
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1932'
+ht-degree: 19%
 
 ---
 
@@ -26,7 +26,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 >[!NOTE]
 >
->La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metriche di monitoraggio per l’acquisizione del profilo di streaming {#streaming-profile-metrics}
 
@@ -91,7 +91,7 @@ Utilizza la tabella delle metriche per informazioni specifiche sui flussi di dat
 | Velocità effettiva della richiesta | Questa metrica rappresenta il numero di eventi che entrano nel sistema di acquisizione al secondo. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
 | Velocità effettiva di elaborazione | Questa metrica rappresenta il numero di eventi correttamente acquisiti dal sistema ogni secondo. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
 | Latenza di acquisizione P95 | Questa metrica misura la latenza del 95° percentile dal momento in cui un evento arriva in Experience Platform al momento in cui viene correttamente acquisito nell’archivio Profili. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
-| Velocità effettiva massima | Questa metrica rappresenta il numero massimo di richieste in entrata al secondo che entrano nell’acquisizione del profilo di streaming | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> |
+| Velocità effettiva massima | Questa metrica rappresenta il numero massimo di richieste in entrata al secondo che entrano nell’acquisizione del profilo di streaming | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> |  |
 | Record acquisiti | Questa metrica rappresenta il numero totale di record acquisiti nell’archivio profili all’interno di un intervallo di tempo configurato. | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> | <ul><li>Sandbox/Flusso di dati: monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi.</li><li>Esecuzione del flusso di dati: raggruppato in 15 minuti.</li></ul> |
 | Record con errori | Questa metrica rappresenta il numero totale di record che, a causa di errori, non sono stati acquisiti nell’archivio profili entro un intervallo di tempo configurato. | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> | <ul><li>Sandbox/Flusso di dati: monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi.</li><li>Esecuzione del flusso di dati: raggruppato in 15 minuti.</li></ul> |
 | Record ignorati | Questa metrica rappresenta il numero totale di record eliminati in un intervallo di tempo configurato a causa di violazioni della configurazione o della capacità. | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> | <ul><li>Sandbox/Flusso di dati: monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi.</li><li>Esecuzione del flusso di dati: raggruppato in 15 minuti.</li></ul> |
@@ -101,31 +101,31 @@ Utilizza la tabella delle metriche per informazioni specifiche sui flussi di dat
 
 ## Utilizza il dashboard di monitoraggio per l’acquisizione del profilo di streaming
 
-Per accedere al dashboard di monitoraggio per l&#39;acquisizione del profilo di streaming, passa all&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Monitoraggio]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Streaming end-to-end]**.
+Per accedere al dashboard di monitoraggio per l&#39;acquisizione del profilo di streaming, passa all&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Monitoring]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Streaming end-to-end]**.
 
 ![Dashboard di monitoraggio per l&#39;acquisizione del profilo di streaming.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Fai riferimento all&#39;intestazione superiore del dashboard per la scheda delle metriche *[!UICONTROL Profilo]*. Utilizza questa visualizzazione per visualizzare informazioni sui record acquisiti, non riusciti e saltati, nonché sullo stato corrente della velocità effettiva e della latenza della richiesta.
+Fare riferimento all&#39;intestazione superiore del dashboard per la scheda delle metriche *[!UICONTROL Profile]*. Utilizza questa visualizzazione per visualizzare informazioni sui record acquisiti, non riusciti e saltati, nonché sullo stato corrente della velocità effettiva e della latenza della richiesta.
 
 ![Scheda del profilo.](../assets/ui/streaming-profiles/profile-card.png)
 
 Quindi, utilizza l’interfaccia per visualizzare informazioni dettagliate sulle metriche di acquisizione del profilo di streaming. Utilizza la funzione calendario per passare da un intervallo di tempo all’altro. Puoi scegliere tra le seguenti finestre temporali preconfigurate:
 
-* [!UICONTROL Ultime 6 ore]
-* [!UICONTROL Ultime 12 ore]
-* [!UICONTROL Ultime 24 ore]
-* [!UICONTROL Ultimi 7 giorni]
-* [!UICONTROL Ultimi 30 giorni]
+* [!UICONTROL Last 6 hours]
+* [!UICONTROL Last 12 hours]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
 In alternativa, puoi configurare manualmente il tuo intervallo temporale utilizzando il calendario.
 
-Puoi utilizzare tre diverse categorie di metriche nel dashboard di monitoraggio per l&#39;acquisizione del profilo di streaming: [!UICONTROL Throughput], [!UICONTROL Acquisizione] e [!UICONTROL Latenza].
+Nel dashboard di monitoraggio è possibile utilizzare tre diverse categorie di metriche per l&#39;acquisizione del profilo di streaming: [!UICONTROL Throughput], [!UICONTROL Ingestion] e [!UICONTROL Latency].
 
 >[!BEGINTABS]
 
 >[!TAB Velocità effettiva]
 
-Seleziona **[!UICONTROL Throughput]** per visualizzare informazioni sulla quantità di dati che Experience Platform sta elaborando in un periodo di tempo configurato. Fai riferimento a questa metrica per valutare l’efficienza e la capacità del sistema.
+Selezionare **[!UICONTROL Throughput]** per visualizzare informazioni sulla quantità di dati che Experience Platform sta elaborando in un periodo di tempo configurato. Fai riferimento a questa metrica per valutare l’efficienza e la capacità del sistema.
 
 ![Dashboard con visualizzazione impostata su &quot;throughput&quot;.](../assets/ui/streaming-profiles/throughput.png)
 
@@ -135,7 +135,7 @@ Seleziona **[!UICONTROL Throughput]** per visualizzare informazioni sulla quanti
 
 >[!TAB Acquisizione]
 
-**Acquisizione**: seleziona **[!UICONTROL Acquisizione]** per visualizzare informazioni sui processi di acquisizione nella sandbox. Questi processi di acquisizione vengono misurati in tre metriche diverse.
+**Acquisizione**: seleziona **[!UICONTROL Ingestion]** per visualizzare informazioni sui processi di acquisizione nella sandbox. Questi processi di acquisizione vengono misurati in tre metriche diverse.
 
 ![Dashboard con visualizzazione impostata su &quot;Ingestion&quot;.](../assets/ui/streaming-profiles/ingestion.png)
 
@@ -145,7 +145,7 @@ Seleziona **[!UICONTROL Throughput]** per visualizzare informazioni sulla quanti
 
 >[!TAB Latenza]
 
-Seleziona **[!UICONTROL Latenza]** per visualizzare informazioni sul tempo necessario ad Experience Platform per rispondere a una richiesta o completare un&#39;operazione entro un determinato periodo di tempo.
+Selezionare **[!UICONTROL Latency]** per visualizzare informazioni sul tempo necessario ad Experience Platform per rispondere a una richiesta o completare un&#39;operazione entro un determinato periodo di tempo.
 
 ![Dashboard con visualizzazione impostata su &quot;latency&quot;.](../assets/ui/streaming-profiles/latency.png)
 
@@ -155,7 +155,7 @@ Seleziona **[!UICONTROL Latenza]** per visualizzare informazioni sul tempo neces
 
 La tabella del flusso di dati elenca tutte le attività di acquisizione in streaming con il corrispondente set di metriche per Real-Time Customer Profile. Ogni flusso di dati viene elencato con il relativo set di dati corrispondente.
 
-Se ti stai avvicinando ai limiti della capacità a livello di sandbox, puoi fare riferimento alla colonna [!UICONTROL Velocità effettiva massima] per identificare tutti i flussi di dati esistenti che contribuiscono ai tassi di consumo. Leggi la [sezione sulle best practice](#best-practices) per ulteriori informazioni sulle best practice per la gestione dei flussi di dati.
+Se ti stai avvicinando ai limiti della capacità a livello di sandbox, puoi fare riferimento alla colonna [!UICONTROL Max throughput] per identificare tutti i flussi di dati esistenti che contribuiscono ai tassi di consumo. Leggi la [sezione sulle best practice](#best-practices) per ulteriori informazioni sulle best practice per la gestione dei flussi di dati.
 
 Per monitorare i dati che vengono acquisiti in un flusso di dati specifico, seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter-add.png) accanto al nome del flusso di dati.
 
@@ -206,17 +206,17 @@ Leggi questa sezione per le risposte alle domande più frequenti sul monitoraggi
 
 +++Risposta
 
-Il dashboard [!UICONTROL Monitoraggio] mostra le metriche in tempo reale per l&#39;acquisizione e l&#39;elaborazione. Questi numeri sono metriche esatte registrate al momento dell’attività. Al contrario, il dashboard [!UICONTROL Capacità] utilizza un meccanismo di arrotondamento per il calcolo della capacità di throughput. Questo meccanismo consente di ridurre picchi di breve durata derivanti dalla qualificazione istantanea come violazioni e garantisce che gli avvisi di capacità si concentrino su tendenze sostenute, anziché su picchi momentanei.
+Il dashboard [!UICONTROL Monitoring] mostra le metriche in tempo reale per l&#39;acquisizione e l&#39;elaborazione. Questi numeri sono metriche esatte registrate al momento dell’attività. Al contrario, il dashboard [!UICONTROL Capacity] utilizza un meccanismo di arrotondamento per il calcolo della capacità di trasmissione. Questo meccanismo consente di ridurre picchi di breve durata derivanti dalla qualificazione istantanea come violazioni e garantisce che gli avvisi di capacità si concentrino su tendenze sostenute, anziché su picchi momentanei.
 
 A causa del meccanismo di lisciatura, potrebbe notare:
 
-* Piccoli picchi in [!UICONTROL Monitoraggio] non visualizzati in [!UICONTROL Capacità].
-* Valori leggermente inferiori in [!UICONTROL Capacità] rispetto a [!UICONTROL Monitoraggio] nello stesso timestamp.
+* Piccoli picchi in [!UICONTROL Monitoring] che non compaiono in [!UICONTROL Capacity].
+* Valori leggermente inferiori in [!UICONTROL Capacity] rispetto a [!UICONTROL Monitoring] allo stesso timestamp.
 
 Le due dashboard sono accurate, ma sono progettate per scopi diversi.
 
-* [!UICONTROL Monitoraggio]: visibilità operativa dettagliata, momento per momento.
-* [!UICONTROL Capacità]: vista strategica per l&#39;identificazione dei pattern di utilizzo e di violazione.
+* [!UICONTROL Monitoring]: visibilità operativa dettagliata, momento per momento.
+* [!UICONTROL Capacity]: visualizzazione strategica per l&#39;identificazione dei pattern di utilizzo e di violazione.
 
 +++
 

@@ -3,10 +3,11 @@ keywords: integrazione adform; adform;
 title: Integrazione di Adform per il retargeting non autenticato
 description: Questa integrazione di Adobe Experience Platform consente di eseguire il retargeting degli utenti in base a ECID.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -47,7 +48,7 @@ Prima di integrare Adform con Adobe, assicurati di soddisfare i seguenti prerequ
 2. **CDP o SKU connessione**: è necessario disporre dello SKU di Adobe Customer Data Platform (CDP) Prime o Ultimate oppure dello SKU connessione per consentire una comunicazione lato client e lato server senza interruzioni.
 
 3. **Configurazione Adobe Experience Platform Edge Network**:
-   * Assicurati che Edge Network sia configurato per supportare l’inoltro di eventi in tempo reale per il retargeting fuori sede. Per ulteriori informazioni, consulta la [Guida introduttiva all&#39;inoltro degli eventi](https://experienceleague.adobe.com/it/docs/experience-platform/tags/event-forwarding/getting-started) di Adobe.
+   * Assicurati che Edge Network sia configurato per supportare l’inoltro di eventi in tempo reale per il retargeting fuori sede. Per ulteriori informazioni, consulta la [Guida introduttiva all&#39;inoltro degli eventi](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) di Adobe.
    * Questo passaggio è fondamentale per trasmettere i dati all’endpoint lato server di Adform in modo efficiente.
 
 Una volta stabiliti questi prerequisiti, è possibile continuare a configurare e distribuire l&#39;estensione [!DNL Adform].
@@ -75,7 +76,7 @@ L’azione &quot;track&quot; è la regola dell’evento principale. Si attiva in
 
 **Parametri richiesti:**
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | --- | --- |
 | `Page Name` | Identifica la pagina o l’azione dell’utente. |
 | `User Agent` | Acquisisce informazioni per la corrispondenza del pubblico. |
@@ -83,7 +84,7 @@ L’azione &quot;track&quot; è la regola dell’evento principale. Si attiva in
 
 **Parametri consigliati:**
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | --- | --- |
 | `Page URL` | Identifica la pagina o l’azione dell’utente. |
 | `Referral URL` | Acquisisce informazioni per la corrispondenza del pubblico. |
@@ -105,6 +106,7 @@ L&#39;estensione deve essere associata a una regola per funzionare correttamente
 ## Convalidare e distribuire
 
 Assicurati che l&#39;estensione sia installata e configurata correttamente e che tutti gli elementi dati richiesti siano mappati, tra cui:
+
 * [ECID](/help/identity-service/features/ecid.md)
 * Nome pagina
 * URL di riferimento

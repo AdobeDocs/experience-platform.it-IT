@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;mappatura Audience Manager;mappatura audience manager
 solution: Experience Platform
 title: Campi di mappatura per il connettore Source di Adobe Audience Manager
-description: Scopri come mappare i dati di Adobe Audience Manager (dati in tempo reale, onboarded e profilo) sui campi Experience Data Model (XDM) corrispondenti per il connettore di origine dell’Audience Manager.
+description: Scopri come mappare i dati di Adobe Audience Manager (dati in tempo reale, onboarded e profilo) sui campi Experience Data Model (XDM) corrispondenti per il connettore di origine di Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
-# Audience Manager di mappature campi
+# Mappature campi Audience Manager
 
 Le tabelle seguenti contengono le mappature tra i campi nei dati di Adobe Audience Manager (dati in tempo reale, onboarded e profilo) e i relativi campi XDM corrispondenti.
 
@@ -27,7 +27,7 @@ Tipo: dati in tempo reale
 | `requestIds[]` | `ExperienceEvent.endUserIds` - *Solo per gli spazi dei nomi presenti in endUserIds e solo per il primo valore.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *Solo per gli spazi dei nomi presenti in endUserIds e solo per il primo valore.* |
-| `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+| `trait[]` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |

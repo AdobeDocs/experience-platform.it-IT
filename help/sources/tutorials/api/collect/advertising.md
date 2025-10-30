@@ -5,7 +5,7 @@ title: Creare un flusso di dati per le origini di Advertising utilizzando l’AP
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’applicazione pubblicitaria di terze parti e acquisirli in Experience Platform utilizzando i connettori di origini e l’API del servizio Flow.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1351'
 ht-degree: 3%

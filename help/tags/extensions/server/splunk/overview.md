@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Splunk
 description: Scopri l’estensione Splunk per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '958'
 ht-degree: 1%
 
 ---
@@ -61,13 +61,13 @@ Seleziona **Estensioni** nel menu di navigazione a sinistra. In **Installed**, s
 
 ![Pulsante Configura per l&#39;estensione Splunk selezionata nell&#39;interfaccia utente](../../../images/extensions/server/splunk/configure.png)
 
-Per **[!UICONTROL URL agente di raccolta eventi HTTP]**, immettere l&#39;indirizzo e la porta dell&#39;istanza della piattaforma Splunk. In **[!UICONTROL Token di accesso]**, immetti il valore [!DNL Event Collector Token]. Al termine, selezionare **[!UICONTROL Salva]**.
+Per **[!UICONTROL HTTP Event Collector URL]**, immettere l&#39;indirizzo e la porta dell&#39;istanza della piattaforma Splunk. In **[!UICONTROL Access Token]** immettere il valore [!DNL Event Collector Token]. Al termine, selezionare **[!UICONTROL Save]**.
 
 ![Opzioni di configurazione compilate nell&#39;interfaccia utente](../../../images/extensions/server/splunk/input.png)
 
 ## Configurare una regola di inoltro degli eventi {#config_rule}
 
-Inizia a creare una nuova regola di inoltro eventi [regola](../../../ui/managing-resources/rules.md) e configurane le condizioni come desiderato. Quando selezioni le azioni per la regola, seleziona l&#39;estensione [!UICONTROL Splunk], quindi seleziona il tipo di azione [!UICONTROL Crea evento]. Vengono visualizzati controlli aggiuntivi per configurare ulteriormente l&#39;evento Splunk.
+Inizia a creare una nuova regola di inoltro eventi [regola](../../../ui/managing-resources/rules.md) e configurane le condizioni come desiderato. Quando selezioni le azioni per la regola, seleziona l&#39;estensione [!UICONTROL Splunk], quindi seleziona il tipo di azione [!UICONTROL Create Event]. Vengono visualizzati controlli aggiuntivi per configurare ulteriormente l&#39;evento Splunk.
 
 ![Definisci configurazione azione](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -75,13 +75,13 @@ Il passaggio successivo consiste nel mappare le proprietà dell’evento Splunk 
 
 | Nome campo | Descrizione |
 | --- | --- |
-| [!UICONTROL Evento &#x200B;]<br><br>**(OBBLIGATORIO)** | Indica come desideri fornire i dati dell’evento. I dati dell&#39;evento possono essere assegnati alla chiave `event` all&#39;interno dell&#39;oggetto JSON nella richiesta HTTP oppure possono essere testo non elaborato. La chiave `event` si trova allo stesso livello delle chiavi di metadati all&#39;interno del pacchetto eventi JSON. All&#39;interno delle parentesi graffe chiave-valore `event`, i dati possono trovarsi in qualsiasi formato richiesto, ad esempio una stringa, un numero, un altro oggetto JSON e così via. |
+| [!UICONTROL Event]<br><br>**(OBBLIGATORIO)** | Indica come desideri fornire i dati dell’evento. I dati dell&#39;evento possono essere assegnati alla chiave `event` all&#39;interno dell&#39;oggetto JSON nella richiesta HTTP oppure possono essere testo non elaborato. La chiave `event` si trova allo stesso livello delle chiavi di metadati all&#39;interno del pacchetto eventi JSON. All&#39;interno delle parentesi graffe chiave-valore `event`, i dati possono trovarsi in qualsiasi formato richiesto, ad esempio una stringa, un numero, un altro oggetto JSON e così via. |
 | [!UICONTROL Host] | Il nome host del client da cui stai inviando i dati. |
-| [!UICONTROL Tipo Source] | Tipo di origine da assegnare ai dati dell&#39;evento. |
+| [!UICONTROL Source Type] | Tipo di origine da assegnare ai dati dell&#39;evento. |
 | [!UICONTROL Source] | Valore di origine da assegnare ai dati dell’evento. Ad esempio, se invii dati da un’app che stai sviluppando, imposta questa chiave sul nome dell’app. |
-| [!UICONTROL Indice] | Nome dell&#39;indice dei dati dell&#39;evento. Se per il token è impostato il parametro indexes, l’indice specificato deve trovarsi all’interno dell’elenco degli indici consentiti. |
-| [!UICONTROL Tempo] | Ora dell’evento. Il formato di ora predefinito è l&#39;ora UNIX (nel formato `<sec>.<ms>`) e dipende dal fuso orario locale. Ad esempio, `1433188255.500` indica 1433188255 secondi e 500 millisecondi dopo l&#39;epoca oppure lunedì 1 giugno 2015 alle 19:15 GMT.:50: |
-| [!UICONTROL Campi] | Specifica un oggetto JSON non elaborato o un set di coppie chiave-valore contenenti campi personalizzati espliciti da definire al momento dell’indice.  La chiave `fields` non è applicabile ai dati non elaborati.<br><br>Le richieste contenenti la proprietà `fields` devono essere inviate all&#39;endpoint `/collector/event`, altrimenti non verranno indicizzate. Per ulteriori informazioni, consulta la documentazione di Splunk su [estrazioni di campi indicizzati](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Index] | Nome dell&#39;indice dei dati dell&#39;evento. Se per il token è impostato il parametro indexes, l’indice specificato deve trovarsi all’interno dell’elenco degli indici consentiti. |
+| [!UICONTROL Time] | Ora dell’evento. Il formato di ora predefinito è l&#39;ora UNIX (nel formato `<sec>.<ms>`) e dipende dal fuso orario locale. Ad esempio, `1433188255.500` indica 1433188255 secondi e 500 millisecondi dopo l&#39;epoca oppure lunedì 1 giugno 2015 alle 19:15 GMT.:50: |
+| [!UICONTROL Fields] | Specifica un oggetto JSON non elaborato o un set di coppie chiave-valore contenenti campi personalizzati espliciti da definire al momento dell’indice.  La chiave `fields` non è applicabile ai dati non elaborati.<br><br>Le richieste contenenti la proprietà `fields` devono essere inviate all&#39;endpoint `/collector/event`, altrimenti non verranno indicizzate. Per ulteriori informazioni, consulta la documentazione di Splunk su [estrazioni di campi indicizzati](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Convalidare i dati in Splunk {#validate}
 

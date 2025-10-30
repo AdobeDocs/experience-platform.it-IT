@@ -2,10 +2,10 @@
 title: Vista Editor di convalida
 description: Questa guida contiene informazioni dettagliate sulla vista Editor di convalida in Adobe Experience Platform Assurance.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 100%
+source-wordcount: '496'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +15,7 @@ L’Editor di convalida consente di gestire in modo rapido e semplice le funzion
 
 ## Introduzione all’Editor di convalida
 
-Dopo aver [configurato Assurance](../tutorials/implement-assurance.md), sulla vista **[!UICONTROL Home]**, seleziona l’**[!UICONTROL Editor di convalida]**.
+Dopo [aver configurato Assurance](../tutorials/implement-assurance.md), nella visualizzazione **[!UICONTROL Home]** selezionare **[!UICONTROL Validation Editor]**.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -23,11 +23,11 @@ Dopo aver [configurato Assurance](../tutorials/implement-assurance.md), sulla vi
 
 Questa funzione consente di creare, modificare o eliminare funzioni di convalida per le sessioni di Adobe Experience Platform Assurance.
 
-1. Seleziona **[!UICONTROL Crea una nuova convalida]**.
+1. Seleziona **[!UICONTROL Create a New Validation]**.
 2. Immetti un **nome** per identificare la convalida, quindi specifica una **categoria** e una **descrizione**.
 3. Modifica il codice nell’editor per convalidare gli eventi per la sessione di Assurance.
 
-Una volta completati i test di funzione, seleziona **[!UICONTROL Pubblica]** per salvare la convalida.
+Una volta completati i test di funzione, selezionare **[!UICONTROL Publish]** per salvare la convalida.
 
 ### Definizione dell’evento
 
@@ -57,7 +57,7 @@ La funzione di convalida deve restituire un oggetto contenente quanto segue:
 | :--- | :--- | :--- |
 | `message` | Stringa | Il messaggio di convalida da visualizzare nei risultati di riepilogo. |
 | `events` | Array | Array di eventi UUID da segnalare come corrispondente o non corrispondente. |
-| `links` | Array | Un array di oggetti `ValidationResultLink` per fare riferimento alla documentazione e ad altre risorse `{( type: 'doc'|'product', url: String )}` |
+| `links` | Array | Array di `ValidationResultLink` oggetti per fare riferimento alla documentazione e ad altre risorse `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
 | `result` | Stringa | Questo è il risultato della convalida e deve essere una delle stringhe enumerate: “corrispondente”, “non corrispondente”, “sconosciuto” |
 
 ## Visualizzare i risultati della convalida

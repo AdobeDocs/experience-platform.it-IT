@@ -5,7 +5,7 @@ title: Creare un modello utilizzando JupyterLab Notebooks
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per creare una ricetta utilizzando il modello per la generazione di formule dei notebook JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Il resto di questo tutorial riguarda i seguenti file predefiniti nel notebook de
 
 Il seguente tutorial video spiega il notebook con modello di propensione Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452500?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### File dei requisiti {#requirements-file}
 
@@ -93,7 +93,7 @@ Per il notebook con propensione Luma, non è necessario aggiornare i requisiti.
 
 I file di configurazione, `training.conf` e `scoring.conf`, vengono utilizzati per specificare i set di dati da utilizzare per l&#39;apprendimento e il punteggio e per aggiungere iperparametri. Esistono configurazioni separate per l’apprendimento e il punteggio.
 
-Affinché un modello possa eseguire l&#39;apprendimento, è necessario fornire `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` e `tenantId`. Inoltre, per il punteggio, è necessario fornire `scoringDataSetId`, `tenantId` e `scoringResultsDataSetId `.
+Affinché un modello possa eseguire l&#39;apprendimento, è necessario fornire `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` e `tenantId`. Inoltre, per il punteggio, è necessario fornire `scoringDataSetId`, `tenantId` e `scoringResultsDataSetId`.
 
 Per trovare il set di dati e gli ID dello schema, vai alla scheda dati ![Scheda dati](../images/jupyterlab/create-recipe/dataset-tab.png) all&#39;interno dei blocchi appunti sulla barra di navigazione a sinistra (sotto l&#39;icona della cartella). È necessario fornire tre ID di set di dati diversi. `scoringResultsDataSetId` viene utilizzato per memorizzare i risultati del punteggio del modello e deve essere un set di dati vuoto. Questi set di dati sono stati creati in precedenza nel passaggio [Risorse richieste](#assets).
 

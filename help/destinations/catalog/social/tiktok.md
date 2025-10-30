@@ -3,7 +3,7 @@ title: Connessione TikTok
 description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1111'
 ht-degree: 3%
@@ -117,7 +117,7 @@ Di seguito è riportato un esempio di corretta mappatura identità durante l’e
 
 Selezione dei campi di origine:
 
-* Selezionare un identificatore (ad esempio:` Email_LC_SHA256`) come identità di origine che identifica in modo univoco un profilo in Adobe Experience Platform e [!DNL TikTok Ads Manager].
+* Selezionare un identificatore (ad esempio: `Email_LC_SHA256`) come identità di origine che identifica in modo univoco un profilo in Adobe Experience Platform e [!DNL TikTok Ads Manager].
 
 Selezione dei campi di destinazione:
 

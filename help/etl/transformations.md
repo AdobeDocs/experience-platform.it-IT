@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;etl;ETL;trasformazioni etl;trasformazioni etl;trasformazioni ETL
+keywords: Experience Platform;home;argomenti popolari;etl;ETL;trasformazioni etl;trasformazioni ETL;;home;popular topic;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: Esempio di trasformazioni ETL
 description: Questo articolo illustra le seguenti trasformazioni di esempio che uno sviluppatore di estrazione, trasformazione, caricamento (ETL) può incontrare.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '452'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Mappatura
 
 I requisiti di mappatura per i dati CRM sono descritti nella tabella seguente e includono le seguenti trasformazioni:
+
 - Colonne di identità in `identityMap` proprietà
 - Data di nascita (Data di nascita) a anno e mese-giorno
 - Stringhe a valori doppi o interi brevi.
@@ -54,10 +55,10 @@ I requisiti di mappatura per i dati CRM sono descritti nella tabella seguente e 
 | GENERE | person.gender | Trasforma il genere come valore enum corrispondente person.gender |
 | DOB | person.bornDayAndMonth: &quot;MM-DD&quot;<br/>person.bornDate: &quot;YYYY-MM-DD&quot;<br/>person.BirthYear: YYYY | Trasforma bornDayAndMonth in stringa<br/>Trasforma bornDate in stringa<br/>Trasforma bornYear in int breve |
 | EMAIL | personalEmail.address | Copia come stringa |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copia come stringa nell’array CRMID in identityMap e imposta Primary come false |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primario:false}] | Copia come stringa nell’array CRMID in identityMap e imposta Primary come false |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primario: false}] | Copia come stringa nella prima voce nell’array ECID in identityMap e imposta Primary come false |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copia come stringa nell’array LOYALTYID in identityMap e imposta Primary come true |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Copia come stringa in una seconda voce nell’array ECID in identityMap e imposta Primary su false |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primario:true}] | Copia come stringa nell’array LOYALTYID in identityMap e imposta Primary come true |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primario:false}] | Copia come stringa in una seconda voce nell’array ECID in identityMap e imposta Primary su false |
 | TELEFONO | homePhone.number | Copia come stringa |
 | VIA | homeAddress.street1 | Copia come stringa |
 | CITTÀ | homeAddress.city | Copia come stringa |
@@ -284,9 +285,9 @@ I requisiti di mappatura per l’array di identità sono descritti nella tabella
 
 | Campo identità | Campo identityMap | Tipo di dati |
 | -------------- | ----------------- | --------- |
-| identità[0].id | identityMap[E-mail][{"id"}] | copia come stringa |
-| identità[1].id | identityMap[CRMID][{"id"}] | copia come stringa |
-| identità[2].id | identityMap[LOYALTYID][{"id"}] | copia come stringa |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | copia come stringa |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | copia come stringa |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | copia come stringa |
 
 ### XDM di output
 
