@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform per aziende con più marchi e aree geografiche
 description: Scopri come fornire ai team di implementazione gli strumenti e le informazioni necessari per navigare efficacemente tra le complessità di Adobe Experience Platform.
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 6e96cf7660a9a7fe1b4eaef645bca55ed89b7673
 workflow-type: tm+mt
-source-wordcount: '5325'
+source-wordcount: '5322'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Quando esplori le opzioni di implementazione, devi comprendere e considerare gli
 - Focus: accuratezza e qualità dei dati.
 - Obiettivi: garantire la privacy e l’affidabilità dei dati, progettare schemi e modelli di dati, gestire le origini dati.
 
-### &#x200B;1. Un’impresa che opera con isolamento limitato dei dati
+### Un&#39;azienda che opera con isolamento limitato dei dati
 
 Un principio architettonico chiave in Experience Platform è che i dati dei clienti sono limitati a una sandbox di produzione specifica basata su criteri e requisiti di governance.
 
@@ -80,7 +80,7 @@ Puoi definire i controlli di accesso con ruoli e autorizzazioni per controllare 
 
 Considera un data engineer che potrebbe non avere bisogno di accedere a tutte le funzionalità delle applicazioni basate su Experience Platform e piattaforma. In genere sono responsabili della creazione di definizioni di dati (schemi), della configurazione delle origini dati per l’acquisizione dei dati e della creazione di set di dati. Tuttavia, potrebbe non essere la stessa persona che crea e attiva i tipi di pubblico per esperienze cliente personalizzate. Per questo utente tipo, crea un ruolo, aggiungi le autorizzazioni appropriate e concedi l’accesso solo alle funzionalità richieste. Al contrario, un addetto al marketing non creerebbe schemi e acquisirebbe dati, ma piuttosto si concentrerebbe sulla creazione e l’attivazione di tipi di pubblico per abilitare esperienze cliente personalizzate.
 
-Se lo desideri, puoi aggiungere controlli di accesso granulari per limitare l’accesso a campi specifici nel profilo cliente unificato con funzionalità di controllo dell’accesso basato su attributi/controllo dell’accesso a livello di campo. Si tratta di meccanismi di governance in Experience Platform che consentono di limitare l’accesso agli attributi dei dati in base a etichette predefinite. Con il controllo degli accessi a livello di campo, è possibile gestire i dati personali identificabili e limitare l’accesso a tutti i flussi di lavoro di Experience Platform e delle applicazioni. Per ulteriori dettagli sulle funzionalità di controllo degli accessi, consulta la [documentazione sul controllo degli accessi](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home).
+Se lo desideri, puoi aggiungere controlli di accesso granulari per limitare l’accesso a campi specifici nel profilo cliente unificato con funzionalità di controllo dell’accesso basato su attributi/controllo dell’accesso a livello di campo. Si tratta di meccanismi di governance in Experience Platform che consentono di limitare l’accesso agli attributi dei dati in base a etichette predefinite. Con il controllo degli accessi a livello di campo, è possibile gestire i dati personali identificabili e limitare l’accesso a tutti i flussi di lavoro di Experience Platform e delle applicazioni. Per ulteriori dettagli sulle funzionalità di controllo degli accessi, consulta la [documentazione sul controllo degli accessi](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
 ![Controlli di accesso CDP, Configura autorizzazioni ruolo](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
@@ -102,12 +102,12 @@ Con la funzione di strumenti sandbox, puoi selezionare vari oggetti ed esportarl
 
 Puoi utilizzare le API di Experience Platform per automatizzare le distribuzioni sandbox e le attività di configurazione. Le API consentono il controllo programmabile per attività ripetitive come l’esportazione, l’importazione o la modifica di configurazioni sandbox, fornendo flessibilità se si preferiscono flussi di lavoro automatizzati.
 
-Per ulteriori dettagli sugli strumenti sandbox, consulta la [documentazione sugli strumenti sandbox](https://experienceleague.adobe.com/it/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Per ulteriori dettagli sugli strumenti sandbox, consulta la [documentazione sugli strumenti sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Crea pacchetto](./images/whitepaper/create-package.png) | ![Pacchetti elenco CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
 
-### &#x200B;2. Isolamento dei dati per regione o marchio
+### Isolamento dei dati per area geografica o marchio
 
 Se hai bisogno di un isolamento completo (ad es., regionale o basato su marchio), puoi operare in base a criteri di accesso ai dati rigidi o a requisiti legali che limitano l’accesso dei team del tuo marchio ai dati specifici delle rispettive aree geografiche o dei rispettivi marchi. Puoi definire modelli di accesso in base a dati specifici per area geografica o marchio, garantendo la conformità con i protocolli interni, normativi e di governance dei dati. Questo approccio è fondamentale se operi in settori altamente regolamentati (ad esempio, la gestione dei dati PII) o se devi mantenere dati distinti e segmentati per diverse aree geografiche o identità del marchio.
 
@@ -229,9 +229,9 @@ Inoltre, puoi utilizzare Experience Platform Segment Match, una funzione in Plat
 
 Questo servizio di condivisione dei segmenti consente a due o più utenti di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
 
-Per ulteriori dettagli sulla funzione Segment Match, consulta la [documentazione di Segment Match](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/ui/segment-match/overview).
+Per ulteriori dettagli sulla funzione Segment Match, consulta la [documentazione di Segment Match](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
-### 3. Una combinazione di approcci per le operazioni globali, regionali e specifici per il brand
+### Una combinazione di approcci per le operazioni globali, regionali e specifici per il brand
 
 Molte aziende multimarca operano su scala globale e, come tali, cercano spesso una combinazione di approcci di gestione dei dati unificati e isolati. In questo scenario, cercano di separare i dati per più regioni o paesi. I brand all’interno dell’organizzazione possono aspettarsi di operare esclusivamente sui dati associati al proprio marchio specifico, il tutto all’interno degli stessi limiti di dati di una geografia o di un paese. Questo approccio consente la gestione centralizzata dei dati regionali o nazionali, facilitando al tempo stesso le operazioni di marketing e di dati specifiche per il brand. Si tratta di un modello che combina i vantaggi della gestione unificata dei dati con la necessità di un isolamento specifico per il marchio e l’area geografica.
 
@@ -434,7 +434,7 @@ Experience Platform offre alle aziende un solido framework per centralizzare, ge
 
    - È necessario valutare attentamente se distribuire **più ID organizzazione o più sandbox** in base alla residenza dei dati, alla conformità e alle esigenze operative.
 
-   - **Gli ID organizzazione** offrono isolamento completo&#x200B;**, mentre le impostazioni con più sandbox forniscono flessibilità operativa all&#39;interno di un framework di governance condiviso**.
+   - **Gli ID organizzazione** offrono isolamento completo**, mentre le impostazioni con più sandbox forniscono flessibilità operativa all&#39;interno di un framework di governance condiviso**.
 
 ## Considerazioni finali
 
