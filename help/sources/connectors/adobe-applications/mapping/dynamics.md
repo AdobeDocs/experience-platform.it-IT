@@ -265,4 +265,4 @@ In questo scenario, il valore corrisponde alla chiave, se la chiave si trova nel
 >
 >Un&#39;iterazione nidificata dell&#39;operazione precedente sarà simile a: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Per ulteriori informazioni, vedere il documento [ sugli operatori logici in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Per ulteriori informazioni, vedere il documento [&#x200B; sugli operatori logici in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

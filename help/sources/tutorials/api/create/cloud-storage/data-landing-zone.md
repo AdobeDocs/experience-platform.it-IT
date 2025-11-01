@@ -673,4 +673,4 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai recuperato le credenziali di [!DNL Data Landing Zone], ne hai esplorato la struttura per trovare il file da portare in Experience Platform e hai creato una connessione di origine per iniziare a portare i tuoi dati in Experience Platform. Ora puoi passare alla prossima esercitazione, dove scoprirai come [creare un flusso di dati per portare i dati dell&#39;archiviazione cloud in Experience Platform utilizzando l&#39;API [!DNL Flow Service] 2}.](../../collect/cloud-storage.md)
+Seguendo questa esercitazione, hai recuperato le credenziali di [!DNL Data Landing Zone], ne hai esplorato la struttura per trovare il file da portare in Experience Platform e hai creato una connessione di origine per iniziare a portare i tuoi dati in Experience Platform. Ora puoi passare alla prossima esercitazione, dove scoprirai come [creare un flusso di dati per portare i dati dell&#39;archiviazione cloud in Experience Platform utilizzando l&#39;API [!DNL Flow Service] 2&rbrace;.](../../collect/cloud-storage.md)
