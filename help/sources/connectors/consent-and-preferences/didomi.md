@@ -4,9 +4,9 @@ description: Scopri come collegare Didomi a Adobe Experience Platform utilizzand
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Prima di collegare le origini a Experience Platform, è necessario aggiungere al
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Didomi]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
+Per connettere l&#39;account **[!UICONTROL View Sources]** ad Experience Platform, è necessario che per l&#39;account siano abilitate sia le autorizzazioni **[!UICONTROL Manage Sources]** che quelle [!DNL Didomi]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
 
 ### Raccogliere le credenziali API di Adobe
 
@@ -51,9 +51,9 @@ Per informazioni su come effettuare correttamente chiamate alle API di Experienc
 
 Uno schema **Experience Data Model (XDM)** definisce la struttura dei dati che invierai da [!DNL Didomi] (ad esempio, ID utente, scopo del consenso) ad Experience Platform.
 
-Per creare uno schema, seleziona [!UICONTROL Schemi] nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform, quindi seleziona **[!UICONTROL Crea schema]**. Quindi, seleziona **[!UICONTROL Standard]** come tipo di schema, quindi seleziona **[!UICONTROL Manuale]** per creare manualmente i campi. Seleziona una classe base per lo schema e fornisci un nome per lo schema.
+Per creare uno schema, seleziona [!UICONTROL Schemas] nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform, quindi seleziona **[!UICONTROL Create schema]**. Selezionare **[!UICONTROL Standard]** come tipo di schema, quindi **[!UICONTROL Manual]** per creare manualmente i campi. Seleziona una classe base per lo schema e fornisci un nome per lo schema.
 
-Dopo la creazione, aggiorna lo schema aggiungendo uno dei campi obbligatori. Assicurati che almeno un campo sia un campo [!UICONTROL Identità] per informare Experience Platform dei valori di identità primari. Infine, assicurati di abilitare l&#39;interruttore [!UICONTROL Profilo] per archiviare correttamente i dati.
+Dopo la creazione, aggiorna lo schema aggiungendo uno dei campi obbligatori. Assicurati che almeno un campo sia un campo [!UICONTROL Identity] per informare Experience Platform dei valori di identità primari. Infine, assicurati di abilitare l&#39;interruttore [!UICONTROL Profile] per memorizzare correttamente i dati.
 
 ![create-schema](../../images/tutorials/create/didomi/create-schema.png)
 
@@ -67,7 +67,7 @@ Per ulteriori informazioni, consulta la guida su [creazione di schemi nell&#39;i
 
 Un **set di dati** in Experience Platform viene utilizzato per memorizzare i dati in arrivo in base allo schema definito.
 
-Per creare un set di dati, seleziona [!UICONTROL Set di dati] nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Experience Platform, quindi seleziona **[!UICONTROL Crea set di dati]**. Quindi, seleziona **[!UICONTROL Crea set di dati dallo schema]**, quindi seleziona lo schema da associare al nuovo set di dati.
+Per creare un set di dati, seleziona [!UICONTROL Datasets] nella navigazione a sinistra dell&#39;interfaccia utente di Experience Platform, quindi seleziona **[!UICONTROL Create dataset]**. Quindi, seleziona **[!UICONTROL Create dataset from schema]** e quindi lo schema da associare al nuovo set di dati.
 
 ![create-dataset](../../images/tutorials/create/didomi/create-dataset.png)
 
@@ -82,7 +82,7 @@ Per garantire la compatibilità con Experience Platform, il webhook deve soddisf
 | Campo | Descrizione | Esempio |
 | --- | --- | --- | 
 | Segreto client | La chiave segreta associata alle credenziali API di Adobe. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
-| Chiave API | Chiave API pubblica utilizzata per autenticare le richieste ai servizi Adobe. |
+| Chiave API | Chiave API pubblica utilizzata per autenticare le richieste ai servizi Adobe. |  |
 | Tipo di concessione | Metodo tramite il quale un&#39;applicazione ottiene un token di accesso dal server autorizzazioni. Imposta questo valore su `client_credentials`. | `client_credentials` |
 | Portata | Gli ambiti di autorizzazione definiscono le autorizzazioni o i livelli di accesso specifici richiesti da un’applicazione al provider API. | `openid,AdobeID,read_organizations,additional_info.projectedProductContext,session` |
 | Intestazione di autenticazione | Le intestazioni aggiuntive necessarie per la richiesta del token Adobe. | `{"Content-type": "application/x-www-form-urlencoded"}` |

@@ -2,9 +2,9 @@
 title: Mappatura dei campi per il connettore Source di Adobe Analytics
 description: Mappa i campi Adobe Analytics ai campi XDM utilizzando il connettore Source di Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3832'
 ht-degree: 5%
 
 ---
@@ -242,7 +242,7 @@ Leggi questa sezione per informazioni sui campi di mappatura Analytics obsoleti.
 | `m_page_type` | `web.webPageDetails.isErrorPage` | booleano | Variabile utilizzata per popolare la dimensione Pagine non trovate. Questa variabile deve essere vuota o contenere &quot;ErrorPage&quot;. |
 | `m_pagename_no_url` | `web.webPageDetails.name` | numero | Nome della pagina (se impostato). Se non viene specificata alcuna pagina, questo valore viene lasciato vuoto. |
 | `m_paid_search` | `search.isPaid` | booleano | Flag impostato se l’hit corrisponde al rilevamento di ricerche a pagamento. |
-| `m_product_list` | `productListItems[].items` | array | L’elenco dei prodotti, trasmesso attraverso la variabile dei prodotti. | {SKU (stringa), quantità (numero intero), priceTotal (numero)} |
+| `m_product_list` | `productListItems[].items` | array | L’elenco dei prodotti, trasmesso attraverso la variabile dei prodotti. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | stringa | Un ID numerico che rappresenta il tipo di riferimento per l’hit.<br/>`1`: all&#39;interno del sito<br/>`2`: altri siti Web<br/>`3`: motori di ricerca<br/>`4`: disco rigido<br/>`5`: USENET<br/>`6`: digitato/contrassegnato con segnalibro (nessun referrer)<br/>`7`: e-mail<br/>`8`: nessun JavaScript<br/>`9`: social network |
 | `m_search_engine` | `search.searchEngine` | stringa | L’ID numerico che rappresenta il motore di ricerca che ha indirizzato il visitatore al sito. |
 | `post_currency` | `commerce.order.currencyCode` | stringa | Codice valuta utilizzato durante la transazione. |

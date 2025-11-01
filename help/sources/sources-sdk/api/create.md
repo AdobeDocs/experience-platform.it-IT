@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
+keywords: Experience Platform;home;argomenti popolari;origini;connettori;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Creare una nuova specifica di connessione utilizzando l’API del servizio Flusso
 description: Il documento seguente descrive come creare una specifica di connessione utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Una specifica di connessione rappresenta la struttura di un&#39;origine. Contiene informazioni sui requisiti di autenticazione di una sorgente, definisce come i dati sorgente possono essere esplorati e ispezionati e fornisce informazioni sugli attributi di una determinata sorgente. L&#39;endpoint `/connectionSpecs` nell&#39;API [!DNL Flow Service] consente di gestire in modo programmatico le specifiche di connessione all&#39;interno dell&#39;organizzazione.
 
-Nel documento seguente vengono descritti i passaggi necessari per creare una specifica di connessione utilizzando l&#39;API [!DNL Flow Service] e integrare una nuova origine tramite Self-Serve Sources (Batch SDK).
+Nel documento seguente vengono descritti i passaggi necessari per creare una specifica di connessione utilizzando l&#39;API [!DNL Flow Service] e integrare una nuova origine tramite Origini self-service (Batch SDK).
 
 ## Introduzione
 
@@ -39,10 +39,10 @@ Una volta fornito, devi strutturare l’archivio Git privato nel modo seguente:
 | Artefatti (nomi file) | Descrizione | Esempio |
 | --- | --- | --- |
 | {your_source} | Nome della sorgente. Questa cartella deve contenere tutti gli artefatti relativi alla tua origine, all’interno dell’archivio Git privato. | `mailchimp-members` |
-| {your_source}-category.txt | Categoria a cui appartiene l&#39;origine, formattata come file di testo. L’elenco delle categorie di origini disponibili supportate da Origini self-service (SDK batch) include: <ul><li>Advertising</li><li>Analytics</li><li>Consenso e preferenze</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Pagamenti</li><li>Protocolli</li></ul> **Nota**: se ritieni che la tua origine non rientri in nessuna delle categorie precedenti, contatta il rappresentante del tuo Adobe per discutere. | `mailchimp-members-category.txt` All&#39;interno del file, specificare la categoria dell&#39;origine, ad esempio: `marketingAutomation`. |
-| {your_source}-description.txt | Breve descrizione dell’origine. | [!DNL Mailchimp Members] è l&#39;origine dell&#39;automazione di marketing che è possibile utilizzare per portare all&#39;Experience Platform [!DNL Mailchimp Members] dati. |
-| {your_source}-icon.svg | Immagine da utilizzare per rappresentare la tua origine nel catalogo delle sorgenti di Experience Platform. Questa icona deve essere un file SVG. |
-| {your_source}-label.txt | Il nome dell’origine così come dovrebbe essere visualizzato nel catalogo delle origini Experienci Platform. | Membri di Mailchimp |
+| {your_source}-category.txt | Categoria a cui appartiene l&#39;origine, formattata come file di testo. L’elenco delle categorie di origini disponibili supportate da Origini self-service (Batch SDK) include: <ul><li>Advertising</li><li>Analytics</li><li>Consenso e preferenze</li><li>CRM</li><li>Customer Success</li><li>Database</li><li>e-Commerce</li><li>Marketing Automation</li><li>Pagamenti</li><li>Protocolli</li></ul> **Nota**: se ritieni che la tua origine non rientri in nessuna delle categorie precedenti, contatta il rappresentante Adobe per discutere. | `mailchimp-members-category.txt` All&#39;interno del file, specificare la categoria dell&#39;origine, ad esempio: `marketingAutomation`. |
+| {your_source}-description.txt | Breve descrizione dell’origine. | [!DNL Mailchimp Members] è l&#39;origine dell&#39;automazione di marketing che puoi utilizzare per portare dati di [!DNL Mailchimp Members] ad Experience Platform. |
+| {your_source}-icon.svg | Immagine da utilizzare per rappresentare l’origine nel catalogo delle origini di Experience Platform. Questa icona deve essere un file SVG. |  |
+| {your_source}-label.txt | Il nome dell’origine che dovrebbe apparire nel catalogo delle origini di Experience Platform. | Membri di Mailchimp |
 | {your_source}-connectionSpec.json | Un file JSON che contiene la specifica di connessione dell’origine. Questo file non è inizialmente necessario in quanto verrà compilata la specifica di connessione durante il completamento di questa guida. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
@@ -51,7 +51,7 @@ Una volta fornito, devi strutturare l’archivio Git privato nel modo seguente:
 >
 >Durante il periodo di test della specifica di connessione, al posto dei valori chiave, è possibile utilizzare `text` nella specifica di connessione.
 
-Dopo aver aggiunto i file necessari all’archivio Git privato, devi creare una richiesta di pull (PR), ad Adobe da rivedere. Quando la PR viene approvata e unita, riceverai un ID che può essere utilizzato per la specifica di connessione per fare riferimento all&#39;etichetta, alla descrizione e all&#39;icona della tua sorgente.
+Dopo aver aggiunto i file necessari all’archivio Git privato, devi creare una richiesta di pull (PR) che Adobe possa rivedere. Quando la PR viene approvata e unita, riceverai un ID che può essere utilizzato per la specifica di connessione per fare riferimento all&#39;etichetta, alla descrizione e all&#39;icona della tua sorgente.
 
 Quindi, segui i passaggi descritti di seguito per configurare le specifiche di connessione. Per ulteriori informazioni sulle diverse funzionalità che è possibile aggiungere all&#39;origine, ad esempio pianificazione avanzata, schema personalizzato o diversi tipi di impaginazione, consultare la guida alla [configurazione delle specifiche dell&#39;origine](../config/sourcespec.md).
 

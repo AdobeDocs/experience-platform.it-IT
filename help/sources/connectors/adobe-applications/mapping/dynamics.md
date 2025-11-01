@@ -2,7 +2,7 @@
 title: Campi mappatura Microsoft Dynamics
 description: Le tabelle seguenti contengono le mappature tra i campi sorgente di Microsoft Dynamics e i corrispondenti campi XDM.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 8%
@@ -222,7 +222,7 @@ Le tabelle seguenti contengono le mappature tra [!DNL Microsoft Dynamics] campi 
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |  |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | Il valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
-| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
+| `iif(entityid != null && entityid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", entityid, "sourceKey", concat(entityid,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |  |
 | `listmemberid` | `marketingListMemberKey.sourceID` |  |
 | `concat(listmemberid,"@${CRM_ORG_ID}.Dynamics")` | `marketingListMemberKey.sourceKey` | Identità primaria. Il valore per `"${CRM_ORG_ID}"` verrà sostituito automaticamente. |
 | `iif(listid != null && listid != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", listid, "sourceKey", concat(listid,"@${CRM_ORG_ID}.Dynamics")), null)` | `marketingListKey` |  |
@@ -265,4 +265,4 @@ In questo scenario, il valore corrisponde alla chiave, se la chiave si trova nel
 >
 >Un&#39;iterazione nidificata dell&#39;operazione precedente sarà simile a: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Per ulteriori informazioni, vedere il documento [&#x200B; sugli operatori logici in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Per ulteriori informazioni, vedere il documento [ sugli operatori logici in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

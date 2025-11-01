@@ -1,13 +1,13 @@
 ---
 title: Creare una build Web SDK personalizzata utilizzando il pacchetto NPM
 description: Creare una build Web SDK personalizzata contenente solo i moduli necessari.
-source-git-commit: 0f77023b07102ac2bc812034afacb1522ef209e5
+exl-id: 0ba5ae55-9ec0-41b6-9675-e76ade8ca4cd
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 6%
 
 ---
-
 
 # Creazione di una build Web SDK personalizzata
 
@@ -40,7 +40,7 @@ Nella tabella seguente viene illustrata la relazione tra i moduli di Web SDK e i
 | Agente di raccolta attività | [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) | N/D | Canale |
 | Tipi di pubblico | N/D | N/D | Piccolo |
 | Contesto | [`context`](../commands/configure/context.md) | N/D | Piccolo |
-| Motore di regole | `personalizationStorageEnabled` | | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Canale |
+| Motore di regole | `personalizationStorageEnabled` | <ul><li>`evaluateRulesets`</li><li>[`subscribeRulesetItems`](../commands/subscriberulesetitems.md)</li></ul> | Canale |
 | Unione eventi | N/D | `createEventMergeId` | Piccolo |
 | Bridge di Media Analytics | N/D | [`getMediaAnalyticsTracker`](../commands/getmediaanalyticstracker.md) | Grande |
 | Personalizzazione | <ul><li>[`prehidingStyle`](../commands/configure/prehidingstyle.md)</li><li>[`targetMigrationEnabled`](../commands/configure/targetmigrationenabled.md)</li><li>[`autoCollectPropositionInteractions`](../commands/configure/autocollectpropositioninteractions.md)</li></ul> | N/D | Grande |
@@ -71,4 +71,3 @@ Nella tabella seguente viene illustrata la relazione tra i moduli di Web SDK e i
 1. Una volta confermata la posizione, la build personalizzata viene generata e salvata.
 
    ![Immagine di un terminale che mostra il percorso salvato della build personalizzata.](../assets/custom-build/saved.png)
-

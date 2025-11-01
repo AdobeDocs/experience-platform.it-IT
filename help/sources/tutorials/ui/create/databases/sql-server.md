@@ -2,9 +2,9 @@
 title: Creare una connessione Source a Microsoft SQL Server nell'interfaccia utente
 description: Scopri come creare una connessione di origine di Microsoft SQL Server utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
@@ -30,39 +30,39 @@ Per connettersi a [!DNL SQL Server] su [!DNL Experience Platform], è necessario
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| Stringa di connessione | Stringa di connessione associata all&#39;account [!DNL Microsoft SQL Server]. Il modello di stringa di connessione dipende dall&#39;utilizzo del nome del server o dell&#39;istanza per l&#39;origine dati:<ul><li>Stringa di connessione che utilizza il nome del server: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Stringa di connessione che utilizza il nome istanza:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
+| Stringa di connessione | Stringa di connessione associata all&#39;account [!DNL Microsoft SQL Server]. Il modello di stringa di connessione dipende dall&#39;utilizzo del nome del server o dell&#39;istanza per l&#39;origine dati:<ul><li>Stringa di connessione che utilizza il nome del server: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Stringa di connessione che utilizza il nome istanza:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` <br> `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` </li></ul> |
 
 Per ulteriori informazioni su come iniziare, consulta [questo [!DNL SQL Server] documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ## Connetti il tuo account [!DNL SQL Server]
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria *Database* selezionare **[!DNL Microsoft SQL Server]**, quindi **[!UICONTROL Configurazione]**.
+Nella categoria *Database* selezionare **[!DNL Microsoft SQL Server]**, quindi **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Le origini nel catalogo origini visualizzano l&#39;opzione **[!UICONTROL Set up]** quando una determinata origine non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Add data]**.
 
 ![Catalogo delle origini con l&#39;origine di Microsoft SQL Server selezionata.](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti a Microsoft SQL Server]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect to Microsoft SQL Server]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 >[!BEGINTABS]
 
 >[!TAB Crea un nuovo account]
 
-Per creare un nuovo account, selezionare **[!UICONTROL Nuovo account]** e fornire un nome, una descrizione facoltativa e le credenziali.
+Per creare un nuovo account, selezionare **[!UICONTROL New account]** e fornire un nome, una descrizione facoltativa e le credenziali.
 
-Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
+Al termine, selezionare **[!UICONTROL Connect to source]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![È stata immessa ed evidenziata la nuova interfaccia account con i dettagli della connessione di origine.](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 >[!TAB Usa un account esistente]
 
-Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account che si desidera utilizzare dal catalogo degli account esistente.
+Per utilizzare un account esistente, selezionare **[!UICONTROL Existing account]**, quindi selezionare l&#39;account che si desidera utilizzare dal catalogo degli account esistente.
 
-Seleziona **[!UICONTROL Avanti]** per procedere.
+Selezionare **[!UICONTROL Next]** per continuare.
 
 ![Interfaccia account esistente che visualizza un elenco degli account esistenti.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 

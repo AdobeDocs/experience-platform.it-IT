@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;source 
 title: Configurare le specifiche di autenticazione per le origini self-service (Batch SDK)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare le origini self-service (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Origini self-service (Batch SDK) supporta i codici di aggiornamento OAuth 2 e l�
 
 Un codice di aggiornamento OAuth 2 consente l’accesso sicuro a un’applicazione generando un token di accesso temporaneo e un token di aggiornamento. Il token di accesso ti consente di accedere in modo sicuro alle risorse senza dover fornire altre credenziali, mentre il token di aggiornamento ti consente di generare un nuovo token di accesso, una volta scaduto il token di accesso.
 
-+++Visualizza un esempio di codice di aggiornamento OAuth 2
++++Visualizza esempio di codice di aggiornamento OAuth 2
 
 ```json
 {
@@ -116,20 +116,20 @@ Un codice di aggiornamento OAuth 2 consente l’accesso sicuro a un’applicazio
 | --- | --- | --- |
 | `authSpec.name` | Visualizza il nome del tipo di autenticazione supportato. | `oAuth2-refresh-code` |
 | `authSpec.type` | Definisce il tipo di autenticazione supportato dall&#39;origine. | `oAuth2-refresh-code` |
-| `authSpec.spec` | Contiene informazioni sullo schema, il tipo di dati e le proprietà dell’autenticazione. |
+| `authSpec.spec` | Contiene informazioni sullo schema, il tipo di dati e le proprietà dell’autenticazione. |  |
 | `authSpec.spec.$schema` | Definisce lo schema utilizzato per l’autenticazione. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definisce il tipo di dati dello schema. | `object` |
-| `authSpec.spec.properties` | Contiene informazioni sulle credenziali utilizzate per l’autenticazione. |
-| `authSpec.spec.properties.description` | Visualizza una breve descrizione delle credenziali. |
+| `authSpec.spec.properties` | Contiene informazioni sulle credenziali utilizzate per l’autenticazione. |  |
+| `authSpec.spec.properties.description` | Visualizza una breve descrizione delle credenziali. |  |
 | `authSpec.spec.properties.type` | Definisce il tipo di dati delle credenziali. | `string` |
-| `authSpec.spec.properties.clientId` | L’ID client associato all’applicazione. L’ID client viene utilizzato insieme al segreto client per recuperare il token di accesso. |
-| `authSpec.spec.properties.clientSecret` | Il segreto client associato all’applicazione. Il segreto client viene utilizzato insieme all’ID client per recuperare il token di accesso. |
-| `authSpec.spec.properties.accessToken` | Il token di accesso autorizza l’accesso sicuro all’applicazione. |
-| `authSpec.spec.properties.refreshToken` | Il token di aggiornamento viene utilizzato per generare un nuovo token di accesso, alla scadenza del token. |
-| `authSpec.spec.properties.expirationDate` | Definisce la data di scadenza del token di accesso. |
-| `authSpec.spec.properties.refreshTokenUrl` | URL utilizzato per recuperare il token di aggiornamento. |
-| `authSpec.spec.properties.accessTokenUrl` | URL utilizzato per recuperare il token di aggiornamento. |
-| `authSpec.spec.properties.requestParameterOverride` | Consente di specificare i parametri delle credenziali da ignorare durante l&#39;autenticazione. |
+| `authSpec.spec.properties.clientId` | L’ID client associato all’applicazione. L’ID client viene utilizzato insieme al segreto client per recuperare il token di accesso. |  |
+| `authSpec.spec.properties.clientSecret` | Il segreto client associato all’applicazione. Il segreto client viene utilizzato insieme all’ID client per recuperare il token di accesso. |  |
+| `authSpec.spec.properties.accessToken` | Il token di accesso autorizza l’accesso sicuro all’applicazione. |  |
+| `authSpec.spec.properties.refreshToken` | Il token di aggiornamento viene utilizzato per generare un nuovo token di accesso, alla scadenza del token. |  |
+| `authSpec.spec.properties.expirationDate` | Definisce la data di scadenza del token di accesso. |  |
+| `authSpec.spec.properties.refreshTokenUrl` | URL utilizzato per recuperare il token di aggiornamento. |  |
+| `authSpec.spec.properties.accessTokenUrl` | URL utilizzato per recuperare il token di aggiornamento. |  |
+| `authSpec.spec.properties.requestParameterOverride` | Consente di specificare i parametri delle credenziali da ignorare durante l&#39;autenticazione. |  |
 | `authSpec.spec.required` | Visualizza le credenziali necessarie per l&#39;autenticazione. | `accessToken` |
 
 {style="table-layout:auto"}
@@ -173,13 +173,13 @@ L’autenticazione di base è un tipo di autenticazione che ti consente di acced
 | --- | --- | --- |
 | `authSpec.name` | Visualizza il nome del tipo di autenticazione supportato. | `Basic Authentication` |
 | `authSpec.type` | Definisce il tipo di autenticazione supportato dall&#39;origine. | `BasicAuthentication` |
-| `authSpec.spec` | Contiene informazioni sullo schema, il tipo di dati e le proprietà dell’autenticazione. |
+| `authSpec.spec` | Contiene informazioni sullo schema, il tipo di dati e le proprietà dell’autenticazione. |  |
 | `authSpec.spec.$schema` | Definisce lo schema utilizzato per l’autenticazione. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definisce il tipo di dati dello schema. | `object` |
-| `authSpec.spec.description` | Visualizza ulteriori informazioni specifiche per il tipo di autenticazione. |
-| `authSpec.spec.properties` | Contiene informazioni sulle credenziali utilizzate per l’autenticazione. |
-| `authSpec.spec.properties.username` | Il nome utente dell’account associato all’applicazione. |
-| `authSpec.spec.properties.password` | La password dell&#39;account associata all&#39;applicazione. |
+| `authSpec.spec.description` | Visualizza ulteriori informazioni specifiche per il tipo di autenticazione. |  |
+| `authSpec.spec.properties` | Contiene informazioni sulle credenziali utilizzate per l’autenticazione. |  |
+| `authSpec.spec.properties.username` | Il nome utente dell’account associato all’applicazione. |  |
+| `authSpec.spec.properties.password` | La password dell&#39;account associata all&#39;applicazione. |  |
 | `authSpec.spec.required` | Specifica i campi obbligatori come valori obbligatori da immettere in Experience Platform. | `username` |
 
 {style="table-layout:auto"}
@@ -201,7 +201,7 @@ I seguenti parametri sono generalmente necessari quando si utilizza l’autentic
 
 {style="table-layout:auto"}
 
-+++Autenticazione chiave API View
++++Visualizza autenticazione chiave API
 
 ```json
 {

@@ -2,7 +2,7 @@
 title: Messaggi di errore origini
 description: Scopri i messaggi di errore che possono verificarsi quando utilizzi il servizio Flusso per le origini.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 48%
@@ -24,8 +24,8 @@ Questo documento fornisce un catalogo di messaggi di errore, descrizioni e risol
 | `1004-415` | Tipo di file multimediale non supportato | Il formato di payload fornito non è supportato. Controlla la richiesta fornita e riprova. |
 | `1005-500` | Errore interno | Si è verificato un errore interno. Riprova più tardi e contatta l’assistenza clienti se il problema persiste. |
 | `1006-408` | Timeout della richiesta | Si è verificato un errore durante l’elaborazione della richiesta. Timeout della richiesta. Riprova e contatta l&#39;assistenza clienti se il problema persiste. |
-| `1007-400` | Parametro di intestazione non valido | Parametro di intestazione non valido: {headerName} ricevuto. Controlla i parametri di intestazione e riprova. |
-| `1008-401` | | Token di autorizzazione non valido | Il token di autorizzazione non ha accesso a questa organizzazione oppure l’organizzazione non esiste. Verifica che l’organizzazione esista o contatta l’amministratore per ottenere l’accesso. |
+| `1007-400` | Parametro di intestazione non valido | Parametro di intestazione non valido: `{headerName}` ricevuto. Controlla i parametri di intestazione e riprova. |
+| `1008-401` | Token di autorizzazione non valido | Il token di autorizzazione non ha accesso a questa organizzazione oppure l’organizzazione non esiste. Verifica che l’organizzazione esista o contatta l’amministratore per ottenere l’accesso. |
 | `1009-403` | ID organizzazione IMS mancante o vuoto | L’intestazione della richiesta ID organizzazione è mancante o vuota. Aggiorna il valore dell’intestazione e riprova. |
 | `1010-500` | Messaggio dettagliato non valido | Il parametro nel messaggio dettagliato non è stato fornito correttamente. Verifica il parametro nel messaggio dettagliato e riprova. |
 | `1011-503` | Servizio non disponibile | Il servizio non è al momento disponibile. Riprova. Se il problema persiste contatta l’assistenza clienti. |
@@ -44,7 +44,7 @@ Questo documento fornisce un catalogo di messaggi di errore, descrizioni e risol
 | `1104-504` | Timeout del gateway | Timeout del gateway. Riprova e contatta l’assistenza clienti se il problema persiste. |
 | `1105-401` | Non autorizzato | Utente non autorizzato. {detailedMessage} |
 | `1106-403` | Non consentito | Operazione richiesta non consentita. {detailedMessage} |
-| `1107-412` | Precondizione non riuscita | La condizione definita dalle intestazioni If-Unmodified-Since o If-None-Match non è soddisfatta. {detailedMessage} |
+| `1107-412` | Precondizione non riuscita | La condizione definita dalle intestazioni If-Unmodified-Since o If-None-Match non è soddisfatta. `{detailedMessage}` |
 
 ## Errori di crittografia
 
@@ -114,7 +114,7 @@ Questo documento fornisce un catalogo di messaggi di errore, descrizioni e risol
 | `1350-400` | Richiesta non valida | Non è stato fornito alcun operatore per il filtro all’origine. Fornisci una richiesta di filtro valida con l’operatore appropriato e riprova. |
 | `1351-400` | Richiesta non valida | L&#39;operatore {operator} specificato non è supportato per il filtro all&#39;origine per questo connettore. Specifica un operatore valido e riprova. |
 | `1352-400` | Richiesta non valida | L&#39;operatore {operator} specificato non può essere mappato ad alcun operatore nativo supportato per {ql}. Specifica un operatore valido e riprova. |
-| `1353-400` | Richiesta non valida | Il filtro all&#39;origine non è ancora supportato per il connettore {connectorType}. Controlla i connettori supportati nella documentazione: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=it. |
+| `1353-400` | Richiesta non valida | Il filtro all&#39;origine non è ancora supportato per il connettore {connectorType}. Controlla i connettori supportati nella documentazione: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Richiesta non valida | Il linguaggio di query {ql} non è ancora supportato per il filtro all&#39;origine. Specifica una lingua di query valida e riprova. |
 | `1355-400` | Richiesta non valida | Il tipo di filtro fornito non è valido. Il tipo di filtro supportato è: PQL. Fornisci un tipo di filtro valido e riprova. |
 | `1356-400` | Richiesta non valida | Il formato di filtro specificato non è valido. Il formato di filtro supportato è: pql/json. Fornisci un formato di filtro valido e riprova. |

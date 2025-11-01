@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Cloud Connector
 description: Scopri l’estensione di inoltro degli eventi Cloud Connector in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 79%
+source-wordcount: '1681'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,7 @@ Questa sezione descrive il tipo di azione Invia dati disponibile nell’estensio
 
 ### Tipo di richiesta
 
-Per selezionare il tipo di richiesta necessario per l’endpoint, seleziona il tipo appropriato nel menu a discesa [!UICONTROL Tipo di richiesta].
+Per selezionare il tipo di richiesta necessario per l’endpoint, seleziona il tipo appropriato nel menu a discesa [!UICONTROL Request Type].
 
 | Metodo | Descrizione |
 |---|---|
@@ -45,15 +45,15 @@ Utilizza ciascuna di queste schede (Parametri query, Intestazioni ed Elementi da
 
 #### Parametri query
 
-Definisci una chiave e un valore per ogni coppia chiave-valore che si desidera inviare come parametro di stringa di query. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato “siteSection” come chiave o valore, immetti `{{siteSection}}`. In alternativa, seleziona l’elemento di dati creato in precedenza scegliendolo nel menu a discesa.
+Definisci una chiave e un valore per ogni coppia chiave-valore che si desidera inviare come parametro di stringa di query. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato &quot;siteSection&quot; come chiave o valore, immettere `{{siteSection}}`. In alternativa, seleziona l’elemento di dati creato in precedenza scegliendolo nel menu a discesa.
 
-Per aggiungere altri parametri di query, seleziona **[!UICONTROL Aggiungi altro]**.
+Per aggiungere altri parametri di query, seleziona **[!UICONTROL Add Another]**.
 
 #### Intestazioni
 
-Definisci una chiave e un valore per ogni coppia chiave-valore da inviare come intestazione. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato “pageName” come chiave o valore, immetti `{{pageName}}`. In alternativa, seleziona l’elemento dati creato in precedenza scegliendolo nel menu a discesa.
+Definisci una chiave e un valore per ogni coppia chiave-valore da inviare come intestazione. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato &quot;pageName&quot; come chiave o valore, immettere `{{pageName}}`. In alternativa, seleziona l’elemento dati creato in precedenza scegliendolo nel menu a discesa.
 
-Per aggiungere altre intestazioni, seleziona **[!UICONTROL Aggiungi altro]**.
+Per aggiungere altre intestazioni, seleziona **[!UICONTROL Add Another]**.
 
 Nella tabella seguente sono elencate le intestazioni predefinite. Non sei limitato a utilizzare solo queste intestazioni: queste sono disponibili per praticità e, se necessario, puoi aggiungere altre intestazioni personalizzate.
 
@@ -90,12 +90,12 @@ Nella tabella seguente sono elencate le intestazioni predefinite. Non sei limita
 | [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) | |
-| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Intestazione specifica per l’implementazione, che può avere vari effetti ovunque lungo la catena di richieste e risposte. Utilizzato per compatibilità con le versioni precedenti delle cache HTTP/1.0 in cui l’intestazione Cache-Control non è ancora presente. | |
-| [Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte di un documento che il server deve restituire. | |
-| [Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | Indirizzo della pagina web precedente dalla quale un collegamento ha portato alla pagina richiesta. | |
+| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Intestazione specifica per l’implementazione, che può avere vari effetti ovunque lungo la catena di richieste e risposte. Utilizzato per compatibilità con le versioni precedenti delle cache HTTP/1.0 in cui l’intestazione Cache-Control non è ancora presente. |
+| [Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |  |
+| [Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte di un documento che il server deve restituire. |
+| [Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | Indirizzo della pagina web precedente dalla quale un collegamento ha portato alla pagina richiesta. |
 | TE | Specifica le codifiche di trasferimento che l’agente utente è disposto ad accettare, anche chiamato `Accept-Transfer-Encoding` in modo in modo più informale e intuitivo. |
-| Esegui l&#39;aggiornamento | Il documento RFC pertinente per il campo dell&#39;intestazione [`Upgrade` è RFC 7230, sezione 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Lo standard stabilisce regole per l&#39;aggiornamento o la modifica a un protocollo diverso sulla connessione corrente client, server e protocollo di trasporto. Ad esempio, questo standard di intestazione consente a un client di passare da HTTP 1.1 a HTTP 2.0, sempre che il server decida di riconoscere e implementare il campo dell&#39;intestazione `Upgrade`. Nessuna delle parti è tenuta ad accettare i termini specificati nel campo dell&#39;intestazione `Upgrade`. Può essere utilizzato nelle intestazioni client e server. Se il campo dell&#39;intestazione `Upgrade` è specificato, il mittente DEVE anche inviare il campo dell&#39;intestazione `Connection` con l&#39;opzione `upgrade` specificata. | |
+| Esegui l&#39;aggiornamento | Il documento RFC pertinente per il campo dell&#39;intestazione [`Upgrade` è RFC 7230, sezione 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Lo standard stabilisce regole per l&#39;aggiornamento o la modifica a un protocollo diverso sulla connessione corrente client, server e protocollo di trasporto. Ad esempio, questo standard di intestazione consente a un client di passare da HTTP 1.1 a HTTP 2.0, sempre che il server decida di riconoscere e implementare il campo dell&#39;intestazione `Upgrade`. Nessuna delle parti è tenuta ad accettare i termini specificati nel campo dell&#39;intestazione `Upgrade`. Può essere utilizzato nelle intestazioni client e server. Se il campo dell&#39;intestazione `Upgrade` è specificato, il mittente DEVE anche inviare il campo dell&#39;intestazione `Connection` con l&#39;opzione `upgrade` specificata. |
 | [Utente-agente](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Contiene una stringa caratteristica che consente ai peer del protocollo di rete di identificare il tipo di applicazione, il sistema operativo, il fornitore di software o la versione del software dell&#39;agente utente del software richiedente. |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Vengono aggiunti dai proxy, sia forward che reverse proxy, e possono essere visualizzati nelle intestazioni delle richieste e delle risposte. |
 | [Avvertenza](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Informazioni generali di avviso sui possibili problemi. |
@@ -104,19 +104,19 @@ Nella tabella seguente sono elencate le intestazioni predefinite. Non sei limita
 
 #### Body come JSON
 
-Definire una chiave e un valore per ogni coppia chiave-valore da inviare nel corpo della richiesta. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato &quot;appSection&quot; come chiave o valore, immetti `{{appSection}}`. In alternativa, seleziona l’elemento di dati creato in precedenza scegliendolo nel menu a discesa.
+Definire una chiave e un valore per ogni coppia chiave-valore da inviare nel corpo della richiesta. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato &quot;appSection&quot; come chiave o valore, immettere `{{appSection}}`. In alternativa, seleziona l’elemento di dati creato in precedenza scegliendolo nel menu a discesa.
 
-Per aggiungere altre coppie chiave-valore, seleziona **[!UICONTROL Aggiungi altro]**.
+Per aggiungere altre coppie chiave-valore, seleziona **[!UICONTROL Add Another]**.
 
 #### Body come Raw
 
-Definire una chiave e un valore per ogni coppia chiave-valore da inviare nel corpo della richiesta. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato &quot;appSection&quot; come chiave o valore, immetti `{{appSection}}`. In alternativa, seleziona l&#39;elemento dati creato in precedenza scegliendolo nel menu a discesa. Puoi aggiungere uno o più elementi di dati.
+Definire una chiave e un valore per ogni coppia chiave-valore da inviare nel corpo della richiesta. Per immettere manualmente un elemento dati, utilizza la tokenizzazione dell’elemento dati con parentesi graffa per l’inoltro di eventi. Per fare riferimento al valore di un elemento dati denominato &quot;appSection&quot; come chiave o valore, immettere `{{appSection}}`. In alternativa, seleziona l&#39;elemento dati creato in precedenza scegliendolo nel menu a discesa. Puoi aggiungere uno o più elementi di dati.
 
 ### Avanzate
 
-Le azioni all’interno delle regole nell&#39;inoltro degli eventi vengono eseguite in sequenza. Potrebbero verificarsi situazioni in cui vuoi recuperare dati da una sorgente esterna che non è presente nell&#39;evento in arrivo dal client, quindi rispondere e trasformare o inviare tali dati a una destinazione finale in un&#39;azione successiva all&#39;interno di una singola regola. Questa operazione è possibile tramite l’opzione &quot;Salva la risposta della richiesta&quot; nella sezione avanzata.
+Le azioni all’interno delle regole nell&#39;inoltro degli eventi vengono eseguite in sequenza. Potrebbero verificarsi situazioni in cui vuoi recuperare dati da una sorgente esterna che non è presente nell&#39;evento in arrivo dal client, quindi rispondere e trasformare o inviare tali dati a una destinazione finale in un&#39;azione successiva all&#39;interno di una singola regola. Ciò è possibile tramite l’opzione &quot;Salva la risposta della richiesta&quot; nella sezione avanzata.
 
-Per salvare il corpo della risposta da un endpoint, seleziona la casella **[!UICONTROL Salva la risposta della richiesta]** e definisci una chiave di risposta nel campo di testo.
+Per salvare il corpo della risposta da un endpoint, seleziona la casella **[!UICONTROL Save the request response]** e definisci una chiave di risposta nel campo di testo.
 
 Se la chiave di risposta è definita come `productDetails`, fai riferimento a tali dati in un elemento dati e poi a tale elemento in un&#39;azione successiva all&#39;interno della stessa regola. Per creare un elemento dati che fa riferimento a `productDetail`, crea un elemento dati di tipo `path` e immetti il percorso seguente:
 
@@ -134,7 +134,7 @@ Il certificato [!DNL mTLS] è una credenziale digitale che prova l&#39;identità
 
 Per installare l&#39;estensione, [crea una proprietà di inoltro eventi](../../../ui/event-forwarding/overview.md#properties) o seleziona una proprietà esistente da modificare.
 
-Seleziona **[!UICONTROL Estensioni]** nel pannello a sinistra. Nella scheda **[!UICONTROL Catalogo]**, seleziona la scheda **[!UICONTROL Adobe Cloud Connector]**, quindi seleziona **[!UICONTROL Installa]**.
+Seleziona **[!UICONTROL Extensions]** nel pannello a sinistra. Nella scheda **[!UICONTROL Catalog]**, seleziona la scheda **[!UICONTROL Adobe Cloud Connector]**, quindi seleziona **[!UICONTROL Install]**.
 
 ![Il catalogo delle estensioni mostra la scheda delle estensioni [!DNL Adobe Cloud Connector] che evidenzia l&#39;installazione.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -146,15 +146,15 @@ Seleziona **[!UICONTROL Estensioni]** nel pannello a sinistra. Nella scheda **[!
 
 Dopo aver installato l&#39;estensione, puoi creare una regola di Inoltro eventi che utilizza [!DNL mTLS] e aggiungerla alla libreria.
 
-Crea una nuova [regola](../../../ui/managing-resources/rules.md) di inoltro eventi nella proprietà di inoltro eventi. Specifica un nome per la regola, quindi in **[!UICONTROL Azioni]** aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Adobe Cloud Connector]**. Quindi, selezionare **[!UICONTROL Esegui chiamata di recupero]** per il **[!UICONTROL tipo azione]**.
+Crea una nuova [regola](../../../ui/managing-resources/rules.md) di inoltro eventi nella proprietà di inoltro eventi. Specifica un nome per la regola, quindi in **[!UICONTROL Actions]** aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Adobe Cloud Connector]**. Selezionare **[!UICONTROL Make Fetch Call]** per **[!UICONTROL Action Type]**.
 
 ![Visualizzazione delle regole di proprietà di inoltro eventi, con i campi necessari per aggiungere una configurazione dell&#39;azione della regola di inoltro eventi evidenziati.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Dopo aver effettuato la selezione, verranno visualizzati controlli aggiuntivi per configurare il metodo e la destinazione per la richiesta [!DNL mTLS]. Per abilitare l&#39;utilizzo dei certificati attivi negli ambienti, selezionare **[!UICONTROL Attiva in[!DNL mTLS]]**, quindi selezionare **[!UICONTROL Mantieni modifiche]** per salvare la regola.
+Dopo aver effettuato la selezione, verranno visualizzati controlli aggiuntivi per configurare il metodo e la destinazione per la richiesta [!DNL mTLS]. Per abilitare l&#39;utilizzo dei certificati attivi negli ambienti, selezionare **[!UICONTROL Enable in [!DNL mTLS]]**, quindi selezionare **[!UICONTROL Keep Changes]** per salvare la regola.
 
 ![Visualizzazione delle regole di proprietà di inoltro eventi, con i campi di controllo aggiuntivi e mantieni le modifiche evidenziate.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
-La nuova regola è ora pronta. Seleziona **[!UICONTROL Salva nella libreria]**, quindi seleziona **[!UICONTROL Genera]** per distribuirla. La richiesta [!DNL mTLS] è ora attiva e disponibile nella libreria.
+La nuova regola è ora pronta. Seleziona **[!UICONTROL Save to Library]**, quindi seleziona **[!UICONTROL Build]** per distribuirlo. La richiesta [!DNL mTLS] è ora attiva e disponibile nella libreria.
 
 ![Regola di inoltro eventi con salvataggio nella libreria e compilazione evidenziate.](../../../images/extensions/server/cloud-connector/save-build.png)
 

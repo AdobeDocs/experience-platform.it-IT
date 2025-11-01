@@ -3,9 +3,9 @@ title: Creare una nuova specifica di connessione per Streaming SDK utilizzando l
 description: Il documento seguente descrive come creare una specifica di connessione utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->L’SDK di streaming per origini self-service è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
+>Origini self-service Streaming SDK è in versione beta. Per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta, leggere la [panoramica delle origini](../../home.md#terms-and-conditions).
 
 Una specifica di connessione rappresenta la struttura di un&#39;origine. Contiene informazioni sui requisiti di autenticazione di una sorgente, definisce come i dati sorgente possono essere esplorati e ispezionati e fornisce informazioni sugli attributi di una determinata sorgente. L&#39;endpoint `/connectionSpecs` nell&#39;API [!DNL Flow Service] consente di gestire in modo programmatico le specifiche di connessione all&#39;interno dell&#39;organizzazione.
 
@@ -26,7 +26,7 @@ Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per 
 
 ## Raccogli artefatti
 
-Per creare una nuova origine di streaming con Origini self-service, devi prima coordinarti con Adobe, richiedere un archivio Git privato e allinearti con Adobe sui dettagli relativi all’etichetta, alla descrizione, alla categoria e all’icona per la tua origine.
+Per creare una nuova origine di streaming con Origini self-service, devi prima coordinarti con Adobe, richiedere un archivio Git privato e allinearti con Adobe per i dettagli relativi all’etichetta, alla descrizione, alla categoria e all’icona per la tua origine.
 
 Una volta fornito, devi strutturare l’archivio Git privato nel modo seguente:
 
@@ -42,10 +42,10 @@ Una volta fornito, devi strutturare l’archivio Git privato nel modo seguente:
 | Artefatti (nomi file) | Descrizione | Esempio |
 | --- | --- | --- |
 | {your_source} | Nome della sorgente. Questa cartella deve contenere tutti gli artefatti relativi alla tua origine, all’interno dell’archivio Git privato. | `medallia` |
-| {your_source}-category.txt | Categoria a cui appartiene l&#39;origine, formattata come file di testo. **Nota**: se ritieni che la tua origine non rientri in nessuna delle categorie precedenti, contatta il rappresentante del tuo Adobe per discutere. | `medallia-category.txt` All&#39;interno del file, specificare la categoria dell&#39;origine, ad esempio: `streaming`. |
-| {your_source}-description.txt | Breve descrizione dell’origine. | [!DNL Medallia] è l&#39;origine dell&#39;automazione di marketing che è possibile utilizzare per portare all&#39;Experience Platform [!DNL Medallia] dati. |
-| {your_source}-icon.svg | Immagine da utilizzare per rappresentare la tua origine nel catalogo delle sorgenti di Experience Platform. Questa icona deve essere un file SVG. |
-| {your_source}-label.txt | Il nome dell’origine così come dovrebbe essere visualizzato nel catalogo delle origini Experienci Platform. | Medallia |
+| {your_source}-category.txt | Categoria a cui appartiene l&#39;origine, formattata come file di testo. **Nota**: se ritieni che la tua origine non rientri in nessuna delle categorie precedenti, contatta il rappresentante Adobe per discutere. | `medallia-category.txt` All&#39;interno del file, specificare la categoria dell&#39;origine, ad esempio: `streaming`. |
+| {your_source}-description.txt | Breve descrizione dell’origine. | [!DNL Medallia] è l&#39;origine dell&#39;automazione di marketing che puoi utilizzare per portare dati di [!DNL Medallia] ad Experience Platform. |
+| {your_source}-icon.svg | Immagine da utilizzare per rappresentare l’origine nel catalogo delle origini di Experience Platform. Questa icona deve essere un file SVG. |  |
+| {your_source}-label.txt | Il nome dell’origine che dovrebbe apparire nel catalogo delle origini di Experience Platform. | Medallia |
 | {your_source}-connectionSpec.json | Un file JSON che contiene la specifica di connessione dell’origine. Questo file non è inizialmente necessario in quanto verrà compilata la specifica di connessione durante il completamento di questa guida. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
@@ -54,7 +54,7 @@ Una volta fornito, devi strutturare l’archivio Git privato nel modo seguente:
 >
 >Durante il periodo di test della specifica di connessione, al posto dei valori chiave, è possibile utilizzare `text` nella specifica di connessione.
 
-Dopo aver aggiunto i file necessari all’archivio Git privato, devi creare una richiesta di pull (PR), ad Adobe da rivedere. Quando la PR viene approvata e unita, riceverai un ID che può essere utilizzato per la specifica di connessione per fare riferimento all&#39;etichetta, alla descrizione e all&#39;icona della tua sorgente.
+Dopo aver aggiunto i file necessari all’archivio Git privato, devi creare una richiesta di pull (PR) che Adobe possa rivedere. Quando la PR viene approvata e unita, riceverai un ID che può essere utilizzato per la specifica di connessione per fare riferimento all&#39;etichetta, alla descrizione e all&#39;icona della tua sorgente.
 
 Quindi, segui i passaggi descritti di seguito per configurare le specifiche di connessione. Per ulteriori informazioni sulle diverse funzionalità che è possibile aggiungere all&#39;origine, ad esempio pianificazione avanzata, schema personalizzato o diversi tipi di impaginazione, consultare la guida alla [configurazione delle specifiche dell&#39;origine](../config/sourcespec.md).
 
@@ -72,7 +72,7 @@ Dopo aver raccolto gli artefatti richiesti, copiare e incollare il modello di sp
   "attributes": {
     "category": "Streaming",
     "isSource": true,
-    "documentationLink": "https://docs.adobe.com/content/help/it-IT/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+    "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
     "uiAttributes": {
       "apiFeatures": {
         "updateSupported": false
@@ -172,7 +172,7 @@ curl -X POST \
       "attributes": {
           "category": "Streaming",
           "isSource": true,
-          "documentationLink": "https://docs.adobe.com/content/help/it-IT/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+          "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
           "uiAttributes": {
             "apiFeatures": {
               "updateSupported": false
@@ -287,7 +287,7 @@ In caso di esito positivo, la risposta restituisce la specifica di connessione a
       "attributes": {
         "category": "Streaming",
         "isSource": true,
-        "documentationLink": "https://docs.adobe.com/content/help/it-IT/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
+        "documentationLink": "https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/understanding-streaming-ingestion.html",
         "uiAttributes": {
           "apiFeatures": {
             "updateSupported": false
