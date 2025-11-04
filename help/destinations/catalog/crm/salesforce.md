@@ -3,9 +3,9 @@ keywords: crm;CRM;crm destinazioni;salesforce crm;salesforce crm destinazione
 title: Connessione Salesforce CRM
 description: La destinazione di Salesforce CRM ti consente di esportare i dati del tuo account e di attivarli in Salesforce CRM per le tue esigenze aziendali.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 27f2b28d924fbd85eefbea5a65d1ee9249bafa87
 workflow-type: tm+mt
-source-wordcount: '2736'
+source-wordcount: '2734'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai t
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione di Salesforce CRM, è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione di Salesforce CRM, è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti in [!DNL Salesforce CRM] {#prerequisites-destination}
 
@@ -62,7 +62,7 @@ Inoltre, assicurati che [ambiti](https://help.salesforce.com/s/articleView?id=co
 * ``refresh_token``
 * ``offline_access``
 
-Infine, assicurati che la sovvenzione `password` sia abilitata nel tuo account [!DNL Salesforce]. Per informazioni sugli scenari speciali[!DNL Salesforce], consulta la documentazione [&#x200B; &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5)Flusso nome utente-password OAuth 2.0.
+Infine, assicurati che la sovvenzione `password` sia abilitata nel tuo account [!DNL Salesforce]. Per informazioni sugli scenari speciali[!DNL Salesforce], consulta la documentazione [ ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5)Flusso nome utente-password OAuth 2.0.
 
 >[!IMPORTANT]
 >
@@ -79,7 +79,7 @@ Per ogni pubblico che si attiva da Experience Platform a [!DNL Salesforce CRM], 
 >[!IMPORTANT]
 >
 >Non includere spazi nel nome del campo. Utilizzare invece il carattere di sottolineatura `(_)` come separatore.
->&#x200B;>In [!DNL Salesforce] è necessario creare campi personalizzati con un **[!UICONTROL Field Name]** che corrisponda esattamente al valore specificato in **[!UICONTROL Mapping ID]** per ogni segmento Experience Platform attivato. Ad esempio, la schermata seguente mostra un campo personalizzato denominato `crm_2_seg`. Quando si attiva un pubblico in questa destinazione, aggiungere `crm_2_seg` come **[!UICONTROL Mapping ID]** per popolare i tipi di pubblico da Experience Platform in questo campo personalizzato.
+>In [!DNL Salesforce] è necessario creare campi personalizzati con un **[!UICONTROL Field Name]** che corrisponda esattamente al valore specificato in **[!UICONTROL Mapping ID]** per ogni segmento Experience Platform attivato. Ad esempio, la schermata seguente mostra un campo personalizzato denominato `crm_2_seg`. Quando si attiva un pubblico in questa destinazione, aggiungere `crm_2_seg` come **[!UICONTROL Mapping ID]** per popolare i tipi di pubblico da Experience Platform in questo campo personalizzato.
 
 Di seguito è riportato un esempio di creazione di campi personalizzati in [!DNL Salesforce], *Passaggio 1 - Seleziona il tipo di dati*:
 ![Schermata dell&#39;interfaccia utente di Salesforce che mostra la creazione di campi personalizzati, passaggio 1 - Selezionare il tipo di dati.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -107,9 +107,9 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 | `Username` | Nome utente dell&#39;account [!DNL Salesforce]. | |
 | `Password` | Password dell&#39;account [!DNL Salesforce]. | |
 | `Security Token` | Il token di sicurezza [!DNL Salesforce] che verrà in seguito aggiunto alla fine della password [!DNL Salesforce] per creare una stringa concatenata da utilizzare come **[!UICONTROL Password]** durante l&#39;autenticazione [alla destinazione](#authenticate).<br> Consulta la documentazione di [!DNL Salesforce] per [reimpostare il token di sicurezza](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) per scoprire come rigenerarlo dall&#39;interfaccia di [!DNL Salesforce] se non disponi del token di sicurezza. |  |
-| `Custom Domain` | Il prefisso del dominio [!DNL Salesforce]. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la &#x200B;](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5)documentazione[!DNL Salesforce]. | Se il dominio [!DNL Salesforce] è <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> come valore sarà necessario `d5i000000isb4eak-dev-ed`. |
-| `Client ID` | Salesforce `Consumer Key`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
-| `Client Secret` | Salesforce `Consumer Secret`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
+| `Custom Domain` | Il prefisso del dominio [!DNL Salesforce]. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la ](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5)documentazione[!DNL Salesforce]. | Se il dominio [!DNL Salesforce] è <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> come valore sarà necessario `d5i000000isb4eak-dev-ed`. |
+| `Client ID` | Salesforce `Consumer Key`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la ](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
+| `Client Secret` | Salesforce `Consumer Secret`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la ](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
 
 ### Guardrail {#guardrails}
 
@@ -285,7 +285,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio creato all’interno del segmento.
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra il segmento.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Infine, accedi al sito web Salesforce e verifica se i profili del pubblico sono stati aggiunti o aggiornati.
+1. Infine, accedi al sito web Salesforce e verifica se i profili del pubblico sono stati aggiornati.
 
    **Utilizzo dei contatti**
 
