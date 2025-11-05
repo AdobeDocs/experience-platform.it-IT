@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Experience Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
+source-git-commit: aa56c6bec3544c922521cc611036fd2989feb8b3
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1999'
 ht-degree: 3%
 
 ---
 
 # Panoramica di [!DNL Segment Match]
+
+>[!IMPORTANT]
+>
+>Adobe ha introdotto [!DNL Segment Match] nel 2021 per consentire ai clienti di collaborare e scambiare tipi di pubblico. All&#39;inizio del 2025, Adobe ha introdotto [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), che è l&#39;approccio a lungo termine per soddisfare questo caso d&#39;uso.
+>
+>* Per i clienti di Stati Uniti, Canada, Australia e Nuova Zelanda: Adobe consiglia ai clienti di Real-Time CDP Prime e Ultimate di trasferire i casi di utilizzo della collaborazione sui dati da [!DNL Segment Match] a Real-Time CDP Collaboration. Visualizza la [documentazione](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) e la [guida rapida](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) per Real-Time CDP Collaboration e contatta il team del tuo account Adobe per ulteriori informazioni.
+>* Per i clienti in tutte le altre aree geografiche: [!DNL Segment Match] è l&#39;opzione consigliata fino al rilascio di Real-Time CDP Collaboration in tali aree geografiche nel 2026.
 
 Adobe Experience Platform Segment Match è un servizio di condivisione dei segmenti che consente a due o più utenti di Experience Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy. [!DNL Segment Match] utilizza gli standard sulla privacy di Experience Platform e gli identificatori personali, ad esempio e-mail con hash, numeri di telefono con hash e identificatori di dispositivo come IDFA e GAID.
 
@@ -44,8 +51,8 @@ L’elenco degli spazi dei nomi supportati è il seguente:
 
 | Namespace | Descrizione |
 | --------- | ----------- |
-| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Experience Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=it#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
-| Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati che devono essere sottoposti a hashing utilizzando sia il formato SHA256 che il formato E.164. |
+| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Experience Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
+| Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati a cui deve essere applicato l’hashing utilizzando sia il formato SHA256 che il formato E.164. |
 | ECID | Uno spazio dei nomi che rappresenta un valore Experience Cloud ID (ECID). A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, vedere [Panoramica ECID](../../../identity-service/features/ecid.md). |
 | Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
 | ID Google Ad | Uno spazio dei nomi che rappresenta un ID di Google Advertising. Per ulteriori informazioni, consulta il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
@@ -66,7 +73,7 @@ L’ultimo prerequisito da stabilire è configurare una nuova etichetta di utili
 
 Le etichette di utilizzo dei dati consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Experience Platform o non appena i dati diventano disponibili per l’utilizzo in Experience Platform.
 
-[!DNL Segment Match] utilizza l&#39;etichetta C11, un&#39;etichetta di contratto specifica di [!DNL Segment Match] che puoi aggiungere manualmente a qualsiasi set di dati o attributo per assicurarti che sia escluso dal processo di condivisione partner [!DNL Segment Match]. L&#39;etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato i set di dati e/o i campi da escludere da [!DNL Segment Match] e aggiunto di conseguenza l&#39;etichetta C11, l&#39;etichetta viene automaticamente applicata dal flusso di lavoro [!DNL Segment Match]. [!DNL Segment Match] abilita automaticamente i criteri di base [!UICONTROL Limita condivisione dati]. Per istruzioni specifiche su come applicare le etichette di utilizzo dei dati ai set di dati, consulta l&#39;esercitazione su [gestione delle etichette di utilizzo dei dati nell&#39;interfaccia utente](../../../data-governance/labels/user-guide.md).
+[!DNL Segment Match] utilizza l&#39;etichetta C11, un&#39;etichetta di contratto specifica di [!DNL Segment Match] che puoi aggiungere manualmente a qualsiasi set di dati o attributo per assicurarti che sia escluso dal processo di condivisione partner [!DNL Segment Match]. L&#39;etichetta C11 indica i dati che non devono essere utilizzati nei processi [!DNL Segment Match]. Dopo aver determinato i set di dati e/o i campi da escludere da [!DNL Segment Match] e aggiunto di conseguenza l&#39;etichetta C11, l&#39;etichetta viene automaticamente applicata dal flusso di lavoro [!DNL Segment Match]. [!DNL Segment Match] abilita automaticamente i criteri di base [!UICONTROL Restrict data sharing]. Per istruzioni specifiche su come applicare le etichette di utilizzo dei dati ai set di dati, consulta l&#39;esercitazione su [gestione delle etichette di utilizzo dei dati nell&#39;interfaccia utente](../../../data-governance/labels/user-guide.md).
 
 Per un elenco delle etichette di utilizzo dati e delle relative definizioni, vedere il glossario [etichette di utilizzo dati](../../../data-governance/labels/reference.md). Per informazioni sui criteri di utilizzo dei dati, vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
@@ -87,11 +94,11 @@ Dopo aver configurato i dati di identità e gli spazi dei nomi, la configurazion
 
 ### Gestisci partner
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Segmenti]** dalla barra di navigazione a sinistra, quindi seleziona **[!UICONTROL Feed]** dall&#39;intestazione superiore.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Segments]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Feeds]** dall&#39;intestazione superiore.
 
 ![segments-feed.png](./images/segments-feed.png)
 
-La pagina [!UICONTROL Feed] contiene un elenco dei feed ricevuti dai partner e dei feed condivisi. Per visualizzare un elenco di partner esistenti o stabilire una connessione con un nuovo partner, selezionare **[!UICONTROL Gestisci partner]**.
+La pagina [!UICONTROL Feeds] contiene un elenco dei feed ricevuti dai partner e dei feed condivisi. Per visualizzare un elenco di partner esistenti o stabilire una connessione con un nuovo partner, selezionare **[!UICONTROL Manage partners]**.
 
 ![manage-partners.png](./images/manage-partners.png)
 
@@ -101,15 +108,15 @@ Una connessione tra due partner è un &quot;handshake bidirezionale&quot; che fu
 >
 >La &quot;stretta di mano bidirezionale&quot; tra te e il tuo partner è strettamente una connessione. Durante questo processo non vengono scambiati dati.
 
-Puoi visualizzare un elenco delle connessioni con i partner esistenti nell&#39;interfaccia principale della schermata [!UICONTROL Gestisci partner]. Nella barra a destra si trova il pannello [!UICONTROL Condividi impostazione], che consente di generare un nuovo [!UICONTROL ID connessione] e una casella di input in cui è possibile immettere il [!UICONTROL ID connessione] di un partner.
+È possibile visualizzare un elenco delle connessioni con i partner esistenti nell&#39;interfaccia principale della schermata [!UICONTROL Manage partners]. Nella barra a destra si trova il pannello [!UICONTROL Share setting], che offre l&#39;opzione di generare un nuovo [!UICONTROL connect ID] e una casella di input in cui è possibile immettere il [!UICONTROL connect ID] di un partner.
 
 ![stabilire-connessione.png](./images/establish-connection.png)
 
-Per creare un nuovo [!UICONTROL ID connessione], seleziona **[!UICONTROL Rigenera]** in [!UICONTROL Impostazione condivisione], quindi seleziona l&#39;icona Copia accanto all&#39;ID appena generato.
+Per creare un nuovo [!UICONTROL connect ID], selezionare **[!UICONTROL Regenerate]** in [!UICONTROL Share setting], quindi selezionare l&#39;icona Copia accanto all&#39;ID appena generato.
 
 ![share-setting.png](./images/share-setting.png)
 
-Per connettere un partner utilizzando il relativo [!UICONTROL ID connessione], immettere il valore dell&#39;ID univoco nella casella di input in [!UICONTROL Partner connessione], quindi selezionare **[!UICONTROL Richiesta]**.
+Per connettere un partner utilizzando il proprio [!UICONTROL connect ID], immettere il valore dell&#39;ID univoco nella casella di input in [!UICONTROL Connect partner], quindi selezionare **[!UICONTROL Request]**.
 
 ![connect-partner.png](./images/connect-partner.png)
 
@@ -123,34 +130,34 @@ Per connettere un partner utilizzando il relativo [!UICONTROL ID connessione], i
 
 Un **feed** è un raggruppamento di dati (segmenti), le regole per l&#39;esposizione o l&#39;utilizzo di tali dati e le configurazioni che determinano la corrispondenza dei dati con i dati dei partner. Un feed può essere gestito in modo indipendente e scambiato con altri utenti di Experience Platform tramite [!DNL Segment Match].
 
-Per creare un nuovo feed, selezionare **[!UICONTROL Crea feed]** dal dashboard [!UICONTROL Feed].
+Per creare un nuovo feed, selezionare **[!UICONTROL Create feed]** dal dashboard [!UICONTROL Feeds].
 
 ![create-feed.png](./images/create-feed.png)
 
 La configurazione di base di un feed include un nome, una descrizione e configurazioni relative a casi di utilizzo marketing e impostazioni di identità. Specifica un nome e una descrizione per il feed, quindi applica i casi di utilizzo di marketing da cui desideri escludere i dati. È possibile selezionare più casi d’uso da un elenco che include:
 
 * [!UICONTROL Analytics]
-* [!UICONTROL Combina con PII]
-* [!UICONTROL Targeting intersito]
+* [!UICONTROL Combine with PII]
+* [!UICONTROL Cross-site targeting]
 * [!UICONTROL Data Science]
-* [!UICONTROL Destinazione e-mail]
-* [!UICONTROL Esporta a terze parti]
-* [!UICONTROL Pubblicità in loco]
-* [!UICONTROL Personalizzazione in loco]
-* [!UICONTROL Corrispondenza segmento]
-* [!UICONTROL Personalizzazione identità singola]
+* [!UICONTROL Email targeting]
+* [!UICONTROL Export to third party]
+* [!UICONTROL Onsite advertising]
+* [!UICONTROL Onsite personalization]
+* [!UICONTROL Segment Match]
+* [!UICONTROL Single identity personalization]
 
-Infine, seleziona gli spazi dei nomi di identità appropriati per il feed. Per informazioni sugli spazi dei nomi specifici supportati da [!DNL Segment Match], vedere la [tabella dei dati di identità e degli spazi dei nomi](#namespaces). Al termine, selezionare **[!UICONTROL Avanti]**.
+Infine, seleziona gli spazi dei nomi di identità appropriati per il feed. Per informazioni sugli spazi dei nomi specifici supportati da [!DNL Segment Match], vedere la [tabella dei dati di identità e degli spazi dei nomi](#namespaces). Al termine, selezionare **[!UICONTROL Next]**.
 
 ![condivisione del pubblico.png](./images/audience-sharing.png)
 
-Dopo aver stabilito le impostazioni del feed, seleziona i segmenti da condividere dall’elenco dei segmenti di prime parti. Puoi selezionare più segmenti dall’elenco e utilizzare la barra a destra per gestire l’elenco dei segmenti selezionati. Al termine, seleziona **[!UICONTROL Avanti]**.
+Dopo aver stabilito le impostazioni del feed, seleziona i segmenti da condividere dall’elenco dei segmenti di prime parti. Puoi selezionare più segmenti dall’elenco e utilizzare la barra a destra per gestire l’elenco dei segmenti selezionati. Al termine, selezionare **[!UICONTROL Next]**.
 
 ![select-segments.png](./images/select-segments.png)
 
-Viene visualizzata la pagina [!UICONTROL Condividi] che fornisce un&#39;interfaccia per selezionare i partner con cui si desidera condividere il feed. Durante questo passaggio, puoi anche visualizzare il rapporto delle stime di sovrapposizione pre-condivisione e vedere il numero di identità sovrapposte per spazio dei nomi tra te e il tuo partner, il numero di identità sovrapposte che hanno il consenso per la condivisione dei dati.
+Viene visualizzata la pagina [!UICONTROL Share], che fornisce un&#39;interfaccia per selezionare i partner con cui si desidera condividere il feed. Durante questo passaggio, puoi anche visualizzare il rapporto delle stime di sovrapposizione pre-condivisione e vedere il numero di identità sovrapposte per spazio dei nomi tra te e il tuo partner, il numero di identità sovrapposte che hanno il consenso per la condivisione dei dati.
 
-Seleziona **[!UICONTROL Analizza per segmento]** per visualizzare il rapporto delle stime.
+Selezionare **[!UICONTROL Analyze by segment]** per visualizzare il report delle stime.
 
 ![analyse.png](./images/analyze.png)
 
@@ -161,27 +168,27 @@ Il rapporto delle stime di sovrapposizione consente di gestire i controlli di so
 | Identità stimate con il consenso | Il numero totale di identità sovrapposte che soddisfano i requisiti di consenso configurati per la tua organizzazione. |
 | Identità sovrapposte stimate | Il numero di identità idonee per il segmento selezionato e con corrispondenza con il partner selezionato. Queste identità vengono visualizzate per spazio dei nomi e non rappresentano singole identità di profilo. Le stime di sovrapposizione si basano sugli schizzi di profilo. |
 
-Al termine, selezionare **[!UICONTROL Chiudi]**.
+Al termine, selezionare **[!UICONTROL Close]**.
 
 ![overlap-report.png](./images/overlap-report.png)
 
-Dopo aver selezionato i partner e visualizzato il rapporto delle stime di sovrapposizione, seleziona **[!UICONTROL Successivo]** per continuare.
+Dopo aver selezionato i partner e visualizzato il rapporto delle stime di sovrapposizione, selezionare **[!UICONTROL Next]** per continuare.
 
 ![condivisione.png](./images/share.png)
 
-Viene visualizzato il passaggio [!UICONTROL Rivedi], che consente di rivedere il nuovo feed prima che venga condiviso e pubblicato. Questo passaggio include dettagli sull’impostazione di identità applicata, nonché informazioni sui casi di utilizzo di marketing, sui segmenti e sui partner selezionati.
+Viene visualizzato il passaggio [!UICONTROL Review], che consente di rivedere il nuovo feed prima che venga condiviso e pubblicato. Questo passaggio include dettagli sull’impostazione di identità applicata, nonché informazioni sui casi di utilizzo di marketing, sui segmenti e sui partner selezionati.
 
-Selezionare **[!UICONTROL Fine]** per continuare.
+Selezionare **[!UICONTROL Finish]** per continuare.
 
 ![revisione.png](./images/review.png)
 
 ### Aggiorna feed
 
-Per aggiungere o rimuovere segmenti, selezionare **[!UICONTROL Crea feed]** dalla pagina [!UICONTROL Feed], quindi selezionare **[!UICONTROL Feed esistente]**. Nell&#39;elenco dei feed esistenti visualizzati, selezionare il feed che si desidera aggiornare, quindi selezionare **[!UICONTROL Avanti]**.
+Per aggiungere o rimuovere segmenti, selezionare **[!UICONTROL Create feed]** dalla pagina [!UICONTROL Feeds], quindi selezionare **[!UICONTROL Existing feed]**. Nell&#39;elenco dei feed esistenti visualizzati, selezionare il feed che si desidera aggiornare, quindi selezionare **[!UICONTROL Next]**.
 
 ![elenco feed](./images/feed-list.png)
 
-Viene visualizzato l’elenco dei segmenti. Da qui, puoi aggiungere nuovi segmenti al feed e utilizzare la barra a destra per rimuovere eventuali segmenti non più necessari. Dopo aver completato la gestione dei segmenti nel feed, seleziona **[!UICONTROL Successivo]**, quindi segui i passaggi descritti in precedenza per completare il feed aggiornato.
+Viene visualizzato l’elenco dei segmenti. Da qui, puoi aggiungere nuovi segmenti al feed e utilizzare la barra a destra per rimuovere eventuali segmenti non più necessari. Dopo aver completato la gestione dei segmenti nel feed, selezionare **[!UICONTROL Next]** e quindi seguire i passaggi descritti in precedenza per completare il feed aggiornato.
 
 Aggiornamento ![](./images/update.png)
 
@@ -191,7 +198,7 @@ Aggiornamento ![](./images/update.png)
 
 ### Accetta un feed in ingresso
 
-Per visualizzare un feed in ingresso, selezionare **[!UICONTROL Ricevuto]** dall&#39;intestazione della pagina [!UICONTROL Feed], quindi selezionare dall&#39;elenco il feed che si desidera visualizzare. Per accettare il feed, selezionare **[!UICONTROL Attiva per il profilo]** e attendere alcuni istanti prima che lo stato venga aggiornato da [!UICONTROL In sospeso] a [!UICONTROL Abilitato].
+Per visualizzare un feed in ingresso, selezionare **[!UICONTROL Received]** dall&#39;intestazione della pagina [!UICONTROL Feeds], quindi selezionare il feed da visualizzare dall&#39;elenco. Per accettare il feed, selezionare **[!UICONTROL Enable for profile]** e attendere alcuni istanti prima che lo stato venga aggiornato da [!UICONTROL Pending] a [!UICONTROL Enabled].
 
 ![received.png](./images/received.png)
 
