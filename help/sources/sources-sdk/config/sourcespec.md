@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;source 
 title: Configurare le specifiche di origine per le origini self-service (Batch SDK)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare le origini self-service (Batch SDK).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 1%
+source-wordcount: '2107'
+ht-degree: 0%
 
 ---
 
@@ -231,6 +231,7 @@ Per un esempio di specifica di origine completa, vedere l&#39;[appendice](#sourc
 | --- | --- | --- |
 | `sourceSpec.attributes` | Contiene informazioni sull’origine specifiche per l’interfaccia utente o l’API. |  |
 | `sourceSpec.attributes.uiAttributes` | Visualizza informazioni sull&#39;origine specifica dell&#39;interfaccia utente. |  |
+| `sourceSpec.attributes.uiAttributes.isPreview` | Attributo booleano che indica se l’origine viene visualizzata come anteprima (non per produzione/disponibilità generale). | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Attributo booleano che indica se l’origine richiede più feedback dai clienti per aggiungere alle sue funzionalità. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definisce la categoria dell’origine. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Definisce l’icona utilizzata per il rendering dell’origine nell’interfaccia utente di Experience Platform. | `mailchimp-icon.svg` |
