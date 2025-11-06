@@ -2,16 +2,16 @@
 title: Monitorare l’acquisizione del profilo di streaming
 description: Scopri come utilizzare la dashboard di monitoraggio per monitorare l’acquisizione del profilo di streaming
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 19%
+source-wordcount: '1835'
+ht-degree: 18%
 
 ---
 
 # Monitorare l’acquisizione del profilo di streaming
 
-Puoi utilizzare la dashboard di monitoraggio nell’interfaccia utente di Adobe Experience Platform per eseguire il monitoraggio in tempo reale dell’acquisizione del profilo di streaming all’interno della tua organizzazione. Utilizza questa funzione per accedere in modo più trasparente alle metriche di velocità effettiva, latenza e qualità dei dati correlate ai dati in streaming. Inoltre, utilizza questa funzione per gli avvisi proattivi e il recupero di informazioni fruibili per identificare potenziali violazioni della capacità e problemi di acquisizione dei dati.
+Puoi utilizzare la dashboard di monitoraggio nell’interfaccia utente di Adobe Experience Platform per eseguire il monitoraggio in tempo reale dell’acquisizione del profilo di streaming all’interno della tua organizzazione. Utilizza questa funzione per accedere in modo più trasparente alle metriche di velocità effettiva e qualità dei dati correlate ai dati in streaming. Inoltre, utilizza questa funzione per gli avvisi proattivi e il recupero di informazioni fruibili per identificare potenziali violazioni della capacità e problemi di acquisizione dei dati.
 
 Leggi la guida seguente per scoprire come utilizzare la dashboard di monitoraggio per tracciare tassi e metriche per i processi di acquisizione dei profili di streaming nella tua organizzazione.
 
@@ -21,19 +21,19 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 * [Flussi dati](../home.md): i flussi dati rappresentano processi di dati che trasferiscono informazioni in Experience Platform. Sono configurati in vari servizi per facilitare lo spostamento di dati dai connettori di origine ai set di dati di destinazione, nonché al servizio Identity, al profilo cliente in tempo reale e alle destinazioni.
 * [Profilo cliente in tempo reale](../../profile/home.md): Profilo cliente in tempo reale combina dati provenienti da più origini, online, offline, CRM e di terze parti, in un&#39;unica vista actionable di ciascun cliente, consentendo esperienze coerenti e personalizzate in tutti i punti di contatto.
-* [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): l&#39;acquisizione in streaming per Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.Experience Platform consente di gestire esperienze coordinate, coerenti e rilevanti generando un profilo cliente in tempo reale per ciascuno dei singoli clienti. &#x200B;L’acquisizione in streaming svolge un ruolo chiave nella creazione di questi profili con la minore latenza possibile.
+* [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): l&#39;acquisizione in streaming per Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.Experience Platform consente di gestire esperienze coordinate, coerenti e rilevanti generando un profilo cliente in tempo reale per ciascuno dei singoli clienti. .
 * [Capacità](../../landing/license-usage-and-guardrails/capacity.md): in Experience Platform, le capacità ti informano se la tua organizzazione ha superato uno dei tuoi guardrail e ti forniscono informazioni su come risolvere questi problemi.
 
 >[!NOTE]
 >
->La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metriche di monitoraggio per l’acquisizione del profilo di streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitorare l’acquisizione del profilo di streaming"
->abstract="La dashboard di monitoraggio per i profili di streaming mostra informazioni su velocità effettiva, tassi di acquisizione e latenza. Utilizza questa dashboard per visualizzare, comprendere e analizzare le metriche di elaborazione dei dati. dei profili di streaming in Experience Platform."
+>abstract="La dashboard di monitoraggio per i profili di streaming visualizza informazioni sulla velocità effettiva e sulle velocità di acquisizione. Utilizza questa dashboard per visualizzare, comprendere e analizzare le metriche di elaborazione dei dati. dei profili di streaming in Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,6 @@ Utilizza la tabella delle metriche per informazioni specifiche sui flussi di dat
 | --- | --- | --- | --- |
 | Velocità effettiva della richiesta | Questa metrica rappresenta il numero di eventi che entrano nel sistema di acquisizione al secondo. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
 | Velocità effettiva di elaborazione | Questa metrica rappresenta il numero di eventi correttamente acquisiti dal sistema ogni secondo. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
-| Latenza di acquisizione P95 | Questa metrica misura la latenza del 95° percentile dal momento in cui un evento arriva in Experience Platform al momento in cui viene correttamente acquisito nell’archivio Profili. | Sandbox/Flusso di dati | Monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi. |
 | Velocità effettiva massima | Questa metrica rappresenta il numero massimo di richieste in entrata al secondo che entrano nell’acquisizione del profilo di streaming | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> |  |
 | Record acquisiti | Questa metrica rappresenta il numero totale di record acquisiti nell’archivio profili all’interno di un intervallo di tempo configurato. | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> | <ul><li>Sandbox/Flusso di dati: monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi.</li><li>Esecuzione del flusso di dati: raggruppato in 15 minuti.</li></ul> |
 | Record con errori | Questa metrica rappresenta il numero totale di record che, a causa di errori, non sono stati acquisiti nell’archivio profili entro un intervallo di tempo configurato. | <ul><li>Sandbox/Flusso di dati</li><li>Esecuzione flusso di dati</li></ul> | <ul><li>Sandbox/Flusso di dati: monitoraggio in tempo reale con aggiornamento dei dati ogni 60 secondi.</li><li>Esecuzione del flusso di dati: raggruppato in 15 minuti.</li></ul> |
@@ -105,7 +104,7 @@ Per accedere al dashboard di monitoraggio per l&#39;acquisizione del profilo di 
 
 ![Dashboard di monitoraggio per l&#39;acquisizione del profilo di streaming.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Fare riferimento all&#39;intestazione superiore del dashboard per la scheda delle metriche *[!UICONTROL Profile]*. Utilizza questa visualizzazione per visualizzare informazioni sui record acquisiti, non riusciti e saltati, nonché sullo stato corrente della velocità effettiva e della latenza della richiesta.
+Fare riferimento all&#39;intestazione superiore del dashboard per la scheda delle metriche *[!UICONTROL Profile]*. Utilizza questa visualizzazione per visualizzare informazioni sui record acquisiti, non riusciti e saltati, nonché sullo stato corrente della velocità effettiva della richiesta.
 
 ![Scheda del profilo.](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -119,7 +118,7 @@ Quindi, utilizza l’interfaccia per visualizzare informazioni dettagliate sulle
 
 In alternativa, puoi configurare manualmente il tuo intervallo temporale utilizzando il calendario.
 
-Nel dashboard di monitoraggio è possibile utilizzare tre diverse categorie di metriche per l&#39;acquisizione del profilo di streaming: [!UICONTROL Throughput], [!UICONTROL Ingestion] e [!UICONTROL Latency].
+È possibile utilizzare due diverse categorie di metriche nel dashboard di monitoraggio per l&#39;acquisizione del profilo di streaming: [!UICONTROL Throughput] e [!UICONTROL Ingestion].
 
 >[!BEGINTABS]
 
@@ -142,12 +141,6 @@ Selezionare **[!UICONTROL Throughput]** per visualizzare informazioni sulla quan
 * **Record acquisiti**: la quantità totale di record creati in un determinato periodo di tempo. Questa metrica rappresenta i processi di acquisizione dei dati corretti nella sandbox.
 * **Record ignorati**: numero totale di record che non sono stati acquisiti a causa di errori.
 * **Record ignorati**: numero totale di record ignorati a causa della violazione dei limiti di capacità.
-
->[!TAB Latenza]
-
-Selezionare **[!UICONTROL Latency]** per visualizzare informazioni sul tempo necessario ad Experience Platform per rispondere a una richiesta o completare un&#39;operazione entro un determinato periodo di tempo.
-
-![Dashboard con visualizzazione impostata su &quot;latency&quot;.](../assets/ui/streaming-profiles/latency.png)
 
 >[!ENDTABS]
 
