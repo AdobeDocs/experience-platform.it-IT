@@ -5,9 +5,9 @@ title: Creare schemi web e set di dati Luma
 type: Tutorial
 description: Questa esercitazione ti fornisce i prerequisiti e le risorse necessari per il modello di propensione demo Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 219305a71c70a5bbec2fad591c166761e3aaa9ee
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Questo tutorial ti fornisce i prerequisiti e le risorse necessari per tutte le a
 
 ## Scaricare le risorse {#assets}
 
-L’esercitazione seguente utilizza un modello di propensione all’acquisto Luma personalizzato. Prima di procedere, [scarica la cartella zip delle risorse richieste](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip). Questa cartella contiene:
+L’esercitazione seguente utilizza un modello di propensione all’acquisto Luma personalizzato. Prima di procedere, [scarica la cartella zip delle risorse richieste](../assets/DSW-course-sample-assets.7z). Questa cartella contiene:
 
 - Il notebook del modello di propensione all&#39;acquisto
 - Notebook utilizzato per acquisire dati in un set di dati di formazione e punteggio (un sottoinsieme di dati web Luma)
@@ -49,15 +49,15 @@ L’esercitazione seguente utilizza un modello di propensione all’acquisto Lum
 
 ### Creare lo schema di dati web Luma e acquisire i dati
 
-Per creare un modello, è necessario disporre di un set di dati in Experience Platform utilizzato per addestrare e valutare il modello. Il seguente tutorial video del corso [Data Science Workspace](https://experienceleague.adobe.com/?lang=it&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=it) illustra come creare lo schema Luma e acquisire i dati utilizzati dal modello di propensione all’acquisto.
+Per creare un modello, è necessario disporre di un set di dati in Experience Platform utilizzato per addestrare e valutare il modello. Il seguente tutorial video del corso [Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=it) illustra come creare lo schema Luma e acquisire i dati utilizzati dal modello di propensione all’acquisto.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447162?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/333312)
 
 ### Creare i set di dati dei risultati di apprendimento, punteggio e punteggio
 
 Per eseguire il notebook per la generazione di formule o utilizzare l’API per addestrare e valutare un modello, è necessario specificare i set di dati e gli schemi utilizzati per l’apprendimento e il punteggio. Il seguente tutorial video illustra come impostare i set di dati dei risultati di apprendimento, punteggio e punteggio, nonché lo schema dei risultati di punteggio utilizzato nel modello di propensione all’acquisto Luma.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447429?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## Passaggi successivi
 
