@@ -3,18 +3,14 @@ solution: Experience Platform
 title: Tipi di pubblico simili
 description: Scopri come eseguire il targeting di nuovi tipi di pubblico di alto valore in Adobe Experience Platform utilizzando tipi di pubblico simili.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2250'
 ht-degree: 9%
 
 ---
 
 # Guida ai tipi di pubblico simili
-
->[!AVAILABILITY]
->
->Informazioni e tipi di pubblico simili sono disponibili solo nella **edizione B2C**.
 
 >[!IMPORTANT]
 >
@@ -85,15 +81,15 @@ I pacchetti di componenti aggiuntivi, che saranno disponibili in un secondo mome
 
 ## Accesso {#access}
 
-Per confermare se hai accesso a tipi di pubblico simili, seleziona un pubblico all&#39;interno del Portale pubblico e controlla se la scheda **[!UICONTROL Informazioni simili]** è visibile.
+Per confermare se hai accesso a tipi di pubblico simili, seleziona un pubblico all&#39;interno del Portale pubblico e controlla se la scheda **[!UICONTROL Look-alike insights]** è visibile.
 
 ## Visualizzare informazioni simili {#view}
 
-Le informazioni simili sono integrate nella pagina dei dettagli del pubblico. Per esaminare gli approfondimenti simili relativi a un pubblico, seleziona **[!UICONTROL Tipi di pubblico]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Sfoglia]** e dal pubblico per il quale desideri visualizzare gli approfondimenti.
+Le informazioni simili sono integrate nella pagina dei dettagli del pubblico. Per esaminare gli approfondimenti simili relativi a un pubblico, seleziona **[!UICONTROL Audiences]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Browse]** e dal pubblico per il quale desideri visualizzare gli approfondimenti.
 
 ![Il pulsante Tipi di pubblico è evidenziato, così come il pubblico di base utilizzato per la modellazione lookalike.](../images/types/lookalike/browse.png)
 
-Viene visualizzata la pagina dei dettagli del pubblico. Seleziona la scheda **[!UICONTROL Approfondimenti simili]** per visualizzare gli approfondimenti simili del pubblico. Viene visualizzata la pagina **[!UICONTROL Informazioni simili]**. Questa pagina presenta tre elementi principali: il grafico delle somiglianze e della portata, i tipi di pubblico simili e i fattori influenti.
+Viene visualizzata la pagina dei dettagli del pubblico. Seleziona la scheda **[!UICONTROL Look-alike insights]** per visualizzare le informazioni simili del pubblico. Viene visualizzata la pagina **[!UICONTROL Look-alike insights]**. Questa pagina presenta tre elementi principali: il grafico delle somiglianze e della portata, i tipi di pubblico simili e i fattori influenti.
 
 ![Viene evidenziata la scheda Approfondimenti simili, che mostra gli approfondimenti simili per il pubblico di base.](../images/types/lookalike/look-alike-insights.png)
 
@@ -155,17 +151,17 @@ Questi bucket vengono ricalcolati regolarmente per garantire che i dati siano te
 >
 >**impossibile** utilizzare un pubblico simile come pubblico di base per un altro pubblico simile. In altre parole, **non puoi** creare tipi di pubblico simili concatenati.
 
-Per creare un pubblico simile, devi selezionare il pubblico da cui vuoi basare il pubblico simile. Per accedere all&#39;elenco dei tipi di pubblico disponibili, seleziona **[!UICONTROL Tipi di pubblico]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Sfoglia]**. Viene visualizzato l’elenco dei tipi di pubblico. In questa pagina puoi selezionare il pubblico da utilizzare come pubblico di base.
+Per creare un pubblico simile, devi selezionare il pubblico da cui vuoi basare il pubblico simile. Per accedere all&#39;elenco dei tipi di pubblico disponibili, seleziona **[!UICONTROL Audiences]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Browse]**. Viene visualizzato l’elenco dei tipi di pubblico. In questa pagina puoi selezionare il pubblico da utilizzare come pubblico di base.
 
 ![Il pulsante Tipi di pubblico è evidenziato, così come il pubblico di base utilizzato per la modellazione lookalike.](../images/types/lookalike/browse.png)
 
-Nella pagina dei dettagli del pubblico, seleziona **[!UICONTROL Crea pubblico simile]** per iniziare il processo di creazione di un pubblico simile.
+Nella pagina dei dettagli del pubblico, seleziona **[!UICONTROL Create look-alike audience]** per iniziare il processo di creazione di un pubblico simile.
 
-![Il pulsante [!UICONTROL Crea pubblico simile] è evidenziato.](../images/types/lookalike/create-look-alike-audience.png)
+![Il pulsante [!UICONTROL Create look-alike audience] è evidenziato.](../images/types/lookalike/create-look-alike-audience.png)
 
-Viene visualizzata la finestra a comparsa **[!UICONTROL Crea un pubblico simile]**. In questa pagina puoi impostare la percentuale di somiglianza per il pubblico simile.
+Verrà visualizzato il popover **[!UICONTROL Create a look-alike audience]**. In questa pagina puoi impostare la percentuale di somiglianza per il pubblico simile.
 
-![Viene visualizzato il messaggio a comparsa [!UICONTROL Crea un pubblico simile].](../images/types/lookalike/create-audience.png)
+![Viene visualizzato il popover [!UICONTROL Create a look-alike audience].](../images/types/lookalike/create-audience.png)
 
 Puoi impostare questa percentuale di somiglianza in tre modi diversi:
 
@@ -175,17 +171,17 @@ Puoi impostare questa percentuale di somiglianza in tre modi diversi:
 
 Puoi anche aggiornare i dettagli sul pubblico per similarità, tra cui il nome e la descrizione. Per impostazione predefinita, il nome del pubblico simile viene generato in base al nome del pubblico di base e alla percentuale di somiglianza precedentemente specificata.
 
-![Le informazioni di base sono evidenziate nella finestra a comparsa [!UICONTROL Crea un pubblico simile].](../images/types/lookalike/basic-info.png)
+![Le informazioni di base sono evidenziate nel popover [!UICONTROL Create a look-alike audience].](../images/types/lookalike/basic-info.png)
 
-Seleziona **[!UICONTROL Crea]** per completare la creazione del pubblico per similarità.
+Seleziona **[!UICONTROL Create]** per completare la creazione del pubblico per similarità.
 
-![Il pulsante Crea è evidenziato nella finestra a comparsa [!UICONTROL Crea un pubblico simile].](../images/types/lookalike/create-audience.png)
+![Il pulsante Crea è evidenziato nella finestra a comparsa [!UICONTROL Create a look-alike audience].](../images/types/lookalike/create-audience.png)
 
-Il pubblico lookalike appena creato è accessibile nella sezione **[!UICONTROL Tipi di pubblico lookalike]** della pagina dei dettagli del pubblico ed è disponibile anche nel Portale pubblico e per altri utilizzi a valle. Tieni presente che ci vorrà un po’ di tempo prima che il pubblico similare venga valutato. Finché non viene assegnato un punteggio, il conteggio dei profili apparirà pari a 0.
+Il pubblico lookalike appena creato è accessibile nella sezione **[!UICONTROL Look-alike audiences]** della pagina dei dettagli del pubblico ed è disponibile anche nel Portale pubblico e per altri utilizzi a valle. Tieni presente che ci vorrà un po’ di tempo prima che il pubblico similare venga valutato. Finché non viene assegnato un punteggio, il conteggio dei profili apparirà pari a 0.
 
 ## Visualizzare i dettagli del pubblico per similarità {#view-details}
 
-Per visualizzare i dettagli di un pubblico simile, seleziona il pubblico simile nella sezione **[!UICONTROL Tipi di pubblico simili]** del pubblico di base.
+Per visualizzare i dettagli di un pubblico per similarità, seleziona il pubblico per similarità nella sezione **[!UICONTROL Look-alike audiences]** del pubblico di base.
 
 ![La sezione dei tipi di pubblico simili è evidenziata.](../images/types/lookalike/select-laa.png)
 
