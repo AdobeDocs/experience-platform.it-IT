@@ -25,7 +25,7 @@ Il seguente tutorial richiede che GitHub Desktop sia installato sul computer loc
 
 ## Connessione a GitHub e configurazione dell’ambiente di authoring locale
 
-Il primo passaggio nella configurazione dell&#39;ambiente di authoring locale consiste nel passare all&#39;[archivio GitHub di Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+Il primo passaggio nella configurazione dell&#39;ambiente di authoring locale consiste nel passare all&#39;[archivio GitHub di Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.it-IT).
 
 ![repository-piattaforma](../assets/platform-repo.png)
 
@@ -97,6 +97,6 @@ Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota a
 
 ![create-pr](../assets/create-pr.png)
 
-Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda delle richieste di pull in https://github.com/AdobeDocs/experience-platform.en.
+Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda delle richieste di pull in https://github.com/AdobeDocs/experience-platform.it-IT.
 
 ![confirm-pr](../assets/confirm-pr.png)

@@ -96,7 +96,7 @@ Lo schema CEE, come tutti gli schemi ExperienceEvent XDM, acquisisce lo stato de
 
 Come tutti gli schemi XDM, il gruppo di campi dello schema CEE è estensibile. In altre parole, è possibile aggiungere campi aggiuntivi al gruppo di campi CEE e, se necessario, è possibile includere varianti diverse in più schemi.
 
-Un esempio completo del gruppo di campi è disponibile nell&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Inoltre, è possibile visualizzare e copiare il seguente [file JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per un esempio di come i dati possono essere strutturati in modo da essere conformi allo schema CEE. Per informazioni sui campi chiave descritti nella sezione seguente e su come mappare i propri dati sullo schema, consulta entrambi gli esempi.
+Un esempio completo del gruppo di campi è disponibile nell&#39;[archivio XDM pubblico](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Inoltre, è possibile visualizzare e copiare il seguente [file JSON](https://github.com/AdobeDocs/experience-platform.it-IT/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per un esempio di come i dati possono essere strutturati in modo da essere conformi allo schema CEE. Per informazioni sui campi chiave descritti nella sezione seguente e su come mappare i propri dati sullo schema, consulta entrambi gli esempi.
 
 ## Campi chiave
 
@@ -355,7 +355,7 @@ Se acquisisci dati da un file CSV locale, puoi passare alla sezione successiva s
 
 #### Mappare e acquisire dati {#ingest}
 
-Dopo aver creato uno schema CEE e un set di dati, puoi iniziare a mappare le tabelle di dati sullo schema e acquisire tali dati in Experience Platform. Consulta l&#39;esercitazione su [mappatura di un file CSV a uno schema XDM](../ingestion/tutorials/map-csv/overview.md) per i passaggi su come eseguire questa operazione nell&#39;interfaccia utente. Puoi utilizzare il seguente [file JSON di esempio](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per testare il processo di acquisizione prima di utilizzare i tuoi dati.
+Dopo aver creato uno schema CEE e un set di dati, puoi iniziare a mappare le tabelle di dati sullo schema e acquisire tali dati in Experience Platform. Consulta l&#39;esercitazione su [mappatura di un file CSV a uno schema XDM](../ingestion/tutorials/map-csv/overview.md) per i passaggi su come eseguire questa operazione nell&#39;interfaccia utente. Puoi utilizzare il seguente [file JSON di esempio](https://github.com/AdobeDocs/experience-platform.it-IT/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per testare il processo di acquisizione prima di utilizzare i tuoi dati.
 
 Una volta popolato un set di dati, è possibile utilizzarlo per acquisire file di dati aggiuntivi.
 

@@ -23,7 +23,7 @@ Le istruzioni in questa pagina mostrano come utilizzare un editor di testo per l
 
 ## Connessione a GitHub e configurazione dell’ambiente di authoring locale {#set-up-environment}
 
-1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.en`
+1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.it-IT`
 2. Per [eseguire il fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=it#fork-the-repository) dell&#39;archivio, fare clic su **Effettuare il fork** come illustrato di seguito. In questo modo viene creata una copia dell’archivio Experience Platform nel tuo account GitHub.
 
    ![Archivio della documentazione di Adobe per fork](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ Le istruzioni in questa pagina mostrano come utilizzare un editor di testo per l
 
 1. A questo punto, viene visualizzata una notifica che richiede di firmare il Contratto di licenza da collaboratore (CLA) di Adobe. Questo è un passaggio obbligatorio. Dopo aver firmato il contratto di licenza, aggiorna la pagina PR e invia la richiesta di pull.
 
-1. Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda **Richieste pull** in `https://github.com/AdobeDocs/experience-platform.en`.
+1. Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda **Richieste pull** in `https://github.com/AdobeDocs/experience-platform.it-IT`.
 
 ![PR completato](../assets/docs-framework/ssd-pr-successful.png)
 
