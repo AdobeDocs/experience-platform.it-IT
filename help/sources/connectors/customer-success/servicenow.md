@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore Source ServiceNow
 description: Scopri come collegare ServiceNow a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ Adobe Experience Platform consente di acquisire dati da origini esterne e allo s
 
 [!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati da un sistema di successo cliente di terze parti. Il supporto per i provider di successo dei clienti include [!DNL ServiceNow].
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 La documentazione seguente fornisce informazioni su come connettere [!DNL ServiceNow] a [!DNL Experience Platform] tramite API o l&#39;interfaccia utente:
 

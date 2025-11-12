@@ -3,9 +3,9 @@ title: Modello self-service di documentazione per interfaccia utente Streaming S
 description: Scopri come portare dati in streaming da un’origine a Adobe Experience Platform utilizzando l’interfaccia utente.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Questo tutorial illustra i passaggi per la creazione di un connettore di origine
 
 *Aggiungere informazioni in questa sezione su qualsiasi elemento di cui i clienti devono essere a conoscenza prima di iniziare a configurare l&#39;origine nell&#39;interfaccia utente di Adobe Experience Platform. Informazioni su:*
 
-* *da aggiungere a un elenco consentiti*
+* *da aggiungere a un inserisco nell&#39;elenco Consentiti di*
 * *requisiti per l&#39;hashing delle e-mail*
 * *qualsiasi specifica account sul tuo lato*
 * *come ottenere le credenziali di autenticazione per connettersi alla piattaforma*
@@ -53,11 +53,11 @@ Per ulteriori informazioni su queste credenziali, vedere la documentazione relat
 
 ## Connetti il tuo account *YOURSOURCE*
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria **Streaming** selezionare *YOURSOURCE*, quindi **[!UICONTROL Aggiungi dati]**.
+Nella categoria **Streaming** selezionare *YOURSOURCE*, quindi **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
@@ -67,18 +67,18 @@ Nella categoria **Streaming** selezionare *YOURSOURCE*, quindi **[!UICONTROL Agg
 
 ## Selezionare i dati
 
-Viene visualizzato il passaggio **[!UICONTROL Seleziona dati]**, che fornisce un&#39;interfaccia per la selezione dei dati da portare in Experience Platform.
+Viene visualizzato il passaggio **[!UICONTROL Select data]**, che fornisce un&#39;interfaccia per la selezione dei dati da portare in Experience Platform.
 
 * La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
 
-Seleziona **[!UICONTROL Carica file]** per caricare un file JSON dal sistema locale. In alternativa, puoi trascinare e rilasciare il file JSON da caricare nel pannello [!UICONTROL Trascina i file].
+Selezionare **[!UICONTROL Upload files]** per caricare un file JSON dal sistema locale. In alternativa, è possibile trascinare il file JSON da caricare nel pannello [!UICONTROL Drag and drop files].
 
 ![Passaggio Aggiungi dati del flusso di lavoro origini.](../assets/streaming/add-data.png)
 
-Una volta caricato il file, l’interfaccia di anteprima si aggiorna e mostra un’anteprima dello schema caricato. L’interfaccia di anteprima consente di esaminare il contenuto e la struttura di un file. È inoltre possibile utilizzare l&#39;utilità [!UICONTROL Cerca campo] per accedere a elementi specifici dallo schema.
+Una volta caricato il file, l’interfaccia di anteprima si aggiorna e mostra un’anteprima dello schema caricato. L’interfaccia di anteprima consente di esaminare il contenuto e la struttura di un file. È inoltre possibile utilizzare l&#39;utilità [!UICONTROL Search field] per accedere a elementi specifici dallo schema.
 
-Al termine, selezionare **[!UICONTROL Avanti]**.
+Al termine, selezionare **[!UICONTROL Next]**.
 
 ![Passaggio di anteprima del flusso di lavoro origini.](../assets/streaming/preview.png)
 
@@ -86,28 +86,28 @@ Al termine, selezionare **[!UICONTROL Avanti]**.
 
 Viene visualizzato il passaggio **Dettagli flusso di dati** che fornisce le opzioni per utilizzare un set di dati esistente o stabilirne uno nuovo per il flusso di dati, nonché l&#39;opportunità di fornire un nome e una descrizione per il flusso di dati. Durante questo passaggio, puoi anche configurare le impostazioni per l’acquisizione del profilo, la diagnostica degli errori, l’acquisizione parziale e gli avvisi.
 
-Al termine, selezionare **[!UICONTROL Avanti]**.
+Al termine, selezionare **[!UICONTROL Next]**.
 
 ![Passaggio del flusso di dati dei dettagli del flusso di lavoro delle origini.](../assets/streaming/dataflow-detail.png)
 
 ## Mappatura
 
-Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
+Viene visualizzato il passaggio [!UICONTROL Mapping], che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
-Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=it).
+Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
-Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
+Una volta mappati correttamente i dati di origine, selezionare **[!UICONTROL Next]**.
 
 ![Passaggio di mappatura del flusso di lavoro di origine.](../assets/streaming/mapping.png)
 
-## Rivisione
+## Rivedi
 
-Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio **[!UICONTROL Review]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Connessione]**: mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno di tale file di origine.
-* **[!UICONTROL Assegna set di dati e mappa i campi]**: mostra in quale set di dati vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+* **[!UICONTROL Connection]**: mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno di tale file di origine.
+* **[!UICONTROL Assign dataset & map fields]**: mostra in quale set di dati vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
 
-Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Fine]** e attendi un po&#39; di tempo per la creazione del flusso di dati.
+Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e lascia un po&#39; di tempo per la creazione del flusso di dati.
 
 ![Passaggio di revisione del flusso di lavoro origini.](../assets/streaming/review.png)
 
@@ -115,7 +115,7 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Fine]** e attendi
 
 Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experience Platform.
 
-Per recuperare l&#39;endpoint di streaming, vai alla pagina [!UICONTROL Attività flusso di dati] del flusso di dati appena creato e copia l&#39;endpoint dalla parte inferiore del pannello [!UICONTROL Proprietà].
+Per recuperare l&#39;endpoint di streaming, vai alla pagina [!UICONTROL Dataflow activity] del flusso di dati appena creato e copia l&#39;endpoint dalla parte inferiore del pannello [!UICONTROL Properties].
 
 ![Endpoint di streaming nell&#39;attività del flusso di dati.](../assets/testing/endpoint-test.png)
 
@@ -123,7 +123,7 @@ Per recuperare l&#39;endpoint di streaming, vai alla pagina [!UICONTROL Attivit�
 
 *I flussi di lavoro per i passaggi rimanenti della creazione di un flusso di dati sono modulari. In caso di chiamate specifiche che si desidera effettuare per quanto riguarda la propria origine, vedere la sezione Risorse aggiuntive di seguito.*
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account *YOURSOURCE*. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=it).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account *YOURSOURCE*. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Risorse aggiuntive
 

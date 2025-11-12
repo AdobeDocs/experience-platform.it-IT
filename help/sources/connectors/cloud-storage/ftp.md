@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore Source FTP
 description: Scopri come collegare un server FTP a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Experien
 >
 >Durante la creazione di un flusso di dati con il connettore di origine FTP, si consiglia vivamente di impostare una pianificazione di acquisizione una tantum a causa di problemi persistenti con aggiornamenti incrementali rilevati nei server FTP.
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 ## Vincoli di denominazione per file e directory
 

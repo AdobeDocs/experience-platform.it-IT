@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore Source di Apache Spark su Azure HDInsights
 description: Scopri come collegare Apache Spark su Azure HDInsights a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Adobe Experience Platform consente di acquisire dati da origini esterne e allo s
 
 [!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati da un database di terze parti. [!DNL Experience Platform] può connettersi a diversi tipi di database, ad esempio database relazionali, NoSQL o data warehouse. Il supporto per i provider di database include [!DNL Apache Spark] in [!DNL Azure HDInsights].
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 La documentazione seguente fornisce informazioni su come connettere [!DNL Apache Spark] su [!DNL Azure HDInsights] a [!DNL Experience Platform] tramite API o l&#39;interfaccia utente:
 

@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: Scopri come collegare Data Landing Zone a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone] è un&#39;interfaccia di archiviazione [!DNL Azure Blob] fornita da Adobe Experience Platform, che consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per inserire i file in Experience Platform. Hai accesso a un contenitore [!DNL Data Landing Zone] per sandbox e il volume totale di dati in tutti i contenitori è limitato al totale dei dati forniti con la tua licenza Experience Platform Products and Services. Per tutti i clienti di Experience Platform viene eseguito il provisioning con un contenitore [!DNL Data Landing Zone] per sandbox. È possibile leggere e scrivere i file nel contenitore tramite [!DNL Azure Storage Explorer] o l&#39;interfaccia della riga di comando.
 
-[!DNL Data Landing Zone] supporta l&#39;autenticazione basata su SAS e i relativi dati sono protetti con meccanismi di protezione di archiviazione standard [!DNL Azure Blob] in modalità di riposo e transito. L&#39;autenticazione basata su SAS consente di accedere in modo sicuro al contenitore [!DNL Data Landing Zone] tramite una connessione Internet pubblica. Non sono necessarie modifiche di rete per accedere al contenitore [!DNL Data Landing Zone], pertanto non è necessario configurare elenchi consentiti o impostazioni per più aree geografiche per la rete. Experience Platform impone una scadenza di sette giorni rigorosa su tutti i file e le cartelle caricati in un contenitore [!DNL Data Landing Zone]. Tutti i file e le cartelle vengono eliminati dopo sette giorni.
+[!DNL Data Landing Zone] supporta l&#39;autenticazione basata su SAS e i relativi dati sono protetti con meccanismi di protezione di archiviazione standard [!DNL Azure Blob] in modalità di riposo e transito. L&#39;autenticazione basata su SAS consente di accedere in modo sicuro al contenitore [!DNL Data Landing Zone] tramite una connessione Internet pubblica. Non sono necessarie modifiche di rete per accedere al contenitore [!DNL Data Landing Zone], pertanto non è necessario configurare i inserisce nell&#39;elenco Consentiti o le impostazioni di più aree geografiche per la rete. Experience Platform impone una scadenza di sette giorni rigorosa su tutti i file e le cartelle caricati in un contenitore [!DNL Data Landing Zone]. Tutti i file e le cartelle vengono eliminati dopo sette giorni.
 
 ## Configura l&#39;origine [!DNL Data Landing Zone] per Experience Platform su Azure {#azure}
 
@@ -159,7 +159,7 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 >[!AVAILABILITY]
 >
->Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Segui i passaggi seguenti per scoprire come configurare l&#39;account [!DNL Data Landing Zone] per Experience Platform su Amazon Web Services (AWS).
 
@@ -305,7 +305,7 @@ Infine, passa all&#39;URL generato per accedere direttamente alla console AWS co
 
 >[!IMPORTANT]
 >
->- Per connettersi all&#39;origine, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]**. Per ulteriori informazioni, leggere la [panoramica sul controllo degli accessi](../../../access-control/home.md) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>- Per connettersi all&#39;origine, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Sources]** e **[!UICONTROL Manage Sources]**. Per ulteriori informazioni, leggere la [panoramica sul controllo degli accessi](../../../access-control/home.md) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >
 >- I collegamenti privati non sono attualmente supportati per la connessione ad Experience Platform tramite [!DNL Data Landing Zone]. Gli unici metodi supportati per l&#39;accesso sono i metodi elencati [qui](#manage-the-contents-of-your-data-landing-zone).
 

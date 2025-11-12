@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 34%
 
 ---
@@ -398,7 +398,7 @@ ht-degree: 34%
    - [Messaggi di errore nelle origini](./errors/sources-errors.md)
    - [Messaggi di errore nel servizio Flusso](./errors/flow-service-errors.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
-- [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
+- [Indirizzo IP inserisco nell&#39;elenco Consentiti](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

@@ -3,16 +3,16 @@ title: Panoramica del connettore Source Mixpanel
 description: Scopri come collegare Mixpanel a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 0%
+source-wordcount: '431'
+ht-degree: 6%
 
 ---
 
 # [!DNL Mixpanel]
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
 Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di analisi di terze parti. Il supporto per i provider di analisi include [!DNL Mixpanel].
 
@@ -20,9 +20,9 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un’appli
 
 Le origini sfruttano [Mixpanel Event Export API > Download](https://developer.mixpanel.com/reference/raw-event-export) per scaricare i dati dell&#39;evento così come vengono ricevuti e memorizzati in [!DNL Mixpanel], insieme a tutte le proprietà dell&#39;evento (incluso `distinct_id`) e la marca temporale esatta dell&#39;evento inviato ad Experience Platform. Mixpanel utilizza token bearer come meccanismo di autenticazione per comunicare con l’API di esportazione degli eventi Mixpanel.
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 ## Autentica il tuo account [!DNL Mixpanel]
 

@@ -3,9 +3,9 @@ title: Panoramica di Oracle NetSuite Source
 description: Scopri come collegare Oracle NetSuite a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2024-01-30T00:00:00Z
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '722'
 ht-degree: 6%
 
 ---
@@ -31,9 +31,9 @@ Per ulteriori informazioni sulle due origini [!DNL Oracle NetSuite], vedere la t
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Cliente | Recupera dati cliente specifici, inclusi dettagli quali nomi, indirizzi e identificatori chiave del cliente. |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Contatto | Recupera i nomi dei contatti, le e-mail, i numeri di telefono ed eventuali campi personalizzati relativi ai contatti associati ai clienti. |
 
-## ELENCO CONSENTITI di indirizzo IP {#ip-allow-list}
+## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-allow-list}
 
-Prima di utilizzare i connettori di origine, potrebbe essere necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 ## Prerequisiti {#prerequisites}
 

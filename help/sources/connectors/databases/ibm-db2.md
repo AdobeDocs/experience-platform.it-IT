@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore Source di IBM DB2
 description: Scopri come collegare IBM DB2 a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Adobe Experience Platform fornisce connettività nativa per provider di database
 
 Sono supportati diversi tipi di database di terze parti, inclusi data warehouse relazionali, NoSQL o di terze parti. Il supporto per i provider di database include IBM DB2.
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 La documentazione seguente fornisce informazioni su come connettere IBM DB2 a [!DNL Experience Platform] utilizzando le API o l&#39;interfaccia utente:
 

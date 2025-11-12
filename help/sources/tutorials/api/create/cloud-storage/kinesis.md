@@ -3,9 +3,9 @@ title: Creare una connessione Amazon Kinesis Source utilizzando l’API del serv
 description: Scopri come collegare Adobe Experience Platform a un’origine Amazon Kinesis utilizzando l’API del servizio Flusso.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ Affinché [!DNL Flow Service] possa connettersi al tuo account [!DNL Amazon Kine
 | ---------- | ----------- |
 | `accessKeyId` | L&#39;ID della chiave di accesso è la metà della coppia di chiavi di accesso utilizzata per autenticare l&#39;account [!DNL Kinesis] in Experience Platform. |
 | `secretKey` | La chiave di accesso segreta è l&#39;altra metà della coppia di chiavi di accesso utilizzata per autenticare l&#39;account [!DNL Kinesis] in Experience Platform. |
-| `region` | Area geografica del tuo account [!DNL Kinesis]. Per ulteriori informazioni sulle aree geografiche, consulta la guida sull&#39;[aggiunta di indirizzi IP all&#39;elenco consentiti](../../../../ip-address-allow-list.md). |
+| `region` | Area geografica del tuo account [!DNL Kinesis]. Per ulteriori informazioni sulle aree geografiche, consulta la guida su [aggiunta di indirizzi IP alla inserisce nell&#39;elenco Consentiti di](../../../../ip-address-allow-list.md). |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Per ulteriori informazioni sulle chiavi di accesso [!DNL Kinesis] e su come generarle, consultare questa [[!DNL AWS] guida sulla gestione delle chiavi di accesso per gli utenti IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).

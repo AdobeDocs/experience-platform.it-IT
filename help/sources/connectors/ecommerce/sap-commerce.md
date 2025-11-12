@@ -4,9 +4,9 @@ description: Scopri come collegare SAP Commerce a Adobe Experience Platform util
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
@@ -26,9 +26,9 @@ L&#39;origine [!DNL SAP Commerce] consente di acquisire informazioni su clienti 
 
 Inoltre, se [!DNL SAP Commerce] viene eseguito per recuperare i dati del cliente, viene chiamata anche l&#39;API [Customer-Contact Relationships](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) per recuperare le informazioni di contatto del cliente.
 
-## ELENCO CONSENTITI di indirizzo IP {#ip-allow-list}
+## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-allow-list}
 
-Prima di utilizzare i connettori di origine, potrebbe essere necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 ## Prerequisiti {#prerequisites}
 
@@ -39,7 +39,7 @@ Prima di poter trasferire i dati di [!DNL SAP Commerce] ad Experience Platform, 
 * Chiave del servizio [!DNL SAP]. La chiave del servizio [!DNL SAP] ti consente di accedere all&#39;API [!DNL SAP Subscription Billing] tramite Experience Platform. [!DNL SAP Commerce] richiede quanto segue:
    * ID client
    * Segreto client
-   * URL. Schema URL: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato successivamente per ottenere i valori per `region` e `tokenEndpoint` quando [crei una connessione di base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) utilizzando l&#39;API o quando [connetti il tuo account [!DNL SAP Commerce] &#x200B;](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) tramite l&#39;interfaccia utente di Experience Platform.
+   * URL. Schema URL: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato successivamente per ottenere i valori per `region` e `tokenEndpoint` quando [crei una connessione di base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) utilizzando l&#39;API o quando [connetti il tuo account [!DNL SAP Commerce] ](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) tramite l&#39;interfaccia utente di Experience Platform.
 
 +++Seleziona per visualizzare un esempio della chiave del servizio
 

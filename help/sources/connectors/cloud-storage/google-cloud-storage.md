@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore Source di archiviazione Google Cloud
 description: Scopri come collegare Google Cloud Storage a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -21,21 +21,21 @@ Adobe Experience Platform fornisce connettività nativa per i provider di cloud 
 
 Le origini di archiviazione cloud possono inserire i tuoi dati in Experience Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come JSON o Parquet conforme all’Experience Data Model (XDM) oppure in un formato delimitato. Ogni fase del processo viene integrata nel flusso di lavoro delle origini. Experience Platform consente di inserire dati da [!DNL Google Cloud Storage] tramite batch.
 
-## ELENCO CONSENTITI di indirizzo IP
+## Indirizzo IP inserisco nell&#39;elenco Consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti. La mancata aggiunta all’elenco consentiti degli indirizzi IP specifici per l’area geografica potrebbe causare errori o prestazioni non ottimali durante l’utilizzo delle origini. Per ulteriori informazioni, vedere la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md).
+Prima di collegare le origini a Experience Platform, è necessario aggiungere al elenco Consentiti di indirizzi IP specifici per l’area geografica. Per ulteriori informazioni, leggere la guida in [inserire nell&#39;elenco Consentiti degli indirizzi IP per la connessione ad Experience Platform](../../ip-address-allow-list.md).
 
 ## Configurazione dei prerequisiti per la connessione all&#39;account [!DNL Google Cloud Storage]
 
-Per connettersi ad Experience Platform, è necessario innanzitutto abilitare l&#39;interoperabilità per l&#39;account [!DNL Google Cloud Storage]. Per accedere all&#39;impostazione di interoperabilità, apri [!DNL Google Cloud Platform] e seleziona **[!UICONTROL Impostazioni]** dall&#39;opzione **[!UICONTROL Archiviazione cloud]** nel pannello di navigazione.
+Per connettersi ad Experience Platform, è necessario innanzitutto abilitare l&#39;interoperabilità per l&#39;account [!DNL Google Cloud Storage]. Per accedere all&#39;impostazione di interoperabilità, aprire [!DNL Google Cloud Platform] e selezionare **[!UICONTROL Settings]** dall&#39;opzione **[!UICONTROL Cloud Storage]** nel pannello di navigazione.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
-Viene visualizzata la pagina **[!UICONTROL Impostazioni]**. Da qui puoi visualizzare informazioni relative al tuo ID progetto [!DNL Google] e dettagli sul tuo account [!DNL Google Cloud Storage]. Per accedere alle impostazioni di interoperabilità, seleziona **[!UICONTROL Interoperabilità]** dall&#39;intestazione superiore.
+Viene visualizzata la pagina **[!UICONTROL Settings]**. Da qui puoi visualizzare informazioni relative al tuo ID progetto [!DNL Google] e dettagli sul tuo account [!DNL Google Cloud Storage]. Per accedere alle impostazioni di interoperabilità, selezionare **[!UICONTROL Interoperability]** dall&#39;intestazione superiore.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
-La pagina **[!UICONTROL Interoperabilità]** contiene informazioni sull&#39;autenticazione, le chiavi di accesso e il progetto predefinito associato all&#39;account del servizio. Per generare un nuovo ID chiave di accesso e una chiave di accesso segreta per l&#39;account del servizio, selezionare **[!UICONTROL Crea una chiave per un account del servizio]**.
+La pagina **[!UICONTROL Interoperability]** contiene informazioni sull&#39;autenticazione, le chiavi di accesso e il progetto predefinito associato all&#39;account del servizio. Per generare un nuovo ID chiave di accesso e una chiave di accesso segreta per l&#39;account del servizio, selezionare **[!UICONTROL Create a Key for a Service Account]**.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
