@@ -79,7 +79,7 @@ Se si sta creando un nuovo account, selezionare **[!UICONTROL New account]**, qu
 
 *I flussi di lavoro per i passaggi rimanenti della creazione di un flusso di dati sono modulari. In caso di chiamate specifiche che si desidera effettuare per quanto riguarda la propria origine, vedere la sezione Risorse aggiuntive di seguito.*
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account *YOURSOURCE*. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account *YOURSOURCE*. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=it).
 
 ## Risorse aggiuntive
 
