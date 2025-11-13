@@ -156,13 +156,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
 
 ## Panoramica video {#video-overview}
 
 Guarda il video seguente per una spiegazione dei vantaggi e di come attivare i dati per Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/38180/)
+>[!VIDEO](https://video.tv.adobe.com/v/326486?captions=ita)
 
 ## Connettersi alla destinazione {#connect}
 
