@@ -2,9 +2,9 @@
 description: Scopri come configurare le specifiche del server di destinazione in Adobe Experience Platform Destination SDK tramite l’endpoint "/authoring/destination-servers".
 title: Specifiche server per le destinazioni create con Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2775'
 ht-degree: 2%
 
 ---
@@ -78,7 +78,7 @@ Nell&#39;esempio seguente, un partner crea un server di destinazione Data Landin
          "templatingStrategy":"NONE",
          "value":"Your/hardcoded/path/here"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -307,7 +307,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -318,6 +318,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 | `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL Data Landing Zone] destinazioni, impostare su `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | Stringa | *Richiesto*. Impostare questo valore in base al tipo di valore utilizzato nel campo `path.value`.<ul><li>Se desideri che gli utenti inseriscano il proprio account [!DNL Data Landing Zone] nell&#39;interfaccia utente di Experience Platform, imposta questo valore su `PEBBLE_V1`. In questo caso, è necessario formattare il campo `path.value` per leggere un valore dai [campi dati cliente](../destination-configuration/customer-data-fields.md) compilati dall&#39;utente. Questo caso d’uso è illustrato nell’esempio precedente.</li><li>Se per l&#39;integrazione si utilizza un percorso hardcoded, ad esempio `"path.value": "https://myaccount.blob.core.windows.net/"`, impostare questo valore su `NONE`. |
 | `fileBasedDlzDestination.path.value` | Stringa | Percorso della cartella di destinazione che ospiterà i file esportati. |
+| `fileBasedDlzDestination.useCase` | Stringa | *Richiesto*. Imposta su `"dlz_destination"`. Questa proprietà identifica la destinazione come [!DNL Data Landing Zone] destinazione. Questa proprietà viene utilizzata solo durante la creazione di una destinazione [!DNL Data Landing Zone]. |
 
 {style="table-layout:auto"}
 
