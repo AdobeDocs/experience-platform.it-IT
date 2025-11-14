@@ -2,9 +2,9 @@
 title: Connettore Source di Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 816c41613844e0d2b53003bc865f1996a86297c6
+source-git-commit: d9dad6b5da413740559e6c8de7392bc2e169d5d9
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,14 @@ Quando viene stabilita una connessione di origine per portare dati [!DNL Analyti
 
 Per informazioni dettagliate sulla mappatura dei campi tra [!DNL Analytics] e Experience Platform, consulta la guida [Mappatura campi Adobe Analytics](./mapping/analytics.md).
 
+>[!TIP]
+>
+>Segui queste best practice per evitare di superare i diritti di licenza e di travolgere le metriche di archiviazione totale e ricchezza dei dati:
+>
+>* Imposta Experience Event Dataset Retention Time-To-Live (TTL) all’inizio per ottimizzare la gestione del ciclo di vita dei dati e l’efficienza dello storage. Per ulteriori dettagli, consulta la guida su [gestione della conservazione dei set di dati di Experience Event nel data lake tramite TTL](../../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md).
+>
+>* Quando crei un flusso di dati di origine Analytics, inizia configurando il connettore per acquisire i dati solo nel data lake. Dopo aver confermato il funzionamento del flusso di dati, puoi abilitare l’acquisizione del profilo per il set di dati. Questo approccio funziona al meglio quando i filtri di riga e colonna riducono efficacemente il volume di dati. Per ulteriori informazioni, consulta la documentazione sulla [connessione di Adobe Analytics ad Experience Platform](../../tutorials/ui/create/adobe-applications/analytics.md).
+
 ## Qual è la latenza prevista per i dati di Analytics su Experience Platform?
 
 La latenza prevista per i dati di Analytics su Experience Platform è descritta nella tabella seguente. La latenza varia a seconda della configurazione del cliente, dei volumi di dati e delle applicazioni consumer. Ad esempio, se l&#39;implementazione di Analytics è configurata con `A4T`, la latenza per la pipeline aumenterà a 5-10 minuti.
@@ -52,11 +60,11 @@ La latenza prevista per i dati di Analytics su Experience Platform è descritta 
 | Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **non** abilitato) | &lt; 2 minuti |
 | Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **è** abilitato) | fino a 30 minuti |
 | Nuovi dati in Data Lake | &lt; 2,25 ore |
-| Nuovi dati in Customer Journey Analytics senza [unione](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=it) | &lt; 3,75 ore |
+| Nuovi dati in Customer Journey Analytics senza [unione](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 ore |
 | Nuovi dati per Customer Journey Analytics con unione | &lt; 7 ore |
 | Backfill di meno di 10 miliardi di eventi | &lt; 4 settimane |
 
-Per ulteriori informazioni sulle latenze di Customer Journey Analytics, vedere: [Guardrail Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=it).
+Per ulteriori informazioni sulle latenze di Customer Journey Analytics, vedere: [Guardrail Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 Il valore predefinito della retrocompilazione di Analytics per le sandbox di produzione è 13 mesi. Per i dati di Analytics nelle sandbox non di produzione, la retrocompilazione è impostata su tre mesi. Il limite di 10 miliardi di eventi menzionato nella tabella precedente è strettamente in relazione alla latenza prevista.
 
@@ -79,9 +87,9 @@ La tabella seguente fornisce ulteriori informazioni sui campi di identità nei d
 
 | Campo identità | Descrizione |
 | --- | --- |
-| AAID | AAID è l&#39;identificatore del dispositivo principale in Adobe Analytics ed è garantita la sua esistenza in ogni evento trasmesso tramite l&#39;origine [!DNL Analytics]. AAID viene talvolta indicato come *ID legacy di Analytics* o come ID cookie `s_vi`. Nonostante ciò, viene creato un AAID anche se il cookie `s_vi` non è presente. AAID è rappresentato dalle colonne `post_visid_high` e `post_visid_low` in [[!DNL Analytics] feed di dati](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=it). In un dato evento, il campo AAID contiene una singola identità che può essere uno dei diversi tipi descritti nell&#39;[ordine delle operazioni per [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html?lang=it). **Nota**: all&#39;interno di un&#39;intera suite di rapporti, un AAID può contenere diversi tipi tra gli eventi. |
-| ECID | L&#39;ECID (Experience Cloud ID) è un campo separato dell&#39;identificatore del dispositivo, che viene popolato in Adobe Analytics quando [!DNL Analytics] viene implementato utilizzando il servizio Experience Cloud Identity. L’ECID viene talvolta indicato anche come MCID (Marketing Cloud ID). Se su un evento esiste un ECID, l&#39;AAID può essere basato su ECID a seconda che il [periodo di tolleranza](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html?lang=it) di Analytics sia configurato o meno. ECID è rappresentato da `mcvisid` nei feed dati di Analytics. Per ulteriori informazioni su ECID, consulta la [panoramica ECID](../../../identity-service/features/ecid.md). Per informazioni sul funzionamento di ECID con [!DNL Analytics], consulta il documento in [Richieste Analytics e Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=it). |
-| AACUSTOMID | AACUSTOMID è un campo separato dell&#39;identificatore che viene popolato in Adobe Analytics in base all&#39;utilizzo della variabile `s.VisitorID` nell&#39;implementazione [!DNL Analytics]. AACUSTOMID è rappresentato dalla colonna `cust_visid` in [[!DNL Analytics] feed di dati](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html?lang=it). Se AACUSTOMID è presente, AAID sarà basato su AACUSTOMID perché AACUSTOMID supera tutti gli altri identificatori come definito dall&#39;[ordine delle operazioni per [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html?lang=it). |
+| AAID | AAID è l&#39;identificatore del dispositivo principale in Adobe Analytics ed è garantita la sua esistenza in ogni evento trasmesso tramite l&#39;origine [!DNL Analytics]. AAID viene talvolta indicato come *ID legacy di Analytics* o come ID cookie `s_vi`. Nonostante ciò, viene creato un AAID anche se il cookie `s_vi` non è presente. AAID è rappresentato dalle colonne `post_visid_high` e `post_visid_low` in [[!DNL Analytics] feed di dati](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). In un dato evento, il campo AAID contiene una singola identità che può essere uno dei diversi tipi descritti nell&#39;[ordine delle operazioni per [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **Nota**: all&#39;interno di un&#39;intera suite di rapporti, un AAID può contenere diversi tipi tra gli eventi. |
+| ECID | L&#39;ECID (Experience Cloud ID) è un campo separato dell&#39;identificatore del dispositivo, che viene popolato in Adobe Analytics quando [!DNL Analytics] viene implementato utilizzando il servizio Experience Cloud Identity. L’ECID viene talvolta indicato anche come MCID (Marketing Cloud ID). Se su un evento esiste un ECID, l&#39;AAID può essere basato su ECID a seconda che il [periodo di tolleranza](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) di Analytics sia configurato o meno. ECID è rappresentato da `mcvisid` nei feed dati di Analytics. Per ulteriori informazioni su ECID, consulta la [panoramica ECID](../../../identity-service/features/ecid.md). Per informazioni sul funzionamento di ECID con [!DNL Analytics], consulta il documento in [Richieste Analytics e Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
+| AACUSTOMID | AACUSTOMID è un campo separato dell&#39;identificatore che viene popolato in Adobe Analytics in base all&#39;utilizzo della variabile `s.VisitorID` nell&#39;implementazione [!DNL Analytics]. AACUSTOMID è rappresentato dalla colonna `cust_visid` in [[!DNL Analytics] feed di dati](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). Se AACUSTOMID è presente, AAID sarà basato su AACUSTOMID perché AACUSTOMID supera tutti gli altri identificatori come definito dall&#39;[ordine delle operazioni per [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### Trattamento delle identità da parte dell&#39;origine [!DNL Analytics]
 
@@ -103,7 +111,7 @@ Quando l&#39;identità o le identità vengono copiate in `identityMap`, anche `e
 * Se ECID è presente, `endUserIDs._experience.mcid.namespace.code` è impostato su &quot;ECID&quot;.
 * Se AACUSTOMID è presente, `endUserIDs._experience.aacustomid.namespace.code` è impostato su &quot;AACUSTOMID&quot;.
 
-Nella mappa di identità, se ECID è presente, viene contrassegnato come identità primaria dell’evento. In questo caso, AAID può essere basato su ECID a causa del [periodo di tolleranza del servizio Identity](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html?lang=it). In caso contrario, AAID è contrassegnato come identità primaria dell’evento. AACUSTOMID non viene mai contrassegnato come ID primario dell’evento. Tuttavia, se AACUSTOMID è presente, AAID è basato su AACUSTOMID a causa dell’ordine delle operazioni di Experience Cloud.
+Nella mappa di identità, se ECID è presente, viene contrassegnato come identità primaria dell’evento. In questo caso, AAID può essere basato su ECID a causa del [periodo di tolleranza del servizio Identity](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). In caso contrario, AAID è contrassegnato come identità primaria dell’evento. AACUSTOMID non viene mai contrassegnato come ID primario dell’evento. Tuttavia, se AACUSTOMID è presente, AAID è basato su AACUSTOMID a causa dell’ordine delle operazioni di Experience Cloud.
 
 >[!NOTE]
 >
