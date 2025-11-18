@@ -6,10 +6,10 @@ breadcrumb-title: Guida agli stream di dati
 user-guide-description: Scopri come configurare gli stream di dati in Adobe Experience Platform.
 feature: Datastreams
 role: Developer
-source-git-commit: 4f3bec03d26c7606e70db75320cf3ba39d9d2b0d
+source-git-commit: 5e2445e2f1ec71aeeb2b6abbd032dad607a7427b
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 83%
+source-wordcount: '42'
+ht-degree: 78%
 
 ---
 
@@ -22,6 +22,3 @@ ht-degree: 83%
 * [Configurare il rilevamento di bot per gli stream di dati](bot-detection.md)
 * [Configurare gli override dello stream di dati](overrides.md)
 * [Preparazione dei dati per la raccolta dati](data-prep.md)
-* Arricchimento dei dati {#data-enrichment}
-   * [Dati meteo di The Weather Channel](data-enrichment/weather.md)
-   * [Mappature dei campi dati meteo](data-enrichment/weather-reference.md)
