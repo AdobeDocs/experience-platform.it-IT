@@ -2,9 +2,9 @@
 title: Connettere Adobe Analytics Ad Experience Platform
 description: Scopri come importare i dati della suite di rapporti di Adobe Analytics in Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d9dad6b5da413740559e6c8de7392bc2e169d5d9
+source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2745'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 È importante comprendere i seguenti termini chiave utilizzati nel presente documento:
 
 * **Attributo standard**: gli attributi standard sono qualsiasi attributo predefinito da Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nei gruppi di campi Dati di origine e Schema di Analytics.
-* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in Analytics. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la [documentazione di Analytics sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=it).
+* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia delle variabili personalizzate in Analytics. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Per ulteriori informazioni sulle eVar, consulta la [documentazione di Analytics sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
 * **Qualsiasi attributo nei gruppi di campi personalizzati**: gli attributi che provengono dai gruppi di campi creati dai clienti sono tutti definiti dall&#39;utente e non sono considerati né attributi standard né personalizzati.
 
 ## Navigare nel catalogo delle origini
@@ -112,6 +112,12 @@ Experience Platform rileva automaticamente la mappatura per eventuali conflitti 
 >In caso di conflitti di nomi tra la suite di rapporti di origine e lo schema selezionato, puoi comunque continuare con il flusso di dati di Analytics, riconoscendo che i descrittori dei campi non verranno modificati. In alternativa, puoi scegliere di creare un nuovo schema con un set vuoto di descrittori.
 
 ## Mappature personalizzate {#custom-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_analytics_import_mapping"
+>title="Scarica modello"
+>abstract="Scarica il modello CSV per eseguire la mappatura offline."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importa mappatura"
 
 È possibile utilizzare le funzioni di preparazione dati per aggiungere nuove mappature personalizzate o campi calcolati per gli attributi personalizzati. Per aggiungere mappature personalizzate, selezionare **[!UICONTROL Custom]**.
 
@@ -319,5 +325,5 @@ Il seguente video ha lo scopo di chiarire come acquisire dati utilizzando il con
 >
 > L&#39;interfaccia utente [!DNL Experience Platform] mostrata nel video seguente non è aggiornata. Per le schermate e le funzionalità più recenti dell’interfaccia utente, consulta la documentazione precedente.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430258?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
