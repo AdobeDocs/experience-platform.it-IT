@@ -23,7 +23,7 @@ Leggi questo documento per scoprire come installare l&#39;estensione e utilizzar
 
 ## Prerequisiti {#prerequisites}
 
-Per configurare [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API] è necessario disporre di un ID inserzionista, di un ID UPixel e di un ID tracker pertinenti dall&#39;account ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
+Per configurare [!DNL The Trade Desk][[!DNL The Trade Desk Real-Time Conversions API] è necessario disporre di un ID inserzionista, di un ID UPixel e di un ID tracker pertinenti dall&#39;account &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
 
 >[!INFO]
 >
@@ -84,7 +84,7 @@ Le opzioni di configurazione sono suddivise in tre sezioni principali, come illu
 
 ![La sezione [!DNL Basic Request Properties] che mostra l&#39;input di dati di esempio nei campi.](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
 
-Per ulteriori informazioni sulle [!DNL The Trade Desk]proprietà di richiesta[ accettate dall&#39;API per conversioni in tempo reale di ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties), consultare la documentazione per gli sviluppatori di [!DNL The Trade Desk].
+Per ulteriori informazioni sulle [!DNL The Trade Desk]proprietà di richiesta[&#x200B; accettate dall&#39;API per conversioni in tempo reale di &#x200B;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties), consultare la documentazione per gli sviluppatori di [!DNL The Trade Desk].
 
 **[!UICONTROL Object Request Parameters]**
 
@@ -93,7 +93,7 @@ Oggetto JSON contenente ulteriori informazioni. Puoi utilizzare un set ridotto d
 
 ![La sezione [!DNL Object Request Parameters] che mostra i campi disponibili.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-Per ulteriori informazioni su [ e sulle relative proprietà, fare riferimento alla documentazione dell&#39;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items)Evento conversioni in tempo reale[!UICONTROL Object Request Parameters].
+Per ulteriori informazioni su [&#x200B; e sulle relative proprietà, fare riferimento alla documentazione dell&#39;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items)Evento conversioni in tempo reale[!UICONTROL Object Request Parameters].
 
 **[!UICONTROL Configuration Overrides]**
 
