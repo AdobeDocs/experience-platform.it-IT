@@ -4,7 +4,7 @@ description: Scopri come utilizzare Gestione autorizzazioni in Adobe Experience 
 exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '572'
 ht-degree: 7%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Per accedere a [!UICONTROL Gestione autorizzazioni], è necessario essere un amministratore di prodotto. Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
+>Per accedere a [!UICONTROL Permission Manager], devi essere un amministratore di prodotto. Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Utilizza query semplici in [!UICONTROL Gestione autorizzazioni] per creare rapporti concisi che ti aiuteranno a comprendere la gestione degli accessi e a risparmiare tempo nella convalida delle autorizzazioni di accesso in molti flussi di lavoro e livelli di granularità. È possibile utilizzare [!UICONTROL Gestione autorizzazioni] per trovare gli utenti che appartengono a un gruppo di utenti e dispongono dei privilegi di accesso specificati, nonché i ruoli con etichette specifiche.
+Utilizzare query semplici in [!UICONTROL Permission Manager] per creare report concisi che consentono di comprendere la gestione degli accessi e risparmiare tempo nella convalida delle autorizzazioni di accesso in molti flussi di lavoro e livelli di granularità. È possibile utilizzare [!UICONTROL Permission Manager] per trovare utenti che appartengono a un gruppo di utenti e dispongono di privilegi di accesso specifici, nonché ruoli con etichette specifiche.
 
 ## Eseguire una ricerca di utenti all’interno di un gruppo di utenti specificato {#search-users}
 
@@ -23,25 +23,25 @@ Utilizza query semplici in [!UICONTROL Gestione autorizzazioni] per creare rappo
 >id="platform_permission_manager"
 >title="Gestione autorizzazioni"
 >abstract="Utilizza i selettori a discesa nella pagina per ottenere rapporti sul livello di accesso di diversi livelli di granularità per utenti e ruoli."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=it" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
-Utilizzando il menu a discesa, selezionare l&#39;attributo **[!UICONTROL Utenti]**.
+Utilizzando il menu a discesa, selezionare l&#39;attributo **[!UICONTROL Users]**.
 
 ![Elenco a discesa degli attributi che evidenzia gli utenti.](../../images/permission-manager/users-select.png)
 
-Selezionare quindi il **[!UICONTROL gruppo utenti]** che si desidera cercare utilizzando il menu a discesa.
+Selezionare quindi **[!UICONTROL User Group]** da cercare utilizzando il menu a discesa.
 
 >[!INFO]
 >
->[!UICONTROL Il gruppo utenti] non è un campo obbligatorio. Puoi selezionare un solo gruppo di utenti per ogni rapporto.
+>[!UICONTROL User Group] non è un campo obbligatorio Puoi selezionare un solo gruppo di utenti per ogni rapporto.
 
 ![Elenco a discesa Gruppo utenti evidenziato.](../../images/permission-manager/user-group-select.png)
 
-Per un rapporto più granulare, puoi specificare la risorsa con le azioni in una particolare sandbox. Seleziona **[!UICONTROL Risorsa]**, **[!UICONTROL Azioni]** e **[!UICONTROL Sandbox]** dal menu a discesa, quindi seleziona **[!UICONTROL Mostra risultati]**.
+Per un rapporto più granulare, puoi specificare la risorsa con le azioni in una particolare sandbox. Selezionare **[!UICONTROL Resource]**, **[!UICONTROL Actions]** e **[!UICONTROL Sandboxes]** dal menu a discesa, quindi selezionare **[!UICONTROL Show Results]**.
 
 >[!INFO]
 >
->[!UICONTROL Risorsa], [!UICONTROL Azioni] e [!UICONTROL Sandbox] non sono campi obbligatori. Una volta aggiunta, è possibile rimuovere un&#39;azione o una sandbox selezionando **&#39;x&#39;** accanto alla selezione da rimuovere.
+>[!UICONTROL Resource], [!UICONTROL Actions] e [!UICONTROL Sandboxes] non sono campi obbligatori. Una volta aggiunta, è possibile rimuovere un&#39;azione o una sandbox selezionando **&#39;x&#39;** accanto alla selezione da rimuovere.
 
 ![Risorse, azioni, sandbox ed evidenziazione dei risultati](../../images/permission-manager/users-additional-attributes-select.png)
 
@@ -51,23 +51,23 @@ Un elenco di utenti e il loro indirizzo e-mail vengono segnalati in base ai crit
 
 ## Cerca ruoli con etichette specifiche {#search-roles}
 
-Utilizzando il menu a discesa, seleziona l&#39;attributo **[!UICONTROL Ruoli]**.
+Utilizzando il menu a discesa, selezionare l&#39;attributo **[!UICONTROL Roles]**.
 
 >[!INFO]
 >
->[!UICONTROL Etichette] non è un campo obbligatorio. Puoi selezionare più etichette, che verranno elencate sotto questo elenco a discesa una volta selezionate. Una volta aggiunta, è possibile rimuovere un&#39;etichetta selezionando **&#39;x&#39;** accanto all&#39;azione.
+>[!UICONTROL Labels] non è un campo obbligatorio Puoi selezionare più etichette, che verranno elencate sotto questo elenco a discesa una volta selezionate. Una volta aggiunta, è possibile rimuovere un&#39;etichetta selezionando **&#39;x&#39;** accanto all&#39;azione.
 
 ![L&#39;elenco a discesa degli attributi evidenzia i ruoli.](../../images/permission-manager/roles-select.png)
 
-Quindi, seleziona le **[!UICONTROL etichette]** che desideri cercare utilizzando il menu a discesa.
+Selezionare quindi **[!UICONTROL Labels]** da cercare utilizzando il menu a discesa.
 
 ![Elenco a discesa Etichette evidenziato.](../../images/permission-manager/roles-labels-select.png)
 
-Per un rapporto più granulare, puoi specificare la risorsa con le azioni in una particolare sandbox. Seleziona **[!UICONTROL Risorsa]**, **[!UICONTROL Azioni]** e **[!UICONTROL Sandbox]** dal menu a discesa, quindi seleziona **[!UICONTROL Mostra risultati]**.
+Per un rapporto più granulare, puoi specificare la risorsa con le azioni in una particolare sandbox. Selezionare **[!UICONTROL Resource]**, **[!UICONTROL Actions]** e **[!UICONTROL Sandboxes]** dal menu a discesa, quindi selezionare **[!UICONTROL Show Results]**.
 
 >[!INFO]
 >
->[!UICONTROL Risorsa], [!UICONTROL Azioni] e [!UICONTROL Sandbox] non sono campi obbligatori. È possibile selezionare una sola [!UICONTROL risorsa] per ogni report. Una volta aggiunta, è possibile rimuovere un&#39;azione o una sandbox selezionando **&#39;x&#39;** accanto alla selezione da rimuovere.
+>[!UICONTROL Resource], [!UICONTROL Actions] e [!UICONTROL Sandboxes] non sono campi obbligatori. È possibile selezionare un solo [!UICONTROL Resource] per ogni report. Una volta aggiunta, è possibile rimuovere un&#39;azione o una sandbox selezionando **&#39;x&#39;** accanto alla selezione da rimuovere.
 
 ![Risorse, azioni, sandbox ed evidenziazione dei risultati](../../images/permission-manager/roles-additional-attributes-select.png)
 
@@ -81,7 +81,7 @@ Per ogni ruolo corrispondente ai criteri specificati vengono visualizzate le seg
 | Etichette | Elenco di etichette associate al ruolo. |
 | Sandbox | Un elenco di Sanbox contenenti questo ruolo. |
 | Modificato | La data e la marca temporale dell’ultimo aggiornamento del ruolo. |
-| Creato a | La data e la marca temporale di creazione del ruolo. |
+| Data creazione | La data e la marca temporale di creazione del ruolo. |
 | Creato da | Dettagli del creatore del ruolo. |
 
 ![Report generato in base agli attributi selezionati evidenziati](../../images/permission-manager/roles-report.png)

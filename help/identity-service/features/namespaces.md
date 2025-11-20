@@ -4,7 +4,7 @@ description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1848'
 ht-degree: 17%
 
 ---
@@ -99,12 +99,12 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 | Nome visualizzato | Descrizione |
 | ------------ | ----------- |
 | AdCloud | Uno spazio dei nomi che rappresenta Adobe AdCloud. |
-| Adobe Analytics (ID legacy) | Uno spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento sugli [spazi dei nomi Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=it#namespaces). |
+| Adobe Analytics (ID legacy) | Uno spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento sugli [spazi dei nomi Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces). |
 | Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
 | Servizio di notifica push di Apple | Uno spazio dei nomi che rappresenta le identità raccolte tramite il servizio Apple Push Notification. Per ulteriori informazioni, consulta il seguente documento sul [servizio Apple Push Notification](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1). |
 | ECID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](./ecid.md). |
 | E-mail | Uno spazio dei nomi che rappresenta un indirizzo e-mail. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
-| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Per ulteriori informazioni, consulta il seguente documento sul supporto dell&#39;hashing [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=it#hashing-support). |
+| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Per ulteriori informazioni, consulta il seguente documento sul supporto dell&#39;hashing [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support). |
 | Firebase Cloud Messaging | Spazio dei nomi che rappresenta le identità raccolte tramite Google Firebase Cloud Messaging per le notifiche push. Per ulteriori informazioni, consulta il seguente documento sulla [messaggistica cloud di Google Firebase](https://firebase.google.com/docs/cloud-messaging). |
 | Google Ad ID (GAID) | Uno spazio dei nomi che rappresenta un ID di Google Advertising. Per ulteriori informazioni, consulta il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
 | Telefono | Uno spazio dei nomi che rappresenta un numero di telefono. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
@@ -121,7 +121,7 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 >title="Visualizzare le identità di integrazione"
 >abstract="Le identità di integrazione sono spazi dei nomi utilizzati per collegarsi ad altri sistemi e non utilizzati nella risoluzione delle identità o per unire le identità. <br> Queste identità sono nascoste per impostazione predefinita. Utilizza il pulsante di attivazione per visualizzare gli spazi dei nomi dell’integrazione."
 
-Per visualizzare gli spazi dei nomi delle identità nell&#39;interfaccia utente, seleziona **[!UICONTROL Identità]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Sfoglia]**.
+Per visualizzare gli spazi dei nomi delle identità nell&#39;interfaccia utente, selezionare **[!UICONTROL Identities]** nell&#39;area di navigazione a sinistra, quindi selezionare **[!UICONTROL Browse]**.
 
 Viene visualizzata una directory di spazi dei nomi dell’organizzazione contenente informazioni su nomi, simboli di identità, date dell’ultimo aggiornamento, tipi di identità corrispondenti e descrizione.
 
@@ -131,19 +131,19 @@ Viene visualizzata una directory di spazi dei nomi dell’organizzazione contene
 
 A seconda dei dati organizzativi e dei casi di utilizzo, potrebbe essere necessario specificare spazi dei nomi personalizzati. È possibile creare spazi dei nomi personalizzati utilizzando l&#39;API [[!DNL Identity Service]](../api/create-custom-namespace.md) o tramite l&#39;interfaccia utente.
 
-Per creare uno spazio dei nomi personalizzato, selezionare **[!UICONTROL Crea spazio dei nomi identità]**.
+Per creare uno spazio dei nomi personalizzato, selezionare **[!UICONTROL Create identity namespace]**.
 
 >[!TIP]
 >
->Le identità di integrazione sono spazi dei nomi utilizzati per connettersi con altri sistemi. Non vengono utilizzati nella risoluzione delle identità né per unire le identità. Seleziona **[!UICONTROL Visualizza identità integrazione]** per aggiornare l&#39;elenco e includere le identità integrazione. Tuttavia, le identità di integrazione sono nascoste per impostazione predefinita perché sono di sola visualizzazione e non è necessario configurarle.
+>Le identità di integrazione sono spazi dei nomi utilizzati per connettersi con altri sistemi. Non vengono utilizzati nella risoluzione delle identità né per unire le identità. Selezionare **[!UICONTROL View integration identities]** per aggiornare l&#39;elenco e includere le identità di integrazione. Tuttavia, le identità di integrazione sono nascoste per impostazione predefinita perché sono di sola visualizzazione e non è necessario configurarle.
 
 ![Pulsante Crea spazio dei nomi delle identità nell&#39;area di lavoro delle identità.](../images/namespace/create-identity-namespace.png)
 
-Viene visualizzata la finestra [!UICONTROL Crea spazio dei nomi identità]. Innanzitutto, devi fornire un nome visualizzato e un simbolo di identità per lo spazio dei nomi personalizzato che desideri creare. Facoltativamente, puoi anche fornire una descrizione per aggiungere più contesto allo spazio dei nomi personalizzato che stai creando.
+Viene visualizzata la finestra [!UICONTROL Create identity namespace]. Innanzitutto, devi fornire un nome visualizzato e un simbolo di identità per lo spazio dei nomi personalizzato che desideri creare. Facoltativamente, puoi anche fornire una descrizione per aggiungere più contesto allo spazio dei nomi personalizzato che stai creando.
 
 ![Finestra popup in cui è possibile inserire informazioni relative allo spazio dei nomi delle identità personalizzato.](../images/namespace/name-and-symbol.png)
 
-Quindi, seleziona il tipo di identità da assegnare allo spazio dei nomi personalizzato. Al termine, selezionare **[!UICONTROL Crea]**.
+Quindi, seleziona il tipo di identità da assegnare allo spazio dei nomi personalizzato. Al termine, selezionare **[!UICONTROL Create]**.
 
 ![Selezione di tipi di identità tra cui è possibile scegliere e assegnare al proprio spazio dei nomi di identità personalizzato.](../images/namespace/select-identity-type.png)
 

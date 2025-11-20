@@ -4,8 +4,8 @@ description: Scopri come aggiungere etichette di utilizzo dei dati ai campi dell
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 8%
+source-wordcount: '745'
+ht-degree: 9%
 
 ---
 
@@ -38,7 +38,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 Per iniziare ad aggiungere le etichette, devi prima [selezionare uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [creare un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell&#39;Editor di schema.
 
-Per modificare le etichette di un singolo campo, seleziona il campo nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Gestisci accesso]** nella barra a destra.
+Per modificare le etichette di un singolo campo, è possibile selezionare il campo nell&#39;area di lavoro, quindi selezionare **[!UICONTROL Manage access]** nella barra a destra.
 
 >[!IMPORTANT]
 >
@@ -46,17 +46,17 @@ Per modificare le etichette di un singolo campo, seleziona il campo nell&#39;are
 
 ![Selezionare un campo dall&#39;area di lavoro dell&#39;Editor schema](../images/tutorials/labels/manage-access.png)
 
-Puoi anche selezionare la scheda **[!UICONTROL Etichette]**, scegliere il campo desiderato dall&#39;elenco e selezionare **[!UICONTROL Applica etichette di accesso e governance dei dati]** nella barra a destra.
+È inoltre possibile selezionare la scheda **[!UICONTROL Labels]**, scegliere il campo desiderato dall&#39;elenco e selezionare **[!UICONTROL Apply Access and Data Governance Labels]** nella barra a destra.
 
-![Seleziona un campo dalla scheda [!UICONTROL Etichette]](../images/tutorials/labels/select-field-on-labels-tab.png)
+![Selezionare un campo dalla scheda [!UICONTROL Labels]](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Per modificare le etichette per l&#39;intero schema, nella scheda **[!UICONTROL Etichette]**, seleziona la casella di controllo sotto l&#39;icona del filtro. In questo modo viene selezionato ogni campo disponibile nello schema. Quindi, seleziona **[!UICONTROL Applica etichette di accesso e governance dei dati]** nella barra a destra.
+Per modificare le etichette per l&#39;intero schema, nella scheda **[!UICONTROL Labels]** selezionare la casella di controllo sotto l&#39;icona del filtro. In questo modo viene selezionato ogni campo disponibile nello schema. Selezionare **[!UICONTROL Apply Access and Data Governance Labels]** nella barra a destra.
 
-![Selezionare il nome dello schema dalla scheda [!UICONTROL Etichette]](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![Selezionare il nome dello schema dalla scheda [!UICONTROL Labels]](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >
->Quando si tenta per la prima volta di modificare le etichette di uno schema o di un campo, viene visualizzato un messaggio di liberatoria che spiega in che modo l’utilizzo delle etichette influisce sulle operazioni a valle a seconda dei criteri dell’organizzazione. Seleziona **[!UICONTROL Procedi]** per continuare a modificare.
+>Quando si tenta per la prima volta di modificare le etichette di uno schema o di un campo, viene visualizzato un messaggio di liberatoria che spiega in che modo l’utilizzo delle etichette influisce sulle operazioni a valle a seconda dei criteri dell’organizzazione. Selezionare **[!UICONTROL Proceed]** per continuare la modifica.
 >
 >![Dichiarazione di non responsabilità per l&#39;utilizzo dell&#39;etichetta](../images/tutorials/labels/disclaimer.png)
 
@@ -70,19 +70,19 @@ Viene visualizzata una finestra di dialogo che consente di modificare le etichet
 >
 >Se stai modificando i campi per l’intero schema, la barra a destra non elenca i campi applicabili e visualizza invece il nome dello schema.
 
-Utilizza l’elenco visualizzato per selezionare le etichette da aggiungere allo schema o al campo. Man mano che le etichette vengono scelte, la sezione **[!UICONTROL Etichette applicate]** viene aggiornata per mostrare le etichette selezionate finora.
+Utilizza l’elenco visualizzato per selezionare le etichette da aggiungere allo schema o al campo. Quando si selezionano le etichette, la sezione **[!UICONTROL Applied labels]** viene aggiornata per mostrare le etichette selezionate finora.
 
 ![Finestra di dialogo Applica etichette di accesso e governance dei dati con le etichette applicate evidenziate.](../images/tutorials/labels/applied-labels.png)
 
-Per filtrare le etichette visualizzate per tipo, seleziona la categoria desiderata nella barra a sinistra. Per creare una nuova etichetta personalizzata, selezionare **[!UICONTROL Crea etichetta]**.
+Per filtrare le etichette visualizzate per tipo, seleziona la categoria desiderata nella barra a sinistra. Per creare una nuova etichetta personalizzata, selezionare **[!UICONTROL Create label]**.
 
 ![Finestra di dialogo Applica etichette di accesso e governance dei dati con filtro di tipo etichetta applicato ed etichetta Crea evidenziata.](../images/tutorials/labels/filter-and-create-custom.png)
 
-Una volta ottenute le etichette desiderate, selezionare **[!UICONTROL Salva]** per applicarle al campo o allo schema.
+Una volta ottenute le etichette desiderate, selezionare **[!UICONTROL Save]** per applicarle al campo o allo schema.
 
 ![Finestra di dialogo Applica etichette di accesso e governance dei dati con Salva evidenziato.](../images/tutorials/labels/save-labels.png)
 
-Viene visualizzata di nuovo la scheda **[!UICONTROL Etichette]** con le etichette applicate per lo schema.
+Viene visualizzata di nuovo la scheda **[!UICONTROL Labels]** con le etichette applicate allo schema.
 
 ![Scheda Etichette dell&#39;area di lavoro degli schemi con le etichette dei campi applicate evidenziate.](../images/tutorials/labels/field-labels-added.png)
 

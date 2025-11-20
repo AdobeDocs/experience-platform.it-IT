@@ -160,4 +160,4 @@ Per verificare se i dati sono stati esportati correttamente, controlla l’archi
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allow-list}
 
-Se hai bisogno di aggiungere IP Adobe inserire nell&#39;elenco Consentiti a un inserisco nell&#39;elenco Consentiti di, consulta l&#39;articolo [Indirizzo IP &#x200B;](ip-address-allow-list.md).
+Se hai bisogno di aggiungere IP Adobe inserire nell&#39;elenco Consentiti a un inserisco nell&#39;elenco Consentiti di, consulta l&#39;articolo [Indirizzo IP ](ip-address-allow-list.md).

@@ -4,8 +4,8 @@ title: Monitorare l’acquisizione del data lake
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 9%
+source-wordcount: '1430'
+ht-degree: 10%
 
 ---
 
@@ -48,9 +48,9 @@ Seleziona **[!UICONTROL Data lake]** dall&#39;intestazione principale nel dashbo
 
 ![Dashboard di monitoraggio con la scheda delle origini selezionata.](../assets/ui/monitor-sources/data-lake.png)
 
-Il grafico [!UICONTROL Tasso di acquisizione] visualizza il tasso di acquisizione dei dati in base all&#39;intervallo di tempo configurato. Per impostazione predefinita, nel dashboard di monitoraggio vengono visualizzate le percentuali di acquisizione delle ultime 24 ore. Per i passaggi su come configurare l&#39;intervallo di tempo, leggere la guida alla [configurazione dell&#39;intervallo di tempo di monitoraggio](monitor.md#configure-monitoring-time-frame).
+Il grafico [!UICONTROL Ingestion rate] visualizza il tasso di acquisizione dei dati in base all&#39;intervallo di tempo configurato. Per impostazione predefinita, nel dashboard di monitoraggio vengono visualizzate le percentuali di acquisizione delle ultime 24 ore. Per i passaggi su come configurare l&#39;intervallo di tempo, leggere la guida alla [configurazione dell&#39;intervallo di tempo di monitoraggio](monitor.md#configure-monitoring-time-frame).
 
-Per impostazione predefinita, il grafico è abilitato alla visualizzazione. Per nascondere il grafico, selezionare **[!UICONTROL Metriche e grafici]** per disabilitare l&#39;attivazione e nascondere il grafico.
+Per impostazione predefinita, il grafico è abilitato alla visualizzazione. Per nascondere il grafico, selezionare **[!UICONTROL Metrics and graphs]** per disabilitare l&#39;interruttore e nascondere il grafico.
 
 ![Grafico delle metriche del tasso di acquisizione.](../assets/ui/monitor-sources/metrics-graph.png)
 
@@ -75,10 +75,10 @@ Puoi filtrare ulteriormente i dati utilizzando le opzioni fornite sopra la tabel
 | Opzioni di filtro | Descrizione |
 | --- | --- |
 | Cerca | Utilizzare la barra di ricerca per filtrare la visualizzazione in base a un singolo tipo di origine. |
-| Origini | Seleziona **[!UICONTROL Origini]** per filtrare la visualizzazione e visualizzare i dati delle metriche in base al tipo di origine. Questa è la visualizzazione predefinita utilizzata dal dashboard di monitoraggio. |
-| Flussi di dati | Seleziona **[!UICONTROL Flussi dati]** per filtrare la visualizzazione e visualizzare i dati delle metriche per flusso di dati. |
-| Mostra solo errori | Seleziona **[!UICONTROL Mostra solo errori]** per filtrare la visualizzazione e visualizzare solo i flussi di dati che hanno segnalato errori di acquisizione. |
-| Le mie fonti | Puoi filtrare ulteriormente la vista utilizzando il menu a discesa [!UICONTROL Risorse personali]. Utilizza il menu a discesa per filtrare la vista per categoria. In alternativa, è possibile selezionare **[!UICONTROL Tutte le origini]** per visualizzare le metriche su tutte le origini o, oppure selezionare **[!UICONTROL Le mie origini]** per visualizzare solo le origini con cui si dispone di un account corrispondente. |
+| Origini | Seleziona **[!UICONTROL Sources]** per filtrare la visualizzazione e visualizzare i dati delle metriche in base al tipo di origine. Questa è la visualizzazione predefinita utilizzata dal dashboard di monitoraggio. |
+| Flussi di dati | Seleziona **[!UICONTROL Dataflows]** per filtrare la visualizzazione e visualizzare i dati delle metriche in base al flusso di dati. |
+| Mostra solo errori | Seleziona **[!UICONTROL Show failures only]** per filtrare la visualizzazione e visualizzare solo i flussi di dati che hanno segnalato errori di acquisizione. |
+| Le mie fonti | È possibile filtrare ulteriormente la visualizzazione utilizzando il menu a discesa [!UICONTROL My sources]. Utilizza il menu a discesa per filtrare la vista per categoria. In alternativa, è possibile selezionare **[!UICONTROL All sources]** per visualizzare le metriche su tutte le origini o, oppure selezionare **[!UICONTROL My sources]** per visualizzare solo le origini con cui si dispone di un account corrispondente. |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Per personalizzare la visualizzazione delle colonne, selezionare l&#39;icona del
 
 ![Dashboard di monitoraggio con l&#39;icona delle impostazioni delle colonne selezionata.](../assets/ui/monitor-sources/edit-columns.png)
 
-Utilizzare quindi la finestra *[!UICONTROL Personalizza tabella]* per selezionare le colonne che si desidera visualizzare nel dashboard. Al termine, selezionare **[!UICONTROL Applica]**.
+Utilizzare quindi la finestra *[!UICONTROL Customize table]* per selezionare le colonne che si desidera visualizzare nel dashboard. Al termine, selezionare **[!UICONTROL Apply]**.
 
 ![Finestra popup di personalizzazione colonna nel dashboard di monitoraggio.](../assets/ui/monitor-sources/customize-table.png)
 
@@ -106,7 +106,7 @@ Per esaminare ulteriormente un flusso di dati, seleziona l&#39;icona filtro ![fi
 
 Viene quindi visualizzata un’interfaccia che elenca tutte le iterazioni di esecuzione del flusso di dati selezionato.
 
-Le esecuzioni del flusso di dati rappresentano un’istanza dell’esecuzione del flusso di dati. Ad esempio, se un flusso di dati è pianificato per essere eseguito ogni ora alle 09:00, alle 00:00 e alle 00:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
+Le esecuzioni del flusso di dati rappresentano un’istanza dell’esecuzione del flusso di dati. Ad esempio, se un flusso di dati è pianificato per essere eseguito ogni ora alle 9:00, alle 10:00 e alle 11:00, avrai tre istanze di un flusso eseguito. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
 Per verificare le metriche di una specifica iterazione di esecuzione del flusso di dati, seleziona l&#39;icona del filtro ![filter](/help/images/icons/filter-add.png) accanto al flusso di dati.
 
@@ -135,9 +135,9 @@ Utilizza la pagina dei dettagli dell’esecuzione del flusso di dati per visuali
 
 {style="table-layout:auto"}
 
-Se il flusso di dati segnala errori, puoi scorrere verso il basso fino alla parte inferiore della pagina e utilizzare l&#39;interfaccia [!UICONTROL Errori di esecuzione flusso di dati].
+Se il flusso di dati viene eseguito e segnala errori, è possibile scorrere verso il basso fino alla parte inferiore della pagina utilizzando l&#39;interfaccia [!UICONTROL Dataflow run errors].
 
-Utilizzare la sezione [!UICONTROL Record non riusciti] per visualizzare le metriche nei record non acquisiti a causa di errori. Per visualizzare un report completo degli errori, selezionare **[!UICONTROL Anteprima diagnostica errori]**. Per scaricare una copia della diagnostica degli errori e del manifesto del file, selezionare **[!UICONTROL Scarica]**, quindi copiare la chiamata API di esempio da utilizzare con l&#39;API [!DNL Data Access].
+Utilizza la sezione [!UICONTROL Records failed] per visualizzare le metriche sui record che non sono stati acquisiti a causa di errori. Per visualizzare un report completo degli errori, selezionare **[!UICONTROL Preview error diagnostics]**. Per scaricare una copia della diagnostica degli errori e del manifesto del file, selezionare **[!UICONTROL Download]**, quindi copiare la chiamata API di esempio da utilizzare con l&#39;API [!DNL Data Access].
 
 >[!NOTE]
 >
@@ -145,7 +145,7 @@ Utilizzare la sezione [!UICONTROL Record non riusciti] per visualizzare le metri
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai imparato a monitorare il tasso di acquisizione del data lake utilizzando il dashboard **[!UICONTROL Monitoraggio]**. Hai anche imparato a identificare gli errori che causano errori del flusso di dati durante l’acquisizione. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai imparato a monitorare il tasso di acquisizione del data lake utilizzando il dashboard **[!UICONTROL Monitoring]**. Hai anche imparato a identificare gli errori che causano errori del flusso di dati durante l’acquisizione. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Monitoraggio dei dati di identità](./monitor-identities.md).
 * [Monitoraggio dei dati del profilo](./monitor-profiles.md).

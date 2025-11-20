@@ -4,7 +4,7 @@ description: Scopri come utilizzare le query con parametri nell’interfaccia ut
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '681'
 ht-degree: 11%
 
 ---
@@ -47,7 +47,7 @@ SELECT
 
 Per creare una query con parametri nell’interfaccia utente, passa all’editor delle query. Per ulteriori istruzioni, vedere la sezione relativa all&#39;accesso di [all&#39;editor di query](./user-guide.md#accessing-query-editor).
 
-Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, seleziona la scheda **[!UICONTROL Parametri query]** accanto alla [!UICONTROL Console] per aggiungere il valore mancante alla chiave. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Icona di avviso (![Icona di avviso.](/help/images/icons/alert.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi campo di input [!UICONTROL Value] vuoto.
+Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, seleziona la scheda **[!UICONTROL Query parameters]** accanto a [!UICONTROL Console] e aggiungi il valore mancante per la chiave. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Icona di avviso (![Icona di avviso.](/help/images/icons/alert.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi campo di input [!UICONTROL Value] vuoto.
 
 >[!NOTE]
 >
@@ -57,11 +57,11 @@ Utilizza la premessa `'$'` per immettere un parametro di query nella query nell�
 
 >[!TIP]
 >
->Modificare le schede da [!UICONTROL Parametri query] a [!UICONTROL Console] per visualizzare l&#39;output della console della query.
+>Modificare le schede da [!UICONTROL Query parameters] a [!UICONTROL Console] per visualizzare l&#39;output della console della query.
 
 ## Utilizzare i dettagli dei registri di query per verificare i valori dei parametri {#check-parameter-values}
 
-Non è possibile salvare i parametri all’interno dei modelli in quanto i valori utilizzati non sono persistenti. Tuttavia, è possibile controllare la pagina [!UICONTROL Dettagli registro query] per trovare i valori dei parametri utilizzati in un&#39;esecuzione di query. In questo caso, i registri non indicano che la query era con parametri. Per istruzioni su come trovare i valori utilizzati, consulta la [documentazione dei registri di query](./query-logs.md).
+Non è possibile salvare i parametri all’interno dei modelli in quanto i valori utilizzati non sono persistenti. Tuttavia, è possibile controllare la pagina [!UICONTROL Query log details] per trovare i valori dei parametri utilizzati in un&#39;esecuzione di query. In questo caso, i registri non indicano che la query era con parametri. Per istruzioni su come trovare i valori utilizzati, consulta la [documentazione dei registri di query](./query-logs.md).
 
 ![La visualizzazione dei registri delle query con l&#39;istruzione SQL di una query con parametri è evidenziata nella sezione dei dettagli.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 

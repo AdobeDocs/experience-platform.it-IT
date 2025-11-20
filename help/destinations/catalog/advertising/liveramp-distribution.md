@@ -4,8 +4,8 @@ description: Scopri come utilizzare il connettore LiveRamp - Distribuzione per o
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2744'
-ht-degree: 37%
+source-wordcount: '2645'
+ht-degree: 39%
 
 ---
 
@@ -65,20 +65,20 @@ Dopo aver effettuato l&#39;onboarding dei tipi di pubblico in LiveRamp, continua
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autentica su LiveRamp {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la schermata di connessione di destinazione.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
-* **[!UICONTROL ID organizzazione LiveRamp]**: l&#39;ID organizzazione del tuo account LiveRamp (elencato come _owner_org_ nelle credenziali fornite da LiveRamp).
-* **[!UICONTROL Password]**: password dell&#39;account LiveRamp (elencata come _secret_key_ nelle credenziali fornite da LiveRamp).
-* **[!UICONTROL URL token]**: l&#39;URL del token LiveRamp.
-* **[!UICONTROL Nome utente]**: il nome utente dell&#39;account LiveRamp (indicato come _account_id_ nelle credenziali fornite da LiveRamp).
+* **[!UICONTROL LiveRamp Organization ID]**: ID organizzazione dell&#39;account LiveRamp (elencato come _owner_org_ nelle credenziali fornite da LiveRamp).
+* **[!UICONTROL Password]**: password del tuo account LiveRamp (elencata come _secret_key_ nelle credenziali fornite da LiveRamp).
+* **[!UICONTROL Token URL]**: URL del token LiveRamp.
+* **[!UICONTROL Username]**: nome utente del tuo account LiveRamp (elencato come _account_id_ nelle credenziali fornite da LiveRamp).
 
 ### Configurare i dettagli della destinazione {#destination-details}
 
@@ -86,7 +86,7 @@ Dopo aver effettuato correttamente la connessione all’account LiveRamp, inseri
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra la schermata dei dettagli della destinazione.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
-* **[!UICONTROL Nome]**: inserisci il nome preferito per la connessione di destinazione.
+* **[!UICONTROL Name]**: inserisci il nome preferito per la connessione di destinazione.
 
 >[!NOTE]
 >
@@ -94,10 +94,10 @@ Dopo aver effettuato correttamente la connessione all’account LiveRamp, inseri
 ><br>
 >Esempio: `LiveRamp - Roku`.
 
-* **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Utilizza una descrizione che ti aiuta a identificare facilmente lo scopo di questa destinazione.
-* **[!UICONTROL Destinazione]**: utilizza il menu a discesa per selezionare la destinazione in cui desideri attivare i tipi di pubblico. La destinazione selezionata influisce direttamente su quanto visualizzato nella schermata [impostazioni specifiche per la destinazione](#destination-settings).
-* **[!UICONTROL Integrazione]**: selezionare l&#39;account di integrazione che si desidera utilizzare per la destinazione.
-* **[!UICONTROL Identificatore]**: seleziona gli identificatori supportati dalla destinazione. Attualmente, tutti gli identificatori supportati nelle destinazioni sono precompilati nel menu a discesa.
+* **[!UICONTROL Description]**: immettere una descrizione per la destinazione. Utilizza una descrizione che ti aiuta a identificare facilmente lo scopo di questa destinazione.
+* **[!UICONTROL Destination]**: utilizza il menu a discesa per selezionare la destinazione in cui desideri attivare i tipi di pubblico. La destinazione selezionata influisce direttamente su quanto visualizzato nella schermata [impostazioni specifiche per la destinazione](#destination-settings).
+* **[!UICONTROL Integration]**: selezionare l&#39;account di integrazione che si desidera utilizzare per la destinazione.
+* **[!UICONTROL Identifier]**: selezionare gli identificatori supportati dalla destinazione. Attualmente, tutti gli identificatori supportati nelle destinazioni sono precompilati nel menu a discesa.
 
 ## Impostazioni specifiche per la destinazione {#destination-settings}
 
@@ -116,7 +116,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dei dati cliente per la destinazione 4C Insights.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL 4C Brand Profile ID]**: immetti l&#39;ID numerico associato al tuo 4C Brand Profile. Se non disponi di questo ID, contatta il rappresentante dei servizi del cliente 4C.
+* **[!UICONTROL 4C Brand Profile ID]**: immetti l’ID numerico associato al tuo profilo marchio 4C. Se non disponi di questo ID, contatta il rappresentante dei servizi del cliente 4C.
 
 ### [!DNL Acast] {#acast}
 
@@ -129,7 +129,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dati cliente per la destinazione Acast.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Client name]**: nome dell&#39;account dell&#39;inserzionista, come si desidera che venga mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Ampersand.tv] {#ampersand-tv}
 
@@ -142,7 +142,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dati cliente per la destinazione e commerciale.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
 
-* **[!UICONTROL Nome società]**: nome società, come si desidera che venga visualizzato al partner di destinazione. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Your Company Name]**: il nome della tua società, come desideri che venga mostrato al partner di destinazione. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Captify] {#captify}
 
@@ -155,7 +155,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dati cliente per la destinazione Captify.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Client name]**: nome dell&#39;account dell&#39;inserzionista, come si desidera che venga mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Cardlytics] {#cardlytics}
 
@@ -168,7 +168,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dei dati cliente per la destinazione Cardlytics.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Client name]**: nome dell&#39;account dell&#39;inserzionista, come si desidera che venga mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Disney (Hulu/ESPN/ABC)] {#disney}
 
@@ -193,9 +193,9 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dati del cliente per la destinazione Disney.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
-* **[!UICONTROL Accordo sui termini di destinazione dei dati dell&#39;inserzionista]**: digita in `I AGREE` per confermare la conferma e l&#39;accordo sui termini dei dati dell&#39;inserzionista Disney.
-* **[!UICONTROL Nome client]**: immettere il nome della società che si desidera venga visualizzato al partner di destinazione.
-* **[!UICONTROL Indirizzo e-mail]**: immetti un indirizzo e-mail associato a un utente. Questo indirizzo e-mail funge da firma per il contratto sui termini di dati dell’inserzionista.
+* **[!UICONTROL Advertiser data destination terms agreement]**: digita in `I AGREE` per confermare la conferma e il consenso ai termini dei dati degli inserzionisti Disney.
+* **[!UICONTROL Client name]**: immettere il nome della società che si desidera venga visualizzato al partner di destinazione.
+* **[!UICONTROL Email address]**: immettere un indirizzo di posta elettronica associato a un utente. Questo indirizzo e-mail funge da firma per il contratto sui termini di dati dell’inserzionista.
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -208,7 +208,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dati cliente per la destinazione iHeartMedia.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Client Name]**: nome dell&#39;account dell&#39;inserzionista, come si desidera che venga mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Index Exchange] {#index-exchange}
 
@@ -221,7 +221,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra i campi dati cliente per la destinazione di Index Exchange.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
 
-* **[!UICONTROL Nome account]**: nome dell&#39;account client di Exchange dell&#39;indice. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Account Name]**: nome dell&#39;account client di Exchange dell&#39;indice. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Magnite CTV Platform] {#magnite}
 
@@ -252,8 +252,8 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dati cliente per la destinazione Magnite DV+.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL ID partner]**: l&#39;ID partner del progetto Rubicon associato all&#39;editore proprietario del segmento o dei dati. Contatta il rappresentante account di Rubicon Project in caso di dubbi sul valore da utilizzare.
-* **[!UICONTROL ID postazione]**: ID postazione Magnite DV+ fornito dall&#39;account manager Magnite
+* **[!UICONTROL Partner ID]**: l&#39;ID partner del progetto Rubicon associato all&#39;editore proprietario del segmento o dei dati. Contatta il rappresentante account di Rubicon Project in caso di dubbi sul valore da utilizzare.
+* **[!UICONTROL Seat ID]**: ID postazione Magnite DV+ fornito dall&#39;account manager Magnite
 
 ### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
 
@@ -281,10 +281,10 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dei dati cliente per la destinazione Nexxen.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL Tipo di tariffa]**: il tipo di tariffa rappresenta il modo in cui l&#39;utilizzo dei dati deve essere fatturato. Tutte le tariffe 0,00$ devono essere a prezzo fisso. Se non sai con certezza quale tipo di tariffa utilizzare, contatta il rappresentante Nexxen.
-* **[!UICONTROL ID mercato]**: immettere l&#39;ID mercato numerico in cui creare il contratto dati Nexxen. Se stai facendo la sindacazione “AlwaysOn” in ogni mercato della piattaforma Nexxen, immetti -1.
-* **[!UICONTROL ID inserzionista]**: se invii dati a un singolo inserzionista nella piattaforma Nexxen, immetti l&#39;ID inserzionista numerico Nexxen. Se si desidera rendere i dati disponibili a tutti gli inserzionisti in un mercato o se questi segmenti sono &quot;AlwaysOn&quot;, immettere -1.
-* **[!UICONTROL E-mail di contatto]**: immetti l&#39;indirizzo e-mail che Nexxen deve utilizzare per inviare i dettagli del contratto dei dati. Probabilmente si tratta del tuo indirizzo e-mail, ma può anche essere un alias e-mail. Per più destinatari, separare utilizzando le virgole ( `email1@domain.com`, `email2@domain.com`).
+* **[!UICONTROL Rate Type]**: il tipo di tariffa rappresenta il modo in cui l&#39;utilizzo dei dati deve essere fatturato. Tutte le tariffe 0,00$ devono essere a prezzo fisso. Se non sai con certezza quale tipo di tariffa utilizzare, contatta il rappresentante Nexxen.
+* **[!UICONTROL Market ID]**: immetti l&#39;ID di mercato numerico in cui creare il contratto dati Nexxen. Se stai facendo la sindacazione “AlwaysOn” in ogni mercato della piattaforma Nexxen, immetti -1.
+* **[!UICONTROL Advertiser ID]**: se invii dati a un singolo inserzionista nella piattaforma Nexxen, immetti l&#39;ID inserzionista numerico Nexxen. Se si desidera rendere i dati disponibili a tutti gli inserzionisti in un mercato o se questi segmenti sono &quot;AlwaysOn&quot;, immettere -1.
+* **[!UICONTROL Contact Email]**: immettere l&#39;indirizzo di posta elettronica che Nexxen deve utilizzare per inviare i dettagli del contratto dei dati. Probabilmente si tratta del tuo indirizzo e-mail, ma può anche essere un alias e-mail. Per più destinatari, separare utilizzando le virgole ( `email1@domain.com`, `email2@domain.com`).
 
 ### [!DNL One Fox] {#fox}
 
@@ -310,7 +310,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dati cliente per la destinazione Pandora.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
 
-* **[!UICONTROL Nome account]**: nome dell&#39;account Pandora. Contatta il rappresentante del tuo account Pandora se non sai con certezza quale sia il nome del tuo account. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Account name]**: il nome del tuo account Pandora. Contatta il rappresentante del tuo account Pandora se non sai con certezza quale sia il nome del tuo account. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Reddit] {#reddit}
 
@@ -328,8 +328,8 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con i campi dei dati cliente per la destinazione Reddit.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
 
-* **[!UICONTROL ID inserzionista Reddit]**: ID inserzionista Reddit. Deve iniziare con “t2_” o “a2_”. Se non conosci il tuo ID inserzionista, contatta il rappresentante Reddit.
-* **[!UICONTROL Nome inserzionista Reddit]**: nome dell&#39;inserzionista Reddit. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Reddit advertiser ID]**: ID inserzionista Reddit. Deve iniziare con “t2_” o “a2_”. Se non conosci il tuo ID inserzionista, contatta il rappresentante Reddit.
+* **[!UICONTROL Reddit advertiser name]**: nome dell&#39;inserzionista Reddit. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Roku] {#roku}
 
@@ -347,8 +347,8 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con gli identificatori supportati per la destinazione Roku.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
 
-* **[!UICONTROL Indirizzo e-mail account Roku]**: immetti l&#39;indirizzo e-mail associato al tuo account Roku.
-* **[!UICONTROL Indirizzo e-mail del rappresentante dell&#39;account Roku]**: immetti l&#39;indirizzo e-mail del rappresentante dell&#39;account Roku. Per immettere più indirizzi, separali con virgole.
+* **[!UICONTROL Roku account email address]**: immetti l&#39;indirizzo e-mail associato al tuo account Roku.
+* **[!UICONTROL Roku account representative email address]**: immetti l&#39;indirizzo e-mail del rappresentante del tuo account Roku. Per immettere più indirizzi, separali con virgole.
 
 ### [!DNL Spotify] {#spotify}
 
@@ -361,7 +361,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con gli identificatori supportati per la destinazione Spotify.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Client name]**: nome dell&#39;account dell&#39;inserzionista, come si desidera che venga mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Taboola] {#taboola}
 
@@ -379,8 +379,8 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con gli identificatori supportati per la destinazione Taboola.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
-* **[!UICONTROL Indirizzo e-mail dell&#39;account manager]**: l&#39;indirizzo e-mail dell&#39;account manager Taboola.
-* **[!UICONTROL Tipo di segmento]**: il tipo di segmento. Al momento sono supportati solo i segmenti di prime parti.
+* **[!UICONTROL Account manager email address]**: l&#39;indirizzo e-mail del tuo account manager Taboola.
+* **[!UICONTROL Segment type]**: tipo di segmento. Al momento sono supportati solo i segmenti di prime parti.
 
 ### [!DNL TargetSpot] {#targetspot}
 
@@ -393,7 +393,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con gli identificatori supportati per la destinazione TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Client name]**: nome dell&#39;account dell&#39;inserzionista, come si desidera che venga mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### [!DNL Teads] {#teads}
 
@@ -406,7 +406,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con gli identificatori supportati per la destinazione TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
 
-* **[!UICONTROL ID teads]**: ID teads
+* **[!UICONTROL Teads ID]**: ID teads
 
 ### [!DNL WB Discovery] {#wb-discovery}
 
@@ -419,19 +419,19 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform con gli identificatori supportati per la destinazione di individuazione Web.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
 
-* **[!UICONTROL Nome client]**: il nome dell&#39;account dell&#39;inserzionista, che si desidera mostrare al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
+* **[!UICONTROL Client name]**: nome dell&#39;account dell&#39;inserzionista, come si desidera che venga mostrato al partner di destinazione. Utilizza il nome della tua azienda. Non utilizzare spazi o caratteri speciali.
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Per ricevere notifiche sullo stato del flusso di dati, seleziona un avviso dall’elenco. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 La connessione [!DNL LiveRamp - Distribution] attiva i tipi di pubblico che sono già stati caricati sul tuo account LiveRamp tramite la connessione [LiveRamp - Onboarding](liveramp-onboarding.md).
 

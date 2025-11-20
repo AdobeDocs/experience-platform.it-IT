@@ -64,7 +64,7 @@ Un tipo di dati che si può considerare sensibile può essere diversi tipi di da
 | **PSPD** | I dati personali sensibili consentiti (PSPD) si riferiscono a dati che Adobe consente contrattualmente di caricare e che sono considerati &quot;sensibili&quot;, &quot;categorie speciali di dati&quot; o termini simili utilizzati dalle leggi applicabili. Ciò esclude specificamente le informazioni sanitarie protette (PHI) e altri dati sanitari regolamentati. |
 | **RHD** | Dati che si riferiscono a informazioni protette sulla salute (PHI) o informazioni su un paziente che Adobe ti consente contrattualmente di caricare. |
 
-## Etichette per ecosistemi partner {#partner}
+## Etichette dell’ecosistema dei partner {#partner}
 
 Le etichette dell’ecosistema partner vengono utilizzate per categorizzare i dati ottenuti da fonti esterne all’organizzazione.
 
@@ -74,7 +74,7 @@ Questa etichetta viene utilizzata per determinare l’utilizzo dei dati dei pote
 | --- | --- |
 | **Terze parti** | I dati di terze parti sono dati forniti da un fornitore di dati di terze parti. Un fornitore di dati di terze parti è un’entità che ha concluso un accordo con l’organizzazione che ti autorizza ad accedere ai dati di terze parti, utilizzarli, visualizzarli e trasmetterli insieme ad Experience Platform. |
 | **Arricchimento di terze parti** | Dati raccolti da un’organizzazione terza che non è direttamente correlata alla persona interessata. L’etichetta deve essere applicata ai dati di terze parti utilizzati per arricchire i profili di prime parti. |
-| **Prospezione di terze parti** | Dati raccolti da un’organizzazione terza che non è direttamente correlata alla persona interessata. L’etichetta deve essere applicata ai dati di terze parti utilizzati nella parte superiore della ricerca di funnel per clienti nuovi. |
+| **Prospezione di terze parti** | Dati raccolti da un’organizzazione terza che non è direttamente correlata alla persona interessata. L’etichetta deve essere applicata ai dati di terze parti utilizzati in aggiunta alla ricerca di potenziali clienti funnel. |
 
 ## Appendice
 

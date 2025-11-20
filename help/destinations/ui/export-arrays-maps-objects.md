@@ -5,7 +5,7 @@ description: Scopri come esportare array, mappe e oggetti da Real-Time CDP a des
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1062'
 ht-degree: 13%
 
 ---
@@ -46,7 +46,7 @@ Ottieni le informazioni più importanti sulle funzionalità in questa sezione e 
 
 In Experience Platform puoi utilizzare [schemi XDM](/help/xdm/home.md) per gestire diversi tipi di campi. Prima di aggiungere il supporto per le esportazioni di array, era possibile esportare campi di tipo coppia chiave-valore semplici, come le stringhe, da Experience Platform nelle destinazioni desiderate. Un esempio di questo campo precedentemente supportato per l&#39;esportazione è `personalEmail.address`:`johndoe@acme.org`.
 
-Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform [. &#x200B;](/help/xdm/ui/fields/array.md) È ora possibile esportare oggetti array come nell’esempio seguente.
+Altri tipi di campo in Experience Platform includono i campi array. Ulteriori informazioni sulla gestione dei campi array nell&#39;interfaccia utente di Experience Platform [. ](/help/xdm/ui/fields/array.md) È ora possibile esportare oggetti array come nell’esempio seguente.
 
 ```
 organizations = [{
@@ -71,11 +71,11 @@ Oltre agli array, puoi anche esportare mappe e oggetti da Experience Platform al
 
 ## Prerequisiti {#prerequisites}
 
-[Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata, segui i [passaggi di attivazione per le destinazioni di archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e procedi al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Quando ti connetti alla destinazione cloud desiderata, devi selezionare l&#39;opzione **[!UICONTROL Esporta array, mappe, oggetti]**. Per ulteriori informazioni, consulta la sezione seguente.
+[Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata, segui i [passaggi di attivazione per le destinazioni di archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e procedi al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Quando ti connetti alla destinazione cloud desiderata, devi selezionare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]**. Per ulteriori informazioni, consulta la sezione seguente.
 
 >[!NOTE]
 >
->Per le destinazioni di personalizzazione enterprise e edge, il supporto per l&#39;esportazione di campi di tipo mappa è disponibile senza la necessità di selezionare l&#39;opzione **[!UICONTROL Esporta array, mappe, oggetti]**. Questa opzione non è disponibile o richiesta per la connessione a questi tipi di destinazioni.
+>Per le destinazioni di personalizzazione Enterprise e Edge, il supporto per l&#39;esportazione di campi di tipo mappa è disponibile senza la necessità di selezionare un&#39;opzione **[!UICONTROL Export arrays, maps, objects]**. Questa opzione non è disponibile o richiesta per la connessione a questi tipi di destinazioni.
 
 ## Pulsante di attivazione per esportazione di array, mappe e oggetti {#export-arrays-maps-objects-toggle}
 
@@ -84,7 +84,7 @@ Oltre agli array, puoi anche esportare mappe e oggetti da Experience Platform al
 >title="Esportare array, mappe e oggetti"
 >abstract="<p> <b>Attiva</b> questa impostazione per abilitare l’esportazione di array, mappe e oggetti in file JSON o Parquet. Puoi selezionare questi tipi di oggetto nella visualizzazione del campo di origine del passaggio della mappatura. Se il pulsante di attivazione è attivato, non puoi utilizzare l’opzione dei campi calcolati nel passaggio di mappatura.</p><p>Con questo pulsante di attivazione <b>disattivata</b>, puoi utilizzare l’opzione dei campi calcolati e applicare varie funzioni di trasformazione dei dati durante l’attivazione dei tipi di pubblico. Tuttavia, è possibile <i>non</i> esportare array, mappe e oggetti in file JSON o Parquet e, a tale scopo, è necessario configurare una destinazione separata.</p>"
 
-Durante la connessione a una destinazione di archiviazione cloud basata su file, è possibile impostare l&#39;attivazione o la disattivazione di **[!UICONTROL Esporta array, mappe, oggetti]**.
+Durante la connessione a una destinazione di archiviazione cloud basata su file, è possibile attivare o disattivare **[!UICONTROL Export arrays, maps, objects]**.
 
 ![Esporta array, mappe, oggetti con un&#39;impostazione di attivazione o disattivazione ed evidenzia la finestra a comparsa.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
@@ -98,7 +98,7 @@ Attivando questa impostazione, è possibile esportare interi oggetti (ad esempio
 
 ![Selezionare gli oggetti tramite il selettore del campo di origine nel passaggio di mappatura del flusso di lavoro di attivazione.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-Selezionando questa opzione, l&#39;interfaccia utente blocca l&#39;utilizzo dei campi calcolati e il controllo **[!UICONTROL Aggiungi campi calcolati]** è disabilitato, come illustrato di seguito. Per utilizzare i campi calcolati per le trasformazioni di dati, imposta una connessione di destinazione con l’interruttore disattivato.
+Quando questa opzione è selezionata, l&#39;interfaccia utente blocca l&#39;utilizzo dei campi calcolati e il controllo **[!UICONTROL Add calculated fields]** è disabilitato, come illustrato di seguito. Per utilizzare i campi calcolati per le trasformazioni di dati, imposta una connessione di destinazione con l’interruttore disattivato.
 
 ![Controllo campi calcolati disabilitato.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 

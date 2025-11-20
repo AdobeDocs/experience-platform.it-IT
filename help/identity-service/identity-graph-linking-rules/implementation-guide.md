@@ -4,7 +4,7 @@ description: Scopri i passaggi consigliati da seguire per l’implementazione de
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1944'
 ht-degree: 6%
 
 ---
@@ -37,7 +37,7 @@ In questa sezione vengono descritti i passaggi preliminari che è necessario com
 
 Assicurati che lo spazio dei nomi univoco con la priorità più elevata sia sempre presente in ogni profilo noto. In questo modo il servizio Identity è in grado di rilevare l’identificatore di persona appropriato in un dato grafico.
 
-+++Seleziona questa opzione per visualizzare un esempio di grafico senza uno spazio dei nomi con un singolo identificatore di persona
++++Seleziona questa opzione per visualizzare un esempio di grafico senza un singolo spazio dei nomi dell’identificatore della persona
 
 Se non disponi di uno spazio dei nomi univoco per rappresentare gli identificatori delle persone, potresti ottenere un grafico che collega più identificatori delle persone allo stesso ECID. In questo esempio, sia B2BCRM che B2CCRM sono collegati allo stesso ECID allo stesso tempo. Questo grafico suggerisce che Tom, usando il suo account di accesso B2C, ha condiviso un dispositivo con Summer, usando il suo account di accesso B2B. Tuttavia, il sistema riconoscerà che si tratta di un profilo (compressione del grafico).
 
@@ -45,7 +45,7 @@ Se non disponi di uno spazio dei nomi univoco per rappresentare gli identificato
 
 +++
 
-+++Seleziona per visualizzare un esempio di grafico con uno spazio dei nomi con identificatore di persona singolo
++++Seleziona questa opzione per visualizzare un esempio di grafico con uno spazio dei nomi con identificatore di persona singolo
 
 Dato uno spazio dei nomi univoco, (in questo caso un CRMID invece di due spazi dei nomi diversi), Identity Service è in grado di distinguere l’identificatore della persona più recente associato all’ECID. In questo esempio, poiché esiste un CRMID univoco, Identity Service è in grado di riconoscere uno scenario di &quot;dispositivo condiviso&quot;, in cui due entità condividono lo stesso dispositivo.
 
@@ -94,7 +94,7 @@ Durante il processo di pre-implementazione, devi assicurarti che gli eventi aute
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/it/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Se il sistema invia due identificatori di persona, l’implementazione potrebbe 
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/it/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ In questo esempio, puoi presumere che il seguente evento sia stato inviato ad Ex
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/it/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -182,8 +182,8 @@ In questo esempio, puoi presumere che il seguente evento sia stato inviato ad Ex
 
 Il primo passaggio nel processo di implementazione del servizio Identity consiste nell’assicurarsi che l’account Experience Platform venga aggiunto a un ruolo provvisto delle autorizzazioni necessarie. L’amministratore può configurare le autorizzazioni per il tuo account passando all’interfaccia utente Autorizzazioni in Adobe Experience Cloud. A questo punto, è necessario aggiungere il tuo account a un ruolo con le seguenti autorizzazioni:
 
-* [!UICONTROL Visualizza impostazioni identità]: applica questa autorizzazione per poter visualizzare spazi dei nomi e priorità dello spazio dei nomi univoci nella pagina di esplorazione dello spazio dei nomi delle identità.
-* [!UICONTROL Modifica impostazioni identità]: applica questa autorizzazione per poter modificare e salvare le impostazioni di identità.
+* [!UICONTROL View Identity Settings]: applicare questa autorizzazione per visualizzare spazi dei nomi e priorità dello spazio dei nomi univoci nella pagina di esplorazione dello spazio dei nomi delle identità.
+* [!UICONTROL Edit Identity Settings]: applica questa autorizzazione per poter modificare e salvare le impostazioni di identità.
 
 Per ulteriori informazioni sulle autorizzazioni, leggere la [guida alle autorizzazioni](../../access-control/abac/ui/permissions.md).
 
@@ -193,13 +193,13 @@ Se i dati lo richiedono, devi innanzitutto creare gli spazi dei nomi appropriati
 
 ## Usa strumento di simulazione grafico {#graph-simulation}
 
-Quindi, passa allo strumento di simulazione del grafico [&#128279;](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
+Quindi, passa allo strumento di simulazione del grafico [](./graph-simulation.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Puoi utilizzare lo strumento di simulazione del grafico per simulare grafici di identità, creati con diverse configurazioni di spazio dei nomi e priorità dello spazio dei nomi univoche.
 
 Creando diverse configurazioni, puoi utilizzare lo strumento di simulazione del grafico per scoprire e comprendere meglio in che modo l’algoritmo di ottimizzazione delle identità e alcune configurazioni possono influenzare il comportamento del grafico.
 
 ## Configurare le impostazioni di identità {#identity-settings}
 
-Per avere un&#39;idea migliore del comportamento del grafico, passa alla [interfaccia utente delle impostazioni delle identità](./identity-settings-ui.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Per accedere all&#39;interfaccia utente delle impostazioni delle identità, seleziona **[!UICONTROL Identità]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Impostazioni]**.
+Per avere un&#39;idea migliore del comportamento del grafico, passa alla [interfaccia utente delle impostazioni delle identità](./identity-settings-ui.md) nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service. Per accedere all&#39;interfaccia utente delle impostazioni di identità, selezionare **[!UICONTROL Identities]** dal menu di navigazione a sinistra, quindi selezionare **[!UICONTROL Settings]**.
 
 ![La pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato.](../images/implementation/settings.png "Pagina di esplorazione delle identità con il pulsante Impostazioni evidenziato."){zoomable="yes"}
 
@@ -245,13 +245,13 @@ Una volta che hai tutti gli elementi elencati sopra, puoi iniziare ad acquisire 
 >
 >Una volta acquisiti i dati, il payload dei dati non elaborati XDM non cambia. Puoi comunque visualizzare le configurazioni dell’identità primaria nell’interfaccia utente. Tuttavia, queste configurazioni verranno sostituite dalle impostazioni di identità.
 
-Per qualsiasi feedback, utilizza l&#39;opzione **[!UICONTROL Feedback su Beta]** nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service.
+Per qualsiasi feedback, utilizza l’opzione **[!UICONTROL Beta feedback]** nell’area di lavoro dell’interfaccia utente del servizio Identity.
 
 ## Convalidare i grafici {#validate}
 
 Utilizza il dashboard delle identità per ottenere informazioni sullo stato dei tuoi grafici delle identità, ad esempio il conteggio delle identità complessivo e le tendenze del conteggio dei grafici, il conteggio delle identità per spazio dei nomi e il conteggio dei grafici per dimensione. Puoi anche utilizzare il dashboard delle identità per visualizzare le tendenze su grafici con due o più identità, organizzati per spazio dei nomi.
 
-Selezionare i puntini di sospensione (`...`), quindi selezionare **[!UICONTROL Visualizza altri]** per ulteriori informazioni e per verificare che non siano presenti grafici compressi.
+Selezionare i puntini di sospensione (`...`), quindi selezionare **[!UICONTROL View more]** per ulteriori informazioni e per verificare che non siano presenti grafici compressi.
 
 ![Dashboard delle identità nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service.](../images/implementation/identity_dashboard.png "Dashboard delle identità nell&#39;area di lavoro dell&#39;interfaccia utente di Identity Service."){zoomable="yes"}
 

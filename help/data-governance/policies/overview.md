@@ -6,8 +6,8 @@ description: I criteri di utilizzo dei dati sono regole che descrivono i tipi di
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 17%
+source-wordcount: '1207'
+ht-degree: 18%
 
 ---
 
@@ -22,12 +22,12 @@ Affinché le etichette di utilizzo dei dati supportino in modo efficace la confo
 
 Sono disponibili due tipi di criteri:
 
-* **[!UICONTROL Criteri di governance dei dati]**: limita l&#39;attivazione dei dati in base all&#39;azione di marketing in esecuzione e alle etichette di utilizzo dei dati presenti nei dati in questione.
-* **[!UICONTROL Criteri di consenso]**: filtra i profili che possono essere attivati in [destinazioni](../../destinations/home.md) in base al consenso o alle preferenze dei tuoi clienti
+* **[!UICONTROL Data governance policy]**: limita l&#39;attivazione dei dati in base all&#39;azione di marketing in esecuzione e alle etichette di utilizzo dei dati presenti nei dati in questione.
+* **[!UICONTROL Consent policy]**: filtra i profili attivabili in [destinazioni](../../destinations/home.md) in base al consenso o alle preferenze dei tuoi clienti
 
 >[!NOTE]
 >
->I criteri di utilizzo dei dati non devono essere confusi con i [criteri di controllo dell&#39;accesso](../../access-control/abac/end-to-end-guide.md#policy), che determinano se alcuni utenti Experience Platform della tua organizzazione possono accedere a determinati campi di dati, e sono configurati tramite la scheda [!UICONTROL Autorizzazioni].
+>I criteri di utilizzo dei dati non devono essere confusi con i [criteri di controllo dell&#39;accesso](../../access-control/abac/end-to-end-guide.md#policy), che determinano se alcuni utenti Experience Platform della tua organizzazione possono accedere a determinati campi di dati, e sono configurati tramite la scheda [!UICONTROL Permissions].
 
 Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo dei dati e fornisce collegamenti a ulteriore documentazione sull’utilizzo dei criteri nell’interfaccia utente o nell’API.
 
@@ -57,7 +57,7 @@ Consulta l&#39;appendice di questo documento per un elenco delle [azioni di mark
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=it).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestione dei criteri di utilizzo dei dati {#manage}

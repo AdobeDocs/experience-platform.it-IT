@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;interfaccia utente;personalizzazione;dashboard utilizzo licenze;dashboard;utilizzo licenze;diritto;consumo;;user interface;UI;customization;license usage dashboard;dashboard;license usage;entitlement;usage
-title: Dashboard utilizzo licenze
+title: Dashboard di utilizzo delle licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3455'
-ht-degree: 38%
+source-wordcount: '3275'
+ht-degree: 40%
 
 ---
 
@@ -132,7 +132,7 @@ ht-degree: 38%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
-Puoi visualizzare informazioni importanti sull&#39;utilizzo delle licenze della tua organizzazione tramite la dashboard [!UICONTROL Utilizzo licenze] di Adobe Experience Platform. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Experience Platform.
+È possibile visualizzare informazioni importanti sull&#39;utilizzo delle licenze dell&#39;organizzazione tramite il dashboard di Adobe Experience Platform [!UICONTROL License usage]. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Experience Platform.
 
 I rapporti sull’utilizzo delle licenze forniscono un elevato grado di granularità. La maggior parte delle metriche è condivisa tra più prodotti e riflette l’utilizzo aggregato tra tutti i prodotti che li utilizzano, non i totali per prodotto. Il dashboard fornisce l’utilizzo consolidato di queste metriche in tutte le sandbox di produzione o di sviluppo e la metrica di utilizzo da una sandbox specifica. Con le metriche di utilizzo è possibile tenere traccia delle seguenti applicazioni Experience Platform: Real-Time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
@@ -140,43 +140,43 @@ Questa guida illustra come accedere e utilizzare il dashboard utilizzo licenze n
 
 Per una panoramica generale dell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente di Experience Platform](../../landing/ui-guide.md).
 
-## [!UICONTROL Utilizzo licenza] dati dashboard
+## [!UICONTROL License usage] dati dashboard
 
-Nel dashboard [!UICONTROL Utilizzo licenze] viene visualizzato un elenco di tutti i prodotti Experience Platform acquistati e dei relativi componenti aggiuntivi. Da questa dashboard è possibile trovare un’istantanea dei dati relativi alla licenza dell’organizzazione per Experience Platform in qualsiasi sandbox associata.
+Nel dashboard di [!UICONTROL License usage] viene visualizzato un elenco di tutti i prodotti Experience Platform acquistati ed eventuali componenti aggiuntivi per tali prodotti. Da questa dashboard è possibile trovare un’istantanea dei dati relativi alla licenza dell’organizzazione per Experience Platform in qualsiasi sandbox associata.
 
 I dati in questo dashboard vengono visualizzati esattamente come apparivano nel momento specifico in cui è stata acquisita l’istantanea. Non si tratta di un’approssimazione o di un esempio, ma il dashboard non viene aggiornato in tempo reale.
 
 >[!NOTE]
 >
->La maggior parte delle metriche nel dashboard viene aggiornata ogni giorno, in base a un’istantanea dell’istanza di Experience Platform. [!UICONTROL Righe CJA disponibili] è un&#39;eccezione ed è aggiornato mensilmente. Le metriche etichettate con &quot;pacchetti&quot;, ad esempio [!UICONTROL Pacchetti utenti Adobe Query Service], [!UICONTROL Numero di pacchetti di ricchezza profilo] e [!UICONTROL Numero di pacchetti di segmentazione streaming], riflettono i diritti di licenza per le offerte di componenti aggiuntivi e non tengono traccia dell&#39;utilizzo corrente. Le modifiche apportate dopo lo snapshot non sono visibili fino allo snapshot successivo.
+>La maggior parte delle metriche nel dashboard viene aggiornata ogni giorno, in base a un’istantanea dell’istanza di Experience Platform. [!UICONTROL CJA Rows Available] è un&#39;eccezione e viene aggiornato mensilmente. Le metriche etichettate con &quot;pacchetti&quot;, come [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] e [!UICONTROL Streaming Segmentation No of Packs], riflettono i diritti di licenza per le offerte di componenti aggiuntivi e non tengono traccia dell&#39;utilizzo corrente. Le modifiche apportate dopo lo snapshot non sono visibili fino allo snapshot successivo.
 
 ## Esplorazione del dashboard utilizzo licenze {#explore}
 
-Per passare al dashboard utilizzo licenze nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Utilizzo licenze]** nella barra a sinistra. Il dashboard contiene due schede: **[!UICONTROL Metriche]** e **[!UICONTROL Prodotti]**.
+Per passare al dashboard utilizzo licenze nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL License usage]** nella barra a sinistra. Il dashboard contiene due schede: **[!UICONTROL Metrics]** e **[!UICONTROL Products]**.
 
 >[!NOTE]
 >
 >Per impostazione predefinita, il dashboard utilizzo licenze non è attivato. Gli utenti devono disporre dell’autorizzazione &quot;View License Usage Dashboard&quot; (Visualizza dashboard utilizzo licenze) per visualizzare la dashboard. Per i passaggi relativi alla concessione delle autorizzazioni di accesso, fare riferimento alla [guida alle autorizzazioni del dashboard](../permissions.md).
 
-## Scheda [!UICONTROL Metriche] {#metrics-tab}
+## Scheda [!UICONTROL Metrics] {#metrics-tab}
 
-La scheda **[!UICONTROL Metriche]** fornisce una visualizzazione centralizzata di tutte le metriche di utilizzo delle licenze nell&#39;organizzazione. Poiché la maggior parte delle metriche è condivisa tra i prodotti, non esiste una suddivisione separata per prodotto per queste metriche.
+La scheda **[!UICONTROL Metrics]** fornisce una visualizzazione centralizzata di tutte le metriche di utilizzo delle licenze nell&#39;organizzazione. Poiché la maggior parte delle metriche è condivisa tra i prodotti, non esiste una suddivisione separata per prodotto per queste metriche.
 
 La tabella delle metriche include le colonne seguenti:
 
 | Nome colonna | Descrizione |
 |---|---|
-| **[!UICONTROL Nome metrica]** | Nome della metrica di utilizzo della licenza. Ogni voce include un&#39;icona di informazioni (`ⓘ`) che visualizza una descrizione e un elenco dei prodotti associati. |
-| **[!UICONTROL Concesso in licenza]** | Il numero di unità che la tua organizzazione ha il diritto di utilizzare, come definito nel tuo contratto. Questa metrica corrisponde al valore della **quantità licenza** nella scheda Prodotti. |
-| **[!UICONTROL Misurato]** | La quantità della metrica attualmente utilizzata dall’organizzazione. |
-| **[!UICONTROL Utilizzo %]** | Percentuale del valore concesso in licenza attualmente in uso. |
-| **[!UICONTROL Utilizzo previsto %]** | L’intervallo previsto di utilizzo della metrica nelle prossime 6 settimane. |
+| **[!UICONTROL Metric Name]** | Nome della metrica di utilizzo della licenza. Ogni voce include un&#39;icona di informazioni (`ⓘ`) che visualizza una descrizione e un elenco dei prodotti associati. |
+| **[!UICONTROL Licensed]** | Il numero di unità che la tua organizzazione ha il diritto di utilizzare, come definito nel tuo contratto. Questa metrica corrisponde al valore della **quantità licenza** nella scheda Prodotti. |
+| **[!UICONTROL Measured]** | La quantità della metrica attualmente utilizzata dall’organizzazione. |
+| **[!UICONTROL Usage %]** | Percentuale del valore concesso in licenza attualmente in uso. |
+| **[!UICONTROL Predicted Usage %]** | L’intervallo previsto di utilizzo della metrica nelle prossime 6 settimane. |
 
-Utilizza l&#39;interruttore sandbox **[!UICONTROL Produzione]** o **[!UICONTROL Sviluppo]** per filtrare le metriche visualizzate dalle sandbox.
+Utilizza l&#39;interruttore sandbox **[!UICONTROL Production]** o **[!UICONTROL Development]** per filtrare le metriche visualizzate dalle sandbox.
 
 >[!NOTE]
 >
->Il reporting sui consumi è cumulativo per tipo di sandbox. Selezionando [!UICONTROL Produzione] o [!UICONTROL Sviluppo] viene visualizzato l&#39;utilizzo combinato in tutte le sandbox di quel tipo.
+>Il reporting sui consumi è cumulativo per tipo di sandbox. Selezionando [!UICONTROL Production] o [!UICONTROL Development] si mostra l&#39;utilizzo combinato in tutte le sandbox di quel tipo.
 
 ![La scheda Metriche della dashboard Utilizzo licenze visualizza un elenco di metriche, quantità di licenze e dati di utilizzo.](../images/license-usage/metrics-tab.png)
 
@@ -204,33 +204,33 @@ Ogni grafico include menu a discesa per filtrare i dati. Utilizza il menu a disc
 
 ![Visualizzazione dei dettagli della metrica del pubblico indirizzabile con grafico cronologico di utilizzo, tabella sandbox e pulsante di esportazione.](../images/license-usage/metric-details-view.png)
 
-Puoi anche selezionare una **[!UICONTROL Data personalizzata]** per scegliere il periodo di tempo visualizzato.
+È inoltre possibile selezionare **[!UICONTROL Custom date]** per scegliere il periodo di tempo visualizzato.
 
 ![Scheda Panoramica della dashboard Utilizzo licenze con le opzioni dell&#39;intervallo date personalizzate evidenziate.](../images/license-usage/custom-date-range.png)
 
 ### Esportazione CSV {#export-metric-usage-data}
 
-Puoi esportare i dati storici sull’utilizzo per la metrica e la sandbox selezionate come file CSV direttamente dalla vista dei dettagli della metrica. Seleziona l&#39;icona **[!UICONTROL Esporta]** per scaricare i dati del grafico in formato tabulare. Il file CSV esportato consente di analizzare le tendenze offline o condividere informazioni sull’utilizzo tra i team.
+Puoi esportare i dati storici sull’utilizzo per la metrica e la sandbox selezionate come file CSV direttamente dalla vista dei dettagli della metrica. Selezionare l&#39;icona **[!UICONTROL Export]** per scaricare i dati del grafico in formato tabulare. Il file CSV esportato consente di analizzare le tendenze offline o condividere informazioni sull’utilizzo tra i team.
 
-## Scheda [!UICONTROL Prodotti] {#products-tab}
+## Scheda [!UICONTROL Products] {#products-tab}
 
-La scheda **[!UICONTROL Prodotti]** presenta i dati di utilizzo della licenza raggruppati per prodotti acquistati ed eventuali componenti aggiuntivi associati. La scheda [!UICONTROL Prodotti] contiene due tabelle:
+La scheda **[!UICONTROL Products]** presenta i dati di utilizzo della licenza raggruppati per prodotti acquistati ed eventuali componenti aggiuntivi associati. La scheda [!UICONTROL Products] contiene due tabelle:
 
-- **[!UICONTROL Prodotti core] tabella**: questa tabella elenca i principali prodotti Adobe Experience Platform concessi in licenza dalla tua organizzazione. Ogni prodotto elenca la propria metrica principale, il tracciamento dell’utilizzo e l’utilizzo previsto.
-- **[!UICONTROL Componenti aggiuntivi] tabella**: elenca gli elementi supplementari i cui importi di licenza contribuiscono alle metriche del prodotto di base. I componenti aggiuntivi non dispongono di metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti core a cui sono associati.
+- **[!UICONTROL Core products]tabella**: questa tabella elenca i principali prodotti Adobe Experience Platform concessi in licenza dalla tua organizzazione. Ogni prodotto elenca la propria metrica principale, il tracciamento dell’utilizzo e l’utilizzo previsto.
+- **[!UICONTROL Add-ons]tabella**: elenca gli elementi supplementari i cui importi di licenza contribuiscono alle metriche del prodotto di base. I componenti aggiuntivi non dispongono di metriche separate, ma migliorano il tracciamento dell’utilizzo dei prodotti core a cui sono associati.
 
 | Nome colonna | Descrizione |
 |---|---|
-| **[!UICONTROL Prodotto]** | La soluzione Adobe concessa in licenza dalla tua organizzazione. |
-| **[!UICONTROL Metrica principale]** | La metrica principale utilizzata per il tracciamento all’interno di quel prodotto. |
-| **[!UICONTROL Importo licenza]** | Il valore previsto dal contratto per l’importo massimo della metrica principale. |
-| **[!UICONTROL Utilizzo]** | Quantità della metrica principale utilizzata. |
-| **[!UICONTROL Utilizzo %]** | La percentuale della metrica principale utilizzata in base alla quantità di licenza. |
-| **[!UICONTROL Utilizzo previsto]** | Percentuale di utilizzo prevista della metrica principale. |
+| **[!UICONTROL Product]** | La soluzione Adobe concessa in licenza dalla tua organizzazione. |
+| **[!UICONTROL Primary Metric]** | La metrica principale utilizzata per il tracciamento all’interno di quel prodotto. |
+| **[!UICONTROL License Amount]** | Il valore previsto dal contratto per l’importo massimo della metrica principale. |
+| **[!UICONTROL Usage]** | Quantità della metrica principale utilizzata. |
+| **[!UICONTROL Usage %]** | La percentuale della metrica principale utilizzata in base alla quantità di licenza. |
+| **[!UICONTROL Predicted Usage]** | Percentuale di utilizzo prevista della metrica principale. |
 
 >[!NOTE]
 >
->La [!UICONTROL quantità di licenza] per i componenti aggiuntivi è inclusa nella quantità totale di licenza del prodotto di base. I componenti aggiuntivi non vengono tracciati separatamente, ma migliorano le funzionalità dei prodotti associati. Ad esempio, se acquisti una confezione di cinque sandbox come componente aggiuntivo, l’importo viene aggiunto a quello del prodotto di base. La tabella dei componenti aggiuntivi mostra un [!UICONTROL importo licenza] specifico per il componente aggiuntivo, ma l&#39;utilizzo effettivo viene registrato attraverso il prodotto di base.
+>[!UICONTROL License Amount] per i componenti aggiuntivi è incluso nella quantità totale di licenza del prodotto di base. I componenti aggiuntivi non vengono tracciati separatamente, ma migliorano le funzionalità dei prodotti associati. Ad esempio, se acquisti una confezione di cinque sandbox come componente aggiuntivo, l’importo viene aggiunto a quello del prodotto di base. La tabella dei componenti aggiuntivi mostra un [!UICONTROL License Amount] specifico per il componente aggiuntivo, ma l&#39;utilizzo effettivo viene registrato attraverso il prodotto di base.
 
 ![Scheda Prodotti della dashboard Utilizzo licenze con tabelle per i prodotti core e i componenti aggiuntivi.](../images/license-usage/products-tab.png)
 
@@ -250,15 +250,15 @@ La scheda **[!UICONTROL Prodotti]** presenta i dati di utilizzo della licenza ra
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze di set di dati automatizzate"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
-Gestire e ottimizzare in modo proattivo le risorse di gestione delle licenze con previsioni di utilizzo precise e aggiornate. La colonna [!UICONTROL Utilizzo previsto] prevede l&#39;utilizzo futuro delle licenze a livello di sandbox in tutte le sandbox di produzione e sviluppo per tutti i prodotti acquistati. Le previsioni ora vengono aggiornate settimanalmente, fornendo una previsione di sei settimane basata sui dati di utilizzo più recenti. Ogni previsione include sia un limite inferiore che un limite superiore per supportare una pianificazione informata.
+Gestire e ottimizzare in modo proattivo le risorse di gestione delle licenze con previsioni di utilizzo precise e aggiornate. La colonna [!UICONTROL Predicted Usage] prevede l&#39;utilizzo futuro delle licenze a livello di sandbox in tutte le sandbox di produzione e sviluppo per tutti i prodotti acquistati. Le previsioni ora vengono aggiornate settimanalmente, fornendo una previsione di sei settimane basata sui dati di utilizzo più recenti. Ogni previsione include sia un limite inferiore che un limite superiore per supportare una pianificazione informata.
 
 >[!IMPORTANT]
 >
 >Le previsioni vengono aggiornate settimanalmente ogni venerdì. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
 
-Visualizza un riepilogo dell&#39;utilizzo dei diritti di un prodotto dalla scheda [!UICONTROL Prodotto] nella tabella [!UICONTROL Prodotti principali].
+Visualizzare un riepilogo dell&#39;utilizzo dei diritti di un prodotto dalla scheda [!UICONTROL Product] nella tabella [!UICONTROL Core products].
 
-![Scheda [!UICONTROL Utilizzo licenze] [!UICONTROL Prodotto] con un prodotto ed evidenziata la colonna Utilizzo previsto.](../images/license-usage/product-predicted-usage.png)
+![Scheda [!UICONTROL License usage] [!UICONTROL Product] con un prodotto ed evidenziata la colonna dei dati di utilizzo previsti.](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
@@ -276,42 +276,42 @@ La percentuale di utilizzo previsto è determinata come segue:
 
 La funzione di utilizzo previsto supporta le metriche seguenti:
 
-- [!UICONTROL Pubblico indirizzabile]
-- [!UICONTROL Profili utente]
-- [!UICONTROL Calcola ore]
-- [!UICONTROL Numero di righe del pubblico del Percorso di clienti]
-- [!UICONTROL Profili coinvolgibili]
-- [!UICONTROL Volume di dati totale]
+- [!UICONTROL Addressable audience]
+- [!UICONTROL Businessperson profiles]
+- [!UICONTROL Compute hours]
+- [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Engageable profiles]
+- [!UICONTROL Total Data Volume]
 
 ## Metriche disponibili {#available-metrics}
 
 >[!IMPORTANT]
 >
->A partire dal 20 agosto, i clienti con diritti per &#39;[!UICONTROL Ricchezza media profilo]&#39; e &#39;[!UICONTROL Archiviazione totale]&#39; hanno invece visualizzato &#39;[!UICONTROL Volume totale dati]&#39; nel dashboard Utilizzo licenze. Non vi sono state modifiche alle adesioni dei clienti, ma solo una semplificazione delle metriche di tracciamento. [!UICONTROL Il volume totale dei dati] rappresenta i dati disponibili nel profilo cliente in tempo reale per i flussi di lavoro di coinvolgimento e personalizzazione. Questa metrica semplificata ha migliorato la gestione e la misurazione dell’utilizzo di Real-Time Customer Profile. I clienti sono stati invitati a contattare il proprio rappresentante Adobe per ulteriori chiarimenti su questa modifica.
+>A partire dal 20 agosto, i clienti con diritti per &#39;[!UICONTROL Average Profile Richness]&#39; e &#39;[!UICONTROL Total Storage]&#39; hanno invece visto &#39;[!UICONTROL Total Data Volume]&#39; nel dashboard utilizzo licenze. Non vi sono state modifiche alle adesioni dei clienti, ma solo una semplificazione delle metriche di tracciamento. [!UICONTROL Total Data Volume] rappresenta i dati disponibili in Real-Time Customer Profile per i flussi di lavoro di coinvolgimento e personalizzazione. Questa metrica semplificata ha migliorato la gestione e la misurazione dell’utilizzo di Real-Time Customer Profile. I clienti sono stati invitati a contattare il proprio rappresentante Adobe per ulteriori chiarimenti su questa modifica.
 
 Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a più prodotti dell’organizzazione. Le metriche disponibili sono:
 
 | Metrica | Descrizione |
 |---|---|
-| [!UICONTROL Dimensione Audience Activation] | Dimensione totale dei profili attivati in qualsiasi destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite le destinazioni di streaming. |
-| [!UICONTROL Pubblico di riferimento] | Il set di profili persona in Real-Time Customer Profile che la tua organizzazione è autorizzata a coinvolgere, inclusi sia i profili direttamente identificabili che quelli pseudonimi. Questi profili possono contenere attributi, comportamenti e dati di appartenenza ai segmenti. I volumi di profilo vengono calcolati utilizzando il grafo di identità deterministico predefinito di Adobe Experience Platform e sono considerati una feature condivisa. |
-| [!UICONTROL Pacchetti utenti servizio query ad hoc] | Un componente aggiuntivo per aumentare il diritto di utenti simultanei autorizzati del Query Service a cinque ulteriori utenti e a un ulteriore query ad hoc per pacchetto in esecuzione contemporanea. È possibile concedere in licenza più pacchetti utente per query ad hoc aggiuntive. |
-| [!UICONTROL Ricchezza media profilo] | **Obsoleto** - Somma di tutti i dati di produzione archiviati nel servizio profili hub in qualsiasi momento, divisa per cinque volte il numero di profili di persona aziendale autorizzati. [!UICONTROL Ricchezza media profilo] è una caratteristica condivisa. |
-| [!UICONTROL Righe CJA Disponibili] | Le righe medie giornaliere di dati disponibili per l’analisi in Customer Journey Analytics. |
-| [!UICONTROL Attributi calcolati] | Dati comportamentali aggregati del profilo basati su eventi di esperienza che vengono convertiti in un attributo di profilo e possono essere inclusi in un profilo persona. |
-| [!UICONTROL Pubblico consumer] | Il numero di profili di persona identificati come &quot;Pubblico consumatore&quot; nell’ordine cliente. |
-| [!UICONTROL Dimensione esportazione dati] | La quantità di dati inviati tramite le attivazioni dei set di dati in un anno. |
-| [!UICONTROL Esportazioni dati] | Dimensione totale dei set di dati che possono essere esportati in qualsiasi soluzione non Adobe (direttamente o indirettamente) in un anno. |
-| [!UICONTROL Archiviazione Data Lake] | Quantità utilizzata dell’archivio dati analitici in Adobe Experience Platform. |
-| [!UICONTROL Pubblico coinvolgibile] | Un gruppo di profili persona in Real-Time Customer Profile che hai tentato di coinvolgere negli ultimi 12 mesi utilizzando le funzionalità di authoring, decisione, consegna, sperimentazione o orchestrazione di Journey Optimizer. |
-| [!UICONTROL Tipi di pubblico simili] | Un pubblico consumer lookalike è un pubblico generato modellando un pubblico consumer esistente per identificare profili di persone con attributi o comportamenti simili. |
-| [!UICONTROL Numero di modelli AMM] | Un conteggio del modello di apprendimento automatico (integrato in Adobe Mix Modeler) utilizzato per misurare e/o prevedere un risultato specifico in base agli investimenti effettuati. |
-| [!UICONTROL Numero di sandbox] | Numero di separazioni logiche all’interno dell’istanza di qualsiasi servizio on-demand di Adobe che accede a dati e operazioni isolate di Adobe Experience Platform. |
-| [!UICONTROL Numero di pacchetti Richness profilo] | Un aumento del volume totale di dati autorizzato di 25 KB per profilo per ogni pacchetto di ricchezza di profilo aggiuntivo. |
-| [!UICONTROL Ore di calcolo servizio query] | Misurazione del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query in batch. |
-| [!UICONTROL Segmentazione streaming n. di pacchetti] | I pacchetti aggiornano l’appartenenza al segmento per un profilo persona quando nuovi dati entrano nel servizio di segmentazione tramite un flusso di streaming. L’appartenenza al segmento viene valutata in base agli attributi correnti del profilo della persona e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
-| [!UICONTROL Volume di dati totale] | La quantità totale di dati disponibili per Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. Il volume totale dei dati è calcolato con la seguente formula: **Volume totale dei dati = Pubblico indirizzabile × Rendicità media del profilo**. Questa metrica riflette i dati memorizzati solo nell’archivio profili ed esclude l’archiviazione del data lake. Fornisce una visualizzazione più mirata dei dati rilevanti per il coinvolgimento basato sul profilo. Per ulteriori informazioni, consulta le [domande frequenti sul volume totale dei dati](../../landing/license-usage-and-guardrails/total-data-volume.md). |
-| [!UICONTROL Volume totale di uscita dati] | Il volume annuo cumulativo di dati esportati da Adobe Experience Platform in data warehouse di terze parti. |
+| [!UICONTROL Audience Activation Size] | Dimensione totale dei profili attivati in qualsiasi destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite le destinazioni di streaming. |
+| [!UICONTROL Addressable Audience] | Il set di profili persona in Real-Time Customer Profile che la tua organizzazione è autorizzata a coinvolgere, inclusi sia i profili direttamente identificabili che quelli pseudonimi. Questi profili possono contenere attributi, comportamenti e dati di appartenenza ai segmenti. I volumi di profilo vengono calcolati utilizzando il grafo di identità deterministico predefinito di Adobe Experience Platform e sono considerati una feature condivisa. |
+| [!UICONTROL Adhoc Query Service Users Packs] | Un componente aggiuntivo per aumentare il diritto di utenti simultanei autorizzati del Query Service a cinque ulteriori utenti e a un ulteriore query ad hoc per pacchetto in esecuzione contemporanea. È possibile concedere in licenza più pacchetti utente per query ad hoc aggiuntive. |
+| [!UICONTROL Average profile richness] | **Obsoleto** - Somma di tutti i dati di produzione archiviati nel servizio profili hub in qualsiasi momento, divisa per cinque volte il numero di profili di persona aziendale autorizzati. [!UICONTROL Average profile richness] è una funzionalità condivisa. |
+| [!UICONTROL CJA Rows Available] | Le righe medie giornaliere di dati disponibili per l’analisi in Customer Journey Analytics. |
+| [!UICONTROL Computed Attributes] | Dati comportamentali aggregati del profilo basati su eventi di esperienza che vengono convertiti in un attributo di profilo e possono essere inclusi in un profilo persona. |
+| [!UICONTROL Consumer Audience] | Il numero di profili di persona identificati come &quot;Pubblico consumatore&quot; nell’ordine cliente. |
+| [!UICONTROL Data Export Size] | La quantità di dati inviati tramite le attivazioni dei set di dati in un anno. |
+| [!UICONTROL Data Exports] | Dimensione totale dei set di dati che possono essere esportati in qualsiasi soluzione non Adobe (direttamente o indirettamente) in un anno. |
+| [!UICONTROL Data Lake Storage] | Quantità utilizzata dell’archivio dati analitici in Adobe Experience Platform. |
+| [!UICONTROL Engageable Audience] | Un gruppo di profili persona in Real-Time Customer Profile che hai tentato di coinvolgere negli ultimi 12 mesi utilizzando le funzionalità di authoring, decisione, consegna, sperimentazione o orchestrazione di Journey Optimizer. |
+| [!UICONTROL Look-alike Audiences] | Un pubblico consumer lookalike è un pubblico generato modellando un pubblico consumer esistente per identificare profili di persone con attributi o comportamenti simili. |
+| [!UICONTROL Number of AMM Models] | Un conteggio del modello di apprendimento automatico (integrato in Adobe Mix Modeler) utilizzato per misurare e/o prevedere un risultato specifico in base agli investimenti effettuati. |
+| [!UICONTROL Number of Sandboxes] | Numero di separazioni logiche all’interno dell’istanza di qualsiasi servizio on-demand di Adobe che accede a dati e operazioni isolate di Adobe Experience Platform. |
+| [!UICONTROL Profile Richness No of Packs] | Un aumento del volume totale di dati autorizzato di 25 KB per profilo per ogni pacchetto di ricchezza di profilo aggiuntivo. |
+| [!UICONTROL Query Service Compute Hours] | Misurazione del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query in batch. |
+| [!UICONTROL Streaming Segmentation No of Packs] | I pacchetti aggiornano l’appartenenza al segmento per un profilo persona quando nuovi dati entrano nel servizio di segmentazione tramite un flusso di streaming. L’appartenenza al segmento viene valutata in base agli attributi correnti del profilo della persona e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
+| [!UICONTROL Total Data Volume] | La quantità totale di dati disponibili per Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. Il volume totale dei dati è calcolato con la seguente formula: **Volume totale dei dati = Pubblico indirizzabile × Rendicità media del profilo**. Questa metrica riflette i dati memorizzati solo nell’archivio profili ed esclude l’archiviazione del data lake. Fornisce una visualizzazione più mirata dei dati rilevanti per il coinvolgimento basato sul profilo. Per ulteriori informazioni, consulta le [domande frequenti sul volume totale dei dati](../../landing/license-usage-and-guardrails/total-data-volume.md). |
+| [!UICONTROL Total Volume of Data Egress] | Il volume annuo cumulativo di dati esportati da Adobe Experience Platform in data warehouse di terze parti. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
@@ -323,12 +323,12 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 | Licenza | Descrizione del prodotto |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:INTENSO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/it/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Servizi app e Intelligent Services](https://helpx.adobe.com/it/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:DA PRFL A 10M</li><li>RT CUSTOMER DATA PLATFORM:DA PRFL A 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:ATTIVAZIONE OD</li><li>AEP:ATTIVAZIONE OD PRFL A 10M</li><li>AEP:PRFL ATTIVAZIONE OD FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/it/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:INTELLIGENZA OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/it/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>REAL-TIME CDP UNP: ORCHESTRAZIONE PROFILO OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/it/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD PESANTE</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Servizi app e Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>PIATTAFORMA DATI CLIENTE RT:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL A 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL A 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>ATTIVAZIONE DI AEP:OD</li><li>AEP:OD ACTIVATION PRFL A 10M</li><li>AEP:OD ACTIVATION PRFL FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>ORCHESTRAZIONE PROFILO Real-Time CDP:OD UNP</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/it/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >

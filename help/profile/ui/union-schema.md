@@ -6,12 +6,12 @@ description: Nell’interfaccia utente di Adobe Experience Platform puoi visuali
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Guida dell&#39;interfaccia utente dello schema di unione]
+# Guida dell&#39;interfaccia utente della [!UICONTROL Union schema]
 
 Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare facilmente qualsiasi schema di unione all’interno della tua organizzazione e visualizzare in anteprima campi, identità, relazioni e schemi contributivi per una classe specifica. Questa guida fornisce informazioni dettagliate su come visualizzare ed esplorare gli schemi di unione tramite l’interfaccia utente di Experience Platform.
 
@@ -40,15 +40,15 @@ L’utilizzo degli schemi di unione richiede una conoscenza approfondita degli s
 
 ## Visualizza schemi di unione {#view-union-schemas}
 
-Per passare agli schemi unione nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nell&#39;area di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Schema unione]**. Viene visualizzata la scheda [!UICONTROL Schema unione] per visualizzare lo schema di unione per la classe attualmente selezionata.
+Per passare agli schemi di unione nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profiles]** dal menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Union Schema]**. Viene visualizzata la scheda [!UICONTROL Union Schema] con lo schema di unione per la classe attualmente selezionata.
 
 ![Viene visualizzata la pagina Schema di unione con le schede Profilo e Schema di unione evidenziate.](../images/union-schema/landing.png)
 
 ## Seleziona una classe {#select-a-class}
 
-Per visualizzare lo schema di unione per una classe XDM specifica, seleziona la classe dal menu a discesa **[!UICONTROL Classe]**. Poiché non tutte le classi dispongono di schemi di unione, nel menu a discesa sono disponibili solo le classi con schemi di unione (ovvero le classi con schemi che sono stati abilitati per Profilo).
+Per visualizzare lo schema di unione per una classe XDM specifica, seleziona la classe dal menu a discesa **[!UICONTROL Class]**. Poiché non tutte le classi dispongono di schemi di unione, nel menu a discesa sono disponibili solo le classi con schemi di unione (ovvero le classi con schemi che sono stati abilitati per Profilo).
 
-Dopo aver selezionato una classe, lo schema visualizzato viene aggiornato in modo da riflettere lo schema di unione per la classe selezionata. Ad esempio, puoi selezionare **[!UICONTROL Profilo individuale XDM]** per visualizzare lo schema di unione per quella classe.
+Dopo aver selezionato una classe, lo schema visualizzato viene aggiornato in modo da riflettere lo schema di unione per la classe selezionata. Ad esempio, è possibile selezionare **[!UICONTROL XDM Individual Profile]** per visualizzare lo schema di unione per tale classe.
 
 ![Viene evidenziato un elenco a discesa contenente le classi dello schema di unione.](../images/union-schema/class.png)
 
@@ -70,7 +70,7 @@ Per ulteriori informazioni sui set di dati, tra cui la visualizzazione dell&#39;
 
 ## Visualizzare gli schemi contributivi {#view-contributing-schemas}
 
-Puoi anche visualizzare quali schemi specifici contribuiscono allo schema di unione selezionando **[!UICONTROL Tutti gli schemi che contribuiscono]** per espandere l&#39;elenco degli schemi. A seconda della classe selezionata e del numero di schemi creati dall’organizzazione all’interno di Experience Platform, potrebbe trattarsi di un elenco breve contenente un singolo schema o di un elenco lungo contenente più schemi.
+Puoi anche visualizzare quali schemi specifici contribuiscono allo schema di unione selezionando **[!UICONTROL All contributing schemas]** per espandere l&#39;elenco degli schemi. A seconda della classe selezionata e del numero di schemi creati dall’organizzazione all’interno di Experience Platform, potrebbe trattarsi di un elenco breve contenente un singolo schema o di un elenco lungo contenente più schemi.
 
 ![L&#39;elenco degli schemi che contribuiscono allo schema di unione è evidenziato.](../images/union-schema/contributing-schemas.png)
 
@@ -80,7 +80,7 @@ Selezionando il nome di uno schema specifico vengono evidenziati i campi all’i
 
 ## Visualizza identità {#view-identities}
 
-Puoi visualizzare un elenco di identità incluse nello schema di unione tramite l&#39;interfaccia utente selezionando **[!UICONTROL Identità]** per espandere l&#39;elenco.
+Tramite l&#39;interfaccia utente è possibile visualizzare un elenco di identità incluse nello schema di unione selezionando **[!UICONTROL Identities]** per espandere l&#39;elenco.
 
 ![Le identità appartenenti allo schema di unione sono evidenziate.](../images/union-schema/identities.png)
 
@@ -94,7 +94,7 @@ Il campo di identità è evidenziato nello schema di unione e i dettagli dell’
 
 L’interfaccia utente dello schema di unione consente inoltre di visualizzare le relazioni definite per gli schemi in base alla classe di schema selezionata. La definizione di una relazione è un modo per collegare due schemi appartenenti a classi diverse al fine di ottenere informazioni più complesse sui dati dei clienti.
 
-Se sono state stabilite relazioni per la classe selezionata, se si seleziona **[!UICONTROL Relazioni]** viene visualizzato un elenco di campi utilizzati per creare relazioni. Non tutti gli schemi utilizzano o necessitano di relazioni definite, pertanto è comune che la sezione relazioni non contenga campi.
+Se sono state stabilite relazioni per la classe selezionata, selezionando **[!UICONTROL Relationships]** viene visualizzato un elenco di campi utilizzati per creare relazioni. Non tutti gli schemi utilizzano o necessitano di relazioni definite, pertanto è comune che la sezione relazioni non contenga campi.
 
 Per ulteriori informazioni sulle relazioni tra schemi, incluso come definirle utilizzando l&#39;interfaccia utente, visita [questo documento sulle relazioni tra schemi](../../xdm/tutorials/relationship-ui.md).
 

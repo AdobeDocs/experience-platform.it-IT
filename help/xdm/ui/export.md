@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '636'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 11%
 
 Tutte le risorse all’interno della Libreria schemi sono contenute in una sandbox specifica all’interno di un’organizzazione. In alcuni casi, potrebbe essere utile condividere risorse Experience Data Model (XDM) tra sandbox e organizzazioni.
 
-Per soddisfare questa esigenza, l&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Adobe Experience Platform consente di generare un payload di esportazione per qualsiasi schema all&#39;interno della raccolta schemi. Questo payload può quindi essere utilizzato in una chiamata all’API Schema Registry per importare lo schema (e tutte le risorse dipendenti) in una sandbox e un’organizzazione di destinazione.
+Per soddisfare questa esigenza, l&#39;area di lavoro [!UICONTROL Schemas] nell&#39;interfaccia utente di Adobe Experience Platform consente di generare un payload di esportazione per qualsiasi schema all&#39;interno di nella raccolta schemi. Questo payload può quindi essere utilizzato in una chiamata all’API Schema Registry per importare lo schema (e tutte le risorse dipendenti) in una sandbox e un’organizzazione di destinazione.
 
 >[!NOTE]
 >
@@ -32,17 +32,17 @@ Anche se l’interfaccia utente di Experience Platform consente di esportare ris
 
 ## Generare un payload di esportazione {#generate-export-payload}
 
-I payload di esportazione possono essere generati nell&#39;interfaccia utente di Experience Platform dal pannello dei dettagli nella scheda [!UICONTROL Sfoglia] o direttamente dall&#39;area di lavoro dello schema nell&#39;Editor di schema.
+I payload di esportazione possono essere generati nell&#39;interfaccia utente di Experience Platform dal pannello dei dettagli nella scheda [!UICONTROL Browse] o direttamente dall&#39;area di lavoro dello schema nell&#39;Editor di schema.
 
-Per generare un payload di esportazione, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemi], selezionare la riga dello schema da esportare per visualizzare i dettagli dello schema nella barra laterale a destra.
+Per generare un payload di esportazione, selezionare **[!UICONTROL Schemas]** nel menu di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemas], selezionare la riga dello schema da esportare per visualizzare i dettagli dello schema nella barra laterale a destra.
 
 >[!TIP]
 >
 >Per informazioni dettagliate su come trovare la risorsa XDM che stai cercando, consulta la guida su [esplorazione delle risorse XDM](./explore.md).
 
-Quindi, seleziona l&#39;icona **[!UICONTROL Copia JSON]** (![Copia icona](/help/images/icons/copy.png)) tra le opzioni disponibili.
+Selezionare quindi l&#39;icona **[!UICONTROL Copy JSON]** (![Copia icona](/help/images/icons/copy.png)) tra le opzioni disponibili.
 
-![Area di lavoro Schemi con una riga di schema e [!UICONTROL Copia in JSON] evidenziata.](../images/ui/export/copy-json.png)
+![Area di lavoro Schemi con una riga di schema e [!UICONTROL Copy to JSON] evidenziata.](../images/ui/export/copy-json.png)
 
 Questo copia un payload JSON negli Appunti, generato in base alla struttura dello schema. Per lo schema &quot;[!DNL Loyalty Members]&quot; mostrato sopra, viene generato il seguente JSON:
 
@@ -212,13 +212,13 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 
 +++
 
-È inoltre possibile copiare il payload selezionando [!UICONTROL Altro] in alto a destra nell&#39;Editor di schema. Un menu a discesa fornisce due opzioni: [!UICONTROL Copia struttura JSON] e [!UICONTROL Elimina schema].
+È inoltre possibile copiare il payload selezionando [!UICONTROL More] in alto a destra nell&#39;Editor di schema. Un menu a discesa fornisce due opzioni, [!UICONTROL Copy JSON structure] e [!UICONTROL Delete schema].
 
 >[!NOTE]
 >
 >Non è possibile eliminare uno schema se è abilitato per il profilo o se a esso sono associati set di dati.
 
-![Editor schemi con [!UICONTROL Altro] e [!UICONTROL Copia in JSON] evidenziati.](../images/ui/export/schema-editor-copy-json.png)
+![Editor schemi con [!UICONTROL More] e [!UICONTROL Copy to JSON] evidenziati.](../images/ui/export/schema-editor-copy-json.png)
 
 Il payload assume la forma di un array; ogni elemento dell’array è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell&#39;esempio precedente, il gruppo di campi personalizzato &quot;[!DNL Loyalty details]&quot; e lo schema &quot;[!DNL Loyalty Members]&quot; sono inclusi. Tutte le risorse core utilizzate dallo schema non vengono incluse nell’esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni.
 
@@ -230,4 +230,4 @@ Dopo aver copiato il JSON di esportazione per lo schema, puoi utilizzarlo come p
 
 ## Passaggi successivi
 
-Seguendo questa guida, hai esportato correttamente uno schema XDM in un’organizzazione o sandbox diversa. Per ulteriori informazioni sulle funzionalità dell&#39;interfaccia utente di [!UICONTROL Schemi], fare riferimento alla panoramica dell&#39;interfaccia utente di [[!UICONTROL Schemi]](./overview.md).
+Seguendo questa guida, hai esportato correttamente uno schema XDM in un’organizzazione o sandbox diversa. Per ulteriori informazioni sulle funzionalità dell&#39;interfaccia utente [!UICONTROL Schemas], vedere la panoramica dell&#39;interfaccia utente [[!UICONTROL Schemas]](./overview.md).

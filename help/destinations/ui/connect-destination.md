@@ -5,7 +5,7 @@ description: Scopri come connettersi a una destinazione in Adobe Experience Plat
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1236'
 ht-degree: 4%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->* Per connettersi a una destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione e attivazione dei set di dati]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ## Panoramica {#overview}
 
@@ -23,29 +23,29 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
 
 ## Trovare la destinazione desiderata nel catalogo {#setup}
 
-1. Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
+1. Vai a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e seleziona la scheda **[!UICONTROL Catalog]**.
 
    ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la pagina del catalogo delle destinazioni.](../assets/ui/connect-destinations/catalog.png)
 
 2. Le schede di destinazione nel catalogo possono avere controlli di azione diversi, a seconda che tu disponga di una connessione esistente alla destinazione e che le destinazioni supportino l’attivazione di tipi di pubblico, l’esportazione di set di dati o entrambi. Potresti visualizzare uno dei seguenti controlli per le schede di destinazione:
 
-   * **[!UICONTROL Configurazione]**. Prima di poter attivare i tipi di pubblico o esportare i set di dati, è necessario impostare una connessione a questa destinazione.
-   * **[!UICONTROL Attiva]**. Connessione già impostata a questa destinazione. Questa destinazione supporta l’attivazione del pubblico e le esportazioni di set di dati.
-   * **[!UICONTROL Attiva tipi di pubblico]**. Connessione già impostata a questa destinazione. Questa destinazione supporta solo l’attivazione del pubblico.
+   * **[!UICONTROL Set up]**. Prima di poter attivare i tipi di pubblico o esportare i set di dati, è necessario impostare una connessione a questa destinazione.
+   * **[!UICONTROL Activate]**. Connessione già impostata a questa destinazione. Questa destinazione supporta l’attivazione del pubblico e le esportazioni di set di dati.
+   * **[!UICONTROL Activate audiences]**. Connessione già impostata a questa destinazione. Questa destinazione supporta solo l’attivazione del pubblico.
 
    Per ulteriori informazioni sulla differenza tra questi controlli, è inoltre possibile fare riferimento alla sezione [Catalogo](../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
-   Selezionare **[!UICONTROL Configura]**, **[!UICONTROL Attiva]** o **[!UICONTROL Attiva tipi di pubblico]**, a seconda del controllo disponibile.
+   Selezionare **[!UICONTROL Set up]**, **[!UICONTROL Activate]** o **[!UICONTROL Activate audiences]**, a seconda del controllo disponibile.
 
    ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la pagina del catalogo delle destinazioni con il controllo di configurazione evidenziato.](../assets/ui/connect-destinations/set-up.png)
 
    ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la pagina del catalogo delle destinazioni in cui è evidenziato il controllo Attiva pubblico.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. Se hai selezionato **[!UICONTROL Configura]**, passa al passaggio successivo, per [autenticare](#authenticate) nella destinazione.
+3. Se hai selezionato **[!UICONTROL Set up]**, passa al passaggio successivo, per [autenticare](#authenticate) nella destinazione.
 
-   Se hai selezionato **[!UICONTROL Attiva]**, **[!UICONTROL Attiva pubblico]** o **[!UICONTROL Esporta set di dati]**, ora puoi visualizzare un elenco delle connessioni di destinazione esistenti.
+   Se hai selezionato **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** o **[!UICONTROL Export datasets]**, ora puoi visualizzare un elenco delle connessioni di destinazione esistenti.
 
-   Selezionare **[!UICONTROL Configura nuova destinazione]** per stabilire una nuova connessione alla destinazione.
+   Selezionare **[!UICONTROL Configure new destination]** per stabilire una nuova connessione alla destinazione.
 
    ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra un elenco di destinazioni disponibili ed evidenzia il controllo Configura nuova destinazione.](../assets/ui/connect-destinations/configure-new-destination.png)
 
@@ -60,10 +60,10 @@ Il primo passaggio nella connessione a una destinazione consiste nell’eseguire
 
 A seconda della destinazione a cui ti stai connettendo, è possibile che venga visualizzata la pagina del partner di destinazione per l’autenticazione o che ti venga richiesto di immettere le credenziali di autenticazione direttamente nel flusso di lavoro di Experience Platform.
 
-Quando si imposta una nuova connessione di destinazione, è necessario fornire un **[!UICONTROL nome account]** e, facoltativamente, una **[!UICONTROL descrizione]**. Questi campi sono disponibili per tutte le destinazioni.
+Quando si imposta una nuova connessione di destinazione, è necessario fornire **[!UICONTROL Account name]** e, facoltativamente, **[!UICONTROL Description]**. Questi campi sono disponibili per tutte le destinazioni.
 
-* **[!UICONTROL Nome account]**: immetti un nome che ti aiuterà a identificare facilmente questo account di destinazione in futuro. Questa funzione è particolarmente utile se hai più connessioni per la stessa destinazione.
-* **[!UICONTROL Descrizione]** (facoltativo): aggiungi ulteriori dettagli che possano aiutare te o il tuo team a distinguere gli account, ad esempio lo scopo della connessione o il contesto di business pertinente.
+* **[!UICONTROL Account name]**: immettere un nome che consenta di identificare facilmente l&#39;account di destinazione in futuro. Questa funzione è particolarmente utile se hai più connessioni per la stessa destinazione.
+* **[!UICONTROL Description]** (facoltativo): aggiungi ulteriori dettagli che possano aiutare te o il tuo team a distinguere gli account, ad esempio lo scopo della connessione o il contesto di business pertinente.
 
 L’immissione di informazioni chiare e descrittive in questi campi facilita la gestione e la selezione dell’account di destinazione corretto durante l’attivazione dei tipi di pubblico.
 
@@ -113,7 +113,7 @@ Alcune destinazioni basate su file supportano l’attivazione del pubblico per c
 
    ![Finestra di dialogo Configura nuova destinazione con le opzioni di sottoscrizione degli avvisi di destinazione contestuali evidenziate.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
-2. Seleziona **[!UICONTROL Avanti]**.
+2. Seleziona **[!UICONTROL Next]**.
 
    ![La finestra di dialogo Configura nuova destinazione con il controllo Successivo evidenziato consente all&#39;utente di procedere al passaggio successivo nel flusso di lavoro.](../assets/ui/connect-destinations/next.png)
 
@@ -123,7 +123,7 @@ Alcune destinazioni basate su file supportano l’attivazione del pubblico per c
 
    ![Viene evidenziata la finestra di dialogo Configura nuova destinazione con le azioni di marketing disponibili. Sono evidenziati anche i controlli disponibili per completare il flusso di lavoro Connetti a destinazione.](../assets/ui/connect-destinations/governance.png)
 
-2. Seleziona **[!UICONTROL Salva ed esci]** per salvare la configurazione di destinazione oppure seleziona **[!UICONTROL Avanti]** per passare ai dati del pubblico [flusso di attivazione](activation-overview.md).
+2. Seleziona **[!UICONTROL Save & Exit]** per salvare la configurazione di destinazione oppure seleziona **[!UICONTROL Next]** per passare al flusso di attivazione [dei dati del pubblico](activation-overview.md).
 
 ## Passaggi successivi {#next-steps}
 

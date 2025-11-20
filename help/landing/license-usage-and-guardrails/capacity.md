@@ -4,7 +4,7 @@ description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe E
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1605'
 ht-degree: 6%
 
 ---
@@ -58,7 +58,7 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
    - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
 - La velocità effettiva combinata iniziale per l’acquisizione in streaming è di 1500 record al secondo (rps)
    - Questo throughput di streaming combinato misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo cliente in tempo reale, nelle sandbox di produzione e sviluppo.
-   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
@@ -72,7 +72,7 @@ Se l’utilizzo supera il 100% della capacità concessa in licenza, verrà consi
 
 ## Accesso {#access}
 
-Per accedere alla panoramica Capacità, selezionare **[!UICONTROL Utilizzo licenza]** seguito da **[!UICONTROL Capacità]**.
+Per accedere alla panoramica della capacità, selezionare **[!UICONTROL License usage]** seguito da **[!UICONTROL Capacity]**.
 
 ![Il metodo per accedere alla sezione Capacità è evidenziato.](/help/landing/images/capacity/access-capacity.png)
 
@@ -82,7 +82,7 @@ Viene visualizzata la pagina Panoramica capacità, contenente informazioni quali
 
 ### Cronologia avvisi {#alert-history}
 
-Nella sezione **[!UICONTROL Cronologia avvisi]** viene visualizzato un elenco delle violazioni di capacità più recenti all&#39;interno dell&#39;organizzazione.
+Nella sezione **[!UICONTROL Alert history]** viene visualizzato un elenco delle violazioni di capacità più recenti all&#39;interno dell&#39;organizzazione.
 
 ![Viene visualizzata la sezione Cronologia avvisi.](/help/landing/images/capacity/alert-history.png)
 
@@ -92,7 +92,7 @@ Nella sezione **[!UICONTROL Cronologia avvisi]** viene visualizzato un elenco de
 | Avviso | La capacità che è stata superata nella sandbox. |
 | Marca temporale | I dati e l’ora in cui si è verificata la violazione. |
 
-Per visualizzare una cronologia completa degli avvisi per la tua organizzazione, seleziona l&#39;icona ![tre punti](/help/images/icons/more.png), seguita da **[!UICONTROL Visualizza tutti]**.
+Per visualizzare una cronologia completa degli avvisi per la tua organizzazione, seleziona l&#39;icona ![tre punti](/help/images/icons/more.png), seguita da **[!UICONTROL View all]**.
 
 ![Viene visualizzata la cronologia completa degli avvisi per un&#39;organizzazione.](/help/landing/images/capacity/full-alert-history.png)
 
@@ -127,7 +127,7 @@ Viene visualizzata la pagina dei dettagli della velocità effettiva di streaming
 
 ![Viene visualizzata la pagina della velocità effettiva di streaming, con informazioni dettagliate sulla velocità effettiva di streaming per la sandbox selezionata.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
-Per aggiornare le capacità di velocità effettiva di streaming dell&#39;organizzazione, selezionare **[!UICONTROL Alloca capacità]**.
+Per aggiornare le capacità di velocità effettiva di streaming dell&#39;organizzazione, selezionare **[!UICONTROL Allocate capacities]**.
 
 ![Il pulsante Alloca capacità è evidenziato nella pagina dei dettagli della velocità effettiva di streaming.](/help/landing/images/capacity/select-allocate.png)
 
@@ -141,11 +141,11 @@ Viene visualizzata la pagina di allocazione. In questa pagina puoi impostare le 
 >
 >Se il valore non è nell&#39;ordine di 100, verrà arrotondato per eccesso o per difetto.
 
-Dopo aver aggiornato le allocazioni di capacità, selezionare **[!UICONTROL Salva]** per completare gli aggiornamenti. Tieni presente che la riproduzione delle modifiche nell’organizzazione potrebbe richiedere fino a 10 minuti.
+Dopo aver aggiornato le allocazioni di capacità, selezionare **[!UICONTROL Save]** per completare gli aggiornamenti. Tieni presente che la riproduzione delle modifiche nell’organizzazione potrebbe richiedere fino a 10 minuti.
 
 #### Conteggio del pubblico {#audience-count}
 
-Le sezioni **[!UICONTROL Conteggio pubblico in streaming]** e **[!UICONTROL Conteggio pubblico in Edge]** visualizzano il numero di tipi di pubblico in streaming e edge nella sandbox e il numero massimo di tipi di pubblico in streaming e edge consentiti nella sandbox.
+Le sezioni **[!UICONTROL Streaming audience count]** e **[!UICONTROL Edge audience count]** visualizzano il numero di tipi di pubblico in streaming e edge all&#39;interno della sandbox e il numero massimo di tipi di pubblico in streaming e edge consentiti all&#39;interno della sandbox.
 
 ![Vengono visualizzate le sezioni Conteggio pubblico.](/help/landing/images/capacity/audience-count.png)
 
@@ -175,7 +175,7 @@ Inoltre, puoi esaminare i flussi di dati e vedere se è possibile ottimizzare la
 
 Il video seguente offre una panoramica di Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475281/?learn=on&enablevpops&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Domande frequenti {#faq}
 

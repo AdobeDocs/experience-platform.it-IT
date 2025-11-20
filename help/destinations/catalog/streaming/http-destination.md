@@ -6,7 +6,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2752'
 ht-degree: 7%
 
 ---
@@ -46,7 +46,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 | ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -113,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Quando ti connetti a questa destinazione, devi fornire le seguenti informazioni:
 
@@ -126,48 +126,48 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 #### Autenticazione token Bearer {#bearer-token-authentication}
 
-Se si seleziona il tipo di autenticazione **[!UICONTROL Token Bearer]** per connettersi all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connetti alla destinazione]**:
+Se si seleziona il tipo di autenticazione **[!UICONTROL Bearer token]** per la connessione all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connect to destination]**:
 
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP utilizzando l&#39;autenticazione token bearer.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL Token Bearer]**: inserisci il token Bearer per l&#39;autenticazione nel percorso HTTP.
+* **[!UICONTROL Bearer token]**: inserire il token Bearer per l&#39;autenticazione nel percorso HTTP.
 
 #### Nessuna autenticazione {#no-authentication}
 
-Se si seleziona il tipo di autenticazione **[!UICONTROL None]** per connettersi all&#39;endpoint HTTP:
+Se si seleziona il tipo di autenticazione **[!UICONTROL None]** per la connessione all&#39;endpoint HTTP:
 
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP, senza autenticazione.](../../assets/catalog/http/http-api-authentication-none.png)
 
-Quando selezioni questa autenticazione aperta, devi solo selezionare **[!UICONTROL Connetti alla destinazione]** e la connessione all&#39;endpoint è stata stabilita.
+Quando si seleziona questa autenticazione aperta, è necessario selezionare solo **[!UICONTROL Connect to destination]** e la connessione all&#39;endpoint è stata stabilita.
 
 #### Autenticazione password OAuth 2 {#oauth-2-password-authentication}
 
-Se si seleziona il tipo di autenticazione **[!UICONTROL Password OAuth 2]** per connettersi all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connetti alla destinazione]**:
+Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Password]** per la connessione all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connect to destination]**:
 
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP utilizzando OAuth 2 con autenticazione tramite password.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL URL token di accesso]**: l&#39;URL sul lato dell&#39;utente che rilascia i token di accesso e, facoltativamente, aggiorna i token.
-* **[!UICONTROL ID client]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
-* **[!UICONTROL Segreto client]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
-* **[!UICONTROL Nome utente]**: il nome utente per accedere all&#39;endpoint HTTP.
+* **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
+* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Username]**: nome utente per accedere all&#39;endpoint HTTP.
 * **[!UICONTROL Password]**: password per accedere all&#39;endpoint HTTP.
 
 #### Autenticazione credenziali client OAuth 2 {#oauth-2-client-credentials-authentication}
 
-Se si seleziona il tipo di autenticazione **[!UICONTROL Credenziali client OAuth 2]** per connettersi all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connetti alla destinazione]**:
+Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentials]** per la connessione all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connect to destination]**:
 
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP utilizzando OAuth 2 con autenticazione delle credenziali client.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 > 
->Quando si utilizza l&#39;autenticazione [!UICONTROL Credenziali client OAuth 2], l&#39;[!UICONTROL URL token di accesso] può avere un massimo di un parametro di query. L&#39;aggiunta di un [!UICONTROL URL token di accesso] con più parametri di query può causare problemi durante la connessione all&#39;endpoint.
+>Quando si utilizza l&#39;autenticazione [!UICONTROL OAuth 2 Client Credentials], [!UICONTROL Access Token URL] può avere un massimo di un parametro di query. L&#39;aggiunta di un [!UICONTROL Access Token URL] con più parametri di query può causare problemi durante la connessione all&#39;endpoint.
 
-* **[!UICONTROL URL token di accesso]**: l&#39;URL sul lato dell&#39;utente che rilascia i token di accesso e, facoltativamente, aggiorna i token.
-* **[!UICONTROL ID client]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
-* **[!UICONTROL Segreto client]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
-* **[!UICONTROL Tipo di credenziali client]**: selezionare il tipo di concessione credenziali client OAuth2 supportata dall&#39;endpoint:
-   * **[!UICONTROL Corpo del modulo codificato]**: in questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviata alla tua destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
-   * **[!UICONTROL Autorizzazione di base]**: in questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *in un&#39;intestazione `Authorization`* dopo essere stati codificati in base64 e inviati alla destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
+* **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
+* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client Credentials Type]**: selezionare il tipo di concessione di credenziali client OAuth2 supportata dall&#39;endpoint:
+   * **[!UICONTROL Body Form Encoded]**: In questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviata alla tua destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
+   * **[!UICONTROL Basic Authorization]**: in questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *in un&#39;intestazione `Authorization`* dopo essere stati codificati in base64 e inviati alla destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -200,32 +200,32 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 ![Immagine della schermata dell&#39;interfaccia utente che mostra i campi completati per i dettagli della destinazione HTTP.](../../assets/catalog/http/http-api-destination-details.png)
 
-* **[!UICONTROL Nome]**: immetti un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: immetti una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Intestazioni]**: immettere le intestazioni personalizzate che si desidera includere nelle chiamate di destinazione, nel seguente formato: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL Endpoint HTTP]**: URL dell&#39;endpoint HTTP a cui si desidera inviare i dati del profilo.
-* **[!UICONTROL Parametri query]**: facoltativamente, è possibile aggiungere parametri di query all&#39;URL dell&#39;endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Includi nomi segmento]**: attiva questa opzione se vuoi che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. **Nota**: i nomi dei segmenti sono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includono il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
-* **[!UICONTROL Includi marche temporali segmento]**: attiva questa opzione se desideri che l&#39;esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Name]**: immettere un nome con cui riconoscere questa destinazione in futuro.
+* **[!UICONTROL Description]**: immettere una descrizione che consentirà di identificare questa destinazione in futuro.
+* **[!UICONTROL Headers]**: immettere le intestazioni personalizzate che si desidera includere nelle chiamate di destinazione, nel seguente formato: `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL HTTP Endpoint]**: URL dell&#39;endpoint HTTP a cui si desidera inviare i dati del profilo.
+* **[!UICONTROL Query parameters]**: facoltativamente, è possibile aggiungere parametri di query all&#39;URL dell&#39;endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. **Nota**: i nomi dei segmenti sono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includono il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* [La valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata nelle esportazioni nella destinazione API HTTP. [Ulteriori informazioni](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attiva dati pubblico nelle destinazioni di esportazione del profilo di streaming](../../ui/activate-streaming-profile-destinations.md).
 
 ### Attributi di destinazione {#attributes}
 
-Nel passaggio [[!UICONTROL Seleziona attributi]](../../ui/activate-streaming-profile-destinations.md#select-attributes), Adobe consiglia di selezionare un identificatore univoco dallo [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
+Nel passaggio [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes), Adobe consiglia di selezionare un identificatore univoco dallo [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione.
 
 ## Comportamento di esportazione del profilo {#profile-export-behavior}
 
@@ -245,7 +245,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del segmento mappato nel flusso di dati di attivazione. <br> **Importante**: quando l&#39;opzione **[!UICONTROL Includi nomi di segmento]** è abilitata, i nomi di segmento vengono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includeranno il campo `name`, anche se l&#39;opzione è abilitata. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del segmento mappato nel flusso di dati di attivazione. <br> **Importante**: quando l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata, i nomi dei segmenti vengono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includeranno il campo `name`, anche se l&#39;opzione è abilitata. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -318,7 +318,7 @@ I dati di [!DNL Experience Platform] esportati arrivano nella destinazione di [!
 }
 ```
 
-Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle impostazioni dell&#39;interfaccia utente selezionate nel flusso di destinazione di connessione per le opzioni **[!UICONTROL Includi nomi segmento]** e **[!UICONTROL Includi marche temporali segmento]**:
+Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle impostazioni dell&#39;interfaccia utente selezionate nel flusso di destinazione di connessione per le opzioni **[!UICONTROL Include Segment Names]** e **[!UICONTROL Include Segment Timestamps]**:
 
 +++ L&#39;esempio di esportazione dei dati seguente include i nomi del pubblico nella sezione `segmentMembership`
 
@@ -342,7 +342,7 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
       }
 ```
 
-**Nota**: in questo esempio, il primo segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) è mappato alla destinazione e include il campo `name`. Il secondo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) non è mappato alla destinazione e non include il campo `name`, anche se l&#39;opzione **[!UICONTROL Includi nomi di segmento]** è abilitata.
+**Nota**: in questo esempio, il primo segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) è mappato alla destinazione e include il campo `name`. Il secondo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) non è mappato alla destinazione e non include il campo `name`, anche se l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata.
 
 +++
 

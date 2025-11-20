@@ -46,11 +46,11 @@ La sezione **[!UICONTROL Expiring credentials]** fornisce le seguenti informazio
 >
 >![Scheda Impostazioni di Admin Console con Privacy e sicurezza, Impostazioni autenticazione e Durata massima sessione evidenziate.](../images/ui/credentials/max-session-life.png)
 >
->Per ulteriori informazioni sulle [Impostazioni avanzate](https://helpx.adobe.com/it/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console, consulta la Guida di Adobe.
+>Per ulteriori informazioni sulle [Impostazioni avanzate](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console, consulta la Guida di Adobe.
 
 ### Connettersi ai dati Customer Journey Analytics nelle sessioni di query {#connect-to-customer-journey-analytics}
 
-Utilizza l&#39;estensione Customer Journey Analytics BI con Power BI o Tableau per accedere alle [visualizzazioni dati](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/data-views) di Customer Journey Analytics con SQL. Integrando Query Service con l’estensione BI, puoi accedere alle visualizzazioni dati direttamente all’interno delle sessioni di Query Service. Questa integrazione semplifica le funzionalità degli strumenti BI che utilizzano Query Service come interfaccia PostgreSQL. Questa funzionalità elimina la necessità di duplicare le visualizzazioni dati negli strumenti di business intelligence, garantisce la coerenza dei rapporti tra le piattaforme e semplifica l&#39;integrazione dei dati Customer Journey Analytics con altre origini nelle piattaforme di business intelligence.
+Utilizza l&#39;estensione Customer Journey Analytics BI con Power BI o Tableau per accedere alle [visualizzazioni dati](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) di Customer Journey Analytics con SQL. Integrando Query Service con l’estensione BI, puoi accedere alle visualizzazioni dati direttamente all’interno delle sessioni di Query Service. Questa integrazione semplifica le funzionalità degli strumenti BI che utilizzano Query Service come interfaccia PostgreSQL. Questa funzionalità elimina la necessità di duplicare le visualizzazioni dati negli strumenti di business intelligence, garantisce la coerenza dei rapporti tra le piattaforme e semplifica l&#39;integrazione dei dati Customer Journey Analytics con altre origini nelle piattaforme di business intelligence.
 
 Consulta la documentazione per scoprire come [connettere Query Service a diverse applicazioni client desktop](../clients/overview.md), ad esempio [Power BI](../clients/power-bi.md) o [Tableau](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Per accedere ai dati Customer Journey Analytics in Power BI o Tableau, seleziona
 
 Puoi anche accedere ai dati Customer Journey Analytics direttamente da Query Editor o Postgres CLI. A tale scopo, fare riferimento al database `cja` durante la scrittura della query. Per ulteriori informazioni su come scrivere, eseguire e salvare le query, vedere la [guida all&#39;authoring delle query](./user-guide.md#query-authoring) di Query Editor.
 
-Per istruzioni complete sull&#39;accesso alle visualizzazioni dati di Customer Journey Analytics con SQL, consulta la [BI extension guide](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-dataviews/bi-extension).
+Per istruzioni complete sull&#39;accesso alle visualizzazioni dati di Customer Journey Analytics con SQL, consulta la [BI extension guide](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension).
 
 ## Credenziali senza scadenza {#non-expiring-credentials}
 
@@ -176,7 +176,7 @@ La tabella seguente illustra i parametri normalmente necessari per la connession
 >[!NOTE]
 >
 >Quando ci si connette a un host utilizzando credenziali senza scadenza, è comunque necessario utilizzare tutti i parametri elencati nella sezione [!UICONTROL EXPIRING CREDENTIALS] ad eccezione della password e del nome utente.
->&#x200B;>Il formato per l&#39;immissione del nome utente e della password utilizza valori separati da due punti come mostrato in questo esempio `username:{your_username}` e `password:{password_string}`.
+>Il formato per l&#39;immissione del nome utente e della password utilizza valori separati da due punti come mostrato in questo esempio `username:{your_username}` e `password:{password_string}`.
 
 | Parametro | Descrizione | Esempio |
 |---|---|---|

@@ -5,8 +5,8 @@ title: Monitorare i flussi di dati per le origini di streaming nell’interfacci
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 10%
+source-wordcount: '990'
+ht-degree: 11%
 
 ---
 
@@ -25,13 +25,13 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 ## Monitorare i flussi di dati per le origini di streaming
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini per le quali è possibile creare un account con.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini per le quali è possibile creare un account con.
 
-Per visualizzare i flussi di dati esistenti per le origini di streaming, seleziona **[!UICONTROL Flussi di dati]** dall&#39;intestazione superiore.
+Per visualizzare i flussi di dati esistenti per le origini di streaming, seleziona **[!UICONTROL Dataflows]** dall&#39;intestazione superiore.
 
 ![catalogo](../../images/tutorials/monitor-streaming/catalog.png)
 
-La pagina [!UICONTROL Flussi dati] contiene un elenco di tutti i flussi di dati esistenti nell&#39;organizzazione, incluse informazioni sui dati di origine, il nome account e lo stato di esecuzione del flusso di dati.
+La pagina [!UICONTROL Dataflows] contiene un elenco di tutti i flussi di dati esistenti nell&#39;organizzazione, incluse informazioni sui dati di origine, il nome account e lo stato di esecuzione del flusso di dati.
 
 Seleziona il nome del flusso di dati che desideri visualizzare.
 
@@ -47,13 +47,13 @@ La tabella seguente contiene ulteriori informazioni sugli stati di esecuzione de
 | Errore | Lo stato `Error` indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 | Nessuna esecuzione | Lo stato `No runs` indica che il flusso di dati è stato creato ma non è stata avviata alcuna esecuzione del flusso di dati. |
 
-La pagina [!UICONTROL Attività flusso di dati] visualizza informazioni specifiche sul flusso di dati in streaming. Il banner superiore contiene il numero cumulativo di record acquisiti e di record non riusciti per tutti i flussi di dati in streaming eseguiti nell’intervallo di date selezionato.
+Nella pagina [!UICONTROL Dataflow Activity] vengono visualizzate informazioni specifiche sul flusso di dati in streaming. Il banner superiore contiene il numero cumulativo di record acquisiti e di record non riusciti per tutti i flussi di dati in streaming eseguiti nell’intervallo di date selezionato.
 
 ![attività-flusso di dati](../../images/tutorials/monitor-streaming/dataflow-activity.png)
 
-Per impostazione predefinita, i dati visualizzati contengono i tassi di acquisizione degli ultimi sette giorni. Seleziona **[!UICONTROL Ultimi 7 giorni]** per regolare l&#39;intervallo di tempo dei record visualizzati.
+Per impostazione predefinita, i dati visualizzati contengono i tassi di acquisizione degli ultimi sette giorni. Selezionare **[!UICONTROL Last 7 days]** per regolare l&#39;intervallo di tempo dei record visualizzati.
 
-Viene visualizzata una finestra a comparsa del calendario che fornisce opzioni per intervalli di tempo di acquisizione alternativi. Puoi configurare l’intervallo di tempo di esecuzione del flusso di dati per visualizzare le esecuzioni del flusso dei sette giorni precedenti o degli ultimi 30 giorni. In alternativa, puoi configurare il calendario interattivo per impostare un intervallo di tempo personalizzato. Al termine, selezionare **[!UICONTROL Applica]**.
+Viene visualizzata una finestra a comparsa del calendario che fornisce opzioni per intervalli di tempo di acquisizione alternativi. Puoi configurare l’intervallo di tempo di esecuzione del flusso di dati per visualizzare le esecuzioni del flusso dei sette giorni precedenti o degli ultimi 30 giorni. In alternativa, puoi configurare il calendario interattivo per impostare un intervallo di tempo personalizzato. Al termine, selezionare **[!UICONTROL Apply]**.
 
 ![calendario](../../images/tutorials/monitor-streaming/calendar.png)
 
@@ -89,24 +89,24 @@ Nella metà inferiore della pagina vengono visualizzate informazioni sul numero 
 
 Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
-* **[!UICONTROL Inizio esecuzione flusso di dati]**: ora di inizio dell&#39;esecuzione del flusso di dati.
-* **[!UICONTROL Tempo di elaborazione]**: il tempo necessario all&#39;elaborazione del flusso di dati.
-* **[!UICONTROL Record ricevuti]**: numero totale di record ricevuti nel flusso di dati da un connettore di origine.
-* **[!UICONTROL Record acquisiti]**: numero totale di record acquisiti in [!DNL Data Lake].
-* **[!UICONTROL Record con avvisi]**: il numero totale di record con avvisi acquisiti. Tutti gli errori di trasformazione dei mapper vengono segnalati come avvisi e le righe parzialmente acquisite vengono etichettate come `success` con un avviso. **Nota**: il supporto per l&#39;acquisizione di record con avvisi è disponibile solo per le origini di streaming.
-* **[!UICONTROL Record non riusciti]**: numero di record che non sono stati acquisiti in [!DNL Data Lake] a causa di errori nei dati.
-* **[!UICONTROL Frequenza di acquisizione]**: percentuale di completamento dei record acquisiti in [!DNL Data Lake]. Questa metrica è applicabile quando [!UICONTROL Acquisizione parziale] è abilitato.
-* **[!UICONTROL Stato]**: rappresenta lo stato in cui si trova il flusso di dati: [!UICONTROL Completato] o [!UICONTROL Elaborazione]. [!UICONTROL Completato] significa che tutti i record per l&#39;esecuzione del flusso di dati corrispondente sono stati elaborati entro il periodo di un&#39;ora. [!UICONTROL Elaborazione] indica che l&#39;esecuzione del flusso di dati non è ancora terminata.
+* **[!UICONTROL Dataflow run start]**: ora di inizio dell&#39;esecuzione del flusso di dati.
+* **[!UICONTROL Processing time]**: tempo necessario per l&#39;elaborazione del flusso di dati.
+* **[!UICONTROL Records Received]**: numero totale di record ricevuti nel flusso di dati da un connettore di origine.
+* **[!UICONTROL Records Ingested]**: numero totale di record acquisiti in [!DNL Data Lake].
+* **[!UICONTROL Records with Warnings]**: numero totale di record con avvisi acquisiti. Tutti gli errori di trasformazione dei mapper vengono segnalati come avvisi e le righe parzialmente acquisite vengono etichettate come `success` con un avviso. **Nota**: il supporto per l&#39;acquisizione di record con avvisi è disponibile solo per le origini di streaming.
+* **[!UICONTROL Records Failed]**: numero di record che non sono stati acquisiti in [!DNL Data Lake] a causa di errori nei dati.
+* **[!UICONTROL Ingestion Rate]**: percentuale di successo dei record acquisiti in [!DNL Data Lake]. Questa metrica è applicabile quando [!UICONTROL Partial Ingestion] è abilitato.
+* **[!UICONTROL Status]**: rappresenta lo stato del flusso di dati: [!UICONTROL Completed] o [!UICONTROL Processing]. [!UICONTROL Completed] significa che tutti i record per l&#39;esecuzione del flusso di dati corrispondente sono stati elaborati entro il periodo di un&#39;ora. [!UICONTROL Processing] significa che l&#39;esecuzione del flusso di dati non è ancora terminata.
 
-La pagina [!UICONTROL Panoramica sull&#39;esecuzione del flusso di dati] contiene informazioni aggiuntive sul flusso di dati, ad esempio l&#39;ID di esecuzione del flusso di dati corrispondente, il set di dati di destinazione e l&#39;ID organizzazione.
+La pagina [!UICONTROL Dataflow run overview] contiene informazioni aggiuntive sul flusso di dati, ad esempio l&#39;ID di esecuzione del flusso di dati corrispondente, il set di dati di destinazione e l&#39;ID organizzazione.
 
-Un&#39;esecuzione del flusso con errori contiene anche il pannello [!UICONTROL Errori di esecuzione del flusso di dati], che visualizza l&#39;errore particolare che ha portato all&#39;errore dell&#39;esecuzione, nonché il numero totale di record che non sono riusciti.
+Un&#39;esecuzione di flusso con errori contiene anche il pannello [!UICONTROL Dataflow run errors], che visualizza l&#39;errore specifico che ha portato all&#39;errore dell&#39;esecuzione, nonché il numero totale di record che non sono riusciti.
 
 ![dataflow-run-overview](../../images/tutorials/monitor-streaming/dataflow-run-overview.png)
 
 ### Visualizza record con avvisi {#warnings}
 
-[!UICONTROL Record con avvisi] visualizza un elenco di avvisi di trasformazione del mapper che si sono verificati durante l&#39;esecuzione del flusso. Le righe parzialmente acquisite sono considerate riuscite e vengono aggiunte avvertenze se vengono rilevati errori di trasformazione del mapper.
+[!UICONTROL Records with warnings] visualizza un elenco di avvisi di trasformazione del mapper che si sono verificati durante l&#39;esecuzione del flusso. Le righe parzialmente acquisite sono considerate riuscite e vengono aggiunte avvertenze se vengono rilevati errori di trasformazione del mapper.
 
 Per impostazione predefinita, tutti gli errori di trasformazione dei mapper vengono considerati come avvisi, ad eccezione dei seguenti:
 
@@ -114,17 +114,17 @@ Per impostazione predefinita, tutti gli errori di trasformazione dei mapper veng
 * Riferimenti ad attributi inesistenti
 * Mancata corrispondenza tra i tipi di dati XDM
 
-Per visualizzare la diagnostica degli errori, selezionare **[!UICONTROL Anteprima diagnostica errori]**.
+Per visualizzare la diagnostica degli errori, selezionare **[!UICONTROL Preview error diagnostics]**.
 
 ![record con avvertenze](../../images/tutorials/monitor-streaming/records-with-warnings.png)
 
-La finestra [!UICONTROL Anteprima diagnostica errori] consente di visualizzare in anteprima fino a 100 errori e/o avvisi relativi all&#39;esecuzione del flusso di dati. Da qui è inoltre possibile scaricare il manifesto dell’errore di acquisizione per ulteriori informazioni, utilizzando l’API [!DNL Data Access].
+La finestra [!UICONTROL Error diagnostics preview] consente di visualizzare in anteprima fino a 100 errori e/o avvisi relativi all&#39;esecuzione del flusso di dati. Da qui è inoltre possibile scaricare il manifesto dell’errore di acquisizione per ulteriori informazioni, utilizzando l’API [!DNL Data Access].
 
 ![diagnostica](../../images/tutorials/monitor-streaming/diagnostics.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai utilizzato correttamente l&#39;area di lavoro [!UICONTROL Origini] per monitorare i flussi di dati in streaming e identificare gli errori che hanno portato a flussi di dati non riusciti. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, l&#39;area di lavoro [!UICONTROL Sources] è stata utilizzata correttamente per monitorare i flussi di dati in streaming e identificare gli errori che hanno causato eventuali flussi di dati non riusciti. Per ulteriori informazioni, consulta i seguenti documenti:
 
 * [Panoramica sulle origini](../../home.md)
 * [Panoramica dei flussi di dati](../../../dataflows/home.md)

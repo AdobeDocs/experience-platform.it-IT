@@ -5,8 +5,8 @@ description: Scopri come esportare i set di dati da Adobe Experience Platform ne
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
 workflow-type: tm+mt
-source-wordcount: '2721'
-ht-degree: 7%
+source-wordcount: '2656'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[&#x200B; di &#x200B;](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima del 1° novembre 2024*.
+>**Elemento azione**: la versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima del 1° novembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -50,16 +50,16 @@ Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Origini, Web SDK, Mobile SDK, Connettore dati di Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=it#profile-attribute-datasets">Set di dati snapshot profilo generato dal sistema</a>.</li></td>
+    <td><ul><li>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Origini, Web SDK, Mobile SDK, Connettore dati di Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Set di dati snapshot profilo generato dal sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -74,11 +74,11 @@ Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare
 </tbody>
 </table>
 
-## Esercitazione video {#video-tutorial}
+## Tutorial video {#video-tutorial}
 
 Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro descritto in questa pagina, i vantaggi dell’utilizzo della funzionalità di esportazione dei set di dati e alcuni casi d’uso consigliati.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448826?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -111,35 +111,35 @@ Per esportare i set di dati, tieni presente i seguenti prerequisiti:
 
 ### Autorizzazioni richieste {#permissions}
 
-Per esportare i set di dati, è necessario **[!UICONTROL Visualizzare le destinazioni]**, **[!UICONTROL Visualizzare i set di dati]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [accedere alle autorizzazioni di controllo](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per esportare i set di dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Attiva]** o **[!UICONTROL Esporta set di dati]**, si dispone delle autorizzazioni appropriate.
+Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Activate]** o **[!UICONTROL Export datasets]**, si dispone delle autorizzazioni appropriate.
 
 ## Seleziona la destinazione {#select-destination}
 
 Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set di dati:
 
-1. Vai a **[!UICONTROL Connessioni > Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
+1. Passare a **[!UICONTROL Connections > Destinations]** e selezionare la scheda **[!UICONTROL Catalog]**.
 
    ![Scheda Catalogo di destinazione con il controllo Catalogo evidenziato.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. Seleziona **[!UICONTROL Attiva]** o **[!UICONTROL Esporta set di dati]** nella scheda corrispondente alla destinazione in cui desideri esportare i set di dati.
+1. Seleziona **[!UICONTROL Activate]** o **[!UICONTROL Export datasets]** nella scheda corrispondente alla destinazione in cui desideri esportare i set di dati.
 
    ![Scheda Catalogo di destinazione con controllo di attivazione evidenziato.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. Seleziona **[!UICONTROL Set di dati di tipo dati]** e seleziona la connessione di destinazione in cui desideri esportare i set di dati, quindi seleziona **[!UICONTROL Avanti]**.
+1. Selezionare **[!UICONTROL Data type Datasets]** e la connessione di destinazione in cui si desidera esportare i set di dati, quindi selezionare **[!UICONTROL Next]**.
 
 >[!TIP]
 > 
->Se si desidera impostare una nuova destinazione per esportare i set di dati, selezionare **[!UICONTROL Configura nuova destinazione]** per attivare il flusso di lavoro [Connetti alla destinazione](/help/destinations/ui/connect-destination.md).
+>Se desideri impostare una nuova destinazione per esportare i set di dati, seleziona **[!UICONTROL Configure new destination]** per attivare il flusso di lavoro [Connetti alla destinazione](/help/destinations/ui/connect-destination.md).
 
 ![Flusso di lavoro di attivazione della destinazione con il controllo Set di dati evidenziato.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-1. Viene visualizzata la visualizzazione **[!UICONTROL Seleziona set di dati]**. Procedi alla sezione successiva per [selezionare i set di dati](#select-datasets) per l&#39;esportazione.
+1. Viene visualizzata la visualizzazione **[!UICONTROL Select datasets]**. Procedi alla sezione successiva per [selezionare i set di dati](#select-datasets) per l&#39;esportazione.
 
 ## Seleziona i set di dati {#select-datasets}
 
-Utilizza le caselle di controllo a sinistra dei nomi dei set di dati per selezionare i set di dati da esportare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**.
+Utilizzare le caselle di controllo a sinistra dei nomi dei set di dati per selezionare i set di dati da esportare nella destinazione, quindi selezionare **[!UICONTROL Next]**.
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio Seleziona set di dati in cui è possibile selezionare i set di dati da esportare.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
@@ -160,17 +160,17 @@ Utilizza le caselle di controllo a sinistra dei nomi dei set di dati per selezio
 >title="Aggiornare la data di fine per questo corpo del flusso di dati"
 >abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° settembre 2025. Effettua l’aggiornamento alla data di fine desiderata, altrimenti le esportazioni di dati si interromperanno alla data predefinita."
 
-Utilizza il passaggio **[!UICONTROL Pianificazione]** per:
+Utilizza il passaggio **[!UICONTROL Scheduling]** per:
 
 * Imposta una data di inizio e una data di fine, nonché una cadenza di esportazione per le esportazioni dei set di dati.
 * Configura se i file del set di dati esportati devono esportare l’appartenenza completa al set di dati o solo modifiche incrementali all’appartenenza a ogni occorrenza di esportazione.
 * Personalizza il percorso della cartella nel percorso di archiviazione in cui devono essere esportati i set di dati. Ulteriori informazioni su come [modificare il percorso della cartella di esportazione](#edit-folder-path).
 
-Utilizza il controllo **[!UICONTROL Modifica pianificazione]** nella pagina per modificare la frequenza di esportazione delle esportazioni e per scegliere se esportare file completi o incrementali.
+Utilizzare il controllo **[!UICONTROL Edit schedule]** nella pagina per modificare la cadenza di esportazione delle esportazioni e per scegliere se esportare file completi o incrementali.
 
 ![Il controllo Modifica pianificazione è evidenziato nel passaggio Pianificazione.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
-L&#39;opzione **[!UICONTROL Esporta file incrementali]** è selezionata per impostazione predefinita. Questo attiva un’esportazione di uno o più file che rappresentano un’istantanea completa del set di dati. I file successivi sono aggiunte incrementali al set di dati dall’esportazione precedente. È inoltre possibile selezionare **[!UICONTROL Esporta file completi]**. In questo caso, seleziona la frequenza **[!UICONTROL Una volta]** per un&#39;esportazione completa una tantum del set di dati.
+L&#39;opzione **[!UICONTROL Export incremental files]** è selezionata per impostazione predefinita. Questo attiva un’esportazione di uno o più file che rappresentano un’istantanea completa del set di dati. I file successivi sono aggiunte incrementali al set di dati dall’esportazione precedente. È inoltre possibile selezionare **[!UICONTROL Export full files]**. In questo caso, seleziona la frequenza **[!UICONTROL Once]** per un&#39;esportazione completa una tantum del set di dati.
 
 >[!IMPORTANT]
 >
@@ -178,16 +178,16 @@ L&#39;opzione **[!UICONTROL Esporta file incrementali]** è selezionata per impo
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio di pianificazione.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. Utilizza il selettore **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
+1. Utilizza il selettore **[!UICONTROL Frequency]** per selezionare la frequenza di esportazione:
 
-   * **[!UICONTROL Giornaliero]**: pianifica le esportazioni di file incrementali una volta al giorno, ogni giorno, al momento specificato.
-   * **[!UICONTROL Oraria]**: pianifica esportazioni di file incrementali ogni 3, 6, 8 o 12 ore.
+   * **[!UICONTROL Daily]**: pianificare le esportazioni di file incrementali una volta al giorno, ogni giorno, all&#39;ora specificata.
+   * **[!UICONTROL Hourly]**: pianifica esportazioni di file incrementali ogni 3, 6, 8 o 12 ore.
 
-2. Utilizza il selettore **[!UICONTROL Ora]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
+2. Utilizza il selettore **[!UICONTROL Time]** per scegliere l&#39;ora del giorno, in formato [!DNL UTC], in cui eseguire l&#39;esportazione.
 
-3. Utilizza il selettore **[!UICONTROL Data]** per scegliere l&#39;intervallo in cui deve essere eseguita l&#39;esportazione.
+3. Utilizza il selettore **[!UICONTROL Date]** per scegliere l&#39;intervallo di esecuzione dell&#39;esportazione.
 
-4. Seleziona **[!UICONTROL Salva]** per salvare la pianificazione e procedere al passaggio **[!UICONTROL Rivedi]**.
+4. Selezionare **[!UICONTROL Save]** per salvare la pianificazione e procedere al passaggio **[!UICONTROL Review]**.
 
 >[!NOTE]
 > 
@@ -205,7 +205,7 @@ L&#39;opzione **[!UICONTROL Esporta file incrementali]** è selezionata per impo
 >title="Anteprima del percorso della cartella del set di dati"
 >abstract="Ottieni un’anteprima della struttura di cartelle creata nel percorso di archiviazione in base alle macro aggiunte in questa finestra."
 
-Seleziona **[!UICONTROL Modifica percorso cartella]** per personalizzare la struttura delle cartelle nel percorso di archiviazione in cui vengono depositati i set di dati esportati.
+Selezionare **[!UICONTROL Edit folder path]** per personalizzare la struttura di cartelle nel percorso di archiviazione in cui vengono depositati i set di dati esportati.
 
 ![Il controllo del percorso della cartella di modifica è evidenziato nel passaggio di pianificazione.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
 
@@ -213,13 +213,13 @@ Seleziona **[!UICONTROL Modifica percorso cartella]** per personalizzare la stru
 
 ![Selezione di macro evidenziata nella finestra modale della cartella personalizzata.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-Dopo aver selezionato le macro desiderate, è possibile visualizzare un&#39;anteprima della struttura di cartelle che verrà creata nel percorso di archiviazione. Il primo livello nella struttura delle cartelle rappresenta il **[!UICONTROL percorso cartella]** indicato quando si è [connessi alla destinazione](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) per esportare i set di dati.
+Dopo aver selezionato le macro desiderate, è possibile visualizzare un&#39;anteprima della struttura di cartelle che verrà creata nel percorso di archiviazione. Il primo livello nella struttura delle cartelle rappresenta **[!UICONTROL Folder path]** che hai indicato quando [ti sei connesso alla destinazione](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) per esportare i set di dati.
 
 ![Anteprima del percorso della cartella evidenziata nella finestra modale della cartella personalizzata.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## Rivedi {#review}
 
-Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a esportare i set di dati nella destinazione.
+Nella pagina **[!UICONTROL Review]** è disponibile un riepilogo della selezione. Selezionare **[!UICONTROL Cancel]** per interrompere il flusso, **[!UICONTROL Back]** per modificare le impostazioni o **[!UICONTROL Finish]** per confermare la selezione e avviare l&#39;esportazione dei set di dati nella destinazione.
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio di revisione.](/help/destinations/assets/ui/export-datasets/review.png)
 
@@ -231,7 +231,7 @@ Experience Platform crea una struttura di cartelle nel percorso di archiviazione
 
 >[!TIP]
 > 
->Il primo livello in questa struttura di cartelle - `folder-name-you-provided` - rappresenta il **[!UICONTROL percorso cartella]** che hai indicato quando [ti sei connesso alla destinazione](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) per esportare i set di dati.
+>Il primo livello in questa struttura di cartelle - `folder-name-you-provided` - rappresenta **[!UICONTROL Folder path]** che hai indicato quando [ti sei connesso alla destinazione](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) per esportare i set di dati.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -258,7 +258,7 @@ Le esportazioni in file JSON sono supportate *solo in modalità compressa*. Le e
 
 Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti operazioni:
 
-1. Accedi all&#39;[interfaccia utente di Experience Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore per visualizzare i flussi di dati di destinazione esistenti.
+1. Accedi alla [interfaccia utente di Experience Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Browse]** dall&#39;intestazione superiore per visualizzare i flussi di dati di destinazione esistenti.
 
    ![Visualizzazione esplorazione di destinazione con una connessione di destinazione visualizzata e il resto offuscato.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -266,21 +266,21 @@ Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti
    > 
    >Seleziona l&#39;icona del filtro ![Icona filtro](/help/images/icons/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
 
-2. Dalla colonna **[!UICONTROL Dati attivazione]**, seleziona il controllo Set di dati per visualizzare tutti i set di dati mappati a questo flusso di dati di esportazione.
+2. Dalla colonna **[!UICONTROL Activation data]**, seleziona il controllo set di dati per visualizzare tutti i set di dati mappati a questo flusso di dati di esportazione.
 
    ![L&#39;opzione di navigazione dei set di dati disponibili è evidenziata nella colonna Dati di attivazione.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. Viene visualizzata la pagina **[!UICONTROL Dati attivazione]** per la destinazione. Utilizza le caselle di controllo a sinistra dell&#39;elenco dei set di dati per selezionare i set di dati da rimuovere, quindi seleziona **[!UICONTROL Rimuovi set di dati]** nella barra a destra per attivare la finestra di dialogo di conferma della rimozione dei set di dati.
+3. Viene visualizzata la pagina **[!UICONTROL Activation data]** per la destinazione. Utilizza le caselle di controllo a sinistra dell&#39;elenco dei set di dati per selezionare i set di dati da rimuovere, quindi seleziona **[!UICONTROL Remove datasets]** nella barra a destra per attivare la finestra di dialogo di conferma della rimozione dei set di dati.
 
    ![Finestra di dialogo Rimuovi set di dati che mostra il controllo Rimuovi set di dati nella barra a destra.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-4. Nella finestra di dialogo di conferma, seleziona **[!UICONTROL Rimuovi]** per rimuovere immediatamente il set di dati dalle esportazioni nella destinazione.
+4. Nella finestra di dialogo di conferma, seleziona **[!UICONTROL Remove]** per rimuovere immediatamente il set di dati dalle esportazioni alla destinazione.
 
    ![Finestra di dialogo che mostra l&#39;opzione Conferma rimozione set di dati dal flusso di dati.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 ## Diritti di esportazione del set di dati {#licensing-entitlement}
 
-Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 I diritti all’esportazione di dati per diverse applicazioni non sono additivi. Ciò significa, ad esempio, che se acquisti Real-Time CDP Ultimate e Adobe Journey Optimizer Ultimate, il diritto all’esportazione del profilo sarà il più grande tra i due diritti, in base alle descrizioni del prodotto. Il volume di adesioni viene calcolato prendendo il numero totale di profili con licenza e moltiplicandolo per 500 KB per Real-Time CDP Prime o 700 KB per Real-Time CDP Ultimate per determinare il volume di dati a cui hai diritto.
 

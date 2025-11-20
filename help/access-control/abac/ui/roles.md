@@ -5,8 +5,8 @@ description: Questo documento fornisce informazioni sulla gestione dei ruoli tra
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 23%
+source-wordcount: '594'
+ht-degree: 24%
 
 ---
 
@@ -23,13 +23,13 @@ I ruoli definiscono l’accesso di un amministratore, uno specialista o un utent
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it" text="Gestire un ruolo"
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Applicare etichette a un ruolo"
 
-Per creare un nuovo ruolo, seleziona la scheda **[!UICONTROL Ruoli]** nella barra laterale e seleziona **[!UICONTROL Crea ruolo]**.
+Per creare un nuovo ruolo, selezionare la scheda **[!UICONTROL Roles]** nella barra laterale e selezionare **[!UICONTROL Create Role]**.
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Crea un nuovo ruolo]**, in cui viene richiesto di immettere un nome e una descrizione facoltativa.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Create a new role]** in cui viene richiesto di immettere un nome e una descrizione facoltativa.
 
-Al termine, selezionare **[!UICONTROL Conferma]**.
+Al termine, selezionare **[!UICONTROL Confirm]**.
 
 ![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
 
@@ -45,11 +45,11 @@ Fai clic e trascina la risorsa pertinente nel pannello principale.
 
 ![flac-additional-resources-ADDED](../../images/flac-ui/flac-additional-resources-added.png)
 
-Seleziona le autorizzazioni per le risorse da includere nel ruolo utilizzando il menu a discesa. Ripeti questa operazione per tutte le risorse da includere per il ruolo. Al termine, selezionare **[!UICONTROL Salva ed esci]**.
+Seleziona le autorizzazioni per le risorse da includere nel ruolo utilizzando il menu a discesa. Ripeti questa operazione per tutte le risorse da includere per il ruolo. Al termine, selezionare **[!UICONTROL Save and exit]**.
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
-Il nuovo ruolo è stato creato e si è reindirizzati alla pagina **[!UICONTROL Ruoli]**, in cui il nuovo ruolo creato verrà visualizzato nell&#39;elenco.
+Il nuovo ruolo è stato creato e si è reindirizzati alla pagina **[!UICONTROL Roles]**, in cui il nuovo ruolo creato verrà visualizzato nell&#39;elenco.
 
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
@@ -57,29 +57,29 @@ Per ulteriori informazioni su come gestire le autorizzazioni del ruolo dopo la c
 
 Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruolo e come gestire gli utenti per tale ruolo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423940/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Duplicare un ruolo
 
-Per duplicare un ruolo esistente, selezionarlo dalla scheda **[!UICONTROL Ruoli]**. In alternativa, utilizza l’opzione di filtro per filtrare i risultati e individuare il ruolo da duplicare.
+Per duplicare un ruolo esistente, selezionare il ruolo dalla scheda **[!UICONTROL Roles]**. In alternativa, utilizza l’opzione di filtro per filtrare i risultati e individuare il ruolo da duplicare.
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
-Quindi, seleziona **[!UICONTROL Duplica]** dall&#39;alto a destra dello schermo.
+Quindi, seleziona **[!UICONTROL Duplicate]** dall&#39;alto a destra dello schermo.
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Ruolo duplicato]**, in cui viene richiesto di confermare la duplicazione.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Duplicate role]** in cui viene richiesto di confermare la duplicazione.
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
 Verrà quindi visualizzata la pagina dei dettagli del ruolo, in cui è possibile modificare il nome e le autorizzazioni per il ruolo. Dettagli, Etichette e Sandbox sono duplicati dal ruolo precedente. Gli utenti dovranno essere aggiunti tramite la scheda utenti. Per ulteriori informazioni sull&#39;aggiunta di dettagli, etichette, sandbox e utenti a un ruolo, è possibile visualizzare il documento [Gestione delle autorizzazioni per un ruolo](permissions.md).
 
-Fare clic sulla freccia sinistra per tornare alla scheda **[!UICONTROL Ruoli]**.
+Fare clic sulla freccia sinistra per tornare alla scheda **[!UICONTROL Roles]**.
 
 ![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
 
-Il nuovo ruolo verrà visualizzato nell&#39;elenco nella pagina **[!UICONTROL Ruoli]**.
+Il nuovo ruolo verrà visualizzato nell&#39;elenco nella pagina **[!UICONTROL Roles]**.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
@@ -89,11 +89,11 @@ Selezionare i puntini di sospensione (`…`) accanto al nome di un ruolo e un me
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Elimina ruolo utente]** in cui viene richiesto di confermare l&#39;eliminazione.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Delete user role]** in cui viene richiesto di confermare l&#39;eliminazione.
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
-Verrai riportato alla scheda **[!UICONTROL Ruoli]**.
+Verrà visualizzata di nuovo la scheda **[!UICONTROL Roles]**.
 
 ## Passaggi successivi
 

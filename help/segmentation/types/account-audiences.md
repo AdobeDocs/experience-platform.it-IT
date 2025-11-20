@@ -1,13 +1,13 @@
 ---
 title: Pubblico dell’account
 description: Scopri come creare e utilizzare i tipi di pubblico dell’account per eseguire il targeting dei profili dell’account nelle destinazioni a valle.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 20%
+source-wordcount: '1498'
+ht-degree: 21%
 
 ---
 
@@ -35,11 +35,11 @@ Prima di iniziare a utilizzare i tipi di pubblico dell’account, esamina le dif
 
 ## Accesso {#access}
 
-Per accedere ai tipi di pubblico dell&#39;account, seleziona **[!UICONTROL Tipi di pubblico]** nella sezione **[!UICONTROL Account]**.
+Per accedere al pubblico dell&#39;account, selezionare **[!UICONTROL Audiences]** nella sezione **[!UICONTROL Accounts]**.
 
 ![Il pulsante Tipi di pubblico è evidenziato nella sezione Account.](../images/types/account/select.png)
 
-Viene visualizzata la pagina [!UICONTROL Sfoglia], con un elenco di tutti i tipi di pubblico dell&#39;account per l&#39;organizzazione.
+Viene visualizzata la pagina [!UICONTROL Browse], con un elenco di tutti i tipi di pubblico dell&#39;account per l&#39;organizzazione.
 
 ![Vengono visualizzati i tipi di pubblico dell&#39;account appartenenti all&#39;organizzazione.](../images/types/account/browse.png)
 
@@ -53,19 +53,19 @@ Puoi anche utilizzare la funzionalità di ricerca e filtro per cercare e ordinar
 >
 >I tipi di pubblico dell&#39;account vengono valutati utilizzando la segmentazione **batch** e verranno valutati ogni 24 ore.
 
-Per creare un pubblico per un account, seleziona **[!UICONTROL Crea pubblico]** nella pagina [!UICONTROL Sfoglia].
+Per creare un pubblico di account, selezionare **[!UICONTROL Create audience]** nella pagina [!UICONTROL Browse].
 
-![Il pulsante [!UICONTROL Crea pubblico] è evidenziato nella pagina di navigazione del pubblico dell&#39;account.](../images/types/account/select-create-audience.png)
+![Il pulsante [!UICONTROL Create audience] è evidenziato nella pagina di esplorazione del pubblico dell&#39;account.](../images/types/account/select-create-audience.png)
 
-Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Nella scheda [!UICONTROL Attributi] puoi aggiungere sia gli attributi creati da Experience Platform che quelli personalizzati.
+Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Nella scheda [!UICONTROL Attributes] puoi aggiungere sia gli attributi creati da Experience Platform che quelli personalizzati.
 
 ![Viene visualizzato il Generatore di segmenti. Si noti che vengono visualizzati solo gli attributi e i tipi di pubblico.](../images/types/account/segment-builder.png)
 
-Quando crei il pubblico dell&#39;account, tieni presente che gli eventi sono elencati in **[!UICONTROL Persone]**, anziché essere la loro scheda, poiché questi attributi sono associati alle persone.
+Quando si creano i tipi di pubblico dell&#39;account, si noti che gli eventi sono elencati in **[!UICONTROL People]**, anziché essere la propria scheda, poiché questi attributi sono associati alle persone.
 
-![La posizione in cui trovare gli eventi, che si trova nella cartella [!UICONTROL Persone], è evidenziata.](../images/types/account/attributes.png)
+![La posizione in cui trovare gli eventi, che si trova nella cartella [!UICONTROL People], è evidenziata.](../images/types/account/attributes.png)
 
-Nella scheda [!UICONTROL Tipi di pubblico] puoi aggiungere tipi di pubblico basati sulle persone creati in precedenza da utilizzare per la creazione del pubblico del tuo account.
+Nella scheda [!UICONTROL Audiences] puoi aggiungere tipi di pubblico basati sulle persone creati in precedenza da utilizzare durante la creazione del pubblico del tuo account.
 
 ![La scheda Tipi di pubblico nel Generatore di segmenti è evidenziata.](../images/types/account/audiences.png)
 
@@ -79,11 +79,11 @@ Per utilizzare i tipi di relazione alternativi, selezionare ![l&#39;icona delle 
 
 ![L&#39;icona delle impostazioni è evidenziata nella sezione Campi.](../images/types/account/select-settings.png)
 
-Nella scheda [!UICONTROL Impostazioni], seleziona **[!UICONTROL Mostra selettori di relazioni]** nella sezione **[!UICONTROL Relazione di campi]**.
+Nella scheda [!UICONTROL Settings], selezionare **[!UICONTROL Show relationship selectors]** nella sezione **[!UICONTROL Relationship of fields]**.
 
 ![L&#39;opzione Mostra selettori di relazioni è selezionata nella sezione Relazioni dei campi della scheda Impostazioni.](../images/types/account/show-relation-selectors.png)
 
-Seleziona di nuovo ![l&#39;icona impostazioni](../../images/icons/settings.png) per tornare alla scheda [!UICONTROL Campi]. È ora disponibile la sezione **[!UICONTROL Stabilire relazioni]**, che consente di stabilire come l&#39;account è connesso alla persona e come la persona è connessa all&#39;opportunità.
+Seleziona di nuovo ![l&#39;icona impostazioni](../../images/icons/settings.png) per tornare alla scheda [!UICONTROL Fields]. È ora disponibile la sezione **[!UICONTROL Establish relationships]**, che consente di stabilire come l&#39;account è connesso alla persona e come la persona è connessa all&#39;opportunità.
 
 ![Viene evidenziata la sezione Stabilire relazioni, in cui sono visualizzate le opzioni per la connessione di un account a una persona e per la connessione di una persona a un&#39;opportunità.](../images/types/account/establish-relationships.png)
 
@@ -112,11 +112,11 @@ Dopo aver stabilito la relazione desiderata, puoi aggiungere i tipi di pubblico 
 
 Dopo aver creato il pubblico del tuo account, puoi attivarlo in altri servizi a valle.
 
-Seleziona il pubblico da attivare, seguito da **[!UICONTROL Attiva nella destinazione]**.
+Selezionare il pubblico da attivare, seguito da **[!UICONTROL Activate to destination]**.
 
-![Il pulsante [!UICONTROL Attiva nella destinazione] è evidenziato nel menu Azioni rapide per il pubblico selezionato.](../images/types/account/activate.png)
+![Il pulsante [!UICONTROL Activate to destination] è evidenziato nel menu Azioni rapide per il pubblico selezionato.](../images/types/account/activate.png)
 
-Viene visualizzata la pagina [!UICONTROL Attiva destinazione]. Per ulteriori informazioni sul processo di attivazione, incluse le destinazioni supportate e i dettagli sulle mappature dei campi, consulta l&#39;esercitazione [attivare i tipi di pubblico dell&#39;account](/help/destinations/ui/activate-account-audiences.md).
+Viene visualizzata la pagina [!UICONTROL Activate destination]. Per ulteriori informazioni sul processo di attivazione, incluse le destinazioni supportate e i dettagli sulle mappature dei campi, consulta l&#39;esercitazione [attivare i tipi di pubblico dell&#39;account](/help/destinations/ui/activate-account-audiences.md).
 
 ## Passaggi successivi {#next-steps}
 

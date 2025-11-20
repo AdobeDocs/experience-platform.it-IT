@@ -5,8 +5,8 @@ description: Questo documento fornisce informazioni sulla gestione delle etichet
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 24%
+source-wordcount: '238'
+ht-degree: 26%
 
 ---
 
@@ -33,14 +33,14 @@ Le etichette consentono di categorizzare set di dati e campi in base ai criteri 
 
 >[!NOTE]
 >
->Esiste un unico elenco di etichette per un’intera organizzazione. Per creare un&#39;etichetta personalizzata, sono necessarie le autorizzazioni **[!UICONTROL Gestione etichette di utilizzo]** nella sandbox di produzione. L&#39;eliminazione delle etichette non è attualmente supportata.
+>Esiste un unico elenco di etichette per un’intera organizzazione. Per creare un&#39;etichetta personalizzata, sono necessarie le autorizzazioni **[!UICONTROL Manage Usage Labels]** per la sandbox di produzione. L&#39;eliminazione delle etichette non è attualmente supportata.
 
-Per creare una nuova etichetta, seleziona la scheda **[!UICONTROL Etichette]** nella barra laterale e seleziona **[!UICONTROL Crea etichetta]**.
+Per creare una nuova etichetta, selezionare la scheda **[!UICONTROL Labels]** nella barra laterale e selezionare **[!UICONTROL Create Label]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Crea nuova etichetta]**, in cui viene richiesto di immettere un nome, un nome descrittivo facoltativo e una descrizione facoltativa.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Create a new label]** in cui viene richiesto di immettere un nome, un nome descrittivo facoltativo e una descrizione facoltativa.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-Al termine, selezionare **[!UICONTROL Conferma]**.
+Al termine, selezionare **[!UICONTROL Confirm]**.

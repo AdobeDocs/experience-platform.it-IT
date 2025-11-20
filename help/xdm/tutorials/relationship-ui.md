@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1342'
 ht-degree: 9%
 
 ---
@@ -65,13 +65,13 @@ Le sezioni seguenti descrivono la struttura di ogni schema utilizzato in questa 
 
 ### Schema [!DNL Loyalty Members]
 
-Lo schema di origine &quot;[!DNL Loyalty Members]&quot; è basato sulla classe [!DNL XDM Individual Profile], contenente un campo che descrive i membri di un programma fedeltà. Uno di questi campi, `personalEmail.addess`, funge da identità primaria per lo schema nello spazio dei nomi [!UICONTROL E-mail]. Come visto in **[!UICONTROL Proprietà schema]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
+Lo schema di origine &quot;[!DNL Loyalty Members]&quot; è basato sulla classe [!DNL XDM Individual Profile], contenente un campo che descrive i membri di un programma fedeltà. Uno di questi campi, `personalEmail.addess`, funge da identità primaria per lo schema nello spazio dei nomi [!UICONTROL Email]. Come visto in **[!UICONTROL Schema Properties]**, questo schema è stato abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### Schema [!DNL Hotels]
 
-Lo schema di riferimento &quot;[!DNL Hotels]&quot; è basato su una classe &quot;[!DNL Hotels]&quot; personalizzata e contiene campi che descrivono un hotel. Per poter partecipare a una relazione, lo schema di riferimento deve inoltre avere un&#39;identità primaria definita ed essere abilitato per [!UICONTROL Profilo]. In questo caso, `_tenantId.hotelId`funge da identità primaria per lo schema, utilizzando uno spazio dei nomi di identità &quot;[!DNL Hotel ID]&quot; personalizzato.
+Lo schema di riferimento &quot;[!DNL Hotels]&quot; è basato su una classe &quot;[!DNL Hotels]&quot; personalizzata e contiene campi che descrivono un hotel. Per poter partecipare a una relazione, lo schema di riferimento deve inoltre avere un&#39;identità primaria definita ed essere abilitato per [!UICONTROL Profile]. In questo caso, `_tenantId.hotelId`funge da identità primaria per lo schema, utilizzando uno spazio dei nomi di identità &quot;[!DNL Hotel ID]&quot; personalizzato.
 
 ![Attiva per profilo](../images/tutorials/relationship/hotels.png)
 
@@ -91,15 +91,15 @@ Nel caso dello schema [!DNL Loyalty Members], verrà aggiunto un nuovo campo `pr
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Nell’area di lavoro viene visualizzato un nuovo segnaposto di campo. In **[!UICONTROL Proprietà campo]**, fornire un nome di campo e un nome visualizzato per il campo e impostarne il tipo su &quot;[!UICONTROL Stringa]&quot;. In **[!UICONTROL Assegna a]**, selezionare un gruppo di campi esistente da estendere o digitare un nome univoco per creare un nuovo gruppo di campi. In questo caso, viene creato un nuovo gruppo di campi &quot;[!DNL Preferred Hotel]&quot;.
+Nell’area di lavoro viene visualizzato un nuovo segnaposto di campo. In **[!UICONTROL Field properties]**, fornire un nome di campo e un nome visualizzato per il campo e impostarne il tipo su &quot;[!UICONTROL String]&quot;. In **[!UICONTROL Assign to]**, selezionare un gruppo di campi esistente da estendere o digitare un nome univoco per creare un nuovo gruppo di campi. In questo caso, viene creato un nuovo gruppo di campi &quot;[!DNL Preferred Hotel]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Al termine, selezionare **[!UICONTROL Applica]**.
+Al termine, selezionare **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Il campo `preferredHotel` aggiornato viene visualizzato nell&#39;area di lavoro, che si trova sotto un oggetto `_tenantId` poiché è un campo personalizzato. Seleziona **[!UICONTROL Salva]** per finalizzare le modifiche allo schema.
+Il campo `preferredHotel` aggiornato viene visualizzato nell&#39;area di lavoro, che si trova sotto un oggetto `_tenantId` poiché è un campo personalizzato. Seleziona **[!UICONTROL Save]** per finalizzare le modifiche allo schema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -111,11 +111,11 @@ Una volta definito un campo di riferimento dedicato per lo schema di origine, pu
 >
 >Le relazioni possono essere supportate solo nei campi stringa o matrice di stringhe.
 
-Seleziona il campo `preferredHotel` nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Aggiungi relazione]** nella barra laterale **[!UICONTROL Proprietà campo]**.
+Seleziona il campo `preferredHotel` nell&#39;area di lavoro, quindi seleziona **[!UICONTROL Add relationship]** nella barra laterale **[!UICONTROL Field properties]**.
 
 ![L&#39;Editor di schema con la relazione Aggiungi evidenziata nella barra laterale delle proprietà del campo.](../images/tutorials/relationship/add-relationship.png)
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Aggiungi relazione]. Da questa finestra di dialogo è possibile impostare i parametri richiesti per la configurazione di un campo relazione. Per gli utenti di Real-Time CDP B2C, puoi **only** impostare una relazione uno-a-uno tra lo schema di origine e quello di riferimento.
+Viene visualizzata la finestra di dialogo [!UICONTROL Add relationship]. Da questa finestra di dialogo è possibile impostare i parametri richiesti per la configurazione di un campo relazione. Per gli utenti di Real-Time CDP B2C, puoi **only** impostare una relazione uno-a-uno tra lo schema di origine e quello di riferimento.
 
 >[!NOTE]
 >
@@ -123,33 +123,33 @@ Viene visualizzata la finestra di dialogo [!UICONTROL Aggiungi relazione]. Da qu
 
 ![Finestra di dialogo Aggiungi relazione.](../images/tutorials/relationship/add-relationship-dialog.png)
 
-Utilizza il menu a discesa per **[!UICONTROL Schema di riferimento]** e seleziona lo schema di riferimento per la relazione (&quot;[!DNL Hotels]&quot; in questo esempio).
+Utilizzare il menu a discesa per **[!UICONTROL Reference schema]** e selezionare lo schema di riferimento per la relazione (&quot;[!DNL Hotels]&quot; in questo esempio).
 
 >[!NOTE]
 >
 >Solo gli schemi che contengono un’identità primaria sono inclusi nel menu a discesa dello schema di riferimento. Questa protezione impedisce la creazione accidentale di una relazione con uno schema non ancora configurato correttamente.
 
-Lo spazio dei nomi dell&#39;identità dello schema di riferimento (in questo caso, &quot;[!DNL Hotel ID]&quot;) viene popolato automaticamente in **[!UICONTROL Spazio dei nomi dell&#39;identità di riferimento]**. Al termine, seleziona **[!UICONTROL Applica]**.
+Lo spazio dei nomi dell&#39;identità dello schema di riferimento (in questo caso, &quot;[!DNL Hotel ID]&quot;) viene popolato automaticamente in **[!UICONTROL Reference identity namespace]**. Al termine, fai clic su **[!UICONTROL Apply]**.
 
 ![La finestra di dialogo Aggiungi relazione con i parametri di relazione configurati e Applica evidenziati.](../images/tutorials/relationship/apply-relationship.png)
 
-Il campo `preferredHotel` è ora evidenziato come relazione nell&#39;area di lavoro, con il nome dello schema di riferimento. Seleziona **[!UICONTROL Salva]** per salvare le modifiche e completare il flusso di lavoro.
+Il campo `preferredHotel` è ora evidenziato come relazione nell&#39;area di lavoro, con il nome dello schema di riferimento. Seleziona **[!UICONTROL Save]** per salvare le modifiche e completare il flusso di lavoro.
 
 ![Editor schema con i riferimenti di relazione e Salva evidenziati.](../images/tutorials/relationship/relationship-save.png)
 
 ### Modifica un campo relazione esistente {#edit-relationship}
 
-Per modificare lo schema di riferimento, selezionare un campo con una relazione esistente, quindi selezionare **[!UICONTROL Modifica relazione]** nella barra laterale **[!UICONTROL Proprietà campo]**.
+Per modificare lo schema di riferimento, selezionare un campo con una relazione esistente, quindi selezionare **[!UICONTROL Edit relationship]** nella barra laterale **[!UICONTROL Field properties]**.
 
 ![Editor di schema con relazione di modifica evidenziata.](../images/tutorials/relationship/edit-relationship.png)
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Modifica relazione]. Da qui puoi seguire il processo descritto in [definizione di un campo relazione](#relationship-field) o eliminare la relazione. Selezionare **[!UICONTROL Elimina relazione]** per rimuovere la relazione con lo schema di riferimento.
+Viene visualizzata la finestra di dialogo [!UICONTROL Edit relationship]. Da qui puoi seguire il processo descritto in [definizione di un campo relazione](#relationship-field) o eliminare la relazione. Selezionare **[!UICONTROL Delete relationship]** per rimuovere la relazione con lo schema di riferimento.
 
 ![Finestra di dialogo Modifica relazione.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
 ## Filtrare e cercare relazioni {#filter-and-search}
 
-Puoi filtrare e cercare relazioni specifiche all&#39;interno degli schemi dalla scheda [!UICONTROL Relazioni] dell&#39;area di lavoro [!UICONTROL Schemi]. È possibile utilizzare questa visualizzazione per individuare e gestire rapidamente le relazioni. Per istruzioni dettagliate sulle opzioni di filtro, leggi il documento su [esplorazione delle risorse dello schema](../ui/explore.md#lookup).
+È possibile filtrare e cercare relazioni specifiche negli schemi dalla scheda [!UICONTROL Relationships] dell&#39;area di lavoro [!UICONTROL Schemas]. È possibile utilizzare questa visualizzazione per individuare e gestire rapidamente le relazioni. Per istruzioni dettagliate sulle opzioni di filtro, leggi il documento su [esplorazione delle risorse dello schema](../ui/explore.md#lookup).
 
 ![Scheda Relazioni nell&#39;area di lavoro Schemi.](../images/tutorials/relationship-b2b/relationship-tab.png)
 

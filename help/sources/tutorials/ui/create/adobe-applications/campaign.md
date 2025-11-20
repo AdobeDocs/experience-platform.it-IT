@@ -5,7 +5,7 @@ description: Scopri come collegare Adobe Experience Platform a Adobe Campaign Ma
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1202'
 ht-degree: 6%
 
 ---
@@ -26,11 +26,11 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 ## Connettere Adobe Campaign Managed Cloud Services ad Experience Platform
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. È inoltre possibile utilizzare la barra di ricerca per limitare le origini visualizzate.
 
-Nella categoria **[!UICONTROL Applicazioni Adobe]**, selezionare **[!UICONTROL Adobe Campaign Managed Cloud Services]**, quindi **[!UICONTROL Aggiungi dati]**.
+Nella categoria **[!UICONTROL Adobe applications]**, selezionare **[!UICONTROL Adobe Campaign Managed Cloud Services]**, quindi **[!UICONTROL Add data]**.
 
 ![Catalogo origini che visualizza la scheda Adobe Campaign Managed Cloud Services.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -54,7 +54,7 @@ Nella categoria **[!UICONTROL Applicazioni Adobe]**, selezionare **[!UICONTROL A
 >abstract="Nome dell’entità definita nel database di Adobe Campaign."
 >text="Learn more in documentation"
 
-Viene visualizzato il passaggio [!UICONTROL Seleziona dati] che fornisce un&#39;interfaccia per configurare la [!UICONTROL istanza Adobe Campaign], la [!UICONTROL mappatura Target] e il [!UICONTROL nome schema].
+Viene visualizzato il passaggio [!UICONTROL Select data], che fornisce un&#39;interfaccia per configurare [!UICONTROL Adobe Campaign instance], [!UICONTROL Target mapping] e [!UICONTROL Schema name].
 
 | Proprietà | Descrizione |
 | --- | --- |
@@ -64,15 +64,15 @@ Viene visualizzato il passaggio [!UICONTROL Seleziona dati] che fornisce un&#39;
 
 ![Interfaccia in cui è possibile configurare l&#39;istanza Adobe Campaign, la mappatura di destinazione e il nome dello schema.](../../../../images/tutorials/create/campaign/select-data.png)
 
-Dopo aver fornito i valori per l’istanza Campaign, la mappatura del target e il nome dello schema, lo schermo si aggiorna per visualizzare un’anteprima dello schema e un set di dati di esempio. Al termine, selezionare **[!UICONTROL Avanti]**.
+Dopo aver fornito i valori per l’istanza Campaign, la mappatura del target e il nome dello schema, lo schermo si aggiorna per visualizzare un’anteprima dello schema e un set di dati di esempio. Al termine, selezionare **[!UICONTROL Next]**.
 
 ![Anteprima della gerarchia dello schema e campione del set di dati](../../../../images/tutorials/create/campaign/preview.png)
 
 ### Usa un set di dati esistente
 
-La pagina [!UICONTROL Dettagli flusso di dati] consente di scegliere se utilizzare un set di dati esistente o configurarne uno nuovo per il flusso di dati.
+La pagina [!UICONTROL Dataflow detail] consente di scegliere se utilizzare un set di dati esistente o configurarne uno nuovo per il flusso di dati.
 
-Per utilizzare un set di dati esistente, selezionare **[!UICONTROL Set di dati esistente]**. Puoi recuperare un set di dati esistente utilizzando l&#39;opzione [!UICONTROL Ricerca avanzata] oppure scorrendo l&#39;elenco dei set di dati esistenti nel menu a discesa.
+Per utilizzare un set di dati esistente, selezionare **[!UICONTROL Existing dataset]**. È possibile recuperare un set di dati esistente utilizzando l&#39;opzione [!UICONTROL Advanced search] oppure scorrendo l&#39;elenco dei set di dati esistenti nel menu a discesa.
 
 Con un set di dati selezionato, fornisci un nome per il flusso di dati e una descrizione facoltativa.
 
@@ -80,7 +80,7 @@ Con un set di dati selezionato, fornisci un nome per il flusso di dati e una des
 
 ### Utilizza un nuovo set di dati
 
-Per utilizzare un nuovo set di dati, selezionare **[!UICONTROL Nuovo set di dati]**, quindi specificare un nome per il set di dati di output e una descrizione facoltativa. Quindi, seleziona uno schema a cui mappare utilizzando l&#39;opzione [!UICONTROL Ricerca avanzata] o scorrendo l&#39;elenco degli schemi esistenti nel menu a discesa. Al termine, selezionare **[!UICONTROL Avanti]**.
+Per utilizzare un nuovo set di dati, selezionare **[!UICONTROL New dataset]**, quindi fornire un nome per il set di dati di output e una descrizione facoltativa. Quindi, selezionare uno schema a cui mappare utilizzando l&#39;opzione [!UICONTROL Advanced search] o scorrendo l&#39;elenco degli schemi esistenti nel menu a discesa. Al termine, selezionare **[!UICONTROL Next]**.
 
 ![Interfaccia che visualizza la nuova opzione del set di dati.](../../../../images/tutorials/create/campaign/new-dataset.png)
 
@@ -88,13 +88,13 @@ Per utilizzare un nuovo set di dati, selezionare **[!UICONTROL Nuovo set di dati
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per iscriverti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi di origini tramite l&#39;interfaccia utente](../../alerts.md).
 
-Dopo aver fornito i dettagli al flusso di dati, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli al flusso di dati, selezionare **[!UICONTROL Next]**.
 
 ![Selezione di diversi tipi di avviso che è possibile abilitare per il flusso di dati.](../../../../images/tutorials/create/campaign/alerts.png)
 
 ### Mappare i campi dati su uno schema XDM
 
-Viene visualizzato il passaggio [!UICONTROL Mappatura] che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
+Viene visualizzato il passaggio [!UICONTROL Mapping], che fornisce un&#39;interfaccia per mappare i campi sorgente dallo schema sorgente ai campi XDM di destinazione appropriati nello schema di destinazione.
 
 Experience Platform fornisce consigli intelligenti per campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso. In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull&#39;utilizzo dell&#39;interfaccia mapper e dei campi calcolati, consulta la [guida dell&#39;interfaccia utente della preparazione dati](../../../../../data-prep/ui/mapping.md).
 
@@ -104,18 +104,18 @@ Experience Platform fornisce consigli intelligenti per campi mappati automaticam
 >
 >Per ogni pubblico, puoi aggiungere fino a 20 campi da mappare su Adobe Campaign. È possibile modificare questo limite aggiornando il valore dell&#39;opzione `NmsCdp_Aep_Sources_Max_Columns` nella cartella Amministrazione > Piattaforma > Opzioni di Esplora campagne.
 
-Una volta mappati correttamente i dati di origine, seleziona **[!UICONTROL Avanti]**.
+Una volta mappati correttamente i dati di origine, selezionare **[!UICONTROL Next]**.
 
 ![Struttura di mapping con quattro campi dati di origine mappati ai campi schema XDM corrispondenti.](../../../../images/tutorials/create/campaign/mapping.png)
 
 ### Verifica il flusso di dati
 
-Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio **[!UICONTROL Review]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Connessione]**: mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno di tale file di origine.
-* **[!UICONTROL Assegna set di dati e mappa i campi]**: mostra in quale set di dati vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+* **[!UICONTROL Connection]**: mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno di tale file di origine.
+* **[!UICONTROL Assign dataset & map fields]**: mostra in quale set di dati vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
 
-Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Fine]** e attendi che venga creato un po&#39; di tempo.
+Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Finish]** e lascia un po&#39; di tempo per la creazione del flusso di dati.
 
 ![Pagina di revisione contenente informazioni sulla connessione e sul set di dati.](../../../../images/tutorials/create/campaign/review.png)
 
@@ -123,7 +123,7 @@ Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Fine]** e attendi c
 
 Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sui tassi di acquisizione e sui batch riusciti e non riusciti.
 
-Per iniziare a visualizzare l&#39;attività del set di dati, seleziona **[!UICONTROL Flussi di dati]** nel catalogo delle origini.
+Per iniziare a visualizzare l&#39;attività del set di dati, selezionare **[!UICONTROL Dataflows]** nel catalogo delle origini.
 
 ![Pagina del catalogo delle origini con la scheda dell&#39;intestazione dei flussi di dati selezionata.](../../../../images/tutorials/create/campaign/dataflows.png)
 

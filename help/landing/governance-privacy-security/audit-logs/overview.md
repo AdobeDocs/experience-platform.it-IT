@@ -6,7 +6,7 @@ feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1579'
 ht-degree: 29%
 
 ---
@@ -32,7 +32,7 @@ Al fine di aumentare la trasparenza e la visibilità delle attività eseguite ne
 
 In un certo senso, un registro di controllo comunica a **chi** ha eseguito **cosa** azione e **quando**. Ogni azione registrata contiene metadati che indicano il tipo di azione, la data e l’ora, l’ID e-mail dell’utente che l’ha eseguita e altri attributi relativi al tipo di azione.
 
-Quando un utente esegue un’azione, vengono registrati due tipi di eventi di controllo. Un evento di base acquisisce il risultato dell&#39;autorizzazione dell&#39;azione, [!UICONTROL allow] o [!UICONTROL deny], mentre un evento avanzato acquisisce il risultato dell&#39;esecuzione, [!UICONTROL success] o [!UICONTROL failure]. È possibile collegare più eventi migliorati allo stesso evento di base. Ad esempio, quando si attiva una destinazione, l&#39;evento principale registra l&#39;autorizzazione dell&#39;azione [!UICONTROL Aggiornamento destinazione], mentre gli eventi avanzati registrano più azioni di [!UICONTROL Attivazione segmento].
+Quando un utente esegue un’azione, vengono registrati due tipi di eventi di controllo. Un evento di base acquisisce il risultato dell&#39;autorizzazione dell&#39;azione [!UICONTROL allow] o [!UICONTROL deny], mentre un evento avanzato acquisisce il risultato dell&#39;esecuzione [!UICONTROL success] o [!UICONTROL failure]. È possibile collegare più eventi migliorati allo stesso evento di base. Ad esempio, quando si attiva una destinazione, l&#39;evento core registra l&#39;autorizzazione dell&#39;azione [!UICONTROL Destination Update], mentre gli eventi avanzati registrano più azioni [!UICONTROL Segment Activate].
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 
 Quando la funzione è abilitata per la tua organizzazione, i registri di audit vengono raccolti automaticamente quando si verifica un’attività. Non è necessario abilitare manualmente la raccolta dei registri.
 
-Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso **[!UICONTROL Visualizza registro attività utente]** concessa (nella categoria [!UICONTROL Governance dei dati]). Per informazioni su come gestire le singole autorizzazioni per le funzionalità di Experience Platform, consulta la [documentazione sul controllo degli accessi](../../../access-control/home.md).
+Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso **[!UICONTROL View User Activity Log]** concessa (nella categoria [!UICONTROL Data Governance]). Per informazioni su come gestire le singole autorizzazioni per le funzionalità di Experience Platform, consulta la [documentazione sul controllo degli accessi](../../../access-control/home.md).
 
 ## Gestione dei registri di audit nell’interfaccia utente {#managing-audit-logs-in-the-ui}
 
@@ -85,7 +85,7 @@ Per visualizzare ed esportare i registri di audit, è necessario disporre dell&#
 >title="Istruzioni"
 >abstract="<ul><li>Seleziona <b>Audit</b> nel pannello di navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: i registri di audit vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se è necessario esaminare i dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti dei criteri interni. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona a imbuto (filtro) per visualizzare un elenco di filtri con cui limitare i risultati. Vengono visualizzati solo gli ultimi 1.000 record, a prescindere dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di audit, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di audit</a> su Experience League.</li></ul>"
 
-Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform nell&#39;area di lavoro **[!UICONTROL Audit]** nell&#39;interfaccia utente di Experience Platform. Nell’area di lavoro viene visualizzato un elenco dei registri registrati, per impostazione predefinita ordinati dal più recente al meno recente.
+È possibile visualizzare i registri di controllo per diverse funzioni di Experience Platform nell&#39;area di lavoro **[!UICONTROL Audits]** nell&#39;interfaccia utente di Experience Platform. Nell’area di lavoro viene visualizzato un elenco dei registri registrati, per impostazione predefinita ordinati dal più recente al meno recente.
 
 ![La dashboard Audit evidenzia Audit nel menu a sinistra.](../../images/audit-logs/audits.png)
 
@@ -99,7 +99,7 @@ Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a des
 
 ### Filtrare i registri di audit
 
-Selezionare l&#39;icona funnel (![icona filtro](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati.
+Selezionare l&#39;icona funnel (![icona Filtro](/help/images/icons/filter.png)) per visualizzare un elenco di controlli filtro per limitare i risultati.
 
 >[!NOTE]
 >
@@ -111,13 +111,13 @@ Nell’interfaccia utente sono disponibili i seguenti filtri per gli eventi di a
 
 | Filtro | Descrizione |
 | --- | --- |
-| [!UICONTROL Categoria] | Utilizza il menu a discesa per filtrare i risultati visualizzati per [categoria](#category). |
-| [!UICONTROL Azione] | Filtra per azione. Le azioni disponibili per ciascun servizio sono riportate nella tabella delle risorse precedente. |
-| [!UICONTROL Utente] | Immettere l&#39;ID utente completo (ad esempio, `johndoe@acme.com`) da filtrare per utente. |
-| [!UICONTROL Stato] | Filtra gli eventi di controllo in base al risultato: operazione riuscita, non riuscita, consentita o negata a causa della mancanza di autorizzazioni [controllo di accesso](../../../access-control/home.md). Per un&#39;azione eseguita, gli eventi di base mostrano [!UICONTROL Consenti] o [!UICONTROL Rifiuta]. Se l&#39;evento di base è [!UICONTROL Consenti], è possibile che abbia allegato uno o più eventi avanzati che mostrano **[!UICONTROL Operazione riuscita]** o **[!UICONTROL Errore]**. Ad esempio, un&#39;azione riuscita mostra [!UICONTROL Consenti] nell&#39;evento principale e [!UICONTROL Riuscito] nell&#39;evento avanzato allegato. |
-| [!UICONTROL Data] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in base al quale filtrare i risultati. I dati possono essere esportati con un periodo di lookback di 90 giorni (ad esempio, da 2021-12-15 a 2022-03-15). Questo può variare a seconda del tipo di evento. |
+| [!UICONTROL Category] | Utilizza il menu a discesa per filtrare i risultati visualizzati per [categoria](#category). |
+| [!UICONTROL Action] | Filtra per azione. Le azioni disponibili per ciascun servizio sono riportate nella tabella delle risorse precedente. |
+| [!UICONTROL User] | Immettere l&#39;ID utente completo (ad esempio, `johndoe@acme.com`) da filtrare per utente. |
+| [!UICONTROL Status] | Filtra gli eventi di controllo in base al risultato: operazione riuscita, non riuscita, consentita o negata a causa della mancanza di autorizzazioni [controllo di accesso](../../../access-control/home.md). Per un&#39;azione eseguita, gli eventi di base mostrano [!UICONTROL Allow] o [!UICONTROL Deny]. Quando l&#39;evento di base è [!UICONTROL Allow], è possibile che abbia allegato uno o più eventi avanzati che mostrano **[!UICONTROL Success]** o **[!UICONTROL Failure]**. Ad esempio, un&#39;azione riuscita mostra [!UICONTROL Allow] sull&#39;evento principale e [!UICONTROL Success] sull&#39;evento avanzato associato. |
+| [!UICONTROL Date] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in base al quale filtrare i risultati. I dati possono essere esportati con un periodo di lookback di 90 giorni (ad esempio, da 2021-12-15 a 2022-03-15). Questo può variare a seconda del tipo di evento. |
 
-Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola per il filtro in questione, oppure seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
+Per rimuovere un filtro, selezionare la &quot;X&quot; sull&#39;icona della pillola per il filtro in questione, oppure selezionare **[!UICONTROL Clear all]** per rimuovere tutti i filtri.
 
 ![Dashboard di controllo con filtro di cancellazione evidenziato.](../../images/audit-logs/clear-filters.png)
 
@@ -126,26 +126,26 @@ I dati del registro di controllo restituiti contengono le seguenti informazioni 
 | Nome colonna | Descrizione |
 |---|---|
 | [!UICONTROL Timestamp] | Data e ora esatte dell&#39;azione eseguita nel formato `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nome risorsa] | Il valore del campo [!UICONTROL Nome risorsa] dipende dalla categoria scelta come filtro. |
-| [!UICONTROL Categoria] | Questo campo corrisponde alla categoria selezionata nel menu a discesa del filtro. |
-| [!UICONTROL Azione] | Le azioni disponibili dipendono dalla categoria scelta come filtro. |
-| [!UICONTROL Utente] | Questo campo fornisce l’ID utente che ha eseguito la query. |
+| [!UICONTROL Asset Name] | Il valore del campo [!UICONTROL Asset Name] dipende dalla categoria scelta come filtro. |
+| [!UICONTROL Category] | Questo campo corrisponde alla categoria selezionata nel menu a discesa del filtro. |
+| [!UICONTROL Action] | Le azioni disponibili dipendono dalla categoria scelta come filtro. |
+| [!UICONTROL User] | Questo campo fornisce l’ID utente che ha eseguito la query. |
 
 ![Dashboard dei controlli di audit con il registro attività filtrato evidenziato.](../../images/audit-logs/filtered.png)
 
 ### Esportare i registri di audit {#export-audit-logs}
 
-Per esportare l’elenco corrente dei registri di audit, seleziona **[!UICONTROL Scarica registro]**.
+Per esportare l&#39;elenco corrente dei registri di controllo, selezionare **[!UICONTROL Download log]**.
 
 >[!NOTE]
 >
 >I registri possono essere richiesti con intervalli di 90 giorni, fino a 365 giorni nel passato. Tuttavia, la quantità massima di registri che possono essere restituiti durante una singola esportazione è di 10.000 eventi di audit (core o ottimizzati).
 
-![Dashboard dei controlli con [!UICONTROL Registro di download] evidenziato.](../../images/audit-logs/download.png)
+![Dashboard di controllo con [!UICONTROL Download log] evidenziato.](../../images/audit-logs/download.png)
 
-Nella finestra di dialogo visualizzata, seleziona il formato preferito (**[!UICONTROL CSV]** o **[!UICONTROL JSON]**), quindi seleziona **[!UICONTROL Scarica]**. Il browser scarica il file generato e lo salva nel computer.
+Nella finestra di dialogo visualizzata, seleziona il formato preferito (**[!UICONTROL CSV]** o **[!UICONTROL JSON]**), quindi seleziona **[!UICONTROL Download]**. Il browser scarica il file generato e lo salva nel computer.
 
-![Finestra di dialogo per la selezione del formato file con [!UICONTROL Download] evidenziato.](../../images/audit-logs/select-download-format.png)
+![La finestra di dialogo di selezione del formato file con [!UICONTROL Download] evidenziato.](../../images/audit-logs/select-download-format.png)
 
 ## Abilita avvisi {#enable-alerts}
 
@@ -169,7 +169,7 @@ Tutte le azioni che possono essere eseguite nell’interfaccia utente possono es
 
 ## Gestione dei registri di audit per Adobe Admin Console
 
-Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/it/enterprise/using/audit-logs.html).
+Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Passaggi successivi e risorse aggiuntive
 
@@ -177,4 +177,4 @@ Questa guida illustra come gestire i registri di audit in Experience Platform. P
 
 Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/344647?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

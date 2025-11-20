@@ -5,7 +5,7 @@ description: Questo documento fornisce informazioni sulla gestione dei criteri d
 exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '648'
 ht-degree: 11%
 
 ---
@@ -120,29 +120,29 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->Per impostazione predefinita, la funzione [!UICONTROL Inclusione automatica] è attivata per tutti i clienti, il che significa che tutte le sandbox sono aggiunte al criterio.
+>Per impostazione predefinita, la funzione [!UICONTROL Auto-include] è attivata per tutti i clienti, il che significa che tutte le sandbox sono aggiunte al criterio.
 
 >[!NOTE]
 >
 >Il criterio **[!UICONTROL Default-Label-Based-Access-Control-Policy]** è attualmente l&#39;unico disponibile per la configurazione.
 
-Per visualizzare le sandbox associate a un criterio, seleziona il criterio dalla scheda **[!UICONTROL Criteri]**.
+Per visualizzare le sandbox associate a un criterio, selezionare il criterio dalla scheda **[!UICONTROL Policies]**.
 
 ![La pagina dei criteri mostra un elenco dei criteri esistenti disponibili.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Quindi, seleziona il criterio, quindi seleziona la scheda **[!UICONTROL Sandbox]**. Viene visualizzato un elenco di sandbox associate al criterio.
+Selezionare quindi il criterio e la scheda **[!UICONTROL Sandboxes]**. Viene visualizzato un elenco di sandbox associate al criterio.
 
 ![La pagina dei criteri mostra un elenco dei criteri esistenti disponibili.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### Aggiungi criterio a tutte le sandbox
 
-Utilizza l&#39;interruttore **[!UICONTROL Inclusione automatica]** nella scheda **[!UICONTROL Sandbox]** per attivare i criteri per tutte le sandbox.
+Utilizza l&#39;interruttore **[!UICONTROL Auto-include]** nella scheda **[!UICONTROL Sandboxes]** per attivare i criteri per tutte le sandbox.
 
-![La scheda [!UICONTROL Sandbox] mostra l&#39;interruttore [!UICONTROL Inclusione automatica].](../../images/flac-ui/abac-policies-auto-include.png)
+![Scheda [!UICONTROL Sandboxes] che mostra l&#39;interruttore [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Abilita inclusione automatica]** in cui viene richiesto di confermare la selezione. Seleziona **[!UICONTROL Abilita]** per completare l&#39;impostazione di configurazione.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Enable Auto-include]** in cui viene richiesto di confermare la selezione. Selezionare **[!UICONTROL Enable]** per completare l&#39;impostazione di configurazione.
 
-![La finestra di dialogo [!UICONTROL Attiva inclusione automatica] evidenzia [!UICONTROL Attiva].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![La finestra di dialogo [!UICONTROL Enable Auto-include] evidenzia [!UICONTROL Enable].](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Abilita inclusione autom
 
 >[!IMPORTANT]
 >
->Le sandbox future non saranno incluse nel criterio per impostazione predefinita se l&#39;opzione [!UICONTROL Inclusione automatica] è disattivata. Sarà necessario gestire e aggiungere manualmente le sandbox al criterio.
+>Le sandbox future non saranno incluse nel criterio per impostazione predefinita se l&#39;interruttore [!UICONTROL Auto-include] è disattivato. Sarà necessario gestire e aggiungere manualmente le sandbox al criterio.
 
-Utilizza l&#39;interruttore **[!UICONTROL Inclusione automatica]** nella scheda **[!UICONTROL Sandbox]** per disabilitare i criteri per tutte le sandbox.
+Utilizza l&#39;interruttore **[!UICONTROL Auto-include]** nella scheda **[!UICONTROL Sandboxes]** per disabilitare i criteri per tutte le sandbox.
 
-![La scheda [!UICONTROL Sandbox] mostra l&#39;interruttore [!UICONTROL Inclusione automatica].](../../images/flac-ui/abac-policies-auto-include.png)
+![Scheda [!UICONTROL Sandboxes] che mostra l&#39;interruttore [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
 
-Dalla scheda **[!UICONTROL Sandbox]**, seleziona **[!UICONTROL Aggiungi sandbox]** per selezionare le sandbox a cui verrà applicato questo criterio.
+Dalla scheda **[!UICONTROL Sandboxes]**, seleziona **[!UICONTROL Add Sandboxes]** per selezionare le sandbox a cui verrà applicato questo criterio.
 
-![La scheda [!UICONTROL Sandbox] mostra un elenco di sandbox aggiunte al criterio.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![La scheda [!UICONTROL Sandboxes] che mostra un elenco di sandbox aggiunte al criterio.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
-Viene visualizzato un elenco di sandbox. Seleziona la sandbox da aggiungere dall’elenco. In alternativa, utilizza la barra di ricerca per cercare la sandbox. Seleziona **[!UICONTROL Salva]**.
+Viene visualizzato un elenco di sandbox. Seleziona la sandbox da aggiungere dall’elenco. In alternativa, utilizza la barra di ricerca per cercare la sandbox. Seleziona **[!UICONTROL Save]**.
 
-![Pagina [!UICONTROL Aggiungi sandbox] contenente l&#39;elenco delle sandbox esistenti disponibili da aggiungere ai criteri.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![La pagina [!UICONTROL Add Sandboxes] che mostra un elenco di sandbox esistenti disponibili da aggiungere al criterio.](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -174,11 +174,11 @@ Viene visualizzato un elenco di sandbox. Seleziona la sandbox da aggiungere dall
 
 Per rimuovere una sandbox, seleziona l&#39;icona **X** accanto al nome della sandbox.
 
-![La scheda [!UICONTROL Sandbox] mostra un elenco di sandbox ed evidenzia le [!UICONTROL X] da eliminare.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![La scheda [!UICONTROL Sandboxes] mostra un elenco di sandbox ed evidenzia le [!UICONTROL X] da eliminare.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Rimuovi]** in cui viene richiesto di confermare la selezione. Seleziona **[!UICONTROL Conferma]** per completare la rimozione.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Remove]** in cui viene richiesto di confermare la selezione. Selezionare **[!UICONTROL Confirm]** per completare la rimozione.
 
-![La finestra di dialogo [!UICONTROL Rimuovi] evidenzia [!UICONTROL Conferma].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![La finestra di dialogo [!UICONTROL Remove] evidenzia [!UICONTROL Confirm].](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -192,7 +192,7 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Rimuovi]** in cui viene 
 >abstract="I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. A ogni organizzazione viene fornito un criterio predefinito che è necessario attivare per iniziare a controllare l’accesso a oggetti specifici in base alle etichette. Le etichette applicate alle risorse negano l’accesso a meno che gli utenti non siano assegnati a un ruolo con un’etichetta corrispondente. Non è possibile modificare o eliminare i criteri predefiniti, ma è possibile attivarli o disattivarli."
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gestire le etichette"
 
-Per attivare un criterio esistente, selezionarlo dalla scheda **[!UICONTROL Criteri]**.
+Per attivare un criterio esistente, selezionarlo dalla scheda **[!UICONTROL Policies]**.
 
 ![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
@@ -200,12 +200,12 @@ Quindi, selezionare i puntini di sospensione (`…`) accanto al nome di un crite
 
 ![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Attiva criterio]** in cui viene richiesto di confermare l&#39;attivazione.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Activate policy]** in cui viene richiesto di confermare l&#39;attivazione.
 
 ![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
 
-Sei tornato alla scheda **[!UICONTROL criteri]** e viene visualizzata una conferma del pop-over di attivazione. Lo stato del criterio viene visualizzato come attivo.
+Si è tornati alla scheda **[!UICONTROL policies]** e viene visualizzata una conferma del pop-over di attivazione. Lo stato del criterio viene visualizzato come attivo.
 
 ![flac-policy-enabled](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 

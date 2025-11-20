@@ -5,7 +5,7 @@ description: Scopri come utilizzare la funzionalità dei campi calcolati per ese
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
 source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1604'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ Per eseguire varie trasformazioni sui dati esportati nelle destinazioni di archi
 
 Per utilizzare i campi calcolati per le trasformazioni dei dati:
 
-1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare **[!UICONTROL Esporta array, mappe, oggetti]** [opzione](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]** [](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Segui i [passaggi di attivazione per le destinazioni dell&#39;archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e passa al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Utilizzare i campi calcolati {#how-to-export-calculated-fields}
@@ -50,11 +50,11 @@ Per utilizzare i campi calcolati per le trasformazioni dei dati:
 >
 >Quando si utilizzano campi calcolati, oltre a qualsiasi funzione di trasformazione dei dati applicata, è necessario utilizzare anche la funzione `array_to_string` per concatenare i campi in una stringa.
 
-Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Aggiungi campo calcolato]**.
+Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL Add calculated field]**.
 
 >[!TIP]
 >
->Il controllo **[!UICONTROL Aggiungi campo calcolato]** è disabilitato per le connessioni di destinazione in cui il controllo **[!UICONTROL Esporta matrici, mappe e oggetti]** è stato disattivato. [Ulteriori informazioni](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+>Il controllo **[!UICONTROL Add calculated field]** è disabilitato per le connessioni di destinazione in cui il controllo **[!UICONTROL Export arrays, maps, and objects]** è stato disattivato. [Ulteriori informazioni](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![Aggiungi campo calcolato evidenziato nel passaggio di mappatura del flusso di lavoro di attivazione batch.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -66,17 +66,17 @@ Ad esempio, utilizza la funzione `array_to_string` nel campo `organizations` com
 
 ![Finestra modale della funzionalità del campo calcolato con la funzione array-to-string selezionata.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
-Seleziona **[!UICONTROL Salva]** per mantenere il campo calcolato e tornare al passaggio di mappatura.
+Selezionare **[!UICONTROL Save]** per mantenere il campo calcolato e tornare al passaggio di mappatura.
 
 ![Finestra modale della funzionalità del campo calcolato con la funzione matrice-stringa selezionata ed il controllo Salva evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
-Tornando al passaggio di mappatura del flusso di lavoro, compila il **[!UICONTROL campo di destinazione]** con il valore dell&#39;intestazione di colonna desiderata per questo campo nei file esportati.
+Tornando al passaggio di mappatura del flusso di lavoro, compila **[!UICONTROL Target field]** con il valore dell&#39;intestazione di colonna desiderata per questo campo nei file esportati.
 
 ![Passaggio di mapping con il campo di destinazione evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Seleziona campo di destinazione 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
-Al termine, seleziona **[!UICONTROL Avanti]** per procedere al passaggio successivo del flusso di lavoro di attivazione.
+Al termine, selezionare **[!UICONTROL Next]** per procedere al passaggio successivo del flusso di lavoro di attivazione.
 
 ![Passaggio di mappatura con il campo di destinazione evidenziato e un valore di destinazione compilato.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario **&#x200B; per utilizzare il controllo &#x200B;** [!UICONTROL Campi calcolati]** nell&#39;interfaccia utente.
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Calculated fields]** nell&#39;interfaccia utente.
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
 

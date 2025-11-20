@@ -6,7 +6,7 @@ description: Scopri come creare e modificare le classi nell’interfaccia utente
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1562'
 ht-degree: 5%
 
 ---
@@ -26,21 +26,21 @@ Questo documento fornisce una panoramica su come creare, modificare e gestire le
 
 ## Prerequisiti {#prerequisites}
 
-Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform e alle [nozioni di base sulla composizione dello schema](../../schema/composition.md), consulta la [panoramica di XDM](../../home.md) per scoprire come le classi contribuiscono agli schemi XDM.
+Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzione al ruolo di XDM nell&#39;ecosistema Experience Platform e alle [nozioni di base sulla composizione dello schema](../../home.md), consulta la [panoramica di XDM](../../schema/composition.md) per scoprire come le classi contribuiscono agli schemi XDM.
 
 Sebbene non sia necessario per questa guida, è consigliabile seguire anche l&#39;esercitazione su [composizione di uno schema nell&#39;interfaccia utente](../../tutorials/create-schema-ui.md) per acquisire familiarità con le varie funzionalità dell&#39;Editor di schema.
 
 ## Introduzione {#getting-started}
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemi], quindi seleziona la scheda **[!UICONTROL Classi]**. Viene visualizzato un elenco delle classi disponibili.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemas]** nel menu di navigazione a sinistra per aprire l&#39;area di lavoro [!UICONTROL Schemas], quindi seleziona la scheda **[!UICONTROL Classes]**. Viene visualizzato un elenco delle classi disponibili.
 
-![Numero di classi all&#39;interno della scheda [!UICONTROL Classi] dell&#39;area di lavoro [!UICONTROL Schemi] [!UICONTROL Classi] e [!UICONTROL Schemi] evidenziati.](../../images/ui/resources/classes/available-classes.png)
+![Numero di classi all&#39;interno della scheda [!UICONTROL Classes] dell&#39;area di lavoro [!UICONTROL Schemas] [!UICONTROL Classes] e [!UICONTROL Schemas] evidenziate.](../../images/ui/resources/classes/available-classes.png)
 
 ## Filtra classi {#filter}
 
-L’elenco delle classi viene filtrato automaticamente in base alla modalità di creazione. L’impostazione predefinita visualizza le classi definite da Adobe. Puoi anche filtrare l’elenco per visualizzare quelli creati dall’organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Personalizzato]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
+L’elenco delle classi viene filtrato automaticamente in base alla modalità di creazione. L’impostazione predefinita visualizza le classi definite da Adobe. Puoi anche filtrare l’elenco per visualizzare quelli creati dall’organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Custom]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
 
-![Scheda [!UICONTROL Classi] dell&#39;area di lavoro [!UICONTROL Schemi] con [!UICONTROL Standard] e [!UICONTROL Personalizzato] evidenziati.](../../images/ui/resources/classes/standard-and-custom-classes.png)
+![Scheda [!UICONTROL Classes] dell&#39;area di lavoro [!UICONTROL Schemas] con [!UICONTROL Standard] e [!UICONTROL Custom] evidenziati.](../../images/ui/resources/classes/standard-and-custom-classes.png)
 
 >[!TIP]
 >
@@ -48,29 +48,29 @@ L’elenco delle classi viene filtrato automaticamente in base alla modalità di
 
 ## Crea una nuova classe {#create}
 
-Esistono due metodi per creare una classe nell&#39;interfaccia utente di Experience Platform, tramite **[!UICONTROL Crea classe]** o **[!UICONTROL Crea schema]**.
+Esistono due metodi per creare una classe nell&#39;interfaccia utente di Experience Platform, tramite **[!UICONTROL Create class]** o **[!UICONTROL Create schema]**.
 
 ### Crea classe
 
-Seleziona **[!UICONTROL Crea classe]** dalla scheda [!UICONTROL Classi] nell&#39;area di lavoro [!UICONTROL Schemi].
+Selezionare **[!UICONTROL Create class]** dalla scheda [!UICONTROL Classes] nell&#39;area di lavoro [!UICONTROL Schemas].
 
-![Scheda [!UICONTROL Classi] dell&#39;area di lavoro [!UICONTROL Schemi] con [!UICONTROL Crea classe] evidenziata](../../images/ui/resources/classes/create-class.png)
+![Scheda [!UICONTROL Classes] dell&#39;area di lavoro [!UICONTROL Schemas] con [!UICONTROL Create class] evidenziato](../../images/ui/resources/classes/create-class.png)
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Crea classe]. Immetti un [!UICONTROL Nome visualizzato] e una [!UICONTROL Descrizione] per la classe e scegli il comportamento previsto della classe con i pulsanti di scelta. Le classi possono essere di tipo [!UICONTROL Record] o [!UICONTROL Serie temporali]. Seleziona **[!UICONTROL Crea]** per confermare le scelte e tornare alla scheda [!UICONTROL Classi].
+Viene visualizzata la finestra di dialogo [!UICONTROL Create class]. Immettere [!UICONTROL Display name] e [!UICONTROL Description] per la classe e scegliere il comportamento desiderato della classe con i pulsanti di scelta. Le classi possono essere di tipo [!UICONTROL Record] o [!UICONTROL Time-series]. Seleziona **[!UICONTROL Create]** per confermare le scelte e tornare alla scheda [!UICONTROL Classes].
 
-![La finestra di dialogo [!UICONTROL Crea classe] con [!UICONTROL Crea] evidenziata.](../../images/ui/resources/classes/create-class-dialog.png)
+![La finestra di dialogo [!UICONTROL Create class] con [!UICONTROL Create] è evidenziata.](../../images/ui/resources/classes/create-class-dialog.png)
 
-La classe creata è disponibile ed elencata nella visualizzazione [!UICONTROL Classi].
+La classe creata è disponibile ed elencata nella visualizzazione [!UICONTROL Classes].
 
-![Scheda [!UICONTROL Classi] dell&#39;area di lavoro [!UICONTROL Schemi] con la classe creata di recente evidenziata.](../../images/ui/resources/classes/new-class-listing.png)
+![Scheda [!UICONTROL Classes] dell&#39;area di lavoro [!UICONTROL Schemas] con la classe creata di recente evidenziata.](../../images/ui/resources/classes/new-class-listing.png)
 
 ### Crea schema
 
-In alternativa, puoi creare una classe creando manualmente uno schema. Seleziona **[!UICONTROL Crea schema]** dalla scheda [!UICONTROL Classi] nell&#39;area di lavoro [!UICONTROL Schemi].
+In alternativa, puoi creare una classe creando manualmente uno schema. Selezionare **[!UICONTROL Create schema]** dalla scheda [!UICONTROL Classes] nell&#39;area di lavoro [!UICONTROL Schemas].
 
-![Scheda [!UICONTROL Classi] dell&#39;area di lavoro [!UICONTROL Schemi] con [!UICONTROL Crea schema] evidenziato](../../images/ui/resources/classes/create-schema.png)
+![Scheda [!UICONTROL Classes] dell&#39;area di lavoro [!UICONTROL Schemas] con [!UICONTROL Create schema] evidenziato](../../images/ui/resources/classes/create-schema.png)
 
-Selezionare **[!UICONTROL Manuale]** nella finestra di dialogo [!UICONTROL Crea schema] visualizzata.
+Selezionare **[!UICONTROL Manual]** nella finestra di dialogo [!UICONTROL Create a schema] visualizzata.
 
 >[!NOTE]
 >
@@ -78,23 +78,23 @@ Selezionare **[!UICONTROL Manuale]** nella finestra di dialogo [!UICONTROL Crea 
 
 ![Finestra di dialogo Crea schema con le opzioni del flusso di lavoro e seleziona evidenziato.](../../images/ui/resources/classes/manually-create-a-schema.png)
 
-Viene visualizzato il flusso di lavoro per la creazione dello schema. Nella sezione [!UICONTROL Dettagli schema], seleziona **[!UICONTROL Altro]**. Viene visualizzato un elenco delle classi disponibili. Selezionare **[!UICONTROL Crea classe]**.
+Viene visualizzato il flusso di lavoro per la creazione dello schema. Nella sezione [!UICONTROL Schema details], selezionare **[!UICONTROL Other]**. Viene visualizzato un elenco delle classi disponibili. Seleziona **[!UICONTROL Create class]**.
 
-![Il flusso di lavoro [!UICONTROL Crea schema] con [!UICONTROL Altro] evidenziato nella sezione [!UICONTROL Dettagli schema].](../../images/ui/resources/classes/other-schema-details.png)
+![Il flusso di lavoro [!UICONTROL Create schema] con [!UICONTROL Other] evidenziato nella sezione [!UICONTROL Schema details].](../../images/ui/resources/classes/other-schema-details.png)
 
-Viene visualizzata la finestra di dialogo [!UICONTROL Crea classe]. Immetti un [!UICONTROL Nome visualizzato] e una [!UICONTROL Descrizione] per la classe e scegli il comportamento previsto della classe con i pulsanti di scelta. Le classi possono essere di tipo [!UICONTROL Record] o [!UICONTROL Serie temporali]. Seleziona **[!UICONTROL Crea]** per confermare le scelte e tornare alla scheda [!UICONTROL Classi].
+Viene visualizzata la finestra di dialogo [!UICONTROL Create class]. Immettere [!UICONTROL Display name] e [!UICONTROL Description] per la classe e scegliere il comportamento desiderato della classe con i pulsanti di scelta. Le classi possono essere di tipo [!UICONTROL Record] o [!UICONTROL Time-series]. Seleziona **[!UICONTROL Create]** per confermare le scelte e tornare alla scheda [!UICONTROL Classes].
 
-![La finestra di dialogo [!UICONTROL Crea classe] con [!UICONTROL Crea] evidenziata.](../../images/ui/resources/classes/create-class-from-schema.png)
+![La finestra di dialogo [!UICONTROL Create class] con [!UICONTROL Create] è evidenziata.](../../images/ui/resources/classes/create-class-from-schema.png)
 
-L&#39;elenco delle classi viene aggiornato nella sezione [!UICONTROL Dettagli schema] e la classe appena creata viene selezionata automaticamente. Seleziona **[!UICONTROL Avanti]** per continuare a creare lo schema.
+L&#39;elenco delle classi viene aggiornato nella sezione [!UICONTROL Schema details] e la nuova classe creata viene selezionata automaticamente. Seleziona **[!UICONTROL Next]** per continuare a creare lo schema.
 
-![La sezione [!UICONTROL Dettagli schema] con la nuova classe selezionata ed evidenziata [!UICONTROL Successivo].](../../images/ui/resources/classes/select-new-class.png)
+![La sezione [!UICONTROL Schema details] con la nuova classe selezionata ed evidenziata [!UICONTROL Next].](../../images/ui/resources/classes/select-new-class.png)
 
 Dopo aver selezionato una classe, viene visualizzata la sezione [!UICONTROL Name and review]. In questa sezione, fornisci un nome e una descrizione per identificare lo schema. &#x200B;La struttura di base dello schema (fornita dalla classe) viene visualizzata nell’area di lavoro per rivedere e verificare la struttura di classe e schema selezionata.
 
-Immetti un nome visualizzato dello schema [!UICONTROL descrittivo] nel campo di testo. Quindi, inserisci una descrizione adatta per identificare lo schema. Dopo aver rivisto la struttura dello schema e aver impostato correttamente le impostazioni, seleziona **[!UICONTROL Fine]** per creare lo schema.
+Immetti un [!UICONTROL Schema display name] descrittivo nel campo di testo. Quindi, inserisci una descrizione adatta per identificare lo schema. Dopo aver rivisto la struttura dello schema e aver impostato correttamente le impostazioni, selezionare **[!UICONTROL Finish]** per creare lo schema.
 
-![La sezione [!UICONTROL Name and review] del flusso di lavoro [!UICONTROL Create schema] con [!UICONTROL Schema display name], [!UICONTROL Description], e [!UICONTROL Finish] evidenziato.](../../images/ui/resources/classes/schema-details.png)
+![La sezione [!UICONTROL Name and review] del flusso di lavoro [!UICONTROL Create schema] con [!UICONTROL Schema display name], [!UICONTROL Description] e [!UICONTROL Finish] evidenziati.](../../images/ui/resources/classes/schema-details.png)
 
 ## Aggiungere campi a una classe {#add-fields}
 
@@ -102,7 +102,7 @@ Dopo aver aperto uno schema che utilizza una classe personalizzata nell’Editor
 
 >[!IMPORTANT]
 >
->Quando crei uno schema che implementa una classe definita dall’organizzazione, ricorda che i gruppi di campi di schema sono disponibili per l’utilizzo solo con classi compatibili. Poiché la classe definita è nuova, nella finestra di dialogo **[!UICONTROL Aggiungi gruppo di campi]** non sono elencati gruppi di campi compatibili. Sarà invece necessario [creare nuovi gruppi di campi](./field-groups.md#create) da utilizzare con tale classe. La prossima volta che componi uno schema che implementa la nuova classe, i gruppi di campi definiti verranno elencati e saranno disponibili per l’uso.
+>Quando crei uno schema che implementa una classe definita dall’organizzazione, ricorda che i gruppi di campi di schema sono disponibili per l’utilizzo solo con classi compatibili. Poiché la classe definita è nuova, nella finestra di dialogo **[!UICONTROL Add field group]** non sono elencati gruppi di campi compatibili. Sarà invece necessario [creare nuovi gruppi di campi](./field-groups.md#create) da utilizzare con tale classe. La prossima volta che componi uno schema che implementa la nuova classe, i gruppi di campi definiti verranno elencati e saranno disponibili per l’uso.
 
 ![Editor di schema con il pulsante di aggiunta evidenziato.](../../images/ui/resources/classes/add-field.png)
 
@@ -110,13 +110,13 @@ Dopo aver aperto uno schema che utilizza una classe personalizzata nell’Editor
 >
 >Tenere presente che tutti i campi aggiunti a una classe verranno utilizzati in tutti gli schemi che utilizzano tale classe. Pertanto, è necessario considerare attentamente quali campi saranno utili in tutti i casi di utilizzo degli schemi. Se stai pensando di aggiungere un campo che potrebbe essere utilizzato solo in alcuni schemi di questa classe, puoi provare ad aggiungerlo a tali schemi [creando un gruppo di campi](./field-groups.md#create).
 
-Nell&#39;area di lavoro viene visualizzato un segnaposto per **[!UICONTROL Campo senza titolo]** e la barra a destra si aggiorna per mostrare i controlli per configurare le proprietà del campo. In **[!UICONTROL Assegna a]**, seleziona **[!UICONTROL Classe]**.
+Nell&#39;area di lavoro viene visualizzato un segnaposto **[!UICONTROL Untitled Field]** e la barra a destra si aggiorna per mostrare i controlli per configurare le proprietà del campo. In **[!UICONTROL Assign to]**, selezionare **[!UICONTROL Class]**.
 
-![Campo senza titolo nell&#39;area di lavoro dell&#39;Editor schema con la proprietà di campo Assegna a [!UICONTROL Classe] selezionata ed evidenziata.](../../images/ui/resources/classes/assign-to-class.png)
+![Campo senza titolo nell&#39;area di lavoro dell&#39;Editor schema con la proprietà del campo Assegna a [!UICONTROL Class] selezionata ed evidenziata.](../../images/ui/resources/classes/assign-to-class.png)
 
-Consulta la guida su [definizione dei campi nell&#39;interfaccia utente](../fields/overview.md#define) per i passaggi specifici su come configurare e aggiungere il campo alla classe. Continua ad aggiungere alla classe tutti i campi necessari. Al termine, selezionare **[!UICONTROL Salva]** per salvare sia lo schema che la classe.
+Consulta la guida su [definizione dei campi nell&#39;interfaccia utente](../fields/overview.md#define) per i passaggi specifici su come configurare e aggiungere il campo alla classe. Continua ad aggiungere alla classe tutti i campi necessari. Al termine, selezionare **[!UICONTROL Save]** per salvare sia lo schema che la classe.
 
-![Lo schema appena creato nell&#39;area di lavoro dell&#39;Editor di schema, con [!UICONTROL Salva] evidenziato.](../../images/ui/resources/classes/save.png)
+![Lo schema appena creato nell&#39;area di lavoro dell&#39;Editor di schema, con [!UICONTROL Save] evidenziato.](../../images/ui/resources/classes/save.png)
 
 Se in precedenza sono stati creati schemi che utilizzano questa classe, i campi appena aggiunti verranno visualizzati automaticamente in tali schemi.
 
@@ -128,26 +128,26 @@ Se in precedenza sono stati creati schemi che utilizzano questa classe, i campi 
 >
 >Dopo aver salvato e utilizzato una classe personalizzata nell’acquisizione dei dati, è possibile apportarvi solo modifiche aggiuntive. Per ulteriori informazioni, consulta le [regole dell&#39;evoluzione dello schema](../../schema/composition.md#evolution).
 
-È possibile modificare una classe tramite il flusso di lavoro dello schema modificando uno schema esistente che estende la classe o creando manualmente uno schema. Non è possibile modificare direttamente una classe. Dall&#39;interno della scheda [!UICONTROL Sfoglia] nell&#39;area di lavoro [!UICONTROL Schemi], selezionare una classe esistente o **[!UICONTROL Crea uno schema]**.
+È possibile modificare una classe tramite il flusso di lavoro dello schema modificando uno schema esistente che estende la classe o creando manualmente uno schema. Non è possibile modificare direttamente una classe. Dalla scheda [!UICONTROL Browse] nell&#39;area di lavoro [!UICONTROL Schemas], selezionare una classe esistente o **[!UICONTROL Create a schema]**.
 
-![Editor di schema con una classe esistente e [!UICONTROL Creazione di uno schema] evidenziati.](../../images/ui/resources/classes/edit-class-options.png)
+![Editor di schema con una classe esistente ed evidenziato [!UICONTROL Create a schema].](../../images/ui/resources/classes/edit-class-options.png)
 
-Se scegli di creare un nuovo schema, consulta la sezione sulla [creazione di uno schema](#create-schema) per i dettagli. Al termine della creazione dello schema o dopo aver selezionato uno schema esistente, verrà visualizzato l&#39;Editor di schema. Per aggiornare un campo di classe esistente, seleziona il campo dalla struttura dello schema. Le informazioni del campo vengono visualizzate nella barra a destra. Assicurati che [!UICONTROL Assegna a]
-l&#39;opzione **[!UICONTROL Classe]** è selezionata o gli aggiornamenti non influiranno sulla classe.
+Se scegli di creare un nuovo schema, consulta la sezione sulla [creazione di uno schema](#create-schema) per i dettagli. Al termine della creazione dello schema o dopo aver selezionato uno schema esistente, verrà visualizzato l&#39;Editor di schema. Per aggiornare un campo di classe esistente, seleziona il campo dalla struttura dello schema. Le informazioni del campo vengono visualizzate nella barra a destra. Assicurati che [!UICONTROL Assign to]
+l&#39;opzione **[!UICONTROL Class]** è selezionata o gli aggiornamenti non influiranno sulla classe.
 
-![L&#39;Editor di schema con un campo selezionato ed evidenziato e la barra a destra esposta, evidenziando [!UICONTROL Assegna a].](../../images/ui/resources/classes/edit-existing-field.png)
+![Editor di schema con un campo selezionato ed evidenziato e la barra a destra esposta, con evidenziazione di [!UICONTROL Assign to].](../../images/ui/resources/classes/edit-existing-field.png)
 
-Apporta le modifiche desiderate al campo, scorri verso il basso nella barra a destra per selezionare **[!UICONTROL Applica]** per salvare le modifiche.
+Apporta le modifiche desiderate al campo, scorrendo verso il basso nella barra a destra per selezionare **[!UICONTROL Apply]** per salvare le modifiche.
 
 >[!IMPORTANT]
 >
 > Eventuali aggiornamenti apportati ai campi verranno applicati a tutti gli schemi che utilizzano tale classe, seguendo le [regole di evoluzione dello schema](../../schema/composition.md#evolution).
 
-![Editor schema con un campo selezionato e la barra a destra esposta, evidenziando [!UICONTROL Applica].](../../images/ui/resources/classes/save-changes.png)
+![Editor schema con un campo selezionato e la barra a destra esposta, evidenziando [!UICONTROL Apply].](../../images/ui/resources/classes/save-changes.png)
 
-Per aggiungere nuovi campi, seguire la [guida per aggiungere campi a una classe](#add-fields-to-a-class). Al termine, selezionare **[!UICONTROL Salva]** per salvare sia lo schema che la classe.
+Per aggiungere nuovi campi, seguire la [guida per aggiungere campi a una classe](#add-fields-to-a-class). Al termine, selezionare **[!UICONTROL Save]** per salvare sia lo schema che la classe.
 
-![Editor schema con [!UICONTROL Salva] evidenziato.](../../images/ui/resources/classes/save-schema.png)
+![Editor di schema con [!UICONTROL Save] evidenziato.](../../images/ui/resources/classes/save-schema.png)
 
 ## Modificare la classe di uno schema {#schema}
 
@@ -156,6 +156,6 @@ Per ulteriori informazioni, consulta la guida su [creazione e modifica di schemi
 
 ## Passaggi successivi {#next-steps}
 
-Questo documento illustra come creare e modificare le classi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
+Questo documento illustra come creare e modificare le classi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemas], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemas]](../overview.md).
 
 Per informazioni su come gestire le classi utilizzando l&#39;API Schema Registry, vedere la [guida dell&#39;endpoint delle classi](../../api/classes.md).

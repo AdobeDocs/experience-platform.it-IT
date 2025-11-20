@@ -5,7 +5,7 @@ role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Quando esegui una valutazione flessibile del pubblico, tieni presente le seguent
 
 Per utilizzare la valutazione flessibile del pubblico, è necessario disporre delle seguenti autorizzazioni:
 
-- **[!UICONTROL Valuta il segmento in un pubblico]** nella sezione **[!DNL Profile Management]**.
+- **[!UICONTROL Evaluate Segment to an Audience]** nella sezione **[!DNL Profile Management]**.
 
 Per ulteriori informazioni sul controllo degli accessi basato sui ruoli, leggere la [panoramica sul controllo degli accessi](../../access-control/home.md).
 
@@ -300,15 +300,15 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 >[!TAB Interfaccia utente di Experience Platform]
 
-Per eseguire una valutazione flessibile del pubblico nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Tipi di pubblico]** nella sezione **[!UICONTROL Clienti]**.
+Per eseguire una valutazione flessibile del pubblico nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Audiences]** nella sezione **[!UICONTROL Customers]**.
 
 ![Il pulsante Tipi di pubblico nella sezione Clienti è evidenziato. Viene visualizzato il Portale pubblico per i profili dei clienti.](../images/methods/fae/audience-portal.png)
 
-Viene visualizzato il Portale dei tipi di pubblico, con un elenco di tutti i tipi di pubblico relativi all’organizzazione. In Audience Portal, puoi scegliere i tipi di pubblico da valutare e selezionare **[!UICONTROL Valuta pubblico]**.
+Viene visualizzato il Portale dei tipi di pubblico, con un elenco di tutti i tipi di pubblico relativi all’organizzazione. In Audience Portal, puoi scegliere i tipi di pubblico da valutare e selezionare **[!UICONTROL Evaluate audience]**.
 
 ![Sono selezionati i tipi di pubblico per i quali si desidera utilizzare la valutazione flessibile del pubblico.](../images/methods/fae/evaluate-audiences.png)
 
-Viene visualizzato il popover **[!UICONTROL Valuta i tipi di pubblico su richiesta]**, in cui viene visualizzato l&#39;elenco dei tipi di pubblico che verranno valutati con il processo di segmentazione su richiesta. Se un pubblico non è idoneo per la valutazione su richiesta, verrà rimosso automaticamente dal processo di valutazione. Verifica che i tipi di pubblico elencati siano quelli che desideri valutare.
+Viene visualizzato il popover **[!UICONTROL Evaluate audiences on demand]**, con l&#39;elenco dei tipi di pubblico che verranno valutati con il processo di segmentazione su richiesta. Se un pubblico non è idoneo per la valutazione su richiesta, verrà rimosso automaticamente dal processo di valutazione. Verifica che i tipi di pubblico elencati siano quelli che desideri valutare.
 
 ![Vengono visualizzati i tipi di pubblico che possono essere valutati utilizzando la valutazione flessibile.](../images/methods/fae/evaluate-audiences-modal.png)
 
@@ -318,7 +318,7 @@ Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procede
 >
 >Lo stato del processo di segmentazione può essere segnalato come nello stato &quot;In coda&quot; all’interno del dashboard di monitoraggio. Per visualizzare lo stato più aggiornato del processo di segmentazione, effettua una richiesta GET all&#39;endpoint `/segment/jobs`, fornendo l&#39;ID del processo di segmentazione nel percorso della richiesta. Ulteriori informazioni sull’utilizzo di questo endpoint sono disponibili nella scheda API.
 >
->Se esegui una valutazione flessibile del pubblico e vuoi che la valutazione attivi il pubblico in una destinazione, devi assicurarti che la frequenza sia impostata su **[!UICONTROL Dopo la valutazione del segmento]**. L&#39;esecuzione della valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), attiverà i tipi di pubblico al termine del processo di valutazione flessibile del pubblico, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
+>Se esegui una valutazione flessibile del pubblico e desideri che la valutazione attivi il pubblico in una destinazione, devi verificare che la frequenza sia impostata su **[!UICONTROL After segment evaluation]**. L&#39;esecuzione della valutazione flessibile del pubblico su tipi di pubblico già impostati per essere attivati [dopo la valutazione del segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), attiverà i tipi di pubblico al termine del processo di valutazione flessibile del pubblico, indipendentemente da eventuali processi di attivazione giornalieri precedenti.
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procede
 
 Il video seguente illustra come accedere e utilizzare la valutazione flessibile del pubblico in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453648?&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Domande frequenti {#faq}
 

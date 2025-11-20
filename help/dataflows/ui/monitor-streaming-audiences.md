@@ -5,8 +5,8 @@ hide: true
 hidefromtoc: true
 source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 5%
+source-wordcount: '368'
+ht-degree: 6%
 
 ---
 
@@ -54,8 +54,8 @@ La tabella seguente fornisce informazioni più dettagliate sulle metriche utiliz
 
 ## Utilizzare il dashboard di monitoraggio per i tipi di pubblico in streaming {#monitoring-dashboard}
 
-Per accedere al dashboard di monitoraggio per i tipi di pubblico in streaming, passa all&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Monitoraggio]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Streaming end-to-end]**.
+Per accedere al dashboard di monitoraggio per i tipi di pubblico in streaming, passa all&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Monitoring]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Streaming end-to-end]**.
 
 IMMAGINE
 
-Nella parte superiore del dashboard è presente la scheda della metrica **[!UICONTROL Tipi di pubblico]**. Visualizza informazioni sul **Tasso di valutazione** per i tipi di pubblico.
+Nella parte superiore del dashboard è presente la scheda della metrica **[!UICONTROL Audiences]**. Visualizza informazioni sul **Tasso di valutazione** per i tipi di pubblico.

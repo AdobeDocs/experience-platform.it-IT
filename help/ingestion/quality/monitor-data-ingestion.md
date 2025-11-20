@@ -6,7 +6,7 @@ description: Questa guida utente descrive come monitorare i dati nell’interfac
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '641'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ Questa guida utente descrive come monitorare i dati nell’interfaccia utente di
 >
 >Per calcolare il totale degli eventi in una data specifica, utilizzare l&#39;espressione di: `total events / day = ingestion rate * 60 * 60 * 24`.
 
-Nell&#39;[interfaccia utente di Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
+Nell&#39;[interfaccia utente di Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
 
 Viene visualizzata la pagina di monitoraggio **[!UICONTROL Streaming end-to-end]**. In questa area di lavoro è disponibile un grafico che visualizza la frequenza degli eventi in streaming ricevuti da [!DNL Experience Platform], un grafico che visualizza la frequenza degli eventi in streaming elaborati correttamente da [[!DNL Real-Time Customer Profile]](../../profile/home.md) e un elenco dettagliato dei dati in arrivo.
 
@@ -72,7 +72,7 @@ Inoltre, i record con errori forniscono dettagli sugli errori che si sono verifi
 
 ## Monitorare l’acquisizione di dati batch end-to-end
 
-In [[!DNL Experience Platform UI]](https://platform.adobe.com), selezionare **[!UICONTROL Monitoraggio]** nel menu di navigazione sinistro.
+In [[!DNL Experience Platform UI]](https://platform.adobe.com), seleziona **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra.
 
 Viene visualizzata la pagina di monitoraggio **[!UICONTROL Batch end-to-end]**, in cui viene visualizzato un elenco dei batch precedentemente acquisiti. È possibile selezionare uno qualsiasi dei batch per ottenere informazioni più dettagliate su tale record.
 

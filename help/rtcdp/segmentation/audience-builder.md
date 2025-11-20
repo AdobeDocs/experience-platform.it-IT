@@ -2,12 +2,12 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Scopri come utilizzare Audience Builder in Real-Time Customer Data Platform per creare tipi di pubblico.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 8%
+source-wordcount: '957'
+ht-degree: 9%
 
 ---
 
@@ -42,19 +42,19 @@ Quando utilizzi Audience Builder per gli account, puoi utilizzare gli attributi 
 
 >[!NOTE]
 >
->La sezione **[!UICONTROL Opzioni campo]** è attualmente in versione beta ed è disponibile solo per alcuni clienti. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
+>La sezione **[!UICONTROL Field options]** è attualmente in versione beta ed è disponibile solo per alcuni clienti. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
 
-Viene visualizzata la sezione [!UICONTROL Impostazioni]. In questa sezione è possibile aggiornare i campi visualizzati e la relazione tra di essi.
+Viene visualizzata la sezione [!UICONTROL Settings]. In questa sezione è possibile aggiornare i campi visualizzati e la relazione tra di essi.
 
-Per le **[!UICONTROL opzioni campo]**, è possibile visualizzare solo i campi che contengono dati o lo schema XDM completo.
+Per **[!UICONTROL Field options]**, è possibile visualizzare solo i campi che contengono dati o lo schema XDM completo.
 
-Per la **[!UICONTROL relazione dei campi]**, puoi utilizzare le relazioni standard per la tua organizzazione oppure visualizzare i selettori di relazioni.
+Per **[!UICONTROL Relationship of fields]** è possibile utilizzare le relazioni standard per l&#39;organizzazione oppure visualizzare i selettori di relazioni.
 
 ![Viene visualizzato il modulo delle impostazioni.](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### Attributi {#attributes}
 
-La scheda [!UICONTROL Attributi] consente di sfogliare gli attributi dell&#39;account appartenenti alla classe dell&#39;account aziendale XDM, nonché le opportunità e gli attributi basati sulle persone. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell&#39;[area di lavoro del generatore di regole](#rule-builder-canvas) al centro dell&#39;area di lavoro.
+La scheda [!UICONTROL Attributes] consente di sfogliare gli attributi dell&#39;account appartenenti alla classe dell&#39;account aziendale XDM, nonché gli attributi basati su opportunità e persone. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell&#39;[area di lavoro del generatore di regole](#rule-builder-canvas) al centro dell&#39;area di lavoro.
 
 ![La scheda Attributi viene visualizzata in Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
@@ -76,7 +76,7 @@ Per una guida più dettagliata su Audience Builder, consulta la [guida utente di
 
 ### Tipi di pubblico {#audiences}
 
-La scheda **[!UICONTROL Tipi di pubblico]** elenca tutti i tipi di pubblico basati sulle persone e sugli account disponibili in Experience Platform.
+Nella scheda **[!UICONTROL Audiences]** sono elencati tutti i tipi di pubblico basati su persone e account disponibili in Experience Platform.
 
 Puoi passare il cursore del mouse sull&#39;![icona informazioni](../../images/icons/info.png) accanto a un pubblico per visualizzare informazioni sul pubblico, tra cui l&#39;ID, la descrizione e la gerarchia delle cartelle per individuare il pubblico.
 
@@ -86,7 +86,7 @@ Puoi passare il cursore del mouse sull&#39;![icona informazioni](../../images/ic
 
 Un pubblico creato in Audience Builder è una raccolta di regole utilizzate per descrivere caratteristiche o comportamenti chiave di un pubblico target. Queste regole vengono create utilizzando l’area di lavoro del generatore di regole, che si trova al centro di Audience Builder.
 
-Per aggiungere una nuova regola alla definizione del segmento, trascina un riquadro dalla scheda **[!UICONTROL Campi]** e rilascialo nell&#39;area di lavoro del generatore di regole.
+Per aggiungere una nuova regola alla definizione del segmento, trascina un riquadro dalla scheda **[!UICONTROL Fields]** e rilascialo nell&#39;area di lavoro del generatore di regole.
 
 ![Area di lavoro del generatore di regole con un campo aggiunto.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
@@ -100,25 +100,25 @@ Per ulteriori informazioni sui contenitori, consulta la [documentazione del Gene
 
 ## Proprietà pubblico {#properties}
 
-La sezione **[!UICONTROL Proprietà pubblico]** visualizza informazioni sul pubblico, inclusa una stima della dimensione del pubblico. Puoi anche specificare dettagli sul pubblico, tra cui nome, descrizione e tag.
+Nella sezione **[!UICONTROL Audience properties]** vengono visualizzate informazioni sul pubblico, inclusa una stima della dimensione del pubblico. Puoi anche specificare dettagli sul pubblico, tra cui nome, descrizione e tag.
 
 ![La sezione delle proprietà del pubblico viene visualizzata per il pubblico in Audience Builder.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-I **[!UICONTROL account qualificati]** indicano il numero effettivo di account che corrispondono alle regole del pubblico. Questo numero viene aggiornato ogni 24 ore, dopo l’esecuzione del processo di segmentazione.
+**[!UICONTROL Qualified accounts]** indica il numero effettivo di account che corrispondono alle regole del pubblico. Questo numero viene aggiornato ogni 24 ore, dopo l’esecuzione del processo di segmentazione.
 
-I **[!UICONTROL account stimati]** indicano il numero approssimativo di account in base al processo di esempio. Puoi aggiornare questo valore dopo aver aggiunto nuove regole o condizioni e aver selezionato **[!UICONTROL Aggiorna stima]**.
+**[!UICONTROL Estimated accounts]** indica il numero approssimativo di account in base al processo di esempio. È possibile aggiornare questo valore dopo aver aggiunto nuove regole o condizioni e aver selezionato **[!UICONTROL Refresh estimate]**.
 
 ![Viene visualizzata la sezione delle stime all&#39;interno della sezione delle proprietà del pubblico.](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
-È possibile selezionare **[!UICONTROL Visualizza account]** per visualizzare un campione di account idonei per il pubblico con le regole correnti.
+È possibile selezionare **[!UICONTROL View accounts]** per visualizzare un campione degli account idonei per il pubblico con le regole correnti.
 
 ![Il pulsante Visualizza account è evidenziato.](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
-La **[!UICONTROL vista Codice]** fornisce una descrizione testuale delle regole del pubblico.
+**[!UICONTROL Code view]** fornisce una descrizione testuale del codice delle regole del pubblico.
 
 ![Versione della visualizzazione codice del pubblico dell&#39;account.](../assets/segmentation/audience-builder/code-view.png)
 
-È possibile selezionare **[!UICONTROL Applica etichette di accesso]** per applicare le etichette di accesso pertinenti per il pubblico. Ulteriori informazioni sulle etichette di accesso sono disponibili nella [guida gestione etichette](../../access-control/abac/ui/labels.md){target="_blank"}.
+È possibile selezionare **[!UICONTROL Apply access labels]** per applicare le etichette di accesso pertinenti per il pubblico. Ulteriori informazioni sulle etichette di accesso sono disponibili nella [guida gestione etichette](../../access-control/abac/ui/labels.md){target="_blank"}.
 
 ![Viene visualizzato il popover Applica etichette di accesso e governance dei dati.](../assets/segmentation/audience-builder/apply-access-labels.png)
 

@@ -5,14 +5,14 @@ title: Iscriviti agli avvisi contestuali sulle destinazioni
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 8%
+source-wordcount: '935'
+ht-degree: 14%
 
 ---
 
 # Iscriviti agli avvisi contestuali sulle destinazioni
 
-Adobe Experience Platform ti consente di abbonarti agli avvisi basati su eventi relativi alle attività di Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine in un flusso di lavoro o se si sono verificati errori.
+Adobe Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. Gli avvisi riducono o eliminano la necessità di interrogare l’[[!DNL Observability Insights] API](../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata milestone all’interno di un flusso di lavoro o se si sono verificati errori.
 
 È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 
@@ -38,11 +38,11 @@ Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe 
 >
 >Devi abilitare le notifiche istantanee delle e-mail per il tuo account Experience Platform per ricevere le notifiche di avviso basate su e-mail per i flussi di dati.
 
-Puoi abilitare gli avvisi per i flussi di dati durante il passaggio [!UICONTROL Configura nuova destinazione] del flusso di lavoro [connessione di destinazione](connect-destination.md).
+Puoi abilitare gli avvisi per i flussi di dati durante il passaggio [!UICONTROL Configure new destination] del flusso di lavoro [connessione di destinazione](connect-destination.md).
 
 ![Immagine dell&#39;interfaccia utente che mostra la sezione avvisi di destinazione.](../assets/ui/alerts/destination-alerts.png)
 
-Seleziona gli avvisi a cui vuoi abbonarti, quindi seleziona **[!UICONTROL Successivo]** per rivedere e completare il flusso di dati.
+Seleziona gli avvisi a cui vuoi abbonarti, quindi seleziona **[!UICONTROL Next]** per rivedere e completare il flusso di dati.
 
 Gli avvisi disponibili per i flussi di dati di destinazione sono descritti nella tabella seguente.
 
@@ -79,11 +79,11 @@ Seleziona il messaggio di avviso per visualizzare informazioni specifiche sul fl
 
 ![Immagine dell&#39;interfaccia utente che mostra come selezionare una notifica](../assets/ui/alerts/select-alert-message.png)
 
-Viene visualizzata la pagina [!UICONTROL Dettagli esecuzione flusso di dati]. Nella metà superiore della schermata viene visualizzata una panoramica del flusso di dati, con informazioni sugli attributi, l’ID di esecuzione del flusso di dati corrispondente e un riepilogo di errore di alto livello.
+Viene visualizzata la pagina [!UICONTROL Dataflow run details]. Nella metà superiore della schermata viene visualizzata una panoramica del flusso di dati, con informazioni sugli attributi, l’ID di esecuzione del flusso di dati corrispondente e un riepilogo di errore di alto livello.
 
 ![Immagine dell&#39;interfaccia utente che mostra la pagina dei dettagli di esecuzione del flusso di dati.](../assets/ui/alerts/dataflow-overview.png)
 
-Nella metà inferiore della pagina vengono visualizzati [!UICONTROL errori di esecuzione del flusso di dati] che si sono verificati durante la fase di esecuzione del flusso di dati. Da qui puoi visualizzare in anteprima la diagnostica degli errori oppure utilizzare l&#39;[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) per scaricare la diagnostica degli errori o il manifesto del file che corrisponde al flusso di dati.
+Nella metà inferiore della pagina vengono visualizzati tutti i [!UICONTROL Dataflow run errors] che si sono verificati durante la fase di esecuzione del flusso di dati. Da qui puoi visualizzare in anteprima la diagnostica degli errori oppure utilizzare l&#39;[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) per scaricare la diagnostica degli errori o il manifesto del file che corrisponde al flusso di dati.
 
 ![Immagine dell&#39;interfaccia utente che mostra la pagina dei dettagli di esecuzione del flusso di dati, con un&#39;evidenziazione nella sezione errori.](../assets/ui/alerts/dataflow-run-error.png)
 
@@ -95,21 +95,21 @@ Gli avvisi per i flussi di dati vengono inviati anche via e-mail. Seleziona il n
 
 ![Schermata di un messaggio e-mail di avviso](../assets/ui/alerts/email.png)
 
-Analogamente all&#39;avviso dell&#39;interfaccia utente, viene visualizzata la pagina [!UICONTROL Panoramica sull&#39;esecuzione del flusso di dati], che fornisce un&#39;interfaccia per analizzare eventuali errori associati al flusso di dati.
+Analogamente all&#39;avviso dell&#39;interfaccia utente, viene visualizzata la pagina [!UICONTROL Dataflow run overview], che offre un&#39;interfaccia per analizzare eventuali errori associati al flusso di dati.
 
 ![dataflow-overview](../assets/ui/alerts/dataflow-overview.png)
 
 ## Abbonati e annulla l’abbonamento agli avvisi {#subscribe-and-unsubscribe}
 
-È possibile sottoscrivere altri avvisi o annullare l&#39;abbonamento agli avvisi stabiliti per un flusso di dati di destinazione esistente nella pagina Destinazioni [!UICONTROL Sfoglia].
+È possibile abbonarsi a più avvisi o annullare l&#39;abbonamento agli avvisi stabiliti per un flusso di dati di destinazione esistente nella pagina Destinazioni [!UICONTROL Browse].
 
 ![Immagine dell&#39;interfaccia utente che mostra la pagina Sfoglia destinazioni](../assets/ui/alerts/destination-list.png)
 
-Individuare la connessione di destinazione per la quale si desidera ricevere avvisi e selezionare i puntini di sospensione (`...`) per visualizzare un menu a discesa di opzioni. Quindi, seleziona **[!UICONTROL Abbonati agli avvisi]** per modificare le impostazioni degli avvisi del flusso di dati di destinazione.
+Individuare la connessione di destinazione per la quale si desidera ricevere avvisi e selezionare i puntini di sospensione (`...`) per visualizzare un menu a discesa di opzioni. Quindi, seleziona **[!UICONTROL Subscribe to alerts]** per modificare le impostazioni degli avvisi del flusso di dati di destinazione.
 
 ![Immagine dell&#39;interfaccia utente con le opzioni di destinazione](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-Viene visualizzata una finestra popup con un elenco di avvisi di destinazione. Seleziona gli avvisi a cui vuoi abbonarti o deseleziona gli avvisi a cui vuoi annullare l’abbonamento. Al termine, selezionare **[!UICONTROL Salva]**.
+Viene visualizzata una finestra popup con un elenco di avvisi di destinazione. Seleziona gli avvisi a cui vuoi abbonarti o deseleziona gli avvisi a cui vuoi annullare l’abbonamento. Al termine, selezionare **[!UICONTROL Save]**.
 
 ![Immagine dell&#39;interfaccia utente che mostra la pagina delle sottoscrizioni degli avvisi di destinazione](../assets/ui/alerts/destination-alerts-list.png)
 

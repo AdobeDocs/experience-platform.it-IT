@@ -83,8 +83,8 @@ Quindi, passare a [definire le chiavi primarie](../fields/identity.md#define-a-i
 
 >[!NOTE]
 >
->Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL &#x200B; Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
->&#x200B;>![L&#39;area di lavoro dell&#39;Editor di schema mostra una struttura di schema relazionale vuota con tipo relazionale evidenziato.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL  Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
+>![L&#39;area di lavoro dell&#39;Editor di schema mostra una struttura di schema relazionale vuota con tipo relazionale evidenziato.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Carica un file DDL {#upload-ddl-file}
 
@@ -258,7 +258,7 @@ Dopo aver aggiunto un gruppo di campi a uno schema, puoi rimuovere i campi globa
 >[!IMPORTANT]
 >
 >Se si seleziona **[!UICONTROL Remove]**, il campo verrà eliminato dal gruppo di campi stesso, con effetti su *tutti* gli schemi che utilizzano tale gruppo di campi.
->&#x200B;>Non utilizzare questa opzione a meno che non si desideri **rimuovere il campo da ogni schema che include il gruppo di campi**.
+>Non utilizzare questa opzione a meno che non si desideri **rimuovere il campo da ogni schema che include il gruppo di campi**.
 
 Per eliminare un campo dal gruppo di campi, selezionarlo nell&#39;area di lavoro e selezionare **[!UICONTROL Remove]** nella barra a destra. Questo esempio mostra il campo `taxId` dal gruppo **[!UICONTROL Demographic Details]**.
 

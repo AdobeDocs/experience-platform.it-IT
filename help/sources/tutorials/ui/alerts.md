@@ -5,14 +5,14 @@ title: Iscriviti agli avvisi contestuali nell’interfaccia utente di
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 7%
+source-wordcount: '809'
+ht-degree: 13%
 
 ---
 
 # Iscriviti agli avvisi per i flussi di dati di origini nell’interfaccia utente
 
-Adobe Experience Platform ti consente di abbonarti agli avvisi basati su eventi relativi alle attività di Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine in un flusso di lavoro o se si sono verificati errori.
+Adobe Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. Gli avvisi riducono o eliminano la necessità di interrogare l’[[!DNL Observability Insights] API](../../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata milestone all’interno di un flusso di lavoro o se si sono verificati errori.
 
 È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 
@@ -38,7 +38,7 @@ Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe 
 >
 >Devi abilitare le notifiche istantanee delle e-mail per il tuo account Experience Platform per ricevere le notifiche di avviso basate su e-mail per i flussi di dati.
 
-Puoi abilitare gli avvisi per i flussi di dati durante il passaggio [!UICONTROL Dettagli flusso di dati] del flusso di lavoro origini nell&#39;area di lavoro origini.
+È possibile abilitare gli avvisi per i flussi di dati durante il passaggio [!UICONTROL Dataflow detail] del flusso di lavoro origini nell&#39;area di lavoro origini.
 
 ![dettagli flusso di dati](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -54,7 +54,7 @@ Gli avvisi disponibili per i flussi di dati di origine sono:
 | Esecuzione del flusso di origini completata | Questo avviso invia un messaggio quando i dati provenienti dall’origine vengono acquisiti correttamente in Experience Platform. |
 | Errore di esecuzione del flusso origini | Questo avviso ti invia un messaggio in caso di errore nel flusso di dati. |
 
-Seleziona gli avvisi a cui vuoi abbonarti, quindi seleziona **[!UICONTROL Successivo]** per rivedere e completare il flusso di dati.
+Seleziona gli avvisi a cui vuoi abbonarti, quindi seleziona **[!UICONTROL Next]** per rivedere e completare il flusso di dati.
 
 ![select-alerts](../../images/tutorials/alerts/select-alerts.png)
 
@@ -92,11 +92,11 @@ Seleziona il messaggio di avviso per visualizzare informazioni specifiche sul fl
 
 ![select-alert-message](../../images/tutorials/alerts/select-alert-message.png)
 
-Viene visualizzata la pagina [!UICONTROL Panoramica dell&#39;esecuzione del flusso di dati]. Nella metà superiore della schermata viene visualizzata una panoramica del flusso di dati, con informazioni sugli attributi, l’ID di esecuzione del flusso di dati corrispondente e un riepilogo di errore di alto livello.
+Viene visualizzata la pagina [!UICONTROL Dataflow run overview]. Nella metà superiore della schermata viene visualizzata una panoramica del flusso di dati, con informazioni sugli attributi, l’ID di esecuzione del flusso di dati corrispondente e un riepilogo di errore di alto livello.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
-Nella metà inferiore della pagina vengono visualizzati [!UICONTROL errori di esecuzione del flusso di dati] verificatisi durante la fase di esecuzione del flusso di dati. Da qui puoi visualizzare in anteprima la diagnostica degli errori oppure utilizzare l&#39;[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) per scaricare la diagnostica degli errori o il manifesto del file che corrisponde al flusso di dati.
+Nella metà inferiore della pagina vengono visualizzati tutti i [!UICONTROL Dataflow run errors] che si sono verificati durante la fase di esecuzione del flusso di dati. Da qui puoi visualizzare in anteprima la diagnostica degli errori oppure utilizzare l&#39;[[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) per scaricare la diagnostica degli errori o il manifesto del file che corrisponde al flusso di dati.
 
 ![errori di esecuzione del flusso di dati](../../images/tutorials/alerts/dataflow-run-error.png)
 
@@ -108,17 +108,17 @@ Gli avvisi per i flussi di dati vengono inviati anche via e-mail. Seleziona il n
 
 ![e-mail](../../images/tutorials/alerts/email.png)
 
-Analogamente all&#39;avviso dell&#39;interfaccia utente, viene visualizzata la pagina [!UICONTROL Panoramica sull&#39;esecuzione del flusso di dati], che fornisce un&#39;interfaccia per analizzare eventuali errori associati al flusso di dati.
+Analogamente all&#39;avviso dell&#39;interfaccia utente, viene visualizzata la pagina [!UICONTROL Dataflow run overview], che offre un&#39;interfaccia per analizzare eventuali errori associati al flusso di dati.
 
 ![dataflow-overview](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Abbonati e annulla l’abbonamento agli avvisi
 
-È possibile sottoscrivere altri avvisi o annullare l&#39;abbonamento agli avvisi stabiliti per un flusso di dati esistente nella pagina [!UICONTROL Flussi dati]. Individuare il flusso di dati creato dall&#39;elenco, quindi selezionare i puntini di sospensione (`...`) per visualizzare un menu a discesa di opzioni. Quindi, seleziona **[!UICONTROL Abbonati avvisi]** per modificare le impostazioni degli avvisi del flusso di dati.
+È possibile abbonarsi a ulteriori avvisi o annullare l&#39;abbonamento agli avvisi stabiliti per un flusso di dati esistente nella pagina [!UICONTROL Dataflows]. Individuare il flusso di dati creato dall&#39;elenco, quindi selezionare i puntini di sospensione (`...`) per visualizzare un menu a discesa di opzioni. Quindi, seleziona **[!UICONTROL Subscribe alerts]** per modificare le impostazioni degli avvisi del flusso di dati.
 
 ![opzioni](../../images/tutorials/alerts/options.png)
 
-Viene visualizzata una finestra popup che fornisce un elenco di avvisi relativi alle origini. Seleziona gli avvisi a cui vuoi abbonarti o deseleziona gli avvisi a cui vuoi annullare l’abbonamento. Al termine, selezionare **[!UICONTROL Salva]**.
+Viene visualizzata una finestra popup che fornisce un elenco di avvisi relativi alle origini. Seleziona gli avvisi a cui vuoi abbonarti o deseleziona gli avvisi a cui vuoi annullare l’abbonamento. Al termine, selezionare **[!UICONTROL Save]**.
 
 ![salva](../../images/tutorials/alerts/save.png)
 

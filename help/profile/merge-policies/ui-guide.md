@@ -5,7 +5,7 @@ description: Scopri come utilizzare i criteri di unione utilizzando l’interfac
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2334'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Questa guida richiede una buona conoscenza di diverse importanti funzionalità d
 >title="Criterio di unione non trovato"
 >abstract="Questo significa che Experience Platform non ha trovato il criterio di unione richiesto. Per risolvere l’errore, prova una delle soluzioni seguenti:<ul><li>Assicurati che nell’URL sia elencato l’ID corretto del criterio di unione.</li><li>Assicurati di disporre della giusta combinazione di sandbox e organizzazione per il criterio di unione a cui stai tentando di accedere.</li></ul>"
 
-Nell&#39;interfaccia utente di [!DNL Experience Platform], è possibile iniziare a utilizzare i criteri di unione selezionando **[!UICONTROL Profili]** nell&#39;area di navigazione a sinistra e quindi selezionando la scheda **[!UICONTROL Criteri di unione]**.
+Nell&#39;interfaccia utente di [!DNL Experience Platform], è possibile iniziare a utilizzare i criteri di unione selezionando **[!UICONTROL Profiles]** nel menu di navigazione a sinistra e quindi selezionando la scheda **[!UICONTROL Merge Policies]**.
 
 Questa scheda include un elenco di tutti i criteri di unione esistenti per l’organizzazione, nonché i dettagli di ciascun criterio di unione, incluso il nome del criterio, indipendentemente dal fatto che il criterio di unione sia o meno il criterio di unione predefinito, e la classe di schema a cui il criterio di unione si riferisce.
 
@@ -46,46 +46,46 @@ Per selezionare i dettagli visibili o per aggiungere altre colonne alla visualiz
 
 ## Creare un criterio di unione {#create-a-merge-policy}
 
-Per creare un nuovo criterio di unione, seleziona **[!UICONTROL Crea criterio di unione]** nella scheda Criteri di unione per accedere al nuovo flusso di lavoro del criterio di unione.
+Per creare un nuovo criterio di unione, selezionare **[!UICONTROL Create merge policy]** nella scheda Criteri di unione per accedere al nuovo flusso di lavoro del criterio di unione.
 
 ![Pagina di destinazione dei criteri di unione con il pulsante Crea evidenziato.](../images/merge-policies/create-new.png)
 
-Il flusso di lavoro **[!UICONTROL Nuovo criterio di unione]** richiede di fornire informazioni importanti per il nuovo criterio di unione tramite una serie di passaggi guidati. Questi passaggi sono descritti nelle sezioni che seguono.
+Il flusso di lavoro **[!UICONTROL New merge policy]** richiede di fornire informazioni importanti per il nuovo criterio di unione tramite una serie di passaggi guidati. Questi passaggi sono descritti nelle sezioni che seguono.
 
 ![Nuovo flusso di lavoro per i criteri di unione.](../images/merge-policies/create.png)
 
-## [!UICONTROL Configura] {#configure}
+## [!UICONTROL Configure] {#configure}
 
 Il primo passaggio nel flusso di lavoro consente di configurare il criterio di unione fornendo informazioni di base. Queste informazioni includono:
 
-* **[!UICONTROL Nome]**: il nome del criterio di unione deve essere descrittivo ma conciso.
-* **[!UICONTROL Classe schema]**: classe dello schema XDM associata al criterio di unione. Specifica la classe di schema per la quale viene creato il criterio di unione. Le organizzazioni possono creare più criteri di unione per classe di schema. Attualmente nell&#39;interfaccia utente è disponibile solo la classe [!UICONTROL Profilo individuale XDM]. È possibile visualizzare in anteprima lo schema di unione per la classe dello schema selezionando **[!UICONTROL Visualizza schema di unione]**. Per ulteriori informazioni, vedere la sezione seguente [visualizzazione dello schema di unione](#view-union-schema).
-* **[!UICONTROL Unione ID]**: questo campo definisce come determinare le identità correlate di un cliente. Esistono due possibili valori per l’unione di identità ed è importante comprendere in che modo il tipo di unione di identità selezionato influirà sui dati. Per ulteriori informazioni, consulta la [panoramica dei criteri di unione](overview.md).
-   * **[!UICONTROL Nessuno]**: non eseguire alcuna unione di identità.
-   * **[!UICONTROL Grafico privato]**: esegui l&#39;unione delle identità in base al grafico delle identità private.
-* **[!UICONTROL Criterio di unione predefinito]**: pulsante di attivazione/disattivazione che consente di scegliere se il criterio di unione sarà o meno il criterio predefinito per l&#39;organizzazione. Se il selettore è attivato, viene visualizzato un avviso che richiede di confermare la modifica del criterio di unione predefinito dell&#39;organizzazione. Per ulteriori informazioni sui criteri di unione predefiniti, consulta la [panoramica dei criteri di unione](overview.md).
+* **[!UICONTROL Name]**: il nome del criterio di unione deve essere descrittivo ma conciso.
+* **[!UICONTROL Schema class]**: classe dello schema XDM associata al criterio di unione. Specifica la classe di schema per la quale viene creato il criterio di unione. Le organizzazioni possono creare più criteri di unione per classe di schema. Attualmente nell&#39;interfaccia utente è disponibile solo la classe [!UICONTROL XDM Individual Profile]. È possibile visualizzare in anteprima lo schema di unione per la classe dello schema selezionando **[!UICONTROL View Union Schema]**. Per ulteriori informazioni, vedere la sezione seguente [visualizzazione dello schema di unione](#view-union-schema).
+* **[!UICONTROL ID stitching]**: questo campo definisce come determinare le identità correlate di un cliente. Esistono due possibili valori per l’unione di identità ed è importante comprendere in che modo il tipo di unione di identità selezionato influirà sui dati. Per ulteriori informazioni, consulta la [panoramica dei criteri di unione](overview.md).
+   * **[!UICONTROL None]**: non eseguire alcuna unione identità.
+   * **[!UICONTROL Private Graph]**: eseguire l&#39;unione delle identità in base al grafico delle identità private.
+* **[!UICONTROL Default merge policy]**: pulsante di attivazione/disattivazione che consente di scegliere se il criterio di unione sarà o meno il criterio predefinito per l&#39;organizzazione. Se il selettore è attivato, viene visualizzato un avviso che richiede di confermare la modifica del criterio di unione predefinito dell&#39;organizzazione. Per ulteriori informazioni sui criteri di unione predefiniti, consulta la [panoramica dei criteri di unione](overview.md).
   ![Un popover che spiega cosa accade quando il criterio di unione viene impostato come criterio di unione predefinito.](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Criterio di unione attivo su Edge]**: pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione sarà attivo o meno su Edge. Per garantire che tutti i consumatori di profili utilizzino la stessa vista sugli spigoli, i criteri di unione possono essere contrassegnati come attivi sugli spigoli. Per attivare un pubblico in Edge (contrassegnato come pubblico Edge), è necessario legarlo a un criterio di unione contrassegnato come attivo in Edge. Se un pubblico è **non** associato a un criterio di unione contrassegnato come attivo sul server Edge, il pubblico non verrà contrassegnato come attivo sul server Edge e verrà contrassegnato come pubblico in streaming. Inoltre, ogni sandbox in un&#39;organizzazione può avere solo **un** criterio di unione attivo su Edge.
+* **[!UICONTROL Active-On-Edge Merge Policy]**: pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione sarà attivo o meno sul server Edge. Per garantire che tutti i consumatori di profili utilizzino la stessa vista sugli spigoli, i criteri di unione possono essere contrassegnati come attivi sugli spigoli. Per attivare un pubblico in Edge (contrassegnato come pubblico Edge), è necessario legarlo a un criterio di unione contrassegnato come attivo in Edge. Se un pubblico è **non** associato a un criterio di unione contrassegnato come attivo sul server Edge, il pubblico non verrà contrassegnato come attivo sul server Edge e verrà contrassegnato come pubblico in streaming. Inoltre, ogni sandbox in un&#39;organizzazione può avere solo **un** criterio di unione attivo su Edge.
 
-Una volta completati i campi obbligatori, puoi selezionare **[!UICONTROL Successivo]** per continuare con il flusso di lavoro.
+Una volta completati i campi obbligatori, puoi selezionare **[!UICONTROL Next]** per continuare con il flusso di lavoro.
 
 ![Schermata Configura completata con il pulsante Avanti evidenziato.](../images/merge-policies/create-complete.png)
 
-## [!UICONTROL Visualizza schema unione] {#view-union-schema}
+## [!UICONTROL View Union Schema] {#view-union-schema}
 
-Quando crei o modifichi un criterio di unione, puoi visualizzare lo schema di unione per la classe di schema selezionata selezionando **[!UICONTROL Visualizza schema di unione]**.
+Quando crei o modifichi un criterio di unione, puoi visualizzare lo schema di unione per la classe di schema selezionata selezionando **[!UICONTROL View Union Schema]**.
 
 ![Il pulsante &quot;Visualizza schema unione&quot; è evidenziato nel flusso di lavoro del nuovo criterio di unione.](../images/merge-policies/view-union-schema.png)
 
-Verrà aperta la finestra di dialogo [!UICONTROL Visualizza schema unione], in cui sono visualizzati tutti gli schemi, le identità e le relazioni associati allo schema di unione. Puoi utilizzare la finestra di dialogo per esplorare lo schema di unione nello stesso modo in cui accedi alla scheda [!UICONTROL Schema di unione] nella sezione [!UICONTROL Profili] dell&#39;interfaccia utente di Experience Platform.
+Verrà aperta la finestra di dialogo [!UICONTROL View Union Schema], in cui sono visualizzati tutti gli schemi, le identità e le relazioni associati allo schema di unione. È possibile utilizzare la finestra di dialogo per esplorare lo schema di unione nello stesso modo in cui si accede alla scheda [!UICONTROL Union Schema] nella sezione [!UICONTROL Profiles] dell&#39;interfaccia utente di Experience Platform.
 
-Per informazioni dettagliate sugli schemi di unione, tra cui come interagire con essi nella scheda [!UICONTROL Schema unione] o nella finestra di dialogo [!UICONTROL Visualizza schema unione] visualizzata nel flusso di lavoro dei criteri di unione, visita la [guida dell&#39;interfaccia utente dello schema unione](../ui/union-schema.md).
+Per informazioni dettagliate sugli schemi di unione, tra cui come interagire con essi nella scheda [!UICONTROL Union Schema] o nella finestra di dialogo [!UICONTROL View Union Schema] visualizzata nel flusso di lavoro dei criteri di unione, visita la [guida dell&#39;interfaccia utente dello schema di unione](../ui/union-schema.md).
 
 ![Finestra di dialogo Visualizza schema di unione.](../images/merge-policies/view-union-schema-dialog.png)
 
-## [!UICONTROL Seleziona set di dati profilo] {#select-profile-datasets}
+## [!UICONTROL Select Profile datasets] {#select-profile-datasets}
 
-Nella schermata **[!UICONTROL Seleziona set di dati profilo]**, è necessario selezionare il **[!UICONTROL metodo di unione]** che si desidera utilizzare per il criterio di unione. Sullo schermo viene visualizzato anche il numero totale di [!UICONTROL set di dati profilo] nell&#39;organizzazione relativi alla classe dello schema selezionata nella schermata precedente.
+Nella schermata **[!UICONTROL Select Profile datasets]**, è necessario selezionare **[!UICONTROL Merge method]** che si desidera utilizzare per il criterio di unione. Sullo schermo viene visualizzato anche il numero totale di [!UICONTROL Profile datasets] nell&#39;organizzazione che si riferiscono alla classe dello schema selezionata nella schermata precedente.
 
 A seconda del metodo di unione scelto, tutti i set di dati profilo verranno uniti in base all’ordine in cui sono stati aggiornati l’ultima volta (marca temporale ordinata) oppure dovrai selezionare i set di dati profilo da includere nel criterio di unione e l’ordine in cui unirli (precedenza set di dati).
 
@@ -95,93 +95,93 @@ Per ulteriori informazioni sui metodi di unione, consulta la [panoramica dei cri
 
 >[!TAB Timestamp ordinato]
 
-Se si seleziona **[!UICONTROL Timestamp ordinato]** come metodo di unione, gli attributi dei set di dati aggiornati più di recente avranno la precedenza. Questo si applica a tutti i set di dati profilo.
+Se si seleziona **[!UICONTROL Timestamp ordered]** come metodo di unione, gli attributi dei set di dati aggiornati più di recente avranno la precedenza. Questo si applica a tutti i set di dati profilo.
 
 >[!NOTE]
 >
->Il numero tra parentesi quadre accanto a **[!UICONTROL Set di dati profilo]** (ad esempio, `(37)` nell&#39;immagine visualizzata) mostra il numero totale di set di dati profilo che verranno inclusi.
+>Il numero tra parentesi quadre accanto a **[!UICONTROL Profile datasets]** (ad esempio, `(37)` nell&#39;immagine mostrata) mostra il numero totale di set di dati profilo che verranno inclusi.
 
 ![Immagine che mostra il metodo di unione ordinato per marca temporale in fase di selezione.](../images/merge-policies/timestamp-ordered.png)
 
 >[!TAB Precedenza set di dati]
 
-Se si seleziona **[!UICONTROL Precedenza set di dati]** come metodo di unione, è necessario selezionare i set di dati profilo e assegnarvi manualmente le priorità. Ogni set di dati elencato include anche lo stato dell’ultimo batch acquisito o visualizza un avviso che indica che non è stato acquisito alcun batch in tale set di dati.
+Per selezionare **[!UICONTROL Dataset precedence]** come metodo di unione è necessario selezionare i set di dati profilo e assegnarvi manualmente le priorità. Ogni set di dati elencato include anche lo stato dell’ultimo batch acquisito o visualizza un avviso che indica che non è stato acquisito alcun batch in tale set di dati.
 
 Dall’elenco dei set di dati puoi selezionare fino a 50 set di dati da includere nel criterio di unione.
 
 >[!NOTE]
 >
->Il numero tra parentesi quadre accanto a **[!UICONTROL Set di dati profilo]** (ad esempio, `(37)` nell&#39;immagine mostrata) mostra il numero totale di set di dati profilo disponibili per la selezione.
+>Il numero tra parentesi quadre accanto a **[!UICONTROL Profile datasets]** (ad esempio, `(37)` nell&#39;immagine mostrata) mostra il numero totale di set di dati profilo disponibili per la selezione.
 
-Quando i set di dati vengono selezionati, vengono aggiunti alla sezione **[!UICONTROL Seleziona set di dati]**, che consente di trascinare e rilasciare i set di dati e di ordinarli in base alla precedenza desiderata. Man mano che i set di dati vengono regolati nell’elenco, viene aggiornato il numero ordinale (1, 2, 3, ecc.) accanto al set di dati, con priorità visualizzabile (1 a cui viene assegnata la priorità più alta, quindi 2 e in avanti).
+I set di dati selezionati vengono aggiunti alla sezione **[!UICONTROL Select datasets]**, consentendo di trascinare e rilasciare i set di dati e di ordinarli in base alla precedenza desiderata. Man mano che i set di dati vengono regolati nell’elenco, viene aggiornato il numero ordinale (1, 2, 3, ecc.) accanto al set di dati, con priorità visualizzabile (1 a cui viene assegnata la priorità più alta, quindi 2 e in avanti).
 
-La selezione di un set di dati aggiorna anche la sezione **[!UICONTROL Schema di unione]**, mostrando i campi nello schema di unione a cui ogni set di dati contribuisce. Per ulteriori informazioni sugli schemi di unione, tra cui come interagire con le visualizzazioni nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente dello schema di unione](../ui/union-schema.md)
+La selezione di un set di dati aggiorna anche la sezione **[!UICONTROL Union schema]**, mostrando i campi nello schema di unione a cui ogni set di dati contribuisce. Per ulteriori informazioni sugli schemi di unione, tra cui come interagire con le visualizzazioni nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente dello schema di unione](../ui/union-schema.md)
 
 ![Immagine che mostra la precedenza del set di dati selezionato, insieme alle impostazioni corrispondenti che è necessario scegliere se tale opzione è selezionata.](../images/merge-policies/dataset-precedence.png)
 
 >[!ENDTABS]
 
-## [!UICONTROL Seleziona set di dati ExperienceEvent] {#select-experienceevent-datasets}
+## [!UICONTROL Select ExperienceEvent datasets] {#select-experienceevent-datasets}
 
-Il passaggio successivo nel flusso di lavoro richiede la selezione di set di dati ExperienceEvent. Questa schermata è influenzata dal metodo di unione selezionato nella schermata [[!UICONTROL Seleziona set di dati profilo]](#select-profile-datasets).
+Il passaggio successivo nel flusso di lavoro richiede la selezione di set di dati ExperienceEvent. Questa schermata è influenzata dal metodo di unione selezionato nella schermata [[!UICONTROL Select Profile datasets]](#select-profile-datasets).
 
 >[!BEGINTABS]
 
 >[!TAB Timestamp ordinato]
 
-Se hai selezionato **[!UICONTROL Timestamp ordinato]** come metodo di unione per i set di dati profilo, anche qui avranno la precedenza gli attributi dei set di dati ExperienceEvent aggiornati più di recente.
+Se hai selezionato **[!UICONTROL Timestamp ordered]** come metodo di unione per i set di dati profilo, anche qui avranno la precedenza gli attributi dei set di dati ExperienceEvent aggiornati più di recente.
 
 >[!NOTE]
 >
->Il numero tra parentesi quadre accanto a **[!UICONTROL Set di dati ExperienceEvent]** (ad esempio, `(1)` nell&#39;immagine visualizzata) mostra il numero totale di set di dati ExperienceEvent creati dall&#39;organizzazione e correlati alla classe di schema selezionata nella schermata di configurazione del criterio di unione.
+>Il numero tra parentesi quadre accanto a **[!UICONTROL ExperienceEvent datasets]** (ad esempio, `(1)` nell&#39;immagine mostrata) mostra il numero totale di set di dati ExperienceEvent creati dall&#39;organizzazione che si riferiscono alla classe di schema selezionata nella schermata di configurazione del criterio di unione.
 
 ![Viene visualizzato il numero totale di set di dati ExperienceEvent che possono essere correlati alla classe dello schema.](../images/merge-policies/timestamp-experienceevent.png)
 
 >[!TAB Precedenza set di dati]
 
-Se hai selezionato **[!UICONTROL Precedenza set di dati]** come metodo di unione per i set di dati profilo, dovrai selezionare i set di dati ExperienceEvent da includere. Puoi selezionare fino a 50 set di dati ExperienceEvent dall’elenco dei set di dati.
+Se hai selezionato **[!UICONTROL Dataset precedence]** come metodo di unione per i set di dati profilo, dovrai selezionare i set di dati ExperienceEvent da includere. Puoi selezionare fino a 50 set di dati ExperienceEvent dall’elenco dei set di dati.
 
 >[!NOTE]
 >
->Il numero tra parentesi quadre accanto a **[!UICONTROL Set di dati ExperienceEvent]** (ad esempio, `(1)` nell&#39;immagine visualizzata) mostra il numero totale di set di dati ExperienceEvent creati dall&#39;organizzazione e correlati alla classe di schema selezionata nella schermata di configurazione del criterio di unione.
+>Il numero tra parentesi quadre accanto a **[!UICONTROL ExperienceEvent datasets]** (ad esempio, `(1)` nell&#39;immagine mostrata) mostra il numero totale di set di dati ExperienceEvent creati dall&#39;organizzazione che si riferiscono alla classe di schema selezionata nella schermata di configurazione del criterio di unione.
 
-I set di dati selezionati vengono visualizzati nella sezione [!UICONTROL Seleziona set di dati].
+I set di dati selezionati vengono visualizzati nella sezione [!UICONTROL Select datasets].
 
 I set di dati ExperienceEvent non possono essere ordinati manualmente, ma gli attributi nei set di dati ExperienceEvent vengono aggiunti ai set di dati profilo se fanno parte dello stesso frammento di profilo.
 
-Analogamente alla selezione dei set di dati profilo, la selezione di un set di dati ExperienceEvent aggiorna anche la sezione **[!UICONTROL Schema di unione]**, mostrando i campi nello schema di unione a cui ogni set di dati contribuisce. Per ulteriori informazioni sugli schemi di unione, tra cui come interagire con le visualizzazioni nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente dello schema di unione](../ui/union-schema.md).
+Analogamente alla selezione dei set di dati profilo, la selezione di un set di dati ExperienceEvent aggiorna anche la sezione **[!UICONTROL Union schema]**, mostrando i campi nello schema di unione in cui ogni set di dati contribuisce ai dati. Per ulteriori informazioni sugli schemi di unione, tra cui come interagire con le visualizzazioni nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente dello schema di unione](../ui/union-schema.md).
 
 ![Vengono visualizzati i set di dati ExperienceEvent selezionabili.](../images/merge-policies/dataset-precedence-experienceevent.png)
 
 >[!ENDTABS]
 
-## [!UICONTROL Revisione] {#review}
+## [!UICONTROL Review] {#review}
 
-L’ultimo passaggio nel flusso di lavoro consiste nel rivedere il criterio di unione. Nella schermata **[!UICONTROL Revisione]** vengono visualizzate informazioni sul criterio di unione, inclusi il metodo di unione ID selezionato, il metodo di unione selezionato e i set di dati inclusi. Per visualizzare tutti i set di dati Profilo o ExperienceEvent inclusi, seleziona il numero di set di dati per espandere l’elenco a discesa.
+L’ultimo passaggio nel flusso di lavoro consiste nel rivedere il criterio di unione. Nella schermata **[!UICONTROL Review]** vengono visualizzate informazioni sul criterio di unione, inclusi il metodo di unione ID selezionato, il metodo di unione selezionato e i set di dati inclusi. Per visualizzare tutti i set di dati Profilo o ExperienceEvent inclusi, seleziona il numero di set di dati per espandere l’elenco a discesa.
 
-Nella schermata di revisione è inclusa anche la tabella **[!UICONTROL Anteprima dati]** che mostra i record del profilo di esempio che utilizzano i criteri di unione. Questo consente di visualizzare in anteprima l’aspetto di un profilo cliente prima di salvare il criterio di unione.
+Nella schermata di revisione è inclusa anche la tabella **[!UICONTROL Preview data]** che mostra i record del profilo di esempio che utilizzano il criterio di unione. Questo consente di visualizzare in anteprima l’aspetto di un profilo cliente prima di salvare il criterio di unione.
 
-Verifica attentamente la configurazione dei criteri di unione e visualizza in anteprima i dati prima di selezionare **[!UICONTROL Fine]** per completare il flusso di lavoro di creazione.
+Prima di selezionare **[!UICONTROL Finish]** per completare il flusso di lavoro di creazione, verificare attentamente la configurazione del criterio di unione e visualizzare in anteprima i dati.
 
 >[!BEGINTABS]
 
 >[!TAB Timestamp ordinato]
 
-Se hai selezionato **[!UICONTROL Timestamp ordinato]** come metodo di unione per il criterio di unione, l&#39;elenco dei set di dati profilo include tutti i set di dati creati dall&#39;organizzazione relativi alla classe dello schema, in ordine di timestamp. L’elenco dei set di dati ExperienceEvent include tutti i set di dati creati dalla tua organizzazione per la classe di schema selezionata e verranno aggiunti ai set di dati profilo.
+Se hai selezionato **[!UICONTROL Timestamp ordered]** come metodo di unione per il criterio di unione, l&#39;elenco dei set di dati profilo include tutti i set di dati creati dall&#39;organizzazione in relazione alla classe dello schema, in ordine di marca temporale. L’elenco dei set di dati ExperienceEvent include tutti i set di dati creati dalla tua organizzazione per la classe di schema selezionata e verranno aggiunti ai set di dati profilo.
 
-La tabella **[!UICONTROL Anteprima dati]** mostra record di profilo di esempio in base a un ordine di marca temporale dei set di dati. Questo consente di visualizzare in anteprima l’aspetto di un profilo cliente prima di salvare il criterio di unione.
+La tabella **[!UICONTROL Preview data]** mostra alcuni record di profilo di esempio in base a un ordine di marca temporale dei set di dati. Questo consente di visualizzare in anteprima l’aspetto di un profilo cliente prima di salvare il criterio di unione.
 
-Seleziona **[!UICONTROL Fine]** per creare il nuovo criterio di unione.
+Seleziona **[!UICONTROL Finish]** per creare il nuovo criterio di unione.
 
 ![Viene visualizzata la pagina Revisione. Questa pagina consente di esaminare i dettagli del criterio di unione appena creato.](../images/merge-policies/timestamp-review.png)
 
 >[!TAB Precedenza set di dati]
 
-Se hai selezionato **[!UICONTROL Precedenza set di dati]** come metodo di unione per il criterio di unione, gli elenchi dei set di dati Profile ed ExperienceEvent includono solo i set di dati Profile ed ExperienceEvent selezionati rispettivamente durante il flusso di lavoro di creazione. L’ordine dei set di dati profilo deve corrispondere alla precedenza specificata durante la creazione. In caso contrario, utilizzare il pulsante [!UICONTROL Indietro] per tornare ai passaggi del flusso di lavoro precedenti e regolare la priorità.
+Se hai selezionato **[!UICONTROL Dataset precedence]** come metodo di unione per il criterio di unione, gli elenchi dei set di dati Profile ed ExperienceEvent includono solo i set di dati Profile ed ExperienceEvent selezionati durante il flusso di lavoro di creazione, rispettivamente. L’ordine dei set di dati profilo deve corrispondere alla precedenza specificata durante la creazione. In caso contrario, utilizzare il pulsante [!UICONTROL Back] per tornare ai passaggi del flusso di lavoro precedenti e regolare la priorità.
 
-La tabella **[!UICONTROL Anteprima dati]** mostra i record del profilo di esempio che utilizzano i set di dati selezionati. Questo consente di visualizzare in anteprima l’aspetto di un profilo cliente prima di salvare il criterio di unione.
+La tabella **[!UICONTROL Preview data]** mostra i record di profilo di esempio che utilizzano i set di dati selezionati. Questo consente di visualizzare in anteprima l’aspetto di un profilo cliente prima di salvare il criterio di unione.
 
-Seleziona **[!UICONTROL Fine]** per creare il nuovo criterio di unione.
+Seleziona **[!UICONTROL Finish]** per creare il nuovo criterio di unione.
 
 ![Viene visualizzata la pagina Revisione. Questa pagina consente di esaminare i dettagli del criterio di unione appena creato.](../images/merge-policies/dataset-precedence-review.png)
 
@@ -189,15 +189,15 @@ Seleziona **[!UICONTROL Fine]** per creare il nuovo criterio di unione.
 
 ## Modificare un criterio di unione {#edit}
 
-Dalla scheda [!UICONTROL Criteri di unione], è possibile modificare un criterio di unione esistente creato per la classe [!DNL XDM Individual Profile] selezionando il **[!UICONTROL Nome criterio]** per il criterio di unione che si desidera modificare.
+Dalla scheda [!UICONTROL Merge Policies] è possibile modificare un criterio di unione esistente creato per la classe [!DNL XDM Individual Profile] selezionando **[!UICONTROL Policy name]** per il criterio di unione che si desidera modificare.
 
-Quando viene visualizzata la schermata **[!UICONTROL Modifica criterio di unione]**, è possibile modificare il nome e il metodo [!UICONTROL unione ID], nonché specificare se questo criterio è il criterio di unione predefinito per l&#39;organizzazione.
+Quando viene visualizzata la schermata **[!UICONTROL Edit merge policy]**, è possibile apportare modifiche al nome e al metodo [!UICONTROL ID stitching], nonché specificare se questo criterio è il criterio di unione predefinito per l&#39;organizzazione.
 
-Selezionare **[!UICONTROL Avanti]** per continuare il flusso di lavoro dei criteri di unione per aggiornare il metodo di unione e i set di dati inclusi nel criterio di unione.
+Selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro del criterio di unione per aggiornare il metodo di unione e i set di dati inclusi nel criterio di unione.
 
 ![Viene visualizzato il flusso di lavoro per la modifica dei criteri di unione.](../images/merge-policies/edit-screen.png)
 
-Dopo aver apportato le modifiche necessarie, rivedi il criterio di unione e seleziona **[!UICONTROL Fine]** per salvare le modifiche e tornare alla scheda [!UICONTROL Criteri di unione].
+Dopo aver apportato le modifiche necessarie, rivedere il criterio di unione e selezionare **[!UICONTROL Finish]** per salvare le modifiche e tornare alla scheda [!UICONTROL Merge policies].
 
 >[!WARNING]
 >
@@ -209,12 +209,12 @@ Dopo aver apportato le modifiche necessarie, rivedi il criterio di unione e sele
 
 Durante la creazione o l’aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se tale criterio viola uno dei criteri di utilizzo dei dati definiti dall’organizzazione. I criteri di utilizzo dei dati fanno parte della governance dei dati di Adobe Experience Platform e sono regole che descrivono i tipi di azioni di marketing che è consentito eseguire o meno su dati specifici di [!DNL Experience Platform].
 
-Ad esempio, se per creare un pubblico che si è attivato in una destinazione di terze parti è stato utilizzato un criterio di unione e nell&#39;organizzazione sono stati rilevati criteri di utilizzo dei dati che impediscono l&#39;esportazione di dati specifici a terze parti, durante il tentativo di salvataggio del criterio di unione verrà visualizzata una notifica di **[!UICONTROL violazione del criterio di governance dei dati]**.
+Se, ad esempio, è stato utilizzato un criterio di unione per creare un pubblico attivato in una destinazione di terze parti e nell&#39;organizzazione sono presenti criteri di utilizzo dei dati che impediscono l&#39;esportazione di dati specifici a terze parti, verrà inviata una notifica **[!UICONTROL Data governance policy violation detected]** quando si tenta di salvare il criterio di unione.
 
-Questa notifica include un elenco dei criteri di utilizzo dei dati che sono stati violati e consente di visualizzare i dettagli della violazione selezionando un criterio dall’elenco. Quando si seleziona un criterio violato, la scheda **[!UICONTROL Derivazione dati]** fornisce il motivo della violazione e le attivazioni interessate, ognuna delle quali fornisce ulteriori dettagli su come il criterio di utilizzo dei dati è stato violato.
+Questa notifica include un elenco dei criteri di utilizzo dei dati che sono stati violati e consente di visualizzare i dettagli della violazione selezionando un criterio dall’elenco. Quando si seleziona un criterio violato, la scheda **[!UICONTROL Data lineage]** fornisce il motivo della violazione e le attivazioni interessate, ognuna delle quali fornisce ulteriori dettagli sulla violazione del criterio di utilizzo dei dati.
 
 Per ulteriori informazioni sulle modalità di esecuzione della governance dei dati in Adobe Experience Platform, consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md).
 
 ## Passaggi successivi
 
-Dopo aver creato e configurato i criteri di unione per l’organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Experience Platform e per creare tipi di pubblico dai dati del profilo. Per ulteriori informazioni su come creare e utilizzare i tipi di pubblico utilizzando l&#39;interfaccia utente e le API di [!DNL Experience Platform], consulta la [panoramica sulla segmentazione](../../segmentation/home.md).
+Dopo aver creato e configurato i criteri di unione per l’organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Experience Platform e per creare tipi di pubblico dai dati del profilo. Per ulteriori informazioni su come creare e utilizzare i tipi di pubblico utilizzando l&#39;interfaccia utente e le API di [, consulta la ](../../segmentation/home.md)panoramica sulla segmentazione[!DNL Experience Platform].

@@ -6,7 +6,7 @@ description: Scopri gli schemi Experience Data Model (XDM) e gli elementi di bas
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4350'
+source-wordcount: '4308'
 ht-degree: 8%
 
 ---
@@ -21,7 +21,7 @@ Uno schema è un set di regole che rappresentano e convalidano la struttura e il
 
 Oltre a descrivere la struttura dei dati, gli schemi applicano vincoli e aspettative ai dati in modo che possano essere convalidati durante gli spostamenti tra sistemi diversi. Queste definizioni standard consentono di interpretare i dati in modo coerente, indipendentemente dall’origine, ed eliminano la necessità di traduzione tra le applicazioni.
 
-Experience Platform mantiene questa normalizzazione semantica utilizzando gli schemi. Gli schemi sono il metodo standard per descrivere i dati in Experience Platform che consentono il riutilizzo di tutti i dati conformi agli schemi in un’organizzazione senza conflitti o anche la condivisione tra più organizzazioni.
+Experience Platform mantiene questa normalizzazione semantica utilizzando gli schemi. Gli schemi sono il metodo standard per descrivere i dati in Experience Platform; consentono di riutilizzare senza conflitti tutti i dati conformi agli schemi all’interno di un’organizzazione, o anche di condividerli tra più organizzazioni.
 
 Gli schemi XDM sono ideali per memorizzare grandi quantità di dati complessi in un formato autonomo. Consulta le sezioni su [oggetti incorporati](#embedded) e [big data](#big-data) nell&#39;appendice di questo documento per ulteriori informazioni su come XDM esegue questa operazione.
 
@@ -48,7 +48,7 @@ Tutti gli schemi XDM descrivono dati che possono essere classificati come record
 
 Sia gli schemi record che le serie temporali contengono una mappa di identità (`xdm:identityMap`). Questo campo contiene la rappresentazione dell’identità di un soggetto, tratta dai campi contrassegnati come &quot;Identità&quot; come descritto nella sezione successiva.
 
-### [!UICONTROL Identità] {#identity}
+### [!UICONTROL Identity] {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
@@ -57,9 +57,9 @@ Sia gli schemi record che le serie temporali contengono una mappa di identità (
 
 Gli schemi definiscono la struttura dei dati acquisiti in Experience Platform. Questi dati alimentano più servizi all’interno della Platform e aiutano a creare un’unica vista unificata di ogni individuo. Quindi, durante la progettazione degli schemi, considera con attenzione quali campi contrassegnare come identità: questi controllano il modo in cui i profili vengono uniti nei diversi set di dati.
 
-Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell&#39;acquisizione dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;[!UICONTROL grafo identità]&quot; dell&#39;utente. È quindi possibile accedere ai dati del grafico da [[!DNL Real-Time Customer Profile]](../../profile/home.md) e altri servizi Experience Platform per fornire una visualizzazione combinata di ogni singolo cliente.
+Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell&#39;acquisizione dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;[!UICONTROL Identity Graph]&quot; dell&#39;utente. È quindi possibile accedere ai dati del grafico da [[!DNL Real-Time Customer Profile]](../../profile/home.md) e altri servizi Experience Platform per fornire una visualizzazione combinata di ogni singolo cliente.
 
-I campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Considera eventuali identificatori univoci specifici dell&#39;organizzazione, in quanto potrebbero essere validi anche per i campi &quot;[!UICONTROL Identity]&quot;.
+I campi comunemente contrassegnati come &quot;[!UICONTROL Identity]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Considera eventuali identificatori univoci specifici per la tua organizzazione, in quanto potrebbero essere buoni anche i campi &quot;[!UICONTROL Identity]&quot;.
 
 Per ulteriori informazioni su come le informazioni sulle identità possono aiutarti a fornire esperienze digitali ai tuoi clienti, consulta la [Panoramica del servizio Identity](../../identity-service/home.md). Consulta il documento sulle best practice per la modellazione dati per [suggerimenti sull&#39;utilizzo delle identità durante la creazione di uno schema](./best-practices.md#data-validation-fields).
 
@@ -163,7 +163,7 @@ Gli schemi vengono composti utilizzando la seguente formula:
 
 **Gruppo campi classe + schema;ast; = Schema XDM**
 
-&ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
+&amp;ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
 
 ### Classe {#class}
 
@@ -183,9 +183,9 @@ La classe di uno schema determina quali gruppi di campi sono idonei per l’util
 
 Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessarie per quasi tutti i processi Experience Platform a valle. Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate vengono definite da un’organizzazione quando non sono disponibili classi core definite da Adobe per descrivere un caso d’uso univoco.
 
-La schermata seguente illustra come le classi sono rappresentate nell’interfaccia utente di Experience Platform. Poiché lo schema di esempio visualizzato non contiene gruppi di campi, tutti i campi visualizzati vengono forniti dalla classe dello schema ([!UICONTROL Profilo individuale XDM]).
+La schermata seguente illustra come le classi sono rappresentate nell’interfaccia utente di Experience Platform. Poiché lo schema di esempio visualizzato non contiene gruppi di campi, tutti i campi visualizzati vengono forniti dalla classe dello schema ([!UICONTROL XDM Individual Profile]).
 
-![Il [!UICONTROL Profilo individuale XDM] all&#39;interno dell&#39;Editor di schema.](../images/schema-composition/class.png)
+![Il [!UICONTROL XDM Individual Profile] all&#39;interno dell&#39;Editor di schema.](../images/schema-composition/class.png)
 
 Per l&#39;elenco più aggiornato delle classi XDM standard disponibili, fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/classes). In alternativa, se preferisci visualizzare le risorse nell&#39;interfaccia utente, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md).
 
@@ -207,7 +207,7 @@ I gruppi di campi definiscono con quali classi sono compatibili, in base al comp
 
 Experience Platform include molti gruppi di campi standard di Adobe, consentendo ai fornitori di definire gruppi di campi per i propri utenti e ai singoli utenti di definire gruppi di campi per i propri concetti specifici.
 
-Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Indirizzo principale]&quot; per lo schema &quot;[!UICONTROL Membri fedeltà]&quot;, è possibile utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, concetti più specifici dell’organizzazione (ad esempio dettagli del programma fedeltà personalizzato o attributi di prodotto) che potrebbero non essere coperti dai gruppi di campi standard. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
+Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; per lo schema &quot;[!UICONTROL Loyalty Members]&quot;, è possibile utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, concetti più specifici dell’organizzazione (ad esempio dettagli del programma fedeltà personalizzato o attributi di prodotto) che potrebbero non essere coperti dai gruppi di campi standard. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
 
 >[!NOTE]
 >
@@ -217,9 +217,9 @@ Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL Nome]&quot; e &quot;[
 
 Gli schemi sono composti da &quot;zero o più&quot; gruppi di campi, pertanto puoi comporre uno schema valido senza utilizzare alcun gruppo di campi.
 
-La schermata seguente illustra come i gruppi di campi sono rappresentati nell’interfaccia utente di Experience Platform. Un singolo gruppo di campi ([!UICONTROL Dettagli demografici]) viene aggiunto a uno schema in questo esempio, che fornisce un raggruppamento di campi alla struttura dello schema.
+La schermata seguente illustra come i gruppi di campi sono rappresentati nell’interfaccia utente di Experience Platform. In questo esempio viene aggiunto un singolo gruppo di campi ([!UICONTROL Demographic Details]) a uno schema, che fornisce un raggruppamento di campi alla struttura dello schema.
 
-![Editor schema con il gruppo di campi [!UICONTROL Dettagli demografici] evidenziato in uno schema di esempio.](../images/schema-composition/field-group.png)
+![Editor schema con il gruppo di campi [!UICONTROL Demographic Details] evidenziato in uno schema di esempio.](../images/schema-composition/field-group.png)
 
 Per l&#39;elenco più aggiornato dei gruppi di campi XDM standard disponibili, fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/fieldgroups). In alternativa, se preferisci visualizzare le risorse nell&#39;interfaccia utente, consulta la guida su [esplorazione dei componenti XDM](../ui/explore.md).
 
@@ -237,7 +237,7 @@ I tipi di dati vengono utilizzati come tipi di campi di riferimento nelle classi
 
 Experience Platform fornisce diversi tipi di dati comuni come parte di [!DNL Schema Registry] per supportare l&#39;utilizzo di modelli standard per la descrizione di strutture di dati comuni. Questo è spiegato più dettagliatamente nelle [esercitazioni del registro degli schemi](../tutorials/create-schema-api.md) e diventerà più chiaro man mano che si seguono i passaggi per definire i tipi di dati.
 
-La schermata seguente illustra come i tipi di dati sono rappresentati nell’interfaccia utente di Experience Platform. Uno dei campi forniti dal gruppo di campi [!UICONTROL Dettagli demografici] utilizza il tipo di dati &quot;[!UICONTROL Oggetto]&quot;, come indicato dal testo che segue il carattere barra verticale (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi che si riferiscono al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui è necessario acquisire il nome di una persona.
+La schermata seguente illustra come i tipi di dati sono rappresentati nell’interfaccia utente di Experience Platform. Uno dei campi forniti dal gruppo di campi [!UICONTROL Demographic Details] utilizza il tipo di dati &quot;[!UICONTROL Object]&quot;, come indicato dal testo che segue il carattere barra verticale (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi che si riferiscono al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui è necessario acquisire il nome di una persona.
 
 ![Diagramma nell&#39;Editor schema per una singola persona con l&#39;oggetto Nome completo e gli attributi evidenziati.](../images/schema-composition/data-type.png)
 
@@ -280,11 +280,11 @@ Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincol
 
 Gli schemi vengono creati utilizzando un modello di composizione e rappresentano il formato e la struttura dei dati da acquisire in [!DNL Experience Platform]. Come indicato in precedenza, questi schemi sono composti da una classe e da zero o più gruppi di campi compatibili con tale classe.
 
-Ad esempio, uno schema che descrive gli acquisti effettuati in un punto vendita al dettaglio potrebbe essere denominato &quot;[!UICONTROL Transazioni store]&quot;. Lo schema implementa la classe [!DNL XDM ExperienceEvent] combinata con il gruppo di campi [!UICONTROL Commerce] standard e un gruppo di campi [!UICONTROL Informazioni prodotto] definito dall&#39;utente.
+Ad esempio, uno schema che descrive gli acquisti effettuati in un punto vendita al dettaglio potrebbe essere denominato &quot;[!UICONTROL Store Transactions]&quot;. Lo schema implementa la classe [!DNL XDM ExperienceEvent] combinata con il gruppo di campi [!UICONTROL Commerce] standard e un gruppo di campi [!UICONTROL Product Info] definito dall&#39;utente.
 
-Un altro schema che tiene traccia del traffico del sito Web potrebbe essere denominato &quot;[!UICONTROL Visite Web]&quot;. Implementa anche la classe [!DNL XDM ExperienceEvent], ma questa volta combina il gruppo di campi [!UICONTROL Web] standard.
+Un altro schema che tiene traccia del traffico del sito Web potrebbe essere denominato &quot;[!UICONTROL Web Visits]&quot;. Implementa anche la classe [!DNL XDM ExperienceEvent], ma questa volta combina il gruppo di campi [!UICONTROL Web] standard.
 
-Il diagramma seguente mostra questi schemi e i campi con il contributo di ciascun gruppo di campi. Contiene inoltre due schemi basati sulla classe [!DNL XDM Individual Profile], incluso lo schema &quot;[!UICONTROL Membri fedeltà]&quot; menzionato in precedenza in questa guida.
+Il diagramma seguente mostra questi schemi e i campi con il contributo di ciascun gruppo di campi. Contiene inoltre due schemi basati sulla classe [!DNL XDM Individual Profile], incluso lo schema &quot;[!UICONTROL Loyalty Members]&quot; menzionato in precedenza in questa guida.
 
 ![Diagramma di flusso costituito da quattro schemi e dai gruppi di campi che vi contribuiscono.](../images/schema-composition/composition.png)
 
@@ -306,8 +306,8 @@ Tutti i file di dati acquisiti in Experience Platform devono essere conformi all
 
 Se stai inserendo in Experience Platform tipi di pubblico da sistemi esterni, devi utilizzare i seguenti componenti per acquisirli negli schemi:
 
-* [[!UICONTROL Definizione segmento] classe](../classes/segment-definition.md): utilizzare questa classe standard per acquisire gli attributi chiave di una definizione segmento esterna.
-* [[!UICONTROL Dettagli sull&#39;iscrizione al segmento] gruppo di campi](../field-groups/profile/segmentation.md): aggiungi questo gruppo di campi allo schema [!UICONTROL Profilo individuale XDM] per associare i profili dei clienti a tipi di pubblico specifici.
+* [[!UICONTROL Segment definition] classe](../classes/segment-definition.md): utilizzare questa classe standard per acquisire gli attributi chiave di una definizione di segmento esterna.
+* [[!UICONTROL Segment Membership Details] gruppo di campi](../field-groups/profile/segmentation.md): aggiungi questo gruppo di campi allo schema [!UICONTROL XDM Individual Profile] per associare i profili dei clienti a tipi di pubblico specifici.
 
 ## Passaggi successivi
 

@@ -185,4 +185,4 @@ Per scoprire i principi di progettazione e le best practice per la composizione 
 
 Per approfondire la tua conoscenza di [!DNL XDM System] in Experience Platform, guarda il seguente video:
 
->[!VIDEO](https://video.tv.adobe.com/v/38516?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

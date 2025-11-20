@@ -4,7 +4,7 @@ title: Configurare le opzioni di formattazione dei file per le destinazioni basa
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1191'
 ht-degree: 17%
 
 ---
@@ -55,11 +55,11 @@ Utilizzare questo controllo per impostare un separatore per ogni campo e valore 
 
 Visualizza gli esempi seguenti dei contenuti dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL due punti`(:)`]** selezionati: `male:John:Doe`
-* Output di esempio con **[!UICONTROL virgola`(,)`]** selezionata: `male,John,Doe`
-* Output di esempio con **[!UICONTROL pipe`(|)`]** selezionata: `male|John|Doe`
-* Output di esempio con **[!UICONTROL Punto e virgola`(;)`]** selezionato: `male;John;Doe`
-* Output di esempio con **[!UICONTROL scheda`(\t)`]** selezionata: `male \t John \t Doe`
+* Output di esempio con **[!UICONTROL Colon `(:)`]** selezionato: `male:John:Doe`
+* Output di esempio con **[!UICONTROL Comma `(,)`]** selezionato: `male,John,Doe`
+* Output di esempio con **[!UICONTROL Pipe `(|)`]** selezionato: `male|John|Doe`
+* Output di esempio con **[!UICONTROL Semicolon `(;)`]** selezionato: `male;John;Doe`
+* Output di esempio con **[!UICONTROL Tab `(\t)`]** selezionato: `male \t John \t Doe`
 
 ### Carattere virgolette {#quote-character}
 
@@ -72,8 +72,8 @@ Utilizzare questa opzione per controllare se le virgolette doppie devono essere 
 
 Le opzioni disponibili sono:
 
-* **[!UICONTROL Carattere Null (\0000)]**. Utilizza questa opzione per rimuovere le virgolette doppie dai file CSV esportati.
-* **[!UICONTROL Virgolette (&quot;)]**. Utilizzare questa opzione quando i valori stringa contengono un delimitatore o virgolette doppie. Questa opzione consente di mantenere i delimitatori o le virgolette doppie nei file CSV esportati, in modo da identificare correttamente il valore corrispondente a ciascun campo.
+* **[!UICONTROL Null Character (\0000)]**. Utilizza questa opzione per rimuovere le virgolette doppie dai file CSV esportati.
+* **[!UICONTROL Double Quotes (")]**. Utilizzare questa opzione quando i valori stringa contengono un delimitatore o virgolette doppie. Questa opzione consente di mantenere i delimitatori o le virgolette doppie nei file CSV esportati, in modo da identificare correttamente il valore corrispondente a ciascun campo.
 
 #### Esempi
 
@@ -81,8 +81,8 @@ Considerare il valore di input `Anna,"Doe,John"`.
 
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL carattere nullo (\0000)]** selezionato: `Anna,Doe,John`
-* Output di esempio con **[!UICONTROL virgolette doppie (&quot;)]** selezionate: `Anna,"Doe,John"`
+* Output di esempio con **[!UICONTROL Null Character (\0000)]** selezionato: `Anna,Doe,John`
+* Output di esempio con **[!UICONTROL Double Quotes (")]** selezionato: `Anna,"Doe,John"`
 
 ### Carattere di escape {#escape-character}
 
@@ -100,8 +100,8 @@ Utilizzare questa opzione per impostare un singolo carattere per l&#39;escape de
 
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL Barra rovesciata`(\)`]** selezionata: `"Test,\"John\",LastName"`
-* Output di esempio con **[!UICONTROL Virgoletta singola`(')`]** selezionata: `"Test,'"John'",LastName"`
+* Output di esempio con **[!UICONTROL Back slash `(\)`]** selezionato: `"Test,\"John\",LastName"`
+* Output di esempio con **[!UICONTROL Single quote `(')`]** selezionato: `"Test,'"John'",LastName"`
 
 ### Output valore vuoto {#empty-value-output}
 
@@ -114,7 +114,7 @@ Utilizzare questo controllo per impostare la rappresentazione di stringa di un v
 
 * **[!UICONTROL Null (null)]**
 * **Stringa vuota tra virgolette doppie (&quot;&quot;)**
-* **[!UICONTROL Stringa vuota]**
+* **[!UICONTROL Empty string]**
 
 #### Esempi
 
@@ -122,7 +122,7 @@ Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna
 
 * Output di esempio con **[!UICONTROL null]** selezionato: `male,NULL,TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in un valore nullo.
 * Output di esempio con **&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in una coppia di virgolette doppie.
-* Output di esempio con **[!UICONTROL Stringa vuota]** selezionata: `male,,TestLastName`. In questo caso, Experience Platform mantiene il valore vuoto e lo esporta così com’è (senza virgolette doppie).
+* Output di esempio con **[!UICONTROL Empty string]** selezionato: `male,,TestLastName`. In questo caso, Experience Platform mantiene il valore vuoto e lo esporta così com’è (senza virgolette doppie).
 
 >[!TIP]
 >
@@ -139,7 +139,7 @@ Utilizza questo controllo per impostare la rappresentazione stringa di un valore
 
 * **[!UICONTROL Null (null)]**
 * **Stringa vuota tra virgolette doppie (&quot;&quot;)**
-* **[!UICONTROL Stringa vuota]**
+* **[!UICONTROL Empty string]**
 
 #### Esempi
 
@@ -147,7 +147,7 @@ Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna
 
 * Output di esempio con **[!UICONTROL null]** selezionato: `male,NULL,TestLastName`. In questo caso, non si verifica alcuna trasformazione e il file CSV contiene il valore null.
 * Output di esempio con **&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experience Platform sostituisce il valore null con virgolette doppie intorno a una stringa vuota.
-* Output di esempio con **[!UICONTROL Stringa vuota]** selezionata: `male,,TestLastName`. In questo caso, Experience Platform sostituisce il valore null con una stringa vuota (senza virgolette doppie).
+* Output di esempio con **[!UICONTROL Empty string]** selezionato: `male,,TestLastName`. In questo caso, Experience Platform sostituisce il valore null con una stringa vuota (senza virgolette doppie).
 
 ### Formato di compressione {#compression-format}
 

@@ -5,7 +5,7 @@ type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1710'
 ht-degree: 4%
 
 ---
@@ -35,11 +35,11 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 >title="Tipi di pubblico"
 >abstract="La vista Tipi di pubblico contiene informazioni su tutti i tipi di pubblico dell’organizzazione, con ulteriori informazioni sui relativi processi di attivazione e valutazione."
 
-Per accedere al dashboard **[!UICONTROL Tipi di pubblico]**, seleziona **[!UICONTROL Monitoraggio]** nell&#39;area di navigazione a sinistra. Nella pagina **[!UICONTROL Monitoraggio]**, seleziona la scheda **[!UICONTROL Tipi di pubblico]**.
+Per accedere al dashboard **[!UICONTROL Audiences]**, seleziona **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra. Una volta nella pagina **[!UICONTROL Monitoring]**, seleziona la scheda **[!UICONTROL Audiences]**.
 
 ![Scheda Pubblico. Vengono visualizzate le informazioni sull&#39;ultimo processo di valutazione e sull&#39;ultimo processo di esportazione.](../assets/ui/monitor-audiences/audience-card.png)
 
-Nella dashboard principale di **[!UICONTROL Audiences]**, la scheda **[!UICONTROL Audiences]** mostra lo stato e la data dell&#39;ultimo processo di valutazione e dell&#39;ultimo processo di esportazione.
+Nel dashboard **[!UICONTROL Audiences]** principale, la scheda **[!UICONTROL Audiences]** mostra lo stato e la data dell&#39;ultimo processo di valutazione e dell&#39;ultimo processo di esportazione.
 
 La dashboard stessa contiene metriche sia per i tipi di pubblico che per i processi di segmentazione. Per impostazione predefinita, la dashboard mostra le metriche relative al pubblico delle ultime 24 ore. Per ulteriori informazioni sulla visualizzazione dei processi di segmentazione, consulta la sezione [monitoraggio dei processi di segmentazione](#monitoring-segmentation-jobs-dashboard).
 
@@ -53,22 +53,22 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| **[!UICONTROL Nome pubblico]** | Il nome del pubblico. |
-| **[!UICONTROL Tipo di dati]** | Il tipo di dati del pubblico. I valori possibili includono **[!UICONTROL Cliente]**, **[!UICONTROL Account]** e **[!UICONTROL Prospect]**. Puoi visualizzare per i tipi di pubblico di un tipo di dati specificato utilizzando il filtro [!UICONTROL Tipo di dati] sopra la barra multifunzione delle schede. |
-| **[!UICONTROL Timestamp ultima valutazione]** | La data e l’ora di esecuzione dell’ultimo processo di valutazione del pubblico. |
-| **[!UICONTROL Ultimo stato di valutazione]** | Lo stato dell’ultimo processo di valutazione del pubblico. I valori possibili includono **[!UICONTROL Operazione riuscita]**, **[!UICONTROL Nessuna esecuzione]** e **[!UICONTROL Operazione non riuscita]**. |
-| **[!UICONTROL Ultimo metodo di valutazione]** | Il metodo di valutazione del pubblico. Poiché è supportata solo la segmentazione batch, l&#39;unico valore possibile è **[!UICONTROL Batch]**. |
-| **[!UICONTROL Ultimi profili di valutazione]** | Il numero di profili valutati nell’ultimo processo di valutazione del pubblico. |
-| **[!UICONTROL Timestamp ultima attivazione]** | La data e l’ora di esecuzione dell’ultimo processo di attivazione del pubblico. |
-| **[!UICONTROL Stato ultima attivazione]** | Lo stato dell’ultimo processo di attivazione del pubblico. I valori possibili includono **[!UICONTROL Operazione riuscita]**, **[!UICONTROL Nessuna esecuzione]** e **[!UICONTROL Operazione non riuscita]**. |
-| **[!UICONTROL Identità ultima attivazione]** | Il numero di identità attivate nell’ultimo processo di attivazione del pubblico. |
-| **[!UICONTROL Destinazione ultima attivazione]** | Il nome della destinazione a cui è stato attivato l’ultimo processo di attivazione del pubblico. |
+| **[!UICONTROL Audience name]** | Il nome del pubblico. |
+| **[!UICONTROL Data type]** | Il tipo di dati del pubblico. I valori possibili sono **[!UICONTROL Customer]**, **[!UICONTROL Account]** e **[!UICONTROL Prospect]**. Puoi visualizzare per i tipi di pubblico di un tipo di dati specificato utilizzando il filtro [!UICONTROL Data type] sopra la barra multifunzione delle schede. |
+| **[!UICONTROL Last evaluation timestamp]** | La data e l’ora di esecuzione dell’ultimo processo di valutazione del pubblico. |
+| **[!UICONTROL Last evaluation status]** | Lo stato dell’ultimo processo di valutazione del pubblico. I valori possibili sono **[!UICONTROL Success]**, **[!UICONTROL No runs]** e **[!UICONTROL Failed]**. |
+| **[!UICONTROL Last evaluation method]** | Il metodo di valutazione del pubblico. Poiché è supportata solo la segmentazione batch, l&#39;unico valore possibile è **[!UICONTROL Batch]**. |
+| **[!UICONTROL Last evaluation profiles]** | Il numero di profili valutati nell’ultimo processo di valutazione del pubblico. |
+| **[!UICONTROL Last activation timestamp]** | La data e l’ora di esecuzione dell’ultimo processo di attivazione del pubblico. |
+| **[!UICONTROL Last activation status]** | Lo stato dell’ultimo processo di attivazione del pubblico. I valori possibili sono **[!UICONTROL Success]**, **[!UICONTROL No runs]** e **[!UICONTROL Failed]**. |
+| **[!UICONTROL Last activation identities]** | Il numero di identità attivate nell’ultimo processo di attivazione del pubblico. |
+| **[!UICONTROL Last activation destination]** | Il nome della destinazione a cui è stato attivato l’ultimo processo di attivazione del pubblico. |
 
 Puoi filtrare i risultati per un pubblico specifico e visualizzare i relativi processi di segmentazione selezionando l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter-add.png)). I processi di segmentazione sono ordinati in ordine cronologico, con i processi di segmentazione più recenti che appaiono per primi.
 
 ![L&#39;icona del filtro è evidenziata. Selezionando questa opzione è possibile visualizzare i processi di segmentazione per il pubblico specificato.](../assets/ui/monitor-audiences/filter-audience.png)
 
-Viene visualizzato il dashboard del pubblico filtrato. La scheda **[!UICONTROL Tipi di pubblico]** mostra lo stato e la data dell&#39;ultimo processo di valutazione e dell&#39;ultimo processo di attivazione.
+Viene visualizzato il dashboard del pubblico filtrato. La scheda **[!UICONTROL Audiences]** mostra lo stato e la data dell&#39;ultimo processo di valutazione e dell&#39;ultimo processo di attivazione.
 
 ![Scheda Pubblico. Vengono visualizzate le informazioni sull&#39;ultimo processo di valutazione e sull&#39;ultimo processo di attivazione.](../assets/ui/monitor-audiences/specified-audience-card.png)
 
@@ -80,14 +80,14 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| **[!UICONTROL Inizio processo]** | La data e l’ora di inizio del processo di segmentazione. |
-| **[!UICONTROL Tipo]** | Indica il tipo di processo di segmentazione. I due tipi di processo supportati sono **attivazione** e **valutazione** processi. |
-| **[!UICONTROL Processo completato]** | La data e l’ora in cui il processo di segmentazione è stato completato. |
-| **[!UICONTROL Tempo di elaborazione]** | Il tempo necessario per il completamento del processo di segmentazione. |
-| **[!UICONTROL Stato processo]** | Stato del processo di segmentazione. I valori supportati includono **[!UICONTROL Operazione riuscita]**, **[!UICONTROL Operazione in corso]** e **[!UICONTROL Operazione non riuscita]**. |
-| **[!UICONTROL Conteggio dei profili]** | Il numero di profili che il processo di segmentazione sta valutando. Ogni utente deve avere un profilo univoco. |
-| **[!UICONTROL Identità attivata]** | Il numero di identità attivate dal processo di segmentazione. Ogni profilo può avere più identità. Ad esempio, un profilo potrebbe avere come identità un’e-mail, un numero di telefono e un numero fedeltà. |
-| **[!UICONTROL Nome destinazione]** | Il nome della destinazione in cui viene attivato il processo di segmentazione. |
+| **[!UICONTROL Job start]** | La data e l’ora di inizio del processo di segmentazione. |
+| **[!UICONTROL Type]** | Indica il tipo di processo di segmentazione. I due tipi di processo supportati sono **attivazione** e **valutazione** processi. |
+| **[!UICONTROL Job complete]** | La data e l’ora in cui il processo di segmentazione è stato completato. |
+| **[!UICONTROL Processing time]** | Il tempo necessario per il completamento del processo di segmentazione. |
+| **[!UICONTROL Job status]** | Stato del processo di segmentazione. I valori supportati sono **[!UICONTROL Success]**, **[!UICONTROL In Progress]** e **[!UICONTROL Failed]**. |
+| **[!UICONTROL Profile count]** | Il numero di profili che il processo di segmentazione sta valutando. Ogni utente deve avere un profilo univoco. |
+| **[!UICONTROL Identity activated]** | Il numero di identità attivate dal processo di segmentazione. Ogni profilo può avere più identità. Ad esempio, un profilo potrebbe avere come identità un’e-mail, un numero di telefono e un numero fedeltà. |
+| **[!UICONTROL Destination name]** | Il nome della destinazione in cui viene attivato il processo di segmentazione. |
 
 Puoi filtrare ulteriormente per un processo di segmentazione specifico e visualizzarne i dettagli selezionando l&#39;icona del filtro (![Icona del filtro.](/help/images/icons/filter.png)). Esistono due diversi tipi di processi di segmentazione che possono essere filtrati: processi di attivazione e processi di valutazione.
 
@@ -101,17 +101,17 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| **[!UICONTROL Profili ricevuti]** | Numero totale di profili ricevuti nel flusso di attivazione. |
-| **[!UICONTROL Identità attivate]** | Numero totale di identità attivate correttamente nella destinazione, in base ai profili ricevuti. |
-| **[!UICONTROL Identità escluse]** | Il numero totale di identità escluse dall’attivazione nella destinazione, in base ai profili ricevuti. Queste identità potrebbero essere escluse a causa di attributi mancanti o violazioni del consenso. |
-| **[!UICONTROL Dimensione dei dati]** | Dimensione del flusso di dati da attivare. |
-| **[!UICONTROL File totali]** | Numero totale di file attivati nel flusso di dati. |
-| **[!UICONTROL Stato]** | Stato corrente del processo di attivazione. |
-| **[!UICONTROL Inizio esecuzione flusso di dati]** | Data e ora di inizio del processo di attivazione. |
-| **[!UICONTROL Fine esecuzione flusso di dati]** | La data e l’ora in cui è terminato il processo di attivazione. |
-| **[!UICONTROL ID esecuzione flusso di dati]** | ID del processo di attivazione corrente. |
-| **[!UICONTROL ID organizzazione IMS]** | ID dell&#39;organizzazione a cui appartiene il processo di attivazione. |
-| **[!UICONTROL Nome destinazione]** | Nome della destinazione a cui vengono attivati i dati. |
+| **[!UICONTROL Profiles received]** | Numero totale di profili ricevuti nel flusso di attivazione. |
+| **[!UICONTROL Identities activated]** | Numero totale di identità attivate correttamente nella destinazione, in base ai profili ricevuti. |
+| **[!UICONTROL Identities excluded]** | Il numero totale di identità escluse dall’attivazione nella destinazione, in base ai profili ricevuti. Queste identità potrebbero essere escluse a causa di attributi mancanti o violazioni del consenso. |
+| **[!UICONTROL Size of data]** | Dimensione del flusso di dati da attivare. |
+| **[!UICONTROL Total files]** | Numero totale di file attivati nel flusso di dati. |
+| **[!UICONTROL Status]** | Stato corrente del processo di attivazione. |
+| **[!UICONTROL Dataflow run start]** | Data e ora di inizio del processo di attivazione. |
+| **[!UICONTROL Dataflow run end]** | La data e l’ora in cui è terminato il processo di attivazione. |
+| **[!UICONTROL Dataflow run ID]** | ID del processo di attivazione corrente. |
+| **[!UICONTROL IMS org ID]** | ID dell&#39;organizzazione a cui appartiene il processo di attivazione. |
+| **[!UICONTROL Destination name]** | Nome della destinazione a cui vengono attivati i dati. |
 
 Nella sezione tipi di pubblico puoi visualizzare un elenco dei tipi di pubblico attivati come parte del processo di attivazione.
 
@@ -121,11 +121,11 @@ Per la sezione dei tipi di pubblico sono disponibili le metriche seguenti:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| **[!UICONTROL Nome]** | Il nome del pubblico che è stato attivato. |
-| **[!UICONTROL Identità attivate]** | Numero totale di identità attivate correttamente nella destinazione, in base ai profili ricevuti. |
-| **[!UICONTROL Identità escluse]** | Il numero totale di identità escluse dall’attivazione nella destinazione, in base ai profili ricevuti. Queste identità potrebbero essere escluse a causa di attributi mancanti o di una violazione del consenso. |
-| **[!UICONTROL Stato ultima esecuzione del flusso di dati]** | Lo stato dell’ultimo processo di attivazione eseguito per quel pubblico. |
-| **[!UICONTROL Data ultima esecuzione del flusso di dati]** | La data e l’ora dell’ultimo processo di attivazione eseguito per quel pubblico. |
+| **[!UICONTROL Name]** | Il nome del pubblico che è stato attivato. |
+| **[!UICONTROL Identities activated]** | Numero totale di identità attivate correttamente nella destinazione, in base ai profili ricevuti. |
+| **[!UICONTROL Identities excluded]** | Il numero totale di identità escluse dall’attivazione nella destinazione, in base ai profili ricevuti. Queste identità potrebbero essere escluse a causa di attributi mancanti o di una violazione del consenso. |
+| **[!UICONTROL Last dataflow run status]** | Lo stato dell’ultimo processo di attivazione eseguito per quel pubblico. |
+| **[!UICONTROL Last dataflow run date]** | La data e l’ora dell’ultimo processo di attivazione eseguito per quel pubblico. |
 
 Inoltre, puoi visualizzare i dettagli sugli errori di esecuzione del flusso di dati. Nella sezione errori di esecuzione del flusso di dati, puoi visualizzare sia le identità con errori che quelle escluse. La sezione errori include dettagli sul codice di errore e sul numero di identità non riuscite o escluse.
 
@@ -141,29 +141,29 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| **[!UICONTROL Profili totali]** | Numero totale di profili da valutare. |
-| **[!UICONTROL Stato]** | Stato del processo di valutazione. Gli stati possibili per il processo di valutazione includono **[!UICONTROL Operazione completata]** e **[!UICONTROL Operazione non riuscita]**. |
-| **[!UICONTROL Inizio processo]** | Data e ora di inizio del processo di valutazione. |
-| **[!UICONTROL Fine processo]** | Data e ora di fine del processo di valutazione. |
-| **[!UICONTROL Tipo di processo]** | Il tipo di processo di segmentazione. In questo caso, sarà sempre un processo di **[!UICONTROL Valutazione del segmento]**. |
-| **[!UICONTROL Tipo di valutazione]** | Tipo di valutazione in corso. Può essere **[!UICONTROL Batch]** o **[!UICONTROL Streaming]**. |
-| **[!UICONTROL ID processo]** | ID del processo di valutazione. |
-| **[!UICONTROL ID organizzazione IMS]** | ID dell&#39;organizzazione a cui appartiene il processo di valutazione. |
-| **[!UICONTROL Nome pubblico]** | Il nome del pubblico che viene valutato. |
-| **[!UICONTROL ID pubblico]** | ID del pubblico che viene valutato. |
+| **[!UICONTROL Total profiles]** | Numero totale di profili da valutare. |
+| **[!UICONTROL Status]** | Stato del processo di valutazione. Gli stati possibili per il processo di valutazione includono **[!UICONTROL Success]** e **[!UICONTROL Failed]**. |
+| **[!UICONTROL Job start]** | Data e ora di inizio del processo di valutazione. |
+| **[!UICONTROL Job end]** | Data e ora di fine del processo di valutazione. |
+| **[!UICONTROL Job type]** | Il tipo di processo di segmentazione. In questo caso, sarà sempre un processo **[!UICONTROL Segment evaluation]**. |
+| **[!UICONTROL Evaluation type]** | Tipo di valutazione in corso. Può essere **[!UICONTROL Batch]** o **[!UICONTROL Streaming]**. |
+| **[!UICONTROL Job ID]** | ID del processo di valutazione. |
+| **[!UICONTROL IMS org ID]** | ID dell&#39;organizzazione a cui appartiene il processo di valutazione. |
+| **[!UICONTROL Audience name]** | Il nome del pubblico che viene valutato. |
+| **[!UICONTROL Audience ID]** | ID del pubblico che viene valutato. |
 
-Nella sezione [!UICONTROL Tipi di pubblico] è disponibile un elenco dei tipi di pubblico che vengono valutati come parte del processo di valutazione. Puoi filtrare l’elenco dei tipi di pubblico per nome utilizzando la barra di ricerca.
+Nella sezione [!UICONTROL Audiences] è possibile visualizzare un elenco dei tipi di pubblico che vengono valutati come parte del processo di valutazione. Puoi filtrare l’elenco dei tipi di pubblico per nome utilizzando la barra di ricerca.
 
 >[!IMPORTANT]
 >
 >Questa visualizzazione dashboard supporta attualmente fino a 800 metriche per il pubblico.
 
-Per la sezione [!UICONTROL Tipi di pubblico] sono disponibili le metriche seguenti:
+Per la sezione [!UICONTROL Audiences] sono disponibili le metriche seguenti:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| **[!UICONTROL Nome]** | Il nome del pubblico che viene valutato. |
-| **[!UICONTROL Conteggio dei profili]** | Il numero di profili che vengono valutati. |
+| **[!UICONTROL Name]** | Il nome del pubblico che viene valutato. |
+| **[!UICONTROL Profile count]** | Il numero di profili che vengono valutati. |
 
 ## Dashboard di monitoraggio dei processi di segmentazione {#monitoring-segmentation-jobs-dashboard}
 
@@ -172,7 +172,7 @@ Per la sezione [!UICONTROL Tipi di pubblico] sono disponibili le metriche seguen
 >title="Processi di segmentazione"
 >abstract="La vista processi di segmentazione contiene informazioni sui processi di valutazione ed esportazione per tutti i tipi di pubblico."
 
-Per accedere al dashboard **[!UICONTROL Processi di segmentazione]**, seleziona **[!UICONTROL Processi di segmentazione]** nel dashboard [!UICONTROL Tipi di pubblico]. Il dashboard [!UICONTROL Monitoraggio] contiene metriche e informazioni sui processi di valutazione ed esportazione.
+Per accedere al dashboard **[!UICONTROL Segmentation Jobs]**, selezionare **[!UICONTROL Segmentation jobs]** nel dashboard [!UICONTROL Audiences]. Il dashboard [!UICONTROL Monitoring] contiene metriche e informazioni sui processi di valutazione ed esportazione.
 
 >[!NOTE]
 >
@@ -180,14 +180,14 @@ Per accedere al dashboard **[!UICONTROL Processi di segmentazione]**, seleziona 
 
 ![Viene visualizzato il dashboard di monitoraggio dei processi di segmentazione. L&#39;opzione per passare da Audiences a Segmentation job è evidenziata.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
 
-Utilizza il dashboard [!UICONTROL Processi di segmentazione] per capire se la valutazione e l&#39;esportazione del profilo si verificano in tempo e senza eccezioni, in modo che i servizi a valle per l&#39;attivazione della destinazione possano disporre dei dati di profilo valutati più recenti.
+Utilizzare il dashboard [!UICONTROL Segmentation Jobs] per capire se la valutazione e l&#39;esportazione del profilo si verificano in tempo e senza eccezioni, in modo che i servizi a valle per l&#39;attivazione della destinazione possano disporre dei dati di profilo valutati più recenti.
 
 Per i processi di segmentazione sono disponibili le metriche seguenti:
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| **[!UICONTROL Processo di segmentazione]** | Indica il nome del processo di segmentazione. |
-| **[!UICONTROL Tipo]** | Indica il tipo di processo di segmentazione, esportazione o valutazione. In entrambi i casi, il processo di segmentazione valuta o esporta **tutti** i tipi di pubblico appartenenti a un&#39;organizzazione. Per ulteriori informazioni sui processi di esportazione, leggere la guida sull&#39;endpoint dei [processi di esportazione](../../segmentation/api/export-jobs.md). Per ulteriori informazioni sui processi di valutazione, consulta l&#39;esercitazione su [valutazione di una definizione di segmento](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
-| **[!UICONTROL Inizio processo]** | La data e l’ora di inizio del processo di segmentazione. |
-| **[!UICONTROL Fine processo]** | La data e l’ora in cui il processo di segmentazione è stato completato. |
-| **[!UICONTROL Stato]** | Stato del processo completato. Gli stati possibili per il processo di segmentazione includono Completato o Non riuscito. |
+| **[!UICONTROL Segmentation job]** | Indica il nome del processo di segmentazione. |
+| **[!UICONTROL Type]** | Indica il tipo di processo di segmentazione, esportazione o valutazione. In entrambi i casi, il processo di segmentazione valuta o esporta **tutti** i tipi di pubblico appartenenti a un&#39;organizzazione. Per ulteriori informazioni sui processi di esportazione, leggere la guida sull&#39;endpoint dei [processi di esportazione](../../segmentation/api/export-jobs.md). Per ulteriori informazioni sui processi di valutazione, consulta l&#39;esercitazione su [valutazione di una definizione di segmento](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Job start]** | La data e l’ora di inizio del processo di segmentazione. |
+| **[!UICONTROL Job end]** | La data e l’ora in cui il processo di segmentazione è stato completato. |
+| **[!UICONTROL Status]** | Stato del processo completato. Gli stati possibili per il processo di segmentazione includono Completato o Non riuscito. |

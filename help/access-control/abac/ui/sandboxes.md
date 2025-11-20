@@ -5,8 +5,8 @@ description: Questo documento fornisce informazioni sulla gestione delle sandbox
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 13%
+source-wordcount: '258'
+ht-degree: 18%
 
 ---
 
@@ -22,7 +22,7 @@ Le sandbox sono partizioni virtuali all’interno di una singola istanza di Expe
 
 ## Configurare le sandbox
 
-Per visualizzare i dettagli e i ruoli a cui/con cui è assegnata una sandbox, seleziona la scheda **[!UICONTROL Sandbox]**.
+Per visualizzare i dettagli e i ruoli a cui/con cui è assegnata una sandbox, selezionare la scheda **[!UICONTROL Sandboxes]**.
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
@@ -32,7 +32,7 @@ La scheda dei dettagli fornisce una panoramica della sandbox. Nella panoramica s
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-Seleziona la scheda **[!UICONTROL Ruoli]** per visualizzare i ruoli a cui è assegnata la sandbox.
+Seleziona la scheda **[!UICONTROL Roles]** per visualizzare i ruoli a cui è assegnata la sandbox.
 
 ![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 

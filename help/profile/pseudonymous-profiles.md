@@ -6,7 +6,7 @@ description: Questo documento fornisce indicazioni generali sulla configurazione
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1260'
 ht-degree: 7%
 
 ---
@@ -49,15 +49,15 @@ Un profilo viene considerato per la scadenza dei dati pseudonimi se soddisfa le 
 >
 >Ulteriori informazioni sulle autorizzazioni in Experience Platform sono disponibili nella [panoramica sul controllo degli accessi](../access-control/home.md#permissions).
 
-Per aggiungere la scadenza dei dati del profilo pseudonimo alla tua organizzazione, vai alla dashboard Profilo e seleziona **[!UICONTROL Impostazioni]**.
+Per aggiungere la scadenza dei dati del profilo pseudonimo alla tua organizzazione, vai alla dashboard Profilo e seleziona **[!UICONTROL Settings]**.
 
 ![Il pulsante Impostazioni nel dashboard Profilo è evidenziato.](./images/pseudonymous-profiles/profile-settings.png)
 
-Viene visualizzato il popover [!UICONTROL Impostazioni profilo]. In questo popover puoi impostare il numero di giorni per la scadenza dei dati del profilo pseudonimo e lo spazio dei nomi delle identità utilizzato per la scadenza dei dati.
+Verrà visualizzato il popover [!UICONTROL Profile settings]. In questo popover puoi impostare il numero di giorni per la scadenza dei dati del profilo pseudonimo e lo spazio dei nomi delle identità utilizzato per la scadenza dei dati.
 
 Per le sandbox di produzione, la scadenza predefinita dei dati del profilo pseudonimo è di 14 giorni, con un minimo di 1 giorno e un massimo di 365 giorni. Per le sandbox di sviluppo, la scadenza predefinita dei dati del profilo pseudonimo è di 3 giorni, con un minimo di 1 giorno e un massimo di 365 giorni.
 
-Seleziona **[!UICONTROL Applica]** per salvare le impostazioni di scadenza dei dati.
+Seleziona **[!UICONTROL Apply]** per salvare le impostazioni di scadenza dei dati.
 
 ![Il popover per aggiungere la scadenza dei dati del profilo pseudonimo ai profili della tua organizzazione. Il pulsante Applica è evidenziato.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
@@ -131,7 +131,7 @@ Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event
 
 +++ Risposta
 
-- Il sistema di eliminazione [&#128279;](../identity-service/guardrails.md) del servizio Identity  &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
+- Il sistema di eliminazione [ del servizio Identity ](../identity-service/guardrails.md) &quot;first-in, first-out&quot; potrebbe eliminare gli ECID dal grafo delle identità, archiviati in Identity Service.
 - Se questo comportamento di eliminazione determina la memorizzazione di un profilo solo ECID nel profilo cliente in tempo reale (archivio profili), la scadenza dei dati del profilo pseudonimo eliminerà tale profilo dall’archivio profili.
 
 +++

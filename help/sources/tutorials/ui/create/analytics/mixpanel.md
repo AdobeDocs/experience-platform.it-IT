@@ -4,7 +4,7 @@ description: Scopri come creare una connessione sorgente Mixpanel utilizzando l�
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '783'
 ht-degree: 11%
 
 ---
@@ -37,25 +37,25 @@ Per ulteriori informazioni sull&#39;autenticazione dell&#39;origine [!DNL Mixpan
 
 ## Connetti il tuo account [!DNL Mixpanel]
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria *Analytics*, selezionare [!DNL Mixpanel], quindi **[!UICONTROL Aggiungi dati]**.
+Nella categoria *Analytics* selezionare [!DNL Mixpanel], quindi **[!UICONTROL Add data]**.
 
 ![catalogo](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti account Mixpanel]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect Mixpanel account]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 ### Account esistente
 
-Per utilizzare un account esistente, seleziona l&#39;account [!DNL Mixpanel] con cui vuoi creare un nuovo flusso di dati, quindi seleziona **[!UICONTROL Successivo]** per continuare.
+Per utilizzare un account esistente, seleziona l&#39;account [!DNL Mixpanel] con cui desideri creare un nuovo flusso di dati, quindi seleziona **[!UICONTROL Next]** per continuare.
 
 ![esistente](../../../../images/tutorials/create/mixpanel-export-events/existing.png)
 
 ### Nuovo account
 
-Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e le tue credenziali. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
+Se si sta creando un nuovo account, selezionare **[!UICONTROL New account]**, quindi fornire un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connect to source]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![nuovo](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
@@ -67,11 +67,11 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 >abstract="Il fuso orario deve corrispondere a quello impostato nel tuo profilo Mixpanel, poiché Experience Platform utilizza il fuso orario del progetto designato per acquisire i dati rilevanti da Mixpanel. Prima di registrare l’evento in un archivio dati, Mixpanel regolerà il proprio fuso orario in base a quello del tuo progetto."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=it#project-id-and-timezone" text="Ulteriori informazioni sono disponibili nella documentazione"
 
-Una volta autenticata l&#39;origine, fornisci l&#39;ID progetto e il fuso orario, quindi seleziona **[!UICONTROL Seleziona]**.
+Una volta autenticata l&#39;origine, specificare l&#39;ID progetto e il fuso orario, quindi selezionare **[!UICONTROL Select]**.
 
 Il fuso orario designato prima dell&#39;acquisizione dei dati [!DNL Mixpanel] in Experience Platform deve essere uguale all&#39;impostazione del fuso orario del profilo [!DNL Mixpanel]. Eventuali modifiche al fuso orario dei dati verranno applicate solo ai nuovi eventi e i vecchi eventi rimarranno nel fuso orario precedentemente designato. [!DNL Mixpanel] è compatibile con l&#39;ora legale e regolerà in modo appropriato il timestamp di acquisizione. Per ulteriori informazioni sull&#39;effetto dei fusi orari sui dati, vedere la guida di [!DNL Mixpanel] alla gestione dei fusi orari per i progetti [.](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel)
 
-Dopo alcuni istanti, l’interfaccia corretta viene aggiornata a un pannello di anteprima, che consente di esaminare lo schema prima di creare un flusso di dati. Al termine, selezionare **[!UICONTROL Avanti]**.
+Dopo alcuni istanti, l’interfaccia corretta viene aggiornata a un pannello di anteprima, che consente di esaminare lo schema prima di creare un flusso di dati. Al termine, selezionare **[!UICONTROL Next]**.
 
 ![configurazione](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
@@ -87,7 +87,7 @@ Le sezioni seguenti forniscono ulteriori risorse a cui è possibile fare riferim
 
 Di seguito vengono descritti i passaggi che è possibile eseguire per verificare che la connessione all&#39;origine [!DNL Mixpanel] sia stata eseguita correttamente e che gli eventi [!DNL Mixpanel] vengano acquisiti in Experience Platform.
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Set di dati]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Set di dati]. Nella schermata [!UICONTROL Attività set di dati] vengono visualizzati i dettagli delle esecuzioni.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Datasets]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Datasets]. Nella schermata [!UICONTROL Dataset Activity] vengono visualizzati i dettagli delle esecuzioni.
 
 ![attività-set di dati](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
@@ -95,7 +95,7 @@ Quindi, seleziona l’ID di esecuzione del flusso di dati che desideri visualizz
 
 ![monitoraggio dei flussi di dati](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
-Infine, seleziona **[!UICONTROL Anteprima set di dati]** per visualizzare i dati acquisiti.
+Infine, seleziona **[!UICONTROL Preview dataset]** per visualizzare i dati acquisiti.
 
 ![anteprima-set di dati](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 

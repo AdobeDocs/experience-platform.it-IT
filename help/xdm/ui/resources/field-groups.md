@@ -6,8 +6,8 @@ description: Scopri come creare e modificare i gruppi di campi dello schema nell
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 8%
+source-wordcount: '966'
+ht-degree: 9%
 
 ---
 
@@ -34,11 +34,11 @@ Sebbene non sia necessario per questa guida, è consigliabile seguire l&#39;eser
 
 Per creare un nuovo gruppo di campi, devi innanzitutto selezionare uno schema a cui aggiungere il gruppo di campi. Puoi scegliere di [creare un nuovo schema](./schemas.md#create) o [selezionare uno schema esistente da modificare](./schemas.md#edit).
 
-Dopo aver aperto lo schema in [!DNL Schema Editor], seleziona **[!UICONTROL Aggiungi]** accanto alla sezione [!UICONTROL Gruppi di campi] nella barra a sinistra.
+Dopo aver aperto lo schema in [!DNL Schema Editor], seleziona **[!UICONTROL Add]** accanto alla sezione [!UICONTROL Field groups] nella barra a sinistra.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Nella finestra di dialogo visualizzata, seleziona **[!UICONTROL Crea nuovo gruppo di campi]**. Qui puoi fornire **[!UICONTROL Nome visualizzato]** e **[!UICONTROL Descrizione]** per il gruppo di campi. Al termine, selezionare **[!UICONTROL Aggiungi gruppi di campi]**.
+Nella finestra di dialogo visualizzata, selezionare **[!UICONTROL Create new field group]**. Qui puoi fornire **[!UICONTROL Display name]** e **[!UICONTROL Description]** per il gruppo di campi. Al termine, selezionare **[!UICONTROL Add field groups]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -48,9 +48,9 @@ Nella finestra di dialogo visualizzata, seleziona **[!UICONTROL Crea nuovo grupp
 
 ## Filtra gruppi di campi {#filter}
 
-L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. L’impostazione predefinita visualizza i gruppi di campi definiti da Adobe. Tuttavia, puoi anche filtrare l’elenco per mostrare quelli creati dalla tua organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Personalizzato]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
+L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. L’impostazione predefinita visualizza i gruppi di campi definiti da Adobe. Tuttavia, puoi anche filtrare l’elenco per mostrare quelli creati dalla tua organizzazione. Selezionare il pulsante di opzione per scegliere tra le opzioni [!UICONTROL Standard] e [!UICONTROL Custom]. L&#39;opzione [!UICONTROL Standard] mostra le entità create da Adobe e l&#39;opzione [!UICONTROL Custom] mostra le entità create all&#39;interno dell&#39;organizzazione.
 
-![Scheda [!UICONTROL Gruppi di campi] dell&#39;area di lavoro [!UICONTROL Schemi] con [!UICONTROL Standard] e [!UICONTROL Personalizzato] evidenziati.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![Scheda [!UICONTROL Field groups] dell&#39;area di lavoro [!UICONTROL Schemas] con [!UICONTROL Standard] e [!UICONTROL Custom] evidenziati.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Modificare un gruppo di campi esistente {#edit}
 
@@ -74,17 +74,17 @@ Per aggiungere campi a un gruppo di campi personalizzato, inizia selezionando l&
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Nell&#39;area di lavoro viene visualizzato un segnaposto per **[!UICONTROL Campo senza titolo]** e la barra a destra si aggiorna per mostrare i controlli per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell&#39;interfaccia utente](../fields/overview.md#define) per i passaggi specifici su come configurare diversi tipi di campi.
+Nell&#39;area di lavoro viene visualizzato un segnaposto **[!UICONTROL Untitled Field]** e la barra a destra si aggiorna per mostrare i controlli per configurare le proprietà del campo. Consulta la guida su [definizione dei campi nell&#39;interfaccia utente](../fields/overview.md#define) per i passaggi specifici su come configurare diversi tipi di campi.
 
-In **[!UICONTROL Assegna a]**, seleziona l&#39;opzione **[!UICONTROL Gruppo di campi]**, quindi utilizza il menu a discesa per selezionare il gruppo di campi desiderato dall&#39;elenco. Per limitare i risultati, puoi iniziare a digitare il nome del gruppo di campi.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-In **[!UICONTROL Assegna a]**, seleziona l&#39;opzione **[!UICONTROL Gruppo di campi]**, quindi utilizza il menu a discesa per selezionare il gruppo di campi desiderato dall&#39;elenco. Per limitare i risultati, puoi iniziare a digitare il nome del gruppo di campi.
+In **[!UICONTROL Assign to]**, selezionare l&#39;opzione **[!UICONTROL Field Group]**, quindi utilizzare il menu a discesa per selezionare il gruppo di campi desiderato dall&#39;elenco. Per limitare i risultati, puoi iniziare a digitare il nome del gruppo di campi.
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-Una volta aggiunto allo schema, il campo viene assegnato al gruppo di campi selezionato. Continua ad aggiungere al gruppo di campi tutti i campi necessari. Al termine, selezionare **[!UICONTROL Salva]** per salvare sia lo schema che il gruppo di campi.
+In **[!UICONTROL Assign to]**, selezionare l&#39;opzione **[!UICONTROL Field Group]**, quindi utilizzare il menu a discesa per selezionare il gruppo di campi desiderato dall&#39;elenco. Per limitare i risultati, puoi iniziare a digitare il nome del gruppo di campi.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Una volta aggiunto allo schema, il campo viene assegnato al gruppo di campi selezionato. Continua ad aggiungere al gruppo di campi tutti i campi necessari. Al termine, selezionare **[!UICONTROL Save]** per salvare sia lo schema che il gruppo di campi.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Se lo stesso gruppo di campi è già utilizzato in altri schemi, i campi appena 
 
 ## Passaggi successivi {#next-steps}
 
-Questa guida illustra come creare e modificare i gruppi di campi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemi], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemi]](../overview.md).
+Questa guida illustra come creare e modificare i gruppi di campi utilizzando l’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemas], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemas]](../overview.md).
 
 Per informazioni su come gestire i gruppi di campi utilizzando l&#39;API [!DNL Schema Registry], consulta la [guida dell&#39;endpoint dei gruppi di campi](../../api/field-groups.md).

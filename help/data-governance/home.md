@@ -6,7 +6,7 @@ description: La governance dei dati di Adobe Experience Platform consente di ges
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1619'
 ht-degree: 9%
 
 ---
@@ -90,8 +90,8 @@ Un esempio di azione di marketing potrebbe essere il desiderio di esportare un s
 
 Sono disponibili due tipi di criteri:
 
-* **[!UICONTROL Criteri di governance dei dati]**: limita l&#39;attivazione dei dati in base all&#39;azione di marketing in esecuzione e alle etichette di utilizzo dei dati presenti nei dati in questione.
-* **[!UICONTROL Criteri di consenso]**: filtra i profili che possono essere attivati in [destinazioni](../destinations/home.md) in base al consenso o alle preferenze dei tuoi clienti.
+* **[!UICONTROL Data governance policy]**: limita l&#39;attivazione dei dati in base all&#39;azione di marketing in esecuzione e alle etichette di utilizzo dei dati presenti nei dati in questione.
+* **[!UICONTROL Consent policy]**: filtra i profili attivabili in [destinazioni](../destinations/home.md) in base al consenso o alle preferenze dei tuoi clienti.
 
 Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri utilizzando l’API del servizio criteri o l’interfaccia utente di Experience Platform. Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la [panoramica dei criteri](./policies/overview.md).
 
@@ -132,8 +132,8 @@ La tabella seguente illustra i termini chiave relativi alla governance dei dati 
 
 Il video seguente ha lo scopo di aiutarti a comprendere il framework di governance dei dati.
 
->[!VIDEO](https://video.tv.adobe.com/v/35476?quality=12&enable10seconds=on&speedcontrol=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 Il video seguente fornisce indicazioni su come applicare le etichette di utilizzo dei dati agli schemi o all’intero set di dati in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422790/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

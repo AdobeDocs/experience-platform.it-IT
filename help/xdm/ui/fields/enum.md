@@ -6,7 +6,7 @@ description: Scopri come definire le enumerazioni e i valori consigliati per i c
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1222'
 ht-degree: 8%
 
 ---
@@ -22,25 +22,25 @@ In Experience Data Model (XDM), a un campo stringa può essere assegnato un set 
 
 **[!UICONTROL Enums]** vincola i valori che possono essere acquisiti per un campo stringa a un set predefinito. Se tenti di acquisire dati in un campo enum e il valore non corrisponde a nessuno di quelli definiti nella relativa configurazione, l’acquisizione verrà negata.
 
-A differenza delle enumerazioni, l&#39;opzione **[!UICONTROL Valori suggeriti]** consente di indicare un insieme di valori consigliati per un campo stringa che non vincola i valori che può acquisire. Al contrario, i valori suggeriti influiscono sui valori predefiniti disponibili nell&#39;[Interfaccia utente segmentazione](../../../segmentation/ui/overview.md) quando si include il campo stringa come attributo.
+A differenza delle enumerazioni, l&#39;opzione **[!UICONTROL Suggested values]** consente di indicare un insieme di valori consigliati per un campo stringa che non vincolano i valori che può acquisire. Al contrario, i valori suggeriti influiscono sui valori predefiniti disponibili nell&#39;[Interfaccia utente segmentazione](../../../segmentation/ui/overview.md) quando si include il campo stringa come attributo.
 
 Quando [definisci un nuovo campo](./overview.md#define) nell&#39;interfaccia utente di Adobe Experience Platform e imposti il tipo su [!UICONTROL String], puoi definire un [enum](#enum) o [valori suggeriti](#suggested-values) per quel campo.
 
 ![Immagine che mostra l&#39;opzione Enum &amp; Valori suggeriti abilitata per un campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/enum-options-selected.png)
 
-Questo documento illustra come definire le enumerazioni e i valori suggeriti nell&#39;area di lavoro dell&#39;interfaccia utente [!UICONTROL Schemi]. Per una rapida panoramica sulle enumerazioni e sui valori suggeriti, tra cui come configurarle nell’interfaccia utente e i relativi effetti a valle, guarda il video seguente:
+Questo documento illustra come definire le enumerazioni e i valori suggeriti nell&#39;area di lavoro dell&#39;interfaccia utente [!UICONTROL Schemas]. Per una rapida panoramica sulle enumerazioni e sui valori suggeriti, tra cui come configurarle nell’interfaccia utente e i relativi effetti a valle, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413678/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Definire un&#39;enumerazione {#enum}
 
-Seleziona **[!UICONTROL Numeri e valori suggeriti]**, quindi seleziona **[!UICONTROL Numeri]**. Vengono visualizzati controlli aggiuntivi che consentono di specificare i vincoli di valore per l&#39;enum. Per aggiungere un vincolo, selezionare **[!UICONTROL Aggiungi riga]**.
+Seleziona **[!UICONTROL Enums and Suggested Values]**, quindi seleziona **[!UICONTROL Enums]**. Vengono visualizzati controlli aggiuntivi che consentono di specificare i vincoli di valore per l&#39;enum. Per aggiungere un vincolo, selezionare **[!UICONTROL Add row]**.
 
 ![Immagine che mostra l&#39;opzione Enums selezionata nell&#39;interfaccia utente](../../images/ui/fields/enum/enum-add-row.png)
 
-Nella colonna **[!UICONTROL Valore]** è necessario specificare il valore esatto al quale si desidera vincolare il campo. Facoltativamente, puoi anche fornire un **[!UICONTROL Nome visualizzato]** descrittivo per il vincolo, che influisce su come il valore verrà rappresentato nella segmentazione.
+Nella colonna **[!UICONTROL Value]** è necessario specificare il valore esatto al quale si desidera vincolare il campo. Facoltativamente, puoi anche fornire un **[!UICONTROL Display Name]** descrittivo per il vincolo, che influisce su come il valore verrà rappresentato nella segmentazione.
 
-Continua a utilizzare **[!UICONTROL Aggiungi riga]** per aggiungere i vincoli desiderati e le etichette facoltative all&#39;enum oppure seleziona l&#39;icona Elimina (![Immagine dell&#39;icona Elimina](/help/images/icons/remove-circle.png)) accanto a una riga aggiunta in precedenza per rimuoverla. Al termine, selezionare **[!UICONTROL Applica]** per applicare le modifiche allo schema.
+Continua a utilizzare **[!UICONTROL Add row]** per aggiungere i vincoli desiderati e le etichette facoltative all&#39;enum oppure seleziona l&#39;icona Elimina (![Immagine dell&#39;icona Elimina](/help/images/icons/remove-circle.png)) accanto a una riga aggiunta in precedenza per rimuoverla. Al termine, selezionare **[!UICONTROL Apply]** per applicare le modifiche allo schema.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -48,13 +48,13 @@ L’area di lavoro viene aggiornata per riflettere le modifiche. Quando esplori 
 
 ## Definire i valori suggeriti {#suggested-values}
 
-Seleziona **[!UICONTROL Numeri e valori suggeriti]**, quindi seleziona **[!UICONTROL Valori suggeriti]** per visualizzare ulteriori controlli. Da qui, seleziona **[!UICONTROL Aggiungi riga]** per iniziare ad aggiungere i valori suggeriti.
+Selezionare **[!UICONTROL Enums and Suggested Values]**, quindi selezionare **[!UICONTROL Suggested Values]** per visualizzare ulteriori controlli. Da qui, seleziona **[!UICONTROL Add row]** per iniziare ad aggiungere i valori suggeriti.
 
 ![Immagine che mostra l&#39;opzione Valori suggeriti selezionata nell&#39;interfaccia utente](../../images/ui/fields/enum/suggested-add-row.png)
 
-Nella colonna **[!UICONTROL Nome visualizzato]**, specifica un nome descrittivo per il valore da visualizzare nell&#39;interfaccia utente Segmentazione. Per aggiungere altri valori suggeriti, selezionare **[!UICONTROL Aggiungi riga]** di nuovo e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, selezionare ![l&#39;icona Elimina](/help/images/icons/remove-circle.png) accanto alla riga in questione.
+Nella colonna **[!UICONTROL Display Name]**, specifica un nome descrittivo per il valore da visualizzare nell’interfaccia utente Segmentazione. Per aggiungere altri valori suggeriti, selezionare nuovamente **[!UICONTROL Add row]** e ripetere il processo in base alle esigenze. Per rimuovere una riga aggiunta in precedenza, selezionare ![l&#39;icona Elimina](/help/images/icons/remove-circle.png) accanto alla riga in questione.
 
-Al termine, selezionare **[!UICONTROL Applica]** per applicare le modifiche allo schema.
+Al termine, selezionare **[!UICONTROL Apply]** per applicare le modifiche allo schema.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/suggested-confirm.png)
 
@@ -64,11 +64,11 @@ Al termine, selezionare **[!UICONTROL Applica]** per applicare le modifiche allo
 
 ### Gestisci valori suggeriti per campi standard
 
-Alcuni campi dei componenti XDM standard contengono i propri valori consigliati, ad esempio `eventType` della classe [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md). Sebbene sia possibile creare ulteriori valori suggeriti per un campo standard, non è possibile modificare o rimuovere i valori suggeriti non definiti dall&#39;organizzazione. Quando si visualizza un campo standard nell’interfaccia utente, i relativi valori consigliati vengono visualizzati ma sono di sola lettura.
+Alcuni campi dei componenti XDM standard contengono i propri valori suggeriti, ad esempio `eventType` della classe [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md). Sebbene sia possibile creare ulteriori valori suggeriti per un campo standard, non è possibile modificare o rimuovere i valori suggeriti non definiti dall&#39;organizzazione. Quando si visualizza un campo standard nell’interfaccia utente, i relativi valori consigliati vengono visualizzati ma sono di sola lettura.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/suggested-standard.png)
 
-Per aggiungere nuovi valori suggeriti per un campo standard, selezionare **[!UICONTROL Aggiungi riga]**. Per rimuovere un valore suggerito precedentemente aggiunto dall&#39;organizzazione, selezionare ![l&#39;icona Elimina](/help/images/icons/remove-circle.png) accanto alla riga in questione.
+Per aggiungere nuovi valori suggeriti per un campo standard, selezionare **[!UICONTROL Add row]**. Per rimuovere un valore suggerito precedentemente aggiunto dall&#39;organizzazione, selezionare ![l&#39;icona Elimina](/help/images/icons/remove-circle.png) accanto alla riga in questione.
 
 ![Immagine che mostra i valori enum e i nomi visualizzati compilati per il campo stringa nell&#39;interfaccia utente](../../images/ui/fields/enum/suggested-standard-add.png)
 
