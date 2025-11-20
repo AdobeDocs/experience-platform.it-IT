@@ -2,7 +2,7 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Scopri come utilizzare Audience Builder in Real-Time Customer Data Platform per creare tipi di pubblico.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt

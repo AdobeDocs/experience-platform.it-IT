@@ -80,7 +80,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL Microsoft Bing] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL Microsoft Bing] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+>Se stai cercando di creare la tua prima destinazione con [!DNL Microsoft Bing] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL Microsoft Bing] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 Durante la configurazione della destinazione, devi fornire le seguenti informazioni:
 

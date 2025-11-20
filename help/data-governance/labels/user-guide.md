@@ -24,7 +24,7 @@ Questa guida utente descrive i passaggi per l&#39;utilizzo delle etichette di ut
 
 Per applicare le etichette ai dati, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Manage Usage Labels]** per l&#39;utilizzo nella sandbox di produzione predefinita denominata &quot;prod&quot;. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili. **impossibile** eliminare le etichette. È invece possibile rimuoverli dai set di dati o dai campi a cui sono applicati.
 
-Per ulteriori informazioni su come assegnare un&#39;autorizzazione, vedere la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o la [panoramica sul controllo degli accessi](../../access-control/home.md). Se non hai accesso ad Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
+Per ulteriori informazioni su come assegnare un&#39;autorizzazione, vedere la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=it) o la [panoramica sul controllo degli accessi](../../access-control/home.md). Se non hai accesso ad Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
 
 ## Gestire le etichette a livello di schema
 

@@ -26,7 +26,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 >[!NOTE]
 >
->La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metriche di monitoraggio per l’acquisizione del profilo di streaming {#streaming-profile-metrics}
 
