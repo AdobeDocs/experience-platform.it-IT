@@ -156,4 +156,4 @@ Ora puoi anche definire i criteri di utilizzo dei dati in base alle etichette ap
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3422790?captions=ita&quality=12&enable10seconds=on&speedcontrol=on) -->

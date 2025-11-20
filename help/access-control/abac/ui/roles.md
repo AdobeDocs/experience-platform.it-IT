@@ -57,7 +57,7 @@ Per ulteriori informazioni su come gestire le autorizzazioni del ruolo dopo la c
 
 Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruolo e come gestire gli utenti per tale ruolo.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475981/?captions=ita&learn=on)
 
 ## Duplicare un ruolo
 

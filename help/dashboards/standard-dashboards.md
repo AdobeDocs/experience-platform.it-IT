@@ -182,4 +182,4 @@ Per scoprire le metriche e le visualizzazioni preconfigurate disponibili per i d
 
 Per approfondire la conoscenza delle dashboard in Experience Platform, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413782?captions=ita&quality=12&learn=on)

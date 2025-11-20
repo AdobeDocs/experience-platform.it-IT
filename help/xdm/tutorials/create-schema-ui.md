@@ -409,11 +409,11 @@ Ora puoi seguire l&#39;esercitazione su [definizione di una relazione di schema 
 
 Nel video seguente viene illustrato come creare uno schema semplice nell&#39;interfaccia utente [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430219?captions=ita&quality=12&learn=on)
 
 Il video seguente ha lo scopo di rafforzare la tua comprensione del lavoro con i gruppi di campo e le classi.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413602?captions=ita&quality=12&learn=on)
 
 ## Appendice
 

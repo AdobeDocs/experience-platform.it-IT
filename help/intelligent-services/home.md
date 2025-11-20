@@ -22,7 +22,7 @@ I servizi intelligenti consentono agli analisti e ai professionisti del marketin
 
 Il video seguente è stato progettato per approfondire la conoscenza di Intelligent Services. Utilizzando casi d’uso aziendali di esempio, questo video spiega un flusso di lavoro di alto livello e illustra le funzionalità di IA per l’attribuzione e di IA per l’analisi dei clienti.
 
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36626?captions=ita&learn=on&quality=12)
 
 ## Vantaggi di Intelligent Services
 
