@@ -31,7 +31,7 @@ Per eseguire varie trasformazioni sui dati esportati nelle destinazioni di archi
 
 Per utilizzare i campi calcolati per le trasformazioni dei dati:
 
-1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]** [](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]** [&#128279;](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Segui i [passaggi di attivazione per le destinazioni dell&#39;archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e passa al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Utilizzare i campi calcolati {#how-to-export-calculated-fields}
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Calculated fields]** nell&#39;interfaccia utente.
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario **&#x200B; per utilizzare il controllo &#x200B;** [!UICONTROL Calculated fields]** nell&#39;interfaccia utente.
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
 

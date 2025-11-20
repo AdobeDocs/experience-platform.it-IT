@@ -14,8 +14,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ## Panoramica {#overview}
 

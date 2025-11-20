@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;operazione [Aggiorna un contatto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) dall&#39;API REST [!DNL Oracle Eloqua], che consente di **aggiornare le identità** all&#39;interno di un pubblico in [!DNL Oracle Eloqua].
 
-[!DNL Oracle Eloqua] utilizza l&#39;autenticazione di base [](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) per comunicare con l&#39;API REST [!DNL Oracle Eloqua]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Oracle Eloqua] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
+[!DNL Oracle Eloqua] utilizza l&#39;autenticazione di base [&#128279;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) per comunicare con l&#39;API REST [!DNL Oracle Eloqua]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Oracle Eloqua] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
 
 ## Casi d’uso {#use-cases}
 

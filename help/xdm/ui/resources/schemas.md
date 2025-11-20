@@ -83,7 +83,7 @@ Quindi, passare a [definire le chiavi primarie](../fields/identity.md#define-a-i
 
 >[!NOTE]
 >
->Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL  Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
+>Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL &#x200B; Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
 >![L&#39;area di lavoro dell&#39;Editor di schema mostra una struttura di schema relazionale vuota con tipo relazionale evidenziato.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Carica un file DDL {#upload-ddl-file}

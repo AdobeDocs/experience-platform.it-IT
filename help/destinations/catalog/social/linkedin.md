@@ -30,7 +30,7 @@ Una società di software organizza una conferenza e desidera tenersi in contatto
 
 >[!IMPORTANT]
 >
->A partire da settembre 2025, non è più possibile mappare [!DNL IDFA] come identità di destinazione, poiché [!DNL IDFA] non è più supportato dalla destinazione [!DNL LinkedIn Matched Audiences]. Per ulteriori dettagli, consulta la [!DNL LinkedIn Matched Audiences]documentazione[ dell&#39;integrazione ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes). Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform.
+>A partire da settembre 2025, non è più possibile mappare [!DNL IDFA] come identità di destinazione, poiché [!DNL IDFA] non è più supportato dalla destinazione [!DNL LinkedIn Matched Audiences]. Per ulteriori dettagli, consulta la [!DNL LinkedIn Matched Audiences]documentazione[&#x200B; dell&#39;integrazione &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes). Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform.
 
 
 | Identità di destinazione | Descrizione | Considerazioni |

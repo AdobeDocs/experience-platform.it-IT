@@ -217,4 +217,4 @@ Per ulteriori informazioni sulle modalità di esecuzione della governance dei da
 
 ## Passaggi successivi
 
-Dopo aver creato e configurato i criteri di unione per l’organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Experience Platform e per creare tipi di pubblico dai dati del profilo. Per ulteriori informazioni su come creare e utilizzare i tipi di pubblico utilizzando l&#39;interfaccia utente e le API di [, consulta la ](../../segmentation/home.md)panoramica sulla segmentazione[!DNL Experience Platform].
+Dopo aver creato e configurato i criteri di unione per l’organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Experience Platform e per creare tipi di pubblico dai dati del profilo. Per ulteriori informazioni su come creare e utilizzare i tipi di pubblico utilizzando l&#39;interfaccia utente e le API di [, consulta la &#x200B;](../../segmentation/home.md)panoramica sulla segmentazione[!DNL Experience Platform].
