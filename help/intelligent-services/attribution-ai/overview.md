@@ -29,7 +29,7 @@ IA per l’attribuzione supporta due categorie di punteggi, algoritmici e basati
 
 Il video seguente è stato progettato per comprendere meglio Attribution AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36617?captions=ita&learn=on&quality=12)
 
 ## Esempi di casi d’uso aziendali
 
