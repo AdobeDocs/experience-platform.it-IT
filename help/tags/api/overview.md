@@ -4,8 +4,8 @@ description: L’API di Reactor consente agli sviluppatori di gestire in modo pr
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 92%
+source-wordcount: '1079'
+ht-degree: 93%
 
 ---
 
@@ -19,7 +19,7 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, consulta l
 
 ## Aziende
 
-Un’azienda rappresenta l’organizzazione di un utente di tag, in genere una divisione business. Queste aziende corrispondono 1:1 agli ID organizzazione. Gli utenti API hanno visibilità solo delle aziende a cui hanno accesso.
+Un’azienda rappresenta l’organizzazione di un utente di tag, in genere una divisione business. Queste aziende corrispondono a 1:1 con gli ID organizzazione. Gli utenti API hanno visibilità solo delle aziende a cui hanno accesso.
 
 Per informazioni su come visualizzare le aziende disponibili nell’API, consulta la [guida dell’endpoint “companies”](./endpoints/companies.md).
 

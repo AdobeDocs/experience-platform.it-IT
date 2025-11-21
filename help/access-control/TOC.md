@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 56%
+ht-degree: 57%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 56%
 # Controllo degli accessi {#access-control}
 
 * [Panoramica sul controllo degli accessi](home.md)
-* Controllo dell&#39;accesso basato su attributi {#abac}
+* Controllo degli accessi basato su attributi {#abac}
    * [Panoramica](abac/overview.md)
    * [Guida completa](abac/end-to-end-guide.md)
    * [Utilizzare le etichette di accesso per gestire l’accesso degli utenti ai flussi di dati di destinazione](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -31,13 +31,13 @@ ht-degree: 56%
    * Gestione autorizzazioni {#permissions-manager}
       * [Panoramica](abac/permission-manager/overview.md)
       * [Autorizzazioni](abac/permission-manager/permissions.md)
-   * API di controllo dell&#39;accesso basata su attributi {#abac-api}
+   * API di controllo dell’accesso basata su attributi {#abac-api}
       * [Panoramica](abac/api/overview.md)
       * [Introduzione](abac/api/getting-started.md)
       * [Ruoli](abac/api/roles.md)
       * [Criteri](abac/api/policies.md)
       * [Prodotti](abac/api/products.md)
-* Interfaccia utente di controllo degli accessi {#ui}
+* Interfaccia utente per il controllo degli accessi {#ui}
    * [Panoramica](ui/overview.md)
    * [Seleziona un profilo di prodotto](ui/browse.md)
    * [Gestire le autorizzazioni per un profilo di prodotto](ui/permissions.md)

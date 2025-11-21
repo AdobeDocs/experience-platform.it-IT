@@ -4,8 +4,8 @@ description: Scopri l’estensione tag Adobe Audience Manager in Adobe Experienc
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 96%
+source-wordcount: '440'
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Con l’estensione tag Audience Manager, puoi integrare il codice DIL utilizzato da Audience Manager con le proprietà in Adobe Experience Platform.
 
@@ -25,9 +25,9 @@ Utilizza questo riferimento per informazioni sulle opzioni disponibili quando ut
 
 ## Configura l&#39;estensione Adobe Audience Manager
 
-Se l’estensione Adobe Audience Manager non è ancora stata installata, apri la proprietà, quindi fai clic su **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore sull’estensione Adobe Audience Manager e fai clic su **[!UICONTROL Installa]**.
+Se l’estensione Adobe Audience Manager non è ancora stata installata, apri la proprietà, quindi seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione Adobe Audience Manager e seleziona **[!UICONTROL Install]**.
 
-Per configurare l’estensione, apri la scheda [!UICONTROL Estensioni], passa il puntatore sull’estensione e fai clic su **[!UICONTROL Configura]**.
+Per configurare l’estensione, apri la scheda [!UICONTROL Extensions], passa il puntatore sull’estensione e seleziona **[!UICONTROL Configure]**.
 
 ### Impostazioni DIL
 
@@ -45,7 +45,7 @@ Non è possibile modificare questa impostazione.
 
 Se l&#39;URL corrisponde a qualsiasi percorso escluso, l&#39;estensione non viene caricata.
 
-Fai clic su **[!UICONTROL Aggiungi percorso]** per specificare un URL escluso.
+Fai clic su **[!UICONTROL Add Path]** per specificare un URL escluso.
 
 Abilita Regex se l&#39;URL è un&#39;espressione regolare.
 
@@ -59,17 +59,17 @@ Puoi anche creare una nota contenente informazioni su questa configurazione.
 
 #### Utilizza DIL Google Analytics Module
 
-Attiva il modulo [Google Analytics](https://experiencecloud.adobe.com/resources/help/it_IT/aam/dil-google-universal-analytics.html).
+Abilita il modulo [Google Analytics](https://experiencecloud.adobe.com/resources/help/it_IT/aam/dil-google-universal-analytics.html).
 
 #### Proprietà inizializzazione DIL.create
 
 Aggiungi le proprietà di inizializzazione utilizzate da [DIL.create](https://experiencecloud.adobe.com/resources/help/it_IT/aam/r_dil_create.html) e la sottoproprietà spazio nomi per [l&#39;oggetto visitorService](https://experiencecloud.adobe.com/resources/help/it_IT/aam/r_dil_visitor_service.html). Nei commenti al codice, vale a dire nel Code Editor, sono inclusi due casi d&#39;uso di esempio.
 
-Seleziona **[!UICONTROL Scegli un elemento]** per aggiungere altre proprietà.
+Fai clic su **[!UICONTROL Choose an Item]** per aggiungere altre proprietà.
 
-Passa il puntatore sull&#39;icona &quot;i&quot; per ottenere informazioni sul funzionamento di ciascuna proprietà. Per ulteriori informazioni sulle proprietà consulta la [documentazione Audience Manager DIL](https://experiencecloud.adobe.com/resources/help/it_IT/aam/r_dil_create.html).
+Passa il puntatore sull’icona “i” per ottenere informazioni sul funzionamento di ciascuna proprietà. Per ulteriori informazioni sulle proprietà consulta la [documentazione Audience Manager DIL](https://experiencecloud.adobe.com/resources/help/it_IT/aam/r_dil_create.html).
 
-Al termine della configurazione dell’estensione, fai clic su **[!UICONTROL Salva]**.
+Fai clic su **[!UICONTROL Save]** al termine della configurazione dell&#39;estensione.
 
 ## Tipi di azioni di estensione di Adobe Audience Manager
 

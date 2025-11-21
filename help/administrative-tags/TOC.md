@@ -6,7 +6,7 @@ user-guide-description: Utilizza i tag unificati per gestire le tassonomie dei m
 source-git-commit: cc8e7074eafae11887486b0cec54154d96eb5a5c
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 82%
+ht-degree: 75%
 
 ---
 
@@ -19,6 +19,6 @@ ht-degree: 82%
    * [Introduzione](api/getting-started.md)
    * [Cartelle](api/folders.md)
    * [Tag](api/tags.md)
-* Interfaccia utente Tag unificati {#ui}
+* Interfaccia utente tag unificata {#ui}
    * [Gestione dei tag](ui/managing-tags.md)
    * [Categorie di tag](ui/tags-categories.md)

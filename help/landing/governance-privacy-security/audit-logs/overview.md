@@ -169,7 +169,7 @@ Tutte le azioni che possono essere eseguite nell’interfaccia utente possono es
 
 ## Gestione dei registri di audit per Adobe Admin Console
 
-Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/it/enterprise/using/audit-logs.html).
+Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Passaggi successivi e risorse aggiuntive
 
@@ -177,4 +177,4 @@ Questa guida illustra come gestire i registri di audit in Experience Platform. P
 
 Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/344647?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

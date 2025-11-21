@@ -6,7 +6,7 @@ role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '523'
 ht-degree: 30%
 
 ---
@@ -29,7 +29,7 @@ Cosa troverai in questa documentazione di guida:
 
 ## Panoramica {#overview}
 
-[!UICONTROL Playbook di casi d&#39;uso] può aiutarti a superare il problema quando inizi a usare Real-Time CDP o Adobe Journey Optimizer quando potresti non sapere esattamente con cosa iniziare o come creare le risorse giuste per ottenere i casi d&#39;uso desiderati.
+[!UICONTROL Use Case Playbooks] può aiutarti a superare il problema quando inizi a usare Real-Time CDP o Adobe Journey Optimizer quando potresti non sapere esattamente con cosa iniziare o come creare le risorse giuste per ottenere i casi d&#39;uso desiderati.
 
 I playbook basati su casi d’uso possono aiutarti:
 
@@ -52,7 +52,7 @@ Guarda questo video per scoprire come individuare, creare, pubblicare e risolver
 
 ## Disponibilità {#availability}
 
-Alcuni [!UICONTROL Playbook di casi d&#39;uso] sono personalizzati per i casi d&#39;uso di Real-Time CDP, mentre altri sono più adatti per i clienti che usano Journey Optimizer. Sfoglia il catalogo per trovare i playbook più adatti al tuo prodotto e caso d’uso. Ulteriori informazioni su Real-Time CDP e Journey Optimizer sono disponibili nelle [descrizioni dei prodotti di Adobe](https://helpx.adobe.com/it/legal/product-descriptions.html).
+Alcuni [!UICONTROL Use Case Playbooks] sono personalizzati per i casi d&#39;uso di Real-Time CDP, mentre altri sono più adatti per i clienti che usano Journey Optimizer. Sfoglia il catalogo per trovare i playbook più adatti al tuo prodotto e caso d’uso. Ulteriori informazioni su Real-Time CDP e Journey Optimizer sono disponibili nelle [descrizioni dei prodotti Adobe](https://helpx.adobe.com/it/legal/product-descriptions.html).
 
 ## Guide dell’interfaccia utente {#ui-guides}
 

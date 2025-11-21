@@ -19,7 +19,7 @@ ht-degree: 33%
 * [Panoramica di Data Science Workspace](home.md)
 * [Accesso e funzioni di Data Science Workspace](access-features-dsw.md)
 * [Descrizione dettagliata di Data Science Workspace](walkthrough.md)
-* JupyterLab {#jupyterlab}
+* JupyterLab notebook {#jupyterlab}
    * [Panoramica](jupyterlab/overview.md)
    * [Accesso ai dati](jupyterlab/access-notebook-data.md)
    * [Analizzare i dati](jupyterlab/analyze-your-data.md)
@@ -27,14 +27,14 @@ ht-degree: 33%
    * [Analisi esplorativa dei dati (EDA)](jupyterlab/eda-notebook.md)
    * [Creare un modello con il generatore di formule](jupyterlab/create-a-model.md)
    * [Collaborare in JupyterLab tramite Git](jupyterlab/using-git-for-collaboration.md)
-* API di apprendimento automatico Sensei {#api}
+* API di apprendimento automatico di Sensei {#api}
    * [Introduzione](api/getting-started.md)
    * [Motori](api/engines.md)
    * [MLInstance (ricette)](api/mlinstances.md)
    * [Esperimenti](api/experiments.md)
    * [Modelli](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Insight](api/insights.md)
+   * [Approfondimenti](api/insights.md)
    * [Appendice](api/appendix.md)
 * Ricette predefinite {#pre-built-recipes}
    * [Ricetta per consigli sui prodotti](pre-built-recipes/product-recommendations.md)
@@ -46,7 +46,7 @@ ht-degree: 33%
    * [Creazione di modelli con Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Accesso ai dati Python](authoring/python.md)
    * [Accesso ai dati Spark](authoring/spark.md)
-* Esercitazioni modello e ricetta {#models-recipes}
+* Tutorial su modelli e ricette {#models-recipes}
    * [Creare e pubblicare un modello di apprendimento automatico](models-recipes/create-publish-model.md)
    * [Creare schemi e set di dati Luma demo](models-recipes/create-luma-data.md)
    * [Creare lo schema e il set di dati di vendita al dettaglio](models-recipes/create-retails-sales-dataset.md)

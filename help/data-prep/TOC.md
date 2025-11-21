@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 66%
 
 - [Panoramica sulla preparazione dati](home.md)
 - [Funzioni di preparazione dati](functions.md)
-- API servizio mappatura {#api}
+- API del servizio di mappatura {#api}
    - [Panoramica](./api/overview.md)
    - [Introduzione](./api/getting-started.md)
    - [Funzioni](./api/functions.md)

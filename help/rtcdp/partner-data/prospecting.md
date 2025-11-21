@@ -5,8 +5,8 @@ feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 85%
+source-wordcount: '2027'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ Utilizza il supporto dati di terze parti in Real-Time CDP per espandere la tua b
 
 ## Perché considerare questo caso d’uso {#why-this-use-case}
 
-I brand si trovano ad affrontare contemporaneamente sfide impegnative relative all’esecuzione responsabile di casi d’uso di acquisizione clienti top-of-the-funnel senza dipendere dai cookie di terze parti, da budget limitati e da una maggiore domanda di trasparenza e ritorno sulla spesa pubblicitaria.
+I brand si trovano ad affrontare contemporaneamente sfide impegnative per l’esecuzione responsabile di casi d’uso di acquisizione clienti top-of-the-funnel senza dipendere da cookie di terze parti, budget limitati e maggiore domanda di trasparenza e ritorno sulla spesa pubblicitaria.
 
 Adobe Real-Time Customer Data Platform può aiutare i brand a passare in modo sicuro i casi d’uso supportati dalla piattaforma di gestione dati (DMP) a alternative senza cookie, in modo da portare avanti la sofisticazione e la potenza complete della segmentazione self-service, della cura del pubblico e dell’attivazione in un unico sistema. Il tutto senza compromettere la costante attenzione di Adobe all’uso responsabile dei dati tramite un framework brevettato per la governance dei dati e il consenso.
 
@@ -55,7 +55,7 @@ Prima di espandere Real-Time CDP per coinvolgere e acquisire nuovi clienti, assi
 
 Il tutorial video seguente illustra come raggiungere e coinvolgere i potenziali tipi di pubblico:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452866/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Come utilizzare il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
 
@@ -84,29 +84,29 @@ Per poter ricevere i profili di potenziali clienti dal partner dati, è necessar
 
 I componenti di identità, gestione dati e governance che utilizzerai sono:
 
-* Un nuovo tipo di identità **[!UICONTROL ID partner]** per i profili forniti dal partner
-* Una nuova classe XDM del **[!UICONTROL Profilo individuale potenziale cliente XDM]**
+* Un nuovo tipo di identità **[!UICONTROL Partner ID]** per i profili forniti dai partner
+* Una nuova classe XDM **[!UICONTROL XDM Individual Prospect Profile]**
 * **(La documentazione sarà presto disponibile)** Gruppi di campi personalizzati per il supporto dei dati dei partner
 * **(La documentazione sarà presto disponibile)** Etichette di terze parti che verranno aggiunte agli attributi provenienti dai partner
 
 #### Creare uno spazio dei nomi identità dell’ID partner {#create-partner-id-namespace}
 
-Inizia creando un nuovo tipo di identità per i profili che riceverai dal partner. A questo scopo, nella sezione Identità devi creare un nuovo spazio dei nomi identità del tipo **[!UICONTROL ID partner]**.
+Inizia creando un nuovo tipo di identità per i profili che riceverai dal partner. A tale scopo, nella sezione Identity è necessario creare un nuovo spazio dei nomi di identità di tipo **[!UICONTROL Partner ID]**.
 
 ![Crea un nuovo spazio dei nomi identità di ID partner.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * Per ulteriori informazioni sullo spazio dei nomi ID partner, consulta la [sezione sui tipi di identità](/help/identity-service/features/namespaces.md).
 * Ulteriori informazioni su [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.
 
-#### Crea un nuovo schema con la classe del **[!UICONTROL Profilo individuale potenziale cliente XDM]**
+#### Crea un nuovo schema con la classe **[!UICONTROL XDM Individual Prospect Profile]**
 
-Poi, in **[!UICONTROL Gestione dati]** > **[!UICONTROL Schemi]**, crea un nuovo schema e assegnalo alla classe del **[!UICONTROL Profilo individuale potenziale cliente XDM]**.
+Successivamente, in **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]**, creare un nuovo schema e assegnargli la classe **[!UICONTROL XDM Individual Prospect Profile]**.
 
 ![Cerca la classe del Profilo individuale potenziale cliente XDM nel generatore di schemi XDM.](/help/rtcdp/assets/partner-data/prospecting/xdm-individual-prospect-class.png)
 
 Ulteriori informazioni su come [creare e modificare schemi nell’interfaccia utente](/help/xdm/ui/resources/schemas.md) e ottenere informazioni complete sulla classe del Profilo individuale potenziale cliente XDM (collegamento in arrivo).
 
-La classe del **[!UICONTROL Profilo individuale potenziale cliente XDM]** è preconfigurata con i campi mostrati di seguito. Per arricchire lo schema con gli attributi forniti dai partner per i profili di potenziali clienti, puoi creare un nuovo gruppo di campi con gli attributi previsti e aggiungerlo allo schema, oppure puoi utilizzare uno dei gruppi di campi preconfigurati forniti da Adobe.
+La classe **[!UICONTROL XDM Individual Prospect Profile]** è preconfigurata con i campi mostrati di seguito. Per arricchire lo schema con gli attributi forniti dai partner per i profili di potenziali clienti, puoi creare un nuovo gruppo di campi con gli attributi previsti e aggiungerlo allo schema, oppure puoi utilizzare uno dei gruppi di campi preconfigurati forniti da Adobe.
 
 ![Campi preconfigurati per la classe Profilo individuale potenziale cliente XDM.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
@@ -128,10 +128,10 @@ Prendi in considerazione l’aggiunta di etichette di governance dei dati di ter
 
 Per farlo, segui la procedura indicata di seguito:
 
-1. Passa allo schema creato e seleziona la scheda **[!UICONTROL Etichette]**.
+1. Passare allo schema creato e selezionare la scheda **[!UICONTROL Labels]**.
 2. Seleziona tutti i campi in questo schema utilizzando il pulsante di selezione nella parte superiore, quindi fai clic sull’icona a forma di matita sulla destra per applicare le etichette di governance dei dati a questo schema.
-3. Seleziona l’etichetta **[!UICONTROL Ecosistema partner]** dalle categorie sulla sinistra.
-4. Scegli l’etichetta denominata **[!UICONTROL Terze parti]** e seleziona **[!UICONTROL Salva]**.
+3. Selezionare l&#39;etichetta **[!UICONTROL Partner Ecosystem]** dalle categorie a sinistra.
+4. Scegliere l&#39;etichetta denominata **[!UICONTROL Third Party]** e selezionare **[!UICONTROL Save]**.
 5. Tieni presente che tutti i campi nello schema ora presentano l’etichetta selezionata nel passaggio precedente.
 
 >[!SUCCESS]
@@ -152,11 +152,11 @@ Dopo aver preparato il modello dati per la gestione dei profili di potenziali cl
 
 Per caricare alcuni dati di esempio e popolare i profili di potenziali clienti, crea un set di dati e carica un file ricevuto dal partner di dati. Segui i passaggi seguenti:
 
-1. Accedi a **[!UICONTROL Gestione dati]** > **[!UICONTROL Set di dati]** e seleziona **[!UICONTROL Crea set di dati]**.
+1. Passa a **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** e seleziona **[!UICONTROL Create dataset]**.
 2. Seleziona Crea set di dati da schema
 3. Seleziona lo schema creato in un passaggio precedente
 4. Assegna un nome al set di dati e, facoltativamente, una descrizione.
-5. Seleziona **[!UICONTROL Fine]**.
+5. Seleziona **[!UICONTROL Finish]**.
 
 ![Una registrazione dei passaggi per creare un set di dati per i profili di potenziali clienti.](/help/rtcdp/assets/partner-data/prospecting/create-dataset-for-prospect-profiles.gif)
 
@@ -164,7 +164,7 @@ Tieni presente che, analogamente al passaggio per la creazione di uno schema, è
 
 ![Abilitare seti di dati per profilo.](/help/rtcdp/assets/partner-data/prospecting/enable-dataset-for-profile.png)
 
-Per caricare nel set di dati un file ricevuto dal partner, seleziona il set di dati, scorri verso il basso nella barra a destra e seleziona **[!UICONTROL Aggiungi dati]**. Puoi trascinare il file o selezionare **[!UICONTROL Scegli file]** per passare alla posizione del file e selezionarla.
+Per caricare nel set di dati un file ricevuto dal partner, selezionare il set di dati, scorrere verso il basso nella barra a destra e selezionare **[!UICONTROL Add data]**. Trascinare il file o selezionare **[!UICONTROL Choose files]** per spostarsi nel percorso del file e selezionarlo.
 
 ![Aggiungere file al set di dati.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
@@ -183,13 +183,13 @@ Dopo aver caricato l’elenco dei profili dal partner di dati in Real-Time CDP, 
 
 #### Controllare i profili di potenziali clienti caricati {#inspect-profiles}
 
-Per visualizzare l’elenco dei profili di potenziali clienti, passa a **[!UICONTROL Potenziali clienti]** > **[!UICONTROL Profili]** nella barra a sinistra.
+Per visualizzare l&#39;elenco dei profili potenziali, passa a **[!UICONTROL Prospects]** > **[!UICONTROL Profiles]** nella barra a sinistra.
 
-Perché i profili di potenziali clienti appena caricati in Real-Time CDP vengano visualizzati nella vista **[!UICONTROL Sfoglia]** della schermata Profilo potenziale cliente, potrebbero volerci fino a due ore. Se nella pagina viene visualizzato il messaggio “Non ci sono profili di potenziali clienti da sfogliare in questo momento”, riprova più tardi. Dopo una breve attesa, nella vista **[!UICONTROL Sfoglia]** dovresti iniziare a vedere i profili di potenziali clienti.
+Potrebbero essere necessarie fino a due ore affinché i profili di potenziali clienti che hai appena caricato in Real-Time CDP vengano visualizzati nella visualizzazione **[!UICONTROL Browse]** della schermata Prospect Profile. Se nella pagina viene visualizzato il messaggio “Non ci sono profili di potenziali clienti da sfogliare in questo momento”, riprova più tardi. Dopo un po&#39; di attesa, i profili prospect dovrebbero iniziare a essere visualizzati nella visualizzazione **[!UICONTROL Browse]**.
 
 >[!TIP]
 >
->Tieni presente la colonna **[!UICONTROL Spazio dei nomi identità]**. Se lavori con più fornitori di dati, utilizza questa colonna per dedurre l’origine dei profili di potenziali clienti.
+>Si noti la presenza della colonna **[!UICONTROL Identity Namespace]**. Se lavori con più fornitori di dati, utilizza questa colonna per dedurre l’origine dei profili di potenziali clienti.
 
 ![Vista dei profili di potenziali clienti caricati in Real-Time CDP.](/help/rtcdp/assets/partner-data/prospecting/prospect-profiles-view.png)
 
@@ -203,7 +203,7 @@ Ulteriori informazioni su [profili prospect](/help/profile/ui/prospect-profile.m
 
 Utilizza la funzionalità segmentazione di Real-Time CDP per creare tipi di pubblico dai profili di potenziali clienti. Utilizza le regole di segmentazione desiderate per creare tipi di pubblico personalizzati.
 
-Per iniziare e creare tipi di pubblico composti da profili di potenziali clienti, passa a **[!UICONTROL Potenziali clienti]** > **[!UICONTROL Tipi di pubblico]**.
+Per iniziare e creare tipi di pubblico composti da profili potenziali, passa a **[!UICONTROL Prospects]** > **[!UICONTROL Audiences]**.
 
 ![Vista di tipi di pubblico potenziali.](/help/rtcdp/assets/partner-data/prospecting/prospect-audiences.png)
 

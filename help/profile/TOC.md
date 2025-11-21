@@ -7,7 +7,7 @@ role: User
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 33%
    * [Aggiungere dati a Real-Time Customer Profile](tutorials/add-profile-data.md)
    * [Configurare un set di dati per il profilo](tutorials/dataset-configuration.md)
    * [Generare il rapporto di sovrapposizione del set di dati](tutorials/dataset-overlap-report.md)
-   * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it)
+   * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 * [Guida alla risoluzione dei problemi di [!DNL Profile]](troubleshooting.md)
 * [Riferimento API profilo](https://www.adobe.com/go/profile-apis-en)

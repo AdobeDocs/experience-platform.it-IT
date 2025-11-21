@@ -36,18 +36,18 @@ Costruirai schemi, set di dati e tipi di pubblico mentre lavori attraverso esemp
 
 Una volta completati i passaggi per implementare il caso d’uso, utilizzerai le seguenti funzionalità di Real-Time CDP e Adobe Journey Optimizer (elencate nell’ordine in cui verranno utilizzate). Assicurati di disporre delle [autorizzazioni di controllo degli accessi basate su attributi](/help/access-control/home.md) per tutte queste aree o richiedi all’amministratore di sistema di concedere le autorizzazioni necessarie.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=it) - Integra i dati tra le origini dati per alimentare la campagna. Questi dati vengono quindi utilizzati per creare i tipi di pubblico della campagna e far emergere elementi di dati personalizzati utilizzati nell’e-mail e nelle tessere delle promozioni web (ad esempio, nome o informazioni relative all’account). CDP viene utilizzato anche per attivare i tipi di pubblico tra e-mail e sul Web (tramite [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integra i dati tra le origini dati per alimentare la campagna. Questi dati vengono quindi utilizzati per creare i tipi di pubblico della campagna e far emergere elementi di dati personalizzati utilizzati nell’e-mail e nelle tessere delle promozioni web (ad esempio, nome o informazioni relative all’account). CDP viene utilizzato anche per attivare i tipi di pubblico tra e-mail e sul Web (tramite [!DNL Adobe Target]).
    * [Schemi](/help/xdm/home.md)
    * [Profili](/help/profile/home.md)
    * [Set di dati](/help/catalog/datasets/overview.md)
    * [Tipi di pubblico](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Destinazioni](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=it) - Consente di fornire ai clienti esperienze connesse, contestuali e personalizzate.
-   * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=it)
+   * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Tipi di pubblico/Eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=it)
-   * [Azioni Percorso](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it)
+   * [Azioni Percorso](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Come ottenere il caso d’uso {#achieve-use-case-instruction}
 
@@ -97,7 +97,7 @@ Per completare ciascuno dei passaggi descritti nelle panoramiche di alto livello
 
 Le risorse Experience Data Model (XDM) sono gestite nell&#39;area di lavoro [!UICONTROL Schemas] in [!DNL Adobe Experience Platform]. È possibile visualizzare ed esplorare le risorse di base fornite da [!DNL Adobe] (ad esempio i gruppi di campi) e creare risorse e schemi personalizzati per l&#39;organizzazione.
 
-Per ulteriori informazioni sulla creazione di [schemi](/help/xdm/home.md), vedere l&#39;esercitazione [crea schema.](/help/xdm/tutorials/create-schema-ui.md) e [Modellare i dati sull&#39;esperienza del cliente con XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=it).
+Per ulteriori informazioni sulla creazione di [schemi](/help/xdm/home.md), vedere l&#39;esercitazione [crea schema.](/help/xdm/tutorials/create-schema-ui.md) e [Modellare i dati sull&#39;esperienza del cliente con XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
 Per il caso di utilizzo del ricoinvolgimento vengono utilizzate quattro progettazioni di schemi. Ogni schema richiede la configurazione di campi specifici. Devi abilitare lo schema per essere incluso nel Profilo cliente in tempo reale. Per ulteriori informazioni sull&#39;abilitazione dello schema per l&#39;utilizzo in Real-Time Customer Profile, leggere [enable a schema for Real-Time Customer Profile](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile) (Abilitare uno schema per Real-Time Customer Profile).
 
@@ -141,7 +141,7 @@ Il gruppo di campi [Consensi e preferenze](/help/xdm/field-groups//profile/conse
 
 +++Dettagli test profilo (gruppo di campi)
 
-Questo gruppo di campi ti consente di testare il percorso prima che venga pubblicato, utilizzando i profili di test. Per ulteriori informazioni sulla creazione di profili di test, leggere l&#39;esercitazione [creazione di profili di test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=it) e l&#39;esercitazione [verifica del percorso](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=it).
+Questo gruppo di campi ti consente di testare il percorso prima che venga pubblicato, utilizzando i profili di test. Per ulteriori informazioni sulla creazione di profili di test, leggere l&#39;esercitazione [creazione di profili di test](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) e l&#39;esercitazione [verifica del percorso](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
@@ -314,11 +314,11 @@ Per ulteriori informazioni su come creare un [set di dati](/help/catalog/dataset
 
 >[!IMPORTANT]
 >
->Come requisito legale, è necessario dare ai clienti la possibilità di annullare l’abbonamento alla ricezione di comunicazioni da un marchio e garantire che questa scelta sia rispettata. Ulteriori informazioni sulle normative applicabili nella [Panoramica sulle normative sulla privacy](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=it).
+>Come requisito legale, è necessario dare ai clienti la possibilità di annullare l’abbonamento alla ricezione di comunicazioni da un marchio e garantire che questa scelta sia rispettata. Ulteriori informazioni sulle normative applicabili nella [Panoramica sulle normative sulla privacy](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
 #### Criteri di consenso
 
-Durante la creazione di un percorso di ricoinvolgimento, puoi aggiungere i seguenti [criteri di consenso](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=it):
+Durante la creazione di un percorso di ricoinvolgimento, puoi aggiungere i seguenti [criteri di consenso](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
 
 * Se `consents.marketing.email.val = "Y"` allora può inviare un&#39;e-mail
 * Se `consents.marketing.sms.val = "Y"` allora può inviare un SMS
@@ -346,7 +346,7 @@ Nessun [criterio di utilizzo dati](/help/data-governance/policies/overview.md) r
 
 Gli scenari di ricoinvolgimento utilizzano i tipi di pubblico per definire attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio profili, al fine di distinguere un gruppo di persone commerciabile dalla base clienti. I tipi di pubblico possono essere creati in più modi in [!DNL Adobe Experience Platform].
 
-Per ulteriori informazioni su come creare un pubblico, leggere la [guida dell&#39;interfaccia utente del servizio del pubblico](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=it#create-audience).
+Per ulteriori informazioni su come creare un pubblico, leggere la [guida dell&#39;interfaccia utente del servizio del pubblico](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Per ulteriori informazioni su come comporre direttamente [Tipi di pubblico](/help/segmentation/home.md), consulta la [Guida dell&#39;interfaccia utente Composizione pubblico](/help/segmentation/ui/audience-composition.md).
 
@@ -436,7 +436,7 @@ Questo percorso non richiede la creazione di tipi di pubblico.
 >
 >[!DNL Adobe Journey Optimizer] non include tutti gli elementi visualizzati nei diagrammi. Tutti i [annunci multimediali a pagamento](/help/destinations/catalog/social/overview.md) sono creati in [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it) ti aiuta a fornire ai tuoi clienti esperienze connesse, contestuali e personalizzate. Il percorso del cliente è l’intero processo di interazione del cliente con il marchio. Ogni percorso di casi d’uso richiede informazioni specifiche. Di seguito sono elencati i dati precisi necessari per ciascun percorso.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ti aiuta a fornire ai tuoi clienti esperienze connesse, contestuali e personalizzate. Il percorso del cliente è l’intero processo di interazione del cliente con il marchio. Ogni percorso di casi d’uso richiede informazioni specifiche. Di seguito sono elencati i dati precisi necessari per ciascun percorso.
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ Lo scenario di navigazione dei prodotti abbandonati è incentrato sulla navigazi
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=it).
+Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 1: Visualizzazioni prodotto
    * Schema: Transazioni digitali del cliente
@@ -571,7 +571,7 @@ Lo scenario del carrello abbandonato riguarda i prodotti che sono stati inseriti
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=it).
+Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: aggiungi al carrello
    * Schema: Transazioni digitali del cliente
@@ -704,7 +704,7 @@ Lo scenario di conferma dell’ordine si concentra sugli acquisti di prodotti ef
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=it).
+Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, leggere la [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 4: Acquisti online
    * Schema: Transazioni digitali del cliente
@@ -755,7 +755,7 @@ La logica chiave dell’area di lavoro di percorso richiede di identificare even
 
 >[!ENDTABS]
 
-Per ulteriori informazioni sulla creazione di percorsi in [!DNL Adobe Journey Optimizer], leggere la [Guida introduttiva ai percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=it).
+Per ulteriori informazioni sulla creazione di percorsi in [!DNL Adobe Journey Optimizer], leggere la [Guida introduttiva ai percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Impostazione di annunci multimediali a pagamento nelle destinazioni {#paid-media-ads}
 

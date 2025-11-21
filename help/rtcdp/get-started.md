@@ -6,7 +6,7 @@ feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2321'
 ht-degree: 1%
 
 ---
@@ -156,7 +156,7 @@ Ad esempio, per acquisire i dati CRM di Luma, filtra il catalogo per *CRM* e ven
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Selezionare ad esempio **[!UICONTROL Contatti]**. Viene caricata automaticamente un&#39;anteprima dei dati dei contatti, in modo da poter verificare che l&#39;aspetto sia quello previsto.
+   Selezionare ad esempio **[!UICONTROL Contacts]**. Viene caricata automaticamente un&#39;anteprima dei dati dei contatti, in modo da poter verificare che l&#39;aspetto sia quello previsto.
 
    Real-Time CDP consente di eseguire molte operazioni manuali eseguendo il mapping automatico dei campi standard allo schema di profilo [!DNL Experience Data Model] (XDM).
 
@@ -235,7 +235,7 @@ Poiché Sarah ha aggiunto un oggetto regalo apparente nel carrello e lo ha abban
 
 Dopo aver aggiunto il pubblico &quot;Abbandoni del carrello regali&quot;, puoi vedere approssimativamente quante persone fanno parte di questo pubblico. Puoi intervenire e renderla disponibile per la personalizzazione su tutti i canali.
 
-Seleziona **[!UICONTROL Invia a destinazioni]**.
+Seleziona **[!UICONTROL Send to destinations]**.
 
 In Real-Time CDP, Luma può agire direttamente sui propri tipi di pubblico a scopo di personalizzazione.\
 Qui vediamo tutte le destinazioni disponibili per l’invio di questa destinazione da parte di Luma, sia per le soluzioni Adobe che per quelle non Adobe:
@@ -260,7 +260,7 @@ Puoi anche pianificare l’esportazione del pubblico in modo che inizi o finisca
 >
 >Facoltativamente, se selezioni il campo data, questo pianifica automaticamente 90 giorni di uscita.
 
-Seleziona **[!UICONTROL Salva]** per passare alla pagina successiva.
+Selezionare **[!UICONTROL Save]** per passare alla pagina successiva.
 
 Quando un cliente in questo pubblico effettua un acquisto, la sua iscrizione a questo pubblico viene eliminata in tempo reale. Non si qualificano più perché il loro stato è cambiato.
 

@@ -5,8 +5,8 @@ feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 77%
+source-wordcount: '1249'
+ht-degree: 72%
 
 ---
 
@@ -24,9 +24,9 @@ Puoi integrare i profili di prime parti con attributi di partner di dati affidab
 
 La maggior parte dei brand, anche quelli ricchi di dati di prime parti, può trarre vantaggio dalla semplificazione dei propri dati e dalla comprensione più sfumata dei clienti, dei loro comportamenti, modelli e preferenze.
 
-Adobe Real-time Customer Data Platform può aiutare i brand a integrare in modo responsabile i dati di prime parti con informazioni, identificatori e attributi utili provenienti da uno o più partner di fiducia.
+Adobe Real-time Customer Data Platform può aiutare i brand a integrare in modo responsabile i dati di prime parti con informazioni, identificatori e attributi preziosi provenienti da uno o più partner di fiducia.
 
-Adobe è consapevole del fatto che non esiste un approccio universale che consenta l’interoperabilità diretta con i dati e i partner di identità per promuovere un coinvolgimento personalizzato e ponderato in tutte le fasi del ciclo di vita del cliente. Queste funzionalità sono supportate da un framework di governance dei dati affidabile, che consente un controllo sfumato su dove e come vengono utilizzati i dati dei partner. Ad esempio, potresti voler utilizzare le informazioni fornite dai partner per la segmentazione, ma non per la personalizzazione.
+Adobe è consapevole del fatto che non esiste un approccio universale e consente l’interoperabilità diretta con i dati e i partner di identità per promuovere un coinvolgimento personalizzato e ponderato in tutte le fasi del ciclo di vita del cliente. Queste funzionalità sono supportate da un framework di governance dei dati affidabile, che consente un controllo sfumato su dove e come vengono utilizzati i dati dei partner. Ad esempio, potresti voler utilizzare le informazioni fornite dai partner per la segmentazione, ma non per la personalizzazione.
 
 Ad esempio, segui i passaggi descritti in questo caso d’uso quando devi arricchire i record dei clienti con segnali demografici e intenzionali.
 
@@ -41,13 +41,13 @@ Se prendi in considerazione l’integrazione dei profili di prime parti con gli 
 
 >[!WARNING]
 >
->Gli attributi aggiuntivi forniti dal partner acquisiti in Real-Time CDP influiscono sul *volume totale di dati*. Per ulteriori informazioni sul volume totale dei dati, leggere la [descrizione del prodotto Real-time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
+>Gli attributi aggiuntivi forniti dal partner acquisiti in Real-Time CDP influiscono sul *volume totale di dati*. Per ulteriori informazioni sul volume totale dei dati, leggere la [descrizione del prodotto Real-Time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
 ## Procedura dettagliata del video {#video-walkthrough}
 
 Il tutorial video seguente illustra come integrare i tipi di pubblico di prime parti con gli attributi forniti dai partner:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452465/?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 
@@ -71,14 +71,14 @@ Questa fase è descritta nella sezione [prerequisiti](#prerequisites-and-plannin
 
 A questo punto, estendi il framework di gestione dati in Real-Time CDP per adattarlo agli attributi forniti dai partner.
 
-È possibile creare un nuovo schema della classe **[!UICONTROL Profilo individuale XDM]** o estendere uno schema esistente dello stesso tipo per includere gli attributi forniti dal partner. Adobe consiglia vivamente di creare un nuovo schema con un nuovo set di gruppi di campi che rappresentino al meglio gli attributi aggiuntivi del fornitore dei dati. In questo modo gli schemi di dati sono puliti e possono evolvere indipendentemente l’uno dall’altro.
+È possibile creare un nuovo schema della classe **[!UICONTROL XDM Individual Profile]** o estendere uno schema esistente dello stesso tipo per includere gli attributi forniti dai partner. Adobe consiglia vivamente di creare un nuovo schema con un nuovo set di gruppi di campi che rappresentino al meglio gli attributi aggiuntivi del fornitore dei dati. In questo modo gli schemi di dati sono puliti e possono evolvere indipendentemente l’uno dall’altro.
 
 Per includere in uno schema gli attributi forniti dal partner, è possibile creare un nuovo gruppo di campi con gli attributi previsti oppure utilizzare uno dei gruppi di campi preconfigurati forniti da Adobe.
 
 Per ulteriori informazioni, consulta le pagine della documentazione seguenti:
 
 * [Nozioni di base sulla composizione dello schema](/help/xdm/schema/composition.md)
-* [Panoramica sulla classe [!UICONTROL Profilo individuale XDM]](/help/xdm/classes/individual-profile.md)
+* [Panoramica della classe [!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md)
 * [Creare e modificare gli schemi nell’interfaccia utente](/help/xdm/ui/resources/schemas.md)
 * [Creare e modificare gruppi di campi schema nell’interfaccia utente](/help/xdm/ui/resources/field-groups.md)
 
@@ -99,7 +99,7 @@ Anche in questo passaggio, tieni presente come cambia il modello di governance d
 
 >[!TIP]
 >
->Se scegli di integrare i profili dei clienti con un identificatore basato sulla persona del fornitore di dati, puoi creare un nuovo tipo di identità del tipo **[[!UICONTROL ID partner]](/help/identity-service/features/namespaces.md)**.
+>Se si sceglie di integrare i profili cliente con un identificatore basato su persona del fornitore di dati, è possibile creare un nuovo tipo di identità di tipo **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**.
 >
 >Per ulteriori informazioni sull’ID partner, consulta la [sezione sui tipi di identità](/help/identity-service/features/namespaces.md).
 >Ulteriori informazioni su [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.

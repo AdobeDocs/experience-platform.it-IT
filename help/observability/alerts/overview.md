@@ -6,24 +6,24 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 3%
+source-wordcount: '799'
+ht-degree: 12%
 
 ---
 
-# Panoramica degli avvisi
+# Panoramica sugli avvisi
 
 >[!NOTE]
 >
 >Poiché gli avvisi sono supportati sia nelle sandbox di produzione che in quelle di sviluppo, è possibile abbonarsi a essi in qualsiasi sandbox. Quando viene reimpostata una sandbox, vengono reimpostati anche tutti gli avvisi di abbonamento e, quando viene eliminata una sandbox, tutti gli avvisi di abbonamento vengono eliminati.
 
-Adobe Experience Platform ti consente di abbonarti agli avvisi basati su eventi relativi alle attività di Adobe Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine in un flusso di lavoro o se si sono verificati errori.
+Adobe Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. Gli avvisi riducono o eliminano la necessità di interrogare l’[[!DNL Observability Insights] API](../api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata milestone all’interno di un flusso di lavoro o se si sono verificati errori.
 
 Quando viene raggiunto un determinato set di condizioni nelle operazioni di Experience Platform (ad esempio un potenziale problema quando il sistema supera una soglia), Experience Platform può inviare messaggi di avviso a tutti gli utenti dell’organizzazione che si sono iscritti a tali condizioni. Questi messaggi possono ripetersi in un intervallo di tempo predefinito fino alla risoluzione dell&#39;avviso.
 
 Questo documento fornisce una panoramica degli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 
-## Avvisi una tantum e avvisi ripetuti
+## Confronto tra avvisi una tantum e ripetuti
 
 Gli avvisi di Experience Platform possono essere inviati una sola volta oppure possono essere ripetuti in un intervallo predefinito finché non vengono risolti. I casi di utilizzo di ciascuna di queste opzioni sono destinati a differire nei seguenti modi:
 
@@ -64,20 +64,20 @@ Gli avvisi possono essere inviati a un webhook configurato per facilitare l’au
 
 L’interfaccia utente di Experience Platform ti consente di visualizzare gli avvisi ricevuti e di gestire le regole degli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423920?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Per lavorare con gli avvisi nell’interfaccia utente di Experience Platform, è necessario disporre delle seguenti autorizzazioni di controllo degli accessi abilitate tramite Adobe Admin Console:
 
 | Autorizzazione | Descrizione |
 | --- | --- |
 | Visualizza avvisi | Consente di visualizzare i messaggi di avviso ricevuti. |
-| Visualizza cronologia avvisi* | Consente di visualizzare una cronologia degli avvisi ricevuti tramite la scheda [!UICONTROL Avvisi]. |
-| Gestione avvisi* | Consente di abilitare e disabilitare le regole di avviso tramite la scheda [!UICONTROL Avvisi]. |
-| Risolvi avvisi* | Consente di risolvere gli avvisi attivati tramite la scheda [!UICONTROL Avvisi]. |
+| Visualizza cronologia avvisi* | Consente di visualizzare una cronologia degli avvisi ricevuti tramite la scheda [!UICONTROL Alerts]. |
+| Gestione avvisi* | Consente di abilitare e disabilitare le regole di avviso tramite la scheda [!UICONTROL Alerts]. |
+| Risolvi avvisi* | Consente di risolvere gli avvisi attivati tramite la scheda [!UICONTROL Alerts]. |
 
 {style="table-layout:auto"}
 
-**Per accedere alla scheda [!UICONTROL Avvisi], è inoltre necessario disporre dell&#39;autorizzazione Visualizza avvisi in combinazione con una delle altre autorizzazioni.*
+**Per accedere alla scheda [!UICONTROL Alerts], è inoltre necessario disporre dell&#39;autorizzazione Visualizza avvisi in combinazione con una delle altre autorizzazioni.*
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi
 >
 > Seleziona un avviso per passare a un dashboard correlato e ottenere informazioni più dettagliate sul motivo per cui è stato attivato l’avviso.
 
-Inoltre, la scheda [!UICONTROL Avvisi] nell&#39;interfaccia utente consente ai singoli utenti di abbonarsi a tipi di avviso specifici e agli amministratori di abilitare o disabilitare completamente le regole di avviso. Per ulteriori informazioni sulla gestione degli avvisi, consulta la [Guida dell&#39;interfaccia utente](./ui.md).
+Inoltre, la scheda [!UICONTROL Alerts] nell&#39;interfaccia utente consente ai singoli utenti di abbonarsi a tipi di avviso specifici e agli amministratori di abilitare o disabilitare completamente le regole di avviso. Per ulteriori informazioni sulla gestione degli avvisi, consulta la [Guida dell&#39;interfaccia utente](./ui.md).
 
 ## Passaggi successivi
 

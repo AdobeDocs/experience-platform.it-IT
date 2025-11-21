@@ -137,7 +137,7 @@ ht-degree: 92%
 ## Versione 1.3.0 - 28 gennaio 2022
 
 * È stato aggiunto il collegamento Informazioni su, che consente di visualizzare la versione corrente e le relative note.
-* È stato aggiunto il pulsante per visualizzare o nascondere gli hit post-elaborati per le richieste di Analytics. L’interruttore è disponibile nella sezione di Analytics.
+* È stato aggiunto il pulsante di attivazione per visualizzare o nascondere gli hit post-elaborati per le richieste di Analytics. Il pulsante di attivazione è disponibile nella sezione di Analytics.
 * È stato risolto un problema di sessione di debug remoto che si verificava alla chiusura della sessione all’esterno del debugger.
 * È stata corretta la notifica di errore visibile nella scheda Transazioni Edge del Web SDK.
 * È stato corretto l’avviso di deprecazione dei tag di Adobe nella pagina quando il debugger accedeva all’oggetto _satellite.
@@ -154,7 +154,7 @@ ht-degree: 92%
 * Visualizzazione debug remoto: organizza gli eventi di debug remoto in un grafico di flusso visivo nella sezione Adobe Experience Platform Web SDK > Transazioni Edge.
 * All’avvio di una nuova sessione di debug remoto, viene richesto che l’organizzazione Adobe Experience Platform Web SDK utilizzata nella pagina corrisponda a quella con cui è stato eseguito l’accesso.
 * È possibile mostraee solo le transazioni Edge per la scheda connessa. I registri di tracciamento di Target sono ancora disponibili nella sezione Registri > Edge.
-* È consentito sostituire separatamente la configurazione dell’ID dello stream di dati per ogni istanza di Adobe Experience Platform Web SDK sulla pagina. È stato aggiunto un pulsante per abilitare/disabilitare il debug.
+* È consentito sostituire separatamente la configurazione dell’ID dello stream di dati per ogni istanza di Adobe Experience Platform Web SDK sulla pagina. È stato aggiunto un pulsante di attivazione per abilitare/disabilitare il debug.
 * È stato risolto un problema a causa del quale il token di tracciamento di Adobe Target non veniva sempre inviato con sessioni di debug remoto per Adobe Experience Platform Web SDK.
 
 ## Versione 1.0.0 del 5 maggio 2021

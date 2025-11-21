@@ -5,7 +5,7 @@ feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1181'
 ht-degree: 9%
 
 ---
@@ -30,7 +30,7 @@ Questo documento fornisce una panoramica di alto livello sull’inoltro degli ev
 >
 >Per informazioni sul modo in cui l&#39;inoltro degli eventi si inserisce nell&#39;ecosistema di raccolta dati di Experience Platform, consulta la [panoramica sulla raccolta dati](../../../collection/home.md).
 
-L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=it) offre i seguenti vantaggi:
+L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) offre i seguenti vantaggi:
 
 **Prestazioni**:
 
@@ -53,7 +53,7 @@ Mentre i tag raccolgono i dati dell’evento direttamente dal sito o dall’app 
 
 ### Proprietà {#properties}
 
-L&#39;inoltro degli eventi mantiene un proprio archivio di proprietà separato dai tag, che puoi visualizzare nell&#39;interfaccia utente di Experience Platform o di Data Collection selezionando **[!UICONTROL Inoltro eventi]** nell&#39;area di navigazione a sinistra.
+L&#39;inoltro degli eventi mantiene un proprio archivio di proprietà separato dai tag, che puoi visualizzare nell&#39;interfaccia utente di Experience Platform o di Data Collection selezionando **[!UICONTROL Event Forwarding]** nell&#39;area di navigazione a sinistra.
 
 >[!TIP]
 >
@@ -65,7 +65,7 @@ Tutte le proprietà di inoltro eventi elencano **[!UICONTROL Edge]** come piatta
 
 ### Estensioni {#extensions}
 
-L&#39;inoltro degli eventi dispone di un proprio catalogo di estensioni compatibili, ad esempio l&#39;estensione [Core](../../extensions/server/core/overview.md) e l&#39;estensione [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Puoi visualizzare le estensioni disponibili per le proprietà di inoltro degli eventi nell&#39;interfaccia utente selezionando **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Catalogo]**.
+L&#39;inoltro degli eventi dispone di un proprio catalogo di estensioni compatibili, ad esempio l&#39;estensione [Core](../../extensions/server/core/overview.md) e l&#39;estensione [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Puoi visualizzare le estensioni disponibili per le proprietà di inoltro degli eventi nell&#39;interfaccia utente selezionando **[!UICONTROL Extensions]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Catalog]**.
 
 Puoi visualizzare le risorse aggiuntive disponibili per ulteriori informazioni su questa funzione selezionando ![informazioni](../../images/ui/event-forwarding/overview/about.png) dal pannello a destra.
 
@@ -107,7 +107,7 @@ Puoi visualizzare le risorse aggiuntive disponibili per ulteriori informazioni s
 
 #### Sequenza di azioni della regola {#action-sequencing}
 
-La sezione [!UICONTROL Azioni] di una regola di inoltro eventi viene sempre eseguita in sequenza. Ad esempio, se una regola ha due azioni, la seconda azione non inizia l’esecuzione fino al completamento dell’azione precedente (e nei casi in cui è prevista una risposta da un endpoint, tale endpoint ha risposto). Quando si salva una regola, occorre assicurarsi che l&#39;ordine delle azioni sia corretto. Questa sequenza di esecuzione non può essere eseguita in modo asincrono come con le regole di tag.
+La sezione [!UICONTROL Actions] di una regola di inoltro degli eventi viene sempre eseguita in sequenza. Ad esempio, se una regola ha due azioni, la seconda azione non inizia l’esecuzione fino al completamento dell’azione precedente (e nei casi in cui è prevista una risposta da un endpoint, tale endpoint ha risposto). Quando si salva una regola, occorre assicurarsi che l&#39;ordine delle azioni sia corretto. Questa sequenza di esecuzione non può essere eseguita in modo asincrono come con le regole di tag.
 
 ## Segreti {#secrets}
 

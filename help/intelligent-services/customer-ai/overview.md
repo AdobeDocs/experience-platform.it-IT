@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;panoramica;ia clienti;argomenti popolari;panoramica di ia clienti;customer ai overview
+keywords: Experience Platform;panoramica;customer ai;argomenti più comuni;customer ai overview;customer ai overview
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Panoramica di Customer AI
@@ -44,11 +44,11 @@ Il cliente non è progettato per:
 
 Il seguente video è progettato per supportare la tua comprensione di Customer AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/36499?learn=on&quality=12&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Come funziona
 
-Customer AI funziona analizzando i dati esistenti di Consumer Experience Event per prevedere i punteggi di propensione di abbandono o conversione. Adobe riconosce che la definizione di abbandono e conversione non è uniforme in tutti i casi d’uso e per questo motivo, puoi definire obiettivi target personalizzati come un insieme di condizioni. Puoi configurare l’obiettivo previsto purché l’evento di interesse sia presente nei dati evento esperienza del consumatore immessi.
+Customer AI funziona analizzando i dati esistenti di Consumer Experience Event per prevedere i punteggi di propensione di abbandono o conversione. Adobe si rende conto che la definizione di abbandono e conversione non è uniforme in tutti i casi d’uso e per questo motivo è possibile definire obiettivi di destinazione personalizzati come un insieme di condizioni. Puoi configurare l’obiettivo previsto purché l’evento di interesse sia presente nei dati evento esperienza del consumatore immessi.
 
 ## Passaggi successivi
 

@@ -159,7 +159,7 @@ Utilizza la funzionalità di scadenza dei dati dei profili pseudonimi per rimuov
 
 ### Interfaccia utente del set di dati - Conservazione del set di dati di Experience Event {#data-retention}
 
-Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [&#128279;](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Scadenze eventi esperienza profilo {#event-expirations}
 
