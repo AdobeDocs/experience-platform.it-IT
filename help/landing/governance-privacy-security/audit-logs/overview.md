@@ -177,4 +177,4 @@ Questa guida illustra come gestire i registri di audit in Experience Platform. P
 
 Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344647?captions=ita&quality=12&learn=on)
