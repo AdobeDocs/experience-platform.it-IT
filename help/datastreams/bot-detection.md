@@ -2,9 +2,9 @@
 title: Configurare il rilevamento di bot per gli stream di dati
 description: Scopri come configurare il rilevamento di bot per i flussi di dati, per differenziare il traffico umano e non umano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 9a60212a9a9fa01ef8a73cfa2c16088c196788d4
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,19 @@ Questo punteggio bot consente alle soluzioni che ricevono la richiesta di identi
 >
 >Il rilevamento dei bot non elimina alcuna richiesta di bot. Aggiorna lo schema XDM solo con il punteggio bot e inoltra l&#39;evento al servizio [datastream](configure.md) configurato.
 >
->Le soluzioni Adobe possono gestire il punteggio bot in diversi modi. Adobe Analytics, ad esempio, utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=it) e non utilizza il punteggio impostato da Edge Network. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
+>Le soluzioni Adobe possono gestire il punteggio bot in diversi modi. Adobe Analytics, ad esempio, utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato da Edge Network. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
 
-Dopo la creazione, le regole di rilevamento dei bot possono richiedere fino a 15 minuti per propagarsi in Edge Network.
+## Considerazioni tecniche {#technical-considerations}
+
+Prima di abilitare il rilevamento di bot sui flussi di dati, ecco alcuni punti chiave da tenere a mente per garantire risultati accurati e un’implementazione fluida:
+
+* Il rilevamento dei bot si applica solo alle richieste non autenticate inviate a `edge.adobedc.net`.
+* Le richieste autenticate inviate a `server.adobedc.net` non vengono valutate per il traffico da bot, in quanto il traffico autenticato è considerato attendibile.
+* Dopo la creazione, le regole di rilevamento dei bot possono richiedere fino a 15 minuti per propagarsi in Edge Network.
 
 ## Prerequisiti {#prerequisites}
 
-Affinché il rilevamento bot funzioni sullo stream di dati, devi aggiungere il gruppo di campi **[!UICONTROL Informazioni sul rilevamento bot]** allo schema. Per informazioni su come aggiungere gruppi di campi a uno schema, consulta la documentazione dello schema [XDM](../xdm/ui/resources/schemas.md#add-field-groups).
+Affinché il rilevamento di bot funzioni sullo stream di dati, devi aggiungere il gruppo di campi **[!UICONTROL Bot Detection Information]** allo schema. Per informazioni su come aggiungere gruppi di campi a uno schema, consulta la documentazione dello schema [XDM](../xdm/ui/resources/schemas.md#add-field-groups).
 
 ## Configurare il rilevamento di bot per gli stream di dati {#configure}
 
@@ -49,17 +55,17 @@ Vai all’elenco dei flussi di dati e seleziona il flusso di dati a cui desideri
 
 ![Interfaccia utente per gli stream di dati con l&#39;elenco degli stream di dati.](assets/bot-detection/datastream-list.png)
 
-Nella pagina dei dettagli dello stream di dati, seleziona l&#39;opzione **[!UICONTROL Rilevamento bot]** nella barra a destra.
+Nella pagina dei dettagli dello stream di dati, seleziona l’opzione **[!UICONTROL Bot Detection]** nella barra a destra.
 
 ![Opzione di rilevamento bot evidenziata nell&#39;interfaccia utente dello stream di dati.](assets/bot-detection/bot-detection.png)
 
-Viene visualizzata la pagina **[!UICONTROL Regole di rilevamento bot]**.
+Viene visualizzata la pagina **[!UICONTROL Bot Detection Rules]**.
 
 ![Impostazioni di rilevamento bot nella pagina delle impostazioni dello stream di dati.](assets/bot-detection/bot-detection-page.png)
 
 Dalla pagina Regole di rilevamento bot, puoi configurare il rilevamento bot utilizzando le seguenti funzionalità:
 
-* Utilizzo di [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Utilizzo di [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Creazione di regole di rilevamento bot personalizzate.
 
 ### Utilizzare l&#39;elenco internazionale Spiders e bot IAB/ABC {#iab-list}
@@ -68,8 +74,8 @@ L&#39;[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelin
 
 Per configurare lo stream di dati per l’utilizzo dell’elenco internazionale Spiders e Bots IAB/ABC:
 
-1. Attiva l&#39;opzione **[!UICONTROL Usa elenco Spider e bot internazionali IAB/ABC per il rilevamento di bot in questo flusso di dati]**.
-2. Seleziona **[!UICONTROL Salva]** per applicare le impostazioni di rilevamento bot allo stream di dati.
+1. Attiva/disattiva l&#39;opzione **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]**.
+2. Seleziona **[!UICONTROL Save]** per applicare le impostazioni di rilevamento bot allo stream di dati.
 
 ![Elenco di spider e bot IAB abilitato.](assets/bot-detection/bot-detection-list.png)
 
@@ -97,15 +103,15 @@ Se hai bisogno di regole di rilevamento bot più granulari, puoi combinare le co
 
 Per creare una regola di rilevamento bot, effettua le seguenti operazioni:
 
-1. Seleziona **[!UICONTROL Aggiungi nuova regola]**.
+1. Seleziona **[!UICONTROL Add New Rule]**.
 
    ![Schermata delle impostazioni di rilevamento bot con il pulsante Aggiungi nuova regola evidenziato.](assets/bot-detection/bot-detection-new-rule.png)
 
-2. Digitare un nome per la regola nel campo **[!UICONTROL Nome regola]**.
+2. Digitare un nome per la regola nel campo **[!UICONTROL Rule Name]**.
 
    ![Schermata delle regole di rilevamento bot con il nome della regola evidenziato.](assets/bot-detection/rule-name.png)
 
-3. Selezionare **[!UICONTROL Aggiungi nuova condizione IP]** per aggiungere una nuova regola basata su IP. È possibile definire la regola in base all’indirizzo IP o all’intervallo di indirizzi IP.
+3. Selezionare **[!UICONTROL Add new IP condition]** per aggiungere una nuova regola basata su IP. È possibile definire la regola in base all’indirizzo IP o all’intervallo di indirizzi IP.
 
    ![Schermata delle regole di rilevamento bot con il campo dell&#39;indirizzo IP evidenziato.](assets/bot-detection/ip-address-rule.png)
 
@@ -115,7 +121,7 @@ Per creare una regola di rilevamento bot, effettua le seguenti operazioni:
    >
    >Le condizioni IP si basano su un&#39;operazione logica `OR`. Una richiesta è contrassegnata come proveniente da un bot se corrisponde a una qualsiasi delle condizioni IP definite.
 
-4. Se si desidera aggiungere condizioni di intestazione alla regola, selezionare **[!UICONTROL Aggiungi gruppo di condizioni di intestazione]**, quindi selezionare le intestazioni da utilizzare per la regola.
+4. Se si desidera aggiungere condizioni di intestazione alla regola, selezionare **[!UICONTROL Add header conditions group]**, quindi selezionare le intestazioni da utilizzare per la regola.
 
    ![Schermata delle regole di rilevamento bot con le condizioni di intestazione evidenziate.](assets/bot-detection/header-conditions.png)
 
@@ -123,7 +129,7 @@ Per creare una regola di rilevamento bot, effettua le seguenti operazioni:
 
    ![Schermata delle regole di rilevamento bot con le condizioni di intestazione evidenziate.](assets/bot-detection/header-condition-rule.png)
 
-5. Dopo aver configurato le regole di rilevamento bot desiderate, seleziona **[!UICONTROL Salva]** per applicare le regole allo stream di dati.
+5. Dopo aver configurato le regole di rilevamento bot desiderate, seleziona **[!UICONTROL Save]** per applicare le regole allo stream di dati.
 
    ![Schermata delle regole di rilevamento bot con le condizioni di intestazione evidenziate.](assets/bot-detection/bot-detection-save.png)
 

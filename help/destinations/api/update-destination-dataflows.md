@@ -5,9 +5,9 @@ title: Aggiornare i flussi di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Questa esercitazione illustra i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere tipi di pubblico e attributi utilizzando l’API del servizio Flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2471'
 ht-degree: 4%
 
 ---
@@ -749,6 +749,14 @@ I file esportati contengono il nome della destinazione, l’ID del pubblico di E
 ## Aggiungere un attributo di profilo a un flusso di dati {#add-profile-attribute}
 
 Per aggiungere un attributo di profilo al flusso di dati di destinazione, eseguire una richiesta PATCH all&#39;API [!DNL Flow Service] fornendo l&#39;ID di flusso, la versione e l&#39;attributo di profilo che si desidera aggiungere.
+
+>[!IMPORTANT]
+>
+>**Requisiti di mappatura specifici per la destinazione**
+>
+>Il metodo `profileSelectors` descritto in questa sezione funziona per la maggior parte delle destinazioni di streaming. Tuttavia, alcune destinazioni di streaming, tra cui **Adobe Target**, richiedono il flusso di lavoro del set di mappatura della preparazione dati.
+>
+>**Se gli attributi del profilo non vengono visualizzati nell&#39;interfaccia utente di Experience Platform dopo una risposta API (202)** riuscita, è necessario utilizzare il metodo del set di mappatura documentato in [Attiva i tipi di pubblico in destinazioni batch](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 **Formato API**
 
