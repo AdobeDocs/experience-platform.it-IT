@@ -3,9 +3,9 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '992'
 ht-degree: 9%
 
 ---
@@ -40,6 +40,12 @@ Questa destinazione richiede l’utilizzo di uno dei seguenti metodi di raccolta
 * Utilizza [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) per raccogliere dati dal tuo sito Web.
 * Utilizza [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) se desideri raccogliere dati dalla tua app mobile.
 * Utilizza l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) se non utilizzi [Web SDK](/help/web-sdk/home.md) o [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) oppure se desideri personalizzare l&#39;esperienza utente in base agli attributi del profilo.
+
+>[!IMPORTANT]
+>
+>**Requisiti di personalizzazione basati su attributi:** Se desideri personalizzare in base agli attributi del profilo (non solo all&#39;appartenenza al pubblico), **devi** utilizzare la [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) con integrazione lato server autenticata, indipendentemente dal fatto che si utilizzi anche Web SDK o Mobile SDK per la raccolta dei dati.
+>
+>Solo Web SDK e Mobile SDK supportano la personalizzazione in base all’iscrizione al pubblico. L&#39;API di Edge Network è **necessaria** per recuperare in modo sicuro gli attributi del profilo per la personalizzazione.
 
 >[!IMPORTANT]
 >
