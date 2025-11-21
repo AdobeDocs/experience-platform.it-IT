@@ -2,9 +2,9 @@
 title: Guida alla segmentazione di Edge
 description: Scopri come utilizzare la segmentazione Edge per valutare i tipi di pubblico in Experience Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
+source-git-commit: d93bf7a3b7447a71fa3ead96e5c35ec9cd2dd99a
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1191'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,9 @@ La segmentazione di Edge consente di valutare istantaneamente le definizioni dei
 >
 > I dati edge verranno memorizzati in una posizione del server perimetrale più vicina al punto in cui sono stati raccolti. Questi dati possono anche essere archiviati in una posizione diversa da quella designata come centro dati Adobe Experience Platform hub (o principale).
 >
-> Inoltre, il motore di segmentazione Edge rispetterà solo le richieste sul server Edge in cui è presente **una** identità primaria contrassegnata, il che è coerente con le identità primarie non basate su Edge.
+> Il motore di segmentazione Edge rispetterà le richieste solo sul server Edge in cui è presente **una** identità contrassegnata principale, in linea con le identità primarie non basate su Edge.
+>
+> Inoltre, poiché la segmentazione Edge è progettata per elaborare le richieste su larga scala, i server perimetrali caricano dinamicamente i metadati richiesti. Di conseguenza, per le prime chiamate potrebbe verificarsi una latenza di &quot;avvio a freddo&quot;, indipendentemente dal tipo di sandbox. In questa finestra, le prime chiamate di valutazione possono causare un timeout. Una breve esplosione pre-calda o un carico realistico aiuta a eliminare gli errori di test falsi positivi.
 
 ## Tipi di query di segmentazione di Edge {#query-types}
 
@@ -151,15 +153,15 @@ Ulteriori informazioni sull&#39;utilizzo di questo endpoint sono disponibili nel
 
 >[!TAB Audience Portal]
 
-In Audience Portal, seleziona **[!UICONTROL Crea pubblico]**.
+In Audience Portal, selezionare **[!UICONTROL Create audience]**.
 
 ![Il pulsante Crea pubblico è evidenziato in Audience Portal.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-Viene visualizzata una finestra a comparsa. Seleziona **[!UICONTROL Genera regole]** per accedere al Generatore di segmenti.
+Viene visualizzata una finestra a comparsa. Seleziona **[!UICONTROL Build rules]** per accedere al Generatore di segmenti.
 
 ![Il pulsante Genera regole è evidenziato nel popover Crea pubblico.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-In Segment Builder (Generatore di segmenti), crea una definizione di segmento che corrisponda a uno dei [tipi di query idonei](#eligible-query-types). Se la definizione del segmento è idonea per la segmentazione Edge, potrai selezionare **[!UICONTROL Edge]** come **[!UICONTROL metodo di valutazione]**.
+In Segment Builder (Generatore di segmenti), crea una definizione di segmento che corrisponda a uno dei [tipi di query idonei](#eligible-query-types). Se la definizione del segmento è idonea per la segmentazione Edge, potrai selezionare **[!UICONTROL Edge]** come **[!UICONTROL Evaluation method]**.
 
 ![Viene visualizzata la definizione del segmento. Il tipo di valutazione è evidenziato e mostra che la definizione del segmento può essere valutata utilizzando la segmentazione Edge.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -315,11 +317,11 @@ Dopo aver selezionato un pubblico su Audience Portal, viene visualizzata la pagi
 
 ![Viene visualizzata la pagina dei dettagli del pubblico per un pubblico valutato mediante la segmentazione Edge.](../images/methods/edge/audience-details.png)
 
-Per i tipi di pubblico abilitati per Edge, viene visualizzata la scheda **[!UICONTROL Profili nel tempo]**, che mostra il totale delle metriche qualificate e le nuove metriche di aggiornamento del pubblico.
+Per i tipi di pubblico abilitati per Edge, viene visualizzata la scheda **[!UICONTROL Profiles over time]** che mostra il totale dei destinatari qualificati e le nuove metriche di aggiornamento del pubblico.
 
-La metrica **[!UICONTROL Totale qualificato]** rappresenta il numero totale di tipi di pubblico qualificati, in base alle valutazioni edge per questo pubblico.
+La metrica **[!UICONTROL Total qualified]** rappresenta il numero totale di tipi di pubblico idonei, in base alle valutazioni edge per questo pubblico.
 
-La metrica **[!UICONTROL Nuovo pubblico aggiornato]** è rappresentata da un grafico a linee che mostra la modifica della dimensione del pubblico tramite la segmentazione Edge. Puoi regolare il menu a discesa per visualizzare le ultime 24 ore, l’ultima settimana o gli ultimi 30 giorni.
+La metrica **[!UICONTROL New audience updated]** è rappresentata da un grafico a linee che mostra la modifica nella dimensione del pubblico attraverso la segmentazione Edge. Puoi regolare il menu a discesa per visualizzare le ultime 24 ore, l’ultima settimana o gli ultimi 30 giorni.
 
 ![La scheda Profili nel tempo è evidenziata.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
