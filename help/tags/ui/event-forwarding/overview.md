@@ -30,7 +30,7 @@ Questo documento fornisce una panoramica di alto livello sull’inoltro degli ev
 >
 >Per informazioni sul modo in cui l&#39;inoltro degli eventi si inserisce nell&#39;ecosistema di raccolta dati di Experience Platform, consulta la [panoramica sulla raccolta dati](../../../collection/home.md).
 
-L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) offre i seguenti vantaggi:
+L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=it) offre i seguenti vantaggi:
 
 **Prestazioni**:
 
