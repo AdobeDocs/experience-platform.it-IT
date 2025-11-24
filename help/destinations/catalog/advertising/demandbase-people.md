@@ -2,9 +2,9 @@
 title: Connessione Demandbase People
 description: Utilizza questa destinazione per attivare i tipi di pubblico e arricchirli con i dati di terze parti Demandbase, per altri casi d’uso a valle nel marketing e nelle vendite.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '891'
 ht-degree: 4%
 
 ---
@@ -68,7 +68,7 @@ Per esportare i tipi di pubblico in Demandbase, è necessario quanto segue:
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
@@ -102,14 +102,29 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Mappature obbligatorie {#mandatory-mappings}
 
-Quando si attivano i tipi di pubblico nella destinazione [!DNL Demandbase People], è necessario configurare le seguenti mappature di campi obbligatorie nel passaggio di mappatura:
+Quando si attivano i tipi di pubblico nella destinazione [!DNL Demandbase People], è necessario configurare la seguente mappatura campi obbligatoria nel passaggio di mappatura:
+
+| Campo di origine | Campo di destinazione | Descrizione |
+|--------------|--------------|-------------|
+| `xdm: workEmail.address` | `Identity: email` | Indirizzo e-mail aziendale della persona |
+
+### Mappature consigliate {#recommended-mappings}
+
+Per una corrispondenza ottimale, includi le seguenti mappature facoltative nel flusso di attivazione, oltre alla [mappatura obbligatoria](#mandatory-mappings) di cui sopra.
 
 | Campo di origine | Campo di destinazione | Descrizione |
 |--------------|--------------|-------------|
 | `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identificatore univoco della persona |
 | `xdm: person.name.lastName` | `xdm: lastName` | Cognome della persona |
 | `xdm: person.name.firstName` | `xdm: firstName` | Nome della persona |
-| `xdm: workEmail.address` | `Identity: email` | Indirizzo e-mail aziendale della persona |
+
+### Best practice per la mappatura {#mapping-best-practices}
+
+Durante il mapping dei campi a [!DNL Demandbase People], considera il seguente comportamento di corrispondenza:
+
+* **Corrispondenza primaria**: se `externalPersonId` è presente, Demandbase lo utilizza come identificatore primario per la corrispondenza della persona.
+* **Corrispondenza fallback**: se `externalPersonId` non è disponibile, Demandbase utilizza il campo `email` per l&#39;identificazione.
+* **Obbligatorio e consigliato**: sebbene Demandbase richieda solo `email`, Adobe consiglia di mappare tutti i campi disponibili nella tabella delle mappature consigliata precedente per migliorare la precisione della corrispondenza e le prestazioni della campagna.
 
 ![Mappature persone Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
@@ -120,4 +135,4 @@ Queste mappature sono necessarie per il corretto funzionamento della destinazion
 * **Guardrail API Demandbase**: se hai esportato tipi di pubblico in Demandbase e le esportazioni hanno avuto esito positivo in Experience Platform, ma non tutti i dati raggiungono Demandbase, potresti aver riscontrato una limitazione API sul lato Demandbase. Rivolgiti a loro per chiarimenti.
 * **Eliminazione elenco**: gli elenchi Persone sono univoci, pertanto non è possibile ricreare un nuovo elenco con un nome già in uso. Quando si rimuovono persone da un elenco, queste non saranno più disponibili, ma non verranno eliminate.
 * **Ora di attivazione**: il caricamento dei dati in Demandbase è soggetto a elaborazione notturna.
-* **Denominazione del pubblico**: se un pubblico account con lo stesso nome è stato attivato in precedenza in Demandbase, non è possibile riattivarlo tramite un flusso di dati diverso nella destinazione Demandbase.
+* **Denominazione pubblico**: se un pubblico di persone con lo stesso nome è stato attivato in precedenza in Demandbase, non è possibile riattivarlo tramite un flusso di dati diverso nella destinazione Demandbase.
