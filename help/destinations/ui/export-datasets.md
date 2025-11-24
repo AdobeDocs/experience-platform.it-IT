@@ -3,10 +3,10 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
+source-git-commit: de161bcb29a0d4fc9b0c419506537b18255c79a4
 workflow-type: tm+mt
-source-wordcount: '2656'
-ht-degree: 8%
+source-wordcount: '3005'
+ht-degree: 7%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[&#x200B; di &#x200B;](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima del 1° novembre 2024*.
+>**Elemento azione**: la versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima del 1° novembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -50,16 +50,16 @@ Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Origini, Web SDK, Mobile SDK, Connettore dati di Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=it#profile-attribute-datasets">Set di dati snapshot profilo generato dal sistema</a>.</li></td>
+    <td><ul><li>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experience Platform dopo l’acquisizione o la raccolta di dati tramite Origini, Web SDK, Mobile SDK, Connettore dati di Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Set di dati snapshot profilo generato dal sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulta la documentazione di <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilizza la tabella seguente per capire quali tipi di set di dati puoi esportare
 
 Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro descritto in questa pagina, i vantaggi dell’utilizzo della funzionalità di esportazione dei set di dati e alcuni casi d’uso consigliati.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448826?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -143,6 +143,10 @@ Utilizzare le caselle di controllo a sinistra dei nomi dei set di dati per selez
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio Seleziona set di dati in cui è possibile selezionare i set di dati da esportare.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
+>[!NOTE]
+>
+>Tutti i set di dati selezionati qui condivideranno la stessa pianificazione di esportazione. Se hai bisogno di diverse programmazioni di esportazione (ad esempio, esportazioni incrementali per alcuni set di dati ed esportazioni complete una tantum per altri), crea flussi di dati separati per ciascun tipo di programmazione.
+
 ## Pianificare l’esportazione di set di dati {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -160,6 +164,16 @@ Utilizzare le caselle di controllo a sinistra dei nomi dei set di dati per selez
 >title="Aggiornare la data di fine per questo corpo del flusso di dati"
 >abstract="A causa dei recenti aggiornamenti di questa destinazione, il flusso di dati ora richiede una data di fine. Adobe ha impostato una data di fine predefinita al 1° settembre 2025. Effettua l’aggiornamento alla data di fine desiderata, altrimenti le esportazioni di dati si interromperanno alla data predefinita."
 
+>[!IMPORTANT]
+>
+>**La pianificazione si applica a tutti i set di dati nel flusso di dati**
+>
+>Quando configuri o modifichi la pianificazione di esportazione, questa si applica a **tutti i set di dati** attualmente esportati tramite il flusso di dati che stai configurando. Non è possibile impostare pianificazioni diverse per singoli set di dati all’interno dello stesso flusso di dati.
+>
+>Se hai bisogno di pianificazioni di esportazione diverse per set di dati diversi, devi creare flussi di dati separati (connessioni di destinazione separate) per ogni tipo di pianificazione.
+>
+>**Esempio:** se il Set di dati A viene esportato in modo incrementale e si aggiunge il Set di dati B con una pianificazione di esportazione completa una tantum, anche il Set di dati A verrà aggiornato alla pianificazione di esportazione completa una tantum.
+
 Utilizza il passaggio **[!UICONTROL Scheduling]** per:
 
 * Imposta una data di inizio e una data di fine, nonché una cadenza di esportazione per le esportazioni dei set di dati.
@@ -167,6 +181,10 @@ Utilizza il passaggio **[!UICONTROL Scheduling]** per:
 * Personalizza il percorso della cartella nel percorso di archiviazione in cui devono essere esportati i set di dati. Ulteriori informazioni su come [modificare il percorso della cartella di esportazione](#edit-folder-path).
 
 Utilizzare il controllo **[!UICONTROL Edit schedule]** nella pagina per modificare la cadenza di esportazione delle esportazioni e per scegliere se esportare file completi o incrementali.
+
+>[!WARNING]
+>
+>Modificando la pianificazione in questo punto verrà aggiornato il comportamento di esportazione per tutti i set di dati in questo flusso di dati. Se questo flusso di dati contiene più set di dati, tutti saranno interessati da questa modifica.
 
 ![Il controllo Modifica pianificazione è evidenziato nel passaggio Pianificazione.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -213,9 +231,18 @@ Selezionare **[!UICONTROL Edit folder path]** per personalizzare la struttura di
 
 ![Selezione di macro evidenziata nella finestra modale della cartella personalizzata.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-Dopo aver selezionato le macro desiderate, è possibile visualizzare un&#39;anteprima della struttura di cartelle che verrà creata nel percorso di archiviazione. Il primo livello nella struttura delle cartelle rappresenta **[!UICONTROL Folder path]** che hai indicato quando [ti sei connesso alla destinazione](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) per esportare i set di dati.
+Dopo aver selezionato le macro desiderate, è possibile visualizzare un&#39;anteprima della struttura di cartelle che verrà creata nel percorso di archiviazione. Il primo livello nella struttura delle cartelle rappresenta **[!UICONTROL Folder path]** che hai indicato quando [ti sei connesso alla destinazione](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) per esportare i set di dati.
 
 ![Anteprima del percorso della cartella evidenziata nella finestra modale della cartella personalizzata.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
+### Best practice per la gestione di più set di dati {#best-practices-multiple-datasets}
+
+Durante l’esportazione di più set di dati, considera le seguenti best practice:
+
+* **Stessi requisiti di pianificazione**: raggruppa i set di dati che richiedono la stessa pianificazione di esportazione (frequenza, tipo) in un singolo flusso di dati per una gestione più semplice.
+* **Requisiti di pianificazione diversi**: crea flussi di dati separati per i set di dati che richiedono pianificazioni di esportazione o tipi di esportazione diversi (incrementali rispetto a completi). In questo modo ogni set di dati viene esportato in base alle sue esigenze specifiche.
+* **Rivedi prima di modificare**: prima di modificare la pianificazione di un flusso di dati esistente, controlla quali set di dati sono già stati esportati tramite tale flusso di dati per evitare modifiche non desiderate al loro comportamento di esportazione.
+* **Documenta la configurazione**: tieni traccia dei set di dati in cui si trovano i flussi di dati, soprattutto quando gestisci più pianificazioni di esportazione tra destinazioni diverse.
 
 ## Rivedi {#review}
 
@@ -280,7 +307,7 @@ Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti
 
 ## Diritti di esportazione del set di dati {#licensing-entitlement}
 
-Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 I diritti all’esportazione di dati per diverse applicazioni non sono additivi. Ciò significa, ad esempio, che se acquisti Real-Time CDP Ultimate e Adobe Journey Optimizer Ultimate, il diritto all’esportazione del profilo sarà il più grande tra i due diritti, in base alle descrizioni del prodotto. Il volume di adesioni viene calcolato prendendo il numero totale di profili con licenza e moltiplicandolo per 500 KB per Real-Time CDP Prime o 700 KB per Real-Time CDP Ultimate per determinare il volume di dati a cui hai diritto.
 
@@ -352,4 +379,10 @@ No, non è possibile.
 
 +++Risposta
 I tentativi vengono eseguiti automaticamente per la maggior parte dei tipi di errori di sistema.
++++
+
+**È possibile impostare pianificazioni di esportazione diverse per set di dati diversi nello stesso flusso di dati?**
+
++++Risposta
+No, tutti i set di dati all’interno di un singolo flusso di dati condividono la stessa pianificazione di esportazione. Se hai bisogno di pianificazioni di esportazione diverse per set di dati diversi, devi creare flussi di dati separati (connessioni di destinazione) per ogni tipo di pianificazione. Ad esempio, se desideri che il Set di dati A venga esportato in modo incrementale ogni giorno e il Set di dati B venga esportato come esportazione completa una tantum, devi creare due flussi di dati separati.
 +++
