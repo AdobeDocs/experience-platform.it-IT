@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 290c20d3deb70372fb2fc691c6e6d04d34a72853
 workflow-type: tm+mt
-source-wordcount: '4975'
+source-wordcount: '4976'
 ht-degree: 4%
 
 ---
@@ -1096,7 +1096,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### Aggiungi crittografia ai file esportati
 
-È inoltre possibile aggiungere la crittografia ai file esportati. A tale scopo, è necessario aggiungere elementi da `encryptionSpecs`. Vedi l’esempio di richiesta seguente con i parametri obbligatori evidenziati:
+È inoltre possibile aggiungere la crittografia ai file esportati. A tale scopo, è necessario aggiungere elementi dall&#39;oggetto `encryption`. Vedi l’esempio di richiesta seguente con i parametri obbligatori evidenziati:
 
 
 >[!BEGINSHADEBOX]
@@ -1104,7 +1104,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++ Visualizza le specifiche di crittografia per le destinazioni di archiviazione cloud
 
 ```json {line-numbers="true" start-line="1" highlight="26-27"}
-           "encryptionSpecs": [
+           "encryption": [
                 {
                     "name": "File PGP/GPG Encryption",
                     "type": "FileAsymmetric",
@@ -1163,12 +1163,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "sshKey": "<Add SSH key>"
       }
     },
-  "encryptionSpecs":{
-     "specName": "Encryption spec",
-     "params": {
-         "encryptionAlgo":"PGPGPG",
-         "publicKey":"<Add public key>"
-      }            
+  "encryption": {
+    "specName": "File Encryption",
+        "params": {
+            "encryptionAlgo": "PGP/GPG",
+            "publicKey": "<Add public key>"
+        }
     },
   "connectionSpec": {
     "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec
@@ -1221,7 +1221,7 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { //describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1432,7 +1432,7 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1632,7 +1632,7 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -1822,11 +1822,11 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
         "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
         "version": "1.0",
         "authSpec": [],
-        "encryptionSpecs": [],
-            "targetSpec": { // describes the target connection parameters
-                "name": "User based target",
-                "type": "UserNamespace",
-                "spec": {
+        "encryption": [],
+        "targetSpec": { // describes the target connection parameters
+            "name": "User based target",
+            "type": "UserNamespace",
+            "spec": {
                     "$schema": "http://json-schema.org/draft-07/schema#",
                     "type": "object",
                     "properties": {
@@ -2013,7 +2013,7 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
@@ -2212,7 +2212,7 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
             "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
             "version": "1.0",
             "authSpec": [...],
-            "encryptionSpecs": [...],
+            "encryption": [...],
             "targetSpec": { // describes the target connection parameters
                 "name": "User based target",
                 "type": "UserNamespace",
