@@ -3,9 +3,9 @@ title: Registra ordini di lavoro di eliminazione
 description: Scopri come utilizzare l’endpoint /workorder nell’API di igiene dei dati per gestire gli ordini di lavoro di eliminazione dei record in Adobe Experience Platform. Questa guida descrive le quote, le timeline di elaborazione e l’utilizzo delle API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2440'
 ht-degree: 2%
 
 ---
@@ -300,6 +300,110 @@ Nella tabella seguente sono descritte le proprietà della risposta.
 >[!NOTE]
 >
 >La proprietà azione per gli ordini di lavoro di eliminazione record è attualmente `identity-delete` nelle risposte API. Se l&#39;API cambia per utilizzare un valore diverso (ad esempio `delete_identity`), la documentazione verrà aggiornata di conseguenza.
+
+## Converti elenchi ID in JSON per richieste di cancellazione record
+
+Per creare un ordine di lavoro di eliminazione record da file CSV, TSV o TXT contenenti identificatori, è possibile utilizzare script di conversione per produrre i payload JSON richiesti per l&#39;endpoint `/workorder`. Questo approccio è particolarmente utile quando si lavora con file di dati esistenti. Per script pronti all&#39;uso e istruzioni complete, visita l&#39;archivio GitHub [csv per l&#39;igiene dei dati](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+### Generare payload JSON
+
+I seguenti esempi di script di base mostrano come eseguire gli script di conversione in Python o Ruby:
+
+>[!BEGINTABS]
+
+>[!TAB Esempio di esecuzione dello script Python]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Esempio per eseguire lo script Ruby]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+La tabella seguente descrive i parametri degli script di base.
+
+| Parametro | Descrizione |
+| ---           | ---     |
+| `verbose` | Abilita output dettagliato. |
+| `column` | Il nome dell’indice (basato su 1) o dell’intestazione della colonna contenente i valori di identità da eliminare. Se non specificato, viene impostata automaticamente la prima colonna. |
+| `namespace` | Oggetto con una proprietà `code` che specifica lo spazio dei nomi dell&#39;identità (ad esempio, &quot;email&quot;). |
+| `dataset-id` | L’identificatore univoco del set di dati associato all’ordine di lavoro. Se la richiesta si applica a tutti i set di dati, questo campo verrà impostato su `ALL`. |
+| `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
+| `output-dir` | La directory in cui scrivere il payload JSON di output. |
+
+{style="table-layout:auto"}
+
+L’esempio seguente mostra un payload JSON convertito correttamente da un file CSV, TSV o TXT. Contiene record associati allo spazio dei nomi specificato e viene utilizzato per eliminare i record identificati dagli indirizzi e-mail.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+La tabella seguente descrive le proprietà nel payload JSON.
+
+| Proprietà | Descrizione |
+| ---          | ---     |
+| `action` | Azione richiesta per l&#39;ordine di lavoro di eliminazione record. Impostato automaticamente su `delete_identity` dallo script di conversione. |
+| `datasetId` | L’identificatore univoco del set di dati. |
+| `displayName` | Etichetta leggibile per questo ordine di lavoro di eliminazione record. |
+| `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
+| `identities` | Matrice di oggetti, ciascuno contenente:<br><ul><li> `namespace`: oggetto con una proprietà `code` che specifica lo spazio dei nomi dell&#39;identità (ad esempio, &quot;email&quot;).</li><li> `id`: valore di identità da eliminare per questo spazio dei nomi.</li></ul> |
+
+{style="table-layout:auto"}
+
+### Invia i dati JSON generati all&#39;endpoint `/workorder`
+
+Per inviare una richiesta, seguire le istruzioni riportate nella sezione [creare un ordine di lavoro di eliminazione record](#create). Utilizzare il payload JSON convertito come corpo della richiesta (`-d`) durante l&#39;invio della richiesta POST `curl` all&#39;endpoint API `/workorder`.
 
 ## Recuperare i dettagli per un ordine di lavoro di eliminazione record specifico {#lookup}
 
