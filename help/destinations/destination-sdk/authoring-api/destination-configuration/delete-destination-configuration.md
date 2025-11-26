@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione di destinazione esistente tramite Adobe Experience Platform Destination SDK.
 title: Eliminare una configurazione di destinazione
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fda542e62c448788099d63951277278a146fdfc8
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '279'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) 
 
 ## Eliminare una configurazione di destinazione {#delete}
 
-È possibile eliminare una configurazione del server di destinazione [esistente](create-destination-configuration.md) effettuando una richiesta `DELETE` all&#39;endpoint `/authoring/destinations` con `{INSTANCE_ID}` della configurazione di destinazione da eliminare.
+È possibile eliminare una configurazione di destinazione [esistente](create-destination-configuration.md) effettuando una richiesta `DELETE` all&#39;endpoint `/authoring/destinations` con `{INSTANCE_ID}` della configurazione di destinazione che si desidera eliminare.
 
 >[!TIP]
 >
