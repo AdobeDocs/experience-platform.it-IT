@@ -4,9 +4,9 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 6d1b73c1557124f283558e1daeb3ddeaaec8e8a4
+source-git-commit: aacc3cbbc2bc8c02e50f375f78733a851138e1c7
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '2908'
 ht-degree: 6%
 
 ---
@@ -59,7 +59,7 @@ Per utilizzare la destinazione API HTTP per esportare dati da Experience Platfor
 * L&#39;endpoint HTTP deve supportare lo schema del profilo di Experience Platform. Nella destinazione API HTTP non è supportata alcuna trasformazione in uno schema di payload di terze parti. Consulta la sezione [dati esportati](#exported-data) per un esempio dello schema di output di Experience Platform.
 * L&#39;endpoint HTTP deve supportare le intestazioni.
 * L’endpoint HTTP deve rispondere entro 2 secondi per garantire la corretta elaborazione dei dati ed evitare errori di timeout.
-* Se prevedi di utilizzare mTLS: l’endpoint di ricezione dei dati deve avere TLS disabilitato e solo mTLS abilitato. Se utilizzi anche l’autenticazione OAuth 2, devi mantenere un endpoint HTTPS standard separato per il recupero del token. Per informazioni dettagliate, consulta la sezione [mTLSsAssessment](#mtls-considerations).
+* Se prevedi di utilizzare mTLS: l’endpoint di ricezione dei dati deve avere TLS disabilitato e solo mTLS abilitato. mTLS non è supportato se l&#39;endpoint richiede l&#39;autenticazione tramite password OAuth 2 o credenziali client.
 
 >[!TIP]
 >
@@ -75,17 +75,7 @@ Per utilizzare la destinazione API HTTP per esportare dati da Experience Platfor
 
 Il supporto mTLS per le destinazioni API HTTP si applica **solo all&#39;endpoint di ricezione dei dati** in cui vengono inviate le esportazioni dei profili (il campo **[!UICONTROL HTTP Endpoint]** in [dettagli destinazione](#destination-details)).
 
-**mTLS non supportato per gli endpoint di autenticazione OAuth 2:**
-
-* L&#39;elemento **[!UICONTROL Access Token URL]** utilizzato nelle credenziali del client OAuth 2 o nell&#39;autenticazione della password OAuth 2 non supporta mTLS
-* Le richieste di recupero e aggiornamento dei token vengono inviate tramite HTTPS standard senza l’autenticazione del certificato client
-
-**Architettura richiesta:** Se hai bisogno di mTLS per l&#39;endpoint di ricezione dei dati e utilizzi l&#39;autenticazione OAuth 2, devi mantenere due endpoint separati:
-
-* **Endpoint di autenticazione:** HTTPS standard (senza mTLS) per la gestione dei token
-* **Endpoint di ricezione dati:** HTTPS con mTLS-only abilitato per le esportazioni di profili
-
-Questa architettura rappresenta un limite della piattaforma corrente. Il supporto per mTLS sugli endpoint di autenticazione è in fase di valutazione per le versioni future.
+mTLS **non è supportato** se l&#39;endpoint richiede l&#39;autenticazione tramite password OAuth 2 o credenziali client.
 
 ### Configurazione di mTLS per l’esportazione dei dati {#configuring-mtls}
 
@@ -167,9 +157,9 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Password]** per 
 
 >[!NOTE]
 >
->**Limitazione mTLS:** [!UICONTROL Access Token URL] non supporta mTLS. Se prevedi di utilizzare mTLS per l’endpoint di ricezione dei dati, l’endpoint di autenticazione deve utilizzare HTTPS standard. Per ulteriori dettagli sull&#39;architettura richiesta, consulta la sezione [considerazioni su mTLS](#mtls-considerations).
+>**Limitazione mTLS:** mTLS non supportata con autenticazione password OAuth 2. Per informazioni dettagliate, consulta la sezione [mTLSsAssessment](#mtls-considerations).
 
-* **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento. Questo endpoint deve utilizzare HTTPS standard e non supporta mTLS.
+* **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
 * **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
 * **[!UICONTROL Username]**: nome utente per accedere all&#39;endpoint HTTP.
@@ -187,9 +177,9 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentia
 
 >[!NOTE]
 >
->**Limitazione mTLS:** [!UICONTROL Access Token URL] non supporta mTLS. Se prevedi di utilizzare mTLS per l’endpoint di ricezione dei dati, l’endpoint di autenticazione deve utilizzare HTTPS standard. Per ulteriori dettagli sull&#39;architettura richiesta, consulta la sezione [considerazioni su mTLS](#mtls-considerations).
+>Limitazione **mTLS:** mTLS non supportata con autenticazione credenziali client OAuth 2. Per informazioni dettagliate, consulta la sezione [mTLSsAssessment](#mtls-considerations).
 
-* **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento. Questo endpoint deve utilizzare HTTPS standard e non supporta mTLS.
+* **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
 * **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
 * **[!UICONTROL Client Credentials Type]**: selezionare il tipo di concessione di credenziali client OAuth2 supportata dall&#39;endpoint:
@@ -206,7 +196,7 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentia
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Endpoint HTTP"
->abstract="L’URL dell’endpoint HTTP a cui desideri inviare i dati del profilo. Questo è l’endpoint per la ricezione di dati e, se configurato, supporta mTLS. Questo è separato dall’URL del token di accesso OAuth 2, che non supporta mTLS."
+>abstract="L’URL dell’endpoint HTTP a cui desideri inviare i dati del profilo. Questo è l’endpoint di ricezione dei dati e supporta mTLS se configurato (non disponibile con l’autenticazione tramite password OAuth 2 o credenziali client)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -230,7 +220,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Name]**: immettere un nome con cui riconoscere questa destinazione in futuro.
 * **[!UICONTROL Description]**: immettere una descrizione che consentirà di identificare questa destinazione in futuro.
 * **[!UICONTROL Headers]**: immettere le intestazioni personalizzate che si desidera includere nelle chiamate di destinazione, nel seguente formato: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]**: URL dell&#39;endpoint HTTP a cui si desidera inviare i dati del profilo. Questo è l’endpoint di ricezione dei dati. Se utilizzi mTLS, l’endpoint deve avere TLS disabilitato e solo mTLS abilitato. Questo è diverso dall’URL del token di accesso OAuth 2 configurato durante l’autenticazione.
+* **[!UICONTROL HTTP Endpoint]**: URL dell&#39;endpoint HTTP a cui si desidera inviare i dati del profilo. Questo è l’endpoint di ricezione dei dati. Se utilizzi mTLS, l’endpoint deve avere TLS disabilitato e solo mTLS abilitato.
 * **[!UICONTROL Query parameters]**: facoltativamente, è possibile aggiungere parametri di query all&#39;URL dell&#39;endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. **Nota**: i nomi dei segmenti sono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includono il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
 * **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
