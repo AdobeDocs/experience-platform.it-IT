@@ -2,10 +2,10 @@
 title: Sviluppare un’estensione
 description: Questo documento fornisce una panoramica generale del processo di sviluppo delle estensioni tag, con collegamenti verso la documentazione che descrive i processi in maggior dettaglio.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
+source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 96%
+source-wordcount: '436'
+ht-degree: 91%
 
 ---
 
@@ -42,11 +42,7 @@ Sono inoltre disponibili diversi strumenti npm per lo sviluppo del pacchetto di 
 
 ## Estensioni di esempio
 
-Su Github sono disponibili alcune estensioni di esempio da esaminare o usare come progetti iniziali:
-
-* [Estensione di esempio Hello World](https://github.com/adobe/reactor-helloworld-extension)
-* [Estensione di esempio Typekit](https://github.com/jeffchasin/extension-typekit)
-* [Estensione di esempio Pinterest](https://github.com/jeffchasin/extension-pinterest)
+Come progetti iniziali, puoi rivedere o utilizzare le estensioni di esempio da GitHub, ad esempio l&#39;estensione di esempio [Hello World](https://github.com/adobe/reactor-helloworld-extension).
 
 ## Workspace Slack
 

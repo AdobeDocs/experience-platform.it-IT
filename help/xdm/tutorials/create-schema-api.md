@@ -5,10 +5,10 @@ title: Creare uno schema utilizzando l’API Schema Registry
 type: Tutorial
 description: Questa esercitazione utilizza l’API Schema Registry per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cc1c2edc8980c562e323357376c2594fd8ea482a
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 3%
+source-wordcount: '2853'
+ht-degree: 2%
 
 ---
 
@@ -221,7 +221,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Richiesta**
 
-Questa richiesta aggiorna lo schema Membri fedeltà per includere i campi nel gruppo di campi [[!UICONTROL Dettagli demografici]](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Questa richiesta aggiorna lo schema Membri fedeltà per includere i campi all&#39;interno del gruppo di campi [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
 Aggiungendo il gruppo di campi `profile-person-details`, lo schema Membri fedeltà ora acquisisce informazioni demografiche per i membri del programma fedeltà come il nome, il cognome e il compleanno.
 
@@ -304,7 +304,7 @@ Gli schemi Membri fedeltà richiedono altri due gruppi di campi standard, che è
 
 >[!TIP]
 >
->È utile esaminare tutti i gruppi di campi disponibili per acquisire familiarità con i campi inclusi in ciascuno di essi. Puoi elencare (GET) tutti i gruppi di campi disponibili per l’utilizzo con una particolare classe eseguendo una richiesta per ciascuno dei contenitori &quot;global&quot; e &quot;tenant&quot; e restituendo solo i gruppi di campi in cui il campo &quot;meta:intendedToExtend&quot; corrisponde alla classe in uso. In questo caso, è la classe [!DNL XDM Individual Profile], quindi viene utilizzato [!DNL XDM Individual Profile] `$id`:
+>È utile esaminare tutti i gruppi di campi disponibili per acquisire familiarità con i campi inclusi in ciascuno di essi. È possibile elencare (GET) tutti i gruppi di campi disponibili per l&#39;utilizzo con una particolare classe eseguendo una richiesta per ciascuno dei contenitori &quot;global&quot; e &quot;tenant&quot;, restituendo solo i gruppi di campi in cui il campo &quot;meta:intendedToExtend&quot; corrisponde alla classe in uso. In questo caso, è la classe [!DNL XDM Individual Profile], quindi viene utilizzato [!DNL XDM Individual Profile] `$id`:
 >
 >```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -325,8 +325,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 Questa richiesta aggiorna lo schema Membri fedeltà per includere i campi all’interno dei seguenti gruppi di campi standard:
 
-* [[!UICONTROL Dettagli contatto personale]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): aggiunge informazioni di contatto quali indirizzo dell&#39;abitazione, indirizzo di posta elettronica e telefono dell&#39;abitazione.
-* [[!UICONTROL Dettagli fedeltà]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): aggiunge informazioni di contatto quali indirizzo dell&#39;abitazione, indirizzo e-mail e telefono dell&#39;abitazione.
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): aggiunge informazioni di contatto quali indirizzo dell&#39;abitazione, indirizzo di posta elettronica e telefono dell&#39;abitazione.
+* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): aggiunge informazioni di contatto quali indirizzo dell&#39;abitazione, indirizzo di posta elettronica e telefono dell&#39;abitazione.
 
 ```SHELL
 curl -X PATCH \
@@ -420,7 +420,7 @@ Lo schema Membri fedeltà ora deve contenere quattro valori `$ref` nell&#39;arra
 
 ### Definisci un nuovo gruppo di campi
 
-Anche se il gruppo di campi standard [!UICONTROL Dettagli fedeltà] fornisce utili campi relativi alla fedeltà allo schema, esistono campi fedeltà aggiuntivi non inclusi in alcun gruppo di campi standard.
+Anche se il gruppo di campi [!UICONTROL Loyalty Details] standard fornisce utili campi relativi alla fedeltà allo schema, esistono campi fedeltà aggiuntivi che non sono inclusi in alcun gruppo di campi standard.
 
 Per aggiungere questi campi, è possibile definire gruppi di campi personalizzati nel contenitore `tenant`. Questi gruppi di campi sono specifici dell’organizzazione e non sono visibili o modificabili da persone esterne all’organizzazione.
 
@@ -1151,7 +1151,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->È possibile elencare i valori &quot;xdm:namespace&quot; disponibili o crearne di nuovi utilizzando [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). Il valore di &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda dello &quot;xdm:namespace&quot; utilizzato.
+>È possibile elencare i valori &quot;xdm:namespace&quot; disponibili o crearne di nuovi utilizzando [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). Il valore per &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda del &quot;xdm:namespace&quot; utilizzato.
 
 **Risposta**
 
@@ -1368,6 +1368,52 @@ La risposta è un elenco filtrato di schemi, contenente solo quelli che soddisfa
 }
 ```
 
+## Utilizza l’interfaccia utente per convalidare lo schema {#validate-in-ui}
+
+Utilizzare l&#39;interfaccia utente di Experience Platform per verificare che lo schema creato tramite l&#39;API [!DNL Schema Registry] abbia la struttura, le proprietà e la configurazione di identità corrette. Segui questi passaggi:
+
+### Individuare lo schema
+
+Per iniziare, passare a **[!UICONTROL Schemas]** > **[!UICONTROL Browse]**. Utilizzare il campo di immissione testo per cercare il nome dello schema (ad esempio, `Campaign Member`) e selezionare il nome dello schema dalla tabella.
+
+![Gli schemi sfogliano la visualizzazione evidenziando il campo di immissione testo per cercare e selezionare lo schema.](../images/tutorials/create-schema/schemas-browse.png)
+
+### Conferma la struttura dello schema
+
+Nell’area di lavoro dello schema viene visualizzata la struttura completa dello schema. Verifica che:
+
+* Tutti i gruppi di campi standard aggiunti vengono visualizzati nell’area di lavoro.
+* Il gruppo di campi personalizzato viene visualizzato nella struttura e viene espanso per visualizzarne i campi.
+
+![Area di lavoro dello schema che visualizza la struttura completa dello schema con gruppi di campi standard e personalizzati espansi.](../images/tutorials/create-schema/schema-canvas.png)
+
+### Rivedi proprietà schema
+
+Quindi, selezionare il nodo radice dello schema per aprire il pannello **[!UICONTROL Schema properties]** e confermare i metadati chiave:
+
+* Schema `$id`
+* Nome visualizzato
+* Stato abilitazione profilo
+
+`$id` deve corrispondere al valore restituito nella risposta API.
+
+>[!NOTE]
+>
+>La classe assegnata (**[!UICONTROL XDM Business Campaign Members]** in questo esempio) viene visualizzata nel pannello **[!UICONTROL Composition]** a sinistra.
+
+![La vista Editor schema con la directory principale dello schema selezionata e il pannello Proprietà schema aperto per rivedere i metadati chiave.](../images/tutorials/create-schema/review-schema-properties.png)
+
+### Convalida campi di identità
+
+Ogni campo di identità aggiunto allo schema è elencato nella sezione **[!UICONTROL Identities]** del pannello **[!UICONTROL Composition]**. Seleziona un campo di identità per visualizzarne le proprietà nel pannello di destra. Per ogni campo di identità, conferma:
+
+* Lo spazio dei nomi dell’identità è corretto.
+* Il campo è contrassegnato come identità primaria, se applicabile.
+
+![Sezione Identità del pannello di composizione con un campo di identità selezionato e le relative proprietà di identità visualizzate nel pannello di destra.](../images/tutorials/create-schema/identitiy-confirmation.png)
+
+Se la struttura, le proprietà e la configurazione dell&#39;identità corrispondono alla configurazione API, lo schema è stato creato e configurato correttamente tramite l&#39;API [!DNL Schema Registry].
+
 ## Passaggi successivi
 
 Seguendo questa esercitazione, hai composto correttamente uno schema utilizzando sia gruppi di campi standard che un gruppo di campi definito. Ora puoi utilizzare questo schema per creare un set di dati e acquisire i dati del record in Adobe Experience Platform.
@@ -1384,7 +1430,7 @@ Le informazioni seguenti integrano l’esercitazione sull’API.
 
 In questa esercitazione, viene composto uno schema per descrivere i membri di un programma fedeltà per la vendita al dettaglio.
 
-Lo schema implementa la classe [!DNL XDM Individual Profile] e combina più gruppi di campi. Acquisisce informazioni sui membri fedeltà utilizzando i gruppi di campi standard [!DNL Demographic Details], [!UICONTROL Dettagli contatto personali] e [!UICONTROL Dettagli fedeltà], nonché tramite un gruppo di campi Livello fedeltà personalizzato definito durante l&#39;esercitazione.
+Lo schema implementa la classe [!DNL XDM Individual Profile] e combina più gruppi di campi. Acquisisce informazioni sui membri fedeltà utilizzando i gruppi di campi standard [!DNL Demographic Details], [!UICONTROL Personal Contact Details] e [!UICONTROL Loyalty Details], nonché tramite un gruppo di campi Livello fedeltà personalizzato definito durante l’esercitazione.
 
 Di seguito è riportato lo schema Membri fedeltà completato in formato JSON:
 
