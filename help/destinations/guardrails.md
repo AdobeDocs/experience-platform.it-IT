@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 6583c85498a0106389a2e8b14b499cb1f6bafe75
+source-git-commit: 216621652697c378164125a6d0e125a33ee008be
 workflow-type: tm+mt
-source-wordcount: '1712'
+source-wordcount: '1763'
 ht-degree: 2%
 
 ---
@@ -178,6 +178,7 @@ Ulteriori informazioni sull’[esportazione dei set di dati](/help/destinations/
 | --- | --- | --- | --- |
 | Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Guardrail delle prestazioni | Puoi creare fino a 5 destinazioni private di flussi personalizzati o batch con Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
 | Criteri di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1.800 e massimo 3.600)</li><li>`maxNumEventsInBatch` (minimo 1.000 e massimo 10.000)</li></ul> | Guarddrail imposto dal sistema | Quando utilizzi l&#39;opzione di [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili che i messaggi devono includere. |
+| Durata del token OAuth 2 per Destination SDK | Minimo 24 ore consigliato | Guardrail delle prestazioni | Per le destinazioni che utilizzano l&#39;[autorizzazione OAuth 2](/help/destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md), Adobe consiglia di impostare i valori di durata del token di accesso su un minimo di 24 ore. Le connessioni con token la cui durata è inferiore a 1 ora determineranno la perdita di profili durante l’attivazione. |
 
 {style="table-layout:auto"}
 
@@ -196,7 +197,7 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

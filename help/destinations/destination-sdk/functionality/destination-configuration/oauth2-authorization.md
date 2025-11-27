@@ -2,9 +2,9 @@
 description: Questa pagina descrive i vari flussi di autorizzazione OAuth 2 supportati da Destination SDK e fornisce istruzioni per impostare l’autorizzazione OAuth 2 per la destinazione.
 title: Autorizzazione OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2182'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ L’output include sempre un token di accesso, utilizzato da Experience Platform
 Il sistema che Adobe ha progettato per l’autorizzazione OAuth 2:
 
 * Supporta tutte e tre le sovvenzioni OAuth 2 tenendo conto di eventuali varianti di esse, come campi di dati aggiuntivi, chiamate API non standard e altro ancora.
-* Supporta i token di accesso con valori di durata variabili, che si tratti di 90 giorni, 30 minuti o qualsiasi altro valore di durata specificato.
+* Supporta i token di accesso con valori di durata variabili. Adobe consiglia di impostare il valore di durata del token su un minimo di 24 ore.
 * Supporta i flussi di autorizzazione OAuth 2 con o senza token di aggiornamento.
 
 ## OAuth 2 con codice di autorizzazione {#authorization-code}
