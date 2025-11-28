@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 17825151f58548ab82d0ac44beacab06386f0a2d
 workflow-type: tm+mt
-source-wordcount: '4259'
+source-wordcount: '4295'
 ht-degree: 4%
 
 ---
@@ -58,6 +58,13 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campagne orchestrate"
 >abstract="Abilita questa opzione per consentire l’utilizzo del set di dati selezionato nelle campagne orchestrate di Adobe Journey Optimizer. Il set di dati deve utilizzare uno schema relazionale ed è possibile creare un solo set di dati per schema."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Abilitare il set di dati per le campagne orchestrate"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_enableforlookup_toggle"
+>title="Abilitare per la ricerca"
+>abstract="Abilita questo set di dati per la ricerca per utilizzarne i dati in Journey Optimizer per la personalizzazione, il decisioning e l’orchestrazione del percorso."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Utilizzare i dati di Adobe Experience Platform in Journey Optimizer"
 
 Nell&#39;interfaccia utente [!DNL Experience Platform], selezionare **[!UICONTROL Datasets]** nel menu di navigazione a sinistra per aprire il dashboard **[!UICONTROL Datasets]**. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
 
@@ -337,7 +344,7 @@ Viene visualizzata una casella di conferma. Selezionare **[!UICONTROL Delete]** 
 
 Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfaccia utente verrà eliminato dal data lake, da Identity Service e anche da tutti i dati di profilo associati a tale set di dati nell’archivio Profili.
 
-È possibile eliminare i dati profilo associati a un set di dati dall&#39;archivio [!DNL Profile] (lasciando i dati nel data lake) utilizzando l&#39;API Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API dei processi di sistema &#x200B;](../../profile/api/profile-system-jobs.md).
+È possibile eliminare i dati profilo associati a un set di dati dall&#39;archivio [!DNL Profile] (lasciando i dati nel data lake) utilizzando l&#39;API Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API dei processi di sistema ](../../profile/api/profile-system-jobs.md).
 
 ## Cercare e filtrare i set di dati {#search-and-filter}
 
