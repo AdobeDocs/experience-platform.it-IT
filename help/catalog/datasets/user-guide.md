@@ -58,13 +58,13 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campagne orchestrate"
 >abstract="Abilita questa opzione per consentire l’utilizzo del set di dati selezionato nelle campagne orchestrate di Adobe Journey Optimizer. Il set di dati deve utilizzare uno schema relazionale ed è possibile creare un solo set di dati per schema."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Abilitare il set di dati per le campagne orchestrate"
+>additional-url="https://experienceleague.adobe.com/it/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Abilitare il set di dati per le campagne orchestrate"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Abilitare per la ricerca"
 >abstract="Abilita questo set di dati per la ricerca per utilizzarne i dati in Journey Optimizer per la personalizzazione, il decisioning e l’orchestrazione del percorso."
->additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Utilizzare i dati di Adobe Experience Platform in Journey Optimizer"
+>additional-url="https://experienceleague.adobe.com/it/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Utilizzare i dati di Adobe Experience Platform in Journey Optimizer"
 
 Nell&#39;interfaccia utente [!DNL Experience Platform], selezionare **[!UICONTROL Datasets]** nel menu di navigazione a sinistra per aprire il dashboard **[!UICONTROL Datasets]**. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
 
