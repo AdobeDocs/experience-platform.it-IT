@@ -138,7 +138,7 @@ Una volta impostato il cookie [!DNL FPID], il relativo valore può essere recupe
 È possibile utilizzare [!DNL FPIDs] in due modi:
 
 * **[Metodo 1](#setting-cookie-datastreams)**: configurare [!DNL CNAME] per le chiamate Web SDK e includere il nome del cookie [!DNL FPID] nella configurazione dello stream di dati.
-* **[Metodo 2](#identityMap)**: includere [!DNL FPID] nella mappa delle identità. Per ulteriori informazioni, consulta la sezione più avanti in questo documento sull&#39;utilizzo degli FPID in [ per `identityMap`](#identityMap).
+* **[Metodo 2](#identityMap)**: includere [!DNL FPID] nella mappa delle identità. Per ulteriori informazioni, consulta la sezione più avanti in questo documento sull&#39;utilizzo degli FPID in [&#x200B; per `identityMap`](#identityMap).
 
 ### Metodo 1: configurare un CNAME per le chiamate Web SDK e impostare un cookie ID di prime parti nello stream di dati {#setting-cookie-datastreams}
 
@@ -164,7 +164,7 @@ Per utilizzare questa funzionalità, è necessario impostare il cookie [!DNL FPI
 >
 >Questa funzionalità richiede l&#39;abilitazione di [Raccolta dati di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en).
 
-**Passaggio 2. Abilita la funzionalità&#x200B;**[!UICONTROL First Party ID Cookie]**per lo stream di dati**
+**Passaggio 2. Abilita la funzionalità&#x200B;**&#x200B;[!UICONTROL First Party ID Cookie]&#x200B;**per lo stream di dati**
 
 Dopo aver configurato il CNAME, devi abilitare l&#39;opzione **[!UICONTROL First Party ID Cookie]** per lo stream di dati. Questa impostazione indica ad Edge Network di fare riferimento a un cookie specificato durante la ricerca di un ID dispositivo di prime parti, invece di cercare questo valore nella [mappa identità](#identityMap).
 

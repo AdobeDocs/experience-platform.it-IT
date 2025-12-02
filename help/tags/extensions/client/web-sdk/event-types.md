@@ -253,7 +253,7 @@ Nell’azione Codice personalizzato, inclusa nella regola per la gestione dei da
 var propositions = event.propositions;
 ```
 
-Se `event.propositions` esiste, si tratta di un array contenente oggetti di proposta di personalizzazione. Per ulteriori informazioni sul contenuto di [, vedere ](#manually-render-personalized-content)Eseguire manualmente il rendering del contenuto personalizzato`result.propositions`.
+Se `event.propositions` esiste, si tratta di un array contenente oggetti di proposta di personalizzazione. Per ulteriori informazioni sul contenuto di [, vedere &#x200B;](#manually-render-personalized-content)Eseguire manualmente il rendering del contenuto personalizzato`result.propositions`.
 
 Supponiamo di voler raccogliere tutti i nomi di attività da tutte le proposte di cui è stato eseguito il rendering automatico dal web SDK e inviarli in un singolo array. È quindi possibile inviare il singolo array a una terza parte. In questo caso, scrivere il codice personalizzato all&#39;interno dell&#39;azione [!UICONTROL Custom code] in:
 

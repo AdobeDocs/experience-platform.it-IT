@@ -344,7 +344,7 @@ Viene visualizzata una casella di conferma. Selezionare **[!UICONTROL Delete]** 
 
 Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfaccia utente verrà eliminato dal data lake, da Identity Service e anche da tutti i dati di profilo associati a tale set di dati nell’archivio Profili.
 
-È possibile eliminare i dati profilo associati a un set di dati dall&#39;archivio [!DNL Profile] (lasciando i dati nel data lake) utilizzando l&#39;API Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API dei processi di sistema ](../../profile/api/profile-system-jobs.md).
+È possibile eliminare i dati profilo associati a un set di dati dall&#39;archivio [!DNL Profile] (lasciando i dati nel data lake) utilizzando l&#39;API Profilo cliente in tempo reale. Per ulteriori informazioni, consulta la [guida dell&#39;endpoint API dei processi di sistema &#x200B;](../../profile/api/profile-system-jobs.md).
 
 ## Cercare e filtrare i set di dati {#search-and-filter}
 

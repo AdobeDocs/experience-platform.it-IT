@@ -36,7 +36,8 @@ Inoltre, assicurati di disporre di tutte le [autorizzazioni](/help/access-contro
 
 ![Area di lavoro dello schema](assets/getting-started/schema-structure.png)
 
->[!NOTE]\
+>[!NOTE]
+>\
 >Una volta salvati, gli schemi consentono solo *modifiche aggiuntive*. Per ulteriori informazioni, consulta [evoluzione schema](/help/xdm/schema/composition.md#evolution).
 
 ## Creare un flusso di dati {#datastream}

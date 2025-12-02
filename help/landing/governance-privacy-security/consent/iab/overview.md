@@ -197,7 +197,7 @@ OneTrust.OnConsentChanged(function () {
 
 >[!NOTE]
 >
->Per utilizzare questo metodo, è necessario aggiungere il gruppo di campi Privacy evento esperienza allo schema [!DNL Profile] abilitato per [!DNL XDM ExperienceEvent]. Consulta la sezione sull&#39;aggiornamento dello schema ExperienceEvent[ nella guida alla preparazione del set di dati per i passaggi su come configurare questo elemento.](./dataset.md#event-schema)
+>Per utilizzare questo metodo, è necessario aggiungere il gruppo di campi Privacy evento esperienza allo schema [!DNL Profile] abilitato per [!DNL XDM ExperienceEvent]. Consulta la sezione sull&#39;aggiornamento dello schema ExperienceEvent[&#x200B; nella guida alla preparazione del set di dati per i passaggi su come configurare questo elemento.](./dataset.md#event-schema)
 
 Il comando `sendEvent` deve essere utilizzato come callback nei listener di eventi appropriati sul sito Web. Il comando prevede due argomenti: (1) una stringa che indica il tipo di comando (in questo caso, `sendEvent`) e (2) un payload contenente un oggetto `xdm` che fornisce i campi di consenso richiesti come JSON:
 
