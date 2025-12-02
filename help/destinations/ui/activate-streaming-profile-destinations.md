@@ -4,9 +4,9 @@ type: Tutorial
 description: Scopri come attivare i dati sul pubblico disponibili in Adobe Experience Platform inviando tipi di pubblico a destinazioni basate su profili di streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '717'
 ht-degree: 1%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
-> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessari **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
-> * Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
+> * Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
@@ -37,15 +37,15 @@ Per attivare i dati nelle destinazioni, devi avere [connesso correttamente a una
 
 ## Seleziona la destinazione {#select-destination}
 
-1. Vai a **[!UICONTROL Connessioni > Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
+1. Passare a **[!UICONTROL Connections > Destinations]** e selezionare la scheda **[!UICONTROL Catalog]**.
 
    ![Immagine che mostra la scheda del catalogo di destinazione.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Seleziona **[!UICONTROL Attiva pubblico]** nella scheda corrispondente alla destinazione in cui desideri attivare il pubblico, come illustrato nell&#39;immagine seguente.
+1. Seleziona **[!UICONTROL Activate audiences]** sulla scheda corrispondente alla destinazione in cui desideri attivare il pubblico, come illustrato nell&#39;immagine seguente.
 
    ![Immagine che evidenzia il controllo Attiva pubblico nella scheda del catalogo delle destinazioni.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
+1. Selezionare la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi selezionare **[!UICONTROL Next]**.
 
    ![Immagine che mostra una selezione di due destinazioni a cui è possibile connettersi.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
@@ -53,37 +53,37 @@ Per attivare i dati nelle destinazioni, devi avere [connesso correttamente a una
 
 ## Seleziona i tipi di pubblico {#select-audiences}
 
-Per selezionare i tipi di pubblico che si desidera attivare nella destinazione, utilizzare le caselle di controllo a sinistra dei nomi dei tipi di pubblico, quindi selezionare **[!UICONTROL Avanti]**.
+Per selezionare i tipi di pubblico da attivare nella destinazione, utilizzare le caselle di controllo a sinistra dei nomi dei tipi di pubblico, quindi selezionare **[!UICONTROL Next]**.
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione di Audience Portal](../../segmentation/ui/audience-portal.md).
-* **[!UICONTROL Caricamento personalizzato]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Segmentation Service]**: pubblico generato in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione di Audience Portal](../../segmentation/ui/audience-portal.md).
+* **[!UICONTROL Custom upload]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
 * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
 ![Immagine che evidenzia la selezione delle caselle di controllo nel passaggio Seleziona tipi di pubblico del flusso di lavoro di attivazione.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## Seleziona attributi profilo {#select-attributes}
 
-Nel passaggio **[!UICONTROL Mappatura]**, seleziona gli attributi del profilo che desideri inviare alla destinazione.
+Nel passaggio **[!UICONTROL Mapping]**, selezionare gli attributi di profilo che si desidera inviare alla destinazione di destinazione.
 
-1. Nella pagina **[!UICONTROL Seleziona attributi]**, seleziona **[!UICONTROL Aggiungi nuovo campo]**.
+1. Nella pagina **[!UICONTROL Select attributes]**, selezionare **[!UICONTROL Add new field]**.
 
    ![Immagine che evidenzia il controllo Aggiungi nuovo campo nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
-1. Selezionare la freccia a destra della voce **[!UICONTROL Campo schema]**.
+1. Selezionare la freccia a destra della voce **[!UICONTROL Schema field]**.
 
    ![Immagine che evidenzia come selezionare un campo di origine nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. Nella pagina **[!UICONTROL Seleziona campo]**, seleziona gli attributi XDM da inviare alla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
+1. Nella pagina **[!UICONTROL Select field]**, seleziona gli attributi XDM da inviare alla destinazione, quindi scegli **[!UICONTROL Select]**.
 
    ![Immagine che mostra una selezione di campi XDM che è possibile selezionare come campi di origine.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-1. Per aggiungere altri campi, ripetere i passaggi da 1 a 3, quindi selezionare **[!UICONTROL Avanti]**.
+1. Per aggiungere altri campi, ripetere i passaggi da 1 a 3, quindi selezionare **[!UICONTROL Next]**.
 
-## Rivisione {#review}
+## Rivedi {#review}
 
-Nella pagina **[!UICONTROL Rivedi]** puoi visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
+Nella pagina **[!UICONTROL Review]** è disponibile un riepilogo della selezione. Selezionare **[!UICONTROL Cancel]** per interrompere il flusso, **[!UICONTROL Back]** per modificare le impostazioni oppure **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
 ![Riepilogo selezioni nel passaggio di revisione.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
@@ -101,7 +101,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-Nel passaggio **[!UICONTROL Rivedi]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
+Nel passaggio **[!UICONTROL Review]**, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, leggere le [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione relativa alla governance dei dati.
 
 ![violazione criteri dati](../assets/common/data-policy-violation.png)
 
@@ -111,7 +111,7 @@ Inoltre, in questo passaggio puoi utilizzare i filtri disponibili nella pagina p
 
 ![Registrazione dello schermo che mostra i filtri del pubblico disponibili nel passaggio di revisione.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
-Se si è soddisfatti della selezione e non sono state rilevate violazioni dei criteri, selezionare **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
+Se si è soddisfatti della selezione e non sono state rilevate violazioni dei criteri, selezionare **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
 ## Verificare l’attivazione del pubblico {#verify}
 

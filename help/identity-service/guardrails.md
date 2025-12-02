@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,7 @@ L’eliminazione avviene solo per i dati presenti nel servizio Identity e non pe
 Se desideri mantenere gli eventi autenticati rispetto al CRMID, ti consigliamo di modificare gli ID primari da ECID a CRMID. Leggi i seguenti documenti per i passaggi su come implementare questa modifica:
 
 * [Configura la mappa delle identità per i tag di Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Dati di identità in Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Dati di identità in Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
 
 ### Scenari di esempio
 
@@ -143,13 +143,13 @@ In questo esempio, ECID:32110 viene acquisito e collegato a un grafico di grandi
 
 >[!TAB Processo di eliminazione]
 
-Di conseguenza, Identity Service elimina l’identità meno recente in base alla marca temporale e al tipo di identità. In questo caso, ECID:35577 viene eliminato solo dal grafo delle identità.
+Di conseguenza, Identity Service elimina l’identità meno recente in base alla marca temporale e al tipo di identità. In questo caso, ECID:35577 viene eliminato solo dal grafico delle identità.
 
 ![](./images/guardrails/during-split.png)
 
 >[!TAB Output grafico]
 
-In seguito all’eliminazione di ECID:35577, vengono eliminati anche gli spigoli che collegavano CRMID:60013 e CRMID:25212 con l’ECID:35577 ora eliminato. Questo processo di eliminazione fa sì che il grafico venga diviso in due grafici più piccoli.
+A seguito dell&#39;eliminazione di ECID:35577, vengono eliminati anche i bordi che hanno collegato CRMID:60013 e CRMID:25212 con l&#39;ECID:35577 ora eliminato. Questo processo di eliminazione fa sì che il grafico venga diviso in due grafici più piccoli.
 
 ![](./images/guardrails/after-split.png)
 
@@ -168,15 +168,15 @@ In seguito all’eliminazione di ECID:35577, vengono eliminati anche gli spigoli
 
 In virtù della logica di eliminazione, alcune identità &quot;hub&quot; possono anche essere eliminate. Queste identità hub si riferiscono a nodi collegati a diverse identità singole che altrimenti verrebbero scollegate.
 
-Nell’esempio seguente, ECID:21011 viene acquisito e collegato al grafo in `timestamp=51`, superando quindi il limite di 50 identità.
+Nell&#39;esempio seguente, ECID:21011 viene acquisito e collegato al grafo in `timestamp=51`, superando quindi il limite di 50 identità.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
 >[!TAB Processo di eliminazione]
 
-Di conseguenza, Identity Service elimina l’identità meno recente solo dal grafo delle identità, che in questo caso è ECID:35577. L’eliminazione di ECID:35577 comporta anche l’eliminazione dei seguenti elementi:
+Di conseguenza, Identity Service elimina l&#39;identità meno recente solo dal grafo delle identità, che in questo caso è ECID:35577. L&#39;eliminazione di ECID:35577 comporta anche l&#39;eliminazione dei seguenti elementi:
 
-* Il collegamento tra CRMID: 60013 e l’ECID:35577 ora eliminato, risultante in uno scenario di suddivisione del grafico.
+* Il collegamento tra CRMID: 60013 e l&#39;ECID:35577 ora eliminato genera uno scenario di suddivisione del grafico.
 * IDFA: 32110, IDFA: 02383 e le identità rimanenti rappresentate da `(...)`. Queste identità vengono eliminate perché singolarmente non sono collegate ad altre identità e pertanto non possono essere rappresentate in un grafico.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
@@ -199,7 +199,7 @@ Per ulteriori informazioni su [!DNL Identity Service], vedere la seguente docume
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

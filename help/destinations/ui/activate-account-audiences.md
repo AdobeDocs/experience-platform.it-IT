@@ -2,12 +2,12 @@
 title: Attivare il pubblico dell’account nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico dell’account nelle destinazioni
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pub
 
 ## Destinazioni supportati {#supported-destinations}
 
-Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**. Utilizza il filtro **[!UICONTROL Tipi di dati]** e seleziona **[!UICONTROL Account]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico dell&#39;account. Attualmente, l&#39;esportazione dei tipi di pubblico dell&#39;account è disponibile solo per alcune destinazioni di archiviazione cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e per la destinazione di streaming [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
+Vai a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e seleziona la scheda **[!UICONTROL Catalog]**. Utilizza il filtro **[!UICONTROL Data types]** e seleziona **[!UICONTROL Accounts]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico dell&#39;account. Attualmente, l&#39;esportazione dei tipi di pubblico dell&#39;account è disponibile solo per alcune destinazioni di archiviazione cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e per la destinazione di streaming [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
 
 ![Destinazioni che supportano i tipi di pubblico dell&#39;account.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -39,19 +39,19 @@ Guarda il video seguente per una panoramica sulla creazione e l’attivazione de
 
 ### Autorizzazioni richieste {#permissions}
 
-Per attivare i tipi di pubblico dell&#39;account, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Attiva destinazioni]** [Autorizzazioni per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per attivare i tipi di pubblico dell&#39;account, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Activate Destinations]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per assicurarti di disporre delle autorizzazioni necessarie per attivare i tipi di pubblico dell’account, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Attiva]**, si dispone delle autorizzazioni appropriate.
+Per assicurarti di disporre delle autorizzazioni necessarie per attivare i tipi di pubblico dell’account, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Activate]**, si dispone delle autorizzazioni appropriate.
 
 ## Seleziona la destinazione {#select-destination}
 
 Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set di dati:
 
-1. Vai a **[!UICONTROL Connessioni > Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
+1. Passare a **[!UICONTROL Connections > Destinations]** e selezionare la scheda **[!UICONTROL Catalog]**.
 
    ![Scheda Catalogo di destinazione con il controllo Catalogo evidenziato.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. Seleziona **[!UICONTROL Attiva]** nella scheda corrispondente alla destinazione in cui desideri esportare i set di dati.
+1. Seleziona **[!UICONTROL Activate]** nella scheda corrispondente alla destinazione in cui desideri esportare i set di dati.
 
 >[!TIP]
 >
@@ -59,11 +59,11 @@ Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set
 
 ![Pagina di destinazione Demandbase in grado di esportare i tipi di pubblico del profilo evidenziati.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
-1. Seleziona **[!UICONTROL Account tipo dati]**, seguito dalla connessione di destinazione in cui desideri esportare i set di dati, quindi seleziona **[!UICONTROL Avanti]**.
+1. Selezionare **[!UICONTROL Data type Accounts]**, seguito dalla connessione di destinazione in cui esportare i set di dati, quindi selezionare **[!UICONTROL Next]**.
 
 >[!TIP]
 > 
->Se desideri impostare una nuova destinazione per attivare i tipi di pubblico dell&#39;account, seleziona **[!UICONTROL Configura nuova destinazione]** per attivare il flusso di lavoro [Connetti alla destinazione](/help/destinations/ui/connect-destination.md) e [seleziona gli account come tipo di dati](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
+>Se desideri impostare una nuova destinazione per attivare i tipi di pubblico dell&#39;account, seleziona **[!UICONTROL Configure new destination]** per attivare il flusso di lavoro [Connetti alla destinazione](/help/destinations/ui/connect-destination.md) e [seleziona gli account come tipo di dati](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
 ![Flusso di lavoro di attivazione della destinazione con controllo account evidenziato.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
@@ -71,7 +71,7 @@ Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set
 
 ## Seleziona il pubblico del tuo account {#select-account-audiences}
 
-Utilizza le caselle di controllo a sinistra dei nomi dei tipi di pubblico dell&#39;account per selezionare i tipi di pubblico che desideri esportare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**. In questa visualizzazione vengono visualizzati solo *tipi di pubblico dell&#39;account* e non vengono visualizzati altri tipi di pubblico.
+Utilizzare le caselle di controllo a sinistra dei nomi dei tipi di pubblico dell&#39;account per selezionare i tipi di pubblico da esportare nella destinazione, quindi selezionare **[!UICONTROL Next]**. In questa visualizzazione vengono visualizzati solo *tipi di pubblico dell&#39;account* e non vengono visualizzati altri tipi di pubblico.
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio Seleziona tipi di pubblico in cui è possibile selezionare i tipi di pubblico dell&#39;account da esportare.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
@@ -81,26 +81,26 @@ Per il resto del flusso di lavoro di attivazione per esportare i tipi di pubblic
 
 >[!NOTE]
 >
->Tieni presente che nel passaggio di pianificazione, durante l&#39;esportazione dei tipi di pubblico dell&#39;account nelle destinazioni di archiviazione cloud, il flusso di lavoro per attivare i tipi di pubblico dell&#39;account ti consente di esportare solo [file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _con una pianificazione giornaliera_. Le esportazioni orarie non sono supportate. Si noti inoltre che **[!UICONTROL Dopo la valutazione del pubblico]** è l&#39;unico tipo di valutazione supportato.
+>Tieni presente che nel passaggio di pianificazione, durante l&#39;esportazione dei tipi di pubblico dell&#39;account nelle destinazioni di archiviazione cloud, il flusso di lavoro per attivare i tipi di pubblico dell&#39;account ti consente di esportare solo [file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _con una pianificazione giornaliera_. Le esportazioni orarie non sono supportate. Si noti inoltre che **[!UICONTROL After audience evaluation]** è l&#39;unico tipo di valutazione supportato.
 
 ## Callout importanti e limitazioni note {#important-callouts-known-limitations}
 
 Tieni presente i seguenti callout importanti e le limitazioni note per la versione con disponibilità generale della funzionalità di attivazione dei tipi di pubblico dell’account.
 
-### Coppie di mappatura necessarie nel passaggio di mappatura durante l&#39;attivazione dei tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Aziende) LinkedIn MatchedIn]** {#required-mappings}
+### Coppie di mappatura richieste nel passaggio di mappatura quando si attivano i tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Companies) LinkedIn Matched Audiences]** {#required-mappings}
 
-Quando si attivano i tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, si noti che le due coppie di mapping seguenti sono obbligatorie per esportare correttamente i dati:
+Quando si attivano i tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, tenere presente che le due coppie di mappatura seguenti sono obbligatorie per esportare correttamente i dati:
 
 ![Mappatura campi obbligatori LinkedIn.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Campo di origine | Campo di destinazione |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (seleziona questo campo nella visualizzazione **[!UICONTROL Seleziona spazio dei nomi identità]**, quando selezioni il **[!UICONTROL campo di destinazione]**). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell&#39;account nelle destinazioni.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selezionare lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell&#39;account nelle destinazioni."){width="100" zoomable="yes"} |
+| `accountKey.sourceKey` | `primaryId` (seleziona questo campo nella visualizzazione **[!UICONTROL Select Identity namespace]**, quando selezioni **[!UICONTROL Target Field]**). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell&#39;account nelle destinazioni.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selezionare lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell&#39;account nelle destinazioni."){width="100" zoomable="yes"} |
 
 ### Applicazione della governance dei dati {#data-governance-enforcement}
 
-Il consenso viene applicato a livello di persona o profilo per *tipi di pubblico cliente e potenziale*. Pertanto, la [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata quando si attivano i tipi di pubblico dell&#39;account nelle destinazioni. Nel passaggio di revisione del flusso di lavoro di attivazione, puoi visualizzare un controllo disattivato per **[!UICONTROL Visualizza i criteri di consenso applicabili]**.
+Il consenso viene applicato a livello di persona o profilo per *tipi di pubblico cliente e potenziale*. Pertanto, la [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata quando si attivano i tipi di pubblico dell&#39;account nelle destinazioni. Nel passaggio di revisione del flusso di lavoro di attivazione, è possibile visualizzare un controllo disattivato per **[!UICONTROL View applicable consent policies]**.
 
 ![Passaggio di revisione del flusso di lavoro attiva tipi di pubblico per l&#39;account con il controllo dell&#39;applicazione del consenso disattivato.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

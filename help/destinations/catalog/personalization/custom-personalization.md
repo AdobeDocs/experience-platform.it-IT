@@ -3,7 +3,7 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 9%
@@ -37,9 +37,9 @@ Configura questa destinazione per consentire alle piattaforme di personalizzazio
 
 Questa destinazione richiede l’utilizzo di uno dei seguenti metodi di raccolta dati, a seconda dell’implementazione:
 
-* Utilizza [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) per raccogliere dati dal tuo sito Web.
+* Utilizza [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) per raccogliere dati dal tuo sito Web.
 * Utilizza [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) se desideri raccogliere dati dalla tua app mobile.
-* Utilizza l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) se non utilizzi [Web SDK](/help/web-sdk/home.md) o [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) oppure se desideri personalizzare l&#39;esperienza utente in base agli attributi del profilo.
+* Utilizza l&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/) se non utilizzi il Web SDK o il Mobile SDK o se desideri personalizzare l&#39;esperienza utente in base agli attributi del profilo.
 
 >[!IMPORTANT]
 >
@@ -108,7 +108,7 @@ Leggi [Attiva profili e tipi di pubblico destinazioni di personalizzazione edge]
 
 ## Dati esportati {#exported-data}
 
-Se si utilizzano [Tag in Adobe Experience Platform](../../../tags/home.md) per distribuire Experience Platform Web SDK, utilizzare la funzionalità [Invia evento completato](../../../tags/extensions/client/web-sdk/event-types.md) e l&#39;azione del codice personalizzato avrà una variabile `event.destinations` che è possibile utilizzare per visualizzare i dati esportati.
+Se si utilizzano [Tag in Adobe Experience Platform](/help/tags/home.md) per distribuire Experience Platform Web SDK, utilizzare la funzionalità [Invia evento completato](/help/tags/extensions/client/web-sdk/event-types.md) e l&#39;azione del codice personalizzato avrà una variabile `event.destinations` che è possibile utilizzare per visualizzare i dati esportati.
 
 Di seguito è riportato un valore di esempio per la variabile `event.destinations`:
 
@@ -130,7 +130,7 @@ Di seguito è riportato un valore di esempio per la variabile `event.destination
 ]
 ```
 
-Se non utilizzi [Tag](/help/tags/home.md) per distribuire Experience Platform Web SDK, utilizza [risposte ai comandi](/help/web-sdk/commands/command-responses.md) per visualizzare i dati esportati.
+Se non utilizzi [Tag](/help/tags/home.md) per distribuire Experience Platform Web SDK, utilizza [risposte ai comandi](/help/collection/js/commands/command-responses.md) per visualizzare i dati esportati.
 
 È possibile analizzare la risposta JSON di Adobe Experience Platform per trovare l’alias di integrazione corrispondente dell’applicazione che si sta integrando con Adobe Experience Platform. Gli ID del pubblico possono essere trasmessi nel codice dell’applicazione come parametri di targeting. Di seguito è riportato un esempio di ciò che dovrebbe apparire specifico per la risposta di destinazione.
 

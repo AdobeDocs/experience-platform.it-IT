@@ -3,24 +3,24 @@ solution: Experience Platform
 title: Gruppo di campi schema Consensi e preferenze
 description: Scopri il gruppo di campi schema Consensi e preferenze.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Consensi e preferenze] gruppo di campi
+# Gruppo di campi [!UICONTROL Consents and Preferences]
 
-[!UICONTROL Consensi e preferenze] è un gruppo di campi standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce informazioni sul consenso e sulle preferenze per un singolo cliente.
+[!UICONTROL Consents and Preferences] è un gruppo di campi standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce informazioni su consenso e preferenze per un singolo cliente.
 
 >[!NOTE]
 >
->Poiché questo gruppo di campi è compatibile solo con [!DNL XDM Individual Profile], non può essere utilizzato per [!DNL XDM ExperienceEvent] schemi. Se desideri includere i dati sul consenso e sulle preferenze nello schema Experience Event, aggiungi allo schema il tipo di dati [[!UICONTROL Consenso per privacy, Personalization e preferenze di marketing]](../../data-types/consents.md) tramite un [gruppo di campi personalizzato](../../ui/resources/field-groups.md#create).
+>Poiché questo gruppo di campi è compatibile solo con [!DNL XDM Individual Profile], non può essere utilizzato per [!DNL XDM ExperienceEvent] schemi. Se si desidera includere i dati relativi al consenso e alle preferenze nello schema Experience Event, aggiungere il tipo di dati [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]](../../data-types/consents.md) allo schema tramite un [gruppo di campi personalizzato](../../ui/resources/field-groups.md#create).
 
 ## Struttura del gruppo di campi {#structure}
 
-Il gruppo di campi [!UICONTROL Consensi e preferenze] fornisce un singolo campo di tipo oggetto, `consents`, per acquisire informazioni sul consenso e sulle preferenze. Questo campo estende il tipo di dati [[!UICONTROL Consenso per privacy, Personalization e preferenze di marketing]](../../data-types/consents.md), rimuovendo il campo `adID` e aggiungendo un campo mappa `idSpecific`.
+Il gruppo di campi [!UICONTROL Consents and Preferences] fornisce un singolo campo di tipo oggetto, `consents`, per acquisire informazioni sul consenso e sulle preferenze. Questo campo estende il tipo di dati [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]](../../data-types/consents.md), rimuovendo il campo `adID` e aggiungendo un campo mappa `idSpecific`.
 
 ![](../../images/field-groups/consent.png)
 
@@ -28,7 +28,7 @@ Il gruppo di campi [!UICONTROL Consensi e preferenze] fornisce un singolo campo 
 >
 >Consulta la guida su [esplorazione delle risorse XDM](../../ui/explore.md) in per i passaggi su come cercare qualsiasi risorsa XDM e ispezionarne la struttura nell&#39;interfaccia utente di Experience Platform.
 
-Il seguente codice JSON mostra un esempio del tipo di dati che il gruppo di campi [!UICONTROL Consensi e preferenze] può elaborare. Per informazioni su come utilizzare la maggior parte dei campi forniti dal gruppo di campi, fare riferimento alla guida sul tipo di dati [Consensi e preferenze](../../data-types/consents.md). Le sottosezioni seguenti si concentrano sugli attributi univoci aggiunti dal gruppo di campi al tipo di dati.
+Il codice JSON seguente mostra un esempio del tipo di dati che il gruppo di campi [!UICONTROL Consents and Preferences] può elaborare. Per informazioni su come utilizzare la maggior parte dei campi forniti dal gruppo di campi, fare riferimento alla guida sul tipo di dati [Consensi e preferenze](../../data-types/consents.md). Le sottosezioni seguenti si concentrano sugli attributi univoci aggiunti dal gruppo di campi al tipo di dati.
 
 ```json
 {
@@ -106,7 +106,7 @@ Il seguente codice JSON mostra un esempio del tipo di dati che il gruppo di camp
 >* Se il cliente ha rinunciato a livello di canale, tutti i consensi o le preferenze equivalenti in `idSpecific` vengono ignorati.
 >* Se il consenso o la preferenza a livello di canale non è impostata o il cliente ha acconsentito, vengono rispettati i consensi o le preferenze equivalenti in `idSpecific`.
 
-Ogni chiave nell&#39;oggetto `idSpecific` rappresenta uno spazio dei nomi di identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per categorizzare diversi identificatori, si consiglia di utilizzare uno degli spazi dei nomi standard forniti da Identity Service per ridurre le dimensioni di archiviazione per Real-Time Customer Profile. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta la [panoramica dello spazio dei nomi di identità](../../../identity-service/features/namespaces.md) nella documentazione di Identity Service.
+Ogni chiave nell&#39;oggetto `idSpecific` rappresenta uno spazio dei nomi di identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per categorizzare diversi identificatori, si consiglia di utilizzare uno degli spazi dei nomi standard forniti da Identity Service per ridurre le dimensioni di archiviazione per Real-Time Customer Profile. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta la [panoramica dello spazio dei nomi di identità](/help/identity-service/features/namespaces.md) nella documentazione di Identity Service.
 
 Le chiavi di ciascun oggetto spazio dei nomi rappresentano i valori di identità univoci per i quali il cliente ha impostato le preferenze. Ogni valore di identità può contenere un set completo di consensi e preferenze, formattato come `consents`.
 
@@ -173,20 +173,20 @@ Il consenso `adID` rappresenta il consenso del cliente per l&#39;utilizzo di un 
 
 ## Acquisizione di dati tramite il gruppo di campi {#ingest}
 
-Per utilizzare il gruppo di campi [!UICONTROL Consensi e preferenze] per acquisire i dati sul consenso dai clienti, è necessario creare un set di dati basato su uno schema che contiene tale gruppo di campi.
+Per utilizzare il gruppo di campi [!UICONTROL Consents and Preferences] per acquisire i dati sul consenso dai clienti, è necessario creare un set di dati basato su uno schema che contiene tale gruppo di campi.
 
-Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_it) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il gruppo di campi [!UICONTROL Consensi e preferenze], consulta la sezione sulla [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
+Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il gruppo di campi [!UICONTROL Consents and Preferences], consulta la sezione sulla [creazione di un set di dati](/help/catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >
->Per inviare i dati sul consenso a [!DNL Real-Time Customer Profile], è necessario creare uno schema abilitato per [!DNL Profile] basato sulla classe [!DNL XDM Individual Profile] che contiene il gruppo di campi [!UICONTROL Consensi e preferenze]. Il set di dati creato in base a tale schema deve essere abilitato anche per [!DNL Profile]. Fare riferimento ai tutorial collegati in precedenza per i passaggi specifici relativi ai requisiti di [!DNL Real-Time Customer Profile] per schemi e set di dati.
+>Per inviare i dati sul consenso a [!DNL Real-Time Customer Profile], è necessario creare uno schema abilitato per [!DNL Profile] basato sulla classe [!DNL XDM Individual Profile] che contiene il gruppo di campi [!UICONTROL Consents and Preferences]. Il set di dati creato in base a tale schema deve essere abilitato anche per [!DNL Profile]. Fare riferimento ai tutorial collegati in precedenza per i passaggi specifici relativi ai requisiti di [!DNL Real-Time Customer Profile] per schemi e set di dati.
 >
->Inoltre, devi anche assicurarti che i criteri di unione siano configurati per assegnare la priorità ai set di dati che contengono i dati di consenso e preferenze più recenti, al fine di aggiornare correttamente i profili dei clienti. Per ulteriori informazioni, consulta la panoramica sui [criteri di unione](../../../rtcdp/profile/merge-policies.md).
+>Inoltre, devi anche assicurarti che i criteri di unione siano configurati per assegnare la priorità ai set di dati che contengono i dati di consenso e preferenze più recenti, al fine di aggiornare correttamente i profili dei clienti. Per ulteriori informazioni, consulta la panoramica sui [criteri di unione](/help/rtcdp/profile/merge-policies.md).
 
 ## Gestione delle modifiche di consenso e preferenze
 
-Quando un cliente modifica il proprio consenso o le proprie preferenze sul sito Web, le modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, non dovrebbe essere presente alcuna personalizzazione nella pagina successiva che carica.
+Quando un cliente modifica i propri consensi o preferenze sul sito web, queste modifiche devono essere raccolte e applicate immediatamente impostando il consenso nella libreria di raccolta dati utilizzata. Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, sulla pagina successiva da caricare non dovrebbe essere presente alcuna personalizzazione. Vedere [`setConsent`](/help/collection/js/commands/setconsent.md) utilizzando la libreria JavaScript o l&#39;azione [[!UICONTROL Set consent]](/help/tags/extensions/client/web-sdk/actions/set-consent.md) utilizzando l&#39;estensione tag Web SDK.
 
 ## Passaggi successivi
 
-Questo documento descrive la struttura e l&#39;utilizzo del gruppo di campi [!UICONTROL Consensi e preferenze]. Per ulteriori informazioni sugli altri campi forniti dal gruppo di campi, consulta il documento sul tipo di dati [[!UICONTROL Consenso per privacy, Personalization e preferenze di marketing]](../../data-types/consents.md).
+Questo documento descrive la struttura e l&#39;utilizzo del gruppo di campi [!UICONTROL Consents and Preferences]. Per ulteriori informazioni sugli altri campi forniti dal gruppo di campi, vedere il documento sul tipo di dati [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences]](../../data-types/consents.md).

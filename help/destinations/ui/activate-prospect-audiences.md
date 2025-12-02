@@ -3,14 +3,14 @@ title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 13%
+source-wordcount: '595'
+ht-degree: 14%
 
 ---
 
-# Attiva tipi di pubblico potenziale
+# Attiva tipi di pubblico di potenziali clienti
 
 >[!AVAILABILITY]
 >
@@ -20,7 +20,7 @@ Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pub
 
 ## Destinazioni supportati {#supported-destinations}
 
-Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**. Utilizza il filtro **[!UICONTROL Tipi di dati]** e seleziona **[!UICONTROL Prospect]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico prospect. Attualmente, l’esportazione dei tipi di pubblico potenziali è disponibile solo per le destinazioni di archiviazione cloud.
+Vai a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e seleziona la scheda **[!UICONTROL Catalog]**. Utilizza il filtro **[!UICONTROL Data types]** e seleziona **[!UICONTROL Prospects]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico potenziali. Attualmente, l’esportazione dei tipi di pubblico potenziali è disponibile solo per le destinazioni di archiviazione cloud.
 
 ![Destinazioni che supportano i tipi di pubblico potenziali.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -31,19 +31,19 @@ Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]** e seleziona l
 
 ### Autorizzazioni richieste {#permissions}
 
-Per attivare i tipi di pubblico potenziali, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e **[!UICONTROL Destinazioni attivazione]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per attivare i tipi di pubblico potenziali, sono necessarie le **[!UICONTROL View Destinations]** e **[!UICONTROL Activate Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per assicurarti di disporre delle autorizzazioni necessarie per attivare i tipi di pubblico potenziali, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Attiva]**, si dispone delle autorizzazioni appropriate.
+Per assicurarti di disporre delle autorizzazioni necessarie per attivare i tipi di pubblico potenziali, sfoglia il catalogo delle destinazioni. Se una destinazione dispone di un controllo **[!UICONTROL Activate]**, si dispone delle autorizzazioni appropriate.
 
 ## Seleziona la destinazione {#select-destination}
 
 Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set di dati:
 
-1. Vai a **[!UICONTROL Connessioni > Destinazioni]** e seleziona la scheda **[!UICONTROL Catalogo]**.
+1. Passare a **[!UICONTROL Connections > Destinations]** e selezionare la scheda **[!UICONTROL Catalog]**.
 
    ![Scheda Catalogo di destinazione con il controllo Catalogo evidenziato.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. Seleziona **[!UICONTROL Attiva]** nella scheda corrispondente alla destinazione in cui desideri esportare i set di dati.
+2. Seleziona **[!UICONTROL Activate]** nella scheda corrispondente alla destinazione in cui desideri esportare i set di dati.
 
 >[!TIP]
 >
@@ -51,11 +51,11 @@ Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set
 
 ![Pagina di destinazione di Amazon S3 in grado di esportare i tipi di pubblico del profilo evidenziati.](/help/destinations/assets/ui/activate-prospect-audiences/amazon-s3-icon-activate-prospect-audiences.png)
 
-1. Seleziona **[!UICONTROL Tipo di dati Prospect]**, seguito dalla connessione di destinazione in cui desideri esportare i set di dati, quindi seleziona **[!UICONTROL Avanti]**.
+1. Selezionare **[!UICONTROL Data type Prospects]**, seguito dalla connessione di destinazione in cui esportare i set di dati, quindi selezionare **[!UICONTROL Next]**.
 
 >[!TIP]
 > 
->Se desideri impostare una nuova destinazione per attivare i tipi di pubblico prospect, seleziona **[!UICONTROL Configura nuova destinazione]** per attivare il flusso di lavoro [Connetti alla destinazione](/help/destinations/ui/connect-destination.md).
+>Se desideri impostare una nuova destinazione per attivare i tipi di pubblico prospect, seleziona **[!UICONTROL Configure new destination]** per attivare il flusso di lavoro [Connetti alla destinazione](/help/destinations/ui/connect-destination.md).
 
 ![Flusso di lavoro di attivazione della destinazione con il controllo Prospect evidenziato.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
 
@@ -63,7 +63,7 @@ Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set
 
 ## Selezionare il pubblico potenziale {#select-prospect-audiences}
 
-Utilizza le caselle di controllo a sinistra dei nomi dei tipi di pubblico potenziali per selezionare i tipi di pubblico che desideri esportare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**. In questa vista vengono visualizzati solo i tipi di pubblico potenziali e non altri tipi di pubblico.
+Utilizzare le caselle di controllo a sinistra dei nomi dei gruppi di destinatari prospect per selezionare i gruppi di destinatari da esportare nella destinazione, quindi selezionare **[!UICONTROL Next]**. In questa vista vengono visualizzati solo i tipi di pubblico potenziali e non altri tipi di pubblico.
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio Seleziona tipi di pubblico in cui è possibile selezionare i potenziali tipi di pubblico da esportare.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 

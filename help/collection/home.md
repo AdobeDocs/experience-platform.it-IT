@@ -1,71 +1,42 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;raccolta dati;launch;web sdk
 solution: Experience Platform
 title: Panoramica sulla raccolta dati
-description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
+description: Scopri come inviare dati a Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 3d51f01d314587510d900d335dc92fedb8ac31e8
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 4%
+source-wordcount: '287'
+ht-degree: 2%
 
 ---
 
 # Panoramica sulla raccolta dati
 
-Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente da origini lato client e inviarli all’Edge Network di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli in pochi secondi a destinazioni Adobe o non Adobe.
+Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente da varie origini e inviarli all’Edge Network di Adobe Experience Platform. Tali dati possono quindi essere arricchiti, trasformati e distribuiti a destinazioni Adobe o non Adobe.
 
-La raccolta dei dati è supportata per le seguenti origini lato client:
+Adobe supporta i seguenti linguaggi di codice con librerie dedicate per la raccolta dati:
 
-* Applicazioni basate sul Web
-* Applicazioni mobile native
-* Applicazioni over-the-top (OTT)
+* **JavaScript**: per siti Web e applicazioni basate su Web
+* **Cotlin**: per dispositivi Android
+* **Swift**: per dispositivi iOS
+* **Brightscript**: per dispositivi Roku
+* **Flutter**: per applicazioni Android + iOS che utilizzano Flutter
+* **React Native**: per applicazioni Android + iOS che utilizzano React Native
 
-La raccolta dei dati si concentra sulla reperibilità e sull’accessibilità dei set di dati acquisiti, tra cui:
+L’interfaccia utente dei tag in Raccolta dati di Adobe Experience Platform include un’estensione per SDK web e SDK mobile.
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=it)
-* [Tag](../tags/home.md)
-* [Stream di dati](../datastreams/overview.md)
-* [Inoltro eventi](../tags/ui/event-forwarding/overview.md)
-* [Adobe Experience Platform Web SDK](../web-sdk/home.md)
-* [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
-* [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/)
-* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
-* [Experience Platform Assurance](../assurance/home.md)
+Se nessuno degli SDK di cui sopra soddisfa le esigenze del progetto, puoi utilizzare l&#39;[API Edge Network di Adobe Experience Platform](https://developer.adobe.com/data-collection-apis/docs/) per inviare dati direttamente ad Adobe.
 
+## Processo di raccolta dati
 
-Questa guida fornisce un’introduzione di alto livello alla raccolta dei dati e spiega come funziona l’invio di dati a prodotti Adobe Experience Cloud e applicazioni non Adobe tramite Experience Platform Edge Network.
+Invece di installare e implementare singole librerie per ciascun prodotto Adobe, puoi implementare uno degli SDK o delle estensioni di tag sopra riportati per aggregare tutti i dati desiderati in un singolo payload. Il payload viene inviato a uno [stream di dati](/help/datastreams/overview.md) nell&#39;Edge Network di Adobe Experience Platform.
 
-## Tag, Web SDK e Mobile SDK
+![Diagramma raccolta dati](assets/tags-sdks.png)
 
-Experience Platform Web SDK e Experience Platform Mobile SDK comprimono tutte le librerie di prodotti Adobe in un unico kit di sviluppo, rispettivamente per le piattaforme web e mobili. Questi possono essere implementati utilizzando codice non elaborato o utilizzando [tag](../tags/home.md) tramite l&#39;interfaccia utente di Data Collection o Adobe Experience Platform.
+Adobe Experience Platform Edge Network è una rete di server distribuita a livello globale, veloce e affidabile in grado di ricevere ed elaborare dati su una scala straordinaria. Quando un flusso di dati riceve dei dati, questi vengono distribuiti a ciascuna soluzione configurata dall’utente. I dati vengono trasmessi in un formato comprensibile a ogni singolo prodotto.
 
-La compressione di queste librerie velocizza la raccolta dei dati e consolida le operazioni in un unico flusso dai dispositivi lato client all’Edge Network di Experience Platform.
+![Diagramma soluzioni Adobe](assets/adobe-solutions.png)
 
-![Tag, Web SDK, SDK mobile](./images/home/tags-sdks.png)
+È inoltre possibile utilizzare [inoltro eventi](/help/tags/ui/event-forwarding/overview.md) per trasformare, arricchire e inviare dati a qualsiasi destinazione non Adobe con latenza ridotta e senza alcun codice di implementazione lato client.
 
-## Experience Platform Edge Network e flussi di dati {#edge}
-
-Experience Platform Edge Network è una rete di server distribuita a livello globale, veloce e affidabile, in grado di ricevere ed elaborare dati su vasta scala. Utilizzando i tag, puoi impostare [datastream](../datastreams/overview.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che ti consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
-
-Inoltre, gli stream di dati sono integrati con diverse funzionalità di Experience Platform che garantiscono che tutti i dati sensibili che invii siano gestiti in modo appropriato rispetto a politiche organizzative e normative legali. Per ulteriori informazioni, consulta la sezione sulla gestione di [dati sensibili](../datastreams/overview.md#sensitive) nella documentazione dei flussi di dati.
-
-![Flussi di dati e soluzioni Adobe](./images/home/adobe-solutions.png)
-
-## Inoltro eventi
-
-[L&#39;inoltro degli eventi](../tags/ui/event-forwarding/overview.md) può toccare qualsiasi flusso di dati di Experience Platform, consentendoti di trasformare, arricchire e inviare dati a qualsiasi destinazione non Adobe con latenza estremamente bassa e senza aggiungere codice di terze parti al dispositivo client.
-
-![Inoltro eventi](./images/home/event-forwarding.png)
-
->[!NOTE]
->
->L’inoltro di eventi è una funzione a pagamento inclusa nelle offerte Adobe Real-Time Customer Data Platform Connections, Prime o Ultimate.
-
-## Passaggi successivi
-
-Questo documento fornisce una panoramica di alto livello sul funzionamento della raccolta dei dati per automatizzare il processo di invio dei dati raccolti sull’esperienza del cliente ai prodotti Adobe e alle destinazioni di terze parti.
-
-![Framework raccolta dati](./images/home/collection.png)
-
-Per ulteriori informazioni sul flusso di lavoro generale coinvolto nell&#39;invio di dati evento tramite Edge Network, consulta la [panoramica end-to-end](./e2e.md).
+![Diagramma inoltro eventi](assets/event-forwarding.png)

@@ -2,9 +2,9 @@
 description: Scopri come configurare le identità di destinazione supportate per le destinazioni create con Destination SDK.
 title: Configurazione dello spazio dei nomi dell’identità
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '918'
 ht-degree: 3%
 
 ---
@@ -62,8 +62,8 @@ Quando definisci le identità di destinazione supportate dalla destinazione, puo
 | `acceptsAttributes` | Booleano | Facoltativo | Indica se i clienti possono mappare gli attributi di profilo standard all’identità che stai configurando. |
 | `acceptsCustomNamespaces` | Booleano | Facoltativo | Indica se i clienti possono mappare gli spazi dei nomi di identità personalizzati allo spazio dei nomi di identità che stai configurando. |
 | `acceptedGlobalNamespaces` | - | Facoltativo | Indica quali [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) (ad esempio, [!UICONTROL IDFA]) i clienti possono mappare all&#39;identità che stai configurando. |
-| `transformation` | Stringa | Facoltativo | Visualizza la casella di controllo [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell&#39;interfaccia utente di Experience Platform quando il campo di origine è un attributo XDM o uno spazio dei nomi di identità personalizzato. Utilizza questa opzione per consentire agli utenti di aggiungere hash agli attributi sorgente durante l’esportazione. Per abilitare questa opzione, impostare il valore su `sha256(lower($))`. |
-| `requiredTransformation` | Stringa | Facoltativo | Quando i clienti selezionano questo spazio dei nomi dell&#39;identità di origine, la casella di controllo [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) viene applicata automaticamente alla mappatura e i clienti non possono disattivarla. Per abilitare questa opzione, impostare il valore su `sha256(lower($))`. |
+| `transformation` | Stringa | Facoltativo | Visualizza la casella di controllo [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell&#39;interfaccia utente di Experience Platform quando il campo di origine è un attributo XDM o uno spazio dei nomi di identità personalizzato. Utilizza questa opzione per consentire agli utenti di aggiungere hash agli attributi sorgente durante l’esportazione. Per abilitare questa opzione, impostare il valore su `sha256(lower($))`. |
+| `requiredTransformation` | Stringa | Facoltativo | Quando i clienti selezionano questo spazio dei nomi dell&#39;identità di origine, la casella di controllo [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) viene applicata automaticamente alla mappatura e i clienti non possono disabilitarla. Per abilitare questa opzione, impostare il valore su `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 

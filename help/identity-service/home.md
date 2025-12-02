@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica di Identity Service
 description: Il servizio Adobe Experience Platform Identity consente di ottenere una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi diversi e consentendo di fornire esperienze digitali personali e di impatto in tempo reale.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -105,15 +105,15 @@ Un grafo di identità è una mappa di relazioni tra diversi spazi dei nomi di id
 
 Il video seguente ha lo scopo di aiutarti a comprendere le identità e i grafici di identità.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422773?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Comprensione del ruolo del servizio Identity nell’infrastruttura Experience Platform
 
 Il servizio Identity svolge un ruolo fondamentale all’interno di Experience Platform. Alcune di queste integrazioni chiave includono:
 
 * [Schemi](../xdm/home.md): all&#39;interno di uno schema specifico, i campi dello schema contrassegnati come identità consentono la creazione di grafici delle identità.
-* [Set di dati](../catalog/datasets/overview.md): quando un set di dati è abilitato per l&#39;acquisizione in Real-Time Customer Profile, i grafici delle identità vengono generati dal set di dati, dato che il set di dati ha almeno due campi contrassegnati come identità.
-* [Web SDK](../web-sdk/home.md): Web SDK invia eventi di esperienza a Adobe Experience Platform e Identity Service genera un grafico quando esistono due o più identità nell&#39;evento.
+* [Set di dati](../catalog/datasets/overview.md): quando un set di dati è abilitato per l&#39;acquisizione in Real-Time Customer Profile, i grafici delle identità vengono generati dal set di dati, dato che il set di dati contiene almeno due campi contrassegnati come identità.
+* [Raccolta dati](/help/collection/home.md): le librerie di raccolta dati (come il Web SDK) inviano eventi di esperienza a Adobe Experience Platform. Il servizio Identity genera un grafico quando esistono due o più identità nell’evento.
 * [Profilo cliente in tempo reale](../profile/home.md): prima dell&#39;unione degli attributi e degli eventi per un determinato profilo, il profilo cliente in tempo reale può fare riferimento al grafico delle identità. Per ulteriori informazioni, consulta la guida su [informazioni sulla relazione tra Identity Service e Real-Time Customer Profile](./identity-and-profile.md).
 * [Destinazioni](../destinations/home.md): le destinazioni possono inviare informazioni sul profilo ad altri sistemi in base a uno spazio dei nomi di identità, ad esempio e-mail con hash.
 * [Corrispondenza segmento](../segmentation/ui/segment-match/overview.md): la corrispondenza del segmento corrisponde a due profili in due sandbox diverse che hanno lo stesso spazio dei nomi e lo stesso valore di identità.

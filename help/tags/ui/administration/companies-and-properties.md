@@ -2,10 +2,10 @@
 title: Proprietà
 description: Scopri come Adobe Experience Platform organizza e raggruppa le estensioni, gli ambienti e le librerie per la tua organizzazione.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 94%
+source-wordcount: '1153'
+ht-degree: 90%
 
 ---
 
@@ -71,7 +71,7 @@ Le funzioni di User Management ti consentono di assegnare ruoli diversi a utenti
 
 ## Pagina Proprietà
 
-Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Per il web esiste un solo codice di incorporamento di pubblicazione per ogni proprietà. Per i dispositivi mobili esiste un ID app di configurazione per proprietà.
+Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Per il web, esiste per ogni proprietà un solo codice da incorporare per la pubblicazione. Per i dispositivi mobili esiste un ID app di configurazione per proprietà.
 
 Una proprietà può essere un raggruppamento di uno o più domini e sottodomini. Puoi gestire e tenere traccia di queste risorse in modo simile. Ad esempio, supponi di disporre di più siti Web basati su un modello e di voler tenere traccia delle stesse risorse su tutti. Puoi applicare una proprietà a più domini.
 
@@ -97,7 +97,7 @@ Questa sezione fornisce indicazioni su come creare o configurare una proprietà 
 
 Prima di iniziare, controlla [Best practice per la pianificazione delle proprietà](companies-and-properties.md#best-practices-for-planning-properties).
 
-Passa alla pagina dell’azienda, quindi fai clic su **[!UICONTROL Aggiungi proprietà]**. In alternativa, seleziona una proprietà esistente dall’elenco e fai clic su **[!UICONTROL Configura]**.
+Passa alla pagina dell&#39;azienda, quindi fai clic su **[!UICONTROL Add Property]**. In alternativa, seleziona una proprietà esistente dall&#39;elenco e fai clic su **[!UICONTROL Configure]**.
 
 ![](../../images/property-settings.png)
 
@@ -111,10 +111,10 @@ Segui le istruzioni per creare una proprietà web.
 
    **Domains:** l’URL di base di tutti i siti in cui si intende distribuire questa proprietà.
 
-1. (Avanzate) **[!UICONTROL Esegui componenti regola in sequenza]**. Seleziona questa casella di controllo per fare in modo che condizioni e azioni vengano eseguite dopo che quelle precedenti siano state completate.
-1. (Avanzate) **[!UICONTROL Restituisci una stringa vuota per gli elementi di dati mancanti:]** se si fa riferimento a un elemento dati che non esiste in una libreria, in genere verrà restituito `undefined`. Seleziona questa casella di controllo se desideri invece che venga restituita una stringa vuota.
-1. (Avanzate) **[!UICONTROL Configura per lo sviluppo di estensioni:]** seleziona questa casella di controllo se intendi installare estensioni di sviluppo create internamente.
-1. Seleziona **[!UICONTROL Salva]**.
+1. (Avanzata) **[!UICONTROL Run rule components in sequence]**: seleziona questa casella di controllo per fare in modo che condizioni e azioni vengano eseguite dopo che quelle precedenti sono state completate.
+1. (Avanzata) **[!UICONTROL Return an empty string for missing data elements:]** Se si fa riferimento a un elemento dati che non esiste in una libreria, in genere verrà restituito `undefined`. Abilita questa casella di controllo se desideri invece che venga restituita una stringa vuota.
+1. (Avanzata) **[!UICONTROL Configure for extension development:]** Abilita questa casella di controllo se intendi installare estensioni di sviluppo a cura dell&#39;azienda
+1. Seleziona **[!UICONTROL Save]**.
 
 ### Per dispositivi mobili
 
@@ -131,7 +131,7 @@ Segui le istruzioni per creare una proprietà mobile.
 
    * **Use HTTPS:** scegli se tutte le comunicazioni di dati devono essere inviate tramite HTTP o HTTPS.
 
-1. Seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Save]**.
 
 Dopo la creazione della proprietà, Experience Platform aggiunge automaticamente un host predefinito, un set di ambienti (Sviluppo, Staging e Produzione) e le estensioni predefinite.
 
@@ -147,4 +147,4 @@ Per eliminare una proprietà tag, effettua le seguenti operazioni.
 
    Puoi selezionare più proprietà da eliminare.
 
-1. Fai clic su **[!UICONTROL Elimina]**, quindi conferma la rimozione della proprietà.
+1. Fai clic su **[!UICONTROL Delete]**, quindi conferma la rimozione della proprietà.

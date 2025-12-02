@@ -3,7 +3,7 @@ title: Personalizzare le esperienze nel sito per visitatori sconosciuti utilizza
 description: Scopri come utilizzare il riconoscimento visitatori assistito dal partner per offrire esperienze personalizzate nel sito a chi lo visita.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
 source-wordcount: '2568'
 ht-degree: 72%
@@ -47,7 +47,7 @@ Quando prevedi di utilizzare gli attributi forniti dai partner per offrire esper
 Per implementare correttamente questo caso d’uso, devi utilizzare più aree di Real-time Customer Data Platform e altre soluzioni Experience Cloud. Assicurati di disporre delle [autorizzazioni di controllo degli accessi basate su attributi](/help/access-control/abac/overview.md) per tutte queste aree o richiedi all’amministratore di sistema di concedere le autorizzazioni necessarie.
 
 * Raccolta dati
-   * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
+   * [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md)
    * [Tag](/help/tags/home.md)
    * [Stream di dati](/help/datastreams/overview.md)
 * Gestione dei dati in Real-Time CDP
@@ -64,7 +64,7 @@ Per implementare correttamente questo caso d’uso, devi utilizzare più aree di
 
 Il tutorial video seguente illustra come personalizzare le esperienze nel sito per visitatori sconosciuti:
 
->[!VIDEO](https://video.tv.adobe.com/v/3449260/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 

@@ -2,10 +2,10 @@
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 53%
+source-wordcount: '1166'
+ht-degree: 43%
 
 ---
 
@@ -30,9 +30,9 @@ Esistono due casi di utilizzo in cui la preparazione dei dati per la raccolta de
 
 ## Inviare un livello dati esistente ad Edge Network tramite Web SDK {#send-datalayer-via-websdk}
 
-Il livello dati esistente deve essere inviato utilizzando l&#39;oggetto [`data`](/help/web-sdk/commands/sendevent/data.md) nel comando `sendEvent`.
+Il livello dati esistente deve essere inviato utilizzando l&#39;oggetto [`data`](/help/collection/js/commands/sendevent/data.md) nel comando `sendEvent`.
 
-Se utilizzi Tag, devi utilizzare il campo **[!UICONTROL Dati]** del tipo di azione **[!UICONTROL Invia evento]**, come descritto nella [documentazione sull&#39;estensione tag di Web SDK](/help/tags/extensions/client/web-sdk/action-types.md).
+Se utilizzi Tag, devi utilizzare il campo **[!UICONTROL Data]** del tipo di azione [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
 
 Il resto di questa guida si concentrerà su come mappare il livello dati agli standard XDM dopo che è stato inviato da WebSDK.
 
@@ -48,11 +48,11 @@ Questa guida illustra come mappare i dati nell’interfaccia utente. Per seguire
 
 Per una dimostrazione rapida del processo di preparazione dei dati per la raccolta dati, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/345565?quality=12&enable10seconds=on&speedcontrol=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Selezionare i dati] {#select-data}
+## [!UICONTROL Select data] {#select-data}
 
-Dopo aver completato la configurazione di base per uno stream di dati, seleziona **[!UICONTROL Salva e Aggiungi mappatura]** e verrà visualizzato il passaggio **[!UICONTROL Seleziona dati]**. Da qui, devi fornire un oggetto JSON campione che rappresenti la struttura dei dati che intendi inviare ad Experience Platform.
+Selezionare **[!UICONTROL Save and Add Mapping]** dopo aver completato la configurazione di base per uno stream di dati e viene visualizzato il passaggio **[!UICONTROL Select data]**. Da qui, devi fornire un oggetto JSON campione che rappresenti la struttura dei dati che intendi inviare ad Experience Platform.
 
 Per acquisire proprietà direttamente dal livello dati, l’oggetto JSON deve avere una singola proprietà principale `data`. Le sottoproprietà dell&#39;oggetto `data` devono quindi essere costruite in modo da eseguire il mapping alle proprietà del livello dati che si desidera acquisire. Seleziona la sezione seguente per visualizzare un esempio di oggetto JSON formattato correttamente con una radice `data`.
 
@@ -152,7 +152,7 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 
 +++
 
-È possibile selezionare l’opzione per caricare l’oggetto come file oppure incollarlo nella casella di testo specificata. Se il JSON è valido, nel pannello di destra viene visualizzato uno schema di anteprima. Seleziona **[!UICONTROL Avanti]** per continuare.
+È possibile selezionare l’opzione per caricare l’oggetto come file oppure incollarlo nella casella di testo specificata. Se il JSON è valido, nel pannello di destra viene visualizzato uno schema di anteprima. Selezionare **[!UICONTROL Next]** per continuare.
 
 ![Esempio JSON di dati in arrivo previsti.](assets/data-prep/select-data.png)
 
@@ -160,9 +160,9 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 >
 > Utilizza un oggetto JSON di esempio che rappresenta ogni elemento del livello dati che può essere utilizzato su qualsiasi pagina. Ad esempio, non tutte le pagine utilizzano gli elementi del livello dati del carrello. Tuttavia, gli elementi del livello dati del carrello devono essere inclusi in questo oggetto JSON di esempio.
 
-## [!UICONTROL Mappatura]
+## [!UICONTROL Mapping]
 
-Viene visualizzato il passaggio **[!UICONTROL Mappatura]**, che consente di mappare i campi nei dati di origine a quelli dello schema dell&#39;evento di destinazione in Experience Platform. Da qui puoi configurare la mappatura in due modi:
+Viene visualizzato il passaggio **[!UICONTROL Mapping]**, che consente di mappare i campi nei dati di origine a quelli dello schema dell&#39;evento di destinazione in Experience Platform. Da qui puoi configurare la mappatura in due modi:
 
 * [Crea regole di mappatura](#create-mapping) per questo flusso di dati tramite un processo manuale.
 * [Importare regole di mappatura](#import-mapping) da un flusso di dati esistente.
@@ -173,19 +173,19 @@ Viene visualizzato il passaggio **[!UICONTROL Mappatura]**, che consente di mapp
 
 ### Creare regole di mappatura {#create-mapping}
 
-Per creare una regola di mapping, selezionare **[!UICONTROL Aggiungi nuovo mapping]**.
+Per creare una regola di mappatura, selezionare **[!UICONTROL Add new mapping]**.
 
 ![Aggiunta di una nuova mappatura.](assets/data-prep/add-new-mapping.png)
 
-Seleziona l’icona della sorgente (![Icona sorgente](/help/images/icons/source.png)) e nella finestra di dialogo visualizzata seleziona il campo di origine che desideri mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizza il pulsante **[!UICONTROL Seleziona]** per continuare.
+Seleziona l’icona della sorgente (![Icona sorgente](/help/images/icons/source.png)) e nella finestra di dialogo visualizzata seleziona il campo di origine che desideri mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizzare il pulsante **[!UICONTROL Select]** per continuare.
 
 ![Selezione del campo da mappare nello schema di origine.](assets/data-prep/source-mapping.png)
 
-Quindi, seleziona l’icona dello schema (![Icona dello schema](/help/images/icons/schema.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegli il campo in cui mappare i dati prima di confermare con **[!UICONTROL Seleziona]**.
+Quindi, seleziona l’icona dello schema (![Icona dello schema](/help/images/icons/schema.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegliere il campo a cui si desidera mappare i dati prima di confermare con **[!UICONTROL Select]**.
 
 ![Selezione del campo da mappare nello schema di destinazione.](assets/data-prep/target-mapping.png)
 
-Viene visualizzata di nuovo la pagina della mappatura con la mappatura di campi completata. La sezione **[!UICONTROL Avanzamento della mappatura]** viene aggiornata per riflettere il numero totale di campi mappati correttamente.
+Viene visualizzata di nuovo la pagina della mappatura con la mappatura di campi completata. La sezione **[!UICONTROL Mapping progress]** viene aggiornata per riflettere il numero totale di campi mappati correttamente.
 
 ![Il campo è stato mappato correttamente con l&#39;avanzamento riflesso.](assets/data-prep/field-mapped.png)
 
@@ -203,11 +203,11 @@ Se in precedenza hai creato un flusso di dati, puoi riutilizzarne le regole di m
 >
 >L’importazione di regole di mappatura da un altro stream di dati sovrascrive eventuali mappature di campo aggiunte prima dell’importazione.
 
-Per iniziare, seleziona **[!UICONTROL Importa mappatura]**.
+Per iniziare, selezionare **[!UICONTROL Import Mapping]**.
 
 ![Pulsante Importa mapping selezionato.](assets/data-prep/import-mapping-button.png)
 
-Nella finestra di dialogo visualizzata, seleziona lo stream di dati di cui desideri importare le regole di mappatura. Una volta scelto lo stream di dati, seleziona **[!UICONTROL Anteprima]**.
+Nella finestra di dialogo visualizzata, seleziona lo stream di dati di cui desideri importare le regole di mappatura. Una volta scelto lo stream di dati, selezionare **[!UICONTROL Preview]**.
 
 ![Selezione di uno stream di dati esistente.](assets/data-prep/select-mapping-rules.png)
 
@@ -215,7 +215,7 @@ Nella finestra di dialogo visualizzata, seleziona lo stream di dati di cui desid
 >
 >Gli stream di dati possono essere importati solo all’interno della stessa [sandbox](../sandboxes/home.md). In altre parole, non puoi importare uno stream di dati da una sandbox all’altra.
 
-La schermata successiva mostra un’anteprima delle regole di mappatura salvate per lo stream di dati selezionato. Assicurati che le mappature visualizzate siano quelle previste, quindi seleziona **[!UICONTROL Importa]** per confermare e aggiungere le mappature al nuovo stream di dati.
+La schermata successiva mostra un’anteprima delle regole di mappatura salvate per lo stream di dati selezionato. Verificare che i mapping visualizzati siano quelli previsti, quindi selezionare **[!UICONTROL Import]** per confermare e aggiungere i mapping al nuovo flusso di dati.
 
 ![Regole di mappatura da importare.](assets/data-prep/import-mapping-rules.png)
 
@@ -225,9 +225,9 @@ La schermata successiva mostra un’anteprima delle regole di mappatura salvate 
 
 ### Completare la mappatura
 
-Continua a seguire i passaggi precedenti per mappare il resto dei campi sullo schema di destinazione. Anche se non è necessario mappare tutti i campi sorgente disponibili, tutti i campi nello schema di destinazione impostati come richiesto devono essere mappati per completare questo passaggio. Il contatore dei **[!UICONTROL Campi obbligatori]** indica quanti campi obbligatori non sono ancora mappati nella configurazione corrente.
+Continua a seguire i passaggi precedenti per mappare il resto dei campi sullo schema di destinazione. Anche se non è necessario mappare tutti i campi sorgente disponibili, tutti i campi nello schema di destinazione impostati come richiesto devono essere mappati per completare questo passaggio. Il contatore **[!UICONTROL Required fields]** indica quanti campi obbligatori non sono ancora mappati nella configurazione corrente.
 
-Una volta che il conteggio dei campi richiesto raggiunge zero e la mappatura è soddisfacente, seleziona **[!UICONTROL Salva]** per finalizzare le modifiche.
+Una volta che il conteggio dei campi richiesto raggiunge zero e la mappatura è soddisfacente, selezionare **[!UICONTROL Save]** per finalizzare le modifiche.
 
 ![Mappatura completata](assets/data-prep/mapping-complete.png)
 

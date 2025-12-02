@@ -2,9 +2,9 @@
 title: Profili Edge
 description: Scopri i profili edge, la terminologia correlata, le aree disponibili per i profili edge e i servizi disponibili per i profili edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform, Real-Time Customer Profile è l’unica fonte di verità per i dati delle entità. Questi dati di profilo si trovano in un hub centrale e consentono di gestire i casi d’uso che si basano sulla completezza e sulla completezza dei dati. Tuttavia, in casi di utilizzo più in tempo reale, in cui la sensibilità al tempo è più importante, l’opzione preferita sono i profili edge. I profili Edge sono profili leggeri che si trovano ai margini e aiutano nei casi di utilizzo di personalizzazione in tempo reale.
 
-Ad Adobe, applicazioni come Adobe Target, Custom Personalization Destination e Adobe Campaign utilizzano Edge per fornire ai clienti esperienze personalizzate in tempo reale. I dati vengono instradati a uno spigolo da una proiezione, con una destinazione di proiezione che definisce lo spigolo a cui verranno inviati i dati.
+Ad esempio, applicazioni Adobe come Adobe Target, Custom Personalization Destination e Adobe Campaign utilizzano Edge per fornire ai clienti esperienze personalizzate in tempo reale. I dati vengono instradati a uno spigolo da una proiezione, con una destinazione di proiezione che definisce lo spigolo a cui verranno inviati i dati.
 
 ## Terminologia {#terminology}
 
@@ -55,7 +55,7 @@ Il servizio XPS (Express Profile Service) recupera i profili sui diversi bordi. 
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, avrai acquisito una conoscenza di base dei profili edge, comprese informazioni sulle aree geografiche e sui servizi disponibili per i profili edge. Per ulteriori informazioni su Adobe Experience Edge, consulta la [panoramica dell&#39;Edge Network](../web-sdk/home.md#edge-network).
+Dopo aver letto questa guida, avrai acquisito una conoscenza di base dei profili edge, comprese informazioni sulle aree geografiche e sui servizi disponibili per i profili edge. Per ulteriori informazioni su Adobe Experience Edge, consulta [Panoramica sulla raccolta dati](/help/collection/home.md).
 
 ## Appendice
 

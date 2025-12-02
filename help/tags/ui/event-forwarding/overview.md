@@ -3,7 +3,7 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri l’inoltro eventi in Adobe Experience Platform, che consente di utilizzare la rete Edge di Experience Platform per eseguire attività senza modificare l’implementazione dei tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 9%
@@ -24,13 +24,13 @@ L’inoltro degli eventi in Adobe Experience Platform consente di inviare i dati
 
 Questo documento fornisce una panoramica di alto livello sull’inoltro degli eventi in Experience Platform.
 
-![Inoltro eventi nell&#39;ecosistema di raccolta dati.](../../../collection/images/home/event-forwarding.png)
+![Inoltro eventi nell&#39;ecosistema di raccolta dati.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->Per informazioni sul modo in cui l&#39;inoltro degli eventi si inserisce nell&#39;ecosistema di raccolta dati di Experience Platform, consulta la [panoramica sulla raccolta dati](../../../collection/home.md).
+>Per informazioni sul modo in cui l&#39;inoltro degli eventi si inserisce nell&#39;ecosistema di raccolta dati di Experience Platform, consulta la [panoramica sulla raccolta dati](/help/collection/home.md).
 
-L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/web-sdk/home.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=it) offre i seguenti vantaggi:
+L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) offre i seguenti vantaggi:
 
 **Prestazioni**:
 
@@ -89,7 +89,7 @@ Puoi visualizzare le risorse aggiuntive disponibili per ulteriori informazioni s
 
 ### Regole {#rules}
 
-La creazione di regole nelle proprietà di inoltro degli eventi funziona in modo simile ai tag, con la differenza fondamentale che non è possibile selezionare eventi come componenti regola. Al contrario, una regola di inoltro degli eventi elabora tutti gli eventi ricevuti dal [flusso di dati](../../../datastreams/overview.md) e inoltra tali eventi alle destinazioni se vengono soddisfatte determinate condizioni.
+La creazione di regole nelle proprietà di inoltro degli eventi funziona in modo simile ai tag, con la differenza fondamentale che non è possibile selezionare eventi come componenti regola. Al contrario, una regola di inoltro degli eventi elabora tutti gli eventi ricevuti dal [flusso di dati](/help/datastreams/overview.md) e inoltra tali eventi alle destinazioni se vengono soddisfatte determinate condizioni.
 
 Inoltre, esiste un timeout di 30 secondi che si applica a un singolo evento durante l’elaborazione in tutte le regole (e quindi tutte le azioni) all’interno di una proprietà di inoltro degli eventi. Ciò significa che tutte le regole e tutte le azioni per un singolo evento devono essere completate in questo intervallo di tempo.
 

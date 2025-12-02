@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
+source-wordcount: '5425'
 ht-degree: 82%
 
 ---
@@ -116,7 +116,7 @@ Per ulteriori informazioni sulle opzioni avanzate, consulta la sezione [Opzioni]
 
 #### Hover
 
-L’evento si attiva se l’utente passa col cursore sopra un elemento specificato. Inoltre, devi configurare se la regola viene attivata immediatamente o dopo un numero specificato di millisecondi. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
+L’evento si attiva se l’utente passa il puntatore su un elemento specificato. Inoltre, devi configurare se la regola viene attivata immediatamente o dopo un numero specificato di millisecondi. Per ulteriori informazioni sulle impostazioni personalizzabili degli eventi, consulta la sezione [Opzioni](#options).
 
 ### Altri eventi
 
@@ -178,8 +178,8 @@ Ogni tipo di evento modulo utilizza le impostazioni seguenti:
 
 #### Specific Elements \| Any Element
 
-* Se selezioni **[!UICONTROL Elementi specifici]**, vengono visualizzate le opzioni per selezionare gli elementi e i valori della proprietà.
-* Se selezioni **[!UICONTROL Qualsiasi elemento]**, non vi sono ulteriori opzioni necessarie per limitare gli elementi.
+* Se selezioni **[!UICONTROL Specific Elements]**, vengono visualizzate le opzioni per selezionare gli elementi e i valori della proprietà.
+* Se selezioni **[!UICONTROL Any Element]**, non vi sono ulteriori opzioni necessarie per limitare gli elementi.
 
 #### Elements matching the CSS selector
 
@@ -195,7 +195,7 @@ Se selezioni questa opzione, diventano disponibili i seguenti parametri:
 
 * Regex
 
-  Attiva se `property=value` è un&#39;espressione regolare.
+  Abilita se `property=value` è un&#39;espressione regolare.
 
 * Add
 
@@ -204,7 +204,7 @@ Se selezioni questa opzione, diventano disponibili i seguenti parametri:
 #### Advanced options (Bubbling)
 
 * Esegui questa regola anche quando l&#39;evento ha origine da un elemento discendente
-* Consenti l&#39;esecuzione di questa regola anche se l&#39;evento ha già attivato una regola riferita a un elemento discendente
+* Consenti l’esecuzione di questa regola anche se l’evento ha già attivato una regola il cui targeting è un elemento discendente
 * Una volta eseguita la regola, impedisci all&#39;evento di attivare elementi di targeting di regole
 
 ## Tipi di condizione dell&#39;estensione core
@@ -231,9 +231,9 @@ Specifica un codice personalizzato che deve esistere come condizione dell&#39;ev
 
 Utilizza l’editor di codice integrato per immettere il codice personalizzato:
 
-1. Seleziona **[!UICONTROL Apri editor]**.
+1. Seleziona **[!UICONTROL Open Editor]**.
 1. Digita il codice personalizzato.
-1. Seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Save]**.
 
 Una variabile denominata `event` sarà automaticamente disponibile; potrai fare riferimento a essa all&#39;interno del codice personalizzato. L&#39;oggetto `event` conterrà informazioni utili sull&#39;evento che ha attivato la regola. Il modo più semplice per determinare quali dati evento sono disponibili è accedere `event` alla console dall&#39;interno del codice personalizzato:
 
@@ -277,7 +277,7 @@ Se disponi di una regola con più condizioni, è possibile che questa condizione
 
 Sono disponibili i seguenti operatori di confronto dei valori:
 
-**Equal:** La condizione restituisce true se i due valori sono uguali utilizzando un confronto non rigoroso (in JavaScript, == operator). I valori possono essere di qualsiasi tipo. Quando digiti una parola come _true_, _false_, _null_ o _undefined_ in un campo value, la parola viene confrontata come stringa e non viene convertita nel relativo equivalente JavaScript.
+**Uguale:** la condizione restituisce “vero” se i due valori sono uguali utilizzando un confronto non rigoroso (in JavaScript, operatore ==). I valori possono essere di qualsiasi tipo. Quando digiti una parola come _true_, _false_, _null_ o _undefined_ in un campo value, la parola viene confrontata come stringa e non viene convertita nel relativo equivalente JavaScript.
 
 **Does Not Equal:** La condizione restituisce true se i due valori non sono equalizzati con un confronto non rigoroso (in JavaScript il != operatore). I valori possono essere di qualsiasi tipo. Quando digiti una parola come _true_, _false_, _null_ o _undefined_ in un campo value, la parola viene confrontata come stringa e non viene convertita nel relativo equivalente JavaScript.
 
@@ -323,7 +323,7 @@ Specifica il nome e il valore della variabile JavaScript esistenti affinché un 
 
 ### Coinvolgimento
 
-#### Landing Page
+#### Pagina di destinazione
 
 Specifica la pagina a cui l&#39;utente deve accedere per attivare l&#39;evento.
 
@@ -557,8 +557,8 @@ Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e l
    * JavaScript
    * HTML
 1. Seleziona se eseguire il codice dell&#39;azione a livello globale.
-1. Seleziona **[!UICONTROL Apri editor]**.
-1. Modifica il codice, quindi seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Open Editor]**.
+1. Modifica il codice, quindi fai clic su **[!UICONTROL Save]**.
 
 Quando JavaScript è selezionato come linguaggio, sarà automaticamente disponibile una variabile denominata `event` a cui è possibile fare riferimento all&#39;interno del codice personalizzato. L&#39;oggetto `event` conterrà informazioni utili sull&#39;evento che ha attivato la regola. Il modo più semplice per determinare quali dati evento sono disponibili è accedere `event` alla console dall&#39;interno del codice personalizzato:
 
@@ -636,7 +636,7 @@ Questa azione attiva tutte le regole che utilizzano un [evento di chiamata diret
 
 ![Schermata di un&#39;azione Trigger Direct Call nell&#39;interfaccia utente di Data Collection](../../../images/extensions/client/core/direct-call-action.png)
 
-L&#39;azione è mappata direttamente al metodo [`track`](../../../ui/client-side/satellite-object.md#track) nell&#39;oggetto `satellite`, a cui è possibile accedere tramite il codice lato client.
+Questa azione viene mappata direttamente su [`_satellite.track()`](/help/collection/tags/track.md).
 
 ## Tipi di elementi di dati dell’estensione Core
 
@@ -842,7 +842,7 @@ Simile a Informazioni pagina, questo elemento dati utilizza tipi di comportament
 
 Seleziona uno dei seguenti attributi di comportamento dei visitatori:
 
-* Landing page
+* Pagina di destinazione
 * Traffic source
 * Minutes on site
 * Session count

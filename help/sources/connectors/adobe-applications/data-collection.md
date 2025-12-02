@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;origini;sorgente;raccolta 
 title: Raccolta dati di Adobe
 description: Questo documento fornisce una panoramica dell’origine di raccolta dati di Adobe.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '291'
 ht-degree: 2%
 
 ---
@@ -18,11 +18,11 @@ L’integrazione delle origini di Raccolta dati di Adobe Experience Platform con
 
 ## Utilizzare l’area di lavoro origini per accedere alla raccolta dati
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria [!UICONTROL Applicazioni Adobe], selezionare **[!UICONTROL Raccolta dati Adobe]**, quindi selezionare **[!UICONTROL Configurazione]**.
+Nella categoria [!UICONTROL Adobe applications] selezionare **[!UICONTROL Adobe Data Collection]**, quindi **[!UICONTROL Set up]**.
 
 ![raccolta dati](./images/data-collection/catalog.png)
 
@@ -32,8 +32,8 @@ Un flusso di dati è una configurazione che indica all’Edge Network dove desid
 
 ![flussi di dati](./images/data-collection/datastreams.png)
 
-Per i passaggi completi su come configurare la raccolta dati nell&#39;interfaccia utente, consulta la [panoramica end-to-end della raccolta dati](../../../collection/e2e.md).
+Per i passaggi completi su come configurare la raccolta dati nell&#39;interfaccia utente, vedere [Guida introduttiva all&#39;estensione tag Web SDK](/help/tags/extensions/client/web-sdk/getting-started.md).
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai imparato ad accedere all’interfaccia utente di Data Collection utilizzando l’area di lavoro origini. Per ulteriori informazioni sulla raccolta dati, vedere [Panoramica sulla raccolta dati](../../../collection/e2e.md).
+Dopo aver letto questo documento, hai imparato ad accedere all’interfaccia utente di Data Collection utilizzando l’area di lavoro origini. Per ulteriori informazioni sulla raccolta dati, vedere [Panoramica sulla raccolta dati](/help/collection/home.md).

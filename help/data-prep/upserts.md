@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Delle Righe A Real-Time Customer Profile Tramite La Preparazione Dei Dati
 description: Scopri come inviare aggiornamenti parziali delle righe a Real-Time Customer Profile utilizzando la preparazione dati.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
@@ -271,7 +271,7 @@ Di seguito è riportato un elenco delle limitazioni note da considerare quando s
 
 * Utilizzare il metodo Streaming Upserts solo per l&#39;invio di aggiornamenti di riga parziali a [!DNL Real-Time Customer Profile]. Aggiornamenti riga parziali: **non** utilizzati dal data lake.
 * Il metodo degli aggiornamenti in streaming non supporta l’aggiornamento, la sostituzione e la rimozione di identità. Se non esistono, vengono create nuove identità. Pertanto, l&#39;operazione `identity` deve essere sempre impostata per la creazione. Se esiste già un’identità, l’operazione è no-op.
-* Il metodo di upsert streaming attualmente non supporta [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) e [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* Il metodo di upsert in streaming non supporta attualmente [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) o [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Passaggi successivi
 

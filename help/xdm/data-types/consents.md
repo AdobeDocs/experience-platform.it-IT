@@ -3,18 +3,18 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Tipo di dati Consensi e preferenze
 description: Il tipo di dati Consenso per privacy, Personalization e Preferenze di marketing ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni sui dati.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '2334'
-ht-degree: 0%
+source-wordcount: '2305'
+ht-degree: 1%
 
 ---
 
-# Tipo di dati [!UICONTROL Consensi e preferenze]
+# Tipo di dati [!UICONTROL Consents and Preferences]
 
-Il tipo di dati [!UICONTROL Consenso per privacy, Personalization e preferenze marketing] (di seguito denominato &quot;[!UICONTROL Consensi e preferenze]&quot;) è un tipo di dati [!DNL Experience Data Model] (XDM) destinato a supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP) e da altre origini dalle operazioni dei dati.
+Il tipo di dati [!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] (di seguito denominato &quot;tipo di dati [!UICONTROL Consents and Preferences]&quot;) è un tipo di dati [!DNL Experience Data Model] (XDM) destinato a supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP) e da altre origini dalle operazioni dei dati.
 
-Questo documento descrive la struttura e l&#39;uso previsto dei campi forniti dal tipo di dati [!UICONTROL Consensi e preferenze].
+Questo documento descrive la struttura e l&#39;utilizzo previsto dei campi forniti dal tipo di dati [!UICONTROL Consents and Preferences].
 
 ## Prerequisiti {#prerequisites}
 
@@ -27,9 +27,9 @@ Questo documento richiede una buona conoscenza di XDM e dell&#39;utilizzo degli 
 
 >[!IMPORTANT]
 >
->Il tipo di dati [!UICONTROL Consensi e preferenze] è progettato per coprire una serie di casi di utilizzo della gestione del consenso e delle preferenze. Di conseguenza, questo documento descrive l’utilizzo dei campi del tipo di dati in termini generali e fornisce solo suggerimenti su come interpretare l’utilizzo di tali campi. Consulta il team legale della tua privacy per allineare la struttura del tipo di dati con il modo in cui la tua organizzazione interpreta e presenta ai clienti queste scelte di consenso e preferenze.
+>Il tipo di dati [!UICONTROL Consents and Preferences] è progettato per coprire una serie di casi di utilizzo della gestione del consenso e delle preferenze. Di conseguenza, questo documento descrive l’utilizzo dei campi del tipo di dati in termini generali e fornisce solo suggerimenti su come interpretare l’utilizzo di tali campi. Consulta il team legale della tua privacy per allineare la struttura del tipo di dati con il modo in cui la tua organizzazione interpreta e presenta ai clienti queste scelte di consenso e preferenze.
 
-Il tipo di dati [!UICONTROL Consensi e preferenze] fornisce diversi campi utilizzati per acquisire le informazioni relative a **consenso** e **preferenza**.
+Il tipo di dati [!UICONTROL Consents and Preferences] fornisce diversi campi utilizzati per acquisire le informazioni relative a **consenso** e **preferenza**.
 
 Il consenso è un’opzione che consente al cliente di specificare in che modo i suoi dati possono essere utilizzati. La maggior parte dei consensi ha un aspetto legale, in quanto alcune giurisdizioni richiedono di ottenere l&#39;autorizzazione prima che i dati possano essere utilizzati in un modo particolare, o richiedono che il cliente abbia la possibilità di interrompere tale utilizzo (opt-out) se non è richiesto il consenso affermativo.
 
@@ -46,7 +46,7 @@ La schermata seguente mostra come la struttura del tipo di dati è rappresentata
 >
 >Consulta la guida su [esplorazione delle risorse XDM](../ui/explore.md) in per i passaggi su come cercare qualsiasi risorsa XDM e ispezionarne la struttura nell&#39;interfaccia utente di Experience Platform.
 
-Il seguente codice JSON mostra un esempio del tipo di dati che il tipo di dati [!UICONTROL Consensi e preferenze] può elaborare. Le informazioni sull’uso specifico di ciascuno di questi campi sono fornite nelle sezioni seguenti.
+Il seguente codice JSON mostra un esempio del tipo di dati che il tipo di dati [!UICONTROL Consents and Preferences] può elaborare. Le informazioni sull’uso specifico di ciascuno di questi campi sono fornite nelle sezioni seguenti.
 
 ```json
 {
@@ -255,23 +255,23 @@ Il seguente codice JSON mostra un esempio del tipo di dati che il tipo di dati [
 
 ## Acquisizione di dati tramite il tipo di dati {#ingest}
 
-Per utilizzare il tipo di dati [!UICONTROL Consensi e preferenze] per acquisire i dati sul consenso dai clienti, è necessario creare un set di dati basato su uno schema che contiene tale tipo di dati.
+Per utilizzare il tipo di dati [!UICONTROL Consents and Preferences] per acquisire i dati sul consenso dai clienti, è necessario creare un set di dati basato su uno schema che contiene tale tipo di dati.
 
-Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_it) per i passaggi su come assegnare tipi di dati ai campi. Dopo aver creato uno schema contenente un campo con tipo di dati [!UICONTROL Consensi e preferenze], consulta la sezione sulla [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
+Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare tipi di dati ai campi. Dopo aver creato uno schema contenente un campo con il tipo di dati [!UICONTROL Consents and Preferences], consulta la sezione sulla [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >
->Per inviare i dati sul consenso a [!DNL Real-Time Customer Profile], è necessario creare uno schema abilitato per [!DNL Profile] basato sulla classe [!DNL XDM Individual Profile] che contiene il tipo di dati [!UICONTROL Consensi e preferenze]. Il set di dati creato in base a tale schema deve essere abilitato anche per [!DNL Profile]. Fare riferimento ai tutorial collegati in precedenza per i passaggi specifici relativi ai requisiti di [!DNL Real-Time Customer Profile] per schemi e set di dati.
+>Per inviare i dati sul consenso a [!DNL Real-Time Customer Profile], è necessario creare uno schema abilitato per [!DNL Profile] basato sulla classe [!DNL XDM Individual Profile] che contiene il tipo di dati [!UICONTROL Consents and Preferences]. Il set di dati creato in base a tale schema deve essere abilitato anche per [!DNL Profile]. Fare riferimento ai tutorial collegati in precedenza per i passaggi specifici relativi ai requisiti di [!DNL Real-Time Customer Profile] per schemi e set di dati.
 >
 >Inoltre, devi anche assicurarti che i criteri di unione siano configurati per assegnare la priorità ai set di dati che contengono i dati di consenso e preferenze più recenti, al fine di aggiornare correttamente i profili dei clienti. Per ulteriori informazioni, consulta la panoramica sui [criteri di unione](../../rtcdp/profile/merge-policies.md).
 
 ## Gestione delle modifiche di consenso e preferenze
 
-Quando un cliente modifica il proprio consenso o le proprie preferenze sul sito Web, le modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
+Quando un cliente modifica i propri consensi o preferenze sul sito web, queste modifiche devono essere raccolte e applicate immediatamente impostando il consenso nella libreria di raccolta dati utilizzata. Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita. Vedi [`setConsent`](/help/collection/js/commands/setconsent.md) utilizzando la libreria JavaScript, oppure l&#39;azione [[!UICONTROL Set consent]](/help/tags/extensions/client/web-sdk/actions/set-consent.md) utilizzando l&#39;estensione tag.
 
 ## Appendice {#appendix}
 
-Le sezioni seguenti forniscono informazioni di riferimento aggiuntive relative al tipo di dati [!UICONTROL Consensi e preferenze].
+Le sezioni seguenti forniscono informazioni di riferimento aggiuntive relative al tipo di dati [!UICONTROL Consents and Preferences].
 
 ### Valori accettati per `val` {#choice-values}
 
@@ -315,6 +315,6 @@ Nella tabella seguente sono illustrati i valori accettati per `preferred`. I val
 
 {style="table-layout:auto"}
 
-### Schema completo di [!UICONTROL consensi e preferenze] {#full-schema}
+### Schema [!UICONTROL Consents and Preferences] completo {#full-schema}
 
-Per visualizzare lo schema completo per il tipo di dati [!UICONTROL Consensi e preferenze], fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
+Per visualizzare lo schema completo per il tipo di dati [!UICONTROL Consents and Preferences], fare riferimento al [archivio XDM ufficiale](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).

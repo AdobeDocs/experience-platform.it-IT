@@ -2,7 +2,7 @@
 title: Logica di collegamento del servizio Identity
 description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 2%
@@ -102,7 +102,7 @@ Hai anche implementato Web SDK e acquisito un set di dati Web SDK (Experience Ev
 | `t=3` | ECID:44675 | Visualizza home page |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Visualizza cronologia acquisti |
 
-L&#39;identità primaria di ogni evento verrà determinata in base a [modalità di configurazione dei tipi di elementi dati](../../tags/extensions/client/web-sdk/data-element-types.md).
+L&#39;identità primaria di ogni evento verrà determinata in base a [modalità di configurazione dei tipi di elementi dati](/help/tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >

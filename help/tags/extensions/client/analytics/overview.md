@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Analytics
 description: Scopri le caratteristiche dell’estensione tag di Adobe Analytics in Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 86%
+source-wordcount: '2308'
+ht-degree: 85%
 
 ---
 
@@ -21,9 +21,9 @@ Utilizza questo riferimento per informazioni sulla configurazione dell&#39;esten
 
 Questa sezione fornisce un riferimento per le opzioni disponibili durante la configurazione dell&#39;estensione Adobe Analytics.
 
-Se l’estensione Adobe Analytics non è ancora installata, apri la proprietà, quindi seleziona **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore sull’estensione Adobe Analytics e fai clic su **[!UICONTROL Installa]**.
+Se l’estensione Adobe Analytics non è ancora installata, apri la proprietà, quindi seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione Adobe Analytics e seleziona **[!UICONTROL Install]**.
 
-Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore sull’estensione e fai clic su **[!UICONTROL Configura]**.
+Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore sull’estensione e seleziona **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -111,11 +111,11 @@ Seleziona un&#39;opzione dalla sezione Generale della pagina di configurazione. 
 
 Abilita o disabilita il tracciamento in base al cookie di privacy UE.
 
-Quando selezioni la casella di controllo EU Compliance (Conformità UE), viene visualizzato il campo [!UICONTROL Nome del cookie di tracciamento]. Questo cookie di tracciamento sostituisce il nome predefinito del cookie di tracciamento. Puoi personalizzare il nome utilizzato dai tag per tenere traccia dello stato di rinuncia alla ricezione di altri cookie.
+Quando si abilita la casella di controllo EU Compliance, viene visualizzato il campo [!UICONTROL Tracking Cookie Name]. Questo cookie di tracciamento sostituisce il nome predefinito del cookie di tracciamento. Puoi personalizzare il nome utilizzato dai tag per tenere traccia dello stato di rinuncia alla ricezione di altri cookie.
 
 Quando viene caricata una pagina, il sistema controlla se è impostato un cookie chiamato sat\_track (o il nome del cookie personalizzato specificato nella pagina Modifica proprietà). Prendi in considerazione le seguenti informazioni:
 
-* Se il cookie non esiste o se il cookie esiste ed è impostato su un valore diverso da true, il caricamento dello strumento viene ignorato quando questa impostazione è attivata. Ciò significa che non verrà applicata alcuna parte di una regola che utilizza lo strumento. Se una regola dispone di analisi con conformità UE e codice di terze parti e il cookie è impostato su false, il codice di terze parti continua a essere eseguito. Tuttavia, le variabili di analisi non saranno impostate.
+* Se il cookie non esiste o se il cookie esiste ed è impostato su un valore diverso da true, il caricamento dello strumento viene ignorato quando questa impostazione è abilitata. Ciò significa che non verrà applicata alcuna parte di una regola che utilizza lo strumento. Se una regola dispone di analisi con conformità UE e codice di terze parti e il cookie è impostato su false, il codice di terze parti continua a essere eseguito. Tuttavia, le variabili di analisi non saranno impostate.
 * Se il cookie esiste ma è impostato su true, lo strumento viene caricato normalmente.
 
 L&#39;utente è tenuto a impostare il cookie sat\_ track (o personalizzato) su false se un visitatore indica la rinuncia. Puoi eseguire questa operazione utilizzando un codice personalizzato:
@@ -183,7 +183,7 @@ Consulta [s.trackDownLoadLinks](https://experienceleague.adobe.com/docs/analytic
 
 ### Download delle estensioni
 
-Se l&#39;opzione Track Download Links è attivata, puoi selezionare le estensioni dei collegamenti dei file inclusi nel Downloads Report. Se il sito contiene collegamenti a file con una qualsiasi delle estensioni elencate, gli URL di tali collegamenti saranno visualizzati nel reporting.
+Se l&#39;opzione Track Download Links è abilitata, puoi selezionare le estensioni dei collegamenti dei file inclusi nel Downloads Report. Se il sito contiene collegamenti a file con una qualsiasi delle estensioni elencate, gli URL di tali collegamenti saranno visualizzati nel reporting.
 
 Consulta [s.linkDownloadFileTypes](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkdownloadfiletypes.html?lang=it).
 
@@ -311,7 +311,7 @@ Imposta una o più [eVar](https://experienceleague.adobe.com/docs/analytics/impl
 1. Specifica se impostare la eVar come valore (Set As) o copia (Duplicate From) di un&#39;altra eVar.
 1. Fornisci un valore Set As oppure seleziona la eVar da duplicare.
 1. (Facoltativo) Seleziona Aggiungi eVar per impostare altre eVar.
-1. Seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Seleziona **[!UICONTROL Keep Changes]**.
 
 #### Proprietà
 
@@ -320,8 +320,8 @@ Imposta una o più [proprietà](https://experienceleague.adobe.com/docs/analytic
 1. Seleziona una proprietà dal menu a discesa.
 1. Specifica se impostare la proprietà come valore (Set As) o copia (Duplicate From) di un&#39;altra eVar.
 1. Fornisci un valore Set As oppure seleziona la eVar da cui duplicare la proprietà.
-1. (Facoltativo) Fai clic su **[!UICONTROL Aggiungi proprietà]** per impostare più proprietà.
-1. Seleziona **[!UICONTROL Mantieni modifiche]**.
+1. (Facoltativo) Seleziona **[!UICONTROL Add prop]** per impostare altre proprietà.
+1. Seleziona **[!UICONTROL Keep Changes]**.
 
 #### Eventi
 
@@ -329,8 +329,8 @@ Imposta uno o più [eventi](https://experienceleague.adobe.com/docs/analytics/im
 
 1. Seleziona un evento dal menu a discesa.
 1. (Facoltativo) Seleziona o specifica un elemento dati usato per la [serializzazione degli eventi](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=it).
-1. (Facoltativo) Fai clic su **[!UICONTROL Aggiungi evento]** per impostare altri eventi.
-1. Seleziona **[!UICONTROL Mantieni modifiche]**.
+1. (Facoltativo) Seleziona **[!UICONTROL Add event]** per impostare altri eventi.
+1. Seleziona **[!UICONTROL Keep Changes]**.
 
 >[!TAB Visualizzazione JSON]
 
@@ -361,11 +361,11 @@ Se lo desideri, configura gerarchie aggiuntive.
 
 #### Nome pagina
 
-Questo valore fa riferimento al nome di una determinata pagina e corrisponde alla variabile [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=it) in Analytics.
+Questo valore fa riferimento al nome di una determinata pagina e corrisponde alla variabile [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
 
 >[!IMPORTANT]
 >
->Nelle implementazioni di Adobe Experience Manager, questa variabile indica all’AEM dove memorizzare il rapporto Analytics recuperato. Per garantire la corretta persistenza dei rapporti, la stringa del nome della pagina deve essere formattata come un percorso del sito separato da due punti.
+>Nelle implementazioni di Adobe Experience Manager, questa variabile indica ad AEM dove memorizzare il rapporto Analytics recuperato. Per garantire la corretta persistenza dei rapporti, la stringa del nome della pagina deve essere formattata come un percorso del sito separato da due punti.
 >
 >Ad esempio, una pagina Web in `content/we-retail/language-masters/en/men.html` deve avere il valore del nome pagina `content:we-retail:language-masters:en:men`.
 
@@ -398,9 +398,9 @@ Usa l&#39;editor per specificare il codice pagina personalizzato.
 
 **Impostazioni**
 
-1. Seleziona **[!UICONTROL Apri editor]**.
+1. Seleziona **[!UICONTROL Open Editor]**.
 1. Digita il codice personalizzato.
-1. Seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Save]**.
 
 ### Invia beacon {#send-beacon}
 
@@ -426,7 +426,7 @@ Seleziona questa opzione se non desideri incrementare una visualizzazione di pag
    * Collegamento personalizzato: specifica il nome del collegamento.
    * Collegamento di download: specifica il nome di un file.
    * Collegamento di uscita: specifica l&#39;URL di destinazione.
-1. Seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Seleziona **[!UICONTROL Keep Changes]**.
 
 ### Cancella variabili {#clear-variables}
 

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Note sulla versione di Adobe Experience Platform di aprile 2023.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '2010'
-ht-degree: 96%
+source-wordcount: '1983'
+ht-degree: 95%
 
 ---
 
@@ -66,8 +66,8 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
-| Offuscamento dell’indirizzo IP per gli stream di dati | Ora puoi definire le opzioni di offuscamento parziale o completo dell’IP a livello di dati nell’[interfaccia utente per la configurazione dello stream di dati](../../datastreams/configure.md). <br><br>L’impostazione di offuscamento dell’IP a livello di stream di dati ha la precedenza su qualsiasi offuscamento dell’IP configurato in Adobe Target e Audience Manager. <br><br>I dati inviati ad Adobe Analytics non sono influenzati dall’impostazione dell’[!UICONTROL Offuscamento IP] a livello di stream di dati. Adobe Analytics attualmente riceve indirizzi IP non offuscati. Affinché Analytics possa ricevere indirizzi IP offuscati, l’offuscamento dell’IP deve essere configurato separatamente in Adobe Analytics. Questo comportamento verrà aggiornato nelle versioni future.<br><br> Per ulteriori dettagli sull’offuscamento dell’IP e istruzioni su come configurarlo, consulta la [documentazione sulla configurazione dello stream di dati](../../datastreams/configure.md#advanced-options). |
-| [Override della configurazione dello stream di dati](../../datastreams/overrides.md) | Ora puoi definire opzioni di configurazione aggiuntive per i flussi di dati, che puoi utilizzare per ignorare impostazioni specifiche, ad esempio set di dati evento, il token di proprietà Target, i contenitori di sincronizzazione ID e la suite di rapporti Analytics. <br><br>L’override delle configurazioni dello stream di dati è un processo in due fasi: <ol><li>Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../datastreams/configure.md).</li><li>Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’[estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) di Web SDK.</li></ol> |
+| Offuscamento dell’indirizzo IP per gli stream di dati | Ora puoi definire le opzioni di offuscamento parziale o completo dell’IP a livello di dati nell’[interfaccia utente per la configurazione dello stream di dati](../../datastreams/configure.md). <br><br>L’impostazione di offuscamento dell’IP a livello di stream di dati ha la precedenza su qualsiasi offuscamento dell’IP configurato in Adobe Target e Audience Manager. <br><br>I dati inviati ad Adobe Analytics non sono interessati dall&#39;impostazione [!UICONTROL IP Obfuscation] a livello di flusso di dati. Adobe Analytics attualmente riceve indirizzi IP non offuscati. Affinché Analytics possa ricevere indirizzi IP offuscati, l’offuscamento dell’IP deve essere configurato separatamente in Adobe Analytics. Questo comportamento verrà aggiornato nelle versioni future.<br><br> Per ulteriori dettagli sull’offuscamento dell’IP e istruzioni su come configurarlo, consulta la [documentazione sulla configurazione dello stream di dati](../../datastreams/configure.md#advanced-options). |
+| [Override della configurazione dello stream di dati](../../datastreams/overrides.md) | Ora puoi definire opzioni di configurazione aggiuntive per i flussi di dati, che puoi utilizzare per ignorare impostazioni specifiche, ad esempio set di dati evento, il token di proprietà Target, i contenitori di sincronizzazione ID e la suite di rapporti Analytics. <br><br>L’override delle configurazioni dello stream di dati è un processo in due fasi: <ol><li>Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../datastreams/configure.md).</li><li>Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’[estensione tag](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) di Web SDK.</li></ol> |
 | Segreto JWT OAuth  | Il [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=it) consente di utilizzare i token di servizio Adobe e Google per supportare le interazioni da server a server nell’inoltro degli eventi. |
 | Estensione [!DNL Pinterest Conversions API] | L’estensione per l’inoltro degli eventi [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=it) consente di sfruttare i dati acquisiti nella rete Edge di Adobe Experience Platform e di inviarli a [!DNL Pinterest] in forma di eventi lato server che utilizzano [!DNL Pinterest Conversions API]. |
 
@@ -90,7 +90,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
 | Monitoraggio del flusso di dati per le destinazioni [!DNL Custom Personalization] e [!DNL Adobe Commerce] | <p> Ora puoi visualizzare le metriche di attivazione per le connessioni di [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md) e [Personalizzazione personalizzata con attributi](../../destinations/catalog/personalization/custom-personalization.md). </p> <p>![Immagine di Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Metriche di Adobe Commerce"){width="100" zoomable="yes"}</p>  Per ulteriori informazioni, consulta [Monitorare i flussi di dati nell’area di lavoro Destinazioni](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace). |
-| Nuovo campo **[!UICONTROL Aggiungi ID segmento al nome del segmento]** per le destinazioni [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] | <p>Ora il nome del segmento in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) può includere l’ID di segmento da Experience Platform, come segue: `Segment Name (Segment ID)`.</p><p>![Aggiungi immagine a ID segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nuovo campo Aggiungi ID segmento al nome del segmento "){width="100" zoomable="yes"}</p> |
+| Nuovo campo **[!UICONTROL Append segment ID to segment name]** per le destinazioni [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] | <p>Ora il nome del segmento in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) può includere l’ID di segmento da Experience Platform, come segue: `Segment Name (Segment ID)`.</p><p>![Aggiungi immagine a ID segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nuovo campo Aggiungi ID segmento al nome del segmento "){width="100" zoomable="yes"}</p> |
 | Retrocompilazioni del pubblico pianificate | <p>Per la destinazione [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), l’attivazione delle retrocompilazioni del pubblico alla destinazione è programmata per verificarsi 24-48 ore dopo che un segmento è stato mappato per la prima volta a una connessione di destinazione. Questo aggiornamento risponde al criterio di Google di attendere 24 ore prima dell&#39;acquisizione dei dati e migliorerà le percentuali di corrispondenza tra Real-Time CDP e [!DNL Google Display & Video 360].</p> <p>Tieni presente che si tratta di una configurazione back-end applicabile solo a questa destinazione e che non è correlata ad alcuna opzione di pianificazione configurabile dalla clientela nell’interfaccia utente.</p> |
 
 {style="table-layout:auto"}
@@ -115,7 +115,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Attivare/disattivare nomi visualizzati | L’Editor di schema ora fornisce un’opzione per passare dai nomi originali dei campi ai corrispondenti nomi visualizzati, più leggibili.<br>![Editor di schema con l’attivazione/disattivazione del nome visualizzato evidenziata.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Attivazione/disattivazione nome visualizzato nell’Editor schema"){width="100" zoomable="yes"}<br>Questa flessibilità migliora l’individuazione del campo e la modifica degli schemi. I nomi visualizzati per i gruppi di campi standard sono generati dal sistema, ma possono anche essere personalizzati tramite l’interfaccia utente, se necessario. Per ulteriori informazioni, consulta la [documentazione sull’attivazione/disattivazione del nome visualizzato](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it#display-name-toggle). |
+| Attivare/disattivare nomi visualizzati | L’Editor di schema ora fornisce un pulsante di attivazione per passare dai nomi originali dei campi ai corrispondenti nomi visualizzati, più leggibili.<br>![Editor di schema con l’attivazione/disattivazione del nome visualizzato evidenziata.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Attivazione/disattivazione nome visualizzato nell’Editor schema"){width="100" zoomable="yes"}<br>Questa flessibilità migliora l’individuazione del campo e la modifica degli schemi. I nomi visualizzati per i gruppi di campi standard sono generati dal sistema, ma possono anche essere personalizzati tramite l’interfaccia utente, se necessario. Per ulteriori informazioni, consulta la [documentazione sull’attivazione/disattivazione del nome visualizzato](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=it#display-name-toggle). |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Schema | [[!UICONTROL Campi di classificazione Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Un nuovo schema XDM per i set di dati di classificazione di Target contenente un set di campi di metadati per classificare le attività ed esperienze di Target. |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files) | Un nuovo schema XDM per i set di dati di classificazione di Target contenente un set di campi di metadati per classificare le attività ed esperienze di Target. |
 
 {style="table-layout:auto"}
 
@@ -131,11 +131,11 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Gruppo di campi | [[!UICONTROL Estensione di unione degli account del servizio profili unificato di Adobe]](https://github.com/adobe/xdm/pull/1696/files) | È stato aggiunto un gruppo di campi di estensione account per il Profilo cliente in tempo reale che consente agli utenti di aggiungere l’appartenenza al segmento nell’unione account. |
-| Schema | [[!UICONTROL Schema di sistema per attributi calcolati]](https://github.com/adobe/xdm/pull/1696/files) | Il gruppo di campi Attributi calcolati utilizzato dal Profilo cliente in tempo reale è stato aggiornato a uno schema globale del sistema di sola lettura. |
-| Gruppo di campi | Multiplo | Sono stati aggiunti diversi eventi come campi per lo [[!UICONTROL Schema della serie temporale]](https://github.com/adobe/xdm/pull/1718/files). |
+| Gruppo di campi | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | È stato aggiunto un gruppo di campi di estensione account per il Profilo cliente in tempo reale che consente agli utenti di aggiungere l’appartenenza al segmento nell’unione account. |
+| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1696/files) | Il gruppo di campi Attributi calcolati utilizzato dal Profilo cliente in tempo reale è stato aggiornato a uno schema globale del sistema di sola lettura. |
+| Gruppo di campi | Multiplo | Sono stati aggiunti diversi eventi come campi per [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/pull/1718/files). |
 | Gruppo di campi | Dettagli fedeltà profilo | [È stato corretto il titolo](https://github.com/adobe/xdm/pull/1717/files) per `xdm:upgradeDate` da “Nome programma” a “Data aggiornamento”. |
-| Gruppo di campi | Multiplo | Diversi campi dell’[[!UICONTROL Elemento decisione]](https://github.com/adobe/xdm/pull/1714/files) sono stati aggiornati per rimuovere la doppia gerarchia nidificata. |
+| Gruppo di campi | Multiplo | Diversi campi di [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1714/files) sono stati aggiornati per rimuovere la doppia gerarchia nidificata. |
 
 {style="table-layout:auto"}
 

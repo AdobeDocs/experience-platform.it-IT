@@ -2,9 +2,9 @@
 title: Connettere il copilota GitHub e il codice Visual Studio a Query Service
 description: Scopri come connettere GitHub Copilot e Visual Studio Code con Adobe Experience Platform Query Service.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Questo documento descrive i passaggi necessari per connettere [!DNL GitHub Copil
 
 Questa guida richiede che tu abbia già accesso a un account GitHub e che ti sia registrato per [!DNL GitHub Copilot]. Puoi [registrarti dal sito Web GitHub](https://github.com/github-copilot/signup). Sono inoltre necessari [!DNL VS Code]. Puoi [scaricare [!DNL VS Code] dal loro sito Web ufficiale](https://code.visualstudio.com/download).
 
-Dopo aver installato [!DNL VS Code] e attivato la sottoscrizione a [!DNL Copilot], acquisisci le credenziali di connessione per Experience Platform. Queste credenziali si trovano nella scheda [!UICONTROL Credenziali] dell&#39;area di lavoro [!UICONTROL Query] nell&#39;interfaccia utente di Experience Platform. Leggi la guida alle credenziali per [scopri come trovare questi valori nell&#39;interfaccia utente di Experience Platform](../ui/credentials.md). Contatta l&#39;amministratore dell&#39;organizzazione se al momento non hai accesso all&#39;area di lavoro [!UICONTROL Query].
+Dopo aver installato [!DNL VS Code] e attivato la sottoscrizione a [!DNL Copilot], acquisisci le credenziali di connessione per Experience Platform. Queste credenziali si trovano nella scheda [!UICONTROL Credentials] dell&#39;area di lavoro [!UICONTROL Queries] nell&#39;interfaccia utente di Experience Platform. Leggi la guida alle credenziali per [scopri come trovare questi valori nell&#39;interfaccia utente di Experience Platform](../ui/credentials.md). Contattare l&#39;amministratore dell&#39;organizzazione se al momento non si dispone dell&#39;accesso all&#39;area di lavoro [!UICONTROL Queries].
 
 ### Estensioni [!DNL Visual Studio Code] richieste {#required-extensions}
 
@@ -58,8 +58,8 @@ Viene visualizzata la visualizzazione [!DNL Connection Settings]. Immettere le c
 | [!DNL Server address] | Immetti il valore **[!UICONTROL Host]** fornito nelle credenziali Experience Platform Postgres, ad esempio `acmeprod.platform-query.adobe.io`. |
 | [!DNL Port] | Questo valore è in genere `80` per i servizi Experience Platform. |
 | [!DNL Database] | Immetti il valore **[!UICONTROL Database]** fornito nelle credenziali Experience Platform Postgres, ad esempio `prod:all`. |
-| [!DNL Username] | Questa proprietà fa riferimento al tuo ID organizzazione. Immetti il valore **[!UICONTROL Nome utente]** fornito nelle credenziali Experience Platform Postgres. |
-| [!DNL Password] | Questa proprietà è il token di accesso. Immetti il valore **[!UICONTROL Password]** fornito nelle credenziali Experience Platform Postgres. |
+| [!DNL Username] | Questa proprietà fa riferimento al tuo ID organizzazione. Immetti il valore **[!UICONTROL Username]** fornito nelle credenziali Postgres di Experience Platform. |
+| [!DNL Password] | Questa proprietà è il token di accesso. Immetti il valore **[!UICONTROL Password]** fornito nelle credenziali Postgres di Experience Platform. |
 
 ![Area di lavoro dell&#39;Assistente connessione con diverse impostazioni evidenziate.](../images/clients/github-copilot/connection-settings.png)
 

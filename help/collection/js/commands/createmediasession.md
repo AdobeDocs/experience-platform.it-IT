@@ -1,0 +1,92 @@
+---
+title: createMediaSession
+description: Scopri come configurare Web SDK per gestire automaticamente le sessioni multimediali
+exl-id: abcb26f6-7249-4235-99eb-e4b9aeecff3e
+source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 7%
+
+---
+
+# `createMediaSession`
+
+Il comando `createMediaSession` fa parte del componente Web SDK `streamingMedia`. Puoi utilizzare questo componente per raccogliere i dati relativi alle sessioni multimediali sul tuo sito web. Per informazioni su come configurare questo componente, consulta la `streamingMedia` [documentazione](configure/streamingmedia.md).
+
+I dati raccolti possono includere informazioni su riproduzioni multimediali, pause, completamenti e altri eventi correlati. Una volta raccolti, puoi inviare questi dati ad [Adobe Analytics for Streaming Media](https://experienceleague.adobe.com/it/docs/media-analytics/using/media-overview) per aggregare le metriche. Questa funzione fornisce una soluzione completa per il tracciamento e la comprensione del comportamento di consumo dei contenuti multimediali sul sito web.
+
+È possibile creare sessioni multimediali in Web SDK in due modi:
+
+* **Le sessioni multimediali con tracciamento automatico** consentono al Web SDK di gestire l&#39;invio di eventi ping multimediali a [Adobe Analytics for Streaming Media](https://experienceleague.adobe.com/it/docs/media-analytics/using/media-overview). La frequenza di questi ping è determinata dalle impostazioni di configurazione del componente [streamingMedia](configure/streamingmedia.md).
+* **Le sessioni multimediali con tracciamento manuale** offrono maggiore controllo sull&#39;invio di eventi ping di sessione ad [Adobe Analytics for Streaming Media](https://experienceleague.adobe.com/it/docs/media-analytics/using/media-overview). È inoltre possibile archiviare `sessionID` per le sessioni multimediali.
+
+## Creare una sessione multimediale con tracciamento automatico {#automatic}
+
+Per avviare automaticamente il tracciamento di una sessione multimediale, chiamare il metodo `createMediaSession` con le opzioni descritte di seguito:
+
+```javascript
+    alloy("createMediaSession", {
+        playerId: "movie-test",
+        getPlayerDetails: () => {
+            return {
+                playhead: document.getElementById("movie-test").currentTime,
+                qoeDataDetails: {
+                    bitrate: 1000,
+                    startupTime: 1000,
+                    fps: 30,
+                    droppedFrames: 10
+                }
+            };
+        },
+        xdm: {
+            eventType: "media.sessionStart",
+            mediaCollection: {
+                sessionDetails: {
+                    ...
+                }
+            }
+        }
+    });
+```
+
+| Proprietà | Tipo | Obbligatorio | Descrizione |
+|---------|----------|---------|---------|
+| `playerId` | Stringa | Sì | L’ID del lettore, un identificatore univoco che rappresenta la sessione multimediale. |
+| `getPlayerDetails` | Funzione | Sì | Funzione che restituisce i dettagli del lettore. Questa funzione di callback verrà chiamata dal Web SDK prima di ogni evento multimediale per `playerId` fornito. |
+| `xdm.eventType` | Oggetto | No | Il tipo di evento multimediale. Se non specificato, questo campo viene impostato automaticamente su `media.sessionStart`. |
+| `xdm.mediaCollection.sessionDetails` | Oggetto | Sì | Contiene le proprietà dei dettagli della sessione. Per ulteriori informazioni, vedere [Schema raccolta file multimediali](/help/xdm/data-types/media-collection-details.md). |
+
+## Creare una sessione multimediale tracciata manualmente {#manual}
+
+Per avviare manualmente il tracciamento di una sessione multimediale, chiamare il metodo `createMediaSession` con le opzioni descritte di seguito:
+
+```javascript
+const sessionPromise = alloy("createMediaSession", {
+    xdm: {
+        eventType: "media.sessionStart",
+        mediaCollection: {
+            playhead: 0,
+            sessionDetails: {
+                ...
+            },
+            qoeDataDetails: {
+                bitrate: 1000,
+                startupTime: 1000,
+                fps: 30,
+                droppedFrames: 10
+            }
+        }
+    }
+});
+```
+
+| Proprietà | Tipo | Obbligatorio | Descrizione |
+|---------|----------|---------|---------|
+| `xdm.eventType` | Oggetto | No | Il tipo di evento multimediale. Se non specificato, viene automaticamente impostato su `media.sessionStart`. |
+| `xdm.mediaCollection.sessionDetails` | Oggetto | Sì | Contiene le proprietà dei dettagli della sessione. Per ulteriori informazioni, vedere [Schema raccolta file multimediali](/help/xdm/data-types/media-collection-details.md). |
+| `xdm.mediaCollection.playhead` | Intero | Sì | La testina di riproduzione corrente. |
+| `xdm.mediaCollection.qoeDataDetails` | Oggetto | No | La qualità dei dettagli dei dati sull’esperienza. Per ulteriori informazioni, consulta la documentazione dello schema [Media Collection](/help/xdm/data-types/media-collection-details.md). |
+
+## Creare una sessione multimediale tramite l’estensione tag Web SDK
+
+L&#39;estensione tag Web SDK equivalente a questo comando è il tipo di evento [**[!UICONTROL Session start]**](/help/tags/extensions/client/web-sdk/actions/send-media-event.md#session-start) nell&#39;azione &#39;[!UICONTROL Send media event]&#39;.

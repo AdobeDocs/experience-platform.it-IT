@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull’acquisizione in streaming
 description: L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
+source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Adobe Experience Platform ti consente di creare esperienze coordinate, coerenti 
 
 Il video seguente è stato progettato per comprendere meglio l’acquisizione in streaming e illustra i concetti descritti in precedenza.
 
->[!VIDEO](https://video.tv.adobe.com/v/36263?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Trasmetti record profilo e [!DNL ExperienceEvents]
 
@@ -33,13 +33,13 @@ Per ulteriori informazioni, leggere la [guida alla creazione di una connessione 
 
 Dopo aver verificato che i dati sono puliti, puoi abilitare i set di dati per [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
 
-Per ulteriori informazioni sull&#39;abilitazione di un set di dati per [!DNL Profile] e [!DNL Identity Service], leggere la [guida alla configurazione di un set di dati](../../profile/tutorials/dataset-configuration.md).
+Per ulteriori informazioni sull&#39;abilitazione di un set di dati per [!DNL Profile] e [!DNL Identity Service], leggere la [guida alla configurazione di un set di dati](/help/profile/tutorials/dataset-configuration.md).
 
 ## Qual è la latenza prevista per l’acquisizione in streaming su Experience Platform?
 
 >[!IMPORTANT]
 >
->I guardrail per l’acquisizione in streaming sono associati al diritto totale di utilizzo della licenza che corrisponde all’intera organizzazione. Inoltre, l’utilizzo dei dati nelle sandbox di sviluppo è limitato al 10% del totale dei profili. Per ulteriori informazioni sui diritti di utilizzo della licenza, leggere la [guida alle best practice per la gestione dei dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Per informazioni su come impostare i limiti per la velocità effettiva di streaming, leggere la [Panoramica sulla capacità](../../landing/license-usage-and-guardrails/capacity.md).
+>I guardrail per l’acquisizione in streaming sono associati al diritto totale di utilizzo della licenza che corrisponde all’intera organizzazione. Inoltre, l’utilizzo dei dati nelle sandbox di sviluppo è limitato al 10% del totale dei profili. Per ulteriori informazioni sui diritti di utilizzo della licenza, leggere la [guida alle best practice per la gestione dei dati](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). Per informazioni su come impostare i limiti per la velocità effettiva di streaming, leggere la [Panoramica sulla capacità](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destinazione | Latenza prevista |
 | --------- | ---------------- |
@@ -61,4 +61,4 @@ La tabella seguente mostra le linee guida sui limiti di richiesta al secondo per
 
 ## Estensione Adobe Experience Platform
 
-Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale in [!DNL Experience Platform]. Per ulteriori informazioni, consulta la documentazione dell&#39;[estensione Experience Platform](../../tags/extensions/client/web-sdk/overview.md).
+Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale in [!DNL Experience Platform]. Per ulteriori informazioni, consulta la documentazione dell&#39;[estensione Experience Platform](/help/tags/extensions/client/web-sdk/overview.md).

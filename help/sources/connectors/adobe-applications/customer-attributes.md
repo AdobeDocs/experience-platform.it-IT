@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Panoramica del connettore Source per attributi cliente
 description: Scopri come collegare Attributi del cliente a Adobe Experience Platform utilizzando le API o l’interfaccia utente
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 7%
+source-wordcount: '382'
+ht-degree: 14%
 
 ---
 
 # Connettore Attributi del cliente
 
-Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Experience Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
+Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=it) in Experience Cloud consente di caricare i dati aziendali acquisiti da un database di gestione delle relazioni con i clienti (CRM). Puoi caricare i dati in un’origine dati di attributi cliente in Experience Cloud, quindi utilizzarli in Adobe Analytics e Adobe Target.
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html) in Experience Cloud consente di caricare i dati aziendali acquisiti da un database di gestione delle relazioni con i clienti (CRM). Puoi caricare i dati in un’origine dati di attributi cliente in Experience Cloud, quindi utilizzarli in Adobe Analytics e Adobe Target.
 
 Experience Platform fornisce supporto per l&#39;acquisizione dei dati del profilo [!DNL Customer Attributes] in Adobe Experience Platform.
 
@@ -31,7 +31,7 @@ Impossibile selezionare uno spazio dei nomi esistente per l&#39;identità quando
 
 Affinché i dati di [!DNL Customer Attributes] possano essere collegati ad altri set di dati di [!DNL Profile], i relativi dati e identità devono poter essere associati a un Experience Cloud ID.
 
-È possibile stabilire lo spazio dei nomi `CORE` impostando l&#39;Experience Cloud ID per il visitatore utilizzando [Web SDK](/help/web-sdk/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) o l&#39;API del servizio ID di [Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
+È possibile stabilire lo spazio dei nomi `CORE` impostando l&#39;Experience Cloud ID per il visitatore utilizzando [Web SDK](/help/collection/use-cases/identity/id-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) o l&#39;API del servizio ID di [Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
 
 Il file [!DNL Customer Attributes] non popola ulteriormente altre relazioni di identità. Ad esempio, se un set di dati di origine [!DNL Customer Attributes] contiene un campo **E-mail** e un campo **ID fedeltà**, questi campi devono essere etichettati come campi di identità nello schema per essere elaborati in [!DNL Identity Service].
 

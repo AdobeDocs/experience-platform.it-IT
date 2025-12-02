@@ -6,9 +6,9 @@ description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Ex
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -30,8 +30,8 @@ Questa guida richiede una buona conoscenza dei vari servizi Experience Platform 
 * [Experience Data Model (XDM)](/help/xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
 * [Servizio Adobe Experience Platform Identity](/help/identity-service/home.md): risolve il problema fondamentale della frammentazione dei dati sull&#39;esperienza del cliente, collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](/help/profile/home.md): utilizza le funzionalità [!DNL Identity Service] per creare profili cliente dettagliati dai set di dati in tempo reale. Real-Time Customer Profile estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): una libreria JavaScript lato client che consente di integrare vari servizi Experience Platform nel sito Web rivolto al cliente.
-   * [Comandi per il consenso di SDK](../../../../web-sdk/commands/setconsent.md): panoramica del caso d&#39;uso dei comandi SDK relativi al consenso mostrati in questa guida.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md): una libreria JavaScript lato client che consente di integrare vari servizi Experience Platform nel sito Web rivolto al cliente.
+   * [Comandi per il consenso di SDK](/help/collection/js/commands/setconsent.md): panoramica del caso d&#39;uso dei comandi SDK relativi al consenso mostrati in questa guida.
 * [Servizio di segmentazione di Adobe Experience Platform](/help/segmentation/home.md): consente di dividere i dati del profilo cliente in tempo reale in gruppi di individui che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 
 ## Riepilogo del flusso di elaborazione del consenso {#summary}
@@ -51,7 +51,7 @@ Nella versione corrente del supporto per l&#39;elaborazione del consenso in Expe
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulla struttura dei campi di consenso XDM menzionati in precedenza, consulta la guida sul tipo di dati [[!UICONTROL Consensi e preferenze]](/help/xdm/data-types/consents.md).
+>Per ulteriori informazioni sulla struttura dei campi di consenso XDM menzionati in precedenza, consulta la guida sul tipo di dati [[!UICONTROL Consents and Preferences]](/help/xdm/data-types/consents.md).
 
 Una volta configurato il sistema, Experience Platform Web SDK interpreta il valore del consenso per la raccolta dati per l’utente corrente per determinare se i dati devono essere inviati a Adobe Experience Platform Edge Network, eliminati dal client o memorizzati finché l’autorizzazione per la raccolta dati non viene impostata su sì o no.
 
@@ -77,7 +77,7 @@ Dopo aver creato un set di dati abilitato per [!DNL Profile] per l&#39;elaborazi
 >
 >Se non si dispone di set di dati in conflitto, è necessario impostare la precedenza delle marche temporali per il criterio di unione. Questo consente di garantire che l’impostazione di consenso utilizzata sia l’ultimo consenso specificato da un cliente.
 
-Per ulteriori informazioni su come utilizzare i criteri di unione, leggere la [panoramica dei criteri di unione](../../../../profile/merge-policies/overview.md). Durante la configurazione dei criteri di unione, devi assicurarti che i profili includano tutti gli attributi di consenso richiesti forniti dal gruppo di campi dello schema [!UICONTROL Consensi e preferenze], come descritto nella guida sulla [preparazione del set di dati](./dataset.md).
+Per ulteriori informazioni su come utilizzare i criteri di unione, leggere la [panoramica dei criteri di unione](../../../../profile/merge-policies/overview.md). Durante la configurazione dei criteri di unione, è necessario assicurarsi che i profili includano tutti gli attributi di consenso richiesti forniti dal gruppo di campi dello schema [!UICONTROL Consents and Preferences], come descritto nella guida sulla [preparazione set di dati](./dataset.md).
 
 ## Portare i dati del consenso in Experience Platform
 
@@ -101,7 +101,7 @@ Consulta la documentazione di Mobile SDK per [configurare l&#39;estensione per d
 
 Puoi acquisire dati di consenso conformi a XDM da un file CSV utilizzando l’acquisizione batch. Questo può essere utile se disponi di un backlog di dati sul consenso raccolti in precedenza che non è ancora stato integrato nei profili dei clienti.
 
-Segui l&#39;esercitazione su [mappatura di un file CSV su XDM](../../../../ingestion/tutorials/map-csv/overview.md) per scoprire come convertire i campi dati in XDM e acquisirli in Experience Platform. Quando selezioni la [!UICONTROL Destinazione] per il mapping, accertati di selezionare l&#39;opzione **[!UICONTROL Usa set di dati esistente]** e scegliere il set di dati di consenso abilitato per [!DNL Profile] creato in precedenza.
+Segui l&#39;esercitazione su [mappatura di un file CSV su XDM](../../../../ingestion/tutorials/map-csv/overview.md) per scoprire come convertire i campi dati in XDM e acquisirli in Experience Platform. Quando selezioni [!UICONTROL Destination] per la mappatura, accertati di selezionare l&#39;opzione **[!UICONTROL Use existing dataset]** e scegliere il set di dati di consenso abilitato per [!DNL Profile] creato in precedenza.
 
 ## Testare l’implementazione {#test-implementation}
 
@@ -115,7 +115,7 @@ Dopo aver acquisito i dati sul consenso dei clienti nel set di dati abilitato pe
 
 Consulta la sezione su [esplorazione dei profili per identità](../../../../profile/ui/user-guide.md#browse) nella guida dell&#39;interfaccia utente [!DNL Profile] per i passaggi specifici su come cercare i dettagli di un profilo.
 
-Per impostazione predefinita, i nuovi attributi di consenso non vengono visualizzati nel dashboard di un profilo. Devi quindi passare alla scheda **[!UICONTROL Attributi]** nella pagina dei dettagli di un profilo per verificare che siano stati acquisiti come previsto. Per informazioni su come personalizzare il dashboard in base alle proprie esigenze, consulta la guida del [dashboard dei profili](../../../../profile/ui/profile-dashboard.md).
+Per impostazione predefinita, i nuovi attributi di consenso non vengono visualizzati nel dashboard di un profilo. Pertanto, devi passare alla scheda **[!UICONTROL Attributes]** nella pagina dei dettagli di un profilo per confermare che sono stati acquisiti come previsto. Per informazioni su come personalizzare il dashboard in base alle proprie esigenze, consulta la guida del [dashboard dei profili](../../../../profile/ui/profile-dashboard.md).
 
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management

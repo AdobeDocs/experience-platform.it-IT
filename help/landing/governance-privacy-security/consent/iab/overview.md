@@ -6,9 +6,9 @@ description: Scopri come configurare le operazioni sui dati e gli schemi per tra
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2509'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,8 @@ Questa guida richiede anche una buona conoscenza dei seguenti servizi Experience
 * [Experience Data Model (XDM)](/help/xdm/home.md): framework standardizzato in base al quale Experience Platform organizza i dati sull&#39;esperienza del cliente.
 * [Servizio Adobe Experience Platform Identity](/help/identity-service/home.md): risolve il problema fondamentale della frammentazione dei dati sull&#39;esperienza del cliente, collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](/help/profile/home.md): utilizza [!DNL Identity Service] per creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili cliente nel proprio archivio dati separato.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): una libreria JavaScript lato client che consente di integrare vari servizi Experience Platform nel sito Web rivolto al cliente.
-   * [Comandi per il consenso di SDK](../../../../web-sdk/commands/setconsent.md): panoramica del caso d&#39;uso dei comandi SDK relativi al consenso mostrati in questa guida.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md): una libreria JavaScript lato client che consente di integrare vari servizi Experience Platform nel sito Web rivolto al cliente.
+   * [Comandi per il consenso di SDK](/help/collection/js/commands/setconsent.md): panoramica del caso d&#39;uso dei comandi SDK relativi al consenso mostrati in questa guida.
 * [Servizio di segmentazione di Adobe Experience Platform](/help/segmentation/home.md): consente di dividere i dati di [!DNL Real-Time Customer Profile] in gruppi di individui che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
 
 Oltre ai servizi Experience Platform elencati sopra, dovresti conoscere anche [destinazioni](/help/data-governance/home.md) e il loro ruolo nell&#39;ecosistema Experience Platform.
@@ -127,13 +127,13 @@ Dopo aver fornito un nome univoco per lo stream di dati, seleziona il pulsante a
 | Campo stream di dati | Valore |
 | --- | --- |
 | [!UICONTROL Sandbox] | Il nome della [sandbox](/help/sandboxes/home.md) Experience Platform che contiene la connessione streaming e i set di dati necessari per impostare lo stream di dati. |
-| [!UICONTROL Ingresso streaming] | Una connessione in streaming valida per Experience Platform. Se non disponi di un ingresso di streaming, consulta l&#39;esercitazione sulla [creazione di una connessione di streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md). |
-| [!UICONTROL Set di dati di evento] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). Se hai incluso il gruppo di campi [[!UICONTROL IAB TCF 2.0 Consent]](/help/xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando il comando [`sendEvent`](#sendEvent), memorizzando tali dati in questo set di dati. Tieni presente che i valori di consenso memorizzati in questo set di dati sono **non** utilizzati nei flussi di lavoro di applicazione automatica. |
-| [!UICONTROL Set di dati di profilo] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). Quando si risponde agli hook di modifica del consenso di CMP tramite il comando [`setConsent`](#setConsent), i dati raccolti vengono memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori del consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di applicazione automatica. |
+| [!UICONTROL Streaming Inlet] | Una connessione in streaming valida per Experience Platform. Se non disponi di un ingresso di streaming, consulta l&#39;esercitazione sulla [creazione di una connessione di streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md). |
+| [!UICONTROL Event Dataset] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). Se hai incluso il gruppo di campi [[!UICONTROL IAB TCF 2.0 Consent]](/help/xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando il comando [`sendEvent`](#sendEvent), memorizzando tali dati in questo set di dati. Tieni presente che i valori di consenso memorizzati in questo set di dati sono **non** utilizzati nei flussi di lavoro di applicazione automatica. |
+| [!UICONTROL Profile Dataset] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). Quando si risponde agli hook di modifica del consenso di CMP tramite il comando [`setConsent`](#setConsent), i dati raccolti vengono memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori del consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di applicazione automatica. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore della schermata e continua seguendo eventuali altre richieste per completare la configurazione.
+Al termine, selezionare **[!UICONTROL Save]** nella parte inferiore della schermata e continuare a seguire eventuali richieste aggiuntive per completare la configurazione.
 
 ### Esecuzione di comandi per la modifica del consenso
 
@@ -141,7 +141,7 @@ Dopo aver creato lo stream di dati descritto nella sezione precedente, puoi iniz
 
 #### Utilizzo degli hook per la modifica del consenso di CMP {#setConsent}
 
-Molte CMP forniscono hook pronti all’uso in grado di ascoltare gli eventi di modifica del consenso. Quando si verificano questi eventi, è possibile utilizzare il comando [`setConsent`](/help/web-sdk/commands/setconsent.md) per aggiornare i dati del consenso del cliente.
+Molte CMP forniscono hook pronti all’uso in grado di ascoltare gli eventi di modifica del consenso. Quando si verificano questi eventi, è possibile utilizzare il comando [`setConsent`](/help/collection/js/commands/setconsent.md) per aggiornare i dati del consenso del cliente.
 
 Il comando `setConsent` prevede due argomenti:
 
@@ -197,7 +197,7 @@ OneTrust.OnConsentChanged(function () {
 
 >[!NOTE]
 >
->Per utilizzare questo metodo, è necessario aggiungere il gruppo di campi Privacy evento esperienza allo schema [!DNL XDM ExperienceEvent] abilitato per [!DNL Profile]. Consulta la sezione sull&#39;aggiornamento dello schema ExperienceEvent[&#128279;](./dataset.md#event-schema) nella guida alla preparazione del set di dati per i passaggi su come configurare questo elemento.
+>Per utilizzare questo metodo, è necessario aggiungere il gruppo di campi Privacy evento esperienza allo schema [!DNL Profile] abilitato per [!DNL XDM ExperienceEvent]. Consulta la sezione sull&#39;aggiornamento dello schema ExperienceEvent[ nella guida alla preparazione del set di dati per i passaggi su come configurare questo elemento.](./dataset.md#event-schema)
 
 Il comando `sendEvent` deve essere utilizzato come callback nei listener di eventi appropriati sul sito Web. Il comando prevede due argomenti: (1) una stringa che indica il tipo di comando (in questo caso, `sendEvent`) e (2) un payload contenente un oggetto `xdm` che fornisce i campi di consenso richiesti come JSON:
 
@@ -224,7 +224,7 @@ alloy("sendEvent", {
 
 ### Gestione delle risposte SDK
 
-Molti comandi di Web SDK restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Per ulteriori informazioni, vedere [Risposte ai comandi](/help/web-sdk/commands/command-responses.md).
+Molti comandi di Web SDK restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Per ulteriori informazioni, vedere [Risposte ai comandi](/help/collection/js/commands/command-responses.md).
 
 ## Esportare segmenti {#export}
 
