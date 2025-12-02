@@ -26,7 +26,7 @@ Per accedere a una raccolta completa di playbook di casi d&#39;uso nell&#39;inte
 
 Guarda questo video per scoprire i passaggi necessari per creare la sandbox, configurare le autorizzazioni e configurare le superfici di canale per le notifiche e-mail, push e SMS in Journey Optimizer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449834?captions=ita&learn=on)
 
 ## Creare una sandbox di sviluppo {#create-development-sandbox}
 
