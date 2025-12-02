@@ -45,7 +45,7 @@ Gli stream di dati utilizzano le funzionalità integrate di governance dei dati 
 
 Il video seguente fornisce una breve panoramica sulla configurazione e l’applicazione delle restrizioni di utilizzo dei dati per i flussi di dati nell’interfaccia utente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413103/?captions=ita&quality=12&learn=on&speedcontrol=on)
 
 In Experience Platform, puoi applicare [etichette di utilizzo dei dati sensibili](../data-governance/labels/reference.md#sensitive) agli schemi e ai campi contenenti dati ritenuti sensibili dalla tua organizzazione. Ad esempio, l’etichetta `RHD` viene utilizzata per indicare le informazioni sanitarie protette (PHI) e l’etichetta `S1` rappresenta i dati di geolocalizzazione.
 
