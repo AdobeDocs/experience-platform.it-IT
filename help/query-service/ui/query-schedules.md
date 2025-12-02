@@ -25,8 +25,8 @@ Per informazioni dettagliate sulla configurazione degli account tecnici e sull&#
 
 Per ulteriori informazioni sulla creazione e la configurazione di un account tecnico, consulta:
 
-- [Configurazione di Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): istruzioni dettagliate per la configurazione di Adobe Developer Console e l&#39;ottenimento delle credenziali OAuth.
-- [Configurazione end-to-end dell&#39;account tecnico](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): procedura dettagliata completa per la creazione e la configurazione di un account tecnico in Adobe Experience Platform.
+- [Configurazione di Developer Console](https://experienceleague.adobe.com/it/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): istruzioni dettagliate per la configurazione di Adobe Developer Console e l&#39;ottenimento delle credenziali OAuth.
+- [Configurazione end-to-end dell&#39;account tecnico](https://experienceleague.adobe.com/it/docs/platform-learn/tutorial-comprehensive-technical/setup): procedura dettagliata completa per la creazione e la configurazione di un account tecnico in Adobe Experience Platform.
 
 Se utilizzi solo l’interfaccia utente di Query Service, assicurati di disporre delle autorizzazioni necessarie o coordinati con un amministratore che gestisce gli account tecnici. Tutte le query pianificate vengono aggiunte all&#39;elenco nella scheda [!UICONTROL Scheduled queries], in cui è possibile monitorare lo stato, i dettagli della pianificazione e i messaggi di errore per tutti i processi di query pianificati, nonché sottoscrivere avvisi. Per ulteriori informazioni sul monitoraggio e la gestione delle query, vedere il documento [monitoraggio delle query pianificate](./monitor-queries.md).
 

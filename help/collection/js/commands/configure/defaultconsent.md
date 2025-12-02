@@ -61,7 +61,7 @@ Vedi la tabella seguente per capire quando si verifica la raccolta dei dati e qu
 | `out` | `out` | No | Sì |
 | `out` | Non impostato | No | No |
 
-Per un elenco dei cookie impostati dalla libreria, vedere [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk).
+Per un elenco dei cookie impostati dalla libreria, vedere [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/cookies/web-sdk).
 
 >[!NOTE]
 >

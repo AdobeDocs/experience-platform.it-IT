@@ -13,7 +13,7 @@ ht-degree: 3%
 
 La proprietà `edgeDomain` consente di modificare il dominio in cui il Web SDK invia i dati. Questa proprietà viene spesso utilizzata dalle organizzazioni che utilizzano [cookie di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it). I dati vengono inviati al dominio dell’organizzazione, quindi un record CNAME li inoltra ad Adobe.
 
-Il valore utilizzato per `edgeDomain` dipende dalla partecipazione al [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert):
+Il valore utilizzato per `edgeDomain` dipende dalla partecipazione al [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/adobe-managed-cert):
 
 **Se la tua organizzazione partecipa al programma di certificazione gestito da Adobe**, imposta il valore sul dominio di prime parti selezionato durante la configurazione del certificato. In genere questo valore è un sottodominio di proprietà dell’organizzazione. Ad esempio, `data.example.com`. I record CNAME nella tua organizzazione reindirizzano tali dati ad Adobe.
 

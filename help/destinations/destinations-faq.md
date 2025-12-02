@@ -229,7 +229,7 @@ Le definizioni del pubblico vengono propagate ad Edge Network in un massimo di u
 ### Dove posso visualizzare gli attributi attivati in Adobe Target?
 
 +++Risposta
-Gli attributi saranno disponibili per l&#39;utilizzo in Target nelle offerte [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
+Gli attributi saranno disponibili per l&#39;utilizzo in Target nelle offerte [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=it) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=it).
 +++
 
 ### È possibile creare una destinazione senza un flusso di dati e quindi aggiungere un flusso di dati alla stessa destinazione in un secondo momento?
@@ -265,7 +265,7 @@ Sì.  Le [regole per la governance dei dati e i criteri di consenso](../data-gov
 ### Le destinazioni [!DNL Adobe Target] e [!DNL Custom Personalization] [!DNL HIPAA] sono conformi?
 
 +++Risposta
-[!DNL Adobe Target] non è conforme a [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). I clienti devono verificare con i propri team legali la disponibilità di [!DNL HIPPA] per i canali di ottimizzazione personalizzati prima di utilizzare la personalizzazione Edge tramite [!DNL Adobe Target] o le destinazioni [!DNL Custom Personalization].
+[!DNL Adobe Target] non è conforme a [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/it/solutions/industries/healthcare.html). I clienti devono verificare con i propri team legali la disponibilità di [!DNL HIPPA] per i canali di ottimizzazione personalizzati prima di utilizzare la personalizzazione Edge tramite [!DNL Adobe Target] o le destinazioni [!DNL Custom Personalization].
 
 Per i casi d&#39;uso in cui la gestione dei criteri di consenso deve essere applicata su larga scala, i clienti devono acquistare [!DNL Adobe Privacy & Security Shield]. Le funzionalità di [!DNL Adobe Privacy & Security Shield] sono vendute come suite avanzata di funzionalità e non possono essere acquistate separatamente.
 

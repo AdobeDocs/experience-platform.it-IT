@@ -77,7 +77,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Nome </p> </td> 
-   <td colname="col2"> <p>Nome della proprietà <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> del tag</a> </p> </td> 
+   <td colname="col2"> <p>Nome della proprietà <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=it" format="https" scope="external"> del tag</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versione </p> </td> 
@@ -85,7 +85,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>Data build </p> </td> 
-   <td colname="col2"> <p>Data build della libreria <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> di tag </a> </p> </td> 
+   <td colname="col2"> <p>Data build della libreria <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=it" format="https" scope="external"> di tag </a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ambiente </p> </td> 
@@ -150,47 +150,47 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Codice client </p> </td> 
-   <td colname="col2"> <p>Il <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html" format="html" scope="external"> Codice client </a> di Target. </p> </td> 
+   <td colname="col2"> <p>Il <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=it" format="html" scope="external"> Codice client </a> di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versione </p> </td> 
-   <td colname="col2"> <p>La versione corrente di <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html" format="html" scope="external"> at.js</a> o mbox.js. </p> </td> 
+   <td colname="col2"> <p>La versione corrente di <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/target-atjs-versions.html?lang=it" format="html" scope="external"> at.js</a> o mbox.js. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nome richiesta globale </p> </td> 
-   <td colname="col2"> <p>La<a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html" format="html" scope="external"> mbox globale</a> si riferisce alla singola chiamata server effettuata nella parte superiore di ogni pagina web nell’implementazione di Target. </p> </td> 
+   <td colname="col2"> <p>La<a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html?lang=it" format="html" scope="external"> mbox globale</a> si riferisce alla singola chiamata server effettuata nella parte superiore di ogni pagina web nell’implementazione di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Evento caricamento pagina </p> </td> 
-   <td colname="col2"> <p>Tipo di <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external">evento</a> che attiva il caricamento della pagina. </p> </td> 
+   <td colname="col2"> <p>Tipo di <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=it" format="html" scope="external">evento</a> che attiva il caricamento della pagina. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nome richiesta </p> </td> 
-   <td colname="col2"> <p>Nome di una richiesta relativa a una <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html" format="html" scope="external"> posizione</a> sulla pagina. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
+   <td colname="col2"> <p>Nome di una richiesta relativa a una <a href="https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/global-mbox/understanding-global-mbox.html?lang=it" format="html" scope="external"> posizione</a> sulla pagina. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nome attività </p> </td> 
-   <td colname="col2"> <p>Il nome della <a href="https://experienceleague.adobe.com/docs/target/using/activities/activities.html" format="html" scope="external"> campagna o dell’attività</a> Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
+   <td colname="col2"> <p>Il nome della <a href="https://experienceleague.adobe.com/docs/target/using/activities/activities.html?lang=it" format="html" scope="external"> campagna o dell’attività</a> Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Attività ID </p> </td> 
-   <td colname="col2"> <p>ID dell’attività Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
+   <td colname="col2"> <p>ID dell’attività Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nome esperienza </p> </td> 
-   <td colname="col2"> <p>Il nome dell’<a href="https://experienceleague.adobe.com/docs/target/using/experiences/experiences.html" format="html" scope="external"> esperienza</a> Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
+   <td colname="col2"> <p>Il nome dell’<a href="https://experienceleague.adobe.com/docs/target/using/experiences/experiences.html?lang=it" format="html" scope="external"> esperienza</a> Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID esperienza </p> </td> 
-   <td colname="col2"> <p>ID dell’esperienza Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
+   <td colname="col2"> <p>ID dell’esperienza Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nome offerta</p> </td> 
-   <td colname="col2"> <p>Nome dell’<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> offerta</a> Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
+   <td colname="col2"> <p>Nome dell’<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=it" format="html" scope="external"> offerta</a> Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID offerta </p> </td> 
-   <td colname="col2"> <p>ID dell’offerta Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
+   <td colname="col2"> <p>ID dell’offerta Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=it" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
  </tbody> 
 </table>
