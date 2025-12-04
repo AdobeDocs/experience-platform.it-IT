@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: a4db84f5918e99b3c6dd63ff5a25063b89be2ba7
+source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
 workflow-type: tm+mt
-source-wordcount: '3484'
+source-wordcount: '3550'
 ht-degree: 10%
 
 ---
@@ -82,12 +82,17 @@ Viene visualizzato un elenco di singole esecuzioni e delle relative metriche spe
 - **[!UICONTROL Identities excluded]**: numero totale di identità di profilo ignorate per l&#39;attivazione in base ad attributi mancanti e violazione del consenso.
 - **[!UICONTROL Identities failed]**: numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 
+>[!NOTE]
+>
+>I totali per le identità attivate, escluse e non riuscite rappresentano una somma di tutti i conteggi di esecuzioni di flussi di dati individuali. Poiché le esecuzioni dei flussi di dati hanno un valore TTL (time-to-live) di 90 giorni, in genere questi totali coprono circa gli ultimi 3 mesi. Quando i flussi di dati meno recenti scadono e vengono rimossi dal sistema, potrebbe verificarsi una diminuzione del numero totale visualizzato.
+
 ![Il flusso di dati esegue i dettagli per le destinazioni di streaming.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
 - **[!UICONTROL Dataflow run start]**: ora di inizio dell&#39;esecuzione del flusso di dati. Per le esecuzioni dei flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione dei flussi di dati, sotto forma di metriche orarie. Ciò significa che per l’esecuzione del flusso di dati in streaming, se un flusso di dati è iniziato, ad esempio, alle 10:30PM, la metrica mostra l’ora di inizio come 10:00 PM nell’interfaccia utente.
-- **[!UICONTROL Processing time]**: tempo necessario per l&#39;elaborazione del flusso di dati.
+- **[!UICONTROL Audience]**: numero di tipi di pubblico associati a ogni esecuzione del flusso di dati.
+- **[!UICONTROL Processing duration]**: tempo necessario per l&#39;elaborazione del flusso di dati.
    - Per **[!UICONTROL completed]** esecuzioni, la metrica del tempo di elaborazione mostra sempre un&#39;ora.
    - Per le esecuzioni dei flussi di dati che si trovano ancora in uno stato **[!UICONTROL processing]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione dei flussi di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 9:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. La durata del tempo di elaborazione è direttamente influenzata dai nuovi tentativi eseguiti a seguito della risposta della destinazione non riuscita. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
 - **[!UICONTROL Profiles received]**: numero totale di profili ricevuti nel flusso di dati.
@@ -165,7 +170,7 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
 - **[!UICONTROL Dataflow run start]**: ora di inizio dell&#39;esecuzione del flusso di dati.
 - **[!UICONTROL Audience]**: nome del pubblico associato a ogni esecuzione del flusso di dati.
-- **[!UICONTROL Processing time]**: tempo necessario per l&#39;elaborazione dell&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Processing duration]**: tempo necessario per l&#39;elaborazione dell&#39;esecuzione del flusso di dati.
 - **[!UICONTROL Profiles received]**: numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
 - **[!UICONTROL Identities activated]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata durante l&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identities excluded]**: numero totale di identità di profilo escluse dall&#39;attivazione in base ad attributi mancanti e violazione del consenso.
