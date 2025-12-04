@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Experience Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: aa56c6bec3544c922521cc611036fd2989feb8b3
+source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2000'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe ha introdotto [!DNL Segment Match] nel 2021 per consentire ai clienti di collaborare e scambiare tipi di pubblico. All&#39;inizio del 2025, Adobe ha introdotto [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/home), che è l&#39;approccio a lungo termine per soddisfare questo caso d&#39;uso.
+>Adobe ha introdotto [!DNL Segment Match] nel 2021 per consentire ai clienti di collaborare e scambiare tipi di pubblico. All&#39;inizio del 2025, Adobe ha introdotto [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), che è l&#39;approccio a lungo termine per soddisfare questo caso d&#39;uso.
 >
->* Per i clienti di Stati Uniti, Canada, Australia e Nuova Zelanda: Adobe consiglia ai clienti di Real-Time CDP Prime e Ultimate di trasferire i casi di utilizzo della collaborazione sui dati da [!DNL Segment Match] a Real-Time CDP Collaboration. Visualizza la [documentazione](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/home) e la [guida rapida](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/quick-start-guide) per Real-Time CDP Collaboration e contatta il team del tuo account Adobe per ulteriori informazioni.
+>* Per i clienti negli Stati Uniti, in Canada, Australia, Nuova Zelanda e EMEA: Adobe consiglia ai clienti Real-Time CDP Prime e Ultimate di trasferire i casi di utilizzo della collaborazione sui dati da [!DNL Segment Match] a Real-Time CDP Collaboration. Visualizza la [documentazione](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) e la [guida rapida](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) per Real-Time CDP Collaboration e contatta il team del tuo account Adobe per ulteriori informazioni.
 >* Per i clienti in tutte le altre aree geografiche: [!DNL Segment Match] è l&#39;opzione consigliata fino al rilascio di Real-Time CDP Collaboration in tali aree geografiche nel 2026.
 
 Adobe Experience Platform Segment Match è un servizio di condivisione dei segmenti che consente a due o più utenti di Experience Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy. [!DNL Segment Match] utilizza gli standard sulla privacy di Experience Platform e gli identificatori personali, ad esempio e-mail con hash, numeri di telefono con hash e identificatori di dispositivo come IDFA e GAID.
@@ -51,7 +51,7 @@ L’elenco degli spazi dei nomi supportati è il seguente:
 
 | Namespace | Descrizione |
 | --------- | ----------- |
-| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Experience Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=it#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
+| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Experience Platform offre due metodi per supportare l&#39;hashing sulla raccolta dati, tramite [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e tramite [preparazione dati](../../../data-prep/functions.md#hashing). |
 | Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati a cui deve essere applicato l’hashing utilizzando sia il formato SHA256 che il formato E.164. |
 | ECID | Uno spazio dei nomi che rappresenta un valore Experience Cloud ID (ECID). A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, vedere [Panoramica ECID](../../../identity-service/features/ecid.md). |
 | Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
