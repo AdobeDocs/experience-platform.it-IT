@@ -139,7 +139,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;inizializzazione dei dettagli del collegamento Activity Map quando veniva chiamato l&#39;hook di monitoraggio `onInstanceConfigured`.
 - È stato risolto un problema a causa del quale le destinazioni dei cookie non venivano impostate sul percorso corretto.
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
-- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[&#x200B; chiamate a causa di una codifica URL non valida nel parametro &#x200B;](commands/sendevent/overview.md).
+- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[ chiamate a causa di una codifica URL non valida nel parametro ](commands/sendevent/overview.md).
 
 ## Versione 2.21.1 - venerdì 18 luglio 2024
 
