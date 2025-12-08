@@ -30,7 +30,7 @@ Sul lato server, un gateway edge unificato e un framework di servizi di piattafo
 
 Un sistema Edge consolidato consente di gestire campagne pubblicitarie, di marketing e di personalizzazione su tutti i canali. Riduce il costo totale di proprietà e supporta vari tipi di dati, consentendo di mappare il modello dati per l’utilizzo con più prodotti Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37267?captions=ita&quality=12&learn=on)
 
 ## Librerie sostituite dal Web SDK {#sdks}
 
