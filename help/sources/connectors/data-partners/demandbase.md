@@ -2,12 +2,12 @@
 title: Intento Demandbase
 description: Scopri l’origine di Intento Demandbase su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: e223ea754a250956e65c3f526119a3ebd7bb067c
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1504'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Demandbase]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Per connettere l&#39;account **[!UICONTROL View Sources]** ad Experience Platform, è necessario che per l&#39;account siano abilitate sia le autorizzazioni **[!UICONTROL Manage Sources]** che quelle [!DNL Demandbase]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
 
 ### Vincoli di denominazione per file e directory
 
@@ -57,6 +57,10 @@ Quando si assegna un nome al file o alla directory di archiviazione cloud, è ne
 Per ulteriori informazioni su queste credenziali, leggere la [[!DNL Google Cloud Storage] Guida delle chiavi HMAC](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Per i passaggi su come generare la propria chiave di accesso, leggere la [guida ai prerequisiti nella [!DNL Google Cloud Storage] panoramica origine](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## Schema [!DNL Demandbase]
+
+>[!IMPORTANT]
+>
+>Durante la creazione di uno schema B2B per gli intenti dell’account Demandbase nell’interfaccia utente di Experience Platform, assicurati di abilitare l’acquisizione del profilo per lo schema. Per ulteriori informazioni, leggere la guida su [creazione e modifica di schemi nell&#39;interfaccia utente](../../../xdm/ui/resources/schemas.md).
 
 Leggere questa sezione per informazioni sullo schema [!DNL Demandbase] e sulla struttura dei dati.
 
