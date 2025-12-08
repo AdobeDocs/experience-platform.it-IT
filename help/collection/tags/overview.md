@@ -1,15 +1,15 @@
 ---
-title: Riferimento oggetto satellite
+title: Panoramica dei tag JavaScript lato client (_satellite)
 description: Scopri l’oggetto _satellite lato client e le varie funzioni che consente di eseguire con esso nei tag.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# `_satellite` Guida di riferimento per gli oggetti di
+# Panoramica di JavaScript lato client dei tag (`_satellite`)
 
 _Queste pagine descrivono come utilizzare l&#39;oggetto `_satellite`, che consente di gestire e personalizzare la logica dei tag tramite JavaScript. Per informazioni dettagliate su come configurare l&#39;implementazione nell&#39;interfaccia utente di Data Collection, vedere [Estensione tag di Adobe Experience Platform Web SDK](/help/tags/extensions/client/web-sdk/overview.md)._
 

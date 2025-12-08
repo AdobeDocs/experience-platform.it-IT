@@ -1,26 +1,19 @@
 ---
-title: Panoramica di JavaScript
+title: Panoramica della libreria JavaScript di Web SDK
 description: Invia dati a Adobe Experience Platform Edge Network tramite JavaScript.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
 
-# Panoramica di JavaScript
+# Panoramica della libreria JavaScript di Web SDK
 
-**Adobe Experience Platform Web SDK** è una libreria JavaScript lato client che consente di inviare dati a Adobe Experience Platform Edge Network.
+**Adobe Experience Platform Web SDK** è una libreria JavaScript lato client che consente di inviare dati a Adobe Experience Platform Edge Network. Questa guida illustra il percorso di implementazione della libreria JavaScript di Web SDK (`alloy.js`), inclusi i concetti di base, l&#39;installazione, la configurazione e i comandi. Per informazioni sull&#39;estensione tag Web SDK nell&#39;interfaccia utente di Data Collection, vedere l&#39;estensione tag [Web SDK](/help/tags/extensions/client/web-sdk/overview.md).
 
 Il SDK web invia i dati in modo indipendente dalla soluzione (XDM) all’Edge Network di Experience Platform, che quindi li mappa su formati e destinazioni specifici della soluzione e li invia in tempo reale.
-
-È possibile implementare il Web SDK in due modi:
-
-* Implementazione manuale tramite la [libreria JavaScript](install/library.md) (questa documentazione)
-* L&#39;estensione tag [Web SDK](/help/tags/extensions/client/web-sdk/overview.md)
-
-Questa guida include istruzioni per interagire con le soluzioni Experience Cloud utilizzando la libreria JavaScript di Web SDK.
 
 ## Experience Platform Edge Network {#edge-network}
 
@@ -37,7 +30,7 @@ Sul lato server, un gateway edge unificato e un framework di servizi di piattafo
 
 Un sistema Edge consolidato consente di gestire campagne pubblicitarie, di marketing e di personalizzazione su tutti i canali. Riduce il costo totale di proprietà e supporta vari tipi di dati, consentendo di mappare il modello dati per l’utilizzo con più prodotti Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/37267?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## Librerie sostituite dal Web SDK {#sdks}
 

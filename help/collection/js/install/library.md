@@ -1,17 +1,17 @@
 ---
-title: Installare il Web SDK utilizzando la libreria JavaScript
+title: Installare la libreria JavaScript di Web SDK
 description: Fai riferimento alla libreria Web SDK utilizzando un file CDN autonomo.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-# Installare il Web SDK utilizzando la libreria JavaScript
+# Installare la libreria JavaScript di Web SDK
 
-Un&#39;alternativa all&#39;installazione del Web SDK senza [utilizzo dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/overview.md) consiste nel fare riferimento alla libreria JavaScript ospitata su una rete CDN. Puoi fare riferimento direttamente alla libreria, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e completi.
+Un&#39;alternativa all&#39;installazione del Web SDK senza [utilizzo dell&#39;estensione tag](/help/tags/extensions/client/web-sdk/overview.md) consiste nel fare riferimento alla libreria Web SDK JavaScript ospitata su una rete CDN. Puoi fare riferimento direttamente alla libreria, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e completi.
 
 La libreria SDK Web è disponibile utilizzando la seguente struttura URL:
 

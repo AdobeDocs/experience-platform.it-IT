@@ -2,7 +2,7 @@
 title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Risposte alle domande frequenti su Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 2%
@@ -67,9 +67,9 @@ Adobe Experience Platform Web SDK può anche inviare dati direttamente a Adobe E
 
 **Time-to-value:** Adobe ha lavorato sodo (e continuerà) per semplificare al massimo la distribuzione del Web SDK tramite tag e la mappatura dei dati lato client su XDM. Al termine di questo lavoro, tutte le altre soluzioni Adobe e i servizi Adobe Experience Platform possono essere attivati o disattivati lato server. Ad esempio, se utilizzi questo per Adobe Analytics e desideri attivare Target o Experience Platform, puoi semplicemente attivare la configurazione Datastream e illuminare questi casi d’uso.
 
-## Cos’è [!DNL alloy.js]?
+## Cos’è `alloy.js`?
 
-[!DNL alloy.js] è il nome della libreria Web SDK JavaScript. Viene fatto riferimento a esso nel codice sorgente e nel nome file di SDK.
+`alloy.js` è il nome della libreria Web SDK JavaScript. Viene fatto riferimento a esso nel codice sorgente e nel nome file di SDK.
 
 ## I clienti devono acquistare Adobe Experience Platform per utilizzare [!DNL Web SDK]?
 
@@ -78,7 +78,7 @@ No. Qualsiasi cliente di Adobe Digital Experience può utilizzare gratuitamente 
 * I clienti che *non* hanno accesso ad Experience Platform o Real-time CDP e desiderano utilizzare [!DNL Web SDK] dovranno configurare le autorizzazioni appropriate per la creazione di schemi e flussi di dati nell&#39;interfaccia utente di Data Collection o nell&#39;interfaccia utente di Experience Platform.
 * I clienti che hanno accesso ad Experience Platform o Real-time CDP e desiderano utilizzare [!DNL Web SDK] dovranno configurare le autorizzazioni appropriate per la creazione di schemi, set di dati, spazi dei nomi delle identità e flussi di dati nell&#39;interfaccia utente di Data Collection o nell&#39;interfaccia utente di Experience Platform.
 
-Per ulteriori informazioni sulla configurazione di queste autorizzazioni, consulta la documentazione sulla [gestione delle autorizzazioni per la raccolta dati](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=it).
+Per ulteriori informazioni sulla configurazione di queste autorizzazioni, consulta la documentazione sulla [gestione delle autorizzazioni per la raccolta dati](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Chi deve utilizzare il Web SDK?
 
@@ -98,7 +98,7 @@ Il Web SDK è attualmente disponibile al pubblico e può essere utilizzato per i
 
 SDK è gratuito ed è ospitato gratuitamente da Adobe. Se necessario, è possibile scaricarlo e ospitarlo sui propri server senza alcun costo.
 
-Il Web SDK richiede l&#39;accesso a [configurazioni dello stream di dati](/help/datastreams/overview.md) e al generatore di schemi XDM di Experience Platform [&#128279;](/help/xdm/tutorials/create-schema-ui.md) per consentire ai server Adobe di gestire correttamente i dati in entrata provenienti da SDK. Se desideri ottenere l’accesso, contatta il team del tuo account Adobe per avviare il processo di richiesta.
+Il Web SDK richiede l&#39;accesso a [configurazioni dello stream di dati](/help/datastreams/overview.md) e al generatore di schemi XDM di Experience Platform [](/help/xdm/tutorials/create-schema-ui.md) per consentire ai server Adobe di gestire correttamente i dati in entrata provenienti da SDK. Se desideri ottenere l’accesso, contatta il team del tuo account Adobe per avviare il processo di richiesta.
 
 ## Quali casi d’uso sono attualmente supportati dal Web SDK?
 
@@ -144,7 +144,7 @@ Se utilizzi i nostri SDK e invii XDM ad Edge Network, l’inoltro di eventi per 
 
 ## Cos’è un dominio CNAME o di prima parte e perché è importante?
 
-Ulteriori informazioni su un CNAME sono disponibili nella [documentazione di Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=it)
+Ulteriori informazioni su un CNAME sono disponibili nella [documentazione di Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
 
 ## Adobe Experience Platform Web SDK utilizza i cookie? In caso affermativo, quali cookie utilizza?
 
