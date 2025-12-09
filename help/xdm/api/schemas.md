@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API Schema Registry consente di gestire in modo programmatico gli schemi XDM all’interno dell’applicazione Experience.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2122'
+source-wordcount: '2091'
 ht-degree: 4%
 
 ---
@@ -286,10 +286,6 @@ Per aggiungere campi aggiuntivi a uno schema, è possibile eseguire un&#39;opera
 >[!AVAILABILITY]
 >
 >Data Mirror e gli schemi relazionali sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
-
->[!NOTE]
->
->Nelle versioni precedenti della documentazione API di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. La funzionalità rimane la stessa, solo la terminologia è cambiata per maggiore chiarezza.
 
 Creare uno schema relazionale effettuando una richiesta POST all&#39;endpoint `/schemas`. Gli schemi relazionali memorizzano dati strutturati in stile relazionale **senza** classi o gruppi di campi. Definisci i campi direttamente sullo schema e identifica lo schema come relazionale utilizzando un tag di comportamento logico.
 

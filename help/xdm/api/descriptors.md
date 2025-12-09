@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i descrittori
 description: L’endpoint /descriptors nell’API Schema Registry consente di gestire in modo programmatico i descrittori XDM all’interno dell’applicazione Experience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2882'
 ht-degree: 1%
 
 ---
@@ -35,10 +35,6 @@ L&#39;endpoint `/descriptors` nell&#39;API [!DNL Schema Registry] consente di ge
 L&#39;endpoint utilizzato in questa guida fa parte dell&#39;[[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e per le informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
 Oltre ai descrittori standard, [!DNL Schema Registry] supporta i tipi di descrittori per gli schemi relazionali, ad esempio **chiave primaria**, **versione** e **timestamp**. Questi applicano l’univocità, controllano il controllo delle versioni e definiscono i campi di serie temporali a livello di schema. Se non conosci gli schemi relazionali, controlla la [panoramica di Data Mirror](../data-mirror/overview.md) e la [documentazione tecnica sugli schemi relazionali](../schema/relational.md) prima di continuare.
-
->[!NOTE]
->
->Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. La funzionalità del descrittore e gli endpoint API rimangono invariati. Per maggiore chiarezza, è stata aggiornata solo la terminologia.
 
 >[!IMPORTANT]
 >
@@ -631,7 +627,7 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 
 #### Descrittore di campo obsoleto
 
-È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione [&#x200B; `Accept`corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
+È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione [ `Accept`corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
 
 ```json
 {

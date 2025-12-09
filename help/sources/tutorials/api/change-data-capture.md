@@ -2,9 +2,9 @@
 title: Abilitare Change Data Capture per le connessioni di origine nell’API
 description: Scopri come abilitare l’acquisizione dei dati di modifica per le connessioni di origine nell’API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,6 @@ Entrambi gli approcci richiedono Data Mirror con schemi relazionali per preserva
 >[!AVAILABILITY]
 >
 >Data Mirror e gli schemi relazionali sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
-
->[!NOTE]
->
->Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. Le funzionalità e le modifiche apportate alle funzionalità di acquisizione dei dati rimangono invariate.
 
 >[!NOTE]
 >

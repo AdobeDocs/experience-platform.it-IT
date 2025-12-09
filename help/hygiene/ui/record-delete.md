@@ -2,9 +2,9 @@
 title: Registra richieste di eliminazione (flusso di lavoro interfaccia utente)
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2358'
 ht-degree: 6%
 
 ---
@@ -208,10 +208,6 @@ Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro che viene vis
 ## Eliminazione di record dai set di dati basati su schemi relazionali {#relational-record-delete}
 
 Se il set di dati da cui stai eseguendo l’eliminazione si basa su uno schema relazionale, controlla le seguenti considerazioni per assicurarti che i record vengano rimossi correttamente e non riacquisiti a causa di mancata corrispondenza tra Experience Platform e il sistema di origine.
-
->[!NOTE]
->
->Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli. La funzionalità e il comportamento di eliminazione rimangono gli stessi.
 
 ### Comportamento eliminazione record
 

@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema relazionale;schemi relazionali;schema;schema;xdm;experience data model;
 solution: Experience Platform
 title: Schemi relazionali
-description: Scopri gli schemi relazionali (precedentemente noti come schemi basati su modelli) in Adobe Experience Platform, inclusi le funzioni, i campi obbligatori, le relazioni e le limitazioni.
+description: Scopri gli schemi relazionali in Adobe Experience Platform, tra cui funzionalità, campi obbligatori, relazioni e limitazioni.
 badge: Disponibilità limitata
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
-source-git-commit: 605c169c9de7a978e6d2f0bdc809371c82cd3280
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ Gli schemi relazionali forniscono un modello di modellazione flessibile e contro
 >
 >Le considerazioni sull’eliminazione dei dati si applicano a tutte le implementazioni dello schema relazionale. Le applicazioni che utilizzano questi schemi devono comprendere in che modo le eliminazioni influiscono sui set di dati correlati, sui requisiti di conformità e sui processi a valle. Pianifica gli scenari di eliminazione e rivedi [le linee guida sull&#39;igiene dei dati](../../hygiene/ui/record-delete.md#relational-record-delete) prima dell&#39;implementazione.
 
->[!NOTE]
->
->Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli.
-
 Utilizzare gli schemi relazionali per:
 
 * Garantire l&#39;integrità dei dati con chiavi primarie composite o a campo singolo imposte.
@@ -38,7 +34,7 @@ Utilizzare gli schemi relazionali per:
 
 ## Differenze tra gli schemi relazionali e gli schemi XDM standard
 
-Gli schemi XDM standard in Experience Platform seguono uno dei tre comportamenti di dati seguenti: Record, Serie temporali o Ad hoc. Per definizioni e dettagli, vedi [Comportamenti dei dati XDM](https://experienceleague.adobe.com/it/docs/experience-platform/xdm/home#data-behaviors).
+Gli schemi XDM standard in Experience Platform seguono uno dei tre comportamenti di dati seguenti: Record, Serie temporali o Ad hoc. Per definizioni e dettagli, vedi [Comportamenti dei dati XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 Nel modello tradizionale, gli schemi record e serie temporali partecipano a [schemi unione](../api/unions.md) (vedi anche la [guida dell&#39;interfaccia utente dello schema unione](../../profile/ui/union-schema.md)). Questi schemi si evolvono automaticamente quando [gruppi di campi](./composition.md#field-group) condivisi vengono aggiornati e i campi personalizzati devono essere nidificati in uno spazio dei nomi tenant. Anche se potente, questo modello può rallentare l’onboarding, produrre schemi eccessivamente complessi con campi non utilizzati e richiedere una mappatura o trasformazione dei dati aggiuntiva. Questi fattori aumentano la curva di apprendimento e il lavoro di manutenzione in corso.
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '4652'
-ht-degree: 1%
+source-wordcount: '4635'
+ht-degree: 2%
 
 ---
 
@@ -36,10 +36,6 @@ Nell&#39;area di lavoro [!UICONTROL Schemas], seleziona **[!UICONTROL Create sch
 >[!AVAILABILITY]
 >
 >Data Mirror e gli schemi relazionali sono disponibili per i titolari di licenze di **Campagne orchestrate** Adobe Journey Optimizer. Sono disponibili anche come **versione limitata** per gli utenti di Customer Journey Analytics, a seconda della licenza e dell&#39;abilitazione della funzione. Contatta il tuo rappresentante Adobe per accedere.
-
->[!NOTE]
->
->Nelle versioni precedenti della documentazione di Adobe Experience Platform, gli schemi relazionali erano precedentemente denominati schemi basati su modelli.
 
 Selezionare **[!UICONTROL Relational]** per definire schemi strutturati di tipo relazionale con un controllo granulare sui record. Gli schemi relazionali supportano l&#39;applicazione della chiave primaria, il controllo delle versioni a livello di record e le relazioni a livello di schema tramite chiavi primarie ed esterne. Sono ottimizzati anche per l’acquisizione incrementale tramite l’acquisizione di dati di modifica e supportano più modelli di dati utilizzati nelle implementazioni di Orchestrazione di Campaign, Data Distiller e B2B.
 
@@ -83,7 +79,7 @@ Quindi, passare a [definire le chiavi primarie](../fields/identity.md#define-a-i
 
 >[!NOTE]
 >
->Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL &#x200B; Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
+>Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL  Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
 >![L&#39;area di lavoro dell&#39;Editor di schema mostra una struttura di schema relazionale vuota con tipo relazionale evidenziato.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Carica un file DDL {#upload-ddl-file}
