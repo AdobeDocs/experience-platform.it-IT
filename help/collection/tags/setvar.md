@@ -1,9 +1,9 @@
 ---
 title: setVar()
 description: Imposta un valore che è possibile recuperare in seguito utilizzando getVar().
-source-git-commit: 6f8bdfd09023ea48962a40a9539afe017bc108cc
+source-git-commit: 54c32803136bf37a13bb9ca14b1d1c7b09a2041c
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ _satellite.getVar('title'); // Blinding Light
 _satellite.getVar('category'); // Game
 _satellite.getVar('genre'); // Tower defense
 ```
+
+>[!NOTE]
+>
+>Evitare l&#39;uso dei punti (`.`) quando si impostano i nomi delle variabili utilizzando questo metodo. Il metodo `getVar()` non riconosce le variabili che contengono periodi impostati con `setVar()`. Tuttavia, `getVar()` _non riconosce_ gli elementi dati che utilizzano periodi quando sono definiti nell&#39;interfaccia utente dei tag.
