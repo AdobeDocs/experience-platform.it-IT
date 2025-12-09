@@ -2,9 +2,9 @@
 description: Scopri come creare un connettore di origine Adobe Analytics nell’interfaccia utente per inserire i dati delle classificazioni in Adobe Experience Platform.
 title: Creare una connessione Source Adobe Analytics per i dati delle classificazioni nell’interfaccia utente
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -29,31 +29,31 @@ Il connettore di origine delle classificazioni di Analytics richiede che i dati 
 
 ## Seleziona le classificazioni
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria *Applicazioni Adobe*, selezionare **[!UICONTROL Adobe Analytics]**, quindi **[!UICONTROL Configurazione]**.
+Nella categoria *Applicazioni Adobe* selezionare **[!UICONTROL Adobe Analytics]**, quindi **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** se non è presente alcun account autenticato. Una volta autenticato un account, l&#39;opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Le origini nel catalogo origini visualizzano l&#39;opzione **[!UICONTROL Set up]** se non è presente alcun account autenticato. Una volta autenticato un account, l&#39;opzione diventa **[!UICONTROL Add data]**.
 
 ![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con l&#39;origine di Adobe Analytics selezionata.](../../../../images/tutorials/create/classifications/catalog.png)
 
-Quindi seleziona [!UICONTROL Classificazioni] e seleziona i set di dati di classificazione da acquisire in Experience Platform.
+Quindi, seleziona [!UICONTROL Classifications] e seleziona i set di dati di classificazione da acquisire in Experience Platform. In alternativa, puoi utilizzare la funzione di ricerca per filtrare e selezionare classificazioni specifiche.
 
-Puoi selezionare fino a 30 set di dati di classificazioni diversi da inserire in Experience Platform. Tutti i set di dati selezionati verranno visualizzati nella barra a destra. Al termine, selezionare [!UICONTROL Avanti] per continuare.
+Puoi selezionare fino a 30 set di dati di classificazioni diversi da inserire in Experience Platform. Tutti i set di dati selezionati verranno visualizzati nella barra a destra. Al termine, selezionare [!UICONTROL Next] per continuare.
 
 ![Pagina delle classificazioni con diversi set di dati di classificazione selezionati.](../../../../images/tutorials/create/classifications/select.png)
 
 ## Rivedere le classificazioni
 
-Viene visualizzato il passaggio **[!UICONTROL Rivedi]**, che consente di rivedere i set di dati di classificazioni selezionati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio **[!UICONTROL Review]**, che consente di rivedere i set di dati di classificazione selezionati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Connessione]**: mostra la piattaforma di origine e lo stato della connessione.
-* **[!UICONTROL Tipo di dati]**: mostra il numero di classificazioni selezionate.
-* **[!UICONTROL Pianificazione]**: mostra la frequenza di sincronizzazione per i dati delle classificazioni. **Nota**: i dati delle classificazioni vengono aggiornati settimanalmente.
+* **[!UICONTROL Connection]**: mostra la piattaforma di origine e lo stato della connessione.
+* **[!UICONTROL Data type]**: mostra il numero di classificazioni selezionate.
+* **[!UICONTROL Scheduling]**: mostra la frequenza di sincronizzazione per i dati delle classificazioni. **Nota**: i dati delle classificazioni vengono aggiornati settimanalmente.
 
-Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Fine]** e attendi un po&#39; di tempo per la creazione del flusso di dati.
+Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e lascia un po&#39; di tempo per la creazione del flusso di dati.
 
 ![Pagina di revisione per i dati delle classificazioni di Adobe Analytics.](../../../../images/tutorials/create/classifications/review.png)
 
@@ -63,4 +63,4 @@ Seguendo questa esercitazione, hai creato un connettore sata per le classificazi
 
 * [Panoramica del connettore di origine di Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Creare una connessione di origine di Analytics per i dati della suite di rapporti nell’interfaccia utente](./analytics.md)
-* [Informazioni sulle classificazioni](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=it)
+* [Informazioni sulle classificazioni](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
