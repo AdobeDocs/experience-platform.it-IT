@@ -627,7 +627,7 @@ I descrittori di identità di riferimento forniscono un contesto di riferimento 
 
 #### Descrittore di campo obsoleto
 
-È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione [ `Accept`corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
+È possibile [rendere obsoleto un campo all&#39;interno di una risorsa XDM personalizzata](../tutorials/field-deprecation-api.md#custom) aggiungendo un attributo `meta:status` impostato su `deprecated` al campo in questione. Tuttavia, se desideri rendere obsoleti i campi forniti dalle risorse XDM standard negli schemi, puoi assegnare allo schema in questione un descrittore di campo obsoleto per ottenere lo stesso effetto. Utilizzando l&#39;intestazione [&#x200B; `Accept`corretta](../tutorials/field-deprecation-api.md#verify-deprecation), puoi visualizzare quali campi standard sono obsoleti per uno schema quando lo cerchi nell&#39;API.
 
 ```json
 {
