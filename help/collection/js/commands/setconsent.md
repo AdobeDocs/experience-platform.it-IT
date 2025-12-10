@@ -2,10 +2,10 @@
 title: setConsent
 description: Utilizzato in ogni pagina per tenere traccia delle preferenze di consenso degli utenti.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 3%
+source-wordcount: '1117'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ Il Web SDK supporta i seguenti standard:
    1. Lo schema Experience Event contiene il gruppo di campi Consenso [IAB TCF 2.0](/help/xdm/field-groups/event/iab.md).
    1. Includi le informazioni sul consenso IAB nell&#39;evento [oggetto XDM](sendevent/xdm.md). Il Web SDK non include automaticamente le informazioni sul consenso durante l’invio dei dati dell’evento.
 
-Dopo aver utilizzato questo comando, il Web SDK scrive le preferenze dell&#39;utente in un cookie. La prossima volta che l’utente carica il sito web nel browser, SDK recupera queste preferenze persistenti per determinare se gli eventi possono essere inviati ad Adobe.
+Quando si utilizza questo comando, il Web SDK scrive le preferenze dell&#39;utente nel cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk). Questo cookie viene impostato indipendentemente dalle preferenze di consenso del visitatore, perché memorizza le preferenze di consenso del visitatore. La prossima volta che l’utente carica il sito web nel browser, SDK recupera queste preferenze persistenti per determinare se gli eventi possono essere inviati ad Adobe.
 
 Adobe consiglia di memorizzare le preferenze della finestra di dialogo sul consenso separatamente dal consenso per Web SDK. Il Web SDK non offre un modo per recuperare il consenso. Per assicurarsi che le preferenze utente rimangano sincronizzate con SDK, è possibile chiamare il comando `setConsent` a ogni caricamento di pagina. Il Web SDK effettua una chiamata al server solo quando cambia il consenso.
 
@@ -34,15 +34,13 @@ Il comando `setConsent` utilizza solo `ECID` dalla mappa delle identità, in qua
 
 Il Web SDK offre due comandi di configurazione del consenso complementari:
 
-* [`defaultConsent`](configure/defaultconsent.md): questo comando ha lo scopo di acquisire le preferenze di consenso dei clienti di Adobe che utilizzano Web SDK.
-* [`setConsent`](setconsent.md): questo comando ha lo scopo di acquisire le preferenze di consenso dei visitatori del tuo sito.
+* [`defaultConsent`](configure/defaultconsent.md): questo comando imposta automaticamente la preferenza di consenso predefinita del visitatore prima di chiamare `setConsent`.
+* `setConsent` (pagina corrente): questo comando imposta esplicitamente la preferenza di consenso del visitatore.
 
-Se utilizzate insieme, queste impostazioni possono portare a risultati diversi di raccolta dati e impostazione dei cookie, a seconda dei valori configurati.
-
-Vedi la tabella seguente per capire quando si verifica la raccolta dei dati e quando vengono impostati i cookie, in base alle impostazioni del consenso.
+Se utilizzate insieme, queste impostazioni possono portare a risultati diversi di raccolta dati e impostazione cookie, a seconda dei valori configurati:
 
 | `defaultConsent` | `setConsent` | La raccolta dei dati avviene | Web SDK imposta i cookie del browser |
-|---------|----------|---------|---------|
+| --- | --- | --- | --- |
 | `in` | `in` | Sì | Sì |
 | `in` | `out` | No | Sì |
 | `in` | Non impostato | Sì | Sì |
@@ -53,16 +51,9 @@ Vedi la tabella seguente per capire quando si verifica la raccolta dei dati e qu
 | `out` | `out` | No | Sì |
 | `out` | Non impostato | No | No |
 
-I seguenti cookie vengono impostati quando la configurazione del consenso consente:
+Per un elenco completo dei cookie che è possibile impostare, vedere [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) nella guida Servizi di base.
 
-| Nome | Età massima | Descrizione |
-|---|---|---|
-| **`AMCV_###@AdobeOrg`** | 34128000 (395 giorni) | Presente quando [`idMigrationEnabled`](configure/idmigrationenabled.md) è abilitato. Questa funzione risulta utile durante la transizione al Web SDK mentre alcune parti del sito utilizzano ancora `visitor.js`. |
-| **`Demdex cookie`** | 15552000 (180 giorni) | Presente se la sincronizzazione ID è abilitata. Audience Manager imposta questo cookie per assegnare un ID univoco a un visitatore del sito. Il cookie demdex aiuta Audience Manager a eseguire funzioni di base come l’identificazione dei visitatori, la sincronizzazione degli ID, la segmentazione, la modellazione, il reporting e così via. |
-| **`kndctr_orgid_cluster`** | 1800 (30 minuti) | Memorizza l’area Edge Network che soddisfa le richieste dell’utente corrente. L’area viene utilizzata nel percorso URL in modo che Edge Network possa indirizzare la richiesta all’area corretta. Se un utente si connette con un indirizzo IP diverso o in una sessione diversa, la richiesta viene nuovamente indirizzata all’area più vicina. |
-| **`kndct_orgid_identity`** | 34128000 (395 giorni) | Memorizza l’ECID, così come altre informazioni relative all’ECID. |
-| **`kndctr_orgid_consent`** | 15552000 (180 giorni) | Memorizza le preferenze di consenso degli utenti per il sito Web. |
-| **`s_ecid`** | 63115200 (2 anni) | Contiene una copia dell&#39;Experience Cloud ID ([!DNL ECID]) o MID. Il MID viene memorizzato in una coppia chiave/valore con sintassi `s_ecid=MCMID\|<ECID>`. |
+## Utilizzo del comando `setConsent`
 
 Eseguire il comando `setConsent` quando si chiama l&#39;istanza configurata del Web SDK. In questo comando è possibile includere i seguenti oggetti:
 
@@ -108,9 +99,9 @@ alloy("setConsent", {
 
 Per registrare le preferenze di consenso dell’utente fornite tramite lo standard Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF), imposta la stringa di consenso come mostrato di seguito.
 
-Se il consenso è impostato in questo modo, Real-Time Customer Profile viene aggiornato con le informazioni sul consenso. Affinché ciò funzioni, lo schema XDM del profilo deve contenere il gruppo di campi dello schema di privacy del profilo [&#128279;](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Durante l’invio di eventi, le informazioni sul consenso IAB devono essere aggiunte manualmente all’oggetto XDM dell’evento. Il Web SDK non include automaticamente le informazioni sul consenso negli eventi.
+Se il consenso è impostato in questo modo, Real-Time Customer Profile viene aggiornato con le informazioni sul consenso. Affinché ciò funzioni, lo schema XDM del profilo deve contenere il gruppo di campi dello schema di privacy del profilo [](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Durante l’invio di eventi, le informazioni sul consenso IAB devono essere aggiunte manualmente all’oggetto XDM dell’evento. Il Web SDK non include automaticamente le informazioni sul consenso negli eventi.
 
-Per inviare le informazioni sul consenso negli eventi, è necessario aggiungere il gruppo di campi Privacy evento esperienza allo schema [!DNL Profile] abilitato per [!DNL XDM ExperienceEvent]. Consulta la sezione sull&#39;aggiornamento dello schema ExperienceEvent[&#x200B; nella guida alla preparazione del set di dati per i passaggi su come configurare questo elemento.](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema)
+Per inviare le informazioni sul consenso negli eventi, è necessario aggiungere il gruppo di campi Privacy evento esperienza allo schema [!DNL Profile] abilitato per [!DNL XDM ExperienceEvent]. Consulta la sezione sull&#39;aggiornamento dello schema ExperienceEvent[ nella guida alla preparazione del set di dati per i passaggi su come configurare questo elemento.](/help/landing/governance-privacy-security/consent/iab/dataset.md#event-schema)
 
 * **`standard`**: lo standard di consenso scelto. Impostare questa proprietà su `"IAB TCF"` per lo standard IAB TCF 2.0.
 * **`version`**: stringa che rappresenta la versione dello standard di consenso. Impostare questa proprietà su `"2.0"` per lo standard IAB TCF 2.0.

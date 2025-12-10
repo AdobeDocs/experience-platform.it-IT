@@ -2,10 +2,10 @@
 title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Risposte alle domande frequenti su Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 2%
+source-wordcount: '1665'
+ht-degree: 1%
 
 ---
 
@@ -78,7 +78,7 @@ No. Qualsiasi cliente di Adobe Digital Experience può utilizzare gratuitamente 
 * I clienti che *non* hanno accesso ad Experience Platform o Real-time CDP e desiderano utilizzare [!DNL Web SDK] dovranno configurare le autorizzazioni appropriate per la creazione di schemi e flussi di dati nell&#39;interfaccia utente di Data Collection o nell&#39;interfaccia utente di Experience Platform.
 * I clienti che hanno accesso ad Experience Platform o Real-time CDP e desiderano utilizzare [!DNL Web SDK] dovranno configurare le autorizzazioni appropriate per la creazione di schemi, set di dati, spazi dei nomi delle identità e flussi di dati nell&#39;interfaccia utente di Data Collection o nell&#39;interfaccia utente di Experience Platform.
 
-Per ulteriori informazioni sulla configurazione di queste autorizzazioni, consulta la documentazione sulla [gestione delle autorizzazioni per la raccolta dati](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=it).
+Per ulteriori informazioni sulla configurazione di queste autorizzazioni, consulta la documentazione sulla [gestione delle autorizzazioni per la raccolta dati](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Chi deve utilizzare il Web SDK?
 
@@ -98,7 +98,7 @@ Il Web SDK è attualmente disponibile al pubblico e può essere utilizzato per i
 
 SDK è gratuito ed è ospitato gratuitamente da Adobe. Se necessario, è possibile scaricarlo e ospitarlo sui propri server senza alcun costo.
 
-Il Web SDK richiede l&#39;accesso a [configurazioni dello stream di dati](/help/datastreams/overview.md) e al generatore di schemi XDM di Experience Platform [&#128279;](/help/xdm/tutorials/create-schema-ui.md) per consentire ai server Adobe di gestire correttamente i dati in entrata provenienti da SDK. Se desideri ottenere l’accesso, contatta il team del tuo account Adobe per avviare il processo di richiesta.
+Il Web SDK richiede l&#39;accesso a [configurazioni dello stream di dati](/help/datastreams/overview.md) e al generatore di schemi XDM di Experience Platform [](/help/xdm/tutorials/create-schema-ui.md) per consentire ai server Adobe di gestire correttamente i dati in entrata provenienti da SDK. Se desideri ottenere l’accesso, contatta il team del tuo account Adobe per avviare il processo di richiesta.
 
 ## Quali casi d’uso sono attualmente supportati dal Web SDK?
 
@@ -144,25 +144,11 @@ Se utilizzi i nostri SDK e invii XDM ad Edge Network, l’inoltro di eventi per 
 
 ## Cos’è un dominio CNAME o di prima parte e perché è importante?
 
-Ulteriori informazioni su un CNAME sono disponibili nella [documentazione di Adobe](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=it)
+Consulta il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) nella guida dei servizi di base.
 
 ## Adobe Experience Platform Web SDK utilizza i cookie? In caso affermativo, quali cookie utilizza?
 
-Sì, attualmente il Web SDK utilizza da uno a sette cookie, a seconda dell’implementazione. Di seguito è riportato un elenco dei cookie che è possibile visualizzare con il Web SDK e il modo in cui vengono utilizzati:
-
-| **Nome** | **maxAge** | **Età descrittiva** | **Descrizione** |
-|---|---|---|---|
-| **kndct_orgid_identity** | 34128000 | 395 giorni | Il cookie di identità memorizza l’ECID, nonché altre informazioni relative all’ECID. |
-| **kndctr_orgid_consent_check** | 7200 | 2 ore | Questo cookie basato su sessione segnala al server di cercare le preferenze di consenso lato server. |
-| **kndctr_orgid_consent** | 15552000 | 180 giorni | Questo cookie memorizza le preferenze di consenso dell’utente per il sito web. |
-| **kndctr_orgid_cluster** | 1800 | 30 minuti | Questo cookie memorizza l’area Edge Network che soddisfa le richieste dell’utente corrente. L’area viene utilizzata nel percorso URL in modo che Edge Network possa indirizzare la richiesta all’area corretta. Questo cookie ha una durata di 30 minuti, pertanto se un utente si connette con un indirizzo IP diverso, la richiesta può essere indirizzata all’area più vicina. |
-| **mbox** | 63072000 | 2 anni | Questo cookie viene visualizzato quando l’impostazione di migrazione di Target è impostata su true. In questo modo il cookie [mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) di destinazione potrà essere impostato dal Web SDK. |
-| **mboxEdgeCluster** | 1800 | 30 minuti | Questo cookie viene visualizzato quando l’impostazione di migrazione di Target è impostata su true. Questo cookie consente al Web SDK di comunicare il cluster Edge corretto a at.js in modo che i profili di Target possano rimanere sincronizzati mentre gli utenti si spostano all’interno di un sito. |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 giorni | Questo cookie viene visualizzato solo quando è abilitata la migrazione degli ID sul Web SDK di Adobe Experience Platform. Questo cookie è utile per la transizione al Web SDK quando alcune parti del sito utilizzano ancora visitor.js. Per ulteriori informazioni, vedere [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md). |
-
-Quando si utilizza il Web SDK, Edge Network imposta uno o più cookie indicati sopra. Edge Network imposta tutti i cookie con gli attributi `secure` e `sameSite="none"`.
-
-Se al momento sul sito web sono presenti sezioni protette e non protette, ciò potrebbe interferire con l’identificazione dell’utente. Quando un utente passa da una sezione protetta del sito a una non protetta, Edge Network genera un nuovo `ECID` con la richiesta.
+Consulta [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) nella guida dei servizi core.
 
 ## Quali browser sono supportati da Adobe Experience Platform Web SDK?
 
