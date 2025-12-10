@@ -22,7 +22,7 @@ Il Web SDK supporta i seguenti standard:
    1. Lo schema Experience Event contiene il gruppo di campi Consenso [IAB TCF 2.0](/help/xdm/field-groups/event/iab.md).
    1. Includi le informazioni sul consenso IAB nell&#39;evento [oggetto XDM](sendevent/xdm.md). Il Web SDK non include automaticamente le informazioni sul consenso durante l’invio dei dati dell’evento.
 
-Quando si utilizza questo comando, il Web SDK scrive le preferenze dell&#39;utente nel cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk). Questo cookie viene impostato indipendentemente dalle preferenze di consenso del visitatore, perché memorizza le preferenze di consenso del visitatore. La prossima volta che l’utente carica il sito web nel browser, SDK recupera queste preferenze persistenti per determinare se gli eventi possono essere inviati ad Adobe.
+Quando si utilizza questo comando, il Web SDK scrive le preferenze dell&#39;utente nel cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/cookies/web-sdk). Questo cookie viene impostato indipendentemente dalle preferenze di consenso del visitatore, perché memorizza le preferenze di consenso del visitatore. La prossima volta che l’utente carica il sito web nel browser, SDK recupera queste preferenze persistenti per determinare se gli eventi possono essere inviati ad Adobe.
 
 Adobe consiglia di memorizzare le preferenze della finestra di dialogo sul consenso separatamente dal consenso per Web SDK. Il Web SDK non offre un modo per recuperare il consenso. Per assicurarsi che le preferenze utente rimangano sincronizzate con SDK, è possibile chiamare il comando `setConsent` a ogni caricamento di pagina. Il Web SDK effettua una chiamata al server solo quando cambia il consenso.
 
@@ -51,7 +51,7 @@ Se utilizzate insieme, queste impostazioni possono portare a risultati diversi d
 | `out` | `out` | No | Sì |
 | `out` | Non impostato | No | No |
 
-Per un elenco completo dei cookie che è possibile impostare, vedere [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) nella guida Servizi di base.
+Per un elenco completo dei cookie che è possibile impostare, vedere [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/cookies/web-sdk) nella guida Servizi di base.
 
 ## Utilizzo del comando `setConsent`
 
