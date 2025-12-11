@@ -136,8 +136,8 @@ Il video seguente ha lo scopo di aiutarti a comprendere il framework di governan
 >
 >Il video fa riferimento all’applicazione di etichette ai singoli campi del set di dati. Questo flusso di lavoro è stato dichiarato obsoleto. [Le etichette devono ora essere applicate a livello di campo dello schema](./e2e.md#labels). I concetti contenuti nel video rimangono accurati, ma il flusso di lavoro di etichettatura è cambiato.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35476?captions=ita&quality=12&enable10seconds=on&speedcontrol=on)
 
 Il video seguente fornisce indicazioni su come applicare le etichette di utilizzo dei dati agli schemi o all’intero set di dati in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422790/?captions=ita&learn=on)
