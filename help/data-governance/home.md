@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica sulla governance dei dati
 description: La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9b1630a4876c0bcd7331f8da264e4f19ce00b59a
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 9%
+source-wordcount: '1656'
+ht-degree: 8%
 
 ---
 
@@ -132,8 +132,12 @@ La tabella seguente illustra i termini chiave relativi alla governance dei dati 
 
 Il video seguente ha lo scopo di aiutarti a comprendere il framework di governance dei dati.
 
->[!VIDEO](https://video.tv.adobe.com/v/35476?captions=ita&quality=12&enable10seconds=on&speedcontrol=on)
+>[!IMPORTANT]
+>
+>Il video fa riferimento all’applicazione di etichette ai singoli campi del set di dati. Questo flusso di lavoro è stato dichiarato obsoleto. [Le etichette devono ora essere applicate a livello di campo dello schema](./e2e.md#labels). I concetti contenuti nel video rimangono accurati, ma il flusso di lavoro di etichettatura è cambiato.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 Il video seguente fornisce indicazioni su come applicare le etichette di utilizzo dei dati agli schemi o all’intero set di dati in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422790/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
