@@ -170,7 +170,7 @@ L&#39;estensione MA espone i moduli condivisi `get-instance` e `media-heartbeat`
    ...
    ```
 
-1. Utilizzando l’istanza Media Heartbeat, segui la [documentazione JS Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) e la [documentazione API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) per implementare il tracciamento multimediale.
+1. Utilizzando l’istanza Media Heartbeat, segui la [documentazione JS Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=it) e la [documentazione API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) per implementare il tracciamento multimediale.
 
 >[!NOTE]
 >

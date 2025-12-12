@@ -72,7 +72,7 @@ Il metodo `init` verrà richiamato dai tag non appena la vista sarà stata caric
 | `company` | Oggetto contenente `orgId` (il tuo Adobe Experience Cloud ID di 24 caratteri), `id` (l&#39;identificatore univoco della tua azienda nell&#39;API di Reactor) e `tenantId` (l&#39;identificatore univoco di un&#39;organizzazione nel sistema Identity Management di Adobe). |
 | `schema` | Oggetto in formato [JSON Schema](https://json-schema.org/). Questo oggetto proviene dal [manifesto dell’estensione](../manifest.md) e può essere utile per convalidare il modulo. |
 | `apiEndpoints` | Oggetto contenente `reactor` che contiene un riferimento all&#39;indirizzo Web dell&#39;API di Reactor. |
-| `userConsentPermissions` | Oggetto contenente i flag di consenso dai [dati di utilizzo del prodotto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) di Adobe. Utilizza il flag archiviato in `globalDataCollectionAndUsage` per capire se l&#39;estensione può raccogliere *qualsiasi* dati cliente. |
+| `userConsentPermissions` | Oggetto contenente i flag di consenso dai [dati di utilizzo del prodotto](https://experienceleague.adobe.com/it/docs/core-services/interface/features/account-preferences#product-usage-data) di Adobe. Utilizza il flag archiviato in `globalDataCollectionAndUsage` per capire se l&#39;estensione può raccogliere *qualsiasi* dati cliente. |
 | `preferredLanguages` | Matrice di stringhe di lingua. |
 
 La tua vista deve utilizzare queste informazioni per riprodurre e gestire il modulo. Probabilmente dovrai usare solo `info.settings`, ma le altre informazioni vengono fornite nel caso siano necessarie.
