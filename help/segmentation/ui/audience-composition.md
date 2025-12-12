@@ -3,14 +3,20 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
+source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2293'
 ht-degree: 16%
 
 ---
 
 # Guida dell’interfaccia utente di Audience Composition
+
+>[!BEGINSHADEBOX]
+
+Se sei un cliente di Adobe Journey Optimizer, leggi la [guida introduttiva alla composizione del pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) nella documentazione di Adobe Journey Optimizer per ulteriori informazioni sull&#39;utilizzo della composizione del pubblico in tale contesto.
+
+>[!ENDSHADEBOX]
 
 >[!AVAILABILITY]
 >
