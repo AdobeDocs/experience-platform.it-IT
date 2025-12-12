@@ -3,9 +3,9 @@ keywords: Experience Platform;servizio query;servizio query;strutture dati nidif
 title: Appiattire le strutture di dati nidificati da utilizzare con gli strumenti di business intelligence
 description: Questo documento spiega come appiattire gli schemi XDM per tutte le tabelle e le viste durante una sessione quando si utilizzano strumenti BI di terze parti con Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -42,19 +42,19 @@ Quando ci si connette a Query Service con il client di terze parti scelto, aggiu
 
 L’input deve avere il seguente formato:
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 Di seguito è riportato un esempio di stringa di connessione:
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## Esempio {#example}
 
-Lo schema di esempio utilizzato in questa guida utilizza il gruppo di campi standard [!UICONTROL Dettagli Commerce], che utilizza la struttura di oggetti `commerce` e l&#39;array `productListItems`. Consulta la documentazione XDM per [ulteriori informazioni sul gruppo di campi [!UICONTROL Dettagli Commerce]](../../xdm/field-groups/event/commerce-details.md). Una rappresentazione della struttura dello schema è visibile nell’immagine seguente.
+Lo schema di esempio utilizzato in questa guida utilizza il gruppo di campi standard [!UICONTROL Commerce Details], che utilizza la struttura di oggetti `commerce` e l&#39;array `productListItems`. Consulta la documentazione XDM per [ulteriori informazioni sul gruppo di campi [!UICONTROL Commerce Details]](../../xdm/field-groups/event/commerce-details.md). Una rappresentazione della struttura dello schema è visibile nell’immagine seguente.
 
 ![Diagramma di schema del gruppo di campi Dettagli di Commerce che include le strutture `commerce` e `productListItems`.](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ Se lo strumento BI non supporta strutture di dati nidificate, può essere diffic
 
 I valori seguenti rappresentano `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180) e `commerce.purchases.value`(1.0) in campi nidificati con formattazione errata.
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 Utilizzando l&#39;impostazione `FLATTEN`, è possibile accedere a campi separati all&#39;interno dello schema o a sezioni intere della struttura dati nidificata utilizzando la notazione del punto e il nome del percorso originale. Di seguito è riportato un esempio di questo formato che utilizza il gruppo di campi `commerce`.
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value
