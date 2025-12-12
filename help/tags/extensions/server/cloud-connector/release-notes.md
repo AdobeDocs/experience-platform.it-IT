@@ -2,18 +2,14 @@
 title: Note sulla versione dell’estensione connettore cloud di Adobe Experience Platform
 description: Note aggiornate sulla versione dell’estensione connettore cloud in Adobe Experience Platform.
 exl-id: 5ee85d9f-71f4-46ee-9064-4ceee1cf90e7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '128'
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+workflow-type: tm+mt
+source-wordcount: '83'
 ht-degree: 100%
 
 ---
 
 # Note sulla versione dell’estensione connettore cloud di Adobe Experience Platform
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 17 gennaio 2023
 

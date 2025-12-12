@@ -2,18 +2,14 @@
 title: Tipi di elementi dati per le estensioni web
 description: Scopri come definire un modulo libreria data-element-type per un’estensione tag in una proprietà web.
 exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '555'
 ht-degree: 67%
 
 ---
 
 # Tipi di elementi dati per le estensioni web
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nei tag di raccolta dati, gli elementi dati sono essenzialmente alias per parti di dati su una pagina. Questi dati si trovano in parametri di stringhe di query, cookie, elementi DOM o altre posizioni. Le regole possono fare riferimento a un elemento dati che funge da astrazione per accedere a tali dati.
 
@@ -29,7 +25,7 @@ Questo documento illustra come definire i tipi di elementi dati per un’estensi
 
 I tipi di elementi dati sono in genere costituiti dai seguenti elementi:
 
-1. Una [vista](./views.md) nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection che consente agli utenti di modificare le impostazioni per l&#39;elemento dati.
+1. Una [vista](./views.md) visualizzata nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection che consente agli utenti di modificare le impostazioni per l&#39;elemento dati.
 2. Modulo libreria emesso all’interno della libreria runtime di tag per interpretare le impostazioni e recuperare i dati.
 
 Considera una situazione in cui desideri consentire agli utenti di recuperare dei dati da un elemento nell’archiviazione locale denominato `productName`. Il modulo potrebbe presentarsi così:

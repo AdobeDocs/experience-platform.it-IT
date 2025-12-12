@@ -1,19 +1,15 @@
 ---
 title: Moduli libreria Core per le estensioni Web
-description: Scopri i moduli libreria di base che puoi utilizzare con le estensioni web.
+description: 'Scopri i moduli libreria di base che puoi utilizzare con le estensioni web. '
 exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 93%
+source-wordcount: '250'
+ht-degree: 100%
 
 ---
 
 # Moduli libreria Core per le estensioni Web
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questo documento fornisce un elenco dei moduli libreria Coredi che è possibile utilizzare nelle estensioni Web. Per accedere a questi moduli, utilizza `require('@adobe/{MODULE}')`, dove `{MODULE}` è il nome del modulo principale che desideri utilizzare.
 

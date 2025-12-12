@@ -2,18 +2,14 @@
 title: Flusso per estensioni web
 description: Scopri come i componenti di estensione web interagiscono tra loro in fase di runtime in Adobe Experience Platform.
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 89%
+source-wordcount: '227'
+ht-degree: 77%
 
 ---
 
 # Flusso per estensioni web
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Ogni evento, condizione, azione e tipo di elemento dati nelle estensioni Web dispone di una vista mediante la quale gli utenti possono modificare le impostazioni e di un modulo libreria che agisce in base alle impostazioni definite dall&#39;utente.
 
@@ -31,4 +27,4 @@ Il flusso di elaborazione delle regole comprende le seguenti fasi:
 1. Quando il modulo libreria degli eventi determina che si è verificato un determinato evento, viene richiamato `trigger`.
 1. I tag trasmettono `settings` nei moduli libreria delle condizioni della regola in cui vengono valutate le condizioni.
 1. Ogni modulo libreria di condizioni restituisce se una condizione è stata valutata “true”.
-1. Se tutte le condizioni risultano “true”, le azioni della regola vengono eseguite.
+1. Se tutte le condizioni risultano soddisfatte, vengono eseguite le azioni della regola.

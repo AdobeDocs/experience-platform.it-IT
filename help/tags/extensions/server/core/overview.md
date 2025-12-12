@@ -3,18 +3,14 @@ title: Panoramica dell’estensione Core per l’inoltro degli eventi
 description: Scopri l’estensione Core per l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1662'
 ht-degree: 97%
 
 ---
 
 # Panoramica sull’estensione Core per l’inoltro degli eventi
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’estensione Core per l’inoltro degli eventi fornisce gli eventi, le condizioni e i tipi di dati predefiniti per l’inoltro di eventi in Adobe Experience Platform.
 
@@ -28,9 +24,9 @@ In questa sezione sono descritti i tipi di condizioni disponibili nell’estensi
 
 Specifica un codice personalizzato che deve esistere come condizione dell&#39;evento. Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato. L’inoltro degli eventi in Adobe Experience Platform supporta ES13.
 
-1. Seleziona **[!UICONTROL Apri editor]**.
+1. Seleziona **[!UICONTROL Open Editor]**.
 1. Digita il codice personalizzato.
-1. Seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Save]**.
 
 Per accedere al valore di un elemento dati nel codice personalizzato, utilizza il metodo `getDataElementValue`. Ad esempio, per recuperare il valore di un elemento dati denominato `productName`, scrivi quanto segue: 
 
@@ -111,7 +107,7 @@ Se disponi di una regola con più condizioni, è possibile che questa condizione
 
 Sono disponibili i seguenti operatori di confronto dei valori:
 
-**Equal:** La condizione restituisce true se i due valori sono uguali utilizzando un confronto non rigoroso (in JavaScript, == operator). I valori possono essere di qualsiasi tipo. Quando digiti una parola come _true_, _false_, _null_ o _undefined_ in un campo value, la parola viene confrontata come stringa e non viene convertita nel relativo equivalente JavaScript.
+**Uguale:** la condizione restituisce “vero” se i due valori sono uguali utilizzando un confronto non rigoroso (in JavaScript, operatore ==). I valori possono essere di qualsiasi tipo. Quando digiti una parola come _true_, _false_, _null_ o _undefined_ in un campo value, la parola viene confrontata come stringa e non viene convertita nel relativo equivalente JavaScript.
 
 **Does Not Equal:** La condizione restituisce true se i due valori non sono equalizzati con un confronto non rigoroso (in JavaScript il != operatore). I valori possono essere di qualsiasi tipo. Quando digiti una parola come _true_, _false_, _null_ o _undefined_ in un campo value, la parola viene confrontata come stringa e non viene convertita nel relativo equivalente JavaScript.
 
@@ -141,11 +137,11 @@ Sono disponibili i seguenti operatori di confronto dei valori:
 
 **Is True:** La condizione restituisce true se il valore è booleano con il valore true. Il valore fornito non viene convertito in booleano se è di qualsiasi altro tipo. Un valore diverso da un valore booleano con valore true restituisce false.
 
-**Is Truthy:** La condizione restituisce true se il valore è true dopo essere stato convertito in booleano. Consulta la [documentazione Truthy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Truthy) per esempi di valori truthy.
+**Is Truthy:** La condizione restituisce true se il valore è true dopo essere stato convertito in booleano. Per esempi di valori truthy consulta [documentazione Truthy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Truthy).
 
 **Is False:** La condizione restituisce true se il valore è booleano con il valore di false. Il valore fornito non viene convertito in booleano se è di qualsiasi altro tipo. Se un valore diverso da un valore booleano con valore false restituisce false, restituisce false.
 
-**Is Falsy:** La condizione restituisce true se il valore è false dopo essere stato convertito in booleano. Consulta la [documentazione Falsy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Falsy) per esempi di valori falsy.
+**Is Falsy:** La condizione restituisce true se il valore è false dopo essere stato convertito in booleano. Per esempi di valori falsy consulta [documentazione Falsy di MDN](https://developer.mozilla.org/it-IT/docs/Glossary/Falsy).
 
 
 
@@ -158,8 +154,8 @@ In questa sezione sono descritti i tipi di azioni disponibili nell&#39;estension
 Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate. L’inoltro degli eventi in Adobe Experience Platform supporta ES13.
 
 1. Denomina il codice dell&#39;azione.
-1. Seleziona **[!UICONTROL Apri editor]**.
-1. Modifica il codice, quindi seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Open Editor]**.
+1. Modifica il codice, quindi seleziona **[!UICONTROL Save]**.
 
 Per accedere al valore di un elemento dati nel codice personalizzato, utilizza il metodo `getDataElementValue`. Ad esempio, per recuperare il valore di un elemento dati denominato `productName`, scrivi quanto segue: 
 
@@ -183,9 +179,9 @@ Nelle sezioni seguenti sono descritti i tipi di elementi dati disponibili nell&#
 
 ### Custom Code
 
-Per inserire nell’interfaccia utente un codice JavaScript personalizzato, fai clic su **[!UICONTROL Apri editor]** e inserisci il codice nella finestra dell’editor.
+Un JavaScript personalizzato può essere inserito nell&#39;interfaccia utente facendo clic su **[!UICONTROL Open Editor]** e inserendo il codice nella finestra dell&#39;editor.
 
-Nella finestra dell&#39;editor è necessaria un&#39;istruzione return per indicare il valore da utilizzare come valore dell&#39;elemento dati. Se non viene inclusa un&#39;istruzione return oppure viene restituito il valore `null` o `undefined`, il valore predefinito dell&#39;elemento dati è `null` o `undefined`.
+Nella finestra dell&#39;editor è necessaria un&#39;istruzione return per indicare il valore da utilizzare come valore dell&#39;elemento dati. Se non viene inclusa un&#39;istruzione return o viene restituito il valore `null` o `undefined`, il valore predefinito dell&#39;elemento dati è `null` o `undefined`.
 
 Per accedere al valore di un elemento dati nel codice personalizzato, utilizza il metodo `getDataElementValue`. Ad esempio, per recuperare il valore di un elemento dati denominato `productName`, scrivi quanto segue: 
 

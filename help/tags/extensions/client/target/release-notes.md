@@ -2,18 +2,14 @@
 title: Note sulla versione dell’estensione Adobe Target
 description: Note aggiornate sulla versione dell’estensione tag Adobe Target in Adobe Experience Platform.
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 94%
+source-wordcount: '533'
+ht-degree: 97%
 
 ---
 
 # Note sulla versione di Adobe Target
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 16 settembre 2021
 

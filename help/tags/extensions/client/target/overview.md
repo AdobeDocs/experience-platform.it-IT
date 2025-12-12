@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Target
 description: Scopri l’estensione tag per Adobe Target in Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1126'
 ht-degree: 93%
 
 ---
 
 # Panoramica dell’estensione Adobe Target
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulle opzioni disponibili quando utilizzi questa estensione per creare una regola.
 
@@ -23,9 +19,9 @@ Utilizza questo riferimento per informazioni sulle opzioni disponibili quando ut
 >
 > L’estensione Adobe Target richiede at.js. Non supporta mbox.js.
 
-Se l’estensione Adobe Target non è ancora installata, apri la proprietà, quindi seleziona **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore sull’estensione Target e fai clic su **[!UICONTROL Installa]**.
+Se l’estensione Adobe Target non è ancora installata, apri la tua proprietà, quindi seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione Target e seleziona **[!UICONTROL Install]**.
 
-Per configurare l’estensione, apri la scheda [!UICONTROL Estensioni], passa il puntatore sull’estensione e fai clic su **[!UICONTROL Configura]**.
+Per configurare l’estensione, apri la scheda [!UICONTROL Extensions], passa il puntatore sull’estensione e seleziona **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-target-config.png)
 
@@ -72,7 +68,7 @@ Per ulteriori informazioni sul funzionamento dell&#39;impostazione Timeout, cons
 
 #### Altre impostazioni at.js disponibili nell&#39;interfaccia utente di Target
 
-Diverse impostazioni disponibili sulla pagina [!UICONTROL Modifica impostazioni at.js] dell’interfaccia utente di Target non fanno parte dell’estensione Target. Ecco alcune soluzioni alternative:
+Diverse impostazioni disponibili nella pagina [!UICONTROL Edit at.js settings] dell&#39;interfaccia utente di Target non fanno parte dell&#39;estensione di Target. Ecco alcune soluzioni alternative:
 
 * Creazione automatica di mbox globale. Questa impostazione è sostituita dall&#39;azione Fire Global Mbox nell&#39;estensione Target.
 * Intestazione libreria. Questa impostazione non fa parte dell&#39;estensione Target. Inserisci il codice che deve essere caricato prima di at.js in un&#39;azione Core Extension>Custom Code prima di utilizzare l&#39;azione Load Target.
@@ -135,7 +131,7 @@ Nelle implementazioni asincrone, è possibile che il rendering del contenuto pre
 
 Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza lo snippet per nascondere il contenuto:
 
-* Lo snippet deve essere aggiunto prima di caricare il codice di incorporamento dell’intestazione del tag.
+* Lo snippet deve essere aggiunto prima di caricare il codice da incorporare dell’intestazione del tag.
 * Questo codice non può essere gestito dai tag, pertanto deve essere aggiunto direttamente alla pagina.
 * La pagina viene visualizzata quando si verifica il primo degli eventi seguenti:
    * Quando è stata ricevuta la risposta mbox globale

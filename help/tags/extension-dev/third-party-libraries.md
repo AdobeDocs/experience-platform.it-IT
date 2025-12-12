@@ -2,20 +2,16 @@
 title: Implementazione di librerie di terze parti
 description: Scopri i diversi metodi di hosting delle librerie di terze parti nelle estensioni tag di Adobe Experience Platform.
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 98%
+source-wordcount: '1270'
+ht-degree: 100%
 
 ---
 
 # Implementazione di librerie di terze parti
 
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
-
-Uno degli scopi principali delle estensioni tag in Adobe Experience Platform è quello di facilitare l’implementazione di tecnologie di marketing (librerie) esistenti nel sito web. Utilizzando le estensioni, è possibile implementare le librerie fornite da reti CDN (content delivery network) di terze parti senza dover modificare manualmente il codice HTML del sito web.
+Uno degli scopi principali delle estensioni tag in Adobe Experience Platform è quello di facilitare l’implementazione di tecnologie di marketing (librerie) esistenti nel sito web. Utilizzando le estensioni, è possibile implementare le librerie fornite da reti per la consegna dei contenuti (CDN) di terze parti senza dover modificare manualmente il codice HTML del sito web.
 
 Esistono diversi metodi per ospitare librerie di terze parti (fornitori) all’interno delle estensioni. Questo documento fornisce una panoramica di questi diversi metodi di implementazione, inclusi i pro e i contro di ciascuno.
 
@@ -94,11 +90,11 @@ Le sezioni seguenti illustrano i diversi modi in cui è possibile caricare le li
 Sono contemplati i seguenti metodi:
 
 - [Implementazione di librerie di terze parti](#implementing-third-party-libraries)
-   - [Prerequisiti &#x200B;](#prerequisites)
+   - [Prerequisiti ](#prerequisites)
    - [Processo di caricamento del codice di base](#base-code-loading-process)
       - [Esempio di codice di base](#base-code-example)
    - [Opzioni di implementazione dei tag](#tags-implementation-options)
-      - [Caricare in fase di runtime dall’host del fornitore {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [Caricare in fase di runtime dall’host del fornitore](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [Caricare in fase di runtime dall’host della libreria di tag](#load-at-runtime-from-the-tag-library-host)
       - [Incorporare direttamente la libreria](#embed-the-library-directly)
    - [Passaggi successivi](#next-steps)

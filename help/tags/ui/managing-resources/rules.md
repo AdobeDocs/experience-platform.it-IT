@@ -2,18 +2,14 @@
 title: Regole
 description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2028'
-ht-degree: 73%
+source-wordcount: '1962'
+ht-degree: 74%
 
 ---
 
 # Regole
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I tag in Adobe Experience Platform seguono un sistema basato su regole. Cercano le interazione degli utenti e i relativi dati. Quando i criteri descritti nelle tue regole vengono soddisfatti, la regola attiva l&#39;estensione, lo script o il codice lato client identificato.
 
@@ -55,12 +51,12 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 >
 >Puoi visualizzare le risorse aggiuntive disponibili per ulteriori informazioni su questa funzione selezionando ![informazioni](../../images/ui/event-forwarding/overview/about.png) dal pannello a destra.
 
-1. Apri la scheda [!UICONTROL Regole], quindi seleziona **[!UICONTROL Crea nuova regola]**.
+1. Apri la scheda [!UICONTROL Rules], quindi seleziona **[!UICONTROL Create New Rule]**.
 
    ![Scheda Regole che evidenzia il campo del nome.](../../images/launch-rule-builder.png)
 
 1. Denomina la regola.
-1. Fai clic sull’icona **[!UICONTROL Aggiungi]** degli Eventi.
+1. Fai clic sull’icona **[!UICONTROL Add]** degli Eventi.
 1. Seleziona l’estensione e uno dei tipi di evento disponibili per tale estensione, quindi configura le impostazioni dell’evento.
 
    ![Pagina configurazione evento regole.](../../images/rule-event-config.png)
@@ -81,7 +77,7 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
    >
    >Se il percorso specificato non è corretto, i dati non vengono raccolti.
 
-1. Imposta il parametro Ordine, quindi seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Imposta il parametro Ordine, quindi seleziona **[!UICONTROL Keep Changes]**.
 
    L&#39;ordine predefinito per tutti i componenti della regola è 50. Se vuoi che una di queste venga eseguita prima, impostala con un numero inferiore a 50.
 
@@ -91,7 +87,7 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 
      Se desideri che venga eseguita in un secondo momento, impostala con un numero maggiore di 50. Per ulteriori informazioni sull&#39;ordinamento, consulta [Ordinamento delle regole](rules.md#rule-ordering).
 
-1. Fai clic sull&#39;icona **[!UICONTROL Aggiungi]** delle Condizioni, quindi seleziona un tipo di logica, un&#39;estensione, un tipo di condizione e configura le impostazioni della condizione. Quindi, seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Fai clic sull&#39;icona Condizioni **[!UICONTROL Add]**, quindi seleziona un tipo di logica, un&#39;estensione, un tipo di condizione e configura le impostazioni della condizione. Quindi, seleziona **[!UICONTROL Keep Changes]**.
 
    ![Pagina di configurazione della condizione delle regole.](../../images/condition-settings.png)
 
@@ -106,18 +102,18 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 
    È possibile aggiungere tutte le condizioni desiderate. Più condizioni all’interno della stessa regola sono collegate da AND.
 
-1. Fai clic sull&#39;icona Azioni **[!UICONTROL Aggiungi]**, quindi seleziona l&#39;estensione e uno dei tipi di azione disponibili per l&#39;estensione, configura le impostazioni per l&#39;azione, quindi seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Fai clic sull&#39;icona Azioni **[!UICONTROL Add]**, quindi seleziona l&#39;estensione e uno dei tipi di azione disponibili per l&#39;estensione, configura le impostazioni per l&#39;azione, quindi seleziona **[!UICONTROL Keep Changes]**.
 
    ![Pagina di configurazione azione delle regole.](../../images/action-settings.png)
 
    I tipi di azioni disponibili dipendono dall’estensione selezionata. Le impostazioni delle azioni variano a seconda del tipo di azione.
 
-   (Avanzata) Wait to run next action (Attendi di eseguire l’azione successiva): questa opzione è disponibile quando la sequenza dei componenti della regola è abilitata sulla proprietà. Se questa opzione è selezionata, i tag non chiameranno l’azione successiva fino al completamento di questa. Se questa opzione è deselezionata, l’azione successiva inizia a essere eseguita immediatamente. Il valore predefinito è **[!UICONTROL Selezionata]**.
+   (Avanzata) Wait to run next action (Attendi di eseguire l’azione successiva): questa opzione è disponibile quando la sequenza dei componenti della regola è abilitata sulla proprietà. Se questa opzione è selezionata, i tag non chiameranno l’azione successiva fino al completamento di questa. Se questa opzione è deselezionata, l’azione successiva inizia a essere eseguita immediatamente. Il valore predefinito è **[!UICONTROL Checked]**.
 
    (Avanzata) Timeout: questa opzione è disponibile quando la sequenza dei componenti della regola è abilitata sulla proprietà. Definisce il tempo massimo consentito per il completamento dell’azione. Se viene raggiunto il timeout, l’azione non riesce e tutte le azioni successive per questa regola verranno rimosse dalla coda di elaborazione. Il valore predefinito è 2000 ms.
 
 
-1. Rivedi la regola, quindi seleziona **[!UICONTROL Salva regola]**.
+1. Rivedi la regola, quindi seleziona **[!UICONTROL Save Rule]**.
 
    Successivamente, quando [pubblichi](../publishing/overview.md), aggiungi questa regola a una libreria e distribuiscila.
 
@@ -167,7 +163,7 @@ Adobe non è in grado di garantire che vengano attivate altre regole e che sia n
 
 ## Sequenza dei componenti della regola {#sequencing}
 
-Il comportamento dell&#39;ambiente di runtime dipende dall&#39;abilitazione o meno di **[!UICONTROL Esegui componenti regola in sequenza]** per la proprietà. Questa impostazione determina se i componenti di una regola possono essere valutati in parallelo (in modo asincrono) o se devono essere valutati in sequenza.
+Il comportamento dell&#39;ambiente di runtime dipende dall&#39;abilitazione o meno di **[!UICONTROL Run rule components in sequence]** per la proprietà. Questa impostazione determina se i componenti di una regola possono essere valutati in parallelo (in modo asincrono) o se devono essere valutati in sequenza.
 
 >[!IMPORTANT]
 >

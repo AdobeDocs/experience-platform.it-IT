@@ -2,18 +2,14 @@
 title: Supporto di Content Security Policy (CSP)
 description: Scopri come gestire le restrizioni CSP (Content Security Policy, criteri per la sicurezza dei contenuti) durante l’integrazione del sito web con i tag in Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 97%
+source-wordcount: '1031'
+ht-degree: 96%
 
 ---
 
 # Supporto di Content Security Policy (CSP)
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I Criteri sulla sicurezza dei contenuti (CSP) sono una funzione di sicurezza che aiuta a prevenire attacchi alla vulnerabilità cross-site scripting (XSS). Questo accade quando il browser viene indotto a eseguire contenuti dannosi che sembrano avere origini affidabili, ma provengono in realtà da una posizione diversa. I CSP consentono al browser di verificare (per conto dell’utente) che lo script provenga effettivamente da una sorgente affidabile.
 

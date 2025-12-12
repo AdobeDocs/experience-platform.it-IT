@@ -2,18 +2,14 @@
 title: Estensioni di inoltro di tag ed eventi
 description: Documentazione per le estensioni di inoltro di tag ed eventi in Adobe Experience Platform.
 exl-id: 2433a64f-66f2-4c21-bdec-c6b8e1658b2b
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 23%
+source-wordcount: '190'
+ht-degree: 14%
 
 ---
 
 # Estensioni di inoltro di tag ed eventi
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Un’estensione è un set di codice che estende le funzionalità fornite dai tag o dall’inoltro di eventi. Se installi un&#39;estensione in una libreria, l&#39;estensione aggiunge un set di eventi, condizioni e/o azioni univoci che possono essere utilizzati nelle [configurazioni di regole](../ui/managing-resources/rules.md) della libreria.
 

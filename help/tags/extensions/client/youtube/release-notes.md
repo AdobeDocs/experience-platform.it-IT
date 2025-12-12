@@ -2,18 +2,14 @@
 title: Note sulla versione per l’estensione di tracciamento di video YouTube
 description: Note aggiornate sulla versione dell’estensione di tracciamento di video YouTube in Adobe Experience Platform.
 exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 86%
+source-wordcount: '93'
+ht-degree: 100%
 
 ---
 
 # Note sulla versione dell’estensione di tracciamento di video YouTube
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 4 giugno 2021
 

@@ -2,18 +2,14 @@
 title: Autorizzazioni utente per i tag
 description: Scopri i diversi tipi di autorizzazioni disponibili per i tag e alcune strategie di implementazione di base per diversi casi d’uso aziendali.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1305'
-ht-degree: 18%
+source-wordcount: '1260'
+ht-degree: 17%
 
 ---
 
 # Autorizzazioni utente per i tag
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Le autorizzazioni utente per i tag in Adobe Experience Platform vengono assegnate agli utenti tramite Adobe Admin Console. Anziché essere assegnati a singoli utenti, diversi set di autorizzazioni vengono configurati separatamente come profili di prodotto. Gli utenti vengono quindi assegnati a questi profili di prodotto per ottenere le autorizzazioni per le quali sono stati configurati.
 
@@ -21,7 +17,7 @@ Questa guida fornisce una panoramica dei diversi tipi di autorizzazioni disponib
 
 >[!NOTE]
 >
->Per i passaggi su come configurare le autorizzazioni per gli utenti utilizzando l&#39;Admin Console, fare riferimento al tutorial su [gestione delle autorizzazioni per la raccolta dati](../../../collection/permissions.md).
+>Per i passaggi su come configurare le autorizzazioni per gli utenti che utilizzano Admin Console, consulta l&#39;esercitazione su [gestione delle autorizzazioni per la raccolta dati](../../../collection/permissions.md).
 
 ## Tipi di autorizzazione
 
@@ -42,7 +38,7 @@ Per impostazione predefinita, i profili di prodotto consentono l’accesso a tut
 
 ### Diritti di proprietà {#property-rights}
 
-Qualsiasi proprietà tag creata nell’interfaccia utente diventa disponibile in Admin Console e consente di raggruppare la proprietà con diritti di proprietà specifici nello stesso profilo di prodotto.
+Qualsiasi proprietà tag creata nell’interfaccia utente diventa disponibile in Admin Console e consente di raggrupparla con diritti di proprietà specifici nello stesso profilo di prodotto.
 
 Ad esempio, se un determinato profilo di prodotto non ha accesso alla proprietà A1, gli utenti che appartengono a tale profilo non possono visualizzare o modificare le impostazioni all’interno della proprietà A1.
 
@@ -54,7 +50,7 @@ La tabella seguente illustra i diritti di proprietà disponibili e le funzionali
 | --- | --- |
 | **Sviluppa** | Questo consente di eseguire le azioni seguenti:<ul><li>Creare regole ed elementi dati</li><li>Creare librerie e generarle negli ambienti di sviluppo esistenti</li><li>Inviare una libreria per l’approvazione</li></ul>La maggior parte delle attività quotidiane nell’interfaccia utente richiedono questo diritto. |
 | **Approva** | Questo consente di trasferire nell’ambiente di staging una libreria e una build inviate. Puoi inoltre approvare una libreria per la pubblicazione dopo aver completato i test. |
-| **Publish** | Questo consente di pubblicare librerie approvate nell’ambiente di produzione. |
+| **Pubblica** | Questo consente di pubblicare librerie approvate nell’ambiente di produzione. |
 | **Gestione estensioni** | Questo consente di eseguire le azioni seguenti: <ul><li>Installare nuove estensioni in una proprietà</li><li>Modificare la configurazione per un&#39;estensione già installata</li><li>Eliminare un’estensione</li></ul>Per ulteriori informazioni sulle estensioni, consulta la [panoramica sulle estensioni](../managing-resources/extensions/overview.md). In genere questo ruolo appartiene al reparto IT o Marketing, a seconda dell&#39;organizzazione. |
 | **Gestisci ambienti** | Questo consente di creare e modificare gli ambienti. Per ulteriori informazioni, consulta la [documentazione degli ambienti](../publishing/environments.md). Generalmente, questo ruolo appartiene al reparto IT. |
 
@@ -76,7 +72,7 @@ I diritti aziendali si applicano ad autorizzazioni che si estendono su più prop
 
 Le autorizzazioni totali di un singolo utente sono determinate dall’iscrizione totale in profili di prodotto diversi. Se un utente appartiene a più profili di prodotto, le autorizzazioni di ciascun profilo vengono aggiunte insieme anziché moltiplicate.
 
-Ad esempio, il profilo di prodotto A ti concede il diritto Develop per la proprietà 1. Il profilo di prodotto B ti concede il diritto Publish per la proprietà 2. In questo caso, è possibile sviluppare nella proprietà 1 e Publish nella proprietà 2, ma non è possibile pubblicare nella proprietà 1 o sviluppare nella proprietà 2 perché non si dispone dei diritti espliciti per farlo.
+Ad esempio, il profilo di prodotto A ti concede il diritto Develop per la proprietà 1. Il profilo di prodotto B ti concede il diritto Publish per la proprietà 2. In questo caso, è possibile sviluppare nella proprietà 1 e pubblicare nella proprietà 2, ma non è possibile pubblicare nella proprietà 1 o sviluppare nella proprietà 2 perché non si dispone dei diritti espliciti per farlo.
 
 ## Scenari di diritti
 
@@ -102,7 +98,7 @@ Per eseguire questa operazione:
 
 Un&#39;azienda di livello Enterprise potrebbe avere più siti divisi geograficamente, con team diversi responsabili di ogni area geografica. All&#39;interno di questi team, i vari utenti possono sviluppare e pubblicare.
 
-È simile alla precedente &quot;Separazione dei compiti&quot;, ma organizzata per aree geografiche. Ad esempio, puoi creare un profilo &quot;Develop&quot; (Sviluppa) e un profilo &quot;Publish&quot; (Sviluppa) per il Nord America e gruppi &quot;Develop&quot; e &quot;Publish&quot; separati per l’Europa.
+È simile alla precedente &quot;Separazione dei compiti&quot;, ma organizzata per aree geografiche. Ad esempio, puoi creare un profilo &quot;Develop&quot; (Sviluppa) e un profilo &quot;Publish&quot; (Pubblica) per il Nord America e creare gruppi separati &quot;Develop&quot; (Sviluppa) e &quot;Publish&quot; (Pubblica) per l’Europa.
 
 ## Ruoli di esempio
 
@@ -113,12 +109,12 @@ Nella tabella seguente vengono forniti alcuni esempi dei tipi di ruoli che è po
 | Manager | Vuole vedere cosa sta succedendo nel sistema, ma non dovrebbe essere in grado di apportare modifiche. | Inclusione automatica | (Nessuno) | (Nessuno) |
 | Addetto al marketing | Può installare estensioni e impostare nuovi tag per le proprietà esistenti, ma non può pubblicare negli ambienti di staging o produzione. | Inclusione automatica | <ul><li>Sviluppa</li><li>Gestire le estensioni</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
 | Sviluppatore app mobili | È responsabile dell’implementazione di soluzioni Adobe e di terze parti all’interno di un’app mobile nativa. | Inclusione automatica | <ul><li>Sviluppa</li><li>Gestire le estensioni</li></ul> | <li>Gestisci proprietà</li><li>Gestione configurazioni app</li> |
-| Team IT | Non modifica effettivamente alcun tag, ma ha il pieno controllo sugli ambienti di staging e produzione e su ciò che contiene. | Inclusione automatica | (Nessuno) | <ul><li>Approva</li><li>Pubblica</li><li>Gestisci ambienti</li></ul> |
+| Team IT | Non modifica effettivamente alcun tag, ma ha il pieno controllo sugli ambienti di staging e produzione e su ciò che contiene. | Inclusione automatica | (Nessuno) | <ul><li>Approva</li><li>Pubblicazione</li><li>Gestisci ambienti</li></ul> |
 | Sviluppatore di estensioni | Sviluppa le estensioni e può inviarle per l&#39;approvazione, ma non può pubblicarle o aggiungerle alle proprietà esistenti. | Inclusione automatica | <ul><li>Sviluppa</li></ul> | <ul><li>Gestisci proprietà</li><li>Sviluppare estensioni</li></ul> |
-| Utente privilegiato | Fa tutto. | Inclusione automatica | <ul><li>Sviluppa</li><li>Approva</li><li>Pubblica</li><li>Gestire le estensioni</li><li>Gestisci ambienti</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
+| Utente privilegiato | Fa tutto. | Inclusione automatica | <ul><li>Sviluppa</li><li>Approva</li><li>Pubblicazione</li><li>Gestire le estensioni</li><li>Gestisci ambienti</li></ul> | <ul><li>Gestisci proprietà</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Passaggi successivi
 
-In questo documento è stata fornita una panoramica delle autorizzazioni disponibili per i tag nell’Experience Platform. Per i passaggi su come configurare i profili di prodotto per i tag in Adobe Admin Console, consulta la guida su [gestione delle autorizzazioni utente per la raccolta dati](../../../collection/permissions.md).
+Questo documento fornisce una panoramica delle autorizzazioni disponibili per i tag in Experience Platform. Per i passaggi su come configurare i profili di prodotto per i tag in Adobe Admin Console, consulta la guida su [gestione delle autorizzazioni utente per la raccolta dati](../../../collection/permissions.md).

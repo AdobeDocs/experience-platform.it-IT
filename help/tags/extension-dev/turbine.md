@@ -2,18 +2,14 @@
 title: Variabile libera “turbine”
 description: Scopri l’oggetto turbine, una variabile libera che fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 86%
+source-wordcount: '561'
+ht-degree: 88%
 
 ---
 
 # Variabile libera “turbine”
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’oggetto `turbine` rappresenta una “variabile libera” nell’ambito dei moduli libreria dell’estensione. Fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform ed è sempre disponibile per i moduli libreria senza che sia necessario utilizzare `require()`.
 

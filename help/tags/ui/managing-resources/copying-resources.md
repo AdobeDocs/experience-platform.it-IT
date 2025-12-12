@@ -2,18 +2,14 @@
 title: Copiare le risorse
 description: Scopri come creare una nuova risorsa tag utilizzando le impostazioni di una risorsa tag esistente in Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '785'
 ht-degree: 87%
 
 ---
 
 # Copiare le risorse
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 A volte è utile creare una nuova risorsa utilizzando le impostazioni di una risorsa esistente. In questi casi, puoi fare una copia.
 
@@ -23,11 +19,11 @@ Copiare una risorsa crea un duplicato della stessa nella destinazione specificat
 
 ## Avviare una copia
 
-Per avviare la copia di un’estensione, visualizza le estensioni installate, fai clic sulla freccia a discesa sul pulsante **[!UICONTROL Configura]** e seleziona **[!UICONTROL Copia]**.
+Puoi avviare la copia di un&#39;estensione visualizzando le estensioni installate facendo clic sulla freccia a discesa sul pulsante **[!UICONTROL Configure]** e selezionando **[!UICONTROL Copy]**.
 
 ![Copiare l’estensione Analytics](../../images/copy-initiate-extension.png)
 
-Per proprietà, regole ed elementi dati, seleziona la risorsa da copiare, quindi fai clic sul pulsante **[!UICONTROL Copia]** nel menu delle azioni.
+Per proprietà, regole ed elementi dati, seleziona semplicemente la risorsa da copiare, quindi fai clic sul pulsante **[!UICONTROL Copy]** nel menu delle azioni.
 
 ![Copiare la regola di Analytics](../../images/copy-initiate-rule.png)
 
@@ -37,7 +33,7 @@ Se copi una regola o un elemento dati, nella finestra di dialogo di copia puoi u
 >
 >Non è possibile copiare le risorse in un’altra proprietà se una di queste è configurata per lo sviluppo dell’estensione e l’altra non lo è.
 
-Dopo aver configurato il comportamento desiderato, fai clic su **[!UICONTROL Copia]**.
+Dopo aver configurato il comportamento desiderato, fai clic su **[!UICONTROL Copy]**.
 
 ## Copia delle proprietà
 

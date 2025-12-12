@@ -2,18 +2,14 @@
 title: Estensioni
 description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 88%
+source-wordcount: '471'
+ht-degree: 90%
 
 ---
 
 # Estensioni
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Un’estensione è un set di codice che estende le funzionalità fornite dai tag o dall’inoltro di eventi.
 
@@ -27,13 +23,13 @@ Le estensioni determinano gli elementi disponibili per la creazione di propriet�
 
 Utilizza i collegamenti nella parte superiore dell’elenco Estensioni per visualizzare le estensioni installate, il catalogo delle estensioni o gli aggiornamenti.
 
-Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per ulteriori informazioni, vedere la sezione relativa all&#39;[aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione.
+Seleziona un&#39;estensione, quindi fai clic su [!UICONTROL Configure] per visualizzare e modificare le sue impostazioni. Per ulteriori informazioni, vedere la sezione relativa all&#39;[aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione.
 
 >[!IMPORTANT]
 >
 >Le modifiche diventano effettive solo dopo la loro [pubblicazione](../../publishing/overview.md).
 
-Per impostazione predefinita, Adobe fornisce estensioni che supportano diverse integrazioni comuni. Le estensioni possono essere modificate con configurazioni personalizzate. Le configurazioni vengono fornite tramite le estensioni. Per creare una configurazione, fai clic sulla scheda dell’estensione, quindi seleziona **[!UICONTROL Aggiungi nuova configurazione]**.
+Per impostazione predefinita, Adobe fornisce estensioni che supportano diverse integrazioni comuni. Le estensioni possono essere modificate con configurazioni personalizzate. Le configurazioni vengono fornite tramite le estensioni. Per creare una configurazione, fai clic sulla scheda dell&#39;estensione, quindi fai clic su **[!UICONTROL Add New Configuration]**.
 
 ## Catalogo delle estensioni
 
@@ -51,7 +47,7 @@ La pagina Estensioni offre tre visualizzazioni:
 
   Mostra aggiornamenti alle estensioni installate.
 
-Fai clic su **[!UICONTROL Estensioni]** per visualizzare tutte le estensioni installate. Puoi inoltre utilizzare il catalogo per visualizzare un elenco di tutte le estensioni disponibili e per quali estensioni sono disponibili aggiornamenti.
+Fai clic su **[!UICONTROL Extensions]** per visualizzare tutte le estensioni installate. Puoi inoltre utilizzare il catalogo per visualizzare un elenco di tutte le estensioni disponibili e per quali estensioni sono disponibili aggiornamenti.
 
 Per informazioni sulle estensioni proprietarie di Adobe, consulta la [documentazione sulle estensioni](../../../extensions/client/overview.md).
 
@@ -63,7 +59,7 @@ I tag sono altamente estensibili. Le estensioni aggiungono funzionalità di base
 >
 >Utilizza le nella guida del prodotto nel pannello a destra per ulteriori informazioni sulle estensioni e visualizzare le risorse disponibili aggiuntive.
 
-1. Dalla pagina della panoramica di una proprietà, apri la scheda **[!UICONTROL Estensioni]**.
+1. Dalla pagina della panoramica di una proprietà, apri la scheda **[!UICONTROL Extensions]**.
 1. Selezionare un&#39;estensione.
 
    ![Scheda Catalogo che mostra le estensioni principali nella scheda Estensioni.](../../../images/extensions.png)
@@ -84,7 +80,7 @@ Quando crei o modifichi elementi, puoi salvarli e generarli nella [libreria atti
 
 ## Configurare un&#39;estensione
 
-Passa il puntatore del mouse su un’estensione installata e seleziona **[!UICONTROL Configura]**.
+Passa il puntatore del mouse su un&#39;estensione installata e fai clic su **[!UICONTROL Configure]**.
 
 >[!NOTE]
 >

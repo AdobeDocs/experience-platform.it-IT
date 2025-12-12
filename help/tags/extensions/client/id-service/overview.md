@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Experience Cloud Identity Service
 description: Scopri l’estensione tag Adobe Experience Cloud Identity Service in Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '739'
 ht-degree: 95%
 
 ---
 
 # Panoramica dell’estensione Adobe Experience Cloud Identity Service
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Usa questa guida di riferimento per informazioni sulla configurazione dell’estensione Adobe Experience Cloud ID e sulle opzioni disponibili quando utilizzi questa estensione per generare una regola.
 
@@ -23,9 +19,9 @@ Usa questa estensione per integrare Experience Cloud Identity Service nella tua 
 
 Questa sezione fornisce un riferimento sulle opzioni disponibili durante la configurazione dell&#39;estensione Experience Cloud ID.
 
-Se l’estensione Experience Cloud ID non è ancora stata installata, apri la proprietà, quindi fai clic su **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore sull’estensione Experience Cloud ID e fai clic su **[!UICONTROL Installa]**.
+Se l’estensione Experience Cloud ID non è ancora stata installata, apri la proprietà, quindi seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione Experience Cloud ID e seleziona **[!UICONTROL Install]**.
 
-Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore sull’estensione e fai clic su **[!UICONTROL Configura]**.
+Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore sull’estensione e seleziona **[!UICONTROL Configure]**.
 
 ![](../../../images/optin.jpg)
 
@@ -43,7 +39,7 @@ L&#39;Experience Cloud ID non viene caricato se l&#39;URL corrisponde a uno dei 
 
 (Facoltativo) Se si tratta di un&#39;espressione regolare, abilita Regex.
 
-Fai clic su **[!UICONTROL Aggiungi]** per escludere un altro percorso.
+Fai clic su **[!UICONTROL Add]** per escludere un altro percorso.
 
 ### Consenso accordato
 
@@ -73,7 +69,7 @@ Utilizza questa impostazione opzionale per specificare il dominio in cui viene m
 
 Specifica quando scade il cookie Opt In se la memorizzazione è abilitata, in secondi.
 
-Immetti un numero, quindi seleziona un&#39;unità di tempo dall&#39;elenco a discesa. Ad esempio, immetti 2 e seleziona **[!UICONTROL Settimane]**. Il valore predefinito è 13 mesi.
+Immetti un numero, quindi seleziona un&#39;unità di tempo dall&#39;elenco a discesa. Ad esempio, immetti 2 e seleziona **[!UICONTROL Weeks]**. Il valore predefinito è 13 mesi.
 
 **Autorizzazioni?**
 
@@ -117,5 +113,5 @@ Imposta uno o più ID cliente.
    * autenticato
    * Utente disconnesso
 
-1. (Facoltativo) Fai clic su **[!UICONTROL Aggiungi]** per impostare altri ID cliente.
-1. Seleziona **[!UICONTROL Mantieni modifiche]**.
+1. (Facoltativo) Fai clic su **[!UICONTROL Add]** per impostare altri ID cliente.
+1. Seleziona **[!UICONTROL Keep Changes]**.

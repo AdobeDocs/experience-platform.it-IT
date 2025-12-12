@@ -2,18 +2,14 @@
 title: Riferimento delle estensioni di inoltro eventi
 description: Trova la documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 18%
+source-wordcount: '119'
+ht-degree: 4%
 
 ---
 
 # Riferimento per le estensioni di inoltro eventi
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -26,7 +22,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 
 >[!NOTE]
 >
->Qualsiasi nome di estensione seguito da un asterisco (*) collega all’elenco dell’estensione nell’Adobe Exchange, che contiene le istruzioni di installazione e utilizzo. Tutti gli altri collegamenti fanno riferimento alla documentazione dell&#39;estensione su Adobe Experience League.
+>Qualsiasi nome di estensione seguito da un asterisco (*) collega all’elenco dell’estensione su Adobe Exchange, che contiene istruzioni di installazione e utilizzo. Tutti gli altri collegamenti fanno riferimento alla documentazione dell’estensione su Adobe Experience League.
 
 * [Connettore Adobe Experience Platform Cloud](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)

@@ -2,18 +2,14 @@
 title: Flusso per estensioni Edge
 description: Scopri in che modo i componenti di un’estensione edge in Adobe Experience Platform interagiscono tra loro in fase di runtime.
 exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 85%
+source-wordcount: '235'
+ht-degree: 78%
 
 ---
 
 # Flusso per estensioni Edge
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nelle estensioni edge, ogni condizione, azione e tipo di elemento dati dispone di una vista mediante la quale gli utenti possono modificare le impostazioni e di un modulo libreria che agisce in base alle impostazioni definite dall&#39;utente.
 
@@ -29,6 +25,6 @@ Il flusso di elaborazione delle regole comprende le seguenti fasi:
 
 1. All’avvio, i metodi `settings` e `trigger` vengono trasmessi al modulo libreria di eventi.
 1. Quando il modulo libreria degli eventi determina che si è verificato un determinato evento, viene richiamato `trigger`.
-1. Experience Platform trasmette `settings` nei moduli libreria delle condizioni della regola in cui vengono valutate le condizioni.
+1. Experience Platform passa `settings` nei moduli libreria delle condizioni della regola in cui vengono valutate le condizioni.
 1. Ogni tipo di condizione restituisce se una condizione è stata valutata &quot;true&quot;.
-1. Se tutte le condizioni risultano “true”, le azioni della regola vengono eseguite.
+1. Se tutte le condizioni risultano soddisfatte, vengono eseguite le azioni della regola.

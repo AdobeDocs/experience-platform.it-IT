@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe ContextHub
 description: Scopri l’estensione tag Adobe ContextHub in Adobe Experience Platform.
 exl-id: 90700ce2-14fd-4d15-bbb8-98a8bbca5005
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 91%
+source-wordcount: '172'
+ht-degree: 100%
 
 ---
 
 # Panoramica dell’estensione Adobe ContextHub
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulla configurazione dell&#39;estensione Adobe ContextHub e sulle opzioni disponibili quando utilizzi questa estensione per generare una regola.
 
@@ -21,9 +17,9 @@ Utilizza questo riferimento per informazioni sulla configurazione dell&#39;esten
 
 Questa sezione fornisce un riferimento per le opzioni disponibili durante la configurazione dell&#39;estensione Adobe ContextHub.
 
-Se l’estensione Adobe ContextHub non è ancora installata, apri la proprietà, quindi seleziona **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore sull’estensione Adobe ContextHub e fai clic su **[!UICONTROL Installa]**.
+Se l’estensione Adobe ContextHub non è ancora installata, apri la proprietà, quindi seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione Adobe ContextHub e seleziona **[!UICONTROL Install]**.
 
-Per configurare l’estensione, apri la scheda [!UICONTROL Estensioni], passa il puntatore sull’estensione e fai clic su **[!UICONTROL Configura]**.
+Per configurare l’estensione, apri la scheda [!UICONTROL Extensions], passa il puntatore sull’estensione e seleziona **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-contexthub-config.png)
 
@@ -31,8 +27,8 @@ Seleziona il tipo ContextHub. Sono disponibili le seguenti configurazioni:
 
 ### Livello dati ContextHub predefinito
 
-Utilizza questa opzione se desideri che i tag facciano riferimento allo schema ContextHub predefinito per questa integrazione. Se hai apportato modifiche allo schema ContextHub o desideri utilizzare un livello di dati diverso, utilizza l&#39;opzione personalizzata.
+Utilizza questa opzione se desideri che i tag facciano riferimento allo schema ContextHub predefinito per questa integrazione. Se hai apportato modifiche allo schema ContextHub o desideri utilizzare un livello dati diverso, utilizza l’opzione personalizzata.
 
 ### Livello dati ContextHub personalizzato
 
-Utilizza questa opzione se hai modificato lo schema del livello di dati o se intendi modificarlo.
+Utilizza questa opzione se hai modificato lo schema del livello dati o se intendi modificarlo.

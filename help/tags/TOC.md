@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: c7bedcdb04d5c5483d0239a9fb99388d5e1e1fe5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '824'
 ht-degree: 43%
 
 ---
@@ -366,7 +366,5 @@ ht-degree: 43%
       * [Ricerca delle risorse](./api/guides/search.md)
       * [Segreti](./api/guides/secrets.md)
 * [Domande frequenti](./faq.md)
-* [Aggiornamenti terminologici](./term-updates.md)
-* [Supporto obsoleto per Internet Explorer 10 e 11](./ie-deprecation.md)
 * [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
 

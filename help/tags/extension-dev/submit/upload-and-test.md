@@ -2,18 +2,14 @@
 title: Caricare e implementare test end-to-end per un’estensione
 description: Scopri come convalidare, caricare e testare l’estensione in Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2299'
 ht-degree: 84%
 
 ---
 
 # Caricare e implementare test end-to-end
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per testare le estensioni dei tag in Adobe Experience Platform, utilizza l’API dei tag e/o strumenti per riga di comando per caricare i pacchetti di estensione. Quindi, utilizza l’interfaccia utente di Experience Platform o di Data Collection per installare il pacchetto di estensione in una proprietà ed esercitarne le funzionalità all’interno di una libreria di tag e di una build.
 
@@ -63,8 +59,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Per impostazione predefinita, lo strumento Uploader richiede le credenziali di Adobe I/O per un flusso OAuth da server a server. Le credenziali legacy di `jwt-auth`
-> &#x200B;> può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
-> &#x200B;> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> può essere utilizzato eseguendo `npx @adobe/reactor-uploader@v5.2.0` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
+> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
 Lo strumento di caricamento richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l&#39;organizzazione adatta dal menu a discesa, individua l&#39;integrazione corretta e seleziona **[!UICONTROL View]**.
 

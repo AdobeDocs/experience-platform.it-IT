@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '5425'
+source-wordcount: '5380'
 ht-degree: 82%
 
 ---
 
 # Panoramica dell’estensione Core
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’estensione tag Core è l’estensione predefinita rilasciata con Adobe Experience Platform.
 

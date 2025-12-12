@@ -2,18 +2,14 @@
 title: Browser supportati
 description: Elenco di più browser compatibili con un tag runtime di Adobe Experience Platform.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 87%
+source-wordcount: '97'
+ht-degree: 100%
 
 ---
 
 # Browser supportati
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Il runtime di tag in Adobe Experience Platform (consegnato ai siti web dei client) è compatibile con più browser:
 

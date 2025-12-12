@@ -2,18 +2,14 @@
 title: Ripubblicare una libreria
 description: Scopri come ripubblicare una libreria di tag precedente in Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 81%
+source-wordcount: '604'
+ht-degree: 80%
 
 ---
 
 # Ripubblicare una libreria
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Le cinque librerie più recenti pubblicate nell&#39;ambiente di produzione su una proprietà Web sono disponibili per un recupero successivo. Questa funzione è utile quando si trova un bug nella libreria di produzione e occorre eseguire immediatamente il rollback allo stato valido.
 
@@ -45,7 +41,7 @@ Questo significa che quando si ripubblica una libreria precedente:
 
 * La modalità con cui gli ambienti di sviluppo e di gestione temporanea calcolano ciò che è a monte non cambia
 
-Esamina lo scenario in cui esegui il roll back a causa di un problema con una regola specifica. La revisione della regola attualmente in produzione potrebbe, ad esempio, essere precedente a tre revisioni. Quando visualizzi questa regola nell’interfaccia utente per correggerla, vengono comunque riportate le ultime modifiche salvate, anziché le modifiche attualmente in produzione.
+Esamina lo scenario in cui esegui il ripristino della versione precedente a seguito di un problema con una regola specifica. La revisione della regola attualmente in produzione potrebbe, ad esempio, essere precedente a tre revisioni. Quando visualizzi questa regola nell’interfaccia utente per correggerla, vengono comunque riportate le ultime modifiche salvate, anziché le modifiche attualmente in produzione.
 
 Per questo motivo, Experience Platform notifica che una proprietà è in stato di ripubblicazione per ricordare che ciò che visualizzi nell’interfaccia utente di Data Collection è un po’ più lontano dalla produzione rispetto al solito. Questa notifica può essere eliminata e viene visualizzata una volta per ogni sessione del browser la prima volta che visualizzi la proprietà.
 
@@ -57,7 +53,7 @@ Dalla schermata Pubblicazione:
 
 1. Trova nella colonna Pubblicato la libreria che desideri ripubblicare.
 1. Seleziona i puntini di sospensione (`...`) nell&#39;angolo superiore destro della scheda Libreria.
-1. Seleziona **[!UICONTROL Ripubblica]**.
+1. Seleziona **[!UICONTROL Republish]**.
 
 ## Scarica
 
@@ -71,4 +67,4 @@ Dalla schermata Pubblicazione:
 
 1. Trova nella colonna Pubblicato la libreria che desideri scaricare.
 1. Seleziona i puntini di sospensione (`...`) nell&#39;angolo superiore destro della scheda Libreria.
-1. Seleziona **[!UICONTROL Scarica]**.
+1. Seleziona **[!UICONTROL Download]**.

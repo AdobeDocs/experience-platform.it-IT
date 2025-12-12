@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Cloud Connector
 description: Scopri l’estensione di inoltro degli eventi Cloud Connector in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 75%
+source-wordcount: '1636'
+ht-degree: 74%
 
 ---
 
 # Panoramica dell’estensione Cloud Connector
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’estensione di inoltro degli eventi Cloud Connector consente di creare richieste HTTP personalizzate per l’invio di dati a una destinazione o il recupero di dati da una destinazione. L’estensione Cloud Connector è simile a Postman su Adobe Experience Platform Edge Network e può essere utilizzata per inviare dati a un endpoint che non ha ancora un’estensione dedicata.
 
@@ -95,7 +91,7 @@ Nella tabella seguente sono elencate le intestazioni predefinite. Non sei limita
 | [Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Indica la parte di un documento che il server deve restituire. |
 | [Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | Indirizzo della pagina web precedente dalla quale un collegamento ha portato alla pagina richiesta. |
 | TE | Specifica le codifiche di trasferimento che l’agente utente è disposto ad accettare, anche chiamato `Accept-Transfer-Encoding` in modo in modo più informale e intuitivo. |
-| Esegui l&#39;aggiornamento | Il documento RFC pertinente per il campo dell&#39;intestazione [`Upgrade` è RFC 7230, sezione 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Lo standard stabilisce regole per l&#39;aggiornamento o la modifica a un protocollo diverso sulla connessione corrente client, server e protocollo di trasporto. Ad esempio, questo standard di intestazione consente a un client di passare da HTTP 1.1 a HTTP 2.0, sempre che il server decida di riconoscere e implementare il campo dell&#39;intestazione `Upgrade`. Nessuna delle parti è tenuta ad accettare i termini specificati nel campo dell&#39;intestazione `Upgrade`. Può essere utilizzato nelle intestazioni client e server. Se il campo dell&#39;intestazione `Upgrade` è specificato, il mittente DEVE anche inviare il campo dell&#39;intestazione `Connection` con l&#39;opzione `upgrade` specificata. |
+| Aggiornamento | Il documento RFC pertinente per il campo dell&#39;intestazione [`Upgrade` è RFC 7230, sezione 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Lo standard stabilisce regole per l&#39;aggiornamento o la modifica a un protocollo diverso sulla connessione corrente client, server e protocollo di trasporto. Ad esempio, questo standard di intestazione consente a un client di passare da HTTP 1.1 a HTTP 2.0, sempre che il server decida di riconoscere e implementare il campo dell&#39;intestazione `Upgrade`. Nessuna delle parti è tenuta ad accettare i termini specificati nel campo dell&#39;intestazione `Upgrade`. Può essere utilizzato nelle intestazioni client e server. Se il campo dell&#39;intestazione `Upgrade` è specificato, il mittente DEVE anche inviare il campo dell&#39;intestazione `Connection` con l&#39;opzione `upgrade` specificata. |
 | [Utente-agente](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) | Contiene una stringa caratteristica che consente ai peer del protocollo di rete di identificare il tipo di applicazione, il sistema operativo, il fornitore di software o la versione del software dell&#39;agente utente del software richiedente. |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Vengono aggiunti dai proxy, sia forward che reverse proxy, e possono essere visualizzati nelle intestazioni delle richieste e delle risposte. |
 | [Avvertenza](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Informazioni generali di avviso sui possibili problemi. |

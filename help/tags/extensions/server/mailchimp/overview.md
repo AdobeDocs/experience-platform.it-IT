@@ -7,18 +7,14 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 5%
+source-wordcount: '1205'
+ht-degree: 2%
 
 ---
 
 # Panoramica dell’estensione per l’inoltro di eventi Mailchimp
-
->[!NOTE]
->  
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=it) come riferimento consolidato delle modifiche terminologiche.
 
 L&#39;estensione Mailchimp [event forwarding](../../../ui/event-forwarding/overview.md) invia eventi all&#39;API Mailchimp Marketing che può attivare le e-mail per campagne di marketing, percorsi o transazioni Mailchimp.
 

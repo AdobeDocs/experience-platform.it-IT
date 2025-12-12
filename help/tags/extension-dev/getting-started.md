@@ -2,18 +2,14 @@
 title: Guida introduttiva allo sviluppo delle estensioni
 description: Introduzione allo sviluppo di estensioni tag in Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: 077d3ac5a34f052ef6293927d67e3cc8afb27563
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 80%
+source-wordcount: '465'
+ht-degree: 73%
 
 ---
 
 # Guida introduttiva allo sviluppo delle estensioni
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per imparare a creare estensioni, utilizzeremo lo strumento di scaffolding open source, fornito da ingegneri Adobe per creare i file e la struttura di file necessari per il pacchetto di estensione. Non ti resterà quindi che occuparti della parte importante: scrivere di fatto il codice.
 
@@ -52,7 +48,7 @@ Lo strumento di scaffolding fornirà quindi le opzioni per la creazione della st
 
 * [Vista di configurazione dell’estensione](./configuration.md): vista (file HTML) attraverso la quale un’estensione raccoglie le impostazioni globali fornite da un utente.
 * [Tipi di evento](./web/event-types.md): definisce un’attività da monitorare. Ad esempio, è utile per sapere quando un utente scorre rapidamente la pagina o interagisce con un suo elemento. Gli eventi possono quindi essere utilizzati nelle regole per eseguire delle azioni.
-* [Tipi di condizione](./web/condition-types.md): i tipi di condizione controllano se un elemento è vero o falso. Ad esempio, è utile per sapere se l’utente utilizza il browser Chrome, se usa un iPad o se si trova su un dominio specifico.
+* [Tipi di condizione](./web/condition-types.md): i tipi di condizione controllano se un elemento è vero o falso. Ad esempio, questo può restituire se il browser dell’utente è Chrome, se sta utilizzando un iPad o se l’utente si trova su un dominio specifico.
 * [Tipi di azione](./web/action-types.md): l’azione da eseguire quando si verifica un evento. Ad esempio, si può inviare un beacon di analisi, mostrare un’offerta, salvare un cookie o aprire una chat di supporto.
 * [Tipi di elementi dati](./web/data-element-types.md): un tipo di elemento dati recupera dei dati. Questi possono provenire dall’archivio locale, da un cookie, da un elemento DOM o da uno specifico percorso.
 * [Moduli condivisi](./web/shared.md) (solo Web): un modulo condiviso è un meccanismo mediante il quale le estensioni possono comunicare con altre estensioni.

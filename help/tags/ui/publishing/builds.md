@@ -2,18 +2,14 @@
 title: Build
 description: Scopri il concetto di build e come queste funzionano in Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '746'
 ht-degree: 86%
 
 ---
 
 # Build
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Una build è il set di file contenente tutto il codice che viene eseguito sul dispositivo client.
 
@@ -27,7 +23,7 @@ Una libreria definisce un set discreto di risorse tag (estensioni, regole ed ele
 
 Una build contiene tutto il codice del modulo (fornito dagli sviluppatori dell’estensione) e la configurazione (inserita dall’utente) necessaria per abilitare le risorse contenute nella libreria. Ad esempio, se un’estensione fornisce azioni non utilizzate nelle tue regole, il codice per eseguire tali azioni non è contenuto nella build.
 
-Le Build sono suddivise nel file della libreria principale e in molti file di dimensioni più ridotte. Il file della libreria principale è menzionato nel tuo codice di incorporamento e caricato sulla pagina in fase di esecuzione. Contiene:
+Le Build sono suddivise nel file della libreria principale e in molti file di dimensioni più ridotte. Il file della libreria principale è menzionato nel tuo codice da incorporare e caricato sulla pagina in fase di esecuzione. Contiene:
 
 * Il motore regole
 * Tutte le configurazioni Extension

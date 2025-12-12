@@ -2,18 +2,14 @@
 title: Rilasciare un’estensione
 description: Scopri come rilasciare un’estensione tag in Adobe Experience Platform in modo privato o pubblico.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 64%
+source-wordcount: '433'
+ht-degree: 60%
 
 ---
 
 # Rilasciare un’estensione
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Una volta completati i test e la documentazione, l’estensione è pronta per il rilascio. Attualmente è possibile eseguire due tipi di rilascio:
 
@@ -38,8 +34,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > Per impostazione predefinita, il releaser richiede le credenziali di Adobe I/O per un flusso OAuth da server a server. Le credenziali legacy di `jwt-auth`
-> &#x200B;> può essere utilizzato eseguendo `npx @adobe/reactor-releaser@v3.1.3` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
-> &#x200B;> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> può essere utilizzato eseguendo `npx @adobe/reactor-releaser@v3.1.3` fino a quando non diventerà obsoleto il 1° gennaio 2025. Parametri richiesti
+> per eseguire la versione `jwt-auth` è possibile trovare [qui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 Il releaser richiede di inserire solo alcune informazioni. È possibile recuperare `clientId` e `clientSecret` dalla console Adobe I/O. Passa alla [pagina Integrations](https://console.adobe.io/integrations) (Integrazioni) nella console di I/O. Seleziona l&#39;organizzazione adatta dal menu a discesa, individua l&#39;integrazione corretta e seleziona **[!UICONTROL View]**.
 

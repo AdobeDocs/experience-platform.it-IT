@@ -2,18 +2,14 @@
 title: Panoramica sulla pubblicazione
 description: Scopri come pubblicare le modifiche apportate alle librerie dei codici di gestione dei tag in Adobe Experience Platform.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '565'
 ht-degree: 95%
 
 ---
 
 # Panoramica sulla pubblicazione
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Adobe Experience Platform consente di incorporare le modifiche al codice di gestione dei tag all’interno di singole librerie. Dal momento che più librerie possono essere sviluppate in parallelo da parte di team diversi, è importante seguire uno specifico processo basato su autorizzazioni al fine di unire le modifiche prima di inviarle all’ambiente di produzione.
 
@@ -23,7 +19,7 @@ Al livello di base, ogni libreria è soggetta al seguente processo di pubblicazi
 1. Se necessario, verifica la funzionalità della libreria in un ambiente di staging.
 1. Implementa la libreria nell’ambiente di produzione.
 
-Considera una situazione di creazione di un nuovo evento “Vai alla cassa”, crea un elemento dati sulle entrate relativo a tale evento e modifica la configurazione dell’estensione Adobe Analytics per supportare il nuovo evento e il nuovo elemento dati. Puoi includere tutte queste modifiche in una nuova libreria e utilizzare il processo di pubblicazione per testarle, approvarle e pubblicarle come una singola unità.
+Considera una situazione di creazione di un nuovo evento “Pagamento”, crea un elemento dati sulle entrate relativo a tale evento e modifica la configurazione dell’estensione Adobe Analytics per supportare il nuovo evento e il nuovo elemento dati. Puoi includere tutte queste modifiche in una nuova libreria e utilizzare il processo di pubblicazione per testarle, approvarle e pubblicarle come una singola unità.
 
 Per una panoramica di alto livello del flusso di lavoro di pubblicazione delle librerie, con informazioni su come queste ereditano le risorse dalle build precedenti in base al loro stato di pubblicazione, consulta la [guida al flusso di pubblicazione](./publishing-flow.md).
 

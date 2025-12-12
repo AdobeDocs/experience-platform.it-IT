@@ -2,18 +2,14 @@
 title: Moduli libreria nelle estensioni Web
 description: Scopri come formattare i moduli libreria per le estensioni Web in Adobe Experience Platform.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 94%
+source-wordcount: '327'
+ht-degree: 99%
 
 ---
 
 # Moduli libreria nelle estensioni web
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 >[!IMPORTANT]
 >

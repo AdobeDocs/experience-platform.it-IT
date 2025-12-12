@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Target v2
 description: Scopri le caratteristiche dell’estensione Tag di Adobe Target v2 in Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 88%
+source-wordcount: '1298'
+ht-degree: 87%
 
 ---
 
 # Panoramica dell’estensione Adobe Target v2
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulle opzioni disponibili quando utilizzi questa estensione per creare una regola.
 
@@ -23,9 +19,9 @@ Utilizza questo riferimento per informazioni sulle opzioni disponibili quando ut
 >
 >L’estensione Adobe Target richiede At.js 2.x.
 
-Se l’estensione Adobe Target non è ancora installata, apri la proprietà, quindi seleziona **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore sull’estensione Target e fai clic su **[!UICONTROL Installa]**.
+Se l’estensione Adobe Target non è ancora installata, apri la tua proprietà, quindi seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione Target e seleziona **[!UICONTROL Install]**.
 
-Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore sull’estensione e fai clic su **[!UICONTROL Configura]**.
+Per configurare l’estensione, apri la scheda Estensioni, passa il puntatore sull’estensione e seleziona **[!UICONTROL Configure]**.
 
 ![](../../../images/targetv2config.png)
 
@@ -47,9 +43,9 @@ Questo ID collega l&#39;implementazione al tuo account Adobe Experience Cloud. Q
 
 Il dominio del server fa riferimento al dominio in cui vengono inviate le richieste Target. Questo valore dovrebbe essere quasi sempre lasciato come predefinito.
 
-#### Consenso RGPD
+#### Consenso GDPR
 
-Quando abilitato, Adobe Target fornisce funzionalità opt-in per supportare la strategia di gestione del consenso. La funzionalità opt-in consente ai clienti di controllare come e quando viene attivato il tag di Target. Per ulteriori informazioni sul consenso di Adobe, consulta [Privacy e Regolamento generale sulla protezione dei dati (RGPD)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=it).
+Quando abilitato, Adobe Target fornisce funzionalità opt-in per supportare la strategia di gestione del consenso. La funzionalità opt-in consente ai clienti di controllare come e quando viene attivato il tag di Target. Per ulteriori informazioni sul consenso di Adobe, consulta [Privacy e Regolamento generale sulla protezione dei dati (GDPR)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=it).
 
 #### Timeout (ms)
 
@@ -98,7 +94,7 @@ Questo tipo di azione consente a Target di attivare una richiesta al caricamento
 Specifica se abilitare la funzione per nascondere l’elemento “body”, in modo da evitare lo sfarfallio iniziale della pagina, e lo stile utilizzato per nasconderlo. Sono disponibili le seguenti opzioni:
 
 * **Nascondi corpo:** puoi abilitare o disabilitare questa impostazione. Il valore predefinito è Enabled: ciò significa che HTML BODY è nascosta.
-* **Stile corpo nascosto:** il valore predefinito è body{opacity:0}. Questo valore può essere modificato in uno diverso, ad esempio body{display:none}.
+* **Stile corpo nascosto:** Il valore predefinito è body{opacity:0}. Questo valore può essere modificato in un valore diverso, ad esempio body{display:none}.
 
 Per ulteriori informazioni, consulta la [documentazione online di Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=it).
 
@@ -129,7 +125,7 @@ In implementazioni asincrone, la pagina può terminare il rendering del contenut
 
 Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza lo snippet per nascondere il contenuto:
 
-* Lo snippet deve essere aggiunto prima di caricare il codice di incorporamento dell’intestazione del tag.
+* Lo snippet deve essere aggiunto prima di caricare il codice da incorporare dell’intestazione del tag.
 * Questo codice non può essere gestito dai tag, pertanto deve essere aggiunto direttamente alla pagina.
 * La pagina viene visualizzata quando si verifica il primo degli eventi seguenti:
    * Quando è stata ricevuta la risposta di caricamento della pagina

@@ -2,18 +2,14 @@
 title: Note sulla versione per l’estensione Adobe Target v2
 description: Note sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 42%
+source-wordcount: '788'
+ht-degree: 41%
 
 ---
 
 # Note sulla versione dell’estensione Adobe Target v2
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## v0.20.3 (23 gennaio 2024)
 
@@ -34,7 +30,7 @@ ht-degree: 42%
 
 - Aggiornato per supportare `at.js` 2.11.0.
 - È stato aggiunto il supporto per l’impostazione di sandboxId e sandboxName personalizzati per Adobe Experience Platform in targetGlobalSettings, che verranno trasmessi all’API di consegna nelle chiamate getOffer/getOffers.
-- Correzione DOM shadow per il concatenamento :eq() nel selettore.
+- Correzione DOM shadow per concatenamento :eq() nel selettore.
 
 ## v0.19.3 (18 settembre 2023)
 
@@ -150,7 +146,7 @@ ht-degree: 42%
 ## v0.12.0 (10 ottobre 2019)
 
 - Aggiornamento di `at.js` a v2.2.
-- Sono state migliorate le prestazioni per le integrazioni tra la libreria Experience Cloud ID (ECID) v4.4 e `at.js` 2.2.
+- Migliorate le prestazioni per le integrazioni tra la libreria Experience Cloud ID (ECID) v4.4 e `at.js` 2.2.
 - In precedenza, la libreria ECID effettuava due chiamate di blocco prima che `at.js` potesse recuperare le esperienze. Ora effettua una sola chiamata, migliorando notevolmente le prestazioni.
 
 >[!NOTE]

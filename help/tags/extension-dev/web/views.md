@@ -2,18 +2,14 @@
 title: Visualizzazioni nelle estensioni web
 description: 'Scopri come definire le viste per i moduli libreria nelle estensioni Web Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
+source-wordcount: '2103'
 ht-degree: 91%
 
 ---
 
 # Viste nelle estensioni Web
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Ogni evento, condizione, azione o tipo di elemento dati può offrire una vista mediante la quale l’utente potrà specificare alcune impostazioni. L’estensione può anche avere una [vista di livello superiore per la configurazione dell’estensione](../configuration.md), mediante la quale gli utenti possono specificare impostazioni globali per tutta l’estensione. Il processo di creazione è identico per tutti i tipi di vista.
 
@@ -76,7 +72,7 @@ Il metodo `init` verrà richiamato dai tag non appena la vista sarà stata caric
 | `company` | Oggetto contenente `orgId` (il tuo Adobe Experience Cloud ID di 24 caratteri), `id` (l&#39;identificatore univoco della tua azienda nell&#39;API di Reactor) e `tenantId` (l&#39;identificatore univoco di un&#39;organizzazione nel sistema Identity Management di Adobe). |
 | `schema` | Oggetto in formato [JSON Schema](https://json-schema.org/). Questo oggetto proviene dal [manifesto dell’estensione](../manifest.md) e può essere utile per convalidare il modulo. |
 | `apiEndpoints` | Oggetto contenente `reactor` che contiene un riferimento all&#39;indirizzo Web dell&#39;API di Reactor. |
-| `userConsentPermissions` | Oggetto contenente i flag di consenso dai [dati di utilizzo del prodotto](https://experienceleague.adobe.com/it/docs/core-services/interface/features/account-preferences#product-usage-data) di Adobe. Utilizza il flag archiviato in `globalDataCollectionAndUsage` per capire se l&#39;estensione può raccogliere *qualsiasi* dati cliente. |
+| `userConsentPermissions` | Oggetto contenente i flag di consenso dai [dati di utilizzo del prodotto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) di Adobe. Utilizza il flag archiviato in `globalDataCollectionAndUsage` per capire se l&#39;estensione può raccogliere *qualsiasi* dati cliente. |
 | `preferredLanguages` | Matrice di stringhe di lingua. |
 
 La tua vista deve utilizzare queste informazioni per riprodurre e gestire il modulo. Probabilmente dovrai usare solo `info.settings`, ma le altre informazioni vengono fornite nel caso siano necessarie.
@@ -137,7 +133,7 @@ Quando si richiama questo metodo, verrà visualizzata una finestra modale che co
 | Proprietà | Descrizione |
 | --- | --- |
 | `pattern` | Pattern di espressione regolare da utilizzare come valore iniziale del campo del pattern all’interno del tester. Questo generalmente viene fornito quando l’utente modifica un’espressione regolare esistente. In caso contrario, inizialmente il campo del pattern sarà vuoto. |
-| `flags` | Flag di espressione regolare che devono essere utilizzati dal tester. Ad esempio, `gi` potrebbe indicare il flag di corrispondenza globale e il flag di esclusione della distinzione tra maiuscole e minuscole. Questi flag non possono essere modificati dall’utente nel tester, ma vengono utilizzati per dimostrare i flag specifici che l’estensione utilizzerà durante l’esecuzione dell’espressione regolare. Se non vengono speficati, nel test non verrà utilizzato alcun flag. Per ulteriori informazioni sui flag per espressioni regolari, consulta la [documentazione RegExp di MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Un esempio d’uso comune è dato da un’estensione che consente agli utenti di attivare o disattivare la distinzione tra maiuscole e minuscole per un’espressione regolare. In questo caso, generalmente l’estensione fornisce una casella di controllo nella vista dell’estensione che, se selezionata, attiva l’opzione per ignorare l’uso di lettere maiuscole o minuscole (rappresentata dal flag `i`). L’oggetto impostazioni salvato dalla vista deve indicare se la casella di controllo è stata selezionata, affinché il modulo libreria che esegue l’espressione regolare possa sapere se utilizzare il flag `i`. Inoltre, se la vista dell’estensione desidera aprire il tester delle espressioni regolari, se è stata selezionata la casella di controllo per ignorare l’uso di maiuscole/minuscole deve trasmettere il flag `i`. Questo consente all’utente di testare correttamente l’espressione regolare con l’opzione per ignorare l’uso di maiuscole/minuscole abilitata. |
+| `flags` | Flag di espressione regolare che devono essere utilizzati dal tester. Ad esempio, `gi` potrebbe indicare il flag di corrispondenza globale e il flag di esclusione della distinzione tra maiuscole e minuscole. Questi flag non possono essere modificati dall’utente nel tester, ma vengono utilizzati per dimostrare i flag specifici che l’estensione utilizzerà durante l’esecuzione dell’espressione regolare. Se non vengono speficati, nel test non verrà utilizzato alcun flag. Per ulteriori informazioni sui flag per espressioni regolari, consulta la [documentazione RegExp di MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Un esempio d’uso comune è dato da un’estensione che consente agli utenti di attivare o disattivare la distinzione tra maiuscole e minuscole per un’espressione regolare. In questo caso, generalmente l’estensione fornisce una casella di controllo nella vista dell’estensione che, se selezionata, abilita l’opzione per ignorare l’uso di lettere maiuscole o minuscole (rappresentata dal flag `i`). L’oggetto impostazioni salvato dalla vista deve indicare se la casella di controllo è stata selezionata, affinché il modulo libreria che esegue l’espressione regolare possa sapere se utilizzare il flag `i`. Inoltre, se la vista dell’estensione desidera aprire il tester delle espressioni regolari, se è stata selezionata la casella di controllo per ignorare l’uso di maiuscole/minuscole deve trasmettere il flag `i`. Questo consente all’utente di testare correttamente l’espressione regolare con l’opzione per ignorare l’uso di maiuscole/minuscole abilitata. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 

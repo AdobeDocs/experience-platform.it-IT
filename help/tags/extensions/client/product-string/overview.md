@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Analytics Product String
 description: Scopri l’estensione tag Adobe Analytics Product String in Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 96%
+source-wordcount: '470'
+ht-degree: 100%
 
 ---
 
 # Panoramica dell’estensione Adobe Analytics Product String
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 La variabile `products` traccia il modo in cui gli utenti interagiscono con i prodotti sul sito. Ad esempio, la variabile `products` può tracciare il numero di volte in cui un prodotto viene visualizzato, aggiunto al carrello, estratto e acquistato. Può anche tracciare l’efficacia delle categorie di merchandising sul sito.
 
@@ -81,7 +77,7 @@ Il parametro `price` nella stringa di prodotto [!DNL Adobe Analytics] deve rifle
 
 Se la tua implementazione utilizza eventi personalizzati o eVar per merchandising, procedi come segue:
 
-1. Seleziona il relativo pulsante **[!UICONTROL Aggiungi]**.
+1. Seleziona il relativo pulsante **[!UICONTROL Add]**.
 1. Scegli l’evento o l’eVar da impostare dal menu a discesa.
 1. Immetti il percorso della variabile corretta del livello dati utilizzando la stessa sintassi descritta sopra.
 
@@ -93,5 +89,5 @@ Questa azione deve essere seguita da un’azione “Adobe Analytics - Imposta va
 
 ### Requisiti
 
-* Un [livello dati](https://theblog.adobe.com/data-layers-buzzword-best-practice/) basato su oggetti con variabili per tutti i dati relativi al prodotto (ad esempio, ID prodotto, quantità, prezzo). Questa estensione non funziona con livelli dati basati sulla matrice.
+* Un [livello dati](https://theblog.adobe.com/data-layers-buzzword-best-practice/) basato su oggetti con variabili per tutti i dati relativi al prodotto (ad esempio, ID prodotto, quantità, prezzo). Questa estensione non funziona con livelli dati basati su array.
 * È necessario installare l’estensione [Adobe Analytics](../analytics/overview.md).

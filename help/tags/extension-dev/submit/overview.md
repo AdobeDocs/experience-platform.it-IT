@@ -2,18 +2,14 @@
 title: Panoramica del processo di invio delle estensioni
 description: Scopri i passaggi per inviare l’estensione Adobe Experience Platform dallo sviluppo al rilascio.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 93%
+source-wordcount: '186'
+ht-degree: 91%
 
 ---
 
 # Panoramica del processo di invio delle estensioni
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’invio di un’estensione al catalogo di raccolta dati in Adobe Experience Platform non è difficile come potrebbe sembrare. Questo documento fornisce una guida dettagliata all’invio dell’estensione, seguendo singole guide sequenziali. Per inviare l’estensione, è necessario completare i seguenti passaggi:
 

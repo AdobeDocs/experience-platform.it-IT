@@ -2,18 +2,14 @@
 title: Informazioni sulle operazioni lato client
 description: Scopri come gestire le operazioni tag sul lato client dell’app web o mobile.
 exl-id: 54c66066-93f7-4311-a255-0825055d0dec
-source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '131'
 ht-degree: 100%
 
 ---
 
 # Informazioni sulle operazioni lato client
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questa sezione contiene informazioni utili per la gestione delle operazioni tag lato client in Adobe Experience Platform.
 

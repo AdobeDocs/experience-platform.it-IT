@@ -2,18 +2,14 @@
 title: Panoramica sugli host
 description: Scopri le diverse opzioni di hosting disponibili in Adobe Experience Platform.
 exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
-source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 75%
+source-wordcount: '121'
+ht-degree: 81%
 
 ---
 
 # Panoramica sugli host
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Le estensioni, le regole e gli elementi di dati sono blocchi predefiniti. Quando desideri eseguire un&#39;operazione con l&#39;applicazione, questi blocchi predefiniti vengono aggiunti alle librerie e quindi la libreria viene &quot;creata&quot; in una build. Queste build vengono distribuite in una posizione ospitata.
 

@@ -2,18 +2,14 @@
 title: Guida alla risoluzione dei problemi dei tag
 description: Risposte alle domande più frequenti sui tag in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 78%
+source-wordcount: '987'
+ht-degree: 79%
 
 ---
 
 # Guida alla risoluzione dei problemi dei tag
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](./term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questo documento contiene le risposte alle domande più frequenti sui tag in Adobe Experience Platform.
 
@@ -53,15 +49,15 @@ I tag sono predisposti per soddisfare SOC-2 e Gramm-Leach-Bliley Act. I tag offr
 
 ## Quando posso effettuare il passaggio ai tag?
 
-Ora è il momento migliore per passare ai tag. Il processo di migrazione consente di copiare facilmente le proprietà di DTM nei tag. Abbiamo automatizzato quante più operazioni possibili (non occorre modificare il codice di incorporamento nelle pagine e è stata automatizzata la migrazione di regole ed elementi dati). Tuttavia è consigliabile eseguire test approfonditi.
+Ora è il momento migliore per passare ai tag. Il processo di migrazione consente di copiare facilmente le proprietà di DTM nei tag. Abbiamo automatizzato quante più operazioni possibili (non occorre modificare il codice da incorporare nelle pagine ed è stata automatizzata la migrazione di regole ed elementi dati). Tuttavia è consigliabile eseguire test approfonditi.
 
 ## I tag supportano le app a pagina singola e il mio framework preferito?
 
 Sì.  I tag offrono funzionalità flessibili che consentono agli utenti e agli sviluppatori di estensioni di raccogliere, gestire e distribuire dati nelle esperienze fornite da applicazioni a pagina singola o da siti o pagine Ajax-heavy. Ciò si applica a prescindere dalle preferenze del framework di sviluppo, Angular, React.js, Ember, Meteor, ecc.
 
-## I tag supportano i livelli di dati dinamici?
+## I tag supportano i livelli dati dinamici?
 
-Sì.  I tag includono un’estensione specializzata nell’ascolto delle modifiche nei livelli di dati dinamici.
+Sì.  I tag includono un’estensione specializzata nell’ascolto delle modifiche nei livelli dati dinamici.
 
 ## Quali tipi di evento sono supportati dai tag?
 
@@ -93,4 +89,4 @@ Per informazioni su come configurare un profilo di prodotto in Adobe Admin Conso
 
 ## Cosa succede se ho altre domande?
 
-Se hai altre domande, puoi chiedere nella [pagina della community di Adobe Experience Platform Data Collection](https://adobe.com/go/launchme) su Experience League oppure partecipare all&#39;[area di lavoro di Slack della community](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) per sviluppatori e argomenti sull&#39;implementazione tecnica.
+Se hai altre domande, puoi chiedere nella [pagina della community di Adobe Experience Platform Data Collection](https://adobe.com/go/launchme) su Experience League oppure partecipare all&#39;[area di lavoro Slack della community](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) per sviluppatori e argomenti sull&#39;implementazione tecnica.

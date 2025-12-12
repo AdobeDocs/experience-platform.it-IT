@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Analytics
 description: Scopri le caratteristiche dell’estensione tag di Adobe Analytics in Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2308'
+source-wordcount: '2263'
 ht-degree: 85%
 
 ---
 
 # Panoramica dell’estensione Adobe Analytics
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulla configurazione dell&#39;estensione Adobe Analytics e sulle opzioni disponibili quando utilizzi questa estensione per generare una regola.
 
@@ -361,7 +357,7 @@ Se lo desideri, configura gerarchie aggiuntive.
 
 #### Nome pagina
 
-Questo valore fa riferimento al nome di una determinata pagina e corrisponde alla variabile [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=it) in Analytics.
+Questo valore fa riferimento al nome di una determinata pagina e corrisponde alla variabile [`pageName`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
 
 >[!IMPORTANT]
 >

@@ -2,18 +2,14 @@
 title: Tipi di condizioni per le estensioni web
 description: Scopri come definire un modulo libreria di tipo condizione per un’estensione tag in una proprietà web.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 69%
+source-wordcount: '457'
+ht-degree: 70%
 
 ---
 
 # Tipi di condizioni per le estensioni web
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nel contesto di una regola, una condizione viene valutata dopo che si è verificato un evento. Tutte le condizioni devono restituire true affinché la regola possa continuare l’elaborazione. L’eccezione si verifica quando gli utenti inseriscono esplicitamente le condizioni in un bucket di &quot;eccezione&quot;, nel qual caso tutte le condizioni all’interno del bucket devono restituire false per consentire alla regola di continuare l’elaborazione.
 
@@ -29,7 +25,7 @@ Questo documento illustra come definire i tipi di condizioni per un’estensione
 
 I tipi di condizione sono in genere i seguenti:
 
-1. [view](./views.md) nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection che consente agli utenti di modificare le impostazioni per la condizione.
+1. [view](./views.md) visualizzata nell&#39;interfaccia utente di Experience Platform e nell&#39;interfaccia utente di Data Collection, che consente agli utenti di modificare le impostazioni per la condizione.
 2. Modulo libreria emesso all’interno della libreria runtime dei tag per interpretare le impostazioni e valutare una condizione.
 
 Un modulo libreria di tipo condizione ha un obiettivo: valutare se qualcosa è vero o falso. Sta a te definire ciò che verrà valutato.

@@ -2,18 +2,14 @@
 title: Note
 description: Scopri come aggiungere annotazioni testuali a determinate risorse tag in Adobe Experience Platform.
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 94%
+source-wordcount: '262'
+ht-degree: 100%
 
 ---
 
 # Note
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Le note sono annotazioni testuali che possono essere aggiunte ad alcune risorse tag in Adobe Experience Platform. Le note possono essere aggiunte alle seguenti risorse:
 
@@ -39,7 +35,7 @@ Le note sono commenti che non hanno alcun impatto sul comportamento delle risors
 
 Le risorse con note presentano una barra stretta sul lato destro dello schermo. La barra laterale include un&#39;icona per le note. Questa icona mostra il numero corrente di note associate alla risorsa.
 
-Seleziona **[!UICONTROL Note]** per espandere la barra a destra e visualizzare le note, a partire da quelle più recenti. Per aggiungere una nuova nota, scrivi il testo della nota nella casella in alto e seleziona **[!UICONTROL Aggiungi]**.
+Seleziona **[!UICONTROL Notes]** per espandere la barra a destra e visualizzare le note, a partire da quelle più recenti. Per aggiungere una nuova nota, scrivi il testo della nota nella casella in alto e seleziona **[!UICONTROL Add Note]**.
 
 ## Altro
 

@@ -2,9 +2,9 @@
 title: Implementazione asincrona
 description: Scopri come implementare in modo asincrono le librerie tag di Adobe Experience Platform nel tuo sito web.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 98%
 >id="platform_tags_asynchronous_deployment"
 >title="Implementazione asincrona"
 >abstract="Se questa opzione è abilitata, quando questo tag di script viene analizzato il browser inizia a caricare il file JavaScript, ma invece di attendere il caricamento e l’esecuzione della libreria, continua ad analizzare ed eseguire il rendering del resto del documento. Questo può migliorare le prestazioni della pagina web, ma ha importanti conseguenze in merito a come vengono eseguite determinate regole. Per informazioni, consulta la documentazione."
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per gli utenti di Adobe Experience Cloud, assumono sempre maggiore importanza sia le prestazioni, sia la possibilità di implementare le librerie JavaScript richieste dai prodotti Adobe senza che questo comporti alcun blocco del sistema. Strumenti come [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) consigliano agli utenti di modificare le modalità di implementazione delle librerie Adobe nei loro siti. Questo articolo spiega come utilizzare le librerie JavaScript di Adobe in modo asincrono.
 

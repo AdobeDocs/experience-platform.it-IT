@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Media Analytics (3.x SDK) for Audio and Video
 description: Scopri l’estensione tag Adobe Media Analytics (3.x SDK) for Audio and Video in Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '648'
 ht-degree: 93%
 
 ---
 
 # Panoramica di Adobe Media Analytics (3.x SDK) per estensioni audio e video
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questa documentazione per maggiori informazioni sull’installazione, la configurazione e l’implementazione dell’estensione Adobe Media Analytics (3.x SDK) for Audio and Video (estensione Media Analytics). Sono incluse le opzioni disponibili quando si utilizza questa estensione per generare una regola, insieme a esempi e collegamenti a campioni.
 
@@ -33,9 +29,9 @@ Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel proge
 
 ## Installa e configura l&#39;estensione MA
 
-* **Installazione:** per installare l’estensione MA, apri la proprietà dell’estensione, seleziona **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore del mouse sull’estensione **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]**, quindi seleziona **[!UICONTROL Installa]**.
+* **Installazione:** per installare l’estensione MA, apri la proprietà dell’estensione, seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** e seleziona **[!UICONTROL Install]**.
 
-* **Configurazione:** per configurare l’estensione MA, apri la scheda [!UICONTROL Estensioni], passa il puntatore del mouse sull’estensione, quindi fai clic su **[!UICONTROL Configura]**:
+* **Configurazione:** per configurare l’estensione MA, apri la scheda [!UICONTROL Extensions], passa il puntatore sull’estensione, quindi seleziona **[!UICONTROL Configure]**:
 
 ![Configurazione dell&#39;estensione MA](../../../images/ext-ma-config.png)
 
@@ -47,9 +43,9 @@ Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel proge
 | Application Version | Versione dell&#39;app/SDK del lettore multimediale |
 | Player Name | Nome del lettore multimediale in uso (ad esempio &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) |
 | Channel | Proprietà nome canale |
-| Debug Logging | Attiva o disattiva la registrazione |
-| Enable SSL | Attiva o disattiva l&#39;invio di ping su HTTPS |
-| Export APIs to Window Object | Attivare o disattivare l&#39;esportazione delle API di Media Analytics all&#39;ambito globale |
+| Debug Logging | Abilita o disabilita la registrazione |
+| Enable SSL | Abilita o disabilita l&#39;invio di ping su HTTPS |
+| Export APIs to Window Object | Abilita o disabilita l&#39;esportazione delle API di Media Analytics all&#39;ambito globale |
 | Variable Name | Una variabile utilizzata per esportare le API di Media Analytics sotto l&#39;oggetto `window` |
 
 **Promemoria:** l&#39;estensione MA richiede le estensioni [Analytics](../analytics/overview.md) ed [Experience Cloud ID](../id-service/overview.md). Devi aggiungere queste estensioni alla proprietà dell&#39;estensione e configurarle.
@@ -58,7 +54,7 @@ Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel proge
 
 ### Utilizzo da una pagina web/JS-app
 
-L’estensione MA esporta le API Media nell’oggetto finestra globale abilitando l’impostazione “Export APIs to Window Objects” nella pagina [!UICONTROL Configurazione]. Esporta le API sotto il nome della variabile configurato. Ad esempio, se il nome della variabile è configurato come `ADB` allora è possibile accedere alle API di Media tramite `window.ADB.Media`.
+L’estensione MA esporta le API di Media nell’oggetto finestra globale abilitando l’impostazione “Export APIs to Window Objects” nella pagina [!UICONTROL Configuration]. Esporta le API sotto il nome della variabile configurato. Ad esempio, se il nome della variabile è configurato come `ADB` allora è possibile accedere alle API di Media tramite `window.ADB.Media`.
 
 >[!IMPORTANT]
 >

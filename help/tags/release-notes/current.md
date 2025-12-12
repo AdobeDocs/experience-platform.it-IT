@@ -2,10 +2,10 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le più recenti note sulla versione relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 88%
+source-wordcount: '770'
+ht-degree: 87%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!IMPORTANT]
 >
->In questa pagina non verranno più fornite le note sulla versione per i tag e per l’inoltro di eventi. Per informazioni dettagliate sugli aggiornamenti per i tag e l’inoltro degli eventi, consulta le ultime [note sulla versione di Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it#data-collection).
+>In questa pagina non verranno più fornite le note sulla versione per i tag e per l’inoltro di eventi. Per informazioni dettagliate sugli aggiornamenti per i tag e l’inoltro degli eventi, consulta le ultime [note sulla versione di Adobe Experience Platform](/help/release-notes/latest/latest.md).
 
 ## 26 aprile 2023
 
@@ -68,7 +68,7 @@ Sono state rilasciate nuove estensioni:
 ## 27 luglio 2022
 
 * L’accesso alle funzionalità per tag e inoltro eventi viene ora gestito tramite Adobe Admin Console nella scheda Raccolta dati di Adobe Experience Platform. Per ulteriori informazioni, consulta la guida sulle [autorizzazioni della raccolta dati](../../collection/permissions.md).
-* Il supporto per Internet Explorer 10 e 11 è [obsoleto](../ie-deprecation.md).
+* Il supporto per Internet Explorer 10 e 11 è stato dichiarato obsoleto.
 
 ## 22 giugno 2022
 

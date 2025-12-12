@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Media Analytics for Audio and Video
 description: Scopri l’estensione tag Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '892'
 ht-degree: 97%
 
 ---
 
 # Panoramica dell’estensione Adobe Media Analytics for Audio and Video
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questa documentazione per avere maggiori informazioni sull&#39;installazione, la configurazione e l&#39;implementazione dell&#39;estensione Adobe Media Analytics for Audio and Video (estensione Media Analytics). Sono incluse le opzioni disponibili quando si utilizza questa estensione per generare una regola, insieme a esempi e collegamenti a campioni.
 
@@ -33,9 +29,9 @@ Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel proge
 
 ## Installa e configura l&#39;estensione MA
 
-* **Installa:** per installare l‘estensione MA, apri la proprietà dell’estensione, seleziona **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore del mouse sull’estensione **[!UICONTROL Adobe Media Analytics for Audio and Video]** e seleziona **[!UICONTROL Installa]**.
+* **Installazione:** per installare l’estensione MA, apri la proprietà dell’estensione, seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione **[!UICONTROL Adobe Media Analytics for Audio and Video]**, quindi seleziona **[!UICONTROL Install]**.
 
-* **Configura:** per configurare l’estensione MA, apri la scheda [!UICONTROL Estensioni], passa il puntatore sull’estensione, quindi seleziona **[!UICONTROL Configura]**:
+* **Configurazione:** per configurare l’estensione MA, apri la scheda [!UICONTROL Extensions], passa il puntatore sull’estensione, quindi seleziona **[!UICONTROL Configure]**:
 
 ![Configurazione dell&#39;estensione MA](../../../images/ext-va-config.jpg)
 
@@ -48,9 +44,9 @@ Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel proge
 | Player Name | Nome del lettore multimediale in uso (ad esempio &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) |
 | Channel | Proprietà nome canale |
 | Online Video Provider | Nome della piattaforma video online attraverso la quale il contenuto è distribuito |
-| Debug Logging | Attiva o disattiva la registrazione |
-| Enable SSL | Attiva o disattiva l&#39;invio di ping su HTTPS |
-| Export APIs to Window Object | Attivare o disattivare l&#39;esportazione delle API di Media Analytics all&#39;ambito globale |
+| Debug Logging | Abilita o disabilita la registrazione |
+| Enable SSL | Abilita o disabilita l&#39;invio di ping su HTTPS |
+| Export APIs to Window Object | Abilita o disabilita l&#39;esportazione delle API di Media Analytics all&#39;ambito globale |
 | Variable Name | Una variabile utilizzata per esportare le API di Media Analytics sotto l&#39;oggetto `window` |
 
 **Promemoria:** l&#39;estensione MA richiede le estensioni [Analytics](../analytics/overview.md) ed [Experience Cloud ID](../id-service/overview.md). Devi aggiungere queste estensioni alla proprietà dell&#39;estensione e configurarle.
@@ -59,7 +55,7 @@ Dopo aver incluso tutte e tre le estensioni precedentemente menzionate nel proge
 
 ### Utilizzo da una pagina web/JS-app
 
-L’estensione MA esporta le API MediaHeartbeat nell’oggetto finestra globale abilitando l’impostazione “Esporta API nell’oggetto finestra” nella pagina [!UICONTROL Configurazione]. Esporta le API sotto il nome della variabile configurato. Ad esempio, se il nome della variabile è configurato per essere `ADB` allora è possibile accedere a MediaHeartbeat tramite `window.ADB.MediaHeartbeat`.
+L&#39;estensione MA esporta le API MediaHeartbeat nella finestra oggetto globale abilitando l&#39;impostazione &quot;Export APIs to Window Object&quot; nella pagina [!UICONTROL Configuration]. Esporta le API sotto il nome della variabile configurato. Ad esempio, se il nome della variabile è configurato per essere `ADB` allora è possibile accedere a MediaHeartbeat tramite `window.ADB.MediaHeartbeat`.
 
 >[!IMPORTANT]
 >
@@ -174,7 +170,7 @@ L&#39;estensione MA espone i moduli condivisi `get-instance` e `media-heartbeat`
    ...
    ```
 
-1. Utilizzando l’istanza Media Heartbeat, segui la [documentazione JS Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=it) e la [documentazione API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) per implementare il tracciamento multimediale.
+1. Utilizzando l’istanza Media Heartbeat, segui la [documentazione JS Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) e la [documentazione API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) per implementare il tracciamento multimediale.
 
 >[!NOTE]
 >

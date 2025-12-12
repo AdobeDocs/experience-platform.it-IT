@@ -2,18 +2,14 @@
 title: Self-hosting delle librerie
 description: Scopri come implementare il self-hosting per le build delle librerie di tag in Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 90%
+source-wordcount: '446'
+ht-degree: 89%
 
 ---
 
 # Self-hosting delle librerie
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I tag in Adobe Experience Platform consentono la produzione di un set di file denominato [build](../builds.md). Questo insieme di file controlla il comportamento dell’applicazione in fase di esecuzione.
 

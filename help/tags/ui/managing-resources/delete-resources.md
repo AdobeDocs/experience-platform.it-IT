@@ -2,18 +2,14 @@
 title: Eliminare le risorse
 description: Scopri come eliminare le risorse tag in Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 90%
+source-wordcount: '512'
+ht-degree: 93%
 
 ---
 
 # Eliminare le risorse
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’eliminazione di una risorsa corrisponde alla rimozione permanente da Adobe Experience Platform. Se si desidera rimuovere una risorsa da una libreria di tag specifica, ma si desidera comunque che la risorsa sia disponibile per l&#39;utilizzo in altre librerie, vedere la guida in [rimozione di risorse da una libreria](remove-resources-from-library.md).
 
@@ -78,4 +74,4 @@ Prima di eliminare una risorsa è necessario rimuoverla da qualsiasi libreria ch
 
 ## Elimina una risorsa
 
-Nella vista elenco appropriata, seleziona la risorsa da eliminare, quindi fai clic su **[!UICONTROL Elimina]**.
+Nella vista elenco appropriata, seleziona la risorsa da eliminare, quindi fai clic su **[!UICONTROL Delete]**.

@@ -2,18 +2,14 @@
 title: Rimuovere risorse da una libreria
 description: Scopri come rimuovere le risorse da una libreria di tag.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 94%
+source-wordcount: '268'
+ht-degree: 100%
 
 ---
 
 # Rimuovere risorse da una libreria
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Quando non desideri più che una risorsa abbia effetto all&#39;interno di una build è necessario rimuoverla dalla libreria che la contiene e creare una nuova build.
 
@@ -47,7 +43,7 @@ La rimozione di risorse da una libreria di Produzione è il caso più complesso.
 
 1. Disattiva la risorsa.
    1. Seleziona la risorsa nella vista elenco.
-   1. Seleziona **[!UICONTROL Disabilita]**.
+   1. Seleziona **[!UICONTROL Disable]**.
 1. Crea una nuova libreria di Sviluppo.
 1. Aggiungi la versione `latest` della risorsa disabilitata.
 1. Salva e Genera.

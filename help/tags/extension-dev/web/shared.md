@@ -2,18 +2,14 @@
 title: Moduli condivisi nelle estensioni web
 description: Scopri come definire i moduli di libreria condivisa per le estensioni web in Adobe Experience Platform.
 exl-id: ec013a39-966c-43f3-bc36-31198990a17e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 71%
+source-wordcount: '218'
+ht-degree: 73%
 
 ---
 
 # Moduli condivisi nelle estensioni web
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [document](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Un modulo condiviso è un meccanismo mediante il quale è possibile comunicare con altre estensioni. Ad esempio, l’estensione A può caricare una parte di dati in modo asincrono e renderla disponibile all’estensione B tramite una [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), o promessa.
 

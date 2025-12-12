@@ -2,18 +2,14 @@
 title: Note sulla versione per l’estensione Adobe Media Analytics for Audio and Video
 description: Note aggiornate sulla versione per l’estensione tag Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 91%
+source-wordcount: '165'
+ht-degree: 100%
 
 ---
 
 # Note sulla versione di Adobe Media Analytics for Audio and Video
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 25 ottobre 2019
 

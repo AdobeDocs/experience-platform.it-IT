@@ -1,19 +1,15 @@
 ---
 title: Aggiornamenti delle estensioni
-description: Scopri come gli aggiornamenti dell’estensione vengono assemblati e rappresentati nel catalogo delle estensioni.
+description: Scopri come gli aggiornamenti delle estensioni vengono assemblati e rappresentati nel catalogo delle estensioni.
 exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 97%
+source-wordcount: '620'
+ht-degree: 100%
 
 ---
 
 # Aggiornamenti delle estensioni
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli sviluppatori di estensioni aggiungono continuamente nuove funzionalità e spesso ne correggono i bug. Questi aggiornamenti vengono assemblati in nuove versioni di un’estensione e sono resi disponibili nel catalogo come aggiornamenti.
 
@@ -25,7 +21,7 @@ Quando installi un&#39;estensione alla proprietà, viene installata la versione 
 
 ## Notifiche di aggiornamento
 
-Se hai installato un’estensione nella proprietà e nel catalogo è disponibile una versione più recente, sulla scheda dell’estensione nella pagina “Estensioni installate” compare il pulsante [!UICONTROL Aggiorna].
+Quando hai installato un&#39;estensione alla proprietà e una versione più recente è disponibile nel catalogo, sulla scheda dell&#39;estensione compare il pulsante [!UICONTROL Upgrade] quando visualizzi la pagina Estensioni installata.
 
 Quando effettui modifiche alle risorse fornite dalla stessa estensione, viene visualizzato anche un avviso.
 
@@ -41,11 +37,11 @@ Attualmente non è disponibile alcuna funzionalità per il downgrade dell&#39;es
 
 L’installazione di un aggiornamento è un’operazione praticamente identica alla prima installazione dell’estensione.
 
-1. Seleziona **[!UICONTROL Aggiorna]** per passare alla schermata [!UICONTROL Configurazione estensione].
+1. Seleziona **[!UICONTROL Upgrade]** per passare alla schermata [!UICONTROL Extension Configuration].
 1. Apporta le modifiche di configurazione desiderate.
-1. Seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Save]**.
 
-L’aggiornamento non viene eseguito fino a quando non premi **[!UICONTROL Salva]**. Prima di ciò, in qualsiasi momento, puoi fare clic su [!UICONTROL Annulla] e mantenere la versione attualmente installata. Se fai clic su **[!UICONTROL Salva]** non potrai più tornare indietro.
+L&#39;aggiornamento non viene eseguito fino a quando non premi **[!UICONTROL Save]**. Prima di ciò, in qualsiasi momento, puoi fare clic su [!UICONTROL Cancel] e mantenere la versione attualmente installata. Se fai clic su **[!UICONTROL Save]** non potrai più tornare indietro.
 
 Gli aggiornamenti delle estensioni non sono consentiti se disponi di una libreria nello stato `Approved` o `Submitted`. Questo perché la build successiva deve contenere la nuova versione dell’estensione. Per una libreria `Approved` o `Submitted`, la build successiva è la build di produzione. Tale build avrebbe esito negativo poiché non contiene la versione più recente, pertanto il flusso di lavoro consiste nel pubblicare o rifiutare le librerie nello stato `Approved` o `Submitted` _prima_ dell’aggiornamento dell’estensione.
 
@@ -55,10 +51,10 @@ Dopo aver installato l’estensione aggiornata nella proprietà, è necessario i
 
 Inoltre, aggiungere l&#39;estensione aggiornata alla libreria equivale ad [aggiungere qualsiasi altra modifica](../../publishing/libraries.md) a una libreria.
 
-Dalla schermata [!UICONTROL Modifica libreria], puoi utilizzare il pulsante “[!UICONTROL Aggiungi tutte le risorse modificate]” oppure puoi utilizzare il pulsante “[!UICONTROL Aggiungi una risorsa]” e selezionare la singola estensione aggiornata.
+Dalla schermata [!UICONTROL Edit Library] puoi usare il pulsante &quot;[!UICONTROL Add All Changed Resources]&quot; oppure selezionare il pulsante &quot;[!UICONTROL Add a Resource]&quot; e selezionare solo l&#39;estensione aggiornata.
 
 >[!TIP]
 >
->Per abilitare nuove funzionalità, gli sviluppatori di estensioni possono aggiungere nuovi elementi di configurazione alle viste delle estensioni. Se vengono generati errori di generazione dopo l&#39;aggiornamento a una nuova versione dell&#39;estensione, e sono stati isolati per tale estensione, la prima cosa da fare è passare alla pagina Configura e assicurarsi di salvare (anche se non hai modificato nulla). Quindi aggiungi la nuova modifica alla libreria e riprova con la generazione.
+>Per abilitare nuove funzionalità, gli sviluppatori di estensioni possono aggiungere nuovi elementi di configurazione alle viste delle estensioni.  Se vengono generati errori di generazione dopo l&#39;aggiornamento a una nuova versione dell&#39;estensione, e sono stati isolati per tale estensione, la prima cosa da fare è passare alla pagina Configura e assicurarsi di salvare (anche se non hai modificato nulla). Quindi aggiungi la nuova modifica alla libreria e riprova con la generazione.
 
 Dopo aver aggiunto l’aggiornamento dell’estensione alla libreria, puoi seguire i passaggi descritti in [Flusso di pubblicazione](../../publishing/publishing-flow.md) per pubblicare la libreria nell’ambiente di produzione.

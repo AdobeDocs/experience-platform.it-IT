@@ -2,20 +2,16 @@
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 58%
+source-wordcount: '1678'
+ht-degree: 57%
 
 ---
 
 # Note sulla versione dell’estensione Core
 
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
-
-## 25 settembre 2025
+## venerdì 25 settembre 2025
 
 v3.4.4
 
@@ -87,7 +83,7 @@ Nell&#39;elemento dati Valore condizionale sono state introdotte le seguenti mod
 * I valori numerici sono esposti come numeri nell’oggetto impostazioni.
 * Il valore condizionale non è più necessario in modo che possa comportarsi nello stesso modo del valore di fallback.
 
-## 17 settembre 2021
+## sabato 17 settembre 2021
 
 v3.1.1
 

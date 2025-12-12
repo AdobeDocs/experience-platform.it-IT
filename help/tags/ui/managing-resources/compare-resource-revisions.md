@@ -2,28 +2,24 @@
 title: Confrontare le revisioni delle risorse
 description: Scopri come visualizzare la cronologia delle revisioni per una risorsa tag in Adobe Experience Platform.
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 98%
+source-wordcount: '859'
+ht-degree: 100%
 
 ---
 
 # Confrontare le revisioni delle risorse
 
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
-
-Confronta le revisioni di risorse per visualizzare la cronologia di una singola risorsa. Puoi confrontare lo stato corrente della risorsa con le versioni precedenti, oppure la versione pubblicata di una risorsa con quella più recente salvata.
+Confronta le revisioni di risorse per visualizzare la cronologia di una singola risorsa.  Puoi confrontare lo stato corrente della risorsa con le versioni precedenti, oppure la versione pubblicata di una risorsa con quella più recente salvata.
 
 ## Avviare un confronto
 
-L&#39;avvio di un confronto è lo stesso per tutti i tipi di risorse. Apri la vista Modifica per una singola risorsa, quindi individua l’icona dei tre puntini accanto al pulsante **[!UICONTROL Salva]** per visualizzare le azioni disponibili per tale risorsa. Seleziona **[!UICONTROL Confronta revisioni]** dall’elenco.
+L&#39;avvio di un confronto è lo stesso per tutti i tipi di risorse. Apri la vista Modifica per una singola risorsa, quindi individua l&#39;icona dei tre puntini accanto al pulsante **[!UICONTROL Save]** per visualizzare le azioni disponibili per tale risorsa.  Seleziona **[!UICONTROL Compare Revisions]** dall&#39;elenco.
 
 ![Avvia un confronto per un&#39;estensione](../../images/compare-initiate-extension.png)
 
-Per le estensioni, puoi accedere alla vista dei dettagli facendo clic sul pulsante **[!UICONTROL Configura]** quando viene visualizzato l’elenco delle estensioni installate.  Per elementi e regole dati, selezionane uno dall&#39;elenco.
+Per le estensioni, puoi accedere alla vista dei dettagli facendo clic sul pulsante **[!UICONTROL Configure]** quando viene visualizzato l’elenco delle estensioni installate.  Per elementi e regole dati, selezionane uno dall&#39;elenco.
 
 ## Utilizzo della vista Confronto
 
@@ -33,7 +29,7 @@ A sinistra, puoi scegliere tra le revisioni esistenti da confrontare con &quot;P
 
 ![Confronto delle versioni dell&#39;estensione Analytics](../../images/compare-interpret-extension.png)
 
-Seleziona **[!UICONTROL Utilizza queste modifiche]** per copiare le impostazioni dalla revisione selezionata (a sinistra) alla versione più recente (a destra). Le impostazioni vengono copiate dalla precedente revisione alle ultime modifiche non salvate. Se desideri che queste modifiche rimangano invariate, fai clic su **[!UICONTROL Salva]** a seguito dell’uscita dalla vista Confronta.
+Seleziona **[!UICONTROL Use These Changes]** per copiare le impostazioni dalla revisione selezionata (a sinistra) alla versione più recente (a destra).  Le impostazioni vengono copiate dalla precedente revisione alle ultime modifiche non salvate.  Se desideri che queste modifiche rimangano invariate, accertati di **[!UICONTROL Save]** a seguito dell&#39;uscita dalla vista Confronto.
 
 >[!TIP]
 >Le singole risorse possono disporre sia attributi che di impostazioni. Queste impostazioni sono memorizzate come block JSON: un modo strutturato per archiviare i dati, ma sufficientemente flessibile da consentire agli sviluppatori di estensioni di mettere a disposizione tutte le attività necessarie per fare ciò che desiderano.

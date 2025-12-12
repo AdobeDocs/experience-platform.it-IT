@@ -2,18 +2,14 @@
 title: Manifesto dell’estensione
 description: Scopri come configurare un file manifest JSON che informi Adobe Experience Platform su come utilizzare correttamente l’estensione.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2607'
 ht-degree: 84%
 
 ---
 
 # Manifesto dell’estensione
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nella directory di base dell’estensione è necessario creare un file denominato `extension.json`. Contiene informazioni critiche sull’estensione che consentono a Adobe Experience Platform di utilizzarla correttamente. Alcuni contenuti sono creati secondo le regole [npm per `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -75,20 +71,20 @@ L’oggetto di configurazione deve essere strutturato nel modo seguente:
       <td><code>schema</code></td>
       <td>Oggetto dello <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto valido salvato dalla vista di configurazione dell’estensione. In quanto sviluppatore della vista di configurazione, devi assicurarti che tutti gli oggetti impostazioni salvati siano conformi a questo schema. Questo schema verrà utilizzato anche per la convalida quando gli utenti tenteranno di salvare i dati utilizzando i servizi di Experience Platform.<br><br>Esempio di un oggetto schema:
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       È consigliabile utilizzare uno strumento come <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> per verificare manualmente lo schema.</td>
     </tr>
@@ -135,20 +131,20 @@ La definizione di un tipo è un oggetto utilizzato per descrivere un tipo di eve
       <td><code>schema</code></td>
       <td>Oggetto con <a href="https://json-schema.org/">schema JSON</a> che descrive il formato di un oggetto impostazioni valido che può essere salvato dall’utente. Le impostazioni vengono generalmente configurate e salvate da un utente che utilizza l’interfaccia di Data Collection. In questi casi, la vista dell’estensione può eseguire i passaggi necessari per convalidare le impostazioni fornite dall’utente. Alcuni utenti preferiscono invece utilizzare direttamente le API dei tag senza l’ausilio di alcuna interfaccia utente. Lo scopo di questo schema è consentire ad Experience Platform di convalidare correttamente che gli oggetti impostazioni salvati dagli utenti siano in un formato compatibile con il modulo libreria che agirà in base all’oggetto impostazioni in fase di esecuzione, indipendentemente dall’utilizzo o meno di un’interfaccia utente.<br><br>Esempio di oggetto schema:<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       È consigliabile utilizzare uno strumento come <a href="https://www.jsonschemavalidator.net/">JSON Schema validator</a> per verificare manualmente lo schema.</td>
     </tr>

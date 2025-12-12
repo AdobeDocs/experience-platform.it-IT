@@ -2,18 +2,14 @@
 title: Panoramica degli host gestiti da Adobe
 description: Scopri l’opzione di hosting predefinita per la distribuzione delle build della libreria di tag in Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1129'
 ht-degree: 82%
 
 ---
 
 # Panoramica degli host gestiti da Adobe
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 L’impostazione predefinita per la distribuzione delle build delle librerie di tag in Adobe Experience Platform prevede l’utilizzo di host gestiti da Adobe. Quando si crea una nuova proprietà tramite l’interfaccia utente di Data Collection, viene creato automaticamente un host predefinito gestito da Adobe.
 
@@ -44,7 +40,7 @@ Quando si utilizzano gli host gestiti da Adobe, le build delle librerie sono mem
 
 ### Cache perimetrale {#edge}
 
-Lo scopo principale di una rete CDN è quello di distribuire in modo intelligente i contenuti ai server geograficamente più vicini agli utenti finali, per velocizzarne la trasmissione ai dispositivi client. A tal fine, le CDN rendono disponibili copie dei contenuti su server distribuiti geograficamente in tutto il mondo, o “nodi perimetrali”.
+Lo scopo principale di una rete CDN è quello di distribuire in modo intelligente i contenuti ai server geograficamente più vicini agli utenti finali, per velocizzarne il recupero da parte dei dispositivi client. A tal fine, le CDN rendono disponibili copie dei contenuti su server distribuiti geograficamente in tutto il mondo, o “nodi perimetrali”.
 
 Una volta che la build è stata implementata nell&#39;host gestito da Adobe, la rete CDN la distribuisce ai vari server centralizzati (origini). Questi a loro volta inviano copie della build a numerosi nodi perimetrali in tutto il mondo, dove vengono memorizzate nella cache. Le versioni cache della build memorizzate nei nodi perimetrali vengono quindi trasmesse ai dispositivi client.
 
@@ -96,8 +92,8 @@ La prima volta che crei una proprietà nell’interfaccia di Experience Platform
 >
 >Se l’host gestito da Adobe predefinito viene rimosso da tutti gli ambienti, sarà possibile eliminarlo. Se in un secondo tempo desideri ripristinarlo, puoi creare un nuovo host come descritto di seguito:
 >
->1. Seleziona la scheda **[!UICONTROL Host]** nella tua proprietà, quindi seleziona **[!UICONTROL Aggiungi host]**.
->1. Specifica un nome per l’host, seleziona **[!UICONTROL Gestito da Adobe]** come tipo di host, quindi seleziona **[!UICONTROL Salva]**.
+>1. Seleziona la scheda **[!UICONTROL Hosts]** della tua proprietà, quindi seleziona **[!UICONTROL Add Host]**.
+>1. Specifica un nome per l’host, seleziona il tipo **[!UICONTROL Managed by Adobe]**, quindi seleziona **[!UICONTROL Save]**.
 >
 >A questo punto puoi riassegnare gli ambienti all’host gestito da Adobe, in base alle tue esigenze.
 

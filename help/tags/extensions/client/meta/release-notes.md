@@ -1,18 +1,14 @@
 ---
 title: Note sulla versione per l’estensione Meta Pixel
 description: Note aggiornate sulla versione dell’estensione Meta Pixel in Adobe Experience Platform.
-source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 22%
+source-wordcount: '76'
+ht-degree: 0%
 
 ---
 
 # Note sulla versione dell’estensione Meta Pixel
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## 13 febbraio 2023
 

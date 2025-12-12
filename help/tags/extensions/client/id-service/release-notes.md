@@ -2,18 +2,14 @@
 title: Note sulla versione dell’estensione Adobe Experience Cloud Identity Service
 description: Note aggiornate sulla versione dell’estensione tag Adobe Experience Cloud Identity Service in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 75%
+source-wordcount: '643'
+ht-degree: 76%
 
 ---
 
 # Note sulla versione dell’estensione Adobe Experience Cloud Identity Service
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Cloud Identity Service. Per le note sulla versione di Experience Cloud Identity Service, consulta la [documentazione di Identity Service](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=it).
 
@@ -148,7 +144,7 @@ I dettagli dei valori dell’attributo sono reperibili su [web.dev](https://web.
 ### Estensione Experience Cloud ID 4.0.0
 
 * Aggiornamento visitor.js a 4.0
-* Sono state aggiunte opzioni di configurazione per il nuovo oggetto opt-in integrato. Le impostazioni Opt-In possono essere utilizzate per sopprimere cookie e le chiamate beacon di Adobe Solutions per supportare meglio normative come il RGPD.
+* Sono state aggiunte opzioni di configurazione per il nuovo oggetto opt-in incorporato. Le impostazioni Opt-In possono essere utilizzate per sopprimere cookie e le chiamate beacon di Adobe Solutions per supportare meglio normative come il GDPR.
 
   ![](../../../images/ext-mcid-opt-in.png)
 

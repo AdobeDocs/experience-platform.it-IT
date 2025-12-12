@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione per il tracciamento di video BrightCove
 description: Scopri l’estensione tag per il tracciamento di video BrightCove in Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 95%
+source-wordcount: '853'
+ht-degree: 97%
 
 ---
 
 # Panoramica dell’estensione per il tracciamento di video BrightCove
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## Prerequisiti
 
@@ -23,7 +19,7 @@ Per ogni proprietà in Adobe Experience Platform è necessario installare e conf
 * Servizio ID visitatore di Experience Cloud
 * Estensioni core installate
 
-Utilizza lo snippet di codice “In-Page embed code (Advanced)” nell’HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video. Lo snippet HTML “In-Page Embed code (Advanced)” si trova nella [documentazione di Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Il seguente collegamento fornisce ulteriori informazioni su [come generare codice da incorporare sia per i lettori video in anteprima che per quelli pubblicati](https://studio.support.brightcove.com/players/generating-player-embed-code.html).
+Utilizza lo snippet di codice da incorporare “In-Page embed code (Advanced)” nell’HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video. Lo snippet HTML “In-Page Embed code (Advanced)” si trova nella [documentazione di Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Il seguente collegamento fornisce ulteriori informazioni su [come generare codice da incorporare sia per i lettori video in anteprima che per quelli pubblicati](https://studio.support.brightcove.com/players/generating-player-embed-code.html).
 
 Questa versione dell’estensione 1.1.0 consente di incorporare più video BrightCove in una singola pagina web. Se all’interno dei tag di incorporamento avanzati sono presenti più proprietà `id`, accertati che ciascuna di esse disponga di valori univoci. Ad esempio, `player1`, `player2` e così via.
 

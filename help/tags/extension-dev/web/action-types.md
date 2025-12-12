@@ -2,18 +2,14 @@
 title: Tipi di azioni per le estensioni web
 description: Scopri come definire un modulo libreria di tipo azione per un’estensione tag in una proprietà web.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 70%
+source-wordcount: '367'
+ht-degree: 71%
 
 ---
 
 # Tipi di azioni per le estensioni web
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Nel contesto dei tag di raccolta dati, un’azione viene eseguita dopo che si è verificato un evento di regola e tutte le condizioni hanno superato la valutazione.
 

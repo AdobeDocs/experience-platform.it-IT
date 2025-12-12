@@ -2,18 +2,14 @@
 title: Panoramica dell’estensione Adobe Experience Platform Demo
 description: Scopri l’estensione Adobe Experience Platform Demo in Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 99%
+source-wordcount: '1009'
+ht-degree: 97%
 
 ---
 
 # Estensione Adobe Experience Platform Demo
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ Le funzioni di questa estensione verranno trasferite alla nuova estensione. Segu
 
 Questa sezione fornisce un riferimento per le opzioni disponibili durante la configurazione dell&#39;estensione Adobe Experience Platform.
 
-Se l’estensione Adobe Experience Platform non è ancora stata installata, apri la proprietà, quindi fai clic su **[!UICONTROL Estensioni > Catalogo]**, passa il puntatore sull’estensione Adobe Experience Platform e fai clic su **[!UICONTROL Installa]**.
+Se l’estensione Adobe Experience Platform non è ancora stata installata, apri la proprietà, quindi seleziona **[!UICONTROL Extensions > Catalog]**, passa il puntatore sull’estensione Adobe Experience Platform e seleziona **[!UICONTROL Install]**.
 
-Per configurare l’estensione, apri la scheda [!UICONTROL Estensioni], passa il puntatore sull’estensione e fai clic su **[!UICONTROL Configura]**.
+Per configurare l’estensione, apri la scheda [!UICONTROL Extensions], passa il puntatore sull’estensione e seleziona **[!UICONTROL Configure]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### Connessione streaming
 
-La scelta di una connessione in streaming è il primo passaggio che consente di avviare i dati in streaming ad Adobe Experience Platform. Puoi selezionarne uno dalla casella combinata per la connessione streaming. La connessione in streaming è un campo obbligatorio. Se non hai creato una connessione in streaming, puoi crearne una facendo clic sul pulsante **[!UICONTROL Crea una connessione in streaming]**.
+La scelta di una connessione in streaming è il primo passaggio che consente di avviare i dati in streaming ad Adobe Experience Platform. Puoi selezionarne uno dalla casella combinata per la connessione streaming. La connessione in streaming è un campo obbligatorio. Se non hai creato una connessione in streaming, puoi crearne una facendo clic sul pulsante **[!UICONTROL Create a streaming connection]**.
 
-Se selezioni **[!UICONTROL Crea una connessione in streaming]** verrà visualizzata una finestra modale.
+Selezionando **[!UICONTROL Create a streaming connection]** verrà visualizzata una finestra modale.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-La finestra modale contiene campi con valori precompilati che puoi modificare in base alle tue esigenze. Se prevedi di creare più di una connessione in streaming, tieni presente che il campo **[!UICONTROL Origine dati]** deve essere univoco. Il tentativo di creare un’altra connessione in streaming utilizzando una **[!UICONTROL Origine dati]** già in uso in un’altra connessione non avrà esito negativo.
+La finestra modale contiene campi con valori precompilati che puoi modificare in base alle tue esigenze. Se prevedi di creare più di una connessione in streaming, tieni presente che il campo **[!UICONTROL Data Source]** deve essere univoco. Se si tenta di creare un’altra connessione in streaming utilizzando un valore **[!UICONTROL Data Source]** già in uso, si verifica un errore.
 
 Una volta selezionato un endpoint di streaming, l&#39;URL dell&#39;endpoint di streaming e la sorgente saranno visualizzati.
 

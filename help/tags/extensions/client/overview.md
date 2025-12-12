@@ -2,18 +2,14 @@
 title: Riferimento estensioni tag
 description: Trova la documentazione relativa alle estensioni tag in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 12%
+source-wordcount: '427'
+ht-degree: 3%
 
 ---
 
 # Riferimento per le estensioni di tag
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Di seguito è riportato un elenco della documentazione per le estensioni tag lato client. Per un elenco delle estensioni disponibili lato server, consulta invece il [riferimento estensioni inoltro eventi](../server/overview.md).
 

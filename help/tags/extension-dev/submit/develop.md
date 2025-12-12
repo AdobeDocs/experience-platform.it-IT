@@ -2,18 +2,14 @@
 title: Sviluppare un’estensione
 description: Questo documento fornisce una panoramica generale del processo di sviluppo delle estensioni tag, con collegamenti verso la documentazione che descrive i processi in maggior dettaglio.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '391'
 ht-degree: 91%
 
 ---
 
 # Sviluppare un’estensione
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Un’estensione tag può essere considerata come un (piccolo) prodotto con requisiti propri. È utile determinare in che modo un utente di Adobe Experience Platform potrebbe voler utilizzare l’estensione, e definire quindi di conseguenza le funzionalità e i tipi di eventi, condizioni, azioni ed elementi dati che tale estensione dovrà fornire.
 

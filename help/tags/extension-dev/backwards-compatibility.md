@@ -2,18 +2,14 @@
 title: Standard di compatibilità con le versioni precedenti
 description: Scopri lo standard di compatibilità con le versioni precedenti di Adobe Experience Platform che garantisce la compatibilità delle versioni aggiornate delle estensioni dei tag con le versioni precedenti.
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 97%
+source-wordcount: '788'
+ht-degree: 100%
 
 ---
 
 # Standard di compatibilità con le versioni precedenti
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli aggiornamenti a un’estensione tag in Adobe Experience Platform devono essere compatibili con le versioni precedenti dell’estensione. Ciò significa che:
 

@@ -2,18 +2,14 @@
 title: Concedere l’accesso agli utenti
 description: Imposta gli account utente e le autorizzazioni dei tag dei membri del tuo team in Adobe Experience Platform.
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 27%
+source-wordcount: '171'
+ht-degree: 18%
 
 ---
 
 # Concedere l’accesso agli utenti
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Prima di iniziare a utilizzare `extension_package`, è necessario configurare i membri del gruppo con gli account utente e le autorizzazioni.  Puoi eseguire questa operazione in [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -23,4 +19,4 @@ Per consentire a un utente di accedere alle funzioni dei tag, un amministratore 
 
 ## Confermare il provisioning
 
-Dopo aver fornito all&#39;azienda l&#39;accesso ai tag e aver impostato gli utenti come descritto sopra, dovresti poter accedere all&#39;interfaccia utente di Data Collection e Experience Platform dal [dashboard di Adobe Experience Cloud](https://experience.adobe.com/). Se dopo aver completato i passaggi precedenti non riesci ancora ad accedere a nessuna delle due interfacce, contatta il team del tuo account Adobe o l’Assistenza clienti.
+Dopo aver fornito all&#39;azienda l&#39;accesso ai tag e aver impostato gli utenti come descritto sopra, dovresti poter accedere all&#39;interfaccia utente di Data Collection e a quella di Experience Platform dal [dashboard di Adobe Experience Cloud](https://experience.adobe.com/). Se dopo aver completato i passaggi precedenti non riesci ancora ad accedere a nessuna delle due interfacce, contatta il team del tuo account Adobe o l’Assistenza clienti.

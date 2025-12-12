@@ -2,18 +2,14 @@
 title: Elementi dati
 description: Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 90%
+source-wordcount: '1549'
+ht-degree: 89%
 
 ---
 
 # Elementi dati
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 
@@ -29,7 +25,7 @@ Il concetto di elementi dati riutilizzabili è molto potente e dovrebbe essere u
 
 Ad esempio, se usi un modo particolare per fare riferimento a nomi di pagina o ID prodotti, oppure per acquisire informazioni dai parametri delle stringhe query da un collegamento di affiliate marketing o da [!DNL AdWords] e così via, puoi creare un dizionario dati (elementi dati) ottenendo informazioni da origini diverse e quindi utilizzare tali dati in varie regole di tag.
 
-Utilizzando il nome della pagina come esempio, supponi di utilizzare uno schema specifico per il nome della pagina facendo riferimento a un livello di dati, un elemento `document.title` o un tag titolo all&#39;interno del sito Web. I tag in Adobe Experience Platform consentono di creare un elemento dati come singolo punto di riferimento per quel particolare punto di dati. Puoi quindi utilizzare questo elemento dati in qualsiasi regola che debba fare riferimento al nome della pagina. Se per qualche motivo decidi di cambiare il modo in cui si fa riferimento al nome della pagina (ad esempio, finora hai fatto riferimento a `document.title`, ma adesso vuoi farlo a un particolare livello di dati), non è necessario cambiare molte regole diverse per modificare tale riferimento. È sufficiente modificare il riferimento una volta nell&#39;elemento dati e tutte le regole che fanno riferimento a tale elemento dati vengono aggiornate automaticamente.
+Utilizzando il nome della pagina come esempio, supponi di utilizzare uno schema specifico per il nome della pagina facendo riferimento a un livello dati, un elemento `document.title` o un tag titolo all’interno del sito web. I tag in Adobe Experience Platform consentono di creare un elemento dati come singolo punto di riferimento per quel particolare punto di dati. Puoi quindi utilizzare questo elemento dati in qualsiasi regola che debba fare riferimento al nome della pagina. Se per qualche motivo decidi di cambiare il modo in cui si fa riferimento al nome della pagina (ad esempio, finora hai fatto riferimento a `document.title`, ma adesso vuoi farlo a un particolare livello dati), non è necessario cambiare molte regole diverse per modificare tale riferimento. È sufficiente modificare il riferimento una volta nell&#39;elemento dati e tutte le regole che fanno riferimento a tale elemento dati vengono aggiornate automaticamente.
 
 >[!NOTE]
 >
@@ -56,7 +52,7 @@ Puoi utilizzare gli elementi dati negli script personalizzati utilizzando la sin
 
 Gli elementi dati sono i blocchi di creazione per le regole. Gli elementi dati consentono di creare un dizionario dati (o mappa dati) degli elementi comunemente utilizzati su una pagina, indipendentemente da dove si trovano (stringhe, URL o valori cookie) per qualsiasi oggetto contenuto sul sito.
 
-1. Da una pagina Proprietà, apri la scheda [!UICONTROL Elementi dati], quindi seleziona **[!UICONTROL Crea nuovo elemento dati]**.
+1. Da una pagina Proprietà, apri la scheda [!UICONTROL Data Elements], quindi fai clic su **[!UICONTROL Create New Data Element]**.
 1. Denomina l&#39;elemento dati.
 1. Seleziona un&#39;estensione e digita.
 
@@ -85,9 +81,9 @@ Gli elementi dati sono i blocchi di creazione per le regole. Gli elementi dati c
    * Visitor
       * Il valore viene memorizzato indefinitamente nell&#39;archivio locale del browser.
 
-1. Seleziona **[!UICONTROL Salva]**.
+1. Seleziona **[!UICONTROL Save]**.
 
-Quando crei o modifichi elementi, puoi salvarli e generarli nella [libreria attiva](../publishing/libraries.md#active-library). In questo modo la tua libreria viene salvata immediatamente e viene eseguita una build. Viene visualizzato lo stato della build. Puoi anche creare una nuova libreria dal menu a discesa [!UICONTROL Libreria attiva].
+Quando crei o modifichi elementi, puoi salvarli e generarli nella [libreria attiva](../publishing/libraries.md#active-library). In questo modo la tua libreria viene salvata immediatamente e viene eseguita una build. Viene visualizzato lo stato della build. È inoltre possibile creare una nuova libreria dal menu a discesa [!UICONTROL Active Library].
 
 ## Tipi di elementi dati {#types-of-data-elements}
 
@@ -107,7 +103,7 @@ A qualsiasi cookie di dominio può essere fatto riferimento nel campo del nome d
 
 ### Custom Code
 
-Per inserire nell’interfaccia utente un codice JavaScript personalizzato, fai clic su [!UICONTROL Apri editor] e inserisci il codice nella finestra dell’editor.
+Nell&#39;interfaccia utente può essere inserito un JavaScript personalizzato facendo clic su [!UICONTROL Open Editor] e inserendo il codice nella finestra dell&#39;editor.
 
 Nella finestra dell&#39;editor è necessaria un&#39;istruzione return per indicare quale valore deve essere impostato come valore dell&#39;elemento dati. Se non è inclusa un’istruzione return, l’elemento dati viene risolto con `undefined`. In questo modo viene attivato il fallback per cercare un valore memorizzato e quindi un valore predefinito, qualora non sia presente alcun valore memorizzato.
 
@@ -184,7 +180,7 @@ Se utilizzi un oggetto raccolta dati come parte del livello dati, è sufficiente
 
 ### Local storage
 
-Immetti il nome dell’elemento di archiviazione locale nel campo [!UICONTROL Nome elemento di archiviazione locale].
+Immetti il nome dell&#39;elemento di archiviazione locale nel campo [!UICONTROL Local Storage Item Name].
 
 La memorizzazione locale offre ai browser un modo per memorizzare informazioni da pagina a pagina ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). L’archiviazione locale funziona in modo simile ai cookie, ma è molto più grande e flessibile.
 
@@ -205,9 +201,9 @@ Puoi selezionare uno dei seguenti attributi di pagina da utilizzare nell&#39;ele
 
 ### Query String Parameter
 
-Specifica un parametro URL singolo nel campo [!UICONTROL Parametro URL].
+Specifica un singolo parametro URL nel campo [!UICONTROL URL Parameter].
 
-È necessaria solo la sezione name ed eventuali designatori speciali come “?” o “=” devono essere omessi.
+È necessaria solo la sezione name ed eventuali designatori speciali come &quot;?&quot; o “=” devono essere omessi.
 
 #### Esempio:
 
@@ -232,7 +228,7 @@ Massimo: 1000000000
 
 ### Session storage
 
-Immetti il nome dell’elemento di archiviazione sessione nel campo [!UICONTROL Nome elemento di archiviazione sessione]
+Immetti il nome dell&#39;elemento di archiviazione sessione nel campo [!UICONTROL Session Storage Item Name].
 
 L&#39;archiviazione della sessione è simile all&#39;archiviazione locale, fatta eccezione per i dati che vengono eliminati al termine della sessione, mentre l&#39;archiviazione locale o un cookie potrebbero conservare i dati.
 
@@ -242,7 +238,7 @@ Simile a Informazioni pagina, questo elemento dati utilizza tipi di comportament
 
 Seleziona uno dei seguenti attributi di comportamento dei visitatori:
 
-* Landing page
+* Pagina di destinazione
 * Traffic source
 * Minutes on site
 * Session count

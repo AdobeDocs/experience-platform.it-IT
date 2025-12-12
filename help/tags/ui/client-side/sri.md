@@ -2,18 +2,14 @@
 title: Supporto di Subresource Integrity (SRI)
 description: Scopri come Subresource Integrity (SRI) è supportato in Adobe Experience Platform.
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 96%
+source-wordcount: '549'
+ht-degree: 100%
 
 ---
 
 # Supporto di Subresource Integrity (SRI)
-
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 In questo documento viene illustrato il supporto di Subresource Integrity (SRI) in Adobe Experience Platform.
 
@@ -36,19 +32,19 @@ Il processo di convalida dell’SRI può essere riassunto come segue:
 
 In qualità di sistema di gestione dei tag (TMS), i tag in Adobe Experience Platform forniscono una build della libreria JavaScript compilata da caricare sulle pagine con un singolo elemento `<script>` (codice da incorporare). La funzionalità dinamica offerta dal TMS si ottiene sostituendo i contenuti di tale script in modo dinamico, senza che sia necessario apportare ulteriori modifiche.
 
-Tuttavia, quando i contenuti dello script cambiano, cambia anche l’hash di crittografia dei contenuti. Pertanto, l’unico modo per far funzionare l’SRI con un TMS è aggiornare il codice di incorporamento nello stesso momento in cui si pubblica una nuova build. Per molti, questo è in contraddizione con lo scopo principale dell’utilizzo di un TMS.
+Tuttavia, quando i contenuti dello script cambiano, cambia anche l’hash di crittografia dei contenuti. Pertanto, l’unico modo per far funzionare l’SRI con un TMS è aggiornare il codice da incorporare nello stesso momento in cui si pubblica una nuova build. Per molti, questo è in contraddizione con lo scopo principale dell’utilizzo di un TMS.
 
 L’alternativa migliore per la sicurezza dei tag consiste nell’implementare un criterio di sicurezza del contenuto (CSP, Content Security Policy). Per ulteriori informazioni, consulta la guida su [CSP e tag](./content-security-policy.md).
 
 ## Integrazione dell’SRI nella distribuzione di build
 
-Se desideri utilizzare comunque l’SRI per le build delle librerie, dovrai utilizzare l’hosting autonomo. Se utilizzi un hosting gestito da Adobe, non puoi utilizzare l’SRI in mancanza di un periodo di tempo in cui i nuovi contenuti della build non corrispondono all’attributo `integrity` del codice di incorporamento.
+Se desideri utilizzare comunque l’SRI per le build delle librerie, dovrai utilizzare l’hosting autonomo. Se utilizzi un hosting gestito da Adobe, non puoi utilizzare l’SRI in mancanza di un periodo di tempo in cui i nuovi contenuti della build non corrispondono all’attributo `integrity` del codice da incorporare.
 
-L’automazione del processo di aggiornamento del codice di incorporamento varia a seconda della struttura del sito, ma i passaggi generali possono essere riassunti come segue:
+L’automazione del processo di aggiornamento del codice da incorporare varia a seconda della struttura del sito, ma i passaggi generali possono essere riassunti come segue:
 
 1. Recupera la build della libreria di produzione tramite la distribuzione SFTP o scaricando l’archivio dall’interfaccia utente.
 1. Genera l’hash di crittografia della build principale.
-1. Verifica che l’attributo `integrity` del codice di incorporamento sia aggiornato al nuovo hash e che la build di riferimento sia aggiornata come parte della stessa distribuzione.
+1. Verifica che l’attributo `integrity` del codice da incorporare sia aggiornato al nuovo hash e che la build di riferimento sia aggiornata come parte della stessa implementazione.
 
 >[!IMPORTANT]
 >

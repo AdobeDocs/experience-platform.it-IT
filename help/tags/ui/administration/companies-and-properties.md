@@ -2,18 +2,14 @@
 title: Proprietà
 description: Scopri come Adobe Experience Platform organizza e raggruppa le estensioni, gli ambienti e le librerie per la tua organizzazione.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1108'
 ht-degree: 90%
 
 ---
 
 # Proprietà
-
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## Proprietà web
 

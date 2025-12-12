@@ -3,10 +3,10 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri l’inoltro eventi in Adobe Experience Platform, che consente di utilizzare la rete Edge di Experience Platform per eseguire attività senza modificare l’implementazione dei tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 9%
+source-wordcount: '1144'
+ht-degree: 5%
 
 ---
 
@@ -16,11 +16,7 @@ ht-degree: 9%
 >
 >L’inoltro di eventi è una funzione a pagamento inclusa nelle offerte Adobe Real-Time Customer Data Platform Connections, Prime o Ultimate.
 
->[!NOTE]
->
->Con il suo rebranding, Adobe Experience Platform Launch è ora una suite di tecnologie per la raccolta dati all’interno di Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
-
-L’inoltro degli eventi in Adobe Experience Platform consente di inviare i dati degli eventi raccolti a una destinazione per l’elaborazione lato server. L’inoltro di eventi diminuisce il peso delle pagine web e delle app utilizzando Adobe Experience Platform Edge Network per eseguire attività normalmente eseguite sul client. Implementate in modo simile ai tag, le regole di inoltro degli eventi possono trasformare e inviare dati a nuove destinazioni, ma invece di inviarli da un’applicazione client come un browser web, vengono inviati dai server di Adobe.
+L’inoltro degli eventi in Adobe Experience Platform (precedentemente noto come Adobe Experience Platform Launch lato server) consente di inviare i dati degli eventi raccolti a una destinazione per l’elaborazione lato server. L’inoltro di eventi diminuisce il peso delle pagine web e delle app utilizzando Adobe Experience Platform Edge Network per eseguire attività normalmente eseguite sul client. Implementate in modo simile ai tag, le regole di inoltro degli eventi possono trasformare e inviare dati a nuove destinazioni, ma invece di inviarli da un’applicazione client come un browser web, vengono inviati dai server di Adobe.
 
 Questo documento fornisce una panoramica di alto livello sull’inoltro degli eventi in Experience Platform.
 
@@ -30,7 +26,7 @@ Questo documento fornisce una panoramica di alto livello sull’inoltro degli ev
 >
 >Per informazioni sul modo in cui l&#39;inoltro degli eventi si inserisce nell&#39;ecosistema di raccolta dati di Experience Platform, consulta la [panoramica sulla raccolta dati](/help/collection/home.md).
 
-L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=it) offre i seguenti vantaggi:
+L&#39;inoltro degli eventi combinato con Adobe Experience Platform [Web SDK](/help/collection/js/js-overview.md) e [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) offre i seguenti vantaggi:
 
 **Prestazioni**:
 

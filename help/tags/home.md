@@ -2,20 +2,16 @@
 title: Panoramica sui tag
 description: I tag in Adobe Experience Platform costituiscono la soluzione Adobe di nuova generazione per la gestione dei tag. I tag offrono ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate significative.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 91%
+source-wordcount: '550'
+ht-degree: 90%
 
 ---
 
 # Panoramica sui tag
 
->[!NOTE]
->
->Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](./term-updates.md) come riferimento consolidato delle modifiche terminologiche.
-
-I tag in Adobe Experience Platform costituiscono la soluzione Adobe di nuova generazione per la gestione dei tag. I tag offrono ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate significative.
+I tag in Adobe Experience Platform (precedentemente noti come Adobe Experience Platform Launch) sono la soluzione Adobe di nuova generazione per la gestione dei tag. I tag offrono ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate significative.
 
 I tag permettono a chiunque di generare e mantenere le proprie integrazioni, o *estensioni*. Con tali estensioni, disponibili in un&#39;esperienza di tipo app-store, i clienti di [!DNL Adobe Experience Cloud] possono velocizzare l’installazione, la configurazione e l’implementazione dei propri tag.
 
