@@ -142,7 +142,7 @@ Lo schema non viene abilitato automaticamente per Real-Time Customer Profile. De
 
 ### Posso eliminare gli schemi abilitati per il profilo? {#delete-profile-enabled}
 
-Non puoi eliminare uno schema dopo che è stato abilitato per Real-Time Customer Profile. Una volta abilitato uno schema per il profilo, non è possibile disattivarlo o eliminarlo né rimuovere campi dallo schema. Pertanto, è fondamentale pianificare e verificare attentamente la configurazione dello schema prima di abilitarla per il profilo. Tuttavia, puoi eliminare un set di dati abilitato per il profilo. Le informazioni si trovano qui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Non puoi eliminare uno schema dopo che è stato abilitato per Real-Time Customer Profile. Una volta abilitato uno schema per il profilo, non è possibile disattivarlo o eliminarlo né rimuovere campi dallo schema. Pertanto, è fondamentale pianificare e verificare attentamente la configurazione dello schema prima di abilitarla per il profilo. Tuttavia, puoi eliminare un set di dati abilitato per il profilo. Le informazioni si trovano qui: <https://experienceleague.adobe.com/it/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Se non desideri più utilizzare uno schema abilitato per il profilo, è consigliabile rinominare lo schema per includere **Non utilizzare** o **Inattivo**.
 
