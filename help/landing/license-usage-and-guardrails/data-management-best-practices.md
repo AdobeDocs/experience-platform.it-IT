@@ -2,9 +2,9 @@
 title: Best practice per l’adesione alle licenze di gestione dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
+source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
 workflow-type: tm+mt
-source-wordcount: '2957'
+source-wordcount: '3390'
 ht-degree: 1%
 
 ---
@@ -101,6 +101,38 @@ I dati possono essere acquisiti in uno o più sistemi in Experience Platform, ov
 >
 >L&#39;accesso a [!DNL data lake] può dipendere dallo SKU del prodotto acquistato. Per ulteriori informazioni sugli SKU dei prodotti, contatta il tuo rappresentante Adobe.
 
+È inoltre necessario decidere se abilitare i set di dati di ricerca per Real-Time Customer Profile, oltre a utilizzarli per scopi di ricerca generali. Segui le istruzioni riportate di seguito per evitare di superare i limiti di licenza.
+
+#### Abilitazione del profilo per i set di dati di ricerca {#profile-enablement-lookup-datasets}
+
+Un set di dati di ricerca è un set di dati abilitato in Experience Platform in modo che le applicazioni possano farvi riferimento in fase di esecuzione. Utilizza i set di dati di ricerca per memorizzare informazioni relativamente statiche e chiave come dettagli di prodotto, metadati di store o configurazioni di offerta, anziché set di dati il cui scopo principale è contribuire con attributi di profilo (ad esempio, nome, e-mail o livello fedeltà) o eventi di esperienza (ad esempio, visualizzazioni di pagina o acquisti).
+
+Le applicazioni Experience Platform come [!DNL Journey Optimizer] e altre applicazioni decisioning utilizzano questi set di dati per recuperare campi aggiuntivi in base a una chiave (ad esempio, ID prodotto o ID store) e per arricchire flussi di lavoro di personalizzazione, decisioning e orchestrazione. L’abilitazione dei set di dati di ricerca per Real-Time Customer Profile influisce sul volume dei dati del profilo, pertanto per non perdere i diritti di licenza, utilizza le seguenti indicazioni.
+
+Quando configuri i set di dati a scopo di ricerca, considera i due ruoli che un set di dati può svolgere in Experience Platform:
+
+* **Set di dati di ricerca**: consenti alle applicazioni di recuperare dati di riferimento per servizi quali personalizzazione e decisioning in [!DNL Journey Optimizer].
+* **Set di dati abilitati per il profilo**: contribuire con attributi ed eventi ai profili cliente unificati nel profilo cliente in tempo reale. Questi set di dati rendono i loro campi disponibili per i casi di utilizzo di segmentazione e attivazione.
+
+>[!IMPORTANT]
+>
+>Abilita un set di dati di ricerca per Real-Time Customer Profile solo quando devi utilizzare i campi di tale set di dati in Real-Time Customer Profile (ad esempio, per le definizioni di pubblico, l’attivazione o la segmentazione di più entità). L’abilitazione di un set di dati di ricerca per Real-Time Customer Profile aumenta il volume di dati del profilo. Per ulteriori informazioni, consulta l&#39;esercitazione sulla [segmentazione di più entità](../../segmentation/tutorials/multi-entity-segmentation.md).
+
+**Quando abilitare i set di dati per Real-Time Customer Profile:**
+
+Abilita un set di dati per Real-Time Customer Profile nei seguenti casi:
+
+* Il set di dati contiene gli attributi del cliente da unificare nei profili del cliente (ad esempio, livello di fedeltà, preferenze, informazioni sull’account).
+* Il set di dati contiene eventi di esperienza che contribuiscono all’analisi del comportamento del cliente e alla segmentazione.
+* Il set di dati contiene attributi di riferimento o di arricchimento (ad esempio attributi di prodotto, archivio o account) che devono essere utilizzati nelle definizioni di pubblico, inclusa la segmentazione di più entità o l’attivazione a valle.
+
+**Quando NON abilitare i set di dati per Real-Time Customer Profile:**
+
+Evita di abilitare un set di dati per Real-Time Customer Profile nei seguenti casi:
+
+* Il set di dati contiene dati di riferimento come cataloghi di prodotti, dettagli SKU, posizioni dei negozi o altri dati non relativi ai clienti e non è necessario disporre di questi attributi in Real-Time Customer Profile per la segmentazione o l’attivazione, inclusa la segmentazione di più entità.
+* Il set di dati contiene dati di arricchimento utilizzati solo nelle ricerche in fase di esecuzione e non è necessario come parte dell’identità del cliente o nelle definizioni di pubblico.
+
 ### Quali dati conservare?
 
 Per rimuovere i dati diventati obsoleti per i tuoi casi d’uso, puoi applicare sia i filtri di acquisizione dei dati che le regole di scadenza. In genere, i dati comportamentali (come i dati di Analytics) occupano una quantità di spazio di archiviazione significativamente maggiore rispetto ai dati dei record (come i dati CRM). Ad esempio, molti utenti di Experience Platform hanno fino al 90% dei profili compilati dai soli dati comportamentali, rispetto a quelli dei dati dei record. Pertanto, la gestione dei dati comportamentali è fondamentale per garantire la conformità all’interno dei diritti di licenza.
@@ -159,7 +191,7 @@ Utilizza la funzionalità di scadenza dei dati dei profili pseudonimi per rimuov
 
 ### Interfaccia utente del set di dati - Conservazione del set di dati di Experience Event {#data-retention}
 
-Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [&#128279;](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Scadenze eventi esperienza profilo {#event-expirations}
 

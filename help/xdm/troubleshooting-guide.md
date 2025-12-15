@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del sistema XDM
 description: Risposte alle domande frequenti su Experience Data Model (XDM), compresi i passaggi per risolvere gli errori API più comuni.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
+source-git-commit: 8ba80a1cc4529f9d4693e3f7cbd7584193915410
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2368'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Questo documento contiene le risposte alle domande più frequenti su [!DNL Experience Data Model] (XDM) e sul sistema XDM in Adobe Experience Platform, inclusa una guida alla risoluzione dei problemi relativi agli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi Experience Platform, consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** è una specifica open-source che definisce schemi standardizzati per la gestione della customer experience. La metodologia su cui viene generato [!DNL Experience Platform], il **sistema XDM**, rende operativi [!DNL Experience Data Model] schemi per l&#39;utilizzo da parte dei servizi [!DNL Experience Platform]. **[!DNL Schema Registry]** fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere a **[!DNL Schema Library]** entro [!DNL Experience Platform]. Per ulteriori informazioni, consulta la [documentazione XDM](home.md).
+**[!DNL Experience Data Model](XDM)** è una specifica open-source che definisce schemi standardizzati per la gestione della customer experience. La metodologia su cui viene generato [!DNL Experience Platform], il **sistema XDM**, rende operativi [!DNL Experience Data Model] schemi per l&#39;utilizzo da parte dei servizi [!DNL Experience Platform]. **[!DNL Schema Registry]** fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere a **[!DNL Schema Library]** entro [!DNL Experience Platform]. Per ulteriori informazioni, consulta la [documentazione XDM](home.md).
 
 ## Domande frequenti
 
@@ -108,7 +108,7 @@ Per ulteriori dettagli sulla creazione di descrittori di identità nell&#39;API,
 
 ### Definizione delle identità nell’interfaccia utente
 
-Con lo schema aperto nell&#39;Editor schemi, seleziona il campo nella sezione **[!UICONTROL Struttura]** dell&#39;editor che desideri contrassegnare come identità. In **[!UICONTROL Proprietà campo]** sul lato destro, selezionare la casella di controllo **[!UICONTROL Identità]**.
+Con lo schema aperto nell&#39;Editor schemi, selezionare il campo nella sezione **[!UICONTROL Structure]** dell&#39;editor che si desidera contrassegnare come identità. In **[!UICONTROL Field Properties]** a destra, selezionare la casella di controllo **[!UICONTROL Identity]**.
 
 Per ulteriori dettagli sulla gestione delle identità nell&#39;interfaccia utente, vedere la sezione relativa alla [definizione dei campi di identità](./tutorials/create-schema-ui.md#identity-field) nell&#39;esercitazione sull&#39;editor di schema.
 
@@ -132,17 +132,17 @@ Per ulteriori informazioni sull&#39;utilizzo dell&#39;API per abilitare uno sche
 
 ### Abilitazione di uno schema esistente per [!DNL Profile] tramite l&#39;interfaccia utente
 
-In [!DNL Experience Platform], selezionare **[!UICONTROL Schemi]** nell&#39;area di navigazione a sinistra e selezionare il nome dello schema che si desidera abilitare dall&#39;elenco degli schemi. Quindi, sul lato destro dell&#39;editor in **[!UICONTROL Proprietà schema]**, seleziona **[!UICONTROL Profilo]** per attivarlo.
+In [!DNL Experience Platform], selezionare **[!UICONTROL Schemas]** nel menu di navigazione a sinistra e selezionare il nome dello schema che si desidera abilitare dall&#39;elenco degli schemi. Quindi, sul lato destro dell&#39;editor in **[!UICONTROL Schema Properties]**, selezionare **[!UICONTROL Profile]** per attivarlo.
 
-Per ulteriori informazioni, vedere la sezione sull&#39;[utilizzo in Real-Time Customer Profile](./tutorials/create-schema-ui.md#profile) nell&#39;esercitazione [!UICONTROL Schema Editor].
+Per ulteriori informazioni, vedere la sezione relativa all&#39;utilizzo di [in Real-Time Customer Profile](./tutorials/create-schema-ui.md#profile) nell&#39;esercitazione di [!UICONTROL Schema Editor].
 
 ### Quando i dati di Adobe Analytics vengono importati come origine, lo schema creato automaticamente è abilitato per il profilo?
 
 Lo schema non viene abilitato automaticamente per Real-Time Customer Profile. Devi abilitare esplicitamente il set di dati per il profilo in base allo schema abilitato per il profilo. Consulta la documentazione per scoprire i [passaggi e requisiti necessari per abilitare un set di dati da utilizzare in Real-Time Customer Profile](../catalog/datasets/user-guide.md#enable-profile).
 
-### Posso eliminare gli schemi abilitati per il profilo?
+### Posso eliminare gli schemi abilitati per il profilo? {#delete-profile-enabled}
 
-Non puoi eliminare uno schema dopo che è stato abilitato per Real-Time Customer Profile. Una volta abilitato uno schema per il profilo, non è possibile disattivarlo o eliminarlo né rimuovere campi dallo schema. Pertanto, è fondamentale pianificare e verificare attentamente la configurazione dello schema prima di abilitarla per il profilo. Tuttavia, puoi eliminare un set di dati abilitato per il profilo. Le informazioni si trovano qui: <https://experienceleague.adobe.com/it/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Non puoi eliminare uno schema dopo che è stato abilitato per Real-Time Customer Profile. Una volta abilitato uno schema per il profilo, non è possibile disattivarlo o eliminarlo né rimuovere campi dallo schema. Pertanto, è fondamentale pianificare e verificare attentamente la configurazione dello schema prima di abilitarla per il profilo. Tuttavia, puoi eliminare un set di dati abilitato per il profilo. Le informazioni si trovano qui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Se non desideri più utilizzare uno schema abilitato per il profilo, è consigliabile rinominare lo schema per includere **Non utilizzare** o **Inattivo**.
 
