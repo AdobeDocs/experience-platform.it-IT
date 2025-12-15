@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Panoramica sul controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1929'
 ht-degree: 13%
 
 ---
@@ -24,7 +24,7 @@ Tramite il controllo dell’accesso basato su attributi, gli amministratori dell
 
 Il video seguente ha lo scopo di illustrare il controllo degli accessi basato su attributi e illustra come configurare ruoli, risorse e criteri.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451846?learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminologia per il controllo degli accessi basato su attributi
 
@@ -80,7 +80,7 @@ Per ulteriori informazioni sul controllo degli accessi, vedere la [panoramica su
 
 ### Destinazioni {#destinations}
 
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 In qualità di amministratore, puoi utilizzare funzionalità di controllo dell’accesso basate su attributi per:
 
@@ -141,3 +141,9 @@ Il controllo degli accessi basato su attributi consente di:
 * Configura l’accesso degli utenti a campi di schema XDM specifici in base ai set di autorizzazioni applicati ai ruoli assegnati agli utenti.
 
 Per ulteriori informazioni su XDM, consulta la [panoramica XDM](../../xdm/home.md).
+
+### Customer Journey Analytics (CJA)
+
+Le autorizzazioni di accesso a Customer Journey Analytics (CJA) vengono gestite a livello di applicazione in CJA. CJA utilizza i propri controlli di accesso basati su attributi e non eredita o applica i controlli di accesso basati su attributi definiti in Adobe Experience Platform.
+
+Per ulteriori informazioni sul controllo degli accessi a CJA, consulta la [documentazione sul controllo degli accessi a CJA](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control).
