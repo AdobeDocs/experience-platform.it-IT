@@ -2,9 +2,9 @@
 description: Scopri come impostare un criterio di aggregazione per determinare come raggruppare e raggruppare in batch le richieste HTTP nella destinazione.
 title: Criterio di aggregazione
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
+source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1235'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,26 @@ L’esempio di configurazione seguente mostra una configurazione dell’aggregaz
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -62,6 +81,12 @@ L’esempio di configurazione seguente mostra una configurazione dell’aggregaz
 | `aggregationType` | Stringa | Indica il tipo di criterio di aggregazione da utilizzare nella destinazione. Tipi di aggregazione supportati: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Intero | Experience Platform può aggregare più profili esportati in una singola chiamata HTTP. <br><br>Questo valore indica il numero massimo di profili che l&#39;endpoint deve ricevere in una singola chiamata HTTP. Tieni presente che si tratta di un’aggregazione ottimale. Ad esempio, se specifichi il valore 100, Experience Platform potrebbe inviare a una chiamata un numero qualsiasi di profili inferiore a 100. <br><br> Se il server non accetta più utenti per richiesta, impostare questo valore su `1`. |
 | `bestEffortAggregation.splitUserById` | Booleano | Utilizza questo flag se la chiamata alla destinazione deve essere divisa per identità. Imposta questo flag su `true` se il server accetta una sola identità per chiamata, per uno spazio dei nomi identità specificato. |
+| `bestEffortAggregation.aggregationKey` | Oggetto | *Facoltativo*. Consente di aggregare i profili esportati mappati sulla destinazione in base ai parametri descritti di seguito. Questo parametro può essere omesso o impostato su `null` se l&#39;aggregazione non è necessaria. Se fornito, funziona in modo identico alla chiave di aggregazione nell’aggregazione configurabile. |
+| `bestEffortAggregation.aggregationKey.includeSegmentId` | Booleano | Imposta questo parametro su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico. |
+| `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Booleano | Imposta questo parametro e `includeSegmentId` su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico e allo stato del pubblico. |
+| `bestEffortAggregation.aggregationKey.includeIdentity` | Booleano | Impostare questo parametro su `true` se si desidera raggruppare i profili esportati nella destinazione in base allo spazio dei nomi delle identità. |
+| `bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Imposta questo parametro su `true` se vuoi che i profili esportati siano aggregati in gruppi in base a una singola identità (GAID, IDFA, numeri di telefono, e-mail, ecc.). Impostare su `false` se si desidera utilizzare il parametro `groups` per definire raggruppamenti di spazi dei nomi di identità personalizzati. |
+| `bestEffortAggregation.aggregationKey.groups` | Array | Utilizzare questo parametro quando `oneIdentityPerGroup` è impostato su `false`. Crea elenchi di gruppi di identità per raggruppare i profili esportati nella destinazione in base a gruppi di spazi dei nomi di identità. Ad esempio, puoi combinare profili contenenti gli identificatori mobili IDFA e GAID in una chiamata alla destinazione e invia e-mail a un’altra utilizzando la configurazione mostrata nell’esempio precedente. |
 
 {style="table-layout:auto"}
 
@@ -115,8 +140,8 @@ L’esempio di configurazione seguente mostra una configurazione dell’aggregaz
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Imposta questo parametro su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Imposta questo parametro e `includeSegmentId` su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico e allo stato del pubblico. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booleano | Impostare questo parametro su `true` se si desidera raggruppare i profili esportati nella destinazione in base allo spazio dei nomi delle identità. |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Imposta questo parametro su `true` se vuoi che i profili esportati siano aggregati in gruppi in base a una singola identità (GAID, IDFA, numeri di telefono, e-mail, ecc.). |
-| `configurableAggregation.aggregationKey.groups` | Array | Crea elenchi di gruppi di identità per raggruppare i profili esportati nella destinazione in base a gruppi di spazi dei nomi di identità. Ad esempio, puoi combinare profili contenenti gli identificatori mobili IDFA e GAID in una chiamata alla destinazione e invia e-mail a un’altra utilizzando la configurazione mostrata nell’esempio precedente. |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Imposta questo parametro su `true` se vuoi che i profili esportati siano aggregati in gruppi in base a una singola identità (GAID, IDFA, numeri di telefono, e-mail, ecc.). Impostare su `false` se si desidera utilizzare il parametro `groups` per definire raggruppamenti di spazi dei nomi di identità personalizzati. |
+| `configurableAggregation.aggregationKey.groups` | Array | Utilizzare questo parametro quando `oneIdentityPerGroup` è impostato su `false`. Crea elenchi di gruppi di identità per raggruppare i profili esportati nella destinazione in base a gruppi di spazi dei nomi di identità. Ad esempio, puoi combinare profili contenenti gli identificatori mobili IDFA e GAID in una chiamata alla destinazione e invia e-mail a un’altra utilizzando la configurazione mostrata nell’esempio precedente. |
 
 {style="table-layout:auto"}
 

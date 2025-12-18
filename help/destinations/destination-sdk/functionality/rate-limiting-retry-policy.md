@@ -1,10 +1,10 @@
 ---
-description: Scopri come Experience Platform gestisce diversi tipi di errori restituiti dalle destinazioni di streaming e come tenta di inviare dati alla piattaforma di destinazione.
+description: Scopri come Experience Platform gestisce i diversi tipi di errori restituiti dalle destinazioni di streaming e come tenta di inviare dati alla piattaforma di destinazione.
 title: Limitazione della frequenza e criteri per nuovi tentativi per le destinazioni di streaming create con Destination SDK
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 75bee8fde648101335df7a66eae1907b267b4eb6
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -17,23 +17,30 @@ Durante la configurazione di una destinazione tramite Destination SDK, è possib
 
 ## Aggregazione ottimale {#best-effort-aggregation}
 
-Per eventuali chiamate HTTP effettuate sulla destinazione che hanno esito negativo, Experience Platform tenta di effettuare di nuovo la chiamata una volta in più, immediatamente dopo la prima chiamata. Se al secondo tentativo la chiamata non riesce, Experience Platform la abbandona e non la ritenta una terza volta.
+Experience Platform ritenta le chiamate che restituiscono i seguenti codici di risposta HTTP: **403, 408, 409, 429, 500, 502, 503, 504**. Vengono eseguiti due nuovi tentativi agli intervalli seguenti:
+
+* Primo tentativo: dopo 15 secondi
+* Secondo tentativo: dopo 30 secondi
+
+Experience Platform *non* ritenta le chiamate che restituiscono altri codici di risposta HTTP, ad esempio 400 (richiesta non valida). Se la chiamata continua a non riuscire dopo entrambi i tentativi, Experience Platform interrompe l’attivazione e non ritenta.
+
+Per richiedere un criterio diverso per i nuovi tentativi per flussi di dati specifici, contatta l’Assistenza clienti.
 
 ## Aggregazione configurato {#configurable-aggregation}
 
-Nel caso delle piattaforme di destinazione impostate con aggregazione configurabile, l’Experience Platform distingue tra il tipo di errore restituito dalla piattaforma:
+Nel caso delle piattaforme di destinazione impostate con aggregazione configurabile, Experience Platform distingue tra il tipo di errore restituito dalla piattaforma:
 
 * Errori in cui Experience Platform tenta di inviare i dati alla piattaforma:
    * Codici di risposta HTTP 420 e 429
    * Codici di risposta HTTP superiori a 500
-* Errori in cui l&#39;Experience Platform *non* tenta nuovamente di inviare i dati alla piattaforma: tutti gli altri sono stati restituiti dalla piattaforma
+* Errori in cui Experience Platform *non* tenta di inviare nuovamente i dati alla piattaforma: tutti gli altri sono restituiti dalla piattaforma
 
 ### Descrizione dell’approccio Riprova {#retry-approach}
 
-L’approccio di Experience Platform per l’aggregazione configurabile è descritto di seguito. L’esempio presuppone che Experience Platform invii dati a una piattaforma di destinazione che inizia a restituire codici di errore 429 se riceve più di 50.000 richieste al minuto:
+L’approccio di Experience Platform per l’aggregazione configurabile è descritto di seguito. Questo esempio presuppone che Experience Platform invii dati a una piattaforma di destinazione che inizia a restituire codici di errore 429 se riceve più di 50.000 richieste al minuto:
 
 * Minuto 1: Experience Platform aggrega batch da 40.000 con profili da inviare alla piattaforma di destinazione. Experience Platform effettua 40.000 richieste HTTP e tutte hanno esito positivo.
-* Minuto 2: Experience Platform aggrega batch da 70.000 con profili da inviare alla piattaforma di destinazione. Experience Platform effettua 70.000 richieste HTTP e 50.000 hanno esito positivo. Gli altri 20.000 ricevono un errore di limitazione della frequenza dall’endpoint e verranno tentati di nuovo tra 30 minuti.
+* Minuto 2: Experience Platform aggrega batch da 70.000 con profili da inviare alla piattaforma di destinazione. Experience Platform effettua 70.000 richieste HTTP e 50.000 sono riuscite. Gli altri 20.000 ricevono un errore di limitazione della frequenza dall’endpoint e verranno tentati di nuovo tra 30 minuti.
 * Minuto 3: Experience Platform aggrega batch da 30.000 con profili da inviare alla piattaforma di destinazione. Experience Platform effettua 30.000 richieste HTTP e tutte hanno esito positivo.
 * ...
 * ...
@@ -44,4 +51,4 @@ L’approccio di Experience Platform per l’aggregazione configurabile è descr
 Ora sai come Experience Platform gestisce gli errori e la limitazione della frequenza dalle piattaforme di destinazione, a seconda dei criteri di aggregazione selezionati al momento della configurazione della destinazione di streaming. A questo punto, consulta la seguente documentazione:
 
 * [Verifica la configurazione di destinazione](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)
-* [Invia per la revisione una destinazione creata in Destination SDK](../guides/submit-destination.md)
+* [Invia per la revisione di una destinazione creata in Destination SDK](../guides/submit-destination.md)
