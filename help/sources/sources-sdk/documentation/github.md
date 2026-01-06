@@ -17,11 +17,11 @@ Questo documento descrive come utilizzare l’interfaccia web GitHub per creare 
 
 >[!TIP]
 >
->Per supportare ulteriormente il processo di documentazione, puoi utilizzare i seguenti documenti della guida per i collaboratori di Adobe: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Flusso di lavoro contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Per supportare ulteriormente il processo di documentazione, puoi utilizzare i seguenti documenti della guida per i collaboratori di Adobe: <ul><li>[Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=it)</li><li>[Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=it)</li><li>[Flusso di lavoro contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=it)</li></ul>
 
 ## Configurare l’ambiente GitHub
 
-Il primo passaggio nella configurazione dell&#39;ambiente GitHub consiste nel passare all&#39;[archivio GitHub di Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+Il primo passaggio nella configurazione dell&#39;ambiente GitHub consiste nel passare all&#39;[archivio GitHub di Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.it-IT).
 
 ![repository-piattaforma](../assets/platform-repo.png)
 
@@ -33,11 +33,11 @@ Una volta completato il fork, seleziona **main** e immetti un nome per il nuovo 
 
 ![create-branch](../assets/create-branch.png)
 
-Nella struttura di cartelle GitHub dell&#39;archivio con fork, passa a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) e seleziona la categoria appropriata per l&#39;origine dall&#39;elenco. Ad esempio, se stai creando la documentazione per una nuova origine CRM, seleziona **crm**.
+Nella struttura di cartelle GitHub dell&#39;archivio con fork, passa a [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.it-IT/tree/main/help/sources/tutorials/api/create) e seleziona la categoria appropriata per l&#39;origine dall&#39;elenco. Ad esempio, se stai creando la documentazione per una nuova origine CRM, seleziona **crm**.
 
 >[!TIP]
 >
->Se stai creando la documentazione per l&#39;interfaccia utente, passa a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) e seleziona la categoria appropriata per la tua origine. Per aggiungere le immagini, passa a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) e aggiungi le tue schermate alla cartella `sdk`.
+>Se stai creando la documentazione per l&#39;interfaccia utente, passa a [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.it-IT/tree/main/help/sources/tutorials/ui/create) e seleziona la categoria appropriata per la tua origine. Per aggiungere le immagini, passa a [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.it-IT/tree/main/help/sources/images/tutorials/create) e aggiungi le tue schermate alla cartella `sdk`.
 
 ![crm](../assets/crm.png)
 
@@ -77,6 +77,6 @@ Assicurati che i rami di base e di confronto siano corretti. Aggiungi una nota a
 
 A questo punto, viene visualizzata una notifica che richiede di firmare il Contratto di licenza da collaboratore (CLA) di Adobe. Questo è un passaggio obbligatorio. Dopo aver firmato il contratto di licenza, aggiorna la pagina PR e invia la richiesta di pull.
 
-Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda delle richieste di pull in https://github.com/AdobeDocs/experience-platform.en.
+Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda delle richieste di pull in https://github.com/AdobeDocs/experience-platform.it-IT.
 
 ![confirm-pr](../assets/confirm-pr.png)
