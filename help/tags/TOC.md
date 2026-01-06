@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 43%
 
 ---
@@ -276,6 +276,8 @@ ht-degree: 43%
          * [Panoramica](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Panoramica](./extensions/server/mixpanel/overview.md)
+      * [!DNL Nextdoor] {#nextdoor}
+         * [Panoramica](./extensions/server/nextdoor/overview.md)
       * [Pega centro decisionale cliente](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Panoramica](./extensions/server/pinterest/overview.md)
@@ -352,7 +354,7 @@ ht-degree: 43%
       * [Callback](./api/endpoints/callbacks.md)
       * [Note](./api/endpoints/notes.md)
       * [Profilo](./api/endpoints/profile.md)
-      * [Cerca](./api/endpoints/search.md)
+      * [Ricerca](./api/endpoints/search.md)
       * [Segreti](./api/endpoints/secrets.md)
    * Guide {#guides}
       * [ID descrittori dei delegati](./api/guides/delegate-descriptor-ids.md)
