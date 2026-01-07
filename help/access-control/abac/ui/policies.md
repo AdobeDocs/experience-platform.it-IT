@@ -54,7 +54,7 @@ Per riattivare **[!UICONTROL Auto-include]**, utilizzare l&#39;interruttore per 
 
 ### Gestire manualmente le sandbox {#manually-manage-sandboxes}
 
-Quando **[!UICONTROL Auto-include]**è disattivato, è possibile aggiungere o rimuovere manualmente sandbox specifiche dal criterio. Questo offre un controllo preciso sulle sandbox che applicano le regole di controllo dell’accesso del criterio.
+Quando **[!UICONTROL Auto-include]**&#x200B;è disattivato, è possibile aggiungere o rimuovere manualmente sandbox specifiche dal criterio. Questo offre un controllo preciso sulle sandbox che applicano le regole di controllo dell’accesso del criterio.
 
 >[!NOTE]
 >
