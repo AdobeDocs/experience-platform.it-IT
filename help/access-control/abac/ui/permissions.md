@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;ABAC;;home;popular topic;access control;attribute-based access control;ABAC
 title: Autorizzazioni per la gestione dei ruoli di controllo dell'accesso basato su attributi
-description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
+description: Scopri come configurare i ruoli tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1603'
 ht-degree: 17%
 
 ---
@@ -116,7 +116,7 @@ Per rimuovere un utente da un ruolo, selezionare l&#39;icona **X** accanto al no
 
 Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruolo e come gestire gli utenti per tale ruolo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475981/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Gestire le credenziali API per un ruolo {#manage-api-credentials-for-role}
 
