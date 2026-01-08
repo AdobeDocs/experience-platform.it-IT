@@ -4,9 +4,9 @@ title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc97efec5fba090378ceaf73441d0b4bd7fbf51f
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1078'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 * **[!UICONTROL Name]**: immettere un nome con cui riconoscere questa destinazione in futuro.
 * **[!UICONTROL Description]**: immettere una descrizione che consenta di identificare questa destinazione in futuro.
-* **[!UICONTROL Endpoint Instance]**: chiedi al tuo rappresentante [!DNL Braze] quale istanza endpoint utilizzare.
+* **[!UICONTROL Endpoint Instance]**: tutti i [endpoint specifici della regione](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supportati da [!DNL Braze] sono disponibili per la selezione. Chiedi al tuo rappresentante [!DNL Braze] quale istanza endpoint utilizzare.
 
 ### Abilita avvisi {#enable-alerts}
 
