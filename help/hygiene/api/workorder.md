@@ -3,9 +3,9 @@ title: Registra ordini di lavoro di eliminazione
 description: Scopri come utilizzare l’endpoint /workorder nell’API di igiene dei dati per gestire gli ordini di lavoro di eliminazione dei record in Adobe Experience Platform. Questa guida descrive le quote, le timeline di elaborazione e l’utilizzo delle API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2541'
 ht-degree: 2%
 
 ---
@@ -202,6 +202,14 @@ POST /workorder
 >[!NOTE]
 >
 >Puoi eliminare record solo da set di dati il cui schema XDM associato definisce una mappa di identità primaria o di identità.
+
+>[!IMPORTANT]
+>
+>Gli ordini di lavoro di eliminazione record agiscono esclusivamente sul campo **identità primaria**. Si applicano le seguenti limitazioni:
+>
+>- **Le identità secondarie non vengono analizzate.** Se un set di dati contiene più campi di identità, per la corrispondenza viene utilizzata solo l&#39;identità primaria. I record non possono essere indirizzati o eliminati in base a identità non primarie.
+>- **I record senza un&#39;identità primaria compilata vengono ignorati.** Se un record non ha metadati di identità primaria compilati, non è idoneo per l&#39;eliminazione.
+>- **I dati acquisiti prima della configurazione dell&#39;identità non sono idonei.** Se il campo di identità principale è stato aggiunto a uno schema dopo l&#39;acquisizione dei dati, i record precedentemente acquisiti non possono essere eliminati tramite ordini di lavoro di eliminazione dei record.
 
 >[!NOTE]
 >

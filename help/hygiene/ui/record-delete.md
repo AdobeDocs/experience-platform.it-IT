@@ -2,10 +2,10 @@
 title: Registra richieste di eliminazione (flusso di lavoro interfaccia utente)
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
-source-wordcount: '2358'
-ht-degree: 6%
+source-wordcount: '2520'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Utilizzare l&#39;area di lavoro [[!UICONTROL Data Lifecycle]](./overview.md) per
 
 ## Prerequisiti {#prerequisites}
 
-L’eliminazione dei record richiede una buona conoscenza del funzionamento dei campi di identità in Experience Platform. In particolare, devi conoscere i valori dello spazio dei nomi delle identità delle entità di cui desideri eliminare i record, a seconda del set di dati (o dei set di dati) da cui li stai eliminando.
+L’eliminazione dei record richiede una buona conoscenza del funzionamento dei campi di identità in Experience Platform. In particolare, devi conoscere lo spazio dei nomi e i valori dell’identità primaria per le entità di cui desideri eliminare i record, a seconda del set di dati (o dei set di dati) da cui li stai eliminando.
 
 Per ulteriori informazioni sulle identità in Experience Platform, consulta la seguente documentazione:
 
@@ -28,6 +28,14 @@ Per ulteriori informazioni sulle identità in Experience Platform, consulta la s
 * [Profilo cliente in tempo reale](../../profile/home.md): utilizza i grafici delle identità per fornire profili di consumatori unificati basati su dati aggregati provenienti da più origini, aggiornati quasi in tempo reale.
 * [Experience Data Model (XDM)](../../xdm/home.md): fornisce definizioni e strutture standard per i dati di Experience Platform tramite l&#39;utilizzo di schemi. Tutti i set di dati di Experience Platform sono conformi a uno schema XDM specifico e lo schema definisce quali campi sono identità.
 * [Campi identità](../../xdm/ui/fields/identity.md): scopri come viene definito un campo identità in uno schema XDM.
+
+>[!IMPORTANT]
+>
+>Le eliminazioni dei record agiscono esclusivamente sul campo **identità primaria** definito nello schema del set di dati. Si applicano le seguenti limitazioni:
+>
+>* **Le identità secondarie non vengono analizzate.** Se un set di dati contiene più campi di identità, per la corrispondenza viene utilizzata solo l&#39;identità primaria. I record non possono essere indirizzati o eliminati in base a identità non primarie.
+>* **I record senza un&#39;identità primaria compilata vengono ignorati.** Se un record non ha metadati di identità primaria compilati, non è idoneo per l&#39;eliminazione.
+>* **I dati acquisiti prima della configurazione dell&#39;identità non sono idonei.** Se il campo di identità primaria è stato aggiunto a uno schema dopo l&#39;acquisizione dei dati, i record precedentemente acquisiti non possono essere eliminati tramite questo flusso di lavoro.
 
 ## Creare una richiesta {#create-request}
 
@@ -53,13 +61,13 @@ Per eliminare da un set di dati specifico, selezionare **[!UICONTROL Select data
 
 ![Finestra di dialogo [!UICONTROL Select dataset] con un set di dati selezionato ed evidenziato [!UICONTROL Done].](../images/ui/record-delete/select-dataset.png)
 
-Per eliminare da tutti i set di dati, selezionare **[!UICONTROL All datasets]**. Questa opzione aumenta l’ambito dell’operazione e richiede di fornire tutti i tipi di identità pertinenti.
+Per eliminare da tutti i set di dati, selezionare **[!UICONTROL All datasets]**. Questa opzione aumenta l’ambito dell’operazione e richiede di fornire il tipo di identità principale per ogni set di dati di destinazione.
 
 ![La finestra di dialogo [!UICONTROL Select dataset] con l&#39;opzione [!UICONTROL All datasets] selezionata.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Se si seleziona **[!UICONTROL All datasets]**, l&#39;operazione verrà estesa a tutti i set di dati dell&#39;organizzazione. Ogni set di dati può utilizzare un tipo di identità primaria diverso. Devi fornire **tutti i tipi di identità richiesti** per garantire una corrispondenza accurata.
+>Se si seleziona **[!UICONTROL All datasets]**, l&#39;operazione verrà estesa a tutti i set di dati dell&#39;organizzazione. Ogni set di dati può utilizzare un tipo di identità primaria diverso. Devi fornire **il tipo di identità primaria per ogni set di dati** per garantire una corrispondenza accurata.
 >
 >Se manca un tipo di identità, alcuni record potrebbero essere ignorati durante l’eliminazione. Questa operazione può rallentare l&#39;elaborazione e portare a **risultati parziali**.
 
@@ -72,17 +80,21 @@ Ogni set di dati in Experience Platform supporta un solo tipo di identità princ
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Spazio dei nomi identità"
->abstract="Uno spazio dei nomi identità è un attributo che collega un record al profilo di un consumatore in Experience Platform. Il campo spazio dei nomi identità per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo (o spazio dei nomi) per lo spazio dei nomi identità del record, ad esempio `email` per gli indirizzi e-mail e `ecid` per gli Experience Cloud ID. Per ulteriori informazioni, consulta la guida all’interfaccia utente del ciclo di vita dei dati."
+>title="Spazio dei nomi identità primaria"
+>abstract="Lo spazio dei nomi dell’identità primaria è l’attributo che lega in modo univoco un record al profilo di un consumatore in Experience Platform. Il campo di identità primaria per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna devi fornire lo spazio dei nomi dell’identità primaria (ad esempio `email` per gli indirizzi e-mail o `ecid` per gli Experience Cloud ID) che corrisponde allo schema del set di dati. Per ulteriori informazioni, consulta la guida all’interfaccia utente del ciclo di vita dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valore dell’identità primaria"
 >abstract="In questa colonna è necessario specificare il valore per lo spazio dei nomi identità del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di spazio dei nomi identità è `email`, il valore deve corrispondere all’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia utente del ciclo di vita dei dati."
 
-Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Experience Platform, i record vengono eliminati in base al campo **spazio dei nomi identità** definito dallo schema del set di dati.
+Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Experience Platform, i record vengono eliminati in base al campo **identità primaria** definito dallo schema del set di dati.
 
-Come tutti i campi di identità in Experience Platform, uno spazio dei nomi di identità è composto da due elementi: un **tipo** (a volte indicato come spazio dei nomi di identità) e un **valore**. Il tipo di identità fornisce contesto su come il campo identifica un record (ad esempio un indirizzo e-mail). Il valore rappresenta l&#39;identità specifica di un record per quel tipo, ad esempio `jdoe@example.com` per il tipo di identità `email`. I campi più comuni utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
+>[!NOTE]
+>
+>Anche se l&#39;interfaccia utente consente di selezionare uno spazio dei nomi di identità, al momento dell&#39;esecuzione viene utilizzata solo l&#39;**identità primaria** configurata nello schema del set di dati. Assicurati che i valori di identità forniti corrispondano al campo di identità principale del set di dati.
+
+Come tutti i campi di identità in Experience Platform, un&#39;identità primaria è composta da due elementi: un **tipo** (lo spazio dei nomi dell&#39;identità) e un **valore**. Il tipo di identità fornisce contesto su come il campo identifica un record (ad esempio un indirizzo e-mail). Il valore rappresenta l&#39;identità specifica di un record per quel tipo, ad esempio `jdoe@example.com` per il tipo di identità `email`. I campi comuni utilizzati come identità primarie includono informazioni sull’account, ID dispositivo e ID cookie.
 
 >[!TIP]
 >
@@ -101,7 +113,7 @@ Per caricare un file JSON, puoi trascinare e rilasciare il file nell&#39;area fo
 
 ![Il flusso di lavoro per la creazione delle richieste con l&#39;interfaccia Scegli file e trascina per caricare i file JSON è evidenziato.](../images/ui/record-delete/upload-json.png)
 
-Il file JSON deve essere formattato come un array di oggetti, ogni oggetto che rappresenta un’identità.
+Il file JSON deve essere formattato come un array di oggetti, ogni oggetto che rappresenta un valore di identità principale per il set di dati di destinazione.
 
 ```json
 [
@@ -118,7 +130,7 @@ Il file JSON deve essere formattato come un array di oggetti, ogni oggetto che r
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `namespaceCode` | Il tipo di identità. |
+| `namespaceCode` | Spazio dei nomi dell’identità primaria per il set di dati di destinazione. |
 | `value` | Il valore dell’identità primaria come indicato dal tipo. |
 
 Una volta caricato il file, puoi continuare a [inviare la richiesta](#submit).
