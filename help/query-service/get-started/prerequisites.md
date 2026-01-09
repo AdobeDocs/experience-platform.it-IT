@@ -21,7 +21,7 @@ Prima di iniziare a eseguire query sui dati, assicurati di disporre di:
 - **Autorizzazioni richieste**: il tuo account utente ha accesso a Query Service in Experience Platform. Se il servizio non è disponibile nell&#39;interfaccia utente, consulta la [documentazione sulle autorizzazioni](../../access-control/home.md#permissions) e contatta l&#39;amministratore di sistema.
 - **Acquisizione dei dati**: sono stati acquisiti dati in Experience Platform.
 
-Se devi acquisire dei dati, guarda il video [tutorial sull&#39;acquisizione dei dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) per una panoramica sulla creazione di set di dati, la mappatura dello schema, l&#39;acquisizione e la convalida. Leggi la [documentazione sulla panoramica dell&#39;acquisizione](../../ingestion/home.md) per informazioni più approfondite e collegamenti ad altre risorse di apprendimento.
+Se devi acquisire dei dati, guarda il video [tutorial sull&#39;acquisizione dei dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) per una panoramica sulla creazione di set di dati, la mappatura dello schema, l&#39;acquisizione e la convalida. Leggi la [documentazione sulla panoramica dell&#39;acquisizione](../../ingestion/home.md) per informazioni più approfondite e collegamenti ad altre risorse di apprendimento.
 
 ## Percorsi di avvio rapido
 
