@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 7a763a978443c0a074e6368448320056759f72bb
 workflow-type: tm+mt
-source-wordcount: '3236'
+source-wordcount: '3429'
 ht-degree: 1%
 
 ---
@@ -81,12 +81,12 @@ Se un’entità contiene attributi relativi a un singolo cliente, è molto proba
 
 Se desideri analizzare il modo in cui determinati attributi all’interno di un’entità cambiano nel tempo, è molto probabile che si tratti di un’entità evento. Ad esempio, l’aggiunta di elementi di prodotto a un carrello può essere tracciata come evento aggiuntivo al carrello in Experience Platform:
 
-| ID cliente | Tipo | ID prodotto | Quantità | Timestamp |
+| ID cliente | Tipo | ID prodotto | Quantità | Marca temporale |
 | --- | --- | --- | --- | --- |
-| 1234567 | Add | 275098 | 2 | 1 ott 10:32 |
-| 1234567 | Rimuovi | 275098 | 1 | 1 ott 10:33 |
-| 1234567 | Add | 486502 | 1 | 1 ott 10:41 |
-| 1234567 | Add | 910482 | 5 | 3 ottobre, 14:15 |
+| 1234567 | Add | 275098 | 2 | 1 ottobre, 10:32 AM |
+| 1234567 | Rimuovi | 275098 | 1 | 1 ottobre, 10:33 AM |
+| 1234567 | Add | 486502 | 1 | 1 ottobre, 10:41 AM |
+| 1234567 | Add | 910482 | 5 | 3 ottobre, 2:15 PM |
 
 {style="table-layout:auto"}
 
@@ -217,9 +217,9 @@ Experience Platform fornisce diversi gruppi di campi di schema XDM predefiniti p
 * Adobe Campaign
 * Adobe Target
 
-Ad esempio, puoi utilizzare il gruppo di campi [&#128279;](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) del modello [!UICONTROL Adobe Analytics ExperienceEvent] per mappare campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni Adobe che utilizzi, nei tuoi schemi dovresti usare questi gruppi di campi forniti da Adobe.
+Ad esempio, puoi utilizzare il gruppo di campi [[!UICONTROL Adobe Analytics ExperienceEvent Template]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) per mappare i campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni Adobe che utilizzi, nei tuoi schemi dovresti usare questi gruppi di campi forniti da Adobe.
 
-![Un diagramma schema del [!UICONTROL modello Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
+![Diagramma di schema di [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
 I gruppi di campi dell&#39;applicazione Adobe assegnano automaticamente un&#39;identità primaria predefinita tramite l&#39;utilizzo del campo `identityMap`, che è un oggetto generato dal sistema e di sola lettura che mappa i valori di identità standard per un singolo cliente.
 
@@ -231,35 +231,55 @@ Per Adobe Analytics, ECID è l’identità primaria predefinita. Se un valore EC
 
 ## Campi di convalida dei dati {#data-validation-fields}
 
-Quando si acquisiscono i dati nel data lake, la convalida dei dati viene applicata solo per i campi vincolati. Per convalidare un particolare campo durante un’acquisizione batch, è necessario contrassegnare il campo come vincolato nello schema XDM. Per evitare che dati errati vengano acquisiti in Experience Platform, ti consigliamo di definire i criteri per la convalida a livello di campo quando crei gli schemi.
+Quando si acquisiscono i dati nel data lake, la convalida dei dati viene applicata solo per i campi vincolati. Per convalidare un particolare campo durante l’acquisizione batch, devi contrassegnarlo come vincolato nello schema XDM. Per evitare che dati errati vengano immessi in Experience Platform, definisci i requisiti di convalida durante la creazione degli schemi.
 
 >[!IMPORTANT]
 >
->La convalida non viene applicata alle colonne nidificate. Se il formato del campo si trova all’interno di una colonna array, i dati non verranno convalidati.
+>La convalida non viene applicata alle colonne nidificate. Se il formato del campo si trova all’interno di una colonna di matrice, i dati non vengono convalidati.
 
-Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Editor schema per aprire la barra laterale **[!UICONTROL Proprietà campo]**. Per una descrizione esatta dei campi disponibili, consulta la documentazione sulle [proprietà dei campi specifiche per tipo](../ui/fields/overview.md#type-specific-properties).
+Per impostare vincoli su un campo, selezionare il campo nell&#39;Editor schema per aprire la barra laterale **[!UICONTROL Field properties]**. Per una descrizione esatta dei campi disponibili, consulta la documentazione sulle [proprietà dei campi specifiche per tipo](../ui/fields/overview.md#type-specific-properties).
 
-![Editor schema con campi vincolo evidenziati nella barra laterale [!UICONTROL Proprietà campo].](../images/best-practices/data-validation-fields.png)
+![Editor schema con campi vincolo evidenziati nella barra laterale [!UICONTROL Field properties].](../images/best-practices/data-validation-fields.png)
 
 ### Suggerimenti per mantenere l&#39;integrità dei dati {#data-integrity-tips}
 
-Di seguito è riportata una raccolta di suggerimenti per mantenere l&#39;integrità dei dati durante la creazione di uno schema.
+I seguenti suggerimenti consentono di mantenere l’integrità dei dati durante la creazione di uno schema.
 
 * **Considera le identità primarie**: per prodotti Adobe come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, il campo `identityMap` spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.
-* **Assicurarsi che `_id` non sia utilizzato come identità**: il campo `_id` negli schemi Experience Event non può essere utilizzato come identità in quanto è destinato all&#39;univocità dei record.
+* **Assicurarsi che `_id` non sia utilizzato come identità**: il campo `_id` negli schemi Experience Event non può essere utilizzato come identità perché è destinato all&#39;univocità dei record.
 * **Imposta vincoli di lunghezza**: è consigliabile impostare lunghezze minime e massime nei campi contrassegnati come identità. Un avviso viene attivato se si tenta di assegnare uno spazio dei nomi personalizzato a un campo di identità senza soddisfare i vincoli di lunghezza minima e massima. Queste limitazioni contribuiscono a mantenere la coerenza e la qualità dei dati.
-* **Applica pattern per valori coerenti**: se i valori di identità seguono un pattern specifico, è necessario utilizzare l&#39;impostazione **[!UICONTROL Pattern]** per applicare questo vincolo. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.
+* **Applica modelli per valori coerenti**: se i valori di identità seguono un modello specifico, utilizzare l&#39;impostazione **[!UICONTROL Pattern]** per applicare vincoli. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.
 * **Limita le eVar negli schemi di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un’eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.
 * **Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all&#39;identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono. Se si contrassegna un campo non univoco come identità, si potrebbe verificare una compressione indesiderata del profilo.
 * **Verifica lunghezza minima stringa**: tutti i campi stringa devono contenere almeno un carattere, poiché i valori stringa non devono mai essere vuoti. I valori Null per i campi non obbligatori, tuttavia, sono accettabili. Per impostazione predefinita, ai nuovi campi stringa viene assegnata una lunghezza minima pari a uno.
+
+## Gestione degli schemi abilitati per il profilo {#managing-profile-enabled-schemas}
+
+Questa sezione spiega come gestire gli schemi già abilitati per Real-Time Customer Profile. Una volta attivato uno schema, non è più possibile disattivarlo o eliminarlo. È necessario determinare come impedire un ulteriore utilizzo e come gestire i set di dati che non è possibile eliminare.
+
+Una volta che uno schema è abilitato per il profilo, la configurazione non può essere annullata. Se uno schema non deve più essere utilizzato, rinominalo per chiarirne lo stato e creare uno schema sostitutivo con la struttura e la configurazione dell’identità corrette. Questo aiuta a evitare il riutilizzo accidentale dello schema obsoleto quando gli utenti creano nuovi set di dati o configurano flussi di lavoro di acquisizione.
+
+A volte i set di dati di sistema vengono visualizzati insieme a schemi abilitati per Real-Time Customer Profile. Non è possibile eliminare i set di dati di sistema, anche quando lo schema associato è obsoleto. Per evitare utilizzi involontari, rinomina lo schema abilitato per il profilo obsoleto e verifica che nessun flusso di lavoro di acquisizione punti al set di dati di sistema che rimane attivo.
+
+Utilizza le seguenti best practice per evitare il riutilizzo accidentale di schemi abilitati per i profili obsoleti:
+
+* Utilizza una convenzione di denominazione chiara quando depreci uno schema. Includi etichette quali &quot;Obsoleto&quot;, &quot;Non utilizzare&quot; o un tag di versione.
+* Interrompi l’acquisizione di dati in qualsiasi set di dati in base allo schema che desideri ritirare.
+* Crea un nuovo schema con la struttura, la configurazione dell’identità e il pattern di denominazione corretti.
+* Esamina i set di dati di sistema che non possono essere eliminati e verifica che nessun flusso di lavoro di acquisizione vi faccia riferimento.
+* Documenta internamente la modifica in modo che altri utenti comprendano il motivo per cui lo schema è obsoleto.
+
+>[!TIP]
+>
+>Consulta la [guida alla risoluzione dei problemi XDM](../troubleshooting-guide.md#delete-profile-enabled) per ulteriori informazioni sugli schemi abilitati per il profilo e sulle limitazioni correlate.
 
 ## Passaggi successivi
 
 Questo documento illustra le linee guida generali e le best practice per la progettazione del modello dati per Experience Platform. Per riepilogare:
 
-* Prima di creare gli schemi, utilizza un approccio discendente che consiste nell’ordinare le tabelle di dati in categorie di profilo, ricerca ed eventi.
-* Spesso esistono diversi approcci e opzioni per la progettazione di schemi per scopi diversi.
-* Il modello dati deve supportare i casi di utilizzo aziendali, ad esempio la segmentazione o l’analisi del percorso di clienti.
-* Rendi gli schemi il più semplici possibile e aggiungi nuovi campi solo se assolutamente necessario.
+* Ordina le tabelle di dati in categorie di profilo, ricerca ed eventi prima di creare gli schemi.
+* Valuta più approcci quando progetti schemi per diversi casi d’uso.
+* Assicurati che il modello dati supporti la segmentazione o gli obiettivi di percorso del cliente.
+* Mantieni gli schemi il più semplice possibile. Aggiungere nuovi campi solo se necessario.
 
-Quando sei pronto, consulta l&#39;esercitazione su [creazione di uno schema nell&#39;interfaccia utente](../tutorials/create-schema-ui.md) per istruzioni dettagliate su come creare uno schema, assegnare la classe appropriata per l&#39;entità e aggiungere campi a cui mappare i dati.
+Quando sei pronto, consulta l&#39;esercitazione su [creazione di uno schema nell&#39;interfaccia utente](../tutorials/create-schema-ui.md) per istruzioni dettagliate sulla creazione di schemi, l&#39;assegnazione di classi e la mappatura di campi.
