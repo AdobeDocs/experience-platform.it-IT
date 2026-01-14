@@ -2,9 +2,9 @@
 title: Spazi dei nomi e schemi B2B
 description: Questo documento fornisce una panoramica degli spazi dei nomi personalizzati necessari per la creazione di un connettore di origine B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 5eeb0397ddc96a224919a776f94058ae3a539b69
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1538'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Devi avere accesso a [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) per i tuoi schemi B2B per qualificarti in [Profilo cliente in tempo reale](../../../../profile/home.md).
+>- Devi avere accesso a [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) per i tuoi schemi B2B per qualificarti in [Profilo cliente in tempo reale](../../../../profile/home.md).
+>
+>- A partire da gennaio 2026, Real-Time CDP B2B edition non supporterà più **relazioni non standard** tra entità B2B. Si consiglia pertanto di aggiornare le entità B2B in modo da utilizzare le relazioni standard descritte nella [guida degli spazi dei nomi e degli schemi B2B](../../../../rtcdp/schemas/b2b.md).
 
 >[!NOTE]
 >
@@ -40,9 +42,9 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sul pop
 
 | Variable | Descrizione | Esempio |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare [, consulta il tutorial su ](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
+| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su ](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su ](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | Il contenitore `global` contiene tutte le classi, i gruppi di campi di schema, i tipi di dati e gli schemi standard forniti dai partner Adobe e Experience Platform. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
 | `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l’integrazione in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
