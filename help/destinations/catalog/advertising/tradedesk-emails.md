@@ -3,9 +3,9 @@ title: Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -89,7 +89,7 @@ La destinazione CRM [!DNL The Trade Desk] è un caricamento di file batch giorna
 
 ### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Account Type]**: scegliere l&#39;opzione **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
@@ -101,6 +101,11 @@ Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi i
 Quando ci si connette alla destinazione, l’impostazione di un criterio di governance dei dati è completamente facoltativa. Per ulteriori dettagli, consulta la [panoramica sulla governance dei dati](/help/data-governance/policies/overview.md) di Experience Platform.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_ttdg"
+>title="Set di mappatura predefiniti"
+>abstract="Abbiamo preconfigurato questi quattro set di mappatura per te. Quando attivi i dati a Trade Desk, i profili qualificati per i tipi di pubblico attivati non devono necessariamente avere tutte e quattro le identità presenti nei profili, in quanto questa destinazione funziona con una qualsiasi delle identità di destinazione mostrate qui."
 
 >[!IMPORTANT]
 > 
@@ -145,7 +150,7 @@ Per verificare che i dati vengano esportati correttamente da Experience Platform
 
 1. Selezionare innanzitutto la scheda **[!UICONTROL Data]** e rivedere la sezione **[!UICONTROL First-Party]**.
 2. Scorri verso il basso la pagina, sotto **[!UICONTROL Imported Data]**, troverai **[!UICONTROL Adobe 1PD Tile]**.
-3. Fai clic sul riquadro&#x200B;**[!UICONTROL Adobe 1PD]** e verranno elencati tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
+3. Fai clic sul riquadro**[!UICONTROL Adobe 1PD]** e verranno elencati tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
 4. L&#39;ID segmento # di Experience Platform verrà visualizzato come Nome segmento nell&#39;interfaccia utente [!DNL Trade Desk].
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
