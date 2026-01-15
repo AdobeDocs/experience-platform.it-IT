@@ -1,17 +1,17 @@
 ---
 title: Pubblico dell’account
 description: Scopri come creare e utilizzare i tipi di pubblico dell’account per eseguire il targeting dei profili dell’account nelle destinazioni a valle.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1461'
 ht-degree: 21%
 
 ---
 
-# Pubblico dell’account
+# Tipi di pubblico di account
 
 >[!AVAILABILITY]
 >
@@ -60,10 +60,6 @@ Per creare un pubblico di account, selezionare **[!UICONTROL Create audience]** 
 Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Nella scheda [!UICONTROL Attributes] puoi aggiungere sia gli attributi creati da Experience Platform che quelli personalizzati.
 
 ![Viene visualizzato il Generatore di segmenti. Si noti che vengono visualizzati solo gli attributi e i tipi di pubblico.](../images/types/account/segment-builder.png)
-
-Quando si creano i tipi di pubblico dell&#39;account, si noti che gli eventi sono elencati in **[!UICONTROL People]**, anziché essere la propria scheda, poiché questi attributi sono associati alle persone.
-
-![La posizione in cui trovare gli eventi, che si trova nella cartella [!UICONTROL People], è evidenziata.](../images/types/account/attributes.png)
 
 Nella scheda [!UICONTROL Audiences] puoi aggiungere tipi di pubblico basati sulle persone creati in precedenza da utilizzare durante la creazione del pubblico del tuo account.
 
@@ -208,8 +204,8 @@ Quando si utilizzano i tipi di pubblico dell&#39;account, il pubblico **deve** r
    - Un’entità incrociata si verifica quando si passa da un’entità all’altra all’interno del pubblico. Ad esempio, passare da un account a una persona a un elenco di marketing.
 - Il numero massimo di valori che è possibile controllare per un singolo campo è **50**.
    - Ad esempio, se hai un campo &quot;Nome città&quot;, puoi confrontare tale valore con 50 nomi di città.
-- Il pubblico dell&#39;account **non può** utilizzare eventi sequenziali.
 - I tipi di pubblico dell&#39;account **non possono** utilizzare le mappe.
+- Il pubblico dell&#39;account **non può** utilizzare gli eventi.
 - La profondità massima degli array nidificati è **5**.
 - Il numero massimo di oggetti nidificati è **10**.
 
