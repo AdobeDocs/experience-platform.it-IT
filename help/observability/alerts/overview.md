@@ -4,9 +4,9 @@ title: Panoramica degli avvisi
 description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Gli avvisi di Experience Platform possono essere inviati una sola volta oppure p
 | --- | --- |
 | Non indica necessariamente un problema. | Indica uno stato potenzialmente indesiderato. |
 | Non si ripete. | Può ripetere se la condizione anomala persiste. |
-| Gli esempi includono:<ul><li>Acquisizione dei dati completata.</li><li>Esecuzione di una query completata.</li><li>I dati sono stati eliminati.</li></ul> | Gli esempi includono:<ul><li>La durata dell’acquisizione supera il livello di servizio concordato (SLA).</li><li>L’ingestione giornaliera non si è verificata nelle ultime 24 ore.</li><li>Il tasso di errore del processore di flusso è superiore alla soglia configurata.</li><li>Il numero totale di profili supera l’adesione.</li></ul> |
+| Gli esempi includono:<ul><li>Acquisizione dei dati completata.</li><li>Esecuzione di una query completata.</li><li>I dati sono stati eliminati.</li></ul> | Gli esempi includono:<ul><li>La durata dell’acquisizione supera il livello di servizio concordato (SLA).</li><li>L’ingestione giornaliera non si è verificata nelle ultime 24 ore.</li><li>Il tasso di errore del processore di flusso è superiore alla soglia configurata.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Gli avvisi possono essere inviati a un webhook configurato per facilitare l’au
 
 L’interfaccia utente di Experience Platform ti consente di visualizzare gli avvisi ricevuti e di gestire le regole degli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423920?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Per lavorare con gli avvisi nell’interfaccia utente di Experience Platform, è necessario disporre delle seguenti autorizzazioni di controllo degli accessi abilitate tramite Adobe Admin Console:
 
