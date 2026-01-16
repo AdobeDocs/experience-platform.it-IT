@@ -2,9 +2,9 @@
 description: Questa pagina descrive i vari flussi di autorizzazione OAuth 2 supportati da Destination SDK e fornisce istruzioni per impostare l’autorizzazione OAuth 2 per la destinazione.
 title: Autorizzazione OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
+source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2273'
 ht-degree: 2%
 
 ---
@@ -109,7 +109,10 @@ Per impostare questo metodo di autorizzazione per la destinazione, aggiungi le s
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -126,6 +129,7 @@ Per impostare questo metodo di autorizzazione per la destinazione, aggiungi le s
 | `clientId` | Stringa | ID client assegnato dal sistema a Adobe Experience Platform. |
 | `clientSecret` | Stringa | Il segreto client assegnato dal sistema a Adobe Experience Platform. |
 | `scope` | Elenco di stringhe | *Facoltativo*. Imposta l’ambito del token di accesso che consente ad Experience Platform di eseguire sulle risorse. Esempio: &quot;read, write&quot; (lettura, scrittura). |
+| `options.useBasicAuth` | Booleano | *Facoltativo*. Valore booleano che controlla come le credenziali client (ID client e segreto client) vengono inviate all’endpoint token del provider OAuth durante lo scambio di un codice di autorizzazione per un token di accesso. <ul><li>Se è impostato su `false` o non è definito, le credenziali vengono inviate come `client_id` e `client_secret` parametri nel corpo della richiesta POST (comportamento predefinito).</li><li>Se questo parametro è impostato su `true`, le credenziali vengono inviate nell&#39;intestazione HTTP `Authorization` utilizzando il formato di autenticazione di base: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Impostare `useBasicAuth` su `true` quando il provider OAuth richiede l&#39;invio delle credenziali client nell&#39;intestazione `Authorization` anziché nel corpo della richiesta. |
 
 {style="table-layout:auto"}
 
