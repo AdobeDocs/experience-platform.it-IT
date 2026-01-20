@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
+source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 31%
+source-wordcount: '1150'
+ht-degree: 24%
 
 ---
 
@@ -25,52 +25,72 @@ ht-degree: 31%
 >- [Composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
 
-**Data di rilascio: ottobre 2025**
+**Data di rilascio: gennaio 2026**
 
 Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
-- [Avvisi](#alerts)
+- [Agent Orchestrator](#agent-orchestrator)
 - [Destinazioni](#destinations)
+- [Profilo cliente in tempo reale](#real-time-customer-profile)
+- [Schemi](#schemas)
 - [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
 
-## Avvisi {#alerts}
+## Agent Orchestrator {#agent-orchestrator}
 
-Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. Puoi iscriverti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell’interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso nell’interfaccia stessa o tramite notifiche e-mail.
+Agent Orchestrator consente di creare e distribuire agenti basati sull’intelligenza artificiale in grado di automatizzare i flussi di lavoro e interagire con i clienti su più canali.
 
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Avviso sulla percentuale di errori della destinazione | È stato aggiunto un nuovo avviso per le destinazioni: **La frequenza degli errori di destinazione supera la soglia**. Questo avviso notifica quando il numero di record non riusciti durante l&#39;attivazione dei dati supera la soglia consentita, consentendo di rispondere rapidamente ai problemi di attivazione. |
+| Movimento di prova per Agent Orchestrator | Agent Orchestrator offre ora una mozione di prova che consente ai clienti di esplorare e testare il servizio prima di effettuare un acquisto completo. Questa opzione &quot;try-before-you-buy&quot; consente alle organizzazioni di valutare le funzionalità di Agent Orchestrator, incluse le competenze e le funzioni di orchestrazione, nel proprio ambiente. La versione di prova offre un’esperienza pratica nella creazione di agenti basati sull’intelligenza artificiale e nella comprensione di come possono essere integrati nei flussi di lavoro esistenti. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sugli avvisi, consulta la [[!DNL Observability Insights] panoramica](../observability/home.md).
+Per ulteriori informazioni, consulta la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinazioni {#destinations}
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-**Destinazioni nuove o aggiornate**
-
-| Destinazione | Descrizione |
-| --- | --- |
-| [!DNL AdForm] | Utilizzare questa destinazione per inviare i tipi di pubblico di Adobe Real-Time CDP a [!DNL AdForm] per l&#39;attivazione in base all&#39;Experience Cloud ID (ECID) e all&#39;ID Fusion di [!DNL AdForm]. ID Fusion di [!DNL AdForm] è un servizio di risoluzione ID che consente di attivare i tipi di pubblico di prime parti in base all&#39;Experience Cloud ID (ECID). |
-| [!DNL Amazon Ads] | Sono stati aggiunti identificatori personali aggiuntivi di supporto, ad esempio `firstName`, `lastName`, `street`, `city`, `state`, `zip` e `country`. La mappatura di questi campi come identità di destinazione può migliorare le percentuali di corrispondenza del pubblico. |
-| [!DNL Snowflake Batch] (disponibilità limitata) | Crea una condivisione dati live di [!DNL Snowflake] per ricevere aggiornamenti giornalieri sul pubblico direttamente come tabelle condivise nel tuo account. Questa integrazione è attualmente disponibile per le organizzazioni dei clienti con provisioning nell&#39;area VA7. |
-| [!DNL Snowflake Streaming] (disponibilità limitata) | Crea una condivisione dati live di [!DNL Snowflake] per ricevere aggiornamenti del pubblico in streaming direttamente come tabelle condivise nel tuo account. Questa integrazione è attualmente disponibile per le organizzazioni dei clienti con provisioning nell&#39;area VA7. |
-
 **Funzionalità nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per la crittografia lato server di [!DNL AES256] in [!DNL Amazon S3] destinazioni | [!DNL Amazon S3] destinazioni ora supportano [!DNL AES256] crittografia lato server, fornendo maggiore sicurezza per i dati esportati. È possibile configurare questo metodo di crittografia durante la configurazione o l&#39;aggiornamento delle connessioni di destinazione [!DNL Amazon S3], assicurandosi che i dati vengano crittografati inattivi utilizzando gli algoritmi di crittografia [!DNL AES256] standard del settore. Per ulteriori informazioni, consulta la [[!DNL Amazon] documentazione](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html). |
-| [Diverse nuove destinazioni supportano il monitoraggio a livello di pubblico](../dataflows/ui/monitor-destinations.md#audience-level-view) | Le seguenti destinazioni supportano ora il monitoraggio a livello di pubblico: <ul><li>[!DNL Airship Tags]</li><li>(API) [!DNL Salesforce Marketing Cloud]</li><li>[!DNL Marketo Engage]</li><li>[!DNL Microsoft Bing]</li><li>(V1) [!DNL Pega CDH Realtime Audience]</li><li>(V2) [!DNL Pega CDH Realtime Audience]</li><li>Coinvolgimento dell&#39;account [!DNL Salesforce Marketing Cloud]</li><li>[!DNL The Trade Desk]</li></ul> |
-| Correzione dei guardrail di esportazione del set di dati | È stata implementata una correzione ai guardrail di esportazione del set di dati. In precedenza, alcuni set di dati che includevano una colonna timestamp ma erano _non_ in base allo schema XDM Experience Events venivano trattati erroneamente come set di dati Experience Events, limitando le esportazioni a un intervallo di lookback di 365 giorni. Il guardrail di lookback documentato di 365 giorni ora si applica esclusivamente ai set di dati Experience Events. I set di dati che utilizzano uno schema diverso da XDM Experience Events sono ora governati dal guardrail di 10 miliardi di record. Alcuni clienti potrebbero notare un aumento delle esportazioni di set di dati che erroneamente rientravano nell’intervallo di lookback di 365 giorni. Questo consente di esportare set di dati per flussi di lavoro predittivi con un intervallo di lookback lungo. Per ulteriori informazioni, leggere le [protezioni di esportazione del set di dati](../destinations/guardrails.md#dataset-exports). |
-| Generazione di rapporti migliorati a livello di pubblico per le destinazioni enterprise | È stata migliorata la logica di reporting a livello di pubblico per le destinazioni enterprise. Dopo questa versione, i clienti vedranno numeri di reporting del pubblico più precisi che includono solo i tipi di pubblico rilevanti per la destinazione selezionata. Questo aggiustamento di monitoraggio assicura che i rapporti includano solo i tipi di pubblico mappati sul flusso di dati, fornendo informazioni più chiare sull’effettiva attivazione dei dati. Questo non influisce sulla quantità di dati attivati, ma si tratta semplicemente di un miglioramento del monitoraggio per migliorare l’accuratezza della generazione di rapporti. |
+| Limiti di guardrail aggiornati per la destinazione Adobe Target | Il numero massimo di tipi di pubblico che è possibile mappare su una singola destinazione di Adobe Target è stato aumentato da 50 a 250. Questo allinea Adobe Target al limite di pubblico standard per altre destinazioni, fornendo maggiore flessibilità per i flussi di lavoro di attivazione del pubblico. Ora i clienti possono attivare più tipi di pubblico nelle destinazioni di Adobe Target senza dover creare più flussi di dati. |
+
+{style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../destinations/home.md).
+
+## Profilo cliente in tempo reale {#real-time-customer-profile}
+
+Real-Time Customer Profile consente di visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Applicazione della capacità di streaming | Experience Platform ora applica capacità di throughput in streaming per Real-Time Customer Profile e Identity Service. Quando i clienti superano la capacità di streaming contrattuale, i dati vengono messi in coda ed elaborati in modalità first in first out. In questo modo è possibile garantire prestazioni di sistema prevedibili e impedire che le violazioni della capacità influiscano sulla qualità dell’acquisizione dei dati. Note importanti: gli upsert di streaming non saranno disponibili sul data lake quando viene superata la capacità. Questa implementazione non si applica ai clienti con licenze Adobe Journey Optimizer e i dati in coda verranno elaborati in sequenza una volta che la capacità diventa disponibile. |
+| Accesso API obsoleto per Real-Time CDP Prime | L’accesso API per gli eventi esperienza è ora obsoleto per tutti i clienti Real-Time CDP Prime. Questa modifica influisce sulla possibilità di eseguire query sugli eventi esperienza direttamente tramite API. I clienti di Real-Time CDP Ultimate possono richiedere un’eccezione tramite un processo di eccezione formale per abilitare l’accesso API agli eventi di esperienza, se necessario per i loro casi d’uso. Questa funzione consente di ottimizzare le prestazioni del sistema e di allinearsi alle best practice per i modelli di accesso ai dati. |
+| Monitorare l’esecuzione del flusso di dati | Ora puoi monitorare l’avanzamento e la preparazione del flusso di dati eseguito in Profilo. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, consulta la [[!DNL Real-Time Customer Profile] panoramica](../profile/home.md).
+
+## Schemi {#schemas}
+
+Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i sistemi, diventa più semplice mantenere un significato e quindi ottenere valore dai dati. Gli schemi sono composti da una classe base e da zero o più gruppi di campi schema.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Modernizzazione dell’inventario degli schemi con ricerca, filtro, tag e cartelle | La pagina di navigazione dello schema è stata modernizzata per fornire funzionalità organizzative e di individuazione avanzate. Le nuove funzioni includono opzioni avanzate di ricerca e filtro, supporto di tag e cartelle generati dall’utente per organizzare gli schemi e azioni in linea per semplificare i flussi di lavoro. I miglioramenti principali includono: colonne aggiornate (Nome, Classe, Set di dati, Identità, Relazioni, Abilita per profilo, Comportamento, Tipo di schema, Tag, Data di creazione, Ultima modifica), filtri avanzati (Mostra profili, Tipo di schema, Classe, Ha qualsiasi tag, Creato da, Data di creazione, Data di modifica, Ha identità primaria, Ha relazione, Spazio dei nomi dell’identità primaria), azioni in linea (Modifica, Elimina, Applica etichette, Crea set di dati per schemi non relazionali, Gestisci tag, Sposta in cartella, Aggiungi a pacchetto, Copia struttura JSON, Scarica file di esempio) e la possibilità di organizzare gli schemi utilizzando tag e cartelle. Questi miglioramenti forniscono una visibilità completa delle risorse dello schema e consentono una gestione più efficiente dello schema a livello di sandbox. |
+
+Per ulteriori informazioni, consulta la [[!DNL Schemas] panoramica](../xdm/home.md).
 
 ## Servizio di segmentazione {#segmentation-service}
 
@@ -81,6 +101,7 @@ Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../desti
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Monitoraggio della segmentazione in streaming | Il monitoraggio in tempo reale per la segmentazione in streaming fornisce trasparenza in termini di tasso di valutazione, latenza e metriche di qualità dei dati a livello di sandbox, set di dati e pubblico. In questo modo è possibile inviare avvisi proattivi e ottenere informazioni utili per aiutare i data engineer a identificare le violazioni della capacità e i problemi di acquisizione. Le metriche di monitoraggio includono il tasso di valutazione, la latenza di acquisizione P95, nonché i record ricevuti, valutati, non riusciti e saltati. Le funzionalità View-by-DataSet e View-by-Audience forniscono una visibilità completa sui nuovi profili qualificati e non qualificati. |
+| Aggiornamento TTL per pubblico esterno | I tipi di pubblico esterni (come i caricamenti CSV) ora supportano la funzionalità di aggiornamento forzato per le impostazioni Time-to-Live (TTL). Questa funzione consente agli utenti di aggiornare manualmente la scadenza TTL per i tipi di pubblico esterni, fornendo un maggiore controllo sulla gestione del ciclo di vita dei tipi di pubblico. Ciò è particolarmente utile per i tipi di pubblico che devono persistere oltre il periodo TTL iniziale o richiedere una riattivazione senza ricaricare i dati. |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../segmentation/home.md).
 
@@ -92,13 +113,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Origine | Descrizione |
 | --- | --- |
-| [!BADGE Origini di Beta]{type=Informative} [!DNL Talon.one] per i dati fedeltà | Utilizza le origini [!DNL Talon.One] per acquisire i dati batch e di fedeltà in streaming in Experience Platform. Il connettore supporta lo streaming di dati di profilo, dati sulle transazioni e dati sulla fedeltà, tra cui punti guadagnati, punti riscattati, punti scaduti e dati a livello. |
-
-**Origini aggiornate**
-
-| Origine | Descrizione |
-| --- | --- |
-| Disponibilità generale dell&#39;origine [!DNL Google Ads] (solo API) | La versione API dell&#39;origine [!DNL Google Ads] è ora in Disponibilità generale. La documentazione API è stata aggiornata per indicare che la versione più recente è ora `v21` e che Experience Platform supporta tutte le versioni v19 e successive. La versione dell’interfaccia utente rimane in versione beta e supporta l’acquisizione una tantum. Per utilizzare l’acquisizione dati incrementale, utilizza la route API. |
-| Supporto per la rete virtuale [!DNL Azure Event Hubs] | Adobe ora supporta esplicitamente le connessioni di rete virtuale agli hub eventi di Azure, consentendo il trasferimento dei dati su reti private anziché pubbliche. I clienti possono inserire nell&#39;elenco Consentiti Experience Platform VNet per instradare il traffico dei hub eventi in modo privato tramite la dorsale privata di Azure, fornendo sicurezza e conformità migliorate per i flussi di lavoro di acquisizione dei dati. |
+| Origine [!DNL Oracle Eloqua] V2 | È ora disponibile un nuovo connettore di origine [!DNL Oracle Eloqua] che sostituisce il connettore obsoleto. Questo connettore aggiornato offre funzionalità avanzate e maggiore affidabilità per l&#39;acquisizione di dati da [!DNL Oracle Eloqua] in Experience Platform. I clienti che utilizzano il connettore esistente devono effettuare la migrazione alla nuova implementazione, in quanto le connessioni esistenti non funzioneranno più. Il nuovo connettore supporta tutti i passaggi di configurazione e configurazione necessari per connettersi a [!DNL Oracle Eloqua] e acquisire i dati di automazione marketing. |
+| Origine [!DNL Salesforce Marketing Cloud] V2 | È ora disponibile un nuovo connettore di origine [!DNL Salesforce Marketing Cloud] che sostituisce il connettore obsoleto. Questo connettore aggiornato offre prestazioni migliorate e funzionalità aggiuntive per l&#39;acquisizione di dati da [!DNL Salesforce Marketing Cloud] in Experience Platform. I clienti che utilizzano il connettore esistente devono passare alla nuova implementazione. Il nuovo connettore include istruzioni di configurazione complete per la connessione a [!DNL Salesforce Marketing Cloud] e l&#39;acquisizione dei dati di automazione marketing. |
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../sources/home.md).
+
