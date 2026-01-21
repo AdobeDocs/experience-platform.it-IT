@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
+source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 24%
+source-wordcount: '1395'
+ht-degree: 20%
 
 ---
 
@@ -54,11 +54,24 @@ Per ulteriori informazioni, consulta la [documentazione di Agent Orchestrator](h
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
+**Destinazioni nuove o aggiornate**
+
+| Destinazione | Descrizione |
+| --- | --- |
+| Connettore di destinazione Kevel ora disponibile | [[!DNL Kevel]](https://www.kevel.com/) fornisce la tecnologia basata sull&#39;intelligenza artificiale e la guida di esperti che aiutano i leader di settore innovativi a lanciare, scalare e avere successo nel settore dei media retail. Retail Media Cloud di [!DNL Kevel] offre formati di annunci mirati, attribuibili e personalizzabili per la pubblicità nel sito e fuori dal sito. |
+| Connettore di destinazione per Exchange indice ora disponibile | [!DNL Index] è una piattaforma pubblicitaria globale lato offerta che consente ai proprietari di contenuti multimediali di massimizzare il valore dei contenuti su ogni schermo. Con oltre 20 anni di leadership nel settore, [!DNL Index] mette in contatto i marchi più grandi del mondo con i più importanti produttori di esperienze per offrire esperienze consumer di alta qualità. |
+| Supporto di endpoint regionali per connessioni Braze | Tutti gli [endpoint specifici per area geografica](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supportati da [!DNL Braze] sono ora disponibili per la selezione durante il flusso di configurazione di destinazione. Chiedi al tuo rappresentante [!DNL Braze] quale istanza endpoint utilizzare. |
+| Supporto di pianificazione settimanale e mensile per l’onboarding di Liveramp | Ora puoi configurare le pianificazioni di esportazione settimanali e mensili per la destinazione di onboarding Liveramp. |
+| Supporto della crittografia AES256 per le destinazioni Amazon S3 | Ora puoi configurare la crittografia AES256 per le esportazioni Amazon S3. |
+| Esperienza di attivazione migliorata per le destinazioni Trade Desk e Microsoft Bing | Le destinazioni Trade Desk e Microsoft Bing ora includono mappature obbligatorie predefinite per un’esperienza di attivazione ottimizzata. |
+
 **Funzionalità nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Limiti di guardrail aggiornati per la destinazione Adobe Target | Il numero massimo di tipi di pubblico che è possibile mappare su una singola destinazione di Adobe Target è stato aumentato da 50 a 250. Questo allinea Adobe Target al limite di pubblico standard per altre destinazioni, fornendo maggiore flessibilità per i flussi di lavoro di attivazione del pubblico. Ora i clienti possono attivare più tipi di pubblico nelle destinazioni di Adobe Target senza dover creare più flussi di dati. |
+| Limiti di guardrail aggiornati per la destinazione Adobe Target | Il numero massimo di tipi di pubblico che è possibile mappare su una singola destinazione di Adobe Target è stato aumentato da 50 a 250. Questo allinea Adobe Target al limite di pubblico standard per altre destinazioni, fornendo maggiore flessibilità per i flussi di lavoro di attivazione del pubblico. Ora puoi attivare più tipi di pubblico nelle destinazioni di Adobe Target senza dover creare più flussi di dati. |
+| [Modifica destinazioni](/help/destinations/ui/edit-destination.md) e [modifica azioni di marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) disponibilità generale | L’opzione per modificare le destinazioni e le azioni di marketing è ora disponibile per tutti gli utenti. |
+| Attiva o disattiva i nomi visualizzati dei campi nel passaggio di mappatura | Quando mappi i campi dello schema su una destinazione, ora puoi alternare tra la visualizzazione del nome completo del campo XDM e la visualizzazione del solo nome visualizzato. |
 
 {style="table-layout:auto"}
 
