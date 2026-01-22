@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
+source-git-commit: a55272e3124c3fceedcadc33883445132bfec6bd
 workflow-type: tm+mt
-source-wordcount: '4849'
+source-wordcount: '4853'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ I dati associati a questa colonna di identità primaria sono i dati **only** all
 
 Tutti gli altri dati all&#39;interno del pubblico generato esternamente sono considerati **attributi payload**. Questi attributi possono essere utilizzati **solo** per la personalizzazione e l&#39;arricchimento durante l&#39;attivazione e sono **non** associati a un profilo. Tuttavia, questi attributi vengono memorizzati nel data lake.
 
-Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1&rbrace;.**
+Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1}.**
 
 ### Posso riconciliare i dati del pubblico generato esternamente con un profilo esistente in Experience Platform?
 
@@ -120,7 +120,7 @@ Gli attributi di arricchimento sono attributi che provengono da un set di dati e
 
 | Canale di attivazione | Tipi di pubblico da caricamento personalizzato CSV | Tipi di pubblico da Composizione pubblico |
 | --- | --- | --- |
-| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento **&#x200B;**. |
+| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento ****. |
 | Campagne Adobe Journey Optimizer | Non è possibile attivare né gli attributi del pubblico né quelli del payload. | È possibile attivare sia gli attributi di pubblico che quelli di arricchimento. |
 
 ## Stati del ciclo di vita {#lifecycle-states}
@@ -135,7 +135,7 @@ Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Bozza | Un pubblico in stato **Bozza** è un pubblico ancora in fase di sviluppo e non ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. | Sì |
 | Pubblicato | Un pubblico con stato **Pubblicato** è un pubblico pronto per l&#39;uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì | Sì |
-| Non attivo | Un pubblico con stato **Inattivo** è un pubblico attualmente non in uso. Esiste ancora in Experience Platform, ma **non** sarà utilizzabile fino a quando non sarà contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Experience Platform. | No | Sì |
+| Inattivo | Un pubblico con stato **Inattivo** è un pubblico attualmente non in uso. Esiste ancora in Experience Platform, ma **non** sarà utilizzabile fino a quando non sarà contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Experience Platform. | No | Sì |
 | Eliminato | Un pubblico nello stato **Eliminato** è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No | No |
 
 ### In quali stati posso modificare i tipi di pubblico in?
@@ -170,7 +170,7 @@ Se un pubblico valutato tramite la segmentazione in batch viene ripubblicato, ov
 
 Il metodo per inserire un pubblico nello stato di bozza dipende dall’origine del pubblico.
 
-Per i tipi di pubblico creati con Segment Builder (Generatore di segmenti), è possibile impostare il pubblico sullo stato di bozza selezionando &quot;[!UICONTROL Salva come bozza]&quot; nel Generatore di segmenti.
+Per i tipi di pubblico creati con Segment Builder (Generatore di segmenti), è possibile impostare il pubblico sullo stato di bozza selezionando &quot;[!UICONTROL Save as draft]&quot; nel Generatore di segmenti.
 
 Per i tipi di pubblico creati in Composizione pubblico, i tipi di pubblico vengono salvati automaticamente come bozza fino alla pubblicazione.
 
@@ -180,13 +180,13 @@ Una volta che un pubblico è nello stato pubblicato, **non puoi** riportare il p
 
 ### Come si mette un pubblico nello stato pubblicato?
 
-Per i tipi di pubblico creati con Generatore di segmenti o Composizione pubblico, puoi impostare il pubblico sullo stato pubblicato selezionando &quot;[!UICONTROL Pubblica]&quot; nelle rispettive interfacce utente.
+Per i tipi di pubblico creati con Generatore di segmenti o Composizione pubblico, puoi impostare il pubblico sullo stato pubblicato selezionando &quot;[!UICONTROL Publish]&quot; nelle rispettive interfacce utente.
 
 I tipi di pubblico creati esternamente vengono automaticamente impostati su pubblicato.
 
 ### Come si mette un pubblico in stato inattivo?
 
-Per rendere inattivo un pubblico pubblicato, apri il menu Azioni rapide in Audience Portal e seleziona &quot;[!UICONTROL Disattiva]&quot;.
+Per rendere inattivo un pubblico pubblicato, apri il menu Azioni rapide in Audience Portal e seleziona &quot;[!UICONTROL Deactivate]&quot;.
 
 ### Come si ripubblica un pubblico?
 
@@ -194,7 +194,7 @@ Per rendere inattivo un pubblico pubblicato, apri il menu Azioni rapide in Audie
 >
 >Lo stato &quot;ripubblicato&quot; è lo stesso dello stato pubblicato per il comportamento del pubblico.
 
-Puoi ripubblicare un pubblico selezionando un pubblico che si trova nello stato inattivo, aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Pubblica].
+È possibile ripubblicare un pubblico selezionando un pubblico che si trova nello stato inattivo, aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Publish].
 
 ### Come posso impostare un pubblico come eliminato?
 
@@ -202,7 +202,7 @@ Puoi ripubblicare un pubblico selezionando un pubblico che si trova nello stato 
 >
 >Puoi eliminare solo i tipi di pubblico **non** utilizzati in qualsiasi attivazione a valle. Inoltre, non puoi eliminare un pubblico a cui viene fatto riferimento in un altro pubblico. Se non riesci a eliminare il pubblico, assicurati di **non** utilizzarlo in qualsiasi servizio a valle o come blocco predefinito di un altro pubblico.
 
-Puoi impostare un pubblico sullo stato di eliminazione aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Elimina].
+Per impostare un pubblico come eliminato, apri il menu Azioni rapide in Audience Portal e seleziona [!UICONTROL Delete].
 
 ### Esistono avvertenze per le transizioni dello stato del ciclo di vita?
 
@@ -304,11 +304,11 @@ Al momento, è possibile avere solo **10** composizioni pubblicate per sandbox. 
 
 Il posizionamento del componente di composizione segue una struttura rigida come segue:
 
-1. **inizia sempre** con il blocco [!UICONTROL Pubblico] per selezionare l&#39;attività iniziale. Puoi avere un massimo di **un** [!UICONTROL blocco Pubblico].
-2. Facoltativamente, puoi aggiungere un blocco [!UICONTROL Escludi] che segue il blocco [!UICONTROL Pubblico].
-3. Facoltativamente, puoi aggiungere un blocco [!UICONTROL Arricchisci] che segue il blocco [!UICONTROL Escludi]. È possibile utilizzare solo **un** [!UICONTROL Arricchisci] blocco per composizione.
-4. Facoltativamente, puoi aggiungere un blocco [!UICONTROL Classifica] o [!UICONTROL Dividi]. Puoi **solo** avere uno di questi blocchi per composizione.
-5. **sempre** termina con un blocco [!UICONTROL Salva] per salvare il pubblico.
+1. **inizia sempre** con il blocco [!UICONTROL Audience] per selezionare l&#39;attività iniziale. Puoi avere un massimo di **un** [!UICONTROL Audience] blocco.
+2. Facoltativamente, è possibile aggiungere un blocco [!UICONTROL Exclude] che segue il blocco [!UICONTROL Audience].
+3. Facoltativamente, è possibile aggiungere un blocco [!UICONTROL Enrich] che segue il blocco [!UICONTROL Exclude]. È possibile utilizzare solo **un** blocco [!UICONTROL Enrich] per composizione.
+4. È possibile aggiungere un blocco [!UICONTROL Rank] o [!UICONTROL Split]. Puoi **solo** avere uno di questi blocchi per composizione.
+5. **always** termina con un blocco [!UICONTROL Save] per salvare il pubblico.
 
 Inoltre, quando si utilizzano questi blocchi, si applicano le seguenti restrizioni:
 
@@ -360,7 +360,7 @@ Nella sezione seguente sono elencate le domande relative all’iscrizione al pub
 
 ### Come posso confermare l’appartenenza di un profilo a un pubblico?
 
-Per confermare l’iscrizione al pubblico di un profilo, visita la pagina dei dettagli del profilo che desideri confermare. Seleziona **[!UICONTROL Attributi]**, seguito da **[!UICONTROL Visualizza JSON]** ed è possibile confermare che l&#39;oggetto `segmentMembership` contiene l&#39;ID del pubblico.
+Per confermare l’iscrizione al pubblico di un profilo, visita la pagina dei dettagli del profilo che desideri confermare. Selezionare **[!UICONTROL Attributes]**, seguito da **[!UICONTROL View JSON]**, e confermare che l&#39;oggetto `segmentMembership` contiene l&#39;ID del pubblico.
 
 ### L’iscrizione al pubblico può spostarsi tra l’iscrizione ideale e quella effettiva?
 
@@ -408,7 +408,7 @@ Nella sezione seguente sono elencate le domande relative alla segmentazione in s
 
 ### La segmentazione in streaming &quot;unqualification&quot; (non qualificazione) si verifica anche in tempo reale?
 
-Nella maggior parte dei casi, l’annullamento della qualifica per segmentazione in streaming avviene in tempo reale. Tuttavia, i segmenti di streaming che utilizzano segmenti di segmenti non **&#x200B;**&#x200B;sono idonei in tempo reale, ma vengono annullati dopo 24 ore.
+L’annullamento della segmentazione in streaming si verifica a seconda della composizione del pubblico. Per i tipi di pubblico basati su eventi, l’annullamento della qualifica si verifica in tempo reale alla scadenza dell’intervallo di lookback. Per i tipi di pubblico basati su profili o che utilizzano gli attributi del profilo, l’annullamento della qualifica si verifica quando i valori degli attributi del profilo vengono modificati tramite un’origine di streaming o durante il processo di valutazione batch giornaliero.
 
 ### Su quali dati funziona la segmentazione in streaming?
 

@@ -2,9 +2,9 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
+source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1389'
 ht-degree: 20%
 
 ---
@@ -86,7 +86,7 @@ Real-Time Customer Profile consente di visualizzare una visualizzazione olistica
 | Funzione | Descrizione |
 | --- | --- |
 | Applicazione della capacità di streaming | Experience Platform ora applica capacità di throughput in streaming per Real-Time Customer Profile e Identity Service. Quando i clienti superano la capacità di streaming contrattuale, i dati vengono messi in coda ed elaborati in modalità first in first out. In questo modo è possibile garantire prestazioni di sistema prevedibili e impedire che le violazioni della capacità influiscano sulla qualità dell’acquisizione dei dati. Note importanti: gli upsert di streaming non saranno disponibili sul data lake quando viene superata la capacità. Questa implementazione non si applica ai clienti con licenze Adobe Journey Optimizer e i dati in coda verranno elaborati in sequenza una volta che la capacità diventa disponibile. |
-| Accesso API obsoleto per Real-Time CDP Prime | L’accesso API per gli eventi esperienza è ora obsoleto per tutti i clienti Real-Time CDP Prime. Questa modifica influisce sulla possibilità di eseguire query sugli eventi esperienza direttamente tramite API. I clienti di Real-Time CDP Ultimate possono richiedere un’eccezione tramite un processo di eccezione formale per abilitare l’accesso API agli eventi di esperienza, se necessario per i loro casi d’uso. Questa funzione consente di ottimizzare le prestazioni del sistema e di allinearsi alle best practice per i modelli di accesso ai dati. |
+| Accesso API obsoleto per Real-Time CDP Prime | L’accesso API per gli eventi esperienza è ora obsoleto per tutti i clienti Real-Time CDP Prime. Questa modifica influisce sulla possibilità di eseguire query sugli eventi esperienza direttamente tramite API. I clienti di Real-Time CDP Ultimate possono richiedere un’eccezione tramite un processo di eccezione formale per abilitare l’accesso API agli eventi di esperienza, se necessario per i loro casi d’uso. Questa impostazione deprecata consente di allineare Real-Time CDP alle funzionalità di gestione delle licenze. |
 | Monitorare l’esecuzione del flusso di dati | Ora puoi monitorare l’avanzamento e la preparazione del flusso di dati eseguito in Profilo. |
 
 {style="table-layout:auto"}
