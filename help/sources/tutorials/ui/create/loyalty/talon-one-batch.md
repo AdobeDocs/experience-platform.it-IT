@@ -4,9 +4,9 @@ description: Scopri come acquisire dati batch da Talon.One in Adobe Experience P
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Leggi questo tutorial per scoprire come acquisire dati batch dall&#39;account [!DNL Talon.One] in Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente.
 
-## Introduzione
+## Guida introduttiva
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
@@ -34,29 +34,29 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 
 ## Navigare nel catalogo delle origini
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Origini]*. Seleziona la categoria appropriata nel pannello *[!UICONTROL Categorie]*. In alternativa, utilizza la barra di ricerca per passare all’origine specifica che desideri utilizzare.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Sources]*. Selezionare la categoria appropriata nel pannello *[!UICONTROL Categories]*. In alternativa, utilizza la barra di ricerca per passare all’origine specifica che desideri utilizzare.
 
-Per acquisire i dati da [!DNL Talon.One], selezionare la scheda di origine **[!UICONTROL Connettore Source Batch Talon.One]** in *[!UICONTROL Fedeltà]*, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Per acquisire i dati da [!DNL Talon.One], selezionare la scheda di origine **[!UICONTROL Talon.One Batch Source Connector]** in *[!UICONTROL Loyalty]*, quindi selezionare **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Le origini nel catalogo origini visualizzano l&#39;opzione **[!UICONTROL Set up]** quando una determinata origine non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Add data]**.
 
 ![Catalogo delle origini con la scheda del connettore di origine batch Talon.One selezionata.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
 ### Crea un nuovo account
 
-Per creare un nuovo account per l&#39;origine [!DNL Talon.One], selezionare **[!UICONTROL Nuovo account]** e fornire un nome e una descrizione facoltativa per l&#39;account. Quindi, fornisci il tuo dominio [!DNL Talon.One] e la tua chiave API di gestione [!UICONTROL Talon.One]. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e attendere alcuni istanti prima di stabilire la connessione.
+Per creare un nuovo account per l&#39;origine [!DNL Talon.One], selezionare **[!UICONTROL New account]** e fornire un nome e una descrizione facoltativa per l&#39;account. Quindi, fornisci il dominio [!DNL Talon.One] e [!UICONTROL Talon.One Management API Key]. Al termine, selezionare **[!UICONTROL Connect to source]** e attendere alcuni istanti per consentire la connessione.
 
 ![Il passaggio Crea nuovo account del flusso di lavoro di origine.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### Usa un account esistente
 
-Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]** e selezionare l&#39;account [!DNL Talon.One] che si desidera utilizzare dall&#39;interfaccia account.
+Per utilizzare un account esistente, selezionare **[!UICONTROL Existing account]** e selezionare l&#39;account [!DNL Talon.One] che si desidera utilizzare dall&#39;interfaccia account.
 
 ## Selezionare i dati
 
-Dopo aver eseguito l&#39;autenticazione, fornire i valori per **applicationId** e **sessionType**. Durante questo passaggio, puoi utilizzare le funzionalità di anteprima per controllare la struttura dei dati. Al termine, selezionare **[!UICONTROL Avanti]** per continuare.
+Dopo aver eseguito l&#39;autenticazione, fornire i valori per **applicationId** e **sessionType**. Durante questo passaggio, puoi utilizzare le funzionalità di anteprima per controllare la struttura dei dati. Al termine, selezionare **[!UICONTROL Next]** per continuare.
 
 ![Selezionare i dati e visualizzare in anteprima i passaggi del flusso di lavoro origini.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
@@ -64,7 +64,7 @@ Dopo aver eseguito l&#39;autenticazione, fornire i valori per **applicationId** 
 
 Quindi, devi fornire informazioni relative al set di dati e al flusso di dati.
 
-### Dettagli del set di dati
+### Dettagli set di dati
 
 Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne/campi) e record (righe). I dati acquisiti correttamente in Experience Platform vengono memorizzati nel data lake come set di dati.
 
@@ -76,10 +76,10 @@ Durante questo passaggio, puoi utilizzare un set di dati esistente o crearne uno
 
 +++Seleziona per i passaggi per abilitare l’acquisizione del profilo, la diagnostica degli errori e l’acquisizione parziale.
 
-Se il set di dati è abilitato per Real-Time Customer Profile, durante questo passaggio puoi attivare/disattivare **[!UICONTROL il set di dati profilo]** per abilitare i dati per l&#39;acquisizione del profilo. È inoltre possibile utilizzare questo passaggio per abilitare **[!UICONTROL Diagnostica errori]** e **[!UICONTROL Acquisizione parziale]**.
+Se il set di dati è abilitato per Real-Time Customer Profile, durante questo passaggio puoi attivare/disattivare **[!UICONTROL Profile dataset]** per abilitare i dati per l&#39;acquisizione del profilo. È inoltre possibile utilizzare questo passaggio per abilitare **[!UICONTROL Error diagnostics]** e **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnostica errori]**: selezionare **[!UICONTROL Diagnostica errori]** per indicare all&#39;origine di produrre diagnostica errori a cui fare successivamente riferimento durante il monitoraggio dell&#39;attività del set di dati e dello stato del flusso di dati.
-* **[!UICONTROL Acquisizione parziale]**: l&#39;acquisizione parziale in batch consente di acquisire dati contenenti errori, fino a una determinata soglia configurabile. Questa funzione consente di acquisire correttamente in Experience Platform tutti i dati accurati, mentre tutti i dati errati vengono raggruppati separatamente con informazioni sul motivo della validità.
+* **[!UICONTROL Error diagnostics]**: selezionare **[!UICONTROL Error diagnostics]** per indicare all&#39;origine di produrre diagnostica degli errori a cui fare successivamente riferimento durante il monitoraggio dell&#39;attività del set di dati e dello stato del flusso di dati.
+* **[!UICONTROL Partial ingestion]**: l&#39;acquisizione in batch parziale consente di acquisire dati contenenti errori, fino a una determinata soglia configurabile. Questa funzione consente di acquisire correttamente in Experience Platform tutti i dati accurati, mentre tutti i dati errati vengono raggruppati separatamente con informazioni sul motivo della validità.
 
 +++
 
@@ -109,7 +109,7 @@ Con i dettagli del set di dati e del flusso di dati configurati, ora puoi proced
 
 ## Pianificare l’acquisizione del flusso di dati
 
-Viene visualizzato il passaggio [!UICONTROL Pianificazione]. Utilizza l’interfaccia per configurare una pianificazione di acquisizione in modo da acquisire automaticamente i dati di origine selezionati utilizzando le mappature configurate. Per impostazione predefinita, la pianificazione è impostata su `Once`. Per regolare la frequenza di acquisizione, seleziona **[!UICONTROL Frequenza]**, quindi scegli un&#39;opzione dal menu a discesa.
+Viene visualizzato il passaggio [!UICONTROL Scheduling]. Utilizza l’interfaccia per configurare una pianificazione di acquisizione in modo da acquisire automaticamente i dati di origine selezionati utilizzando le mappature configurate. Per impostazione predefinita, la pianificazione è impostata su `Once`. Per regolare la frequenza di acquisizione, selezionare **[!UICONTROL Frequency]**, quindi selezionare un&#39;opzione dal menu a discesa.
 
 >[!TIP]
 >
@@ -132,15 +132,19 @@ Per ulteriori informazioni sulle configurazioni di pianificazione, consulta la t
 
 ## Rivedi
 
-Viene visualizzato il passaggio *[!UICONTROL Rivedi]*, che consente di rivedere i dettagli del flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio *[!UICONTROL Review]*, che consente di rivedere i dettagli del flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Connessione]**: mostra il nome dell&#39;account, la piattaforma di origine e il nome dell&#39;origine.
-* **[!UICONTROL Assegna set di dati e mappa campi]**: mostra il set di dati di destinazione e lo schema a cui il set di dati è conforme.
+* **[!UICONTROL Connection]**: mostra il nome dell&#39;account, la piattaforma di origine e il nome di origine.
+* **[!UICONTROL Assign dataset and map fields]**: mostra il set di dati di destinazione e lo schema a cui il set di dati aderisce.
 
-Dopo aver confermato che i dettagli sono corretti, selezionare **[!UICONTROL Fine]**.
+Dopo aver confermato che i dettagli sono corretti, selezionare **[!UICONTROL Finish]**.
 
 ![Passaggio di revisione del flusso di lavoro origini.](../../../../images/tutorials/create/talon-one-batch/review.png)
 
 ## Monitorare il flusso di dati
 
 Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni su tassi di acquisizione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l&#39;esercitazione su [account di monitoraggio e flussi di dati nell&#39;interfaccia utente](../../../../../dataflows/ui/monitor-sources.md).
+
+## Limitazioni note
+
+Durante il mapping dei dati dallo schema di [!DNL Talon.One] a Adobe Experience Platform, attualmente non è possibile acquisire più effetti dello stesso tipo in una singola transazione. Ad esempio, se una transazione include più effetti `setDiscount` (ad esempio sconti da campagne diverse), solo uno di questi effetti verrà mantenuto durante la mappatura e gli altri verranno sovrascritti.

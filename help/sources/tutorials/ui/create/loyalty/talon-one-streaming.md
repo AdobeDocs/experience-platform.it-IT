@@ -4,9 +4,9 @@ description: Scopri come inviare dati da Talon.One a Adobe Experience Platform u
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Leggi questa guida per scoprire come connettere e inviare in streaming i dati da [!DNL Talon.One] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente.
 
-## Introduzione
+## Guida introduttiva
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
@@ -34,19 +34,19 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 
 ## Navigare nel catalogo delle origini
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Origini]*. Seleziona la categoria appropriata nel pannello *[!UICONTROL Categorie]*. In alternativa, utilizza la barra di ricerca per passare all’origine specifica che desideri utilizzare.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Sources]*. Selezionare la categoria appropriata nel pannello *[!UICONTROL Categories]*. In alternativa, utilizza la barra di ricerca per passare all’origine specifica che desideri utilizzare.
 
-Per eseguire lo streaming dei dati da [!DNL Talon.One], seleziona la scheda di origine **[!UICONTROL Eventi di streaming Talon.One]** in *[!UICONTROL Fedeltà]*, quindi seleziona **[!UICONTROL Aggiungi dati]**.
+Per eseguire lo streaming dei dati da [!DNL Talon.One], selezionare la scheda di origine **[!UICONTROL Talon.One Streaming Events]** in *[!UICONTROL Loyalty]*, quindi selezionare **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Le origini nel catalogo origini visualizzano l&#39;opzione **[!UICONTROL Set up]** quando una determinata origine non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Add data]**.
 
 ![Catalogo delle origini nell&#39;interfaccia utente con la scheda Eventi di streaming Talon.One selezionata.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## Selezionare i dati
 
-Quindi, utilizza l&#39;interfaccia *[!UICONTROL Seleziona dati]* per caricare un file JSON di esempio per definire lo schema di origine. Durante questo passaggio, puoi utilizzare l’interfaccia di anteprima per visualizzare la struttura del file del payload. Al termine, selezionare **[!UICONTROL Avanti]**.
+Quindi, utilizza l&#39;interfaccia *[!UICONTROL Select data]* per caricare un file JSON di esempio per definire lo schema di origine. Durante questo passaggio, puoi utilizzare l’interfaccia di anteprima per visualizzare la struttura del file del payload. Al termine, selezionare **[!UICONTROL Next]**.
 
 ![Il passaggio di dati di selezione del flusso di lavoro origini](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
@@ -54,7 +54,7 @@ Quindi, utilizza l&#39;interfaccia *[!UICONTROL Seleziona dati]* per caricare un
 
 Quindi, devi fornire informazioni relative al set di dati e al flusso di dati.
 
-### Dettagli del set di dati
+### Dettagli set di dati
 
 Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne/campi) e record (righe). I dati acquisiti correttamente in Experience Platform vengono memorizzati nel data lake come set di dati.
 
@@ -66,10 +66,10 @@ Durante questo passaggio, puoi utilizzare un set di dati esistente o crearne uno
 
 +++Seleziona per i passaggi per abilitare l’acquisizione del profilo, la diagnostica degli errori e l’acquisizione parziale.
 
-Se il set di dati è abilitato per Real-Time Customer Profile, durante questo passaggio puoi attivare/disattivare **[!UICONTROL il set di dati profilo]** per abilitare i dati per l&#39;acquisizione del profilo. È inoltre possibile utilizzare questo passaggio per abilitare **[!UICONTROL Diagnostica errori]** e **[!UICONTROL Acquisizione parziale]**.
+Se il set di dati è abilitato per Real-Time Customer Profile, durante questo passaggio puoi attivare/disattivare **[!UICONTROL Profile dataset]** per abilitare i dati per l&#39;acquisizione del profilo. È inoltre possibile utilizzare questo passaggio per abilitare **[!UICONTROL Error diagnostics]** e **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnostica errori]**: selezionare **[!UICONTROL Diagnostica errori]** per indicare all&#39;origine di produrre diagnostica errori a cui fare successivamente riferimento durante il monitoraggio dell&#39;attività del set di dati e dello stato del flusso di dati.
-* **[!UICONTROL Acquisizione parziale]**: l&#39;acquisizione parziale in batch consente di acquisire dati contenenti errori, fino a una determinata soglia configurabile. Questa funzione consente di acquisire correttamente in Experience Platform tutti i dati accurati, mentre tutti i dati errati vengono raggruppati separatamente con informazioni sul motivo della validità.
+* **[!UICONTROL Error diagnostics]**: selezionare **[!UICONTROL Error diagnostics]** per indicare all&#39;origine di produrre diagnostica degli errori a cui fare successivamente riferimento durante il monitoraggio dell&#39;attività del set di dati e dello stato del flusso di dati.
+* **[!UICONTROL Partial ingestion]**: l&#39;acquisizione in batch parziale consente di acquisire dati contenenti errori, fino a una determinata soglia configurabile. Questa funzione consente di acquisire correttamente in Experience Platform tutti i dati accurati, mentre tutti i dati errati vengono raggruppati separatamente con informazioni sul motivo della validità.
 
 +++
 
@@ -101,12 +101,12 @@ Utilizza l’interfaccia di mappatura per mappare i dati di origine sui campi de
 
 ## Rivedi
 
-Viene visualizzato il passaggio *[!UICONTROL Rivedi]*, che consente di rivedere i dettagli del flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio *[!UICONTROL Review]*, che consente di rivedere i dettagli del flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Connessione]**: mostra il nome dell&#39;account, la piattaforma di origine e il nome dell&#39;origine.
-* **[!UICONTROL Assegna set di dati e mappa campi]**: mostra il set di dati di destinazione e lo schema a cui il set di dati è conforme.
+* **[!UICONTROL Connection]**: mostra il nome dell&#39;account, la piattaforma di origine e il nome di origine.
+* **[!UICONTROL Assign dataset and map fields]**: mostra il set di dati di destinazione e lo schema a cui il set di dati aderisce.
 
-Dopo aver confermato che i dettagli sono corretti, selezionare **[!UICONTROL Fine]**.
+Dopo aver confermato che i dettagli sono corretti, selezionare **[!UICONTROL Finish]**.
 
 ![Passaggio di revisione nel flusso di lavoro delle origini.](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
@@ -118,4 +118,8 @@ Una volta creata la connessione, viene visualizzata la pagina dei dettagli delle
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni su tassi di acquisizione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l&#39;esercitazione su [account di monitoraggio e flussi di dati nell&#39;interfaccia utente](../../monitor-streaming.md)
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni su tassi di acquisizione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l&#39;esercitazione su [account di monitoraggio e flussi di dati nell&#39;interfaccia utente](../../monitor-streaming.md).
+
+## Limitazioni note
+
+Per garantire un&#39;acquisizione accurata dei dati, è necessario inviare al connettore i dati provenienti dai punti fedeltà di [!DNL Talon.One] modificati, dagli aggiornamenti dei livelli e dalle notifiche di downgrade dei livelli. Poiché la notifica di modifica dei punti fedeltà non include informazioni sul livello, è necessario inviare queste notifiche a un set di dati di profilo separato. Se si combinano i dati dei punti modificati con le notifiche di aggiornamento o downgrade di livello nello stesso set di dati, le informazioni di livello andranno perse o sovrascritte con valori nulli. Le notifiche di aggiornamento e downgrade a livello possono utilizzare lo stesso set di dati, in quanto includono entrambe i dettagli dei livelli. Dopo l’acquisizione, le regole di unione profili aggiorneranno automaticamente il profilo unito in modo da riflettere i punti e le informazioni sul livello più recenti.
