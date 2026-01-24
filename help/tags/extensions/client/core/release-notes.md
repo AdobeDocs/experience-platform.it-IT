@@ -136,7 +136,7 @@ v2.0.4
 
 * Supporto per elementi dati per vari campi. Il supporto per gli elementi dati è stato aggiunto ai seguenti eventi: “Tempo sulla pagina”, “Entra in viewport”, “Passaggio del mouse” e “Tempo file multimediale riprodotto”; e alle seguenti condizioni: “Tempo sul sito” e “Confronto valori”.
 * È stato aggiunto il supporto del comportamento predefinito per Ctrl/Comando + clic e per clic del pulsante centrale del mouse quando si utilizza Ritardo collegamento.
-* **Ritardo collegamento contrassegnato sull&#39;evento clic come &quot;non più supportato&quot;.** - Ulteriori informazioni sono disponibili sul [Blog di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) per Adobe Experience Platform.
+* **Ritardo collegamento contrassegnato sull&#39;evento clic come &quot;non più supportato&quot;.** - Ulteriori informazioni sono disponibili sul [Blog di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=it) per Adobe Experience Platform.
 
 ## 6 gennaio 2021
 

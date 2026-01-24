@@ -211,4 +211,4 @@ Sfoglia i collegamenti riportati di seguito per comprendere meglio casi d’uso,
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Resta informato, partecipa alla community e migliora la tua esperienza con Adobe Real-Time CDP.</b><br/>Visita la community di Real-Time Customer Data Platform per discutere delle funzionalità con altri professionisti. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Iscriviti alla community oggi!</a></td></tr></table>
+<b>Resta informato, partecipa alla community e migliora la tua esperienza con Adobe Real-Time CDP.</b><br/>Visita la community di Real-Time Customer Data Platform per discutere delle funzionalità con altri professionisti. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP?profile.language=it">Iscriviti alla community oggi!</a></td></tr></table>

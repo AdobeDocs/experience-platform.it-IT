@@ -130,6 +130,6 @@ Per ulteriori informazioni sui diversi stati e opzioni disponibili durante il pr
 
 Per ulteriori informazioni, consulta le seguenti risorse:
 
-* **[Community di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: fai domande e rispondi, invia idee e vota quelle degli altri. Accedi con il tuo Adobe ID.
+* **[Community di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=it)**: fai domande e rispondi, invia idee e vota quelle degli altri. Accedi con il tuo Adobe ID.
 * **[Developer Docs](../api/overview.md)**: partecipa alla community di sviluppatori di tag per creare estensioni o utilizzare le API dei tag
 * **[Panoramica dei tutorial](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=it)**: questi documenti presentano i concetti relativi ai tag, inclusi l’inoltro degli eventi e Mobile SDK per app Android.

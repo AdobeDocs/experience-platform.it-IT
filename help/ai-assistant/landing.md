@@ -435,11 +435,11 @@ Guarda i video seguenti per scoprire i casi di utilizzo dell’Assistente di int
 
 Di seguito sono riportati alcuni esempi di casi di utilizzo dell’Assistente IA:
 
-* [Riduci i tempi di onboarding per i nuovi membri del tuo team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [Riduci il pubblico e ottimizza le operazioni di marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [Verifica le dipendenze e riduci al minimo i rischi durante gli aggiornamenti dei dati](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
-* [Individuare e distribuire le nuove funzionalità più rapidamente](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
-* [Rivoluziona il supporto clienti con l&#39;Assistente AI](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
+* [Riduci i tempi di onboarding per i nuovi membri del tuo team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153?profile.language=it)
+* [Riduci il pubblico e ottimizza le operazioni di marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002?profile.language=it)
+* [Verifica le dipendenze e riduci al minimo i rischi durante gli aggiornamenti dei dati](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364?profile.language=it)
+* [Individuare e distribuire le nuove funzionalità più rapidamente](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125?profile.language=it)
+* [Rivoluziona il supporto clienti con l&#39;Assistente AI](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416?profile.language=it)
 
 >[!TAB Contenuto video aggiuntivo]
 
