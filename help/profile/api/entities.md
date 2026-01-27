@@ -5,18 +5,26 @@ type: Documentation
 description: Adobe Experience Platform consente di accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l’interfaccia utente di. Questa guida illustra come accedere alle entità, più comunemente note come "profili", utilizzando l’API di profilo.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
+source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2290'
 ht-degree: 3%
 
 ---
 
 # Endpoint entità (accesso profilo)
 
+>[!IMPORTANT]
+>
+>Puoi **utilizzare solo** questi endpoint se disponi di Real-Time CDP Ultimate.
+>
+>Se disponi di Real-Time CDP Prime, puoi continuare a acquisire e utilizzare gli eventi di esperienza per i casi di utilizzo di personalizzazione e per visualizzare gli eventi all&#39;interno dell&#39;interfaccia utente di Experience Platform, ma **non** potrai cercare gli eventi di esperienza a livello di programmazione utilizzando l&#39;API.
+>
+>Se disponi di Real-Time CDP Ultimate e **non** cerchi eventi a livello di programmazione, contatta l&#39;Assistenza clienti di Adobe per abilitare questa funzione.
+
 Adobe Experience Platform consente di accedere ai dati di [!DNL Real-Time Customer Profile] utilizzando le API RESTful o l&#39;interfaccia utente. Questa guida illustra come accedere alle entità, più comunemente note come &quot;profili&quot;, utilizzando l’API. Per ulteriori informazioni sull&#39;accesso ai profili tramite l&#39;interfaccia utente di [!DNL Experience Platform], fare riferimento alla [Guida utente del profilo](../ui/user-guide.md).
 
-## Introduzione
+## Guida introduttiva
 
 L&#39;endpoint API utilizzato in questa guida fa parte di [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Prima di continuare, consulta la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
