@@ -185,7 +185,7 @@ Inoltre, puoi esaminare i flussi di dati e vedere se è possibile ottimizzare la
 
 Il video seguente offre una panoramica di Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475281/?captions=ita&learn=on&enablevpops)
 
 ## Domande frequenti {#faq}
 
