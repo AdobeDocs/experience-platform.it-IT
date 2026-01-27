@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 0b607decfa687f89c74fb81055ac2bf4cc54d59b
+source-git-commit: 11ef8fe8b64a7c2bb698c62093aafe3fb11d3789
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1731'
 ht-degree: 2%
 
 ---
@@ -99,7 +99,6 @@ I guardrail riportati di seguito si applicano all&#39;attivazione tramite [desti
 | --- | --- | --- | --- |
 | Numero massimo di [destinazioni Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Guardrail delle prestazioni | Puoi impostare flussi di dati su 10 destinazioni di personalizzazione personalizzate per sandbox. |
 | Numero massimo di attributi mappati a una destinazione di personalizzazione per sandbox | 30 | Guardrail delle prestazioni | È possibile mappare un massimo di 30 attributi in un flusso di dati a una destinazione di personalizzazione, per sandbox. |
-| Numero massimo di tipi di pubblico mappati a una singola destinazione [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Guardrail delle prestazioni | Puoi attivare fino a 50 tipi di pubblico in un flusso di attivazione verso una singola destinazione di Adobe Target. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +196,7 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
