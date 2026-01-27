@@ -2,10 +2,10 @@
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 5520e449b4cbe45eb9664ce3c913dd5d544e088c
+source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 6%
+source-wordcount: '1670'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +58,7 @@ All’interno di questi servizi, vengono tracciati i seguenti guardrail:
    - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
 - La velocità effettiva combinata iniziale per l’acquisizione in streaming è di 1500 record al secondo (rps)
    - Questo throughput di streaming combinato misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo cliente in tempo reale, nelle sandbox di produzione e sviluppo.
-   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
@@ -68,7 +68,17 @@ Experience Platform calcola la velocità effettiva della sandbox in intervalli d
 
 Se l’utilizzo raggiunge l’80% e il 90% della capacità concessa in licenza, Experience Platform invierà un avviso per informarti che stai raggiungendo il massimo della capacità specificata. È possibile modificare le impostazioni per personalizzare la percentuale di capacità in modo da ricevere l&#39;avviso o rimuovere completamente l&#39;avviso.
 
-Se l’utilizzo supera il 100% della capacità concessa in licenza, verrà considerata una violazione della capacità. A questo punto, si verificherà una latenza delle prestazioni e le destinazioni del livello di servizio (SLT) **non** saranno garantite.
+Se l&#39;utilizzo supera il 100% della capacità concessa in licenza, si verrà considerati in violazione della capacità. In caso di violazione della capacità, verranno applicate le seguenti limitazioni:
+
+>[!NOTE]
+>
+>Se hai accesso a Adobe Journey Optimizer, si applicheranno le seguenti limitazioni **non**.
+
+- I dati evento **possono** essere rimossi dalla personalizzazione streaming se la coda di elaborazione dell&#39;evento supera le 12 ore
+- I dati evento rimossi **non** verranno acquisiti nel profilo
+   - Potrai vedere quando gli eventi sono stati rimossi
+   - Gli eventi saranno disponibili all’interno del data lake, in base ai tuoi diritti
+   - *puoi* utilizzare Query Service per riacquisire direttamente i dati, se necessario
 
 ## Accesso {#access}
 
@@ -175,7 +185,7 @@ Inoltre, puoi esaminare i flussi di dati e vedere se è possibile ottimizzare la
 
 Il video seguente offre una panoramica di Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475281/?captions=ita&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Domande frequenti {#faq}
 
