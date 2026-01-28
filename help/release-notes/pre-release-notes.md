@@ -2,9 +2,9 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1316'
 ht-degree: 20%
 
 ---
@@ -113,7 +113,6 @@ Per ulteriori informazioni, consulta la [[!DNL Schemas] panoramica](../xdm/home.
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Monitoraggio della segmentazione in streaming | Il monitoraggio in tempo reale per la segmentazione in streaming fornisce trasparenza in termini di tasso di valutazione, latenza e metriche di qualità dei dati a livello di sandbox, set di dati e pubblico. In questo modo è possibile inviare avvisi proattivi e ottenere informazioni utili per aiutare i data engineer a identificare le violazioni della capacità e i problemi di acquisizione. Le metriche di monitoraggio includono il tasso di valutazione, la latenza di acquisizione P95, nonché i record ricevuti, valutati, non riusciti e saltati. Le funzionalità View-by-DataSet e View-by-Audience forniscono una visibilità completa sui nuovi profili qualificati e non qualificati. |
 | Aggiornamento TTL per pubblico esterno | I tipi di pubblico esterni (come i caricamenti CSV) ora supportano la funzionalità di aggiornamento forzato per le impostazioni Time-to-Live (TTL). Questa funzione consente agli utenti di aggiornare manualmente la scadenza TTL per i tipi di pubblico esterni, fornendo un maggiore controllo sulla gestione del ciclo di vita dei tipi di pubblico. Ciò è particolarmente utile per i tipi di pubblico che devono persistere oltre il periodo TTL iniziale o richiedere una riattivazione senza ricaricare i dati. |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../segmentation/home.md).
