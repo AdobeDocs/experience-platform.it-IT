@@ -2,11 +2,10 @@
 title: Modificare le destinazioni
 type: Tutorial
 description: Scopri come modificare e aggiornare gli account di destinazioni esistenti nell’interfaccia utente di Adobe Experience Platform
-badgeBeta: label="Beta" type="Informative"
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 990fe9162c5b2970f269a5b0668916b7b6e61f44
+source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -15,20 +14,22 @@ ht-degree: 0%
 
 Scopri come modificare vari componenti di una connessione di destinazione esistente, tra cui come aggiornare le credenziali di autenticazione, la posizione di esportazione e altro ancora utilizzando l’interfaccia utente di Experience Platform.
 
->[!IMPORTANT]
->
->Questa funzionalità è disponibile in versione beta solo per alcuni clienti. Per richiedere l’accesso, contatta il tuo rappresentante Adobe.
-
 >[!NOTE]
 >
 > Le operazioni di modifica descritte in questo tutorial sono supportate anche tramite operazioni API. Per ulteriori informazioni, leggi il tutorial su come [modificare le destinazioni nell&#39;API](/help/destinations/api/edit-destination.md).
 
+## Prerequisiti {#prerequisites}
+
+Per modificare le connessioni di destinazione è necessario disporre dell&#39;autorizzazione **[!UICONTROL Manage Destinations]** [controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+
+## Modificare le connessioni di destinazione {#edit}
+
 Per modificare vari componenti di una connessione di destinazione esistente:
 
-1. Passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]**.
+1. Passa a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Seleziona la destinazione desiderata da modificare.
-3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Nome] e utilizzare il controllo ![Modifica destinazione](/help/images/icons/edit.png)**[!UICONTROL Modifica destinazione &#x200B;]**&#x200B;per modificare le connessioni di destinazione esistenti.
-4. Nella finestra modale, modifica le impostazioni desiderate. Al termine, seleziona **[!UICONTROL Salva]**.
+3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**per modificare le connessioni di destinazione esistenti.
+4. Nella finestra modale, modifica le impostazioni desiderate. Al termine, seleziona **[!UICONTROL Save]**.
 
 Nella finestra di modifica della destinazione è possibile aggiornare tutte le impostazioni configurate al momento della connessione iniziale alla destinazione. Queste impostazioni sono diverse in base alla piattaforma di destinazione che stai aggiornando.
 
@@ -60,6 +61,6 @@ Utilizzando l’interfaccia utente di Experience Platform o l’API del servizio
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai utilizzato correttamente l&#39;area di lavoro **[!UICONTROL destinazioni]** per aggiornare le connessioni di destinazione esistenti.
+Seguendo questa esercitazione, è stata utilizzata l&#39;area di lavoro **[!UICONTROL destinations]** per aggiornare le connessioni di destinazione esistenti.
 
 Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../catalog/overview.md).

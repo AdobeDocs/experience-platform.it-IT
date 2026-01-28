@@ -4,9 +4,9 @@ title: Modifica flussi di dati di attivazione
 type: Tutorial
 description: Segui i passaggi descritti in questo articolo per modificare un flusso di dati di attivazione esistente in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 5fae3fe6a3647ba416a26f4cdb9e5b6ce308e990
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '927'
 ht-degree: 0%
 
 ---
@@ -111,11 +111,11 @@ Seleziona **[!UICONTROL Export datasets]** nella barra a destra per selezionare 
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione di esecuzione del flusso di dati Esporta set di dati.](../assets/ui/edit-activation/export-datasets.png)
 
-## [!BADGE Beta]{type=Informative} Modifica azioni di marketing {#edit-marketing-actions}
+## Modifica azioni marketing {#edit-marketing-actions}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Questa funzionalità è attualmente in **beta**. Per richiedere l’accesso, contatta il rappresentante Adobe.
+>Per modificare le azioni di marketing è necessario disporre delle autorizzazioni di controllo di accesso **[!UICONTROL Activate Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Puoi aggiungere o rimuovere azioni di marketing impostate al momento della connessione iniziale alla destinazione.
 
