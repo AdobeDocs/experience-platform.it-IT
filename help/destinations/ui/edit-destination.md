@@ -28,7 +28,7 @@ Per modificare vari componenti di una connessione di destinazione esistente:
 
 1. Passa a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Seleziona la destinazione desiderata da modificare.
-3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**per modificare le connessioni di destinazione esistenti.
+3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;per modificare le connessioni di destinazione esistenti.
 4. Nella finestra modale, modifica le impostazioni desiderate. Al termine, seleziona **[!UICONTROL Save]**.
 
 Nella finestra di modifica della destinazione è possibile aggiornare tutte le impostazioni configurate al momento della connessione iniziale alla destinazione. Queste impostazioni sono diverse in base alla piattaforma di destinazione che stai aggiornando.

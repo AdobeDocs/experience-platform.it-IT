@@ -115,7 +115,7 @@ Seleziona **[!UICONTROL Export datasets]** nella barra a destra per selezionare 
 
 >[!IMPORTANT]
 >
->Per modificare le azioni di marketing è necessario disporre delle autorizzazioni di controllo di accesso **[!UICONTROL Activate Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per modificare le azioni di marketing è necessario disporre delle autorizzazioni di controllo di accesso **[!UICONTROL Activate Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Puoi aggiungere o rimuovere azioni di marketing impostate al momento della connessione iniziale alla destinazione.
 
