@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2026
 description: Note sulla versione di Adobe Experience Platform di gennaio 2026.
-source-git-commit: 9a3fbe281195041cf7444c5b6ec185395ff5ad23
+source-git-commit: 54be4d5c309f60e6c3e2a96ab1fea700cc79a608
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 24%
+source-wordcount: '1231'
+ht-degree: 22%
 
 ---
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## Destinazioni {#destinations}
 
@@ -55,14 +55,12 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Destinazione | Descrizione |
 | --- | --- |
-| Connettore di destinazione Kevel ora disponibile | La destinazione di streaming [!DNL Kevel] per Adobe Experience Platform consente ai clienti di attivare i tipi di pubblico di Adobe direttamente nelle API UserDB e Segment Management di [!DNL Kevel] per supportare il targeting in tempo reale al momento della decisione dell&#39;annuncio. [[!DNL Kevel]](https://www.kevel.com/) fornisce la tecnologia basata sull&#39;intelligenza artificiale e la guida di esperti che aiutano i leader di settore innovativi a lanciare, scalare e avere successo nel settore dei media retail. Retail Media Cloud di [!DNL Kevel] offre formati di annunci mirati, attribuibili e personalizzabili per la pubblicità nel sito e fuori dal sito. |
-| Connettore di destinazione per Exchange indice ora disponibile | Utilizza questo connettore di destinazione per esportare segmenti di pubblico da Adobe Experience Platform direttamente nella piattaforma di pubblicità programmatica di [!DNL Index Exchange]. [!DNL Index] è una piattaforma pubblicitaria globale lato offerta che consente ai proprietari di contenuti multimediali di massimizzare il valore dei contenuti su ogni schermo. Con oltre 20 anni di leadership nel settore, [!DNL Index] mette in contatto i marchi più grandi del mondo con i più importanti produttori di esperienze per offrire esperienze consumer di alta qualità. |
+| Connettore [destinazione Kevel](/help/destinations/catalog/advertising/kevel.md) ora disponibile | La destinazione di streaming [!DNL Kevel] per Adobe Experience Platform consente ai clienti di attivare i tipi di pubblico di Adobe direttamente nelle API UserDB e Segment Management di [!DNL Kevel] per supportare il targeting in tempo reale al momento della decisione dell&#39;annuncio. [[!DNL Kevel]](https://www.kevel.com/) fornisce la tecnologia basata sull&#39;intelligenza artificiale e la guida di esperti che aiutano i leader di settore innovativi a lanciare, scalare e avere successo nel settore dei media retail. Retail Media Cloud di [!DNL Kevel] offre formati di annunci mirati, attribuibili e personalizzabili per la pubblicità nel sito e fuori dal sito. |
+| [Connettore di destinazione di Exchange indice](/help/destinations/catalog/advertising/index-exchange.md) ora disponibile | Utilizza questo connettore di destinazione per esportare segmenti di pubblico da Adobe Experience Platform direttamente nella piattaforma di pubblicità programmatica di [!DNL Index Exchange]. [!DNL Index] è una piattaforma pubblicitaria globale lato offerta che consente ai proprietari di contenuti multimediali di massimizzare il valore dei contenuti su ogni schermo. Con oltre 20 anni di leadership nel settore, [!DNL Index] mette in contatto i marchi più grandi del mondo con i più importanti produttori di esperienze per offrire esperienze consumer di alta qualità. |
 | Supporto di endpoint regionali per connessioni Braze | Tutti gli [endpoint specifici per area geografica](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) supportati da [!DNL Braze] sono ora disponibili per la selezione durante il flusso di configurazione di destinazione. Chiedi al tuo rappresentante [!DNL Braze] quale istanza endpoint utilizzare. |
 | Supporto per la pianificazione settimanale e mensile per [onboarding Liveramp](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Ora puoi configurare le pianificazioni di esportazione settimanali e mensili per la destinazione di onboarding Liveramp. <br> Questa versione verrà implementata gradualmente e verrà completata entro il 30 gennaio. |
 | Esperienza di attivazione migliorata per [le destinazioni Trade Desk](../../destinations/catalog/advertising/tradedesk.md) e [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Le destinazioni Trade Desk e Microsoft Bing ora includono mappature obbligatorie predefinite per un’esperienza di attivazione ottimizzata.  <br> Questa versione verrà implementata gradualmente e verrà completata entro il 30 gennaio. |
-
-<!-- |AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <br><br>**[!UICONTROL Default]**: If you don't have any custom policies applied on your buckets, data will be encrypted at rest when it lands in S3 with the AES256 algorithm. However, if you have custom policies applied, Experience Platform will respect those policies and Amazon S3 will continue to apply whichever custom encryption policies you have configured.<br><br>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest when it lands in S3 with the AES256 algorithm. | -->
-
+| Supporto della crittografia AES256 per [destinazioni Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ora puoi configurare la crittografia AES256 per le esportazioni Amazon S3. Sono disponibili due opzioni: <ul><li>**[!UICONTROL Default]**: se non hai criteri personalizzati applicati ai bucket, i dati verranno crittografati quando arriveranno in S3 con l&#39;algoritmo AES256. Tuttavia, se hai applicato criteri personalizzati, Experience Platform li rispetterà e Amazon S3 continuerà ad applicare qualsiasi criterio di crittografia personalizzato configurato.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform aggiunge l&#39;intestazione `s3:x-amz-server-side-encryption": "AES256` nell&#39;esportazione e i dati verranno crittografati quando arriveranno in S3 con l&#39;algoritmo AES256.</li></ul>  <br> Questa versione verrà implementata gradualmente e verrà completata entro il 30 gennaio. |
 
 **Funzionalità nuove o aggiornate**
 
