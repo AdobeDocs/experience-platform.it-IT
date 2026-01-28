@@ -118,7 +118,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Set di mappatura predefiniti"
->abstract="Abbiamo preconfigurato questi due set di mappatura per te. Quando attivi i dati in Microsoft Bing, i profili idonei per i tipi di pubblico attivati devono avere almeno un’identità ECID associata al loro profilo, per poter essere esportati correttamente nella destinazione.
+>abstract="Abbiamo preconfigurato questi due set di mappatura per te. Quando attivi i dati in Microsoft Bing, i profili idonei per i tipi di pubblico attivati devono avere almeno un’identità ECID associata al loro profilo, per poter essere esportati correttamente nella destinazione."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
 
 >[!IMPORTANT]
