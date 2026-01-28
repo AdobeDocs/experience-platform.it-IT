@@ -3,10 +3,10 @@ title: Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 036d784014e7cdb101f39f63f9d6e8bac01fdc97
+source-git-commit: 47d4078acc73736546d4cbb2d17b49bf8945743a
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 5%
+source-wordcount: '1643'
+ht-degree: 2%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Con il rilascio dell’EUID (European Unified ID), nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md) ora vengono visualizzate due destinazioni [!DNL The Trade Desk - CRM].
+>Nel [catalogo destinazioni](/help/destinations/catalog/overview.md) sono presenti due destinazioni di CRM di The Trade Desk.
 >
->* Se i dati vengono originati nell’UE, utilizza la destinazione **[!DNL The Trade Desk - CRM (EU)]**.
->* Se i dati vengono originati nelle aree geografiche APAC o NAMER, utilizza la destinazione **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
+>* Se i dati vengono originati nell&#39;UE, utilizzare la destinazione **[!DNL The Trade Desk - CRM (EU)]**.
+>* Se i dati vengono originati nelle aree APAC o NAMER, utilizzare la destinazione **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
 >Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *[!DNL Trade Desk]*. Per richieste di informazioni o richieste di aggiornamento, contatta il tuo rappresentante [!DNL Trade Desk].
 
@@ -25,19 +25,17 @@ ht-degree: 5%
 
 Scopri come attivare i profili nell&#39;account [!DNL Trade Desk] per il targeting e l&#39;eliminazione del pubblico in base ai dati CRM.
 
-Questo connettore invia dati all&#39;endpoint di prime parti [!DNL The Trade Desk]. L&#39;integrazione tra Adobe Experience Platform e [!DNL The Trade Desk] non supporta l&#39;esportazione dei dati nell&#39;endpoint di terze parti [!DNL The Trade Desk].
-
-[!DNL The Trade Desk(TTD)] non gestisce direttamente il file di caricamento degli indirizzi e-mail in alcun momento e [!DNL The Trade Desk] non memorizza le e-mail non elaborate (senza hash).
+Questo connettore invia dati a [!DNL The Trade Desk] per l&#39;attivazione di dati di prime parti. [!DNL The Trade Desk] memorizza le e-mail e i numeri di telefono non elaborati (senza hash).
 
 >[!TIP]
 >
->Utilizza [!DNL The Trade Desk] destinazioni CRM per la mappatura dei dati CRM, ad esempio e-mail o indirizzo e-mail con hash. Utilizza [altra destinazione Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) nel catalogo Adobe Experience Platform per cookie e mappature ID dispositivo.
+>Utilizza la destinazione [!DNL The Trade Desk - CRM] per inviare dati CRM (ad esempio e-mail e numeri di telefono) e altri identificatori di dati di prime parti come cookie e ID dispositivo. Puoi continuare a utilizzare la [destinazione Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) nel catalogo Experience Platform per i cookie e le mappature degli ID dispositivo.
 
 ## Prerequisiti {#prerequisites}
 
 >[!IMPORTANT]
 >
->Prima di poter attivare i tipi di pubblico per il Trade Desk, è necessario contattare l&#39;account manager [!DNL Trade Desk] per firmare il contratto di onboarding CRM. [!DNL The Trade Desk] abiliterà l&#39;uso di UID2/EUID e condividerà altri dettagli per aiutarti a configurare la tua destinazione.
+>Prima di poter attivare i tipi di pubblico per il Trade Desk, è necessario contattare l&#39;account manager [!DNL Trade Desk] per abilitare la funzione. Se invii e-mail, numeri di telefono e UID2/EUID, devi condividere l&#39;accordo UID2/EUID firmato con [!DNL The Trade Desk].
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
@@ -47,16 +45,28 @@ A seconda del tipo di ID inseriti in Adobe Experience Platform, devi rispettare 
 
 [!DNL The Trade Desk] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
-Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione sui requisiti di corrispondenza ID e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash.
+Adobe Experience Platform supporta sia indirizzi e-mail con hash che numeri di telefono. Segui le istruzioni riportate nella sezione sui requisiti di corrispondenza ID e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash.
 
-| Identità di destinazione | Descrizione | Considerazioni |
-|---|---|---|
-| E-mail | Indirizzi e-mail (testo non crittografato) | Immettere `email` come identità di destinazione se l&#39;identità di origine è uno spazio dei nomi o un attributo di posta elettronica. |
-| Email_LC_SHA256 | Gli indirizzi e-mail devono avere un hash utilizzando SHA256 e lettere minuscole. Non potrai modificare questa impostazione in un secondo momento. | Immettere `hashed_email` come identità di destinazione se l&#39;identità di origine è uno spazio dei nomi o un attributo Email_LC_SHA256. |
+| Identità di destinazione | Descrizione |
+|---|---|
+| E-mail | Indirizzi e-mail (testo non crittografato) |
+| Email_LC_SHA256 | Gli indirizzi e-mail devono avere un hash utilizzando SHA256 e lettere minuscole. Non potrai modificare questa impostazione in un secondo momento. |
+| Telefono (E.164) | Numeri di telefono che devono essere normalizzati nel formato E.164. Il formato E.164 include un segno più (+), un codice internazionale di chiamata del paese, un prefisso locale e un numero di telefono. Ad esempio: (+)(prefisso del paese)(prefisso dell&#39;area)(numero di telefono). Questo identificatore non è disponibile per The Trade Desk - First-Party Data (EU). |
+| Telefono (SHA256_E.164) | Numeri di telefono che sono già stati normalizzati al formato E.164 e quindi sottoposti a hashing utilizzando SHA-256, con l’hash risultante codificato in Base64. Questo identificatore non è disponibile per The Trade Desk - First-Party Data (EU). |
+| TDID | ID cookie nel Trade Desk |
+| GAID | GOOGLE ADVERTISING ID |
+| IDFA | Apple ID per inserzionisti |
+| UID2 | Valore UID2 non elaborato |
+| UID2Token | Il token UID2 crittografato, noto anche come token pubblicitario. |
+| EUID | Valore ID Unione Europea non elaborato |
+| EUIDToken | Il token EUID crittografato, noto anche come token pubblicitario. |
+| RampID | RampID di 49 o 70 caratteri (precedentemente noto come IdentityLink o IDL). Deve essere un RampID da LiveRamp mappato specificamente per The Trade Desk. |
+| netID | NetID dell&#39;utente come stringa con codifica base64 a 70 caratteri. Questo ID è supportato solo in Europa. |
+| FirstID | Il First-id dell’utente, un cookie di prima parte generalmente impostato dagli editori in Francia. Questo ID è supportato solo in Europa. |
 
 {style="table-layout:auto"}
 
-## Requisiti di hashing delle e-mail {#hashing-requirements}
+## Requisiti di hashing delle e-mail {#email-hashing}
 
 Puoi eseguire l’hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform o utilizzare indirizzi e-mail non elaborati.
 
@@ -67,8 +77,49 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 * Rimuovere gli spazi iniziali e finali.
 * Converte tutti i caratteri ASCII in minuscolo.
 * In `gmail.com` indirizzi e-mail, rimuovi i seguenti caratteri dalla parte del nome utente dell&#39;indirizzo e-mail:
-   * Il punto (. (codice ASCII 46). Ad esempio, normalizzare `jane.doe@gmail.com` in `janedoe@gmail.com`.
-   * Il segno più (+ (codice ASCII 43)) e tutti i caratteri successivi. Ad esempio, normalizzare `janedoe+home@gmail.com` in `janedoe@gmail.com`.
+
+      * Il periodo (`.`) (codice ASCII 46). Ad esempio, normalizzare &quot;jane.doe@gmail.com&quot; in &quot;janedoe@gmail.com&quot;.
+     * Il segno più (`+`) (codice ASCII 43) e tutti i caratteri successivi. Ad esempio, normalizzare `janedoe+home@gmail.com` in `janedoe@gmail.com`.
+  
+## Requisiti di normalizzazione e hashing dei numeri di telefono {#phone-hashing}
+
+Ecco cosa devi sapere sul caricamento dei numeri di telefono:
+
+* È necessario normalizzare i numeri di telefono prima di inviarli in una richiesta, indipendentemente dal fatto che in una richiesta vengano inviati con hash o senza hash.
+* Per caricare dati normalizzati, con hash e codificati, devi inviare numeri di telefono come hash SHA-256 con codifica Base64 dei numeri di telefono normalizzati.
+
+Per caricare numeri di telefono non elaborati o con hash, è necessario normalizzarli.
+
+>[!IMPORTANT]
+>
+>La normalizzazione prima dell’hashing garantisce che il valore ID generato sia sempre lo stesso e che i dati possano essere associati con precisione.
+
+Ecco cosa devi sapere sui requisiti di normalizzazione dei numeri di telefono:
+
+* L&#39;operatore UID2 accetta i numeri di telefono nel formato E.164, che è il formato dei numeri di telefono internazionali che garantisce l&#39;univocità globale.
+* I numeri di telefono E.164 possono avere un massimo di 15 cifre.
+* I numeri di telefono E.164 normalizzati utilizzano la seguente sintassi: `[+][country code][subscriber number including area code]` senza spazi, trattini, parentesi o altri caratteri speciali. Di seguito sono riportati alcuni esempi:
+
+      * US: 1 (234) 567-8901 è normalizzato a +12345678901.
+     * Singapore: 65 1243 5678 è normalizzato a +6512345678.
+     * Australia: il numero di telefono cellulare 0491 570 006 è normalizzato per aggiungere il codice del paese e rilasciare lo zero iniziale: +61491570006.
+     * Regno Unito: il numero di telefono cellulare 07812 345678 è normalizzato per aggiungere il codice del paese e rilasciare lo zero iniziale: +447812345678.
+  
+Verificare che il numero telefonico normalizzato sia UTF-8, non un altro sistema di codifica come UTF-16.
+
+Un hash del numero di telefono è un hash SHA-256 con codifica Base64 di un numero di telefono normalizzato. Il numero di telefono viene prima normalizzato, quindi viene eseguito l’hashing utilizzando l’algoritmo di hashing SHA-256 e quindi i byte risultanti del valore hash vengono codificati utilizzando la codifica Base64. La codifica Base64 viene applicata ai byte del valore hash, non alla rappresentazione di stringa con codifica esadecimale.
+La tabella seguente mostra un esempio di numero di telefono di input semplice e il risultato di ogni passaggio viene applicato per ottenere un valore sicuro e opaco.
+
+| Tipo | Esempio | Commenti e utilizzo |
+|---|---|---|
+| Numero di telefono non elaborato | 1 (234) 567-8901 | Questo è il punto di partenza. |
+| Numero di telefono normalizzato | +12345678901 | La normalizzazione è sempre il primo passo. |
+| Hash SHA-256 del numero di telefono normalizzato | 10e6f0b47054a83359477dcb35231db6de5c69fb1816e1a6b98e192de9e5b9ee | Questa stringa di 64 caratteri è una rappresentazione con codifica esadecimale del SHA-256 a 32 byte. |
+| Codifica esadecimale a Base64 SHA-256 del numero di telefono normalizzato e con hash | EObwtHBUqDNZR33LNSMdtt5cafsYFuGmuY4ZLenlue4 | Questa stringa di 44 caratteri è una rappresentazione con codifica Base64 del SHA-256 a 32 byte. L’hash SHA-256 è un valore esadecimale. È necessario utilizzare un codificatore Base64 che accetta un valore esadecimale come input. Utilizza questa codifica per i valori phone_hash inviati nel corpo della richiesta. |
+
+>[!IMPORTANT]
+>
+>Quando si applica la codifica Base64, assicurarsi di utilizzare una funzione che accetta un valore esadecimale come input. Se utilizzi una funzione che accetta testo come input, il risultato è una stringa più lunga che non è valida ai fini di UID2.
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -89,7 +140,7 @@ La destinazione CRM [!DNL The Trade Desk] è un caricamento di file batch giorna
 
 ### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Account Type]**: scegliere l&#39;opzione **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
@@ -125,28 +176,34 @@ Nella pagina **[!UICONTROL Mapping]** è necessario selezionare attributi o spaz
 
 Di seguito è riportato un esempio di mapping di identità corretto durante l&#39;attivazione di tipi di pubblico nella destinazione CRM [!DNL The Trade Desk].
 
->[!IMPORTANT]
->
-> La destinazione CRM [!DNL The Trade Desk] non accetta indirizzi e-mail non elaborati e con hash come identità nello stesso flusso di attivazione. Crea flussi di attivazione separati per gli indirizzi e-mail non elaborati e con hash.
+Selezione dei campi di origine e di destinazione:
 
-Selezione dei campi di origine:
+| Campo di origine | Campo di destinazione |
+|---|---|
+| E-mail | e-mail |
+| Email_LC_SHA256 | hash_email |
+| Telefono (E.164) | telefono |
+| Telefono (SHA256_E.164) | hash_phone |
+| TDID | tdid |
+| GAID | daid |
+| IDFA | idfa |
+| UID2 | uid2 |
+| UID2Token | uid2_token |
+| EUID | euid |
+| EUIDToken | euid_token |
+| RampID | idl |
+| ID5 | id5 |
+| netID | net_id |
+| FirstID | first_id |
 
-* Seleziona lo spazio dei nomi o l&#39;attributo `Email` come identità di origine se utilizzi l&#39;indirizzo e-mail non elaborato al momento dell&#39;acquisizione dei dati.
-* Se all&#39;inserimento dei dati in Experience Platform si esegue l&#39;hashing degli indirizzi e-mail dei clienti, seleziona lo spazio dei nomi o l&#39;attributo `Email_LC_SHA256` come identità di origine.
-
-Selezione dei campi di destinazione:
-
-* Immettere `email` come identità di destinazione quando lo spazio dei nomi o l&#39;attributo di origine è `Email`.
-* Immettere `hashed_email` come identità di destinazione quando lo spazio dei nomi o l&#39;attributo di origine è `Email_LC_SHA256`.
 
 ## Convalida esportazione dati {#validate}
 
-Per verificare che i dati vengano esportati correttamente da Experience Platform e in [!DNL The Trade Desk], trovare i tipi di pubblico nella sezione dati di Adobe 1PD all&#39;interno di [!DNL The Trade Desk] Data Management Platform (DMP). Di seguito sono riportati i passaggi per trovare l&#39;ID corrispondente nell&#39;interfaccia utente [!DNL Trade Desk]:
+Per verificare che i dati siano stati esportati correttamente da Experience Platform in [!DNL The Trade Desk], trovare i tipi di pubblico nella scheda Adobe 1PD nella libreria [!DNL The Trade Desk] &quot;Dati e identità inserzionista&quot;. Di seguito sono riportati i passaggi per trovare l&#39;ID corrispondente nell&#39;interfaccia utente [!DNL Trade Desk]:
 
-1. Selezionare innanzitutto la scheda **[!UICONTROL Data]** e rivedere la sezione **[!UICONTROL First-Party]**.
-2. Scorri verso il basso la pagina, sotto **[!UICONTROL Imported Data]**, troverai **[!UICONTROL Adobe 1PD Tile]**.
-3. Fai clic sul riquadro&#x200B;**[!UICONTROL Adobe 1PD]** e verranno elencati tutti i tipi di pubblico attivati nella destinazione [!DNL Trade Desk] per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
-4. L&#39;ID segmento # di Experience Platform verrà visualizzato come Nome segmento nell&#39;interfaccia utente [!DNL Trade Desk].
+1. Selezionare innanzitutto la scheda **[!UICONTROL Libraries]** e rivedere la sezione **[!UICONTROL Advertiser data and identity]**.
+2. Fai clic su **[!UICONTROL Adobe 1PD]** per elencare tutti i tipi di pubblico attivati in [!DNL The Trade Desk].
+3. Il Nome segmento o l&#39;ID segmento di Experience Platform verrà visualizzato come Nome segmento nell&#39;interfaccia utente [!DNL Trade Desk].
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
