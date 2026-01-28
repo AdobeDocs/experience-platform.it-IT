@@ -4,9 +4,9 @@ type: Tutorial
 description: Scopri come attivare i dati sul pubblico disponibili in Adobe Experience Platform inviando tipi di pubblico a destinazioni basate su profili di streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
-> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > * Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
@@ -75,9 +75,15 @@ Nel passaggio **[!UICONTROL Mapping]**, selezionare gli attributi di profilo che
 
    ![Immagine che evidenzia come selezionare un campo di origine nel passaggio di mappatura.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. Nella pagina **[!UICONTROL Select field]**, seleziona gli attributi XDM da inviare alla destinazione, quindi scegli **[!UICONTROL Select]**.
+1. Nella pagina **[!UICONTROL Select source field]**, seleziona gli attributi XDM da inviare alla destinazione, quindi scegli **[!UICONTROL Save]**.
 
-   ![Immagine che mostra una selezione di campi XDM che è possibile selezionare come campi di origine.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Immagine che mostra una selezione di campi XDM che è possibile selezionare come campi di origine.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+   Utilizza l&#39;interruttore **[!UICONTROL Show only fields with data]** per visualizzare solo i campi dello schema compilati con valori. Per impostazione predefinita, vengono visualizzati solo i campi schema compilati.
+
+   Utilizza l&#39;interruttore **[!UICONTROL Show display names for fields]** per visualizzare i nomi descrittivi dei campi, anziché i nomi dei campi dello schema.
+
+   ![Seleziona la pagina del campo di origine che mostra l&#39;interruttore per i nomi visualizzati.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. Per aggiungere altri campi, ripetere i passaggi da 1 a 3, quindi selezionare **[!UICONTROL Next]**.
 

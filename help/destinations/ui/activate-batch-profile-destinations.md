@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '4552'
+source-wordcount: '4578'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 > 
->* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 >* Per attivare i tipi di pubblico senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions).
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 > 
@@ -282,6 +282,9 @@ In questo passaggio, devi selezionare gli attributi del profilo che desideri agg
 
    ![Finestra modale che mostra gli attributi del profilo che possono essere esportati nella destinazione.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
+   Utilizza l&#39;interruttore **[!UICONTROL Show display names for fields]** per visualizzare i nomi descrittivi dei campi, anziché i nomi dei campi dello schema.
+
+   ![Seleziona la pagina del campo di origine che mostra l&#39;interruttore per i nomi visualizzati.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. Il campo selezionato per l&#39;esportazione viene ora visualizzato nella vista di mappatura. Se lo desideri, puoi modificare il nome dell’intestazione nel file esportato. A questo scopo, seleziona l’icona nel campo di destinazione.
 
@@ -466,7 +469,7 @@ Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM I
 
 ### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
 
-Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considerazioni chiave
 

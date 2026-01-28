@@ -3,9 +3,9 @@ title: Attivare i dati sul pubblico nelle destinazioni di streaming
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform mappandoli su destinazioni di streaming.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
-> * Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > * Per attivare i tipi di pubblico senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions).
 > * Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 > 
@@ -82,6 +82,10 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
    Utilizza l&#39;interruttore **[!UICONTROL Show only fields with data]** per visualizzare solo i campi dello schema compilati con valori. Per impostazione predefinita, vengono visualizzati solo i campi schema compilati.
 
    ![Selezionare la pagina del campo di origine che mostra diversi campi di origine disponibili.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
+
+   Utilizza l&#39;interruttore **[!UICONTROL Show display names for fields]** per visualizzare i nomi descrittivi dei campi, anziché i nomi dei campi dello schema.
+
+   ![Seleziona la pagina del campo di origine che mostra l&#39;interruttore per i nomi visualizzati.](../assets/ui/activate-segment-streaming-destinations/show-display-names.gif)
 
 1. Selezionare il pulsante a destra della voce **[!UICONTROL Target field]**.
 
