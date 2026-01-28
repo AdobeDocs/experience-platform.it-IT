@@ -3,9 +3,9 @@ keywords: pubblicità; ufficio commerciale; ufficio commerciale di pubblicità
 title: La connessione a Trade Desk
 description: Trade Desk è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: da9ac560f65c8e0fd6c84517a47cd7e4dd868117
+source-git-commit: b282dbae9131e0d2acdcd999d57f2e08b0bd7810
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL The Trade Desk] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/it/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+>Se stai cercando di creare la tua prima destinazione con [!DNL The Trade Desk] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -133,7 +133,8 @@ Quando esegui la mappatura dei tipi di pubblico, Adobe consiglia di utilizzare i
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Set di mappatura predefiniti"
->abstract="Abbiamo preconfigurato questi quattro set di mappatura per te. Quando attivi i dati su The Trade Desk, i profili qualificati per i tipi di pubblico attivati non devono necessariamente avere tutte e quattro le identità presenti sui profili, in quanto questa destinazione funziona con una qualsiasi delle identità di destinazione mostrate qui. Ulteriori informazioni sulle &lt;a href=&quot;https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings&quot;>mappature preconfigurate</a>"
+>abstract="Abbiamo preconfigurato questi quattro set di mappatura per te. Quando attivi i dati su The Trade Desk, i profili qualificati per i tipi di pubblico attivati non devono necessariamente avere tutte e quattro le identità presenti sui profili, in quanto questa destinazione funziona con una qualsiasi delle identità di destinazione mostrate qui.
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
 
 Tutte le identità di destinazione descritte nella sezione [identità supportate](#supported-identities) devono essere mappate nel passaggio di mappatura del flusso di lavoro di attivazione del pubblico. Ciò include:
 
