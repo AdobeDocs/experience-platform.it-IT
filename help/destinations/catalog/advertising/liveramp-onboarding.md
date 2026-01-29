@@ -3,9 +3,9 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-Time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b8540eb20838e7f2228d71bfc002392d07daffe4
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1872'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ In qualità di addetto al marketing, desidero inviare tipi di pubblico da Adobe 
 
 ## Prerequisiti {#prerequisites}
 
-La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP[&#x200B; di &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP[ di ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Per poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], sono necessarie le credenziali [!DNL LiveRamp]. Rivolgiti al tuo rappresentante [!DNL LiveRamp] per ottenere le tue credenziali, se non le hai già.
 
@@ -50,7 +50,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 |---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Audience export]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione [!DNL LiveRamp - Onboarding]. |
-| Frequenza di esportazione | **[!UICONTROL Daily batch]** | Poiché i profili vengono aggiornati in Experience Platform in base alla valutazione del pubblico, i profili (identità) vengono aggiornati una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
+| Frequenza di esportazione | **[!UICONTROL Batch]** | Poiché i profili vengono aggiornati in Experience Platform in base alla valutazione del pubblico, i profili (identità) vengono aggiornati e possono essere consegnati a valle alla piattaforma di destinazione su base giornaliera, settimanale o mensile. Ulteriori informazioni sulle [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione,
 Nel passaggio [!UICONTROL Scheduling], crea una pianificazione di esportazione per ogni pubblico, con le impostazioni mostrate di seguito.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Le esportazioni di file incrementali](../../ui/activate-batch-profile-destinations.md#export-incremental-files) non sono attualmente supportate per la destinazione [!DNL LiveRamp].
-* **[!UICONTROL Frequency]**: [!UICONTROL Daily]
+* **[!UICONTROL Frequency]**: [!UICONTROL Daily], [!UICONTROL Weekly] o [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: selezionare l&#39;ora di inizio e di fine dell&#39;esportazione come desiderato.
 
 ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra il passaggio di pianificazione del pubblico.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
@@ -255,6 +255,7 @@ Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla 
 
 | Mese di rilascio | Tipo di aggiornamento | Descrizione |
 |---|---|---|
+| Febbraio 2025 | Aggiornamento della funzionalità e della documentazione | <ul><li> È stato aggiunto il supporto per le cadenze di consegna settimanale e mensile. |
 | Marzo 2024 | Aggiornamento della funzionalità e della documentazione | <ul><li>È stato aggiunto il supporto per le consegne in Europa e Australia [!DNL LiveRamp] [!DNL SFTP] istanze.</li><li>È stata aggiornata la documentazione per descrivere configurazioni specifiche per le nuove aree geografiche supportate.</li><li>La dimensione massima del file è stata aumentata a 10 milioni di righe (rispetto ai 5 milioni precedenti).</li><li>La documentazione è stata aggiornata per riflettere le maggiori dimensioni dei file.</li></ul> |
 | Luglio 2023 | Versione iniziale | Versione di destinazione iniziale e documentazione pubblicata. |
 
