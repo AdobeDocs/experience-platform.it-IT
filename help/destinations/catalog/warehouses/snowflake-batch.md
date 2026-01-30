@@ -4,9 +4,9 @@ description: Crea una condivisione dati live di Snowflake per ricevere aggiornam
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1662'
 ht-degree: 3%
 
 ---
@@ -149,7 +149,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Snowflake Account ID]**: ID del tuo account Snowflake. Utilizza il seguente formato ID account, a seconda che l’account sia collegato o meno a un’organizzazione:
    * Se l&#39;account è collegato a un&#39;organizzazione:`OrganizationName.AccountName`.
    * Se l&#39;account non è collegato a un&#39;organizzazione:`AccountName`.
-* **[!UICONTROL Account acknowledgment]**: attiva la conferma dell&#39;ID account Snowflake per confermare che l&#39;ID account è corretto e appartiene a te.
+* **[!UICONTROL Select Snowflake Region]**: selezionare l&#39;area in cui è stato eseguito il provisioning dell&#39;istanza di Snowflake. Per informazioni dettagliate sulle aree cloud supportate, consulta la [documentazione](https://docs.snowflake.com/en/user-guide/intro-regions) di Snowflake.
+* **[!UICONTROL Account acknowledgment]**: dopo aver immesso **[!UICONTROL Snowflake Account ID]**, seleziona **[!UICONTROL Yes]** in questo menu a discesa per confermare che **[!UICONTROL Snowflake Account ID]** è corretto e appartiene a te.
 
 >[!IMPORTANT]
 >
@@ -195,10 +196,6 @@ La tabella dinamica contiene le colonne riportate di seguito.
 ![Schermata che mostra l&#39;interfaccia di Snowflake con i dati della tabella dinamica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
 
 ## Limitazioni note {#known-limitations}
-
-### Restrizione criterio di unione predefinito {#default-merge-policy-restriction}
-
-Attualmente, è possibile esportare solo i tipi di pubblico mappati sul criterio di unione predefinito.
 
 ### Disponibilità regionale {#regional-availability}
 

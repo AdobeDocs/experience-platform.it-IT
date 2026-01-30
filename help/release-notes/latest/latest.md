@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2026
 description: Note sulla versione di Adobe Experience Platform di gennaio 2026.
-source-git-commit: cbe9dd4babb31061405dee3ebe4bd40acad82e90
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1454'
-ht-degree: 19%
+source-wordcount: '1529'
+ht-degree: 18%
 
 ---
 
@@ -40,7 +40,7 @@ Agent Orchestrator consente di creare e distribuire agenti basati sull’intelli
 
 | Funzione | Descrizione |
 | --- | --- |
-| Versione di prova per agenti Adobe Experience Platform associata all&#39;utilizzo | **Alcuni clienti ora dispongono di un accesso di prova gratuito agli agenti Adobe Experience Platform**. Puoi utilizzare la versione di prova per esplorare e interagire con gli agenti tramite l’interfaccia dell’Assistente per l’intelligenza artificiale fornita da Adobe Experience Platform Agent Orchestrator. La versione di prova offre un’esperienza pratica con gli agenti di intelligenza artificiale che operano nel contesto dei prodotti e degli ambienti Experience Cloud esistenti dei clienti, consentendo ai team di valutare il valore prima di procedere a un acquisto completo. Gli agenti Adobe Experience Platform sono guidati dall’input e dalla supervisione dell’utente e rispettano i controlli di accesso esistenti a livello di prodotto, garantendo che gli utenti possano eseguire solo azioni o visualizzare i dati per i quali sono autorizzati all’interno delle applicazioni Experience Cloud sottostanti. Per informazioni su come iniziare, leggi la [panoramica della versione di prova associata all&#39;utilizzo degli agenti Experience Platform](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/trial). |
+| Versione di prova per agenti Adobe Experience Platform associata all&#39;utilizzo | **Alcuni clienti ora dispongono di un accesso di prova gratuito agli agenti Adobe Experience Platform**. Puoi utilizzare la versione di prova per esplorare e interagire con gli agenti tramite l’interfaccia dell’Assistente per l’intelligenza artificiale fornita da Adobe Experience Platform Agent Orchestrator. La versione di prova offre un’esperienza pratica con gli agenti di intelligenza artificiale che operano nel contesto dei prodotti e degli ambienti Experience Cloud esistenti dei clienti, consentendo ai team di valutare il valore prima di procedere a un acquisto completo. Gli agenti Adobe Experience Platform sono guidati dall’input e dalla supervisione dell’utente e rispettano i controlli di accesso esistenti a livello di prodotto, garantendo che gli utenti possano eseguire solo azioni o visualizzare i dati per i quali sono autorizzati all’interno delle applicazioni Experience Cloud sottostanti. Per informazioni su come iniziare, leggi la [panoramica della versione di prova associata all&#39;utilizzo degli agenti Experience Platform](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial). |
 
 {style="table-layout:auto"}
 
@@ -61,6 +61,7 @@ Per ulteriori informazioni, consulta la [documentazione di Agent Orchestrator](h
 | Esperienza di attivazione migliorata per [le destinazioni Trade Desk](../../destinations/catalog/advertising/tradedesk.md) e [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Le destinazioni Trade Desk e Microsoft Bing ora includono mappature obbligatorie predefinite per un’esperienza di attivazione ottimizzata.  <br> Questa versione verrà implementata gradualmente e verrà completata entro il 30 gennaio. ![Immagine che mostra i mapping predefiniti per il Trade Desk](../2026/assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Immagine che mostra i mapping predefiniti per Microsoft Bing](../2026/assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | Supporto della crittografia AES256 per [destinazioni Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ora puoi configurare la crittografia AES256 per le esportazioni Amazon S3. Sono disponibili due opzioni: <ul><li>**[!UICONTROL Default]**: i dati verranno crittografati a riposo con l&#39;algoritmo di crittografia predefinito impostato sul bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform aggiunge l&#39;intestazione `s3:x-amz-server-side-encryption": "AES256` nell&#39;esportazione e i dati verranno crittografati a riposo con l&#39;algoritmo AES256 quando arriva in S3. **Questa opzione ha la precedenza su qualsiasi algoritmo di crittografia predefinito configurato nel bucket S3**.</li></ul> Questa versione verrà implementata gradualmente e sarà completa entro il 30 gennaio. |
 | Supporto per l&#39;attivazione del numero di telefono per [la connessione al Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | La destinazione Trade Desk - CRM ora supporta l&#39;attivazione dei numeri di telefono oltre agli indirizzi e-mail. Puoi attivare sia i numeri di telefono senza hash in formato E.164 che i numeri di telefono con hash (formato SHA256_E.164) nel tuo account Trade Desk per il targeting e la soppressione del pubblico in base ai dati CRM. I numeri di telefono devono essere normalizzati nel formato E.164 prima dell&#39;attivazione. |
+| [Aggiornamenti di destinazione del batch Snowflake](../../destinations/catalog/warehouses/snowflake-batch.md) | La destinazione Snowflake Batch ora include la funzionalità di selezione dell’area durante la configurazione della destinazione. Ora puoi selezionare l’area Snowflake specifica in cui viene eseguito il provisioning dell’istanza, garantendo il trasferimento ottimale dei dati e la conformità ai requisiti regionali. Inoltre, è stata rimossa la restrizione predefinita dei criteri di unione, che consente di esportare i tipi di pubblico mappati a qualsiasi criterio di unione. <br> La destinazione batch [!DNL Snowflake] è attualmente disponibile solo per i clienti Real-Time CDP con provisioning nell&#39;area Experience Platform VA7. |
 
 **Funzionalità nuove o aggiornate**
 
