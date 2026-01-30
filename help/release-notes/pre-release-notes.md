@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
+source-git-commit: 76e8f0678c4634258170ca1161134dd1176c24e7
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 20%
+source-wordcount: '1110'
+ht-degree: 22%
 
 ---
 
@@ -32,7 +32,6 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinazioni](#destinations)
 - [Profilo cliente in tempo reale](#real-time-customer-profile)
-- [Schemi](#schemas)
 - [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
 
@@ -92,18 +91,6 @@ Real-Time Customer Profile consente di visualizzare una visualizzazione olistica
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [[!DNL Real-Time Customer Profile] panoramica](../profile/home.md).
-
-## Schemi {#schemas}
-
-Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i sistemi, diventa più semplice mantenere un significato e quindi ottenere valore dai dati. Gli schemi sono composti da una classe base e da zero o più gruppi di campi schema.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Modernizzazione dell’inventario degli schemi con ricerca, filtro, tag e cartelle | La pagina di navigazione dello schema è stata modernizzata per fornire funzionalità organizzative e di individuazione avanzate. Le nuove funzioni includono opzioni avanzate di ricerca e filtro, supporto di tag e cartelle generati dall’utente per organizzare gli schemi e azioni in linea per semplificare i flussi di lavoro. I miglioramenti principali includono: colonne aggiornate (Nome, Classe, Set di dati, Identità, Relazioni, Abilita per profilo, Comportamento, Tipo di schema, Tag, Data di creazione, Ultima modifica), filtri avanzati (Mostra profili, Tipo di schema, Classe, Ha qualsiasi tag, Creato da, Data di creazione, Data di modifica, Ha identità primaria, Ha relazione, Spazio dei nomi dell’identità primaria), azioni in linea (Modifica, Elimina, Applica etichette, Crea set di dati per schemi non relazionali, Gestisci tag, Sposta in cartella, Aggiungi a pacchetto, Copia struttura JSON, Scarica file di esempio) e la possibilità di organizzare gli schemi utilizzando tag e cartelle. Questi miglioramenti forniscono una visibilità completa delle risorse dello schema e consentono una gestione più efficiente dello schema a livello di sandbox. |
-
-Per ulteriori informazioni, consulta la [[!DNL Schemas] panoramica](../xdm/home.md).
 
 ## Servizio di segmentazione {#segmentation-service}
 
