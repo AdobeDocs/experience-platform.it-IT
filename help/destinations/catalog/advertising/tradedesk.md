@@ -3,9 +3,9 @@ keywords: pubblicità; ufficio commerciale; ufficio commerciale di pubblicità
 title: La connessione a Trade Desk
 description: Trade Desk è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: e145dc91fca471078cf94d84ce1012f659d70293
+source-git-commit: 138bfe721bb20fe3ba614a73ffffca3e00979acb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1242'
 ht-degree: 2%
 
 ---
@@ -13,22 +13,6 @@ ht-degree: 2%
 # Connessione [!DNL The Trade Desk]
 
 ## Panoramica {#overview}
-
-
->[!IMPORTANT]
->
-> In seguito all&#39;[aggiornamento interno](../../../release-notes/2025/july-2025.md#destinations) al servizio delle destinazioni a partire da luglio 2025, potresti notare un **calo del numero di profili attivati** nei flussi di dati a [!DNL The Trade Desk].
-> Questo calo è dovuto a una migliore visibilità del monitoraggio. I profili senza ECID ora vengono conteggiati correttamente come eliminati nelle metriche di attivazione. Per informazioni dettagliate, consulta la sezione [mappatura obbligatoria](#mandatory-mappings) in questa pagina.
->
->**Modifica:**
->
->* Il servizio delle destinazioni ora segnala correttamente quando i profili senza ECID vengono eliminati dall’attivazione.
->* **Importante:** i profili senza ECID non sono mai arrivati a [!DNL The Trade Desk] anche prima di questo aggiornamento. L’integrazione ha sempre richiesto ECID. Questo aggiornamento corregge un bug che in precedenza impediva a queste gocce di essere visibili nelle metriche.
->
->**Operazioni da eseguire:**
->
->* Esamina i dati del pubblico per verificare che i profili abbiano valori ECID validi.
->* Monitora le metriche di attivazione per verificare i conteggi dei profili previsti. I conteggi più bassi riflettono un reporting accurato, non un cambiamento nel comportamento della destinazione.
 
 Utilizzare questo connettore di destinazione per inviare i dati del profilo a [!DNL The Trade Desk]. Questo connettore invia dati all&#39;endpoint di prime parti [!DNL The Trade Desk]. L&#39;integrazione tra Adobe Experience Platform e [!DNL The Trade Desk] non supporta l&#39;esportazione dei dati nell&#39;endpoint di terze parti [!DNL The Trade Desk].
 
@@ -46,14 +30,14 @@ In qualità di addetto al marketing, desidero poter utilizzare tipi di pubblico 
 
 Di seguito sono riportate le identità supportate dalla destinazione [!DNL The Trade Desk]. Queste identità possono essere utilizzate per attivare i tipi di pubblico in [!DNL The Trade Desk].
 
-Tutte le identità nella tabella seguente sono mappature obbligatorie.
+Tutte le identità nella tabella seguente sono preconfigurate e mappate automaticamente durante l&#39;attivazione. Non è necessario configurare manualmente queste mappature nel flusso di lavoro di attivazione.
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| [!DNL GAID] | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
-| [!DNL IDFA] | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| [!DNL ECID] | Experience Cloud ID | Questa identità è obbligatoria per il corretto funzionamento dell’integrazione, ma non viene utilizzata per l’attivazione del pubblico. |
-| [!DNL Tradedesk] | [!DNL TDID] nella piattaforma [!DNL The Trade Desk] | Utilizza questa identità durante l’attivazione di tipi di pubblico in base all’ID proprietario del Trade Desk. |
+| GAID | GOOGLE ADVERTISING ID | Attivato quando nel profilo è presente un GAID. |
+| IDFA | Apple ID per inserzionisti | Attivato quando nel profilo è presente un identificatore IDFA. |
+| ECID | Experience Cloud ID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, leggere il seguente documento in [ECID](/help/identity-service/features/ecid.md). |
+| [!DNL Tradedesk] | [!DNL TDID] nella piattaforma [!DNL The Trade Desk] | Attivato quando un profilo ha un ECID ed esiste una mappatura ID da ECID a Trade Desk in Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -81,9 +65,16 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Prerequisiti {#prerequisites}
 
->[!IMPORTANT]
->
->Se stai cercando di creare la tua prima destinazione con [!DNL The Trade Desk] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/it/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+I prerequisiti dipendono dai tipi di identità che intendi utilizzare per l’attivazione del pubblico:
+
+**Non sono presenti prerequisiti solo per l&#39;attivazione degli ID per dispositivi mobili**. Se raccogli e gestisci gli ID (GAID e/o IDFA) per i tuoi clienti, puoi iniziare ad attivare i tipi di pubblico in [!DNL The Trade Desk].
+
+**Per il targeting basato su cookie su[!DNL The Trade Desk]**, assicurati che sia stata stabilita una mappatura tra ECID e [!DNL Trade Desk ID]. A tale scopo, completa i passaggi seguenti:
+
+1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL The Trade Desk ID] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
+   * Se in precedenza hai configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID esistenti vengono automaticamente trasferite ad Experience Platform.
+
+2. **Crea strumenti per le pagine Web**: implementa il codice nelle pagine Web per creare mappature tra [!DNL The Trade Desk ID] e Adobe ECID. Questo consente ad Experience Platform di associare gli ID Trade Desk ai profili dei clienti.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -128,41 +119,43 @@ Nel passaggio [Pianificazione pubblico](../../ui/activate-segment-streaming-dest
 
 Quando esegui la mappatura dei tipi di pubblico, Adobe consiglia di utilizzare il nome del pubblico di Experience Platform, o una forma più breve, per facilitarne l’utilizzo. Tuttavia, l’ID o il nome del pubblico nella destinazione non deve necessariamente corrispondere a quello nel tuo account Experience Platform. Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
 
-### Mappature obbligatorie {#mandatory-mappings}
+### Mappature preconfigurate {#preconfigured-mappings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Set di mappatura predefiniti"
 >abstract="Abbiamo preconfigurato questi quattro set di mappatura per te. Quando attivi i dati su The Trade Desk, i profili qualificati per i tipi di pubblico attivati non devono necessariamente avere tutte e quattro le identità presenti sui profili, in quanto questa destinazione funziona con una qualsiasi delle identità di destinazione mostrate qui. <br> Per il targeting basato su cookie basato sull&#39;ID del Trade Desk, è necessario che ECID sia presente nel profilo e che sia presente una mappatura di sincronizzazione ID tra l&#39;ID del Trade Desk e ECID."
->additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
 
-Tutte le identità di destinazione descritte nella sezione [identità supportate](#supported-identities) devono essere mappate nel passaggio di mappatura del flusso di lavoro di attivazione del pubblico. Ciò include:
+Le seguenti mappature di identità sono **preconfigurate e compilate automaticamente** nel flusso di lavoro di Audience Activation:
 
-* [!DNL GAID] (Google Advertising ID)
-* [!DNL IDFA] (Apple ID per inserzionisti)
-* [!DNL ECID] (Experience Cloud ID)
+* GAID (Google Advertising ID)
+* IDFA (Apple ID per inserzionisti)
+* ECID (Experience Cloud ID)
 * [!DNL The Trade Desk ID]
 
 ![Schermata che mostra le mappature obbligatorie](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 
-La mappatura di tutte le identità di destinazione garantisce che l’attivazione possa essere suddivisa correttamente e fornire profili utilizzando qualsiasi identità presente. Ciò non significa che tutte le identità debbano essere presenti su ciascun profilo.
+Queste mappature sono disattivate e di sola lettura. Non è necessario configurare nulla in questo passaggio. Selezionare **[!UICONTROL Next]** per continuare.
 
-Affinché l&#39;esportazione nel Trade Desk abbia esito positivo, un profilo deve contenere:
+Experience Platform controlla automaticamente ogni profilo che appartiene ai tipi di pubblico mappati nel flusso di lavoro di attivazione per tutti i tipi di identità supportati e quindi attiva il profilo utilizzando le identità presenti.
 
-* [!DNL ECID] e
-* almeno uno tra: [!DNL GAID], [!DNL IDFA] o [!DNL The Trade Desk ID]
+### Requisiti di identità per tipo di attivazione
 
-Esempi:
+**Attivazione ID mobile (GAID/IDFA):** I profili con solo GAID o IDFA sono sufficienti per l&#39;attivazione. Non sono necessari identità o prerequisiti aggiuntivi.
 
-* Solo [!DNL ECID]: non esportato
-* [!DNL ECID] + [!DNL The Trade Desk ID]: esportato
-* [!DNL ECID] + [!DNL IDFA]: esportato
-* [!DNL ECID] + [!DNL GAID]: esportato
-* [!DNL IDFA] + [!DNL The Trade Desk ID] (nessun [!DNL ECID]): non esportato
+**Il targeting basato su cookie ([!DNL Trade Desk ID]):** richiede entrambi:
 
->[!NOTE]
-> 
->In seguito all&#39;aggiornamento del [luglio 2025](/help/release-notes/2025/july-2025.md#destinations) al servizio delle destinazioni, i profili con [!DNL ECID] mancanti ora vengono segnalati correttamente come eliminati nelle metriche di attivazione. Questo è sempre stato il comportamento dell&#39;integrazione - i profili senza [!DNL ECID] non hanno mai raggiunto [!DNL The Trade Desk] - ma le cadute sono ora correttamente visibili nel monitoraggio dei flussi di dati. I conteggi di attivazione inferiori riflettono una generazione di rapporti accurata, non una modifica nella funzionalità di destinazione.
+* ECID presente nel profilo
+* Mapping di sincronizzazione ID tra [!DNL Trade Desk ID] e ECID (configurato come descritto nella sezione [prerequisiti](#prerequisites))
+
+**Comportamento con più ID:** Se un profilo contiene più identità supportate, ogni identità verrà attivata separatamente in [!DNL The Trade Desk]. Questo assicura la massima portata e flessibilità nell’attivazione del pubblico.
+
+### Esempi di attivazione
+
+* **Profili ID mobili:** I profili con GAID e/o IDFA vengono attivati utilizzando i rispettivi ID pubblicitari. Se un profilo contiene sia GAID che IDFA, ogni ID verrà attivato separatamente.
+* **Profilo basato su cookie:** Verrà attivato un profilo con ECID e una mappatura [!DNL Trade Desk ID] corrispondente utilizzando l&#39;ID Trade Desk per il targeting basato su cookie.
+* **Profilo solo ECID:** Un profilo con solo ECID e nessuna mappatura [!DNL Trade Desk ID] non verrà **esportato**. ECID da solo non è sufficiente per l&#39;attivazione.
 
 ## Dati esportati {#exported-data}
 
