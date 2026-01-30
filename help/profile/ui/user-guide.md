@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1924'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 [!DNL Real-Time Customer Profile] crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l&#39;interazione con i dati [!DNL Real-Time Customer Profile] nell&#39;interfaccia utente di Adobe Experience Platform.
 
-## Introduzione
+## Guida introduttiva
 
 Questa guida dell&#39;interfaccia utente richiede una conoscenza dei vari servizi [!DNL Experience Platform] coinvolti nella gestione di [!DNL Real-Time Customer Profiles]. Prima di leggere questa guida o di lavorare nell’interfaccia utente, consulta la documentazione dei seguenti servizi:
 
@@ -42,7 +42,7 @@ Per ulteriori informazioni, visita la [guida del dashboard dei profili](../../da
 
 Nella scheda **[!UICONTROL Browse]** puoi visualizzare i profili in una visualizzazione **scheda** o **grafico** selezionando l&#39;opzione.
 
-![L&#39;opzione di visualizzazione scheda e grafico è evidenziata.](../images/user-guide/card-graph-view.png)
+![L&#39;opzione di visualizzazione scheda e grafico è evidenziata.](../images/user-guide/change-browse-view.png)
 
 Inoltre, puoi sfogliare i profili utilizzando un criterio di unione o cercare profili specifici utilizzando uno spazio dei nomi e un valore di identità.
 
@@ -127,7 +127,9 @@ Nella sezione **[!UICONTROL Customer profile insights]** viene visualizzata una 
 
 #### Widget per insight da IA {#ai-insight-widgets}
 
-[!BADGE Alpha]{type=Informative} Questa funzione è attualmente in Alpha.
+>[!IMPORTANT]
+>
+>Se sei cliente Healthcare Shield, **non** potrai utilizzare widget AI insight.
 
 Nella sezione **[!UICONTROL AI insight widgets]** sono visualizzati i widget generati dall&#39;intelligenza artificiale. Questi widget forniscono informazioni rapide sul profilo, in base ai dati del profilo, tra cui dati demografici (come età, genere o posizione), comportamenti degli utenti (come cronologia acquisti, attività sul sito web o coinvolgimento con i social media) nonché dati psicografici (come interessi, preferenze o scelte di stile di vita). Tutti i widget di intelligenza artificiale utilizzano dati **già** presenti nel profilo.
 
@@ -146,8 +148,6 @@ Puoi anche scegliere di visualizzare o meno i nomi degli attributi come nomi vis
 ![L&#39;opzione Mostra nomi visualizzati è evidenziata.](../images/user-guide/show-display-names.png)
 
 #### Widget con classificazione automatica {#auto-classified-widgets}
-
-[!BADGE Alpha]{type=Informative} Questa funzione è attualmente in Alpha.
 
 La sezione **[!UICONTROL Auto-classified widgets]** visualizza widget che sfruttano lo schema di unione per determinare i gruppi di campi di origine a cui appartiene un attributo, fornendo un contesto più chiaro da dove provengono i dati. È possibile utilizzare la barra di ricerca per cercare più facilmente le parole chiave all&#39;interno dei widget.
 
