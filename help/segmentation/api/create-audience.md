@@ -4,9 +4,9 @@ description: Scopri come creare i metadati per un pubblico esterno utilizzando l
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
+source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '264'
 ht-degree: 7%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 È possibile utilizzare l&#39;endpoint POST `/audiences` per creare i metadati per un pubblico esterno, in modo che il pubblico sia visibile in Audience Portal. Utilizza questo endpoint se l’acquisizione del pubblico verrà gestita in un servizio separato, ad esempio l’acquisizione batch.
 
-## Introduzione
+## Guida introduttiva
 
 >[!IMPORTANT]
 >
@@ -61,7 +61,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -71,6 +72,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | Stringa | Il nome del pubblico. |
 | `description` | Stringa | Una descrizione facoltativa per il pubblico. |
+| `audienceId` | Stringa | Un ID generato esternamente per il pubblico. |
 | `namespace` | Stringa | Lo spazio dei nomi per il pubblico. |
 | `originName` | Stringa | Il nome dell’origine del pubblico. |
 
@@ -80,6 +82,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -87,5 +90,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 | Proprietà | Tipo | Descrizione |
 | -------- | ---- | ----------- |
+| `id` | Stringa | ID generato dal sistema per il pubblico. |
 | `name` | Stringa | Il nome del pubblico creato. |
-| `audienceId` | Stringa | ID del pubblico creato. |
+| `audienceId` | Stringa | L’ID fornito esternamente del pubblico creato. |

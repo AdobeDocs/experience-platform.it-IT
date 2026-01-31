@@ -2,9 +2,9 @@
 title: Panoramica di Audience Portal
 description: Scopri come utilizzare Audience Portal per visualizzare, gestire e creare tipi di pubblico in Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 8fed1f034cd530bd84bf9d9b180d9db3c4ee0faf
+source-git-commit: 1a2536437ae8aa34dac13406dd4b36afa9585ae5
 workflow-type: tm+mt
-source-wordcount: '4434'
+source-wordcount: '4457'
 ht-degree: 3%
 
 ---
@@ -102,7 +102,7 @@ Puoi aggiungere campi aggiuntivi a Audience Portal selezionando ![l&#39;icona de
 | ----- | ----------- |
 | [!UICONTROL Name] | Il nome del pubblico. |
 | [!UICONTROL Profile count] | Il numero totale di profili idonei per il pubblico. |
-| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/it/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Lifecycle status] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive` e `Published`. Ulteriori informazioni sugli stati del ciclo di vita, compreso il significato dei diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, sono disponibili nella sezione [lifecycle status delle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | Nome dell’ultima persona che ha aggiornato il pubblico. |
@@ -138,7 +138,7 @@ Per utilizzare [!DNL Unified Search], aggiungere il termine che si desidera cerc
 
 ![La barra di ricerca è evidenziata.](../images/ui/audience-portal/browse-audience-search.png)
 
-Per ulteriori informazioni su [!DNL Unified Search], incluse le funzionalità supportate, leggere la [documentazione di Ricerca unificata](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=it).
+Per ulteriori informazioni su [!DNL Unified Search], incluse le funzionalità supportate, leggere la [documentazione di Ricerca unificata](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 #### Tag {#tags}
 
@@ -203,7 +203,7 @@ Viene visualizzato l’elenco dei filtri disponibili.
 
 | Filtro | Descrizione |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/it/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. I valori possibili includono [Servizio di segmentazione](#segment-builder), [Caricamento personalizzato](#import-audience), [Composizione pubblico](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Pubblico simile](../types/lookalike-audiences.md), [Composizione pubblico federato](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Distiller dati](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/it/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Has any tag] | Consente di filtrare per tag. È possibile selezionare tra **[!UICONTROL Has any tag]** e **[!UICONTROL Has all tags]**. Quando **[!UICONTROL Has any tag]** è selezionato, i tipi di pubblico filtrati includeranno **qualsiasi** dei tag aggiunti. Quando **[!UICONTROL Has all tags]** è selezionato, i tipi di pubblico filtrati devono includere **tutti** i tag aggiunti. |
 | [!UICONTROL Lifecycle status] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili sono [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] e [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico (metodo di valutazione). Le opzioni disponibili includono [!UICONTROL Batch], [!UICONTROL Streaming] e [!UICONTROL Edge] |
@@ -269,14 +269,14 @@ Se il pubblico è in scadenza entro sette giorni, puoi selezionare **[!UICONTROL
 
 ![Il pulsante [!UICONTROL Refresh data expiration] è evidenziato nella pagina dei dettagli del pubblico.](../images/ui/audience-portal/refresh-data-expiration.png)
 
-In questo modo la scadenza dei dati viene estesa di 30 giorni e vengono utilizzati gli stessi metadati del pubblico. Una volta premuto il pulsante, non è possibile selezionarlo per altri 20 minuti.
+In questo modo la scadenza dei dati viene estesa del numero di giorni definiti nel caricamento iniziale e vengono utilizzati gli stessi metadati di pubblico. Se la scadenza dei dati non è stata definita in precedenza, viene estesa di 30 giorni. Una volta premuto il pulsante, non è possibile selezionarlo per altri 20 minuti.
 
 Questo pulsante **non** sarà selezionabile nelle seguenti situazioni:
 
 - Nessuna batch riuscita per il pubblico
 - Aggiornamento iniziale non riuscito
 - La scadenza dei dati è superiore a sette giorni
-- Il pubblico non ha dati
+- Il pubblico è già scaduto
 
 >[!TAB Servizio di segmentazione]
 
@@ -467,7 +467,7 @@ Facoltativamente, puoi anche aggiungere alcuni dettagli aggiuntivi al pubblico g
 
 >[!NOTE]
 >
->La scadenza dei dati personalizzati imposta il numero di giorni in cui i profili rimarranno **1&rbrace; nell&#39;iscrizione al pubblico.** Una volta scaduta la scadenza dei dati, i profili escono dall’iscrizione al pubblico. Questo valore può essere impostato da 1 a 90 giorni.
+>La scadenza dei dati personalizzati imposta il numero di giorni in cui i profili rimarranno **1} nell&#39;iscrizione al pubblico.** Una volta scaduta la scadenza dei dati, i profili escono dall’iscrizione al pubblico. Questo valore può essere impostato da 1 a 90 giorni.
 
 Dopo aver inserito i dettagli del pubblico, seleziona **[!UICONTROL Next]**.
 

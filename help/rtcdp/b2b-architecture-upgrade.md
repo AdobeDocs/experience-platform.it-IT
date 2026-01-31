@@ -1,12 +1,12 @@
 ---
 title: Aggiornamenti dell'architettura a Real-Time CDP B2B edition
 description: Leggi questo documento per scoprire gli aggiornamenti completi dell’architettura a Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
+source-git-commit: da288d1a917df85b3c003bc6592fda7a6f1eafe7
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 0%
+source-wordcount: '1096'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ Utilizza l’architettura avanzata per i seguenti vantaggi:
 
 Leggi quanto segue per informazioni sui miglioramenti principali inclusi nell’aggiornamento dell’architettura.
 
-### Snapshot dell’account per l’iscrizione al pubblico
+### Istantanee dell’account per l’appartenenza al pubblico
 
 Con la nuova architettura B2B, ora vengono inclusi i dettagli di iscrizione al pubblico per le entità account nelle esportazioni di snapshot. Questa funzione ti consente di accedere allo stato del pubblico a livello di account, ai timestamp e agli indicatori di iscrizione.
 
@@ -39,7 +39,7 @@ Con questo aggiornamento, ora puoi:
 
 Per ulteriori informazioni, leggi la documentazione su [tipi di pubblico dell&#39;account](../segmentation/types/account-audiences.md).
 
-### I tipi di pubblico includono quelli che includono entità B2B
+### Conteggi dei pubblici per tipi di pubblico che includono entità B2B
 
 Le stime delle dimensioni del pubblico per i tipi di pubblico con entità B2B ora sono calcolate con precisione esatta. Queste stime sono disponibili durante l’anteprima e forniscono informazioni più precise e affidabili per i tipi di pubblico che coinvolgono complesse relazioni B2B.
 
@@ -123,6 +123,10 @@ Le richieste di eliminazione per le seguenti entità B2B che utilizzano l&#39;AP
 * Membri di elenco marketing
 
 Leggi [[!DNL Profile Access] API](../profile/api/entities.md) per ulteriori informazioni.
+
+### API del processo di segmento obsoleta
+
+Nella nuova architettura, l’endpoint &quot;create a segment job&quot; (crea un processo di segmentazione) e la valutazione flessibile del pubblico *non sono supportati.
 
 ### Ricerche nel profilo account e opportunità
 
