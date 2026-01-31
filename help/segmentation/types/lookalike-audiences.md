@@ -98,7 +98,7 @@ Viene visualizzata la pagina dei dettagli del pubblico. Seleziona la scheda **[!
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Somiglianza e portata"
->abstract="Il grafico di somiglianza e portata rappresenta la portata prevista di un pubblico Look-Alike costituito da profili al di sopra di un dato punteggio di somiglianza. Puoi passare il puntatore su un punto specifico del grafico per visualizzare la percentuale di somiglianza e il numero di profili previsto per il punto attualmente evidenziato."
+>abstract="Il grafico di somiglianza e portata rappresenta la portata prevista di un pubblico per similarità costituito da profili che superano un dato punteggio di somiglianza. Puoi passare il puntatore su un punto specifico del grafico per visualizzare la percentuale di somiglianza e il numero di profili previsto per il punto attualmente evidenziato."
 
 La sezione similarità e portata mostra un grafico che rappresenta la portata prevista di un pubblico simile costituito da profili al di sopra di un determinato punteggio di somiglianza. Il punteggio di somiglianza rappresenta la **distanza** di somiglianza tra il profilo del pubblico di base e il profilo di insight simile.
 
