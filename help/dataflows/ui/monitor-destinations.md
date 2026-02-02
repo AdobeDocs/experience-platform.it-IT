@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -19,7 +19,7 @@ La dashboard di monitoraggio offre una rappresentazione visiva del percorso di u
 
 Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare la dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni tramite l’interfaccia utente di Experience Platform.
 
-## Introduzione {#getting-started}
+## Guida introduttiva {#getting-started}
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -371,7 +371,7 @@ La pagina dei dettagli di esecuzione del flusso di dati, oltre ai dettagli ripor
 - **[!UICONTROL IMS org ID]**: organizzazione a cui appartiene il flusso di dati.
 - **[!UICONTROL Last updated]**: ora dell&#39;ultimo aggiornamento del flusso di dati.
 
-La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile solo per il flusso di dati eseguito in destinazioni batch e per la destinazione di streaming [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile per le destinazioni elencate nella sezione [visualizzazione a livello di pubblico](#segment-level-view).
 
 Nella visualizzazione errori di esecuzione del flusso di dati viene visualizzato un elenco di record con errori e di record ignorati. Vengono visualizzate informazioni sia per i record con errori che per quelli ignorati, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell&#39;elenco vengono visualizzati i record con errori. Per visualizzare i record ignorati, selezionare l&#39;interruttore **[!UICONTROL Records skipped]**.
 
