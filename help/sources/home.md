@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1667'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Origine | Categoria | Tipo di acquisizione | Cloud |
 | --- | --- | --- | --- |
@@ -240,11 +240,11 @@ Per acquisire i dati di automazione marketing in Experience Platform, puoi utili
 | [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
 | [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
 | [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
-| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua] (V2)](connectors/marketing-automation/eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
 | [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
-| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
+| [[!DNL Salesforce Marketing Cloud] (V2)](connectors/marketing-automation/sfmc.md) | Batch | Azure |
 
 {style="table-layout:auto"}
 

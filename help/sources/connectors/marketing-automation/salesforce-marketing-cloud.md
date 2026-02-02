@@ -3,10 +3,10 @@ title: Panoramica di Salesforce Marketing Cloud Source
 description: Scopri come collegare Salesforce Marketing Cloud a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '639'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->L&#39;origine [!DNL Salesforce Marketing Cloud] diventerà obsoleta a gennaio 2026. Una nuova fonte verrà rilasciata nel corso di quest&#39;anno come alternativa. Una volta rilasciata la nuova origine, è necessario pianificare la migrazione alla nuova origine creando nuove connessioni account e flussi di dati prima della fine di gennaio 2026.
+>L&#39;origine [!DNL Oracle Salesforce Marketing Cloud] è ora obsoleta e non è più disponibile. Utilizza la nuova origine [[!DNL Salesforce Marketing Cloud] (V2)](sfmc.md) come nuovo connettore per i dati [!DNL Salesforce Marketing Cloud].
 
 [!DNL Salesforce Marketing Cloud] consente di gestire e automatizzare il coinvolgimento dei clienti tramite e-mail, dispositivi mobili, social media e annunci pubblicitari, il tutto da un&#39;unica piattaforma. Con strumenti come E-mail Studio, Percorsi Builder e Audience Builder, puoi creare campagne personalizzate e percorsi di clienti su misura per il tuo pubblico.
 
