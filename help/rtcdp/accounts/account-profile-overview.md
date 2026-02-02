@@ -2,13 +2,13 @@
 keywords: rtcdp b2b;b2b;account;account profile;account profiles rtcdp;real-time customer data platform;
 title: Profili account in Real-Time CDP B2B edition
 description: Scopri come Adobe Real-time Customer Data Platform B2B Edition ti consente di unificare le informazioni sull’account da più origini utilizzando i profili dell’account.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 769d83155ae70516a296b71baec37d797dd81f34
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 7%
+source-wordcount: '339'
+ht-degree: 6%
 
 ---
 
@@ -26,9 +26,13 @@ Unendo i dati di account provenienti da origini diverse, puoi iniziare a visuali
 
 Con Real-Time CDP, B2B edition, puoi utilizzare l’interfaccia utente di Experience Platform per visualizzare i profili dell’account e cercare account specifici utilizzando un ID account da un’origine aziendale connessa oppure immettendo direttamente i dettagli dell’origine. Per ulteriori informazioni su come visualizzare i profili dell&#39;account nell&#39;interfaccia utente di Experience Platform, consulta la [guida dell&#39;interfaccia utente del profilo dell&#39;account](account-profile-ui-guide.md).
 
+>[!IMPORTANT]
+>
+>I profili account richiedono che la valutazione della segmentazione batch giornaliera sia abilitata per mostrare i dati. Assicurati che la segmentazione batch sia configurata e pianificata per mantenere informazioni accurate sul profilo dell’account. Per ulteriori dettagli, consulta la [guida alla segmentazione batch](../../segmentation/methods/batch-segmentation.md).
+
 ## Creare e attivare il pubblico dell’account
 
 Puoi creare tipi di pubblico composti da profili di account e quindi attivarli in diverse destinazioni disponibili nel catalogo delle destinazioni di Real-Time CDP. Maggiori informazioni:
 
-* [Pubblico dell’account](/help/segmentation/types/account-audiences.md)
+* [Tipi di pubblico di account](/help/segmentation/types/account-audiences.md)
 * [Attiva il pubblico dell’account](/help/destinations/ui/activate-account-audiences.md)
