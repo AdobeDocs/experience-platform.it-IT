@@ -4,7 +4,7 @@ description: Crea una condivisione dati live di Snowflake per ricevere aggiornam
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
+source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 3%
@@ -136,7 +136,7 @@ Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_batch_accountID"
+>id="platform_destinations_snowflake_batch_accountid"
 >title="Immetti il tuo ID account Snowflake"
 >abstract="Se l’account è collegato a un’organizzazione, utilizza questo formato: `OrganizationName.AccountName`<br><br> Se invece l’account non è collegato a un’organizzazione, utilizza questo formato: `AccountName`"
 
