@@ -1,7 +1,8 @@
 ---
 title: Connessione Kevel
 description: Utilizza la destinazione di streaming Kevel per attivare il pubblico direttamente nelle API UserDB e Segment Management di Kevel e supportare il targeting in tempo reale al momento della decisione.
-source-git-commit: d820485fd81efd08d8626f8476338558c4585c20
+last-substantial-update: 2026-01-27T00:00:00Z
+source-git-commit: 04d01b2deafb1b8f1b0c256f31475bb75989a2c4
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 3%
