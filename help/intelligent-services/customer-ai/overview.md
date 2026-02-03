@@ -3,7 +3,7 @@ keywords: Experience Platform;panoramica;customer ai;argomenti più comuni;custo
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Panoramica di Customer AI
-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze di business in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 short-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
@@ -23,7 +23,7 @@ Con l’aiuto di fattori influenti, IA per l’analisi dei clienti può dirti co
 
 ## Informazioni su Customer AI
 
-Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze di business in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 
 IA per l’analisi dei clienti è progettata per:
 
@@ -44,7 +44,7 @@ Il cliente non è progettato per:
 
 Il seguente video è progettato per supportare la tua comprensione di Customer AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/36499?captions=ita&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Come funziona
 
