@@ -44,7 +44,7 @@ Il cliente non è progettato per:
 
 Il seguente video è progettato per supportare la tua comprensione di Customer AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36499?captions=ita&learn=on&quality=12)
 
 ## Come funziona
 
