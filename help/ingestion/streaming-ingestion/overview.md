@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull’acquisizione in streaming
 description: L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
+source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '433'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform ti consente di creare esperienze coordinate, coerenti 
 
 Il video seguente è stato progettato per comprendere meglio l’acquisizione in streaming e illustra i concetti descritti in precedenza.
 
->[!VIDEO](https://video.tv.adobe.com/v/36263?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Trasmetti record profilo e [!DNL ExperienceEvents]
 
@@ -43,7 +43,7 @@ Per ulteriori informazioni sull&#39;abilitazione di un set di dati per [!DNL Pro
 
 | Destinazione | Latenza prevista |
 | --------- | ---------------- |
-| Profilo cliente in tempo reale | &lt; 15 minuti al 95° percentile |
+| Profilo cliente in tempo reale | <ul><li>&lt; 15 minuti al 95° percentile per l’acquisizione di dati B2C.</li><li>&lt; 30 minuti al 95° percentile per l’acquisizione di dati B2B.</li></ul> |
 | Data lake | &lt; 60 minuti |
 
 ## Linee guida RPS (Request per seconds) per l’acquisizione in streaming
