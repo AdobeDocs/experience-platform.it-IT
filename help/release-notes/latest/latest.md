@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2026
 description: Note sulla versione di Adobe Experience Platform di gennaio 2026.
-source-git-commit: a8eefb3330d0de21fbb8648593eb912c063529d7
+source-git-commit: 1761acbcab12acf1596daf5461476d5b91bb0e9b
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1570'
 ht-degree: 22%
 
 ---
@@ -39,7 +39,7 @@ Agent Orchestrator consente di creare e distribuire agenti basati sull’intelli
 
 | Funzione | Descrizione |
 | --- | --- |
-| Versione di prova per agenti Adobe Experience Platform associata all&#39;utilizzo | **Alcuni clienti ora dispongono di un accesso di prova gratuito agli agenti Adobe Experience Platform**. Puoi utilizzare la versione di prova per esplorare e interagire con gli agenti tramite l’interfaccia dell’Assistente per l’intelligenza artificiale fornita da Adobe Experience Platform Agent Orchestrator. La versione di prova offre un’esperienza pratica con gli agenti di intelligenza artificiale che operano nel contesto dei prodotti e degli ambienti Experience Cloud esistenti dei clienti, consentendo ai team di valutare il valore prima di procedere a un acquisto completo. Gli agenti Adobe Experience Platform sono guidati dall’input e dalla supervisione dell’utente e rispettano i controlli di accesso esistenti a livello di prodotto, garantendo che gli utenti possano eseguire solo azioni o visualizzare i dati per i quali sono autorizzati all’interno delle applicazioni Experience Cloud sottostanti. Per informazioni su come iniziare, leggi la [panoramica della versione di prova associata all&#39;utilizzo degli agenti Experience Platform](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/trial). |
+| Versione di prova per agenti Adobe Experience Platform associata all&#39;utilizzo | **Alcuni clienti ora dispongono di un accesso di prova gratuito agli agenti Adobe Experience Platform**. Puoi utilizzare la versione di prova per esplorare e interagire con gli agenti tramite l’interfaccia dell’Assistente per l’intelligenza artificiale fornita da Adobe Experience Platform Agent Orchestrator. La versione di prova offre un’esperienza pratica con gli agenti di intelligenza artificiale che operano nel contesto dei prodotti e degli ambienti Experience Cloud esistenti dei clienti, consentendo ai team di valutare il valore prima di procedere a un acquisto completo. Gli agenti Adobe Experience Platform sono guidati dall’input e dalla supervisione dell’utente e rispettano i controlli di accesso esistenti a livello di prodotto, garantendo che gli utenti possano eseguire solo azioni o visualizzare i dati per i quali sono autorizzati all’interno delle applicazioni Experience Cloud sottostanti. Per informazioni su come iniziare, leggi la [panoramica della versione di prova associata all&#39;utilizzo degli agenti Experience Platform](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial). |
 
 {style="table-layout:auto"}
 
@@ -101,6 +101,7 @@ Per ulteriori informazioni, consulta la [[!DNL Real-Time Customer Profile] panor
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Aggiornamento della scadenza dei dati del pubblico esterno | I tipi di pubblico esterni (come i caricamenti CSV) ora supportano la funzionalità di aggiornamento forzato per le impostazioni di scadenza dei dati. Questa funzione consente agli utenti di aggiornare manualmente la scadenza dei dati per i tipi di pubblico esterni, fornendo un maggiore controllo sulla gestione del ciclo di vita del pubblico. Ciò è particolarmente utile per i tipi di pubblico che devono persistere oltre il periodo di scadenza iniziale dei dati o richiedere una riattivazione senza ricaricare i dati. Per ulteriori informazioni su questa funzione, leggere la [Panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#audience-summary). |
+| Convalida del pubblico | Experience Platform ora fornisce convalide incorporate per garantire che i tipi di pubblico siano accurati, stabili e scalabili. Questi controlli vengono eseguiti automaticamente in tempo reale durante la creazione delle definizioni del pubblico. Per ulteriori informazioni, consulta la [panoramica sulla convalida del pubblico](/help/segmentation/validation.md). |
 
 Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 

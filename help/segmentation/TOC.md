@@ -5,10 +5,10 @@ breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 43%
+source-wordcount: '212'
+ht-degree: 42%
 
 ---
 
@@ -17,10 +17,11 @@ ht-degree: 43%
 
 - [Panoramica del servizio di segmentazione](home.md)
 - [Tipi di dati di segmentazione](data-types.md)
-- [Guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=it#segmentation-guardrails)
+- [Guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Convalida del pubblico](./validation.md)
 - API di segmentazione {#api}
    - [Panoramica](api/overview.md)
-   - [Introduzione](api/getting-started.md)
+   - [Guida introduttiva](api/getting-started.md)
    - [Creare metadati di pubblico](api/create-audience.md)
    - [Tipi di pubblico](api/audiences.md)
    - [Processi di esportazione](api/export-jobs.md)
@@ -52,8 +53,8 @@ ht-degree: 43%
 - Tipi di pubblico {#types}
    - [Panoramica](types/overview.md)
    - [Pubblico persone](types/people-audiences.md)
-   - [Pubblico potenziale](types/prospect-audiences.md)
-   - [Pubblico dell’account](types/account-audiences.md)
+   - [Tipi di pubblico di potenziali clienti](types/prospect-audiences.md)
+   - [Tipi di pubblico di account](types/account-audiences.md)
    - [Tipi di pubblico per similarità](types/lookalike-audiences.md)
 - Tutorial {#tutorials}
    - [Creare una definizione di segmento](tutorials/create-a-segment.md)

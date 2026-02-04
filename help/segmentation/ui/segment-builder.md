@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
+source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
 workflow-type: tm+mt
-source-wordcount: '5355'
+source-wordcount: '5354'
 ht-degree: 12%
 
 ---
@@ -58,7 +58,7 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -189,34 +189,9 @@ In alternativa, puoi aggiungere manualmente valori separati da virgole.
 
 ![Viene visualizzato un avviso che indica che è stato raggiunto il numero massimo di valori.](../images/ui/segment-builder/maximum-values.png)
 
-### Convalida query {#query-validation}
+### Convalida del pubblico {#audience-validation}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="Complessità logica"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Limite sequenza di eventi"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Avviso sull’efficienza delle query"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Avviso filtro conteggio"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Avviso dati nidificati"
->abstract=""
-
-Segment Builder analizza e convalida automaticamente le query sul pubblico per assicurarti di rispettare le best practice per la definizione del pubblico. Queste best practice possono essere impostate in due categorie: convalida critica e ottimizzazione delle prestazioni.
+Segment Builder analizza e convalida automaticamente la definizione del pubblico per assicurarti di rispettare le best practice per la definizione del pubblico. Queste best practice possono essere impostate in due categorie: convalida critica e ottimizzazione delle prestazioni.
 
 Se una definizione di pubblico non soddisfa una best practice di convalida critica, **non** sarà in grado di salvare le modifiche per mantenere stabile la sandbox. Se una definizione di pubblico non rispetta le best practice per l&#39;ottimizzazione delle prestazioni, potrai salvare le modifiche, ma è *altamente consigliato* aggiornare la definizione del pubblico per evitare problemi di prestazioni.
 
@@ -227,6 +202,8 @@ Se una definizione di pubblico non soddisfa una best practice di convalida criti
 | Conteggio aggregato | Ottimizzazione delle prestazioni | All’interno di una definizione di pubblico sono presenti più di 3 funzioni di aggregazione. |
 | Dati nidificati | Ottimizzazione delle prestazioni | All’interno di una definizione di pubblico sono presenti più di 2 livelli di profondità dei dati nidificati (tipi di dati array o mappa). |
 | Dimensione del pubblico | Ottimizzazione delle prestazioni | La dimensione di qualificazione del pubblico è maggiore del 30% del numero totale di profili nella sandbox. |
+
+Per ulteriori informazioni sul funzionamento della convalida del pubblico, leggere la [guida alla convalida del pubblico](/help/segmentation/validation.md).
 
 ### Aggiunta di tipi di pubblico
 
