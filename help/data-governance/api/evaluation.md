@@ -5,9 +5,9 @@ title: Endpoint API per la valutazione dei criteri
 description: Dopo aver creato le azioni di marketing e definito i criteri, è possibile utilizzare l’API del servizio criteri per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un set di criteri che verrebbero violati se si tentasse di eseguire un’azione di marketing sui dati specificati contenenti le etichette di utilizzo dei dati.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Le richieste di valutazione possono essere effettuate in uno dei tre modi seguen
 1. Considerata un’azione di marketing e uno o più set di dati, l’azione viola alcuni criteri?
 1. Considerata un’azione di marketing, uno o più set di dati e un sottoinsieme di uno o più campi all’interno di ciascuno di tali set di dati, l’azione viola eventuali criteri?
 
-## Introduzione
+## Guida introduttiva
 
 Gli endpoint API utilizzati in questa guida fanno parte dell&#39;[[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
@@ -122,6 +122,10 @@ Una risposta corretta include un array `violatedPolicies` che contiene i dettagl
 ```
 
 ## Valutare le violazioni dei criteri utilizzando i set di dati {#datasets}
+
+>[!WARNING]
+>
+>L&#39;endpoint `/constraints` per la valutazione basata su set di dati è obsoleto. Per valutare la violazione dei criteri o eseguire più processi di valutazione, utilizzare l&#39;[API di valutazione in blocco (`/bulk-eval`)](#evaluate-policies-in-bulk).
 
 Puoi valutare le violazioni dei criteri in base a un set di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. Questa operazione viene eseguita eseguendo una richiesta POST all&#39;endpoint `/constraints` per una specifica azione di marketing e fornendo un elenco di ID di set di dati all&#39;interno del corpo della richiesta.
 

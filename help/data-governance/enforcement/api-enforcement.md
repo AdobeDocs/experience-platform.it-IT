@@ -5,9 +5,9 @@ title: Imporre i criteri di utilizzo dei dati utilizzando l’API del servizio c
 type: Tutorial
 description: Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing su tali etichette, è possibile utilizzare l’API Servizio criteri per valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi configurare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1021'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i cr
 
 In questo documento vengono descritti i passaggi per l&#39;utilizzo dell&#39;API [!DNL Policy Service] per verificare la presenza di violazioni dei criteri in scenari diversi.
 
-## Introduzione
+## Guida introduttiva
 
 Questo tutorial richiede una buona conoscenza dei seguenti concetti chiave coinvolti nell’applicazione dei criteri di utilizzo dei dati:
 
@@ -131,6 +131,10 @@ In caso di esito positivo, la risposta restituisce l’URL per l’azione di mar
 | `violatedPolicies` | Array che elenca i criteri violati dal test dell&#39;azione di marketing (specificata in `marketingActionRef`) rispetto al `duleLabels` fornito. |
 
 ## Valuta utilizzando i set di dati
+
+>[!WARNING]
+>
+>L&#39;endpoint `/constraints` per la valutazione basata su set di dati è obsoleto. Per valutare la violazione dei criteri o eseguire più processi di valutazione, utilizzare l&#39;[API di valutazione in blocco (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk).
 
 Puoi valutare un criterio di utilizzo dei dati testando un’azione di marketing rispetto a uno o più set di dati da cui è possibile raccogliere le etichette. A tale scopo, è necessario effettuare una richiesta POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornire gli ID dei set di dati all&#39;interno del corpo della richiesta, come illustrato nell&#39;esempio seguente.
 
