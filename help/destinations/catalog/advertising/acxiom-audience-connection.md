@@ -3,10 +3,10 @@ title: Acxiom Audience Connection
 description: Utilizza la destinazione  [!DNL Acxiom Audience Connection]  per migliorare i tipi di pubblico con la tecnologia  [!DNL Acxiom's Real ID] e attivare i tipi di pubblico su più piattaforme, ad esempio  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
+source-git-commit: 582b8b681163a0e40908cf36ba317954a32f73d0
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 6%
+source-wordcount: '872'
+ht-degree: 7%
 
 ---
 
@@ -32,8 +32,8 @@ Ad esempio, il reparto Marketing Operations di un brand di servizi finanziari gl
 
 ## Prerequisiti {#prerequisites}
 
-* **Conferma le condizioni per l&#39;utilizzo:** Prima di poter configurare una nuova destinazione [!DNL Acxiom Audience Connection], è necessario leggere e firmare il Contratto sulle condizioni per l&#39;utilizzo di [!DNL Acxiom's]. Riceverai il collegamento al contratto una volta completato l&#39;ordine cliente eseguito. Fino alla firma del contratto, la scheda di destinazione [!DNL Acxiom Audience Connection] non verrà visualizzata nel catalogo di destinazione di Experience Platform. Dopo aver accettato e firmato il contratto, [!DNL Adobe] completerà il processo di onboarding e verrà visualizzata la scheda di destinazione [!DNL Acxiom Audience Connection].
-* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/it/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Conferma le condizioni per l&#39;utilizzo:** Prima di poter configurare una nuova destinazione [!DNL Acxiom Audience Connection], è necessario leggere e firmare il Contratto sulle condizioni per l&#39;utilizzo di [!DNL Acxiom's]. Riceverai il collegamento al contratto una volta completato l&#39;ordine cliente eseguito.
+* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Destinazioni supportate {#supported-destinations}
 
@@ -67,8 +67,8 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -96,10 +96,10 @@ Affinché la destinazione [!DNL Acxiom Audience Connection] riceva correttamente
 | E-mail | E-mail principale Per impostazione predefinita, questo campo viene utilizzato come chiave di deduplicazione per rendere univoci i record | No | 10 | 255 |
 | Telefono | Numero di telefono del singolo utente (prefisso + numero)<br> Per impostazione predefinita, questo campo viene utilizzato come chiave di deduplicazione per rendere univoci i record. | No | 11 | 10 |
 
-Nella colonna **[!UICONTROL Campo Source]** immettere il nome di ogni attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL Seleziona campo di origine]**.<br>
+Nella colonna **[!UICONTROL Source Field]** immettere il nome di ogni attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL  Select source field]**.<br>
 ![Schermata di mappatura](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
-Dopo aver mappato tutti i campi, seleziona **[!UICONTROL Avanti]**.
+Dopo aver mappato tutti i campi, selezionare **[!UICONTROL Next]**.
 
 Se non utilizzi lo schema standard [!DNL Adobe's], consulta la [guida dell&#39;interfaccia utente di Query Service](../../../query-service/ui/overview.md) per informazioni su come utilizzare il servizio di query per popolare lo schema standard [!DNL Adobe] con i tuoi nomi di campo.
 
@@ -107,7 +107,7 @@ Se non utilizzi lo schema standard [!DNL Adobe's], consulta la [guida dell&#39;i
 
 Dopo aver completato tutti i passaggi precedenti, puoi rivedere lo stato della connessione di destinazione e i dettagli del pubblico prima di attivarla (distribuirla). I tipi di pubblico selezionati verranno visualizzati nella parte inferiore di un elenco. Ogni pubblico sarà una chiamata separata all&#39;API [!DNL Acxiom Audience Connection].
 
-Se sei soddisfatto dei risultati, seleziona **[!UICONTROL Fine]** per attivare la destinazione.
+Se i risultati sono soddisfacenti, selezionare **[!UICONTROL Finish]** per attivare la destinazione.
 
 ![Rivedi il pubblico](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
 
@@ -128,4 +128,4 @@ Seguendo questa esercitazione, hai attivato correttamente un pubblico sulla piat
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-governance/home).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
