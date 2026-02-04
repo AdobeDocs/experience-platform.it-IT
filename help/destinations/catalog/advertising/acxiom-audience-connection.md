@@ -96,7 +96,7 @@ Affinché la destinazione [!DNL Acxiom Audience Connection] riceva correttamente
 | E-mail | E-mail principale Per impostazione predefinita, questo campo viene utilizzato come chiave di deduplicazione per rendere univoci i record | No | 10 | 255 |
 | Telefono | Numero di telefono del singolo utente (prefisso + numero)<br> Per impostazione predefinita, questo campo viene utilizzato come chiave di deduplicazione per rendere univoci i record. | No | 11 | 10 |
 
-Nella colonna **[!UICONTROL Source Field]** immettere il nome di ogni attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL  Select source field]**.<br>
+Nella colonna **[!UICONTROL Source Field]** immettere il nome di ogni attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL &#x200B; Select source field]**.<br>
 ![Schermata di mappatura](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 Dopo aver mappato tutti i campi, selezionare **[!UICONTROL Next]**.

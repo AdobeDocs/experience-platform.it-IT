@@ -114,7 +114,7 @@ Affinché la destinazione [!DNL Acxiom Real ID Audience Connection] riceva corre
 
 
 
-Nella colonna **[!UICONTROL Source Field]** immettere il nome dell&#39;attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL  Select source field]**. Quindi, selezionare **[!UICONTROL Next]**.
+Nella colonna **[!UICONTROL Source Field]** immettere il nome dell&#39;attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL &#x200B; Select source field]**. Quindi, selezionare **[!UICONTROL Next]**.
 ![Schermata di mappatura](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
