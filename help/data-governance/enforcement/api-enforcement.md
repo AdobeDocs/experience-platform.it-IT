@@ -5,7 +5,7 @@ title: Imporre i criteri di utilizzo dei dati utilizzando l’API del servizio c
 type: Tutorial
 description: Dopo aver creato le etichette di utilizzo dei dati per i dati e aver creato i criteri di utilizzo per le azioni di marketing su tali etichette, è possibile utilizzare l’API Servizio criteri per valutare se un’azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Puoi quindi configurare i tuoi protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 2%
@@ -134,7 +134,7 @@ In caso di esito positivo, la risposta restituisce l’URL per l’azione di mar
 
 >[!WARNING]
 >
->L&#39;endpoint `/constraints` per la valutazione basata su set di dati è obsoleto. Per valutare la violazione dei criteri o eseguire più processi di valutazione, utilizzare l&#39;[API di valutazione in blocco (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk).
+>L&#39;endpoint `/constraints` per la valutazione basata su set di dati è obsoleto. Per valutare la violazione dei criteri o eseguire più processi di valutazione, utilizzare l&#39;[API di valutazione in blocco (`/bulk-eval`)](../api/evaluation.md#bulk).
 
 Puoi valutare un criterio di utilizzo dei dati testando un’azione di marketing rispetto a uno o più set di dati da cui è possibile raccogliere le etichette. A tale scopo, è necessario effettuare una richiesta POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornire gli ID dei set di dati all&#39;interno del corpo della richiesta, come illustrato nell&#39;esempio seguente.
 

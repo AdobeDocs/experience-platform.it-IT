@@ -5,7 +5,7 @@ title: Endpoint API per la valutazione dei criteri
 description: Dopo aver creato le azioni di marketing e definito i criteri, è possibile utilizzare l’API del servizio criteri per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un set di criteri che verrebbero violati se si tentasse di eseguire un’azione di marketing sui dati specificati contenenti le etichette di utilizzo dei dati.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -125,7 +125,7 @@ Una risposta corretta include un array `violatedPolicies` che contiene i dettagl
 
 >[!WARNING]
 >
->L&#39;endpoint `/constraints` per la valutazione basata su set di dati è obsoleto. Per valutare la violazione dei criteri o eseguire più processi di valutazione, utilizzare l&#39;[API di valutazione in blocco (`/bulk-eval`)](#evaluate-policies-in-bulk).
+>L&#39;endpoint `/constraints` per la valutazione basata su set di dati è obsoleto. Per valutare la violazione dei criteri o eseguire più processi di valutazione, utilizzare l&#39;[API di valutazione in blocco (`/bulk-eval`)](#bulk).
 
 Puoi valutare le violazioni dei criteri in base a un set di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. Questa operazione viene eseguita eseguendo una richiesta POST all&#39;endpoint `/constraints` per una specifica azione di marketing e fornendo un elenco di ID di set di dati all&#39;interno del corpo della richiesta.
 
