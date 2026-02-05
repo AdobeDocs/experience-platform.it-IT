@@ -4,9 +4,9 @@ title: Anteprima endpoint API di stato campione (anteprima profilo)
 description: L’endpoint per lo stato di anteprima del campione dell’API Real-Time Customer Profile ti consente di visualizzare in anteprima l’ultimo campione riuscito dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano la sovrapposizione dei set di dati, la sovrapposizione delle identità e i profili non uniti.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
+source-git-commit: 399b76f260732015f691fd199c977d6f7e772b01
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2119'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ I risultati di questo processo di esempio possono essere visualizzati utilizzand
 >
 >Nell’API del servizio di segmentazione di Adobe Experience Platform sono disponibili endpoint per la stima e l’anteprima che consentono di visualizzare informazioni di riepilogo sulle definizioni dei segmenti per poter isolare il pubblico previsto. Per informazioni dettagliate sull&#39;utilizzo degli endpoint di anteprima e stima, visitare la [guida delle anteprime e delle stime degli endpoint](../../segmentation/api/previews-and-estimates.md), parte della guida per gli sviluppatori API [!DNL Segmentation].
 
-## Introduzione
+## Guida introduttiva
 
 L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;[[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Prima di continuare, consulta la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
@@ -434,110 +434,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `profileFragments` | Numero totale di frammenti di profilo presenti nel set di dati. |
 | `records` | Numero totale di record di profilo acquisiti nel set di dati. |
 | `totalProfiles` | Numero totale di profili acquisiti nel set di dati. |
-
-+++
-
-## Ottieni la dimensione del set di dati {#character-count}
-
-Puoi utilizzare questo endpoint per ottenere la dimensione del set di dati in byte settimana per settimana.
-
-**Formato API**
-
-```http
-GET /previewsamplestatus/report/character_count
-```
-
-**Richiesta**
-
-+++Richiesta di esempio per generare il rapporto sul conteggio dei caratteri.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-+++
-
-**Risposta**
-
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sulle dimensioni del set di dati nel corso delle settimane.
-
-+++ Una risposta di esempio che contiene informazioni sulle dimensioni del set di dati dopo la scadenza dei dati.
-
->[!NOTE]
->
->La seguente risposta è stata troncata per mostrare tre set di dati.
-
-```json
-{
-    "data": [
-        {
-            "datasetIds": [
-                {
-                    "datasetId": "67aba91a453f7d298cd2a643",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 107773533894,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "67aa6c867c3110298b017f0e",
-                    "recordType": "timeseries",
-                    "weeks": [
-                        {
-                            "size": 242902062440,
-                            "week": "2025-10-26"
-                        },
-                        {
-                            "size": 837539413062,
-                            "week": "2025-10-19"
-                        },
-                        {
-                            "size": 479253986484,
-                            "week": "2025-10-12"
-                        },
-                        {
-                            "size": 358911988990,
-                            "week": "2025-10-05"
-                        },
-                        {
-                            "size": 349701073042,
-                            "week": "2025-09-28"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "680c043667c0d7298c9ea275",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 18392459832,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                }
-            ],
-            "modelName": "_xdm.context.profile",
-            "reportTimestamp": "2025-10-30T00:28:30.069Z"
-        }
-    ],
-    "reportTimestamp": "2025-10-30T00:28:30.069Z"
-}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `datasetId` | ID del set di dati. |
-| `recordType` | Tipo di dati all’interno del set di dati. Il tipo di record influisce sul valore della variabile `weeks`. I valori supportati includono `keyvalue` e `timeseries`. |
-| `weeks` | Matrice contenente le informazioni sulle dimensioni del set di dati. Per i set di dati di tipo record `keyvalue`, contiene la settimana più recente e le dimensioni totali del set di dati in byte. Per i set di dati di tipo record `timeseries`, contiene ogni settimana dall&#39;acquisizione del set di dati alla settimana più recente e le dimensioni totali del set di dati in byte per ciascuna di tali settimane. |
-| `modelName` | Nome del modello per il set di dati. I valori possibili includono `_xdm.context.profile` e `_xdm.context.experienceevent`. |
-| `reportTimestamp` | La data e l’ora in cui è stato generato il rapporto. |
 
 +++
 
