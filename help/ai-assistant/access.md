@@ -2,7 +2,7 @@
 title: Accedere all’Assistente AI in Experience Platform
 description: Scopri come accedere all’Assistente IA nell’interfaccia utente di Experience Cloud.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 74e695e0fabc76716305d201d4c42021aa782517
+source-git-commit: 659e873f9bccdbc0e52a1943a924dc70d3170e96
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -42,17 +42,17 @@ Se l’organizzazione è legalmente idonea a utilizzare l’Assistente IA e non 
 
 >[!ENDTABS]
 
-## Ottenere l’accesso all’Assistente AI
+## Ottenere l’accesso all’Assistente AI {#get-access-to-ai-assistant}
 
 L’accesso all’Assistente IA è disciplinato dai seguenti parametri:
 
-* **Accedere all&#39;applicazione:** È possibile accedere all&#39;Assistente IA in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer e [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/ai-assistant).
+* **Accedere all&#39;applicazione:** È possibile accedere all&#39;Assistente IA in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer e [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
 * **Autorizzazioni:** Utilizza l&#39;interfaccia utente [Autorizzazioni](../access-control/abac/ui/permissions.md) per concedere o revocare l&#39;accesso all&#39;Assistente IA nella tua organizzazione. Per utilizzare l&#39;Assistente IA, un determinato utente deve appartenere a un ruolo per il quale è stato eseguito il provisioning con le autorizzazioni **Abilita Assistente IA** e **Visualizza informazioni operative**.
    * In qualità di amministratore, puoi aggiungere **Abilita Assistente IA** a un determinato ruolo e aggiungere un utente a tale ruolo, per consentire loro di accedere all&#39;Assistente AI nella tua organizzazione. **Nota**: questa autorizzazione consente a tale utente di accedere all&#39;Assistente di intelligenza artificiale, non concede capacità amministrative per consentire ad altri utenti di accedere all&#39;Assistente di intelligenza artificiale.
    * In qualità di amministratore, puoi aggiungere **View Operational Insights** a un determinato ruolo e aggiungere un utente a tale ruolo, per consentire loro di utilizzare le funzionalità di analisi operative dell&#39;Assistente all&#39;intelligenza artificiale.
 
-Utilizza l&#39;[interfaccia utente delle autorizzazioni](../access-control/abac/ui/roles.md) per concedere le autorizzazioni per l&#39;utilizzo dell&#39;Assistente IA in Experience Platform e Journey Optimizer. Per informazioni su come accedere all’Assistente AI in Customer Journey Analytics. Leggi la documentazione in [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/analytics-platform/using/ai-assistant).
+Utilizza l&#39;[interfaccia utente delle autorizzazioni](../access-control/abac/ui/roles.md) per concedere le autorizzazioni per l&#39;utilizzo dell&#39;Assistente IA in Experience Platform e Journey Optimizer. Per informazioni su come accedere all’Assistente AI in Customer Journey Analytics. Leggi la documentazione in [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
 
 ![Pagina dell&#39;interfaccia utente delle autorizzazioni con le autorizzazioni Abilita Assistente AI e Visualizza informazioni operative incluse in un determinato ruolo.](./images/access/access-permissions.png)
 
@@ -62,7 +62,7 @@ Una volta ottenute le autorizzazioni necessarie, è possibile accedere ad Assist
 
 Guarda il video seguente per scoprire come configurare l’accesso a AI Assistant per le organizzazioni e gli utenti.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475927/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## Passaggi successivi
 
