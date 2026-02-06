@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
+source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
 workflow-type: tm+mt
-source-wordcount: '5354'
-ht-degree: 12%
+source-wordcount: '6311'
+ht-degree: 11%
 
 ---
 
@@ -58,9 +58,100 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
+
+Gli attributi aggiunti possono essere di uno dei seguenti tipi di dati:
+
+| Tipo di dati | Casi d’uso comuni |
+| --------- | ---------------- |
+| Stringa | Nomi, indirizzi e-mail, categorie di prodotti |
+| Numeriche | Età, ricavi, quantità di prodotti, punteggi fedeltà |
+| Booleano | Preferenze, indicatori di stato, flag utente |
+| Enumerazione | Elenchi predefiniti come genere o stato |
+| Data/ora | Date di acquisto, orari di visita, compleanno |
+
+Puoi utilizzare i seguenti operatori per i rispettivi tipi di dati:
+
++++ Operatori stringa
+
+| Operatore | Descrizione | Esempio |
+| -------- | ----------- | ------- |
+| È uguale a | Trova una corrispondenza esatta con il valore specificato | Invia e-mail a **equals** &quot;sample@example.com&quot; |
+| Non è uguale a | Esclude il valore specificato | Lo stato **non è uguale** &quot;Annullato&quot; |
+| Contiene | Il testo include il valore specificato | Il nome prodotto **contiene** &quot;iPhone&quot; |
+| Non contiene | Il testo non include il valore specificato | La descrizione **non contiene** è &quot;interrotta&quot; |
+| Inizia con | Il testo inizia con il valore specificato | ID cliente **inizia con** &quot;PREM&quot; |
+| Termina con | Il testo termina con il valore specificato | L&#39;e-mail **termina con** &quot;@company.com&quot; |
+| Esiste | Il valore esiste | Il secondo nome **esiste** |
+| Non esiste | Il valore non esiste | Lo stato di fedeltà **non esiste** |
+
++++
+
++++ Operatori numerici
+
+| Operatore | Descrizione | Esempio |
+| -------- | ----------- | ------- |
+| È uguale a | Trova una corrispondenza esatta con il valore specificato | Età **uguale a** 25 |
+| Non è uguale a | Esclude il valore specificato | Il conteggio ordini **non è uguale a** 0 |
+| Maggiore di | Il numero è **maggiore** del valore specificato. Questo valore è **esclusivo** del numero specificato. | Ricavi annui **superiori a** 50000 |
+| Maggiore o uguale a | Il numero è **maggiore** del valore specificato. Questo valore è **inclusivo** del numero specificato. | Età **maggiore o uguale** 21 |
+| Minore di | Il numero è **minore** del valore specificato. Questo valore è **esclusivo** del numero specificato. | Giorni dall&#39;acquisto **meno di** 30 |
+| Minore o uguale a | Il numero è **minore** del valore specificato. Questo valore è **inclusivo** del numero specificato. | Valore carrello **minore o uguale a** 100 |
+| Tra | Il numero è **compreso tra** i valori specificati. Questi valori sono **inclusivi** dei numeri specificati. | Età **compresa tra** 25 e 45 anni |
+| Esiste | Il valore esiste | Il punteggio di credito **esiste** |
+| Non esiste | Il valore non esiste | Il punteggio di credito **non esiste** |
+
++++
+
++++ Operatori booleani
+
+| Operatore | Descrizione | Esempio |
+| -------- | ----------- | ------- |
+| È uguale a | Il valore booleano viene impostato sul valore specificato (True o False) | Consenso e-mail **è uguale a True** |
+| Non è uguale a | Il valore booleano è **not** impostato sul valore specificato (True o False) | L&#39;app mobile installata **non è uguale a True** |
+
++++
+
++++ Operatori enum
+
+| Operatore | Descrizione | Esempio |
+| -------- | ----------- | ------- |
+| È uguale a | Il valore è uguale ai valori enum specificati | Genere **uguale a** Femmina |
+| Non è uguale a | Il valore non è uguale al valore enum specificato | Lo stato dell&#39;ordine **non è uguale** annullato |
+| Esiste | Il valore enum è stato impostato | La lingua preferita **esiste** |
+| Non esiste | Valore enum non impostato | La lingua preferita **non esiste** |
+
++++
+
++++ Operatori data/ora
+
+| Operatore | Descrizione | Esempio |
+| -------- | ----------- | ------- |
+| Oggi | Il valore è oggi. È possibile selezionare la casella di controllo **Ignora anno** per fare in modo che il confronto ignori l&#39;anno. | La data di nascita **è** oggi |
+| Ieri | Il valore si è verificato ieri. | Acquisto carrello **è** ieri |
+| Questo mese | Il valore si è verificato questo mese di calendario. | Mese di nascita **è** questo mese |
+| Quest’anno | Il valore si è verificato quest&#39;anno di calendario. | La data di registrazione **è** quest&#39;anno |
+| Data personalizzata | Il valore si è verificato nella data specificata. | La data di acquisto **è il** Data personalizzata |
+| Nell’ultimo/a | Il valore si è verificato nell’ultimo periodo di tempo scelto. Compleanno **è** nell&#39;ultimo mese |
+| Da (a) | Il valore si è verificato nelle due date di calendario scelte. Questo periodo di tempo è **inclusivo** di entrambe le date. | Data di creazione account **is** Dal 20 aprile al 13 luglio |
+| Durante | Il valore si è verificato nel mese o anno selezionato. | Vendita **is** nel mese di marzo |
+| Entro (+/-) | Il valore si è verificato entro giorni, settimane, mesi o anni dalla data selezionata. Questo periodo di tempo è **inclusivo** di entrambe le date. | L&#39;abbandono del carrello è **entro** 3 giorni |
+| Prima di | Il valore si è verificato prima della data selezionata. | La data di iscrizione è **precedente al** 3 gennaio 2025 |
+| Dopo | Il valore si è verificato dopo la data selezionata. | La data di acquisto è **successiva al** 14 marzo 2024 |
+| Intervallo continuo | Il valore si è verificato tra le due date relative. | La data dell’ultimo acquisto è compresa tra sette e tre giorni fa. |
+| In avanti | Il valore si è verificato nel periodo di tempo successivo selezionato. | L’abbandono del carrello avverrà tra 2 giorni |
+
+Per informazioni più dettagliate sulle funzioni di data e ora, leggere la [sezione relativa ai vincoli di tempo](#time-constraints).
+
++++
+
+#### Attributi calcolati {#computed-attributes}
+
+Gli attributi calcolati sono campi calcolati da altri attributi mediante aggregazioni o formule. Puoi utilizzare gli attributi calcolati se hai bisogno di dati aggregati come somme, conteggi o medie in più eventi o se stai creando tipi di pubblico di uso frequente che richiedono calcoli complessi.
+
+Per ulteriori informazioni sugli attributi calcolati, tra cui come crearli, quali funzioni è possibile utilizzare al loro interno e come gestirli, leggere la [panoramica sugli attributi calcolati](/help/profile/computed-attributes/overview.md).
 
 ### Eventi
 
@@ -356,7 +447,7 @@ L&#39;elenco dei vincoli di tempo disponibili per questa operazione differisce d
 
 ## Contenitori {#containers}
 
-Le regole dei segmenti vengono valutate nell’ordine in cui sono elencate. I contenitori consentono di controllare l’ordine di esecuzione tramite l’utilizzo di query nidificate.
+I tipi di pubblico vengono valutati nell’ordine in cui sono elencati. I contenitori consentono di controllare l’ordine di esecuzione tramite l’utilizzo di query nidificate.
 
 Dopo aver aggiunto almeno una sezione all’area di lavoro del generatore di regole, puoi iniziare ad aggiungere contenitori. Per creare un nuovo contenitore, seleziona i puntini di sospensione (...) nell&#39;angolo superiore destro del riquadro, quindi seleziona **[!UICONTROL Add container]**.
 
@@ -375,6 +466,36 @@ Dopo aver selezionato **[!UICONTROL Unwrap container]**, il contenitore secondar
 >Quando rimuovi il wrapping dei contenitori, fai attenzione a che la logica continui a soddisfare la definizione del segmento desiderata.
 
 ![Il contenitore viene visualizzato dopo l&#39;annullamento del wrapping.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Esempi {#container-examples}
+
+Puoi utilizzare i contenitori all’interno di Segment Builder in tre modi diversi: per raggruppare le regole con logica booleana, per controllare se includere o escludere profili che corrispondono ai criteri del contenitore e per definire sequenze di eventi con vincoli di tempo.
+
++++ Logica booleana mista
+
+Nell&#39;esempio seguente **both** AND e OR vengono combinati in una singola espressione. Senza utilizzare i contenitori, non puoi combinare entrambi gli operatori AND con la logica OR in un singolo livello.
+
+![Immagine che mostra come utilizzare i contenitori per combinare la logica booleana e utilizzare la logica di inclusione/esclusione.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Sequenza di eventi
+
+Nell&#39;esempio seguente vengono utilizzati i contenitori per generare la sequenza di eventi.
+
+![Immagine che mostra come sequenziare gli eventi utilizzando i contenitori.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Best practice {#container-best-practices}
+
+Quando aggiungi contenitori al pubblico, tieni presenti le seguenti linee guida:
+
+- Crea i contenitori in modo incrementale, testando la logica a ogni passaggio aggiunto
+   - Ciò è particolarmente importante se utilizzi la logica di &quot;Esclusione&quot;, in quanto può modificare in modo significativo i risultati
+- Assegna un nome chiaro ai contenitori per capire cosa devono fare
+- Evita di avere troppi livelli nidificati di contenitori in quanto riduce le prestazioni
+- Assicurati che l’ordine dei contenitori sia accurato, poiché l’ordine degli eventi influisce notevolmente sui contenitori di sequenza
 
 ## Criteri di unione
 
@@ -461,7 +582,7 @@ Ulteriori informazioni sui diversi metodi di valutazione delle definizioni dei s
 Segment Builder offre un flusso di lavoro avanzato che consente di isolare i tipi di pubblico commerciabili dai dati di [!DNL Real-Time Customer Profile]. Dopo aver letto questa guida, ora dovresti essere in grado di:
 
 - Crea definizioni di segmenti utilizzando una combinazione di attributi, eventi e tipi di pubblico esistenti come blocchi predefiniti.
-- Utilizza l’area di lavoro e i contenitori del generatore di regole per controllare l’ordine in cui vengono eseguite le regole dei segmenti.
+- Utilizza l’area di lavoro e i contenitori del generatore di regole per controllare l’ordine in cui vengono eseguite le regole del pubblico.
 - Visualizza le stime del tuo pubblico potenziale, consentendoti di regolare le definizioni dei segmenti in base alle esigenze.
 - Abilita tutte le definizioni dei segmenti per la segmentazione pianificata.
 - Abilita le definizioni di segmenti specificate per la segmentazione in streaming.
