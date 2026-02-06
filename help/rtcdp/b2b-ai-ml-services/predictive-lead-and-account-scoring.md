@@ -3,12 +3,12 @@ title: Punteggio predittivo di lead e account in Real-Time CDP B2B
 type: Documentation
 description: Panoramica e ulteriori informazioni sulla funzione di punteggio predittivo di lead e account in Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 2%
+source-wordcount: '853'
+ht-degree: 3%
 
 ---
 
@@ -52,7 +52,7 @@ L’algoritmo prende in considerazione i seguenti attributi e dati di input:
 
 >[!NOTE]
 > 
->L&#39;algoritmo controlla solo il campo `sourceAccountKey.sourceKey` nel gruppo di campi Person:personComponents.
+>L&#39;algoritmo controlla solo il campo `sourceAccountKey.sourceKey` nel gruppo di campi Persona:personComponents.
 
 * Profilo account
 
@@ -102,13 +102,13 @@ Dopo l&#39;esecuzione del processo, i risultati vengono salvati in un nuovo set 
 
 ### Visualizzare i punteggi del profilo cliente
 
-Per visualizzare i punteggi predittivi per un profilo persona, seleziona **[!UICONTROL Profili]** nella sezione cliente del pannello a sinistra, quindi inserisci lo spazio dei nomi dell&#39;identità e il valore dell&#39;identità. Al termine, selezionare **[!UICONTROL Visualizza]**.
+Per visualizzare i punteggi predittivi per un profilo persona, seleziona **[!UICONTROL Profiles]** nella sezione cliente del pannello a sinistra, quindi immetti lo spazio dei nomi e il valore dell&#39;identità. Al termine, selezionare **[!UICONTROL View]**.
 
 Quindi, seleziona il profilo dall’elenco.
 
 ![Profilo cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-La pagina **[!UICONTROL Dettagli]** include ora i punteggi predittivi. Fai clic sull’icona del grafico accanto al punteggio predittivo.
+La pagina **[!UICONTROL Detail]** ora include i punteggi predittivi. Fai clic sull’icona del grafico accanto al punteggio predittivo.
 
 ![Punteggio predittivo profilo cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 

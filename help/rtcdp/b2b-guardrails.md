@@ -3,12 +3,12 @@ keywords: profilo;real-time customer profile;risoluzione dei problemi;guardrail;
 title: Guardrail predefiniti per Real-Time Customer Data Platform B2B edition
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti a modellare i tuoi dati per ottenere prestazioni di sistema ottimali utilizzando Adobe Real-Time Customer Data Platform B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1815'
 ht-degree: 2%
 
 ---

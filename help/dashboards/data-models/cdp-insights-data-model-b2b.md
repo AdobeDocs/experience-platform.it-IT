@@ -1,23 +1,22 @@
 ---
-title: Real-time Customer Data Platform Insights Data Model B2B edition
-description: Scopri come utilizzare le query SQL con Real-time Customer Data Platform Insights Data Models (B2B edition) per personalizzare i rapporti di Real-Time CDP per i casi d’uso di marketing e KPI.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: Real-Time Customer Data Platform Insights Data Model B2B edition
+description: Scopri come utilizzare le query SQL con Real-Time Customer Data Platform Insights Data Models (B2B edition) per personalizzare i rapporti di Real-Time CDP per i casi d’uso di marketing e KPI.
+badgeB2B: null
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 0%
+source-wordcount: '438'
+ht-degree: 1%
 
 ---
 
 # Modello dati Real-Time CDP Insights B2B edition
 
-Il modello dati di Real-Time CDP Insights per B2B edition espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per [profili account](https://experienceleague.adobe.com/it/docs/experience-platform/rtcdp/account/account-profile-overview). Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i casi d’uso di marketing B2B e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard.
+Il modello dati di Real-Time CDP Insights per B2B edition espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per [profili account](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Puoi personalizzare questi modelli di query SQL per creare rapporti Real-Time CDP per i casi d’uso di marketing B2B e indicatori di prestazioni chiave (KPI, Key Performance Indicator). Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard.
 
 >[!AVAILABILITY]
 >
->Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, consulta la documentazione sulle [edizioni Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) disponibili oppure contatta il tuo rappresentante Adobe.
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, consulta la documentazione sulle [edizioni di Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) disponibili oppure contatta il tuo rappresentante Adobe.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
@@ -27,7 +26,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 Questa guida richiede una buona conoscenza delle dashboard personalizzate. Leggi la documentazione su [come creare un dashboard personalizzato](../standard-dashboards.md) prima di continuare con questa guida.
 
-## Rapporti di approfondimento B2B di Real-Time CDP e casi d’uso {#B2B-insight-reports-and-use-cases}
+## Rapporti e casi d’uso di Real-Time CDP B2B insight {#B2B-insight-reports-and-use-cases}
 
 Il reporting B2B di Real-Time CDP fornisce informazioni approfondite sui dati dei profili dell’account e sulla relazione tra account e opportunità. I seguenti modelli di schema a stella sono stati sviluppati per rispondere a una serie di casi d’uso comuni di marketing e ogni modello di dati può supportare diversi casi d’uso.
 
@@ -52,13 +51,13 @@ Il diagramma seguente mostra i campi di dati rilevanti in ciascun set di dati, i
 
 #### Il nuovo caso d’uso account per settore {#accounts-by-industry}
 
-La logica utilizzata per [!UICONTROL Nuovi account per settore] insight restituisce i primi cinque settori in base al numero di profili di account e alle loro dimensioni relative tra loro. Per ulteriori informazioni, consulta la [[!UICONTROL documentazione dei nuovi account per settore] widget](../guides/account-profiles.md#accounts-by-industry).
+La logica utilizzata per l&#39;insight [!UICONTROL New accounts by industry] restituisce i primi cinque settori in base al numero di profili di account e alle relative dimensioni reciproche. Per ulteriori informazioni, vedere la documentazione del widget [[!UICONTROL New accounts By Industry]](../guides/account-profiles.md#accounts-by-industry).
 
 >[!TIP]
 >
 >È possibile personalizzare questa query SQL per restituire un numero maggiore o minore di quello dei primi cinque settori.
 
-L&#39;istruzione SQL che genera i [!UICONTROL nuovi account per settore] approfondimenti è visualizzata nella sezione comprimibile seguente.
+L&#39;istruzione SQL che genera l&#39;insight [!UICONTROL New accounts by industry] è visualizzata nella sezione comprimibile seguente.
 
 +++Query SQL
 
@@ -97,9 +96,9 @@ LIMIT 5000;
 
 #### Caso di utilizzo: Nuovi account per tipo {#accounts-by-type}
 
-La logica utilizzata per [!UICONTROL Nuovi account per tipo] insight restituisce il raggruppamento numerico degli account per il relativo tipo. Questa informazione può essere utile per guidare la strategia e le operazioni aziendali, incluse le strategie di allocazione delle risorse o di marketing. Per ulteriori informazioni, consulta la [[!UICONTROL documentazione dei nuovi account per tipo] widget](../guides/account-profiles.md#accounts-by-type).
+La logica utilizzata per l&#39;insight [!UICONTROL New accounts by type] restituisce il raggruppamento numerico degli account per il relativo tipo. Questo insight può aiutare a guidare la strategia e le operazioni aziendali, incluse le strategie di allocazione delle risorse o di marketing. Per ulteriori informazioni, vedere la documentazione del widget [[!UICONTROL New accounts by type]](../guides/account-profiles.md#accounts-by-type).
 
-L&#39;istruzione SQL che genera l&#39;approfondimento [!UICONTROL Nuovi account per tipo] è visualizzata nella sezione comprimibile seguente.
+L&#39;istruzione SQL che genera l&#39;insight [!UICONTROL New accounts by type] è visualizzata nella sezione comprimibile seguente.
 
 +++Query SQL
 

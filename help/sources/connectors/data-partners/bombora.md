@@ -2,12 +2,10 @@
 title: Intento Bombora
 description: Scopri la fonte dell’Intento di Bombora su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1593'
 ht-degree: 1%
 
 ---
@@ -48,7 +46,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account **[!UICONTROL ad Experience Platform, è necessario che per l&#39;account siano abilitate le autorizzazioni]** Visualizza origini **[!UICONTROL e]** Gestisci origini[!DNL Bombora]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Per connettere l&#39;account **[!UICONTROL View Sources]** ad Experience Platform, è necessario che per l&#39;account siano abilitate sia le autorizzazioni **[!UICONTROL Manage Sources]** che quelle [!DNL Bombora]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
 
 ### Vincoli di denominazione per file e directory
 

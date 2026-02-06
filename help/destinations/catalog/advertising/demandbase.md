@@ -1,13 +1,11 @@
 ---
 title: Connessione Demandbase
-description: Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
-badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions newtab=true"
+description: Utilizza questa destinazione per attivare i tipi di pubblico di account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
+source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '781'
 ht-degree: 16%
 
 ---
@@ -22,7 +20,7 @@ Attiva profili per le campagne Demandbase per il targeting, la personalizzazione
 
 ## Caso d’uso {#use-case}
 
-Utilizza questa destinazione per attivare i tipi di pubblico del tuo account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
+Utilizza questa destinazione per attivare i tipi di pubblico di account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
 
 Ad esempio, sfrutta l’ad-tech DSP di Demandbase per eseguire il targeting di utenti tipo o ruoli specifici all’interno di account chiave per la generazione di lead top-of-funnel, oppure per creare e incrementare i gruppi di acquisto. Utilizza la destinazione Demandbase per esplorare altri casi d’uso per eseguire il targeting efficace dei tuoi account.
 
@@ -61,7 +59,7 @@ Per esportare i tipi di pubblico dell’account in Demandbase, è necessario dis
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 

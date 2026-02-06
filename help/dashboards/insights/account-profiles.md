@@ -1,12 +1,11 @@
 ---
 title: Informazioni sul profilo account
 description: Scopri il linguaggio SQL che attiva le informazioni sul profilo account e utilizza queste query per generare informazioni personalizzate che esplorano ulteriormente i clienti e le loro esperienze utente.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -23,11 +22,11 @@ Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte de
 
 ## Profili account aggiunti {#account-profiles-added}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quanti profili di account sono stati aggiunti in un determinato periodo?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -49,11 +48,11 @@ ORDER BY date_key limit 5000;
 
 ## Nuovi account per settore {#accounts-by-industry}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quali sono i primi cinque settori a cui appartengono i profili account?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH rankedindustries AS
@@ -85,11 +84,11 @@ ORDER BY total_accounts DESC limit 5000;
 
 ## Nuovi account per tipo {#accounts-by-type}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Qual è il numero di account in base al tipo?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT t.account_type,
@@ -108,11 +107,11 @@ LIMIT  5000;
 
 ## Opportunità aggiunte {#opportunities-added}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quante opportunità sono state aggiunte in un determinato periodo?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT d.date_key,
@@ -131,11 +130,11 @@ LIMIT  5000;
 
 ## Nuove opportunità per ruolo persona {#opportunities-by-person-role}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Qual è la dimensione relativa e il conteggio dei vari ruoli in un’opportunità?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT p.person_role,
@@ -153,11 +152,11 @@ LIMIT  5000;
 
 ## Nuove opportunità in base ai ricavi {#opportunities-by-revenue}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quali sono le prime 20 opportunità classificate in base ai ricavi (in USD)?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH ranked_opportunities AS
@@ -193,12 +192,12 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 ## Nuove opportunità per stato e fase {#opportunities-by-status-and-stage}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
-- Quali sono le opportunità aperte e in quale fase del funnel di vendita o marketing?
+- Quali sono le opportunità di vendita e in quale fase dell&#39;attività di vendita o marketing funnel?
 - Quali sono le opportunità chiuse e in quale fase del funnel di vendita o marketing?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -226,11 +225,11 @@ FROM   opportunities_by_isclosed limit 5000;
 
 ## Nuove opportunità realizzate {#opportunities-won}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Qual è il numero di opportunità chiuse o finalizzate correttamente?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -255,11 +254,11 @@ FROM   opportunities_by_iswon limit 5000;
 
 <!-- Q) Can we change this name? -->
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quante opportunità sono state chiuse o finalizzate in un determinato periodo?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->Il grafico [!UICONTROL Panoramica clienti per account] include tre approfondimenti drill-through: [!UICONTROL Dettagli clienti per account], [!UICONTROL Panoramica opportunità per account] e [!UICONTROL Dettagli opportunità per account]. Questi drill-through forniscono informazioni più granulari, suddividendo il conteggio di clienti e opportunità per categorie (come clienti diretti e indiretti) e intervalli (come fasce di conteggio di clienti e opportunità). Questi grafici non sono influenzati dai filtri date globali eventualmente impostati.
+>Il grafico [!UICONTROL Customers per Account Overview] include tre approfondimenti drill-through: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] e [!UICONTROL Opportunities per Account Detail]. Questi drill-through forniscono informazioni più granulari, suddividendo il conteggio di clienti e opportunità per categorie (come clienti diretti e indiretti) e intervalli (come fasce di conteggio di clienti e opportunità). Questi grafici non sono influenzati dai filtri date globali eventualmente impostati.
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Qual è la distribuzione dei conti in base al fatto che abbiano clienti diretti o indiretti?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->Questa informazione non è influenzata dai filtri data globali.
+>Questo insight non è influenzato dai filtri data globali.
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quanti account hanno diversi intervalli di clienti diretti o indiretti?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->Questa informazione non è influenzata dai filtri data globali.
+>Questo insight non è influenzato dai filtri data globali.
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Qual è la distribuzione dei conti in base al fatto che abbiano o meno opportunità associate?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->Questa informazione non è influenzata dai filtri data globali.
+>Questo insight non è influenzato dai filtri data globali.
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quanti account hanno diversi intervalli di opportunità associate?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 WITH opportunity_ranges AS (

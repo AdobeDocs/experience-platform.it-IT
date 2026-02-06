@@ -3,12 +3,12 @@ title: Lead per la corrispondenza dell’account in Real-Time CDP B2B
 type: Documentation
 description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experience Platform CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 3%
+source-wordcount: '402'
+ht-degree: 2%
 
 ---
 
@@ -62,11 +62,11 @@ Il servizio di corrispondenza lead-account viene eseguito quando diventa disponi
 
 Dopo l’esecuzione del processo, i risultati vengono salvati in un nuovo set di dati dell’XDM di relazione account-persona esistente.
 
-Per visualizzare l&#39;anteprima del set di dati, seleziona **[!UICONTROL Anteprima set di dati]** in alto a destra.
+Per visualizzare l&#39;anteprima del set di dati, seleziona **[!UICONTROL Preview dataset]** in alto a destra.
 
 ![Nuovo set di dati](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-Il set di dati include le informazioni dell’account corrispondenti e il punteggio di corrispondenza per il set di dati scelto. Il campo **[!UICONTROL Relazione Source]** indica se proviene dal processo di corrispondenza lead-account.
+Il set di dati include le informazioni dell’account corrispondenti e il punteggio di corrispondenza per il set di dati scelto. Il campo **[!UICONTROL Relationship Source]** indica se proviene dal processo di corrispondenza lead-account.
 
 ![Anteprima risultati e punteggi di attendibilità del set di dati](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 

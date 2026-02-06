@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Guida introduttiva di Real-Time Customer Data Platform B2B edition
 description: Utilizza questo scenario di esempio per configurare l’implementazione di Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: ed655be7ad274c06deea1e50001c28c58f68796e
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Questo documento fornisce un flusso di lavoro end-to-end di alto livello per ini
 
 La società tecnologica Bodea vuole combinare dati personali e di account provenienti da diverse fonti di dati in silos per indirizzare in modo efficace i clienti con un’e-mail e una campagna pubblicitaria LinkedIn per il suo nuovo prodotto. Bodea utilizza una piattaforma di automazione del marketing e deve segmentare un pubblico specifico per B2B da più CRM contenenti i dati dei clienti.
 
-## Introduzione
+## Guida introduttiva
 
 Questo flusso di lavoro si basa su diversi servizi Adobe Experience Platform come parte della dimostrazione. Se desideri seguire il corso, ti consigliamo di avere una buona conoscenza dei seguenti servizi:
 
@@ -100,7 +100,7 @@ Nell&#39;area di lavoro [!UICONTROL Segments] dell&#39;interfaccia utente di Exp
 
 >[!NOTE]
 > 
->Consulta il tutorial su [attivazione di un pubblico in una destinazione](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=it) per i passaggi completi su come eseguire questa operazione.
+>Consulta il tutorial su [attivazione di un pubblico in una destinazione](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) per i passaggi completi su come eseguire questa operazione.
 
 L’addetto al marketing di Bodea attiva il pubblico su una destinazione, che consente di inviare i dati sul pubblico da Experience Platform alla piattaforma di automazione marketing. Leggi il [catalogo delle destinazioni](../destinations/catalog/overview.md) per ulteriori informazioni sulle destinazioni disponibili.
 

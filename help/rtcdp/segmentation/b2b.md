@@ -2,11 +2,11 @@
 title: Casi di utilizzo della segmentazione per Real-Time Customer Data Platform B2B edition
 description: Panoramica dei vari casi d’uso di Adobe Real-Time Customer Data Platform B2B edition disponibili.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Prima di poter utilizzare gli attributi di segmentazione per le classi B2B, è n
 
 Una volta soddisfatti questi requisiti, puoi combinare questi attributi per i casi d’uso B2B comuni.
 
-## Introduzione {#getting-started}
+## Guida introduttiva {#getting-started}
 
 Una volta che gli schemi di unione per le classi B2B hanno relazioni stabilite e sono stati utilizzati per acquisire i dati, i loro attributi sono resi disponibili nella barra a sinistra del Generatore di segmenti.
 
@@ -60,7 +60,7 @@ L’immagine seguente illustra le relazioni tra le classi B2B disponibili in Rea
 
 Poiché il modello dati può essere complicato, puoi utilizzare l’interfaccia utente di Platform per visualizzare una rappresentazione visiva più dettagliata del modello dati per trovare gli attributi rilevanti per il caso d’uso. Per iniziare, passa all’interfaccia utente di Platform e seleziona Schemi nel menu di navigazione a sinistra.
 
-Seleziona lo schema appropriato dall&#39;elenco disponibile e seleziona la relazione appropriata dalla barra laterale [!UICONTROL Composizione]. Nell’esempio seguente, selezionando la relazione &quot;Person&quot; (Persona), viene mostrato quale attributo nello schema corrente fa riferimento allo schema &quot;Person&quot; correlato (se si tratta dello schema di origine nella relazione) oppure allo schema &quot;Person&quot; (se si tratta dello schema di riferimento nella relazione).
+Selezionare lo schema appropriato dall&#39;elenco disponibile e selezionare la relazione appropriata dalla barra laterale [!UICONTROL Composition]. Nell’esempio seguente, selezionando la relazione &quot;Person&quot; (Persona), viene mostrato quale attributo nello schema corrente fa riferimento allo schema &quot;Person&quot; correlato (se si tratta dello schema di origine nella relazione) oppure allo schema &quot;Person&quot; (se si tratta dello schema di riferimento nella relazione).
 
 ![esempio di chiave di origine che utilizza la relazione persone nell&#39;area di lavoro dello schema](../assets/segmentation/b2b/source-key-schema-relationship-example.png)
 
@@ -74,23 +74,23 @@ I casi d’uso riportati di seguito forniscono informazioni sulle classi utilizz
 
 ## Esempi di diversi casi di utilizzo della segmentazione {#use-cases}
 
-I seguenti casi d’uso sono disponibili per la segmentazione con B2B edition. Ogni esempio fornisce una descrizione di ciò che il pubblico fa e una descrizione delle classi utilizzate per crearle. Le immagini fornite evidenziano il percorso del file nella barra laterale [!UICONTROL Attributi] che riflette la struttura dello schema. La sezione [!UICONTROL Proprietà segmento] a destra della visualizzazione contiene un raggruppamento scritto degli attributi del pubblico.
+I seguenti casi d’uso sono disponibili per la segmentazione con B2B edition. Ogni esempio fornisce una descrizione di ciò che il pubblico fa e una descrizione delle classi utilizzate per crearle. Le immagini fornite evidenziano il percorso del file nella barra laterale [!UICONTROL Attributes] che riflette la struttura dello schema. La sezione [!UICONTROL Segment properties] a destra della visualizzazione contiene un raggruppamento scritto degli attributi del pubblico.
 
 ### Esempio 1: trovare &quot;responsabili decisionali&quot; per le opportunità B2B {#find-decision-maker}
 
-Trova tutte le persone che sono &quot;Responsabili delle decisioni&quot; di qualsiasi opportunità. Questo pubblico richiede un collegamento tra la classe [!UICONTROL Profilo individuale XDM] e la classe [!UICONTROL Relazione persona opportunità di business XDM].
+Trova tutte le persone che sono &quot;Responsabili delle decisioni&quot; di qualsiasi opportunità. Questo pubblico richiede un collegamento tra la classe [!UICONTROL XDM Individual Profile] e la classe [!UICONTROL XDM Business Opportunity Person Relation].
 
 ![Interfaccia utente che visualizza le impostazioni dell&#39;esempio 1](../assets/segmentation/b2b/example-1.png)
 
 ### Esempio 2: trovare profili B2B assegnati a opportunità per un determinato importo in dollari {#find-opportunities-amount}
 
-Trova tutte le persone che sono direttamente assegnate a qualsiasi opportunità la cui quantità di opportunità è superiore all&#39;importo specificato (1 milione di dollari). Questo pubblico richiede un collegamento tra la classe [!UICONTROL Profilo individuale XDM], [!UICONTROL Relazione persona opportunità di business XDM] e la classe [!UICONTROL Opportunità di business XDM].
+Trova tutte le persone che sono direttamente assegnate a qualsiasi opportunità la cui quantità di opportunità è superiore all&#39;importo specificato (1 milione di dollari). Questo pubblico richiede un collegamento tra la classe [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Opportunity Person Relation] e [!UICONTROL XDM Business Opportunity].
 
 ![Interfaccia utente che visualizza le impostazioni dell&#39;esempio 2](../assets/segmentation/b2b/example-2.png)
 
 ### Esempio 3: trovare profili B2B assegnati alle opportunità per posizione {#find-opportunities-location}
 
-Trova tutte le persone che sono assegnate direttamente alle opportunità in cui l’account si trova in una determinata posizione (Canada). Questo pubblico richiede un collegamento tra la classe [!UICONTROL Profilo individuale XDM], la classe [!UICONTROL Relazione persona opportunità di business XDM], la classe [!UICONTROL Opportunità di business XDM] e la classe [!UICONTROL Account di business XDM].
+Trova tutte le persone che sono assegnate direttamente alle opportunità in cui l’account si trova in una determinata posizione (Canada). Questo pubblico richiede un collegamento tra la classe [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Opportunity Person Relation], [!UICONTROL XDM Business Opportunity] e [!UICONTROL XDM Business Account].
 
 ![Interfaccia utente che visualizza le impostazioni dell&#39;esempio 3](../assets/segmentation/b2b/example-3.png)
 
@@ -108,7 +108,7 @@ Dopo aver creato il primo pubblico, puoi combinarlo con un altro pubblico di per
 
 ### Esempio 5: trovare profili B2B per le opportunità in base al nome del reparto e all’importo dell’opportunità {#find-department-opportunity-amount}
 
-Trova tutte le persone che lavorano nel reparto Risorse Umane (HR) e dispongono di un account con almeno un&#39;opportunità aperta del valore specificato (1 milione di dollari) o superiore. Questo pubblico richiede un collegamento tra la classe [!UICONTROL Profilo individuale XDM], [!UICONTROL Account aziendale XDM] e la classe [!UICONTROL Opportunità aziendale XDM].
+Trova tutte le persone che lavorano nel reparto Risorse Umane (HR) e dispongono di un account con almeno un&#39;opportunità aperta del valore specificato (1 milione di dollari) o superiore. Questo pubblico richiede un collegamento tra la classe [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Account] e [!UICONTROL XDM Business Opportunity].
 
 ![Interfaccia utente che visualizza le impostazioni dell&#39;esempio 5](../assets/segmentation/b2b/example-5.png)
 
@@ -132,7 +132,7 @@ Dopo aver creato il primo pubblico, puoi combinarlo con un altro pubblico di per
 
 ### Esempio 8: utilizzare account correlati per espandere la portata della segmentazione {#related-accounts}
 
-Trova tutte le persone che lavorano in un reparto Risorse Umane e sono correlate a qualsiasi account *o a uno qualsiasi degli account correlati dell&#39;account* che dispone di almeno un&#39;opportunità aperta del valore specificato ($1 milione) o superiore. Questo pubblico richiede un collegamento tra la classe [!UICONTROL Profilo individuale XDM], [!UICONTROL Account aziendale XDM] e la classe [!UICONTROL Opportunità aziendale XDM].
+Trova tutte le persone che lavorano in un reparto Risorse Umane e sono correlate a qualsiasi account *o a uno qualsiasi degli account correlati dell&#39;account* che dispone di almeno un&#39;opportunità aperta del valore specificato ($1 milione) o superiore. Questo pubblico richiede un collegamento tra la classe [!UICONTROL XDM Individual Profile], [!UICONTROL XDM Business Account] e [!UICONTROL XDM Business Opportunity].
 
 ![Interfaccia utente con segmentazione per gli account correlati](../assets/segmentation/b2b/example-8.png)
 

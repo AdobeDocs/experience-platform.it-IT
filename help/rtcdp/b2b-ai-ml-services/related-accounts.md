@@ -1,18 +1,18 @@
 ---
-title: Account correlati in Real-Time CDP B2B Edition
+title: Account correlati in Real-Time CDP B2B edition
 type: Documentation
 description: Panoramica e ulteriori informazioni sulla funzione account correlati in Experience Platform Real-Time CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 4%
+source-wordcount: '427'
+ht-degree: 5%
 
 ---
 
-# Account correlati in Real-Time CDP B2B Edition
+# Account correlati in Real-Time CDP B2B edition
 
 ## Panoramica {#overview}
 
@@ -36,11 +36,11 @@ Utilizza questa funzione per visualizzare i profili account correlati per un pro
 
 ## Abilita il servizio account correlati {#enable}
 
-Per abilitare il servizio, seleziona **[!UICONTROL Profili]** nella barra laterale seguito da **[!UICONTROL Impostazioni]**.
+Per abilitare il servizio, selezionare **[!UICONTROL Profiles]** nella barra laterale seguito da **[!UICONTROL Settings]**.
 
-![Experience Platform di interfaccia utente che evidenzia profili e impostazioni.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![Interfaccia utente di Experience Platform che evidenzia profili e impostazioni.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Selezionare l&#39;opzione accanto a [!UICONTROL Abilita account correlati] per abilitare il servizio, quindi selezionare **[!UICONTROL Salva]**.
+Selezionare l&#39;interruttore accanto a [!UICONTROL Enable related accounts] per abilitare il servizio, quindi selezionare **[!UICONTROL Save]**.
 
 ![Nella schermata delle impostazioni account è evidenziata l&#39;opzione di attivazione/disattivazione e salvataggio.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 

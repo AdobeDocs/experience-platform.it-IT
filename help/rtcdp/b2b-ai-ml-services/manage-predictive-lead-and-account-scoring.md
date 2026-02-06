@@ -3,16 +3,16 @@ title: Gestire il punteggio predittivo di lead e account in Real-Time CDP B2B
 type: Documentation
 description: Questo documento fornisce informazioni sulla gestione della funzione di punteggio predittivo di lead e account in Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '982'
 ht-degree: 3%
 
 ---
 
-# Gestire il punteggio predittivo di lead e account in Adobe Real-time Customer Data Platform, edizione B2B
+# Gestire il punteggio predittivo di lead e account in Adobe Real-Time Customer Data Platform, B2B edition
 
 >[!NOTE]
 >
@@ -22,27 +22,27 @@ Questo tutorial illustra i passaggi necessari per gestire gli obiettivi di punte
 
 ## Crea un nuovo punteggio
 
-Per creare un nuovo punteggio, seleziona **[!UICONTROL Servizi]** nella barra laterale e **[!UICONTROL Crea punteggio]**.
+Per creare un nuovo punteggio, selezionare **[!UICONTROL Services]** nella barra laterale e selezionare **[!UICONTROL Create score]**.
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-Viene visualizzata la schermata **[!UICONTROL Informazioni di base]**, che richiede di selezionare un tipo di profilo, immettere un nome e una descrizione facoltativa. Al termine, selezionare **[!UICONTROL Avanti]**.
+Viene visualizzata la schermata **[!UICONTROL Basic information]** in cui viene richiesto di selezionare un tipo di profilo, immettere un nome e una descrizione facoltativa. Al termine, selezionare **[!UICONTROL Next]**.
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-Viene visualizzata la schermata **[!UICONTROL Definisci obiettivo]**. Seleziona la freccia a discesa, quindi seleziona un tipo di obiettivo dalla finestra a discesa che viene visualizzata.
+Viene visualizzata la schermata **[!UICONTROL Define your goal]**. Seleziona la freccia a discesa, quindi seleziona un tipo di obiettivo dalla finestra a discesa che viene visualizzata.
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Specifiche obiettivo]**. Selezionare la freccia a discesa, quindi selezionare il nome del campo obiettivo dalla finestra a discesa visualizzata.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Goal specifics]**. Selezionare la freccia a discesa, quindi selezionare il nome del campo obiettivo dalla finestra a discesa visualizzata.
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-Viene visualizzata la selezione **[!UICONTROL Condizioni obiettivo]**. Seleziona la freccia a discesa, quindi seleziona condizione dalla finestra a discesa visualizzata.
+Viene visualizzata la selezione **[!UICONTROL Goal conditions]**. Seleziona la freccia a discesa, quindi seleziona condizione dalla finestra a discesa visualizzata.
 
 ![plas-goal-specific-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-Viene visualizzato il campo **[!UICONTROL Valore obiettivo]**. Quindi, configura le [!UICONTROL specifiche obiettivo]. Seleziona il pannello [!UICONTROL Immetti valore campo] e immetti il valore dell&#39;obiettivo.
+Viene visualizzato il campo **[!UICONTROL Goal value]**. Quindi, configura [!UICONTROL Goal specifics]. Selezionare il pannello [!UICONTROL Enter Field Value] e immettere il valore dell&#39;obiettivo.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Viene visualizzato il campo **[!UICONTROL Valore obiettivo]**. Quindi, configura
 
 ![plas-goal-specific-field-value](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-Per aggiungere altri campi, selezionare **[!UICONTROL Aggiungi campo]**.
+Per aggiungere altri campi, selezionare **[!UICONTROL Add field]**.
 
 ![plas-goal-specific-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
@@ -58,9 +58,9 @@ Per configurare l’intervallo temporale di previsione, seleziona la freccia a d
 
 ![plas-prediction-timeframe](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
-Il criterio di unione selezionato determina la modalità di selezione dei valori dei campi di un profilo persona. Utilizzando la freccia a discesa, selezionare il criterio di unione desiderato, quindi selezionare **[!UICONTROL Fine]**.
+Il criterio di unione selezionato determina la modalità di selezione dei valori dei campi di un profilo persona. Utilizzando la freccia a discesa, selezionare il criterio di unione desiderato, quindi selezionare **[!UICONTROL Finish]**.
 
-La configurazione del punteggio **[!UICONTROL è stata completata]**. Verrà visualizzata una finestra di dialogo che conferma la creazione del nuovo punteggio. Selezionare **[!UICONTROL OK]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Scoring setup is complete]** che conferma la creazione del nuovo punteggio. Seleziona **[!UICONTROL OK]**.
 
 ![plas-score-complete](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
@@ -68,7 +68,7 @@ La configurazione del punteggio **[!UICONTROL è stata completata]**. Verrà vis
 >
 >Il completamento di ogni processo di punteggio può richiedere fino a 24 ore.
 
-Sei tornato alla scheda **[!UICONTROL Servizi]** in cui puoi visualizzare il nuovo punteggio creato nell&#39;elenco dei punteggi.
+Si è tornati alla scheda **[!UICONTROL Services]** in cui è possibile visualizzare il nuovo punteggio creato nell&#39;elenco dei punteggi.
 
 ![plas-score-created](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
@@ -80,11 +80,11 @@ Per informazioni più dettagliate sui codici di errore che possono essere visual
 
 ## Modificare un punteggio
 
-Per modificare un punteggio, seleziona un punteggio dalla scheda **[!UICONTROL Servizi]** e seleziona **[!UICONTROL Modifica]** dal pannello dei dettagli aggiuntivi sul lato destro dello schermo.
+Per modificare un punteggio, selezionare un punteggio dalla scheda **[!UICONTROL Services]** e selezionare **[!UICONTROL Edit]** dal pannello dei dettagli aggiuntivi sul lato destro dello schermo.
 
 ![plas-edit-score](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Modifica istanza]**, in cui è possibile modificare la descrizione del punteggio. Apporta le modifiche e seleziona **[!UICONTROL Salva]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Edit instance]**, in cui è possibile modificare la descrizione del punteggio. Apporta le modifiche e seleziona **[!UICONTROL Save]**.
 
 ![plas-edit-save](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
@@ -92,33 +92,33 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Modifica istanza]**, in 
 >
 >Non è possibile modificare la configurazione del punteggio perché questo attiverà la riqualificazione e il nuovo punteggio del modello. Equivale a eliminare il punteggio e crearne uno nuovo. Per modificare la configurazione del punteggio, dovrai clonarlo o crearne uno nuovo.
 
-Sei tornato alla scheda **[!UICONTROL Servizi]**. Seleziona il punteggio per visualizzare i dettagli della descrizione aggiornata nel pannello dei dettagli aggiuntivi sul lato destro della schermata.
+Sei tornato alla scheda **[!UICONTROL Services]**. Seleziona il punteggio per visualizzare i dettagli della descrizione aggiornata nel pannello dei dettagli aggiuntivi sul lato destro della schermata.
 
 ## Clona un punteggio
 
-Per clonare un punteggio, seleziona un punteggio dalla scheda **[!UICONTROL Servizi]** e seleziona **[!UICONTROL Clona]** dal pannello dei dettagli aggiuntivi sul lato destro dello schermo.
+Per clonare un punteggio, selezionare un punteggio dalla scheda **[!UICONTROL Services]** e selezionare **[!UICONTROL Clone]** dal pannello dei dettagli aggiuntivi sul lato destro dello schermo.
 
 ![plas-clone-score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-Viene visualizzata la schermata **[!UICONTROL Informazioni di base]**. Il tipo di profilo, il nome e la descrizione vengono clonati dal punteggio originale. Modifica questi dettagli e seleziona **[!UICONTROL Avanti]**.
+Viene visualizzata la schermata **[!UICONTROL Basic information]**. Il tipo di profilo, il nome e la descrizione vengono clonati dal punteggio originale. Modificare i dettagli e selezionare **[!UICONTROL Next]**.
 
 ![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
-Viene visualizzata la schermata **[!UICONTROL Definisci obiettivo]**. Completa la sezione obiettivi come faresti quando crei un nuovo punteggio e seleziona **[!UICONTROL Fine]**.
+Viene visualizzata la schermata **[!UICONTROL Define your goal]**. Completa la sezione obiettivi come faresti quando crei un nuovo punteggio e seleziona **[!UICONTROL Finish]**.
 
-Sei tornato alla scheda **[!UICONTROL Servizi]** in cui puoi visualizzare il punteggio appena clonato nell&#39;elenco.
+Sei tornato alla scheda **[!UICONTROL Services]** dove puoi vedere il punteggio appena clonato nell&#39;elenco.
 
 >[!NOTE]
 >
->La sezione **[!UICONTROL Definisci l&#39;obiettivo]** non è clonata dal punteggio originale.
+>La sezione **[!UICONTROL Define your goal]** non è clonata dal punteggio originale.
 
 ## Eliminare un punteggio
 
-Per eliminare un punteggio, selezionare un punteggio dalla scheda **[!UICONTROL Servizi]** e selezionare **[!UICONTROL Elimina]** dal pannello dei dettagli aggiuntivi sul lato destro dello schermo.
+Per eliminare un punteggio, selezionare un punteggio dalla scheda **[!UICONTROL Services]** e selezionare **[!UICONTROL Delete]** dal pannello dei dettagli aggiuntivi sul lato destro dello schermo.
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-Viene visualizzata la finestra di conferma **[!UICONTROL Elimina documentazione]**. Seleziona **[!UICONTROL Elimina]**.
+Viene visualizzata la finestra di conferma **[!UICONTROL Delete documentation]**. Seleziona **[!UICONTROL Delete]**.
 
 ![plas-delete-score-confirm](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
@@ -126,7 +126,7 @@ Viene visualizzata la finestra di conferma **[!UICONTROL Elimina documentazione]
 >
 >L’eliminazione della definizione del punteggio eliminerebbe anche tutti i punteggi previsti nel profilo persona o nel profilo account, ma non il gruppo di campi creato per la definizione del punteggio. Il gruppo di campi verrà lasciato &quot;orfano&quot; nel modello di dati.
 
-Sei tornato alla scheda **[!UICONTROL Servizi]** in cui non puoi più visualizzare il punteggio nell&#39;elenco.
+Si è tornati alla scheda **[!UICONTROL Services]** in cui non è più possibile visualizzare il punteggio nell&#39;elenco.
 
 ## Codici di errore della pipeline di IA dei lead
 
