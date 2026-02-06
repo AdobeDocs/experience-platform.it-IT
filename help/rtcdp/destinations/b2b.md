@@ -2,7 +2,7 @@
 title: Destinazioni in Real-Time Customer Data Platform B2B edition
 description: Panoramica del ruolo delle destinazioni in Adobe Real-Time Customer Data Platform B2B edition.
 feature: Destinations
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
@@ -27,4 +27,4 @@ I seguenti documenti forniscono ulteriori informazioni sull’utilizzo della des
 
 - Per informazioni su una delle destinazioni disponibili per Real-Time Customer Data Platform B2B edition, sfoglia il [catalogo delle destinazioni](../../destinations/catalog/overview.md).
 - Per informazioni sulle identità che possono essere esportate in Marketo Engage, consulta la [documentazione di destinazione di Marketo Engage](../../destinations/catalog/adobe/marketo-engage.md).
-- Per informazioni su come connettersi alla destinazione Marketo Engage nell&#39;interfaccia utente di Experience Platform ed esportare i dati, leggere [&#39;Push an Adobe Experience Platform Segment to a Marketo Static List&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).
+- Per informazioni su come connettersi alla destinazione Marketo Engage nell&#39;interfaccia utente di Experience Platform ed esportare i dati, leggere [&#39;Push an Adobe Experience Platform Segment to a Marketo Static List&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=it).

@@ -3,7 +3,7 @@ keywords: visualizzare profili rtcdp;rtcdp visualizzazione profilo;rtcdp profili
 title: Sfogliare i profili in Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform consente di sfogliare i dati Real-Time Customer Profile tramite l’interfaccia utente di Adobe Experience Platform.
 feature: Get Started, Profiles
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
