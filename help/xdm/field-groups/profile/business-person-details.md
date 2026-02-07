@@ -1,26 +1,31 @@
 ---
 title: Gruppo di campi dello schema dei dettagli della persona aziendale XDM
 description: Scopri il gruppo di campi dello schema Dettagli persona aziendale XDM.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 5%
+source-wordcount: '572'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Dettagli persona aziendale XDM] gruppo di campi dello schema
+# [!UICONTROL XDM Business Person Details] gruppo di campi schema
 
-[!UICONTROL Dettagli persona aziendale XDM] è un gruppo di campi di schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce informazioni su una singola persona nel contesto di un&#39;azienda business-to-business (B2B).
+>[!AVAILABILITY]
+>
+>Questo gruppo di campi è disponibile solo per le organizzazioni con accesso al B2B edition di Real-Time CDP.
+
+[!UICONTROL XDM Business Person Details] è un gruppo di campi dello schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce informazioni su una singola persona nel contesto di un&#39;azienda business-to-business (B2B).
 
 ![](../../images/field-groups/business-person-details.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `b2b` | Oggetto | Oggetto che acquisisce i dettagli specifici di B2B sulla persona. |
-| `b2b.accountKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificatore composito per l’account aziendale relativo alla persona. |
-| `b2b.convertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identificatore composito del contatto associato se il lead è stato convertito. |
-| `b2b.personKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identificatore composito per la persona o il frammento di profilo. |
+| `b2b.accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificatore composito per l’account aziendale relativo alla persona. |
+| `b2b.convertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identificatore composito del contatto associato se il lead è stato convertito. |
+| `b2b.personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identificatore composito per la persona o il frammento di profilo. |
 | `b2b.accountID` | Stringa | Un ID univoco per l’account aziendale a cui è associata questa persona. |
 | `b2b.blockedCause` | Stringa | Se la persona è bloccata, questa proprietà fornisce il motivo. |
 | `b2b.convertedContactID` | Stringa | ID del contatto se il lead è stato convertito correttamente. |
@@ -53,7 +58,7 @@ ht-degree: 5%
 | `workEmail` | [Indirizzo e-mail](../../data-types/email-address.md) | Indirizzo e-mail aziendale della persona. |
 | `workPhone` | [Numero di telefono](../../data-types/phone-number.md) | Numero di telefono aziendale della persona. |
 | `identityMap` | Mappa | Campo mappa che contiene un set di identità con spazio dei nomi per la persona. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Real-Time Customer Profile](../../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Per ulteriori informazioni sul caso d&#39;uso, consulta la sezione sulle mappe di identità nelle [nozioni di base sulla composizione dello schema](../../schema/composition.md#identityMap). |
-| `isDeleted` | Booleano | Indica se questa persona è stata eliminata nel Marketo Engage.<br><br>Quando si utilizza il [connettore di origine di Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente rispecchiati nel profilo cliente in tempo reale. Tuttavia, i record relativi a questi profili possono ancora persistere nel Data Lake. Impostando `isDeleted` su `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query nel Data Lake. |
+| `isDeleted` | Booleano | Indica se questa persona è stata eliminata in Marketo Engage.<br><br>Quando si utilizza il [connettore di origine di Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tutti i record eliminati in Marketo vengono automaticamente rispecchiati nel profilo cliente in tempo reale. Tuttavia, i record relativi a questi profili possono ancora persistere nel Data Lake. Impostando `isDeleted` su `true`, è possibile utilizzare il campo per filtrare i record eliminati dalle origini durante la query nel Data Lake. |
 | `organizations` | Array di stringhe | Elenco di nomi di organizzazioni in cui lavora la persona. |
 
 {style="table-layout:auto"}

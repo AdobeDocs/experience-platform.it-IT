@@ -1,17 +1,22 @@
 ---
 title: Gruppo di campi dello schema dei componenti della persona aziendale XDM
 description: Scopri il gruppo di campi dello schema XDM Business Person Components.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Componenti persona aziendale XDM] gruppo di campi dello schema
+# [!UICONTROL XDM Business Person Components] gruppo di campi schema
 
-[!UICONTROL XDM Business Person Components] è un gruppo di campi di schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce più record di origine per una persona e altri attributi necessari per la segmentazione della persona.
+>[!AVAILABILITY]
+>
+>Questo gruppo di campi è disponibile solo per le organizzazioni con accesso al B2B edition di Real-Time CDP.
+
+[!UICONTROL XDM Business Person Components] è un gruppo di campi dello schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce più record di origine per una persona e altri attributi necessari per la segmentazione della persona.
 
 Quando viene creato un profilo per una persona tramite [Real-Time Customer Profile](../../../profile/home.md) in B2B edition of Real-Time CDP, le informazioni utilizzate per creare tale profilo potrebbero provenire potenzialmente da molti record di origine. Ad esempio, se una persona lavora per due aziende diverse, molti sistemi di gestione delle relazioni con i clienti creano una copia intenzionalmente duplicata di tale persona in modo che una copia sia collegata alla società A, mentre l’altra sia collegata alla società B. Quando si inseriscono tali dati in Adobe Experience Platform, questo gruppo di campi viene utilizzato per unire i diversi record di origine in un’unica rappresentazione.
 
@@ -30,11 +35,11 @@ Il gruppo di campi fornisce un campo `personComponents` a livello di radice, che
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `sourceAccountKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Un identificatore composito dell’account associato alla persona. |
-| `sourceConvertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identificatore composito per il contatto correlato se il lead è stato convertito. |
-| `sourceExternalKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identificatore composito del sistema di origine da cui provengono i dati della persona. |
-| `sourcePersonKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identificatore composito della persona. |
-| `workEmail` | [[!UICONTROL Indirizzo e-mail]](../../data-types/b2b-source.md) | ID e-mail aziendale della persona. |
+| `sourceAccountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Un identificatore composito dell’account associato alla persona. |
+| `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identificatore composito per il contatto correlato se il lead è stato convertito. |
+| `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identificatore composito del sistema di origine da cui provengono i dati della persona. |
+| `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Identificatore composito della persona. |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | ID e-mail aziendale della persona. |
 | `personGroupID` | Stringa | Un identificatore di gruppo della persona. |
 | `personScore` | Stringa | Un punteggio generato per la persona da un sistema di gestione delle relazioni con i clienti. |
 | `personSource` | Stringa | Un identificatore univoco basato su stringhe per il sistema di origine da cui provengono i dati della persona. |
