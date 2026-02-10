@@ -2,9 +2,9 @@
 title: Endpoint API per tipi di pubblico esterni
 description: Scopri come utilizzare l’API per tipi di pubblico esterni per creare, aggiornare, attivare ed eliminare i tipi di pubblico esterni da Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
+source-git-commit: ff58324446f28cbdca369ecbb58d8261614ae684
 workflow-type: tm+mt
-source-wordcount: '2253'
+source-wordcount: '2340'
 ht-degree: 5%
 
 ---
@@ -12,6 +12,16 @@ ht-degree: 5%
 # Endpoint &quot;external audiences&quot;
 
 I tipi di pubblico esterni ti consentono di caricare i dati del profilo da sorgenti esterne in Adobe Experience Platform. È possibile utilizzare l&#39;endpoint `/external-audience` nell&#39;API del servizio di segmentazione per acquisire un pubblico esterno in Experience Platform, visualizzare i dettagli e aggiornare i tipi di pubblico esterni, nonché eliminarli.
+
+## Guardrail
+
+A partire dalla versione di marzo, le seguenti protezioni saranno applicate quando si utilizza l’endpoint di tipi di pubblico esterni:
+
+| Guardrail | Limite | Tipo di limite | Descrizione |
+| --------- | ----- | ---------- | ----------- |
+| Numero di esecuzioni di acquisizione del pubblico al giorno | 100 | Guarddrail imposto dal sistema | Il numero massimo di esecuzioni di acquisizione del pubblico consentite al giorno. Questo limite si riferisce al livello **sandbox**. |
+| Numero di acquisizioni per pubblico | 10 | Guarddrail imposto dal sistema | Il numero di acquisizioni che possono essere eseguite su un pubblico specifico. |
+| Dimensione del pubblico esterno | 10 GB | Guardrail delle prestazioni | La dimensione totale consigliata del pubblico esterno è 10 GB. |
 
 ## Introduzione
 
