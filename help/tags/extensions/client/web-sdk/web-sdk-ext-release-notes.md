@@ -19,7 +19,7 @@ Questo documento descrive le note sulla versione dell’estensione tag Adobe Exp
 **Nuove funzioni**
 
 - Contiene [versione 2.31.0](/help/collection/js/release-notes.md#2-31-0) di Adobe Experience Platform Web SDK.
-- Aggiunta del supporto per il codice di base [ di ](/help/collection/js/install/base-code.md)per l&#39;estensione tag.
+- Aggiunta del supporto per il codice di base [&#x200B; di &#x200B;](/help/collection/js/install/base-code.md)per l&#39;estensione tag.
 - Aggiunta di **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contesto](configure/data-collection.md#context-settings) alle impostazioni dell&#39;estensione.
 - Aggiunto componente Brand Concierge.
 - È stata aggiunta un’opzione per consentire l’utilizzo di un’istanza della lega con hosting autonomo con Tag.
