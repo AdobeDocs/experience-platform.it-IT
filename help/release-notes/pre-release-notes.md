@@ -79,7 +79,7 @@ Adobe Experience Platform Data Collection fornisce un set di tecnologie che cons
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
+Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/it/docs/experience-platform/collection/home).
 
 ## Destinazioni {#destinations}
 
