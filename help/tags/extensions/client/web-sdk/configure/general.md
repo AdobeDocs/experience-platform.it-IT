@@ -1,9 +1,10 @@
 ---
 title: Impostazioni di configurazione dell’istanza di SDK
 description: Configurare le impostazioni generali per l'istanza di Web SDK.
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 2%
 
 ---
@@ -32,4 +33,6 @@ ID dell’organizzazione a cui si desidera inviare i dati in Adobe. Nella maggio
 
 ## [!UICONTROL Edge domain]
 
-Il dominio da cui l’estensione invia e riceve i dati. Anche se il valore predefinito di `edge.adobedc.net` funziona, Adobe consiglia di utilizzare un dominio di prime parti nella maggior parte dei casi. Per istruzioni su come impostare un dominio di prime parti idoneo per la raccolta dei dati, vedere il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/adobe-managed-cert). Per istruzioni sull&#39;impostazione di questo valore, consulta anche [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) nella documentazione della libreria JavaScript.
+Il dominio da cui l’estensione invia e riceve i dati. Per impostazione predefinita, il campo contiene `<COMPANYID>.data.adobedc.net`. Le implementazioni precedenti potrebbero contenere un valore predefinito di `edge.adobedc.net`, anch&#39;esso valido.
+
+Nella maggior parte dei casi, Adobe consiglia di utilizzare un dominio di prime parti. Per istruzioni su come impostare un dominio di prime parti idoneo per la raccolta dei dati, vedere il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert). Per istruzioni sull&#39;impostazione di questo valore, consulta anche [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) nella documentazione della libreria JavaScript.

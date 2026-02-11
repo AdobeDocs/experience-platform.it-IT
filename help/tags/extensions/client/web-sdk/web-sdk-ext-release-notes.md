@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '2949'
-ht-degree: 26%
+source-wordcount: '3118'
+ht-degree: 25%
 
 ---
 
@@ -13,6 +13,29 @@ ht-degree: 26%
 # Note sulla versione dell’estensione Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Versione 2.34.0 - 9 febbraio 2026
+
+**Nuove funzioni**
+
+- Contiene [versione 2.31.0](/help/collection/js/release-notes.md#2-31-0) di Adobe Experience Platform Web SDK.
+- Aggiunta del supporto per il codice di base [ di ](/help/collection/js/install/base-code.md)per l&#39;estensione tag.
+- Aggiunta di **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contesto](configure/data-collection.md#context-settings) alle impostazioni dell&#39;estensione.
+- Aggiunto componente Brand Concierge.
+- È stata aggiunta un’opzione per consentire l’utilizzo di un’istanza della lega con hosting autonomo con Tag.
+
+**Correzioni e miglioramenti**
+
+- [dominio Edge predefinito](configure/general.md#edge-domain) è stato aggiornato per includere l&#39;ID società come sottodominio.
+- Aggiunta dell&#39;opzione **[!UICONTROL No overrides]** alle [sostituzioni della configurazione dello stream di dati](configure/configuration-overrides.md).
+- È stato aggiunto un pulsante di aggiornamento per ripopolare gli elementi in alcuni campi di input.
+- I nomi di istanza univoci vengono ora generati automaticamente ogni volta che viene creata un’istanza.
+- È stato corretto un errore a causa del quale `combinedValidator` generava un errore quando il valore era `undefined` o `null`.
+- È stato corretto un errore che veniva visualizzato quando un’istanza veniva eliminata.
+- È stato risolto un problema che causava l’inutilizzabilità dell’elemento dati dell’oggetto XDM a causa di un errore durante il recupero degli schemi.
+- Sono state corrette le impostazioni di salvataggio nell&#39;azione [Invia evento multimediale](actions/send-media-event.md).
+- È stato risolto un problema a causa del quale i campi dei contenuti multimediali in streaming nella vista di configurazione non venivano ripristinati correttamente.
+- Sono stati corretti gli avvisi di popolamento automatico errati nell’editor di oggetti XDM per i valori nidificati.
 
 ## Versione 2.33.0 - 24 settembre 2025
 

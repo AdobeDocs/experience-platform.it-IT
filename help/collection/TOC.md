@@ -6,10 +6,10 @@ breadcrumb-title: Raccolta dati
 user-guide-description: Scopri come inviare dati a Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 30%
+source-wordcount: '142'
+ht-degree: 31%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 30%
    + [Note sulla versione](js/release-notes.md)
    + Installazione {#install}
       + [Panoramica sull’installazione](js/install/overview.md)
+      + [Codice base](js/install/base-code.md)
       + [Libreria](js/install/library.md)
       + [NPM](js/install/npm.md)
       + [Build personalizzata](js/install/create-custom-build.md)
@@ -37,7 +38,8 @@ ht-degree: 30%
          + [autoCollectPropositionInteractions](js/commands/configure/autocollectpropositioninteractions.md)
          + [clickCollection](js/commands/configure/clickcollection.md)
          + [clickCollectionEnabled](js/commands/configure/clickcollectionenabled.md)
-         + [contesto](js/commands/configure/context.md)
+         + [Contesto](js/commands/configure/context.md)
+         + [conversazione](js/commands/configure/conversation.md)
          + [datastreamId](js/commands/configure/datastreamid.md)
          + [debugEnabled](js/commands/configure/debugenabled.md)
          + [defaultConsent](js/commands/configure/defaultconsent.md)
@@ -88,14 +90,14 @@ ht-degree: 30%
    + [_monitoraggi](tags/monitors.md)
    + [setDebug](tags/setdebug.md)
    + [setVar](tags/setvar.md)
-   + [track](tags/track.md)
+   + [tracciamento](tags/track.md)
 + Casi d’uso {#use-cases}
    + [Panoramica](use-cases/overview.md)
    + [Client hints](use-cases/client-hints.md)
    + [Stato client](use-cases/client-state.md)
    + [Raccogliere dati commerce](use-cases/collect-commerce-data.md)
    + [Configurare un CSP](use-cases/configuring-a-csp.md)
-   + [Debug](use-cases/debugging.md)
+   + [Eseguire il debug](use-cases/debugging.md)
    + [Deduplicazione degli eventi](use-cases/event-duplication.md)
    + Identità {#identity}
       + [Panoramica](use-cases/identity/id-overview.md)

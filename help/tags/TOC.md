@@ -6,10 +6,10 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
+source-git-commit: b1666521d135ac953dbde5b4ff64138a187e4b9e
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 43%
+source-wordcount: '827'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 43%
 * [Panoramica sui tag](./home.md)
 * Introduzione {#get-started}
    * [Guida rapida](./quick-start/quick-start.md)
-   * [Guide all&#39;implementazione](./quick-start/implementation-guides.md)
+   * [Guide all’implementazione](./quick-start/implementation-guides.md)
 * Guide dell’interfaccia utente {#ui}
    * [Panoramica](./ui/managing-resources/overview.md)
    * Estensioni {#extensions}
@@ -117,6 +117,7 @@ ht-degree: 43%
             * [Raccolta dati](extensions/client/web-sdk/configure/data-collection.md)
             * [Streaming media](extensions/client/web-sdk/configure/streaming-media.md)
             * [Notifiche push](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
             * [Advertising](extensions/client/web-sdk/configure/advertising.md)
             * [Sostituzioni configurazione](extensions/client/web-sdk/configure/configuration-overrides.md)
             * [Impostazioni avanzate](extensions/client/web-sdk/configure/advanced-settings.md)

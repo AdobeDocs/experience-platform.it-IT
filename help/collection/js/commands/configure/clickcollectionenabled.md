@@ -2,9 +2,9 @@
 title: clickCollectionEnabled
 description: Scopri come configurare Web SDK per determinare se i dati dei clic di collegamento vengono raccolti automaticamente.
 exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
-source-git-commit: 364b9adc406f732ea5ba450730397c4ce1bf03cf
+source-git-commit: 4d251ff7323e83ac5c47b5817f81e8fde64cb7d9
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,21 @@ Il Web SDK tiene traccia di tutti i clic sugli elementi HTML `<a>` e `<area>` se
 1. Se il dominio di destinazione del collegamento è diverso dal `window.location.hostname` corrente, `xdm.web.webInteraction.type` è impostato su `"exit"` (se `clickCollection.exitLinkEnabled` è abilitato).
 1. Se il collegamento non è idoneo per `"download"` o `"exit"`, `xdm.web.webInteraction.type` è impostato su `"other"`.
 
-In tutti i casi, `xdm.web.webInteraction.name` è impostato sull&#39;etichetta di testo del collegamento e `xdm.web.webInteraction.URL` è impostato sull&#39;URL di destinazione del collegamento. Se desideri impostare anche il nome del collegamento sull&#39;URL, puoi sovrascrivere questo campo XDM utilizzando il callback `filterClickDetails` nell&#39;oggetto `clickCollection`.
+In tutti i casi, `xdm.web.webInteraction.name` controlla l&#39;elemento selezionato e i relativi discendenti per il primo valore non vuoto nell&#39;ordine seguente:
+
+1. `innerText` (fallback a `textContent`)
+1. `nodeValue` concatenato da nodi di testo discendenti supportati
+1. Attributo `alt`
+1. Attributo `title`
+1. Attributo `<input value="...">`
+1. Attributo `<img src="...">`
+1. Attributo `aria-label`
+1. Attributo `name`
+1. Stringa vuota
+
+Il campo `xdm.web.webInteraction.URL` è impostato sull&#39;URL di destinazione del collegamento. Se desideri impostare anche il nome del collegamento sull&#39;URL, puoi sovrascrivere questo campo XDM utilizzando il callback `filterClickDetails` nell&#39;oggetto `clickCollection`.
+
+## Implementazione
 
 Impostare il valore booleano `clickCollectionEnabled` durante l&#39;esecuzione del comando `configure`. Se si omette questa proprietà durante la configurazione del Web SDK, per impostazione predefinita viene utilizzato `true`. Impostare questo valore su `false` se si preferisce impostare `xdm.web.webInteraction.type` e `xdm.web.webInteraction.value` manualmente.
 

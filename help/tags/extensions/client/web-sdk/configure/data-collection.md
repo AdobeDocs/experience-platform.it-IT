@@ -1,9 +1,10 @@
 ---
 title: Impostazioni di configurazione della raccolta dati
 description: Configurare le impostazioni di raccolta dati nell'estensione tag Web SDK.
-source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -119,3 +120,4 @@ Raccogli automaticamente le informazioni sui visitatori, compilando specifici ca
 * **[!UICONTROL Environment]**: raccoglie informazioni sul browser dell&#39;utente.
 * **[!UICONTROL Place context]**: raccoglie informazioni sulla posizione dell&#39;utente.
 * **[!UICONTROL High entropy user-agent hints]**: raccoglie informazioni più dettagliate sul dispositivo dell&#39;utente.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**: impedisce l&#39;invio ad Adobe Analytics di dati di riferimento duplicati.

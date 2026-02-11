@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2673'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,22 @@ ht-degree: 5%
 
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.31.0 - 9 febbraio 2026
+
+**Nuove funzioni**
+
+- Aggiunta della disponibilità di `"oneTimeAnalyticsReferrer"` all&#39;array di stringhe [`context`](commands/configure/context.md).
+- È stato aggiunto il componente Brand Concierge.
+- Aggiunta di `meta.queueTimeMillis` alla richiesta di rete per registrare il tempo tra la creazione dell&#39;evento e l&#39;ora di invio.
+- Possibilità di rendere persistente la mappa di identità in modo che possa essere compilata con le chiamate successive.
+
+**Correzioni e miglioramenti**
+
+- Gli attributi `aria-label` e `name` sono ora considerati nella [raccolta di collegamenti automatici](commands/configure/clickcollectionenabled.md).
+- È stata risolta una possibile situazione di tipo &quot;race condition&quot; con integrazioni di identity map.
+- È stato risolto un problema a causa del quale la marca temporale non era inclusa in `streamingMedia`.
+- È stato risolto un problema a causa del quale le azioni del codice personalizzato venivano eseguite una sola volta.
 
 ## Versione 2.30.0 - 24 settembre 2025
 
@@ -139,7 +155,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;inizializzazione dei dettagli del collegamento Activity Map quando veniva chiamato l&#39;hook di monitoraggio `onInstanceConfigured`.
 - È stato risolto un problema a causa del quale le destinazioni dei cookie non venivano impostate sul percorso corretto.
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
-- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[&#x200B; chiamate a causa di una codifica URL non valida nel parametro &#x200B;](commands/sendevent/overview.md).
+- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[ chiamate a causa di una codifica URL non valida nel parametro ](commands/sendevent/overview.md).
 
 ## Versione 2.21.1 - venerdì 18 luglio 2024
 

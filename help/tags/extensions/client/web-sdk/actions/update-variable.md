@@ -1,7 +1,8 @@
 ---
 title: Aggiorna variabile
 description: Modifica il contenuto di un elemento dati variabile.
-source-git-commit: f87e6a0e969aa0924656cdb2ea56aa79d2d7c841
+exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
@@ -20,6 +21,6 @@ Lo schema XDM utilizzato nell’editor corrisponde allo schema selezionato all�
 
 ![Schermata dell&#39;interfaccia di configurazione dell&#39;azione che mostra una proprietà aggiornata](../assets/update-variable-set-property.png)
 
-Se selezioni un elemento dati variabile che utilizza un oggetto dati invece di un oggetto XDM, i campi disponibili dipendono dai prodotti selezionati durante la configurazione dell’elemento dati. Ad esempio, se crei un oggetto dati che include Adobe Analytics, fields, se selezioni l’elemento dati variabile in questa interfaccia utente verranno visualizzati dei campi che potrai compilare in base a specifici requisiti di Adobe Analytics.
+Se selezioni un elemento dati variabile che utilizza un oggetto dati invece di un oggetto XDM, i campi disponibili dipendono dai prodotti selezionati durante la configurazione dell’elemento dati. Ad esempio, se crei un oggetto dati che include Adobe Analytics, fields, se selezioni l’elemento dati variabile in questa interfaccia utente verranno visualizzati dei campi che puoi compilare in modo specifico per Adobe Analytics.
 
 ![Schermata dell&#39;interfaccia di configurazione dell&#39;azione che mostra un elemento dati variabile basato su un oggetto dati](../assets/variable-data-element-data.png)
