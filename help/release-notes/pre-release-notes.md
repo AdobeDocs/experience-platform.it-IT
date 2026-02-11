@@ -1,11 +1,11 @@
 ---
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
-source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1050'
+ht-degree: 33%
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Platform Data Collection fornisce un set di tecnologie che cons
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/it/docs/experience-platform/collection/home).
+Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinazioni {#destinations}
 
@@ -107,7 +107,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | ------- | ----------- |
 | Organizzazione e ricerca dell’inventario degli schemi | La pagina di navigazione dello schema ora include funzioni avanzate di ricerca e filtro, azioni in linea e supporto di tag e cartelle definiti dall’utente. Questi aggiornamenti semplificano la ricerca, l’organizzazione e la gestione degli schemi nelle sandbox, riducendo al contempo il lavoro di navigazione e manutenzione manuale. |
 
-Per ulteriori informazioni, vedere la [[!DNL Schemas] panoramica] (../xdm/home.md).
+Per ulteriori informazioni, consulta la [[!DNL XDM] panoramica](../xdm/home.md).
 
 ## Query Service {#query-service}
 
