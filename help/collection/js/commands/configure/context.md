@@ -97,7 +97,7 @@ Per ulteriori informazioni, vedere [User agent client hints](/help/collection/us
 
 ### Referente di Analytics una tantum {#one-time-analytics-referrer}
 
-La parola chiave `"oneTimeAnalyticsReferrer"` invia un valore referente ad Adobe Analytics solo alla prima chiamata `sendEvent` senza decisioni per una pagina. Il caso d&#39;uso principale per questa parola chiave di contesto è impedire che la dimensione [Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics venga gonfiata dagli hit utilizzati principalmente nelle integrazioni Analytics e Target.
+La parola chiave `"oneTimeAnalyticsReferrer"` invia un valore referente ad Adobe Analytics solo alla prima chiamata `sendEvent` senza decisioni per una pagina. Il caso d&#39;uso principale per questa parola chiave di contesto è impedire che la dimensione [Referrer](https://experienceleague.adobe.com/it/docs/analytics/components/dimensions/referrer) in Adobe Analytics venga gonfiata dagli hit utilizzati principalmente nelle integrazioni Analytics e Target.
 
 Se un determinato comando `sendEvent` utilizza un tipo di evento decisioning (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), viene ignorato durante il calcolo del primo `sendEvent` in una pagina. Se il valore del referente cambia nella pagina e viene attivato un altro `sendEvent`, il nuovo valore del referente viene incluso nel payload. Questa condizione consente di utilizzare la funzione con applicazioni a pagina singola.
 
