@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
+source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 33%
+source-wordcount: '1022'
+ht-degree: 34%
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Platform Data Collection fornisce un set di tecnologie che cons
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/it/docs/experience-platform/collection/home).
+Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinazioni {#destinations}
 
@@ -89,7 +89,6 @@ Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](http
 
 | Destinazione | Descrizione |
 | --- | --- |
-| Destinazione account [!DNL ZoomInfo] | Gli utenti CDP B2B possono ora attivare i dati a livello di account in [!DNL ZoomInfo] tramite il nuovo connettore di destinazione dell&#39;account [!DNL ZoomInfo]. Configura il connettore per iniziare a inviare il pubblico del tuo account a [!DNL ZoomInfo]. |
 | Batch [!DNL Snowflake] generalmente disponibile | La destinazione del batch [!DNL Snowflake] è stata spostata nella disponibilità generale. Ora puoi visualizzare la colonna ID del criterio di unione nei dati esportati insieme alle colonne esistenti, ad esempio marca temporale, attributi di mappatura e iscrizione al pubblico. |
 | Supporto della crittografia AES256 per [destinazioni Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ora puoi configurare la crittografia AES256 per le esportazioni Amazon S3. Scegli tra due opzioni: <ul><li>**[!UICONTROL Default]**: Experience Platform crittografa i dati inattivi con l&#39;algoritmo di crittografia predefinito impostato sul bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform aggiunge l&#39;intestazione `s3:x-amz-server-side-encryption": "AES256` all&#39;esportazione e crittografa i dati inattivi con l&#39;algoritmo AES256 quando arriva in S3. **Questa opzione ha la precedenza su qualsiasi algoritmo di crittografia predefinito configurato nel bucket S3**.</li></ul> |
 
