@@ -4,9 +4,9 @@ description: Scopri come collegare i database ad Experience Platform utilizzando
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
@@ -43,34 +43,35 @@ Per ulteriori informazioni, consulta la [[!DNL Databricks] panoramica](../../../
 
 ## Navigare nel catalogo delle origini
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Origini]*. Scegliere una categoria o utilizzare la barra di ricerca per trovare l&#39;origine.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro *[!UICONTROL Sources]*. Scegliere una categoria o utilizzare la barra di ricerca per trovare l&#39;origine.
 
-Per connettersi a [!DNL Databricks], passare alla categoria *[!UICONTROL Database]*, selezionare la scheda di origine **[!UICONTROL Database di Azure]**, quindi selezionare **[!UICONTROL Configurazione]**.
+Per connettersi a [!DNL Databricks], passare alla categoria *[!UICONTROL Databases]*, selezionare la scheda di origine **[!UICONTROL Azure Databricks]**, quindi selezionare **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Le origini nel catalogo delle origini visualizzano l&#39;opzione **[!UICONTROL Configura]** quando un&#39;origine specificata non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
+>Le origini nel catalogo origini visualizzano l&#39;opzione **[!UICONTROL Set up]** quando una determinata origine non dispone ancora di un account autenticato. Una volta creato un account autenticato, questa opzione diventa **[!UICONTROL Add data]**.
 
-![Catalogo delle origini con la scheda di origine dei database di Azure selezionata.](../../../../images/tutorials/create/databricks/catalog.png)
+![Catalogo delle origini con la scheda di origine di Azure Databricks selezionata.](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### Usa un account esistente
 
-Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account [!DNL Azure Databricks] che si desidera utilizzare.
+Per utilizzare un account esistente, selezionare **[!UICONTROL Existing account]**, quindi selezionare l&#39;account [!DNL Azure Databricks] che si desidera utilizzare.
 
 ![Interfaccia account esistente nel flusso di lavoro di origine con &quot;Account esistente&quot; selezionato.](../../../../images/tutorials/create/databricks/existing.png)
 
 ### Crea un nuovo account
 
-Per creare un nuovo account, selezionare **[!UICONTROL Nuovo account]**, specificare un nome e aggiungere facoltativamente una descrizione per l&#39;account. Quindi, fornisci i valori per le seguenti credenziali di autenticazione:
+Per creare un nuovo account, selezionare **[!UICONTROL New account]**, specificare un nome e aggiungere facoltativamente una descrizione per l&#39;account. Quindi, fornisci i valori per le seguenti credenziali di autenticazione:
 
 * Dominio
 * ID cluster
 * Token di accesso
 * Database
+* Catalogo
 
 ![Nuova interfaccia account nel flusso di lavoro di origine con un nome account e una descrizione facoltativa forniti.](../../../../images/tutorials/create/databricks/new.png)
 
-È inoltre necessario copiare e incollare le credenziali [!UICONTROL SAS di staging URI] nell&#39;ambiente [!DNL Azure Databricks]. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e attendere alcuni istanti prima di stabilire la connessione.
+È inoltre necessario copiare e incollare le credenziali di [!UICONTROL Staging SAS URI] nell&#39;ambiente [!DNL Azure Databricks]. Al termine, selezionare **[!UICONTROL Connect to source]** e attendere alcuni istanti per consentire la connessione.
 
 ![Credenziali di gestione temporanea dell&#39;URI SAS.](../../../../images/tutorials/create/databricks/sas-uri.png)
 
