@@ -2,12 +2,12 @@
 keywords: Indirizzo IP, intervallo IP, destinazioni di elenco consentiti, di elenco Consentiti inserì nell'elenco Consentiti, destinazioni di streaming di
 title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming
 type: Documentation
-description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform all’endpoint API REST HTTP, Amazon Kinesis o all’istanza dei Azure Event Hubs.
+description: Questa pagina fornisce intervalli IP che puoi aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform all’endpoint API REST HTTP o all’istanza Amazon Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
+source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 0%
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
@@ -22,9 +22,14 @@ ht-degree: 0%
 
 Gli intervalli IP documentati in questa pagina si applicano alle seguenti destinazioni:
 
-* [Destinazioni enterprise avanzate](../../destination-types.md#advanced-enterprise-destinations): [Destinazione API HTTP](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinazioni enterprise avanzate](../../destination-types.md#advanced-enterprise-destinations): [Destinazione API HTTP](./http-destination.md) e [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Destinazioni di esportazione del pubblico in streaming](../../destination-types.md#streaming-destinations), ad esempio [Pubblico in tempo reale CDH Pega](/help/destinations/catalog/personalization/pega-v2.md), integrazioni basate su API con [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) e [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
 * Destinazioni pubbliche o private generate tramite [Destination SDK](../../destination-sdk/getting-started.md)
+
+>[!IMPORTANT]
+>
+>Gli intervalli IP documentati in questa pagina sono *non* supportati per [!DNL Azure Event Hubs] destinazioni e destinazioni basate su API di streaming ospitate su Microsoft Azure.
+
 
 Il traffico in uscita da Experience Platform verso queste destinazioni passa sempre attraverso gli IP elencati in questa pagina.
 
