@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 34%
+source-wordcount: '1086'
+ht-degree: 32%
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Platform Data Collection fornisce un set di tecnologie che cons
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/it/docs/experience-platform/collection/home).
+Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinazioni {#destinations}
 
@@ -105,6 +105,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Organizzazione e ricerca dell’inventario degli schemi | La pagina di navigazione dello schema ora include funzioni avanzate di ricerca e filtro, azioni in linea e supporto di tag e cartelle definiti dall’utente. Questi aggiornamenti semplificano la ricerca, l’organizzazione e la gestione degli schemi nelle sandbox, riducendo al contempo il lavoro di navigazione e manutenzione manuale. |
+| Modifica limitata per schemi con set di dati | Le operazioni di modifica che causano l’interruzione delle modifiche ora sono limitate una volta che esiste un set di dati per uno schema. Quando è associato un set di dati, non è più possibile rinominare o eliminare campi, modificare i tipi di dati o i formati dei campi, modificare i descrittori di identità, gestire i campi correlati per rimuovere campi esistenti o modificare la classe assegnata; sono ancora supportate modifiche aggiuntive e la deprecazione dei campi. |
 
 Per ulteriori informazioni, consulta la [[!DNL XDM] panoramica](../xdm/home.md).
 

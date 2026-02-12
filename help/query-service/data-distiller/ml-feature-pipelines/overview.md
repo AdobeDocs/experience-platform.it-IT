@@ -2,9 +2,9 @@
 title: Pipeline di funzioni IA/ML
 description: Scopri come utilizzare Data Distiller per arricchire le pipeline di apprendimento automatico con funzioni derivate dai dati di Adobe Experience Platform. Trasforma i dati non elaborati in funzioni e fornisci i dati delle funzioni per addestrare o valutare un modello che supporta i casi d’uso di marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Data Distiller consente ai data scientist e ai tecnici di arricchire le pipeline
 
 >[!IMPORTANT]
 >
->Questo flusso di lavoro richiede Data Distiller e una licenza Adobe Experience Platform Intelligence. Se non disponi di uno di questi prodotti, contatta il rappresentante del servizio Adobe.
+>Questo flusso di lavoro richiede una licenza di Data Distiller. Se non disponi di questo prodotto, contatta il rappresentante del servizio Adobe.
 
 ![Un&#39;infografica che descrive la pipeline delle funzioni di IA-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
