@@ -2,38 +2,38 @@
 keywords: Experience Platform;home;argomenti popolari;acquisizione dati;dati acquisiti;streaming;panoramica;acquisizione streaming;latenza;latenza streaming;
 solution: Experience Platform
 title: Panoramica sull’acquisizione in streaming
-description: L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
+description: Scopri l’acquisizione in streaming in Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
+source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '431'
 ht-degree: 3%
 
 ---
 
 # Panoramica sull’acquisizione in streaming
 
-L&#39;acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server a [!DNL Experience Platform].
+L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
 
 ## Cosa puoi fare con l’acquisizione in streaming?
 
-Adobe Experience Platform ti consente di creare esperienze coordinate, coerenti e rilevanti generando un [!DNL Real-Time Customer Profile] per ogni singolo cliente. L&#39;acquisizione in streaming svolge un ruolo chiave nella creazione di questi profili consentendo di inviare dati [!DNL Profile] a [!DNL Data Lake] con la minor latenza possibile.
+Adobe Experience Platform ti consente di creare esperienze coordinate, coerenti e rilevanti generando un Profilo cliente in tempo reale per ciascuno dei tuoi clienti individuali. L’acquisizione in streaming svolge un ruolo chiave nella creazione di questi profili, consentendoti di fornire i dati del profilo nel data lake con la minore latenza possibile.
 
 Il video seguente è stato progettato per comprendere meglio l’acquisizione in streaming e illustra i concetti descritti in precedenza.
 
->[!VIDEO](https://video.tv.adobe.com/v/36263?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Trasmetti record profilo e [!DNL ExperienceEvents]
 
-Con l’acquisizione in streaming, gli utenti possono eseguire lo streaming dei record del profilo e da [!DNL ExperienceEvents] a [!DNL Experience Platform] in secondi per favorire la personalizzazione in tempo reale. Tutti i dati inviati alle API Streaming Ingestion vengono automaticamente memorizzati in [!DNL Data Lake].
+Con l&#39;acquisizione in streaming, gli utenti possono inviare in streaming i record del profilo e [!DNL ExperienceEvents] ad Experience Platform in pochi secondi per favorire la personalizzazione in tempo reale. Tutti i dati inviati alle API Streaming Ingestion vengono automaticamente memorizzati nel data lake.
 
 Per ulteriori informazioni, leggere la [guida alla creazione di una connessione in streaming](../tutorials/create-streaming-connection.md).
 
 ### Trasmetti a set di dati
 
-Dopo aver verificato che i dati sono puliti, puoi abilitare i set di dati per [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
+Dopo aver verificato che i dati siano puliti, puoi abilitare i set di dati per Real-Time Customer Profile e [!DNL Identity Service].
 
-Per ulteriori informazioni sull&#39;abilitazione di un set di dati per [!DNL Profile] e [!DNL Identity Service], leggere la [guida alla configurazione di un set di dati](/help/profile/tutorials/dataset-configuration.md).
+Per ulteriori informazioni sull&#39;abilitazione di un set di dati per il profilo e [!DNL Identity Service], leggere la [guida alla configurazione di un set di dati](/help/profile/tutorials/dataset-configuration.md).
 
 ## Qual è la latenza prevista per l’acquisizione in streaming su Experience Platform?
 

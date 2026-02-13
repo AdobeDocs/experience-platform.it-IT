@@ -3,7 +3,7 @@ keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Scopri i guardrail per l’acquisizione dei dati in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: b5b975308d28ae82ea4d811652681215bc2cfbdb
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 0%
@@ -49,7 +49,7 @@ La tabella seguente illustra i guardrail da considerare quando si utilizzano le 
 
 | Tipo di acquisizione | Linee guida | Note |
 | --- | --- | --- |
-| Origini di streaming | <ul><li>La dimensione massima del record è 1 MB, con la dimensione consigliata di 10 KB.</li><li>Le origini di streaming supportano tra 4000 e 5000 richieste al secondo durante l’acquisizione nel data lake. Questo vale per entrambe le connessioni di origine appena create, oltre alle connessioni di origine esistenti. **Nota**: l&#39;elaborazione completa dei dati di streaming nel data lake può richiedere fino a 30 minuti.</li><li>Le origini di streaming supportano un massimo di 1500 richieste al secondo durante l’acquisizione dei dati nel profilo o la segmentazione in streaming.</li></ul> | Le origini di streaming come [!DNL Kafka], [!DNL Azure Event Hubs] e [!DNL Amazon Kinesis] non utilizzano la route [!DNL Data Collection Core Service] (DCCS) e possono avere limiti di velocità effettiva diversi. Consulta la [panoramica delle origini](../sources/home.md) per un catalogo delle origini che puoi utilizzare per l&#39;acquisizione dei dati. |
+| Origini di streaming | <ul><li>La dimensione massima del record è 1 MB, con la dimensione consigliata di 10 KB.</li><li>Le origini di streaming supportano tra 4000 e 5000 richieste al secondo durante l’acquisizione nel data lake. Questo vale per entrambe le connessioni di origine appena create, oltre alle connessioni di origine esistenti. **Nota**: l&#39;elaborazione completa dei dati di streaming nel data lake può richiedere fino a 60 minuti.</li><li>Le origini di streaming supportano un massimo di 1500 richieste al secondo durante l’acquisizione dei dati nel profilo o la segmentazione in streaming.</li></ul> | Le origini di streaming come [!DNL Kafka], [!DNL Azure Event Hubs] e [!DNL Amazon Kinesis] non utilizzano la route [!DNL Data Collection Core Service] (DCCS) e possono avere limiti di velocità effettiva diversi. Consulta la [panoramica delle origini](../sources/home.md) per un catalogo delle origini che puoi utilizzare per l&#39;acquisizione dei dati. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ La tabella seguente illustra i guardrail da considerare quando si utilizzano le 
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (Edizione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
