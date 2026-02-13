@@ -2,14 +2,19 @@
 title: Impostazioni di configurazione dell’istanza di SDK
 description: Configurare le impostazioni generali per l'istanza di Web SDK.
 exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
-source-git-commit: 50881ef9498196f2de5519f050800334019a2586
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '278'
 ht-degree: 2%
 
 ---
 
-# Impostazioni di configurazione dell’istanza di SDK
+# Impostazioni di configurazione dell’istanza di SDK {#sdk-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_sdkinstance"
+>title="Istanze di SDK"
+>abstract="Imposta il nome dell’istanza SDK, l’organizzazione IMS a cui appartiene e il dominio edge."
 
 Questa sezione di configurazione definisce il nome dell’istanza di Web SDK, l’organizzazione IMS a cui si applica e la posizione a cui desideri inviare i dati. Per impostazione predefinita, un&#39;istanza è denominata `alloy`.
 

@@ -2,14 +2,19 @@
 title: Impostazioni di configurazione della raccolta dati
 description: Configurare le impostazioni di raccolta dati nell'estensione tag Web SDK.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 0%
+source-wordcount: '719'
+ht-degree: 1%
 
 ---
 
-# Impostazioni di configurazione della raccolta dati
+# Impostazioni di configurazione della raccolta dati {#data-collection}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datacollection"
+>title="Raccolta dati"
+>abstract="Determina quali dati raccogliere e come tali dati vengono raccolti nell’estensione tag."
 
 Questa sezione di configurazione consente di determinare come vengono raccolti i dati nell’estensione.
 

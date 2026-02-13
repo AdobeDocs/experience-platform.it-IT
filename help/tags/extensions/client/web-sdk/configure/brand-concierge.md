@@ -1,18 +1,24 @@
 ---
 title: Impostazioni di configurazione Brand Concierge
 description: Configura la persistenza della sessione e i timeout del flusso per la chat di Brand Concierge.
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 4%
+source-wordcount: '152'
+ht-degree: 5%
 
 ---
 
-# Impostazioni di configurazione Brand Concierge
+# Impostazioni di configurazione Brand Concierge {#brand-concierge}
 
 >[!AVAILABILITY]
 >
 >Brand Concierge per Web SDK è attualmente in **beta**. La funzionalità e la documentazione sono soggette a modifiche.
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_brandconcierge"
+>title="Brand Concierge"
+>abstract="Impostazioni di configurazione quando si utilizza Brand Concierge nella proprietà."
 
 La sezione **[!UICONTROL Brand Concierge]** consente di controllare il comportamento delle sessioni di chat di Brand Concierge nell&#39;estensione tag Web SDK.
 

@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: b1666521d135ac953dbde5b4ff64138a187e4b9e
+source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '826'
 ht-degree: 44%
 
 ---
@@ -108,7 +108,7 @@ ht-degree: 44%
          * [Introduzione](extensions/client/web-sdk/getting-started.md)
          * Configurare {#configure}
             * [Panoramica](extensions/client/web-sdk/configure/config-overview.md)
-            * [Componenti di build personalizzati](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [Opzioni di build](extensions/client/web-sdk/configure/custom-build-components.md)
             * [istanza SDK](extensions/client/web-sdk/configure/general.md)
             * [Stream di dati](extensions/client/web-sdk/configure/datastreams.md)
             * [Consenso](extensions/client/web-sdk/configure/consent.md)

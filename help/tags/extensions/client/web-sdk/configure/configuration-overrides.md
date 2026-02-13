@@ -1,14 +1,20 @@
 ---
 title: Impostazioni di sostituzione della configurazione dello stream di dati
 description: Modificare le impostazioni di configurazione quando vengono soddisfatte determinate condizioni.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '600'
 ht-degree: 3%
 
 ---
 
-# Impostazioni di sostituzione della configurazione dello stream di dati
+# Impostazioni di sostituzione della configurazione dello stream di dati {#config-overrides}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_overrides"
+>title="Override della configurazione dello stream di dati"
+>abstract="Attiva in modo condizionale diversi comportamenti dello stream di dati senza richiedere uno stream di dati separato. In questa sezione, l’impostazione delle sostituzioni di configurazione dello stream di dati lato client per un ambiente sovrascrive qualsiasi configurazione e regola dello stream di dati dinamico lato server per tale ambiente."
 
 Le sostituzioni dello stream di dati consentono di definire configurazioni aggiuntive per i flussi di dati, che vengono passate ad Edge Network tramite Web SDK. Questa funzione consente di attivare in modo condizionale diversi comportamenti dello stream di dati senza creare un nuovo stream di dati o modificare le impostazioni esistenti.
 

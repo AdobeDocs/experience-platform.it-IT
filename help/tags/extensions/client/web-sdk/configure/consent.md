@@ -1,14 +1,20 @@
 ---
 title: Impostazioni di configurazione del consenso
 description: Configura le impostazioni predefinite di consenso e privacy per l’estensione tag.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
-# Impostazioni di configurazione del consenso
+# Impostazioni di configurazione del consenso {#consent}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="Consenso"
+>abstract="Seleziona il livello predefinito di consenso che viene utilizzato se non viene fornita alcuna preferenza di consenso esplicito."
 
 La sezione **[!UICONTROL Consent]** ti consente di selezionare il livello predefinito di consenso che viene utilizzato se non viene fornita alcuna preferenza di consenso esplicito. Il livello di consenso predefinito non viene salvato nei profili utente.
 

@@ -1,14 +1,20 @@
 ---
 title: Impostazioni di configurazione di Streaming Media
 description: Personalizza il modo in cui l’estensione tag Web SDK raccoglie i dati multimediali in streaming.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 3%
 
 ---
 
-# Impostazioni di configurazione di Streaming Media
+# Impostazioni di configurazione di Streaming Media {#streaming-media}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_streamingmedia"
+>title="Streaming media"
+>abstract="Determina il modo in cui i dati multimediali in streaming vengono raccolti durante le sessioni di riproduzione dei contenuti multimediali."
 
 La funzione di raccolta multimediale consente di raccogliere i dati relativi alle sessioni multimediali, ad esempio riproduzioni, pause, completamenti e altri eventi correlati. Una volta raccolti, puoi inviare questi dati a Adobe Experience Platform o Adobe Analytics per generare rapporti. Questa funzione fornisce una soluzione completa per il tracciamento e la comprensione del comportamento di consumo dei contenuti multimediali sul sito web.
 

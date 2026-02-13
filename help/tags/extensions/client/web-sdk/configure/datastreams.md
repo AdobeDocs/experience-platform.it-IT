@@ -1,14 +1,20 @@
 ---
 title: Impostazioni di configurazione dello stream di dati
 description: Configura lo stream di dati a cui inviare i dati utilizzando l’estensione tag Web SDK.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 0%
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
-# Impostazioni di configurazione dello stream di dati
+# Impostazioni di configurazione dello stream di dati {#datastreams}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datastreams"
+>title="Stream di dati"
+>abstract="Obbligatorio. Imposta lo stream di dati all’interno dell’Edge Network a cui desideri inviare i dati."
 
 Questa sezione di configurazione consente di determinare a quale [flusso di dati](/help/datastreams/overview.md) si desidera inviare i dati. **È necessario un ID dello stream di dati per tutti i dati inviati ad Edge Network.**
 

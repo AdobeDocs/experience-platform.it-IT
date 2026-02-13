@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
 workflow-type: tm+mt
-source-wordcount: '3118'
-ht-degree: 25%
+source-wordcount: '3165'
+ht-degree: 24%
 
 ---
 
@@ -14,12 +14,18 @@ ht-degree: 25%
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/collection/js/release-notes.md).
 
+## Versione 2.34.1 - 11 febbraio 2026
+
+- Contiene [versione 2.31.1](/help/collection/js/release-notes.md) di Adobe Experience Platform Web SDK.
+- È stato risolto un problema che impediva la modifica di [impostazioni di configurazione di Adobe Advertising](configure/advertising.md) nelle azioni [Invia evento](actions/send-event.md).
+- È stato aggiunto un fallback a `edge.adobedc.net` per l&#39;impostazione di configurazione del [dominio Edge](configure/general.md) quando `tenant-id` non è disponibile.
+
 ## Versione 2.34.0 - 9 febbraio 2026
 
 **Nuove funzioni**
 
-- Contiene [versione 2.31.0](/help/collection/js/release-notes.md#2-31-0) di Adobe Experience Platform Web SDK.
-- Aggiunta del supporto per il codice di base [&#x200B; di &#x200B;](/help/collection/js/install/base-code.md)per l&#39;estensione tag.
+- Contiene [versione 2.31.0](/help/collection/js/release-notes.md) di Adobe Experience Platform Web SDK.
+- Aggiunta del supporto per il codice di base [ di ](/help/collection/js/install/base-code.md)per l&#39;estensione tag.
 - Aggiunta di **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contesto](configure/data-collection.md#context-settings) alle impostazioni dell&#39;estensione.
 - Aggiunto componente Brand Concierge.
 - È stata aggiunta un’opzione per consentire l’utilizzo di un’istanza della lega con hosting autonomo con Tag.
