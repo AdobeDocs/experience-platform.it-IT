@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2718'
 ht-degree: 5%
 
 ---
@@ -161,7 +161,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;inizializzazione dei dettagli del collegamento Activity Map quando veniva chiamato l&#39;hook di monitoraggio `onInstanceConfigured`.
 - È stato risolto un problema a causa del quale le destinazioni dei cookie non venivano impostate sul percorso corretto.
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
-- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[&#x200B; chiamate a causa di una codifica URL non valida nel parametro &#x200B;](commands/sendevent/overview.md).
+- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[ chiamate a causa di una codifica URL non valida nel parametro ](commands/sendevent/overview.md).
 
 ## Versione 2.21.1 - venerdì 18 luglio 2024
 
@@ -293,7 +293,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 **Nuove funzioni**
 
 - Ora puoi distribuire esperienze personalizzate in modo più accurato, condividendo gli ID visitatore tra le app mobili e i contenuti web per dispositivi mobili e tra più domini. Per ulteriori informazioni, consulta la [documentazione dedicata](../use-cases/identity/id-sharing.md).
-- È ora possibile eseguire il rendering o l&#39;esecuzione di un array di proposte da [!DNL Adobe Target] in applicazioni a pagina singola, senza incrementare le metriche di analisi. Questo riduce gli errori di reporting e aumenta l’accuratezza delle analisi. Per ulteriori informazioni, consulta la [documentazione dedicata](../use-cases/personalization/rendering-personalization-content.md).
+- È ora possibile eseguire il rendering o l&#39;esecuzione di un array di proposte da [!DNL Adobe Target] in applicazioni a pagina singola, senza incrementare le metriche di analisi. Questo riduce gli errori di reporting e aumenta l’accuratezza delle analisi.
 - Sono state aggiunte ulteriori informazioni al comando `getLibraryInfo`, inclusi i comandi disponibili e la configurazione finale per l&#39;istanza.
 
 **Correzioni e miglioramenti**

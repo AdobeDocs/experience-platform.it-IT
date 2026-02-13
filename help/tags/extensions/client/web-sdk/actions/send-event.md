@@ -1,9 +1,10 @@
 ---
 title: Invia evento
 description: Invia dati a Adobe Experience Platform Edge Network.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 4ac7750e-48ab-4eb6-873d-bb2556dbf788
+source-git-commit: caaf5cad7276d6429fbbf35585fd4845de6ff60c
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -48,8 +49,8 @@ L&#39;azione **[!UICONTROL Send event]** invia un payload a un flusso di dati su
 ![Immagine dell&#39;interfaccia utente Tag di Experience Platform con le impostazioni di Personalization per il tipo di azione Invia evento.](../assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**: Array di ambiti che si desidera richiedere esplicitamente alla personalizzazione. Puoi immettere gli ambiti manualmente o fornire un elemento dati. Quando si immettono manualmente gli ambiti, ogni campo rappresenta un ambito. Selezionare **[!UICONTROL Add scope]** per aggiungere altri ambiti all&#39;azione.
-* **[!UICONTROL Surfaces]**: Array di superfici da interrogare con l&#39;evento. Per ulteriori informazioni, consulta [Creare esperienze Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=it) nella documentazione di Adobe Journey Optimizer. Quando si immettono manualmente le superfici, ogni campo rappresenta una superficie. Selezionare **[!UICONTROL Add surface]** per aggiungere altre superfici all&#39;azione.
-* **Decisioni di personalizzazione visiva:** casella di controllo che, se abilitata, consente di eseguire il rendering del contenuto personalizzato nella pagina. Per ulteriori informazioni, consulta [Rendering del contenuto personalizzato](/help/collection/use-cases/personalization/rendering-personalization-content.md#automatically-rendering-content).
+* **[!UICONTROL Surfaces]**: Array di superfici da interrogare con l&#39;evento. Per ulteriori informazioni, consulta [Creare esperienze Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) nella documentazione di Adobe Journey Optimizer. Quando si immettono manualmente le superfici, ogni campo rappresenta una superficie. Selezionare **[!UICONTROL Add surface]** per aggiungere altre superfici all&#39;azione.
+* **Decisioni di personalizzazione visiva:** casella di controllo che, se abilitata, consente di eseguire il rendering del contenuto personalizzato nella pagina. Per ulteriori informazioni, vedere [Rendering automatico delle azioni DOM](/help/collection/use-cases/personalization/render-auto-pers-content.md).
 * **[!UICONTROL Request default personalization]**: controlla se sono richiesti l&#39;ambito a livello di pagina e la superficie predefinita. Per impostazione predefinita, viene richiesto automaticamente durante la prima chiamata `sendEvent` del caricamento della pagina. La libreria JavaScript equivalente a questi pulsanti di scelta è [`requestDefaultPersonalization`](/help/collection/js/commands/sendevent/personalization.md). Puoi scegliere tra le seguenti opzioni:
    * **[!UICONTROL Automatic]**: comportamento predefinito. Richiedi la personalizzazione predefinita solo se non è ancora stata richiesta.
    * **[!UICONTROL Enabled]**: richiede esplicitamente l&#39;ambito della pagina e la superficie predefinita. Questo aggiorna la cache della vista SPA.

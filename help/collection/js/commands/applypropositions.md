@@ -2,9 +2,9 @@
 title: applyPropositions
 description: Riesegui il rendering delle proposte di cui è già stato eseguito il rendering con sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Questo comando supporta i campi seguenti:
    * Portata
    * Selettore
    * Tipo di azione
+
+>[!NOTE]
+>
+>Il comando `applyPropositions` non invia automaticamente eventi di visualizzazione. Se si desidera eseguire la registrazione, utilizzare il comando `sendEvent` come descritto in [Gestione eventi di visualizzazione](/help/collection/use-cases/personalization/display-events.md).
 
 Eseguire il comando `applyPropositions` quando si chiama l&#39;istanza configurata del Web SDK. L’oggetto contenente le opzioni di configurazione supporta i campi seguenti:
 

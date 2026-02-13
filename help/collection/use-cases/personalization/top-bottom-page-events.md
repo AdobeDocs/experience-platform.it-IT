@@ -2,9 +2,9 @@
 title: Configurare gli eventi di inizio e fine pagina in Web SDK
 description: Questo articolo spiega come utilizzare la parte superiore e inferiore degli eventi di pagina in Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Parametro | Obbligatorio/facoltativo | Descrizione |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Obbligatorio | Questa sezione definisce le proposte sottoposte a rendering manuale. È necessario includere la proposta `ID`, `scope` e `scopeDetails`. Per ulteriori informazioni su come registrare eventi di visualizzazione per contenuti con rendering manuale, consulta la documentazione su come [eseguire manualmente il rendering della personalizzazione](../personalization/rendering-personalization-content.md#manually). Il contenuto di personalizzazione renderizzato manualmente deve essere incluso nella parte inferiore dell’hit pagina. |
+| `xdm._experience.decisioning.propositions` | Obbligatorio | Questa sezione definisce le proposte sottoposte a rendering manuale. È necessario includere la proposta `ID`, `scope` e `scopeDetails`. Per ulteriori informazioni, vedere [Gestione eventi di visualizzazione](display-events.md). Il contenuto di personalizzazione renderizzato manualmente deve essere incluso nella parte inferiore dell’hit pagina. |
 | `xdm._experience.decisioning.propositionEventType` | Obbligatorio | Imposta questo parametro su `display: 1`. |
 | `xdm` | Facoltativo | Utilizza questa sezione per includere tutti i dati necessari per l’evento nella parte inferiore della pagina. |
 
