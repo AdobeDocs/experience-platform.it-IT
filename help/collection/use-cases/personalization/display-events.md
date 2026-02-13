@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 ## Invia eventi di visualizzazione nelle chiamate `sendEvent` successive
 
-L&#39;inclusione di eventi di visualizzazione in una chiamata `sendEvent` successiva è utile quando si desidera allegare dati di caricamento pagina aggiuntivi che non sono disponibili quando si richiede la personalizzazione. Viene comunemente utilizzato quando si implementano [eventi di pagina superiore e inferiore](/help/collection/use-cases/personalization/top-bottom-page-events.md). Implementare correttamente gli eventi di visualizzazione in questo modo consente di evitare problemi con [Percentuale non recapitate](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics.
+L&#39;inclusione di eventi di visualizzazione in una chiamata `sendEvent` successiva è utile quando si desidera allegare dati di caricamento pagina aggiuntivi che non sono disponibili quando si richiede la personalizzazione. Viene comunemente utilizzato quando si implementano [eventi di pagina superiore e inferiore](/help/collection/use-cases/personalization/top-bottom-page-events.md). Implementare correttamente gli eventi di visualizzazione in questo modo consente di evitare problemi con [Percentuale non recapitate](https://experienceleague.adobe.com/it/docs/analytics/components/metrics/bounce-rate) in Adobe Analytics.
 
 1. Nella chiamata `sendEvent` iniziale (spesso nella parte superiore della pagina), richiedere ed eseguire il rendering del contenuto, ma eliminare gli eventi di visualizzazione automatica impostando `renderDecisions` su `true` e `personalization.sendDisplayEvent` su `false`:
 
