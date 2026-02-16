@@ -1,10 +1,10 @@
 ---
 title: Panoramica sull’esecuzione e l’utilizzo
-description: Ispeziona, risolvi i problemi e ottimizza le implementazioni Adobe Experience Platform con gli strumenti Esegui e opera. Ottieni visibilità sulle attivazioni batch pianificate, identifica i problemi di configurazione e migliora l’affidabilità del sistema.
+description: Ispeziona, risolvi i problemi e ottimizza le implementazioni di Experience Platform con gli strumenti Esegui e opera. Ottieni visibilità sulle attivazioni batch pianificate, identifica i problemi di configurazione e migliora l’affidabilità del sistema.
 hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
