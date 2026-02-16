@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Controlla gli Schedules per i Processi
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -45,7 +44,7 @@ Prima di utilizzare [!UICONTROL Job Schedules], è necessario avere familiarità
 
 Comprendere questi componenti consente di interpretare i modelli di esecuzione dei processi e diagnosticare i problemi quando si verificano.
 
-## Informazioni sull’interfaccia Schedules per i job {#understanding-interface}
+## Interfaccia per la pianificazione dei processi {#understanding-interface}
 
 Per accedere a [!UICONTROL Job Schedules]:
 

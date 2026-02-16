@@ -4,10 +4,9 @@ solution: Experience Platform
 title: Visualizza dettagli pianificazione processo
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 0%
 
 ---
@@ -38,7 +37,7 @@ Utilizzare questa vista dettagliata per:
 
 Prima di visualizzare i dettagli del processo, è necessario:
 
-* Avere accesso a [!UICONTROL Job Schedules] con le autorizzazioni di controllo di accesso **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [&#128279;](/help/access-control/home.md#permissions).
+* Avere accesso a [!UICONTROL Job Schedules] con le autorizzazioni di controllo di accesso **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [](/help/access-control/home.md#permissions).
 * Conoscere l&#39;interfaccia [Pianificazioni processi](job-schedules.md#understanding-interface) e la visualizzazione della timeline.
 * Comprendi i diversi [tipi di processo](job-schedules.md#job-schedules-details) (acquisizione del lago, acquisizione del profilo, segmentazione, attivazione).
 
@@ -67,6 +66,8 @@ La vista timeline utilizza un layout orizzontale e verticale per aiutarti a comp
 Questo layout consente di identificare rapidamente le relazioni temporali tra i processi della pipeline dei dati e l’elaborazione a valle. Idealmente, i processi a monte (come il data lake e l’acquisizione del profilo) dovrebbero essere completati a sinistra di questi marcatori verticali, garantendo che i dati siano pronti prima dell’inizio della segmentazione e dell’attivazione. I processi che si estendono oltre questi marcatori indicano potenziali problemi di tempistica in cui i processi a valle possono iniziare prima che i dati siano completamente preparati.
 
 ### Quale visualizzazione utilizzare? {#which-view}
+
+Utilizzare la tabella seguente per scegliere la visualizzazione corretta per l&#39;attività. Fai corrispondere le operazioni necessarie con la visualizzazione consigliata per navigare in modo efficiente.
 
 | Devo... | Usa questa visualizzazione |
 |--------------|---------------|
