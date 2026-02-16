@@ -38,7 +38,7 @@ Utilizzare questa vista dettagliata per:
 
 Prima di visualizzare i dettagli del processo, è necessario:
 
-* Avere accesso a [!UICONTROL Job Schedules] con le autorizzazioni di controllo di accesso **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [](/help/access-control/home.md#permissions).
+* Avere accesso a [!UICONTROL Job Schedules] con le autorizzazioni di controllo di accesso **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [&#128279;](/help/access-control/home.md#permissions).
 * Conoscere l&#39;interfaccia [Pianificazioni processi](job-schedules.md#understanding-interface) e la visualizzazione della timeline.
 * Comprendi i diversi [tipi di processo](job-schedules.md#job-schedules-details) (acquisizione del lago, acquisizione del profilo, segmentazione, attivazione).
 
