@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Note sulla versione di Adobe Experience Platform
 breadcrumb-title: Note sulla versione di Experience Platform
 user-guide-description: Trova le note sulla versione mensili di Adobe Experience Platform.
-source-git-commit: a32410dbdfcd2b6da19377648a62b4c7a16734ae
+source-git-commit: fda9bb00dd77115c8085492cbf5883c0533588d8
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '183'
 ht-degree: 95%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 95%
 * [Note sulla versione corrente di Experience Platform](latest/latest.md)
 * [Note pre-release di Experience Platform](./pre-release-notes.md)
 * 2026 {#2026}
+   * [Febbraio 20206](2026/february-2026.md)
    * [Gennaio 2026](2026/january-2026.md)
 * 2025 {#2025}
    * [Ottobre 2025](2025/october-2025.md)
@@ -55,7 +56,7 @@ ht-degree: 95%
    * [Ottobre 2022](2022/october-2022.md)
    * [Settembre 2022](2022/september-2022.md)
    * [Agosto 2022](2022/august-2022.md)
-   * [Luglio 2022](2022/july-2022.md)
+   * [luglio 2022](2022/july-2022.md)
    * [Giugno 2022](2022/june-2022.md)
    * [Maggio 2022](2022/may-2022.md)
    * [Aprile 2022](2022/april-2022.md)
@@ -67,7 +68,7 @@ ht-degree: 95%
    * [Ottobre 2021](2021/october-2021.md)
    * [Settembre 2021](2021/september-2021.md)
    * [Agosto 2021](2021/august-2021.md)
-   * [Luglio 2021](2021/july-2021.md)
+   * [luglio 2021](2021/july-2021.md)
    * [Giugno 2021](2021/june-2021.md)
    * [Maggio 2021](2021/may-2021.md)
    * [Aprile 2021](2021/april-2021.md)
@@ -80,7 +81,7 @@ ht-degree: 95%
    * [Ottobre 2020](2020/october-2020.md)
    * [Settembre 2020](2020/september-2020.md)
    * [Agosto 2020](2020/august-2020.md)
-   * [Luglio 2020](2020/july-2020.md)
+   * [luglio 2020](2020/july-2020.md)
    * [Giugno 2020](2020/june-2020.md)
    * [Maggio 2020](2020/may-2020.md)
    * [Aprile 2020](2020/april-2020.md)
@@ -91,6 +92,6 @@ ht-degree: 95%
    * [Dicembre 2019](2019/december-2019.md)
    * [Novembre 2019](2019/november-2019.md)
    * [Settembre 2019](2019/september-2019.md)
-   * [Luglio 2019](2019/july-2019.md)
+   * [luglio 2019](2019/july-2019.md)
    * [Giugno 2019](2019/june-2019.md)
    * [Maggio 2019](2019/may-2019.md)
