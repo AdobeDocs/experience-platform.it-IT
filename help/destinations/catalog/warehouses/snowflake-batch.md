@@ -4,9 +4,9 @@ description: Crea una condivisione dati live di Snowflake per ricevere aggiornam
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
+source-git-commit: 2ad61b1b7e728429e047c4801b9a79e479a3aa18
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1735'
 ht-degree: 3%
 
 ---
@@ -152,6 +152,10 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
    * Se l&#39;account non è collegato a un&#39;organizzazione: `AccountName`.
 * **[!UICONTROL Snowflake Region]**: selezionare l&#39;area in cui è stato eseguito il provisioning dell&#39;istanza di Snowflake. Per informazioni dettagliate sulle aree cloud supportate, consulta la [documentazione](https://docs.snowflake.com/en/user-guide/intro-regions) di Snowflake.
 * **[!UICONTROL Account acknowledgment]**: dopo aver immesso **[!UICONTROL Snowflake Account ID]**, seleziona **[!UICONTROL Yes]** in questo menu a discesa per confermare che **[!UICONTROL Snowflake Account ID]** è corretto e appartiene a te.
+
+>[!NOTE]
+>
+> Impossibile modificare **[!UICONTROL Snowflake Account ID]** e **[!UICONTROL Snowflake Region]** tramite il flusso di lavoro [modifica destinazione](../../ui/edit-destination.md) dopo aver creato la destinazione. Per utilizzare valori account o area geografica diversi, [crea una nuova connessione di destinazione](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >
