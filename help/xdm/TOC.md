@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 20%
+source-wordcount: '711'
+ht-degree: 21%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 20%
 * Schemi {#schema}
    * [Nozioni di base sulla composizione dello schema](schema/composition.md)
    * [Best practice per la modellazione dei dati](schema/best-practices.md)
+   * [Pianificazione per abilitazione profilo](./schema/profile-enablement-planning.md)
    * [Dati sensibili e personali](./schema/sensitive-and-personal-data.md)
    * [Vincoli del tipo di campo XDM](schema/field-constraints.md)
    * [Schema relazionale](./schema/relational.md)
@@ -81,7 +82,7 @@ ht-degree: 20%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Medicinale](./classes/medication.md)
    * [Pagatore](./classes/payer.md)
-   * [Piano](./classes/plan.md)
+   * [Pianificare](./classes/plan.md)
    * [Policy](./classes/policy.md)
    * [Prodotto](./classes/product.md)
    * [Potenziale cliente](./classes/prospect.md)
@@ -146,7 +147,7 @@ ht-degree: 20%
       * [Dettagli sui membri della campagna aziendale XDM](./field-groups/b2b-campaign-members/details.md)
    * Medicinale {#medication}
       * [Medicinale sanitario](./field-groups/medication/healthcare-medication.md)
-   * Piano {#plan}
+   * Pianificare {#plan}
       * [Dettagli piano sanitario](./field-groups/plan/healthcare-plan-details.md)
    * Prodotto {#product}
       * [Catalogo prodotti](./field-groups/product/product-catalog.md)
@@ -228,13 +229,13 @@ ht-degree: 20%
    * [Raccolta dettagli sessione](./data-types/session-details-collection.md)
    * [Reporting sui dettagli della sessione](./data-types/session-details-reporting.md)
    * [Spedizione](./data-types/shipping.md)
-   * [Abbonamento](./data-types/subscription.md)
+   * [Iscrizione](./data-types/subscription.md)
    * [Abbonamento Telecom](./data-types/telecom-subscription.md)
    * [Transazione](./data-types/transaction.md)
    * [Informazioni Web](./data-types/web-information.md)
    * [Interazione web](./data-types/web-interaction.md)
    * [Dettagli pagina web](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] UI {#ui}
+* Interfaccia utente [!UICONTROL Schemas] {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplora risorse XDM](./ui/explore.md)
    * Creare e modificare le risorse {#resources}
