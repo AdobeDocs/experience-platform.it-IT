@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2026
 description: Note sulla versione di Adobe Experience Platform di febbraio 2026.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cb35f5b35878b655dc668c0b26e22a41d675161
+source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 46%
+source-wordcount: '606'
+ht-degree: 49%
 
 ---
 
@@ -28,6 +28,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 - [Avvisi](#alerts)
 - [Destinazioni](#destinations)
 - [Origini](#sources)
+- [Experience Data Model (XDM)](#xdm)
 
 ## Avvisi {#alerts}
 
@@ -79,3 +80,14 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../../sources/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
+
+| Funzione | Descrizione |
+| --- | --- |
+| Modifica limitata per schemi con set di dati | Le operazioni di modifica che causano l’interruzione delle modifiche ora sono limitate una volta che esiste un set di dati per uno schema. Quando è associato un set di dati, non è più possibile rinominare o eliminare campi, modificare i tipi di dati o i formati dei campi, modificare i descrittori di identità, gestire i campi correlati per rimuovere campi esistenti o modificare la classe assegnata; sono ancora supportate modifiche aggiuntive e la deprecazione dei campi. |
+
+Per ulteriori informazioni, consulta la [panoramica su XDM](../../xdm/home.md).
+
