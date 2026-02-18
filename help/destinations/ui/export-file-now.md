@@ -3,10 +3,10 @@ title: Esportare file on-demand in destinazioni batch utilizzando l’interfacci
 type: Tutorial
 description: Scopri come esportare i file on-demand nelle destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 111f6d5093a0b66a683745b1da8d8909eb17f7eb
+source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 8%
+source-wordcount: '805'
+ht-degree: 5%
 
 ---
 
@@ -26,9 +26,26 @@ ht-degree: 8%
 
 Questo articolo spiega come utilizzare l&#39;interfaccia utente di Experience Platform per esportare i file on-demand in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [destinazioni e-mail marketing](/help/destinations/catalog/email-marketing/overview.md).
 
-Il controllo **[!UICONTROL Export file now]** consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un pubblico pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del pubblico. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform.
+Il controllo **[!UICONTROL Export file now]** consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un pubblico pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del pubblico.
+
+L’esportazione del file viene attivata immediatamente e utilizza solo i dati dell’istantanea di valutazione del pubblico più recente. Non include le modifiche al profilo o all’identità che si verificano dopo la creazione dello snapshot. Al contrario, le esportazioni pianificate includono sia i dati delle istantanee che le modifiche incrementali che si verificano tra il momento della creazione delle istantanee e quello dell’esportazione.
 
 A questo scopo puoi anche utilizzare le API di Experience Platform. Scopri come [attivare i tipi di pubblico su richiesta nelle destinazioni batch tramite l&#39;API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
+
+## Esportazioni programmate rispetto alle esportazioni su richiesta {#scheduled-vs-ondemand}
+
+Le esportazioni su richiesta e le esportazioni pianificate utilizzano origini dati diverse, il che può comportare differenze nei dati esportati. Consulta la tabella seguente per capire cosa viene esportato in ogni caso.
+
+|  | Esporta subito i file | Esportazioni pianificate |
+|--------|-----------------|-------------------|
+| **Origine dati** | Solo snapshot | Snapshot + modifiche incrementali |
+| **Attributi del profilo** | Valori al momento della copia istantanea | Valori correnti al momento dell’esportazione |
+
+>[!NOTE]
+>
+>Le esportazioni programmate possono mostrare conteggi di profili o valori di attributi diversi rispetto alle esportazioni su richiesta, perché includono aggiornamenti di profilo che si verificano dopo la valutazione del pubblico.
+
+Per ulteriori informazioni, vedere [Informazioni sul comportamento di esportazione pianificato](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Prerequisiti {#prerequisites}
 
