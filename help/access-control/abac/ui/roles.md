@@ -61,7 +61,7 @@ Il nuovo ruolo è stato creato e si è reindirizzati alla pagina **[!UICONTROL R
 
 <!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3475981/?captions=ita&learn=on) -->
 
 ## Duplicare un ruolo
 
