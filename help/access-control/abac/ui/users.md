@@ -170,5 +170,5 @@ Ora sai come visualizzare i dettagli e i ruoli di un utente, un gruppo di utenti
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446406/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->
