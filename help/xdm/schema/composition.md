@@ -163,7 +163,7 @@ Gli schemi vengono composti utilizzando la seguente formula:
 
 **Gruppo campi classe + schema;ast; = Schema XDM**
 
-&amp;ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
+&ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
 
 ### Classe {#class}
 
