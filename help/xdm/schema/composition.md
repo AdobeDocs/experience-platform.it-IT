@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Scopri gli schemi Experience Data Model (XDM) e gli elementi di base, i principi e le best practice per la composizione di schemi in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 5b59d491834854829a89a240ccd612367cf558d4
+source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4331'
 ht-degree: 8%
 
 ---
@@ -123,7 +123,7 @@ Poiché mantenere la compatibilità con le versioni precedenti è fondamentale p
 
 >[!NOTE]
 >
->Puoi introdurre una modifica che interrompe il funzionamento di uno schema solo se non è ancora stato utilizzato per acquisire i dati in Experience Platform e non è stato abilitato per l’utilizzo in Real-Time Customer Profile. Tuttavia, una volta utilizzato in Experience Platform, lo schema deve rispettare i criteri di controllo delle versioni aggiuntivi.
+>Puoi introdurre una modifica che interrompe il funzionamento di uno schema solo se non è ancora stato utilizzato per acquisire i dati in Experience Platform e non è stato abilitato per l’utilizzo in Real-Time Customer Profile. Tuttavia, una volta utilizzato in Experience Platform, lo schema deve rispettare i criteri di controllo delle versioni aggiuntivi. Una volta creato un set di dati per lo schema, le regole di Schema Evolution vengono rigorosamente applicate dal sistema per tutti i campi dello schema. I campi diventeranno non modificabili in tutti gli schemi XDM in cui fanno riferimento.
 
 La tabella seguente suddivide le modifiche supportate durante la modifica di schemi, gruppi di campi e tipi di dati:
 
@@ -163,7 +163,7 @@ Gli schemi vengono composti utilizzando la seguente formula:
 
 **Gruppo campi classe + schema;ast; = Schema XDM**
 
-&ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
+&amp;ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
 
 ### Classe {#class}
 
