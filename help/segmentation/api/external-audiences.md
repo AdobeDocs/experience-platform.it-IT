@@ -2,10 +2,10 @@
 title: Endpoint API per tipi di pubblico esterni
 description: Scopri come utilizzare l’API per tipi di pubblico esterni per creare, aggiornare, attivare ed eliminare i tipi di pubblico esterni da Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: ff58324446f28cbdca369ecbb58d8261614ae684
+source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
 workflow-type: tm+mt
-source-wordcount: '2340'
-ht-degree: 5%
+source-wordcount: '2528'
+ht-degree: 4%
 
 ---
 
@@ -107,14 +107,14 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | Stringa | Il nome del pubblico esterno. |
 | `description` | Stringa | Una descrizione facoltativa per il pubblico esterno. |
 | `customAudienceId` | Stringa | Un identificatore opzionale per il pubblico esterno. |
-| `fields` | Array di oggetti | L’elenco dei campi e i relativi tipi di dati. Durante la creazione dell’elenco di campi, puoi aggiungere i seguenti elementi: <ul><li>`name`: **Obbligatorio** Il nome del campo che fa parte della specifica del pubblico esterno.</li><li>`type`: **Obbligatorio** tipo di dati da inserire nel campo. I valori supportati sono `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obbligatorio per il campo di identità** Spazio dei nomi utilizzato dal campo di identità. I valori supportati includono tutti gli spazi dei nomi validi, ad esempio `ECID` o `email`.</li><li>`labels`: *Facoltativo* Matrice di etichette di controllo di accesso per il campo. Ulteriori informazioni sulle etichette di controllo di accesso disponibili sono disponibili nel glossario [etichette di utilizzo dati](/help/data-governance/labels/reference.md). </li></ul> |
+| `fields` | Array di oggetti | L’elenco dei campi e i relativi tipi di dati. Nell’array devono essere presenti un minimo di 1 campo e un massimo di 41 campi. Uno dei campi **deve** essere un campo di identità e include `identityNs`. Durante la creazione dell’elenco di campi, puoi aggiungere i seguenti elementi: <ul><li>`name`: **Obbligatorio** Il nome del campo che fa parte della specifica del pubblico esterno.</li><li>`type`: **Obbligatorio** tipo di dati da inserire nel campo. I valori supportati sono `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obbligatorio per il campo di identità** Spazio dei nomi utilizzato dal campo di identità. I valori supportati includono tutti gli spazi dei nomi validi, ad esempio `ECID` o `email`.</li><li>`labels`: *Facoltativo* Matrice di etichette di controllo di accesso per il campo. Ulteriori informazioni sulle etichette di controllo di accesso disponibili sono disponibili nel glossario [etichette di utilizzo dati](/help/data-governance/labels/reference.md). </li></ul> |
 | `sourceSpec` | Oggetto | Oggetto contenente le informazioni in cui si trova il pubblico esterno. Quando utilizzi questo oggetto, **devi** includere le seguenti informazioni: <ul><li>`path`: **Obbligatorio**: posizione del pubblico esterno o cartella che contiene il pubblico esterno all&#39;interno dell&#39;origine. Il percorso del file **non può** contenere spazi. Ad esempio, se il percorso è `activation/sample-source/Example CSV File.csv`, impostare il percorso su `activation/sample-source/ExampleCSVFile.csv`. Puoi trovare il percorso dell&#39;origine nella colonna **Dati Source** della sezione dei flussi di dati.</li><li>`type`: **Obbligatorio** Il tipo dell&#39;oggetto che si sta recuperando dall&#39;origine. Questo valore può essere `file` o `folder`.</li><li>`sourceType`: *Facoltativo* Il tipo di origine da cui si sta recuperando. Attualmente, l&#39;unico valore supportato è `Cloud Storage`.</li><li>`cloudType`: **Obbligatorio** Il tipo di archiviazione cloud, basato sul tipo di origine. I valori supportati sono `S3`, `DLZ`, `GCS`, `Azure` e `SFTP`.</li><li>`baseConnectionId`: ID della connessione di base e fornito dal provider di origine. Questo valore è **obbligatorio** se si utilizza un valore `cloudType` di `S3`, `GCS` o `SFTP`. In caso contrario, **non** deve includere questo parametro. Per ulteriori informazioni, leggere la [panoramica dei connettori di origine](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Intero | La scadenza dei dati per il pubblico esterno, in giorni. Questo valore può essere impostato da 1 a 90. Per impostazione predefinita, la scadenza dei dati è impostata su 30 giorni. |
 | `audienceType` | Stringa | Il tipo di pubblico per il pubblico esterno. Attualmente, è supportato solo `people`. |
 | `originName` | Stringa | **Obbligatorio** L&#39;origine del pubblico. Indica da dove proviene il pubblico. Per i tipi di pubblico esterni, utilizzare `CUSTOM_UPLOAD`. |
 | `namespace` | Stringa | Lo spazio dei nomi per il pubblico. Per impostazione predefinita, questo valore è impostato su `CustomerAudienceUpload`. |
 | `labels` | Array di stringhe | Etichette di controllo di accesso applicabili al pubblico esterno. Ulteriori informazioni sulle etichette di controllo di accesso disponibili sono disponibili nel glossario [etichette di utilizzo dati](/help/data-governance/labels/reference.md). |
-| `tags` | Array di stringhe | I tag che desideri applicare al pubblico esterno. Ulteriori informazioni sui tag sono disponibili nella [guida gestione tag](/help/administrative-tags/ui/managing-tags.md). |
+| `tags` | Array di stringhe | I tag che desideri applicare al pubblico esterno. Quando aggiungi l&#39;array di tag, **devi** utilizzare `tagId`. Ulteriori informazioni sui tag sono disponibili nella [guida gestione tag](/help/administrative-tags/ui/managing-tags.md). |
 
 +++
 
@@ -624,6 +624,53 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | Proprietà | Tipo | Descrizione |
 | -------- | ---- | ----------- |
 | `runs` | Oggetto | Oggetto contenente l’elenco delle esecuzioni di acquisizione che appartiene al pubblico. Ulteriori informazioni su questo oggetto sono disponibili nella sezione [recupero stato acquisizione](#retrieve-ingestion-status). |
+
++++
+
+## Estendere la scadenza dei dati per un pubblico esterno {#extend-data-expiration}
+
+>[!NOTE]
+>
+>Per utilizzare il seguente endpoint, è necessario disporre di `audienceId` del pubblico esterno. Puoi ottenere `audienceId` da una chiamata all&#39;endpoint `GET /external-audiences/operations/{OPERATION_ID}` riuscita.
+
+Puoi estendere la scadenza dei dati di un pubblico esterno effettuando una richiesta POST al seguente endpoint e fornendo al contempo l’ID del pubblico.
+
+La scadenza dei dati viene estesa in base alla durata originale impostata durante l’acquisizione. Se non è stata specificata alcuna durata, viene applicata un&#39;estensione predefinita di 30 giorni. Quando estendi la scadenza dei dati, il pubblico verrà riacquisito con i dati dell’ultima acquisizione riuscita.
+
+**Formato API**
+
+```http
+/ais/external-audience/extend-ttl/{AUDIENCE_ID}
+```
+
+**Richiesta**
+
+La richiesta seguente estende la scadenza dei dati del pubblico esterno specificato.
+
++++ Una richiesta di esempio per estendere la scadenza dati di un pubblico esterno.
+
+```shell
+curl -x POST https://platform.adobe.io/data/core/ais/external-audience/extend-ttl/60ccea95-1435-4180-97a5-58af4aa285ab \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del pubblico.
+
++++ Una risposta di esempio quando si estende la scadenza dei dati.
+
+```json
+{
+    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "name": "Sample external audience"
+}
+```
 
 +++
 

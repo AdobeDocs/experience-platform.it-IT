@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2026
 description: Note sulla versione di Adobe Experience Platform di febbraio 2026.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
+source-git-commit: 05c9a99132d1385f9ec043bb667a72304b17a9b5
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 49%
+source-wordcount: '731'
+ht-degree: 48%
 
 ---
 
@@ -27,6 +27,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 
 - [Avvisi](#alerts)
 - [Destinazioni](#destinations)
+- [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
 - [Experience Data Model (XDM)](#xdm)
 
@@ -66,6 +67,19 @@ Per ulteriori informazioni, consulta la [[!DNL Observability Insights] panoramic
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
+
+## Servizio di segmentazione {#segmentation-service}
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I tipi di pubblico possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo brand.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Pubblico API modificabile | Ora puoi modificare i tipi di pubblico creati utilizzando l’API del servizio di segmentazione o Audience Agent nel Generatore di segmenti. **Nota:** i tipi di pubblico che contengono dati della serie temporale **non possono** essere modificati in questo momento con Segment Builder. |
+| Aggiornamento della scadenza dei dati del pubblico esterno | Puoi utilizzare l’API del servizio di segmentazione per estendere la scadenza dei dati dei tipi di pubblico esterni. Per ulteriori informazioni, consulta la [guida dell&#39;API per tipi di pubblico esterni](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
+
+Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
 ## Origini {#sources}
 
