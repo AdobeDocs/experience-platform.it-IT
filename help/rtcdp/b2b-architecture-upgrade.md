@@ -1,11 +1,11 @@
 ---
 title: Aggiornamenti dell'architettura a Real-Time CDP B2B edition
 description: Leggi questo documento per scoprire gli aggiornamenti completi dell’architettura a Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: a48196d369cec9e9927d9320475e06457e575691
+source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1155'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,13 @@ Utilizza l’architettura avanzata per i seguenti vantaggi:
 
 * **Scalabilità dell&#39;acquisizione dei dati**: è stato migliorato il supporto per le relazioni B2B ad alta cardinalità, ad esempio gli account connessi a migliaia di persone.
 * **Valutazione del pubblico efficiente e affidabile**: segmentazione più rapida e resiliente per tipi di pubblico B2B complessi.
-* **risoluzione entità**: risoluzione identità migliorata per le entità B2B, migliore qualità dei dati e riduzione della duplicazione per consentire segmentazione e aggregazione più accurate.
+* **Risoluzione entità**: risoluzione identità migliorata per le entità B2B, migliore qualità dei dati e riduzione della duplicazione per consentire segmentazione e aggregazione più accurate.
+
+>[!TIP]
+>
+>A seconda delle dimensioni e della complessità del pubblico, è possibile che si verifichino modifiche minori nel tempo necessario per la valutazione del pubblico e l’attivazione del pubblico.
+>
+>Ti invitiamo a monitorare i tempi di esecuzione della segmentazione, in particolare se i processi aziendali si basano sul completamento tempestivo della segmentazione e dell’attivazione. In questo modo i flussi di lavoro continueranno a funzionare senza problemi e potrai affrontare proattivamente eventuali modifiche impreviste.
 
 ## Nuove funzioni
 
