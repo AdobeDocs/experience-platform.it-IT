@@ -33,7 +33,7 @@ Adobe Target è una connessione di personalizzazione nel catalogo delle destinaz
 
 Per una breve panoramica su come configurare la connessione Adobe Target in Experience Platform, guarda il video seguente.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449801/?captions=ita&quality=12&learn=on)
 
 ## Casi d’uso supportati in base al tipo di implementazione {#supported-use-cases}
 
