@@ -147,7 +147,7 @@ Per [!DNL Pega Profile Connector] destinazioni, [!DNL Experience Platform] crea 
 Importazione dei dati di profilo da S3 completata. I dati vengono inseriti nell&#39;archivio dati di profilo [!DNL Pega Customer]. I dati importati del profilo cliente possono essere convalidati in [!DNL Pega Customer Profile Designer], come illustrato nella figura seguente.
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile convalidare i dati del profilo di Adobe nel profilo cliente Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In [!DNL Pega Customer Decision Hub], gli amministratori di dati possono configurare processi di dati in [!DNL Customer Profile Designer] per importare periodicamente i dati del profilo da S3, come illustrato nella figura seguente. Per ulteriori informazioni su come configurare i processi di dati per importare i dati del profilo da [, vedere ](#additional-resources)risorse aggiuntive[!DNL Amazon S3].
+In [!DNL Pega Customer Decision Hub], gli amministratori di dati possono configurare processi di dati in [!DNL Customer Profile Designer] per importare periodicamente i dati del profilo da S3, come illustrato nella figura seguente. Per ulteriori informazioni su come configurare i processi di dati per importare i dati del profilo da [, vedere &#x200B;](#additional-resources)risorse aggiuntive[!DNL Amazon S3].
 ![Immagine della schermata dell&#39;interfaccia utente per configurare i processi di dati nel profilo cliente Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Risorse aggiuntive {#additional-resources}
