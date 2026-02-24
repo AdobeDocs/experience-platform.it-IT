@@ -3,9 +3,9 @@ title: Acxiom Audience Connection
 description: Utilizza la destinazione  [!DNL Acxiom Audience Connection]  per migliorare i tipi di pubblico con la tecnologia  [!DNL Acxiom's Real ID] e attivare i tipi di pubblico su più piattaforme, ad esempio  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 582b8b681163a0e40908cf36ba317954a32f73d0
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '1043'
 ht-degree: 7%
 
 ---
@@ -33,7 +33,7 @@ Ad esempio, il reparto Marketing Operations di un brand di servizi finanziari gl
 ## Prerequisiti {#prerequisites}
 
 * **Conferma le condizioni per l&#39;utilizzo:** Prima di poter configurare una nuova destinazione [!DNL Acxiom Audience Connection], è necessario leggere e firmare il Contratto sulle condizioni per l&#39;utilizzo di [!DNL Acxiom's]. Riceverai il collegamento al contratto una volta completato l&#39;ordine cliente eseguito.
-* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/it/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Destinazioni supportate {#supported-destinations}
 
@@ -46,6 +46,31 @@ La destinazione [!DNL Acxiom Audience Connection] attualmente supporta l&#39;att
 * [[!DNL LG Ads]](#lg-ads)
 * [!DNL Spectrum]
 * [!DNL Viant]
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Connettersi alla destinazione {#connect}
 
@@ -96,7 +121,7 @@ Affinché la destinazione [!DNL Acxiom Audience Connection] riceva correttamente
 | E-mail | E-mail principale Per impostazione predefinita, questo campo viene utilizzato come chiave di deduplicazione per rendere univoci i record | No | 10 | 255 |
 | Telefono | Numero di telefono del singolo utente (prefisso + numero)<br> Per impostazione predefinita, questo campo viene utilizzato come chiave di deduplicazione per rendere univoci i record. | No | 11 | 10 |
 
-Nella colonna **[!UICONTROL Source Field]** immettere il nome di ogni attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL &#x200B; Select source field]**.<br>
+Nella colonna **[!UICONTROL Source Field]** immettere il nome di ogni attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL  Select source field]**.<br>
 ![Schermata di mappatura](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 Dopo aver mappato tutti i campi, selezionare **[!UICONTROL Next]**.
@@ -128,4 +153,4 @@ Seguendo questa esercitazione, hai attivato correttamente un pubblico sulla piat
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-governance/home).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).

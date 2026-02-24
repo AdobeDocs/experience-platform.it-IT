@@ -2,10 +2,10 @@
 title: LiveRamp - Connessione di distribuzione
 description: Scopri come utilizzare il connettore LiveRamp - Distribuzione per orchestrare e attivare i tipi di pubblico precedentemente integrati in LiveRamp, per le destinazioni pubblicitarie a valle.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 39%
+source-wordcount: '2816'
+ht-degree: 37%
 
 ---
 
@@ -55,6 +55,31 @@ Tramite la connessione [!DNL LiveRamp - Distribution] possono ora attivare i tip
 Prima di attivare i tipi di pubblico tramite la connessione [!DNL LiveRamp - Distribution], utilizza la connessione [LiveRamp - Onboarding](liveramp-onboarding.md) per esportare i tipi di pubblico di Experience Platform in LiveRamp.
 
 Dopo aver effettuato l&#39;onboarding dei tipi di pubblico in LiveRamp, continua il flusso di lavoro di attivazione dal passaggio [connettiti alla destinazione](#connect) per selezionare e configurare le piattaforme di destinazione di destinazione per l&#39;attivazione dei dati.
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Connettersi alla destinazione {#connect}
 

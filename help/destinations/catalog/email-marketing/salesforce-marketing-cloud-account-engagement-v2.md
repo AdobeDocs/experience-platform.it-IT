@@ -5,9 +5,9 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1913'
 ht-degree: 3%
 
 ---
@@ -24,8 +24,8 @@ Questa destinazione utilizza [[!DNL Salesforce Import API v5]](https://developer
 >[!IMPORTANT]
 > 
 > Versione V2 della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Questa versione sostituisce la destinazione precedente ed è attualmente in versione Alpha.
-> &#x200B;> <br>
-> &#x200B;> Se utilizzi la versione precedente della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), devi eseguire la migrazione a questa versione V2 prima del **gennaio 2026**. Dopo gennaio 2026, Adobe disattiverà la versione precedente e non sarà più disponibile.
+> <br>
+> Se utilizzi la versione precedente della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), devi eseguire la migrazione a questa versione V2 prima del **gennaio 2026**. Dopo gennaio 2026, Adobe disattiverà la versione precedente e non sarà più disponibile.
 
 
 ## Casi d’uso {#use-cases}
@@ -83,6 +83,31 @@ Se viene trovata una corrispondenza utilizzando uno di questi identificatori, il
 | `matchEmail` | Indirizzo e-mail del potenziale cliente | È necessaria almeno una di queste tre identità |
 
 {style="table-layout:auto"}
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 

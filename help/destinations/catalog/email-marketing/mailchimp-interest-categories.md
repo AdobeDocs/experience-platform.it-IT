@@ -3,9 +3,9 @@ title: Categorie di interesse Mailchimp
 description: Mailchimp (noto anche come Intuit Mailchimp) è un popolare piattaforma di automazione del marketing e servizio di e-mail marketing utilizzato dalle aziende per gestire e parlare con i contatti (clienti, clienti o altre parti interessate) utilizzando mailing list e campagne di e-mail marketing. Utilizza questo connettore per ordinare i contatti in base ai loro interessi e preferenze.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2409'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experi
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Mailchimp Interest Categories], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Mailchimp Interest Categories], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti per la destinazione [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -74,7 +74,7 @@ Per ulteriori informazioni, consulta la [[!DNL Mailchimp] documentazione di base
 
 Ciascuno dei tipi di pubblico di [!DNL Mailchimp] può contenere fino a 60 nomi di gruppo (o categorie di interesse) in un singolo gruppo o in più gruppi all&#39;interno dello stesso pubblico. Per eventuali chiarimenti richiesti, consulta [!DNL Mailchimp] [gruppi](https://mailchimp.com/help/getting-started-with-groups/). Quando si raggiunge questo limite, viene visualizzato un messaggio di errore `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` dall&#39;API [!DNL Mailchimp].
 
-Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], consultare inoltre [&#x200B; &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
+Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], consultare inoltre [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
 
 ## Identità supportate {#supported-identities}
 
@@ -83,6 +83,28 @@ Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], c
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
 | E-mail | Indirizzo e-mail di contatto | Obbligatorio |
+
+{style="table-layout:auto"}
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione. Le due tabelle seguenti indicano i tipi di pubblico supportati dal connettore, per _origine pubblico_ e _tipi di profilo inclusi nel pubblico_:
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -240,7 +262,7 @@ Di seguito sono riportate ulteriori informazioni utili dalla documentazione di [
 
 * [Guida introduttiva a [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Guida introduttiva ai tipi di pubblico](https://mailchimp.com/help/getting-started-audience/)
-* [Crea un pubblico](https://mailchimp.com/help/create-audience/)
+* [Creare un pubblico](https://mailchimp.com/help/create-audience/)
 * [Guida introduttiva ai gruppi](https://mailchimp.com/help/getting-started-with-groups/)
 * [Crea un nuovo gruppo di pubblico](https://mailchimp.com/help/create-new-audience-group/)
 * [Categorie di interessi](https://mailchimp.com/developer/marketing/api/interest-categories/)

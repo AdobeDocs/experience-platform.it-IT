@@ -2,9 +2,9 @@
 title: Connessione Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: f0db626401d76997e19632c3e27a133f577bc571
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1781'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Questa integrazione funziona con [Adobe Campaign versione 8.4 o successiva](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=it#release-8-4-1).
+>Questa integrazione funziona con [Adobe Campaign versione 8.4 o successiva](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## Panoramica {#overview}
 
-Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. [Introduzione a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=it)
+Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. [Introduzione a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Utilizza Campaign per:
 
@@ -37,7 +37,7 @@ Quando si utilizza la connessione Adobe Campaign Managed Cloud Services, tenere 
 
   È possibile modificare questo limite aggiornando il valore dell&#39;opzione **NmsCdp_Aep_Destinations_Max_Columns** nella cartella **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** di Esplora campagne.
 
-* Conservazione dei dati nella zona di destinazione dati (DLZ) dell’archiviazione BLOB di Azure: 7 giorni.
+* Conservazione dei dati nella Data Landing Zone (DLZ) di archiviazione BLOB di Azure: 7 giorni.
 * La frequenza di attivazione è di almeno 3 ore.
 * La lunghezza massima del nome file supportata da questa connessione è di 255 caratteri. Quando [configuri il nome del file esportato](../../ui/activate-batch-profile-destinations.md#configure-file-names), accertati che non superi i 255 caratteri. Il superamento della lunghezza massima del nome file causa errori di attivazione.
 * I segmenti o i tipi di pubblico che contengono caratteri speciali (ad esempio: `&`) non sono supportati durante l&#39;esportazione di tipi di pubblico in Adobe Campaign.
@@ -78,6 +78,31 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione del serviz
 
 {style="table-layout:auto"}
 
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
@@ -106,8 +131,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Select instance]**: l&#39;istanza di marketing **[!DNL Campaign]**.
-* **[!UICONTROL Target mapping]**: selezionare il mapping di destinazione utilizzato in **[!DNL Adobe Campaign]** per inviare le consegne. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=it).
-* **[!UICONTROL Select sync type]**:
+* **[!UICONTROL Target mapping]**: selezionare il mapping di destinazione utilizzato in **[!DNL Adobe Campaign]** per inviare le consegne. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Select sync type]**
 
    * **[!UICONTROL Audience sync]**: utilizza questa opzione per inviare il pubblico di Adobe Experience Platform ad Adobe Campaign.
    * **[!UICONTROL Profile sync (Update only)]**: utilizzare questa opzione per inserire gli attributi del profilo Adobe Experience Platform in Adobe Campaign e attivare un processo di sincronizzazione in modo che possano essere aggiornati regolarmente.
@@ -131,7 +156,7 @@ Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [panora
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Per istruzioni sull&#39;attivazione dei dati sul pubblico in questa destinazione, leggi [Attiva dati sul pubblico in destinazioni di esportazione del profilo batch](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it).
+Per istruzioni sull&#39;attivazione dei dati sul pubblico in questa destinazione, leggi [Attiva dati sul pubblico in destinazioni di esportazione del profilo batch](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html).
 
 ### Mappare attributi e identità {#map}
 

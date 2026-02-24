@@ -2,10 +2,10 @@
 title: Connessione Google Ads
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio di pubblicità online che consente alle aziende di pagare per clic su ricerche testuali, visualizzazioni grafiche, video YouTube e display mobili in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 2%
+source-wordcount: '1062'
+ht-degree: 3%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 2%
 Osservare i dettagli seguenti specifici per [!DNL Google Ads] destinazioni:
 
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma [!DNL Google].
-* [!DNL Experience Platform] non include attualmente una metrica di misurazione per convalidare la corretta attivazione. Fai riferimento ai conteggi dei tipi di pubblico in Google per convalidare l’integrazione e comprendere le dimensioni di targeting del pubblico.
+* [!DNL Experience Platform] non include attualmente una metrica di misurazione per convalidare la corretta attivazione. Consulta i conteggi dei pubblici in Google per convalidare l’integrazione e comprendere le dimensioni del targeting del pubblico.
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL Google Ads] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) nel servizio Experience Cloud ID (con Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+>Se stai cercando di creare la tua prima destinazione con [!DNL Google Ads] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio Experience Cloud ID (con Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 ## Identità supportate {#supported-identities}
 
@@ -34,7 +34,7 @@ Osservare i dettagli seguenti specifici per [!DNL Google Ads] destinazioni:
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| UUID di AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e l&#39;ID cookie di Google per tutti gli altri utenti. |
+| UUID di AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) per eseguire il targeting degli utenti in California e l&#39;ID cookie di Google per tutti gli altri utenti. |
 | ID cookie [!DNL Google] | ID cookie [!DNL Google] | [!DNL Google] utilizza questo ID per eseguire il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per Advertising. Questo ID identifica in modo univoco i dispositivi Roku. |  |
 | DOMESTICA | MICROSOFT ADVERTISING ID Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
@@ -48,10 +48,24 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -77,7 +91,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 >[!NOTE]
 >
 >L&#39;inserimento nell&#39;elenco Consentiti è obbligatorio prima di configurare la prima destinazione [!DNL Google Ads] in Experience Platform. Prima di creare una destinazione, assicurati che il processo di inserimento nell&#39;elenco Consentiti descritto di seguito sia stato completato da [!DNL Google].
->&#x200B;>Eccezione a questa regola per [clienti Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html). Se hai già creato una connessione a questa destinazione di Google in Audience Manager, non è necessario eseguire nuovamente il processo di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
+>Eccezione a questa regola per [clienti Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html). Se hai già creato una connessione a questa destinazione di Google in Audience Manager, non è necessario eseguire nuovamente il processo di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
 Prima di creare la destinazione [!DNL Google Ads] in Experience Platform, è necessario contattare [!DNL Google] per inserire Adobe nell&#39;elenco dei provider di dati consentiti e per aggiungere il proprio account al inserisco nell&#39;elenco Consentiti di. Contattare [!DNL Google] e fornire le informazioni seguenti:
 
@@ -131,6 +145,6 @@ Durante la configurazione di questa destinazione, potrebbe venire visualizzato i
 
 Questo errore si verifica quando gli account cliente non sono conformi ai [prerequisiti](#prerequisites) o quando i clienti tentano di configurare la destinazione senza un account [!DNL Google Ads] esistente.
 
-[!DNL Google] ha dichiarato obsolete le nuove integrazioni di cookie [!DNL Google Ads] con fornitori di terze parti. Inserire nell&#39;elenco Consentiti Per eseguire i passaggi di [&#128279;](#allow-listing), è necessario disporre di un&#39;integrazione esistente con [!DNL Google Ads].
+[!DNL Google] ha dichiarato obsolete le nuove integrazioni di cookie [!DNL Google Ads] con fornitori di terze parti. Inserire nell&#39;elenco Consentiti Per eseguire i passaggi di [](#allow-listing), è necessario disporre di un&#39;integrazione esistente con [!DNL Google Ads].
 
 L&#39;approccio consigliato per l&#39;utilizzo di [!DNL Google Ads] consiste nella configurazione di un&#39;integrazione di [[!DNL Google Customer Match]](google-customer-match.md).

@@ -1,11 +1,11 @@
 ---
 title: Destinazione batch Magnite
-description: Utilizza questa destinazione per distribuire in batch i tipi di pubblico di Adobe CDP alla piattaforma Magnite Streaming.
+description: Utilizza questa destinazione per fornire in batch i tipi di pubblico di Adobe CDP alla piattaforma Magnite Streaming.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1782'
 ht-degree: 1%
 
 ---
@@ -72,10 +72,24 @@ La destinazione Magnite: Batch può ricevere *qualsiasi* origine identità da Ad
 
 | Origine pubblico | Supportato | Descrizione |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -92,11 +106,11 @@ Dopo aver approvato l’utilizzo della destinazione e aver condiviso le tue cred
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Individua la destinazione Magnite: Batch nel catalogo delle esperienze Adobe. Fai clic sul pulsante delle opzioni aggiuntive (\...) e quindi configura la connessione/istanza di destinazione.
+Individua la destinazione Magnite: Batch nel catalogo Adobe Experience. Fai clic sul pulsante delle opzioni aggiuntive (\...) e quindi configura la connessione/istanza di destinazione.
 
 Se disponi già di un account, puoi trovarlo modificando l’opzione Tipo di account in &quot;Account esistente&quot;. In caso contrario, verrà creato un account di seguito:
 
-Per creare un nuovo account e autenticarlo per la prima volta nella destinazione, compila i campi obbligatori &quot;Chiave di accesso S3&quot; e &quot;Chiave segreta S3&quot; (forniti tramite il tuo account manager) e seleziona **[!UICONTROL Connetti alla destinazione]**
+Per creare un nuovo account e autenticarlo per la prima volta nella destinazione, compilare i campi &quot;Chiave di accesso S3&quot; e &quot;Chiave segreta S3&quot; richiesti (forniti tramite il proprio account manager) e selezionare **[!UICONTROL Connect to destination]**
 
 ![campi di autenticazione della configurazione di destinazione non compilati](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
@@ -108,11 +122,11 @@ Per creare un nuovo account e autenticarlo per la prima volta nella destinazione
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: un nome con cui riconoscere questa connessione/istanza di destinazione in
+* **[!UICONTROL Name]**: nome con cui riconoscere questa connessione/istanza di destinazione in
 futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questo
+* **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questo
 connessione/istanza di destinazione in futuro.
-* **[!UICONTROL Nome società]**: nome cliente/società. Solo i client [!DNL Magnite Streaming] supportati sono disponibili per la selezione.
+* **[!UICONTROL Your company name]**: nome del cliente/società. Solo i client [!DNL Magnite Streaming] supportati sono disponibili per la selezione.
 
 >[!NOTE]
 >
@@ -124,37 +138,37 @@ connessione/istanza di destinazione in futuro.
 >
 >Se prevedi di inviare più tipi ID (GAID, IDFA, ecc.) utilizzando la destinazione Batch, per ciascuno è necessaria una nuova connessione/istanza di destinazione. Per ulteriori informazioni, contatta il rappresentante dell’account Magnite.
 
-Puoi quindi procedere selezionando **[!UICONTROL Avanti]**
+Puoi quindi procedere selezionando **[!UICONTROL Next]**
 
 Nella schermata successiva, intitolata &quot;Governance Policy and Enforcement Actions (Optional)&quot; (Criteri di governance e azioni di applicazione (Facoltativo)), puoi selezionare facoltativamente tutti i criteri di governance dei dati rilevanti. &quot;Esportazione dati&quot; è generalmente selezionato per la destinazione Magnite: Batch.
 
 ![Criteri di governance facoltativi e azioni di applicazione](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
-Una volta selezionata o se desideri saltare questa schermata facoltativa, seleziona **[!UICONTROL Crea]**
+Una volta selezionata o se si desidera saltare questa schermata facoltativa, selezionare **[!UICONTROL Create]**
 
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ### Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Per istruzioni sull&#39;attivazione di segmenti di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ### Mappare attributi e identità {#map}
 
-Nel campo **[!UICONTROL Source]**, puoi selezionare qualsiasi attributo o identità per i dispositivi. In questo esempio, abbiamo selezionato una IdentityMap personalizzata denominata &quot;DeviceId&quot;
+In **[!UICONTROL Source field]** è possibile selezionare qualsiasi attributo o identità per i dispositivi. In questo esempio, abbiamo selezionato una IdentityMap personalizzata denominata &quot;DeviceId&quot;
 ![mappare i campi dati desiderati sul campo device_id](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-Nel campo **[!UICONTROL Destinazione]**:
+In **[!UICONTROL Target field]**:
 ![selezionare l&#39;identità di destinazione del tipo di dispositivo appropriata](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Per ulteriori informazioni, vedere [Identità supportate](#supported-identities).
-In questo esempio, abbiamo selezionato il **[!UICONTROL campo di destinazione]**: magnite_deviceId_CUSTOM, perché il nostro **[!UICONTROL campo Source]** è stato definito come IdentityMap personalizzato: DeviceID.
+In questo esempio, abbiamo selezionato **[!UICONTROL Target field]**: magnite_deviceId_CUSTOM, perché il nostro **[!UICONTROL Source field]** è stato definito come IdentityMap personalizzato: DeviceID.
 
 >[!NOTE]
 >

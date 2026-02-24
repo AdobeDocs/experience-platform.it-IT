@@ -3,10 +3,10 @@ title: Connessione PX Gainsight
 description: Utilizza la destinazione Gainsight PX per inviare informazioni sulla segmentazione alla piattaforma Gainsight PX.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 2%
+source-wordcount: '988'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ Un&#39;azienda SaaS vuole coinvolgere i propri clienti tramite una guida in-appl
 ## Prerequisiti {#prerequisites}
 
 * Contatta il team di supporto [!DNL Gainsight] e richiedi l&#39;attivazione delle funzionalità dei segmenti esterni per il tuo abbonamento.
-* Genera un valore OAuth Secret per la sottoscrizione PX, utilizzando il pulsante **[!UICONTROL Genera nuovo segreto]** nella parte inferiore della [pagina Dettagli società](https://app.aptrinsic.com/settings/subscription)
+* Genera un valore OAuth Secret per l&#39;abbonamento PX, utilizzando il pulsante **[!UICONTROL Generate New Secret]** nella parte inferiore della [pagina Dettagli società](https://app.aptrinsic.com/settings/subscription)
   ![Schermata Dettagli società in Gainsight PX che mostra il pulsante Genera nuovo segreto](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## Identità supportate {#supported-identities}
@@ -49,11 +49,25 @@ Gainsight PX supporta l’attivazione delle identità descritte nella tabella se
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportato | Descrizione |
-|---|---|---|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite il servizio di segmentazione [Experience Platform](../../../segmentation/home.md). |
-| Caricamenti personalizzati | X | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -61,7 +75,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 |---|---|---|
-| Tipo di esportazione | **[!UICONTROL Esportazione segmento]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione [!DNL Gainsight PX]. |
+| Tipo di esportazione | **[!UICONTROL Segment export]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione [!DNL Gainsight PX]. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -70,44 +84,44 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Gestione destinazioni]** [controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Manage Destinations]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
 ![Schermata di autenticazione](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
 
 * **[!UICONTROL Password]**: password utilizzata per accedere a [[!DNL Gainsight PX]](https://app.aptrinsic.com)
-* **[!UICONTROL ID client]**: ID sottoscrizione Gainsight PX nella [pagina Dettagli società](https://app.aptrinsic.com/settings/subscription)
-* **[!UICONTROL Segreto client]**: il segreto OAuth generato nella parte inferiore della [pagina Dettagli società](https://app.aptrinsic.com/settings/subscription) nell&#39;interfaccia utente [!DNL Gainsight PX].
-* **[!UICONTROL Nome utente]**: indirizzo e-mail utilizzato per accedere all&#39;interfaccia utente [[!DNL Gainsight PX]](https://app.aptrinsic.com)
+* **[!UICONTROL Client ID]**: ID sottoscrizione Gainsight PX nella [pagina Dettagli società](https://app.aptrinsic.com/settings/subscription)
+* **[!UICONTROL Client secret]**: il segreto OAuth generato nella parte inferiore della [pagina Dettagli società](https://app.aptrinsic.com/settings/subscription) nell&#39;interfaccia utente [!DNL Gainsight PX].
+* **[!UICONTROL Username]**: indirizzo e-mail utilizzato per accedere all&#39;interfaccia utente [[!DNL Gainsight PX]](https://app.aptrinsic.com)
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata dei dettagli della destinazione nell&#39;interfaccia utente dell&#39;Experience Platform che mostra come compilare i campi Nome e Descrizione](../../assets/catalog/analytics/gainsight-px/destination_details.png)
+![Schermata Dettagli destinazione nell&#39;interfaccia utente di Experience Platform che mostra come compilare i campi Nome e Descrizione](../../assets/catalog/analytics/gainsight-px/destination_details.png)
 
-* **[!UICONTROL Nome]**: un nome con cui riconoscerai questa destinazione in futuro.
-* **[!UICONTROL Descrizione]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
+* **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attiva i segmenti in questa destinazione {#activate}
 
 >[!IMPORTANT]
 >
->* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizzare i profili]** e **[!UICONTROL Visualizzare i segmenti]** [accedere alle autorizzazioni di controllo](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione.
 
 ### Mappare le identità {#map}
 
-Questa destinazione supporta la mappatura degli attributi del profilo e degli spazi dei nomi di identità. La mappatura di destinazione deve essere sempre lo spazio dei nomi dell&#39;identità **[!UICONTROL IDENTIFICATION_ID]**.
+Questa destinazione supporta la mappatura degli attributi del profilo e degli spazi dei nomi di identità. La mappatura di destinazione deve essere sempre lo spazio dei nomi dell&#39;identità **[!UICONTROL IDENTIFY_ID]**.
 
 Consulta gli esempi seguenti per comprendere meglio come configurare la mappatura.
 
@@ -119,13 +133,13 @@ Nell’esempio mostrato di seguito, il campo sorgente è un attributo di profilo
 
 #### Mappare uno spazio dei nomi delle identità {#map-identity-namespace}
 
-Nell&#39;esempio riportato di seguito, il campo di origine è uno spazio dei nomi di identità (**[!UICONTROL ECID]**) che viene mappato allo spazio dei nomi di destinazione **[!UICONTROL IDENTIID]**.
+Nell&#39;esempio seguente, il campo di origine è uno spazio dei nomi di identità (**[!UICONTROL ECID]**) che viene mappato allo spazio dei nomi di destinazione **[!UICONTROL IDENTIFY_ID]**.
 
 ![Schermata di mapping degli attributi che mostra come selezionare i valori di origine e di destinazione](../../assets/catalog/analytics/gainsight-px/mapping_identities.png)
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-I dati di segmentazione vengono inviati in streaming dall’Experience Platform al Gainsight PX.
+I dati di segmentazione vengono inviati in streaming da Experience Platform a Gainsight PX.
 
 I metadati del segmento sono visibili nella schermata Segmenti nell&#39;interfaccia utente [!DNL Gainsight PX].
 

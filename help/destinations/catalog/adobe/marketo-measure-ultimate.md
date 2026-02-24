@@ -3,10 +3,10 @@ title: Destinazione Marketo Measure Ultimate
 description: Scopri come connettere e attivare i dati nella destinazione di Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 2%
+source-wordcount: '794'
+ht-degree: 3%
 
 ---
 
@@ -33,6 +33,31 @@ Prendi nota dei seguenti prerequisiti per la destinazione Marketo Measure:
 * La mappatura delle sandbox in Experience Platform deve essere completata dall’amministratore nella pagina delle impostazioni di Marketo Measure. Senza la mappatura sandbox, non puoi completare il flusso di lavoro per connetterti alla destinazione e salvare e attivare i dati.
 * È possibile esportare solo i set di dati delle classi XDM B2B (vedi, ad esempio, le classi XDM Business Account e XDM Business Opportunity ). Non è possibile inserire più set di dati della stessa classe XDM B2B per una determinata origine dati.
 * Ogni set di dati può essere incluso in un solo flusso di dati per la destinazione Marketo Measure.
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | No | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | Sì | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -78,7 +103,7 @@ Per istruzioni dettagliate sull&#39;esportazione dei set di dati in questa desti
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Per convalidare un&#39;esportazione di set di dati riuscita, puoi verificare che il set di dati sia stato correttamente eseguito nel tuo [data warehouse di Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=it).
+Per convalidare un&#39;esportazione di set di dati riuscita, puoi verificare che il set di dati sia stato correttamente eseguito nel tuo [data warehouse di Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

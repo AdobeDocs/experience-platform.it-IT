@@ -3,9 +3,9 @@ keywords: crm;CRM;crm destinazioni;salesforce crm;salesforce crm destinazione
 title: Connessione Salesforce CRM
 description: La destinazione di Salesforce CRM ti consente di esportare i dati del tuo account e di attivarli in Salesforce CRM per le tue esigenze aziendali.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 27f2b28d924fbd85eefbea5a65d1ee9249bafa87
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2734'
+source-wordcount: '2905'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai t
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione di Salesforce CRM, è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione di Salesforce CRM, è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti in [!DNL Salesforce CRM] {#prerequisites-destination}
 
@@ -62,7 +62,7 @@ Inoltre, assicurati che [ambiti](https://help.salesforce.com/s/articleView?id=co
 * ``refresh_token``
 * ``offline_access``
 
-Infine, assicurati che la sovvenzione `password` sia abilitata nel tuo account [!DNL Salesforce]. Per informazioni sugli scenari speciali[!DNL Salesforce], consulta la documentazione [&#x200B; &#x200B;](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5)Flusso nome utente-password OAuth 2.0.
+Infine, assicurati che la sovvenzione `password` sia abilitata nel tuo account [!DNL Salesforce]. Per informazioni sugli scenari speciali[!DNL Salesforce], consulta la documentazione [ ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5)Flusso nome utente-password OAuth 2.0.
 
 >[!IMPORTANT]
 >
@@ -107,9 +107,9 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 | `Username` | Nome utente dell&#39;account [!DNL Salesforce]. | |
 | `Password` | Password dell&#39;account [!DNL Salesforce]. | |
 | `Security Token` | Il token di sicurezza [!DNL Salesforce] che verrà in seguito aggiunto alla fine della password [!DNL Salesforce] per creare una stringa concatenata da utilizzare come **[!UICONTROL Password]** durante l&#39;autenticazione [alla destinazione](#authenticate).<br> Consulta la documentazione di [!DNL Salesforce] per [reimpostare il token di sicurezza](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) per scoprire come rigenerarlo dall&#39;interfaccia di [!DNL Salesforce] se non disponi del token di sicurezza. |  |
-| `Custom Domain` | Il prefisso del dominio [!DNL Salesforce]. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la &#x200B;](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5)documentazione[!DNL Salesforce]. | Se il dominio [!DNL Salesforce] è <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> come valore sarà necessario `d5i000000isb4eak-dev-ed`. |
-| `Client ID` | Salesforce `Consumer Key`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
-| `Client Secret` | Salesforce `Consumer Secret`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la &#x200B;](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
+| `Custom Domain` | Il prefisso del dominio [!DNL Salesforce]. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la ](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5)documentazione[!DNL Salesforce]. | Se il dominio [!DNL Salesforce] è <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> come valore sarà necessario `d5i000000isb4eak-dev-ed`. |
+| `Client ID` | Salesforce `Consumer Key`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la ](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
+| `Client Secret` | Salesforce `Consumer Secret`. <br> Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce] , consulta la ](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5)documentazione[!DNL Salesforce]. | |
 
 ### Guardrail {#guardrails}
 
@@ -128,6 +128,31 @@ Se l&#39;amministratore dell&#39;account [!DNL Salesforce] ha applicato restrizi
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
 | `SalesforceId` | L&#39;identificatore [!DNL Salesforce CRM] per le identità di contatto o lead esportate o aggiornate tramite il segmento. | Obbligatorio |
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -172,7 +197,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Salesforce ID Type]**:
+* **[!UICONTROL Salesforce ID Type]**
 
    * Selezionare **[!UICONTROL Contact]** se le identità da esportare o aggiornare sono di tipo *Contatto*.
    * Selezionare **[!UICONTROL Lead]** se le identità da esportare o aggiornare sono di tipo *Lead*.

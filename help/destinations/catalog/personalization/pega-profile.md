@@ -3,9 +3,9 @@ title: Connettore profilo Pega
 description: Utilizza il connettore di profilo Pega per Amazon S3 in Adobe Experience Platform per esportare dati di profilo completi o incrementali, o entrambi, nell’archiviazione cloud Amazon S3. In Pega Customer Decision Hub, è possibile pianificare i processi di dati in Customer Profile Designer per importare periodicamente i dati del profilo dallo storage Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1256'
 ht-degree: 4%
 
 ---
@@ -53,13 +53,38 @@ Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Expe
 
 {style="table-layout:auto"}
 
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 |---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | Frequenza di esportazione | **[!UICONTROL Batch]** | Le destinazioni batch esportano i file sulle piattaforme a valle con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni sulle [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -68,13 +93,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
 * Chiave di accesso **[!DNL Amazon S3]** e chiave segreta **[!DNL Amazon S3]**: in [!DNL Amazon S3], genera una coppia `access key - secret access key` per concedere l&#39;accesso Adobe Experience Platform al tuo account [!DNL Amazon S3]. Ulteriori informazioni sono disponibili nella [documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
@@ -84,13 +109,13 @@ Dopo aver stabilito la connessione di autenticazione a [!DNL Amazon S3], fornire
 
 ![Immagine della schermata dell&#39;interfaccia utente che mostra i campi completati per i dettagli di destinazione del connettore profilo Pega](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
-Per configurare i dettagli per la destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Successivo]**. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
+Per configurare i dettagli per la destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Next]**. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: immettere un nome che consenta di identificare la destinazione.
-* **[!UICONTROL Descrizione]**: immettere una descrizione della destinazione.
-* **[!UICONTROL Nome bucket]**: immettere il nome del bucket [!DNL Amazon S3] da utilizzare per questa destinazione.
-* **[!UICONTROL Percorso cartella]**: immettere il percorso della cartella di destinazione che ospiterà i file esportati.
-* **[!UICONTROL Tipo di compressione]**: selezionare il tipo di compressione GZIP o NONE.
+* **[!UICONTROL Name]**: immettere un nome che consenta di identificare la destinazione.
+* **[!UICONTROL Description]**: immettere una descrizione della destinazione.
+* **[!UICONTROL Bucket name]**: immettere il nome del bucket [!DNL Amazon S3] da utilizzare per questa destinazione.
+* **[!UICONTROL Folder path]**: immettere il percorso della cartella di destinazione che ospiterà i file esportati.
+* **[!UICONTROL Compression Type]**: selezionare il tipo di compressione come GZIP o NONE.
 
 >[!TIP]
 >
@@ -100,20 +125,20 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e se
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attiva dati pubblico nelle destinazioni di esportazione profilo batch](../../ui/activate-batch-profile-destinations.md).
 
 ### Mappare attributi e identità {#map}
 
-Nel passaggio **[!UICONTROL Mappatura]**, puoi selezionare l&#39;attributo e i campi di identità da esportare per i profili. Puoi anche scegliere di modificare le intestazioni nel file esportato con qualsiasi nome descrittivo. Per ulteriori informazioni, vedi il [passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) nell&#39;esercitazione dell&#39;interfaccia utente per l&#39;attivazione di destinazioni batch.
+Nel passaggio **[!UICONTROL Mapping]**, puoi selezionare l&#39;attributo e i campi di identità da esportare per i profili. Puoi anche scegliere di modificare le intestazioni nel file esportato con qualsiasi nome descrittivo. Per ulteriori informazioni, vedi il [passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) nell&#39;esercitazione dell&#39;interfaccia utente per l&#39;attivazione di destinazioni batch.
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
@@ -122,7 +147,7 @@ Per [!DNL Pega Profile Connector] destinazioni, [!DNL Experience Platform] crea 
 Importazione dei dati di profilo da S3 completata. I dati vengono inseriti nell&#39;archivio dati di profilo [!DNL Pega Customer]. I dati importati del profilo cliente possono essere convalidati in [!DNL Pega Customer Profile Designer], come illustrato nella figura seguente.
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile convalidare i dati del profilo di Adobe nel profilo cliente Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In [!DNL Pega Customer Decision Hub], gli amministratori di dati possono configurare processi di dati in [!DNL Customer Profile Designer] per importare periodicamente i dati del profilo da S3, come illustrato nella figura seguente. Per ulteriori informazioni su come configurare i processi di dati per importare i dati del profilo da [!DNL Amazon S3], vedere [risorse aggiuntive](#additional-resources).
+In [!DNL Pega Customer Decision Hub], gli amministratori di dati possono configurare processi di dati in [!DNL Customer Profile Designer] per importare periodicamente i dati del profilo da S3, come illustrato nella figura seguente. Per ulteriori informazioni su come configurare i processi di dati per importare i dati del profilo da [, vedere ](#additional-resources)risorse aggiuntive[!DNL Amazon S3].
 ![Immagine della schermata dell&#39;interfaccia utente per configurare i processi di dati nel profilo cliente Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Risorse aggiuntive {#additional-resources}

@@ -1,13 +1,13 @@
 ---
 title: Algola
 description: Utilizza questo connettore per attivare i tipi di pubblico in Algolia per la personalizzazione e l’utilizzo in ricerche e consigli. Puoi quindi utilizzare il connettore di origine del profilo utente di Algolia per importare i profili in Real-Time CDP per creare tipi di pubblico avanzati.
-source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
+exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 3%
+source-wordcount: '1140'
+ht-degree: 4%
 
 ---
-
 
 # Connessione [!DNL Algolia]
 
@@ -43,8 +43,8 @@ Quindi, utilizza il connettore di origine [[!DNL Algolia User Profiles]](/help/s
 
 >[!IMPORTANT]
 >
->* Per connettersi alla destinazione, è necessario **[!UICONTROL Visualizzare le destinazioni]** e **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizzare i profili]** e **[!UICONTROL Visualizzare i segmenti]** [accedere alle autorizzazioni di controllo](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Visualizza grafo identità]** [Controllo di accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
+>* Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 ## Identità supportate {#supported-identities}
 
@@ -62,10 +62,24 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|---------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -82,16 +96,16 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni per gestire e attivare le destinazioni del set di dati]** [Controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage and Activate Dataset Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connetti alla destinazione]**.
+Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL ID applicazione]**: l&#39;ID applicazione [!DNL Algolia] è un identificatore univoco assegnato al tuo account [!DNL Algolia].
-* **[!UICONTROL Chiave API]**: la chiave API [!DNL Algolia] è una credenziale utilizzata per autenticare e autorizzare le richieste API ai servizi di ricerca e indicizzazione di [!DNL Algolia].
+* **[!UICONTROL Application ID]**: l&#39;ID applicazione [!DNL Algolia] è un identificatore univoco assegnato al tuo account [!DNL Algolia].
+* **[!UICONTROL API Key]**: la chiave API [!DNL Algolia] è una credenziale utilizzata per autenticare e autorizzare le richieste API ai servizi di ricerca e indicizzazione di [!DNL Algolia].
 
 Per ulteriori informazioni su queste credenziali, vedere la [!DNL Algolia] [documentazione sull&#39;autenticazione](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
@@ -101,9 +115,9 @@ Per ulteriori informazioni su queste credenziali, vedere la [!DNL Algolia] [docu
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: immettere il nome preferito per la destinazione.
-* **[!UICONTROL Descrizione]**: breve spiegazione dello scopo della destinazione.
-* **[!UICONTROL Regione]**: opzioni **US** o **EU**. Selezionare l&#39;area in cui vengono memorizzati i dati del cliente.
+* **[!UICONTROL Name]**: immettere il nome preferito per la destinazione.
+* **[!UICONTROL Description]**: breve spiegazione dello scopo della destinazione.
+* **[!UICONTROL Region]**: opzioni **US** o **EU**. Selezionare l&#39;area in cui vengono memorizzati i dati del cliente.
 
 
 ![Dettagli account](../../assets/catalog/personalization/algolia/account.png)
@@ -112,26 +126,26 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
-Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **[!UICONTROL Avanti]**.
+Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
->* Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions).
+>* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
+Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare attributi e identità {#mapping-attributes-identities}
 
-Durante il [!UICONTROL passaggio di mappatura], è necessario mappare l&#39;identità di origine AlgoliaUserToken all&#39;identità di destinazione userId.
+Durante il [!UICONTROL Mapping step], è necessario mappare l&#39;identità di origine AlgoliaUserToken all&#39;identità di destinazione userId.
 
 ![Mappatura completata](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Per verificare se i tipi di pubblico sono stati esportati correttamente nei profili utente, controlla il dashboard di [!DNL Algolia], passa a **[!UICONTROL Advanced Personalization]** e fai clic su **[!UICONTROL Ispettore utente]**. Trova un profilo utente associato al pubblico Adobe Experience Platform esportato e cercalo nel Controllo utente. L’ID del pubblico viene visualizzato nella sezione del segmento.
+Per verificare se i tipi di pubblico sono stati esportati correttamente nei profili utente, controlla la dashboard di [!DNL Algolia], passa a **[!UICONTROL Advanced Personalization]** e fai clic su **[!UICONTROL User Inspector]**. Trova un profilo utente associato al pubblico Adobe Experience Platform esportato e cercalo nel Controllo utente. L’ID del pubblico viene visualizzato nella sezione del segmento.
 
 ![Ispettore utente Algolia](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 

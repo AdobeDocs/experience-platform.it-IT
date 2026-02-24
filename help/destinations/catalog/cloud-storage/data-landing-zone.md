@@ -3,9 +3,9 @@ title: Destinazione Data Landing Zone
 description: Scopri come connettersi alla Data Landing Zone per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1976'
+source-wordcount: '2110'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 Experience Platform applica un TTL (time-to-live) di sette giorni su tutti i file caricati in un contenitore [!DNL Data Landing Zone]. Tutti i file vengono eliminati dopo sette giorni.
 
-Il connettore di destinazione [!DNL Data Landing Zone] è disponibile per i clienti che utilizzano il supporto cloud di Azure o Amazon Web Service. Il meccanismo di autenticazione è diverso in base al cloud in cui viene eseguito il provisioning della destinazione, tutti gli altri elementi relativi alla destinazione e ai relativi casi di utilizzo sono uguali. Ulteriori informazioni sui due diversi meccanismi di autenticazione nelle sezioni [Autentica nella Data Landing Zone con provisioning in Azure Blob](#authenticate-dlz-azure) e [Autentica nella Data Landing Zone con provisioning AWS](#authenticate-dlz-aws).
+Il connettore di destinazione [!DNL Data Landing Zone] è disponibile per i clienti che utilizzano il supporto cloud di Azure o Amazon Web Service. Il meccanismo di autenticazione è diverso in base al cloud in cui viene eseguito il provisioning della destinazione, tutti gli altri elementi relativi alla destinazione e ai relativi casi di utilizzo sono uguali. Leggi di più sui due diversi meccanismi di autenticazione nelle sezioni [Autentica nella Data Landing Zone con provisioning in Azure Blob](#authenticate-dlz-azure) e [Autentica nella Data Landing Zone con provisioning AWS](#authenticate-dlz-aws).
 
 ![Diagramma che mostra le differenze nell’implementazione della destinazione Data Landing Zone in base al supporto cloud.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Implementazione della destinazione Data Landing Zone da parte del supporto cloud"){zoomable="yes"}
 
@@ -38,10 +38,24 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | Sì | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | Sì | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | Sì | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -67,11 +81,11 @@ Durante l&#39;esportazione di *dati sul pubblico*, Experience Platform crea un f
 
 Durante l&#39;esportazione di *set di dati*, Experience Platform crea un file `.parquet` o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta la sezione [Verifica dell&#39;esportazione dei set di dati](../../ui/export-datasets.md#verify) nell&#39;esercitazione sull&#39;esportazione dei set di dati.
 
-## Autentica nella Data Landing Zone con provisioning in Azure Blob {#authenticate-dlz-azure}
+## Autenticazione nell’area di destinazione dati fornita nel BLOB di Azure {#authenticate-dlz-azure}
 
 >[!AVAILABILITY]
 >
->Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Microsoft Azure. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Microsoft Azure. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 È possibile leggere e scrivere file nel contenitore tramite [!DNL Azure Storage Explorer] o l&#39;interfaccia della riga di comando.
 
@@ -194,7 +208,7 @@ La seguente risposta restituisce valori aggiornati per `SASToken` e `SASUri`.
 
 Fornisci il nome visualizzato (`containerName`) e l&#39;URL SAS [!DNL Data Landing Zone], come restituito nella chiamata API descritta in precedenza, quindi seleziona **Avanti**.
 
-![Immettere le informazioni di connessione evidenziate nell&#39;interfaccia utente di Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Immetti le informazioni di connessione evidenziate nell&#39;interfaccia utente di Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 Viene visualizzata la finestra **Riepilogo** che fornisce una panoramica delle impostazioni, incluse informazioni sull&#39;endpoint [!DNL Blob] e sulle autorizzazioni. Al termine, selezionare **Connetti**.
 
@@ -210,7 +224,7 @@ Con il contenitore [!DNL Data Landing Zone] connesso a [!DNL Azure Storage Explo
 
 >[!AVAILABILITY]
 >
->Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
+>Questa sezione si applica alle implementazioni di Experience Platform in esecuzione su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Eseguire le operazioni seguenti per ottenere le credenziali per l&#39;istanza [!DNL Data Landing Zone] per la quale è stato eseguito il provisioning in AWS. Quindi, utilizzare un client di scelta per connettersi all&#39;istanza [!DNL Data Landing Zone].
 
@@ -282,7 +296,7 @@ La risposta seguente restituisce le informazioni sulle credenziali per la zona d
 > 
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 

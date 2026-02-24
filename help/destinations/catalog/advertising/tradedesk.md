@@ -3,9 +3,9 @@ keywords: pubblicità; ufficio commerciale; ufficio commerciale di pubblicità
 title: La connessione a Trade Desk
 description: Trade Desk è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 138bfe721bb20fe3ba614a73ffffca3e00979acb
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1376'
 ht-degree: 2%
 
 ---
@@ -47,10 +47,24 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -71,7 +85,7 @@ I prerequisiti dipendono dai tipi di identità che intendi utilizzare per l’at
 
 **Per il targeting basato su cookie su[!DNL The Trade Desk]**, assicurati che sia stata stabilita una mappatura tra ECID e [!DNL Trade Desk ID]. A tale scopo, completa i passaggi seguenti:
 
-1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL The Trade Desk ID] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/it/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
+1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL The Trade Desk ID] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
    * Se in precedenza hai configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID esistenti vengono automaticamente trasferite ad Experience Platform.
 
 2. **Crea strumenti per le pagine Web**: implementa il codice nelle pagine Web per creare mappature tra [!DNL The Trade Desk ID] e Adobe ECID. Questo consente ad Experience Platform di associare gli ID Trade Desk ai profili dei clienti.
@@ -125,7 +139,7 @@ Quando esegui la mappatura dei tipi di pubblico, Adobe consiglia di utilizzare i
 >id="platform_destinations_required_mappings_ttd"
 >title="Set di mappatura predefiniti"
 >abstract="Abbiamo preconfigurato questi quattro set di mappatura per te. Quando attivi i dati su The Trade Desk, i profili qualificati per i tipi di pubblico attivati non devono necessariamente avere tutte e quattro le identità presenti sui profili, in quanto questa destinazione funziona con una qualsiasi delle identità di destinazione mostrate qui. <br> Per il targeting basato su cookie basato sull&#39;ID del Trade Desk, è necessario che ECID sia presente nel profilo e che sia presente una mappatura di sincronizzazione ID tra l&#39;ID del Trade Desk e ECID."
->additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
 
 Le seguenti mappature di identità sono **preconfigurate e compilate automaticamente** nel flusso di lavoro di Audience Activation:
 

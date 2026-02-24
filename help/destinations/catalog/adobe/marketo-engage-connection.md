@@ -2,10 +2,10 @@
 title: Connessione Marketo Engage
 description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1873'
-ht-degree: 1%
+source-wordcount: '1875'
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ Possono attivare i propri tipi di pubblico in Marketo Engage e utilizzare il tip
 
 ## Prerequisiti {#prerequisites}
 
-* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
+* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
 * Solo le istanze di Marketo Engage nella stessa organizzazione Adobe Real-Time CDP saranno disponibili durante la configurazione di questa destinazione.
 * Questa destinazione può essere utilizzata solo dalle istanze di Marketo Engage con i relativi utenti gestiti in Adobe Admin Console.
 
@@ -65,8 +65,8 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | ✓ | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> <br> |
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> <br> |
 
 {style="table-layout:auto"}
 
@@ -145,8 +145,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
    * **[!UICONTROL Audience and profile]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo e mantenere aggiornate le informazioni sul profilo.
    * **[!UICONTROL Profile only]**: selezionare questa opzione quando si desidera mantenere aggiornati i profili lead di Marketo con le informazioni più recenti di Experience Platform.
    * **[!UICONTROL Audience only]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo senza aggiornare le informazioni sul profilo.
-* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**&#x200B;o **[!UICONTROL Audience and profile]**&#x200B;tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
-* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/it/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
+* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**o **[!UICONTROL Audience and profile]**tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
+* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
 
   >[!NOTE]
   >
