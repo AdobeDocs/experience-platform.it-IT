@@ -67,7 +67,7 @@ Inoltre, l&#39;array `include` del payload della richiesta deve includere i valo
 
 >[!NOTE]
 >
->Per informazioni più dettagliate sugli effetti dell&#39;utilizzo di [ e ](#profile-v-identity) nell&#39;array `ProfileService`, vedere la sezione relativa alle `identity`richieste di profilo e di identità`include` più avanti in questo documento.
+>Per informazioni più dettagliate sugli effetti dell&#39;utilizzo di [&#x200B; e &#x200B;](#profile-v-identity) nell&#39;array `ProfileService`, vedere la sezione relativa alle `identity`richieste di profilo e di identità`include` più avanti in questo documento.
 
 La richiesta seguente crea un nuovo processo di privacy per i dati di un singolo cliente nell&#39;archivio [!DNL Profile]. Nell&#39;array `userIDs` sono forniti due valori di identità per il cliente: uno utilizza lo spazio dei nomi di identità standard `Email` e l&#39;altro utilizza uno spazio dei nomi personalizzato `Customer_ID`. Include inoltre il valore del prodotto per [!DNL Profile] (`ProfileService`) nell&#39;array `include`:
 
@@ -225,4 +225,4 @@ Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando 
 
 Dopo aver letto questo documento, ti verranno presentati i concetti importanti relativi all&#39;elaborazione delle richieste di accesso a dati personali in [!DNL Experience Platform]. Per comprendere meglio come gestire i dati di identità e creare processi relativi alla privacy, continua a leggere la documentazione fornita in questa guida.
 
-Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [ nel data lake](../catalog/privacy.md).
+Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [&#x200B; nel data lake](../catalog/privacy.md).
