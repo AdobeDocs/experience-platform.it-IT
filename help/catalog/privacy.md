@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy nel data lake
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come stabilito dalle normative legali e organizzative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti memorizzati nel data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1446'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Esistono due metodi per aggiungere un descrittore di identità a uno schema di s
 
 ### Utilizzo dell’interfaccia utente {#identity-ui}
 
-Nell&#39;interfaccia utente [!DNL Experience Platform]l&#39;area di lavoro **[!UICONTROL Schemi]** consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, selezionarlo dall&#39;elenco e seguire i passaggi per [impostare un campo schema come campo di identità](../xdm/tutorials/create-schema-ui.md#identity-field) nell&#39;esercitazione [!DNL Schema Editor].
+Nell&#39;interfaccia utente di [!DNL Experience Platform], l&#39;area di lavoro di **[!UICONTROL Schemas]** consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, selezionarlo dall&#39;elenco e seguire i passaggi per [impostare un campo schema come campo di identità](../xdm/tutorials/create-schema-ui.md#identity-field) nell&#39;esercitazione [!DNL Schema Editor].
 
 Dopo aver impostato i campi appropriati nello schema come campi di identità, puoi passare alla sezione successiva su [invio di richieste di privacy](#submit).
 
@@ -147,13 +147,15 @@ La sezione seguente illustra come effettuare richieste di privacy per il data la
 
 ### Utilizzo dell’interfaccia utente
 
-Quando crei richieste di lavoro nell&#39;interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati memorizzati nel data lake.
+Quando si creano richieste di processi nell&#39;interfaccia utente, assicurarsi di selezionare **[!UICONTROL AEP Data Lake]** in **[!UICONTROL Products]** per elaborare i processi per i dati archiviati nel data lake.
 
 ![Immagine che mostra il prodotto del data lake selezionato nella finestra di dialogo per la creazione di richieste di accesso a dati personali](./images/privacy/product-value.png)
 
 ### Mediante l’API
 
-Quando si creano richieste di processi nell&#39;API, qualsiasi `userIDs` fornito deve utilizzare un `namespace` e un `type` specifici a seconda dell&#39;archivio dati a cui si applicano. Gli ID per il data lake devono utilizzare `unregistered` per il valore `type` e un valore `namespace` che corrisponde a una delle [etichette per la privacy](#privacy-labels) aggiunte ai set di dati applicabili.
+Quando si creano richieste di processi nell&#39;API, qualsiasi `userIDs` fornito deve utilizzare un `namespace` e un `type` specifici a seconda dell&#39;archivio dati a cui si applicano. Per il valore dello spazio dei nomi è necessario fornire uno spazio dei nomi di identità valido riconosciuto da Identity Service. Utilizza `standard` per gli spazi dei nomi standard e `custom` per quelli personalizzati.
+
+Gli ID per il data lake devono utilizzare `unregistered` per il valore `type` e un valore `namespace` che corrisponde a una delle [etichette per la privacy](#privacy-labels) aggiunte ai set di dati applicabili.
 
 Inoltre, l&#39;array `include` del payload della richiesta deve includere i valori del prodotto per i diversi archivi di dati a cui viene effettuata la richiesta. Quando si eseguono richieste al data lake, l&#39;array deve includere il valore `aepDataLake`.
 
@@ -181,12 +183,12 @@ curl -X POST \
           {
             "namespace": "email_label",
             "value": "ajones@acme.com",
-            "type": "unregistered"
+            "type": "custom"
           },
           {
             "namespace": "email_label",
             "value": "jdoe@example.com",
-            "type": "unregistered"
+            "type": "custom"
           }
         ]
       }
@@ -212,7 +214,7 @@ Se nella richiesta di accesso a dati personali hai incluso anche `ProfileService
 
 Dopo aver letto questo documento, ti vengono presentati i concetti importanti relativi all’elaborazione delle richieste di accesso a dati personali per il data lake. Si consiglia di continuare a leggere la documentazione fornita in questa guida per comprendere meglio come gestire i dati di identità e creare processi sulla privacy.
 
-Per informazioni sulla procedura di elaborazione delle richieste di accesso a dati personali per l&#39;archivio [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile[&#128279;](../profile/privacy.md).
+Per informazioni sulla procedura di elaborazione delle richieste di accesso a dati personali per l&#39;archivio [, vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile](../profile/privacy.md).[!DNL Profile]
 
 ## Appendice
 

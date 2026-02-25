@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1746'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Le sezioni seguenti descrivono come effettuare richieste di accesso a dati perso
 
 ### Mediante l’API
 
-Durante la creazione di richieste di processi nell&#39;API, qualsiasi ID fornito in `userIDs` deve utilizzare un `namespace` e un `type` specifici. È necessario fornire uno spazio dei nomi [identity](#namespaces) valido riconosciuto da [!DNL Identity Service] per il valore `namespace`, mentre `type` deve essere `standard` o `unregistered` (rispettivamente per gli spazi dei nomi standard e personalizzati).
+Durante la creazione di richieste di processi nell&#39;API, qualsiasi ID fornito in `userIDs` deve utilizzare un `namespace` e un `type` specifici. Per il valore dello spazio dei nomi è necessario fornire uno spazio dei nomi [identity](#namespaces) valido riconosciuto da Identity Service. Utilizza `standard` per gli spazi dei nomi standard e `custom` per quelli personalizzati.
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Inoltre, l&#39;array `include` del payload della richiesta deve includere i valo
 
 >[!NOTE]
 >
->Per informazioni più dettagliate sugli effetti dell&#39;utilizzo di `ProfileService` e `identity` nell&#39;array `include`, vedere la sezione relativa alle [richieste di profilo e di identità](#profile-v-identity) più avanti in questo documento.
+>Per informazioni più dettagliate sugli effetti dell&#39;utilizzo di [ e ](#profile-v-identity) nell&#39;array `ProfileService`, vedere la sezione relativa alle `identity`richieste di profilo e di identità`include` più avanti in questo documento.
 
 La richiesta seguente crea un nuovo processo di privacy per i dati di un singolo cliente nell&#39;archivio [!DNL Profile]. Nell&#39;array `userIDs` sono forniti due valori di identità per il cliente: uno utilizza lo spazio dei nomi di identità standard `Email` e l&#39;altro utilizza uno spazio dei nomi personalizzato `Customer_ID`. Include inoltre il valore del prodotto per [!DNL Profile] (`ProfileService`) nell&#39;array `include`:
 
@@ -168,7 +168,7 @@ Per Profile Service, una volta completato il processo di accesso a dati personal
 
 ### Utilizzo dell’interfaccia utente
 
-Durante la creazione di richieste di processi nell&#39;interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati archiviati nel data lake o [!DNL Real-Time Customer Profile], rispettivamente.
+Quando si creano richieste di processi nell&#39;interfaccia utente, assicurarsi di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profile]** in **[!UICONTROL Products]** per elaborare i processi per i dati archiviati nel data lake o [!DNL Real-Time Customer Profile], rispettivamente.
 
 ![È in corso la creazione di una richiesta di processo di accesso nell&#39;interfaccia utente, con l&#39;opzione di profilo selezionata in Prodotti](./images/privacy/product-value.png)
 
@@ -217,7 +217,7 @@ Per rimuovere il profilo e tutte le associazioni di identità per un determinato
 
 ### Limitazioni dei criteri di unione {#merge-policy-limitations}
 
-Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando un criterio di unione che non esegue l&#39;unione delle identità. Se utilizzi l&#39;interfaccia utente per confermare se le richieste di accesso a dati personali vengono elaborate, assicurati di utilizzare un criterio con **[!DNL None]** come tipo [!UICONTROL ID stitching]. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL l&#39;unione ID] è impostata su [!UICONTROL Private Graph].
+Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando un criterio di unione che non esegue l&#39;unione delle identità. Se utilizzi l&#39;interfaccia utente per confermare se le richieste di accesso a dati personali vengono elaborate, assicurati di utilizzare un criterio con **[!DNL None]** come tipo [!UICONTROL ID stitching]. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL ID stitching] è impostato su [!UICONTROL Private graph].
 
 >![L&#39;unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
 
@@ -225,4 +225,4 @@ Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando 
 
 Dopo aver letto questo documento, ti verranno presentati i concetti importanti relativi all&#39;elaborazione delle richieste di accesso a dati personali in [!DNL Experience Platform]. Per comprendere meglio come gestire i dati di identità e creare processi relativi alla privacy, continua a leggere la documentazione fornita in questa guida.
 
-Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [&#x200B; nel data lake](../catalog/privacy.md).
+Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [ nel data lake](../catalog/privacy.md).

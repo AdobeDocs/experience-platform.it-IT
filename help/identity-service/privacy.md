@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari
 title: Elaborazione delle richieste di privacy nel servizio Identity
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per il servizio Identity.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Le sezioni seguenti descrivono come effettuare richieste di accesso a dati perso
 
 ### Mediante l’API
 
-Durante la creazione di richieste di processi nell&#39;API, qualsiasi ID fornito in `userIDs` deve utilizzare un `namespace` e un `type` specifici. È necessario fornire uno spazio dei nomi [identity](#namespaces) valido riconosciuto da [!DNL Identity Service] per il valore `namespace`, mentre `type` deve essere `standard` o `unregistered` (rispettivamente per gli spazi dei nomi standard e personalizzati).
+Durante la creazione di richieste di processo nell’API, tutti gli ID forniti all’interno di userID devono utilizzare uno spazio dei nomi e un tipo specifici. Per il valore dello spazio dei nomi è necessario fornire uno spazio dei nomi di identità valido riconosciuto da Identity Service. Utilizza `standard` per gli spazi dei nomi standard e `custom` per quelli personalizzati.
 
 Inoltre, l&#39;array `include` del payload della richiesta deve includere i valori del prodotto per i diversi archivi di dati a cui viene effettuata la richiesta. Quando si eseguono richieste a [!DNL Identity], l&#39;array deve includere il valore `Identity`.
 
@@ -98,7 +98,7 @@ curl -X POST \
 >
 >Quando elimini le identità tramite l’eliminazione tramite RGPD, devi specificare il simbolo di identità come spazio dei nomi invece del nome visualizzato.
 
-Durante la creazione di richieste di processi nell&#39;interfaccia utente, assicurarsi di selezionare **[!UICONTROL Identità]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati archiviati in [!DNL Identity Service].
+Quando si creano richieste di processi nell&#39;interfaccia utente, assicurarsi di selezionare **[!UICONTROL Identity]** in **[!UICONTROL Products]** per elaborare i processi per i dati archiviati in [!DNL Identity Service].
 
 ![identity-gdpr](./images/identity-gdpr.png)
 
