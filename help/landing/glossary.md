@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario di Adobe Experience Platform
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '8169'
+source-wordcount: '8224'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,7 @@ ht-degree: 0%
 
 **Etichette di utilizzo dati**: le etichette di utilizzo dati consentono di categorizzare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali conformi alle normative e ai criteri aziendali. Le etichette di utilizzo dei dati aggiunte a un set di dati vengono ereditate o applicate a tutti i campi all’interno di tale set di dati. Le etichette di utilizzo dei dati possono essere applicate direttamente ai campi.
 
-**Flusso di dati**: un flusso di dati è una pipeline virtuale di dati che fluisce in Experience Platform da un&#39;origine e in uscita verso le destinazioni.
+**Flusso di dati**: un flusso di dati è una pipeline virtuale di dati che fluisce in Experience Platform da un&#39;origine e in uscita verso le destinazioni. Nel contesto delle destinazioni, un flusso di dati è sinonimo di [istanza di destinazione](#destination-instance). {#dataflow}
 
 **Esecuzione flusso di dati**: un&#39;esecuzione flusso di dati è un flusso di dati che arriva in Experience Platform in base a una pianificazione specificata dall&#39;utente.
 
@@ -200,6 +200,8 @@ ht-degree: 0%
 **Categoria di destinazione**: una categoria di destinazione è un raggruppamento di destinazioni con caratteristiche simili.
 
 **Catalogo di destinazione**: un catalogo di destinazione è un elenco di destinazioni disponibili in Experience Platform.
+
+**Istanza di destinazione**: un&#39;istanza di destinazione è una connessione singola configurata a una destinazione specifica in Experience Platform, creata tramite l&#39;interfaccia utente o l&#39;API. Rappresenta una singola pipeline di attivazione da Experience Platform a un endpoint di destinazione. Denominato anche [flusso di dati](#dataflow). {#destination-instance}
 
 **Regole di chiamata diretta**: nel contesto dei tag, una regola di chiamata diretta è una regola che viene eseguita quando viene chiamata direttamente dalla pagina, ignorando i sistemi di rilevamento degli eventi e di ricerca.
 
@@ -241,7 +243,7 @@ ht-degree: 0%
 
 **Pacchetto di estensione**: nel contesto dei tag, un pacchetto di estensione è un file ZIP creato e caricato da uno sviluppatore di estensioni che fornisce tutto il necessario affinché gli utenti dei tag possano installare l&#39;estensione all&#39;interno della propria proprietà. Un pacchetto di estensione contiene un manifesto che specifica le informazioni sull’estensione, il HTML/JavaScript necessario agli utenti finali per configurare il comportamento dell’estensione tag e l’eseguibile JavaScript consegnato all’ambiente client (se necessario).
 
-## F
+## V
 
 **Offerte di fallback**: un&#39;offerta di fallback è l&#39;offerta predefinita visualizzata quando un utente finale non è idoneo per nessuna delle offerte della raccolta utilizzata.
 
@@ -329,7 +331,7 @@ ht-degree: 0%
 
 **Entità di ricerca**: nel contesto della modellazione dati, le entità di ricerca rappresentano concetti che possono essere correlati a una singola persona, ma non possono essere utilizzati direttamente per identificare l&#39;individuo. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su classi XDM (Experience Data Model) personalizzate e collegate a un&#39;entità profilo tramite una [relazione schema](../xdm/tutorials/relationship-ui.md).
 
-## M
+## L
 
 **Apprendimento automatico (ML)**: l&#39;apprendimento automatico è il campo di studio che consente ai computer di apprendere senza essere programmati in modo esplicito.
 
@@ -553,7 +555,7 @@ ht-degree: 0%
 
 **VCDPA**: [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) fornisce nuovi diritti sulla privacy dei dati ai residenti della Virginia (&quot;Consumatori&quot;), incluso il diritto di accesso, eliminazione e correzione dei dati personali. I consumatori hanno anche il diritto di non acconsentire alla vendita di dati personali, di non acconsentire alla profilazione basata su dati personali e al trattamento di finalità pubblicitarie personali.
 
-## L
+## W
 
 ## X
 
