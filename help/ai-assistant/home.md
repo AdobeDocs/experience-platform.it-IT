@@ -61,7 +61,7 @@ Per conoscenza del prodotto si intendono i concetti e gli argomenti basati sulla
 
 Per ulteriori informazioni sulla conoscenza del prodotto di AI Assistant, guarda il seguente video:
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475938/?captions=ita&learn=on)
 
 ### Insight operativi {#operational-insights}
 
@@ -90,7 +90,7 @@ Per le domande sulle informazioni operative, le risposte potrebbero non riflette
 
 Per ulteriori informazioni sulle informazioni operative di AI Assistant, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444040?captions=ita&learn=on&enablevpops)
 
 ### Ambito della funzione {#feature-scope}
 
