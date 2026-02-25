@@ -2,10 +2,10 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
 source-wordcount: '927'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -23,7 +23,7 @@ L’Assistente IA in Adobe Experience Platform è un’esperienza di conversazio
 
 >[!IMPORTANT]
 >
->Prima di poter utilizzare l&#39;Assistente IA devi accettare un [contratto utente](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html). Il contratto utente contiene anche il contratto beta pubblico. In questo modo è possibile utilizzare funzioni dell’Assistente AI aggiuntive durante il rollout in una capacità beta.
+>Prima di poter utilizzare l&#39;Assistente IA devi accettare un [contratto utente](https://www.adobe.com/it/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html). Il contratto utente contiene anche il contratto beta pubblico. In questo modo è possibile utilizzare funzioni dell’Assistente AI aggiuntive durante il rollout in una capacità beta.
 
 +++Selezionare per visualizzare l&#39;interfaccia del contratto utente
 
@@ -61,7 +61,7 @@ Per conoscenza del prodotto si intendono i concetti e gli argomenti basati sulla
 
 Per ulteriori informazioni sulla conoscenza del prodotto di AI Assistant, guarda il seguente video:
 
->[!VIDEO](https://video.tv.adobe.com/v/3475938/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Insight operativi {#operational-insights}
 
@@ -76,12 +76,12 @@ Puoi porre domande all’Assistente AI sulle informazioni operative nei seguenti
 | Dominio | Metadati supportati | Metadati non supportati |
 | --- | --- | --- |
 | Attributi | <ul><li>Ricerca nome attributo</li><li>Attributo: relazione schema</li><li>Attributo: relazione set di dati</li><li>Attributo: relazione pubblico</li><li>Attributo - relazione di destinazione</li></ul> | <ul><li>Classe attributo</li><li>Audit</li><li>Stato obsoleto</li><li>Etichette</li><li>Valore memorizzato negli attributi</li></ul> |
-| Tipi di pubblico | <ul><li>Conteggio del pubblico</li><li>Tipo di pubblico (in streaming o in batch)</li><li>Date di creazione/modifica</li><li>Stato attivazione</li><li>Conteggio dei profili</li><li>Pubblico duplicato</li><li>Ricerca definizione pubblico</li><li>Pubblico: relazione tra pubblico</li><li>Pubblico - relazione attributo</li><li>Pubblico: relazione tra set di dati</li><li>Pubblico - relazione destinazione</li><li>Ricerca nome</li><li>Ricerca per nome e ID | <ul><li>Sovrapposizioni di pubblico</li><li>Attivazione pubblico</li><li>Pubblico - Relazioni con la campagna</li><li>Audit</li><li>Crea/modifica</li><li>Etichette</li><li>Tendenze di qualificazione dei profili</li></ul> |
+| Tipi di pubblico | <ul><li>Conteggio del pubblico</li><li>Tipo di pubblico (in streaming o in batch)</li><li>Date di creazione/modifica</li><li>Stato attivazione</li><li>Conteggio dei profili</li><li>Pubblico duplicato</li><li>Ricerca definizione pubblico</li><li>Pubblico: relazione tra pubblico</li><li>Pubblico - relazione attributo</li><li>Pubblico: relazione tra set di dati</li><li>Pubblico - relazione destinazione</li><li>Ricerca nome</li><li>Ricerca per nome e ID | <ul><li>Sovrapposizioni del pubblico</li><li>Attivazione del pubblico</li><li>Pubblico - Relazioni con la campagna</li><li>Audit</li><li>Crea/modifica</li><li>Etichette</li><li>Tendenze di qualificazione dei profili</li></ul> |
 | Flussi di dati | <ul><li>Conteggi dei flussi di dati</li><li>Stato del flusso di dati</li><li>Flusso di dati: relazione set di dati</li><li>Flusso di dati - relazione di origine</li></ul> | <ul><li>Creazione/modifica</li><li>Relazioni flusso di dati-batch</li><li>Acquisisci conteggio profili</li></ul> |
-| Set di dati | <ul><li>Conteggio set di dati</li><li>Stato abilitazione profilo</li><li>Data di creazione/modifica</li><li>Set di dati: relazione schema</li><li>Set di dati: relazione pubblico</li><li>Set di dati: relazione attributo</li><li>Set di dati: relazione flusso di dati</li><li>Ricerca nome </li><li>Ricerca per nome e ID</li></ul> | <ul><li>Audit</li><li>Creato da</li><li>Set di dati: relazione batch</li><li>Creazione/modifica del set di dati</li><li>Dimensione set di dati</li><li>Numero di profili</li><li>Numero di righe</li><li>Ricerca di valori</li></ul> |
+| Set di dati | <ul><li>Conteggio set di dati</li><li>Stato abilitazione profilo</li><li>Data di creazione/modifica</li><li>Set di dati: relazione schema</li><li>Set di dati: relazione pubblico</li><li>Set di dati: relazione attributo</li><li>Set di dati: relazione flusso di dati</li><li>Dimensione set di dati</li><li>Numero di righe</li><li>Ricerca nome </li><li>Ricerca per nome e ID</li></ul> | <ul><li>Audit</li><li>Creato da</li><li>Set di dati: relazione batch</li><li>Creazione/modifica del set di dati</li><li>Numero di profili</li><li>Ricerca di valori</li></ul> |
 | Destinazioni | <ul><li>Conteggi di destinazione configurati</li><li>Destinazione - Relazione pubblico</li><li>Relazione attributo di destinazione</li></ul> | <ul><li>Configurazione account</li><li>Informazioni sulle credenziali dell&#39;account</li><li>Profili univoci attivati</li></ul> |
 | Percorsi | <ul><li>Conteggi</li><li>Ricerca nome</li><li>Ricerca per nome e ID</li><li>Stato del percorso</li><li>Stato attivato (pubblico vs. eventi)</li><li>Date di creazione/modifica</li><li>Frequenza ricorrente</li></ul> | <ul><li>Attributi - Relazioni percorso</li><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Eventi</li><li>Percorso - set di dati</li><li>Percorso - schema</li><li>Offerte</li><li>Tendenze di qualificazione dei profili</li><li>Eventi passaggio</li></ul> |
-| Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerca nome</li><li>Ricerca per nome e ID</li></ul> | <ul><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Gruppi di campi</li><li>Identità</li><li>Spazio dei nomi delle identità</li><li>Etichette</li><li>Numero di profili</li></ul> |
+| Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerca nome</li><li>Ricerca per nome e ID</li></ul> | <ul><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Gruppi di campi</li><li>Identità</li><li>Spazi dei nomi delle identità</li><li>Etichette</li><li>Numero di profili</li></ul> |
 | Origini | <ul><li>Conteggi account</li><li>Stato account</li><li>Flussi di dati attivi/inattivi per ogni account</li><li>Connettore Source - relazione flusso di dati</li><li>Account Source - relazione flusso di dati</li></ul> | <ul><li>Informazioni sulle credenziali dell’account</li><li>Configurazione account</li><li>Metriche di acquisizione dei dati</li><li>Numero di profili</li><li>Source - relazioni batch</li></ul> |
 
 {style="table-layout:auto"}
@@ -90,7 +90,7 @@ Per le domande sulle informazioni operative, le risposte potrebbero non riflette
 
 Per ulteriori informazioni sulle informazioni operative di AI Assistant, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444040?learn=on&enablevpops&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Ambito della funzione {#feature-scope}
 

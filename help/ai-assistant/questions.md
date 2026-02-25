@@ -2,9 +2,9 @@
 title: Guida alle domande per l’Assistente AI
 description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query sull’Assistente AI.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2063'
 ht-degree: 2%
 
 ---
@@ -24,8 +24,8 @@ Le domande di esempio seguenti sono raggruppate per obiettivi che è possibile r
 | Concetti di apprendimento e flussi di lavoro continui | <ul><li>In qualità di utente principiante, puoi utilizzare l’Assistente AI per apprendere i concetti di Real-Time CDP e Adobe Journey Optimizer e integrarti in prodotti e funzionalità che non conosci.</li><li>In qualità di utente esperto, puoi utilizzare l’Assistente IA per risolvere un caso limite che potrebbe bloccare il flusso di lavoro. | <ul><li>Come si imposta una dashboard in Analytics di Percorso?</li><li>Dimmi alcuni casi d’uso per Real-Time CDP.</li></ul> |
 | Risoluzione dei problemi | Utilizza l’Assistente AI per scoprire come eseguire il debug degli errori di base che potrebbero verificarsi nel flusso di lavoro. | <ul><li>Cosa significa questo errore {ERROR_MESSAGE}?</li><li>Perché non sono in grado di eliminare il pubblico denominato &quot;Luma: E-mail Audience&quot;?</li></ul> |
 | Igiene delle sandbox | Utilizza l’Assistente AI per identificare eventuali oggetti duplicati o inutilizzati in modo da poter gestire la sandbox in modo efficiente. | <ul><li>Puoi mostrarmi tipi di pubblico simili?</li><li>Esistono schemi a cui non è associato un set di dati?</li></ul> |
-| Analisi del valore | Utilizza l’Assistente AI per identificare gli oggetti dati più utilizzati e valutare eventuali indicatori di prestazioni o trovare gli oggetti dati più importanti. | <ul><li>Quanti profili ci sono nella definizione del segmento &quot;Luma: Pubblico e-mail&quot;?</li><li>Quando sono stati attivati i tipi di pubblico per la destinazione Tipi di pubblico di Experience Cloud?</li></ul> |
-| Ricerca | Utilizza l’Assistente AI per trovare oggetti Experienci Platform supportati come tipi di pubblico, set di dati, destinazioni, schemi e origini. | <ul><li>Elencare i tipi di pubblico contenenti &quot;Luma&quot; nel nome creati nell’ultimo trimestre.</li><li>Quali attributi sono presenti nello schema XDM &quot;Luma: Azioni personalizzate&quot;?</li></ul> |
+| Analisi del valore | Utilizza l’Assistente AI per identificare gli oggetti dati più utilizzati e valutare eventuali indicatori di prestazioni o trovare gli oggetti dati più importanti. | <ul><li>Quanti profili ci sono nella definizione del segmento &quot;Luma: Pubblico e-mail&quot;?</li><li>Quando i tipi di pubblico sono stati attivati nella destinazione Pubblico di Experience Cloud?</li></ul> |
+| Ricerca | Utilizza l’Assistente AI per trovare gli oggetti di Experience Platform supportati come tipi di pubblico, set di dati, destinazioni, schemi e origini. | <ul><li>Elencare i tipi di pubblico contenenti &quot;Luma&quot; nel nome creati nell’ultimo trimestre.</li><li>Quali attributi sono presenti nello schema XDM &quot;Luma: Azioni personalizzate&quot;?</li></ul> |
 | Analisi dell&#39;impatto | Utilizza l’Assistente AI per identificare gli oggetti dati utilizzati in alcuni flussi di lavoro in modo da poter valutare l’impatto di eventuali modifiche. | <ul><li>Quali tipi di pubblico utilizzano `homeAddress.city` nello schema &quot;Luma: PersonProfiles&quot;?</li><li>Quali set di dati sono l&#39;attributo di profilo `consents.marketing.push.val` archiviato in?</li></ul> |
 
 {style="table-layout:auto"}
@@ -101,7 +101,7 @@ Le tabelle seguenti descrivono le best practice che è possibile seguire quando 
 | Esegui | Esempio |
 | --- | --- |
 | <ul><li>Specificare l&#39;oggetto o le informazioni da recuperare o analizzare.</li><li>Provare a inserire i nomi degli oggetti dati tra virgolette. Se si conosce solo una parte del nome dell&#39;oggetto, è possibile specificarlo nella domanda.</li><li>Utilizza [completamento automatico dell&#39;oggetto](./ui-guide.md#use-auto-complete) per aiutare l&#39;Assistente IA a comprendere meglio il contesto della query.</li></ul> | <ul><li>Quali set di dati utilizzano lo schema &quot;Luma - Fedeltà&quot;?</li><li>Mostrami i segmenti attivati il cui nome contiene &quot;Luma&quot;. Classificale in base al numero di profili.</li></ul> |
-| <ul><li>Evita ambiguità e usa un linguaggio chiaro</li><li>Utilizza una terminologia precisa per garantire una maggiore chiarezza nella query.</li><li>Quando fai domande su Adobe Experience Platform, prova a utilizzare la terminologia specifica di Experience Platform per migliorare la pertinenza delle risposte.</li></ul> | <ul><li>Quanti profili ho in &quot;Pubblico ACME&quot;.</li><li>Mostra i primi 5 attributi XDM utilizzati nei tipi di pubblico attivati.</li></ul> |
+| <ul><li>Evita ambiguità e usa un linguaggio chiaro</li><li>Utilizza una terminologia precisa per garantire una maggiore chiarezza nella query.</li><li>Quando fai domande su Adobe Experience Platform, prova a utilizzare la terminologia specifica di Experience Platform per migliorare la rilevanza delle risposte.</li></ul> | <ul><li>Quanti profili ho in &quot;Pubblico ACME&quot;.</li><li>Mostra i primi 5 attributi XDM utilizzati nei tipi di pubblico attivati.</li></ul> |
 | <ul><li>Fornisci contesto o specifica un criterio per filtrare i risultati.</li><li>Utilizza un criterio di filtro nelle domande per limitare il volume di dati nella risposta.</li></ul> | <ul><li>Mostra i tipi di pubblico che non sono stati attivati e che sono stati creati più di 6 mesi fa e che non sono mai stati modificati.</li><li>Mostra i tipi di pubblico attivati su &quot;Destinazione ACME&quot; e con più di 10000 profili.</li></ul> |
 
 {style="table-layout:auto"}
@@ -127,7 +127,7 @@ L’Assistente AI ora può rispondere a domande su metriche specifiche dei set d
 
 Inoltre, puoi trasmettere un intento simile attraverso una serie di varianti diverse alle quattro domande sopra citate.
 
-+++Seleziona per visualizzare le varianti accettate delle domande sull’osservabilità dei set di dati
++++Seleziona per visualizzare le varianti accettate delle domande di osservabilità dei set di dati
 
 * Quali sono i primi cinque set di dati in base alle dimensioni?
 * Quale set di dati ha il maggior numero di righe?
@@ -154,7 +154,7 @@ Puoi anche perfezionare le domande sull’osservabilità dei dati con un qualifi
 * Set di dati con il maggior numero di dati acquisiti negli ultimi (x) giorni
 * Conteggio dei record per un set di dati specifico negli ultimi (x) giorni
 
-+++Seleziona per visualizzare le varianti accettate delle domande sull’osservabilità dei set di dati
++++Seleziona per visualizzare le varianti accettate delle domande di osservabilità dei set di dati
 
 * Quanti set di dati hanno ricevuto batch negli ultimi (x) giorni?
 * Quali set di dati hanno ricevuto batch negli ultimi (x) giorni?
@@ -196,12 +196,10 @@ Di seguito è riportato un elenco di esempi di domande non attualmente supportat
 * Quanti profili in questa sandbox vivono in California? (**Nota**: per domande simili, devi fornire un criterio specifico per fornire un contesto sufficiente per la richiesta; in questo caso, il criterio specifico è &quot;live in California&quot;).
 * Quali sono i segmenti in cui si trova questo profilo {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * Quanti profili nel set di dati hanno un messaggio e-mail?
-* Quale set di dati rappresenta il numero massimo di profili in questa sandbox?
-* Quale set di dati ha il numero più alto di record?
+* Quale set di dati costituisce il numero massimo di profili in questa sandbox?
 * Quanti segmenti sono stati eliminati in {RELATIVE_DATE}?
-* Quale dei miei set di dati ha le dimensioni più grandi?
 * Assegnami un profilo in {AUDIENCE_NAME}.
-* Qual è il numero totale di profili nella sandbox
+* Qual è il numero totale di profili nella sandbox?
 * Quanti spazi dei nomi di identità sono associati al pubblico {AUDIENCE_NAME}?
 * Mostra un rapporto di tutti i segmenti di pubblico valutati oggi
 * Quanti segmenti hanno profili sovrapposti?
