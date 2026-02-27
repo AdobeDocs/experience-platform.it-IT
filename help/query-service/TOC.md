@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
+source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '411'
 ht-degree: 26%
 
 ---
@@ -109,6 +109,7 @@ ht-degree: 26%
    - [Pianificazioni query](ui/query-schedules.md)
    - [Registri query](ui/query-logs.md)
    - [Monitorare le query pianificate](ui/monitor-queries.md)
+   - [Gestione sessioni](ui/session-management.md)
    - [Guida alle credenziali](ui/credentials.md)
    - [Migrazione di JWT alle credenziali OAuth](ui/migrate-jwt-to-oauth.md)
    - [Genera set di dati di output dai risultati della query](ui/create-datasets.md)
