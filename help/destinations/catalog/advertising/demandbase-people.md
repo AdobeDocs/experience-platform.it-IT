@@ -2,9 +2,9 @@
 title: Connessione Demandbase People
 description: Utilizza questa destinazione per attivare i tipi di pubblico e arricchirli con i dati di terze parti Demandbase, per altri casi d’uso a valle nel marketing e nelle vendite.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 1ceafcccf3f95e401fdce8e00b1755fafe004343
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1018'
 ht-degree: 4%
 
 ---
@@ -82,7 +82,7 @@ Per esportare i tipi di pubblico in Demandbase, è necessario quanto segue:
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
@@ -116,19 +116,19 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 ### Mappature obbligatorie {#mandatory-mappings}
 
-Quando si attivano i tipi di pubblico nella destinazione [!DNL Demandbase People], è necessario configurare la seguente mappatura campi obbligatoria nel passaggio di mappatura:
+Quando si attivano i tipi di pubblico nella destinazione [!DNL Demandbase People], è necessario configurare le seguenti mappature di campi obbligatorie nel passaggio di mappatura:
 
 | Campo di origine | Campo di destinazione | Descrizione |
 |--------------|--------------|-------------|
 | `xdm: workEmail.address` | `Identity: email` | Indirizzo e-mail aziendale della persona |
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identificatore univoco della persona |
 
 ### Mappature consigliate {#recommended-mappings}
 
-Per una corrispondenza ottimale, includi le seguenti mappature facoltative nel flusso di attivazione, oltre alla [mappatura obbligatoria](#mandatory-mappings) di cui sopra.
+Per una precisione di corrispondenza ottimale, includi le seguenti mappature facoltative nel flusso di attivazione, oltre alle [mappature obbligatorie](#mandatory-mappings) di cui sopra.
 
 | Campo di origine | Campo di destinazione | Descrizione |
 |--------------|--------------|-------------|
-| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | Identificatore univoco della persona |
 | `xdm: person.name.lastName` | `xdm: lastName` | Cognome della persona |
 | `xdm: person.name.firstName` | `xdm: firstName` | Nome della persona |
 
@@ -136,9 +136,9 @@ Per una corrispondenza ottimale, includi le seguenti mappature facoltative nel f
 
 Durante il mapping dei campi a [!DNL Demandbase People], considera il seguente comportamento di corrispondenza:
 
-* **Corrispondenza primaria**: se `externalPersonId` è presente, Demandbase lo utilizza come identificatore primario per la corrispondenza della persona.
+* **Corrispondenza primaria**: Demandbase utilizza `externalPersonId` come identificatore primario per la corrispondenza persona.
 * **Corrispondenza fallback**: se `externalPersonId` non è disponibile, Demandbase utilizza il campo `email` per l&#39;identificazione.
-* **Obbligatorio e consigliato**: sebbene Demandbase richieda solo `email`, Adobe consiglia di mappare tutti i campi disponibili nella tabella delle mappature consigliata precedente per migliorare la precisione della corrispondenza e le prestazioni della campagna.
+* **Campi consigliati**: sebbene siano necessari solo `email` e `externalPersonId`, Adobe consiglia di mappare tutti i campi disponibili nella tabella delle mappature consigliata sopra per migliorare la precisione della corrispondenza e le prestazioni della campagna.
 
 ![Mappature persone Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 
