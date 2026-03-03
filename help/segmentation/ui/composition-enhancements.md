@@ -3,13 +3,13 @@ title: Miglioramenti alla composizione del pubblico
 description: Scopri i miglioramenti apportati alla composizione del pubblico con un arricchimento del pubblico e un’attivazione più rapida.
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # Miglioramenti alla composizione del pubblico
 
@@ -26,15 +26,15 @@ Per aggiungere un arricchimento del pubblico alla composizione, seleziona il blo
 
 ![Il blocco del pubblico è evidenziato, così come il pulsante Genera regola.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-Viene visualizzata l’area di lavoro del generatore di regole. Ora puoi creare un criterio di filtro per l’arricchimento del pubblico. I criteri di filtro **devono** includere un attributo all&#39;interno di un array. L’attributo array dipende dalla struttura dello schema della tua organizzazione. Dopo aver creato i criteri di filtro, seleziona **[!UICONTROL Delivery]** nel pannello di destra.
+Viene visualizzata l’area di lavoro del generatore di regole. Ora puoi creare un criterio di filtro per l’arricchimento del pubblico. I criteri di filtro **devono** includere un attributo all&#39;interno di un array. L’attributo array dipende dalla struttura dello schema della tua organizzazione. Dopo aver creato i criteri di filtro, seleziona **[!UICONTROL View enrichment]** nel pannello di destra.
 
-![L&#39;area di lavoro del generatore di regole mostra un esempio di un pubblico che può essere arricchito. Viene evidenziato anche il pulsante Delivery.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![L&#39;area di lavoro del generatore di regole mostra un esempio di un pubblico che può essere arricchito. Viene evidenziato anche il pulsante Delivery.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-Scegliete l&#39;array di oggetti da utilizzare per l&#39;arricchimento dall&#39;elenco nel pannello sinistro. Se nel profilo è presente un solo array, l’array viene selezionato automaticamente. Seleziona **[!UICONTROL Save]** per tornare alla composizione del pubblico.
+Dall’elenco nel pannello a sinistra, scegli l’array di oggetti e i campi da utilizzare nell’arricchimento. Se nel profilo è presente un solo array, l’array viene selezionato automaticamente. Seleziona **[!UICONTROL Save]** per tornare alla composizione del pubblico.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![Viene visualizzata la struttura dello schema per la struttura di arricchimento.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![Viene visualizzata la struttura dello schema per la struttura di arricchimento.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 Nella composizione del pubblico, il blocco [!UICONTROL Audience] è ora di tipo &quot;[!UICONTROL Rule builder with enhancement]&quot;. Seleziona **[!UICONTROL Publish]** per attivare il pubblico con il successivo batch giornaliero.
 
