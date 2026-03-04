@@ -3,20 +3,21 @@ title: Connessione Demandbase
 description: Utilizza questa destinazione per attivare i tipi di pubblico di account per i casi d’uso di Account-Based Marketing (ABM). Pubblicizza a persone e ruoli rilevanti negli account target tramite il Demand Side Platform B2B (DSP) di DemandBase. Gli account target possono inoltre essere arricchiti con dati di terze parti di DemandBase, per altri casi d’uso downstream nel marketing e nelle vendite.
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 5a03902df358d804cbafb401ffcef54eab240dfd
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 14%
 
 ---
 
+
 # Connessione Demandbase {#demandbase}
 
 >[!AVAILABILITY]
 >
->La funzionalità per attivare i tipi di pubblico dell&#39;account nella destinazione Demandbase è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time Customer Data Platform.
+>La funzionalità per attivare il pubblico dell&#39;account nella destinazione Demandbase è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-time Customer Data Platform.
 
-Attiva profili per le campagne Demandbase per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base a [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) .
+Attivare i profili per le campagne Demandbase per il targeting, la personalizzazione e la soppressione dei gruppi di destinatari in base ai [gruppi di destinatari dell&#39;account](/help/segmentation/types/account-audiences.md).
 
 ## Caso d’uso {#use-case}
 
@@ -33,23 +34,20 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini dei gruppi di destinatari al di fuori dei gruppi di destinatari generati tramite [!DNL Segmentation Service]. Leggi le [varie origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> gruppi di destinatari personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> gruppi di destinatari generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
-
-
-Tipi di pubblico supportati per tipo di dati sul pubblico:
+Gruppi di destinatari supportati per tipo di dati:
 
 | Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
 |--------------------|-----------|-------------|-----------|
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | Sì | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
-| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Individui che non sono ancora clienti ma condividono le caratteristiche con il pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Report, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
-
 
 ## Tipo e frequenza di esportazione {#export-type-and-frequency}
 
@@ -58,7 +56,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 |--------------|-----------|---------------------------|
 | Tipo di esportazione | Esportazione pubblico | Tutti i membri del pubblico verranno esportati con identificatori chiave come nome, numero di telefono e altro ancora. |
-| Frequenza | Streaming | Connessioni basate su API sempre attive. Gli aggiornamenti vengono inviati a valle immediatamente dopo le modifiche al profilo. |
+| Frequenza | Streaming | Connessioni basate su API &quot;Always-on&quot;. Gli aggiornamenti vengono inviati a valle immediatamente dopo la modifica del profilo. |
 
 {style="table-layout:auto"}
 
@@ -67,15 +65,15 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 Per esportare i tipi di pubblico dell’account in Demandbase, è necessario disporre dei seguenti elementi:
 
 1. Un account Demandbase.
-2. Un token API Demandbase. Puoi generare un token API con l’utente in Demandbase. Per generare un token, passa a [Profilo personale > Token API](https://web.demandbase.com/o/ad/at) dopo aver effettuato l&#39;accesso all&#39;account Demandbase.
+2. Un token API Demandbase. Puoi generare un token API con l’utente in Demandbase. Per generare un token, accedi a [Il mio profilo > Token API](https://web.demandbase.com/o/ad/at) dopo aver effettuato l’accesso all’account Demandbase.
 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessaria l&#39;autorizzazione **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica del controllo di accesso](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;[esercitazione sulla configurazione di destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 ### Autenticarsi nella destinazione {#authenticate}
 
@@ -104,11 +102,11 @@ Ora puoi attivare i tipi di pubblico in Demandbase.
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Leggi [Attiva pubblico account](/help/destinations/ui/activate-account-audiences.md) per le istruzioni sull&#39;attivazione del pubblico account in questa destinazione.
+Per istruzioni sull&#39;attivazione dei gruppi di destinatari dell&#39;account in questa destinazione, leggi [Attiva gruppi di destinatari dell&#39;account](/help/destinations/ui/activate-account-audiences.md).
 
-### Mappature obbligatorie {#mandatory-mappings}
+### Mapping obbligatori {#mandatory-mappings}
 
-Quando si attivano i tipi di pubblico nella destinazione [!DNL Demandbase], è necessario configurare le seguenti mappature di campi obbligatorie nel passaggio di mappatura:
+Durante l&#39;attivazione dei gruppi di destinatari nella destinazione [!DNL Demandbase], è necessario configurare le mappature dei campi obbligatorie seguenti nel passaggio di mappatura:
 
 | Campo di origine | Campo di destinazione | Descrizione |
 |--------------|--------------|-------------|
@@ -122,7 +120,7 @@ Queste mappature sono necessarie per il corretto funzionamento della destinazion
 
 ## Note aggiuntive e callout importanti {#additional-notes}
 
-* **Denominazione del pubblico**: se un pubblico account con lo stesso nome è stato attivato in precedenza in Demandbase, non è possibile riattivarlo tramite un flusso di dati diverso nella destinazione Demandbase.
+* **Denominazione dei gruppi di destinatari**: se un gruppo di destinatari con lo stesso nome è stato attivato in precedenza in Demandbase, non sarà possibile riattivarlo tramite un flusso di dati diverso nella destinazione Demandbase.
 * **Guardrail API Demandbase**: se hai esportato tipi di pubblico in Demandbase e le esportazioni hanno avuto esito positivo in Experience Platform, ma non tutti i dati raggiungono Demandbase, potresti aver riscontrato una limitazione API sul lato Demandbase. Rivolgiti a loro per chiarimenti.
 * **Eliminazione elenco**: gli elenchi account sono univoci, pertanto non è possibile ricreare un nuovo elenco con un nome già in uso. Quando si rimuovono account da un elenco, questi non saranno più disponibili, ma non verranno eliminati.
 * **Ora di attivazione**: il caricamento dei dati in Demandbase è soggetto a elaborazione notturna.

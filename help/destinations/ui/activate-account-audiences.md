@@ -3,9 +3,9 @@ title: Attivare il pubblico dell’account nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico dell’account nelle destinazioni
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pub
 
 ## Destinazioni supportati {#supported-destinations}
 
-Vai a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e seleziona la scheda **[!UICONTROL Catalog]**. Utilizza il filtro **[!UICONTROL Data types]** e seleziona **[!UICONTROL Accounts]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico dell&#39;account. Attualmente, l&#39;esportazione dei tipi di pubblico dell&#39;account è disponibile solo per alcune destinazioni di archiviazione cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e per la destinazione di streaming [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
+Vai a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e seleziona la scheda **[!UICONTROL Catalog]**. Utilizza il filtro **[!UICONTROL Data types]** e seleziona **[!UICONTROL Accounts]** per visualizzare le destinazioni che supportano l&#39;attivazione dei tipi di pubblico dell&#39;account. Attualmente, l&#39;esportazione dei tipi di pubblico dell&#39;account è disponibile solo per alcune destinazioni di streaming di destinazioni di archiviazione cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e [Bombora](/help/destinations/catalog/advertising/bombora.md), [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
 
 ![Destinazioni che supportano i tipi di pubblico dell&#39;account.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 

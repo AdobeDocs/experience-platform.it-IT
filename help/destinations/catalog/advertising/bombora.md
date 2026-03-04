@@ -1,19 +1,19 @@
 ---
-title: Connessione Bombora
+title: Bombora ABM Audiences connessione
 description: Attiva profili per le campagne Bombora per il targeting, la personalizzazione e l’eliminazione del pubblico, in base al pubblico dell’account.
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 4%
+source-wordcount: '1170'
+ht-degree: 3%
 
 ---
 
-# Connessione Bombora {#bombora}
+# Bombora ABM Audiences connessione {#bombora}
 
 >[!AVAILABILITY]
 >
->La funzionalità per attivare il pubblico dell&#39;account nella destinazione Bombora è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time Customer Data Platform.
+>La funzionalità per attivare i tipi di pubblico dell&#39;account nella destinazione Bombora ABM Audiences è disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time Customer Data Platform.
 
 Attiva profili per le campagne Bombora per il targeting, la personalizzazione e l&#39;eliminazione del pubblico, in base a [tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md).
 
@@ -52,8 +52,6 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 
 {style="table-layout:auto"}
 
-
-
 Tipi di pubblico supportati per tipo di dati sul pubblico:
 
 | Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
@@ -91,14 +89,15 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Per esportare i tipi di pubblico dell&#39;account su Bombora, è necessario disporre delle seguenti informazioni.
 
-1. Un account di Bombora.
+1. Un account di Bombora. In caso contrario, puoi richiedere un account Bombora utilizzando il [modulo di richiesta di attivazione pubblico Bombora](https://customers.bombora.com/artcdp/audience-activation-request).
 2. Bombora **[!UICONTROL client ID]** e **[!UICONTROL client secret]**.
+3. I dati inviati a Bombora devono provenire da set di dati **abilitati per il profilo**, pertanto il set di dati viene incluso nel profilo. Prima di attivare i tipi di pubblico in questa destinazione, assicurati che i set di dati siano [abilitati per il profilo](/help/catalog/datasets/enable-for-profile.md).
 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
@@ -135,8 +134,6 @@ Leggi [Attiva pubblico account](/help/destinations/ui/activate-account-audiences
 
 La destinazione Bombora richiede di configurare le seguenti mappature per l&#39;attivazione dei dati.
 
-
-
 | Campo di origine | Campo di destinazione | Descrizione |
 |---------|----------|---------|
 | Qualsiasi valore | `Identity: primaryId` | Questa mappatura è obbligatoria per Experience Platform per stabilire una connessione con Bombora. Questo valore non viene esportato in Bombora, ma è richiesto per la configurazione di destinazione. È possibile selezionare qualsiasi attributo per il campo di origine. |
@@ -144,6 +141,17 @@ La destinazione Bombora richiede di configurare le seguenti mappature per l&#39;
 
 ![Aggiungi mappature obbligatorie](../..//assets/catalog/advertising/bombora/mappings.png)
 
+## Comportamento sincronizzazione pubblico {#sync-behavior}
+
+Dopo l’attivazione iniziale del pubblico, i successivi aggiornamenti al pubblico in Experience Platform vengono sincronizzati in modo incrementale con Bombora. Si applicano i seguenti comportamenti:
+
+* **Account aggiunto al pubblico**: quando un account viene aggiunto al pubblico in Experience Platform, viene automaticamente aggiunto al pubblico corrispondente in Bombora.
+* **Account rimosso o non più idoneo**: quando un account non è più idoneo per il pubblico o viene rimosso dal pubblico in Experience Platform, viene rimosso dal pubblico corrispondente in Bombora.
+* **Account o profilo eliminato**: quando un account o un profilo viene eliminato da Experience Platform e non è più idoneo per il pubblico, viene rimosso dal pubblico corrispondente in Bombora.
+
+### Comportamento di eliminazione e disconnessione del pubblico {#deletion-disconnect}
+
+Se si elimina un pubblico in Experience Platform o si rimuove un pubblico da un flusso di dati di attivazione Bombora, il pubblico viene rimosso dal proprio account Bombora.
 
 ## Note aggiuntive e callout importanti {#additional-notes}
 
