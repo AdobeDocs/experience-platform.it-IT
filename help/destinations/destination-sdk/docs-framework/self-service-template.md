@@ -2,9 +2,9 @@
 title: Modello self-service // Sostituisci con il nome della tua destinazione
 description: Utilizza questo modello per creare la documentazione pubblica per la destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 38178723dc142ba3e79d6c170affaf86ec496086
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1739'
 ht-degree: 2%
 
 ---
@@ -74,14 +74,25 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione *YourDesti
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-*Aggiungi informazioni in questa sezione sui tipi di pubblico supportati dalla tua destinazione. Abbiamo precompilato la tabella con alcuni valori standard. Utilizza i caratteri `✓` e `X` per segnalare se il tipo di pubblico è supportato da questa destinazione.*
+*Aggiungi informazioni in questa sezione sui tipi di pubblico supportati dalla tua destinazione. Abbiamo precompilato le tabelle con alcuni valori standard. Utilizza `Yes` e `No` per segnalare se il tipo di pubblico è supportato da questa destinazione.*
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Caricamenti personalizzati | X | Tipi di pubblico [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
+| [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+
+{style="table-layout:auto"}
+
+Tipi di pubblico supportati per tipo di dati sul pubblico:
+
+| Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
+|--------------------|-----------|-------------|-----------|
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | Sì | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
+| [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | Sì | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | Sì | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
