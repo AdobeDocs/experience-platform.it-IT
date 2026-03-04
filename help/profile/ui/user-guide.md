@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
+source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '2123'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 [!DNL Real-Time Customer Profile] crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l&#39;interazione con i dati [!DNL Real-Time Customer Profile] nell&#39;interfaccia utente di Adobe Experience Platform.
 
-## Guida introduttiva
+## Introduzione
 
 Questa guida dell&#39;interfaccia utente richiede una conoscenza dei vari servizi [!DNL Experience Platform] coinvolti nella gestione di [!DNL Real-Time Customer Profiles]. Prima di leggere questa guida o di lavorare nell’interfaccia utente, consulta la documentazione dei seguenti servizi:
 
@@ -40,9 +40,9 @@ Per ulteriori informazioni, visita la [guida del dashboard dei profili](../../da
 
 ## Scheda [!UICONTROL Browse]
 
-Nella scheda **[!UICONTROL Browse]** puoi visualizzare i profili in una visualizzazione **scheda** o **grafico** selezionando l&#39;opzione.
+Nella scheda **[!UICONTROL Browse]** puoi visualizzare i profili in una visualizzazione **scheda** o in una visualizzazione **tabella** selezionando l&#39;opzione.
 
-![L&#39;opzione di visualizzazione scheda e grafico è evidenziata.](../images/user-guide/change-browse-view.png)
+![L&#39;interruttore di visualizzazione della tabella e della scheda è evidenziato.](../images/user-guide/change-browse-view.png)
 
 Inoltre, puoi sfogliare i profili utilizzando un criterio di unione o cercare profili specifici utilizzando uno spazio dei nomi e un valore di identità.
 
@@ -111,11 +111,11 @@ Inoltre, puoi visualizzare altri dettagli sui profili come i suoi [attributi](#a
 
 ### Scheda Dettagli {#profile-detail}
 
-La scheda **[!UICONTROL Details]** fornisce informazioni più dettagliate sul profilo selezionato ed è suddivisa in quattro sezioni: Approfondimenti profilo cliente, widget insight di IA, widget personalizzabili e widget classificati automaticamente.
+La scheda **[!UICONTROL Details]** fornisce informazioni più dettagliate sul profilo selezionato. La scheda dei dettagli è suddivisa in varie sezioni, a seconda che tu sia in vista a schede o a grafico. Per la vista a schede, vengono visualizzati gli approfondimenti del profilo cliente, i widget di insight AI, i widget personalizzabili e i widget classificati automaticamente, mentre per la vista grafico vengono visualizzate le sezioni degli attributi del profilo e degli eventi di esperienza.
 
 ![Viene visualizzata la pagina dei dettagli del profilo.](../images/user-guide/profile-details.png)
 
-Inoltre, puoi scegliere se visualizzare o meno le informazioni generate dall’intelligenza artificiale, mostrare i dettagli dell’hub rispetto a Edge, nonché visualizzare i dettagli in visualizzazione grafico.
+Inoltre, puoi scegliere se visualizzare le informazioni generate dall’intelligenza artificiale, mostrare i dettagli dell’hub rispetto a Edge, nonché scegliere tra le viste a schede o a grafico.
 
 ![Sono evidenziati gli interruttori elencati sopra (approfondimenti generati dall&#39;intelligenza artificiale, dati Hub o Edge e vista a schede o grafico).](../images/user-guide/profile-toggles.png)
 
@@ -158,6 +158,24 @@ Questi widget combinano sia dati evento (con il widget Eventi di esperienza) che
 >Se sono presenti più gruppi di campi di origine, i widget utilizzeranno solo **una** delle opzioni disponibili.
 
 ![Viene visualizzata la sezione dei widget classificati automaticamente.](../images/user-guide/auto-classified-widgets.png)
+
+#### Attributi del profilo {#profile-attributes}
+
+Nella sezione **[!UICONTROL Profile attributes]** viene visualizzata una rappresentazione grafica gerarchica dei dati del profilo. In questa vista, il nodo centrale rappresenta il profilo stesso, i nodi secondari rappresentano i gruppi di campi e i nodi rimanenti rappresentano le proprietà all’interno di ciascun gruppo di campi.
+
+Nella vista grafico, puoi trascinare e rilasciare i nodi per riorganizzare l’ordine dei nodi, comprimere ed espandere i nodi per visualizzare ulteriori dettagli sugli attributi, cercare e filtrare per attributo, nonché ingrandire e ridurre per visualizzare meglio i dettagli degli attributi.
+
+![Viene visualizzata la visualizzazione grafico del profilo, con i vari nodi che lo compongono.](/help/profile/images/user-guide/profile-attribute-graph.png)
+
+#### Eventi esperienza {#experience-events}
+
+Nella sezione **[!UICONTROL Experience events]** viene visualizzata una cronologia degli eventi di esperienza che contengono il profilo.
+
+![Viene visualizzata la sezione Eventi esperienza, con una sequenza temporale di eventi esperienza che contengono il profilo.](/help/profile/images/user-guide/experience-event-graph.png)
+
+Se si seleziona **[!UICONTROL View event]**, è possibile visualizzare gli attributi dell&#39;evento collegati all&#39;evento selezionato. Questi dettagli includono il percorso, l’attributo, il nome visualizzato e il valore.
+
+![Viene visualizzato il popover Attributi evento, con ulteriori dettagli relativi all&#39;evento.](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### Scheda Attributi {#attributes}
 
