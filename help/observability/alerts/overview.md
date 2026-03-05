@@ -99,7 +99,7 @@ Puoi utilizzare un proxy webhook in [Adobe App Builder](https://developer.adobe.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
 
-Per ulteriori informazioni su come ricevere notifiche Experience Platform in [!DNL Slack] tramite l&#39;integrazione con un proxy webhook Adobe App Builder, vedere [monitorare gli eventi Experience Platform in [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
+Per ulteriori informazioni su come ricevere notifiche Experience Platform in [!DNL Slack] tramite l&#39;integrazione con un proxy webhook Adobe App Builder, vedere [monitorare gli eventi Experience Platform in [!DNL Slack]](https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
 ## Passaggi successivi
 
