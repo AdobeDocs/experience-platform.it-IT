@@ -64,7 +64,7 @@ Gli avvisi possono essere inviati a un webhook configurato per facilitare l’au
 
 L’interfaccia utente di Experience Platform ti consente di visualizzare gli avvisi ricevuti e di gestire le regole degli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
 
->[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423920?captions=ita&quality=12&learn=on)
 
 Per lavorare con gli avvisi nell’interfaccia utente di Experience Platform, è necessario disporre delle seguenti autorizzazioni di controllo degli accessi abilitate tramite Adobe Admin Console:
 
@@ -97,7 +97,7 @@ Inoltre, la scheda [!UICONTROL Alerts] nell&#39;interfaccia utente consente ai s
 
 Puoi utilizzare un proxy webhook in [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) per ricevere [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) da Experience Platform in [!DNL Slack]. Il proxy gestisce l&#39;handshake di verifica di Adobe e trasforma i payload degli eventi in [!DNL Slack] messaggi, in modo da poter ricevere gli avvisi rivolti al cliente direttamente nell&#39;area di lavoro.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3480203?captions=ita&learn=on)
 
 Per ulteriori informazioni su come ricevere notifiche Experience Platform in [!DNL Slack] tramite l&#39;integrazione con un proxy webhook Adobe App Builder, vedere [monitorare gli eventi Experience Platform in [!DNL Slack]](https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
