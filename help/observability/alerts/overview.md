@@ -4,10 +4,10 @@ title: Panoramica degli avvisi
 description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
+source-git-commit: bdddcdb19fe248af8f83d42bf885f07b9749a399
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 12%
+source-wordcount: '865'
+ht-degree: 11%
 
 ---
 
@@ -64,7 +64,7 @@ Gli avvisi possono essere inviati a un webhook configurato per facilitare l’au
 
 L’interfaccia utente di Experience Platform ti consente di visualizzare gli avvisi ricevuti e di gestire le regole degli avvisi. Il video seguente fornisce un’introduzione a queste funzionalità.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423920?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Per lavorare con gli avvisi nell’interfaccia utente di Experience Platform, è necessario disporre delle seguenti autorizzazioni di controllo degli accessi abilitate tramite Adobe Admin Console:
 
@@ -92,6 +92,14 @@ Con l&#39;autorizzazione Visualizza avvisi, è possibile visualizzare gli avvisi
 > Seleziona un avviso per passare a un dashboard correlato e ottenere informazioni più dettagliate sul motivo per cui è stato attivato l’avviso.
 
 Inoltre, la scheda [!UICONTROL Alerts] nell&#39;interfaccia utente consente ai singoli utenti di abbonarsi a tipi di avviso specifici e agli amministratori di abilitare o disabilitare completamente le regole di avviso. Per ulteriori informazioni sulla gestione degli avvisi, consulta la [Guida dell&#39;interfaccia utente](./ui.md).
+
+### Integrazione con Slack {#slack-integration}
+
+Puoi utilizzare un proxy webhook in [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) per ricevere [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) da Experience Platform in [!DNL Slack]. Il proxy gestisce l&#39;handshake di verifica di Adobe e trasforma i payload degli eventi in [!DNL Slack] messaggi, in modo da poter ricevere gli avvisi rivolti al cliente direttamente nell&#39;area di lavoro.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+
+Per ulteriori informazioni su come ricevere notifiche Experience Platform in [!DNL Slack] tramite l&#39;integrazione con un proxy webhook Adobe App Builder, vedere [monitorare gli eventi Experience Platform in [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
 ## Passaggi successivi
 
