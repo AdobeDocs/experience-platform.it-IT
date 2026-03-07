@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Scopri gli schemi Experience Data Model (XDM) e gli elementi di base, i principi e le best practice per la composizione di schemi in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
+source-git-commit: e4a30f7e483b90d5420ddcc1caffcee2089eda3f
 workflow-type: tm+mt
-source-wordcount: '4331'
+source-wordcount: '4371'
 ht-degree: 8%
 
 ---
@@ -117,6 +117,11 @@ Come illustrato nell&#39;esempio precedente, ogni chiave nell&#39;oggetto `ident
 
 ### Principi di evoluzione dello schema {#evolution}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_schema_editing_breaking_change_warning"
+>title="Modificare uno schema in uso"
+>abstract="Questo schema è già utilizzato dai set di dati o dai flussi di lavoro di acquisizione. Le modifiche ai campi o alle identità esistenti possono causare errori di acquisizione se i flussi di dati sono in esecuzione o pianificati. Dopo l’inizio dell’acquisizione, sono supportate solo modifiche di schema aggiuntive."
+
 Con l’evolversi della natura delle esperienze digitali, devono evolversi anche gli schemi utilizzati per rappresentarle. Uno schema ben progettato è quindi in grado di adattarsi ed evolvere secondo necessità, senza causare modifiche distruttive alle versioni precedenti dello schema.
 
 Poiché mantenere la compatibilità con le versioni precedenti è fondamentale per l’evoluzione dello schema, Experience Platform applica un principio di controllo delle versioni puramente additivo. Questo principio garantisce che eventuali revisioni allo schema risultino solo in aggiornamenti e modifiche non distruttivi. In altre parole, **le modifiche che causano interruzioni non sono supportate.**
@@ -163,7 +168,7 @@ Gli schemi vengono composti utilizzando la seguente formula:
 
 **Gruppo campi classe + schema;ast; = Schema XDM**
 
-&ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
+&amp;ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
 
 ### Classe {#class}
 
