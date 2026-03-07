@@ -5,7 +5,7 @@ exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
 source-wordcount: '1835'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -26,14 +26,14 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 >[!NOTE]
 >
->La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metriche di monitoraggio per l’acquisizione del profilo di streaming {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitorare l’acquisizione del profilo di streaming"
->abstract="La dashboard di monitoraggio per i profili di streaming visualizza informazioni sulla velocità effettiva e sulle velocità di acquisizione. Utilizza questa dashboard per visualizzare, comprendere e analizzare le metriche di elaborazione dei dati. dei profili di streaming in Experience Platform."
+>abstract="La dashboard di monitoraggio per i profili in streaming visualizza informazioni sulla velocità effettiva e sui tassi di acquisizione. Utilizza questa dashboard per visualizzare, comprendere e analizzare le metriche di elaborazione dei dati. dei profili di streaming in Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]

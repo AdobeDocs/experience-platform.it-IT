@@ -1,13 +1,13 @@
 ---
 title: Convalida del pubblico
 description: Scopri come Experience Platform convalida i tipi di pubblico per garantire che funzionino bene anche più a valle.
-source-git-commit: 52439e55d3c48631488b17b6b04256bcbbe37bcb
+exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '1630'
-ht-degree: 1%
+ht-degree: 13%
 
 ---
-
 
 # Convalida del pubblico
 
@@ -110,7 +110,7 @@ plan.equals("trial") AND region.equals("canada")
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
 >title="Limite sequenza di eventi"
->abstract="Il pubblico contiene troppi eventi sequenziali. All’interno della definizione del pubblico, puoi avere solo un massimo di 6 eventi sequenziali. Prima di continuare, rimuovi alcuni eventi sequenziali dalla definizione del pubblico."
+>abstract="Il pubblico contiene troppi eventi sequenziali. La definizione del pubblico puoi avere un massimo di 6 eventi sequenziali. Prima di continuare, rimuovi alcuni eventi sequenziali dalla definizione del pubblico."
 
 La convalida della complessità degli eventi sequenziali limita a 6 il numero di eventi sequenziali in una sequenza.
 
@@ -144,8 +144,8 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Avviso filtro conteggio"
->abstract="Troppi eventi di aggregazione per il pubblico. Dovresti utilizzare un massimo di 3 eventi di aggregazione all’interno del pubblico. Per evitare problemi di prestazioni, rimuovi alcuni eventi di aggregazione dalla definizione del pubblico."
+>title="Avvertenza per filtro sul conteggio"
+>abstract="Il numero di eventi di aggregazione per il tuo pubblico è troppo elevato. Utilizza un massimo di 3 eventi di aggregazione all’interno del pubblico. Per evitare problemi di prestazioni, rimuovi alcuni eventi di aggregazione dalla definizione del pubblico."
 
 Il controllo del conteggio aggregato limita a 3 condizioni il numero di eventi di aggregazione utilizzati nel pubblico.
 
@@ -157,8 +157,8 @@ Per evitare di attivare questa convalida, utilizza solo conteggi specifici quand
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Avviso dati nidificati"
->abstract="Il pubblico ha troppi livelli di dati nidificati. Dovresti utilizzare un massimo di 2 livelli di dati all’interno del pubblico. Per evitare problemi di prestazioni, è necessario appiattire la definizione del pubblico."
+>title="Avvertenza per dati nidificati"
+>abstract="Il pubblico ha troppi livelli di dati nidificati. Utilizza un massimo di 2 livelli di dati all’interno del pubblico. Per evitare problemi di prestazioni, riduci i livelli nella definizione del pubblico."
 
 La convalida della complessità dei dati nidificati limita a 2 livelli il numero di dati nidificati all’interno di una definizione di pubblico.
 
@@ -166,12 +166,12 @@ Sebbene Experience Platform supporti l’utilizzo di oggetti array e map per mem
 
 Se esegui frequentemente la segmentazione su un attributo profondamente nidificato, per un accesso più semplice potresti dover contattare il team di progettazione dati per copiare l’attributo a un livello più alto nello schema del profilo.
 
-### [!BADGE Ottimizzazione delle prestazioni]{type=Caution} Dimensione pubblico {#audience-size}
+### [!BADGE Ottimizzazione delle prestazioni]{type=Caution} Dimensione del pubblico {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
->title="Avvertenza sulla dimensione del pubblico"
->abstract="Il pubblico è scritto in modo troppo ampio. Evita di scrivere una definizione di pubblico che qualifichi più del 30% dei profili totali nella sandbox. Per evitare problemi di prestazioni, devi stringere la definizione del pubblico."
+>title="Avvertenza per dimensione pubblico"
+>abstract="La definizione del pubblico è formulata in modo troppo ampio. Evita di scrivere una definizione di pubblico che qualifichi più del 30% dei profili totali nella sandbox. Per evitare problemi di prestazioni, devi definisci il pubblico in modo più mirato."
 
 La convalida della dimensione del pubblico controlla se la definizione del pubblico è così ampia che più del 30% dei profili totali nella sandbox siano idonei per il pubblico.
 

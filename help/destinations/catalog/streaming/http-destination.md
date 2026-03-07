@@ -7,7 +7,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
 source-wordcount: '3042'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -210,7 +210,7 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentia
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Endpoint HTTP"
->abstract="L’URL dell’endpoint HTTP a cui desideri inviare i dati del profilo. Questo è l’endpoint di ricezione dei dati e supporta mTLS se configurato (non disponibile con l’autenticazione tramite password OAuth 2 o credenziali client)."
+>abstract="URL dell’endpoint HTTP a cui desideri inviare i dati del profilo. Questo è il tuo endpoint di ricezione dei dati e supporta mTLS , se configurato (non è disponibile con l’autenticazione OAuth 2 tramite password o credenziali cliente)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"

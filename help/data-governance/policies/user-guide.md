@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
 source-wordcount: '2380'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -128,7 +128,7 @@ I criteri di consenso sono composti da due componenti logici:
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="Condizione “Se”"
->abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette di governance dei dati o una combinazione di entrambe. Utilizza la logica AND/OR per creare relazioni condizionali complesse tra più condizioni."
+>abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette di governance dei dati o una combinazione di entrambe. Utilizza la logica E/O per creare relazioni condizionali complesse tra più condizioni."
 
 Nella sezione **[!UICONTROL If]**, seleziona le azioni di marketing e/o le etichette di utilizzo dei dati che devono attivare questo criterio. Selezionare **[!UICONTROL View all]** e **[!UICONTROL Select labels]** per visualizzare l&#39;elenco completo delle azioni di marketing e delle etichette disponibili, rispettivamente.
 
@@ -285,4 +285,4 @@ Questo documento fornisce una panoramica su come gestire i criteri di utilizzo d
 
 Il seguente video fornisce una dimostrazione di come utilizzare i criteri di utilizzo nell&#39;interfaccia utente [!DNL Experience Platform]:
 
->[!VIDEO](https://video.tv.adobe.com/v/37131?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

@@ -3,13 +3,13 @@ title: Monitorare i tipi di pubblico in streaming
 description: Scopri come utilizzare il dashboard di monitoraggio per monitorare i tipi di pubblico valutati utilizzando la segmentazione in streaming
 hide: true
 hidefromtoc: true
-source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
-
 
 # Monitorare i tipi di pubblico in streaming
 
@@ -23,7 +23,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 * [Servizio di segmentazione](../../segmentation/home.md):
 * [Capacità](../../landing/license-usage-and-guardrails/capacity.md): in Experience Platform, le capacità ti informano se la tua organizzazione ha superato uno dei tuoi guardrail e ti forniscono informazioni su come risolvere questi problemi.
 
-## Metriche di monitoraggio per il pubblico in streaming {#streaming-audience-metrics}
+## Metriche di monitoraggio per i tipi di pubblico in streaming {#streaming-audience-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_evaluation_rate"
