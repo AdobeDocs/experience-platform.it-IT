@@ -2,28 +2,42 @@
 title: Assistente AI in Adobe Experience Platform
 description: Scopri come utilizzare l’Assistente AI per navigare e comprendere i concetti di Experience Platform e Real-Time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
+source-git-commit: 8b0632efe10e280149d68facea44ea1f62267e3e
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1946'
 ht-degree: 0%
 
 ---
 
-# Guida all’interfaccia utente di Assistente IA
+# Guida all’interfaccia utente di Assistente IA (legacy)
+
+>[!IMPORTANT]
+>
+>Questo documento si applica all’Assistente IA (legacy). Per informazioni sull&#39;Assistente IA (generazione successiva), leggere la [Guida dell&#39;interfaccia utente dell&#39;Assistente IA](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) nella [IA nella documentazione di Experience Cloud](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/home).
+
+Per un confronto tra Assistente IA (legacy) e Assistente IA (di nuova generazione), consulta la tabella seguente:
+
+| Area funzionale | Assistente AI (legacy) | Assistente AI (di nuova generazione) |
+| --- | --- | --- |
+| Esperienza utente | L’Assistente AI (legacy) è disponibile solo in un pannello nella barra a destra. | AI Assistant (Next-Gen) è disponibile sia nel pannello della barra a destra che nell’esperienza coinvolgente a schermo intero. |
+| Ambito delle funzionalità | È possibile utilizzare l’Assistente AI (legacy) sia per conoscere il prodotto che per acquisire informazioni operative. | Puoi utilizzare l’Assistente all’intelligenza artificiale (di nuova generazione) per conoscere il prodotto, ottenere informazioni operative, acquisire competenze avanzate in ambito agente ed eseguire attività in più fasi. |
+| Architettura della piattaforma | L’Assistente IA (legacy) non è basato sullo stack di Agent Orchestrator. | L&#39;Assistente di intelligenza artificiale (di nuova generazione) è basato su [Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), che abilita l&#39;estensibilità e il coordinamento avanzato tra le funzionalità. |
+| Applicazione coperta | L’Assistente IA (legacy) è un’implementazione specifica per l’applicazione. | È possibile utilizzare AI Assistant (di nuova generazione) per un’esperienza di AI Assistant unificata in tutte le applicazioni Adobe Experience Cloud. |
+| Modello di accesso e autorizzazione | Modello di accesso con ambito di applicazione allineato ai limiti dei singoli prodotti. | Tutti gli utenti possono accedere ad AI Assistant (Next-Gen) e agli agenti Experience Platform associati. **Nota**: <ul><li>**Adobe Experience Manager**: l&#39;amministratore deve concedere l&#39;autorizzazione per accedere all&#39;Assistente di intelligenza artificiale (di nuova generazione) tramite [Adobe Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics**: l&#39;amministratore deve concedere l&#39;autorizzazione per accedere all&#39;Assistente di intelligenza artificiale tramite [Customer Journey Analytics Access Control](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en). Questo consente di porre domande sulla conoscenza del prodotto e sulle informazioni sui dati. |
 
 Leggi questa guida per scoprire come utilizzare l’Assistente IA nell’interfaccia utente di Adobe Experience Platform.
 
 ## Accedere all’Assistente IA nell’interfaccia utente di Experience Platform
 
-Per avviare l&#39;Assistente IA, seleziona l&#39;icona **[!UICONTROL Assistente AI]** dall&#39;intestazione superiore dell&#39;interfaccia utente di Experience Platform.
+Per avviare l&#39;Assistente IA, seleziona **[!UICONTROL AI Assistant icon]** dall&#39;intestazione superiore dell&#39;interfaccia utente di Experience Platform.
 
 ![Pagina Home di Experience Platform, con l&#39;icona Assistente AI selezionata e l&#39;interfaccia Assistente AI aperta.](./images/ai-assistant-full-icon.png)
 
-Viene visualizzata l’interfaccia di AI Assistant, che fornisce immediatamente le informazioni necessarie per iniziare. Puoi utilizzare le opzioni fornite in [!UICONTROL Idee per iniziare] a rispondere a domande e comandi quali:
+Viene visualizzata l’interfaccia di AI Assistant, che fornisce immediatamente le informazioni necessarie per iniziare. È possibile utilizzare le opzioni fornite in [!UICONTROL Ideas to get started] per rispondere a domande e comandi quali:
 
-* [!UICONTROL Quale dei miei tipi di pubblico è attivato?]
-* [!UICONTROL Che cos&#39;è uno schema?]
-* [!UICONTROL Informazioni su alcuni casi d&#39;uso comuni per Real-Time CDP]
+* [!UICONTROL Which of my audiences are activated?]
+* [!UICONTROL What is a schema?]
+* [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
 ## Guida all’interfaccia utente di Assistente IA
 
@@ -49,7 +63,7 @@ Questa sezione descrive le diverse funzioni di AI Assistant che puoi utilizzare 
 
 ### Visualizzare gli oggetti dati operativi {#view-operational-data-objects}
 
-A seconda della query, l’Assistente AI fornisce informazioni aggiuntive relative ai dati nella sandbox. Per visualizzare il modo in cui la risposta alla query si applica alla sandbox specifica, seleziona **[!UICONTROL Nella sandbox].**
+A seconda della query, l’Assistente AI fornisce informazioni aggiuntive relative ai dati nella sandbox. Per visualizzare il modo in cui la risposta alla query si applica alla sandbox specifica, selezionare **[!UICONTROL In your sandbox].**
 
 Quando visualizzi i dati relativi alla sandbox, l’Assistente AI può fornire collegamenti diretti a pagine dell’interfaccia utente specifiche che visualizzano i dati oggetto di query.
 
@@ -67,7 +81,7 @@ Puoi verificare le risposte restituite dall’Assistente AI esaminando le citazi
 
 +++Seleziona per visualizzare un esempio di come visualizzare le sorgenti
 
-Per visualizzare le citazioni e convalidare la risposta dell&#39;Assistente AI, selezionare **[!UICONTROL Mostra origini]**.
+Per visualizzare le citazioni e convalidare la risposta dell&#39;Assistente AI, selezionare **[!UICONTROL Show sources]**.
 
 ![Risposta dell&#39;Assistente di intelligenza artificiale con &quot;Mostra origini&quot; selezionato.](./images/show-sources.png)
 
@@ -107,9 +121,9 @@ Puoi anche fornire filtri e modifiche alle domande, nonché istruire l’Assiste
 
 È possibile verificare ogni risposta relativa alle domande di approfondimenti operativi utilizzando una query SQL fornita dall’Assistente AI.
 
-+++Seleziona per visualizzare un esempio di verifica delle risposte di approfondimenti operativi
++++Seleziona per visualizzare un esempio di verifica delle risposte di Operational Insights
 
-Dopo aver ricevuto una risposta per una domanda di approfondimenti operativi, selezionare **[!UICONTROL Mostra origini]**, quindi selezionare **[!UICONTROL Visualizza query di origine]**.
+Dopo aver ricevuto una risposta per una domanda di approfondimenti operativi, selezionare **[!UICONTROL Show sources]** e quindi **[!UICONTROL View source query]**.
 
 ![visualizza query di origine](./images/view-source-query.png)
 
@@ -135,7 +149,7 @@ Quando viene eseguita una query con una domanda di approfondimenti operativi, l�
 
 È possibile utilizzare le funzionalità multi-turn di AI Assistant per avere una conversazione più naturale durante la tua esperienza. L’Assistente AI è in grado di rispondere alle domande di follow-up, fornite. tale contesto può essere dedotto da un’interazione precedente.
 
-+++Selezionare per visualizzare un esempio di tornitura multipla
++++Seleziona per visualizzare un esempio di multi-turn
 
 Nell’esempio seguente, a AI Assistant viene richiesto prima il numero totale di flussi di dati e quindi di elencare i 10 flussi di dati più recenti.
 
@@ -149,7 +163,7 @@ Nell’esempio seguente, a AI Assistant viene richiesto prima il numero totale d
 
 +++Seleziona per visualizzare un esempio di reimpostazione della conversazione
 
-Per reimpostare, selezionare i puntini di sospensione (**`...`**) nell&#39;interfaccia dell&#39;Assistente di intelligenza artificiale, quindi selezionare **[!UICONTROL Avvia nuova conversazione]**. Questo informa l’Assistente AI che intendi modificare gli argomenti e può essere particolarmente utile quando si risolvono problemi relativi a query che hanno esito negativo o che fanno riferimento a informazioni errate.
+Per reimpostare, selezionare i puntini di sospensione (**`...`**) nell&#39;interfaccia dell&#39;Assistente di intelligenza artificiale, quindi selezionare **[!UICONTROL Start new conversation]**. Questo informa l’Assistente AI che intendi modificare gli argomenti e può essere particolarmente utile quando si risolvono problemi relativi a query che hanno esito negativo o che fanno riferimento a informazioni errate.
 
 ![I puntini di sospensione selezionati e l&#39;opzione Avvia nuova conversazione selezionata.](./images/reset.png)
 
@@ -159,7 +173,7 @@ Per reimpostare, selezionare i puntini di sospensione (**`...`**) nell&#39;inter
 
 È possibile utilizzare la funzione di individuazione dell&#39;Assistente AI per visualizzare un elenco dei soggetti generali, raggruppati in entità, supportati dall&#39;Assistente AI.
 
-+++Selezionare questa opzione per visualizzare un esempio di individuazione
++++Selezionare questa opzione per visualizzare un esempio di individuabilità
 
 Per visualizzare il rilevamento, seleziona l’icona a forma di lampadina nell’intestazione superiore dell’interfaccia di AI Assistant.
 
@@ -187,7 +201,7 @@ In alcuni casi, potrebbe essere necessario aggiornare i segnaposto quando una do
 
 I segnaposto sono evidenziati in blu. Seleziona il segnaposto per iniziare ad aggiornarne il valore. Per ottenere risultati ottimali con i segnaposto numerici, assicurati di utilizzare le cifre al posto del testo. È inoltre possibile utilizzare la funzione di completamento automatico entità per aggiornare i valori dei segnaposto. Non è possibile inviare una domanda contenente segnaposto non compilati.
 
-**NOTA**: i suggerimenti sono abilitati per impostazione predefinita. Seleziona l&#39;interruttore **[!UICONTROL Suggerisci idee]** per disabilitare la funzione.
+**NOTA**: i suggerimenti sono abilitati per impostazione predefinita. Selezionare l&#39;interruttore **[!UICONTROL Suggest ideas]** per disabilitare la funzione.
 
 ![Suggerimento dell&#39;Assistente IA con segnaposto aggiornati.](./images/updated_placeholder.png)
 

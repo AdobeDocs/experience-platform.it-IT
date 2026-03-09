@@ -1,32 +1,32 @@
 ---
-title: Guida alle domande per l’Assistente AI
-description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query sull’Assistente AI.
+title: Guida alle domande per l’Assistente IA (legacy)
+description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query su Assistente AI (legacy).
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
+source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2086'
 ht-degree: 2%
 
 ---
 
-# Guida alle domande per l’Assistente AI
+# Guida alle domande per l’Assistente IA (legacy)
 
-Leggi questo documento in per una serie di domande di esempio da utilizzare quando esegui una query sull’Assistente AI.
+Leggi questo documento in per una serie di domande di esempio da utilizzare quando esegui una query su Assistente AI (legacy).
 
-È inoltre possibile utilizzare questo documento per apprendere suggerimenti su [come formulare le domande](#phrasing-your-questions) per ottenere risposte ottimali dall&#39;Assistente di intelligenza artificiale.
+È inoltre possibile utilizzare questo documento per apprendere suggerimenti su [come formulare le domande](#phrasing-your-questions) per ottenere risposte ottimali dall&#39;Assistente AI (versione precedente).
 
 ## Domande basate su obiettivi {#objectives-questions}
 
-Le domande di esempio seguenti sono raggruppate per obiettivi che è possibile raggiungere quando si utilizza l’Assistente IA:
+Le domande di esempio seguenti sono raggruppate per obiettivi che è possibile raggiungere quando si utilizza l’Assistente IA (legacy):
 
 | Finalità | Descrizione | Esempio |
 | --- | --- | --- |
-| Concetti di apprendimento e flussi di lavoro continui | <ul><li>In qualità di utente principiante, puoi utilizzare l’Assistente AI per apprendere i concetti di Real-Time CDP e Adobe Journey Optimizer e integrarti in prodotti e funzionalità che non conosci.</li><li>In qualità di utente esperto, puoi utilizzare l’Assistente IA per risolvere un caso limite che potrebbe bloccare il flusso di lavoro. | <ul><li>Come si imposta una dashboard in Analytics di Percorso?</li><li>Dimmi alcuni casi d’uso per Real-Time CDP.</li></ul> |
-| Risoluzione dei problemi | Utilizza l’Assistente AI per scoprire come eseguire il debug degli errori di base che potrebbero verificarsi nel flusso di lavoro. | <ul><li>Cosa significa questo errore {ERROR_MESSAGE}?</li><li>Perché non sono in grado di eliminare il pubblico denominato &quot;Luma: E-mail Audience&quot;?</li></ul> |
-| Igiene delle sandbox | Utilizza l’Assistente AI per identificare eventuali oggetti duplicati o inutilizzati in modo da poter gestire la sandbox in modo efficiente. | <ul><li>Puoi mostrarmi tipi di pubblico simili?</li><li>Esistono schemi a cui non è associato un set di dati?</li></ul> |
-| Analisi del valore | Utilizza l’Assistente AI per identificare gli oggetti dati più utilizzati e valutare eventuali indicatori di prestazioni o trovare gli oggetti dati più importanti. | <ul><li>Quanti profili ci sono nella definizione del segmento &quot;Luma: Pubblico e-mail&quot;?</li><li>Quando i tipi di pubblico sono stati attivati nella destinazione Pubblico di Experience Cloud?</li></ul> |
-| Ricerca | Utilizza l’Assistente AI per trovare gli oggetti di Experience Platform supportati come tipi di pubblico, set di dati, destinazioni, schemi e origini. | <ul><li>Elencare i tipi di pubblico contenenti &quot;Luma&quot; nel nome creati nell’ultimo trimestre.</li><li>Quali attributi sono presenti nello schema XDM &quot;Luma: Azioni personalizzate&quot;?</li></ul> |
-| Analisi dell&#39;impatto | Utilizza l’Assistente AI per identificare gli oggetti dati utilizzati in alcuni flussi di lavoro in modo da poter valutare l’impatto di eventuali modifiche. | <ul><li>Quali tipi di pubblico utilizzano `homeAddress.city` nello schema &quot;Luma: PersonProfiles&quot;?</li><li>Quali set di dati sono l&#39;attributo di profilo `consents.marketing.push.val` archiviato in?</li></ul> |
+| Concetti di apprendimento e flussi di lavoro continui | <ul><li>In qualità di utente principiante, puoi utilizzare AI Assistant (Legacy) per apprendere i concetti di Real-Time CDP e Adobe Journey Optimizer e integrarti in prodotti e funzionalità che non conosci.</li><li>In qualità di utente esperto, puoi utilizzare l’Assistente IA (legacy) per risolvere un caso limite che potrebbe bloccare il flusso di lavoro. | <ul><li>Come si imposta una dashboard in Analytics di Percorso?</li><li>Dimmi alcuni casi d’uso per Real-Time CDP.</li></ul> |
+| Risoluzione dei problemi | Utilizza l’Assistente AI (legacy) per scoprire come eseguire il debug degli errori di base che potrebbero verificarsi nel flusso di lavoro. | <ul><li>Cosa significa questo errore {ERROR_MESSAGE}?</li><li>Perché non sono in grado di eliminare il pubblico denominato &quot;Luma: E-mail Audience&quot;?</li></ul> |
+| Igiene delle sandbox | Utilizza l’Assistente AI (legacy) per identificare eventuali oggetti duplicati o inutilizzati in modo da mantenere efficiente la sandbox. | <ul><li>Puoi mostrarmi tipi di pubblico simili?</li><li>Esistono schemi a cui non è associato un set di dati?</li></ul> |
+| Analisi del valore | Utilizza l’Assistente AI (legacy) per identificare gli oggetti dati più utilizzati e valutare eventuali indicatori di prestazioni o trovare gli oggetti dati più importanti. | <ul><li>Quanti profili ci sono nella definizione del segmento &quot;Luma: Pubblico e-mail&quot;?</li><li>Quando i tipi di pubblico sono stati attivati nella destinazione Pubblico di Experience Cloud?</li></ul> |
+| Ricerca | Utilizza l’Assistente AI (legacy) per trovare gli oggetti Experience Platform supportati come tipi di pubblico, set di dati, destinazioni, schemi e origini. | <ul><li>Elencare i tipi di pubblico contenenti &quot;Luma&quot; nel nome creati nell’ultimo trimestre.</li><li>Quali attributi sono presenti nello schema XDM &quot;Luma: Azioni personalizzate&quot;?</li></ul> |
+| Analisi dell&#39;impatto | Utilizza l’Assistente AI (legacy) per identificare gli oggetti dati utilizzati in alcuni flussi di lavoro in modo da poter valutare l’impatto di eventuali modifiche. | <ul><li>Quali tipi di pubblico utilizzano `homeAddress.city` nello schema &quot;Luma: PersonProfiles&quot;?</li><li>Quali set di dati sono l&#39;attributo di profilo `consents.marketing.push.val` archiviato in?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -81,26 +81,26 @@ Le domande seguenti sono raggruppate per oggetti dati e sono classificate come [
    * Quando dovrei usare un tipo di dati rispetto a un gruppo di campi?
    * Qual è la differenza tra un&#39;identità e una chiave primaria o esterna?
 * **Risoluzione dei problemi - Conoscenza del prodotto (Real-Time CDP e Journey Optimizer)**
-   * Per cosa può essere utile l’Assistente IA?
+   * Cosa può aiutare l’Assistente AI (legacy) con?
    * Posso eliminare uno schema abilitato per il profilo dopo l’acquisizione dei dati?
    * Perché non posso eliminare un pubblico?
    * Quanto tempo ci vuole affinché i tipi di pubblico vengano valutati e i risultati siano disponibili per il targeting?
 
 ## Formulazione delle domande {#phrasing-your-questions}
 
-Per ottenere una risposta il più accurata possibile, è necessario formulare le domande all’Assistente IA con chiarezza e contesto. Consulta il seguente elenco di suggerimenti per indicazioni su come porre una domanda chiara con il contesto:
+Per ottenere una risposta il più accurata possibile, è necessario formulare le domande all’Assistente AI (legacy) con chiarezza e contesto. Consulta il seguente elenco di suggerimenti per indicazioni su come porre una domanda chiara con il contesto:
 
 * Dichiara il tuo compito e/o la tua domanda in modo conciso.
 * Evita un linguaggio ambiguo o una sintassi troppo complessa per facilitare la comprensione.
-* Fornisci un contesto rilevante relativo all’attività e/o alla domanda, in quanto il contesto può aiutare l’Assistente AI a generare risposte più rilevanti.
+* Fornisci un contesto rilevante relativo all’attività e/o alla domanda, in quanto il contesto può aiutare l’Assistente IA (legacy) a generare risposte più rilevanti.
 
-Leggi le tabelle seguenti per ulteriori indicazioni sulle best practice da seguire quando si pongono domande all’Assistente IA.
+Leggi le tabelle seguenti per ulteriori indicazioni sulle best practice da seguire quando si pongono domande all’Assistente IA (legacy).
 
-Le tabelle seguenti descrivono le best practice che è possibile seguire quando si utilizza l’Assistente IA:
+Le tabelle seguenti descrivono le best practice che è possibile seguire quando si utilizza l’Assistente IA (legacy):
 
 | Esegui | Esempio |
 | --- | --- |
-| <ul><li>Specificare l&#39;oggetto o le informazioni da recuperare o analizzare.</li><li>Provare a inserire i nomi degli oggetti dati tra virgolette. Se si conosce solo una parte del nome dell&#39;oggetto, è possibile specificarlo nella domanda.</li><li>Utilizza [completamento automatico dell&#39;oggetto](./ui-guide.md#use-auto-complete) per aiutare l&#39;Assistente IA a comprendere meglio il contesto della query.</li></ul> | <ul><li>Quali set di dati utilizzano lo schema &quot;Luma - Fedeltà&quot;?</li><li>Mostrami i segmenti attivati il cui nome contiene &quot;Luma&quot;. Classificale in base al numero di profili.</li></ul> |
+| <ul><li>Specificare l&#39;oggetto o le informazioni da recuperare o analizzare.</li><li>Provare a inserire i nomi degli oggetti dati tra virgolette. Se si conosce solo una parte del nome dell&#39;oggetto, è possibile specificarlo nella domanda.</li><li>Utilizza [completamento automatico dell&#39;oggetto](./ui-guide.md#use-auto-complete) per aiutare l&#39;Assistente IA (legacy) a comprendere meglio il contesto della query.</li></ul> | <ul><li>Quali set di dati utilizzano lo schema &quot;Luma - Fedeltà&quot;?</li><li>Mostrami i segmenti attivati il cui nome contiene &quot;Luma&quot;. Classificale in base al numero di profili.</li></ul> |
 | <ul><li>Evita ambiguità e usa un linguaggio chiaro</li><li>Utilizza una terminologia precisa per garantire una maggiore chiarezza nella query.</li><li>Quando fai domande su Adobe Experience Platform, prova a utilizzare la terminologia specifica di Experience Platform per migliorare la rilevanza delle risposte.</li></ul> | <ul><li>Quanti profili ho in &quot;Pubblico ACME&quot;.</li><li>Mostra i primi 5 attributi XDM utilizzati nei tipi di pubblico attivati.</li></ul> |
 | <ul><li>Fornisci contesto o specifica un criterio per filtrare i risultati.</li><li>Utilizza un criterio di filtro nelle domande per limitare il volume di dati nella risposta.</li></ul> | <ul><li>Mostra i tipi di pubblico che non sono stati attivati e che sono stati creati più di 6 mesi fa e che non sono mai stati modificati.</li><li>Mostra i tipi di pubblico attivati su &quot;Destinazione ACME&quot; e con più di 10000 profili.</li></ul> |
 
@@ -118,7 +118,7 @@ Le tabelle seguenti descrivono le best practice che è possibile seguire quando 
 
 ## Osservabilità del set di dati {#dataset-observability}
 
-L’Assistente AI ora può rispondere a domande su metriche specifiche dei set di dati, come le dimensioni di archiviazione e il conteggio delle righe.
+L’Assistente AI (legacy) ora può rispondere a domande su metriche specifiche dei set di dati come le dimensioni di archiviazione e il conteggio delle righe.
 
 * Quali sono i set di dati più grandi in base alle dimensioni?
 * Qual è il set di dati più grande per righe?
@@ -187,7 +187,7 @@ Puoi anche perfezionare le domande sull’osservabilità dei dati con un qualifi
 
 ## Esempi di domande non supportate {#unsupported-questions}
 
-Di seguito è riportato un elenco di esempi di domande non attualmente supportate da AI Assistant.
+Di seguito è riportato un elenco di esempi di domande che non sono attualmente supportate da AI Assistant (Legacy).
 
 +++Seleziona per visualizzare esempi di domande non supportate
 
@@ -230,4 +230,4 @@ Di seguito è riportato un elenco di esempi di domande non attualmente supportat
 
 ## Passaggi successivi
 
-Una volta letto questo documento, sarai in grado di ottimizzare le domande per l’Assistente AI. Per informazioni su come utilizzare la funzionalità durante i flussi di lavoro, leggere la [Guida dell&#39;interfaccia utente dell&#39;Assistente AI](ui-guide.md).
+Una volta letto questo documento, sarai in grado di ottimizzare le domande per l’Assistente IA (versione precedente). Per informazioni su come utilizzare la funzione durante i flussi di lavoro, leggere la [Guida dell&#39;interfaccia utente dell&#39;Assistente AI (versione precedente)](ui-guide.md).
