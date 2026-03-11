@@ -3,9 +3,9 @@ keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
 description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come attributi del pubblico per il targeting all’interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 7b22c4b058b0068b96c26d0c4c7743d489451620
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
@@ -149,7 +149,7 @@ Per gli identificatori che devono essere mappati su un canale, ovvero un disposi
 
 >[!NOTE]
 >
->Utilizza il nome descrittivo visualizzato nel dashboard [!DNL Airship] quando selezioni il campo di destinazione per la mappatura degli attributi.
+>Utilizza `attribute_id` che corrisponde all&#39;attributo nel dashboard [!DNL Airship] quando selezioni il campo di destinazione per la mappatura dell&#39;attributo.
 
 **Identità mappa**
 
