@@ -3,9 +3,9 @@ keywords: destinazioni analytics;destinazione analytics
 title: Panoramica sulle destinazioni di Analytics
 description: Le destinazioni di Analytics tengono traccia di come i visitatori interagiscono con i contenuti sul sito e raccolgono dati per comprendere il comportamento del pubblico. Queste piattaforme forniscono informazioni uniche sul coinvolgimento e sulla conversione dei visitatori più importanti.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Al momento, Adobe Experience Platform supporta le destinazioni di analisi elenca
 
 * [Estensione di tracciamento del sito web Adform](adform.md)
 * [Estensione Adobe Analytics](adobe-analytics.md)
-* [Estensione Adobe Medium Analytics for Audio and Video](adobe-video-analytics.md)
+* [Estensione Adobe Media Analytics for Audio and Video](adobe-video-analytics.md)
 * [Estensione Clicktale](clicktale.md)
 * [Estensione Contentsquare](contentsquare.md)
 * [Estensione decibel](decibel.md)
@@ -35,7 +35,6 @@ Al momento, Adobe Experience Platform supporta le destinazioni di analisi elenca
 * [Estensione Nielsen BSDK](nielsen-bsdk.md)
 * [Estensione Gestore IMA Nielsen](nielsen-ima.md)
 * [Estensione del gestore del lettore Nielsen VideoJS](nielsen-videojs.md)
-* [Estensione Parse.ly Analytics](parsely.md)
 * [Estensione della metrica quantistica](quantum-metric.md)
 * [Estensione SessionCam](sessioncam.md)
 * [Estensione TMMData](tmmdata.md)
