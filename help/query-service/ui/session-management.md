@@ -3,22 +3,24 @@ title: Gestire le sessioni di Query Service in Adobe Experience Platform
 description: Scopri come gli amministratori possono visualizzare, monitorare e terminare le sessioni di Query Service attive per liberare la capacità inattiva e mantenere flussi di lavoro affidabili di Data Distiller.
 keywords: Experience Platform;Query Service;sessioni;gestione sessione;Data Distiller;admin
 solution: Experience Platform
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+badgeLimitedAvailability: label="Disponibilità limitata" type="Informative"
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
 # Gestire le sessioni di Query Service
 
+>[!AVAILABILITY]
+>
+>La gestione delle sessioni per Query Service è attualmente a disponibilità limitata ed è disponibile solo per le organizzazioni con **adesioni Data Distiller**. Per richiedere l’accesso, contatta il team del tuo account Adobe.
+
 Utilizza questa guida per gestire le sessioni attive di Query Service dall’interfaccia utente di Adobe Experience Platform. La gestione delle sessioni consente agli amministratori di monitorare le sessioni simultanee dell’editor delle query nelle sandbox e liberare capacità quando gli utenti lasciano aperte le sessioni.
 
 ## Autorizzazioni necessarie per la gestione delle sessioni {#permissions}
-
->[!AVAILABILITY]
->
->La gestione delle sessioni è disponibile solo per le organizzazioni con diritti per Data Distiller.
 
 >[!IMPORTANT]
 >
@@ -93,4 +95,3 @@ Per estendere l’utilizzo di Query Service e Data Distiller, considera le segue
 
 * [Scopri come gli utenti creano ed eseguono query nella guida utente di Query Editor](user-guide.md)
 * [Monitorare i carichi di lavoro pianificati utilizzando la documentazione di monitoraggio delle query pianificate](monitor-queries.md)
-
