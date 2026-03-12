@@ -3,10 +3,10 @@ title: Registra ordini di lavoro di eliminazione
 description: Scopri come utilizzare l’endpoint /workorder nell’API di igiene dei dati per gestire gli ordini di lavoro di eliminazione dei record in Adobe Experience Platform. Questa guida descrive le quote, le timeline di elaborazione e l’utilizzo delle API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
+source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
 workflow-type: tm+mt
-source-wordcount: '2541'
-ht-degree: 2%
+source-wordcount: '3316'
+ht-degree: 1%
 
 ---
 
@@ -32,27 +32,20 @@ Registra gli ordini di lavoro di eliminazione sono soggetti ai limiti di invio g
 
 ### Diritto invio mensile per prodotto {#quota-limits}
 
-La tabella seguente mostra i limiti di invio degli identificatori per prodotto e livello di adesione. Per ogni prodotto, il limite mensile è il minore tra due valori: un limite fisso di identificazione o una soglia basata su percentuale associata al volume di dati concesso in licenza.
+La tabella seguente mostra i limiti di invio degli identificatori per prodotto e livello di adesione. Per ogni prodotto, il limite mensile è il minore tra due valori: un limite fisso di identificazione o una soglia basata su percentuale associata al volume di dati concesso in licenza. In pratica, la maggior parte delle organizzazioni ha limiti mensili inferiori in base al pubblico indirizzabile effettivo o ai diritti alle righe di Adobe Customer Journey Analytics.
 
 | Prodotto | Descrizione diritto | Limite mensile (scegliendo il valore minore) |
 |----------|-------------------------|---------------------------------|
 | REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 2.000.000 identificatori o il 5% del pubblico indirizzabile |
 | REAL-TIME CDP o ADOBE JOURNEY OPTIMIZER | Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 15.000.000 identificatori o il 10% del pubblico indirizzabile |
-| Customer Journey Analytics | Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 2.000.000 identificatori o 100 identificatori per milione di righe CJA di diritto |
-| Customer Journey Analytics | Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 15.000.000 identificatori o 200 identificatori per milione di righe CJA di diritto |
+| Customer Journey Analytics | Senza il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 2.000.000 identificatori o 100 identificatori per milione di righe Customer Journey Analytics di diritto |
+| Customer Journey Analytics | Con il componente aggiuntivo Privacy and Security Shield o Healthcare Shield | 15.000.000 identificatori o 200 identificatori per milione di righe Customer Journey Analytics di diritto |
 
 >[!NOTE]
 >
->La maggior parte delle organizzazioni avrà limiti mensili inferiori in base al proprio pubblico indirizzabile effettivo o ai diritti di riga di CJA.
-
->[!NOTE]
->
->Le quote vengono reimpostate il primo giorno di ogni mese di calendario. La quota non utilizzata **non** viene riportata.
-
->[!NOTE]
->
->L&#39;utilizzo della quota si basa sul diritto mensile concesso in licenza dalla tua organizzazione per **identificatori inviati**. Le quote non vengono applicate dai guardrail di sistema, ma possono essere monitorate e riviste.\
->La capacità dell&#39;ordine di lavoro di eliminazione del record è un **servizio condiviso**. Il limite mensile riflette il diritto più alto tra Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics ed eventuali componenti aggiuntivi Shield applicabili.
+>- Le quote vengono reimpostate il primo giorno di ogni mese di calendario. La quota non utilizzata **non** viene riportata.
+>- L&#39;utilizzo della quota si basa sul diritto mensile concesso in licenza dalla tua organizzazione per **identificatori inviati**. Le quote non vengono applicate dai guardrail di sistema, ma possono essere monitorate e riviste.
+>- La capacità dell&#39;ordine di lavoro di eliminazione del record è un **servizio condiviso**. Il limite mensile riflette il diritto più alto tra Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics ed eventuali componenti aggiuntivi Shield applicabili.
 
 ### Elaborazione dei timeline per l’invio degli identificatori {#sla-processing-timelines}
 
@@ -131,7 +124,8 @@ In caso di esito positivo, la risposta restituisce un elenco impaginato di ordin
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -168,10 +162,10 @@ Nella tabella seguente sono descritte le proprietà della risposta.
 | `createdAt` | La marca temporale in cui è stato creato l’ordine di lavoro. |
 | `updatedAt` | Timestamp dell&#39;ultimo aggiornamento dell&#39;ordine di lavoro. |
 | `operationCount` | Numero di operazioni incluse nell&#39;ordine di lavorazione. |
-| `targetServices` | Elenco dei servizi target per l&#39;ordine di lavoro. |
+| `targetServices` | Il set di servizi di destinazione che ha elaborato l’eliminazione. Il valore predefinito dipende dai diritti dell’organizzazione. Per le organizzazioni con Real-Time CDP o Adobe Journey Optimizer, il valore predefinito è il set completo di servizi supportati (`["datalake", "identity", "profile", "ajo"]`). Per le organizzazioni solo Customer Journey Analytics (senza un diritto Profilo cliente in tempo reale), l&#39;unico valore valido è [&quot;datalake&quot;]. |
 | `status` | Stato corrente dell&#39;ordine di lavoro. I valori possibili sono: `received`,`validated`, `submitted`, `ingested`, `completed` e `failed`. |
 | `createdBy` | L’e-mail e l’identificatore dell’utente che ha creato l’ordine di lavoro. |
-| `datasetId` | L’identificatore univoco del set di dati associato all’ordine di lavoro. Se la richiesta si applica a tutti i set di dati, questo campo verrà impostato su ALL. |
+| `datasetId` | I set di dati interessati dall’ordine di lavoro: un singolo ID set di dati, un elenco separato da virgole di ID set di dati (set di dati multipli) o il valore letterale `ALL`. Quando la richiesta utilizzava la modalità di solo profilo, questo valore è `ALL`. |
 | `datasetName` | Nome del set di dati associato all’ordine di lavoro. |
 | `displayName` | Etichetta leggibile per l&#39;ordine di lavoro. |
 | `description` | Descrizione dello scopo dell&#39;ordine di lavorazione. |
@@ -185,9 +179,9 @@ Nella tabella seguente sono descritte le proprietà della risposta.
 
 ## Crea un ordine di lavoro di eliminazione record {#create}
 
-Per eliminare i record associati a una o più identità da un singolo set di dati o da tutti i set di dati, effettuare una richiesta POST all&#39;endpoint `/workorder`.
+Per eliminare i record associati a una o più identità da un singolo set di dati, più set di dati o tutti i set di dati, effettuare una richiesta POST all&#39;endpoint `/workorder`.
 
-Gli ordini di lavoro vengono elaborati in modo asincrono e vengono visualizzati nell&#39;elenco degli ordini di lavoro dopo l&#39;invio.
+Gli ordini di lavoro vengono elaborati in modo asincrono e vengono visualizzati nell&#39;elenco degli ordini di lavoro dopo l&#39;invio. Le opzioni per più set di dati e solo profilo (servizi mirati) sono generalmente disponibili per tutti i clienti a partire dalla versione di marzo 2026 di Experience Platform.
 
 >[!TIP]
 >
@@ -199,25 +193,36 @@ Gli ordini di lavoro vengono elaborati in modo asincrono e vengono visualizzati 
 POST /workorder
 ```
 
->[!NOTE]
->
->Puoi eliminare record solo da set di dati il cui schema XDM associato definisce una mappa di identità primaria o di identità.
-
 >[!IMPORTANT]
 >
 >Gli ordini di lavoro di eliminazione record agiscono esclusivamente sul campo **identità primaria**. Si applicano le seguenti limitazioni:
 >
+>- **Lo schema del set di dati deve definire una mappa di identità o identità primaria.** È possibile eliminare record solo da set di dati il cui schema XDM associato definisce una mappa di identità primaria o di identità.
 >- **Le identità secondarie non vengono analizzate.** Se un set di dati contiene più campi di identità, per la corrispondenza viene utilizzata solo l&#39;identità primaria. I record non possono essere indirizzati o eliminati in base a identità non primarie.
 >- **I record senza un&#39;identità primaria compilata vengono ignorati.** Se un record non ha metadati di identità primaria compilati, non è idoneo per l&#39;eliminazione.
 >- **I dati acquisiti prima della configurazione dell&#39;identità non sono idonei.** Se il campo di identità principale è stato aggiunto a uno schema dopo l&#39;acquisizione dei dati, i record precedentemente acquisiti non possono essere eliminati tramite ordini di lavoro di eliminazione dei record.
 
 >[!NOTE]
 >
->Se si tenta di creare un ordine di lavoro di eliminazione record per un set di dati con una scadenza già attiva, la richiesta restituisce HTTP 400 (richiesta non valida). Per scadenza attiva si intende qualsiasi eliminazione pianificata non ancora completata.
+>Se si tenta di creare un ordine di lavoro di eliminazione record per un set di dati con scadenza già attiva, la richiesta restituisce HTTP 400 (richiesta non valida). Per scadenza attiva si intende qualsiasi eliminazione pianificata non ancora completata.
+
+### Formati payload identità (`namespacesIdentities` o `identities`)
+
+Il corpo della richiesta deve includere **esattamente uno** dei seguenti elementi.
+
+| Formato | Proprietà | Forma | Quando utilizzare |
+|--------|----------|-------|-------------|
+| **Consigliato** | `namespacesIdentities` | Array di oggetti con `namespace` (ad esempio, `{ "code": "email" }`) e `ids` (array di stringhe di identità). | Da utilizzare per tutti i payload, siano essi costruiti manualmente o generati da codice. Questa funzione è particolarmente efficiente per ridurre la dimensione del payload quando molte identità condividono lo stesso spazio dei nomi. |
+| **Accettato anche** | `identities` | Array di oggetti con `namespace` (ad esempio, `{ "code": "email" }`) e un singolo `id` (stringa). | Accettato per compatibilità con le versioni precedenti. Formato prodotto da [script di conversione da csv a igiene dei dati](#convert-id-lists-to-json-for-record-delete-requests). Il servizio normalizza questo formato internamente, quindi il comportamento risultante è identico. |
+
+Se si inviano **entrambe le proprietà**, **nessuna proprietà** o si fornisce **un array vuoto** per la proprietà inclusa, l&#39;API restituisce **HTTP 400 (richiesta non valida)** con uno dei messaggi seguenti:
+
+- **Entrambe le proprietà fornite:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **Elenco vuoto o fornito:** `"Identities are Empty for Delete Identity request."`
 
 **Richiesta**
 
-La richiesta seguente elimina tutti i record associati a indirizzi e-mail specifici da un particolare set di dati.
+La richiesta seguente elimina tutti i record associati a indirizzi e-mail specifici da un particolare set di dati. Utilizza il formato `namespacesIdentities` consigliato.
 
 ```shell
 curl -X POST \
@@ -237,7 +242,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -254,8 +259,10 @@ Nella tabella seguente vengono descritte le proprietà per la creazione di un or
 | `displayName` | Etichetta leggibile per questo ordine di lavoro di eliminazione record. |
 | `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
 | `action` | Azione richiesta per l&#39;ordine di lavoro di eliminazione record. Per eliminare i record associati a una determinata identità, utilizzare `delete_identity`. |
-| `datasetId` | L’identificatore univoco del set di dati. Utilizzare l&#39;ID del set di dati per un set di dati specifico oppure `ALL` per eseguire il targeting di tutti i set di dati. I set di dati devono avere una mappa di identità primaria o di identità. Se esiste una mappa di identità, questa sarà presente come campo di primo livello denominato `identityMap`.<br>Tieni presente che una riga di set di dati può avere molte identità nella mappa delle identità, ma solo una può essere contrassegnata come principale. `"primary": true` deve essere incluso per forzare `id` a corrispondere a un&#39;identità primaria. |
-| `namespacesIdentities` | Matrice di oggetti, ciascuno contenente:<br><ul><li> `namespace`: oggetto con una proprietà `code` che specifica lo spazio dei nomi dell&#39;identità (ad esempio, &quot;email&quot;).</li><li> `IDs`: array di valori di identità da eliminare per questo spazio dei nomi.</li></ul>Gli spazi dei nomi di identità forniscono contesto ai dati di identità. Puoi utilizzare gli spazi dei nomi standard forniti da Experience Platform o crearne di personalizzati. Per ulteriori informazioni, consulta la [documentazione sullo spazio dei nomi delle identità](../../identity-service/features/namespaces.md) e la [specifica API del servizio Identity](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `datasetId` | L’identificatore univoco dei set di dati. Il valore deve corrispondere esattamente a uno dei seguenti: il valore letterale `ALL`, un singolo ID set di dati o un elenco separato da virgole di due o più ID set di dati (ad esempio `"id1,id2,id3"`). Impossibile combinare `ALL` con ID specifici. Le richieste di set di dati singolo si comportano come prima, le richieste di set di dati multipli eliminano le identità da ciascun set di dati elencato e `ALL` eseguono il targeting di ogni set di dati. I set di dati devono avere una mappa di identità primaria o di identità. Se esiste una mappa di identità, questa sarà presente come campo di primo livello denominato `identityMap`.<br>**Nota**: una riga di set di dati può avere molte identità nella relativa mappa di identità, ma solo una può essere contrassegnata come primaria. `"primary": true` deve essere incluso per forzare `id` a corrispondere a un&#39;identità primaria.<br>Quando si utilizza `targetServices` per l&#39;eliminazione solo del profilo, `datasetId` deve essere `ALL`. |
+| `targetServices` | Facoltativo. Specifica quali servizi devono elaborare l&#39;eliminazione. Il valore predefinito dipende dai diritti dell’organizzazione. Per impostazione predefinita, le organizzazioni con Real-Time CDP o Adobe Journey Optimizer ricevono il set completo di servizi supportati (`["datalake", "identity", "profile", "ajo"]`). Le organizzazioni che dispongono di Customer Journey Analytics ma non di Real-Time Customer Profile possono utilizzare solo [&quot;datalake&quot;]. Per limitare l&#39;eliminazione solo ai dati relativi al profilo e lasciare inalterato il data lake, impostarlo su `["identity", "profile", "ajo"]` (in qualsiasi ordine). Questa modalità solo profilo richiede un diritto Real-Time CDP o Adobe Journey Optimizer e `datasetId` deve essere `ALL`. |
+| `identities` | **Utilizzare esattamente uno di `identities` o `namespacesIdentities`.** Array di oggetti, ciascuno con `namespace` (oggetto con `code`, ad esempio `"email"`) e `id` (singola stringa di identità). Accettato per compatibilità con le versioni precedenti e prodotto dagli script di conversione. Il servizio normalizza questo formato internamente; il comportamento è identico. Consulta [Formato payload identità](#identity-payload-format-identities-or-namespacesidentities) qui sopra. |
+| `namespacesIdentities` | **Utilizzare esattamente uno di `identities` o `namespacesIdentities`.** Array di oggetti, ciascuno con `namespace` (oggetto con `code`, ad esempio `"email"`) e `ids` (array di stringhe di identità). Consigliato per tutti i payload. La proprietà `namespacesIdentities` è più compatta quando molte identità condividono uno spazio dei nomi. Consulta [Formato payload identità](#identity-payload-format-identities-or-namespacesidentities) qui sopra. Spazi dei nomi identità: [documentazione spazio dei nomi identità](../../identity-service/features/namespaces.md), [API servizio identità](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Risposta**
 
@@ -273,7 +280,8 @@ In caso di esito positivo, la risposta restituisce i dettagli del nuovo ordine d
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -298,20 +306,77 @@ Nella tabella seguente sono descritte le proprietà della risposta.
 | `targetServices` | Elenco dei servizi di destinazione per l&#39;ordine di lavoro di eliminazione record. |
 | `status` | Stato corrente dell&#39;ordine di lavoro di eliminazione del record. |
 | `createdBy` | Indirizzo e-mail e identificatore dell&#39;utente che ha creato il record elimina l&#39;ordine di lavoro. |
-| `datasetId` | L’identificatore univoco del set di dati. Se la richiesta è per tutti i set di dati, il valore sarà impostato su `ALL`. |
+| `datasetId` | L’identificatore univoco dei set di dati. Se la richiesta è per tutti i set di dati, il valore sarà impostato su `ALL`. Per le richieste con più set di dati, il valore riflette l’elenco separato da virgole o il singolo ID inviato. |
 | `datasetName` | Nome del set di dati per questo ordine di lavoro di eliminazione record. |
 | `displayName` | Etichetta leggibile per l&#39;ordine di lavoro di eliminazione record. |
 | `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
 
 {style="table-layout:auto"}
 
+Il valore `targetServices` della risposta fa eco alla richiesta o mostra il set predefinito completo quando omesso (vedi la tabella delle risposte precedente).
+
+### Set di dati multiplo e solo profilo (API) {#multi-dataset-profile-only}
+
+Le seguenti opzioni sono disponibili solo tramite l’API e non sono supportate nell’interfaccia utente di igiene dei dati. Essi controllano quali set di dati e quali servizi elaborano l’eliminazione, consentendo l’invio di più set di dati e richieste di servizi mirate solo per il profilo.
+
+La tabella seguente riepiloga le modifiche apportate al corpo e al comportamento della richiesta per ciascuna opzione.
+
+| Opzione | Richiedi modifica corpo | Comportamento |
+|--------|---------------------|----------|
+| **Set di dati multipli** | Utilizzare un elenco separato da virgole in `datasetId` (esempio: `"id1,id2,id3"`). ID singolo o `ALL` non modificato. | Le identità vengono eliminate dai set di dati elencati (o da un set di dati o da tutti i set di dati quando `ALL`). |
+| **Solo profilo (servizi di destinazione)** | Aggiungi `targetServices` con esattamente `["identity", "profile", "ajo"]` (qualsiasi ordine). Richiede `datasetId`: `"ALL"`. | Solo Identità, Profilo e Adobe Journey Optimizer elaborano l’eliminazione; il data lake non viene modificato. |
+
+#### Richieste di set di dati multipli
+
+Il campo `datasetId` è suddiviso in virgole: utilizza un singolo ID (lo stesso comportamento di prima), un elenco separato da virgole di ID o il valore letterale `ALL`. Per eliminare identità da più set di dati specifici in un unico ordine di lavoro, fornisci un elenco separato da virgole:
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+Le identità vengono quindi eliminate da ciascuno dei set di dati elencati. Le richieste di set di dati singoli funzionano come sempre; utilizza `ALL` per eseguire il targeting di ogni set di dati. Il valore deve essere esattamente uno dei seguenti: `ALL`, un singolo ID set di dati o due o più ID set di dati separati da virgole (senza combinare `ALL` con ID specifici).
+
+#### Solo profilo (servizi mirati)
+
+Per rimuovere solo i dati relativi all&#39;identità e al profilo lasciando intatto il data lake, includere `targetServices` con esattamente questi tre valori in qualsiasi ordine: `identity`, `profile` e `ajo`. Identità, profilo e AJO sono inclusi esplicitamente; il data lake è escluso. In questa modalità, `datasetId` deve essere `ALL` (il caso d&#39;uso è l&#39;eliminazione completa del profilo, non frammenti per set di dati).
+
+Nell&#39;esempio seguente viene creato un ordine di lavoro di eliminazione record solo profilo:
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+Le risposte riuscite per richieste con più set di dati o solo profilo seguono la stessa forma delle altre risposte dell’ordine di lavoro. I valori restituiti `datasetId` e `targetServices` riflettono i valori nella richiesta (o l&#39;elenco predefinito completo quando `targetServices` viene omesso), quindi puoi confermare ciò che è stato inviato.
+
 >[!NOTE]
 >
 >La proprietà azione per gli ordini di lavoro di eliminazione record è attualmente `identity-delete` nelle risposte API. Se l&#39;API cambia per utilizzare un valore diverso (ad esempio `delete_identity`), la documentazione verrà aggiornata di conseguenza.
 
-## Converti elenchi ID in JSON per richieste di cancellazione record
+## Converti elenchi ID in JSON per richieste di cancellazione record (#convert-id-lists-to-json-for-record-delete-requests)
 
-Per creare un ordine di lavoro di eliminazione record da file CSV, TSV o TXT contenenti identificatori, è possibile utilizzare script di conversione per produrre i payload JSON richiesti per l&#39;endpoint `/workorder`. Questo approccio è particolarmente utile quando si lavora con file di dati esistenti. Per script pronti all&#39;uso e istruzioni complete, visita l&#39;archivio GitHub [csv per l&#39;igiene dei dati](https://github.com/perlmonger42/csv-to-data-hygiene).
+Utilizza gli script di conversione per produrre i payload JSON richiesti per l&#39;endpoint `/workorder` quando gli identificatori sono in file CSV, TSV o TXT. Questo approccio è particolarmente utile quando si lavora con file di dati esistenti. Per istruzioni e script pronti all&#39;uso, consulta l&#39;archivio GitHub [csv per l&#39;igiene dei dati](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+Gli script restituiscono il formato **`identities`**, ovvero un `id` per oggetto con `namespace`. L&#39;API accetta questo formato così com&#39;è; è possibile inviare il JSON generato direttamente nel corpo del POST a `/workorder` senza alcuna conversione. Il formato consigliato è **`namespacesIdentities`**. Vedere [Creare un ordine di lavoro di eliminazione record](#create) e [Formato payload identità](#identity-payload-format-identities-or-namespacesidentities).
 
 ### Generare payload JSON
 
@@ -365,8 +430,8 @@ La tabella seguente descrive i parametri degli script di base.
 | ---           | ---     |
 | `verbose` | Abilita output dettagliato. |
 | `column` | Il nome dell’indice (basato su 1) o dell’intestazione della colonna contenente i valori di identità da eliminare. Se non specificato, viene impostata automaticamente la prima colonna. |
-| `namespace` | Oggetto con una proprietà `code` che specifica lo spazio dei nomi dell&#39;identità (ad esempio, &quot;email&quot;). |
-| `dataset-id` | L’identificatore univoco del set di dati associato all’ordine di lavoro. Se la richiesta si applica a tutti i set di dati, questo campo verrà impostato su `ALL`. |
+| `namespace` | Codice spazio dei nomi dell&#39;identità passato allo script (ad esempio, `email`). Il JSON generato lo utilizza nella proprietà `namespace.code` di ciascun oggetto. |
+| `dataset-id` | Identificatore univoco per i set di dati: un singolo ID, ID separati da virgole per set di dati multipli o `ALL` per tutti i set di dati. |
 | `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
 | `output-dir` | La directory in cui scrivere il payload JSON di output. |
 
@@ -402,7 +467,7 @@ La tabella seguente descrive le proprietà nel payload JSON.
 | Proprietà | Descrizione |
 | ---          | ---     |
 | `action` | Azione richiesta per l&#39;ordine di lavoro di eliminazione record. Impostato automaticamente su `delete_identity` dallo script di conversione. |
-| `datasetId` | L’identificatore univoco del set di dati. |
+| `datasetId` | Identificatore univoco per i set di dati: un singolo ID, ID separati da virgole o `ALL`. |
 | `displayName` | Etichetta leggibile per questo ordine di lavoro di eliminazione record. |
 | `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
 | `identities` | Matrice di oggetti, ciascuno contenente:<br><ul><li> `namespace`: oggetto con una proprietà `code` che specifica lo spazio dei nomi dell&#39;identità (ad esempio, &quot;email&quot;).</li><li> `id`: valore di identità da eliminare per questo spazio dei nomi.</li></ul> |
@@ -411,7 +476,7 @@ La tabella seguente descrive le proprietà nel payload JSON.
 
 ### Invia i dati JSON generati all&#39;endpoint `/workorder`
 
-Per inviare una richiesta, seguire le istruzioni riportate nella sezione [creare un ordine di lavoro di eliminazione record](#create). Utilizzare il payload JSON convertito come corpo della richiesta (`-d`) durante l&#39;invio della richiesta POST `curl` all&#39;endpoint API `/workorder`.
+L&#39;output dello script utilizza il formato `identities`, che l&#39;API accetta così com&#39;è. Utilizza il payload JSON convertito come corpo della richiesta (`-d`) quando invii la richiesta POST `curl` all&#39;endpoint `/workorder`. Per le opzioni di richiesta complete e le regole di convalida, vedere [Creare un ordine di lavoro di eliminazione record](#create).
 
 ## Recuperare i dettagli per un ordine di lavoro di eliminazione record specifico {#lookup}
 
@@ -482,12 +547,12 @@ Nella tabella seguente sono descritte le proprietà della risposta.
 | `targetServices` | Elenco dei servizi di destinazione interessati da questo ordine di lavoro di eliminazione record. |
 | `status` | Stato corrente dell&#39;ordine di lavoro di eliminazione record. |
 | `createdBy` | Indirizzo e-mail e identificatore dell&#39;utente che ha creato il record elimina l&#39;ordine di lavoro. |
-| `datasetId` | L’identificatore univoco del set di dati associato all’ordine di lavoro. |
+| `datasetId` | Identificatore univoco dei set di dati associati all&#39;ordine di lavoro (ID singolo, ID separati da virgole o `ALL`). |
 | `datasetName` | Nome del set di dati associato all’ordine di lavoro. |
 | `displayName` | Etichetta leggibile per l&#39;ordine di lavoro di eliminazione record. |
 | `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
 
-## Aggiornare un ordine di lavoro di eliminazione record
+## Aggiornare un ordine di lavoro di eliminazione record {#update}
 
 Aggiornare `name` e `description` per un ordine di lavoro di eliminazione record effettuando una richiesta PUT all&#39;endpoint `/workorder/{WORKORDER_ID}`.
 
@@ -590,7 +655,7 @@ In caso di esito positivo, la risposta restituisce la richiesta dell’ordine di
 | `targetServices` | Elenco dei servizi di destinazione interessati da questo ordine di lavoro di eliminazione record. |
 | `status` | Stato corrente dell&#39;ordine di lavoro di eliminazione record. I valori possibili sono: `received`,`validated`, `submitted`, `ingested`, `completed` e `failed`. |
 | `createdBy` | Indirizzo e-mail e identificatore dell&#39;utente che ha creato il record elimina l&#39;ordine di lavoro. |
-| `datasetId` | Identificatore univoco del set di dati associato all&#39;ordine di lavoro di eliminazione record. |
+| `datasetId` | Identificatore univoco dei set di dati associati all&#39;ordine di lavoro di eliminazione dei record (ID singolo, ID separati da virgole o `ALL`). |
 | `datasetName` | Nome del set di dati associato all&#39;ordine di lavoro di eliminazione record. |
 | `displayName` | Etichetta leggibile per l&#39;ordine di lavoro di eliminazione record. |
 | `description` | Descrizione dell&#39;ordine di lavoro di eliminazione record. |
