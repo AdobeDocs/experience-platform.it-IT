@@ -6,7 +6,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 19c8bc9f0b27e1c04c5038cd268bed43cf57080f
+source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Al momento il connettore di destinazione è a disponibilità limitata. Per ottenere l&#39;accesso, contatta il tuo rappresentante Adobe.</br>
+>Al momento il connettore di destinazione è a disponibilità limitata. Per potervi accedere, contatta il tuo rappresentante Adobe.
 
 ## Panoramica {#overview}
 
