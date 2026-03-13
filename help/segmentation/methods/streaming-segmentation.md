@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Guida alla segmentazione in streaming
-description: Scopri la segmentazione in streaming, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in streaming e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in streaming.
+title: Streaming Segmentation Guide
+description: Learn about streaming segmentation including what it is, how to create an audience evaluated using streaming segmentation, and how to view your audiences created using streaming segmentation.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '2051'
-ht-degree: 3%
+source-wordcount: '2033'
+ht-degree: 4%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 3%
 >
 >Tutte le definizioni di segmenti esistenti attualmente valutate utilizzando lo streaming o la segmentazione Edge continueranno a funzionare così come sono, a meno che non vengano modificate o aggiornate.
 
-## Set di regole {#ruleset}
+## Ruleset {#ruleset}
 
-Qualsiasi definizione di segmento **nuova o modificata** che corrisponde ai seguenti set di regole **non sarà più** valutata mediante streaming o segmentazione Edge. Verranno invece valutati utilizzando la segmentazione batch.
+Any **new or edited** segment definitions that match the following rulesets will **no longer** be evaluated using streaming or edge segmentation. Instead, they will be evaluated using batch segmentation.
 
-- Un singolo evento con una finestra temporale più lunga di 24 ore
-   - Attiva un pubblico con tutti i profili che hanno visualizzato una pagina web negli ultimi 3 giorni.
+- A single event with a time window longer than 24 hours
+   - Activate an audience with all profiles that viewed a webpage in last 3 days.
 - Un singolo evento senza finestra temporale
    - Attiva un pubblico con tutti i profili che hanno visualizzato una pagina web.
 
@@ -49,7 +49,7 @@ Se devi valutare una definizione di segmento utilizzando la segmentazione in str
 
 Ad esempio, supponiamo che tu abbia due tipi di pubblico, con un pubblico che ospita i dati dello schema del profilo e gli altri dati dello schema dell’evento dell’esperienza di alloggio:
 
-| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| Pubblico | Schema | Tipo di Source | Definizione di query | ID pubblico |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Residenti in California | Profilo | Batch | L&#39;indirizzo dell&#39;abitazione è nello stato della California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -70,7 +70,7 @@ Tuttavia, se desideri combinare due tipi di pubblico con i dati dell&#39;evento,
 
 Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i dati dello schema dell’evento esperienza:
 
-| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| Pubblico | Schema | Tipo di Source | Definizione di query | ID pubblico |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Abbandoni recenti | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 24 ore | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -100,15 +100,15 @@ Se non è impostato alcun criterio di unione attivo, è necessario [configurare 
 
 La segmentazione in streaming è la capacità di valutare i tipi di pubblico in Adobe Experience Platform in tempo quasi reale concentrandosi sulla ricchezza dei dati.
 
-Con la segmentazione in streaming, la qualificazione del pubblico ora avviene quando i dati in streaming arrivano in Experience Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. Questo consente di valutare i dati trasmessi in Experience Platform, e di mantenere automaticamente aggiornata l’iscrizione al pubblico.
+Con la segmentazione in streaming, la qualificazione del pubblico ora avviene quando i dati in streaming arrivano in Experience Platform, alleviando la necessità di pianificare ed eseguire processi di segmentazione. This allows you to evaluate data as its passed into Experience Platform, letting audience membership be automatically kept up-to-date.
 
-## Set di regole idonei {#rulesets}
+## Eligible rulesets {#rulesets}
 
 >[!IMPORTANT]
 >
->Per utilizzare la segmentazione in streaming, **devi** utilizzare un criterio di unione &quot;Attivo su Edge&quot;. Per ulteriori informazioni sui criteri di unione, consulta la [panoramica sui criteri di unione](../../profile/merge-policies/overview.md).
+>In order to use streaming segmentation, you **must** use a merge policy that is &quot;Active on Edge&quot;. Per ulteriori informazioni sui criteri di unione, consulta la [panoramica sui criteri di unione](../../profile/merge-policies/overview.md).
 
-Un set di regole è idoneo per la segmentazione in streaming se soddisfa uno dei criteri descritti nella tabella seguente.
+A ruleset will be eligible for streaming segmentation if it meets any of the criteria outlined in the following table.
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ Un set di regole è idoneo per la segmentazione in streaming se soddisfa uno dei
 
 | Tipo di query | Dettagli | Query | Esempio |
 | ---------- | ------- | ----- | ------- |
-| Singolo evento entro un intervallo di tempo inferiore a 24 ore | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro un intervallo di tempo inferiore a 24 ore. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di un singolo evento all&#39;interno di un intervallo di tempo relativo.](../images/methods/streaming/single-event.png) |
-| Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. | `homeAddress.country.equals("US", false)` | ![Viene visualizzato un esempio di un attributo di profilo.](../images/methods/streaming/profile-attribute.png) |
-| Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo all&#39;interno di un intervallo di tempo relativo.](../images/methods/streaming/single-event-with-profile-attribute.png) |
+| Single event within a time window of less than 24 hours | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo entro un intervallo di tempo inferiore a 24 ore. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di un singolo evento all&#39;interno di un intervallo di tempo relativo.](../images/methods/streaming/single-event.png) |
+| Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. | `homeAddress.country.equals("Canada", false)` | ![Viene visualizzato un esempio di un attributo di profilo.](../images/methods/streaming/profile-attribute.png) |
+| Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. | `workAddress.country.equals("Canada", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo all&#39;interno di un intervallo di tempo relativo.](../images/methods/streaming/single-event-with-profile-attribute.png) |
 | Più eventi entro un intervallo di tempo relativo di 24 ore | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Viene visualizzato un esempio di più eventi con un attributo di profilo.](../images/methods/streaming/multiple-events-with-profile-attribute.png) |
 
 Una definizione di segmento **non** sarà idonea per la segmentazione in streaming nei seguenti scenari:
@@ -140,7 +140,7 @@ Se una definizione di segmento viene modificata in modo da non soddisfare più i
 
 Inoltre, l’annullamento del riconoscimento del segmento, in modo simile alla qualificazione del segmento, avviene in tempo reale. Di conseguenza, se un pubblico non è più idoneo per un segmento, non sarà immediatamente qualificato. Ad esempio, se la definizione del segmento richiede &quot;Tutti gli utenti che hanno acquistato scarpe rosse nelle ultime tre ore&quot;, dopo tre ore tutti i profili che si sono inizialmente qualificati per la definizione del segmento non saranno qualificati.
 
-### Combinare tipi di pubblico {#combine-audiences}
+### Combinare più tipi di pubblico {#combine-audiences}
 
 Per combinare i dati provenienti sia da origini batch che da origini in streaming, è necessario separare i componenti batch e in streaming in tipi di pubblico separati.
 
@@ -148,7 +148,7 @@ Per combinare i dati provenienti sia da origini batch che da origini in streamin
 
 Ad esempio, prendiamo in considerazione i due tipi di pubblico di esempio seguenti:
 
-| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| Pubblico | Schema | Tipo di Source | Definizione di query | ID pubblico |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Residenti in California | Profilo | Batch | L&#39;indirizzo dell&#39;abitazione è nello stato della California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -165,15 +165,15 @@ WHEN(<= 24 hours before now)])
 
 Il pubblico risultante *sarà* valutato utilizzando la segmentazione in streaming, poiché sfrutta l&#39;appartenenza del pubblico batch facendo riferimento al componente pubblico batch.
 
-### Più eventi esperienza {#two-events}
+### Multiple Experience Events {#two-events}
 
-Se vuoi combinare più tipi di pubblico con i dati dell&#39;evento, **non puoi** semplicemente combinare gli eventi. È necessario creare un pubblico per ogni evento, quindi creare un altro pubblico che utilizza `inSegment` per fare riferimento a tutti i tipi di pubblico.
+If you want to combine multiple audiences with event data, you **cannot** just combine the events. You&#39;ll need to create an audience for each event, then create another audience that uses `inSegment` to refer to all of the audiences.
 
 Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i dati dello schema dell’evento esperienza:
 
-| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| Pubblico | Schema | Tipo di Source | Definizione di query | ID pubblico |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Abbandoni recenti | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 48 ore | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Recent abandons | Evento esperienza | Batch | Ha almeno un evento di abbandono nelle ultime 48 ore | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Pagamenti recenti | Evento esperienza | Streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In questa situazione, devi creare un terzo pubblico come segue:
@@ -289,15 +289,15 @@ Ulteriori informazioni sull&#39;utilizzo di questo endpoint sono disponibili nel
 
 >[!TAB Audience Portal]
 
-In Audience Portal, seleziona **[!UICONTROL Crea pubblico]**.
+In Audience Portal, selezionare **[!UICONTROL Create audience]**.
 
 ![Il pulsante Crea pubblico è evidenziato in Audience Portal.](../images/methods/streaming/select-create-audience.png)
 
-Viene visualizzata una finestra a comparsa. Seleziona **[!UICONTROL Genera regole]** per accedere al Generatore di segmenti.
+Viene visualizzata una finestra a comparsa. Seleziona **[!UICONTROL Build rules]** per accedere al Generatore di segmenti.
 
 ![Il pulsante Genera regole è evidenziato nel popover Crea pubblico.](../images/methods/streaming/select-build-rules.png)
 
-In Segment Builder, crea una definizione di segmento corrispondente a uno dei [set di regole idonei](#eligible-rulesets). Se la definizione del segmento è idonea per la segmentazione in streaming, potrai selezionare **[!UICONTROL Streaming]** come **[!UICONTROL metodo di valutazione]**.
+In Segment Builder, crea una definizione di segmento corrispondente a uno dei [set di regole idonei](#eligible-rulesets). Se la definizione del segmento è idonea per la segmentazione in streaming, potrai selezionare **[!UICONTROL Streaming]** come **[!UICONTROL Evaluation method]**.
 
 ![Viene visualizzata la definizione del segmento. Il tipo di valutazione è evidenziato. La definizione del segmento può essere valutata utilizzando la segmentazione in streaming.](../images/methods/streaming/streaming-evaluation-method.png)
 
@@ -439,7 +439,7 @@ Puoi recuperare tutti i tipi di pubblico abilitati per la segmentazione in strea
 
 ![L&#39;icona del filtro è evidenziata in Audience Portal.](../images/methods/filter-audiences.png)
 
-All&#39;interno dei filtri disponibili, vai a **[!UICONTROL Frequenza di aggiornamento]** e seleziona &quot;[!UICONTROL Streaming]&quot;. Utilizzando questo filtro vengono visualizzati tutti i tipi di pubblico dell’organizzazione valutati mediante la segmentazione in streaming.
+All&#39;interno dei filtri disponibili, passare a **[!UICONTROL Update frequency]** e selezionare &quot;[!UICONTROL Streaming]&quot;. Utilizzando questo filtro vengono visualizzati tutti i tipi di pubblico dell’organizzazione valutati mediante la segmentazione in streaming.
 
 ![È selezionata la frequenza di aggiornamento in streaming, con tutti i tipi di pubblico dell&#39;organizzazione valutati mediante la segmentazione in streaming.](../images/methods/streaming/filter-streaming.png)
 
@@ -453,22 +453,22 @@ Puoi visualizzare i dettagli di un pubblico specifico valutato utilizzando la se
 
 Dopo aver selezionato un pubblico su Audience Portal, viene visualizzata la pagina dei dettagli del pubblico. Visualizza informazioni sul pubblico, tra cui un riepilogo dei dettagli del pubblico, la quantità di profili qualificati nel tempo, nonché le destinazioni in cui il pubblico è stato attivato.
 
-![Viene visualizzata la pagina dei dettagli del pubblico per un pubblico valutato mediante segmentazione in streaming.](../images/methods/streaming/audience-details.png)
+![The audience details page is displayed for an audience evaluated using streaming segmentation.](../images/methods/streaming/audience-details.png)
 
-Per i tipi di pubblico abilitati per lo streaming, viene visualizzata la scheda **[!UICONTROL Profili nel tempo]**, che mostra il totale delle metriche qualificate e le nuove metriche di aggiornamento del pubblico.
+For streaming-enabled audiences, the **[!UICONTROL Profiles over time]** card is displayed, which shows the total qualified and the nwe audience updated metrics.
 
-La metrica **[!UICONTROL Totale qualificato]** rappresenta il numero totale di tipi di pubblico qualificati, in base alle valutazioni in batch e in streaming per questo pubblico.
+The **[!UICONTROL Total qualified]** metric represents the total number of qualified audiences, based on batch and streaming evaluations for this audience.
 
-La metrica **[!UICONTROL Nuovo pubblico aggiornato]** è rappresentata da un grafico a linee che mostra la modifica nella dimensione del pubblico tramite la segmentazione in streaming. Puoi regolare il menu a discesa per visualizzare le ultime 24 ore, l’ultima settimana o gli ultimi 30 giorni.
+La metrica **[!UICONTROL New audience updated]** è rappresentata da un grafico a linee che mostra la modifica nella dimensione del pubblico tramite la segmentazione in streaming. Puoi regolare il menu a discesa per visualizzare le ultime 24 ore, l’ultima settimana o gli ultimi 30 giorni.
 
 ![La scheda Profili nel tempo è evidenziata.](../images/methods/streaming/profiles-over-time.png)
 
-Per ulteriori dettagli sui dettagli del pubblico, consulta la [Panoramica di Audience Portal](../ui/audience-portal.md#audience-details).
+For more details on audience details, please read the [Audience Portal overview](../ui/audience-portal.md#audience-details).
 
 ## Passaggi successivi
 
-Questa guida spiega come le definizioni dei segmenti abilitati per lo streaming funzionano in Adobe Experience Platform e come monitorare le definizioni dei segmenti abilitati per lo streaming.
+This guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segment definitions.
 
-Per ulteriori informazioni sull&#39;utilizzo dell&#39;interfaccia utente di Adobe Experience Platform, leggere la [Guida utente per la segmentazione](./overview.md).
+To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
 
-Per le domande frequenti sulla segmentazione in streaming, leggi la sezione [segmentazione in streaming delle domande frequenti](../faq.md#streaming-segmentation).
+For frequently asked questions about streaming segmentation, please read the [streaming segmentation section of the FAQ](../faq.md#streaming-segmentation).

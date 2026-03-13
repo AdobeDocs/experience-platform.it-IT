@@ -3,9 +3,9 @@ title: Guida alla valutazione del pubblico flessibile
 description: Scopri come utilizzare la valutazione flessibile del pubblico per eseguire processi di segmentazione in batch su richiesta.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1206'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,9 @@ Quando esegui una valutazione flessibile del pubblico, tieni presente le seguent
 
 - Puoi utilizzare solo la valutazione flessibile del pubblico **due** al giorno per sandbox. Questo limite viene ripristinato alla mezzanotte (UTC).
 - Hai un **massimo** di 50 esecuzioni flessibili di valutazione del pubblico all&#39;anno per **sandbox di produzione**.
+   - Per anno si intende un anno che inizia alla data del contratto Experience Platform per una valutazione flessibile del pubblico. Ad esempio, se il contratto è iniziato il 18 maggio, il numero di esecuzioni flessibili per la valutazione del pubblico verrà reimpostato ogni 18 maggio.
 - Hai un **massimo** di 100 esecuzioni flessibili di valutazione del pubblico all&#39;anno per sandbox **sviluppo**.
+   - Per anno si intende un anno che inizia alla data del contratto Experience Platform per una valutazione flessibile del pubblico. Ad esempio, se il contratto è iniziato il 18 maggio, il numero di esecuzioni flessibili per la valutazione del pubblico verrà reimpostato ogni 18 maggio.
 - Tutti i tipi di pubblico **must** hanno origine &quot;Servizio di segmentazione&quot;.
 - Tutti i tipi di pubblico **devono** essere valutati utilizzando la segmentazione batch.
 - Tutti i tipi di pubblico **devono** essere basati sulle persone.
@@ -326,7 +328,7 @@ Dopo aver confermato che sono elencati i tipi di pubblico corretti, puoi procede
 
 Il video seguente illustra come accedere e utilizzare la valutazione flessibile del pubblico in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453648?captions=ita&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Domande frequenti {#faq}
 
