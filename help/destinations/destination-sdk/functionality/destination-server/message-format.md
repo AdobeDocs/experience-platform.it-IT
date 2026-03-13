@@ -2,9 +2,9 @@
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
 title: Formato del messaggio
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
+source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2512'
 ht-degree: 0%
 
 ---
@@ -176,9 +176,9 @@ Adobe utilizza [modelli Pebble](https://pebbletemplates.io/), un linguaggio di m
 
 Questa sezione fornisce diversi esempi di come vengono effettuate queste trasformazioni, dallo schema XDM di input fino al modello e all’output nei formati di payload accettati dalla destinazione. Gli esempi seguenti sono presentati dalla complessità crescente, come segue:
 
-1. Semplici esempi di trasformazione. Scopri come funziona il modello con semplici trasformazioni per i campi [Attributi profilo](#attributes), [Appartenenza pubblico](#segment-membership) e [Identità](#identities).
+1. Semplici esempi di trasformazione. Scopri come funziona il modello con semplici trasformazioni per i campi [Attributi profilo](#attributes), [Appartenenza pubblico](#audience-membership) e [Identità](#identities).
 2. Esempi di complessità aumentata dei modelli che combinano i campi riportati sopra: [Crea un modello che invia tipi di pubblico e identità](./message-format.md#segments-and-identities) e [Crea un modello che invia segmenti, identità e attributi di profilo](#segments-identities-attributes).
-3. Modelli che includono la chiave di aggregazione. Quando si utilizza l&#39;[aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, Experience Platform raggruppa i profili esportati nella destinazione in base a criteri quali l&#39;ID pubblico, lo stato del pubblico o gli spazi dei nomi di identità.
+3. Modelli che includono la chiave di aggregazione. Quando si utilizza l&#39;[aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, Experience Platform raggruppa i profili esportati nella destinazione in base a criteri quali l&#39;ID pubblico, lo spazio dei nomi del pubblico, lo stato del pubblico o gli spazi dei nomi delle identità.
 
 ### Attributi del profilo {#attributes}
 
@@ -794,7 +794,8 @@ Profilo 2:
                 {% endfor %}
                 ]
             }
-        }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
     ]
 }
 ```
@@ -838,7 +839,7 @@ Profilo 2:
         {
             "attributes": {
                 "firstName": "Harry",
-                "birthDate": "1980/07/21"
+                "birthDate": "1980/07/31"
             },
             "identities": [
                 {
@@ -859,21 +860,21 @@ Profilo 2:
 
 ### Includi la chiave di aggregazione nel modello per accedere ai profili esportati raggruppati per vari criteri {#template-aggregation-key}
 
-Quando si utilizza l&#39;[aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, è possibile raggruppare i profili esportati nella destinazione in base a criteri quali ID pubblico, alias pubblico, appartenenza pubblico o spazi dei nomi di identità.
+Quando si utilizza l&#39;[aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, è possibile raggruppare i profili esportati nella destinazione in base a criteri quali l&#39;ID pubblico, lo spazio dei nomi del pubblico, l&#39;alias del pubblico, l&#39;appartenenza al pubblico o gli spazi dei nomi di identità.
 
 Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione indicate in precedenza, come mostrato negli esempi nelle sezioni seguenti. Utilizza le chiavi di aggregazione per strutturare il messaggio HTTP esportato da Experience Platform in modo che corrisponda ai limiti di formato e di frequenza previsti dalla destinazione.
 
 #### Usa chiave di aggregazione ID pubblico nel modello {#aggregation-key-segment-id}
 
-Se si utilizza l&#39;[aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e si imposta `includeSegmentId` su true, i profili nei messaggi HTTP esportati nella destinazione vengono raggruppati per ID pubblico. Di seguito trovi le modalità di accesso all’ID del pubblico nel modello.
+Se si utilizza l&#39;[aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e si imposta `includeSegmentId` su true, i profili nei messaggi HTTP esportati nella destinazione vengono raggruppati per ID pubblico. Di seguito trovi le modalità di accesso all’ID pubblico e allo spazio dei nomi del pubblico nel modello.
 
 **Input**
 
 Considera i quattro profili seguenti, dove:
 
-* i primi due fanno parte del pubblico con ID pubblico `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* il terzo profilo fa parte del pubblico con ID pubblico `8f812592-3f06-416b-bd50-e7831848a31a`
-* il quarto profilo fa parte di entrambi i tipi di pubblico indicati sopra.
+* i primi due fanno parte del pubblico con ID pubblico `788d8874-8007-4253-92b7-ee6b6c20c6f3` nello spazio dei nomi `ups`
+* il terzo profilo fa parte del pubblico con ID pubblico `8f812592-3f06-416b-bd50-e7831848a31a` nello spazio dei nomi `CustomerAudienceUpload`
+* il quarto profilo fa parte di entrambi i tipi di pubblico di cui sopra, ciascuno sotto il rispettivo namespace.
 
 Profilo 1:
 
@@ -925,7 +926,7 @@ Profilo 3:
       }
    },
    "segmentMembership":{
-      "ups":{
+      "CustomerAudienceUpload":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
@@ -946,12 +947,14 @@ Profilo 4:
    },
    "segmentMembership":{
       "ups":{
-         "8f812592-3f06-416b-bd50-e7831848a31a":{
-            "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"realized"
-         },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"realized"
+         }
+      },
+      "CustomerAudienceUpload":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
          }
       }
@@ -965,11 +968,12 @@ Profilo 4:
 >
 >Per tutti i modelli utilizzati, è necessario eseguire l&#39;escape dei caratteri non validi, ad esempio le virgolette doppie `""`, prima di inserire il [modello](../../functionality/destination-server/templating-specs.md) nella [configurazione del server di destinazione](../../authoring-api/destination-server/create-destination-server.md). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 nello standard [JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Tieni presente che `audienceId` viene utilizzato nel modello per accedere agli ID del pubblico. In questo esempio si presuppone che si utilizzi `audienceId` per l&#39;iscrizione al pubblico nella tassonomia di destinazione. In alternativa, puoi utilizzare qualsiasi altro nome di campo, a seconda della tassonomia.
+Tieni presente che `audienceId` e `audienceNamespace` vengono utilizzati nel modello per accedere all&#39;ID pubblico e allo spazio dei nomi. In questo esempio si presuppone che si utilizzi `audienceId` per l&#39;iscrizione al pubblico nella tassonomia di destinazione. In alternativa, puoi utilizzare qualsiasi altro nome di campo, a seconda della tassonomia.
 
 ```python
 {
     "audienceId": "{{ input.aggregationKey.segmentId }}",
+    "audienceNamespace": "{{ input.aggregationKey.segmentNamespace }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
@@ -982,11 +986,12 @@ Tieni presente che `audienceId` viene utilizzato nel modello per accedere agli I
 
 **Risultato**
 
-Quando vengono esportati nella destinazione, i profili vengono suddivisi in due gruppi, in base al loro ID pubblico.
+Quando vengono esportati nella destinazione, i profili vengono suddivisi in due gruppi, in base al loro ID pubblico e al loro spazio dei nomi.
 
 ```json
 {
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "audienceNamespace":"ups",
    "profiles":[
       {
          "firstName":"Hermione"
@@ -1004,6 +1009,7 @@ Quando vengono esportati nella destinazione, i profili vengono suddivisi in due 
 ```json
 {
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "audienceNamespace":"CustomerAudienceUpload",
    "profiles":[
       {
          "firstName":"Tom"
