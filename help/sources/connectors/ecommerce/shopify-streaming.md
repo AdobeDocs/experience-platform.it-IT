@@ -4,9 +4,9 @@ description: Scopri come creare una connessione di origine e un flusso di dati p
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
@@ -104,7 +104,7 @@ In caso di esito positivo, la risposta restituisce il token di accesso e gli amb
 
 ## Crea un webhook per lo streaming dei dati [!DNL Shopify] {#webhook}
 
-I webhook consentono alle applicazioni di rimanere sincronizzate con i dati di [!DNL Shopify] o di eseguire un&#39;azione dopo che un particolare evento si è verificato in un negozio. Per lo streaming dei dati [!DNL Shopify] su Experience Platform, è possibile utilizzare i webhook per definire l&#39;endpoint http e gli argomenti per la sottoscrizione.
+I webhook consentono alle applicazioni di rimanere sincronizzate con i dati di [!DNL Shopify] o di eseguire un&#39;azione dopo che un particolare evento si è verificato in un negozio. Per lo streaming dei dati [!DNL Shopify] in Experience Platform, è possibile utilizzare i webhook per definire l&#39;endpoint http e gli argomenti per la sottoscrizione.
 
 **Richiesta**
 
@@ -117,7 +117,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --- | --- | 
-| `webhook.address` | L’endpoint http in cui vengono inviati i messaggi in streaming. |
+| `webhook.address` | L’endpoint http in cui vengono inviati i messaggi in streaming. Modello per il webhook: `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
 | `webhook.topic` | L’argomento dell’abbonamento al webhook. Per ulteriori informazioni, leggere la [[!DNL Shopify] guida agli argomenti dell&#39;evento webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | Il formato dei dati. |
 
@@ -138,7 +138,7 @@ In caso di esito positivo, la risposta restituisce informazioni sul webhook, inc
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
@@ -161,7 +161,7 @@ Di seguito è riportato un elenco delle limitazioni note che possono verificarsi
 
 ## Passaggi successivi
 
-I seguenti tutorial forniscono i passaggi per collegare l&#39;origine [!DNL Shopify Streaming] ad Experience Platform utilizzando l&#39;API e l&#39;interfaccia utente:
+I seguenti tutorial forniscono i passaggi necessari per collegare l&#39;origine [!DNL Shopify Streaming] ad Experience Platform utilizzando l&#39;API e l&#39;interfaccia utente:
 
 * [Creare una connessione e un flusso di dati di origine di Shopify Streaming utilizzando l’API del servizio Flusso](../../tutorials/api/create/ecommerce/shopify-streaming.md)
 * [Creare una connessione e un flusso di dati Shopify Streaming nell’interfaccia utente](../../tutorials/ui/create/ecommerce/shopify-streaming.md)
