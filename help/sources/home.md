@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+source-git-commit: 73244fe6f7413fc66773789da2b5491a1ed49f15
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1678'
 ht-degree: 12%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Le seguenti origini sono disponibili solo per [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) o clienti che hanno concesso in licenza lo SKU Advanced Enterprise Source Connectors standalone.
 
 | Origine | Categoria | Tipo di acquisizione | Cloud |
 | --- | --- | --- | --- |
