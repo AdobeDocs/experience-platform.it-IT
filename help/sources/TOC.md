@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1089'
 ht-degree: 34%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 34%
       - [Connettore Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connettore Amazon S3](connectors/cloud-storage/s3.md)
       - [Connettore Apache HDFS](connectors/cloud-storage/hdfs.md)
-      - [Connettore di archiviazione Azure Data Lake Gen2](connectors/cloud-storage/adls-gen2.md)
+      - [Connettore Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
       - [Connettore BLOB di Azure](connectors/cloud-storage/blob.md)
       - [Connettore Azure Event Hubs](connectors/cloud-storage/eventhub.md)
       - [Connettore Azure File Storage](connectors/cloud-storage/azure-file-storage.md)
@@ -74,8 +74,8 @@ ht-degree: 34%
       - [Connettore Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
-      - [Connettore delle banche dati di Azure](connectors/databases/databricks.md)
-      - [Connettore Azure Data Explorer](connectors/databases/data-explorer.md)
+      - [Connettore Azure Databricks](connectors/databases/databricks.md)
+      - [Connettore Data Explorer di Azure](connectors/databases/data-explorer.md)
       - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore Azure Table Storage](connectors/databases/ats.md)
       - [Connettore BigQuery Google](connectors/databases/bigquery.md)
@@ -97,6 +97,8 @@ ht-degree: 34%
       - [Intento Bombora](connectors/data-partners/bombora.md)
       - [Intento Demandbase](connectors/data-partners/demandbase.md)
       - [Risoluzione Merkury Enterprise Identity](connectors/data-partners/merkury.md)
+   - Condivisione dati {#data-sharing}
+      - [Deltashare](connectors/data-sharing/deltashare.md)
    - eCommerce {#ecommerce}
       - [COMMERCE SAP](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -138,7 +140,7 @@ ht-degree: 34%
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
-         - [BLOB di Azure](tutorials/api/create/cloud-storage/blob.md)
+         - [Blob Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Hub eventi Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Archiviazione file di Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
@@ -260,7 +262,7 @@ ht-degree: 34%
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [BLOB di Azure](tutorials/ui/create/cloud-storage/blob.md)
+         - [Blob Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Hub eventi Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Archiviazione file di Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
@@ -310,6 +312,8 @@ ht-degree: 34%
          - [Intento Bombora](tutorials/ui/create/data-partners/bombora.md)
          - [Intento Demandbase](tutorials/ui/create/data-partners/demandbase.md)
          - [Risoluzione Merkury Enterprise Identity](tutorials/ui/create/data-partners/merkury.md)
+      - Condivisione dati {#data-sharing}
+         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
       - eCommerce {#ecommerce}
          - [COMMERCE SAP](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -378,7 +382,7 @@ ht-degree: 34%
       - [Configura specifica di esplorazione](sources-sdk/config/explorespec.md)
    - Guida API per origini self-service (Batch SDK) {#self-serve-api}
       - [Panoramica API di Self-Serve Sources (Batch SDK)](sources-sdk/api/api-overview.md)
-      - [Guida introduttiva](sources-sdk/api/getting-started.md)
+      - [Introduzione](sources-sdk/api/getting-started.md)
       - [Creare una specifica di connessione](sources-sdk/api/create.md)
       - [Aggiornare una specifica di connessione](sources-sdk/api/update-connection-specs.md)
       - [Aggiornare una specifica di flusso](sources-sdk/api/update-flow-specs.md)
