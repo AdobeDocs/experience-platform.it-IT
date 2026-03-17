@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica dei connettori Source
 description: Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 73244fe6f7413fc66773789da2b5491a1ed49f15
+source-git-commit: 6142801c9008c10a3d1a0a11976a2c99fb6cee86
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 12%
+source-wordcount: '1721'
+ht-degree: 11%
 
 ---
 
@@ -38,6 +38,10 @@ Per i connettori creati e gestiti dal partner, ciò significa che potrebbe esser
 
 ## Catalogo origini
 
+>[!NOTE]
+>
+>I flussi di dati di acquisizione di Source che non vanno a buon fine in modo continuo per 30 giorni verranno disattivati automaticamente. Utilizza [Dashboard di monitoraggio](/help/dataflows/ui/monitor-sources.md) per rivedere il flusso di dati, identificare il motivo dell&#39;errore (ad esempio, credenziali, autorizzazioni o modifiche di schema o mapping), applicare gli aggiornamenti necessari e riabilitare il flusso di dati una volta risolto.
+
 Leggere le sezioni seguenti per un elenco di tutte le origini disponibili nel catalogo delle origini.
 
 ### Applicazioni di Adobe {#adobe-applications}
@@ -61,7 +65,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Origini aziendali avanzate {#advanced-enterprise-sources}
 
-Le seguenti origini sono disponibili solo per [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) o clienti che hanno concesso in licenza lo SKU Advanced Enterprise Source Connectors standalone.
+Le seguenti origini sono disponibili solo per [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) o clienti che hanno concesso in licenza lo SKU Advanced Enterprise Source Connectors standalone.
 
 | Origine | Categoria | Tipo di acquisizione | Cloud |
 | --- | --- | --- | --- |
