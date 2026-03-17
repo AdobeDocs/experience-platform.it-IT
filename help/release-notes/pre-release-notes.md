@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
+source-git-commit: efa50881315d986940f7cb3afcbfcc30ef67c3a7
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 32%
+source-wordcount: '1411'
+ht-degree: 27%
 
 ---
 
@@ -25,17 +25,32 @@ ht-degree: 32%
 >- [Composizione di pubblico federato](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/it/docs/real-time-cdp-collaboration/using/latest)
 
-**Data di rilascio: febbraio 2026**
+**Data di rilascio: marzo 2026**
 
 Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Gestione avanzata del ciclo di vita dei dati](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
-- [Avvisi](#alerts)
-- [Raccolta dati](#data-collection)
 - [Destinazioni](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Servizio Query Service](#query-service)
+- [Query Service](#query-service)
+- [Profilo cliente in tempo reale](#profile)
+- [Esecuzione e funzionamento](#run-and-operate)
+- [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
+
+## Gestione avanzata del ciclo di vita dei dati {#advanced-data-lifecycle-management}
+
+Experience Platform offre una suite di funzionalità di igiene dei dati che ti consentono di gestire i dati archiviati tramite l’eliminazione programmatica di record e set di dati del consumatore. Utilizzando l’area di lavoro del ciclo di vita dei dati nell’interfaccia utente o tramite chiamate all’API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Usa queste funzionaità per garantire che le informazioni vengano utilizzate come previsto, che vengano aggiornate quando è necessario correggere dati scorretti e che vengano eliminate quando i criteri organizzativi lo ritengono necessario.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Eliminazione di più set di dati e record di solo profilo (solo API) | È possibile inviare un singolo ID set di dati, un elenco separato da virgole di ID set di dati o il valore letterale `ALL` in `datasetId` per eliminare identità in uno, molti o tutti i set di dati. È inoltre possibile limitare l&#39;eliminazione ai servizi di profilo impostando `targetServices` su `["identity","profile","ajo"]`, lasciando invariato il datalake. Per ulteriori dettagli, consulta la [Guida all&#39;eliminazione dei record degli ordini di lavoro](../hygiene/api/workorder.md). |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, consulta la [panoramica sulla gestione avanzata del ciclo di vita dei dati](../hygiene/home.md).
 
 ## Agent Orchestrator {#agent-orchestrator}
 
@@ -45,41 +60,11 @@ Agent Orchestrator consente di creare e distribuire agenti basati sull’intelli
 
 | Funzione | Descrizione |
 | --- | --- |
-| Agente di onboarding dei dati | Utilizza Data Onboarding Agent per configurare le connessioni di origine, convalidare la qualità dei dati, applicare l’arricchimento semantico, rivedere e convalidare gli schemi ed eseguire l’acquisizione dei dati. Segui i flussi di lavoro passo per passo sia per i flussi B2C che per i flussi B2B, rivedi gli output previsti e risolvi i problemi comuni. |
-| Agente Data Distiller | Utilizzare Data Distiller Agent per creare processi SQL dal linguaggio naturale, ottimizzare le prestazioni SQL, ripristinare gli errori SQL, pianificare e gestire processi SQL e monitorare lo stato dei processi. Per iniziare, controlla le protezioni, le autorizzazioni necessarie e le linee guida per la risoluzione dei problemi. |
-| Agente di raccolta dati | Utilizza l’agente di raccolta dati per ottenere indicazioni contestuali per configurazioni di raccolta dati complesse e per esplorare la derivazione, le dipendenze e le relazioni tra gli oggetti di raccolta dati tramite approfondimenti sulla conversazione. |
+| Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per acquisire informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico o la collaborazione con colleghi, rispondere alle domande dei clienti e prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [documentazione di Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
-
-## Avvisi {#alerts}
-
-Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. È possibile abbonarsi a diverse regole di avviso tramite la scheda [!UICONTROL Alerts] nell&#39;interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso all&#39;interno dell&#39;interfaccia utente stessa o tramite notifiche e-mail.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| --- | --- |
-| Integrazione di [!DNL Slack] per gli avvisi rivolti al cliente | È ora possibile inviare avvisi rivolti al cliente a [!DNL Slack]. Segui il tutorial per configurare l&#39;integrazione di [!DNL Slack] e ricevere notifiche di avviso direttamente nell&#39;area di lavoro di [!DNL Slack]. |
-
-{style="table-layout:auto"}
-
-Per ulteriori informazioni, consulta la [[!DNL Observability Insights] panoramica](../observability/home.md).
-
-## Raccolta dati {#data-collection}
-
-Adobe Experience Platform Data Collection fornisce un set di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli all’Edge Network di Adobe Experience Platform e ad altre destinazioni.
-
-**Funzioni nuove o aggiornate**
-
-| Funzione | Descrizione |
-| --- | --- |
-| Gestione estensione tag per piattaforma Adobe | Utilizza la nuova funzionalità di gestione delle estensioni per caricare, creare pacchetti e rilasciare le estensioni della tua organizzazione per la distribuzione pubblica, privata e di sviluppo. Nella vista aziendale di livello superiore, puoi trovare estensioni private condivise insieme alle estensioni di tua proprietà. Questa funzione supporta le estensioni web, edge e mobili. |
-
-{style="table-layout:auto"}
-
-Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](https://experienceleague.adobe.com/it/docs/experience-platform/collection/home).
 
 ## Destinazioni {#destinations}
 
@@ -89,25 +74,43 @@ Per ulteriori informazioni, leggere la [documentazione sulla raccolta dati](http
 
 | Destinazione | Descrizione |
 | --- | --- |
-| Batch [!DNL Snowflake] generalmente disponibile | La destinazione del batch [!DNL Snowflake] è stata spostata nella disponibilità generale. Ora puoi visualizzare la colonna ID del criterio di unione nei dati esportati insieme alle colonne esistenti, ad esempio marca temporale, attributi di mappatura e iscrizione al pubblico. |
-| Supporto della crittografia AES256 per [destinazioni Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Ora puoi configurare la crittografia AES256 per le esportazioni Amazon S3. Scegli tra due opzioni: <ul><li>**[!UICONTROL Default]**: Experience Platform crittografa i dati inattivi con l&#39;algoritmo di crittografia predefinito impostato sul bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: Experience Platform aggiunge l&#39;intestazione `s3:x-amz-server-side-encryption": "AES256` all&#39;esportazione e crittografa i dati inattivi con l&#39;algoritmo AES256 quando arriva in S3. **Questa opzione ha la precedenza su qualsiasi algoritmo di crittografia predefinito configurato nel bucket S3**.</li></ul> |
+| Supporto per più aree geografiche di [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) | Il connettore di streaming Snowflake è ora disponibile per i clienti oltre l’area geografica statunitense VA7. Utilizza il selettore a discesa Regione per selezionare l’area Snowflake in cui si trova il tuo account. La documentazione è stata aggiornata con la struttura dati prevista per le tabelle di streaming di Snowflake. |
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) e [Selettore area batch Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Ora è più facile trovare la tua regione con il nuovo menu a discesa ricercabile, che combina ricerca e menu a discesa in un unico controllo. |
+| Esporta metadati del pubblico in [destinazioni Batch Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | I file esportati in questa destinazione ora includono metadati del pubblico. La nuova struttura di tabella si applica a tutte le nuove connessioni di destinazione impostate per il passaggio successivo. La vecchia struttura della tabella verrà mantenuta per altri tre mesi prima di essere dichiarata obsoleta. |
+| Connessione [!DNL Adobe Advertising Cloud DSP] | La nuova connessione Adobe Advertising DSP offre le stesse funzionalità della connessione legacy e il supporto di identità aggiuntive. |
+| Supporto per il pubblico esterno per [Il CRM del Trade Desk](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) e [Pinterest](../destinations/catalog/advertising/pinterest.md) | Ora puoi attivare i tipi di pubblico oltre i segmenti del servizio di segmentazione in Trade Desk CRM, Criteo e Pinterest, inclusi i tipi di pubblico di caricamento personalizzati (importati da CSV), i tipi di pubblico simili, i tipi di pubblico federati e i tipi di pubblico creati in altre app di Experience Platform come Adobe Journey Optimizer. Per informazioni dettagliate, consulta la sezione [tipi di pubblico supportati](../destinations/catalog/advertising/criteo.md#supported-audiences) nella pagina del catalogo di ciascuna destinazione. |
+| Filtraggio del pubblico nel flusso di lavoro di attivazione | È ora possibile trovare e filtrare i tipi di pubblico nel passaggio **[!UICONTROL Select audiences]** con la stessa esperienza della pagina Tipi di pubblico; ad esempio, è possibile filtrare in base all&#39;origine del pubblico per trovare facilmente il pubblico che si sta cercando. |
+| Limite aumentato per i tipi di pubblico di caricamento personalizzati | Ora puoi attivare fino a 20 tipi di pubblico per caricamento personalizzato per istanza di destinazione. In precedenza, questo limite era di 10. |
+| [Esporta ora il file](../destinations/ui/export-file-now.md) e [supporto API di attivazione ad hoc](../destinations/api/ad-hoc-activation-api.md) per tipi di pubblico esterni | È ora possibile utilizzare l’interfaccia Export file now (UI) e l’API di attivazione ad hoc con tipi di pubblico esterni (come caricamenti personalizzati, lookalike, federati e tipi di pubblico da altre app Experience Platform) durante l’attivazione di destinazioni basate su file in batch. |
+| Destinazioni API HTTP con OAuth 2 e mTLS | Ora puoi creare e autenticare destinazioni API HTTP che utilizzano OAuth 2 quando l’endpoint di autenticazione richiede TLS reciproco (mTLS); il recupero del token durante la configurazione della destinazione ora supporta mTLS. |
+| Destinazione account ZoomInfo | Ora puoi inviare il pubblico dell’account a ZoomInfo da Real-Time Customer Data Platform (B2B). |
+
+{style="table-layout:auto"}
+
+**Correzioni e miglioramenti**
+
+| Correzione | Descrizione |
+| --- | --- |
+| Convalida dell&#39;ID account [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) | Al passaggio ID account è stato aggiunto un validatore di espressioni regolari. Quando inserisci l&#39;ID, questo viene convalidato per garantire che l&#39;ID organizzazione e l&#39;ID account siano nel formato corretto (separati da un punto). |
+| [hashing del numero di telefono del connettore TikTok](../destinations/catalog/social/tiktok.md) | È stato risolto un problema che impediva l’attivazione a TikTok delle identità codificate dai numeri di telefono a causa di un’errata configurazione nella scheda di destinazione. |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Profilo cliente in tempo reale {#profile}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
+Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con Real-Time Customer Profile puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, del sistema CRM e di terze parti.
 
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
-| ------- | ----------- |
-| Organizzazione e ricerca dell’inventario degli schemi | La pagina di navigazione dello schema ora include funzioni avanzate di ricerca e filtro, azioni in linea e supporto di tag e cartelle definiti dall’utente. Questi aggiornamenti semplificano la ricerca, l’organizzazione e la gestione degli schemi nelle sandbox, riducendo al contempo il lavoro di navigazione e manutenzione manuale. |
-| Modifica limitata per schemi con set di dati | Le operazioni di modifica che causano l’interruzione delle modifiche ora sono limitate una volta che esiste un set di dati per uno schema. Quando è associato un set di dati, non è più possibile rinominare o eliminare campi, modificare i tipi di dati o i formati dei campi, modificare i descrittori di identità, gestire i campi correlati per rimuovere campi esistenti o modificare la classe assegnata; sono ancora supportate modifiche aggiuntive e la deprecazione dei campi. |
+| --- | --- |
+| Selettore ora eventi profilo | È ora possibile impostare una finestra temporale nella scheda eventi profilo per visualizzare e analizzare gli eventi all’interno di tale intervallo. È possibile impostare la finestra temporale su un massimo di 30 giorni. Per impostazione predefinita, mostra gli eventi delle ultime 48 ore. |
 
-Per ulteriori informazioni, consulta la [[!DNL XDM] panoramica](../xdm/home.md).
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, consulta la [panoramica sul profilo cliente in tempo reale](../profile/home.md).
 
 ## Query Service {#query-service}
 
@@ -117,12 +120,41 @@ Il servizio Query Service consente di utilizzare SQL standard per eseguire query
 
 | Funzione | Descrizione |
 | --- | --- |
-| Allineamento della data annuale di reimpostazione del calcolo di Data Distiller (versione limitata) | Le ore di calcolo annuali di Data Distiller ora vengono reimpostate alla data dell’anniversario del contratto con Data Distiller, in base al momento in cui la licenza è stata acquistata o rinnovata. In questo modo i rapporti sull’utilizzo delle licenze vengono allineati ai termini del contratto e possono risultare in un adeguamento una tantum ai valori di utilizzo correnti. |
-| Gestione delle sessioni di Data Distiller (versione limitata) | In qualità di amministratore autorizzato, puoi visualizzare e gestire sessioni attive di Query Service e Data Distiller all’interno della tua organizzazione e sandbox tramite l’interfaccia utente di. Utilizza la gestione delle sessioni per identificare le sessioni inattive e terminarle per liberare capacità. Le protezioni integrate impediscono di terminare le sessioni con query attive. La funzione registra tutte le azioni di rimozione per il controllo e avvisa gli utenti interessati. Per accedere a questa funzionalità è necessaria l&#39;autorizzazione **Gestisci sessioni query**. |
+| Acceleratori Data Distiller | È ora possibile scegliere un acceleratore dalla scheda Acceleratori, immettere i parametri richiesti ed eseguire o pianificare l&#39;istruzione SQL generata senza scriverla personalmente; clonare qualsiasi acceleratore in un modello personalizzato da modificare. |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, leggere la [Panoramica di Query Service](../query-service/home.md).
+
+## Esecuzione e funzionamento {#run-and-operate}
+
+Ispeziona, risolvi i problemi e ottimizza le implementazioni di Experience Platform con gli strumenti Esegui e opera. Ottieni visibilità sulle attivazioni batch pianificate, identifica i problemi di configurazione e migliora l’affidabilità del sistema.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| [Pianificazioni processi](../run-and-operate/job-schedules.md) disponibilità generale | [!DNL Job Schedules] fornisce una visualizzazione unificata di tutti i processi di elaborazione batch pianificati nella pipeline di dati, dall&#39;acquisizione all&#39;attivazione della destinazione. Esaminare lo stato di esecuzione, identificare i conflitti di pianificazione e diagnosticare i problemi di configurazione prima che influiscano sulle operazioni aziendali. |
+| Verifica della disponibilità generale | Configurazioni di schema e identità inadeguate causano significativi problemi a valle, tra cui creazione di profili errata, qualificazione dei segmenti non riuscita e attivazione imprecisa. <br>I controlli di integrità spostano il tuo approccio dalla risoluzione dei problemi reattiva alla manutenzione proattiva e preventiva. I controlli di integrità sono scansioni sempre attive degli schemi e delle identità utilizzati nella sandbox e forniscono un riepilogo dei problemi che è possibile utilizzare per esplorare e risolvere. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, leggere la [Panoramica sull&#39;esecuzione e l&#39;utilizzo](../run-and-operate/overview.md), [Pianificazioni dei processi di ispezione](../run-and-operate/job-schedules.md) e la [Guida all&#39;interfaccia utente di Platform](../landing/ui-guide.md).
+
+## Servizio di segmentazione {#segmentation}
+
+Experience Platform consente di creare segmenti di pubblico dai dati dei clienti e consente la gestione completa del ciclo di vita di tali tipi di pubblico.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Origine di acquisizione in Audience Builder | Ora puoi vedere se ogni attributo proviene da un batch, streaming o sorgente Edge in Audience Builder per evitare di creare tipi di pubblico in streaming non validi o inefficienti. |
+| Mostra solo campi con dati in Account Audience Builder | Ora è possibile filtrare per mostrare solo gli attributi che contengono dati durante la creazione di tipi di pubblico per gli account. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, leggere la [Panoramica tipi di pubblico](../segmentation/home.md).
 
 ## Origini {#sources}
 
@@ -132,8 +164,22 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Origine | Descrizione |
 | --- | --- |
-| Supporto di Unity Catalog nel connettore di origine [!DNL Databricks] | Il connettore di origine [!DNL Databricks] ora supporta Unity Catalog. Leggi la documentazione aggiornata di [[!DNL Databricks]](../sources/connectors/databases/databricks.md) per scoprire come utilizzare Unity Catalog quando configuri la connessione di origine. |
+| Supporto migliorato per Change Data Capture | È ora possibile utilizzare Change Data Capture con le origini [!DNL Marketo Engage], [!DNL Microsoft Dynamics] e [!DNL Salesforce CRM]. |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [panoramica sulle origini](../sources/home.md).
+
+<!--
+
+| [!DNL Deltashare] | The new [!DNL Deltashare] source lets you securely bring live, shared datasets from your partners or internal lakehouse environments directly into Adobe's applications without copying or manually uploading files. You connect to a [!DNL Deltashare] endpoint, choose the tables you need, and you can then use that governed, up-to-date data alongside your existing profiles and insights, so you spend less time on data wrangling and more time activating and analyzing it in your marketing workflows. |
+| [!DNL Kobie] | The new [!DNL Kobie] source connector lets you directly ingest rich loyalty data from [!DNL Kobie] into Adobe's applications, so you can activate it alongside your existing customer profiles and insights. You connect your [!DNL Kobie] environment, configure the data objects you want to bring in (such as member status, transactions, and engagement), and then you can use that up-to-date loyalty information to build audiences, personalize experiences, and measure performance without juggling separate systems. |
+| [!DNL Talon.One] | The new Talon.One source lets you seamlessly bring promotion and incentive data from Talon.One into Adobe's applications, so you can use it alongside your existing customer profiles and behavioral data. You connect your Talon.One account, select the entities and events you want to ingest (such as campaigns, coupons, and redemptions), and then you can use that real-time promotion context to build smarter audiences, personalize offers, and better understand which incentives are driving performance—without managing separate, disconnected systems. |
+
+-->
+
+<!--
+
+| Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+-->
