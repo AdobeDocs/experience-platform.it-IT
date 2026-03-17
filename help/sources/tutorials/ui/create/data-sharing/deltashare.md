@@ -3,7 +3,8 @@ title: Utilizzare Il Connettore Source Deltashare Nell’Interfaccia Utente
 description: Scopri come utilizzare il connettore di origine Deltashare nell’interfaccia utente di Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: cb50e7b4175a34acd1cbf1ebe04fdfd1ab4694aa
+exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
+source-git-commit: 1533e35032d6a0508588652b0e1ca4c6717d4acb
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
@@ -22,4 +23,3 @@ Leggere questa guida per scoprire come utilizzare il connettore di origine [!DNL
 **Nota:** dopo aver selezionato **Avanti**, non potrai modificare la struttura dello schema selezionata.
 
 Se hai già selezionato **Successivo** e hai superato il passaggio di selezione dello schema, non puoi più aggiornare lo schema selezionato se torni a un passaggio precedente. Per modificare lo schema, devi riavviare il processo di configurazione del flusso di dati e iniziare dal passaggio iniziale.
-
