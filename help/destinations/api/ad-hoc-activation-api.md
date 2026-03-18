@@ -5,9 +5,9 @@ title: Attivare i tipi di pubblico su destinazioni batch tramite l’API di atti
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che si verificano prima dell’attivazione.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: e5a757fcd73fc743b570c6456a66907e4720e8b6
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience
 Quando utilizzi l’API di attivazione ad hoc, tieni presenti le seguenti protezioni.
 
 * Attualmente, ogni processo di attivazione ad hoc può attivare fino a 80 tipi di pubblico. Se si tenta di attivare più di 80 tipi di pubblico per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future.
-* I processi di attivazione ad hoc non possono essere eseguiti in parallelo con i [processi di esportazione del pubblico](../../segmentation/api/export-jobs.md) pianificati. Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione del pubblico pianificato sia stato completato. Per informazioni su come monitorare lo stato dei flussi di attivazione, vedere [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md). Ad esempio, se il flusso di dati di attivazione mostra uno stato **[!UICONTROL Elaborazione]**, attendi che termini prima di eseguire il processo di attivazione ad hoc.
+* I processi di attivazione ad hoc non possono essere eseguiti in parallelo con i [processi di esportazione del pubblico](../../segmentation/api/export-jobs.md) pianificati. Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione del pubblico pianificato sia stato completato. Per informazioni su come monitorare lo stato dei flussi di attivazione, vedere [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md). Ad esempio, se il flusso di dati di attivazione mostra uno stato **[!UICONTROL Processing]**, attendi che termini prima di eseguire il processo di attivazione ad hoc.
 * Non eseguire più di un processo di attivazione ad hoc simultaneo per pubblico.
 
 ## Considerazioni sulla segmentazione {#segmentation-considerations}
@@ -126,7 +126,7 @@ Adobe Experience Platform esegue processi di segmentazione pianificati una volta
 >
 >Nota il seguente vincolo occasionale: prima di eseguire un processo di attivazione ad hoc, assicurati che sia trascorsa almeno un&#39;ora dal momento in cui il pubblico è stato attivato per la prima volta in base alla pianificazione impostata in [Passaggio 3 - Creazione del flusso di attivazione nell&#39;interfaccia utente di Experience Platform](#activation-flow).
 
-Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione pianificato per il pubblico sia stato completato. Per informazioni su come monitorare lo stato dei flussi di attivazione, vedere [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md). Ad esempio, se il flusso di dati di attivazione mostra uno stato **[!UICONTROL Elaborazione]**, attendi che termini prima di eseguire il processo di attivazione ad hoc per esportare un file completo.
+Prima di eseguire un processo di attivazione ad hoc, assicurati che il processo di esportazione pianificato per il pubblico sia stato completato. Per informazioni su come monitorare lo stato dei flussi di attivazione, vedere [monitoraggio del flusso di dati di destinazione](../../dataflows/ui/monitor-destinations.md). Ad esempio, se il flusso di dati di attivazione mostra uno stato **[!UICONTROL Processing]**, attendi che termini prima di eseguire il processo di attivazione ad hoc per esportare un file completo.
 
 Una volta completato il processo di esportazione del pubblico, puoi attivare l’attivazione.
 
@@ -139,6 +139,10 @@ Una volta completato il processo di esportazione del pubblico, puoi attivare l�
 >[!IMPORTANT]
 >
 >È obbligatorio includere l&#39;intestazione `Accept: application/vnd.adobe.adhoc.activation+json; version=2` nella richiesta per utilizzare la versione 2 dell&#39;API di attivazione ad hoc.
+
+Per i tipi di pubblico del servizio non di segmentazione (ad esempio, [pubblico di caricamento esterno o personalizzato](../../segmentation/ui/audience-portal.md#import-audience)), devi specificare l&#39;ID del pubblico generato da Experience Platform nella richiesta, non l&#39;ID del pubblico esterno. Puoi trovare l&#39;ID generato dal sistema nella parte superiore del [pannello di riepilogo del pubblico](../../segmentation/ui/audience-portal.md#audience-summary), visualizzato come **ID#** seguito da un UUID, quando apri la pagina dei dettagli del pubblico nell&#39;interfaccia utente dei tipi di pubblico.
+
+![Il pannello di riepilogo del pubblico mostra il campo ID generato dal sistema evidenziato nella parte superiore del pannello.](../assets/api/ad-hoc-activation/audience-summary-id.png)
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
@@ -164,7 +168,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Experience Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** scheda e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Experience Platform, passando alla scheda **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Gli ID dei tipi di pubblico che desideri attivare nella destinazione selezionata. Puoi utilizzare l’API ad hoc per esportare i tipi di pubblico generati da Experience Platform e quelli esterni (caricamento personalizzato). Quando attivi un pubblico esterno, utilizza l’ID generato dal sistema invece dell’ID del pubblico. L&#39;ID generato dal sistema è disponibile nella visualizzazione di riepilogo del pubblico nell&#39;interfaccia utente dei tipi di pubblico. <br> ![Visualizzazione dell&#39;ID del pubblico che non deve essere selezionato.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Visualizzazione dell&#39;ID del pubblico che non deve essere selezionato."){width="100" zoomable="yes"} <br> ![Visualizzazione dell&#39;ID del pubblico generato dal sistema che deve essere utilizzato.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Visualizzazione dell&#39;ID del pubblico generato dal sistema che deve essere utilizzato."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -205,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Experience Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** scheda e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall&#39;interfaccia utente di Experience Platform, passando alla scheda **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e facendo clic sulla riga di destinazione desiderata per visualizzare l&#39;ID di destinazione nella barra a destra. Per ulteriori informazioni, consulta la [documentazione dell&#39;area di lavoro delle destinazioni](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Gli ID dei tipi di pubblico che desideri attivare nella destinazione selezionata. |
 | <ul><li>`exportId1`</li></ul> | L&#39;ID restituito nella risposta del processo [esportazione pubblico](../../segmentation/api/export-jobs.md#retrieve-list). Per istruzioni su come trovare questo ID, consulta [Passaggio 4: ottieni l&#39;ID del processo di esportazione più recente](#segment-export-id). |
 
@@ -251,4 +255,4 @@ Quando utilizzi l’API di attivazione ad hoc, puoi incontrare messaggi di error
 ## Informazioni correlate {#related-information}
 
 * [Connettersi alle destinazioni batch e attivare i dati utilizzando l’API del servizio Flusso](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](/help/destinations/ui/export-file-now.md)
+* [Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](/help/destinations/ui/export-file-now.md)
