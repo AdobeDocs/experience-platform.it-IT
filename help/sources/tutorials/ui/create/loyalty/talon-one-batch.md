@@ -4,9 +4,10 @@ description: Scopri come acquisire dati batch da Talon.One in Adobe Experience P
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
+exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
+source-git-commit: 9c4c4a3bce2329e65abf5e8cfcc2f20ec2799045
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1518'
 ht-degree: 1%
 
 ---
@@ -17,9 +18,11 @@ ht-degree: 1%
 >
 >L&#39;origine [!DNL Talon.One] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
-Leggi questo tutorial per scoprire come acquisire dati batch dall&#39;account [!DNL Talon.One] in Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente.
+L&#39;origine [!DNL Talon.One] per i dati batch riceve gli eventi registrati per un&#39;applicazione [!DNL Talon.One]. Un caso d&#39;uso comune è quello di filtrare per `talon_session_closed` la ricezione di transazioni completate, inclusi punti fedeltà ottenuti o rimborsati, cedole rimborsate, sconti concessi e così via. Per ulteriori informazioni sull&#39;API, leggere la [[!DNL Talon.One] documentazione dell&#39;API di gestione](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
-## Guida introduttiva
+Segui questa esercitazione per scoprire come acquisire i dati batch dall&#39;account [!DNL Talon.One] in Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente.
+
+## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
@@ -46,6 +49,10 @@ Per acquisire i dati da [!DNL Talon.One], selezionare la scheda di origine **[!U
 
 ### Crea un nuovo account
 
+>[!TIP]
+>
+>Prima di creare un nuovo account, controlla i [prerequisiti](../../../../connectors/loyalty/talon-one.md#prerequisites) nella panoramica di [!DNL Talon.One] per scoprire quali credenziali di autenticazione sono necessarie.
+
 Per creare un nuovo account per l&#39;origine [!DNL Talon.One], selezionare **[!UICONTROL New account]** e fornire un nome e una descrizione facoltativa per l&#39;account. Quindi, fornisci il dominio [!DNL Talon.One] e [!UICONTROL Talon.One Management API Key]. Al termine, selezionare **[!UICONTROL Connect to source]** e attendere alcuni istanti per consentire la connessione.
 
 ![Il passaggio Crea nuovo account del flusso di lavoro di origine.](../../../../images/tutorials/create/talon-one-batch/new.png)
@@ -57,6 +64,10 @@ Per utilizzare un account esistente, selezionare **[!UICONTROL Existing account]
 ## Selezionare i dati
 
 Dopo aver eseguito l&#39;autenticazione, fornire i valori per **applicationId** e **sessionType**. Durante questo passaggio, puoi utilizzare le funzionalità di anteprima per controllare la struttura dei dati. Al termine, selezionare **[!UICONTROL Next]** per continuare.
+
+>[!TIP]
+>
+>Per acquisire le transazioni completate, inclusi i punti fedeltà ottenuti o rimborsati, i coupon rimborsati e gli sconti concessi, selezionare il tipo di evento `talon_session_closed`. Per informazioni dettagliate sul filtraggio degli eventi per tipo, fare riferimento al parametro di query [&quot;type&quot; nella [!DNL Talon.One] documentazione API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![Selezionare i dati e visualizzare in anteprima i passaggi del flusso di lavoro origini.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 

@@ -4,10 +4,11 @@ description: Scopri le fonti di Talon.One su Adobe Experience Platform
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
+source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 3%
+source-wordcount: '439'
+ht-degree: 2%
 
 ---
 
@@ -40,6 +41,28 @@ Specificare i valori per le credenziali seguenti per l&#39;autenticazione e la c
 ## Mappatura {#mapping}
 
 Per semplificare la mappatura di ogni oggetto effetto in base al relativo valore univoco `effectType`, è possibile utilizzare la funzione di preparazione dati `array_to_map`. Questo consente di convertire facilmente un array non ordinato di effetti in coppie chiave-valore corrispondenti alle proprie esigenze. Consulta l’esempio seguente per maggiori informazioni.
+
+Puoi anche utilizzare i gruppi di campi fedeltà standardizzati forniti da Adobe per modellare i concetti del programma fedeltà in modo coerente.
+
+>[!BEGINTABS]
+
+>[!TAB Dettagli fedeltà]
+
+Si tratta di un gruppo di campi XDM standard per il profilo individuale XDM, utilizzato per descrivere lo stato di iscrizione fedeltà di una persona acquisendo gli attributi del record anziché i dati dell’evento. Utilizza questo gruppo di campi negli schemi del profilo per acquisire:
+
+* **Chi** il membro è nel programma (`loyaltyID`, `program`, `status`, `tier`)
+* I relativi **saldi correnti e di durata** (`points`, `lifetimePoints`, `expiredPoints`, ecc.)
+* Chiave **date appartenenza** (`joinDate`, `upgradeDate`, `tierExpiryDate`)
+
+>[!TAB Dettagli evento fedeltà]
+
+Il gruppo di campi Dettagli evento fedeltà è progettato per acquisire l’attività fedeltà a livello di evento, ad esempio i punti guadagnati o rimborsati in una transazione specifica. Questo gruppo di campi include campi come `xdm:points`, `xdm:pointsRedeemed`, `xdm:pointsAsOfDate` e `xdm:program`. Utilizza questo gruppo di campi a livello di evento negli schemi Experience Event per acquisire:
+
+* **Movimenti per evento** in punti (ottenuti, riscattati, scaduti)
+* **Sconti** guidati da coupon fedeltà o riferimenti
+* **ID programma** e ID transazione per la riconciliazione con il provider fedeltà.
+
+>[!ENDTABS]
 
 | Origine | Destinazione |
 | ---- | --- |
