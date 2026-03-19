@@ -172,7 +172,7 @@ Quando selezioni la scheda **[!UICONTROL Deprecated Identity Namespace]**, a des
 
 ![Il pannello dei dettagli dello spazio dei nomi dell&#39;identità è obsoleto e mostra la descrizione, l&#39;impatto e l&#39;elenco degli spazi dei nomi interessati](assets/health-checks/deprecated-namespace-detail.png)
 
-Per ulteriori informazioni, vedere l&#39;articolo [Experience Cloud knowledge base sugli spazi dei nomi obsoleti](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Per ulteriori informazioni, vedere l&#39;articolo [Experience Cloud knowledge base sugli spazi dei nomi obsoleti](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Passaggi successivi {#next-steps}
 
