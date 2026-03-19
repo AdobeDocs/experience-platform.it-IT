@@ -22,7 +22,7 @@ In qualità di addetto al marketing, desidero inviare tipi di pubblico da Adobe 
 
 ## Prerequisiti {#prerequisites}
 
-La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP[ di ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP[&#x200B; di &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Per poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], sono necessarie le credenziali [!DNL LiveRamp]. Rivolgiti al tuo rappresentante [!DNL LiveRamp] per ottenere le tue credenziali, se non le hai già.
 

@@ -74,7 +74,7 @@ Per ulteriori informazioni, consulta la [[!DNL Mailchimp] documentazione di base
 
 Ciascuno dei tipi di pubblico di [!DNL Mailchimp] può contenere fino a 60 nomi di gruppo (o categorie di interesse) in un singolo gruppo o in più gruppi all&#39;interno dello stesso pubblico. Per eventuali chiarimenti richiesti, consulta [!DNL Mailchimp] [gruppi](https://mailchimp.com/help/getting-started-with-groups/). Quando si raggiunge questo limite, viene visualizzato un messaggio di errore `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` dall&#39;API [!DNL Mailchimp].
 
-Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], consultare inoltre [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
+Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], consultare inoltre [&#x200B; &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
 
 ## Identità supportate {#supported-identities}
 

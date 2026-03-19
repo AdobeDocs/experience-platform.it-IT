@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Attiva i tipi di pubblico nelle destinazioni curate in base agli identificatori LiveRamp
 
-Utilizza l&#39;integrazione di Adobe Real-Time CDP con [!DNL LiveRamp] per attivare i tipi di pubblico in un elenco curato di destinazioni che utilizzano [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) per l&#39;attivazione, incluse le destinazioni TV e audio connesse, come quelle elencate di seguito.
+Utilizza l&#39;integrazione di Adobe Real-Time CDP con [!DNL LiveRamp] per attivare i tipi di pubblico in un elenco curato di destinazioni che utilizzano [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) per l&#39;attivazione, incluse le destinazioni TV e audio connesse, come quelle elencate di seguito.
 
 >[!IMPORTANT]
 >
