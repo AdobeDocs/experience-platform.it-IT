@@ -2,7 +2,7 @@
 description: Scopri come configurare la destinazione per le configurazioni di mappatura identità e attributi supportate.
 title: Configurazioni di mappatura supportate
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 3%
@@ -33,6 +33,8 @@ Le destinazioni in tempo reale (streaming) create con Destination SDK supportano
 | --- | --- |
 | attributo XDM | Attributo personalizzato |
 | Spazio dei nomi identità | Spazio dei nomi identità |
+
+{style="table-layout:auto"}
 
 L’esempio di configurazione seguente consente ai clienti di utilizzare entrambe le mappature nella tabella precedente.
 
@@ -87,6 +89,8 @@ Le destinazioni basate su file create con Destination SDK supportano le configur
 | attributo XDM | Attributo/Attributo personalizzato |
 | Spazio dei nomi identità | Attributo/Attributo personalizzato |
 | Spazio dei nomi identità | Spazio dei nomi identità |
+
+{style="table-layout:auto"}
 
 L’esempio di configurazione seguente consente ai clienti di utilizzare tutte le mappature della tabella precedente.
 

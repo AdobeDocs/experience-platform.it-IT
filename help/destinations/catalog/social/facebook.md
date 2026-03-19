@@ -3,7 +3,7 @@ keywords: connessione facebook;facebook connection;facebook destinations;faceboo
 title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 5%
@@ -20,15 +20,15 @@ Attiva profili per le campagne [!DNL Facebook] per il targeting, la personalizza
 
 ![Destinazione Facebook nell&#39;interfaccia utente di Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
-## Casi d’uso
+## Casi d’uso {#use-cases}
 
 Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Facebook], ecco due casi d&#39;uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
-### #1 del caso d’uso
+### #1 del caso d’uso {#use-case-1}
 
 Un retailer online vuole raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate basate sui loro ordini precedenti. Il retailer online può acquisire gli indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico alla piattaforma social [!DNL Facebook], ottimizzando le spese pubblicitarie.
 
-### #2 del caso d’uso
+### #2 del caso d’uso {#use-case-2}
 
 Una compagnia aerea ha diversi livelli di clienti (Bronzo, Argento e Oro) e vuole fornire a ciascuno di questi livelli offerte personalizzate tramite piattaforme social. Tuttavia, non tutti i clienti utilizzano l&#39;app mobile della compagnia aerea e alcuni di loro non hanno effettuato l&#39;accesso al sito web della compagnia. Gli unici identificatori di cui dispone l’azienda su questi clienti sono gli ID iscrizione e gli indirizzi e-mail.
 
@@ -164,14 +164,14 @@ Prima di poter utilizzare lo spazio dei nomi `Extern_ID` per inviare dati a [!DN
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL Facebook] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -205,7 +205,7 @@ Per evitare che la scadenza dei token causi interruzioni nei flussi di dati di a
    ![Finestra modale con opzione Riconnetti OAuth](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Le credenziali di autenticazione vengono aggiornate e la scadenza viene reimpostata su 60 giorni.
 
 ### Inserire i dettagli della destinazione {#destination-details}
@@ -250,7 +250,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 >abstract="Gli inserzionisti raccolgono i dati direttamente dai loro clienti e partner."
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

@@ -2,9 +2,9 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2931'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ In Experience Platform sono disponibili diversi tipi di destinazione, come illus
 
 ![Diagramma dei tipi di destinazioni](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Aggregazione dei messaggi nelle destinazioni di streaming
+## Aggregazione dei messaggi nelle destinazioni di streaming {#message-aggregation}
 
 Prima di immergerti in informazioni specifiche per tipo di destinazione, è importante comprendere il concetto di aggregazione dei messaggi per *destinazioni di streaming*.
 
@@ -49,7 +49,7 @@ Il criterio di aggregazione è configurabile e gli sviluppatori di destinazione 
 >
 > Le destinazioni Enterprise sono disponibili solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Le [destinazioni Enterprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform sono Amazon Kinesis, Azure Event Hub e API HTTP.
+Le [destinazioni Enterprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform sono Amazon Kinesis, Azure Event Hub e HTTP API.
 
 Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione aziendale per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica del pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
 
@@ -59,7 +59,9 @@ Experience Platform ottimizza il comportamento di esportazione del profilo nella
 
 In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono idonei per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
 
-Tieni presente che tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
+>[!NOTE]
+>
+>Tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
 
 ### Che cosa determina un’esportazione di dati e cosa è incluso nell’esportazione {#enterprise-behavior}
 
@@ -106,7 +108,9 @@ Experience Platform ottimizza il comportamento di esportazione del profilo nella
 
 In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono idonei per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
 
-Tieni presente che tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
+>[!NOTE]
+>
+>Tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
 
 ### Che cosa determina un’esportazione di dati e cosa è incluso nell’esportazione {#streaming-behavior}
 
@@ -171,7 +175,7 @@ Ad esempio, nell’impostazione di esportazione illustrata di seguito, in cui un
 
 >[!ENDSHADEBOX]
 
-### Che cosa determina un’esportazione di dati e cosa è incluso nell’esportazione
+### Che cosa determina un’esportazione di dati e cosa è incluso nell’esportazione {#file-based-export-details}
 
 In base alle informazioni contenute nella sezione precedente, il comportamento di esportazione del profilo nelle destinazioni basate su file può essere riassunto come descritto di seguito:
 

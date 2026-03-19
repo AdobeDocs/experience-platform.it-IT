@@ -2,9 +2,9 @@
 title: (V2) Connessione del pubblico in tempo reale Pega CDH
 description: Utilizza la destinazione del pubblico in tempo reale Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull’iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni sulle migliori azioni successive.
 exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1170'
 ht-degree: 4%
 
 ---
@@ -119,7 +119,7 @@ Per configurare i dettagli per la destinazione, compilare i campi obbligatori e 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

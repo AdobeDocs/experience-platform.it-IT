@@ -2,7 +2,7 @@
 title: Algola
 description: Utilizza questo connettore per attivare i tipi di pubblico in Algolia per la personalizzazione e l’utilizzo in ricerche e consigli. Puoi quindi utilizzare il connettore di origine del profilo utente di Algolia per importare i profili in Real-Time CDP per creare tipi di pubblico avanzati.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 4%
@@ -111,7 +111,7 @@ Per ulteriori informazioni su queste credenziali, vedere la [!DNL Algolia] [docu
 
 ![Nuovo account](../../assets/catalog/personalization/algolia/connection.png)
 
-### Inserire i dettagli della destinazione
+### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -131,11 +131,11 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions).
+>* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
+Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare attributi e identità {#mapping-attributes-identities}
 

@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1749'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ I guardrail riportati di seguito si applicano all&#39;attivazione tramite [desti
 | Frequenza di attivazione | Un’esportazione completa giornaliera o esportazioni incrementali più frequenti ogni 3, 6, 8 o 12 ore. | Guarddrail imposto dal sistema | Per ulteriori informazioni sugli incrementi di frequenza per le esportazioni batch, leggere le sezioni della documentazione [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files). |
 | Numero massimo di tipi di pubblico che possono essere esportati in una determinata ora | 100 | Guardrail delle prestazioni | Si consiglia di aggiungere un massimo di 100 tipi di pubblico alle istanze di destinazione batch. |
 | Numero massimo di righe (record) per file da attivare | 5 milioni | Guarddrail imposto dal sistema | Adobe Experience Platform divide automaticamente i file esportati in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo. Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un&#39;esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Per ulteriori informazioni, leggere la [sezione di pianificazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) dell&#39;esercitazione attivare destinazioni batch. |
-| Numero massimo di tipi di pubblico esterni (ad es. FAC, caricamento personalizzato, composizione del pubblico) che possono essere attivati in un’istanza di destinazione | 10 | Guarddrail imposto dal sistema | Quando si attivano tipi di pubblico esterni (ad esempio [Composizione pubblico federata](/help/segmentation/ui/audience-portal.md#fac), [caricamento personalizzato](/help/segmentation/ui/audience-portal.md#import-audience), [Composizione pubblico](/help/segmentation/ui/audience-portal.md#audience-composition)) in destinazioni basate su file batch, esiste un limite di 10 tipi di pubblico di questo tipo che è possibile attivare in un&#39;istanza di destinazione. Per ulteriori informazioni su questi tipi di pubblico, consulta [Tipi di pubblico e personalizzazione](/help/segmentation/ui/audience-portal.md#customize). Ulteriori informazioni sul flusso di lavoro per [attivare tipi di pubblico esterni in destinazioni basate su file in batch](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Numero massimo di tipi di pubblico esterni (ad esempio FAC, caricamento personalizzato, composizione del pubblico) che possono essere attivati in un’istanza di destinazione | 10 | Guarddrail imposto dal sistema | Quando si attivano tipi di pubblico esterni (ad esempio [Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac), [custom upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)) in destinazioni basate su file batch, è possibile attivare un massimo di 10 tipi di pubblico in un&#39;istanza di destinazione. Per ulteriori informazioni su questi tipi di pubblico, consulta [Tipi di pubblico e personalizzazione](/help/segmentation/ui/audience-portal.md#customize). Ulteriori informazioni sul flusso di lavoro per [attivare tipi di pubblico esterni in destinazioni basate su file in batch](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Il soft guardrail riportato di seguito si applica a tutti i set di dati esportat
 
 {style="table-layout:auto"}
 
-#### Guardrail per esportazioni di set di dati pianificate
+#### Guardrail per esportazioni di set di dati pianificate {#scheduled-dataset-exports}
 
 Per le esportazioni di set di dati pianificate o ricorrenti, i guardrail riportati di seguito sono identici per i due formati del file esportato (JSON o parquet) e sono raggruppati per tipo di set di dati.
 
@@ -191,12 +191,12 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 
 {style="table-layout:auto"}
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -2,9 +2,9 @@
 title: (API) Connessione Marketing Cloud Salesforce
 description: La destinazione Salesforce Marketing Cloud (precedentemente nota come ExactTarget) ti consente di esportare i dati del tuo account e attivarli in Salesforce Marketing Cloud in base alle tue esigenze aziendali.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2956'
+source-wordcount: '2954'
 ht-degree: 2%
 
 ---
@@ -37,11 +37,11 @@ Il reparto vendite di una piattaforma di noleggio a domicilio desidera inviare u
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL (API) Salesforce Marketing Cloud], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL (API) Salesforce Marketing Cloud], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti in [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
-Per esportare i dati da Experience Platform al tuo account [!DNL Salesforce Marketing Cloud], tieni presente i seguenti prerequisiti:
+Per esportare dati da Experience Platform all&#39;account [!DNL Salesforce Marketing Cloud], tieni presente i seguenti prerequisiti:
 
 #### Devi avere un account [!DNL Salesforce Marketing Cloud] {#prerequisites-account}
 
@@ -104,9 +104,9 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
-| Sottodominio | Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce Marketing Cloud domain prefix], vedere &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) [!DNL Salesforce Marketing Cloud]. | Se il dominio [!DNL Salesforce Marketing Cloud] è <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>è necessario fornire `mcq4jrssqdlyc4lph19nnqgzzs84` come valore. |
-| ID client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [&#x200B; &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | r23kxxxxxxxx0z05xxxxxx |
-| Segreto client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [&#x200B; &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | ipxxxxxxxxT4xxxxxxxxxx |
+| Sottodominio | Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce Marketing Cloud domain prefix], vedere ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html)[!DNL Salesforce Marketing Cloud]. | Se il dominio [!DNL Salesforce Marketing Cloud] è <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>è necessario fornire `mcq4jrssqdlyc4lph19nnqgzzs84` come valore. |
+| ID client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [ ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | r23kxxxxxxxx0z05xxxxxx |
+| Segreto client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [ ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | ipxxxxxxxxT4xxxxxxxxxx |
 
 {style="table-layout:auto"}
 
@@ -130,6 +130,8 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
 | contactKey | Chiave contatto [!DNL Salesforce Marketing Cloud]. Per ulteriori informazioni, consulta la [!DNL Salesforce Marketing Cloud] [documentazione](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5). | Obbligatorio |
+
+{style="table-layout:auto"}
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
@@ -187,6 +189,8 @@ Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligat
 | **[!UICONTROL Client ID]** | [!DNL Salesforce Marketing Cloud] `Client ID`. |
 | **[!UICONTROL Client Secret]** | [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
+{style="table-layout:auto"}
+
 ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come eseguire l&#39;autenticazione in Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 Se i dettagli forniti sono validi, nell&#39;interfaccia utente viene visualizzato lo stato **[!UICONTROL Connected]** con un segno di spunta verde. È quindi possibile procedere al passaggio successivo.
@@ -208,7 +212,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 > * Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 > * Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -269,6 +273,8 @@ Un esempio tipico basato sull’immagine mostrata sopra potrebbe essere.
 | --- | --- | --- |
 | pubblico mc salesforce 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | pubblico mc salesforce 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+
+{style="table-layout:auto"}
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 

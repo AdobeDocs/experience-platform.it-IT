@@ -4,9 +4,9 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '5208'
+source-wordcount: '5203'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[&#x200B; di &#x200B;](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
+>**Elemento azione**: la versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -167,7 +167,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 
@@ -572,7 +572,7 @@ Annotare la riga evidenziata con i commenti in linea nell&#39;esempio [!DNL conn
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
@@ -883,7 +883,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 
@@ -941,7 +941,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento alla sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2(ADLS Gen2).
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2 (ADLS Gen2).
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1270,7 +1270,7 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
@@ -1632,7 +1632,7 @@ Utilizzando la specifica di cui sopra, puoi creare una richiesta di connessione 
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina di documentazione della destinazione [!DNL Amazon S3].
->&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1676,7 +1676,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 
@@ -1685,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina di documentazione della destinazione [!DNL Azure Blob Storage].
->&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1739,7 +1739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1791,7 +1791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina di documentazione della destinazione [!DNL Data Landing Zone].
->&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1843,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione [!DNL Google Cloud Storage].
->&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Per informazioni su come ottenere i parametri di destinazione richiesti, consulta la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione SFTP.
->&#x200B;>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
+>Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2021,7 +2021,7 @@ La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 

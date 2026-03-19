@@ -2,9 +2,9 @@
 description: Scopri come strutturare una chiamata API per creare una configurazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una configurazione di destinazione
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1210'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ Per una descrizione dettagliata delle funzionalità che puoi configurare tramite
 
 ## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Creare una configurazione di destinazione {#create}
 
@@ -203,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | Stringa | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. <br/><br/> Per informazioni dettagliate su queste impostazioni, vedere [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md). |
 | `customerDataFields.default` | Stringa | Definisce il valore predefinito da un elenco `enum`. |
 | `customerDataFields.pattern` | Stringa | Se necessario, applica un pattern per il campo personalizzato. Utilizza espressioni regolari per applicare un pattern. Ad esempio, se gli ID cliente non includono numeri o trattini bassi, immetti `^[A-Za-z]+$` in questo campo. <br/><br/> Per informazioni dettagliate su queste impostazioni, vedere [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md). |
-| `uiAttributes.documentationLink` | Stringa | Fa riferimento alla pagina della documentazione nel [Catalogo destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=it#catalog) per la tua destinazione. Utilizza `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della tua destinazione. Per una destinazione denominata Moviestar, si utilizza `https://www.adobe.com/go/destinations-moviestar-en`. Tieni presente che questo collegamento funziona solo dopo che Adobe ha impostato la destinazione in tempo reale e ha pubblicato la documentazione. <br/><br/> Per informazioni dettagliate su queste impostazioni, vedere [Attributi dell&#39;interfaccia utente](../../functionality/destination-configuration/ui-attributes.md). ![Immagine dell&#39;interfaccia utente di Experience Platform con il collegamento alla documentazione.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL documentazione"){width="100" zoomable="yes"} |
-| `uiAttributes.category` | Stringa | Fa riferimento alla categoria assegnata alla destinazione in Adobe Experience Platform. Per ulteriori informazioni, leggere [Categorie di destinazione](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=it#destination-categories). Utilizzare uno dei valori seguenti: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Per informazioni dettagliate su queste impostazioni, vedere [Attributi dell&#39;interfaccia utente](../../functionality/destination-configuration/ui-attributes.md). |
+| `uiAttributes.documentationLink` | Stringa | Fa riferimento alla pagina della documentazione nel [Catalogo destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) per la tua destinazione. Utilizza `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della tua destinazione. Per una destinazione denominata Moviestar, si utilizza `https://www.adobe.com/go/destinations-moviestar-en`. Tieni presente che questo collegamento funziona solo dopo che Adobe ha impostato la destinazione in tempo reale e ha pubblicato la documentazione. <br/><br/> Per informazioni dettagliate su queste impostazioni, vedere [Attributi dell&#39;interfaccia utente](../../functionality/destination-configuration/ui-attributes.md). ![Immagine dell&#39;interfaccia utente di Experience Platform con il collegamento alla documentazione.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL documentazione"){width="100" zoomable="yes"} |
+| `uiAttributes.category` | Stringa | Fa riferimento alla categoria assegnata alla destinazione in Adobe Experience Platform. Per ulteriori informazioni, leggere [Categorie di destinazione](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). Utilizzare uno dei valori seguenti: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Per informazioni dettagliate su queste impostazioni, vedere [Attributi dell&#39;interfaccia utente](../../functionality/destination-configuration/ui-attributes.md). |
 | `uiAttributes.connectionType` | Stringa | Il tipo di connessione, a seconda della destinazione. Valori supportati: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | Stringa | Si riferisce al tipo di esportazione dei dati supportato dalla destinazione. Impostato su `Streaming` per le integrazioni basate su API, oppure su `Batch` quando si esportano file nelle destinazioni. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica se i clienti possono mappare gli attributi di profilo standard all’identità che stai configurando. |
@@ -233,11 +233,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
-## Gestione degli errori API
+## Gestione degli errori API {#error-handling}
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, ora sai come creare una nuova configurazione di destinazione tramite l&#39;endpoint API `/authoring/destinations` di Destination SDK.
 

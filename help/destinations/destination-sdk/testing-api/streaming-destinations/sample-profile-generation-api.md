@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per generare profili di esempio per la destinazione di streaming, che puoi utilizzare nel test di destinazione.
 title: Generare profili di esempio in base a uno schema di origine
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '976'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Si noti che gli scopi per i quali è possibile utilizzare i profili di esempio n
 
 ## Guida introduttiva alle operazioni API di generazione dei profili di esempio {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Genera profili di esempio in base allo schema di origine da utilizzare durante il test della destinazione {#generate-sample-profiles-source-schema}
 
@@ -47,8 +47,8 @@ Per ottenere l’ID di un’istanza di destinazione, devi innanzitutto creare un
 
 >[!IMPORTANT]
 >
->* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=it) per ulteriori informazioni.
->* Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=it).
+>* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) per ulteriori informazioni.
+>* Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >
 >![Immagine dell&#39;interfaccia utente come ottenere l&#39;ID istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -182,10 +182,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentMembership` | Oggetto mappa che descrive le appartenenze del singolo pubblico. Per ulteriori informazioni su `segmentMembership`, leggere [Dettagli appartenenza pubblico](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=it). |
+| `segmentMembership` | Oggetto mappa che descrive le appartenenze del singolo pubblico. Per ulteriori informazioni su `segmentMembership`, leggere [Dettagli appartenenza pubblico](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Un timestamp dell’ultima volta che questo profilo si è qualificato per il segmento. |
 | `xdm:status` | Campo stringa che indica se l’appartenenza al pubblico è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`realized`: il profilo fa parte del segmento.</li><li>`exited`: il profilo sta uscendo dal pubblico come parte della richiesta corrente.</li></ul> |
-| `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Per ulteriori informazioni su `identityMap`, leggere [Base della composizione dello schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it#identityMap). |
+| `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Per ulteriori informazioni su `identityMap`, leggere [Base della composizione dello schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -377,6 +377,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, sai come generare profili di esempio da utilizzare quando [viene eseguito il test di un modello di trasformazione dei messaggi](create-template.md) o quando [viene verificato se la destinazione è configurata correttamente](streaming-destination-testing-overview.md).

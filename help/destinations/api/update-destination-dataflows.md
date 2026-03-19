@@ -5,9 +5,9 @@ title: Aggiornare i flussi di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Questa esercitazione illustra i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere tipi di pubblico e attributi utilizzando l’API del servizio Flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2471'
+source-wordcount: '2467'
 ht-degree: 4%
 
 ---
@@ -68,6 +68,8 @@ GET /flows/{FLOW_ID}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{FLOW_ID}` | Il valore `id` univoco per il flusso di dati di destinazione che desideri recuperare. |
+
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -389,6 +391,8 @@ curl -X PATCH \
 | `path` | Definisce la parte del flusso da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
+{style="table-layout:auto"}
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo il proprio ID di flusso.
@@ -507,6 +511,8 @@ curl -X PATCH \
 | `endDate` | Solo per *destinazioni batch*. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Non applicabile quando si selezionano `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Imposta la data in cui i membri del pubblico cessano di essere esportati nella destinazione. |
 | `startTime` | Solo per *destinazioni batch*. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> obbligatorio. Seleziona il momento in cui generare ed esportare nella destinazione i file contenenti i membri del pubblico. |
 
+{style="table-layout:auto"}
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo il proprio ID di flusso.
@@ -567,6 +573,7 @@ curl -X PATCH \
 | `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace` e `remove`. Per rimuovere un pubblico da un flusso di dati, utilizzare l&#39;operazione `remove`. |
 | `path` | Specifica quale pubblico esistente deve essere rimosso dal flusso di dati di destinazione, in base all’indice del selettore del pubblico. Per recuperare l&#39;ordine dei tipi di pubblico in un flusso di dati, eseguire una chiamata GET all&#39;endpoint `/flows` e verificare la proprietà `transformations.segmentSelectors`. Per eliminare il primo pubblico nel flusso di dati, utilizza `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -796,6 +803,8 @@ curl -X PATCH \
 | `path` | Definisce la parte del flusso da aggiornare. Quando aggiungi un attributo di profilo a un flusso di dati, utilizza il percorso specificato nell’esempio. |
 | `value.path` | Valore dell’attributo di profilo che stai aggiungendo al flusso di dati. |
 
+{style="table-layout:auto"}
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce l’ID di flusso e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo il proprio ID di flusso.
@@ -849,6 +858,7 @@ curl -X PATCH \
 | `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace` e `remove`. Per rimuovere un pubblico da un flusso di dati, utilizzare l&#39;operazione `remove`. |
 | `path` | Specifica l’attributo di profilo esistente da rimuovere dal flusso di dati di destinazione, in base all’indice del selettore del pubblico. Per recuperare l&#39;ordine degli attributi di profilo in un flusso di dati, eseguire una chiamata GET all&#39;endpoint `/flows` e controllare la proprietà `transformations.profileSelectors`. Per eliminare il primo pubblico nel flusso di dati, utilizza `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
+{style="table-layout:auto"}
 
 **Risposta**
 

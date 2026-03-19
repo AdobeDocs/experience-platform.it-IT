@@ -2,9 +2,9 @@
 title: Connessione Snap Inc
 description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1161'
 ht-degree: 3%
 
 ---
@@ -42,12 +42,12 @@ La destinazione *Snap Inc* supporta l&#39;attivazione delle identità descritte 
 Tutti gli identificatori inviati alla destinazione *Snap Inc* devono avere un hash in formato SHA-256. Per eseguire l&#39;hashing degli identificatori di testo normale prima di inviarli alla destinazione, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** durante la mappatura degli identificatori di destinazione per la destinazione.
 
 >[!WARNING]
-> 
+>
 > Gli identificatori senza hash non verranno accettati dalla destinazione Snap Inc e l&#39;invio potrebbe causare errori.
 
 
 >[!IMPORTANT]
-> 
+>
 > La destinazione Snap Inc non supporta più identità. Seleziona una sola identità.
 
 | Identità di destinazione | Descrizione | Considerazioni |
@@ -99,7 +99,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connessione a Snap Inc {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ### Autenticarsi nella destinazione {#authenticate}
@@ -127,7 +127,7 @@ Per configurare i dettagli per la destinazione, compilare i campi obbligatori e 
 * **[!UICONTROL Account ID]**: l&#39;ID account dell&#39;annuncio associato all&#39;account dell&#39;annuncio in cui importare i tipi di pubblico. Per ulteriori informazioni su come trovare questo elemento, fare riferimento a [questa documentazione nel Centro assistenza commerciale Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
-> 
+>
 >Se si immette un ID account Snapchat Ad errato o non valido, l’attivazione del pubblico non riuscirà. Verifica di aver inserito l&#39;ID dell&#39;account dell&#39;annuncio corretto.
 
 ### Abilita avvisi {#enable-alerts}
@@ -139,7 +139,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -154,7 +154,7 @@ Dopo aver attivato i tipi di pubblico nella destinazione *Snap Inc*, potrai visu
 
 ![Tipi di pubblico](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=it#evaluate-segments).
+Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

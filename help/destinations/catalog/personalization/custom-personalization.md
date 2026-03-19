@@ -3,7 +3,7 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 8%
@@ -92,7 +92,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it" text="Scopri come configurare uno stream di dati"
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -115,7 +115,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Leggi [Attiva profili e tipi di pubblico destinazioni di personalizzazione edge](../../ui/activate-edge-personalization-destinations.md) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
@@ -180,7 +180,7 @@ alloy("sendEvent", {
   });
 ```
 
-### Esempio di risposta per [!UICONTROL Custom Personalization With Attributes]
+### Esempio di risposta per [!UICONTROL Custom Personalization With Attributes] {#example-response-custom-personalization-with-attributes}
 
 Quando si utilizza **[!UICONTROL Custom Personalization With Attributes]**, la risposta API sarà simile all&#39;esempio seguente.
 

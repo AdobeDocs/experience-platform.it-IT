@@ -2,7 +2,7 @@
 description: Scopri come configurare le specifiche del server di destinazione in Adobe Experience Platform Destination SDK tramite l’endpoint "/authoring/destination-servers".
 title: Specifiche server per le destinazioni create con Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2775'
 ht-degree: 2%
@@ -57,7 +57,7 @@ I parametri del server di destinazione hanno due campi configurabili. Queste opz
 
 {style="table-layout:auto"}
 
-### Quando utilizzare campi hardcoded e campi con modelli
+### Quando utilizzare campi hardcoded e campi con modelli {#when-to-use-hard-coded-vs-templatized}
 
 Sia i campi hardcoded che i campi template hanno un proprio utilizzo in Destination SDK, a seconda del tipo di integrazione che stai creando.
 

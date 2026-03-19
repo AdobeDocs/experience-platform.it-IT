@@ -3,9 +3,9 @@ title: Attivare il pubblico dell’account nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico dell’account nelle destinazioni
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Vai a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e seleziona l
 
 ![Destinazioni che supportano i tipi di pubblico dell&#39;account.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
-## Panoramica video
+## Panoramica video {#video-overview}
 
 Guarda il video seguente per una panoramica sulla creazione e l’attivazione dei tipi di pubblico per gli account e sui casi d’uso supportati per l’attivazione di tali tipi di pubblico.
 
@@ -69,17 +69,21 @@ Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set
 
 ## Seleziona il pubblico del tuo account {#select-account-audiences}
 
-Utilizzare le caselle di controllo a sinistra dei nomi dei tipi di pubblico dell&#39;account per selezionare i tipi di pubblico da esportare nella destinazione, quindi selezionare **[!UICONTROL Next]**. In questa visualizzazione vengono visualizzati solo *tipi di pubblico dell&#39;account* e non vengono visualizzati altri tipi di pubblico.
+Utilizzare le caselle di controllo a sinistra dei nomi dei tipi di pubblico dell&#39;account per selezionare i tipi di pubblico da esportare nella destinazione, quindi selezionare **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>In questa visualizzazione vengono visualizzati solo *tipi di pubblico dell&#39;account* e non vengono visualizzati altri tipi di pubblico.
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio Seleziona tipi di pubblico in cui è possibile selezionare i tipi di pubblico dell&#39;account da esportare.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
-## Pianificazione e passaggi successivi
+## Pianificazione e passaggi successivi {#scheduling-and-next-steps}
 
 Per il resto del flusso di lavoro di attivazione per esportare i tipi di pubblico dell’account, leggi l’esercitazione sull’attivazione dei dati in destinazioni basate su file. Continua dal passaggio [pianifica esportazione pubblico](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Se stai attivando i tipi di pubblico dell&#39;account nella destinazione **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, leggi l&#39;esercitazione sull&#39;attivazione delle destinazioni di streaming. Continua dal [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 >[!NOTE]
 >
->Tieni presente che nel passaggio di pianificazione, durante l&#39;esportazione dei tipi di pubblico dell&#39;account nelle destinazioni di archiviazione cloud, il flusso di lavoro per attivare i tipi di pubblico dell&#39;account ti consente di esportare solo [file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _con una pianificazione giornaliera_. Le esportazioni orarie non sono supportate. Si noti inoltre che **[!UICONTROL After audience evaluation]** è l&#39;unico tipo di valutazione supportato.
+>Nel passaggio di pianificazione durante l&#39;esportazione dei tipi di pubblico dell&#39;account nelle destinazioni di archiviazione cloud, il flusso di lavoro per attivare i tipi di pubblico dell&#39;account consente di esportare solo [file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _con una pianificazione giornaliera_. Le esportazioni orarie non sono supportate. **[!UICONTROL After audience evaluation]** è l&#39;unico tipo di valutazione supportato.
 
 ## Callout importanti e limitazioni note {#important-callouts-known-limitations}
 
@@ -95,6 +99,8 @@ Quando si attivano i tipi di pubblico dell&#39;account nella destinazione **[!UI
 |---------|----------|
 | `accountName` | `companyName` |
 | `accountKey.sourceKey` | `primaryId` (seleziona questo campo nella visualizzazione **[!UICONTROL Select Identity namespace]**, quando selezioni **[!UICONTROL Target Field]**). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell&#39;account nelle destinazioni.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selezionare lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell&#39;account nelle destinazioni."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
 
 ### Applicazione della governance dei dati {#data-governance-enforcement}
 

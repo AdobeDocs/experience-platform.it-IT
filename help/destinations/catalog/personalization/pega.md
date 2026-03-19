@@ -2,9 +2,9 @@
 title: (V1) Connessione del pubblico in tempo reale Pega CDH
 description: Utilizza la destinazione del pubblico in tempo reale Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull’iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni sulle migliori azioni successive.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1213'
 ht-degree: 3%
 
 ---
@@ -25,15 +25,15 @@ L&#39;iscrizione al profilo del pubblico da Adobe Experience Platform, quando ca
 >
 >Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da Pegasystems. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente Pega [qui](mailto:support@pega.com).
 
-## Casi d’uso
+## Casi d’uso {#use-cases}
 
 Per capire meglio come e quando utilizzare la destinazione [!DNL Customer Decision Hub], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-### Telecomunicazioni
+### Telecomunicazioni {#telecommunications}
 
 Un addetto al marketing desidera sfruttare le informazioni provenienti da un&#39;azione migliore basata su un modello di data science come fornito da [!DNL Pega Customer Decision Hub] per il coinvolgimento dei clienti. [!DNL Pega Customer Decision Hub] dipende in larga misura dalle intenzioni del cliente, ad esempio &quot;Interested_In_5G&quot;, &quot;Interested_in_Unlimited_Dataplan&quot; o &quot;Interest_in_iPhone_accessories&quot;.
 
-### Servizi finanziari
+### Servizi finanziari {#financial-services}
 
 Un addetto al marketing desidera ottimizzare le offerte per i clienti che hanno effettuato o annullato l’abbonamento alle newsletter del piano pensionistico o del piano pensionistico. Le società di servizi finanziari possono acquisire più ID cliente dai propri CRM in Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare profili che entrano ed escono dai tipi di pubblico a [!DNL Pega Customer Decision Hub] per il decisioning NBA (Next-Best-Action) nei canali in uscita.
 
@@ -122,7 +122,7 @@ Per configurare i dettagli per la destinazione, compilare i campi obbligatori e 
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

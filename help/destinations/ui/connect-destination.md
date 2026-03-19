@@ -3,7 +3,7 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 4%
@@ -13,9 +13,9 @@ ht-degree: 4%
 # Creare una nuova connessione di destinazione
 
 >[!IMPORTANT]
-> 
->* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>
+>* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ## Panoramica {#overview}
 

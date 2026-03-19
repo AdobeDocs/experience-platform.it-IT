@@ -3,16 +3,16 @@ title: Attiva i tipi di pubblico nelle destinazioni curate in base agli identifi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico da Adobe Experience Platform alle destinazioni TV e audio connesse e ad altre integrazioni tramite il RampID LiveRamp.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # Attiva i tipi di pubblico nelle destinazioni curate in base agli identificatori LiveRamp
 
-Utilizza l&#39;integrazione di Adobe Real-Time CDP con [!DNL LiveRamp] per attivare i tipi di pubblico in un elenco curato di destinazioni che utilizzano [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) per l&#39;attivazione, incluse le destinazioni TV e audio connesse, come quelle elencate di seguito.
+Utilizza l&#39;integrazione di Adobe Real-Time CDP con [!DNL LiveRamp] per attivare i tipi di pubblico in un elenco curato di destinazioni che utilizzano [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) per l&#39;attivazione, incluse le destinazioni TV e audio connesse, come quelle elencate di seguito.
 
 >[!IMPORTANT]
 >
@@ -58,15 +58,15 @@ Dopo aver esportato i tipi di pubblico, attivarli utilizzando la destinazione [[
 >
 >Questo processo consente di attivare i tipi di pubblico in destinazioni quali [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) e altre direttamente dall&#39;interfaccia utente di Real-Time CDP, senza dover accedere all&#39;account [!DNL LiveRamp] per l&#39;attivazione.
 
-### Esercitazione video {#video}
+### Tutorial video {#video}
 
 Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro descritto in questa pagina.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452665?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Passaggio 1: invia i tuoi tipi di pubblico da Experience Platform a LiveRamp, tramite la destinazione [!DNL LiveRamp - Onboarding] {#onboarding}
 
-Per attivare i tipi di pubblico in destinazioni curate basate su RampID LiveRamp, devi innanzitutto **esportare i tipi di pubblico da Experience Platform a[!DNL LiveRamp]**.
+Per attivare i tipi di pubblico in destinazioni curate in base ai RampID LiveRamp devi innanzitutto **esportare i tipi di pubblico da Experience Platform a[!DNL LiveRamp]**.
 
 A tale scopo, utilizzare la destinazione **[!DNL LiveRamp - Onboarding]**.
 

@@ -4,9 +4,9 @@ title: Aggiorna account di destinazione
 type: Tutorial
 description: Questo tutorial elenca i passaggi per aggiornare gli account di destinazione nell’interfaccia utente di Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-La scheda **[!UICONTROL Account]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Per tutte le informazioni che puoi ottenere su ciascun account di destinazione, consulta la [Panoramica account](../ui/destinations-workspace.md#accounts).
+La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Per tutte le informazioni che puoi ottenere su ciascun account di destinazione, consulta la [Panoramica account](../ui/destinations-workspace.md#accounts).
 
 Questo tutorial illustra i passaggi necessari per aggiornare i dettagli dell’account di destinazione utilizzando l’interfaccia utente di Experience Platform.
 
@@ -29,7 +29,7 @@ Per le destinazioni batch, puoi aggiornare l’accesso o la chiave segreta, se �
 
 Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la procedura riportata di seguito.
 
-1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Account]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
+1. Accedi alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
 
    ![Scheda Account](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -37,13 +37,13 @@ Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la p
 
    ![Filtra account di destinazione](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account da aggiornare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL attivare i tipi di pubblico]**, **[!UICONTROL modificare i dettagli]** e **[!UICONTROL eliminare]** l&#39;account. Selezionare il pulsante ![Modifica dettagli](/help/images/icons/edit.png) **[!UICONTROL Modifica dettagli]** per modificare le informazioni sull&#39;account.
+3. Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account da aggiornare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]** l&#39;account. Selezionare il pulsante ![Modifica dettagli](/help/images/icons/edit.png) **[!UICONTROL Edit details]** per modificare le informazioni sull&#39;account.
 
    ![Modifica account](../assets/ui/update-accounts/accounts-edit.png)
 
 4. Immetti le credenziali dell&#39;account aggiornate.
 
-   * Per gli account che utilizzano un tipo di connessione `OAuth1` o `OAuth2`, seleziona **[!UICONTROL Riconnetti OAuth]** per rinnovare le credenziali dell&#39;account. Puoi anche aggiornare il nome e la descrizione dell’account.
+   * Per gli account che utilizzano un tipo di connessione `OAuth1` o `OAuth2`, selezionare **[!UICONTROL Reconnect OAuth]** per rinnovare le credenziali dell&#39;account. Puoi anche aggiornare il nome e la descrizione dell’account.
 
    ![Modifica dettagli OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
 
@@ -59,10 +59,10 @@ Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la p
 
    ![Modifica dettagli da server a server](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. Seleziona **[!UICONTROL Salva]** per completare l&#39;aggiornamento dei dettagli account.
+5. Selezionare **[!UICONTROL Save]** per completare l&#39;aggiornamento dei dettagli dell&#39;account.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai utilizzato correttamente l&#39;area di lavoro **[!UICONTROL destinazioni]** per aggiornare gli account esistenti.
+Seguendo questa esercitazione, è stata utilizzata l&#39;area di lavoro **[!UICONTROL destinations]** per aggiornare gli account esistenti.
 
 Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../catalog/overview.md).

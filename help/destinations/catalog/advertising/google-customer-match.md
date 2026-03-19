@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2853'
+source-wordcount: '2849'
 ht-degree: 7%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> Google sta rilasciando modifiche all&#39;API [Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti relativi alla conformità e al consenso definiti nel [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione Europea ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
+> Google sta rilasciando modifiche all&#39;API [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti di conformità e consenso definiti in base al [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione Europea ([Criteri di consenso utente UE](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
 ><br/>
 >Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
 ><br/>
 >I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
 ><br/>
->I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
+>I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare le destinazioni Real-Time CDP Google esistenti senza interruzioni.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) ti consente di utilizzare i tuoi dati online e offline per raggiungere e coinvolgere nuovamente i tuoi clienti nelle proprietà possedute e gestite da Google, ad esempio: [!DNL Search], [!DNL Shopping] e [!DNL Gmail].
 
@@ -34,11 +34,11 @@ ht-degree: 7%
 
 Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Google Customer Match], ecco alcuni esempi di casi d&#39;uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
-### #1 del caso d’uso
+### #1 del caso d’uso {#use-case-1}
 
 Un marchio di abbigliamento sportivo desidera raggiungere i clienti esistenti tramite [!DNL Google Search] e [!DNL Google Shopping] per personalizzare offerte ed articoli in base ai loro acquisti passati e alla cronologia di navigazione. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Experience Platform e creare tipi di pubblico dai propri dati offline. Quindi possono inviare questi tipi di pubblico a [!DNL Google Customer Match] per utilizzarli in [!DNL Search] e [!DNL Shopping], ottimizzando le loro spese pubblicitarie.
 
-### #2 del caso d’uso
+### #2 del caso d’uso {#use-case-2}
 
 >[!TIP]
 >
@@ -170,18 +170,18 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Panoramica video {#video-overview}
 
 Guarda il video seguente per una spiegazione dei vantaggi e di come attivare i dati per Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/326486?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -217,7 +217,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità* nelle destinazioni, è necessario disporre dell&#39;**[!UICONTROL View Identity Graph]** [autorizzazione di controllo dell&#39;accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

@@ -3,7 +3,7 @@ title: Eseguire trasformazioni sui dati esportati nelle destinazioni di archivia
 type: Tutorial
 description: Scopri come utilizzare la funzionalità dei campi calcolati per eseguire trasformazioni sui dati esportati nelle destinazioni dell’archiviazione cloud
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Per eseguire varie trasformazioni sui dati esportati nelle destinazioni di archi
 
 Per utilizzare i campi calcolati per le trasformazioni dei dati:
 
-1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]** [&#128279;](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]** [](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 2. Segui i [passaggi di attivazione per le destinazioni dell&#39;archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e passa al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Utilizzare i campi calcolati {#how-to-export-calculated-fields}
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario **&#x200B; per utilizzare il controllo &#x200B;** [!UICONTROL Calculated fields]** nell&#39;interfaccia utente.
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Calculated fields]** nell&#39;interfaccia utente.
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
 

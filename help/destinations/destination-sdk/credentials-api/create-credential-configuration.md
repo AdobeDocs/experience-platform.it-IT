@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per creare una configurazione delle credenziali per Adobe Experience Platform Destination SDK.
 title: Creare una configurazione delle credenziali
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '584'
 ht-degree: 7%
 
 ---
@@ -35,7 +35,7 @@ Quando si utilizza un sistema di autenticazione globale, è necessario impostare
 
 ## Guida introduttiva alle operazioni API per le credenziali {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Creare una configurazione di credenziali {#create}
 
@@ -166,7 +166,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Archiviazione Azure Data Lake]
+>[!TAB Archiviazione Data Lake Azure]
 
 **Crea una configurazione delle credenziali [!DNL Azure Data Lake Storage]**
 
@@ -193,9 +193,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | Parametro | Tipo | Descrizione |
 | -------- | ----------- | ----------- |
 | `url` | Stringa | URL del provider di autorizzazione |
-| `tenant` | Stringa | Tenant archiviazione Azure Data Lake |
-| `servicePrincipalId` | Stringa | ID entità servizio Azure per l’archiviazione del data lake di Azure |
-| `servicePrincipalKey` | Stringa | Chiave principale del servizio Azure per l’archiviazione del data lake di Azure |
+| `tenant` | Stringa | Tenant di archiviazione Azure Data Lake |
+| `servicePrincipalId` | Stringa | ID dell’entità servizio Azure per l’archiviazione di Azure Data Lake |
+| `servicePrincipalKey` | Stringa | Chiave principale del servizio Azure per l’archiviazione di Azure Data Lake |
 
 {style="table-layout:auto"}
 
@@ -207,7 +207,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Crea una configurazione delle credenziali [!DNL Azure Blob Storage]**
 

@@ -4,9 +4,9 @@ title: Connessione LINE
 description: La destinazione LINE ti consente di aggiungere profili al pubblico di Experience Platform e di fornire esperienze personalizzate agli utenti connessi.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ In qualità di addetto al marketing, puoi indirizzare l&#39;attività agli utent
 
 ### [!DNL LINE] prerequisiti {#prerequisites-destination}
 
-Per esportare i dati da Experience Platform al tuo account [!DNL LINE], tieni presente i seguenti prerequisiti in [!DNL LINE]:
+Per esportare dati da Experience Platform al tuo account [!DNL LINE], tieni presente i seguenti prerequisiti in [!DNL LINE]:
 
 #### Devi avere un account [!DNL LINE] {#prerequisites-account}
 
@@ -136,7 +136,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -152,6 +152,8 @@ A seconda dell’identità di origine, è necessario mappare i seguenti spazi de
 | --- | --- | --- |
 | ID per inserzionisti (IFA) | `IDFA` o `GAID` | `LineId` |
 | ID utente LINE | `UserID` | `LineId` |
+
+{style="table-layout:auto"}
 
 Se le identità di destinazione sono *ID utente LINE*, sarà necessario quanto segue:
 ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target quando si utilizzano gli ID utente LINE per le identità di destinazione.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

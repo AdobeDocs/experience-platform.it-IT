@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un server di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una configurazione del server di destinazione
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2038'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ Per una descrizione dettagliata delle funzionalità che puoi configurare tramite
 
 ## Guida introduttiva alle operazioni API del server di destinazione {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Creare una configurazione del server di destinazione {#create}
 
@@ -341,7 +341,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Archiviazione Azure Data Lake]
+>[!TAB Archiviazione Data Lake Azure]
 
 **Crea un server di destinazione [!DNL Azure Data Lake Storage]**
 
@@ -447,7 +447,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Crea un server di destinazione [!DNL Azure Blob Storage]**
 

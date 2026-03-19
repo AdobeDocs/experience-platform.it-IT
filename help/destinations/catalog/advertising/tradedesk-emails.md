@@ -3,9 +3,9 @@ title: Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1812'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 >* Se i dati vengono originati nell&#39;UE, utilizzare la destinazione **[!DNL The Trade Desk - CRM (EU)]**.
 >* Se i dati vengono originati nelle aree APAC o NAMER, utilizzare la destinazione **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *[!DNL Trade Desk]*. Per richieste di informazioni o richieste di aggiornamento, contatta il tuo rappresentante [!DNL Trade Desk].
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *[!DNL Trade Desk]*. Per richieste di informazioni o richieste di aggiornamento, contattare il rappresentante [!DNL Trade Desk].
 
 ## Panoramica {#overview}
 
@@ -106,7 +106,6 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
       * Il periodo (`.`) (codice ASCII 46). Ad esempio, normalizzare &quot;jane.doe@gmail.com&quot; in &quot;janedoe@gmail.com&quot;.
      * Il segno più (`+`) (codice ASCII 43) e tutti i caratteri successivi. Ad esempio, normalizzare `janedoe+home@gmail.com` in `janedoe@gmail.com`.
   
-
 ## Requisiti di normalizzazione e hashing dei numeri di telefono {#phone-hashing}
 
 Ecco cosa devi sapere sul caricamento dei numeri di telefono:
@@ -166,7 +165,7 @@ La destinazione CRM [!DNL The Trade Desk] è un caricamento di file batch giorna
 
 ### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Account Type]**: scegliere l&#39;opzione **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
@@ -180,7 +179,7 @@ Quando ci si connette alla destinazione, l’impostazione di un criterio di gove
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -222,13 +221,14 @@ Selezione dei campi di origine e di destinazione:
 | netID | net_id |
 | FirstID | first_id |
 
+{style="table-layout:auto"}
 
 ## Convalida esportazione dati {#validate}
 
 Per verificare che i dati siano stati esportati correttamente da Experience Platform in [!DNL The Trade Desk], trovare i tipi di pubblico nella scheda Adobe 1PD nella libreria [!DNL The Trade Desk] &quot;Dati e identità inserzionista&quot;. Di seguito sono riportati i passaggi per trovare l&#39;ID corrispondente nell&#39;interfaccia utente [!DNL Trade Desk]:
 
 1. Selezionare innanzitutto la scheda **[!UICONTROL Libraries]** e rivedere la sezione **[!UICONTROL Advertiser data and identity]**.
-2. Fai clic su **[!UICONTROL Adobe 1PD]** per elencare tutti i tipi di pubblico attivati in [!DNL The Trade Desk].
+2. Selezionare **[!UICONTROL Adobe 1PD]** per elencare tutti i tipi di pubblico attivati in [!DNL The Trade Desk].
 3. Il Nome segmento o l&#39;ID segmento di Experience Platform verrà visualizzato come Nome segmento nell&#39;interfaccia utente [!DNL Trade Desk].
 
 ## Utilizzo dei dati e governance {#data-usage-governance}

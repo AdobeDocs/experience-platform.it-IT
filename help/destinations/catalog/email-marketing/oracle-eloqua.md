@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;oracle eloqua;oracle
 title: (File) Connessione Oracle Eloqua
 description: Oracle Eloqua è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing B2B e le organizzazioni a gestire campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '801'
 ht-degree: 3%
 
 ---
@@ -52,16 +52,16 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## ELENCO CONSENTITI di indirizzo IP {#allow-list}
+## Indirizzo IP inserisco nell&#39;elenco Consentiti {#allow-list}
 
-Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP all’elenco consentiti.
+Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al inserisco nell&#39;elenco Consentiti di e-mail marketing.
 
-Se devi aggiungere degli IP Adobe elenco consentiti all&#39;elenco consentiti, consulta l&#39;[indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
+Se hai bisogno di aggiungere IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta la [inserisce nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Manage Destinations]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -109,7 +109,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

@@ -4,9 +4,9 @@ description: Zeta Marketing Platform (ZMP) è un sistema basato su cloud che con
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1454'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Un inserzionista mira a indirizzare gli utenti all’interno di tipi di pubblico
 
 ## Prerequisiti {#prerequisites}
 
-### Prerequisiti per la piattaforma Zeta Marketing
+### Prerequisiti per la piattaforma Zeta Marketing {#zmp-prerequisites}
 
 * Prima di impostare una nuova connessione alla destinazione Zeta Marketing Platform, è necessario creare un elenco di clienti vuoto nell’account Zeta Marketing Platform. Devi scegliere uno di questi elenchi di clienti come destinazione designata per ricevere il pubblico Adobe Experience Platform che intendi inviare. Puoi creare un elenco clienti vuoto nello ZMP seguendo le istruzioni [qui](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * Sebbene Adobe Experience Platform consenta l’attivazione di più tipi di pubblico a una particolare istanza di destinazione ZMP, è obbligatorio che ogni istanza di destinazione ZMP riceva un solo pubblico Experience Platform. Per gestire più tipi di pubblico da Experience Platform, crea altre istanze di destinazione ZMP per ciascun pubblico e seleziona un elenco di clienti diverso dal menu a discesa. Questo approccio assicura che i tipi di pubblico ZMP di destinazione non vengano sovrascritti. Per ulteriori dettagli, vedi [Inserisci i dettagli della destinazione](#destination-details).
@@ -48,6 +48,7 @@ Un inserzionista mira a indirizzare gli utenti all’interno di tipi di pubblico
 [!DNL Zeta Marketing Platform] supporta l&#39;attivazione degli ID utente personalizzati descritti nella tabella seguente. Per ulteriori dettagli, vedi [identità](/help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
+>
 > Per la destinazione di Zeta Marketing Platform è necessario mappare uno spazio dei nomi dell&#39;identità di origine all&#39;identità di destinazione ZMP `uid`. Questo aiuta la Zeta Marketing Platform a differenziare in modo univoco ogni profilo.
 
 | Identità di destinazione | Descrizione | Considerazioni | Note |
@@ -69,6 +70,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 {style="table-layout:auto"}
 
 >[!NOTE]
+>
 > Man mano che i singoli membri vengono aggiunti o rimossi dal pubblico di Experience Platform, gli aggiornamenti verranno inviati allo ZMP per garantire che l’elenco dei clienti di destinazione sia sincronizzato di conseguenza.
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
@@ -98,7 +100,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Manage Destinations]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -127,14 +129,14 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva tipi di pubblico in destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Mappare attributi e identità {#map}
 

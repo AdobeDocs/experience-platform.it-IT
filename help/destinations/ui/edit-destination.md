@@ -3,7 +3,7 @@ title: Modificare le destinazioni
 type: Tutorial
 description: Scopri come modificare e aggiornare gli account di destinazioni esistenti nell’interfaccia utente di Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Per modificare vari componenti di una connessione di destinazione esistente:
 
 1. Passa a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Seleziona la destinazione desiderata da modificare.
-3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;per modificare le connessioni di destinazione esistenti.
+3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**per modificare le connessioni di destinazione esistenti.
 4. Nella finestra modale, modifica le impostazioni desiderate. Al termine, seleziona **[!UICONTROL Save]**.
 
 Nella finestra di modifica della destinazione è possibile aggiornare tutte le impostazioni configurate al momento della connessione iniziale alla destinazione. Queste impostazioni sono diverse in base alla piattaforma di destinazione che stai aggiornando.
@@ -49,7 +49,7 @@ Di seguito sono riportati alcuni esempi delle impostazioni che è possibile aggi
 >
 >Le impostazioni della connessione di destinazione sono state aggiornate.
 
-## Altre opzioni di modifica
+## Altre opzioni di modifica {#other-editing-options}
 
 Utilizzando l’interfaccia utente di Experience Platform o l’API del servizio Flusso, puoi modificare diverse configurazioni di destinazione, come descritto nei collegamenti seguenti:
 
@@ -59,7 +59,7 @@ Utilizzando l’interfaccia utente di Experience Platform o l’API del servizio
 | [Modifica account](/help/destinations/ui/update-accounts.md) | [Modifica componenti di connessione di base (parametri di autenticazione e altri componenti)](/help/destinations/api/edit-destination.md#patch-base-connection) |
 | [Modifica flussi di dati di attivazione](/help/destinations/ui/edit-activation.md) | [Aggiorna flussi di dati di destinazione](/help/destinations/api/update-destination-dataflows.md) |
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, è stata utilizzata l&#39;area di lavoro **[!UICONTROL destinations]** per aggiornare le connessioni di destinazione esistenti.
 

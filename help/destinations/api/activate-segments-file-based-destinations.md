@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: ba2de112ba9f1fce35f847e9eb9396e65f2a9232
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '4976'
+source-wordcount: '4973'
 ht-degree: 4%
 
 ---
@@ -148,7 +148,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 
@@ -447,7 +447,7 @@ Annotare la riga evidenziata con i commenti in linea nell&#39;esempio [!DNL conn
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] visualizzazione di [!DNL auth spec]
 
@@ -791,7 +791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento alla sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2(ADLS Gen2).
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2 (ADLS Gen2).
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1094,7 +1094,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-### Aggiungi crittografia ai file esportati
+### Aggiungi crittografia ai file esportati {#add-encryption}
 
 È inoltre possibile aggiungere la crittografia ai file esportati. A tale scopo, è necessario aggiungere elementi dall&#39;oggetto `encryption`. Vedi l’esempio di richiesta seguente con i parametri obbligatori evidenziati:
 
@@ -1417,7 +1417,7 @@ Prendere nota delle righe evidenziate con commenti in linea nell&#39;esempio [!D
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] visualizzazione dei parametri di connessione di destinazione
 
@@ -2488,7 +2488,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 
@@ -3017,7 +3017,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Richiesta**
 
@@ -3273,7 +3273,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Prendi nota dell’ID del flusso di dati dalla risposta. Questo ID sarà richiesto nei passaggi successivi.
 
-### Aggiungere tipi di pubblico all’esportazione
+### Aggiungere tipi di pubblico all’esportazione {#add-audiences}
 
 In questo passaggio, puoi anche selezionare i tipi di pubblico da esportare nella destinazione. Per informazioni dettagliate su questo passaggio e sul formato della richiesta per aggiungere un pubblico al flusso di dati, vedi gli esempi nella sezione [Aggiornamento di un flusso di dati di destinazione](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) della documentazione di riferimento API.
 
@@ -3292,7 +3292,7 @@ Ad esempio, per ottenere la seguente mappatura mostrata nell’interfaccia utent
 
 ![Esempio di passaggio di mappatura](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
-### Creare uno schema di input
+### Creare uno schema di input {#create-input-schema}
 
 Per creare uno schema di input, devi innanzitutto recuperare lo [schema di unione](/help/profile/ui/union-schema.md) e le identità che possono essere esportate nella destinazione. Schema di attributi e identità che puoi selezionare come mappatura sorgente.
 
@@ -3730,7 +3730,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 L’ID nella risposta rappresenta l’identificatore univoco dello schema di input creato. Copia l’ID dalla risposta, poiché lo riutilizzerai in un passaggio successivo.
 
-### Creare uno schema di output
+### Creare uno schema di output {#create-output-schema}
 
 Successivamente, devi impostare lo schema di output per l’esportazione. Innanzitutto, devi trovare e verificare lo schema di partner esistente.
 

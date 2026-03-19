@@ -3,9 +3,9 @@ keywords: crm;CRM;destinazioni crm;Outreach;Outreach crm destination
 title: Connessione di uscita
 description: La destinazione Outreach ti consente di esportare i dati del tuo account e attivarli in Outreach per le tue esigenze aziendali.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1808'
 ht-degree: 2%
 
 ---
@@ -28,13 +28,13 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai p
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Outreach], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Outreach], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi per lo schema [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
 ### Prerequisiti per l’estensione {#prerequisites-destination}
 
-Per esportare i dati da Experience Platform al tuo account [!DNL Outreach], tieni presente i seguenti prerequisiti in [!DNL Outreach]:
+Per esportare dati da Experience Platform al tuo account [!DNL Outreach], tieni presente i seguenti prerequisiti in [!DNL Outreach]:
 
 #### Devi avere un account Outreach {#prerequisites-account}
 
@@ -61,7 +61,7 @@ Pagina delle impostazioni [!DNL Outreach] per i potenziali clienti che visualizz
 >
 > I nomi delle etichette sono solo a scopo di identificazione. Non vengono utilizzati per aggiornare i potenziali clienti.
 
-## Guardrail
+## Guardrail {#guardrails}
 
 L&#39;API [!DNL Outreach] ha un limite di velocità di 10.000 richieste all&#39;ora per utente. Se raggiungi questo limite, riceverai una risposta `429` con il seguente messaggio: `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
@@ -116,7 +116,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 > Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione **[!UICONTROL Manage Destinations]** [per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -159,7 +159,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -169,7 +169,7 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL Outreach], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Outreach], effettua le seguenti operazioni:
 
-1. Nel passaggio [!UICONTROL Mapping], fare clic su **[!UICONTROL Add new mapping]**. Viene visualizzata una nuova riga di mappatura.
+1. Nel passaggio [!UICONTROL Mapping], selezionare **[!UICONTROL Add new mapping]**. Viene visualizzata una nuova riga di mappatura.
    ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra come aggiungere una nuova mappatura](../../assets/catalog/crm/outreach/add-new-mapping.png)
 
 1. Nella finestra [!UICONTROL Select source field], scegliere la categoria **[!UICONTROL Select identity namespace]** e aggiungere le mappature desiderate.

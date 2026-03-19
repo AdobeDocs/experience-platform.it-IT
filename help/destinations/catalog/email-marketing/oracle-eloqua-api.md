@@ -3,9 +3,9 @@ title: (API) Connessione Oracle Eloqua
 description: La destinazione Oracle Eloqua (API) consente di esportare i dati dell’account e attivarli in Oracle Eloqua in base alle esigenze aziendali.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2138'
+source-wordcount: '2136'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;operazione [Aggiorna un contatto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) dall&#39;API REST [!DNL Oracle Eloqua], che consente di **aggiornare le identità** all&#39;interno di un pubblico in [!DNL Oracle Eloqua].
 
-[!DNL Oracle Eloqua] utilizza l&#39;autenticazione di base [&#128279;](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) per comunicare con l&#39;API REST [!DNL Oracle Eloqua]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Oracle Eloqua] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
+[!DNL Oracle Eloqua] utilizza l&#39;autenticazione di base [](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) per comunicare con l&#39;API REST [!DNL Oracle Eloqua]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Oracle Eloqua] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
 
 ## Casi d’uso {#use-cases}
 
@@ -27,7 +27,7 @@ Il reparto marketing di una piattaforma online desidera trasmettere una campagna
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Oracle Eloqua], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Oracle Eloqua], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
@@ -47,6 +47,8 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 | `Username` | Il nome utente dell&#39;account [!DNL Oracle Eloqua]. |
 | `Password` | La password del tuo account [!DNL Oracle Eloqua]. |
 | `Pod` | [!DNL Oracle Eloqua] supporta più data center, ciascuno con un nome di dominio univoco. [!DNL Oracle Eloqua] si riferisce a questi come &quot;pod&quot;, sono attualmente sette in totale: p01, p02, p03, p04, p06, p07 e p08. Per ottenere il POD a cui accedi, accedi a [!DNL Oracle Eloqua] e annota l&#39;URL nel browser dopo aver effettuato l&#39;accesso. Ad esempio, se l&#39;URL del browser è `secure.p01.eloqua.com`, `pod` è `p01`. Per ulteriori informazioni, consultare la pagina [determinazione del POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua). |
+
+{style="table-layout:auto"}
 
 Consulta [Accesso a [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) per maggiori informazioni.
 
@@ -70,6 +72,8 @@ Consulta [Accesso a [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/
 | Identità di destinazione | Descrizione | Obbligatorio |
 |---|---|---|
 | `EloquaId` | Identificatore univoco del contatto. | Sì |
+
+{style="table-layout:auto"}
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
@@ -156,7 +160,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -251,7 +255,7 @@ Per ulteriori dettagli, vedere la documentazione di [!DNL Oracle Eloqua]:
 * [Oracle Eloqua Marketing Automation](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [API REST per il servizio Oracle Eloqua Marketing Cloud](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
-### Changelog
+### Changelog {#changelog}
 
 Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla documentazione apportati al connettore di destinazione.
 

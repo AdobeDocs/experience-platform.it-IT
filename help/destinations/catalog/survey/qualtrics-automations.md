@@ -4,9 +4,9 @@ title: Automazioni Qualtrics
 description: Sincronizza i dati relativi all’esperienza e ai clienti operativi per sbloccare la personalizzazione su larga scala. Utilizza l’aggregazione di più fonti di dati operativi in Adobe Experience Platform come input in Qualtrics Experience ID per comprendere meglio i tuoi clienti e consentire un’attività di sensibilizzazione mirata per colmare il divario quando si tratta di comprendere le intenzioni, le emozioni e i driver di esperienza.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1283'
 ht-degree: 3%
 
 ---
@@ -39,14 +39,14 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione *Qualtrics
 
 **Risultato**: il feedback continuo consente all&#39;organizzazione di adattare e migliorare il processo di onboarding, migliorando il coinvolgimento e la produttività dei nuovi dipendenti.
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Prima di impostare la destinazione Qualtrics in Adobe Experience Platform, accertati di aver soddisfatto i seguenti prerequisiti:
 
 * Hai un account Qualtrics.
 * Hai ottenuto il token API necessario da Qualtrics.
 
-### Ottenimento di un token API
+### Ottenimento di un token API {#obtaining-api-token}
 
 Di seguito sono riportati i passaggi necessari per ottenere un token API da Qualtrics.
 
@@ -105,7 +105,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -135,18 +135,18 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva tipi di pubblico in destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Mappare attributi e identità {#map}
 
 Questa destinazione dispone di uno schema aperto ed è quindi possibile inviare qualsiasi proprietà a Qualtrics.
 
-#### Mappa attributi
+#### Mappa attributi {#map-attributes}
 
-Per aggiungere un attributo alla mappatura, seleziona semplicemente **attributi personalizzati** quando aggiungi una nuova mappatura. È possibile immettere un nome qualsiasi per l&#39;attributo. Qualtrics incoraggia la convenzione di denominazione *camelCase* per i nomi di attributo (vedi la schermata seguente per un esempio).
+Per aggiungere un attributo alla mappatura, seleziona **attributi personalizzati** quando aggiungi una nuova mappatura. È possibile immettere un nome qualsiasi per l&#39;attributo. Qualtrics incoraggia la convenzione di denominazione *camelCase* per i nomi di attributo (vedi la schermata seguente per un esempio).
 
 ![Attributo personalizzato](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
@@ -154,7 +154,7 @@ Per un esempio di possibili mappature di attributi, consulta la schermata seguen
 
 ![Mappature di esempio](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
-#### Mappare le identità
+#### Mappare le identità {#map-identities}
 
 È obbligatorio selezionare uno spazio dei nomi delle identità per questa destinazione. I due possibili campi sorgente per il targeting delle mappature dei campi sono:
 

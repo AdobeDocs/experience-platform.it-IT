@@ -5,9 +5,9 @@ title: Connettersi alle destinazioni batch e attivare i dati utilizzando l’API
 description: Istruzioni dettagliate per l’utilizzo dell’API del servizio Flusso per creare una destinazione di archiviazione cloud in batch o di e-mail marketing in Experience Platform e attivare i dati
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3435'
+source-wordcount: '3431'
 ht-degree: 4%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 4%
 # Connettersi a destinazioni di e-mail marketing basate su file e attivare i dati utilizzando l’API del servizio di flusso
 
 >[!IMPORTANT]
-> 
->* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>
+>* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions).
 >
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 >
@@ -27,7 +27,7 @@ ht-degree: 4%
 Questo tutorial illustra come utilizzare l&#39;API del servizio di flusso per creare una [destinazione di e-mail marketing](../catalog/email-marketing/overview.md) basata su file, creare un flusso di dati nella nuova destinazione creata ed esportare i dati nella nuova destinazione creata tramite file CSV.
 
 >[!TIP]
-> 
+>
 >Per informazioni su come attivare i dati nelle destinazioni di archiviazione cloud utilizzando l&#39;API del servizio Flusso, leggere l&#39;[esercitazione sull&#39;API dedicata](/help/destinations/api/activate-segments-file-based-destinations.md).
 
 Questo tutorial utilizza la destinazione [!DNL Adobe Campaign] in tutti gli esempi, ma i passaggi sono identici per le destinazioni di e-mail marketing basate su file.
@@ -44,7 +44,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di creare tipi di pubblico in [!DNL Adobe Experience Platform] dai dati di [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per attivare i dati nelle destinazioni batch in Experience Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che è necessario sapere per attivare i dati nelle destinazioni batch in Experience Platform.
 
 ### Raccogli le credenziali richieste {#gather-required-credentials}
 
@@ -65,7 +65,7 @@ Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare l
 
 ### Raccogli i valori per le intestazioni obbligatorie e facoltative {#gather-values-headers}
 
-Per effettuare chiamate alle API di [!DNL Experience Platform], prima è necessario completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -144,7 +144,7 @@ Successivamente, devi connetterti ai tuoi dati di [!DNL Experience Platform], in
 1. Innanzitutto, devi eseguire una chiamata per autorizzare l&#39;accesso ai tuoi dati in [!DNL Experience Platform], impostando una connessione di base.
 2. Quindi, utilizzando l&#39;ID connessione di base, eseguire un&#39;altra chiamata in cui si crea una *connessione di origine*, che stabilisce la connessione ai dati di [!DNL Experience Platform].
 
-### Autorizza l&#39;accesso ai tuoi dati in [!DNL Experience Platform]
+### Autorizza l&#39;accesso ai tuoi dati in [!DNL Experience Platform] {#authorize-access-experience-platform}
 
 **Formato API**
 
@@ -551,7 +551,7 @@ Una risposta corretta contiene l&#39;identificatore univoco della connessione di
 [!DNL Adobe Experience Platform] esporta i dati per le destinazioni del marketing e-mail in batch e dell&#39;archiviazione cloud sotto forma di [!DNL CSV] file. In questo passaggio è possibile determinare il percorso nel percorso di archiviazione in cui verranno esportati i file.
 
 >[!IMPORTANT]
-> 
+>
 >[!DNL Adobe Experience Platform] divide automaticamente i file di esportazione in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo.
 >
 >Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un&#39;esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`.

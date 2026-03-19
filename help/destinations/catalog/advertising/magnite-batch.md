@@ -3,10 +3,10 @@ title: Destinazione batch Magnite
 description: Utilizza questa destinazione per fornire in batch i tipi di pubblico di Adobe CDP alla piattaforma Magnite Streaming.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 1%
+source-wordcount: '1779'
+ht-degree: 2%
 
 ---
 
@@ -152,10 +152,10 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
-### Attiva i segmenti in questa destinazione {#activate}
+### Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

@@ -3,9 +3,9 @@ title: Connessione HubSpot
 description: La destinazione HubSpot consente di gestire i record dei contatti nell’account HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1638'
 ht-degree: 3%
 
 ---
@@ -30,13 +30,13 @@ Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experi
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL HubSpot], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL HubSpot], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
 ### Prerequisiti per la destinazione [!DNL HubSpot] {#prerequisites-destination}
 
-Per esportare i dati da Experience Platform al tuo account [!DNL HubSpot], tieni presente i seguenti prerequisiti:
+Per esportare dati da Experience Platform all&#39;account [!DNL HubSpot], tieni presente i seguenti prerequisiti:
 
 #### Devi avere un account [!DNL HubSpot] {#prerequisites-account}
 
@@ -159,7 +159,7 @@ Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla 
 
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL HubSpot], effettua le seguenti operazioni:
 
-#### Mappatura dell&#39;identità `Email`
+#### Mappatura dell&#39;identità `Email` {#map-email-identity}
 
 L&#39;identità `Email` è una mappatura obbligatoria per questa destinazione. Segui i passaggi seguenti per mapparla:
 
@@ -177,7 +177,7 @@ L&#39;identità `Email` è una mappatura obbligatoria per questa destinazione. S
 Di seguito è riportato un esempio con la mappatura di identità:
 ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform con mappatura identità e-mail.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
-#### Mappatura degli attributi **facoltativi**
+#### Mappatura degli attributi **facoltativi** {#mapping-optional-attributes}
 
 Per aggiungere altri attributi da aggiornare tra lo schema del profilo XDM e l&#39;account [!DNL HubSpot], ripetere i passaggi seguenti:
 
@@ -224,7 +224,7 @@ Di seguito sono riportate ulteriori informazioni utili dalla documentazione di [
 * [Metodi di autenticazione in HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * [!DNL HubSpot] riferimenti API per le API [Contatti](https://developers.hubspot.com/docs/api/crm/contacts) e [Proprietà](https://developers.hubspot.com/docs/api/crm/properties).
 
-### Changelog
+### Changelog {#changelog}
 
 Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla documentazione apportati al connettore di destinazione.
 

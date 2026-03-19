@@ -2,7 +2,7 @@
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato da Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 2%
@@ -25,19 +25,19 @@ A seconda della configurazione API, potrebbe essere necessario utilizzare o meno
 
 Con il supporto dei metadati del pubblico in Destination SDK, quando configuri la destinazione di Experience Platform, puoi offrire agli utenti di Experience Platform una delle numerose opzioni disponibili per mappare e attivare i tipi di pubblico nella destinazione. Puoi controllare le opzioni disponibili per l&#39;utente tramite i parametri nella sezione [Configurazione metadati pubblico](../functionality/destination-configuration/audience-metadata-configuration.md) della configurazione di destinazione.
 
-### Caso d’uso 1: disponi di un’API di terze parti e gli utenti non devono immettere ID di mappatura
+### Caso d’uso 1: disponi di un’API di terze parti e gli utenti non devono immettere ID di mappatura {#use-case-1}
 
 Se disponi di un endpoint API per creare/aggiornare/eliminare tipi di pubblico o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint creazione/aggiornamento/eliminazione del pubblico. Experience Platform può creare, aggiornare o eliminare a livello di programmazione tipi di pubblico e sincronizzare nuovamente i metadati con Experience Platform.
 
 Quando si attivano i tipi di pubblico nella destinazione nell&#39;interfaccia utente di Experience Platform, gli utenti non devono compilare manualmente un campo ID mappatura pubblico nel flusso di lavoro di attivazione.
 
-### Caso d’uso 2: gli utenti devono prima creare un’audience nella destinazione e devono inserire manualmente l’ID della mappatura
+### Caso d’uso 2: gli utenti devono prima creare un’audience nella destinazione e devono inserire manualmente l’ID della mappatura {#use-case-2}
 
 Se i tipi di pubblico e altri metadati devono essere creati manualmente dai partner o dagli utenti nella tua destinazione, gli utenti devono compilare manualmente il campo ID mappatura pubblico nel flusso di lavoro di attivazione per sincronizzare i metadati del pubblico tra la tua destinazione e Experience Platform.
 
 ![ID mappatura input](../assets/functionality/input-mapping-id.png)
 
-### Caso d’uso 3: la destinazione accetta l’ID del pubblico di Experience Platform e gli utenti non devono inserire manualmente l’ID della mappatura
+### Caso d’uso 3: la destinazione accetta l’ID del pubblico di Experience Platform e gli utenti non devono inserire manualmente l’ID della mappatura {#use-case-3}
 
 Se il sistema di destinazione accetta l&#39;ID pubblico di Experience Platform, puoi configurarlo nel modello di metadati del pubblico. Gli utenti non devono compilare un ID di mappatura del pubblico quando attivano un segmento.
 

@@ -2,9 +2,9 @@
 description: Questa pagina illustra la chiamata API utilizzata per aggiornare una configurazione di credenziali esistente tramite Adobe Experience Platform Destination SDK.
 title: Aggiornare una configurazione delle credenziali
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '608'
 ht-degree: 7%
 
 ---
@@ -35,7 +35,7 @@ Quando si utilizza un sistema di autenticazione globale, è necessario impostare
 
 ## Guida introduttiva alle operazioni API per le credenziali {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Aggiornare una configurazione delle credenziali {#update}
 
@@ -172,7 +172,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Archiviazione Azure Data Lake]
+>[!TAB Archiviazione Data Lake Azure]
 
 **Aggiorna una configurazione delle credenziali [!DNL Azure Data Lake Storage]**
 
@@ -199,7 +199,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | Parametro | Tipo | Descrizione |
 | -------- | ----------- | ----------- |
 | `url` | Stringa | URL del provider di autorizzazione |
-| `tenant` | Stringa | Tenant archiviazione Azure Data Lake |
+| `tenant` | Stringa | Tenant di archiviazione Azure Data Lake |
 | `servicePrincipalId` | Stringa | ID [!DNL Azure Service Principal] per [!DNL Azure Data Lake Storage] |
 | `servicePrincipalKey` | Stringa | [!DNL Azure Service Principal Key] per [!DNL Azure Data Lake Storage] |
 
@@ -213,7 +213,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
->[!TAB Archiviazione BLOB di Azure]
+>[!TAB Archiviazione BLOB Azure]
 
 **Aggiorna una configurazione delle credenziali [!DNL Azure Blob]**
 

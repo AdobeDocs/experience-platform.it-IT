@@ -3,7 +3,7 @@ title: Destinazione Marketo Measure Ultimate
 description: Scopri come connettere e attivare i dati nella destinazione di Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 3%
@@ -73,7 +73,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage and Activate Dataset Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nella sezione seguente.
@@ -96,14 +96,14 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Esporta set di dati in questa destinazione {#export-datasets}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage and Activate Dataset Destinations]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per istruzioni dettagliate sull&#39;esportazione dei set di dati in questa destinazione, leggi l&#39;esercitazione [Esporta set di dati](/help/destinations/ui/export-datasets.md).
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Per convalidare un&#39;esportazione di set di dati riuscita, puoi verificare che il set di dati sia stato correttamente eseguito nel tuo [data warehouse di Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=it).
+Per convalidare un&#39;esportazione di set di dati riuscita, puoi verificare che il set di dati sia stato correttamente eseguito nel tuo [data warehouse di Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

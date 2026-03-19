@@ -3,16 +3,16 @@ keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
 description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1070'
 ht-degree: 3%
 
 ---
 
 # Connessione [!DNL Airship Tags] {#airship-tags-destination}
 
-## Panoramica
+## Panoramica {#overview}
 
 [!DNL Airship] è la principale piattaforma di Customer Engagement e ti aiuta a fornire messaggi omnicanale significativi e personalizzati ai tuoi utenti in ogni fase del ciclo di vita del cliente.
 
@@ -23,9 +23,9 @@ Per ulteriori informazioni su [!DNL Airship], consulta i [documenti dirigibili](
 
 >[!TIP]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Airship]. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all&#39;indirizzo [support.airship.com](https://support.airship.com/).
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Airship]. Per qualsiasi richiesta di informazioni o di aggiornamento, contatta direttamente all&#39;indirizzo [support.airship.com](https://support.airship.com/).
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Prima di poter inviare i tipi di pubblico di Adobe Experience Platform a [!DNL Airship], è necessario:
 
@@ -33,7 +33,7 @@ Prima di poter inviare i tipi di pubblico di Adobe Experience Platform a [!DNL A
 * Genera un token Bearer per l’autenticazione.
 
 >[!TIP]
-> 
+>
 >Se non lo hai già fatto, crea un account [!DNL Airship] tramite [questo collegamento per la registrazione](https://go.airship.eu/accounts/register/plan/starter/).
 
 ## Tipi di pubblico supportati {#supported-audiences}
@@ -72,7 +72,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Gruppi di tag
+## Gruppi di tag {#tag-groups}
 
 Il concetto di pubblico in Adobe Experience Platform è simile a [Tag](https://docs.airship.com/guides/audience/tags/) in Airship, con lievi differenze nell&#39;implementazione. Questa integrazione associa lo stato dell&#39;[appartenenza di un utente in un segmento di Experience Platform](../../../xdm/field-groups/profile/segmentation.md) alla presenza o meno di un tag [!DNL Airship]. Ad esempio, in un pubblico di Experience Platform in cui `xdm:status` diventa `realized`, il tag viene aggiunto al canale [!DNL Airship] o all&#39;utente con nome a cui è mappato questo profilo. Se `xdm:status` diventa `exited`, il tag viene rimosso.
 
@@ -84,7 +84,7 @@ Per abilitare questa integrazione, creare un *gruppo di tag* in [!DNL Airship] d
 
 Per istruzioni sulla creazione del gruppo di tag, consulta [Gestisci gruppi di tag](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups).
 
-## Genera token Bearer
+## Genera token Bearer {#generate-bearer-token}
 
 Vai a **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** nel [Dashboard dirigibile](https://go.airship.com) e seleziona **[!UICONTROL Tokens]** nel menu a sinistra.
 
@@ -94,15 +94,15 @@ Specifica un nome descrittivo per il token, ad esempio &quot;Destinazione tag Ad
 
 Fare clic su **[!UICONTROL Create Token]** e salvare i dettagli come riservati.
 
-## Casi d’uso
+## Casi d’uso {#use-cases}
 
 Per capire meglio come e quando utilizzare la destinazione [!DNL Airship Tags], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-### #1 del caso d’uso
+### #1 del caso d’uso {#use-case-1}
 
 I rivenditori o le piattaforme di intrattenimento possono creare profili utente sui propri clienti fidelizzati e passare tali tipi di pubblico in [!DNL Airship] per il targeting dei messaggi nelle campagne mobili.
 
-### #2 del caso d’uso
+### #2 del caso d’uso {#use-case-2}
 
 Attivare messaggi uno-a-uno in tempo reale quando gli utenti entrano o escono da un pubblico specifico all’interno di Adobe Experience Platform.
 
@@ -111,7 +111,7 @@ Ad esempio, un retailer imposta un pubblico specifico per il marchio jeans in Ex
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -139,7 +139,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md).

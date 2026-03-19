@@ -2,7 +2,7 @@
 title: Connessione Amazon S3
 description: Crea una connessione in uscita allo storage Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1907'
 ht-degree: 13%
@@ -84,7 +84,7 @@ Durante l&#39;esportazione di *set di dati*, Experience Platform crea un file `.
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -101,7 +101,7 @@ Per autenticare nella destinazione, compilare i campi obbligatori e selezionare 
 * Autenticazione chiave di accesso e chiave segreta
 * Autenticazione del ruolo assunta
 
-#### Autenticazione con chiave di accesso S3 e chiave segreta
+#### Autenticazione con chiave di accesso S3 e chiave segreta {#s3-access-key-secret-key-auth}
 
 Utilizza questo metodo di autenticazione quando desideri inserire la chiave di accesso e la chiave segreta di Amazon S3 per consentire ad Experience Platform di esportare dati nelle proprietà di Amazon S3.
 
@@ -304,7 +304,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -316,4 +316,4 @@ Per verificare se i dati sono stati esportati correttamente, controllare l&#39;a
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allow-list}
 
-Se hai bisogno di aggiungere IP Adobe inserire nell&#39;elenco Consentiti a un inserisco nell&#39;elenco Consentiti di, consulta l&#39;articolo [Indirizzo IP &#x200B;](ip-address-allow-list.md).
+Se hai bisogno di aggiungere IP Adobe inserire nell&#39;elenco Consentiti a un inserisco nell&#39;elenco Consentiti di, consulta l&#39;articolo [Indirizzo IP ](ip-address-allow-list.md).

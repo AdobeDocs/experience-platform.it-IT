@@ -5,9 +5,9 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1912'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Questa destinazione utilizza [[!DNL Salesforce Import API v5]](https://developer
 
 
 >[!IMPORTANT]
-> 
+>
 > Versione V2 della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md). Questa versione sostituisce la destinazione precedente ed è attualmente in versione Alpha.
 > <br>
 > Se utilizzi la versione precedente della destinazione [Salesforce Marketing Cloud Account Engagement](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), devi eseguire la migrazione a questa versione V2 prima del **gennaio 2026**. Dopo gennaio 2026, Adobe disattiverà la versione precedente e non sarà più disponibile.
@@ -54,7 +54,7 @@ Prima di attivare i dati nella destinazione [!DNL (V2) Marketing Cloud Account E
 
 ### [!DNL Salesforce Marketing Cloud Account Engagement] prerequisiti {#prerequisites-destination}
 
-Per esportare i dati da Experience Platform al tuo account [!DNL Marketing Cloud Account Engagement], tieni presente i seguenti prerequisiti:
+Per esportare dati da Experience Platform all&#39;account [!DNL Marketing Cloud Account Engagement], tieni presente i seguenti prerequisiti:
 
 #### Devi avere un account [!DNL Marketing Cloud Account Engagement] {#prerequisites-account}
 
@@ -163,7 +163,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -183,7 +183,7 @@ La destinazione Salesforce Marketing Cloud Account Engagement supporta gli attri
 |---------|----------|----------|
 | `salesforceId` | Stringa | ID Salesforce del prospect |
 | `salesforceOwnerId` | Intero | ID utente Salesforce del proprietario del prospect |
-| `salutation` | Stringa | Saluto del potenziale cliente (ad esempio, Sig., Sig.ra, Dott.) |
+| `salutation` | Stringa | Il saluto del potenziale cliente (ad esempio, Sig., Sig.ra, Dott.) |
 | `score` | Intero | Punteggio del potenziale cliente nel coinvolgimento dell’account |
 | `source` | Stringa | Origine del record del prospect |
 | `state` | Stringa | Stato/provincia del prospect |

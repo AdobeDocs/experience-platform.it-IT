@@ -2,7 +2,7 @@
 description: Questa pagina descrive i vari flussi di autorizzazione OAuth 2 supportati da Destination SDK e fornisce istruzioni per impostare l’autorizzazione OAuth 2 per la destinazione.
 title: Autorizzazione OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2273'
 ht-degree: 2%
@@ -133,7 +133,7 @@ Per impostare questo metodo di autorizzazione per la destinazione, aggiungi le s
 
 {style="table-layout:auto"}
 
-## OAuth 2 con concessione password
+## OAuth 2 con concessione password {#oauth2-password-grant}
 
 Per la concessione della password OAuth 2 (leggi le [specifiche degli standard RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform richiede il nome utente e la password dell&#39;utente. Nel flusso di autorizzazione, Experience Platform scambia queste credenziali per un token di accesso e, facoltativamente, per un token di aggiornamento.
 Adobe utilizza gli input standard riportati di seguito per semplificare la configurazione di destinazione, con la possibilità di ignorare i valori:
@@ -176,7 +176,7 @@ Per impostare questo metodo di autorizzazione per la destinazione, aggiungi le s
 
 {style="table-layout:auto"}
 
-## Concessione OAuth 2 con credenziali client
+## Concessione OAuth 2 con credenziali client {#oauth2-client-credentials-grant}
 
 È possibile configurare una destinazione client OAuth 2 (leggere le [specifiche degli standard RFC](https://tools.ietf.org/html/rfc6749#section-4.4)) che supporta gli input e gli output standard elencati di seguito. Puoi personalizzare i valori. Per informazioni dettagliate, consulta [Personalizzare la configurazione OAuth 2](#customize-configuration).
 

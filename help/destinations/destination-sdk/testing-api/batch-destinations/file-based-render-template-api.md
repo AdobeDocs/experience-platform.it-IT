@@ -2,9 +2,9 @@
 description: Questa pagina spiega come utilizzare l’endpoint /authoring/testing/template/render per visualizzare l’aspetto dei campi dati cliente definiti nella configurazione di destinazione.
 title: Convalida campi cliente con modello
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ L’endpoint genera valori casuali per i campi dati del cliente e li restituisce
 
 ## Introduzione {#getting-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Prerequisiti {#prerequisites}
 
@@ -75,10 +75,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 }'
 ```
 
-| Elemento “parameters” | Descrizione |
+| Parametri | Descrizione |
 | -------- | ----------- |
 | `destinationId` | ID della [configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) che si sta testando. |
 | `templates` | I nomi dei campi con modelli definiti nella [configurazione del server di destinazione](../../authoring-api/destination-server/create-destination-server.md). |
+
+{style="table-layout:auto"}
 
 **Risposta**
 

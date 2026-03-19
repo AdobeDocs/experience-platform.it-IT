@@ -3,10 +3,10 @@ title: Connessione moenging
 description: Moengi è una piattaforma di coinvolgimento dei clienti che potenzia in tempo reale le interazioni incentrate sul cliente tra consumatori e marchi.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 2%
+source-wordcount: '1156'
+ht-degree: 3%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 Utilizza la destinazione [!DNL Moengage] per connettere e mappare i dati di Adobe (attributi utente, segmenti ed eventi) a MoEngage in tempo reale. I clienti possono quindi agire su questi dati, distribuendo esperienze personalizzate e mirate.
 
-Con Adobe, l’integrazione è molto semplice e intuitiva. È sufficiente acquisire un profilo utente di Adobe e mapparlo su un attributo utente di MoEngage.
+Con Adobe, l’integrazione è molto semplice e intuitiva. Prendi un profilo utente Adobe e mappalo su un attributo utente MoEngage.
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *Moengi*. Per qualsiasi richiesta di informazioni o di aggiornamento, contattarli direttamente all&#39;indirizzo *`https://help.moengage.com/hc/en-us`.*
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *Moengi*. Per richieste di informazioni o richieste di aggiornamento, contattale direttamente all&#39;indirizzo *`https://help.moengage.com/hc/en-us`.*
 
 ## Casi d’uso {#use-cases}
 
@@ -83,7 +83,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -114,10 +114,10 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione, consulta [Attiva dati pubblico nelle destinazioni di esportazione dei segmenti di streaming](../../ui/activate-segment-streaming-destinations.md).

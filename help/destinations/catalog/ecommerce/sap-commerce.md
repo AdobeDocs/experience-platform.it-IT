@@ -3,9 +3,9 @@ title: Connessione SAP Commerce
 description: Utilizzare il connettore di destinazione SAP Commerce per aggiornare i record dei clienti nell'account SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2306'
 ht-degree: 4%
 
 ---
@@ -30,13 +30,13 @@ Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experi
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL SAP Commerce], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL SAP Commerce], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
 ### Prerequisiti per la destinazione [!DNL SAP Commerce] {#prerequisites-destination}
 
-Per esportare i dati da Experience Platform al tuo account [!DNL SAP Commerce], tieni presente i seguenti prerequisiti:
+Per esportare dati da Experience Platform all&#39;account [!DNL SAP Commerce], tieni presente i seguenti prerequisiti:
 
 #### Devi avere un account [!DNL SAP Subscription Billing] {#prerequisites-account}
 
@@ -195,7 +195,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -205,7 +205,7 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 
 Per inviare correttamente i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL SAP Commerce], è necessario eseguire il passaggio di mappatura dei campi. La mappatura consiste nella creazione di un collegamento tra i campi dello schema Experience Data Model (XDM) nell’account Experience Platform e i corrispondenti equivalenti dalla destinazione. Per mappare correttamente i campi XDM ai campi di destinazione [!DNL SAP Commerce], effettua le seguenti operazioni:
 
-#### Mappa l&#39;identità `customerNumberSAP`
+#### Mappa l&#39;identità `customerNumberSAP` {#map-customer-number-sap}
 
 L&#39;identità `customerNumberSAP` è una mappatura obbligatoria per questa destinazione. Segui i passaggi seguenti per mapparla:
 
@@ -223,7 +223,7 @@ L&#39;identità `customerNumberSAP` è una mappatura obbligatoria per questa des
 Di seguito è riportato un esempio con la mappatura di identità:
 ![Immagine dall&#39;interfaccia utente di Experience Platform che mostra un esempio di mapping di identità customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
-#### Mappatura degli attributi
+#### Mappatura degli attributi {#mapping-attributes}
 
 Per aggiungere altri attributi da aggiornare tra lo schema del profilo XDM e l&#39;account [!DNL SAP Subscription Billing], ripeti i passaggi seguenti:
 
@@ -238,7 +238,7 @@ Per aggiungere altri attributi da aggiornare tra lo schema del profilo XDM e l&#
 >
 > I nomi dei campi di destinazione fanno distinzione tra maiuscole e minuscole e devono corrispondere ai nomi degli attributi [!DNL SAP Subscription Billing]. L&#39;unica eccezione è `country`, dove è necessario utilizzare `countryCode`. [!DNL SAP Subscription Billing] supporta i codici paese alpha-2 (ISO 3166). Il valore fa distinzione tra maiuscole e minuscole e deve essere compreso tra 0 e 3 caratteri. Assicurarsi quindi di fornire esattamente come definito in caso di errori: `The country code {} does not exist` o `size must be between 0 and 3`.
 
-#### Mappa gli attributi `mandatory` per il tipo di cliente selezionato
+#### Mappa gli attributi `mandatory` per il tipo di cliente selezionato {#map-mandatory-attributes}
 
 I mapping di attributi obbligatori dipendono dai **[!UICONTROL Type of Customer]** selezionati. Per mappare gli attributi obbligatori, seleziona una delle opzioni seguenti:
 
@@ -251,6 +251,8 @@ I mapping di attributi obbligatori dipendono dai **[!UICONTROL Type of Customer]
 | `xdm: person.lastName` | `Attribute: lastName` | Sì |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sì |
 
+{style="table-layout:auto"}
+
 >[!TAB Cliente aziendale]
 
 | Campo origine | Campo di destinazione | Obbligatorio |
@@ -258,9 +260,11 @@ I mapping di attributi obbligatori dipendono dai **[!UICONTROL Type of Customer]
 | `xdm: b2b.companyName` | `Attribute: company` | Sì |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sì |
 
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-#### Mappatura di attributi aggiuntivi
+#### Mappatura di attributi aggiuntivi {#mapping-additional-attributes}
 
 Puoi quindi aggiungere altre mappature tra lo schema del profilo XDM e gli attributi [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) per un cliente, come illustrato di seguito:
 
@@ -274,6 +278,8 @@ Puoi quindi aggiungere altre mappature tra lo schema del profilo XDM e gli attri
 | `xdm: workAddress.street1` | `Attribute: street` | No |
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
+{style="table-layout:auto"}
+
 Di seguito è riportato un esempio con mappature di attributi obbligatorie e facoltative in cui il cliente è un singolo utente:
 ![Immagine dall&#39;interfaccia utente di Experience Platform che mostra un esempio con mapping di attributi obbligatori e facoltativi in cui il cliente è un singolo utente.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
@@ -283,6 +289,8 @@ Di seguito è riportato un esempio con mappature di attributi obbligatorie e fac
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | No |
 | `xdm: workAddress.city` | `Attribute: city` | No |
+
+{style="table-layout:auto"}
 
 Di seguito è riportato un esempio con mappature di attributi obbligatorie e facoltative in cui il cliente è un’azienda:
 ![Immagine dall&#39;interfaccia utente di Experience Platform che mostra un esempio con mapping di attributi obbligatori e facoltativi in cui il cliente è un&#39;azienda.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
@@ -345,7 +353,7 @@ Di seguito sono riportate ulteriori informazioni utili dalla documentazione di [
 
 * [Fatturazione sottoscrizione SAP integrata](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
-### Changelog
+### Changelog {#changelog}
 
 Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla documentazione apportati al connettore di destinazione.
 

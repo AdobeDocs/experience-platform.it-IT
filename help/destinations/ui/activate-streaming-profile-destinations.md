@@ -4,7 +4,7 @@ type: Tutorial
 description: Scopri come attivare i dati sul pubblico disponibili in Adobe Experience Platform inviando tipi di pubblico a destinazioni basate su profili di streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 1%
@@ -15,8 +15,8 @@ ht-degree: 1%
 # Attivare i tipi di pubblico per le destinazioni di esportazione dei profili di streaming
 
 >[!IMPORTANT]
-> 
-> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > * Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.

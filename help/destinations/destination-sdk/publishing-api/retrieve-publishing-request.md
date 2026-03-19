@@ -2,10 +2,10 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per recuperare i dettagli di una richiesta di pubblicazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Recuperare una richiesta di pubblicazione di destinazione
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 2%
+source-wordcount: '835'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,7 @@ Utilizza l’endpoint API per la pubblicazione delle destinazioni per inviare un
 
 ## Guida introduttiva alle operazioni API di pubblicazione di destinazione {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Elencare richieste di pubblicazione di destinazione {#retrieve-list}
 
@@ -181,6 +181,6 @@ Se hai passato un `DESTINATION_ID` nella chiamata API, la risposta restituisce l
 
 >[!ENDTABS]
 
-## Gestione degli errori API
+## Gestione degli errori API {#error-handling}
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.

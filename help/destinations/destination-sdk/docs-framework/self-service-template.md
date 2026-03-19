@@ -2,9 +2,9 @@
 title: Modello self-service // Sostituisci con il nome della tua destinazione
 description: Utilizza questo modello per creare la documentazione pubblica per la destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 38178723dc142ba3e79d6c170affaf86ec496086
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1737'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *YourDestination*. Per eventuali richieste di informazioni o richieste di aggiornamento, è possibile contattarle direttamente all&#39;indirizzo *Inserire il collegamento o l&#39;indirizzo di posta elettronica a cui è possibile accedere per ricevere aggiornamenti, ad esempio `support@YourDestination.com`.*
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team *YourDestination*. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all&#39;indirizzo *Inserisci il collegamento o l&#39;indirizzo e-mail a cui puoi accedere per ricevere aggiornamenti, ad esempio `support@YourDestination.com`.*
 
 ## Casi d’uso {#use-cases}
 
@@ -48,7 +48,7 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione *YourDesti
 
 *Aggiungere informazioni in questa sezione su qualsiasi elemento di cui i clienti devono essere a conoscenza prima di iniziare a impostare la destinazione nell&#39;interfaccia utente di Adobe Experience Platform. Informazioni su:*
 
-* *da aggiungere a un elenco consentiti*
+* *da aggiungere a un inserisco nell&#39;elenco Consentiti di*
 * *requisiti per l&#39;hashing delle e-mail*
 * *qualsiasi specifica account sul tuo lato*
 * *come ottenere una chiave API per connettersi alla piattaforma*
@@ -115,7 +115,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -151,7 +151,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

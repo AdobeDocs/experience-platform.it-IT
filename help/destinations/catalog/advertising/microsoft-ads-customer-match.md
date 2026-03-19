@@ -2,11 +2,11 @@
 keywords: pubblicità; microsoft ads; customer match;
 title: Connessione Customer Match di Microsoft Ads
 description: Utilizza la destinazione Customer Match di Microsoft Ads per abbinare i clienti per indirizzo e-mail e coinvolgere di nuovo i clienti nella rete Microsoft Advertising, inclusi gli annunci di ricerca e pubblico.
-badge: Beta
+badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%
@@ -27,11 +27,11 @@ Utilizza la destinazione [!DNL Microsoft Ads Customer Match] per associare i cli
 
 Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Microsoft Ads Customer Match], ecco alcuni esempi di casi d&#39;uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
-### #1 del caso d’uso
+### #1 del caso d’uso {#use-case-1}
 
 Un marchio di e-commerce desidera raggiungere i clienti esistenti tramite [!DNL Microsoft Search] e [!DNL Microsoft Audience Network] per personalizzare le offerte in base ai loro acquisti passati e alla cronologia di navigazione. Il brand può acquisire gli indirizzi e-mail dal proprio CRM in Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico a [!DNL Microsoft Ads Customer Match] per utilizzarli negli annunci di ricerca e pubblico, ottimizzando le spese pubblicitarie.
 
-### #2 del caso d’uso
+### #2 del caso d’uso {#use-case-2}
 
 Un&#39;azienda tecnologica ha lanciato un nuovo prodotto. Per promuovere questo nuovo prodotto, l&#39;obiettivo è sensibilizzare i clienti che hanno acquistato in precedenza prodotti correlati. Caricano indirizzi e-mail dal proprio database CRM in Experience Platform, utilizzando gli indirizzi e-mail come identificatori. I tipi di pubblico vengono creati in base ai clienti che possiedono prodotti correlati. Tali tipi di pubblico vengono inviati a [!DNL Microsoft Ads Customer Match], in modo che l&#39;azienda possa eseguire il targeting dei clienti correnti e di clienti simili in [!DNL Microsoft Advertising Network].
 
@@ -96,7 +96,7 @@ Durante la configurazione della destinazione, devi fornire le seguenti informazi
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -146,7 +146,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità* nelle destinazioni, è necessario disporre dell&#39;**[!UICONTROL View Identity Graph]** [autorizzazione di controllo dell&#39;accesso](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

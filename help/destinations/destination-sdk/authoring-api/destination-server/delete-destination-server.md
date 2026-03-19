@@ -2,10 +2,10 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione del server di destinazione esistente tramite Adobe Experience Platform Destination SDK.
 title: Eliminare una configurazione del server di destinazione
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 1%
+source-wordcount: '329'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ Per una descrizione dettagliata delle funzionalità che è possibile eliminare t
 
 ## Guida introduttiva alle operazioni API del server di destinazione {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare una configurazione del server di destinazione {#delete}
 
@@ -47,6 +47,8 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | `ID` della configurazione del server di destinazione da eliminare. |
+
+{style="table-layout:auto"}
 
 +++Richiesta
 

@@ -3,9 +3,9 @@ keywords: pubblicità; criteri;
 title: Connessione critica
 description: Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l’intera Internet. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della categoria, Criteo assicura che ogni punto di contatto nel percorso di acquisto sia personalizzato per raggiungere la clientela con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1168'
 ht-degree: 11%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da Criteo. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da Criteo. Per richieste di informazioni o richieste di aggiornamento, contatta direttamente il Criteo [qui](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l’intera Internet. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della categoria, Criteo assicura che ogni punto di contatto nel percorso di acquisto sia personalizzato per raggiungere la clientela con l’annuncio giusto, al momento giusto.
 
@@ -35,7 +35,7 @@ Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze pi
 
 ## Identità supportate {#supported-identities}
 
-Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --- | --- | --- |
@@ -80,23 +80,23 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Per aiutarti a capire meglio come utilizzare la destinazione [!DNL Criteo], ecco alcuni obiettivi che i clienti Adobe Experience Platform possono raggiungere con [!DNL Criteo]:
 
-### Caso d&#39;uso 1: recupero del traffico
+### Caso d&#39;uso 1: recupero del traffico {#use-case-1}
 
 Presenta la tua azienda con offerte di prodotti pertinenti e creatività flessibile. Con consigli sui prodotti intelligenti, gli annunci presenteranno automaticamente i prodotti che hanno più probabilità di attivare visite e coinvolgimento. Il targeting flessibile consente di creare tipi di pubblico dal set di dati di e-commerce di Criteo o dai tuoi elenchi di potenziali clienti e dai segmenti Adobe CDP.
 
-### Caso d’uso 2: aumentare le conversioni dei siti web
+### Caso d’uso 2: aumentare le conversioni dei siti web {#use-case-2}
 
 Quando i visitatori lasciano il tuo sito web, ricorda loro cosa non riescono a fare con annunci di retargeting che aumentano le conversioni mostrando offerte speciali e offerte iperrilevanti, ovunque vadano dopo. Connetti il pubblico di Adobe CDP per coinvolgere di nuovo i clienti esistenti o indirizzare l’attività ai consumatori in modo simile ai più fedeli.
 
 ## Connetti a criterio {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Autentica su criterio
+### Autentica su criterio {#authenticate}
 
 I passaggi per la connessione sono i seguenti:
 
@@ -123,7 +123,7 @@ Dopo l’autenticazione nella destinazione, compila i seguenti parametri di conn
 | --- | --- | --- |
 | Nome | Un nome per aiutarti a riconoscere questa destinazione in futuro. Il nome scelto sarà il nome [!DNL Audience] in Criteo Management Center e non potrà essere modificato in un secondo momento. | Sì |
 | Descrizione | Una descrizione per identificare questa destinazione in futuro. | No |
-| ID inserzionista | ID inserzionista del criterio dell’organizzazione. Per maggiori informazioni, contatta il tuo account manager Criteo. | Sì |
+| ID inserzionista | ID inserzionista del criterio dell’organizzazione. Per ottenere queste informazioni, contatta il tuo account manager Criteo. | Sì |
 | Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] della tua organizzazione. Rivolgiti al team del tuo account Criteo per [!DNL GUM Caller ID] appropriato o per ottenere ulteriori informazioni su questa sincronizzazione di [!DNL GUM], se necessario. | Sì, ogni volta che [!DNL GUM ID] viene fornito come identificatore |
 
 ### Abilita avvisi {#enable-alerts}
@@ -135,7 +135,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate-segments}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -205,7 +205,7 @@ Il corpo della richiesta di rimozione del profilo utente ricevuto dalla connessi
 
 Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, consulta la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it).
 
-## Risorse aggiuntive
+## Risorse aggiuntive {#additional-resources}
 
 * [Centro assistenza Criteo](https://help.criteo.com/kb/en)
 * [Portale per sviluppatori Criteo](https://developers.criteo.com)

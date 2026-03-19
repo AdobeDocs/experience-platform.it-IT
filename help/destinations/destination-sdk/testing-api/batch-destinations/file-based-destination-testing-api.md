@@ -2,9 +2,9 @@
 description: Questa pagina spiega come utilizzare l’endpoint API /testing/destinationInstance per verificare se la destinazione basata su file è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
 title: Test della destinazione basata su file con profili di esempio
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ I profili di esempio generati automaticamente contengono dati generici. Se desid
 
 ## Introduzione {#getting-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Prerequisiti {#prerequisites}
 
@@ -240,7 +240,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme al 
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, ora sai come verificare la configurazione della destinazione basata su file.
 

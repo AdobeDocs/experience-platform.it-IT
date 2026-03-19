@@ -2,9 +2,9 @@
 description: Scopri come configurare gli attributi dell’interfaccia utente, ad esempio il collegamento alla documentazione, la categoria della scheda di destinazione e il tipo e la frequenza di connessione della destinazione, per le destinazioni create con Destination SDK.
 title: Attributi dell’interfaccia utente
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,8 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 | Integrazioni in tempo reale (streaming) | Sì |
 | Integrazioni basate su file (batch) | Sì |
 
+{style="table-layout:auto"}
+
 ## Parametri supportati {#supported-parameters}
 
 ```json
@@ -66,7 +68,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 Utilizzare il seguente formato: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della destinazione. Per una destinazione denominata Moviestar, si utilizza `http://www.adobe.com/go/destinations-moviestar-en`.
 
-Gli utenti possono visualizzare e visitare il collegamento alla documentazione dalla pagina del catalogo delle destinazioni nell’interfaccia utente di. Devono passare alla scheda di destinazione, quindi selezionare **[!UICONTROL Altre azioni]** e **[!UICONTROL Visualizza documentazione]**, come illustrato nell&#39;immagine seguente.
+Gli utenti possono visualizzare e visitare il collegamento alla documentazione dalla pagina del catalogo delle destinazioni nell’interfaccia utente di. Devono passare alla scheda di destinazione, quindi selezionare **[!UICONTROL More actions]** e **[!UICONTROL View documentation]**, come illustrato nell&#39;immagine seguente.
 
 ![Immagine dell&#39;interfaccia utente che mostra il percorso del collegamento alla documentazione.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,7 +96,7 @@ Gli utenti possono visualizzare il tipo di connessione di destinazione nella sch
 
 `frequency` è un parametro di stringa che fa riferimento al tipo di esportazione dei dati supportato dalla destinazione. Impostato su `Streaming` per le integrazioni basate su API, oppure su `Batch` quando si esportano file nelle destinazioni.
 
-Gli utenti possono visualizzare il tipo di frequenza nella pagina **[!UICONTROL Il flusso di dati viene eseguito]** di ogni connessione di destinazione.
+Gli utenti possono visualizzare il tipo di frequenza nella pagina **[!UICONTROL Dataflow runs]** di ogni connessione di destinazione.
 
 ![Immagine dell&#39;interfaccia utente che mostra la posizione del tipo di frequenza nell&#39;interfaccia utente.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 

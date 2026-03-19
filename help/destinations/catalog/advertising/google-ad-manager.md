@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connessione Google Ad Manager
 description: Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e nelle app mobili.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1205'
 ht-degree: 7%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> Google sta rilasciando modifiche all&#39;API [Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti relativi alla conformità e al consenso definiti nel [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione Europea ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
+> Google sta rilasciando modifiche all&#39;API [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all&#39;API [Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti di conformità e consenso definiti in base al [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) nell&#39;Unione Europea ([Criteri di consenso utente UE](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso è attiva dal 6 marzo 2024.
 ><br/>
 >Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.
 ><br/>
 >I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
 ><br/>
->I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
+>I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare le destinazioni Real-Time CDP Google esistenti senza interruzioni.
 
 
 [!DNL Google Ad Manager], precedentemente noto come [!DNL DoubleClick for Publishers] (DFP) o [!DNL DoubleClick AdX], è una piattaforma di ad serving di [!DNL Google] che consente agli editori di gestire la visualizzazione di annunci sui propri siti Web tramite video e app mobili.
@@ -32,7 +32,7 @@ Osservare i dettagli seguenti specifici per [!DNL Google Ad Manager] destinazion
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma [!DNL Google].
 * [!DNL Experience Platform] non include attualmente una metrica di misurazione per convalidare la corretta attivazione. Consulta i conteggi dei pubblici in Google per convalidare l’integrazione e comprendere le dimensioni del targeting del pubblico.
 * Dopo aver mappato un pubblico a una destinazione [!DNL Google Ad Manager], il nome del pubblico viene visualizzato immediatamente nell&#39;interfaccia utente [!DNL Google Ad Manager].
-* Il gruppo del segmento ha bisogno di 24-48 ore per essere visualizzato in [!DNL Google Ad Manager]. Inoltre, i tipi di pubblico devono avere una dimensione di pubblico di almeno 50 profili per essere visualizzati in [!DNL Google Ad Manager]. I tipi di pubblico con dimensioni inferiori a 50 profili non verranno popolati in [!DNL Google Ad Manager].
+* Il gruppo del segmento ha bisogno di 24-48 ore per essere visualizzato in [!DNL Google Ad Manager]. Inoltre, i tipi di pubblico devono avere una dimensione di almeno 50 profili da visualizzare in [!DNL Google Ad Manager]. I tipi di pubblico con dimensioni inferiori a 50 profili non verranno popolati in [!DNL Google Ad Manager].
 
 ## Identità supportate {#supported-identities}
 
@@ -42,7 +42,7 @@ Osservare i dettagli seguenti specifici per [!DNL Google Ad Manager] destinazion
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| UUID di AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e l&#39;ID cookie di Google per tutti gli altri utenti. |
+| UUID di AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) per eseguire il targeting degli utenti in California e l&#39;ID cookie di Google per tutti gli altri utenti. |
 | ID cookie [!DNL Google] | ID cookie [!DNL Google] | [!DNL Google] utilizza questo ID per eseguire il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per Advertising. Questo ID identifica in modo univoco i dispositivi Roku. |  |
 | DOMESTICA | MICROSOFT ADVERTISING ID Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
@@ -88,7 +88,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Prerequisiti {#prerequisites}
 
-Se stai cercando di creare la tua prima destinazione con [!DNL Google Ad Manager] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) nel servizio Experience Cloud ID (con Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL Google] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
+Se stai cercando di creare la tua prima destinazione con [!DNL Google Ad Manager] e non hai abilitato in passato la funzionalità di sincronizzazione [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio Experience Cloud ID (con Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato [!DNL Google] integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite ad Experience Platform.
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
@@ -100,7 +100,7 @@ L&#39;inserimento nell&#39;elenco Consentiti è obbligatorio prima di configurar
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -135,7 +135,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md).

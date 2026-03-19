@@ -3,22 +3,22 @@ keywords: Experience Platform;home;argomenti popolari; avvisi;destinazioni
 description: È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali sulle destinazioni
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 14%
+source-wordcount: '931'
+ht-degree: 10%
 
 ---
 
 # Iscriviti agli avvisi contestuali sulle destinazioni
 
-Adobe Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. Gli avvisi riducono o eliminano la necessità di interrogare l’[[!DNL Observability Insights] API](../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata milestone all’interno di un flusso di lavoro o se si sono verificati errori.
+Adobe Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro o se si sono verificati errori.
 
 È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 
 Questo documento descrive come abbonarsi e ricevere messaggi di avviso per i flussi di dati di destinazione.
 
-## Introduzione
+## Introduzione {#getting-started}
 
 Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -36,7 +36,7 @@ Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe 
 
 >[!IMPORTANT]
 >
->Devi abilitare le notifiche istantanee delle e-mail per il tuo account Experience Platform per ricevere le notifiche di avviso basate su e-mail per i flussi di dati.
+>Devi abilitare le notifiche istantanee delle e-mail per il tuo account Experience Platform per ricevere notifiche di avviso basate su e-mail per i flussi di dati.
 
 Puoi abilitare gli avvisi per i flussi di dati durante il passaggio [!UICONTROL Configure new destination] del flusso di lavoro [connessione di destinazione](connect-destination.md).
 
@@ -56,6 +56,8 @@ Gli avvisi disponibili per i flussi di dati di destinazione sono descritti nella
 | Esecuzione del flusso di destinazione completata | Questo avviso ti avvisa quando un pubblico viene attivato correttamente su una destinazione. |
 | Inizio esecuzione flusso di destinazione | Questo avviso notifica quando l’esecuzione di un flusso di destinazione avvia l’attivazione di un pubblico. |
 | Frequenza di attivazione ignorata superata | Questo avviso notifica quando il tasso di salto dell’attivazione supera l’1% del totale delle attivazioni. Le identità vengono ignorate durante l’attivazione quando presentano attributi mancanti o violazioni del consenso. |
+
+{style="table-layout:auto"}
 
 ## Ricezione degli avvisi {#receiving-alerts}
 

@@ -4,10 +4,10 @@ title: Modificare le connessioni di destinazione utilizzando l’API del servizi
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1610'
+ht-degree: 5%
 
 ---
 
@@ -64,7 +64,7 @@ Il primo passaggio nella modifica della connessione di destinazione consiste nel
 
 >[!TIP]
 >
->Puoi utilizzare l’interfaccia utente di Experience Platform per ottenere l’ID del flusso di dati desiderato per una destinazione. Vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]**, seleziona il flusso di dati di destinazione desiderato e individua l&#39;ID di destinazione nella barra a destra. L’ID di destinazione è il valore che utilizzerai come ID di flusso nel passaggio successivo.
+>Puoi utilizzare l’interfaccia utente di Experience Platform per ottenere l’ID del flusso di dati desiderato per una destinazione. Vai a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, seleziona il flusso di dati di destinazione desiderato e trova l&#39;ID di destinazione nella barra a destra. L’ID di destinazione è il valore che utilizzerai come ID di flusso nel passaggio successivo.
 >
 > ![Ottieni l&#39;ID di destinazione tramite l&#39;interfaccia utente di Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -79,6 +79,8 @@ GET /flows/{FLOW_ID}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{FLOW_ID}` | Il valore `id` univoco per il flusso di dati di destinazione che desideri recuperare. |
+
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -233,6 +235,8 @@ curl -X PATCH \
 | `path` | Definisce la parte del flusso da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
+{style="table-layout:auto"}
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce l’ID connessione di destinazione e un Etag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID di connessione di destinazione.
@@ -248,7 +252,7 @@ In caso di esito positivo, la risposta restituisce l’ID connessione di destina
 
 **Richiesta**
 
-La richiesta seguente aggiorna i parametri di una connessione [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) o [[!DNL Google Ad Manager 360] destinazione](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) per aggiungere il nuovo campo [**[!UICONTROL Aggiungi ID pubblico al nome pubblico]**](/help/release-notes/2023/april-2023.md#destinations).
+La richiesta seguente aggiorna i parametri di una connessione [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) o [[!DNL Google Ad Manager 360] destinazione](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) per aggiungere il nuovo campo [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations).
 
 ```shell
 curl -X PATCH \
@@ -272,6 +276,8 @@ curl -X PATCH \
 | `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Definisce la parte del flusso da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
+
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -314,6 +320,8 @@ curl -X PATCH \
 | `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Definisce la parte del flusso da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
+
+{style="table-layout:auto"}
 
 **Risposta**
 
@@ -392,6 +400,8 @@ curl -X PATCH \
 | `path` | Definisce la parte del flusso da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 
+{style="table-layout:auto"}
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce l’ID della connessione di base e un tag aggiornato. È possibile verificare l&#39;aggiornamento effettuando una richiesta GET all&#39;API [!DNL Flow Service] e fornendo l&#39;ID connessione di base.
@@ -403,7 +413,7 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di b
 }
 ```
 
->[!TAB BLOB di Azure]
+>[!TAB Blob Azure]
 
 **Richiesta**
 
@@ -433,6 +443,8 @@ curl -X PATCH \
 | `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace` e `remove`. |
 | `path` | Definisce la parte del flusso da aggiornare. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
+
+{style="table-layout:auto"}
 
 **Risposta**
 

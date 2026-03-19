@@ -5,10 +5,10 @@ title: Eliminare un flusso di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Scopri come eliminare i flussi di dati nelle destinazioni batch e di streaming utilizzando l’API del servizio Flusso.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 14%
+source-wordcount: '563'
+ht-degree: 19%
 
 ---
 
@@ -31,7 +31,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogliere i valori per le intestazioni richieste {#gather-values-for-required-headers}
 
@@ -66,6 +66,8 @@ DELETE /flows/{FLOW_ID}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{FLOW_ID}` | Valore `id` univoco per il flusso di dati di destinazione da eliminare. |
+
+{style="table-layout:auto"}
 
 **Richiesta**
 

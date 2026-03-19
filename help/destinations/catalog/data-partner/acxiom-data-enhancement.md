@@ -2,11 +2,11 @@
 title: Miglioramento dei dati Acxiom
 description: Utilizza questo connettore per attivare profili Adobe di prime parti in Real-Time CDP in Acxiom per l’arricchimento dei dati e l’utilizzo tra i canali di marketing. Puoi quindi usare l’origine Acxiom per importare profili con dati ottimizzati e utilizzarli in Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1436'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->La destinazione [!DNL Acxiom Data Enhancement] è in versione beta.  Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team Acxiom. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo acxiom-adobe-help@acxiom.com.
+>La destinazione [!DNL Acxiom Data Enhancement] è in versione beta.  Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team Acxiom. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all’indirizzo acxiom-adobe-help@acxiom.com.
 
 ## Panoramica {#overview}
 
@@ -107,13 +107,13 @@ Per accedere al bucket su Experience Platform, devi fornire valori validi per le
 | Chiave segreta S3 | ID della chiave segreta del bucket. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 | Nome del bucket | Questo è il bucket in cui verranno condivisi i file. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 
-### Nuovo account
+### Nuovo account {#new-account}
 
 Per definire una nuova posizione S3 gestita da Acxiom:
 
 ![Nuovo account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Account esistente
+### Account esistente {#existing-account}
 
 Gli account già definiti utilizzando la destinazione [!DNL Acxiom Data Enhancement] vengono visualizzati in un pop-up di elenco. Se questa opzione è selezionata, i dettagli dell’account sono visualizzati nella barra a destra. Visualizzare l&#39;esempio dall&#39;interfaccia utente quando si passa a **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
@@ -152,7 +152,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
-### Suggerimenti di mappatura
+### Suggerimenti di mappatura {#mapping-suggestions}
 
 La corretta elaborazione dei file sul lato Acxiom richiede elementi di nome e indirizzo. Anche se non tutti gli elementi sono necessari, fornire il più possibile contribuirà ad una corrispondenza di successo.
 
@@ -177,7 +177,7 @@ I suggerimenti di mappatura sono forniti nella tabella seguente, in cui sono ele
 
 Per verificare se i dati sono stati esportati correttamente, controlla il bucket [!DNL Amazon S3 Storage] e assicurati che i file esportati contengano le popolazioni di profilo previste.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, è stato creato un flusso di dati per esportare i dati del profilo da Experience Platform nel percorso S3 gestito di [!DNL Acxiom]. Successivamente, devi contattare il rappresentante di Adobe con il nome dell’account, i nomi dei file e il percorso del bucket, in modo da poter configurare l’elaborazione.
 

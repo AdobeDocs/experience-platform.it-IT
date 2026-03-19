@@ -5,10 +5,10 @@ title: Eliminare un account di destinazione utilizzando l’API del servizio Flu
 type: Tutorial
 description: Scopri come eliminare un account di destinazione utilizzando l’API del servizio Flusso.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 21%
+source-wordcount: '758'
+ht-degree: 20%
 
 ---
 
@@ -39,7 +39,7 @@ Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare l
 
 ### Raccogliere i valori per le intestazioni richieste {#gather-values-for-required-headers}
 
-Per effettuare chiamate alle API di [!DNL Experience Platform], prima è necessario completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -87,6 +87,8 @@ GET /connections/{CONNECTION_ID}
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -147,7 +149,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Prima di eliminare l’account di destinazione, devi eliminare tutti i flussi di dati esistenti dall’account di destinazione.
->&#x200B;>Per eliminare i flussi di dati esistenti, consulta le pagine seguenti:
+>Per eliminare i flussi di dati esistenti, consulta le pagine seguenti:
 >
 >* [Utilizza l&#39;interfaccia utente di Experience Platform](../ui/delete-destinations.md) per eliminare i flussi di dati esistenti;
 >* [Utilizzare l&#39;API del servizio Flusso](delete-destination-dataflow.md) per eliminare i flussi di dati esistenti.
@@ -183,6 +185,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, hai usato correttamente l&#39;API [!DNL Flow Service] per eliminare gli account di destinazione esistenti. Per ulteriori informazioni sull&#39;utilizzo delle destinazioni, consulta la [panoramica delle destinazioni](/help/destinations/home.md).

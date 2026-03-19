@@ -3,9 +3,9 @@ title: Cercare gli attributi del profilo edge in tempo reale
 description: Scopri come cercare gli attributi del profilo Edge in tempo reale utilizzando la destinazione Personalization personalizzata e l’API di Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1836'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,12 @@ Quando configuri il caso d’uso descritto in questa pagina, utilizzerai i segue
 
 I casi di utilizzo della ricerca di profili Edge sono soggetti ai guardrail di prestazioni specifici descritti nella tabella seguente. Per ulteriori dettagli sui guardrail API di Edge Network, consulta la [pagina della documentazione](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/) relativa ai guardrail.
 
-| Servizio Edge Network | Segmentazione di Edge | Richieste al secondo |
+| Servizio Edge Network | Segmentazione edge | Richieste al secondo |
 |---------|----------|---------|
 | [Destinazione personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) tramite [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Sì | 1500 |
 | [Destinazione personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) tramite [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | No | 1500 |
+
+{style="table-layout:auto"}
 
 ## Passaggio 1: creare e configurare un flusso di dati {#create-datastream}
 
@@ -71,7 +73,7 @@ Segui le istruzioni relative alla [creazione di un criterio di unione](../../pro
 
 ## Passaggio 3: inviare i dati degli attributi del profilo ad Edge Network{#configure-custom-personalization-connection}
 
-Per cercare in tempo reale i profili edge, inclusi gli attributi e i dati di iscrizione al pubblico, è necessario rendere disponibili i dati in Edge Network. A questo scopo, devi creare una connessione a una destinazione **[!UICONTROL Custom Personalization With Attributes]** e attivare i tipi di pubblico, inclusi gli attributi che desideri cercare nei profili edge.
+Per cercare in tempo reale i profili edge, inclusi gli attributi e i dati di appartenenza al pubblico, è necessario rendere disponibili i dati in Edge Network. A questo scopo, devi creare una connessione a una destinazione **[!UICONTROL Custom Personalization With Attributes]** e attivare i tipi di pubblico, inclusi gli attributi che desideri cercare nei profili edge.
 
 +++ Configurare una connessione Personalization con attributi personalizzata
 
@@ -88,8 +90,8 @@ Durante la configurazione della nuova destinazione, seleziona lo stream di dati 
 Dopo aver creato una connessione **[!UICONTROL Custom Personalization With Attributes]**, puoi inviare i dati del profilo ad Edge Network.
 
 >[!IMPORTANT]
-> 
-> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
@@ -204,6 +206,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sì. | ID dello stream di dati creato in [passaggio 1](#create-datastream). |
 
+{style="table-layout:auto"}
+
 ### Risposta {#response}
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP `200 OK`, con un oggetto `Handle` che include informazioni simili a quelle riportate nelle schede seguenti, a seconda che il profilo si trovi o meno sul server Edge di.
@@ -283,6 +287,8 @@ L&#39;oggetto `handle` fornisce le informazioni descritte nella tabella seguente
 | `type` | `handle` oggetti sono raggruppati per tipo. Per i casi di utilizzo di ricerca di profili edge, il tipo dell&#39;oggetto `handle` è sempre `activation:pull`. |
 | `eventIndex` | Edge Network riceve gli eventi dal client sotto forma di array. L’ordine degli eventi nell’array viene mantenuto durante l’elaborazione e rispecchiato da questo indice. L&#39;indicizzazione degli eventi inizia con `0`. |
 
+{style="table-layout:auto"}
+
 >[!TAB Il profilo non esiste nel perimetro]
 
 Se il profilo non esiste sul server Edge di, la risposta sarà simile a quella riportata di seguito.
@@ -307,6 +313,8 @@ L&#39;oggetto `handle` fornisce le informazioni descritte nella tabella seguente
 | `payload` | Quando il profilo non è presente nel perimetro, l&#39;oggetto `payload` è vuoto. |
 | `type` | `payload` oggetti sono raggruppati per tipo. Per i casi di utilizzo di ricerca di profili edge, il tipo dell&#39;oggetto `payload` è sempre `activation:pull`. |
 | `eventIndex` | Edge Network riceve eventi dal client sotto forma di array. L’ordine degli eventi nell’array viene mantenuto durante l’elaborazione e rispecchiato da questo indice. L&#39;indicizzazione degli eventi inizia con `0`. |
+
+{style="table-layout:auto"}
 
 >[!ENDTABS]
 

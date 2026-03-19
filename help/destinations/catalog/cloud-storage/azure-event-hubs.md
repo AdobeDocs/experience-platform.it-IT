@@ -4,9 +4,9 @@ title: Connessione Azure Event Hubs
 description: Crea una connessione in uscita in tempo reale all'archivio  [!DNL Azure Event Hubs]  per inviare dati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2156'
+source-wordcount: '2155'
 ht-degree: 5%
 
 ---
@@ -73,12 +73,12 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che puoi per la destinazione [!DNL Azure Event Hubs]. Per l&#39;elenco completo degli IP da elenco consentiti, consulta l&#39;[elenco Consentiti di indirizzo IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che puoi per la destinazione [!DNL Azure Event Hubs]. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Quando ti connetti a questa destinazione, devi fornire le seguenti informazioni:
@@ -137,7 +137,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* [La valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata nelle esportazioni nella destinazione Azure Event Hubs. [Ulteriori informazioni](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 

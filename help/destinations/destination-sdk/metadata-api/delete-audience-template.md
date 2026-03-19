@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare un modello di pubblico esistente tramite Adobe Experience Platform Destination SDK.
 title: Eliminare un modello di pubblico
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '287'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Per una descrizione dettagliata delle funzionalità che è possibile configurare
 
 ## Guida introduttiva alle operazioni API dei modelli di pubblico {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare un modello di pubblico {#delete}
 
@@ -42,6 +42,8 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | `ID` del modello di pubblico da eliminare. |
+
+{style="table-layout:auto"}
 
 +++Richiesta
 

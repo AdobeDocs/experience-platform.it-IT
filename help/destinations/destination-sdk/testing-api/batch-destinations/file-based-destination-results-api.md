@@ -2,9 +2,9 @@
 description: Questa pagina spiega come utilizzare l’endpoint API /testing/destinationInstance per visualizzare i dettagli completi dei risultati del test. Questo endpoint API restituisce lo stesso risultato che si otterrebbe quando si utilizza l’API del servizio Flusso per monitorare i flussi di dati.
 title: Visualizza risultati di attivazione dettagliati
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Se desideri visualizzare informazioni più dettagliate sul flusso di attivazione
 
 ## Introduzione {#getting-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Prerequisiti {#prerequisites}
 
@@ -54,9 +54,13 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | ID dell’istanza di destinazione per la quale stai generando profili di esempio. Consulta la sezione [prerequisiti](#prerequisites) per informazioni dettagliate su come ottenere questo ID. |
 
-| Parametri della stringa di query | Descrizione |
+{style="table-layout:auto"}
+
+| Parametri stringa di query | Descrizione |
 | -------- | ----------- |
 | `flowRunIds` | Gli ID esecuzione flusso corrispondenti ai tipi di pubblico attivati. È possibile trovare gli ID di esecuzione del flusso nella proprietà `results` restituita nella [risposta della chiamata di test di destinazione](file-based-destination-testing-api.md). |
+
+{style="table-layout:auto"}
 
 **Richiesta**
 
@@ -215,7 +219,7 @@ La risposta contiene i dettagli completi del flusso di attivazione. È possibile
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, sai come verificare la configurazione di destinazione basata su file e visualizzare tutti i dettagli dei risultati dell’attivazione.
 

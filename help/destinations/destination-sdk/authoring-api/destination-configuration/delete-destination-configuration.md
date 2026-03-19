@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione di destinazione esistente tramite Adobe Experience Platform Destination SDK.
 title: Eliminare una configurazione di destinazione
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '277'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Questa pagina esemplifica la richiesta API e il payload che è possibile utilizz
 
 ## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare una configurazione di destinazione {#delete}
 
@@ -41,6 +41,8 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | `ID` della configurazione di destinazione da eliminare. |
 
+{style="table-layout:auto"}
+
 +++Richiesta
 
 ```shell
@@ -60,7 +62,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a u
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, ora sai come eliminare una configurazione di destinazione esistente tramite l&#39;endpoint API di Destination SDK `/authoring/destinations`.
 

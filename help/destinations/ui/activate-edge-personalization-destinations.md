@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,14 @@ Esempi di destinazioni Edge sono le connessioni [Adobe Target](../../destination
 >Quando [si configura la connessione Adobe Target](../catalog/personalization/adobe-target-connection.md) *senza* utilizzando un ID dello stream di dati, i casi d&#39;uso descritti in questo articolo non sono supportati. In assenza di uno stream di dati, sono supportati solo i casi di utilizzo di personalizzazione della sessione successiva.
 
 >[!IMPORTANT]
-> 
->* Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>
+>* Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 >* Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se utilizzate insieme alla [segmentazione Edge](../../segmentation/methods/edge-segmentation.md) e alla mappatura facoltativa degli attributi del profilo [&#128279;](#mapping), queste destinazioni consentono casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva nelle proprietà Web e mobile.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se utilizzate insieme alla [segmentazione Edge](../../segmentation/methods/edge-segmentation.md) e alla mappatura facoltativa degli attributi del profilo [](#mapping), queste destinazioni consentono casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva nelle proprietà Web e mobile.
 
 Per una breve panoramica su come configurare la connessione Adobe Target per la personalizzazione Edge, guarda il video seguente.
 
@@ -39,11 +39,11 @@ Per una breve panoramica su come configurare la connessione Adobe Target per la 
 >
 >L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta i passaggi di configurazione descritti nelle sezioni seguenti.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449801/?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Per una breve panoramica su come condividere tipi di pubblico e attributi di profilo con Adobe Target e destinazioni di personalizzazione personalizzate, guarda il video seguente.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447363/?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casi d’uso {#use-cases}
 
@@ -53,7 +53,7 @@ I casi d’uso descritti di seguito includono sia la personalizzazione del sito 
 
 Per abilitare questi casi d&#39;uso, i clienti hanno bisogno di un modo rapido e semplice per recuperare da Experience Platform informazioni sugli attributi del profilo e sui tipi di pubblico e per inviarle alle connessioni [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Custom Personalization](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experience Platform.
 
-### Personalizzazione della stessa pagina {#same-page}
+### Personalizzazione stessa pagina {#same-page}
 
 Un utente visita una pagina del sito web. Puoi utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l&#39;azione o la decisione successiva (ad esempio, personalizzazione) utilizzando la connessione [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) per piattaforme non Adobe (ad esempio, [!DNL Pega], [!DNL Optimizely] o altre).
 
@@ -61,7 +61,7 @@ Un utente visita una pagina del sito web. Puoi utilizzare le informazioni sulla 
 
 Un utente visita la pagina A del sito web. In base a questa interazione, l’utente si è qualificato per un set di tipi di pubblico. L’utente fa quindi clic su un collegamento che li porta dalla pagina A alla pagina B. I tipi di pubblico per i quali l’utente si era qualificato durante la precedente interazione sulla pagina A, insieme agli aggiornamenti del profilo determinati dalla visita del sito web corrente, verranno utilizzati per potenziare l’azione o la decisione successiva (ad esempio, quale banner pubblicitario mostrare al visitatore o, in caso di test A/B, quale versione della pagina visualizzare).
 
-### Personalizzazione della sessione successiva {#next-session}
+### Personalizzazione sessione successiva {#next-session}
 
 Un utente visita diverse pagine del sito web. In base a queste interazioni, l’utente si è qualificato per un set di tipi di pubblico. L’utente termina quindi la sessione di navigazione corrente.
 

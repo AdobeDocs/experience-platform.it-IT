@@ -2,7 +2,7 @@
 title: Connessione Marketo Engage
 description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1875'
 ht-degree: 2%
@@ -45,7 +45,7 @@ Possono attivare i propri tipi di pubblico in Marketo Engage e utilizzare il tip
 
 ## Prerequisiti {#prerequisites}
 
-* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
+* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
 * Solo le istanze di Marketo Engage nella stessa organizzazione Adobe Real-Time CDP saranno disponibili durante la configurazione di questa destinazione.
 * Questa destinazione può essere utilizzata solo dalle istanze di Marketo Engage con i relativi utenti gestiti in Adobe Admin Console.
 
@@ -108,7 +108,7 @@ Marketo utilizza **[!UICONTROL Marketo deduplication field]** selezionato per fa
 
 {style="table-layout:auto"}
 
-### Considerazioni importanti
+### Considerazioni importanti {#important-considerations}
 
 * **Selezione di campi di deduplicazione**: scegli un campo disponibile e univoco in tutti i profili cliente (ad esempio: indirizzo e-mail, ID cliente)
 * **Gestione partizione**: durante la creazione di nuovi lead, questi vengono inseriti nella partizione selezionata (o nella partizione **[!UICONTROL Default]** se non è stata selezionata alcuna partizione)
@@ -118,7 +118,7 @@ Marketo utilizza **[!UICONTROL Marketo deduplication field]** selezionato per fa
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >* Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 >
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
@@ -145,8 +145,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
    * **[!UICONTROL Audience and profile]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo e mantenere aggiornate le informazioni sul profilo.
    * **[!UICONTROL Profile only]**: selezionare questa opzione quando si desidera mantenere aggiornati i profili lead di Marketo con le informazioni più recenti di Experience Platform.
    * **[!UICONTROL Audience only]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo senza aggiornare le informazioni sul profilo.
-* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**&#x200B;o **[!UICONTROL Audience and profile]**&#x200B;tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
-* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/it/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
+* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**o **[!UICONTROL Audience and profile]**tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
+* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
 
   >[!NOTE]
   >
@@ -165,7 +165,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

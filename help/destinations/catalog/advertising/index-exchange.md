@@ -3,10 +3,10 @@ title: Scambio indice
 description: Connettiti a Index Exchange (Index) e attiva i dati in modo che i segmenti di pubblico possano essere targetizzati da offerte create nell’interfaccia utente dell’indice.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1215'
+ht-degree: 3%
 
 ---
 
@@ -44,7 +44,9 @@ I segmenti di pubblico devono essere registrati con [!DNL Index] utilizzando un 
 
 [!DNL Index] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
-[!DNL Index Exchange] destinazioni supportano un solo tipo di identità per caricamento. È necessario specificare il tipo di identificatore appropriato durante la configurazione dei dettagli della destinazione (vedere la sezione [&quot;Compila dettagli destinazione&quot;](#destination-details) di seguito).
+>[!NOTE]
+>
+>[!DNL Index Exchange] destinazioni supportano un solo tipo di identità per caricamento. È necessario specificare il tipo di identificatore appropriato durante la configurazione dei dettagli della destinazione (vedere la sezione [&quot;Compila dettagli destinazione&quot;](#destination-details) di seguito).
 
 Per caricare più tipi di identità, creare istanze separate della destinazione [!DNL Index Exchange] per ogni tipo di identità.
 
@@ -96,8 +98,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
@@ -112,7 +114,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti. Un ast
 * [!UICONTROL Identifier Type]: selezionare il tipo di identificatore fornito dall&#39;indice che corrisponde all&#39;identificatore che si sta inviando a [!DNL Index]. Consulta la tabella dei tipi di identificatori supportati di seguito. Se non si è sicuri del tipo di identificatore da utilizzare, contattare il rappresentante [!DNL Index]. Per inviare più tipi di identificatori, crea istanze separate di questa destinazione.
 * [!UICONTROL Account ID]: immetti l&#39;ID account [!DNL Index]. Questo non corrisponde all’ID dell’editore. Se non sei sicuro dell&#39;ID da utilizzare, contatta il tuo rappresentante [!DNL Index].
 
-#### Tipi di identificatori supportati
+#### Tipi di identificatori supportati {#supported-identifier-types}
 
 | Tipo di identificatore | Descrizione |
 |------------------ | ------------- |
@@ -131,10 +133,10 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti. Un ast
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso questa destinazione. Seleziona uno o più avvisi dall’elenco per abbonarti alle notifiche di stato per il flusso di dati. Per ulteriori informazioni, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

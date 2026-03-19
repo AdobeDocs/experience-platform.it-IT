@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per convalidare l’output nella destinazione di streaming in base al modello di trasformazione del messaggio.
 title: Convalidare la struttura del profilo esportato
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ In questa pagina sono elencate e descritte tutte le operazioni API che è possib
 
 ## Guida introduttiva alle operazioni API dei modelli di rendering {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Rendering dei profili esportati in base al modello di trasformazione del messaggio {#render-exported-data}
 

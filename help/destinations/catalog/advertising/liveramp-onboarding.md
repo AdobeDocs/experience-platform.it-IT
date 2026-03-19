@@ -3,7 +3,7 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-Time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 4%
@@ -22,7 +22,7 @@ In qualità di addetto al marketing, desidero inviare tipi di pubblico da Adobe 
 
 ## Prerequisiti {#prerequisites}
 
-La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP[&#x200B; di &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+La connessione [!DNL LiveRamp - Onboarding] esporta i file utilizzando l&#39;archiviazione SFTP[ di ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Per poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], sono necessarie le credenziali [!DNL LiveRamp]. Rivolgiti al tuo rappresentante [!DNL LiveRamp] per ottenere le tue credenziali, se non le hai già.
 
@@ -71,7 +71,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -136,7 +136,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](/help/destinations/ui/activate-batch-profile-destinations.md).

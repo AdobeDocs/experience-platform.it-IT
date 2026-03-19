@@ -3,7 +3,7 @@ keywords: linkedin connessione;linkedin connessione;linkedin destinazioni;linked
 title: Connessione LinkedIn Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting, la personalizzazione e l’eliminazione del pubblico, in base alle e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1336'
 ht-degree: 4%
@@ -18,7 +18,7 @@ Attiva profili per le campagne [!DNL LinkedIn] per il targeting, la personalizza
 
 ![Destinazione LinkedIn nell&#39;interfaccia utente di Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
-## Casi d’uso
+## Casi d’uso {#use-cases}
 
 Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL LinkedIn Matched Audiences], ecco un caso d&#39;uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
@@ -30,7 +30,7 @@ Una società di software organizza una conferenza e desidera tenersi in contatto
 
 >[!IMPORTANT]
 >
->A partire da settembre 2025, non è più possibile mappare [!DNL IDFA] come identità di destinazione, poiché [!DNL IDFA] non è più supportato dalla destinazione [!DNL LinkedIn Matched Audiences]. Per ulteriori dettagli, consulta la [!DNL LinkedIn Matched Audiences]documentazione[&#x200B; dell&#39;integrazione &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes). Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform.
+>A partire da settembre 2025, non è più possibile mappare [!DNL IDFA] come identità di destinazione, poiché [!DNL IDFA] non è più supportato dalla destinazione [!DNL LinkedIn Matched Audiences]. Per ulteriori dettagli, consulta la [!DNL LinkedIn Matched Audiences]documentazione[ dell&#39;integrazione ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes). Questa modifica è dovuta ai requisiti di LinkedIn e non è correlata ad alcun aggiornamento del servizio di destinazione di Experience Platform.
 
 
 | Identità di destinazione | Descrizione | Considerazioni |
@@ -117,14 +117,14 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL LinkedIn Matched Audiences] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ Una volta scaduto il token, l’esportazione dei dati nella destinazione smette 
    ![Finestra modale con opzione Riconnetti OAuth](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Le credenziali di autenticazione vengono aggiornate e la scadenza viene reimpostata su 60 giorni.
 
 ### Inserire i dettagli della destinazione {#destination-details}
@@ -177,7 +177,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

@@ -1,12 +1,12 @@
 ---
-title: ELENCO CONSENTITI di indirizzo IP per destinazioni di archiviazione cloud basata su file
+title: Indirizzi IP di cui è stato eseguito il inserisco nell'elenco Consentiti per le destinazioni di archiviazione cloud basate su file
 type: Documentation
-description: Questa pagina fornisce intervalli IP che puoi aggiungere al tuo elenco consentiti per esportare in modo sicuro i dati da Experience Platform alle destinazioni dell’archiviazione cloud.
+description: Questa pagina fornisce intervalli IP che puoi aggiungere al tuo inserisco nell'elenco Consentiti di per esportare in modo sicuro i dati da Experience Platform alle destinazioni dell’archiviazione cloud.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 1%
+source-wordcount: '288'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Le informazioni sull’intervallo IP in questa pagina si applicano ai seguenti c
 
 >[!IMPORTANT]
 >
->Gli intervalli IP documentati in questa pagina sono *non* supportati per le seguenti destinazioni di archiviazione cloud basata su file: [!UICONTROL BLOB di Azure], [!UICONTROL Archiviazione Azure Data Lake Gen2], [!UICONTROL Area di destinazione dati] e server SFTP ospitati in Microsoft Azure.
+>Gli intervalli IP documentati in questa pagina sono *non* supportati per le seguenti destinazioni dell&#39;archiviazione cloud basata su file: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] e server SFTP ospitati su Microsoft Azure.
 
 ## Panoramica {#overview}
 

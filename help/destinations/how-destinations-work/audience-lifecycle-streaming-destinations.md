@@ -1,13 +1,13 @@
 ---
 title: Ciclo di vita del pubblico in Experience Platform e nelle destinazioni di streaming
 description: Scopri come i nomi del pubblico e le mappature di Experience Platform si riflettono nelle piattaforme di destinazione di streaming.
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
 
 ---
-
 
 # Ciclo di vita del pubblico nelle destinazioni di streaming
 
@@ -86,6 +86,6 @@ Le seguenti destinazioni di streaming supportano la rimozione automatica del pub
 * [Tipi di pubblico personalizzati di Twitter](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Destinazioni che non supportano la rimozione di un pubblico
+### Destinazioni che non supportano la rimozione di un pubblico {#no-removal-support}
 
 Per le destinazioni non elencate in precedenza, quando annulli la mappatura di un pubblico dalla destinazione, Experience Platform rimuove solo la mappatura. Il pubblico nella piattaforma di destinazione rimane attivo finché non lo elimini manualmente nella piattaforma partner.

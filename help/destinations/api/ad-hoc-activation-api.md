@@ -5,9 +5,9 @@ title: Attivare i tipi di pubblico su destinazioni batch tramite l’API di atti
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che si verificano prima dell’attivazione.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: e5a757fcd73fc743b570c6456a66907e4720e8b6
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazion
 
 ## Casi d’uso {#use-cases}
 
-### Vendite o promozioni flash
+### Vendite o promozioni flash {#flash-sales}
 
 Un retailer online sta preparando una vendita flash limitata e vuole avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc di Experience Platform, il team marketing può esportare i tipi di pubblico on-demand e inviare rapidamente e-mail promozionali alla base clienti.
 
-### Attualità o ultime notizie
+### Attualità o ultime notizie {#current-events}
 
 Un hotel si aspetta un tempo inclemente nei giorni successivi e il team vuole informare rapidamente gli ospiti in arrivo, in modo che possano pianificare di conseguenza. Il team marketing può utilizzare l’API di attivazione ad hoc di Experience Platform per esportare i tipi di pubblico on-demand e avvisare gli ospiti.
 
-### Test di integrazione
+### Test di integrazione {#integration-testing}
 
 I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience Platform per esportare i tipi di pubblico on-demand, in modo da testare la loro integrazione personalizzata con Adobe Experience Platform e garantire il corretto funzionamento di tutto.
 

@@ -3,7 +3,7 @@ keywords: pubblicità; ufficio commerciale; ufficio commerciale di pubblicità
 title: La connessione a Trade Desk
 description: Trade Desk è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 4%
@@ -85,7 +85,7 @@ I prerequisiti dipendono dai tipi di identità che intendi utilizzare per l’at
 
 **Per il targeting basato su cookie su[!DNL The Trade Desk]**, assicurati che sia stata stabilita una mappatura tra ECID e [!DNL Trade Desk ID]. A tale scopo, completa i passaggi seguenti:
 
-1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL The Trade Desk ID] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/it/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
+1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL The Trade Desk ID] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
    * Se in precedenza hai configurato [!DNL The Trade Desk] integrazioni in Audience Manager, le sincronizzazioni ID esistenti vengono automaticamente trasferite ad Experience Platform.
 
 2. **Crea strumenti per le pagine Web**: implementa il codice nelle pagine Web per creare mappature tra [!DNL The Trade Desk ID] e Adobe ECID. Questo consente ad Experience Platform di associare gli ID Trade Desk ai profili dei clienti.
@@ -93,7 +93,7 @@ I prerequisiti dipendono dai tipi di identità che intendi utilizzare per l’at
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -123,7 +123,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -154,7 +154,7 @@ Queste mappature sono disattivate e di sola lettura. Non è necessario configura
 
 Experience Platform controlla automaticamente ogni profilo che appartiene ai tipi di pubblico mappati nel flusso di lavoro di attivazione per tutti i tipi di identità supportati e quindi attiva il profilo utilizzando le identità presenti.
 
-### Requisiti di identità per tipo di attivazione
+### Requisiti di identità per tipo di attivazione {#identity-requirements-by-activation-type}
 
 **Attivazione ID mobile (GAID/IDFA):** I profili con solo GAID o IDFA sono sufficienti per l&#39;attivazione. Non sono necessari identità o prerequisiti aggiuntivi.
 
@@ -165,7 +165,7 @@ Experience Platform controlla automaticamente ogni profilo che appartiene ai tip
 
 **Comportamento con più ID:** Se un profilo contiene più identità supportate, ogni identità verrà attivata separatamente in [!DNL The Trade Desk]. Questo assicura la massima portata e flessibilità nell’attivazione del pubblico.
 
-### Esempi di attivazione
+### Esempi di attivazione {#activation-examples}
 
 * **Profili ID mobili:** I profili con GAID e/o IDFA vengono attivati utilizzando i rispettivi ID pubblicitari. Se un profilo contiene sia GAID che IDFA, ogni ID verrà attivato separatamente.
 * **Profilo basato su cookie:** Verrà attivato un profilo con ECID e una mappatura [!DNL Trade Desk ID] corrispondente utilizzando l&#39;ID Trade Desk per il targeting basato su cookie.

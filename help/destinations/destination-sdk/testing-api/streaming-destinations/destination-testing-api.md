@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per verificare se la destinazione di streaming è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
 title: Test della destinazione di streaming con profili di esempio
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '603'
 ht-degree: 2%
 
 ---
@@ -26,13 +26,13 @@ Effettuare richieste all’endpoint di test con o senza l’aggiunta di profili 
 
 >[!IMPORTANT]
 >
->* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=it) per ulteriori informazioni.
->* Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=it).
->  &#x200B;>![Immagine dell&#39;interfaccia utente per ottenere l&#39;ID istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
+>* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) per ulteriori informazioni.
+>* Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>![Immagine dell&#39;interfaccia utente per ottenere l&#39;ID istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Guida introduttiva alle operazioni API di test della destinazione {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Verifica la configurazione di destinazione senza aggiungere profili alla chiamata {#test-without-adding-profiles}
 
@@ -324,6 +324,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme all
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, sai come verificare la destinazione. È ora possibile utilizzare il [processo di documentazione self-service](../../docs-framework/documentation-instructions.md) di Adobe per creare una pagina di documentazione per la destinazione.

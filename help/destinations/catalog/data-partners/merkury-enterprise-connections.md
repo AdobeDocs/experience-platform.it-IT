@@ -3,9 +3,9 @@ title: Destinazione connessioni Enterprise Merkury
 description: Scopri come creare una connessione di destinazione Merkury Enterprise Connections utilizzando l’interfaccia utente di Adobe Experience Platform.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1498'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 >
 >Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Merkury]. Per richieste di informazioni o richieste di aggiornamento, contattare il rappresentante dell&#39;account [!DNL Merkury].
 
-## Panoramica
+## Panoramica {#overview}
 
 Utilizza la [!DNL Merkury Enterprise Connections] destinazione per inviare in modo sicuro i tipi di pubblico a [!DNL Merkury]. [!DNL Merkury] consente agli addetti al marketing di trovare e inviare facilmente i tipi di pubblico basati su persone alle connessioni indirizzabili 80+ Premium di TV/CTV, publisher e ad-tech di [!DNL Merkury]. [!DNL Merkury] è alimentato da un grafo completo delle identità dei consumatori adulti degli Stati Uniti di oltre 268 milioni di persone.
 
@@ -30,17 +30,17 @@ Segui i passaggi descritti in questa pagina della documentazione per creare una 
 
 ![La scheda di destinazione Connessioni Enterprise di Merkury è evidenziata nel catalogo delle destinazioni di Experience Platform.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
-## Casi d’uso
+## Casi d’uso {#use-cases}
 
 * **Attivazione di contenuti multimediali digitali**: è possibile associare e distribuire facilmente i profili di pubblico agli oltre 50 editori premium di [!DNL Merkury] e alle connessioni ad-tech.
 * **Migliora l&#39;efficienza**: migliora la portata dei contenuti multimediali indirizzabili e senza cookie, l&#39;efficienza del targeting e il ROAS (Return on Advertising Spend).
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 >[!IMPORTANT]
 >
->* Per connettersi alla destinazione, è necessario **Visualizzare le destinazioni** e **Gestire le destinazioni**, **Attivare le destinazioni**, **Visualizzare i profili** e **Visualizzare i segmenti** [[Autorizzazioni di controllo di accesso]](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions). Leggere la [[panoramica sul controllo di accesso]](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/ui/overview) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare *identità*, è necessario **Visualizza grafo identità** [[autorizzazione di controllo di accesso]](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions).\![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+>* Per connettersi alla destinazione, è necessario **Visualizzare le destinazioni** e **Gestire le destinazioni**, **Attivare le destinazioni**, **Visualizzare i profili** e **Visualizzare i segmenti** [[Autorizzazioni di controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leggere la [[panoramica sul controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario **Visualizza grafo identità** [[autorizzazione di controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## Identità supportate {#supported-identities}
 
@@ -55,7 +55,7 @@ Segui i passaggi descritti in questa pagina della documentazione per creare una 
 
 {style="table-layout:auto"}
 
-## Tipi di pubblico supportati
+## Tipi di pubblico supportati {#supported-audiences}
 
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
@@ -80,26 +80,26 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 {style="table-layout:auto"}
 
 
-## Tipo e frequenza di esportazione
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | **Elemento** | **Tipo** | **Note** |
 |---|---|---|  
-| Tipo di esportazione | **Basato su profilo** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [[flusso di lavoro di attivazione destinazione]](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes). |
-| Frequenza | **Batch** | Le destinazioni batch esportano i file sulle piattaforme a valle con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni su [[destinazioni di frequenza basate su file batch]](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/destination-types#file-based). |
+| Tipo di esportazione | **Basato su profilo** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [[flusso di lavoro di attivazione destinazione]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations#select-attributes). |
+| Frequenza | **Batch** | Le destinazioni batch esportano i file sulle piattaforme a valle con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni su [[destinazioni di frequenza basate su file batch]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-types#file-based). |
 
 {style="table-layout:auto"}
 
-## Connettersi alla destinazione
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, è necessario **Visualizza destinazioni** e **Gestisci e attiva destinazioni set di dati** [[autorizzazioni controllo di accesso]](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions). Leggere la [[panoramica sul controllo di accesso]](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/ui/overview) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario **Visualizza destinazioni** e **Gestisci e attiva destinazioni set di dati** [[autorizzazioni controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leggere la [[panoramica sul controllo di accesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) o contattare l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per connettersi a questa destinazione, seguire i passaggi descritti nel [[tutorial sulla configurazione della destinazione]](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/connect-destination). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
+Per connettersi a questa destinazione, seguire i passaggi descritti nel [[tutorial sulla configurazione della destinazione]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autenticarsi nella destinazione
+### Autenticarsi nella destinazione {#authenticate}
 
 Per eseguire l&#39;autenticazione nella destinazione, compilare i campi obbligatori e selezionare **Connetti alla destinazione**.
 
@@ -116,7 +116,7 @@ Per accedere al bucket su Experience Platform, devi fornire valori validi per le
 
 ![nuova schermata di creazione della destinazione](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
 
-### Inserire i dettagli della destinazione
+### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -134,19 +134,19 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 
 ![immagine delle opzioni csv](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
-### Account esistente
+### Account esistente {#existing-account}
 
 Gli account già definiti utilizzando la destinazione Merkury Enterprise Connections vengono visualizzati in un pop-up di elenco. Se questa opzione è selezionata, i dettagli dell’account sono visualizzati nella barra a destra. Visualizza l&#39;esempio dall&#39;interfaccia utente, quando passi a **Destinazioni** > **Account**:
 
 ![Schermata dell&#39;account di destinazione nella pagina degli account di destinazione.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
-## Abilita avvisi
+## Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/alerts).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
 Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **Avanti**.
 
-## Attivare tipi di pubblico in questa destinazione
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 >
@@ -154,9 +154,9 @@ Dopo aver fornito i dettagli per la connessione di destinazione, seleziona **Ava
 >* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo dell&#39;accesso **Visualizza grafo identità**.
 
 
-Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
 
-## Suggerimenti di mappatura
+## Suggerimenti di mappatura {#mapping-suggestions}
 
 La corretta elaborazione dei file sul lato [!DNL Merkury] richiede elementi di nome e indirizzo. Anche se non tutti gli elementi sono necessari, fornire il più possibile contribuirà ad una corrispondenza di successo.
 
@@ -177,14 +177,14 @@ I suggerimenti di mappatura sono forniti nella tabella seguente che elenca gli a
 
 {style="table-layout:auto"}
 
-## Convalidare l’esportazione dei dati
+## Convalidare l’esportazione dei dati {#validate-data-export}
 
 Per verificare se i dati sono stati esportati correttamente, controlla il bucket di archiviazione Amazon S3 e assicurati che i file esportati contengano le popolazioni di profilo previste.
 
-## Utilizzo dei dati e governance
+## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, consulta la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-governance/home).
+Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, consulta la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, è stato creato un flusso di dati per esportare i dati del profilo da Experience Platform nel percorso S3 gestito di [!DNL Merkury]. Quindi, devi contattare il tuo rappresentante [!DNL Merkury] con il nome dell&#39;account, i nomi dei file e il percorso del bucket in modo da poter configurare l&#39;elaborazione.

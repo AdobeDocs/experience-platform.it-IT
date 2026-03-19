@@ -3,7 +3,7 @@ title: Connessione pubblico Acxiom Real ID
 description: Utilizza la destinazione  [!DNL Acxiom Real ID Audience Connection]  per migliorare i tipi di pubblico con la tecnologia  [!DNL Acxiom's Real ID] e attivare i tipi di pubblico su più piattaforme, ad esempio  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora.
 badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 6%
@@ -34,8 +34,8 @@ Ad esempio, il reparto Marketing Operations di un brand di servizi finanziari gl
 ## Prerequisiti {#prerequisites}
 
 * **Conferma le condizioni per l&#39;utilizzo:** Prima di poter configurare una nuova destinazione [!DNL Acxiom Real ID Audience Connection], è necessario leggere e firmare il Contratto sulle condizioni per l&#39;utilizzo di [!DNL Acxiom's]. Riceverai il collegamento al contratto una volta completato l&#39;ordine cliente eseguito.
-* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/it/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Ottenere la licenza per [!DNL Acxiom's Real ID] prodotto:** Una volta ottenuta la licenza, rendere disponibile il Real ID di Acxiom in Real-Time CDP. Per ulteriori informazioni, vedere [Acxiom Data Enhancement](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement).
+* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Ottenere la licenza per [!DNL Acxiom's Real ID] prodotto:** Una volta ottenuta la licenza, rendere disponibile il Real ID di Acxiom in Real-Time CDP. Per ulteriori informazioni, vedere [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement).
 
 
 ## Identità supportate {#supported-identities}
@@ -107,7 +107,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 
 
-Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
 
 >[!NOTE]
 >
@@ -121,12 +121,12 @@ Affinché la destinazione [!DNL Acxiom Real ID Audience Connection] riceva corre
 [!DNL Acxiom Real ID Audience Connection] consente solo la mappatura al seguente campo di destinazione.
 
 | Nome campo | Descrizione | Obbligatorio |
-|--------------------|------------|--------| 
+|--------------------|------------|--------|
 | ID reale | Un Real ID è un identificatore alfanumerico (ID) univoco a 36 byte dal grafo di risoluzione delle identità proprietario di Acxiom, simile a una chiave primaria per un database relazionale. È un identificatore che rappresenta una persona, una famiglia o un indirizzo. | Sì |
 
+{style="table-layout:auto"}
 
-
-Nella colonna **[!UICONTROL Source Field]** immettere il nome dell&#39;attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL &#x200B; Select source field]**. Quindi, selezionare **[!UICONTROL Next]**.
+Nella colonna **[!UICONTROL Source Field]** immettere il nome dell&#39;attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL  Select source field]**. Quindi, selezionare **[!UICONTROL Next]**.
 ![Schermata di mappatura](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
@@ -144,7 +144,7 @@ Se i risultati sono soddisfacenti, selezionare **[!UICONTROL Finish]** per attiv
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-governance/home).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Risoluzione dei problemi {#troubleshooting}
 

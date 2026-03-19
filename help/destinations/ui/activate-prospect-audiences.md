@@ -3,9 +3,9 @@ title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 14%
 
 ---
@@ -63,11 +63,15 @@ Segui le istruzioni per selezionare una destinazione in cui puoi esportare i set
 
 ## Selezionare il pubblico potenziale {#select-prospect-audiences}
 
-Utilizzare le caselle di controllo a sinistra dei nomi dei gruppi di destinatari prospect per selezionare i gruppi di destinatari da esportare nella destinazione, quindi selezionare **[!UICONTROL Next]**. In questa vista vengono visualizzati solo i tipi di pubblico potenziali e non altri tipi di pubblico.
+Utilizzare le caselle di controllo a sinistra dei nomi dei gruppi di destinatari prospect per selezionare i gruppi di destinatari da esportare nella destinazione, quindi selezionare **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>In questa vista vengono visualizzati solo i tipi di pubblico potenziali e non vengono visualizzati altri tipi di pubblico.
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio Seleziona tipi di pubblico in cui è possibile selezionare i potenziali tipi di pubblico da esportare.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## Pianificazione e passaggi successivi
+## Pianificazione e passaggi successivi {#scheduling-and-next-steps}
 
 Per il resto del flusso di lavoro di attivazione per esportare i tipi di pubblico potenziali, leggi il tutorial sull’attivazione dei dati in destinazioni basate su file. Continua dal passaggio [pianifica esportazione pubblico](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 

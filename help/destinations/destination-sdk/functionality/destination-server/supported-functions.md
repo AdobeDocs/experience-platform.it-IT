@@ -2,10 +2,10 @@
 description: Experience Platform Destination SDK utilizza i modelli Pebble, che consentono di trasformare i dati esportati da Experience Platform nel formato richiesto dalla destinazione.
 title: Funzioni di trasformazione supportate in Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Experience Platform Destination SDK utilizza [[!DNL Pebble] modelli](https://pebbletemplates.io/), che consentono di trasformare i dati esportati da Experience Platform nel formato richiesto dalla destinazione.
 
-L&#39;implementazione di Experience Platform [!DNL Pebble] presenta alcune modifiche rispetto alla versione preconfigurata fornita da [!DNL Pebble]. Inoltre, oltre alle funzioni predefinite fornite da [!DNL Pebble], Adobe ha creato alcune funzioni aggiuntive che è possibile utilizzare con Destination SDK.
+L&#39;implementazione di Experience Platform [!DNL Pebble] presenta alcune modifiche rispetto alla versione standard fornita da [!DNL Pebble]. Inoltre, oltre alle funzioni predefinite fornite da [!DNL Pebble], Adobe ha creato alcune funzioni aggiuntive utilizzabili con Destination SDK.
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ Il modello di trasformazione dei messaggi viene utilizzato nella [configurazione
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere i concetti e le funzioni di questa pagina di riferimento, leggere prima il documento [message format](message-format.md). È necessario conoscere la struttura [&#x200B; di un profilo](message-format.md#profile-structure) in Experience Platform prima di poter utilizzare i modelli [!DNL Pebble] per trasformare e i dati esportati.
+Per comprendere i concetti e le funzioni di questa pagina di riferimento, leggere prima il documento [message format](message-format.md). È necessario conoscere la struttura [ di un profilo](message-format.md#profile-structure) in Experience Platform prima di poter utilizzare i modelli [!DNL Pebble] per trasformare i dati esportati.
 
 Prima di passare alle funzioni descritte di seguito, esaminare gli esempi di modelli nella sezione [Utilizzo di un linguaggio di modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico](message-format.md#using-templating). Gli esempi qui presenti iniziano con una struttura molto semplice e aumentano di complessità.
 
@@ -53,15 +53,15 @@ Dalla sezione delle funzioni [!DNL Pebble], Adobe non supporta *not* la funzione
 
 ## Esempio di utilizzo della funzione `date` {#date-function}
 
-Per esemplificare l&#39;utilizzo di [!DNL Pebble] funzioni in Destination SDK, vedere di seguito come viene utilizzata la funzione data ([link nella documentazione di Pebble](https://pebbletemplates.io/wiki/filter/date/)) per trasformare il formato di una marca temporale.
+Per illustrare il modo in cui le funzioni [!DNL Pebble] vengono utilizzate in Destination SDK, vedere di seguito come la funzione data ([link nella documentazione di Pebble](https://pebbletemplates.io/wiki/filter/date/)) viene utilizzata per trasformare il formato di una marca temporale.
 
-### Caso d’uso
+### Caso d’uso {#date-use-case}
 
-Si desidera modificare il timestamp `lastQualificationTime` dal valore predefinito [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) che Experience Platform esporta in un altro valore preferito dalla destinazione.
+Si desidera modificare il timestamp `lastQualificationTime` dal valore predefinito [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) esportato da Experience Platform a un altro valore preferito dalla destinazione.
 
-### Esempio
+### Esempio {#date-example}
 
-#### Input
+#### Input {#date-input}
 
 ```json
 {
@@ -69,13 +69,13 @@ Si desidera modificare il timestamp `lastQualificationTime` dal valore predefini
 }
 ```
 
-#### Formato
+#### Formato {#date-format}
 
 ```java
 {{ lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### Output
+#### Output {#date-output}
 
 ```json
 {
@@ -89,13 +89,13 @@ Oltre alle funzioni predefinite fornite da [!DNL Pebble], vedere di seguito le f
 
 ### `addedSegments` e `removedSegments` funzioni {#addedsegments-removedsegments-functions}
 
-#### Caso d’uso
+#### Caso d’uso {#segments-use-case}
 
 Queste funzioni possono essere utilizzate per ottenere un elenco dei tipi di pubblico che sono stati aggiunti o rimossi da un profilo.
 
-#### Esempio
+#### Esempio {#segments-example}
 
-##### Input
+##### Input {#segments-input}
 
 ```json
 {
@@ -128,13 +128,13 @@ Queste funzioni possono essere utilizzate per ottenere un elenco dei tipi di pub
 }
 ```
 
-##### Formato
+##### Formato {#segments-format}
 
 ```java
 added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}; removed: {% for s in removedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}
 ```
 
-##### Output
+##### Output {#segments-output}
 
 ```json
 added: <111111><333333>; removed: <222222>
@@ -199,7 +199,7 @@ added: <111111><333333>;|removed: <222222>;
 
 ## Passaggi successivi {#next-steps}
 
-Ora si sa quali funzioni di [!DNL Pebble] sono supportate in Destination SDK e come utilizzarle per adattare il formato dei dati esportati alle proprie esigenze. Quindi, controlla le pagine seguenti:
+È ora possibile sapere quali funzioni di [!DNL Pebble] sono supportate in Destination SDK e come utilizzarle per adattare il formato dei dati esportati alle proprie esigenze. Quindi, controlla le pagine seguenti:
 
 * [Creare e testare un modello di trasformazione dei messaggi](../../testing-api/streaming-destinations/create-template.md)
 * [Operazioni API del modello di rendering](../../testing-api/streaming-destinations/render-template-api.md)

@@ -4,9 +4,9 @@ title: Connessione Microsoft Dynamics 365
 description: La destinazione Microsoft Dynamics 365 consente di esportare i dati dell'account e attivarli in Microsoft Dynamics 365 in base alle esigenze aziendali.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2100'
+source-wordcount: '2098'
 ht-degree: 2%
 
 ---
@@ -29,13 +29,13 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai t
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Dynamics 365], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Dynamics 365], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi per lo schema [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
 ### [!DNL Microsoft Dynamics 365] prerequisiti {#prerequisites-destination}
 
-Per esportare i dati da Experience Platform al tuo account [!DNL Dynamics 365], tieni presente i seguenti prerequisiti in [!DNL Dynamics 365]:
+Per esportare dati da Experience Platform al tuo account [!DNL Dynamics 365], tieni presente i seguenti prerequisiti in [!DNL Dynamics 365]:
 
 #### Devi avere un account [!DNL Microsoft Dynamics 365] {#prerequisites-account}
 
@@ -170,7 +170,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -269,7 +269,7 @@ Ulteriori informazioni utili dalla [[!DNL Dynamics 365] documentazione](https://
 * Metodo [IOrganizationService.Update(Entity)](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
 * [Aggiornare ed eliminare righe di tabella utilizzando l&#39;API Web](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 
-### Changelog
+### Changelog {#changelog}
 
 Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla documentazione apportati al connettore di destinazione.
 

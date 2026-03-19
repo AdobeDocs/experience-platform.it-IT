@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="Disponibilità limitata" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 4%
@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # Destinazione di Audience Analysis
 
-La destinazione [!UICONTROL Audience Analysis] ti consente di arricchire i dati del pubblico di Adobe Experience Platform in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it). Puoi selezionare i tipi di pubblico da includere nei dati arricchiti risultanti. Le qualifiche del pubblico sono quindi disponibili come dimensioni nel reporting di [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=it).
+La destinazione [!UICONTROL Audience Analysis] ti consente di arricchire i dati del pubblico di Adobe Experience Platform in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it). Puoi selezionare i tipi di pubblico da includere nei dati arricchiti risultanti. Le qualifiche del pubblico sono quindi disponibili come dimensioni nel reporting di [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
 >Questa destinazione è in una fase di test limitata. Se ti interessa utilizzare questa destinazione, contatta il team del tuo account Adobe.
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Prima di utilizzare questa destinazione sono necessari i seguenti elementi:
 
@@ -28,7 +28,7 @@ Prima di utilizzare questa destinazione sono necessari i seguenti elementi:
 * È necessario disporre del provisioning per utilizzare Customer Journey Analytics.
 * Devi avere almeno un pubblico creato in Adobe Experience Platform.
 
-## Identità supportate
+## Identità supportate {#supported-identities}
 
 Audience Analysis supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md). Generalmente viene utilizzato Experience Cloud ID (ECID).
 
@@ -43,7 +43,7 @@ Audience Analysis supporta l’attivazione delle identità descritte nella tabel
 
 {style="table-layout:auto"}
 
-## Tipi di pubblico supportati
+## Tipi di pubblico supportati {#supported-audiences}
 
 Quando si utilizza questa destinazione sono supportati i seguenti tipi di pubblico:
 
@@ -68,7 +68,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 {style="table-layout:auto"}
 
 
-## Tipo e frequenza di esportazione
+## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
@@ -79,15 +79,15 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Configura una nuova destinazione
+## Configura una nuova destinazione {#configure-destination}
 
 >[!IMPORTANT]
-> 
->Per creare la destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>
+>Per creare la destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per creare questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Dettagli destinazione
+### Dettagli destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -96,7 +96,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Datastream ID]**: l&#39;ID dello stream di dati che desideri arricchire con i tipi di pubblico idonei. È possibile ottenere questo ID nel [Gestore flussi di dati](/help/datastreams/overview.md).
 * **[!UICONTROL Integration alias]**: alias di integrazione.
 
-### Avvisi
+### Avvisi {#alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
@@ -104,7 +104,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
-### Politiche di governance e azioni di esecuzione
+### Politiche di governance e azioni di esecuzione {#governance-policy}
 
 Questa sezione facoltativa ti consente di definire i criteri di governance dei dati e di garantire che i dati utilizzati siano conformi quando i tipi di pubblico vengono inviati e sono attivi.
 
@@ -113,7 +113,7 @@ Dopo aver selezionato le azioni di marketing desiderate per la destinazione, sel
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Una volta creata la destinazione, puoi attivare il pubblico desiderato per la destinazione.

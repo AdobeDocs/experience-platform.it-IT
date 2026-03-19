@@ -2,7 +2,7 @@
 description: Scopri come configurare le identità di destinazione supportate per le destinazioni create con Destination SDK.
 title: Configurazione dello spazio dei nomi dell’identità
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
@@ -92,11 +92,11 @@ Ad esempio, i clienti possono mappare uno spazio dei nomi [!DNL Experience Platf
 
 Ulteriori informazioni sulle identità nella [panoramica dello spazio dei nomi delle identità](../../../../identity-service/features/namespaces.md).
 
-## Considerazioni sulla mappatura
+## Considerazioni sulla mappatura {#mapping-considerations}
 
 Se i clienti selezionano uno spazio dei nomi dell’identità di origine e non una mappatura di destinazione, Experience Platform inserisce automaticamente nella mappatura di destinazione un attributo con lo stesso nome.
 
-## Configurare l’hashing facoltativo del campo sorgente
+## Configurare l’hashing facoltativo del campo sorgente {#configure-optional-hashing}
 
 I clienti di Experience Platform possono scegliere di acquisire i dati in Experience Platform in formato hash o in testo normale. Se la piattaforma di destinazione accetta sia dati con hash che dati senza hash, puoi dare ai clienti la possibilità di scegliere se Experience Platform deve eseguire l’hashing dei valori dei campi sorgente quando vengono esportati nella destinazione.
 
@@ -122,7 +122,7 @@ Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in
 
 Quando si esegue il mapping degli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hash (ad esempio: `email_lc_sha256` o `phone_sha256`), selezionare l&#39;opzione **Applica trasformazione** per fare in modo che Adobe Experience Platform esegua automaticamente l&#39;hash degli attributi di origine all&#39;attivazione.
 
-## Configurare l’hashing obbligatorio del campo sorgente
+## Configurare l’hashing obbligatorio del campo sorgente {#configure-mandatory-hashing}
 
 Se la destinazione accetta solo dati con hash, puoi configurare gli attributi esportati in modo che ricevano automaticamente l&#39;hash da Experience Platform. La configurazione seguente controlla automaticamente l&#39;opzione **Applica trasformazione** quando le identità `Email` e `Phone` sono mappate.
 

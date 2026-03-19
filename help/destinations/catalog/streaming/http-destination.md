@@ -4,9 +4,9 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3039'
 ht-degree: 8%
 
 ---
@@ -135,7 +135,7 @@ curl --location --request POST 'https://some-api.com/token' \
 ## Connettersi alla destinazione {#connect-destination}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Quando ti connetti a questa destinazione, devi fornire le seguenti informazioni:
@@ -186,7 +186,7 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentia
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP utilizzando OAuth 2 con autenticazione delle credenziali client.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
-> 
+>
 >Quando si utilizza l&#39;autenticazione [!UICONTROL OAuth 2 Client Credentials], [!UICONTROL Access Token URL] può avere un massimo di un parametro di query. L&#39;aggiunta di un [!UICONTROL Access Token URL] con più parametri di query può causare problemi durante la connessione all&#39;endpoint.
 
 >[!NOTE]
@@ -248,7 +248,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* [La valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportata nelle esportazioni nella destinazione API HTTP. [Ulteriori informazioni](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
@@ -268,7 +268,9 @@ Experience Platform ottimizza il comportamento di esportazione del profilo nella
 
 In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono idonei per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
 
-Tieni presente che tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
+>[!NOTE]
+>
+>Tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
 
 ### Che cosa determina un’esportazione di dati e cosa è incluso nell’esportazione {#what-determines-export-what-is-included}
 
@@ -373,7 +375,9 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
       }
 ```
 
-**Nota**: in questo esempio, il primo segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) è mappato alla destinazione e include il campo `name`. Il secondo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) non è mappato alla destinazione e non include il campo `name`, anche se l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata.
+>[!NOTE]
+>
+>In questo esempio, il primo segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) è mappato alla destinazione e include il campo `name`. Il secondo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) non è mappato alla destinazione e non include il campo `name`, anche se l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata.
 
 +++
 

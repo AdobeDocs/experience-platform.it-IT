@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione di credenziali Adobe Experience Platform Destination SDK.
 title: Eliminare una configurazione di credenziali
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '416'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Quando si utilizza un sistema di autenticazione globale, è necessario impostare
 
 ## Guida introduttiva alle operazioni API per le credenziali {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare una configurazione di credenziali {#delete}
 
@@ -52,6 +52,8 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | `ID` della configurazione delle credenziali da eliminare. |
+
+{style="table-layout:auto"}
 
 La richiesta seguente elimina una configurazione di credenziali definita dal parametro `{INSTANCE_ID}`.
 

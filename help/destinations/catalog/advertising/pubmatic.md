@@ -3,10 +3,10 @@ title: Connessione PubMatic
 description: PubMatic ottimizza il valore per il cliente offrendo il supply chain di marketing digitale programmatico del futuro. PubMatic Connect combina tecnologia di piattaforma e servizio dedicato per migliorare il modo in cui l’inventario e i dati vengono assemblati e scambiati.
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 2%
+source-wordcount: '1146'
+ht-degree: 3%
 
 ---
 
@@ -131,7 +131,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 >
@@ -139,7 +139,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 >
 > - Per esportare _identità_, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](../../assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
-Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva tipi di pubblico in destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Mappare attributi e identità {#map}
 
@@ -154,7 +154,7 @@ Selezione dei campi di destinazione:
 
 ![Mappa attributi e identità](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
-### Pianificazione del pubblico
+### Pianificazione del pubblico {#audience-scheduling}
 
 Se utilizzi la destinazione PubMatic Connect (Custom Audience ID Mapping), devi fornire un ID di mappatura per ogni pubblico che corrisponda all’ID pubblico Source nella piattaforma PubMatic.
 

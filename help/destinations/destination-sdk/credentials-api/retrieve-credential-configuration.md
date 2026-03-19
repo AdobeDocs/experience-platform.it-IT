@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione di credenziali tramite Adobe Experience Platform Destination SDK.
 title: Recuperare una configurazione di credenziali
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '497'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Quando si utilizza un sistema di autenticazione globale, è necessario impostare
 
 ## Guida introduttiva alle operazioni API per le credenziali {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Recuperare una configurazione di credenziali {#retrieve}
 
@@ -122,6 +122,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 | Parametro | Descrizione |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | ID della configurazione delle credenziali da recuperare. |
+
+{style="table-layout:auto"}
 
 +++
 

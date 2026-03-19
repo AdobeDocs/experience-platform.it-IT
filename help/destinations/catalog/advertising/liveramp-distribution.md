@@ -2,7 +2,7 @@
 title: LiveRamp - Connessione di distribuzione
 description: Scopri come utilizzare il connettore LiveRamp - Distribuzione per orchestrare e attivare i tipi di pubblico precedentemente integrati in LiveRamp, per le destinazioni pubblicitarie a valle.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2816'
 ht-degree: 37%
@@ -89,7 +89,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 >abstract="Seleziona gli identificatori supportati dalla destinazione. Consulta la documentazione per l’elenco completo degli identificatori supportati per ogni destinazione."
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -455,7 +455,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 La connessione [!DNL LiveRamp - Distribution] attiva i tipi di pubblico che sono già stati caricati sul tuo account LiveRamp tramite la connessione [LiveRamp - Onboarding](liveramp-onboarding.md).

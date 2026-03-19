@@ -5,9 +5,9 @@ title: Connettersi alle destinazioni di streaming e attivare i dati utilizzando 
 description: Questo documento descrive la creazione di destinazioni di streaming utilizzando l’API Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2203'
 ht-degree: 3%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 3%
 # Connettersi alle destinazioni di streaming e attivare i dati utilizzando l’API del servizio Flow
 
 >[!IMPORTANT]
-> 
->Per connettersi a una destinazione, sono necessarie le **[!UICONTROL Destinazioni visualizzazione]** e le **[!UICONTROL Autorizzazioni di gestione delle destinazioni]** [per il controllo degli accessi](/help/access-control/home.md#permissions).
 >
->Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attiva destinazioni]**, **[!UICONTROL Visualizza profili]** e **[!UICONTROL Visualizza segmenti]** [Autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
+>Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions).
+>
+>Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 >
 >Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Questo tutorial illustra come utilizzare le chiamate API per connettersi ai dati Adobe Experience Platform, creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) o [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), creare un flusso di dati alla nuova destinazione creata e attivare i dati nella nuova destinazione creata.
+Questo tutorial illustra come utilizzare le chiamate API per connettersi ai dati di Adobe Experience Platform, creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) o [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), creare un flusso di dati nella nuova destinazione creata e attivare i dati nella nuova destinazione creata.
 
 Questa esercitazione utilizza la destinazione [!DNL Amazon Kinesis] in tutti gli esempi, ma i passaggi sono identici per [!DNL Azure Event Hubs].
 
@@ -30,7 +30,7 @@ Questa esercitazione utilizza la destinazione [!DNL Amazon Kinesis] in tutti gli
 
 Se preferisci utilizzare l&#39;interfaccia utente di Experience Platform per connetterti a una destinazione e attivare i dati, consulta le esercitazioni [Connettere una destinazione](../ui/connect-destination.md) e [Attivare i dati del pubblico per le destinazioni di esportazione del pubblico in streaming](../ui/activate-segment-streaming-destinations.md).
 
-## Introduzione
+## Introduzione {#get-started}
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -38,9 +38,9 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
 * [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere per attivare i dati nelle destinazioni di streaming in Experience Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che dovrai sapere per attivare i dati nelle destinazioni di streaming in Experience Platform.
 
-### Raccogli le credenziali richieste
+### Raccogli le credenziali richieste {#gather-credentials}
 
 Per completare i passaggi descritti in questa esercitazione, è necessario disporre delle seguenti credenziali pronte, a seconda del tipo di destinazioni a cui si connettono e si attivano i tipi di pubblico.
 
@@ -129,7 +129,7 @@ Successivamente, devi connetterti ai dati di Experience Platform, in modo da pot
 2. Quindi, utilizzando l’ID connessione di base, effettuerai un’altra chiamata in cui crei una connessione di origine, che stabilisce la connessione ai dati di Experience Platform.
 
 
-### Autorizzare l’accesso ai dati in Experience Platform
+### Autorizzare l’accesso ai dati in Experience Platform {#authorize-access-experience-platform}
 
 **Formato API**
 
@@ -224,7 +224,7 @@ In questo passaggio, stai impostando una connessione alla destinazione di stream
 1. Innanzitutto, devi eseguire una chiamata per autorizzare l’accesso alla destinazione di streaming impostando una connessione di base.
 2. Quindi, utilizzando l’ID connessione di base, effettuerai un’altra chiamata in cui crei una connessione di destinazione, che specifica la posizione nell’account di archiviazione in cui verranno consegnati i dati esportati e il formato dei dati che verranno esportati.
 
-### Autorizza l’accesso alla destinazione di streaming
+### Autorizza l’accesso alla destinazione di streaming {#authorize-access-streaming-destination}
 
 **Formato API**
 
@@ -287,7 +287,7 @@ Una risposta corretta contiene l&#39;identificatore univoco della connessione di
 }
 ```
 
-### Specificare il percorso di archiviazione e il formato dei dati
+### Specificare il percorso di archiviazione e il formato dei dati {#specify-storage-location-data-format}
 
 **Formato API**
 
@@ -344,7 +344,7 @@ In caso di esito positivo, la risposta restituisce l&#39;identificatore univoco 
 }
 ```
 
-## Creare un flusso di dati
+## Creare un flusso di dati {#create-data-flow}
 
 ![Passaggio 4](../assets/api/streaming-destination/step4.png) della panoramica dei passaggi di destinazione
 
@@ -482,11 +482,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `id` | Specifica l’ID del pubblico che stai aggiungendo al flusso di dati di destinazione. |
 | `name` | *Facoltativo*. Specifica il nome del pubblico che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un pubblico al flusso di dati di destinazione senza specificarne il nome. |
 
+{style="table-layout:auto"}
+
 **Risposta**
 
 Cercate una risposta 202 OK. Nessun corpo di risposta restituito. Per verificare che la richiesta sia corretta, consulta il passaggio successivo, Convalidare il flusso di dati.
 
-## Convalidare il flusso di dati
+## Convalidare il flusso di dati {#validate-data-flow}
 
 ![Passaggio 6 della panoramica dei passaggi di destinazione](../assets/api/streaming-destination/step6.png)
 
@@ -563,7 +565,7 @@ La risposta restituita deve includere nel parametro `transformations` i tipi di 
 
 >[!IMPORTANT]
 >
-> Oltre agli attributi del profilo e ai tipi di pubblico nel passaggio [Attiva i dati nella nuova destinazione](#activate-data), i dati esportati in [!DNL AWS Kinesis] e [!DNL Azure Event Hubs] includeranno anche informazioni sulla mappa delle identità. Rappresenta le identità dei profili esportati (ad esempio [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=it), ID dispositivo mobile, ID Google, indirizzo e-mail e così via). Vedi un esempio di seguito.
+> Oltre agli attributi del profilo e ai tipi di pubblico nel passaggio [Attiva i dati nella nuova destinazione](#activate-data), i dati esportati in [!DNL AWS Kinesis] e [!DNL Azure Event Hubs] includeranno anche informazioni sulla mappa delle identità. Rappresenta le identità dei profili esportati (ad esempio [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID dispositivo mobile, ID Google, indirizzo e-mail e così via). Vedi un esempio di seguito.
 
 ```json
 {

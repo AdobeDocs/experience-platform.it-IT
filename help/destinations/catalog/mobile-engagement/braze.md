@@ -4,7 +4,7 @@ title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 3%
@@ -84,7 +84,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -112,7 +112,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -126,7 +126,7 @@ La mappatura consiste nella creazione di un collegamento tra i campi dello schem
 
 Per mappare correttamente i campi XDM ai campi di destinazione [!DNL Braze], effettua le seguenti operazioni:
 
-Nel passaggio [!UICONTROL Mapping], fare clic su **[!UICONTROL Add new mapping]**.
+Nel passaggio [!UICONTROL Mapping], selezionare **[!UICONTROL Add new mapping]**.
 
 ![Mappatura per aggiunta destinazione Braze](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
@@ -144,7 +144,7 @@ Nella finestra [!UICONTROL Select source field] è possibile scegliere tra due c
 
 ![Mappatura destinazione Braze Spazio dei nomi Source](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Scegli il campo di origine, quindi fai clic su **[!UICONTROL Select]**.
+Scegli il campo di origine, quindi seleziona **[!UICONTROL Select]**.
 
 Nella sezione [!UICONTROL Target Field], fai clic sull&#39;icona di mappatura a destra del campo.
 
@@ -157,7 +157,7 @@ Nella finestra [!UICONTROL Select target field] è possibile scegliere tra due c
 
 ![Sfumatura campi di mappatura destinazione](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Scegli il campo di destinazione, quindi fai clic su **[!UICONTROL Select]**.
+Scegli il campo di destinazione, quindi seleziona **[!UICONTROL Select]**.
 
 Ora dovresti visualizzare la mappatura dei campi nell’elenco.
 

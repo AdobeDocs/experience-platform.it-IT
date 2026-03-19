@@ -2,9 +2,9 @@
 description: Scopri come configurare le opzioni di formattazione dei file quando si attivano i dati in destinazioni basate su file
 title: Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1189'
 ht-degree: 17%
 
 ---
@@ -12,12 +12,12 @@ ht-degree: 17%
 # Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 
 >[!IMPORTANT]
-> 
+>
 >Le opzioni di formattazione descritte in questo documento sono attualmente disponibili solo per i file CSV.
 
-L&#39;opzione per configurare varie opzioni di formattazione per i file esportati è disponibile quando si [connette](/help/destinations/ui/connect-destination.md) a una destinazione basata su file, ad esempio [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [BLOB di Azure](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) o [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
+L&#39;opzione per configurare varie opzioni di formattazione per i file esportati è disponibile quando si [connette](/help/destinations/ui/connect-destination.md) a una destinazione basata su file, ad esempio [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [BLOB Azure](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) o [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
-Puoi configurare varie opzioni di formattazione per i file esportati utilizzando l’interfaccia utente di Experience Platform. Puoi modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file sul tuo lato, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
+Puoi configurare varie opzioni di formattazione per i file esportati utilizzando l’interfaccia utente di Experience Platform. Puoi modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file sul tuo lato, per leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -32,7 +32,7 @@ Per visualizzare le opzioni di formattazione del file, avviare il flusso di lavo
 >
 >È possibile che nella destinazione a cui ci si connette non siano disponibili tutte queste opzioni. Spetta allo sviluppatore di destinazione determinare le opzioni di formattazione dei file da supportare nella destinazione. Lo sviluppatore di destinazione può determinare quali opzioni sono disponibili quando si connette alla destinazione. Le opzioni obbligatorie sono contrassegnate da un asterisco nell’interfaccia utente di Experience Platform.
 > 
->Le destinazioni dell&#39;archiviazione cloud creata da Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [BLOB di Azure](/help/destinations/catalog/cloud-storage/azure-blob.md), [Archiviazione Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Area di destinazione dati](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Archiviazione Google Cloud](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - attualmente supportano solo le sei opzioni CSV evidenziate di seguito.
+>Le destinazioni dell&#39;archiviazione cloud creata da Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - attualmente supportano solo le sei opzioni CSV evidenziate di seguito.
 
 ![Immagine che mostra alcune delle opzioni di formattazione del file disponibili.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -51,15 +51,15 @@ Utilizzare questo controllo per impostare un separatore per ogni campo e valore 
 * Punto e virgola `(;)`
 * Scheda `(\t)`
 
-#### Esempi
+#### Esempi {#delimiter-examples}
 
 Visualizza gli esempi seguenti dei contenuti dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL Colon `(:)`]** selezionato: `male:John:Doe`
-* Output di esempio con **[!UICONTROL Comma `(,)`]** selezionato: `male,John,Doe`
-* Output di esempio con **[!UICONTROL Pipe `(|)`]** selezionato: `male|John|Doe`
-* Output di esempio con **[!UICONTROL Semicolon `(;)`]** selezionato: `male;John;Doe`
-* Output di esempio con **[!UICONTROL Tab `(\t)`]** selezionato: `male \t John \t Doe`
+* Output di esempio con [!UICONTROL Colon `(:)`] selezionato: `male:John:Doe`
+* Output di esempio con [!UICONTROL Comma `(,)`] selezionato: `male,John,Doe`
+* Output di esempio con [!UICONTROL Pipe `(|)`] selezionato: `male|John|Doe`
+* Output di esempio con [!UICONTROL Semicolon `(;)`] selezionato: `male;John;Doe`
+* Output di esempio con [!UICONTROL Tab `(\t)`] selezionato: `male \t John \t Doe`
 
 ### Carattere virgolette {#quote-character}
 
@@ -72,17 +72,17 @@ Utilizzare questa opzione per controllare se le virgolette doppie devono essere 
 
 Le opzioni disponibili sono:
 
-* **[!UICONTROL Null Character (\0000)]**. Utilizza questa opzione per rimuovere le virgolette doppie dai file CSV esportati.
-* **[!UICONTROL Double Quotes (")]**. Utilizzare questa opzione quando i valori stringa contengono un delimitatore o virgolette doppie. Questa opzione consente di mantenere i delimitatori o le virgolette doppie nei file CSV esportati, in modo da identificare correttamente il valore corrispondente a ciascun campo.
+* [!UICONTROL Null Character (\0000)]. Utilizza questa opzione per rimuovere le virgolette doppie dai file CSV esportati.
+* [!UICONTROL Double Quotes (")]. Utilizzare questa opzione quando i valori stringa contengono un delimitatore o virgolette doppie. Questa opzione consente di mantenere i delimitatori o le virgolette doppie nei file CSV esportati, in modo da identificare correttamente il valore corrispondente a ciascun campo.
 
-#### Esempi
+#### Esempi {#quote-character-examples}
 
 Considerare il valore di input `Anna,"Doe,John"`.
 
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL Null Character (\0000)]** selezionato: `Anna,Doe,John`
-* Output di esempio con **[!UICONTROL Double Quotes (")]** selezionato: `Anna,"Doe,John"`
+* Output di esempio con [!UICONTROL Null Character (\0000)] selezionato: `Anna,Doe,John`
+* Output di esempio con [!UICONTROL Double Quotes (")] selezionato: `Anna,"Doe,John"`
 
 ### Carattere di escape {#escape-character}
 
@@ -96,12 +96,12 @@ Utilizzare questa opzione per impostare un singolo carattere per l&#39;escape de
 * Barra rovesciata `(\)`
 * Virgoletta singola `(')`
 
-#### Esempi
+#### Esempi {#escape-character-examples}
 
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL Back slash `(\)`]** selezionato: `"Test,\"John\",LastName"`
-* Output di esempio con **[!UICONTROL Single quote `(')`]** selezionato: `"Test,'"John'",LastName"`
+* Output di esempio con [!UICONTROL Back slash `(\)`] selezionato: `"Test,\"John\",LastName"`
+* Output di esempio con [!UICONTROL Single quote `(')`] selezionato: `"Test,'"John'",LastName"`
 
 ### Output valore vuoto {#empty-value-output}
 
@@ -112,17 +112,17 @@ Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna
 
 Utilizzare questo controllo per impostare la rappresentazione di stringa di un valore vuoto. Questa opzione determina il modo in cui i valori vuoti vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **Stringa vuota tra virgolette doppie (&quot;&quot;)**
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### Esempi
+#### Esempi {#empty-value-examples}
 
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL null]** selezionato: `male,NULL,TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in un valore nullo.
+* Output di esempio con [!UICONTROL null] selezionato: `male,NULL,TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in un valore nullo.
 * Output di esempio con **&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in una coppia di virgolette doppie.
-* Output di esempio con **[!UICONTROL Empty string]** selezionato: `male,,TestLastName`. In questo caso, Experience Platform mantiene il valore vuoto e lo esporta così com’è (senza virgolette doppie).
+* Output di esempio con [!UICONTROL Empty string] selezionato: `male,,TestLastName`. In questo caso, Experience Platform mantiene il valore vuoto e lo esporta così com’è (senza virgolette doppie).
 
 >[!TIP]
 >
@@ -137,17 +137,17 @@ Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna
 
 Utilizza questo controllo per impostare la rappresentazione stringa di un valore nullo all’interno dei file esportati. Questa opzione determina il modo in cui i valori Null vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **Stringa vuota tra virgolette doppie (&quot;&quot;)**
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### Esempi
+#### Esempi {#null-value-examples}
 
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL null]** selezionato: `male,NULL,TestLastName`. In questo caso, non si verifica alcuna trasformazione e il file CSV contiene il valore null.
+* Output di esempio con [!UICONTROL null] selezionato: `male,NULL,TestLastName`. In questo caso, non si verifica alcuna trasformazione e il file CSV contiene il valore null.
 * Output di esempio con **&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experience Platform sostituisce il valore null con virgolette doppie intorno a una stringa vuota.
-* Output di esempio con **[!UICONTROL Empty string]** selezionato: `male,,TestLastName`. In questo caso, Experience Platform sostituisce il valore null con una stringa vuota (senza virgolette doppie).
+* Output di esempio con [!UICONTROL Empty string] selezionato: `male,,TestLastName`. In questo caso, Experience Platform sostituisce il valore null con una stringa vuota (senza virgolette doppie).
 
 ### Formato di compressione {#compression-format}
 
@@ -158,33 +158,33 @@ Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna
 
 Imposta il tipo di compressione da utilizzare per il salvataggio dei dati nel file. Le opzioni supportate sono GZIP e NONE. Questa opzione determina se esportare o meno i file compressi.
 
-### Codifica
+### Codifica {#encoding}
 
 *Non visualizzato nella schermata dell&#39;interfaccia utente*. Specifica la codifica (charset) dei file CSV salvati. Le opzioni sono UTF-8 o UTF-16.
 
-### Carattere per virgolette di escape
+### Carattere per virgolette di escape {#char-to-escape-quote}
 
 *Non visualizzato nella schermata dell&#39;interfaccia utente*. Flag che indica se i valori contenenti virgolette devono sempre essere racchiusi tra virgolette.
 
 L&#39;impostazione predefinita prevede l&#39;escape di tutti i valori contenenti una virgoletta.
 
-### Separatore di righe
+### Separatore di righe {#line-separator}
 
 *Non visualizzato nella schermata dell&#39;interfaccia utente*. Definisce il separatore di riga da utilizzare per la scrittura. La lunghezza massima è di 1 carattere.
 
-### Ignora spazio vuoto iniziale
+### Ignora spazio vuoto iniziale {#ignore-leading-whitespace}
 
 *Non visualizzato nella schermata dell&#39;interfaccia utente*. Un flag che indica se gli spazi vuoti iniziali dei valori esportati devono essere ignorati o meno.
 
-Output di esempio con **[!UICONTROL True]** selezionato: `"male","John","TestLastName"`
-Output di esempio con **[!UICONTROL False]** selezionato: `" male","John","TestLastName"`
+Output di esempio con [!UICONTROL True] selezionato: `"male","John","TestLastName"`
+Output di esempio con [!UICONTROL False] selezionato: `" male","John","TestLastName"`
 
-### Ignora spazio vuoto finale
+### Ignora spazio vuoto finale {#ignore-trailing-whitespace}
 
 Non visualizzato nella schermata dell’interfaccia utente. Un flag che indica se gli spazi vuoti finali dei valori esportati devono essere ignorati o meno.
 
-Output di esempio con **[!UICONTROL True]** selezionato: `"male","John","TestLastName"`
-Output di esempio con **[!UICONTROL False]** selezionato: `"male ","John","TestLastName"`
+Output di esempio con [!UICONTROL True] selezionato: `"male","John","TestLastName"`
+Output di esempio con [!UICONTROL False] selezionato: `"male ","John","TestLastName"`
 
 ### Passaggi successivi {#next-steps}
 

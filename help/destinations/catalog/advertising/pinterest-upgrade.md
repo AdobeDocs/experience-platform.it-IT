@@ -1,45 +1,45 @@
 ---
-title: Migrazione della destinazione pinterest alla nuova API. Azione del cliente richiesta.
-description: Pinterest sta rendendo obsoleta l’API dell’inserzionista v4 attualmente utilizzata dalla destinazione Pinterest in Real-Time CDP. Comprendi le azioni da eseguire per passare facilmente alla nuova API senza interrompere le campagne Pinterest.
+title: Migrazione della destinazione Pinterest alla nuova API. Azione del cliente richiesta.
+description: Pinterest sta rendendo obsoleta l’API dell’inserzionista v4 attualmente utilizzata dalla destinazione Pinterest in Real-Time CDP. Scopri le azioni da eseguire per passare facilmente alla nuova API senza interrompere le campagne Pinterest.
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
 
-# Aggiornamento della destinazione pinterest alla nuova API. Azione cliente richiesta entro il 18 gennaio 2024.
+# Aggiornamento della destinazione Pinterest alla nuova API. Azione cliente richiesta entro il 18 gennaio 2024.
 
 >[!IMPORTANT]
 >
 >Gli elementi azione cliente in questa pagina sono applicabili se l&#39;organizzazione ha impostato flussi di dati per esportare dati in Pinterest prima del 16 novembre 2023, data in cui la nuova destinazione **[!UICONTROL Pinterest]**, utilizzando l&#39;API Pinterest più recente, è stata aggiunta al catalogo delle destinazioni.
 
-## Cosa succede?
+## Cosa succede? {#what-is-happening}
 
-Pinterest ha dichiarato obsoleta l&#39;API dell&#39;inserzionista v4 utilizzata dalla [destinazione Pinterest](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP. L&#39;Adobe ha aggiornato la destinazione per l&#39;utilizzo dell&#39;API dell&#39;inserzionista [v5](https://developers.pinterest.com/docs/getting-started/migration/). Leggi questa pagina per comprendere le azioni da eseguire per passare facilmente alla nuova API senza interrompere le campagne Pinterest.
+Pinterest ha dichiarato obsoleta l&#39;API dell&#39;inserzionista v4 utilizzata dalla [destinazione Pinterest](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP. Adobe ha aggiornato la destinazione per l&#39;utilizzo dell&#39;API pubblicitaria [v5](https://developers.pinterest.com/docs/getting-started/migration/). Leggi questa pagina per comprendere le azioni da eseguire per passare facilmente alla nuova API senza interrompere le campagne Pinterest.
 
-## Perché mi viene inviata una notifica?
+## Perché mi viene inviata una notifica? {#why-notified}
 
 Abbiamo identificato la tua organizzazione come dotata di flussi di dati attivi per attivare i tipi di pubblico in Pinterest.
 
-## Qual è il piano?
+## Qual è il piano? {#what-is-the-plan}
 
 Adobe ha rilasciato una nuova scheda di destinazione Pinterest che sfrutta l’API Pinterest v5 e manterrà i flussi di dati esistenti nella nuova connessione.
 
-## Devo fare qualcosa per mantenere attivi i tipi di pubblico?
+## Devo fare qualcosa per mantenere attivi i tipi di pubblico? {#action-required}
 
 Sì, prima del 18 gennaio 2024, è necessario eseguire l’autenticazione nella nuova destinazione Pinterest con l’account dell’inserzionista Pinterest in Real-Time CDP. Consulta le istruzioni dettagliate di seguito.
 
 ### Autentica di nuovo in Pinterest {#reauthenticate}
 
-1. Vai a **[!UICONTROL Destinazioni > Account]** e utilizza il filtro sullo schermo per filtrare solo la destinazione Pinterest.
+1. Vai a **[!UICONTROL Destinations > Accounts]** e utilizza il filtro sullo schermo per filtrare solo la destinazione Pinterest.
    ![Filtra solo account Pinterest](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. Nella destinazione **Pinterest**, selezionare il simbolo dei tre punti ... e selezionare **[!UICONTROL Modifica dettagli]**.
+2. Nella destinazione **Pinterest**, selezionare il simbolo dei tre punti ... e selezionare **[!UICONTROL Edit details]**.
    ![Seleziona Modifica dettagli](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. Seleziona **[!UICONTROL Riconnetti OAuth]** e accedi al tuo account Pinterest.
+3. Seleziona **[!UICONTROL Reconnect OAuth]** e accedi al tuo account Pinterest.
    ![Seleziona Riconnetti OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Passa all’azione nella sezione seguente
 
@@ -47,9 +47,9 @@ Sì, prima del 18 gennaio 2024, è necessario eseguire l’autenticazione nella 
 
 Quindi devi abilitare i flussi di dati alla nuova scheda **[!UICONTROL Pinterest]**.
 
-1. Vai a **[!UICONTROL Destinazioni > Sfoglia]** e utilizza il filtro sullo schermo per filtrare solo la destinazione **[!UICONTROL Pinterest]**.
+1. Vai a **[!UICONTROL Destinations > Browse]** e utilizza il filtro sullo schermo per filtrare solo la destinazione **[!UICONTROL Pinterest]**.
    ![Filtrare i flussi di dati di Pinterest solo nella scheda Sfoglia](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Seleziona il nome della connessione ipertestuale (campagna fedeltà nell&#39;esempio della schermata precedente) alla destinazione **[!UICONTROL Pinterest]** e cambia l&#39;opzione **[!UICONTROL Abilita]** in **attivato**.
+2. Seleziona il nome della connessione ipertestuale (campagna fedeltà nell&#39;esempio della schermata precedente) alla destinazione **[!UICONTROL Pinterest]** e cambia **[!UICONTROL Enable]** in **on**.
    ![Attiva per le nuove connessioni e disattiva per le connessioni precedenti](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
@@ -58,9 +58,9 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-## Puoi condividere alcune timeline di alto livello?
+## Puoi condividere alcune timeline di alto livello? {#high-level-timelines}
 
-Sì, consulta:
+Sì, vedi di seguito:
 
 **Entro il 16 novembre 2023**: la nuova destinazione è pronta e dovresti vedere due schede Pinterest una accanto all&#39;altra nel catalogo fino a quando Pinterest non smette di supportare la vecchia API v4. Tutti i flussi di dati esistenti nella scheda Pinterest corrente vengono copiati nella nuova destinazione.
 

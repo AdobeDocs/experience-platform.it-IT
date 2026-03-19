@@ -3,9 +3,9 @@ keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
 title: Estensione Nielsen BSDK
 description: L’estensione Nielsen BSDK è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: e1c10673-e3f4-474d-98d7-960124b2bfc7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '510'
 ht-degree: 3%
 
 ---
@@ -30,17 +30,17 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedi loro di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
 Per installare l&#39;estensione [!DNL Nielsen BSDK]:
 
-Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**.
+Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), passa a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleziona l’estensione dal catalogo o utilizza la barra di ricerca.
 
-Fai clic sulla destinazione per evidenziarla, quindi seleziona **[!UICONTROL Configura]** nella barra a destra. Se il controllo **[!UICONTROL Configure]** è disattivato, manca l&#39;autorizzazione **[!UICONTROL manage_properties]**. Consulta [Prerequisiti](#prerequisites).
+Seleziona la destinazione, quindi seleziona **[!UICONTROL Configure]** nella barra a destra. Se il controllo **[!UICONTROL Configure]** è disattivato, manca l&#39;autorizzazione **[!UICONTROL manage_properties]**. Consulta [Prerequisiti](#prerequisites).
 
 Seleziona la proprietà in cui desideri installare l’estensione. Puoi anche creare una nuova proprietà. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Scopri le proprietà nella sezione [Proprietà](../../../tags/ui/administration/companies-and-properties.md#properties-page) della documentazione dei tag.
 
@@ -62,6 +62,6 @@ Puoi configurare, aggiornare ed eliminare le estensioni nell’interfaccia utent
 
 >[!TIP]
 >
->Se l&#39;estensione è già installata in una delle tue proprietà, nell&#39;interfaccia utente di Experience Platform viene comunque visualizzato **[!UICONTROL Installa]** per l&#39;estensione. Avvia il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) per configurare o eliminare l&#39;estensione.
+>Se l&#39;estensione è già installata in una delle tue proprietà, nell&#39;interfaccia utente di Experience Platform viene comunque visualizzato **[!UICONTROL Install]** per l&#39;estensione. Avvia il flusso di lavoro di installazione come descritto in [Installa estensione](#install-extension) per configurare o eliminare l&#39;estensione.
 
 Per aggiornare l&#39;estensione, consulta la guida al [processo di aggiornamento dell&#39;estensione](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) nella documentazione dei tag.

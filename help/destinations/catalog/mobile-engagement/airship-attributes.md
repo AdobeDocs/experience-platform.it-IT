@@ -3,9 +3,9 @@ keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
 description: Trasmetti facilmente i dati del pubblico di Adobe a Airship come attributi del pubblico per il targeting all’interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7b22c4b058b0068b96c26d0c4c7743d489451620
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Per ulteriori informazioni su [!DNL Airship], consulta i [documenti dirigibili](
 
 >[!TIP]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Airship]. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all&#39;indirizzo [support.airship.com](https://support.airship.com/).
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team [!DNL Airship]. Per qualsiasi richiesta di informazioni o di aggiornamento, contatta direttamente all&#39;indirizzo [support.airship.com](https://support.airship.com/).
 
 ## Prerequisiti {#prerequisites}
 
@@ -91,18 +91,18 @@ Fare clic su **[!UICONTROL Create Token]** e salvare i dettagli come riservati.
 
 Per capire meglio come e quando utilizzare la destinazione [!DNL Airship Attributes], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-### #1 del caso d’uso
+### #1 del caso d’uso {#use-case-1}
 
 Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personalizzazione del messaggio e contenuti avanzati in qualsiasi canale di [!DNL Airship]. Ad esempio, sfrutta i dati del profilo [!DNL Experience Platform] per impostare gli attributi di posizione in [!DNL Airship]. In questo modo, un marchio di hotel potrà visualizzare per ogni utente un&#39;immagine che indica la posizione più vicina all&#39;hotel.
 
-### #2 del caso d’uso
+### #2 del caso d’uso {#use-case-2}
 
 Sfrutta gli attributi di Adobe Experience Platform per arricchire ulteriormente i profili [!DNL Airship] e combinarli con SDK o [!DNL Airship] dati predittivi. Ad esempio, un retailer può creare un pubblico con lo stato di fedeltà e i dati sulla posizione (attributi da Experience Platform) e [!DNL Airship] prevede di abbandonarli per inviare messaggi altamente mirati agli utenti con lo stato di fedeltà all&#39;oro che vivono a Las Vegas, NV, e hanno un&#39;alta probabilità di abbandono.
 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -130,7 +130,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 

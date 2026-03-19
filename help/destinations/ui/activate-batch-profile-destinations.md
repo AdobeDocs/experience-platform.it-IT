@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8019f7426f6e6dd3faef131ada8e307c1d075556
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '4783'
 ht-degree: 11%
@@ -14,11 +14,11 @@ ht-degree: 11%
 # Attivare i tipi di pubblico per le destinazioni di esportazione dei profili in batch
 
 >[!IMPORTANT]
-> 
->* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>
+>* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 >* Per attivare i tipi di pubblico senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions).
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
-> 
+>
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ## Panoramica {#overview}
@@ -205,7 +205,7 @@ Se i profili vengono aggiornati dopo la valutazione del pubblico, le esportazion
 
 Per le esportazioni su richiesta, consulta la documentazione su [esportazione di file su richiesta](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
 
-### Esportare file incrementali
+### Esportare file incrementali {#export-incremental-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
@@ -278,7 +278,7 @@ Per modificare più nomi di file contemporaneamente, selezionare il pubblico uti
 Seleziona **[!UICONTROL Apply changes]** per confermare la selezione.
 
 >[!IMPORTANT]
-> 
+>
 >Se non si seleziona il componente **[!UICONTROL Date and Time]**, i nomi dei file saranno statici e il nuovo file esportato sovrascriverà il file precedente nel percorso di archiviazione con ogni esportazione. Questa è l’opzione consigliata quando si esegue un processo di importazione ricorrente da un percorso di archiviazione a una piattaforma di e-mail marketing.
 
 Al termine della configurazione di tutti i tipi di pubblico, selezionare **[!UICONTROL Next]** per continuare.
@@ -298,7 +298,7 @@ In questo passaggio, devi selezionare gli attributi del profilo che desideri agg
 1. Nella pagina **[!UICONTROL Select source field]**, selezionare gli attributi e le identità del profilo che si desidera includere nei file esportati nella destinazione, quindi scegliere **[!UICONTROL Select]**.
 
    >[!TIP]
-   > 
+   >
    >È possibile utilizzare il campo di ricerca per limitare la selezione, come illustrato nell&#39;immagine seguente.
 
    Utilizza l&#39;interruttore **[!UICONTROL Show only fields with data]** per visualizzare solo i campi dello schema compilati con valori. Per impostazione predefinita, vengono visualizzati solo i campi schema compilati.
@@ -496,9 +496,9 @@ Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM I
 
 ### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
 
-Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
-#### Considerazioni chiave
+#### Considerazioni chiave {#key-considerations}
 
 * **Selezione deterministica**: quando più profili hanno chiavi di deduplicazione identiche e lo stesso timestamp di riferimento, la logica di deduplicazione determina il profilo da esportare ordinando i valori delle altre colonne selezionate (esclusi i tipi complessi come array, mappe o oggetti). I valori ordinati vengono valutati in ordine lessicografico e viene selezionato il primo profilo.
 
@@ -535,7 +535,7 @@ Dopo la deduplicazione, il file di esportazione conterrà:
 
 La nuova pagina **[!UICONTROL Mapping]** presenta le seguenti limitazioni note:
 
-#### Impossibile selezionare l’attributo di appartenenza del pubblico tramite il flusso di lavoro di mappatura
+#### Impossibile selezionare l’attributo di appartenenza del pubblico tramite il flusso di lavoro di mappatura {#audience-membership-attribute-mapping}
 
 A causa di un limite noto, al momento non è possibile utilizzare la finestra **[!UICONTROL Select field]** per aggiungere `segmentMembership.seg_namespace.seg_id.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.seg_namespace.seg_id.status` nel campo schema, come illustrato di seguito.
 
@@ -556,7 +556,7 @@ Le esportazioni di file variano nei modi seguenti, a seconda che sia selezionato
 
 Ulteriori informazioni sul comportamento di esportazione del profilo [per le destinazioni basate su file](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
-#### Al momento non è possibile selezionare gli spazi dei nomi delle identità per le esportazioni
+#### Al momento non è possibile selezionare gli spazi dei nomi delle identità per le esportazioni {#identity-namespaces-export-limitation}
 
 La selezione degli spazi dei nomi delle identità per l’esportazione, come illustrato nell’immagine seguente, non è attualmente supportata. Se si selezionano spazi dei nomi di identità per l&#39;esportazione, verrà generato un errore nel passaggio **[!UICONTROL Review]**.
 
@@ -570,7 +570,7 @@ Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di iden
 ## Seleziona attributi profilo {#select-attributes}
 
 >[!IMPORTANT]
-> 
+>
 >Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mapping] passaggio](#mapping) migliorato che sostituisce il passaggio **[!UICONTROL Select attributes]** descritto in questa sezione.
 >
 >Questo passaggio **[!UICONTROL Select attributes]** viene ancora visualizzato per le destinazioni del marketing via e-mail Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
@@ -643,7 +643,7 @@ Seleziona **[!UICONTROL Next]** per passare al passaggio [Rivedi](#review).
 ## Rivedi {#review}
 
 >[!NOTE]
-> 
+>
 >Se sono state applicate etichette di utilizzo dei dati a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene nelle seguenti condizioni:
 >
 >* I campi vengono utilizzati nella definizione del pubblico.

@@ -4,9 +4,9 @@ description: Utilizza il connettore Marketo Engage Person Sync per inviare in st
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1223'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 6%
 Utilizza il connettore Marketo Engage Person Sync per inviare in streaming gli aggiornamenti dai tipi di pubblico personali ai record corrispondenti nell’istanza Marketo Engage.
 
 >[!IMPORTANT]
-> 
+>
 >Il connettore di sincronizzazione del pubblico [Marketo V2](/help/destinations/catalog/adobe/marketo-engage.md) non deve essere utilizzato in modalità creazione insieme al connettore di sincronizzazione dell&#39;aggiornamento del profilo
 
 ## Identità e attributi supportati {#support-identities-and-attributes}
@@ -91,7 +91,7 @@ Se la tua azienda ha accesso a più organizzazioni, assicurati di utilizzare la 
 
 >[!IMPORTANT]
 >
->L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
+>L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
 
 ![Connetti alla destinazione](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,10 +102,10 @@ Se la tua azienda ha accesso a più organizzazioni, assicurati di utilizzare la 
 * **[!UICONTROL First searchable field]**: campo su cui eseguire la deduplicazione. Il campo deve essere presente in ogni record di lead dell’input. Impostazione predefinita e-mail
 * **[!UICONTROL First searchable field]**: campo secondario su cui eseguire la deduplicazione. Il campo deve essere presente in ogni record di lead dell’input. Facoltativo
 
-Dopo aver selezionato l’istanza, dovrai selezionare anche la partizione lead con cui desideri integrare la configurazione. Una [partizione lead](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) è un concetto in Marketo Engage utilizzato per separare i record dei lead in base alle esigenze aziendali, ad esempio un marchio o un&#39;area di vendita. Se la sottoscrizione Marketo non dispone della funzionalità Aree di lavoro e partizioni o se non sono state create ulteriori partizioni nella sottoscrizione, sarà disponibile solo la partizione predefinita. Una singola configurazione può aggiornare solo i record dei lead presenti nella partizione configurata.
+Dopo aver selezionato l’istanza, dovrai selezionare anche la partizione lead con cui desideri integrare la configurazione. Una [partizione lead](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) è un concetto in Marketo Engage utilizzato per separare i record dei lead in base alle esigenze aziendali, ad esempio un marchio o un&#39;area di vendita. Se la sottoscrizione Marketo non dispone della funzionalità Aree di lavoro e partizioni o se non sono state create ulteriori partizioni nella sottoscrizione, sarà disponibile solo la partizione predefinita. Una singola configurazione può aggiornare solo i record dei lead presenti nella partizione configurata.
 
 >[!IMPORTANT]
-> 
+>
 >Dopo la prima attivazione di un pubblico nella destinazione Marketo, la compilazione di profili già presenti nel pubblico prima dell&#39;attivazione della destinazione Marketo può richiedere *fino a 24 ore*. In futuro, ogni volta che i profili verranno aggiunti al pubblico, verranno aggiunti immediatamente a Marketo.
 
 ### Campi di deduplicazione {#deduplication-fields}
@@ -123,10 +123,10 @@ Se non viene trovato alcun record lead corrispondente, verrà creato un nuovo re
 ## Attiva tipi di pubblico {#activate-audiences}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Leggi [Attivare profili e segmenti nelle destinazioni di esportazione dei segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per le istruzioni sull&#39;attivazione dei segmenti di pubblico in questa destinazione.
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva tipi di pubblico in destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 Nel passaggio Attiva tipi di pubblico, potrai selezionare tra tutti i tipi di pubblico di persone visibili.
 

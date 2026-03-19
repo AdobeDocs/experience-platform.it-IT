@@ -2,9 +2,9 @@
 title: Connessione Medallia
 description: Attiva profili per sondaggi Medallia mirati e raccolta di feedback per comprendere meglio le esigenze e le aspettative dei clienti.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 3%
 
 ---
@@ -17,17 +17,17 @@ Attiva profili per sondaggi Medallia mirati e raccolta di feedback per comprende
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team Medallia. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo adobe-integrations@medallia.com.
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team Medallia. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all’indirizzo adobe-integrations@medallia.com.
 
 ## Casi d’uso {#use-cases}
 
 Per aiutarti a capire meglio come e quando utilizzare la destinazione Medallia, ecco alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-### #1 del caso d’uso
+### #1 del caso d’uso {#use-case-1}
 
 Un brand B2B vuole valutare e semplificare il suo programma di onboarding. Vorrebbe inviare sondaggi personalizzati in tempo reale ai clienti che hanno appena completato il processo di onboarding.
 
-### #2 del caso d’uso
+### #2 del caso d’uso {#use-case-2}
 
 Un retailer cerca di comprendere meglio le preferenze del cliente per l’evasione degli ordini. Desiderano inviare un breve sondaggio SMS di 1 domanda ai clienti che hanno effettuato acquisti online e in-store nell&#39;ultimo mese.
 
@@ -93,7 +93,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -128,7 +128,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 ## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
@@ -153,7 +153,7 @@ I seguenti spazi dei nomi delle identità di destinazione devono essere mappati 
 ![Immagine che mostra un esempio di mappatura per identità e attributi.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
-> 
+>
 > Condividi con il tuo team di consegna Medallia i **nomi attributo** esatti per ogni attributo personalizzato di destinazione mappato utilizzando **Campo di destinazione** > **Seleziona attributi personalizzati** > **Nome attributo**. Puoi acquisire una schermata della pagina di mappatura da condividere direttamente.
 
 ## Dati esportati {#exported-data}

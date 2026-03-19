@@ -2,11 +2,11 @@
 title: Soppressione di potenziali clienti di Acxiom
 description: Esporta il pubblico di prima parte verso la destinazione Acxiom per consentire ad Acxiom di escludere i clienti noti o convertiti. Quindi utilizza il connettore di origine Acxiom per acquisire e attivare gli elenchi di potenziali clienti da Acxiom, con i clienti noti o convertiti rimossi.
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1559'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->La destinazione [!DNL Acxiom Prospect-Suppression] è in versione beta. Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team Acxiom. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo acxiom-adobe-help@acxiom.com.
+>La destinazione [!DNL Acxiom Prospect-Suppression] è in versione beta. Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team Acxiom. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all’indirizzo acxiom-adobe-help@acxiom.com.
 
 ## Panoramica {#overview}
 
@@ -92,7 +92,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
@@ -109,13 +109,13 @@ Per accedere al bucket su Experience Platform, devi fornire valori validi per le
 | Chiave segreta S3 | ID della chiave segreta del bucket. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 | Nome del bucket | Questo è il bucket in cui verranno condivisi i file. È possibile recuperare questo valore dal team [!DNL Acxiom]. |
 
-### Nuovo account
+### Nuovo account {#new-account}
 
 Per definire una nuova posizione S3 gestita da Acxiom:
 
 ![Nuovo account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Account esistente
+### Account esistente {#existing-account}
 
 Gli account già definiti utilizzando la destinazione [!DNL Acxiom Prospect Suppression] vengono visualizzati in un pop-up di elenco. Se questa opzione è selezionata, i dettagli dell’account sono visualizzati nella barra a destra. Visualizza l&#39;esempio dall&#39;interfaccia utente quando si passa a **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**:
 
@@ -154,7 +154,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
-### Suggerimenti di mappatura
+### Suggerimenti di mappatura {#mapping-suggestions}
 
 L’elaborazione richiede elementi di nome e indirizzo, mentre non tutti sono necessari, purché il più possibile contribuisca ad una corrispondenza corretta.  I suggerimenti di mappatura sono forniti nella tabella seguente, in cui sono elencati gli attributi sul lato di destinazione utilizzati dall’elaborazione Acxiom a cui i clienti possono mappare gli attributi del profilo.  Questo dovrebbe essere trattato come un suggerimento, in quanto non tutti gli elementi sono necessari e i valori sorgente dipenderanno dalle esigenze dell’account.
 
@@ -175,7 +175,7 @@ L’elaborazione richiede elementi di nome e indirizzo, mentre non tutti sono ne
 >
 >I campi aggiuntivi non elencati sopra verranno inclusi nell’esportazione, ma verranno ignorati dall’elaborazione Acxiom.
 
-## Verifica il flusso di dati
+## Verifica il flusso di dati {#review-dataflow}
 
 Utilizzare la pagina Revisione per un riepilogo del flusso di dati prima dell&#39;invio
 
@@ -185,7 +185,7 @@ Utilizzare la pagina Revisione per un riepilogo del flusso di dati prima dell&#3
 
 Per verificare se i dati sono stati esportati correttamente, controlla il bucket [!DNL Amazon S3 Storage] e assicurati che i file esportati contengano le popolazioni di profilo previste.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, è stato creato un flusso di dati per esportare i dati batch da Experience Platform nel percorso S3 gestito di [!DNL Acxiom]. Per configurare l’elaborazione, contatta il rappresentante Acxiom con il nome dell’account, il nome del file e il percorso del bucket.
 

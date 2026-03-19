@@ -2,10 +2,10 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per recuperare un modello di pubblico tramite Adobe Experience Platform Destination SDK.
 title: Recuperare un modello di pubblico
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 1%
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Per una descrizione dettagliata delle funzionalità che è possibile configurare
 
 ## Guida introduttiva alle operazioni API dei modelli di pubblico {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Recuperare un modello di pubblico {#retrieve}
 
@@ -197,6 +197,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 | Parametro | Descrizione |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | ID del modello di pubblico da recuperare. |
+
+{style="table-layout:auto"}
 
 +++
 

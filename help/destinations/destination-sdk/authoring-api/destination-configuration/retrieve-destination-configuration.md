@@ -2,10 +2,10 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Recuperare una configurazione di destinazione
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 1%
+source-wordcount: '366'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ Questa pagina esemplifica la richiesta API e il payload che è possibile utilizz
 
 ## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, consulta la [guida introduttiva](../../getting-started.md) per informazioni importanti di cui hai bisogno per effettuare correttamente chiamate all&#39;API, tra cui come ottenere l&#39;autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Recuperare una configurazione di destinazione {#retrieve}
 
@@ -190,6 +190,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | ID della configurazione di destinazione da recuperare. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Risposta
@@ -308,7 +310,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](../../../../landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](../../../../landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Dopo aver letto questo documento, ora sai come recuperare una configurazione di destinazione tramite l&#39;endpoint API di Destination SDK `/authoring/destinations`.
 

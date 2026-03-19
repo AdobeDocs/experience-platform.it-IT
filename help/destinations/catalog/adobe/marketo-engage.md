@@ -2,9 +2,9 @@
 title: Destinazione Marketo Engage
 description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '980'
 ht-degree: 2%
 
 ---
@@ -96,24 +96,24 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 ## Impostare la destinazione e attivare i tipi di pubblico {#set-up}
 
 >[!IMPORTANT]
-> 
+>
 >* Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Per istruzioni dettagliate su come impostare la destinazione e attivare i tipi di pubblico, leggi [Pubblicare un pubblico Adobe Experience Platform in un elenco statico di Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=it) nella documentazione di Marketo.
+Per istruzioni dettagliate su come impostare la destinazione e attivare i tipi di pubblico, leggi [Pubblicare un pubblico Adobe Experience Platform in un elenco statico di Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) nella documentazione di Marketo.
 
 Il video seguente illustra anche i passaggi per configurare una destinazione Marketo e attivare i tipi di pubblico.
 
 >[!IMPORTANT]
 >
->Il video non riflette completamente la funzionalità corrente. Per le informazioni più aggiornate, consulta la guida collegata in precedenza. Le seguenti parti del video sono obsolete:
+>Il video non riflette completamente la funzionalità corrente. Per informazioni aggiornate, consulta la guida collegata in precedenza. Le seguenti parti del video sono obsolete:
 > 
 >* La scheda di destinazione da utilizzare nell&#39;interfaccia utente di Experience Platform è **[!UICONTROL Marketo V2]**.
 >* Il video non mostra il nuovo campo del selettore **[!UICONTROL Person creation]** nel flusso di lavoro di connessione alla destinazione. Per utilizzare questo campo, è necessario mappare sia il nome che il cognome durante il passaggio di mappatura degli attributi.
 >* Le due limitazioni indicate nel video non sono più applicabili. Ora puoi mappare molti altri campi dell’attributo del profilo, oltre alle informazioni sull’iscrizione al pubblico supportate al momento della registrazione del video. Puoi anche esportare i membri del pubblico in Marketo che non esistono ancora negli elenchi statici di Marketo e verranno aggiunti agli elenchi.
 >* In Marketo V1, nel **[!UICONTROL Schedule audience step]** del flusso di lavoro di attivazione era necessario aggiungere manualmente **[!UICONTROL Mapping ID]** per esportare correttamente i dati in Marketo. Questo passaggio manuale non è più richiesto in Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440166?captions=ita&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Monitorare la destinazione {#monitor-destination}
 
