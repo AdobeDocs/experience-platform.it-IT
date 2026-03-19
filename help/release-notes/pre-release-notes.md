@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: efa50881315d986940f7cb3afcbfcc30ef67c3a7
+source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 27%
+source-wordcount: '1322'
+ht-degree: 29%
 
 ---
 
@@ -74,12 +74,10 @@ Per ulteriori informazioni, consulta la [documentazione di Agent Orchestrator](h
 
 | Destinazione | Descrizione |
 | --- | --- |
-| Supporto per più aree geografiche di [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) | Il connettore di streaming Snowflake è ora disponibile per i clienti oltre l’area geografica statunitense VA7. Utilizza il selettore a discesa Regione per selezionare l’area Snowflake in cui si trova il tuo account. La documentazione è stata aggiornata con la struttura dati prevista per le tabelle di streaming di Snowflake. |
-| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) e [Selettore area batch Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Ora è più facile trovare la tua regione con il nuovo menu a discesa ricercabile, che combina ricerca e menu a discesa in un unico controllo. |
+| [Selettore di area per il batch Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Ora è più facile trovare la tua regione con il nuovo menu a discesa ricercabile, che combina ricerca e menu a discesa in un unico controllo. |
 | Esporta metadati del pubblico in [destinazioni Batch Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | I file esportati in questa destinazione ora includono metadati del pubblico. La nuova struttura di tabella si applica a tutte le nuove connessioni di destinazione impostate per il passaggio successivo. La vecchia struttura della tabella verrà mantenuta per altri tre mesi prima di essere dichiarata obsoleta. |
 | Connessione [!DNL Adobe Advertising Cloud DSP] | La nuova connessione Adobe Advertising DSP offre le stesse funzionalità della connessione legacy e il supporto di identità aggiuntive. |
 | Supporto per il pubblico esterno per [Il CRM del Trade Desk](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) e [Pinterest](../destinations/catalog/advertising/pinterest.md) | Ora puoi attivare i tipi di pubblico oltre i segmenti del servizio di segmentazione in Trade Desk CRM, Criteo e Pinterest, inclusi i tipi di pubblico di caricamento personalizzati (importati da CSV), i tipi di pubblico simili, i tipi di pubblico federati e i tipi di pubblico creati in altre app di Experience Platform come Adobe Journey Optimizer. Per informazioni dettagliate, consulta la sezione [tipi di pubblico supportati](../destinations/catalog/advertising/criteo.md#supported-audiences) nella pagina del catalogo di ciascuna destinazione. |
-| Filtraggio del pubblico nel flusso di lavoro di attivazione | È ora possibile trovare e filtrare i tipi di pubblico nel passaggio **[!UICONTROL Select audiences]** con la stessa esperienza della pagina Tipi di pubblico; ad esempio, è possibile filtrare in base all&#39;origine del pubblico per trovare facilmente il pubblico che si sta cercando. |
 | Limite aumentato per i tipi di pubblico di caricamento personalizzati | Ora puoi attivare fino a 20 tipi di pubblico per caricamento personalizzato per istanza di destinazione. In precedenza, questo limite era di 10. |
 | [Esporta ora il file](../destinations/ui/export-file-now.md) e [supporto API di attivazione ad hoc](../destinations/api/ad-hoc-activation-api.md) per tipi di pubblico esterni | È ora possibile utilizzare l’interfaccia Export file now (UI) e l’API di attivazione ad hoc con tipi di pubblico esterni (come caricamenti personalizzati, lookalike, federati e tipi di pubblico da altre app Experience Platform) durante l’attivazione di destinazioni basate su file in batch. |
 | Destinazioni API HTTP con OAuth 2 e mTLS | Ora puoi creare e autenticare destinazioni API HTTP che utilizzano OAuth 2 quando l’endpoint di autenticazione richiede TLS reciproco (mTLS); il recupero del token durante la configurazione della destinazione ora supporta mTLS. |
@@ -181,5 +179,8 @@ Per ulteriori informazioni, consulta la [panoramica sulle origini](../sources/ho
 <!--
 
 | Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
 
 -->
