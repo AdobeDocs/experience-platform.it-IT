@@ -2,7 +2,7 @@
 title: Dati di identità nel Web SDK
 description: Scopri come recuperare e gestire gli ID Adobe Experience Cloud (ECID) utilizzando Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
+source-git-commit: 9cde3e244a78598bc407b137426829fcb50f82a2
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Il Web SDK assegna e tiene traccia di [!DNL ECIDs] utilizzando i cookie, con pi�
 Quando un nuovo utente arriva sul tuo sito Web, il [servizio Adobe Experience Cloud Identity](/help/identity-service/home.md) tenta di impostare un cookie di identificazione del dispositivo per tale utente.
 
 * Per i nuovi visitatori, viene generato un [!DNL ECID] che viene restituito nella prima risposta da Experience Platform Edge Network.
-* Per i visitatori di ritorno, [!DNL ECID] viene recuperato dal cookie [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/cookies/web-sdk) e aggiunto al payload della richiesta da Edge Network.
+* Per i visitatori di ritorno, [!DNL ECID] viene recuperato dal cookie [`kndctr_<orgId>_identity`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) e aggiunto al payload della richiesta da Edge Network.
 
 Una volta impostato il cookie contenente [!DNL ECID], ogni richiesta successiva generata dal Web SDK include un [!DNL ECID] codificato nel cookie `kndctr_<orgId>_identity`.
 
@@ -55,7 +55,7 @@ Inoltre, quando si utilizza la raccolta dati di terze parti, alcuni ad blocker l
 
 ### Effetti della durata dei cookie sulle applicazioni Adobe Experience Cloud {#lifespans}
 
-Indipendentemente dal fatto che si scelga una raccolta dati di prima parte o di terze parti, il periodo di tempo in cui un cookie può persistere ha un impatto diretto sui conteggi dei visitatori in [Adobe Analytics](https://experienceleague.adobe.com/it/docs/analytics) e [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/customer-journey-analytics). Inoltre, gli utenti finali potrebbero sperimentare esperienze di personalizzazione incoerenti quando [Adobe Target](https://experienceleague.adobe.com/it/docs/target) o [Offer Decisioning](https://experienceleague.adobe.com/it/docs/target/using/integrate/ajo/offer-decision) sono utilizzati sul sito.
+Indipendentemente dal fatto che si scelga una raccolta dati di prima parte o di terze parti, il periodo di tempo in cui un cookie può persistere ha un impatto diretto sui conteggi dei visitatori in [Adobe Analytics](https://experienceleague.adobe.com/it/docs/analytics) e [Customer Journey Analytics](https://experienceleague.adobe.com/it/docs/customer-journey-analytics). Inoltre, gli utenti finali potrebbero sperimentare esperienze di personalizzazione incoerenti quando [Adobe Target](https://experienceleague.adobe.com/en/docs/target) o [Offer Decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) sono utilizzati sul sito.
 
 Ad esempio, considera una situazione in cui hai creato un’esperienza di personalizzazione che promuove qualsiasi elemento nella home page se un utente lo ha visualizzato tre volte negli ultimi sette giorni.
 
@@ -126,7 +126,7 @@ alloy("getIdentity",{
 
 Utilizzando un campo [`identityMap` XDM](/help/xdm/schema/composition.md#identityMap), è possibile identificare un dispositivo/utente utilizzando più identità, impostarne lo stato di autenticazione e decidere quale identificatore è considerato primario. Se non è stato impostato alcun identificatore come `primary`, l&#39;impostazione predefinita è `ECID`.
 
-I campi `identityMap` sono stati aggiornati con il comando `sentEvent`.
+I campi `identityMap` sono stati aggiornati con il comando `sendEvent`.
 
 ```javascript
 alloy("sendEvent", {
@@ -162,7 +162,7 @@ Ogni oggetto identità nell’array delle identità contiene le seguenti proprie
 | `authenticatedState` | Stringa | **(Obbligatorio)** Stato di autenticazione dell&#39;ID. I valori possibili sono `ambiguous`, `authenticated` e `loggedOut`. |
 | `primary` | Booleano | Determina se questa identità deve essere utilizzata come frammento principale nel profilo. Per impostazione predefinita, l’ECID è impostato come identificatore principale dell’utente. Se omesso, il valore predefinito sarà `false`. |
 
-Se si utilizza il campo `identityMap` per identificare dispositivi o utenti, si ottiene lo stesso risultato dell&#39;utilizzo del metodo [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=it) di [!DNL ID Service API]. Per ulteriori dettagli, consulta la [documentazione API del servizio ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=it).
+Se si utilizza il campo `identityMap` per identificare dispositivi o utenti, si ottiene lo stesso risultato dell&#39;utilizzo del metodo [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) di [!DNL ID Service API]. Per ulteriori dettagli, consulta la [documentazione API del servizio ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html).
 
 ## Migrazione dall’API visitatore a ECID {#migrating-visitor-api-ecid}
 
@@ -174,7 +174,7 @@ Durante la migrazione da utilizzando l’API visitatore, puoi anche eseguire la 
 
 ### Aggiornamento delle caratteristiche per la migrazione
 
-Quando si inviano dati in formato XDM ad Audience Manager, questi devono essere convertiti in segnali durante la migrazione. Le caratteristiche devono essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è facilitato dall&#39;utilizzo dello strumento [BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=it#getting-started-with-bulk-management) creato da Audience Manager.
+Quando si inviano dati in formato XDM ad Audience Manager, questi devono essere convertiti in segnali durante la migrazione. Le caratteristiche devono essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è facilitato dall&#39;utilizzo dello strumento [BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) creato da Audience Manager.
 
 ## Utilizzo nell’inoltro degli eventi
 
