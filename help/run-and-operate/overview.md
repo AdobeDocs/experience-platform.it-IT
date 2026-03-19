@@ -2,13 +2,13 @@
 title: Panoramica sull’esecuzione e l’utilizzo
 description: Ispeziona, risolvi i problemi e ottimizza le implementazioni di Experience Platform con gli strumenti Esegui e opera. Ottieni visibilità sulle attivazioni batch pianificate, identifica i problemi di configurazione e migliora l’affidabilità del sistema.
 hide: true
-source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # Panoramica sull’esecuzione e l’utilizzo
 
@@ -47,7 +47,7 @@ Per accedere agli strumenti Esegui e utilizza dall’interfaccia utente di Exper
 
    >[!NOTE]
    >
-   >Attualmente, l&#39;unica funzionalità disponibile è [Pianificazioni processi](job-schedules.md).
+   >Attualmente, le funzionalità disponibili sono [Pianificazioni processi](job-schedules.md) e [Verifiche stato](health-checks.md).
 
 ![Interfaccia utente di Experience Platform con barra di spostamento a sinistra Esegui e opera.](assets/overview/run-and-operate.png)
 
@@ -78,12 +78,28 @@ Gli Schedules per i processi forniscono tre livelli di indagine:
 
 Puoi anche comprendere le dipendenze tra le fasi di elaborazione dei dati, per garantire un flusso di dati affidabile in tutti i flussi di lavoro di Experience Platform.
 
+### Verifiche stato {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks] sono attualmente disponibili come versione limitata.
+
+Con [Verifiche stato](health-checks.md), puoi rilevare in modo proattivo i problemi di configurazione dello schema e dell&#39;identità prima che influiscano sulle operazioni aziendali. Al momento, i controlli di integrità eseguono scansioni statiche giornaliere tra gli schemi e gli spazi dei nomi delle identità, evidenziando best practice mancanti, configurazioni errate e pattern che portano a errori a valle.
+
+I controlli sanitari valutano attualmente cinque aree fondamentali:
+
+* **[Convalida del campo di identità](health-checks.md#identity-field-validation)**: verificare che la lunghezza e i vincoli del modello dei campi di identità siano corretti.
+* **[Regole di collegamento del grafo delle identità](health-checks.md#identity-graph-linking-rules)**: verificare che le regole di collegamento siano configurate in modo da evitare la compressione del profilo.
+* **[Configurazione identità persone e non persone](health-checks.md#people-non-people-identity)**: convalida l&#39;utilizzo corretto del tipo di identità tra le classi dello schema.
+* **[Descrizioni dello spazio dei nomi delle identità personalizzate](health-checks.md#namespace-missing-description)**: verificare che i metadati dello spazio dei nomi siano completi.
+* **[Spazi dei nomi delle identità obsoleti](health-checks.md#deprecated-namespace)**: rileva spazi dei nomi obsoleti per la pulizia.
+
 ## Passaggi successivi {#next-steps}
 
 Dopo aver compreso lo scopo e le funzionalità degli strumenti di [!UICONTROL Run and Operate], esplorare le risorse seguenti per approfondire le proprie conoscenze:
 
-* Scopri come [acquisire batch](../ingestion/batch-ingestion/overview.md) per comprendere come vengono acquisiti i dati in Experience Platform
+* Scopri come utilizzare [controlli di integrità](health-checks.md) per rilevare problemi di configurazione di schemi e identità
 * Scopri come [controllare le pianificazioni dei processi](job-schedules.md) per l&#39;acquisizione e le attivazioni batch
+* Scopri come [acquisire batch](../ingestion/batch-ingestion/overview.md) per comprendere come vengono acquisiti i dati in Experience Platform
 * Scopri come [configurare le attivazioni pianificate](../destinations/ui/activate-batch-profile-destinations.md) per le destinazioni batch
 * Esplora [monitoraggio del flusso di dati](../dataflows/ui/monitor-destinations.md) per le destinazioni
-
