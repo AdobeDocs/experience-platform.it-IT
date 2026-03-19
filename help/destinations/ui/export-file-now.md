@@ -3,7 +3,7 @@ title: Esportare file on-demand in destinazioni batch utilizzando l’interfacci
 type: Tutorial
 description: Scopri come esportare i file on-demand nelle destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 5%
@@ -14,10 +14,10 @@ ht-degree: 5%
 # Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-## Panoramica di **[!UICONTROL Export file now]** {#overview}
+## Panoramica di [!UICONTROL Export file now] {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"

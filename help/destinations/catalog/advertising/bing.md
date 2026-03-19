@@ -3,10 +3,10 @@ keywords: pubblicità; bing;
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in tutta la rete Microsoft Advertising, inclusi display advertising, search e native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 10%
+source-wordcount: '1050'
+ht-degree: 7%
 
 ---
 
@@ -79,7 +79,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 La destinazione [!DNL Microsoft Bing] richiede la seguente configurazione per funzionare correttamente:
 
-1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL Microsoft Bing] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
+1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL Microsoft Bing] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
    * Se in precedenza hai impostato [!DNL Microsoft Bing] integrazioni in Audience Manager, le sincronizzazioni ID esistenti vengono automaticamente trasferite ad Experience Platform.
 
 2. **Verifica ECID nei profili**: tutti i profili devono avere un ECID presente per essere esportati correttamente. ECID **obbligatorio** per questa destinazione.
@@ -91,7 +91,7 @@ Durante la configurazione della destinazione, devi fornire le seguenti informazi
 ## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Per connettersi alla destinazione, sono necessarie le **[!UICONTROL View Destinations]** e le **[!UICONTROL Manage Destinations]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md).
@@ -120,11 +120,11 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Set di mappatura preconfigurati"
->abstract="Sono disponibili due set di mappatura già preconfigurati. Quando attivi i dati in Microsoft Bing, i profili qualificati per i tipi di pubblico attivati devono avere almeno un’identità ECID associata al loro profilo, per poter essere esportati correttamente nella destinazione."
+>abstract="Sono disponibili due set di mappatura già preconfigurati. Quando attivi i dati in Microsoft Bing, i profili idonei per i tipi di pubblico attivati devono avere almeno un’identità ECID associata al loro profilo, per essere esportati correttamente nella destinazione."
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
 
 >[!IMPORTANT]
-> 
+>
 >Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md).
@@ -146,7 +146,7 @@ Queste mappature sono disattivate e di sola lettura. Non è necessario configura
 >
 >**ECID è necessario per completare l&#39;esportazione.I profili** senza ECID o senza una mappatura di sincronizzazione ID tra ECID e Microsoft Advertising ID non verranno esportati.
 
-### Esempi di attivazione
+### Esempi di attivazione {#activation-examples}
 
 * **Il profilo con mappatura ECID e Microsoft Advertising ID:** è stato esportato e attivato correttamente
 * **Profilo con solo ECID (nessuna mappatura Microsoft Advertising ID):** Il profilo è **non esportato**. È richiesta la mappatura della sincronizzazione ID tra ECID e MAID.
