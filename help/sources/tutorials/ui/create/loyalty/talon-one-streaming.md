@@ -2,9 +2,8 @@
 title: Trasmetti Dati Da Talon.One Ad Experience Platform Utilizzando L’Interfaccia Utente
 description: Scopri come inviare dati da Talon.One a Adobe Experience Platform utilizzando l’interfaccia utente. Questa guida descrive la configurazione, la selezione e la configurazione del flusso di dati.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
+exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
+source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
@@ -19,7 +18,7 @@ ht-degree: 2%
 
 Leggi questa guida per scoprire come connettere e inviare in streaming i dati da [!DNL Talon.One] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente.
 
-## Guida introduttiva
+## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
