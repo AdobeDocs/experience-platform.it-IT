@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: c550186c9cb3bc580a227633e0d7c0b574ecc2e8
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1744'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ In questo documento sono disponibili due tipi di limiti predefiniti:
 | Tipo di guardrail | Descrizione |
 |----------|---------|
 | **Guardrail delle prestazioni (limite software)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
-| **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
+| **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall&#39;interfaccia utente o dall&#39;API [!DNL Real-Time CDP]. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ I guardrail riportati di seguito si applicano all&#39;attivazione tramite [desti
 | Frequenza di attivazione | Un’esportazione completa giornaliera o esportazioni incrementali più frequenti ogni 3, 6, 8 o 12 ore. | Guarddrail imposto dal sistema | Per ulteriori informazioni sugli incrementi di frequenza per le esportazioni batch, leggere le sezioni della documentazione [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files). |
 | Numero massimo di tipi di pubblico che possono essere esportati in una determinata ora | 100 | Guardrail delle prestazioni | Si consiglia di aggiungere un massimo di 100 tipi di pubblico alle istanze di destinazione batch. |
 | Numero massimo di righe (record) per file da attivare | 5 milioni | Guarddrail imposto dal sistema | Adobe Experience Platform divide automaticamente i file esportati in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo. Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un&#39;esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Per ulteriori informazioni, leggere la [sezione di pianificazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) dell&#39;esercitazione attivare destinazioni batch. |
-| Numero massimo di tipi di pubblico esterni (ad esempio FAC, caricamento personalizzato, composizione del pubblico) che possono essere attivati in un’istanza di destinazione | 10 | Guarddrail imposto dal sistema | Quando si attivano tipi di pubblico esterni (ad esempio [Federated Audience Composition](/help/segmentation/ui/audience-portal.md#fac), [custom upload](/help/segmentation/ui/audience-portal.md#import-audience), [Audience Composition](/help/segmentation/ui/audience-portal.md#audience-composition)) in destinazioni basate su file batch, è possibile attivare un massimo di 10 tipi di pubblico in un&#39;istanza di destinazione. Per ulteriori informazioni su questi tipi di pubblico, consulta [Tipi di pubblico e personalizzazione](/help/segmentation/ui/audience-portal.md#customize). Ulteriori informazioni sul flusso di lavoro per [attivare tipi di pubblico esterni in destinazioni basate su file in batch](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Numero massimo di tipi di pubblico esterni (ad esempio: FAC, caricamento personalizzato, composizione del pubblico) che possono essere attivati in un’istanza di destinazione | 20 | Guarddrail imposto dal sistema | Quando si attivano tipi di pubblico esterni (ad esempio [Composizione pubblico federata](/help/segmentation/ui/audience-portal.md#fac), [caricamento personalizzato](/help/segmentation/ui/audience-portal.md#import-audience), [Composizione pubblico](/help/segmentation/ui/audience-portal.md#audience-composition)) in destinazioni basate su file batch, esiste un limite di 20 tipi di pubblico di questo tipo che è possibile attivare in un&#39;istanza di destinazione. Per ulteriori informazioni su questi tipi di pubblico, consulta [Tipi di pubblico e personalizzazione](/help/segmentation/ui/audience-portal.md#customize). Ulteriori informazioni sul flusso di lavoro per [attivare tipi di pubblico esterni in destinazioni basate su file in batch](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -159,8 +159,8 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 |Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
 |---------|---------|-----------|-----------|------------|
-| Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
-| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| Datasets based on the **XDM Experience Events schema** | <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
+| Datasets based on the **XDM Individual Profile schema** | - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
@@ -193,10 +193,10 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 
 ## Passaggi successivi {#next-steps}
 
-Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experience Platform, sulla latenza end-to-end e sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+Per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto [!DNL Real-Time CDP], consulta la seguente documentazione:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
