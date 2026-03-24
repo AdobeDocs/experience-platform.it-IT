@@ -50,7 +50,7 @@ Agent Orchestrator consente di creare e distribuire agenti basati sull’intelli
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
