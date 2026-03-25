@@ -3,25 +3,24 @@ description: Scopri come identificare e risolvere gli anti-pattern comuni di con
 solution: Experience Platform
 title: Identificare gli anti-pattern di pianificazione processo
 type: Tutorial
-hide: true
-source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
+exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-
 # Identificare gli anti-pattern per la pianificazione dei processi
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sono attualmente disponibili come versione limitata e solo per i seguenti processi Real-Time CDP:
+>[!UICONTROL Job schedules] sono attualmente disponibili solo per i seguenti processi Real-Time CDP:
 >
 > * Acquisizione di un data lake batch
 > * Acquisizione profilo batch
-> * Segmentazione batch
-> * Attivazione della destinazione batch.
+> * Segmentazione in batch
+> * Attivazione destinazione batch
 
 La visualizzazione della timeline [Pianificazioni processi](job-schedules.md) consente di identificare i problemi di configurazione comuni che possono influire negativamente sulle prestazioni e sull&#39;affidabilità della pipeline dei dati. Questi anti-pattern spesso causano errori di lavoro, incoerenze nei dati o prestazioni del sistema ridotte. Individuando questi modelli in anticipo, è possibile riconfigurare i processi per evitare problemi prima che influiscano sulle operazioni aziendali.
 
@@ -47,7 +46,7 @@ Prima di identificare gli anti-pattern, è necessario:
 
 **Cosa cercare**: più processi pianificati per l&#39;esecuzione simultanea o in stretta successione, in particolare quando si sovrappongono processi che richiedono molte risorse.
 
-In questo esempio, puoi vedere i processi di acquisizione batch in esecuzione contemporaneamente a un processo di segmentazione pianificato. Ciò crea conflitti di risorse perché entrambe le operazioni richiedono una notevole potenza di elaborazione e memoria.
+Un esempio comune è l’esecuzione di processi di acquisizione in batch contemporaneamente a un processo di segmentazione pianificato. Ciò crea conflitti di risorse perché entrambe le operazioni richiedono una notevole potenza di elaborazione e memoria.
 
 **Perché questo è problematico**:
 
@@ -68,7 +67,7 @@ In questo esempio, puoi vedere i processi di acquisizione batch in esecuzione co
 
 **Cosa cercare**: troppi set di dati con più batch pianificati nella stessa ora, in particolare quando questi batch sono impilati vicini tra loro e pianificati in prossimità di finestre di elaborazione critiche, come gli orari di inizio della segmentazione.
 
-In questo modello, vengono visualizzati i seguenti elementi:
+Questo modello in genere include:
 
 * Più set di dati ciascuno con più batch al giorno
 * Processi ETL (acquisizione di data lake e acquisizione di profili) raggruppati nella stessa ora
@@ -80,14 +79,14 @@ In questo modello, vengono visualizzati i seguenti elementi:
 * **Disponibilità ritardata del profilo**: i processi di acquisizione del profilo troppo vicini a orari di inizio segmentazione potrebbero non essere completati in tempo, causando valutazioni del pubblico incomplete o non aggiornate.
 * **Segmentazione imprevedibile**: se i processi di acquisizione a monte sono ancora in esecuzione all&#39;inizio della segmentazione, si rischia di valutare i tipi di pubblico rispetto a dati incompleti, con conseguente iscrizione errata al pubblico.
 * **Errori a cascata**: un singolo batch ritardato in una pianificazione ad alta densità può causare un effetto domino, ritardando tutti i batch e i processi a valle successivi.
-* **Vincolo risorse**: il sistema potrebbe avere difficoltà ad allocare risorse sufficienti durante l&#39;elaborazione di troppi processi di acquisizione simultanei, rallentando i tempi di elaborazione o causando errori.
+* **Ceppo di risorse**: il sistema potrebbe avere difficoltà ad allocare risorse sufficienti durante l&#39;elaborazione di troppi processi di acquisizione simultanei, rallentando i tempi di elaborazione o causando errori.
 
 **Come correggerlo**:
 
 * **Consolidare i batch**: ridurre la frequenza dei batch combinando più batch di piccole dimensioni in un numero minore di batch più grandi per set di dati.
 * **Distribuisci uniformemente**: distribuisci i processi di acquisizione nell&#39;arco della giornata anziché raggrupparli in ore specifiche.
 * **Aggiungi tempo buffer**: assicurati che siano trascorse almeno 1-2 ore tra il completamento dell&#39;acquisizione del profilo e l&#39;inizio della segmentazione.
-* **Verifica requisiti**: valuta se tutti i set di dati necessitano effettivamente di più batch giornalieri. Molti casi d&#39;uso funzionano con aggiornamenti meno frequenti.
+* **Verifica requisiti**: valuta se tutti i set di dati necessitano effettivamente di più batch giornalieri. Molti casi d’uso funzionano con meno aggiornamenti frequenti.
 
 ## Batch eccessivi per set di dati {#excessive-batches-per-dataset}
 
@@ -95,7 +94,7 @@ In questo modello, vengono visualizzati i seguenti elementi:
 
 **Cosa cercare**: un singolo set di dati con un numero eccessivo di singoli processi batch pianificati nel corso della giornata, creando una lunga serie verticale di processi sulla timeline.
 
-In questo modello, viene visualizzata una riga di set di dati con molti processi di acquisizione batch singoli pianificati a intervalli frequenti, a volte decine di batch al giorno per un singolo set di dati.
+Questo modello coinvolge un singolo set di dati con molti processi di acquisizione batch singoli pianificati a intervalli frequenti, a volte decine di batch al giorno.
 
 **Perché questo è problematico**:
 

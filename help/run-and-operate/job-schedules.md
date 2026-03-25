@@ -3,25 +3,24 @@ description: Scopri come verificare e risolvere i problemi relativi ai processi 
 solution: Experience Platform
 title: Controlla gli Schedules per i Processi
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 0%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
-
 # Verifica pianificazioni processi
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sono attualmente disponibili come versione limitata e solo per i seguenti processi Real-Time CDP:
+>[!UICONTROL Job schedules] sono attualmente disponibili solo per i seguenti processi Real-Time CDP:
 >
 > * Acquisizione di un data lake batch
 > * Acquisizione profilo batch
-> * Segmentazione batch
-> * Attivazione della destinazione batch.
+> * Segmentazione in batch
+> * Attivazione destinazione batch
 
 [!UICONTROL Job Schedules] fornisce una visualizzazione unificata di tutti i processi di elaborazione batch pianificati nella pipeline di dati, dall&#39;acquisizione all&#39;attivazione della destinazione. Esaminare lo stato di esecuzione, identificare i conflitti di pianificazione e diagnosticare i problemi di configurazione prima che influiscano sulle operazioni aziendali.
 
@@ -107,7 +106,6 @@ Durante l&#39;esame delle pianificazioni dei processi, è possibile che si notin
 Questi pattern possono causare errori di processo, elaborazione incompleta dei dati e prestazioni di sistema insoddisfacenti. Per informazioni su come identificare e risolvere questi problemi, consulta la documentazione su [identificazione degli anti-pattern di pianificazione dei processi](job-schedules-anti-patterns.md).
 
 Quando devi analizzare set di dati o esecuzioni di processi specifici, puoi approfondire le viste dettagliate per visualizzare la cronologia di esecuzione, i messaggi di errore, le metriche delle prestazioni e le dipendenze. Per informazioni sulla visualizzazione di questi dati dettagliati, consulta la documentazione su [visualizzazione dei dettagli del processo](job-schedules-details.md).
-
 
 ## Passaggi successivi {#next-steps}
 

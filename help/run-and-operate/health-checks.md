@@ -4,8 +4,8 @@ description: Scopri come utilizzare i controlli di integrità in Adobe Experienc
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: true
-source-git-commit: ab2420b898dc38d19187cee627b5c44e7fb44a6c
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Verifiche stato
 
-I controlli di integrità analizzano gli schemi e le identità utilizzati nella sandbox e forniscono un riepilogo dei problemi che è possibile utilizzare per esplorare e risolvere i problemi con [!UICONTROL AI Assistant]. In futuro, sarà possibile eseguire la scansione di un numero maggiore di oggetti per ottenere un rapporto più completo.
+I controlli di integrità analizzano gli schemi e le identità utilizzati nella sandbox e forniscono un riepilogo dei problemi che è possibile utilizzare per esplorare e risolvere i problemi con l’Assistente AI. In futuro, sarà possibile eseguire la scansione di un numero maggiore di oggetti per ottenere un rapporto più completo.
 
 Configurazioni di schema e identità inadeguate causano significativi problemi a valle, tra cui creazione di profili errata, qualificazione dei segmenti non riuscita e attivazione imprecisa. Questi problemi sono difficili da rilevare e spesso richiedono competenze specialistiche da diagnosticare. I controlli di integrità spostano l&#39;approccio dalla risoluzione reattiva dei problemi alla manutenzione proattiva e preventiva.
 
@@ -22,7 +22,7 @@ I controlli di integrità consentono di:
 
 * **Rileva problemi di configurazione in anticipo**: identifica best practice mancanti, configurazioni non corrette e pattern che causano inefficienze nella personalizzazione, nell&#39;attivazione e altro ancora.
 * **Ricevi correzione guidata**: ottieni indicazioni chiare su ogni problema e su come risolverlo.
-* **Monitoraggio continuo**: in questo momento, i controlli di integrità eseguono scansioni automatiche giornaliere in modo da poter rilevare i problemi prima che diventino errori critici. La pianificazione potrebbe cambiare nelle versioni future.
+* **Monitoraggio continuo**: attualmente, i controlli di integrità eseguono scansioni automatiche giornaliere in modo da poter rilevare i problemi prima che diventino errori critici. La pianificazione potrebbe cambiare nelle versioni future.
 
 ## Prerequisiti {#prerequisites}
 
@@ -72,14 +72,14 @@ Esegue la scansione per garantire che i campi di identità abbiano vincoli di lu
 | Dettaglio | Descrizione |
 | --- | --- |
 | **Problema** | Nei campi contrassegnati come identità manca la lunghezza minima/massima o la convalida del pattern. |
-| **Impatto** | Senza convalida, i valori di Garbage possono immettere [!UICONTROL Identity Service]. Valori come &quot;0&quot;, &quot;Guest&quot; o maiuscole/minuscole non corrispondenti (ad esempio, &quot;xyz123&quot; versus &quot;XYZ123&quot;) compromettono l&#39;integrità del profilo assemblato durante la segmentazione e l&#39;attivazione. |
+| **Impatto** | Senza convalida, i valori di Garbage possono immettere [!DNL Identity Service]. Valori come &quot;0&quot;, &quot;Guest&quot; o maiuscole/minuscole non corrispondenti (ad esempio, &quot;xyz123&quot; versus &quot;XYZ123&quot;) compromettono l&#39;integrità del profilo assemblato durante la segmentazione e l&#39;attivazione. |
 | **Rimedio** | Imposta la lunghezza minima/massima e i vincoli di pattern sui campi personalizzati contrassegnati come identità. Utilizza espressioni regolari per applicare regole quali solo cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. |
 
 Quando selezioni la scheda **[!UICONTROL Identity Field Validation]**, a destra viene visualizzato un pannello dei dettagli. Il pannello mostra:
 
 * **[!UICONTROL Description]**: esegue la scansione per verificare che i campi di identità abbiano lunghezza minima/massima e regole di pattern regex per l&#39;integrità dei dati. Elenca gli schemi e i campi interessati.
 * **[!UICONTROL Impact]**: se i campi di identità negli schemi non hanno lunghezza minima/massima e le convalide dei modelli impostate, si potrebbero verificare dati incoerenti che potrebbero compromettere l&#39;integrità e la qualità dei dati.
-* **[!UICONTROL General areas of impact]**: identificatori di bassa qualità in [!UICONTROL Identity Service]; unione inaffidabile.
+* **[!UICONTROL General areas of impact]**: identificatori di bassa qualità in [!DNL Identity Service]; unione inaffidabile.
 * **[!UICONTROL Experience League Documentation]**: collegamento alle best practice per la modellazione dei dati.
 * **[!UICONTROL Affected Schemas]**: elenco degli schemi interessati, ciascuno con un modulo di espansione per visualizzare ulteriori dettagli e un collegamento per aprire lo schema.
 
@@ -117,12 +117,12 @@ Convalida l’uso corretto dei tipi di identità persone e non persone nelle cla
 | --- | --- |
 | **Problema** | Gli identificatori non persone vengono utilizzati negli schemi di profilo individuale o di classe di Experience Event, oppure negli schemi di ricerca. |
 | **Impatto** | Gli identificatori non persone negli schemi di profilo non partecipano al grafico delle identità, il che porta a una risoluzione incompleta delle identità. Gli identificatori delle persone negli schemi di ricerca aumentano il conteggio dei profili e rendono i dati non idonei per i casi di utilizzo della ricerca. Entrambi i casi rischiano di compromettere l’implementazione con miglioramenti futuri del prodotto. |
-| **Rimedio** | Rivedi gli schemi con flag e correggi le assegnazioni del tipo di identità. Se possibile, rimuovi gli identificatori non di persona dagli schemi dei singoli profili. Per gli schemi già in uso dai set di dati, fai riferimento alle [regole di evoluzione dello schema](/help/xdm/schema/composition.md#evolution). |
+| **Rimedio** | Rivedi gli schemi con flag e correggi le assegnazioni del tipo di identità. Se possibile, rimuovi gli identificatori non relativi alle persone dagli schemi dei singoli profili. Per gli schemi già in uso dai set di dati, fai riferimento alle [regole di evoluzione dello schema](/help/xdm/schema/composition.md#evolution). |
 
 Quando selezioni la scheda **[!UICONTROL People & Non-People Identity Config]**, a destra viene visualizzato un pannello dei dettagli. Il pannello mostra:
 
 * **[!UICONTROL Description]**: convalida l&#39;uso corretto dei tipi di identità tra le classi dello schema. Elenca gli schemi non configurati correttamente ed evidenzia le assegnazioni errate.
-* **[!UICONTROL Impact]**: se a un&#39;entità non persona viene assegnata un&#39;identità di persona, il conteggio dei profili verrà gonfiato e questi dati non saranno idonei come ricerca. Se a un’entità persona viene assegnata un’identità non-persona, i dati non sono disponibili per lo streaming o la segmentazione Edge.
+* **[!UICONTROL Impact]**: se a un&#39;entità non-people viene assegnata un&#39;identità di persona, il conteggio dei profili verrà gonfiato e questi dati non saranno idonei per la ricerca. Se a un’entità persona viene assegnata un’identità non-people, i dati non sono disponibili per lo streaming o la segmentazione Edge.
 * **[!UICONTROL General areas of impact]**: grafici di identità incompleti; conteggi di profili gonfiati; utilizzo errato della ricerca.
 * **[!UICONTROL Affected Schemas]**: elenco di schemi con problemi. Espandi una riga di schema per visualizzare il percorso, il nome dell’identità e il tipo di schema per ogni configurazione errata. Utilizza l’icona del collegamento per aprire lo schema.
 
@@ -172,7 +172,7 @@ Quando selezioni la scheda **[!UICONTROL Deprecated Identity Namespace]**, a des
 
 ![Il pannello dei dettagli dello spazio dei nomi dell&#39;identità è obsoleto e mostra la descrizione, l&#39;impatto e l&#39;elenco degli spazi dei nomi interessati](assets/health-checks/deprecated-namespace-detail.png)
 
-Per ulteriori informazioni, vedere l&#39;articolo [Experience Cloud knowledge base sugli spazi dei nomi obsoleti](https://experienceleague.adobe.com/it/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Per ulteriori informazioni, vedere l&#39;articolo [Experience Cloud knowledge base sugli spazi dei nomi obsoleti](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Passaggi successivi {#next-steps}
 

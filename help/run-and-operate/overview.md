@@ -1,20 +1,18 @@
 ---
 title: Panoramica sull’esecuzione e l’utilizzo
 description: Ispeziona, risolvi i problemi e ottimizza le implementazioni di Experience Platform con gli strumenti Esegui e opera. Ottieni visibilità sulle attivazioni batch pianificate, identifica i problemi di configurazione e migliora l’affidabilità del sistema.
-hide: true
+solution: Experience Platform
+type: Documentation
+role: Admin, User
 exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
-source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 1%
+source-wordcount: '636'
+ht-degree: 2%
 
 ---
 
 # Panoramica sull’esecuzione e l’utilizzo
-
->[!AVAILABILITY]
->
->Le funzioni di esecuzione e funzionamento sono attualmente disponibili come versione limitata.
 
 Quando i processi batch non riescono o forniscono dati incompleti, è necessario comprendere rapidamente la causa del problema. La causa principale potrebbe essere rappresentata da problemi di disponibilità dei dati, tempi non corretti, problemi di configurazione o vincoli di capacità del sistema. Senza una chiara visibilità, è possibile dedicare ore ad analizzare più sistemi prima di trovare la risposta.
 
@@ -30,13 +28,11 @@ Gli strumenti [!UICONTROL Run and Operate] sono progettati per servire più tipi
 
 * **Team di dati e IT**: amministratori di sistema e data engineer che gestiscono pipeline di dati affidabili e risolvono problemi tecnici.
 * **Operazioni di marketing**: tecnici di marketing che controllano la distribuzione dei dati alle piattaforme di marketing e risolvono i problemi di attivazione.
-* **Implementatori**: professionisti che convalidano l&#39;efficienza dell&#39;implementazione, l&#39;affidabilità e la risoluzione dei problemi tecnici.
+* **Implementatori**: professionisti che convalidano l&#39;efficienza e l&#39;affidabilità dell&#39;implementazione e che risolvono problemi tecnici.
 
 ## Prerequisiti {#prerequisites}
 
-Per accedere agli strumenti di esecuzione e gestione, sono necessarie le **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions).
-La pagina [!UICONTROL Job Schedules] fornisce una panoramica di tutti i processi di elaborazione batch pianificati.
-Contatta l’amministratore di sistema per assicurarti di disporre delle autorizzazioni appropriate.
+Per accedere agli strumenti di esecuzione e gestione, sono necessarie le **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions). Contatta l’amministratore di sistema per assicurarti di disporre delle autorizzazioni appropriate.
 
 ## Guida introduttiva {#getting-started}
 
@@ -44,10 +40,6 @@ Per accedere agli strumenti Esegui e utilizza dall’interfaccia utente di Exper
 
 1. Accedi al tuo account Experience Platform e seleziona **[!UICONTROL Run and Operate]** dal menu di navigazione a sinistra.
 2. Selezionare lo strumento corrispondente alle proprie esigenze di ispezione o risoluzione dei problemi.
-
-   >[!NOTE]
-   >
-   >Attualmente, le funzionalità disponibili sono [Pianificazioni processi](job-schedules.md) e [Verifiche stato](health-checks.md).
 
 ![Interfaccia utente di Experience Platform con barra di spostamento a sinistra Esegui e opera.](assets/overview/run-and-operate.png)
 
@@ -63,8 +55,8 @@ I seguenti strumenti consentono di controllare e ottimizzare le operazioni sui d
 >
 > * Acquisizione di un data lake batch
 > * Acquisizione profilo batch
-> * Segmentazione batch
-> * Attivazione della destinazione batch.
+> * Segmentazione in batch
+> * Attivazione destinazione batch
 
 Con [Pianificazioni processi](job-schedules.md), puoi controllare tutte le operazioni batch pianificate nell&#39;organizzazione, per sandbox, incluse l&#39;acquisizione del data lake, l&#39;acquisizione del profilo, la segmentazione e l&#39;attivazione della destinazione. Visualizzare lo stato di esecuzione dei job, le metriche delle prestazioni e la cronologia di esecuzione per identificare i pattern e diagnosticare i problemi di configurazione che influiscono sull&#39;affidabilità.
 
@@ -80,18 +72,14 @@ Puoi anche comprendere le dipendenze tra le fasi di elaborazione dei dati, per g
 
 ### Verifiche stato {#health-checks}
 
->[!IMPORTANT]
->
->[!UICONTROL Health checks] sono attualmente disponibili come versione limitata.
-
-Con [Verifiche stato](health-checks.md), puoi rilevare in modo proattivo i problemi di configurazione dello schema e dell&#39;identità prima che influiscano sulle operazioni aziendali. Al momento, i controlli di integrità eseguono scansioni statiche giornaliere tra gli schemi e gli spazi dei nomi delle identità, evidenziando best practice mancanti, configurazioni errate e pattern che portano a errori a valle.
+Con [Verifiche stato](health-checks.md), puoi rilevare in modo proattivo i problemi di configurazione dello schema e dell&#39;identità prima che influiscano sulle operazioni aziendali. Attualmente, i controlli di integrità eseguono scansioni statiche giornaliere tra gli schemi e gli spazi dei nomi delle identità, evidenziando best practice mancanti, configurazioni errate e pattern che portano a errori a valle.
 
 I controlli sanitari valutano attualmente cinque aree fondamentali:
 
 * **[Convalida del campo di identità](health-checks.md#identity-field-validation)**: verificare che la lunghezza e i vincoli del modello dei campi di identità siano corretti.
 * **[Regole di collegamento del grafo delle identità](health-checks.md#identity-graph-linking-rules)**: verificare che le regole di collegamento siano configurate in modo da evitare la compressione del profilo.
 * **[Configurazione identità persone e non persone](health-checks.md#people-non-people-identity)**: convalida l&#39;utilizzo corretto del tipo di identità tra le classi dello schema.
-* **[Descrizioni dello spazio dei nomi delle identità personalizzate](health-checks.md#namespace-missing-description)**: verificare che i metadati dello spazio dei nomi siano completi.
+* **[Descrizione spazio dei nomi identità personalizzato](health-checks.md#namespace-missing-description)**: verificare che i metadati dello spazio dei nomi siano completi.
 * **[Spazi dei nomi delle identità obsoleti](health-checks.md#deprecated-namespace)**: rileva spazi dei nomi obsoleti per la pulizia.
 
 ## Passaggi successivi {#next-steps}

@@ -3,25 +3,24 @@ description: Scopri come visualizzare informazioni dettagliate sui set di dati e
 solution: Experience Platform
 title: Visualizza dettagli pianificazione processo
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1783'
-ht-degree: 0%
+source-wordcount: '1778'
+ht-degree: 1%
 
 ---
 
-
 # Visualizza dettagli pianificazione processo
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] sono attualmente disponibili come versione limitata e solo per i seguenti processi Real-Time CDP:
+>[!UICONTROL Job schedules] sono attualmente disponibili solo per i seguenti processi Real-Time CDP:
 >
 > * Acquisizione di un data lake batch
 > * Acquisizione profilo batch
-> * Segmentazione batch
-> * Attivazione della destinazione batch.
+> * Segmentazione in batch
+> * Attivazione destinazione batch
 
 Per la risoluzione dei problemi relativi ai processi o l’analisi dei problemi di prestazioni, è necessario disporre di informazioni dettagliate su set di dati specifici ed esecuzioni dei relativi processi. L&#39;interfaccia [Pianificazioni processi](job-schedules.md) consente di eseguire il drill-down dalla visualizzazione della timeline in singoli set di dati e processi per comprendere la cronologia, la tempistica e lo stato dell&#39;esecuzione.
 
@@ -37,7 +36,7 @@ Utilizzare questa vista dettagliata per:
 
 Prima di visualizzare i dettagli del processo, è necessario:
 
-* Avere accesso a [!UICONTROL Job Schedules] con le autorizzazioni di controllo di accesso **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [&#128279;](/help/access-control/home.md#permissions).
+* Avere accesso a **[!UICONTROL Job Schedules]** con le autorizzazioni di controllo di accesso **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [](/help/access-control/home.md#permissions).
 * Conoscere l&#39;interfaccia [Pianificazioni processi](job-schedules.md#understanding-interface) e la visualizzazione della timeline.
 * Comprendi i diversi [tipi di processo](job-schedules.md#job-schedules-details) (acquisizione del lago, acquisizione del profilo, segmentazione, attivazione).
 
