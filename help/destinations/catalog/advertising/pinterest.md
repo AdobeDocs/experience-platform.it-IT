@@ -2,9 +2,9 @@
 title: Connessione a elenco clienti Pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato il tuo sito o dagli utenti che hanno già interagito con i tuoi contenuti su Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: b02e746ba0b8a75699510b37937cb57e7eaefcca
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '952'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato
 
 ## Identità supportate {#supported-identities}
 
-La destinazione [!DNL Pinterest Customer List] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+La destinazione [!DNL Pinterest Customer List] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Nel [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione della destinazione, mappa le identità desiderate al campo di destinazione *pinterest_audience*. Le identità vengono distinte e risolte al momento dell’inserimento dei dati in Pinterest.
 
@@ -45,7 +45,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 

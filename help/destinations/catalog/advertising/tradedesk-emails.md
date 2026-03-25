@@ -3,9 +3,9 @@ title: Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: b02e746ba0b8a75699510b37937cb57e7eaefcca
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1800'
 ht-degree: 2%
 
 ---
@@ -73,11 +73,9 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 Tipi di pubblico supportati per tipo di dati sul pubblico:
 
@@ -106,7 +104,6 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
       * Il periodo (`.`) (codice ASCII 46). Ad esempio, normalizzare &quot;jane.doe@gmail.com&quot; in &quot;janedoe@gmail.com&quot;.
      * Il segno più (`+`) (codice ASCII 43) e tutti i caratteri successivi. Ad esempio, normalizzare `janedoe+home@gmail.com` in `janedoe@gmail.com`.
   
-
 ## Requisiti di normalizzazione e hashing dei numeri di telefono {#phone-hashing}
 
 Ecco cosa devi sapere sul caricamento dei numeri di telefono:
@@ -166,7 +163,7 @@ La destinazione CRM [!DNL The Trade Desk] è un caricamento di file batch giorna
 
 ### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Account Type]**: scegliere l&#39;opzione **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
