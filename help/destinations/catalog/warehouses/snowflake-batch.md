@@ -4,9 +4,9 @@ description: Crea una condivisione dati live di Snowflake per ricevere aggiornam
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: f6565f7820d6d6394d26b88fdde3d42a90dedd63
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1804'
 ht-degree: 3%
 
 ---
@@ -194,12 +194,19 @@ I dati vengono inseriti nell’account Snowflake tramite una tabella dinamica. C
 
 La tabella dinamica contiene le colonne riportate di seguito.
 
-* **TS**: colonna timestamp che indica l&#39;ultimo aggiornamento di ogni riga della tabella condivisa
-* **ID criterio di unione**: ID del [criterio di unione](../../../profile/merge-policies/overview.md) a cui appartiene il pubblico da attivare
-* **Attributi di mappatura**: ogni attributo di mappatura selezionato durante il flusso di lavoro di attivazione viene rappresentato come intestazione di colonna in Snowflake
-* **Appartenenza al pubblico**: l&#39;appartenenza a qualsiasi pubblico mappato al flusso di dati è indicata tramite una voce `active` nella cella corrispondente
+* **TS**: un timestamp che indica quando ogni riga è stata aggiornata l&#39;ultima volta
+* **MERGE_POLICY_ID**: ID del [criterio di unione](../../../profile/merge-policies/overview.md) a cui appartiene il pubblico attivato
+* **AUDIENCE_ID**: l&#39;ID del pubblico
+* **AUDIENCE_NAME**: nome del pubblico configurato in Experience Platform
+* **AUDIENCE_ORIGIN**: [origin](../../../segmentation/ui/audience-portal.md) del pubblico (ad esempio, `Segmentation Service` o `Custom upload`)
+* **AUDIENCE_STATUS**: stato di appartenenza del profilo nel pubblico (ad esempio, `active` o `realized`)
+* **Attributi di mappatura**: ogni attributo di mappatura selezionato durante il flusso di lavoro di attivazione è rappresentato da una colonna
 
 ![Schermata che mostra l&#39;interfaccia di Snowflake con i dati della tabella dinamica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+
+>[!NOTE]
+>
+>La struttura della tabella descritta sopra si applica alle connessioni di destinazione create dopo la versione di Experience Platform di marzo 2026. Durante il periodo di transizione, i nuovi connettori utilizzano entrambe le strutture di tabella, con la nuova struttura preceduta da `V2` (ad esempio, `V2_<table-name>`). Le connessioni esistenti continuano a utilizzare la struttura precedente, in cui ogni pubblico è rappresentato come una colonna separata (ad esempio, `ups_<audience-id>` = `active`). La struttura precedente diventerà obsoleta alla fine di giugno 2026.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
