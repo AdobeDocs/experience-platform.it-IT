@@ -54,7 +54,7 @@ Il processo per ottenere e testare il modello è iterativo. Ripeti i passaggi se
 
 1. [ottenere un modello di esempio](../../testing-api/streaming-destinations/create-template.md#sample-template-api).
 2. Utilizza il modello di esempio come punto di partenza per creare una bozza personalizzata.
-3. Chiama l&#39;endpoint API del modello di rendering [](../../testing-api/streaming-destinations/create-template.md#render-template-api) con il tuo modello. Adobe genera profili di esempio in base allo schema e restituisce il risultato o eventuali errori riscontrati.
+3. Chiama l&#39;endpoint API del modello di rendering [&#128279;](../../testing-api/streaming-destinations/create-template.md#render-template-api) con il tuo modello. Adobe genera profili di esempio in base allo schema e restituisce il risultato o eventuali errori riscontrati.
 4. Confronta i dati esportati con il formato dati previsto dalla destinazione. Se necessario, modifica il modello.
 5. Ripeti questo processo fino a quando i profili esportati non corrispondono al formato di dati previsto della destinazione.
 

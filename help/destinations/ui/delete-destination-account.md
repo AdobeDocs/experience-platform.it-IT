@@ -49,4 +49,4 @@ Per eliminare gli account di destinazione esistenti, effettua le seguenti operaz
 
 Hai utilizzato correttamente l’area di lavoro delle destinazioni per eliminare gli account esistenti.
 
-Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fare riferimento al tutorial sull&#39;eliminazione di connessioni mediante l&#39;API del servizio Flusso[](../api/delete-destination-account.md)
+Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fare riferimento al tutorial sull&#39;eliminazione di connessioni mediante l&#39;API del servizio Flusso[&#128279;](../api/delete-destination-account.md)
