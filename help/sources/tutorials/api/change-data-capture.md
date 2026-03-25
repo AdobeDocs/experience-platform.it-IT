@@ -2,9 +2,9 @@
 title: Abilitare Change Data Capture per le connessioni di origine nell’API
 description: Scopri come abilitare l’acquisizione dei dati di modifica per le connessioni di origine nell’API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
+source-git-commit: 74743d7dc93e2ba291481ad11e923d28088c4903
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1294'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->È ora possibile utilizzare l&#39;acquisizione dei dati di modifica per le origini [!DNL Amazon S3] e [!DNL Data Landing Zone] durante l&#39;esecuzione di Adobe Experience Platform su Amazon Web Services (AWS) durante la connessione a un data center VA6. Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../landing/multi-cloud.md).
+>* Change Data Capture è supportato per le seguenti origini: [!DNL Amazon S3], [!DNL Data Landing Zone], [!DNL Marketo Engage], [!DNL Microsoft Dynamics] e [!DNL Salesforce].
+>
+>* È inoltre possibile abilitare l&#39;acquisizione dei dati di modifica per le origini [!DNL Amazon S3] e [!DNL Data Landing Zone] quando si utilizza Adobe Experience Platform su Amazon Web Services (AWS) in un data center VA6. Experience Platform su AWS è attualmente disponibile per un pubblico limitato. Per ulteriori dettagli sul supporto dell&#39;infrastruttura, consulta la [panoramica multi-cloud di Experience Platform](../../../landing/multi-cloud.md).
 
 Utilizza l’acquisizione dei dati di modifica nelle origini Adobe Experience Platform per mantenere sincronizzati i sistemi di origine e di destinazione quasi in tempo reale.
 
