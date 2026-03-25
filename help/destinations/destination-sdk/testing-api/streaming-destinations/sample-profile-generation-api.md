@@ -47,8 +47,8 @@ Per ottenere l’ID di un’istanza di destinazione, devi innanzitutto creare un
 
 >[!IMPORTANT]
 >
->* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) per ulteriori informazioni.
->* Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Leggi [connettiti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) e [attiva profili e pubblico a una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=it) per ulteriori informazioni.
+>* Dopo aver stabilito la connessione alla destinazione, ottieni l&#39;ID dell&#39;istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [sfoglia una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=it).
 >
 >![Immagine dell&#39;interfaccia utente come ottenere l&#39;ID istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -182,10 +182,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentMembership` | Oggetto mappa che descrive le appartenenze del singolo pubblico. Per ulteriori informazioni su `segmentMembership`, leggere [Dettagli appartenenza pubblico](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | Oggetto mappa che descrive le appartenenze del singolo pubblico. Per ulteriori informazioni su `segmentMembership`, leggere [Dettagli appartenenza pubblico](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=it). |
 | `lastQualificationTime` | Un timestamp dell’ultima volta che questo profilo si è qualificato per il segmento. |
 | `xdm:status` | Campo stringa che indica se l’appartenenza al pubblico è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`realized`: il profilo fa parte del segmento.</li><li>`exited`: il profilo sta uscendo dal pubblico come parte della richiesta corrente.</li></ul> |
-| `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Per ulteriori informazioni su `identityMap`, leggere [Base della composizione dello schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
+| `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Per ulteriori informazioni su `identityMap`, leggere [Base della composizione dello schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it#identityMap). |
 
 {style="table-layout:auto"}
 

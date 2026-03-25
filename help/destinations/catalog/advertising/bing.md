@@ -79,7 +79,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 La destinazione [!DNL Microsoft Bing] richiede la seguente configurazione per funzionare correttamente:
 
-1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL Microsoft Bing] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
+1. **Abilita funzionalità di sincronizzazione ID**: se questa è la prima volta che configuri l&#39;attivazione di [!DNL Microsoft Bing] e in passato non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=it) nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID.
    * Se in precedenza hai impostato [!DNL Microsoft Bing] integrazioni in Audience Manager, le sincronizzazioni ID esistenti vengono automaticamente trasferite ad Experience Platform.
 
 2. **Verifica ECID nei profili**: tutti i profili devono avere un ECID presente per essere esportati correttamente. ECID **obbligatorio** per questa destinazione.

@@ -42,7 +42,7 @@ Seleziona la proprietà tag in cui desideri installare l’estensione. Puoi anch
 
 Il flusso di lavoro ti porta all’interfaccia utente di Data Collection per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la [pagina dell&#39;estensione Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) nella documentazione dei tag.
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la [pagina dell&#39;estensione Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=it) nella documentazione dei tag.
 
 Puoi anche installare l&#39;estensione direttamente nell&#39;[interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Per ulteriori informazioni, consulta la guida in [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

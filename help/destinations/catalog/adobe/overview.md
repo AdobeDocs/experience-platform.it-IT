@@ -49,4 +49,4 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 
 Utilizza la funzionalità di condivisione del pubblico di Experience Platform per condividere i tipi di pubblico di Experience Platform con altre destinazioni di Adobe. Fai riferimento alla pagina seguente per ulteriori informazioni (si apre nel portale della documentazione di Audience Manager):
 
-* [Condivisione del pubblico in Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l&#39;integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Condivisione del pubblico in Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l&#39;integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it)
