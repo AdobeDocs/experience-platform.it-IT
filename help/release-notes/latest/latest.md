@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2026
 description: Note sulla versione di Adobe Experience Platform di marzo 2026.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d7415a9deefac55b8583eb52a7c1f18caf5f3334
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 35%
+source-wordcount: '1161'
+ht-degree: 36%
 
 ---
 
@@ -29,6 +29,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Servizio di segmentazione](#segmentation-service)
 - [Origini](#sources)
 
 ## Gestione avanzata del ciclo di vita dei dati {#advanced-data-lifecycle-management}
@@ -51,7 +52,7 @@ Agent Orchestrator consente di creare e distribuire agenti basati sull’intelli
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -108,6 +109,19 @@ Inspect, troubleshoot, and optimize your Experience Platform implementations wit
 {style="table-layout:auto"}
 
 For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). -->
+
+## Servizio di segmentazione {#segmentation-service}
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I tipi di pubblico possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo brand.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Tipo di acquisizione | Ora puoi visualizzare il tipo di acquisizione degli attributi. Questo consente di conoscere l’origine dei dati e di creare tipi di pubblico migliori. Per ulteriori informazioni su questa funzione, consulta la [guida del Generatore di segmenti](/help/segmentation/ui/segment-builder.md). |
+| Dati di riepilogo | Ora puoi visualizzare i dati di riepilogo per i tuoi attributi per i tipi di pubblico basati su account e persone. Per ulteriori informazioni su questa funzione nei tipi di pubblico dell&#39;account, leggere la [guida di Audience Builder](/help/rtcdp/segmentation/audience-builder.md) dell&#39;account. Per ulteriori informazioni su questa funzione nei tipi di pubblico basati sulle persone, consulta la [guida del Generatore di segmenti](/help/segmentation/ui/segment-builder.md). |
+
+Per ulteriori informazioni, consulta la [[!DNL Segmentation Service] panoramica](../../segmentation/home.md).
 
 ## Origini
 

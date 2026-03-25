@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '6311'
-ht-degree: 11%
+source-wordcount: '6574'
+ht-degree: 10%
 
 ---
 
@@ -56,9 +56,19 @@ Questi blocchi predefiniti sono disponibili nella sezione **[!UICONTROL Fields]*
 
 ![La sezione dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/segment-fields.png)
 
+È possibile selezionare l&#39;icona ![impostazioni](/help/images/icons/settings.png) per modificare le impostazioni per i campi visualizzati.
+
+Per **[!UICONTROL Available fields]**, è possibile visualizzare solo i campi che contengono dati o lo schema XDM completo.
+
+Per **[!UICONTROL Data sources]**, è possibile filtrare per visualizzare gli attributi provenienti dai tipi di acquisizione specificati. I valori supportati sono **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]** e **[!UICONTROL Show fields with no ingested data]**.
+
+Per **[!UICONTROL Merge policy]**, puoi scegliere a quale criterio di unione appartengono i campi.
+
+![L&#39;area delle impostazioni viene visualizzata nel Generatore di segmenti.](../images/ui/segment-builder/settings.png)
+
 ### Attributi
 
-La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -146,6 +156,22 @@ Puoi utilizzare i seguenti operatori per i rispettivi tipi di dati:
 Per informazioni più dettagliate sulle funzioni di data e ora, leggere la [sezione relativa ai vincoli di tempo](#time-constraints).
 
 +++
+
+Quando si seleziona un attributo, è possibile visualizzare i dati di riepilogo selezionando l&#39;[icona informazioni](../../images/icons/info.png). I dati di riepilogo includono informazioni quali la spiegazione del campo, il conteggio dei record dei valori e la percentuale di conti che contengono i valori per questo attributo.
+
+Nella sezione **[!UICONTROL Top values]** vengono visualizzati i valori più frequenti per l&#39;attributo e sono inclusi dettagli quali il valore, il numero di record che contengono il valore e la percentuale di record totali che il valore rappresenta.
+
+![Un popover che visualizza i dati di riepilogo per un attributo](/help/segmentation/images/ui/segment-builder/summary-data.png)
+
+Se un attributo viene popolato da meno del 25% dei profili, verrà visualizzata l&#39;icona ![avviso dati](../../images/icons/data-notice.png). Gli stessi dati di riepilogo vengono visualizzati per l’attributo, indipendentemente da.
+
+>[!NOTE]
+>
+>I primi valori vengono visualizzati solo se il campo **not** contiene troppi valori diversi e se tali valori vengono ripetuti di frequente. Inoltre, questi dati di riepilogo vengono aggiornati **ogni giorno**.
+
+Inoltre, l&#39;attributo ha un **[!UICONTROL Ingestion Type]**. Il tipo di acquisizione consente di conoscere l&#39;origine dei dati e può essere uno dei seguenti valori: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** o **[!UICONTROL No Data Ingested]**.
+
+![Viene visualizzato il tipo di acquisizione per l&#39;attributo.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
 
 #### Attributi calcolati {#computed-attributes}
 

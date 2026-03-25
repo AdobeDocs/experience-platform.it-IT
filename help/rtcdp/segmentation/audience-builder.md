@@ -2,12 +2,12 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Scopri come utilizzare Audience Builder in Real-Time Customer Data Platform per creare tipi di pubblico.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 9%
+source-wordcount: '1079'
+ht-degree: 7%
 
 ---
 
@@ -40,10 +40,6 @@ Quando utilizzi Audience Builder per gli account, puoi utilizzare gli attributi 
 
 ![Le icone delle impostazioni sono evidenziate in Audience Builder.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
->[!NOTE]
->
->La sezione **[!UICONTROL Field options]** è attualmente in versione beta ed è disponibile solo per alcuni clienti. Per ulteriori informazioni, contatta l’Assistenza clienti di Adobe.
-
 Viene visualizzata la sezione [!UICONTROL Settings]. In questa sezione è possibile aggiornare i campi visualizzati e la relazione tra di essi.
 
 Per **[!UICONTROL Field options]**, è possibile visualizzare solo i campi che contengono dati o lo schema XDM completo.
@@ -58,9 +54,17 @@ La scheda [!UICONTROL Attributes] consente di sfogliare gli attributi dell&#39;a
 
 ![La scheda Attributi viene visualizzata in Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
-Quando selezioni un attributo, puoi visualizzare i dati di riepilogo selezionando l&#39;[icona informazioni](../../images/icons/info.png). I dati di riepilogo includono informazioni quali i primi valori, una spiegazione di cosa è il campo e la percentuale di conti che contengono i valori per questo attributo.
+Quando selezioni un attributo, puoi visualizzare i dati di riepilogo selezionando l&#39;[icona informazioni](../../images/icons/info.png). I dati di riepilogo includono informazioni quali i primi valori, una spiegazione di cosa è il campo, il conteggio dei record dei valori, nonché la percentuale di conti che contengono i valori per questo attributo.
+
+La sezione **[!UICONTROL Populated]** mostra il numero di record in cui l&#39;attributo viene popolato rispetto al numero totale di record disponibili e alla percentuale di account che hanno un valore per questo campo.
+
+Nella sezione **[!UICONTROL Top values]** vengono visualizzati i valori più frequenti per l&#39;attributo e sono inclusi dettagli quali il valore, il numero di record che contengono il valore e la percentuale di record totali che il valore rappresenta.
 
 ![Un popover che visualizza una versione completa dei dati di riepilogo per un attributo.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
+
+In alternativa, è possibile visualizzare la distribuzione dei dati con i valori minimo, medio e massimo visualizzati.
+
+![Un popover che visualizza le statistiche per un attributo, inclusi i valori minimo, medio e massimo.](../assets/segmentation/audience-builder/statistics.png)
 
 Se un attributo viene popolato da meno del 25% degli account, verrà visualizzata l&#39;icona ![avviso dati](../../images/icons/data-notice.png). Gli stessi dati di riepilogo vengono visualizzati per l’attributo, indipendentemente da.
 
@@ -72,7 +76,11 @@ Se un attributo viene popolato da meno del 25% degli account, verrà visualizzat
 >
 >Questi dati di riepilogo vengono aggiornati **ogni giorno**.
 
-Per una guida più dettagliata su Audience Builder, consulta la [guida utente di Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
+Inoltre, l&#39;attributo ha un **[!UICONTROL Ingestion Type]**. Il tipo di acquisizione consente di conoscere l&#39;origine dei dati e può essere uno dei seguenti valori: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** o **[!UICONTROL No Data Ingested]**.
+
+![Viene visualizzato il tipo di acquisizione per l&#39;attributo.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+
+Per una guida più dettagliata sugli attributi in Audience Builder, consulta la [guida utente di Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
 ### Tipi di pubblico {#audiences}
 
