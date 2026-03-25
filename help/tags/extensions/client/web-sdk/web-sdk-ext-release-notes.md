@@ -2,17 +2,22 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '3165'
+source-wordcount: '3230'
 ht-degree: 24%
 
 ---
 
 
-# Note sulla versione dell’estensione Web SDK
+# Note sulla versione dell’estensione tag Web SDK
 
-Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Experience Platform Web SDK](/help/collection/js/release-notes.md).
+Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Adobe Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Versione 2.34.2 - 23 marzo 2026
+
+- Contiene [versione 2.32.0](/help/collection/js/release-notes.md) di Adobe Experience Platform Web SDK.
+- È stato risolto un problema specifico relativo alla copia di una proprietà Tags a causa del quale le azioni Aggiorna variabile potevano mantenere i riferimenti agli elementi dati della proprietà originale. Per ripristinare le proprietà copiate esistenti, apri e salva nuovamente ogni azione Aggiorna variabile interessata e la relativa regola. Evita di rinominare gli elementi dati copiati fino a dopo averli salvati nuovamente.
 
 ## Versione 2.34.1 - 11 febbraio 2026
 
@@ -25,7 +30,7 @@ Questo documento descrive le note sulla versione dell’estensione tag Adobe Exp
 **Nuove funzioni**
 
 - Contiene [versione 2.31.0](/help/collection/js/release-notes.md) di Adobe Experience Platform Web SDK.
-- Aggiunta del supporto per il codice di base [&#x200B; di &#x200B;](/help/collection/js/install/base-code.md)per l&#39;estensione tag.
+- Aggiunta del supporto per il codice di base [ di ](/help/collection/js/install/base-code.md)per l&#39;estensione tag.
 - Aggiunta di **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contesto](configure/data-collection.md#context-settings) alle impostazioni dell&#39;estensione.
 - Aggiunto componente Brand Concierge.
 - È stata aggiunta un’opzione per consentire l’utilizzo di un’istanza della lega con hosting autonomo con Tag.

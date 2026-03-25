@@ -1,10 +1,11 @@
 ---
 title: conversazione
 description: Configurare le impostazioni di chat di Brand Concierge.
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: 0f64c7f1-2c28-4c67-af05-dc9ee688fdc0
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 4%
+source-wordcount: '127'
+ht-degree: 3%
 
 ---
 
@@ -20,6 +21,7 @@ L&#39;oggetto `conversation` contiene le opzioni di configurazione per le sessio
 
 | Proprietà | Tipo | Descrizione |
 | --- | --- | --- |
+| **`collectSources`** | `boolean` | Determina se Web SDK legge il parametro della stringa di query `adobe_brand_concierge_source` e lo include in `xdm.channel.referringSource`. Impostazione predefinita: `false`. |
 | **`stickyConversationSession`** | `boolean` | Determina se il Web SDK imposta un cookie di sessione per mantenere le sessioni di chat di Brand Concierge in tutti i caricamenti di pagina. Impostazione predefinita: `false`. Se omesso o impostato su `false`, Brand Concierge chat avvia una nuova sessione a ogni caricamento di pagina. |
 
 ## Esempio
@@ -29,6 +31,7 @@ alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   conversation: {
+    collectSources: true
     stickyConversationSession: true
   }
 });

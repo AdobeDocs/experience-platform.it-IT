@@ -4,24 +4,24 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger; estensione experience debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 92%
+source-wordcount: '846'
+ht-degree: 90%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform Debugger
 
-## Versione 1.6.4, mercoledì 6 maggio 2025
+## Versione 1.6.5 - 24 marzo 2026
 
-### Correzioni e miglioramenti
+* È stato risolto un problema che impediva l’invio di eventi da AppMeasurement nelle sessioni Assurance attive.
+
+## Versione 1.6.4, mercoledì 6 maggio 2025
 
 * È stato risolto un problema che impediva l’accesso a.
 
 ## Versione 1.6.3 - 30 aprile 2025
-
-### Correzioni e miglioramenti
 
 * È stato risolto un problema a causa del quale Debugger impediva il funzionamento delle funzioni DTM e Tag.
 * È stato risolto un problema che impediva la visualizzazione degli hit post-elaborati di Analytics nei registri.
@@ -29,24 +29,15 @@ ht-degree: 92%
 
 ## Versione 1.6.2 - mercoledì 1 ottobre 2024
 
-### Correzioni e miglioramenti
-
 * È stato risolto un problema a causa del quale il debugger era troppo sensibile a tutti gli errori CSP
 
 ## Versione 1.6.1 - 25 luglio 2024
-
-### Correzioni e miglioramenti
 
 * È stato risolto un problema che impediva agli utenti di aggiungere nuovi codici da incorporare dei tag alle pagine senza di essi.
 
 ## Versione 1.6.0 - 11 luglio 2024
 
-### Nuove funzioni
-
 * Consentono agli utenti di acconsentire o rinunciare alla raccolta di dati tecnici e personali.
-
-### Correzioni e miglioramenti
-
 * Sono stati corretti l’inserimento di script in Firefox e il collegamento dell’informativa sulla privacy.
 * Acquisisci le richieste di Analytics mancanti.
 * Correggi gli arresti anomali sulle pagine con molti messaggi complessi della console.
@@ -54,19 +45,12 @@ ht-degree: 92%
 
 ## Versione 1.5.4 - 19 dicembre 2023
 
-### Correzioni e miglioramenti
-
 * È stato risolto un problema che impediva il mantenimento delle impostazioni.
 * È stato risolto un problema che causava l’arresto anomalo del debugger durante la visualizzazione degli hit post-elaborati di Analytics.
 
 ## Versione 1.5.3 - 6 dicembre 2023
 
-### Nuove funzioni
-
 * È stata aggiunta l’impostazione “blocca sulla scheda attiva all’apertura del debugger”.
-
-### Correzioni e miglioramenti
-
 * È stato risolto un problema a causa del quale nei domini privati mancavano le richieste di Analytics.
 * È stato risolto un problema che causava l’assenza di dati Activity Map nella tabella delle richieste di Analytics.
 * È stato risolto un problema che causava un arresto anomalo durante la visualizzazione di Target Trace.
@@ -76,13 +60,9 @@ ht-degree: 92%
 
 (Solo Firefox)
 
-### Correzioni e miglioramenti
-
 * È stata aggiornata l’organizzazione dei file.
 
 ## Versione 1.5.1 - 2 novembre 2023
-
-### Correzioni e miglioramenti
 
 * Sono stati risolti dei problemi a causa dei quali gli eventi di Analytics venivano ignorati o duplicati.
 * È stato risolto un problema che causava il superamento della dimensione massima di archiviazione dello stato.
@@ -90,12 +70,7 @@ ht-degree: 92%
 
 ## Versione 1.5.0 - 19 ottobre 2023
 
-### Nuove funzioni
-
 * Mostra collegamenti a proprietà, ambiente e regole nel riepilogo e nei registri dei tag.
-
-### Correzioni e miglioramenti
-
 * È stato risolto un problema a causa del quale i dati di riepilogo dei tag non venivano inviati.
 * È stato risolto un problema a causa del quale le sessioni di Assurance generavano un errore CORS
 * È stato risolto un problema che impediva la visualizzazione di Target Trace.

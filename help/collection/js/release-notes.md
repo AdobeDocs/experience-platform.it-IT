@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
+source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2751'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 5%
 
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.32.0 - 23 marzo 2026
+
+- Le utilità di base condivise sono ora pubblicate come pacchetto npm standalone ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) per l&#39;utilizzo da parte di estensioni e integrazioni.
+- Ora include il fuso orario IANA nel campo XDM `xdm.placeContext.ianaTimezone` quando `placeContext` è incluso nella variabile di configurazione [`context`](/help/collection/js/commands/configure/context.md).
+- Brand Concierge: risolto un problema di ID sessione quando [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) è disabilitato.
 
 ## Versione 2.31.1 - 11 febbraio 2026
 
@@ -34,8 +40,6 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 **Correzioni e miglioramenti**
 
 - Gli attributi `aria-label` e `name` sono ora considerati nella [raccolta di collegamenti automatici](commands/configure/clickcollectionenabled.md).
-- È stata risolta una possibile situazione di tipo &quot;race condition&quot; con integrazioni di identity map.
-- È stato risolto un problema a causa del quale la marca temporale non era inclusa in `streamingMedia`.
 - È stato risolto un problema a causa del quale le azioni del codice personalizzato venivano eseguite una sola volta.
 
 ## Versione 2.30.0 - 24 settembre 2025
@@ -161,7 +165,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;inizializzazione dei dettagli del collegamento Activity Map quando veniva chiamato l&#39;hook di monitoraggio `onInstanceConfigured`.
 - È stato risolto un problema a causa del quale le destinazioni dei cookie non venivano impostate sul percorso corretto.
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
-- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[&#x200B; chiamate a causa di una codifica URL non valida nel parametro &#x200B;](commands/sendevent/overview.md).
+- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[ chiamate a causa di una codifica URL non valida nel parametro ](commands/sendevent/overview.md).
 
 ## Versione 2.21.1 - venerdì 18 luglio 2024
 

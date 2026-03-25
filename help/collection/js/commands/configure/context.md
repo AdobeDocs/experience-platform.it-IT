@@ -2,9 +2,9 @@
 title: Contesto
 description: Raccogli automaticamente i dati relativi a dispositivo, ambiente o posizione.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1017'
 ht-degree: 5%
 
 ---
@@ -58,6 +58,7 @@ La parola chiave `"placeContext"` raccoglie informazioni sulla posizione dell&#3
 | Provincia di Stato | Il codice della provincia dello stato dell&#39;utente finale. | `xdm.placeContext.geo.stateProvince` | `CA` |
 | Latitudine | La latitudine della posizione dell&#39;utente finale. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
 | Longitudine | La longitudine della posizione dell&#39;utente finale. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
+| Fuso orario IANA | Il fuso orario IANA dell’utente finale. Incluso nelle versioni della libreria 2.32.0 o successive. | `xdm.placeContext.ianaTimezone` | `America/Denver` |
 
 ### Marca temporale
 
@@ -97,7 +98,7 @@ Per ulteriori informazioni, vedere [User agent client hints](/help/collection/us
 
 ### Referente di Analytics una tantum {#one-time-analytics-referrer}
 
-La parola chiave `"oneTimeAnalyticsReferrer"` invia un valore referente ad Adobe Analytics solo alla prima chiamata `sendEvent` senza decisioni per una pagina. Il caso d&#39;uso principale per questa parola chiave di contesto è impedire che la dimensione [Referrer](https://experienceleague.adobe.com/it/docs/analytics/components/dimensions/referrer) in Adobe Analytics venga gonfiata dagli hit utilizzati principalmente nelle integrazioni Analytics e Target.
+La parola chiave `"oneTimeAnalyticsReferrer"` invia un valore referente ad Adobe Analytics solo alla prima chiamata `sendEvent` senza decisioni per una pagina. Il caso d&#39;uso principale per questa parola chiave di contesto è impedire che la dimensione [Referrer](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) in Adobe Analytics venga gonfiata dagli hit utilizzati principalmente nelle integrazioni Analytics e Target.
 
 Se un determinato comando `sendEvent` utilizza un tipo di evento decisioning (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), viene ignorato durante il calcolo del primo `sendEvent` in una pagina. Se il valore del referente cambia nella pagina e viene attivato un altro `sendEvent`, il nuovo valore del referente viene incluso nel payload. Questa condizione consente di utilizzare la funzione con applicazioni a pagina singola.
 
