@@ -1,22 +1,15 @@
 ---
 title: Creare configurazioni di flussi di dati dinamici
 description: Scopri come creare configurazioni di flusso di dati dinamiche, per indirizzare i dati a vari servizi Experience Cloud, in base a regole.
-hide: true
-hidefromtoc: true
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---
 
 # Creare configurazioni di flussi di dati dinamici
-
->[!AVAILABILITY]
->
->* L’opzione per definire configurazioni di stream di dati dinamici è attualmente in Beta e disponibile per un numero limitato di clienti. Per ricevere l’accesso a questa funzionalità, contatta il rappresentante Adobe. La documentazione e le funzionalità sono soggette a modifiche.
 
 Per impostazione predefinita, l&#39;Edge Network di Experience Platform invia tutti gli eventi che raggiungono uno stream di dati a tutti i [servizi](configure.md#add-services) di Experience Cloud che hai abilitato per gli stream di dati. Questo potrebbe non essere sempre il flusso di lavoro ideale per te, a seconda dei casi d’uso.
 
@@ -57,33 +50,33 @@ Se abiliti sia le configurazioni dello stream di dati dinamici che le sostituzio
 
 Dopo che hai [creato uno stream di dati](configure.md) e [aggiunto un servizio](configure.md#add-services), segui i passaggi seguenti per aggiungere una configurazione dinamica al servizio.
 
-1. Vai alla pagina **[!UICONTROL Raccolta dati]** > **[!UICONTROL Flussi di dati]** e seleziona lo stream di dati creato.
+1. Vai alla pagina **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** e seleziona lo stream di dati creato.
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati con l&#39;elenco dei flussi di dati.](assets/configure-dynamic-datastream/select-datastream.png)
 
-1. Selezionare l&#39;opzione **[!UICONTROL Modifica]** nel servizio per il quale si desidera definire una configurazione dinamica.
+1. Selezionare l&#39;opzione **[!UICONTROL Edit]** nel servizio per il quale si desidera definire una configurazione dinamica.
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati che mostra i servizi aggiunti a un flusso di dati.](assets/configure-dynamic-datastream/select-service.png)
 
-1. Nella pagina **[!UICONTROL Configura]**, selezionare **[!UICONTROL Salva e modifica configurazione dinamica]**.
+1. Nella pagina **[!UICONTROL Configure]**, selezionare **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati che mostra la pagina di configurazione dello stream di dati.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. Selezionare **[!UICONTROL Aggiungi configurazione dinamica]**.
+1. Seleziona **[!UICONTROL Add Dynamic Configuration]**.
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati che mostra la configurazione dinamica senza messaggio di regola aggiunta.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
-1. Dal pannello **[!UICONTROL Risorse]**, trascina e rilascia gli elementi con cui desideri creare la regola sul lato destro della finestra. Puoi combinare più risorse per creare regole complesse.
+1. Dal pannello **[!UICONTROL Resources]**, trascina e rilascia gli elementi con cui desideri creare la regola sul lato destro della finestra. Puoi combinare più risorse per creare regole complesse.
 
-   Utilizza le opzioni di ogni risorsa, ad esempio **[!UICONTROL è uguale a]**, **[!UICONTROL è diverso da]**, **[!UICONTROL esiste]** e altro per ottimizzare le regole.
+   Utilizza le opzioni di ogni risorsa, ad esempio **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]** e altre, per ottimizzare le regole.
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati che mostra la regola di configurazione dinamica.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Nella sezione **[!UICONTROL Configurazione]**, attiva/disattiva i servizi che desideri abilitare o disabilitare per ogni regola, a seconda che si desideri che i dati vengano inviati a ogni servizio. Se si disattiva l&#39;interruttore, il routing del servizio è disabilitato e *nessun dato* verrà inviato al servizio upstream.
+1. Nella sezione **[!UICONTROL Configuration]** attivare/disattivare i servizi per ogni regola, a seconda che si desideri inviare i dati a ogni servizio. Se si disattiva l&#39;interruttore, il routing del servizio è disabilitato e *nessun dato* verrà inviato al servizio upstream.
 
    ![Immagine dell&#39;interfaccia utente dei flussi di dati che mostra la regola di configurazione dinamica.](assets/configure-dynamic-datastream/enable-service.png)
 
-1. Al termine della configurazione delle regole, seleziona **[!UICONTROL Salva]**.
+1. Al termine, selezionare **[!UICONTROL Save]**.
 
 ## Considerazioni sulla priorità delle regole {#considerations}
 

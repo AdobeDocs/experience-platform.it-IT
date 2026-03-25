@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2026
 description: Note sulla versione di Adobe Experience Platform di marzo 2026.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8c8b3b223c67dd6e9a00f9cf297f51fd09f3227f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1266'
-ht-degree: 34%
+source-wordcount: '1369'
+ht-degree: 32%
 
 ---
 
@@ -27,6 +27,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 
 - [Gestione avanzata del ciclo di vita dei dati](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [Stream di dati](#datastreams)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Profilo cliente in tempo reale](#real-time-customer-profile)
@@ -53,11 +54,23 @@ Agent Orchestrator consente di creare e distribuire agenti basati sull’intelli
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [documentazione su Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Stream di dati {#datastreams}
+
+Un flusso di dati rappresenta la configurazione lato server durante l’implementazione degli SDK Adobe Experience Platform Web e Mobile e dell’API server di Adobe Experience Platform Edge Network. Il comando di configurazione dello stream di dati negli SDK gestisce tutti i servizi con cui un client interagisce.
+
+| Funzione | Descrizione |
+| --- | --- |
+| Disponibilità generale delle configurazioni dello stream di dati dinamici | Le configurazioni dello stream di dati dinamici sono ora generalmente disponibili. Le configurazioni dello stream di dati dinamici ti consentono di definire set di regole configurabili dall’utente per ciascun servizio abilitato per lo stream di dati, che determinano quale soluzione Experience Cloud deve ricevere ogni tipo di dati. Per ulteriori informazioni, consulta la [guida alle configurazioni dello stream di dati dinamici](../../datastreams/configure-dynamic-datastream.md). |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni, leggere la [panoramica sugli stream di dati](../../datastreams/overview.md).
 
 ## Destinazioni {#destinations}
 
