@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
+source-git-commit: faeb53bfc4eba815eb1d9d00c464da4dc1a3b016
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2177'
 ht-degree: 4%
 
 ---
@@ -169,7 +169,7 @@ Nella vista grafico, puoi trascinare e rilasciare i nodi per riorganizzare l’o
 
 #### Eventi esperienza {#experience-events}
 
-Nella sezione **[!UICONTROL Experience events]** viene visualizzata una cronologia degli eventi di esperienza che contengono il profilo.
+Nella sezione **[!UICONTROL Experience events]** viene visualizzata una cronologia degli eventi di esperienza che contengono il profilo. Per impostazione predefinita, in questa sezione vengono visualizzati gli eventi di esperienza nelle ultime 48 ore. Tuttavia, puoi impostare l’intervallo di date fino a 30 giorni.
 
 ![Viene visualizzata la sezione Eventi esperienza, con una sequenza temporale di eventi esperienza che contengono il profilo.](/help/profile/images/user-guide/experience-event-graph.png)
 
@@ -193,7 +193,11 @@ Per ulteriori informazioni sui profili Edge, consulta la [documentazione sui pro
 
 ### Scheda Eventi {#events}
 
-La scheda **[!UICONTROL Events]** contiene i dati dei 100 eventi di esperienza più recenti associati al cliente. Questi dati possono includere aperture e-mail, attività del carrello e visualizzazioni di pagina. La selezione di **[!UICONTROL View all]** per un singolo evento fornisce ulteriori acquisizioni di campi e valori come parte dell&#39;evento.
+>[!NOTE]
+>
+>La visualizzazione degli eventi può essere ritardata fino a 15 minuti.
+
+Per impostazione predefinita, la scheda **[!UICONTROL Events]** contiene i dati delle ultime 48 ore con i 100 ExperienceEvents più recenti associati al cliente. Questi dati possono includere aperture e-mail, attività del carrello e visualizzazioni di pagina. Puoi anche impostare l’intervallo di date fino a 30 giorni. La selezione di **[!UICONTROL View all]** per un singolo evento fornisce ulteriori acquisizioni di campi e valori come parte dell&#39;evento.
 
 È inoltre possibile visualizzare gli eventi come oggetto JSON selezionando a **[!UICONTROL View JSON]**. È utile per comprendere come vengono acquisiti gli eventi in Experience Platform.
 
