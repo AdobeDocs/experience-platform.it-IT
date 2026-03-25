@@ -2,10 +2,10 @@
 title: Utilizzo licenze e capacità
 description: Scopri i limiti di utilizzo delle licenze e di capacità in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
+source-git-commit: 1a7a074a455542bb1438b2cbf199d79229142389
 workflow-type: tm+mt
-source-wordcount: '1670'
-ht-degree: 5%
+source-wordcount: '2072'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ Per ulteriori informazioni sui guardrail in Experience Platform, leggere la [pan
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Velocità effettiva di streaming"
->abstract="Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel servizio Profilo e nelle sandbox di produzione e sviluppo."
+>abstract="Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo, nelle sandbox di produzione e sviluppo."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -51,14 +51,16 @@ Attualmente, Capacity supporta i seguenti servizi:
 
 - Segmentazione in streaming
 - Acquisizione in streaming
+- Segmentazione Edge
 
 All’interno di questi servizi, vengono tracciati i seguenti guardrail:
 
 - Il numero massimo di pubblici in streaming è 500
-   - Di questi 500 tipi di pubblico in streaming, il numero massimo è 150
+- Il numero massimo di tipi di pubblico edge è 150
 - La velocità effettiva combinata iniziale per l’acquisizione in streaming è di 1500 record al secondo (rps)
    - Questo throughput di streaming combinato misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo cliente in tempo reale, nelle sandbox di produzione e sviluppo.
-   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puoi acquistare supporto aggiuntivo per la segmentazione in streaming fino a 13.500 record al secondo. Ulteriori informazioni sull&#39;acquisto di diritti aggiuntivi sono disponibili nella [descrizione del prodotto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+- Il throughput combinato per la segmentazione Edge è di 1500 record al secondo (rps)
 
 La capacità del pubblico è al livello **sandbox**. Ciò significa che, per ogni sandbox presente nell’organizzazione, puoi avere 500 tipi di pubblico in streaming, di cui 150 Edge.
 
@@ -88,7 +90,7 @@ Per accedere alla panoramica della capacità, selezionare **[!UICONTROL License 
 
 Viene visualizzata la pagina Panoramica capacità, contenente informazioni quali una cronologia degli avvisi e dettagli sulle capacità dell&#39;organizzazione.
 
-![La pagina di panoramica della capacità viene visualizzata completamente, con le sezioni relative alla cronologia degli avvisi e ai dettagli della capacità.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+![Viene visualizzata la pagina di panoramica della capacità, che mostra la cronologia degli avvisi e le sezioni dei dettagli della capacità.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
 
 ### Cronologia avvisi {#alert-history}
 
@@ -106,17 +108,15 @@ Per visualizzare una cronologia completa degli avvisi per la tua organizzazione,
 
 ![Viene visualizzata la cronologia completa degli avvisi per un&#39;organizzazione.](/help/landing/images/capacity/full-alert-history.png)
 
-### Dettagli della capacità {#capacity-details}
+### Capacità di streaming {#streaming-capacities}
 
-La sezione Dettagli capacità contiene informazioni sulle capacità dell&#39;organizzazione. In questa sezione puoi filtrare per sandbox e modificare il periodo di lookback.
+La sezione Capacità di streaming descrive le informazioni sulle capacità di streaming della tua organizzazione. In particolare, questa sezione mostra informazioni sulla capacità relative alla velocità effettiva di streaming e ai tipi di pubblico di streaming. Puoi filtrare queste informazioni per sandbox e modificare il periodo di lookback.
 
 ![Il selettore sandbox e il selettore data per il periodo di lookback sono evidenziati.](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
-Attualmente, questo mostra informazioni sulla capacità relative alla velocità effettiva dello streaming, ai tipi di pubblico in streaming e ai tipi di pubblico perimetrali.
-
 #### Velocità effettiva di streaming {#streaming-throughput}
 
-La sezione velocità effettiva in streaming visualizza informazioni sulla velocità effettiva in streaming nelle sandbox della tua organizzazione. Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel servizio Profilo.
+Nella sezione **[!UICONTROL Streaming throughput]** sono visualizzate informazioni sulla velocità effettiva di streaming all&#39;interno delle sandbox della tua organizzazione. Il valore della velocità effettiva di streaming misura i picchi di eventi in entrata combinati al secondo per l’acquisizione in streaming nel profilo.
 
 ![Viene visualizzata la sezione della velocità effettiva di streaming all&#39;interno della pagina dei dettagli della capacità.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -153,11 +153,52 @@ Viene visualizzata la pagina di allocazione. In questa pagina puoi impostare le 
 
 Dopo aver aggiornato le allocazioni di capacità, selezionare **[!UICONTROL Save]** per completare gli aggiornamenti. Tieni presente che la riproduzione delle modifiche nell’organizzazione potrebbe richiedere fino a 10 minuti.
 
-#### Conteggio del pubblico {#audience-count}
+#### Conteggio del pubblico in streaming {#streaming-audience-count}
 
-Le sezioni **[!UICONTROL Streaming audience count]** e **[!UICONTROL Edge audience count]** visualizzano il numero di tipi di pubblico in streaming e edge all&#39;interno della sandbox e il numero massimo di tipi di pubblico in streaming e edge consentiti all&#39;interno della sandbox.
+Nella sezione **[!UICONTROL Streaming audience count]** vengono visualizzati il numero di tipi di pubblico in streaming all&#39;interno della sandbox e il numero massimo consentito all&#39;interno della sandbox.
 
-![Vengono visualizzate le sezioni Conteggio pubblico.](/help/landing/images/capacity/audience-count.png)
+![Vengono visualizzate le sezioni Conteggi dei pubblici.](/help/landing/images/capacity/audience-count.png)
+
+| Nome colonna | Descrizione |
+| ----------- | ----------- |
+| Sandbox | Nome della sandbox. |
+| Servizi | Servizio utilizzato per la sandbox. |
+| Utilizzo | Il numero di tipi di pubblico in streaming presenti nella sandbox. |
+| Capacità | Il numero massimo di tipi di pubblico in streaming consentiti nella sandbox. |
+
+### Capacità di Edge {#edge-capacities}
+
+La sezione **[!UICONTROL Edge capacities]** contiene informazioni sulle capacità edge dell&#39;organizzazione. In particolare, questa sezione mostra informazioni sulla capacità relative alla velocità effettiva di segmentazione Edge e ai tipi di pubblico Edge. Puoi modificare il periodo di lookback per le capacità edge dell’organizzazione.
+
+![Viene visualizzata la sezione Capacità di Edge. Questo descrive le informazioni, tra cui la velocità effettiva di segmentazione Edge e il conteggio del pubblico Edge.](/help/landing/images/capacity/edge-capacities.png)
+
+#### Velocità effettiva di segmentazione edge {#edge-streaming-throughput}
+
+Nella sezione **[!UICONTROL Edge segmentation throughput]** sono visualizzate informazioni sulla velocità effettiva di segmentazione Edge all&#39;interno delle sandbox dell&#39;organizzazione e dell&#39;organizzazione. Il valore di velocità effettiva della segmentazione Edge misura i picchi di eventi in entrata combinati al secondo per l’acquisizione Edge in Profile.
+
+![Viene visualizzata la sezione velocità effettiva di segmentazione di Edge. Mostra informazioni sulla velocità effettiva di segmentazione Edge nell&#39;organizzazione e nelle relative sandbox.](/help/landing/images/capacity/edge-segmentation-throughput.png)
+
+| Nome colonna | Descrizione |
+| ----------- | ----------- |
+| Organizzazione | Nome dell’organizzazione. Le sandbox disponibili per l’organizzazione sono elencate nel nome dell’organizzazione. |
+| Utilizzo RPS (picco) | Il picco di trasmissione dei dati nella sandbox entro il periodo di lookback selezionato. |
+| Capacità RPS | Throughput massimo di picco per l&#39;organizzazione. |
+| Violazione | Se si è verificata una violazione, il tipo di violazione per la velocità effettiva di segmentazione Edge. |
+| Azioni consigliate | Colonna che descrive l’azione consigliata per alleviare la violazione. |
+
+Puoi selezionare l’organizzazione per visualizzare una visualizzazione più dettagliata della velocità effettiva di segmentazione Edge dell’organizzazione.
+
+![L&#39;organizzazione è evidenziata.](/help/landing/images/capacity/select-organization.png)
+
+Viene visualizzata la pagina **[!UICONTROL Edge Segmentation Throughput]**. Puoi vedere un grafico che mostra la velocità effettiva delle richieste rispetto al limite di capacità. All’interno di questa pagina, puoi regolare il periodo di lookback per il grafico visualizzato.
+
+![Viene visualizzata la pagina Throughput di segmentazione di Edge. Mostra un grafico che descrive il throughput rispetto al limite di capacità.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
+
+#### Conteggio del pubblico edge {#edge-audience-count}
+
+Nella sezione **[!UICONTROL Edge audience count]** vengono visualizzati il numero di tipi di pubblico edge all&#39;interno di ogni sandbox e il numero massimo di tipi di pubblico edge consentiti all&#39;interno della sandbox.
+
+![Viene visualizzata la sezione conteggio del pubblico di Edge. Mostra informazioni relative al conteggio del pubblico Edge.](/help/landing/images/capacity/edge-audience-count.png)
 
 | Nome colonna | Descrizione |
 | ----------- | ----------- |
@@ -166,9 +207,9 @@ Le sezioni **[!UICONTROL Streaming audience count]** e **[!UICONTROL Edge audien
 | Utilizzo | Il numero di tipi di pubblico del tipo elencato presenti nella sandbox. |
 | Capacità | Il numero massimo di tipi di pubblico del tipo elencato consentiti nella sandbox. |
 
-## Best practice per la velocità effettiva di streaming {#suggestions}
+## Best practice per la velocità effettiva di streaming {#streaming-throughput-suggestions}
 
-Puoi risolvere le violazioni della velocità effettiva di streaming adottando una delle seguenti raccomandazioni:
+Puoi risolvere le violazioni della velocità effettiva adottando una delle seguenti raccomandazioni:
 
 1. Aumenta la capacità allocata per la sandbox.
 2. Identifica i flussi di dati a velocità elevata nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-streaming-profile.md) e, se necessario, applica limitazioni o filtri a tali flussi di dati.
@@ -181,11 +222,19 @@ Inoltre, puoi esaminare i flussi di dati e vedere se è possibile ottimizzare la
 | Conversione da batch a streaming | I carichi di lavoro in batch convertiti in streaming possono aumentare in modo significativo il throughput, influendo sulle prestazioni e sull&#39;allocazione delle risorse. Ad esempio, l’esecuzione di un aggiornamento in blocco del profilo dopo un evento senza limiti di tariffa. | Le strategie di streaming non sono necessarie per i casi di utilizzo in batch in cui non è richiesta l’elaborazione a bassa latenza. | Valuta i requisiti del caso d’uso. Per il marketing in uscita in batch, puoi utilizzare [l&#39;acquisizione in batch](/help/ingestion/batch-ingestion/overview.md) invece dello streaming per gestire l&#39;acquisizione dei dati in modo più efficiente. |
 | Acquisizione di dati non necessaria | L’acquisizione di dati non necessari per la personalizzazione aumenta la velocità effettiva senza aggiungere valore e sprecare risorse. Ad esempio, acquisendo in profili tutto il traffico di Analytics, indipendentemente dalla rilevanza. | L’eccesso di dati non rilevanti crea rumore, rendendo più difficile l’identificazione dei punti di dati con impatto. Può anche causare attriti durante la definizione e la gestione di tipi di pubblico e profili. | Acquisisci solo i dati necessari per i tuoi casi d’uso. Assicurati di filtrare i dati non necessari.<ul><li>**Adobe Analytics**: utilizza [filtro a livello di riga](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) per ottimizzare l&#39;immissione di dati.</li><li>**Origini**: utilizza l&#39;API [[!DNL Flow Service] API per filtrare i dati a livello di riga](/help/sources/tutorials/api/filter.md) per le origini supportate come [!DNL Snowflake] e [!DNL Google BigQuery].</li></li>**Stream dati di Edge**: configura [flussi dati dinamici](/help/datastreams/configure-dynamic-datastream.md) per eseguire il filtro a livello di riga del traffico in arrivo da WebSDK.</li></ul> |
 
+## Best practice relative alla velocità effettiva di segmentazione di Edge {#edge-best-practices}
+
+Puoi risolvere le violazioni della velocità effettiva di segmentazione Edge adottando una delle seguenti raccomandazioni:
+
+1. Identifica gli stream di dati a throughput elevato nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-edge.md) e, se necessario, applica limitazioni o filtri in base a tali stream di dati.
+2. Ottimizza l’acquisizione utilizzando l’acquisizione in batch per i casi di utilizzo con latenza inferiore.
+3. Se il problema persiste, contatta il rappresentante dell’Assistenza clienti di Adobe.
+
 ## Panoramica video {#video}
 
 Il video seguente offre una panoramica di Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475281/?captions=ita&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Domande frequenti {#faq}
 

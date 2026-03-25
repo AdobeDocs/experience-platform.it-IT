@@ -2,9 +2,9 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Scopri come utilizzare Audience Builder in Real-Time Customer Data Platform per creare tipi di pubblico.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 7%
@@ -64,7 +64,7 @@ Nella sezione **[!UICONTROL Top values]** vengono visualizzati i valori più fre
 
 In alternativa, è possibile visualizzare la distribuzione dei dati con i valori minimo, medio e massimo visualizzati.
 
-![Un popover che visualizza le statistiche per un attributo, inclusi i valori minimo, medio e massimo.](../assets/segmentation/audience-builder/statistics.png)
+![Un popover che visualizza le statistiche per un attributo, inclusi i valori minimo, medio e massimo.](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 Se un attributo viene popolato da meno del 25% degli account, verrà visualizzata l&#39;icona ![avviso dati](../../images/icons/data-notice.png). Gli stessi dati di riepilogo vengono visualizzati per l’attributo, indipendentemente da.
 
@@ -78,7 +78,7 @@ Se un attributo viene popolato da meno del 25% degli account, verrà visualizzat
 
 Inoltre, l&#39;attributo ha un **[!UICONTROL Ingestion Type]**. Il tipo di acquisizione consente di conoscere l&#39;origine dei dati e può essere uno dei seguenti valori: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** o **[!UICONTROL No Data Ingested]**.
 
-![Viene visualizzato il tipo di acquisizione per l&#39;attributo.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![Viene visualizzato il tipo di acquisizione per l&#39;attributo.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 Per una guida più dettagliata sugli attributi in Audience Builder, consulta la [guida utente di Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
