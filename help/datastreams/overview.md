@@ -2,10 +2,10 @@
 title: Panoramica sugli stream di dati
 description: Scopri come i flussi di dati consentono di collegare l’integrazione lato client di Experience Platform SDK con i prodotti Adobe e le destinazioni di terze parti.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 60%
+source-wordcount: '706'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 60%
 
 Un flusso di dati rappresenta la configurazione lato server per Adobe Experience Platform Web e Mobile SDK. Mentre il comando [`configure`](/help/collection/js/commands/configure/overview.md) in SDK gestisce le impostazioni lato client (ad esempio `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni.
 
-Quando invii una richiesta ad Edge Network, `datastreamId` fa riferimento allo stream di dati in cui vengono inviati i dati. Questo consente di aggiornare la configurazione lato server senza modificare il codice del sito web.
+Quando invii una richiesta ad Edge Network, `datastreamId` fa riferimento allo stream di dati in cui vengono inviati i dati. Puoi aggiornare la configurazione lato server senza modificare il codice del tuo sito web.
 
 Puoi creare e gestire gli stream di dati selezionando **[!UICONTROL Datastreams]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Adobe Experience Platform o Data Collection.
 
@@ -45,7 +45,7 @@ Gli stream di dati utilizzano le funzionalità integrate di governance dei dati 
 
 Il video seguente fornisce una breve panoramica sulla configurazione e l’applicazione delle restrizioni di utilizzo dei dati per i flussi di dati nell’interfaccia utente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413103/?captions=ita&quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
 In Experience Platform, puoi applicare [etichette di utilizzo dei dati sensibili](../data-governance/labels/reference.md#sensitive) agli schemi e ai campi contenenti dati ritenuti sensibili dalla tua organizzazione. Ad esempio, l’etichetta `RHD` viene utilizzata per indicare le informazioni sanitarie protette (PHI) e l’etichetta `S1` rappresenta i dati di geolocalizzazione.
 

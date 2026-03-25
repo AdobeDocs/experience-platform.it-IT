@@ -2,16 +2,16 @@
 title: Configurare gli override dello stream di dati
 description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite Web SDK o Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 53%
+source-wordcount: '1043'
+ht-degree: 52%
 
 ---
 
 # Configurare gli override dello stream di dati
 
-Le sostituzioni dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passati ad Edge Network tramite Web SDK o Mobile SDK.
+Utilizza le sostituzioni dello stream di dati per definire configurazioni aggiuntive per gli stream di dati, che vengono passati ad Edge Network tramite Web SDK o Mobile SDK.
 
 Questo consente di attivare comportamenti diversi dello stream di dati rispetto a quelli predefiniti, senza creare uno stream di dati o modificare le impostazioni esistenti.
 
@@ -51,7 +51,7 @@ Invece di inviare dati a uno stream di dati predefinito, l’azienda può utiliz
 
 ## Configurare gli override dello stream di dati nell’interfaccia utente dello stream di dati {#configure-overrides}
 
-Gli ovverride della configurazione dello stream di dati consentono di modificare le seguenti configurazioni dello stream di dati:
+Le sostituzioni della configurazione dello stream di dati consentono di modificare le seguenti configurazioni dello stream di dati:
 
 * Set di dati evento di Experience Platform
 * Token di proprietà di Adobe Target
@@ -74,7 +74,7 @@ Ora dovresti avere configurato gli override dello stream di dati di Adobe Target
 
 Per configurare gli override dello stream di dati per uno stream di dati di Adobe Analytics, devi prima aver creato uno stream di dati di [Adobe Analytics](configure.md#analytics). Segui le istruzioni per [configurare uno stream di dati](configure.md) con il servizio [Adobe Analytics](configure.md#analytics).
 
-Dopo aver creato lo stream di dati, modifica il servizio [Adobe Analytics](configure.md#target) aggiunto e utilizza la sezione **[!UICONTROL Report Suite Overrides]** per aggiungere le sostituzioni dello stream di dati desiderate, come illustrato nell&#39;immagine seguente.
+Dopo aver creato lo stream di dati, modifica il servizio [Adobe Analytics](configure.md#analytics) aggiunto e utilizza la sezione **[!UICONTROL Report Suite Overrides]** per aggiungere le sostituzioni dello stream di dati desiderate, come illustrato nell&#39;immagine seguente.
 
 Selezionare **[!UICONTROL Show Batch Mode]** per abilitare la modifica in batch delle sostituzioni della suite di rapporti. Puoi copiare e incollare un elenco di override delle suite di rapporti inserendo una suite di rapporti per riga.
 

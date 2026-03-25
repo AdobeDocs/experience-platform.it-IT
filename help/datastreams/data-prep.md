@@ -2,16 +2,16 @@
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 43%
+source-wordcount: '1167'
+ht-degree: 41%
 
 ---
 
 # Preparazione dei dati per la raccolta dati
 
-La preparazione dati è un servizio di Adobe Experience Platform che consente di mappare, trasformare e convalidare i dati da e per [Experience Data Model (XDM)](../xdm/home.md). Durante la configurazione di un [flusso di dati](./overview.md) abilitato per Experience Platform, puoi utilizzare le funzionalità di preparazione dati per mappare i dati di origine su XDM durante l&#39;invio ad Experience Platform Edge Network.
+Preparazione dati è un servizio di Adobe Experience Platform che puoi utilizzare per mappare, trasformare e convalidare i dati da e verso [Experience Data Model (XDM)](../xdm/home.md). Durante la configurazione di un [flusso di dati](./overview.md) abilitato per Experience Platform, puoi utilizzare le funzionalità di preparazione dati per mappare i dati di origine su XDM durante l&#39;invio ad Experience Platform Edge Network.
 
 Tutti i dati inviati da una pagina web devono pervenire ad Experience Platform come XDM. Esistono 3 modi per tradurre i dati da un livello dati su pagina a XDM accettato da Experience Platform:
 
@@ -48,7 +48,7 @@ Questa guida illustra come mappare i dati nell’interfaccia utente. Per seguire
 
 Per una dimostrazione rapida del processo di preparazione dei dati per la raccolta dati, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/345565?captions=ita&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL Select data] {#select-data}
 
@@ -158,7 +158,7 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 
 >[!NOTE]
 >
-> Utilizza un oggetto JSON di esempio che rappresenta ogni elemento del livello dati che può essere utilizzato su qualsiasi pagina. Ad esempio, non tutte le pagine utilizzano gli elementi del livello dati del carrello. Tuttavia, gli elementi del livello dati del carrello devono essere inclusi in questo oggetto JSON di esempio.
+>Utilizza un oggetto JSON di esempio che rappresenta ogni elemento del livello dati che può essere utilizzato su qualsiasi pagina. Ad esempio, non tutte le pagine utilizzano gli elementi del livello dati del carrello. Tuttavia, gli elementi del livello dati del carrello devono essere inclusi in questo oggetto JSON di esempio.
 
 ## [!UICONTROL Mapping]
 
