@@ -4,9 +4,9 @@ description: Esporta il pubblico di prima parte verso la destinazione Acxiom per
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1536'
 ht-degree: 4%
 
 ---
@@ -19,19 +19,19 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Utilizza [!DNL Acxiom Prospect-Suppression] per fornire il pubblico potenziale più produttivo possibile. Questo connettore esporta in modo sicuro i dati di prime parti da Real-Time Customer Data Platform e li esegue tramite una risoluzione di igiene e identità pluripremiata che produce un file di dati da utilizzare come elenco di soppressione. Verrà eseguito il confronto con il database [!DNL Acxiom Global] che consente di personalizzare gli elenchi dei prospect per l&#39;importazione. Quindi, utilizza il connettore di origine [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) per individuare gli elenchi di potenziali clienti da Acxiom di nuovo in Real-Time CDP, con i clienti noti o convertiti rimossi.
+Utilizza [!DNL Acxiom Prospect-Suppression] per fornire il pubblico potenziale più produttivo possibile. Questo connettore esporta in modo sicuro i dati di prime parti da [!DNL Real-Time Customer Data Platform] e li esegue tramite una risoluzione di identità e igiene pluripremiata che produce un file di dati da utilizzare come elenco di soppressione. Verrà eseguito il confronto con il database [!DNL Acxiom Global] che consente di personalizzare gli elenchi dei prospect per l&#39;importazione. Quindi, utilizza il connettore di origine [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) per individuare nuovamente gli elenchi di potenziali clienti da Acxiom in [!DNL Real-Time CDP], con i clienti noti o convertiti rimossi.
 
 ![Diagramma di marketing per esportare dati di prime parti in Acxiom, quindi importare nuovamente i dati prospect in Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
 Acxiom offre i tipi di pubblico con le prestazioni migliori del settore, con il catalogo più ampio che comprende oltre 12.000 attributi di dati globali, con l’obiettivo specifico di fornire esperienze personalizzate. Utilizza combinazioni illimitate di dati di alta qualità per creare e distribuire tipi di pubblico per soddisfare le esigenze specifiche delle campagne.
 
-Questa esercitazione fornisce i passaggi per creare una connessione di destinazione [!DNL Acxiom Prospect-Suppression] e un flusso di dati utilizzando l&#39;interfaccia utente di Adobe Experience Platform. Questo connettore viene utilizzato per fornire dati al servizio Acxiom prospect utilizzando Amazon S3 come punto di rilascio. Una volta avviata l’esportazione dei file nel punto di rilascio di Amazon S3, contatta il rappresentante del tuo account Acxiom.
+Questa esercitazione fornisce i passaggi per creare una connessione di destinazione [!DNL Acxiom Prospect-Suppression] e un flusso di dati utilizzando l&#39;interfaccia utente [!DNL Adobe Experience Platform]. Questo connettore fornisce dati al servizio Acxiom prospect utilizzando Amazon S3 come punto di rilascio. Una volta avviata l’esportazione dei file nel punto di rilascio di Amazon S3, contatta il rappresentante del tuo account Acxiom.
 
 ![Catalogo di destinazione con la destinazione Acxiom selezionata.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL Acxiom Prospect-Suppression], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Acxiom Prospect-Suppression], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Creare un elenco di soppressione per i set di dati di ricerca di potenziali {#create-suppression-list}
 
@@ -43,7 +43,7 @@ Il caso d’uso viene eseguito tramite una combinazione di connettori di destina
 
 Per iniziare, devi esportare i profili cliente esistenti utilizzando questo connettore di destinazione per utilizzarli come file di soppressione. In questo modo, nessun record cliente esistente viene incluso.
 
-Il servizio di Acxiom cerca il file, lo recupera e lo utilizza insieme a criteri di selezione aggiuntivi e genera un file prospect. Puoi quindi utilizzare il connettore di origine [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) corrispondente per acquisire i profili prospect in Adobe Real-Time CDP.
+Il servizio di Acxiom cerca il file, lo recupera e lo utilizza insieme a criteri di selezione aggiuntivi e genera un file prospect. Utilizzare quindi il connettore di origine [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) corrispondente per acquisire i profili prospect in Adobe [!DNL Real-Time CDP].
 
 ## Prerequisiti {#prerequisites}
 
@@ -59,7 +59,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 

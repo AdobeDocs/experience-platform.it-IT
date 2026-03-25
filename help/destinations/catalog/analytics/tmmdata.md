@@ -3,9 +3,9 @@ keywords: TMMData;tmm data;tmdata;TMM data
 title: Estensione TMMData
 description: L’estensione TMMData è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '458'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL TMMData's] Foundation Platform for Adobe Marketing Cloud fornisce ai team di marketing gli strumenti per accedere e combinare tutte le origini dati critiche, inclusi i dati interni/esterni e online/offline, per un&#39;analisi cross-channel sicura e completa, con configurazione automatizzata delle campagne e importazione diretta in Adobe e altri strumenti di analisi e business intelligence.
 
-[!DNL TMMData] è un&#39;estensione di Analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] è un&#39;estensione di analytics in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere ai tag in [!DNL Adobe Experience Platform]. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

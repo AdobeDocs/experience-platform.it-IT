@@ -2,9 +2,9 @@
 title: Utilizza l’interfaccia web GitHub per creare una pagina della documentazione di destinazione
 description: Le istruzioni in questa pagina mostrano come utilizzare l’interfaccia web GitHub per creare una pagina di documentazione per la destinazione Experience Platform e inviarla per la revisione.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: ff094c0c2c75e097140626d77478b8da9a7edf04
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -17,14 +17,14 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 >
 >Consulta anche la documentazione di supporto nella guida per i collaboratori di Adobe:
 >
->* [Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=it)
->* [Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=it)
->* [Flusso di lavoro dei contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=it).
+>* [Installare gli strumenti di creazione Git e Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configurazione locale dell&#39;archivio Git per la documentazione](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Flusso di lavoro dei contributi GitHub per modifiche principali](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Configurare l’ambiente di authoring GitHub {#set-up-environment}
 
-1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.it-IT`.
-1. Per [eseguire il fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=it#fork-the-repository) dell&#39;archivio, fare clic su **Effettuare il fork** come illustrato di seguito. In questo modo viene creata una copia dell’archivio Experience Platform nel tuo account GitHub.
+1. Nel browser, passa a `https://github.com/AdobeDocs/experience-platform.en`.
+1. Per [eseguire il fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) dell&#39;archivio, fare clic su **Effettuare il fork** come illustrato di seguito. In questo modo viene creata una copia dell’archivio Experience Platform nel tuo account GitHub.
 
    ![Archivio della documentazione di Adobe per fork](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -36,7 +36,7 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 
    ![Aggiungi nuovo file](../assets/docs-framework/github-navigate-and-create-file.gif)
 
-1. Assegna un nome alla destinazione `YOURDESTINATION.md`, dove YOURDESTINATION è il nome della destinazione in Adobe Experience Platform. Se ad esempio la società si chiama Moviestar, il file verrà denominato `moviestar.md`.
+1. Assegna un nome alla destinazione `YOURDESTINATION.md`, dove YOURDESTINATION è il nome della destinazione in [!DNL Adobe Experience Platform]. Se ad esempio la società si chiama Moviestar, il file verrà denominato `moviestar.md`.
 
 ## Creare la pagina della documentazione per la destinazione {#author-documentation}
 
@@ -47,7 +47,7 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
    >
    >Puoi chiudere la finestra del browser in qualsiasi momento e riaprirla in un secondo momento. Il tuo lavoro viene salvato automaticamente e ti aspetta quando riapri il browser.
 1. Copia il contenuto dall’editor markdown nel nuovo file in GitHub.
-1. Per qualsiasi schermata o immagine che intendi utilizzare, utilizza l&#39;interfaccia GitHub per caricare i file in `experience-platform.en/help/destinations/assets/catalog/[...]`, dove `[...]` è la categoria desiderata per la tua destinazione. Ad esempio, se stai aggiungendo una destinazione di personalizzazione ad Experience Platform, seleziona la categoria `personalization`. Devi collegare alle immagini dalla pagina che stai creando. Consulta [istruzioni su come collegare le immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=it#link-to-images).
+1. Per qualsiasi schermata o immagine che intendi utilizzare, utilizza l&#39;interfaccia GitHub per caricare i file in `experience-platform.en/help/destinations/assets/catalog/[...]`, dove `[...]` è la categoria desiderata per la tua destinazione. Ad esempio, se stai aggiungendo una destinazione di personalizzazione ad Experience Platform, seleziona la categoria `personalization`. Devi collegare alle immagini dalla pagina che stai creando. Consulta [istruzioni su come collegare le immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![Carica immagine in GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -59,7 +59,7 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 
 >[!TIP]
 >
->Tieni presente che qui non è possibile interrompere nulla. Attenendoti alle istruzioni riportate in questa sezione, ti basta suggerire un aggiornamento della documentazione. L’aggiornamento suggerito verrà approvato o modificato dal team di documentazione di Adobe Experience Platform.
+>Tieni presente che qui non è possibile interrompere nulla. Attenendoti alle istruzioni riportate in questa sezione, ti basta suggerire un aggiornamento della documentazione. L&#39;aggiornamento suggerito verrà approvato o modificato dal team di documentazione di [!DNL Adobe Experience Platform].
 
 1. Dopo aver salvato il file e caricato le immagini desiderate, puoi aprire una richiesta di pull (PR) per unire il ramo di lavoro nel ramo principale dell’archivio della documentazione di Adobe. Assicurati che il ramo su cui hai lavorato sia selezionato e seleziona **Contribute > Apri richiesta pull**.
 
@@ -75,7 +75,7 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 
 1. A questo punto, viene visualizzata una notifica che richiede di firmare il Contratto di licenza da collaboratore (CLA) di Adobe. Questo è un passaggio obbligatorio. Dopo aver firmato il contratto di licenza, aggiorna la pagina PR e invia la richiesta di pull.
 
-1. Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda **Richieste pull** in `https://github.com/AdobeDocs/experience-platform.it-IT`.
+1. Puoi confermare che la richiesta di pull è stata inviata esaminando la scheda **Richieste pull** in `https://github.com/AdobeDocs/experience-platform.en`.
 
    ![PR completato](../assets/docs-framework/ssd-pr-successful.png)
 
@@ -83,4 +83,4 @@ Le istruzioni seguenti mostrano come utilizzare l’interfaccia web GitHub per c
 
 >[!TIP]
 >
->Per aggiungere immagini e collegamenti alla documentazione e per eventuali altre domande su Markdown, leggi [Utilizzo di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=it) nella guida alla scrittura collaborativa di Adobe.
+>Per aggiungere immagini e collegamenti alla documentazione e per eventuali altre domande su Markdown, leggi [Utilizzo di Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) nella guida alla scrittura collaborativa di Adobe.

@@ -4,10 +4,10 @@ title: Panoramica delle destinazioni di e-mail marketing
 type: Tutorial
 description: I provider di servizi e-mail (ESP) ti consentono di gestire le attività di e-mail marketing, ad esempio per l’invio di campagne e-mail promozionali. Scopri quali ESP sono supportati come destinazioni di Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 4%
+source-wordcount: '371'
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-I provider di servizi e-mail (ESP) ti consentono di gestire le attività di e-mail marketing, ad esempio l’invio di campagne e-mail promozionali. Adobe Experience Platform si integra con gli ESP consentendo di attivare i tipi di pubblico nelle destinazioni del marketing via e-mail.
+I provider di servizi e-mail (ESP) ti consentono di gestire le attività di e-mail marketing, ad esempio l’invio di campagne e-mail promozionali. [!DNL Adobe Experience Platform] si integra con gli ESP consentendo l&#39;attivazione dei tipi di pubblico nelle destinazioni del marketing via e-mail.
 
 ## Destinazioni di e-mail marketing supportate {#supported-destinations}
 
-Adobe Experience Platform supporta le seguenti destinazioni di e-mail marketing:
+[!DNL Adobe Experience Platform] supporta le seguenti destinazioni di e-mail marketing:
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)

@@ -2,16 +2,16 @@
 description: Scopri come configurare gli attributi dell’interfaccia utente, ad esempio il collegamento alla documentazione, la categoria della scheda di destinazione e il tipo e la frequenza di connessione della destinazione, per le destinazioni create con Destination SDK.
 title: Attributi dell’interfaccia utente
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
 
 # Attributi dell’interfaccia utente
 
-Gli attributi dell’interfaccia utente definiscono gli elementi visivi che Adobe deve visualizzare per la scheda di destinazione nell’interfaccia utente di Adobe Experience Platform, ad esempio un logo, un collegamento alla pagina della documentazione, una descrizione della destinazione e la relativa categoria e tipo.
+Gli attributi dell&#39;interfaccia utente definiscono gli elementi visivi che Adobe deve visualizzare per la scheda di destinazione nell&#39;interfaccia utente [!DNL Adobe Experience Platform], ad esempio un logo, un collegamento alla pagina della documentazione, una descrizione della destinazione e la relativa categoria e tipo.
 
 Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure vedi le seguenti pagine di panoramica sulla configurazione di destinazione:
 
@@ -64,7 +64,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` è un parametro di stringa che fa riferimento alla pagina della documentazione nel [Catalogo destinazioni](../../../catalog/overview.md) per la tua destinazione. Ogni destinazione prodotta in Adobe Experience Platform deve avere una pagina di documentazione corrispondente. [Scopri come creare una pagina della documentazione di destinazione](../../docs-framework/documentation-instructions.md) per la tua destinazione. Tieni presente che questo non è richiesto per le destinazioni private/personalizzate.
+`documentationLink` è un parametro di stringa che fa riferimento alla pagina della documentazione nel [Catalogo destinazioni](../../../catalog/overview.md) per la tua destinazione. Ogni destinazione prodotta in [!DNL Adobe Experience Platform] deve avere una pagina di documentazione corrispondente. [Scopri come creare una pagina della documentazione di destinazione](../../docs-framework/documentation-instructions.md) per la tua destinazione. Tieni presente che questo non è richiesto per le destinazioni private/personalizzate.
 
 Utilizzare il seguente formato: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, dove `YOURDESTINATION` è il nome della destinazione. Per una destinazione denominata Moviestar, si utilizza `http://www.adobe.com/go/destinations-moviestar-en`.
 
@@ -78,7 +78,7 @@ Gli utenti possono visualizzare e visitare il collegamento alla documentazione d
 
 ### `category` {#category}
 
-`category` è un parametro di stringa che fa riferimento alla categoria assegnata alla tua destinazione in Adobe Experience Platform. Per ulteriori informazioni, leggere [Categorie di destinazione](../../../destination-types.md). Utilizzare uno dei valori seguenti: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
+`category` è un parametro di stringa che fa riferimento alla categoria assegnata alla destinazione in [!DNL Adobe Experience Platform]. Per ulteriori informazioni, leggere [Categorie di destinazione](../../../destination-types.md). Utilizzare uno dei valori seguenti: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
 
 Gli utenti possono visualizzare l’elenco delle categorie di destinazione sul lato sinistro della schermata nel catalogo di destinazione, come illustrato nell’immagine seguente.
 

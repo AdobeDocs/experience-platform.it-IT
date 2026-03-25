@@ -2,7 +2,7 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un modello di pubblico tramite Adobe Experience Platform Destination SDK.
 title: Creare un modello di pubblico
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 4%
@@ -262,9 +262,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `headers.header` | Stringa | Specifica eventuali intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"Content-Type"` |
 | `headers.value` | Stringa | Specifica il valore delle intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"application/x-www-form-urlencoded"` |
 | `requestBody` | Stringa | Specifica il contenuto del corpo del messaggio da inviare all’API. I parametri da aggiungere all&#39;oggetto `requestBody` dipendono dai campi accettati dall&#39;API. Per informazioni su cosa includere nel corpo del messaggio, consultare la [documentazione sulle macro supportate](../functionality/audience-metadata-management.md#macros). |
-| `responseFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |
+| `responseFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#configuration-examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |
 | `responseFields.value` | Stringa | Specifica il valore di tutti i campi di risposta restituiti dall’API quando vengono chiamati. |
-| `responseErrorFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |
+| `responseErrorFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#configuration-examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |
 | `responseErrorFields.value` | Stringa | Analizza eventuali messaggi di errore restituiti nelle risposte alle chiamate API dalla destinazione. Questi messaggi di errore verranno visualizzati dagli utenti nell’interfaccia utente di Experience Platform. |
 | `validations.field` | Stringa | Indica se è necessario eseguire le convalide per qualsiasi campo prima di effettuare chiamate API alla destinazione. Ad esempio, è possibile utilizzare `{{validations.accountId}}` per convalidare l&#39;ID account dell&#39;utente. |
 | `validations.regex` | Stringa | Indica come deve essere strutturato il campo affinché la convalida possa passare. |

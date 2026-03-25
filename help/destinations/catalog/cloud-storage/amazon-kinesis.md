@@ -4,9 +4,9 @@ title: Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale allo storage Amazon Kinesis per eseguire lo streaming dei dati da Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2067'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 Il servizio [!DNL Kinesis Data Streams] di [!DNL Amazon Web Services] consente di raccogliere ed elaborare flussi di dati di grandi dimensioni in tempo reale.
 
-È possibile creare una connessione in uscita in tempo reale all&#39;archivio [!DNL Amazon Kinesis] per eseguire lo streaming dei dati da Adobe Experience Platform.
+È possibile creare una connessione in uscita in tempo reale all&#39;archivio [!DNL Amazon Kinesis] per inviare dati da [!DNL Adobe Experience Platform].
 
 * Per ulteriori informazioni su [!DNL Amazon Kinesis], consulta la [documentazione di Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Per connettersi a [!DNL Amazon Kinesis] a livello di programmazione, vedere l&#39;esercitazione sull&#39;API delle [destinazioni di streaming](../../api/streaming-destinations.md).
@@ -42,7 +42,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che puoi per la destinazione [!DNL Amazon Kinesis]. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione [!DNL Amazon Kinesis]. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
 
 ## Autorizzazioni [!DNL Amazon Kinesis] richieste {#required-kinesis-permission}
 

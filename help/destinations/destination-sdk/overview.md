@@ -2,18 +2,18 @@
 description: Adobe Experience Platform Destination SDK è un set di API di configurazione che ti consente di configurare i modelli di integrazione delle destinazioni affinché Experience Platform distribuisca i dati di pubblico e profilo all’endpoint o alla posizione di archiviazione, in base ai formati di dati e autenticazione scelti. Le configurazioni sono memorizzate in Experience Platform e possono essere recuperate tramite API per ulteriori aggiornamenti.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Destination SDK
+# [!DNL Adobe Experience Platform] Destination SDK
 
-Adobe Experience Platform Destination SDK è una suite di API di configurazione che consente di configurare i modelli di integrazione delle destinazioni per Experience Platform per fornire dati di pubblico e profilo all’endpoint o alla posizione di archiviazione, in base ai formati di dati e autenticazione scelti. Le configurazioni sono memorizzate in Experience Platform e possono essere recuperate tramite API per ulteriori aggiornamenti.
+[!DNL Adobe Experience Platform] Destination SDK è una suite di API di configurazione che consente di configurare i modelli di integrazione delle destinazioni affinché Experience Platform distribuisca i dati di pubblico e profilo all&#39;endpoint o alla posizione di archiviazione, in base ai formati di dati e autenticazione scelti. Le configurazioni sono memorizzate in Experience Platform e possono essere recuperate tramite API per ulteriori aggiornamenti.
 
-La documentazione di Destination SDK fornisce istruzioni sull’utilizzo di Adobe Experience Platform Destination SDK per configurare, testare e rilasciare un’integrazione di destinazione prodotta con Adobe Experience Platform e per far sì che la destinazione diventi parte del catalogo delle destinazioni in continua crescita. Utilizzando Destination SDK, puoi anche creare una destinazione privata personalizzata per esportare dati su misura per le tue esigenze.
+La documentazione di Destination SDK fornisce le istruzioni per utilizzare il Destination SDK [!DNL Adobe Experience Platform] per configurare, testare e rilasciare un&#39;integrazione di destinazione prodotta con [!DNL Adobe Experience Platform] e far sì che la destinazione diventi parte del catalogo delle destinazioni in continua crescita. Utilizzando Destination SDK, puoi anche creare una destinazione privata personalizzata per esportare dati su misura per le tue esigenze.
 
 ![Schermata dall&#39;interfaccia utente di Experience Platform che mostra il catalogo delle destinazioni.](assets/destinations-catalog-overview.png)
 
@@ -32,7 +32,7 @@ Consulta la documentazione nei collegamenti riportati di seguito per iniziare ra
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Spiegazione di tutte le opzioni di configurazione</a></li>
                 <li> Configurazione del server di destinazione - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">specifiche del server</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">specifiche del modello</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Campi dati del cliente e altri componenti di configurazione della destinazione</a></li>
-                <li><a href="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modellazione e macro</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modellazione e macro</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Consulta la documentazione nei collegamenti riportati di seguito per iniziare ra
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configurare una guida end-to-end per la destinazione di streaming</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Comprendere la trasformazione dei dati tramite modelli di Pebble</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">visualizzare le funzioni di modello supportate</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Comprendere i criteri di aggregazione dei dati</a></li>
-                <li><a href="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Esempio di configurazione live</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Esempio di configurazione live</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Verifica la destinazione di streaming</a></li>
             </ul>
         </td>
@@ -109,7 +109,7 @@ In qualità di partner Destination SDK, puoi trarre vantaggio dall&#39;aggiunta 
 
 1. Standardizzare le configurazioni di integrazione tra i clienti con parametri preconfigurati e semplificare l’esperienza di configurazione per i clienti.
 2. Introduce una scheda di destinazione con marchio nel catalogo delle destinazioni di Experience Platform per semplificare la configurazione e la consapevolezza dei clienti.
-3. Essere presentata come integrazione di destinazione prodotta con Adobe Experience Platform e Adobe Real-Time Customer Data Platform.
+3. Essere presentato come integrazione di destinazione prodotta con [!DNL Adobe Experience Platform] e Adobe [!DNL Real-Time Customer Data Platform].
 
 In qualità di cliente di Experience Platform, puoi anche creare una destinazione personalizzata privata, che può soddisfare al meglio le tue esigenze di attivazione.
 
@@ -119,7 +119,7 @@ In qualità di cliente di Experience Platform, puoi anche creare una destinazion
 
 ### Integrazioni in tempo reale (streaming) {#real-time-integrations}
 
-Tramite Destination SDK, Adobe Experience Platform supporta integrazioni in tempo reale (o streaming) con destinazioni che hanno un endpoint REST API. L’integrazione in tempo reale con Experience Platform supporta funzionalità quali:
+Tramite Destination SDK, [!DNL Adobe Experience Platform] supporta integrazioni in tempo reale (dette anche streaming) con destinazioni che hanno un endpoint REST API. L’integrazione in tempo reale con Experience Platform supporta funzionalità quali:
 
 * Trasformazione e aggregazione dei messaggi
 * Recupero profilo
@@ -138,7 +138,7 @@ Leggi i requisiti tecnici sul lato destinazioni nell&#39;articolo [prerequisiti 
 
 ## Accedere a Destination SDK {#get-access}
 
-L’accesso a Destination SDK varia in base al tuo stato di partner o cliente Experience Platform, Real-Time CDP. Per ulteriori informazioni, consulta la tabella seguente.
+L&#39;accesso a Destination SDK varia in base al tuo stato di partner o cliente Experience Platform, [!DNL Real-Time CDP]. Per ulteriori informazioni, consulta la tabella seguente.
 
 | Tipo di partner o cliente | Come accedere a Destination SDK |
 |---------|----------|

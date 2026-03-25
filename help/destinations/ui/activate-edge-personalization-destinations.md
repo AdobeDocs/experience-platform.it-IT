@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1854'
 ht-degree: 0%
 
 ---
@@ -15,43 +15,43 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform utilizza [la segmentazione Edge](../../segmentation/methods/edge-segmentation.md) insieme a [destinazioni Edge](/help/destinations/destination-types.md#edge-personalization-destinations) per consentire ai clienti di creare e indirizzare tipi di pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+[!DNL Adobe Experience Platform] utilizza [segmentazione Edge](../../segmentation/methods/edge-segmentation.md) insieme a [destinazioni Edge](/help/destinations/destination-types.md#edge-personalization-destinations) per consentire ai clienti di creare e indirizzare tipi di pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
-Esempi di destinazioni Edge sono le connessioni [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md).
+Esempi di destinazioni Edge sono le connessioni [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md).
 
 >[!NOTE]
 >
->Quando [si configura la connessione Adobe Target](../catalog/personalization/adobe-target-connection.md) *senza* utilizzando un ID dello stream di dati, i casi d&#39;uso descritti in questo articolo non sono supportati. In assenza di uno stream di dati, sono supportati solo i casi di utilizzo di personalizzazione della sessione successiva.
+>I casi d&#39;uso descritti in questo articolo non sono supportati durante la [configurazione della [!DNL Adobe Target] connessione](../catalog/personalization/adobe-target-connection.md) *senza* tramite un ID dello stream di dati. In assenza di uno stream di dati, sono supportati solo i casi di utilizzo di personalizzazione della sessione successiva.
 
 >[!IMPORTANT]
 >
->* Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>* Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 >* Per attivare i dati senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se utilizzate insieme alla [segmentazione Edge](../../segmentation/methods/edge-segmentation.md) e alla mappatura facoltativa degli attributi del profilo [&#128279;](#mapping), queste destinazioni consentono casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva nelle proprietà Web e mobile.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico in [!DNL Adobe Experience Platform] destinazioni Edge. Se utilizzate insieme alla [segmentazione Edge](../../segmentation/methods/edge-segmentation.md) e alla mappatura facoltativa degli attributi del profilo [](#mapping), queste destinazioni consentono casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva nelle proprietà Web e mobile.
 
-Per una breve panoramica su come configurare la connessione Adobe Target per la personalizzazione Edge, guarda il video seguente.
+Per una breve panoramica su come configurare la connessione [!DNL Adobe Target] per la personalizzazione Edge, guarda il video seguente.
 
 >[!NOTE]
 >
 >L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione di questo video. Per informazioni aggiornate, consulta i passaggi di configurazione descritti nelle sezioni seguenti.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449801/?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
-Per una breve panoramica su come condividere tipi di pubblico e attributi di profilo con Adobe Target e destinazioni di personalizzazione personalizzate, guarda il video seguente.
+Per una breve panoramica su come condividere tipi di pubblico e attributi di profilo in [!DNL Adobe Target] e destinazioni di personalizzazione personalizzate, guarda il video seguente.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447363/?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casi d’uso {#use-cases}
 
-Utilizza le soluzioni di personalizzazione di Adobe, come Adobe Target, o le tue piattaforme partner di personalizzazione (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché i sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite la destinazione [Personalization personalizzato](../catalog/personalization/custom-personalization.md). Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experience Platform Edge Network.
+Utilizza le soluzioni di personalizzazione di Adobe, come [!DNL Adobe Target], o le tue piattaforme partner di personalizzazione (ad esempio [!DNL Optimizely], [!DNL Pega]), nonché i sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite la destinazione [Personalization](../catalog/personalization/custom-personalization.md) personalizzata. Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experience Platform Edge Network.
 
 I casi d’uso descritti di seguito includono sia la personalizzazione del sito che la pubblicità mirata nel sito.
 
-Per abilitare questi casi d&#39;uso, i clienti hanno bisogno di un modo rapido e semplice per recuperare da Experience Platform informazioni sugli attributi del profilo e sui tipi di pubblico e per inviarle alle connessioni [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Custom Personalization](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experience Platform.
+Per abilitare questi casi d&#39;uso, i clienti hanno bisogno di un modo rapido e semplice per recuperare da Experience Platform informazioni sugli attributi del profilo e sui tipi di pubblico e per inviarle alle connessioni [[!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md) o [Personalization](../catalog/personalization/custom-personalization.md) personalizzate nell&#39;interfaccia utente di Experience Platform.
 
 ### Personalizzazione stessa pagina {#same-page}
 
@@ -69,7 +69,7 @@ Il giorno successivo, l’utente ritorna allo stesso sito web del cliente. I tip
 
 ### Personalizzare un banner di una pagina iniziale {#home-page-banner}
 
-Un’azienda di noleggio e vendita di immobili vuole personalizzare la propria pagina principale con un banner, in base alle qualifiche del pubblico in Adobe Experience Platform. L’azienda può selezionare i tipi di pubblico che dovranno ottenere un’esperienza personalizzata e inviarli ad Adobe Target come criteri di targeting per l’offerta Target.
+Un&#39;azienda di noleggio e vendita di abitazioni desidera personalizzare la propria home page con un banner, in base alle qualifiche del pubblico in [!DNL Adobe Experience Platform]. La società può selezionare i tipi di pubblico che dovrebbero ottenere un&#39;esperienza personalizzata e inviarli a [!DNL Adobe Target] come criteri di targeting per la loro offerta Target.
 
 ## Prerequisiti {#prerequisites}
 
@@ -81,7 +81,7 @@ Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experienc
 
 >[!TIP]
 >
->A partire dalla versione di aprile 2024, non è necessario selezionare la casella di controllo Segmentazione di Edge durante la [configurazione della connessione ad Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In questo caso, [personalizzazione della sessione successiva](#next-session) è l&#39;unico caso d&#39;uso di personalizzazione disponibile.
+>A partire dalla versione di aprile 2024, non è necessario selezionare la casella di controllo Segmentazione di Edge durante la [configurazione della connessione a [!DNL Adobe Target]](/help/destinations/catalog/personalization/adobe-target-connection.md). In questo caso, [personalizzazione della sessione successiva](#next-session) è l&#39;unico caso d&#39;uso di personalizzazione disponibile.
 
 ![Configurazione dello stream di dati con segmentazione Edge e destinazioni Personalization evidenziate!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -111,7 +111,7 @@ Segui l&#39;esercitazione [creazione connessione di destinazione](../ui/connect-
 
 A seconda della destinazione che stai configurando, consulta i seguenti articoli per i prerequisiti specifici per la destinazione e le relative informazioni:
 
-* [Connessione Adobe Target](../catalog/personalization/adobe-target-connection.md#parameters)
+* [Connessione [!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md#parameters)
 * [Connessione di personalizzazione personalizzata](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Seleziona la destinazione {#select-destination}

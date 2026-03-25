@@ -3,10 +3,10 @@ keywords: Medaglia;medaglia
 title: Estensione Medallia
 description: L'estensione Medallia è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 3%
+source-wordcount: '450'
+ht-degree: 4%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-Distribuisci [!DNL Medallia] in modo rapido e semplice sulle tue proprietà Web. L’estensione consente inoltre di rilevare eventi di sondaggio, acquisire il feedback dei clienti in tempo reale tramite elementi dati, utilizzarlo nelle regole per personalizzare l’esperienza del cliente e condividere i dati con Adobe Analytics.
+Distribuisci [!DNL Medallia] in modo rapido e semplice sulle tue proprietà Web. L&#39;estensione consente inoltre di rilevare eventi di sondaggio, acquisire feedback dei clienti in tempo reale tramite elementi dati, utilizzarlo nelle regole per personalizzare l&#39;esperienza del cliente e condividere i dati con [!DNL Adobe Analytics].
 
-[!DNL Medallia] è una voce dell&#39;estensione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] è una voce dell&#39;estensione cliente in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere ai tag in [!DNL Adobe Experience Platform]. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

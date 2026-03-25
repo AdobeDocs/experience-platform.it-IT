@@ -5,9 +5,9 @@ title: Eliminare un flusso di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Scopri come eliminare i flussi di dati nelle destinazioni batch e di streaming utilizzando l’API del servizio Flusso.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '557'
 ht-degree: 19%
 
 ---
@@ -22,9 +22,9 @@ Questa esercitazione descrive i passaggi per eliminare i flussi di dati sia per 
 
 Questo tutorial richiede un ID di flusso valido. Se non disponi di un ID di flusso valido, seleziona la destinazione desiderata dal [catalogo delle destinazioni](../catalog/overview.md) e segui i passaggi descritti per [connettersi alla destinazione](../ui/connect-destination.md) e [attivare i dati](../ui/activation-overview.md) prima di provare questa esercitazione.
 
-Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con le piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da [!DNL Adobe Experience Platform]. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per eliminare correttamente un flusso di dati utilizzando l&#39;API [!DNL Flow Service].

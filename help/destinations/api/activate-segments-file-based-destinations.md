@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4973'
+source-wordcount: '4966'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Utilizza le funzionalità avanzate di esportazione dei file per accedere a funzionalità avanzate di personalizzazione durante l’esportazione di file da Experience Platform:
 
-* Nuove [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Nuove [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 * Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite il [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Possibilità di selezionare il [tipo di file](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del file esportato.
 * [Possibilità di personalizzare la formattazione dei file CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -29,7 +29,7 @@ Questa funzionalità è supportata dalle sei schede di archiviazione cloud elenc
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-In questo articolo viene illustrato il flusso di lavoro necessario per utilizzare l&#39;API [Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) per esportare profili qualificati da Adobe Experience Platform in una delle posizioni di archiviazione cloud collegate in precedenza.
+In questo articolo viene illustrato il flusso di lavoro necessario per utilizzare l&#39;API [Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) per esportare profili qualificati da [!DNL Adobe Experience Platform] in uno dei percorsi di archiviazione cloud collegati in precedenza.
 
 >[!TIP]
 >
@@ -47,7 +47,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![Passaggi per attivare i tipi di pubblico che evidenziano il passaggio corrente in cui si trova l&#39;utente](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di creare tipi di pubblico e generarli in [!DNL Adobe Experience Platform] dai dati di [!DNL Real-Time Customer Profile].
@@ -3489,7 +3489,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Visualizza le identità disponibili da utilizzare nello schema di input
 
-La risposta restituisce le identità utilizzabili durante la creazione dello schema di input. Tieni presente che questa risposta restituisce sia [spazi dei nomi di identità standard](/help/identity-service/features/namespaces.md#standard) che [personalizzati](/help/identity-service/features/namespaces.md#manage-namespaces) che hai configurato in Experience Platform.
+La risposta restituisce le identità utilizzabili durante la creazione dello schema di input. Tieni presente che questa risposta restituisce sia [spazi dei nomi di identità standard](/help/identity-service/features/namespaces.md#standard) che [personalizzati](/help/identity-service/features/namespaces.md#create-namespaces) che hai configurato in Experience Platform.
 
 ```json
 [

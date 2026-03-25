@@ -3,7 +3,7 @@ title: Eseguire trasformazioni sui dati esportati nelle destinazioni di archivia
 type: Tutorial
 description: Scopri come utilizzare la funzionalità dei campi calcolati per eseguire trasformazioni sui dati esportati nelle destinazioni dell’archiviazione cloud
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Per eseguire varie trasformazioni sui dati esportati nelle destinazioni di archi
 
 Per utilizzare i campi calcolati per le trasformazioni dei dati:
 
-1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]** [&#128279;](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
+1. [Connetti](/help/destinations/ui/connect-destination.md) a una destinazione di archiviazione cloud desiderata. Quando ci si connette alla destinazione cloud desiderata, disattivare l&#39;opzione **[!UICONTROL Export arrays, maps, objects]** [](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 2. Segui i [passaggi di attivazione per le destinazioni dell&#39;archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e passa al passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Utilizzare i campi calcolati {#how-to-export-calculated-fields}
@@ -118,7 +118,7 @@ Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di
 
 In questo caso, il file di output si presenta come di seguito. Gli elementi dell&#39;array vengono concatenati in una singola stringa utilizzando il carattere `_`.
 
-```
+```csv
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
@@ -133,7 +133,7 @@ Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile 
 
 In questo caso, il file di output si presenta come di seguito. I due elementi dell&#39;array che soddisfano il criterio vengono concatenati in una singola stringa utilizzando il carattere `_`.
 
-```
+```csv
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
@@ -147,7 +147,7 @@ Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile 
 
 In questo caso, il file di output si presenta come di seguito. I tre elementi dell&#39;array vengono trasformati e concatenati in una singola stringa utilizzando il carattere `_`.
 
-```
+```csv
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
@@ -159,7 +159,7 @@ Utilizzare la funzione `iif` per esportare gli elementi di un array in determina
 
 In questo caso, il file di output si presenta come di seguito. In questo caso, il primo elemento dell’array è Marketing, quindi la persona è membro del reparto marketing.
 
-```
+```csv
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
@@ -174,7 +174,7 @@ Continuando con l&#39;oggetto array `organizations` dall&#39;alto, è possibile 
 
 In questo caso, il file di output si presenta come di seguito. Nota come i tre elementi dell’array sono concatenati in una singola stringa utilizzando il carattere `_` e 2023 viene aggiunto alla fine della stringa.
 
-```
+```csv
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
@@ -202,7 +202,7 @@ Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di
 
 In questo caso, il file di output si presenta come di seguito. Il primo valore `true` non nullo nell&#39;array viene esportato nel file.
 
-```
+```csv
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
@@ -220,7 +220,7 @@ Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di
 
 In questo caso, il file di output si presenta come di seguito. Osserva come la seconda colonna indica il numero di elementi nell’array, corrispondente al numero di acquisti separati effettuati dal cliente.
 
-```
+```csv
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
@@ -229,7 +229,7 @@ johndoe@acme.org,"5"
 
 >[!IMPORTANT]
 >
->A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario **&#x200B; per utilizzare il controllo &#x200B;** [!UICONTROL Calculated fields]** nell&#39;interfaccia utente.
+>A differenza delle altre funzioni descritte in questa pagina, per esportare singoli elementi di un array non è necessario ** per utilizzare il controllo **[!UICONTROL Calculated fields]** nell&#39;interfaccia utente.
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, come nell&#39;esempio precedente per la funzione `size_of`, se si desidera accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, è possibile utilizzare `purchaseTime[0]` per esportare il primo elemento del timestamp, `purchaseTime[1]` per esportare il secondo elemento del timestamp, `purchaseTime[2]` per esportare il terzo elemento del timestamp e così via.
 
@@ -237,7 +237,7 @@ johndoe@acme.org,"5"
 
 In questo caso, il file di output si presenta come di seguito, esportando la prima volta che il cliente ha effettuato un acquisto:
 
-```
+```csv
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
@@ -250,7 +250,7 @@ Utilizzare le funzioni `first` e `last` per esportare il primo o l&#39;ultimo el
 
 In questo caso, il file di output si presenta come di seguito, esportando la prima e l’ultima volta che il cliente ha effettuato un acquisto:
 
-```
+```csv
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```

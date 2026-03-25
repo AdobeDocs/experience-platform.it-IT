@@ -3,9 +3,9 @@ Keywords: ECID;ecid
 title: Estensione del servizio Experience Cloud ID
 description: L'estensione del servizio Experience Cloud ID è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '444'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Questa estensione implementa il servizio ID [!DNL Experience Cloud], che identifica i visitatori in tutte le soluzioni [!DNL Experience Cloud].
 
-Il servizio ID [!DNL Experience Cloud] è un&#39;estensione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, consulta la [pagina dell&#39;estensione del servizio Experience Cloud ID](../../../tags/extensions/client/id-service/overview.md) nella documentazione dei tag.
+Il servizio ID [!DNL Experience Cloud] è un&#39;estensione di personalizzazione in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, consulta la [pagina dell&#39;estensione del servizio Experience Cloud ID](../../../tags/extensions/client/id-service/overview.md) nella documentazione dei tag.
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per accedere all&#39;interfaccia utente di Data Collection e chiedere di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per accedere all&#39;interfaccia utente di Data Collection e chiedere di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

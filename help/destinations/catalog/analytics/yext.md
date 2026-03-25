@@ -3,9 +3,9 @@ keywords: Tracciamento conversione testo;Testo;Testo;Tracciamento conversione te
 title: Estensione per il tracciamento delle conversioni di testo
 description: L'estensione Yext Conversion Tracking è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '436'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 L&#39;estensione [!DNL Yext Conversion Tracking] consente di misurare le conversioni attribuibili all&#39;utilizzo dei prodotti Yext.
 
-[!DNL Yext Conversion Tracking] è un&#39;estensione di Analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
+[!DNL Yext Conversion Tracking] è un&#39;estensione di analytics in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere ai tag in [!DNL Adobe Experience Platform]. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

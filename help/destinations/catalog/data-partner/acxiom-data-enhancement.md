@@ -4,9 +4,9 @@ description: Utilizza questo connettore per attivare profili Adobe di prime part
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1419'
 ht-degree: 4%
 
 ---
@@ -23,13 +23,13 @@ Utilizza il connettore [!DNL Acxiom Data Enhancement] per fornire dati descritti
 
 ![Diagramma di marketing per esportare dati di prime parti in Acxiom, quindi importare nuovamente dati arricchiti in Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-Questa esercitazione fornisce i passaggi per creare una connessione di destinazione [!DNL Acxiom Data Enhancement] e un flusso di dati utilizzando l&#39;interfaccia utente di Adobe Experience Platform. Questo connettore viene utilizzato per fornire dati al servizio di miglioramento Acxiom utilizzando Amazon S3 come punto di rilascio.
+Questa esercitazione fornisce i passaggi per creare una connessione di destinazione [!DNL Acxiom Data Enhancement] e un flusso di dati utilizzando l&#39;interfaccia utente [!DNL Adobe Experience Platform]. Questo connettore fornisce dati al servizio di miglioramento Acxiom utilizzando Amazon S3 come punto di rilascio.
 
 ![Catalogo di destinazione con la destinazione Acxiom selezionata.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL Acxiom Data Enhancement], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Acxiom Data Enhancement], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Migliorare i dati dei clienti {#enhance-customer-data}
 
@@ -41,7 +41,7 @@ Il caso d’uso viene eseguito tramite una combinazione di connettori di destina
 
 Per iniziare, esporta i record dei clienti esistenti per l’arricchimento utilizzando questo connettore di destinazione. Il servizio di Acxiom cerca il file, lo recupera, lo arricchisce con i dati di Acxiom e genera un file.
 
-Il cliente utilizza quindi la scheda di origine [Acxiom Data Ingestion](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) corrispondente per acquisire i profili cliente idrati in Adobe Real-Time CDP.
+Il cliente utilizzerà quindi la scheda di origine [Acxiom Data Ingestion](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) corrispondente per acquisire i profili cliente idrati in Adobe [!DNL Real-Time CDP].
 
 ## Prerequisiti {#prerequisites}
 
@@ -57,7 +57,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 

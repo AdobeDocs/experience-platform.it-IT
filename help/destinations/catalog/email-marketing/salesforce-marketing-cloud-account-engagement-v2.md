@@ -5,18 +5,18 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1878'
 ht-degree: 3%
 
 ---
 
 # Connessione [!DNL (V2) Salesforce Marketing Cloud Account Engagement]
 
-La destinazione [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (precedentemente nota come [!DNL Pardot]) consente di esportare i dati del profilo Adobe Experience Platform nella piattaforma di automazione del marketing B2B di Salesforce.
+La destinazione [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (precedentemente nota come [!DNL Pardot]) consente di esportare i dati del profilo [!DNL Adobe Experience Platform] nella piattaforma di automazione del marketing B2B di Salesforce.
 
-Questa integrazione consente la sincronizzazione diretta dei dati tra i profili cliente in Adobe Experience Platform e le campagne marketing in [!DNL Salesforce Marketing Cloud Account Engagement].
+Questa integrazione consente la sincronizzazione diretta dei dati tra i profili cliente in [!DNL Adobe Experience Platform] e le campagne marketing in [!DNL Salesforce Marketing Cloud Account Engagement].
 
 Questa destinazione utilizza [[!DNL Salesforce Import API v5]](https://developer.salesforce.com/docs/marketing/pardot/guide/import-v5.html) per elaborare in modo efficiente le esportazioni di dati batch.
 
@@ -30,19 +30,19 @@ Questa destinazione utilizza [[!DNL Salesforce Import API v5]](https://developer
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL (V2) Marketing Cloud Account Engagement], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL (V2) Marketing Cloud Account Engagement], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Gestione lead B2B {#use-case-lead-management}
 
-Sincronizzare i dati dei lead da Adobe Experience Platform a [!DNL Salesforce Marketing Cloud Account Engagement] per lo sviluppo e il punteggio dei lead completi. Il team marketing può creare profili di pubblico avanzati in Experience Platform ed esportarli in [!DNL Salesforce Marketing Cloud Account Engagement] per campagne di marketing B2B automatizzate.
+Sincronizzare i dati dei lead da [!DNL Adobe Experience Platform] a [!DNL Salesforce Marketing Cloud Account Engagement] per l&#39;acquisizione e il punteggio completi dei lead. Il team marketing può creare profili di pubblico avanzati in Experience Platform ed esportarli in [!DNL Salesforce Marketing Cloud Account Engagement] per campagne di marketing B2B automatizzate.
 
 ### Automazione delle campagne {#use-case-campaign-automation}
 
-È possibile attivare le campagne di marketing in [!DNL Salesforce Marketing Cloud Account Engagement] utilizzando i tipi di pubblico definiti in Adobe Experience Platform. Dopo aver esportato i tipi di pubblico di destinazione in [!DNL Salesforce], puoi utilizzarli per eseguire campagne e-mail e gestire i lead tramite lo sviluppo, il punteggio e la segmentazione della campagna.
+È possibile attivare le campagne di marketing in [!DNL Salesforce Marketing Cloud Account Engagement] utilizzando i tipi di pubblico definiti in [!DNL Adobe Experience Platform]. Dopo aver esportato i tipi di pubblico di destinazione in [!DNL Salesforce], puoi utilizzarli per eseguire campagne e-mail e gestire i lead tramite lo sviluppo, il punteggio e la segmentazione della campagna.
 
 ### Arricchimento del profilo {#use-case-profile-enrichment}
 
-Migliora i profili dei potenziali clienti [!DNL Salesforce Marketing Cloud Account Engagement] con dati completi sui clienti provenienti da Adobe Experience Platform. Esporta attributi di profilo completi per creare record di prospect più dettagliati in [!DNL Salesforce Marketing Cloud Account Engagement] per migliorare il targeting e la personalizzazione.
+Migliora i profili di potenziali clienti [!DNL Salesforce Marketing Cloud Account Engagement] con dati completi sui clienti provenienti da [!DNL Adobe Experience Platform]. Esporta attributi di profilo completi per creare record di prospect più dettagliati in [!DNL Salesforce Marketing Cloud Account Engagement] per migliorare il targeting e la personalizzazione.
 
 ## Prerequisiti {#prerequisites}
 
@@ -74,7 +74,7 @@ Annotare gli elementi seguenti prima di eseguire l&#39;autenticazione nella dest
 
 [!DNL (V2) Marketing Cloud Account Engagement] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
-Se viene trovata una corrispondenza utilizzando uno di questi identificatori, il record del prospect Account Engagement esistente verrà aggiornato con i dati di Adobe Experience Platform. Se non viene trovata alcuna corrispondenza, verrà creato un nuovo record prospect in Coinvolgimento account.
+Se viene trovata una corrispondenza utilizzando uno di questi identificatori, il record del prospect Account Engagement esistente verrà aggiornato con i dati di [!DNL Adobe Experience Platform]. Se non viene trovata alcuna corrispondenza, verrà creato un nuovo record prospect in Coinvolgimento account.
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
@@ -91,7 +91,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -138,7 +138,7 @@ Verrai reindirizzato alla pagina di accesso [!DNL Salesforce]. Immettere le cred
 
 ![Pagina di accesso di Salesforce](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/salesforce-auth.png "Pagina di accesso di Salesforce.")
 
-Quindi, seleziona **[!UICONTROL Allow]** per concedere le autorizzazioni all&#39;app **Adobe Experience Platform** per accedere al tuo account [!DNL Salesforce Marketing Cloud Account Engagement]. *Questa operazione deve essere eseguita una sola volta*.
+Selezionare **[!UICONTROL Allow]** per concedere le autorizzazioni all&#39;app **[!DNL Adobe Experience Platform]** per accedere al proprio account [!DNL Salesforce Marketing Cloud Account Engagement]. *Questa operazione deve essere eseguita una sola volta*.
 
 ![Finestra di conferma dello screenshot dell&#39;app Salesforce per concedere le autorizzazioni all&#39;accesso dell&#39;app Experience Platform al coinvolgimento dell&#39;account Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/allow-app.png)
 
@@ -171,7 +171,7 @@ Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione,
 
 ### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
 
-Per inviare i dati sul pubblico da Adobe Experience Platform alla destinazione [!DNL (V2) Marketing Cloud Account Engagement], è necessario mappare i campi dello schema Experience Data Model (XDM) ai campi corrispondenti nella destinazione.
+Per inviare i dati sul pubblico da [!DNL Adobe Experience Platform] alla destinazione [!DNL (V2) Marketing Cloud Account Engagement], è necessario mappare i campi dello schema Experience Data Model (XDM) ai campi corrispondenti nella destinazione.
 
 Per un elenco completo dei campi supportati, consulta la [documentazione di Salesforce Prospect API v5](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html). [i campi personalizzati](https://developer.salesforce.com/docs/marketing/pardot/guide/custom-field-v5.html) non sono supportati nella versione di Alpha.
 

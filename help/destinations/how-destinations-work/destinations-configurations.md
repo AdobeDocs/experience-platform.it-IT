@@ -2,9 +2,9 @@
 title: Impostazioni di esportazione comuni e configurabili nelle destinazioni
 description: Scopri quali impostazioni di esportazione nelle destinazioni sono configurabili a livello di destinazione e quali sono fisse e non possono essere modificate.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Quando pensi al comportamento di esportazione nelle destinazioni Experience Platform, devi considerare tre livelli separati su cui agiscono le configurazioni.
 
-* Al primo livello, alcune delle impostazioni relative al comportamento di esportazione del profilo e alle impostazioni di configurazione sono comuni a tutte le destinazioni appartenenti a un tipo di destinazione. Queste impostazioni si riferiscono a ciò che attiva un’esportazione di destinazione e a ciò che è incluso in un’esportazione e non possono essere modificate dagli sviluppatori di destinazione o dagli utenti di Real-Time CDP.
+* Al primo livello, alcune delle impostazioni relative al comportamento di esportazione del profilo e alle impostazioni di configurazione sono comuni a tutte le destinazioni appartenenti a un tipo di destinazione. Queste impostazioni si riferiscono a ciò che attiva un&#39;esportazione di destinazione e a ciò che è incluso in un&#39;esportazione e non può essere modificato dagli sviluppatori di destinazione o dagli utenti [!DNL Real-Time CDP].
 * Al secondo livello, alcune impostazioni possono essere personalizzate a livello di destinazione dallo sviluppatore di destinazione durante l’authoring delle destinazioni utilizzando Destination SDK.
-* Al terzo livello, è possibile configurare le impostazioni di configurazione impostate dagli utenti di Real-Time CDP nei flussi di lavoro di attivazione.
+* Al terzo livello, è possibile configurare le impostazioni di configurazione impostate da [!DNL Real-Time CDP] utenti nei flussi di lavoro di attivazione.
 
 ![Diagramma che mostra l&#39;interazione tra le impostazioni di esportazione comuni e configurabili per le destinazioni](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -23,9 +23,9 @@ Questa pagina descrive o collega tutte le impostazioni di esportazione comuni e 
 
 ## Impostazioni di esportazione comuni tra i tipi di destinazione {#common-settings-across-destination-types}
 
-Il comportamento di esportazione della destinazione è coerente tra le destinazioni appartenenti a un tipo di destinazione per quanto riguarda *ciò che attiva un&#39;esportazione di destinazione* e *ciò che è incluso nelle esportazioni di destinazione*. Le esportazioni delle destinazioni vengono attivate dalle notifiche ricevute dal servizio [upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=it#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Il comportamento di esportazione della destinazione è coerente tra le destinazioni appartenenti a un tipo di destinazione per quanto riguarda *ciò che attiva un&#39;esportazione di destinazione* e *ciò che è incluso nelle esportazioni di destinazione*. Le esportazioni delle destinazioni vengono attivate dalle notifiche ricevute dal servizio [upstream Real-time Customer Profile](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
-Ciò che è incluso nelle esportazioni di destinazione varia leggermente tra i tipi di destinazione. Ulteriori informazioni sui [modelli comuni di comportamento di esportazione per tipo di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md). Queste impostazioni non possono essere modificate dagli sviluppatori o dagli utenti di Real-Time CDP.
+Ciò che è incluso nelle esportazioni di destinazione varia leggermente tra i tipi di destinazione. Ulteriori informazioni sui [modelli comuni di comportamento di esportazione per tipo di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md). Non possono essere modificate dagli sviluppatori di destinazione o dagli utenti [!DNL Real-Time CDP].
 
 ## Impostazioni di esportazione personalizzabili per sviluppatori di destinazione {#customizable-settings-by-destination-developers}
 
@@ -46,7 +46,7 @@ Ad esempio, per [destinazioni di streaming](/help/destinations/destination-types
 
 ![Registrazione schermata della selezione identità per il campo di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione.](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
-Analogamente, per [destinazioni basate su file](/help/destinations/destination-types.md#file-based), lo sviluppatore di destinazione può determinare quali [opzioni di aggiunta del nome file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) desidera rendere disponibili per la propria destinazione o quali [opzioni di formattazione file](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) desidera rendere disponibili e l&#39;utente potrà selezionare solo tra queste opzioni, come illustrato di seguito:
+Analogamente, per [destinazioni basate su file](/help/destinations/destination-types.md#file-based), lo sviluppatore di destinazione può determinare quali [opzioni di aggiunta del nome file](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) desidera rendere disponibili per la propria destinazione o quali [opzioni di formattazione file](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) desidera rendere disponibili e l&#39;utente potrà selezionare solo tra queste opzioni, come illustrato di seguito:
 
 ![Registrazione dello schermo dell&#39;opzione di formattazione del file durante la connessione a una destinazione basata su file.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 

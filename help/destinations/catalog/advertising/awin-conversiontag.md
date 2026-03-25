@@ -3,9 +3,9 @@ keywords: Awin Inserzionista Conversione Tag estensione;tag di conversione;Awin;
 title: Estensione tag di conversione per inserzionista Awin
 description: L’estensione tag Awin Advertiser Conversion è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '482'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Il tag di conversione è la dichiarazione dell&#39;oggetto JavaScript AWIN.Tracking.Sale, che viene eseguita nella pagina di conferma per indicare al tag principale che è stata eseguita una conversione. Successivamente, eseguirà le richieste di tracciamento necessarie.
 
-Il tag di conversione degli inserzionisti Awin è un’estensione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
+Il tag di conversione degli inserzionisti Awin è un&#39;estensione pubblicitaria in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per accedere alle funzionalità di raccolta dati nell&#39;interfaccia utente e richiedere l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per accedere alle funzionalità di raccolta dati nell&#39;interfaccia utente e richiedere l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

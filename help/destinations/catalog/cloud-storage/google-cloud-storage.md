@@ -3,9 +3,9 @@ title: Connessione Google Cloud Storage
 description: Scopri come connettersi a Google Cloud Storage e attivare tipi di pubblico o esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1299'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Crea una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente i file di dati da Adobe Experience Platform nei bucket.
+Crea una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente i file di dati da [!DNL Adobe Experience Platform] nei bucket.
 
 ## Connettersi all&#39;archiviazione [!DNL Google Cloud Storage] tramite API o interfaccia utente {#connect-api-or-ui}
 
@@ -28,7 +28,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -41,7 +41,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | Sì | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | Sì | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | Sì | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ Per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazio
 
 ### Pianificazione {#scheduling}
 
-Nel passaggio **[!UICONTROL Scheduling]**, puoi [impostare la pianificazione dell&#39;esportazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) per la destinazione [!DNL Google Cloud Storage] e [configurare il nome dei file esportati](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+Nel passaggio **[!UICONTROL Scheduling]**, puoi [impostare la pianificazione dell&#39;esportazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) per la destinazione [!DNL Google Cloud Storage] e [configurare il nome dei file esportati](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 
 ### Mappare attributi e identità {#map}
 
@@ -168,4 +168,4 @@ Per verificare se i dati sono stati esportati correttamente, controlla il bucket
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allow-list}
 
-Se hai bisogno di aggiungere IP Adobe inserire nell&#39;elenco Consentiti a un inserisco nell&#39;elenco Consentiti di, consulta l&#39;articolo [Indirizzo IP &#x200B;](ip-address-allow-list.md).
+Se hai bisogno di aggiungere IP Adobe a un inserisco nell&#39;elenco Consentiti di, consulta l&#39;articolo [Indirizzo IP ](ip-address-allow-list.md).

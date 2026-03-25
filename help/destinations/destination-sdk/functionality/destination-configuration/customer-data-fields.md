@@ -2,9 +2,9 @@
 description: Scopri come creare campi di input nell’interfaccia utente di Experience Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1750'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Quando crei campi dati del cliente personalizzati, puoi utilizzare i parametri d
 | `enum` | Stringa | Facoltativo | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. |
 | `default` | Stringa | Facoltativo | Definisce il valore predefinito da un elenco `enum`. |
 | `hidden` | Booleano | Facoltativo | Indica se il campo dati del cliente viene visualizzato o meno nell’interfaccia utente. |
-| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il campo **[!UICONTROL Alias integrazione]** nella destinazione [Personalization](../../../catalog/personalization/custom-personalization.md) personalizzata deve essere univoco, il che significa che due flussi di dati separati per questa destinazione non possono avere lo stesso valore per questo campo. |
+| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il campo **[!UICONTROL Integration alias]** nella destinazione [Personalization](../../../catalog/personalization/custom-personalization.md) personalizzata deve essere univoco, il che significa che due flussi di dati separati per questa destinazione non possono avere lo stesso valore per questo campo. |
 | `readOnly` | Booleano | Facoltativo | Indica se il cliente può modificare il valore del campo. |
 
 {style="table-layout:auto"}
@@ -103,17 +103,17 @@ L’esperienza dell’interfaccia utente risultante è illustrata nell’immagin
 
 ## Nomi e descrizioni delle connessioni di destinazione {#names-description}
 
-Durante la creazione di una nuova destinazione, Destination SDK aggiunge automaticamente i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** alla schermata di connessione della destinazione nell&#39;interfaccia utente di Experience Platform. Come puoi vedere nell&#39;esempio precedente, i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** vengono visualizzati nell&#39;interfaccia utente senza essere inclusi nella configurazione dei campi dati del cliente.
+Durante la creazione di una nuova destinazione, Destination SDK aggiunge automaticamente i campi **[!UICONTROL Name]** e **[!UICONTROL Description]** alla schermata di connessione della destinazione nell&#39;interfaccia utente di Experience Platform. Come puoi vedere nell&#39;esempio precedente, i campi **[!UICONTROL Name]** e **[!UICONTROL Description]** vengono riprodotti nell&#39;interfaccia utente senza essere inclusi nella configurazione dei campi dati del cliente.
 
 >[!IMPORTANT]
 >
->Se aggiungi i campi **[!UICONTROL Nome]** e **[!UICONTROL Descrizione]** nella configurazione dei campi dati del cliente, gli utenti li vedranno duplicati nell&#39;interfaccia utente.
+>Se aggiungi **[!UICONTROL Name]** e **[!UICONTROL Description]** campi nella configurazione dei campi dati del cliente, gli utenti li vedranno duplicati nell&#39;interfaccia utente.
 
 ## Campi dati cliente ordine {#ordering}
 
 L’ordine in cui si aggiungono i campi dati del cliente nella configurazione di destinazione si riflette nell’interfaccia utente di Experience Platform.
 
-Ad esempio, la configurazione seguente si riflette di conseguenza nell&#39;interfaccia utente, con le opzioni visualizzate nell&#39;ordine **[!UICONTROL Nome]**, **[!UICONTROL Descrizione]**, **[!UICONTROL Nome bucket]**, **[!UICONTROL Percorso cartella]**, **[!UICONTROL Tipo file]**, **[!UICONTROL Formato compressione]**.
+Ad esempio, la configurazione seguente si riflette di conseguenza nell&#39;interfaccia utente, con le opzioni visualizzate nell&#39;ordine **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
 
 ```json
 "customerDataFields":[
@@ -175,7 +175,7 @@ Ad esempio, la configurazione seguente si riflette di conseguenza nell&#39;inter
 
 Puoi raggruppare diversi campi di dati cliente all’interno di una sezione. Quando si imposta la connessione alla destinazione nell’interfaccia utente, gli utenti possono visualizzare e beneficiare di un raggruppamento visivo di campi simili.
 
-A tale scopo, utilizzare `"type": "object"` per creare il gruppo e raccogliere i campi dei dati del cliente desiderati all&#39;interno di un oggetto `properties`, come illustrato nell&#39;immagine seguente, in cui è evidenziato il raggruppamento **[!UICONTROL Opzioni CSV]**.
+A tale scopo, utilizzare `"type": "object"` per creare il gruppo e raccogliere i campi dei dati cliente desiderati all&#39;interno di un oggetto `properties`, come illustrato nell&#39;immagine seguente, dove il raggruppamento **[!UICONTROL CSV Options]** è evidenziato.
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[

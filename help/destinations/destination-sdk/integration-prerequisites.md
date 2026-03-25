@@ -1,10 +1,10 @@
 ---
-description: Per utilizzare Destination SDK, un'azienda partner deve soddisfare i prerequisiti elencati in questo documento.
+description: Per utilizzare Destination SDK, un’azienda partner deve soddisfare i prerequisiti elencati in questo documento.
 title: Prerequisiti per l’integrazione
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Per utilizzare Destination SDK, accertati di soddisfare i prerequisiti tecnici e
 
 ## Prerequisiti tecnici/API per le destinazioni di streaming {#streaming-prerequisites}
 
-1. Hai un endpoint REST API per Adobe Experience Platform per fornire i seguenti tipi di dati a:
+1. È disponibile un endpoint REST API per [!DNL Adobe Experience Platform] per inviare i seguenti tipi di dati a:
    * Informazioni sull’iscrizione del pubblico;
    * Informazioni sull’identità del profilo;
    * (Facoltativo) Attributi aggiuntivi per l’arricchimento del profilo.

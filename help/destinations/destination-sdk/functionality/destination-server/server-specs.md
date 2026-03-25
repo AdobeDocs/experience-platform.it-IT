@@ -2,16 +2,16 @@
 description: Scopri come configurare le specifiche del server di destinazione in Adobe Experience Platform Destination SDK tramite l’endpoint "/authoring/destination-servers".
 title: Specifiche server per le destinazioni create con Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2775'
+source-wordcount: '2748'
 ht-degree: 2%
 
 ---
 
 # Specifiche server per le destinazioni create con Destination SDK
 
-Le specifiche del server di destinazione definiscono il tipo di piattaforma di destinazione che riceverà i dati da Adobe Experience Platform e i parametri di comunicazione tra Experience Platform e la destinazione. Ad esempio:
+Le specifiche del server di destinazione definiscono il tipo di piattaforma di destinazione che riceverà i dati da [!DNL Adobe Experience Platform] e i parametri di comunicazione tra Experience Platform e la destinazione. Ad esempio:
 
 * Una specifica del server di destinazione [streaming](#streaming-example) definisce l&#39;endpoint del server HTTP che riceverà i messaggi HTTP da Experience Platform. Per informazioni su come configurare la formattazione delle chiamate HTTP all&#39;endpoint, leggere la pagina delle specifiche dei [modelli](templating-specs.md).
 * Una specifica del server di destinazione [Amazon S3](#s3-example) definisce il nome e il percorso del bucket [!DNL S3] in cui Experience Platform esporterà i file.
@@ -19,7 +19,7 @@ Le specifiche del server di destinazione definiscono il tipo di piattaforma di d
 
 Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure vedi le seguenti pagine di panoramica sulla configurazione di destinazione:
 
-* [Utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
+* [Utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-server-template-configuration)
 * [Utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
 
 È possibile configurare le specifiche del server di destinazione tramite l&#39;endpoint `/authoring/destination-servers`. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
@@ -65,7 +65,7 @@ Sia i campi hardcoded che i campi template hanno un proprio utilizzo in Destinat
 
 Quando gli utenti [si connettono alla destinazione](../../../ui/connect-destination.md) nell&#39;interfaccia utente di Experience Platform, è possibile che si desideri gestire il processo di connessione di destinazione senza il relativo input.
 
-A questo scopo, puoi codificare i parametri di connessione della piattaforma di destinazione nelle specifiche del server. Quando si utilizzano valori di parametri hardcoded nella configurazione del server di destinazione, la connessione tra Adobe Experience Platform e la piattaforma di destinazione viene gestita senza alcun input da parte dell’utente.
+A questo scopo, puoi codificare i parametri di connessione della piattaforma di destinazione nelle specifiche del server. Quando si utilizzano valori di parametri hardcoded nella configurazione del server di destinazione, la connessione tra [!DNL Adobe Experience Platform] e la piattaforma di destinazione viene gestita senza alcun input da parte dell&#39;utente.
 
 Nell&#39;esempio seguente, un partner crea un server di destinazione Data Landing Zone con il campo `path.value` codificato.
 
@@ -130,7 +130,7 @@ Di conseguenza, quando gli utenti seguono l&#39;[esercitazione sulla connessione
 
 ## Server di destinazione in tempo reale (streaming) {#streaming-example}
 
-Questo tipo di server di destinazione ti consente di esportare dati da Adobe Experience Platform alla destinazione tramite richieste HTTP. La configurazione del server contiene informazioni sul server che riceve i messaggi (il server sul lato dell’utente).
+Questo tipo di server di destinazione ti consente di esportare dati da [!DNL Adobe Experience Platform] alla tua destinazione tramite richieste HTTP. La configurazione del server contiene informazioni sul server che riceve i messaggi (il server sul lato dell’utente).
 
 Questo processo distribuisce i dati utente come una serie di messaggi HTTP alla piattaforma di destinazione. I parametri seguenti costituiscono il modello delle specifiche del server HTTP.
 
@@ -160,7 +160,7 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 
 ## Server di destinazione [!DNL Amazon S3] {#s3-example}
 
-Questo server di destinazione ti consente di esportare i file contenenti dati di Adobe Experience Platform nell’archiviazione Amazon S3.
+Questo server di destinazione consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nell&#39;archiviazione Amazon S3.
 
 L’esempio seguente mostra un esempio di configurazione del server di destinazione per una destinazione Amazon S3.
 
@@ -194,7 +194,7 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 
 ## Server di destinazione [!DNL SFTP] {#sftp-example}
 
-Questo server di destinazione consente di esportare file contenenti dati Adobe Experience Platform nel server di archiviazione [!DNL SFTP].
+Questo server di destinazione consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nel server di archiviazione [!DNL SFTP].
 
 L’esempio seguente mostra un esempio di configurazione del server di destinazione per una destinazione SFTP.
 
@@ -232,7 +232,7 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 
 ## Server di destinazione [!DNL Azure Data Lake Storage] ([!DNL ADLS]) {#adls-example}
 
-Questo server di destinazione ti consente di esportare i file contenenti dati di Adobe Experience Platform nel tuo account [!DNL Azure Data Lake Storage].
+Questo server di destinazione ti consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nel tuo account [!DNL Azure Data Lake Storage].
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Azure Data Lake Storage].
 
@@ -260,7 +260,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 
 ## Server di destinazione [!DNL Azure Blob Storage] {#blob-example}
 
-Questo server di destinazione consente di esportare i file contenenti dati di Adobe Experience Platform nel contenitore [!DNL Azure Blob Storage].
+Questo server di destinazione consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nel contenitore [!DNL Azure Blob Storage].
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Azure Blob Storage].
 

@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4783'
+source-wordcount: '4769'
 ht-degree: 11%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 >* Per attivare i tipi di pubblico senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions).
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 >
@@ -23,7 +23,7 @@ ht-degree: 11%
 
 ## Panoramica {#overview}
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico in Adobe Experience Platform per mettere in batch destinazioni basate su file di profilo, come l’archiviazione cloud e le destinazioni del marketing via e-mail.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico in [!DNL Adobe Experience Platform] per le destinazioni basate su file di profilo batch, ad esempio l&#39;archiviazione cloud e le destinazioni di e-mail marketing.
 
 ## Prerequisiti {#prerequisites}
 
@@ -496,7 +496,7 @@ Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM I
 
 ### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
 
-Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considerazioni chiave {#key-considerations}
 
@@ -573,7 +573,7 @@ Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di iden
 >
 >Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mapping] passaggio](#mapping) migliorato che sostituisce il passaggio **[!UICONTROL Select attributes]** descritto in questa sezione.
 >
->Questo passaggio **[!UICONTROL Select attributes]** viene ancora visualizzato per le destinazioni del marketing via e-mail Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
+>Questo passaggio **[!UICONTROL Select attributes]** è ancora visualizzato per le destinazioni di e-mail marketing di [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
 Per le destinazioni basate su profili, devi selezionare gli attributi del profilo che desideri inviare alla destinazione target.
 
@@ -593,7 +593,7 @@ Per le destinazioni basate su profili, devi selezionare gli attributi del profil
 
 >[!NOTE]
 >
-> Adobe Experience Platform compila la selezione con quattro attributi consigliati e comunemente utilizzati dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> [!DNL Adobe Experience Platform] compila la selezione con quattro attributi consigliati e comunemente utilizzati dal tuo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Immagine che mostra gli attributi consigliati precompilati nel passaggio di mappatura del flusso di lavoro di attivazione del pubblico.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
@@ -649,7 +649,7 @@ Seleziona **[!UICONTROL Next]** per passare al passaggio [Rivedi](#review).
 >* I campi vengono utilizzati nella definizione del pubblico.
 >* I campi sono configurati come attributi previsti per la destinazione target.
 >
-> Ad esempio, se il campo `person.name.firstName` contiene alcune etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione, nel passaggio di revisione verrà visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Ad esempio, se il campo `person.name.firstName` contiene alcune etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione, nel passaggio di revisione verrà visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Nella pagina **[!UICONTROL Review]** è disponibile un riepilogo della selezione. Selezionare **[!UICONTROL Cancel]** per interrompere il flusso, **[!UICONTROL Back]** per modificare le impostazioni oppure **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
@@ -680,7 +680,7 @@ Se si è soddisfatti della selezione e non sono state rilevate violazioni dei cr
 
 ## Verificare l’attivazione del pubblico {#verify}
 
-Durante l&#39;esportazione dei tipi di pubblico nelle destinazioni dell&#39;archiviazione cloud, Adobe Experience Platform crea un file `.csv`, `.json` o `.parquet` nel percorso di archiviazione fornito. È necessario creare un nuovo file nel percorso di archiviazione in base alla pianificazione impostata nel flusso di lavoro. Di seguito è riportato il formato di file predefinito, ma è possibile [modificare i componenti del nome di file](#configure-file-names):
+Durante l&#39;esportazione dei tipi di pubblico nelle destinazioni dell&#39;archiviazione cloud, [!DNL Adobe Experience Platform] crea un file `.csv`, `.json` o `.parquet` nel percorso di archiviazione specificato. È necessario creare un nuovo file nel percorso di archiviazione in base alla pianificazione impostata nel flusso di lavoro. Di seguito è riportato il formato di file predefinito, ma è possibile [modificare i componenti del nome di file](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Ad esempio, se hai selezionato una frequenza di esportazione giornaliera, i file che riceverai in tre giorni consecutivi potrebbero essere simili al seguente:

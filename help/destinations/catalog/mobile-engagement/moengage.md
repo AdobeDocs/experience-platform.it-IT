@@ -3,9 +3,9 @@ title: Connessione moenging
 description: Moengi è una piattaforma di coinvolgimento dei clienti che potenzia in tempo reale le interazioni incentrate sul cliente tra consumatori e marchi.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1132'
 ht-degree: 3%
 
 ---
@@ -24,13 +24,13 @@ Con Adobe, l’integrazione è molto semplice e intuitiva. Prendi un profilo ute
 
 ## Casi d’uso {#use-cases}
 
-Un addetto al marketing desidera eseguire il targeting di un segmento di utenti (integrato in Adobe Experience Platform) tramite [!DNL Moengage] campagne. Inoltre, desiderano personalizzare il contenuto della campagna in base agli attributi dei profili Adobe Experience Platform. Con questa integrazione, gli utenti e gli attributi vengono aggiornati in MoEngage non appena segmenti e profili vengono aggiornati in Adobe Experience Platform.
+Un addetto marketing desidera eseguire il targeting di un segmento di utenti (integrato in [!DNL Adobe Experience Platform]) tramite [!DNL Moengage] campagne. Inoltre, desiderano personalizzare il contenuto della campagna in base agli attributi dei profili [!DNL Adobe Experience Platform]. Con questa integrazione, gli utenti e gli attributi vengono aggiornati in MoEngage non appena segmenti e profili vengono aggiornati in [!DNL Adobe Experience Platform].
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter inviare i dati Adobe Experience Platform a [!DNL Moengage], tieni presente i seguenti prerequisiti:
+Prima di poter inviare i dati di [!DNL Adobe Experience Platform] a [!DNL Moengage], tieni presente i seguenti prerequisiti:
 
-* Per utilizzare la destinazione MoEngage con Adobe Experience Platform, gli utenti devono prima avere accesso al proprio account [!DNL Moengage]. Visita la pagina seguente per registrarti o accedere al tuo account MoEngage: https://app.moengage.com
+* Per utilizzare la destinazione MoEngage con [!DNL Adobe Experience Platform], gli utenti devono prima avere accesso al loro account [!DNL Moengage]. Visita la pagina seguente per registrarti o accedere al tuo account MoEngage: https://app.moengage.com
 
 
 ## Identità supportate {#supported-identities}
@@ -51,7 +51,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -171,7 +171,7 @@ Per aggiungere altre mappature, ripeti i passaggi precedenti.
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL Moengage], passare al profilo utente nell&#39;account [!DNL Moengage]. In questo caso è necessario trovare un attributo utente denominato `AEPSegments`, creato automaticamente e gli altri attributi personalizzati mappati nei passaggi precedenti di Adobe Experience Platform.
+Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL Moengage], passare al profilo utente nell&#39;account [!DNL Moengage]. In questo caso è necessario trovare un attributo utente denominato `AEPSegments`, creato automaticamente e gli altri attributi personalizzati mappati nei passaggi precedenti di [!DNL Adobe Experience Platform].
 
 `AEPSegments` è un attributo di tipo array in [!DNL Moengage]. Elenca tutti i nomi dei tipi di pubblico di Adobe a cui l’utente è associato in Experience Platform.
 

@@ -4,9 +4,9 @@ description: Pinterest sta rendendo obsoleta l’API dell’inserzionista v4 att
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Cosa succede? {#what-is-happening}
 
-Pinterest ha dichiarato obsoleta l&#39;API dell&#39;inserzionista v4 utilizzata dalla [destinazione Pinterest](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP. Adobe ha aggiornato la destinazione per l&#39;utilizzo dell&#39;API pubblicitaria [v5](https://developers.pinterest.com/docs/getting-started/migration/). Leggi questa pagina per comprendere le azioni da eseguire per passare facilmente alla nuova API senza interrompere le campagne Pinterest.
+Pinterest ha dichiarato obsoleta l&#39;API pubblicitaria v4 utilizzata dalla [destinazione Pinterest](/help/destinations/catalog/advertising/pinterest.md) in [!DNL Real-Time CDP]. Adobe ha aggiornato la destinazione per l&#39;utilizzo dell&#39;API pubblicitaria [v5](https://developers.pinterest.com/docs/getting-started/migration/). Leggi questa pagina per comprendere le azioni da eseguire per passare facilmente alla nuova API senza interrompere le campagne Pinterest.
 
 ## Perché mi viene inviata una notifica? {#why-notified}
 
@@ -31,7 +31,7 @@ Adobe ha rilasciato una nuova scheda di destinazione Pinterest che sfrutta l’A
 
 ## Devo fare qualcosa per mantenere attivi i tipi di pubblico? {#action-required}
 
-Sì, prima del 18 gennaio 2024, è necessario eseguire l’autenticazione nella nuova destinazione Pinterest con l’account dell’inserzionista Pinterest in Real-Time CDP. Consulta le istruzioni dettagliate di seguito.
+Sì, prima del 18 gennaio 2024, è necessario eseguire l&#39;autenticazione nella nuova destinazione Pinterest con l&#39;account dell&#39;inserzionista Pinterest in [!DNL Real-Time CDP]. Consulta le istruzioni dettagliate di seguito.
 
 ### Autentica di nuovo in Pinterest {#reauthenticate}
 
@@ -87,7 +87,7 @@ Sì, vedi di seguito:
 
 -->
 
-**Dopo il 18 gennaio 2024**: <span class="preview">Pinterest ha disattivato l&#39;accesso all&#39;API dell&#39;inserzionista V4. Tutti i clienti Real-Time CDP che non hanno effettuato l’aggiornamento alla nuova destinazione troveranno i propri flussi di dati alla destinazione Pinterest che non riescono. [Esegui nuovamente l&#39;autenticazione in Pinterest](#reauthenticate) e [abilita i flussi di dati](#disable-old-enable-new-flows) nella destinazione aggiornata per riprendere le campagne in Pinterest.</span>
+**Dopo il 18 gennaio 2024**: <span class="preview">Pinterest ha disattivato l&#39;accesso all&#39;API dell&#39;inserzionista V4. Tutti i clienti [!DNL Real-Time CDP] che non hanno effettuato l&#39;aggiornamento alla nuova destinazione troveranno i propri flussi di dati alla destinazione Pinterest con errori. [Esegui nuovamente l&#39;autenticazione in Pinterest](#reauthenticate) e [abilita i flussi di dati](#disable-old-enable-new-flows) nella destinazione aggiornata per riprendere le campagne in Pinterest.</span>
 
 <!--
 

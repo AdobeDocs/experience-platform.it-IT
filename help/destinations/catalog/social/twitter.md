@@ -2,9 +2,9 @@
 title: Connessione Twitter per tipi di pubblico personalizzati
 description: Effettua il targeting dei tuoi follower e clienti esistenti su Twitter e crea campagne di remarketing rilevanti attivando il pubblico integrato in Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '937'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 ## Panoramica {#overview}
 
-Effettua il targeting dei tuoi follower e dei tuoi clienti esistenti su Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico creati in Adobe Experience Platform.
+Esegui il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico creati in [!DNL Adobe Experience Platform].
 
 ## Prerequisiti {#prerequisites}
 
@@ -24,12 +24,12 @@ Prima di configurare la destinazione [!DNL Twitter Custom Audiences], verificare
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Twitter Custom Audiences] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+[!DNL Twitter Custom Audiences] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| device_id | ID IDFA/AdID/Android | Google Advertising ID (GAID) e Apple ID per inserzionisti (IDFA) sono supportati in Adobe Experience Platform. Mappa questi spazi dei nomi e/o attributi dallo schema di origine di conseguenza nel [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione della destinazione. |
-| e-mail | Indirizzi e-mail per l’utente | Mappa i tuoi indirizzi e-mail in testo normale e gli indirizzi e-mail con hash SHA256 su questo campo. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. Se esegui l’hashing degli indirizzi e-mail dei clienti prima di caricarli in Adobe Experience Platform, tieni presente che l’hashing di queste identità deve essere eseguito utilizzando SHA256, senza utilizzare sale. |
+| device_id | ID IDFA/AdID/Android | Google Advertising ID (GAID) e Apple ID per inserzionisti (IDFA) sono supportati in [!DNL Adobe Experience Platform]. Mappa questi spazi dei nomi e/o attributi dallo schema di origine di conseguenza nel [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione della destinazione. |
+| e-mail | Indirizzi e-mail per l’utente | Mappa i tuoi indirizzi e-mail in testo normale e gli indirizzi e-mail con hash SHA256 su questo campo. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. Se esegui l&#39;hashing degli indirizzi e-mail dei clienti prima di caricarli in [!DNL Adobe Experience Platform], tieni presente che l&#39;hashing di queste identità deve essere eseguito utilizzando SHA256, senza l&#39;aggiunta di sale. |
 
 {style="table-layout:auto"}
 
@@ -40,7 +40,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -71,11 +71,11 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL Twitter Custom Audiences], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Twitter Custom Audiences], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### #1 del caso d’uso {#use-case-1}
 
-Esegui il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico creati in Adobe Experience Platform come [!DNL List Custom Audiences] in Twitter.
+Esegui il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico generati in [!DNL Adobe Experience Platform] come [!DNL List Custom Audiences] in Twitter.
 
 ## Connetti alla destinazione {#connect}
 

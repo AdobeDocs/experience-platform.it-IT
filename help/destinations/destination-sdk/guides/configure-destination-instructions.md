@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming con Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione di streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -279,12 +279,12 @@ Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, devi crear
 
 ## Passaggio 6: verifica della destinazione {#test-destination}
 
-Dopo aver configurato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare lo [strumento di test della destinazione](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) per testare l&#39;integrazione tra Adobe Experience Platform e la destinazione.
+Dopo aver configurato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, è possibile utilizzare lo strumento di test [destinazione](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) per testare l&#39;integrazione tra [!DNL Adobe Experience Platform] e la destinazione.
 
 Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti che attiverai nella destinazione. Fai riferimento alle due risorse seguenti per istruzioni su come creare tipi di pubblico in Experience Platform:
 
 * [Creare una pagina di documentazione del pubblico](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Procedura dettagliata per la creazione di un video per il pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it)
+* [Procedura dettagliata per la creazione di un video per il pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Passaggio 7: pubblicare la destinazione {#publish-destination}
 

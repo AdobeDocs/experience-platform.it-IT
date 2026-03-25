@@ -3,9 +3,9 @@ keywords: beemray,estensione beemray
 title: Estensione beemray
 description: L’estensione Beemray è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 5bb639f5-42b5-48ae-a3e9-7585595ab925
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '464'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-[!DNL Beemray] consente di accelerare il prodotto con il contesto situazionale. Ti consente di ottenere informazioni, creare nuove esperienze, stimolare interazioni e coinvolgerti in momenti che contano davvero. Beemray automatizza l’intelligenza contestuale utilizzando l’apprendimento automatico. Beemray si connette a Adobe Experience Cloud e al resto dei tuoi partner tecnologici. Tutto si svolge in tempo reale. Questa estensione installa [!DNL Beemray] SDK sul tuo sito.
+[!DNL Beemray] consente di accelerare il prodotto con il contesto situazionale. Ti consente di ottenere informazioni, creare nuove esperienze, stimolare interazioni e coinvolgerti in momenti che contano davvero. Beemray automatizza l’intelligenza contestuale utilizzando l’apprendimento automatico. Beemray si connette a [!DNL Adobe Experience Cloud] e al resto dei tuoi partner tecnici. Tutto si svolge in tempo reale. Questa estensione installa [!DNL Beemray] SDK sul tuo sito.
 
-Beemray è un’estensione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Beemray è un&#39;estensione di personalizzazione in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere ai tag in [!DNL Adobe Experience Platform]. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

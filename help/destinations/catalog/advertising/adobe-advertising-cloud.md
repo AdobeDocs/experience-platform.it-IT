@@ -3,20 +3,20 @@ keywords: Advertising Cloud;estensione advertising cloud; destinazione advertisi
 title: Estensione Adobe Advertising Cloud
 description: L’estensione Adobe Advertising Cloud è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 3%
+source-wordcount: '415'
+ht-degree: 4%
 
 ---
 
-# Estensione Adobe Advertising Cloud {#adobe-advertising-cloud-extension}
+# Estensione [!DNL Adobe Advertising Cloud] {#adobe-advertising-cloud-extension}
 
 ## Panoramica {#overview}
 
 Questa è l&#39;estensione [!DNL Advertising Cloud] per l&#39;implementazione dei tag di conversione e pubblico [!DNL Advertising Cloud] per DSP e Search (DCO non è attualmente supportato).
 
-Adobe Advertising Cloud è un’estensione per annunci pubblicitari in Adobe Experience Platform.
+[!DNL Adobe Advertising Cloud] è un&#39;estensione pubblicitaria in [!DNL Adobe Experience Platform].
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,11 +26,11 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per accedere alle funzionalità di raccolta dati nell&#39;interfaccia utente e richiedere l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per accedere alle funzionalità di raccolta dati nell&#39;interfaccia utente e richiedere l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l’estensione Adobe Advertising Cloud:
+Per installare l&#39;estensione [!DNL Adobe Advertising Cloud]:
 
 Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), passa a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 

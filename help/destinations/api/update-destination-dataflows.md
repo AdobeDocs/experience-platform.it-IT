@@ -5,9 +5,9 @@ title: Aggiornare i flussi di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Questa esercitazione illustra i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere tipi di pubblico e attributi utilizzando l’API del servizio Flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2459'
 ht-degree: 4%
 
 ---
@@ -24,9 +24,9 @@ Questo tutorial richiede un ID di flusso valido. Se non disponi di un ID di flus
 >
 > I termini *flusso* e *flusso di dati* vengono utilizzati in modo intercambiabile in questa esercitazione. Nel contesto di questa esercitazione, hanno lo stesso significato.
 
-Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con le piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da [!DNL Adobe Experience Platform]. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 * [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza Experience Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per aggiornare correttamente il flusso di dati utilizzando l&#39;API [!DNL Flow Service].
@@ -503,7 +503,7 @@ curl -X PATCH \
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 | `id` | Specifica l’ID del pubblico che stai aggiungendo al flusso di dati di destinazione. |
 | `name` | **(facoltativo)**. Specifica il nome del pubblico che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un pubblico al flusso di dati di destinazione senza specificarne il nome. |
-| `filenameTemplate` | Solo per *destinazioni batch*. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: **(facoltativo)**. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(facoltativo)**. Seleziona una di queste due opzioni affinché i file includano l’ora in cui sono generati da Experience Platform.</li><li>`custom-text`: **(facoltativo)**. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, fare riferimento alla sezione [Configura nomi di file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell&#39;esercitazione sull&#39;attivazione delle destinazioni batch. |
+| `filenameTemplate` | Solo per *destinazioni batch*. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: **(facoltativo)**. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(facoltativo)**. Seleziona una di queste due opzioni affinché i file includano l’ora in cui sono generati da Experience Platform.</li><li>`custom-text`: **(facoltativo)**. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, fare riferimento alla sezione [Configura nomi di file](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) nell&#39;esercitazione sull&#39;attivazione delle destinazioni batch. |
 | `exportMode` | Solo per *destinazioni batch*. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> obbligatorio. Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. |
 | `startDate` | Seleziona la data in cui il pubblico deve iniziare a esportare i profili nella tua destinazione. |
 | `frequency` | Solo per *destinazioni batch*. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> obbligatorio. <br> <ul><li>Per la modalità di esportazione `"DAILY_FULL_EXPORT"`, è possibile selezionare `ONCE` o `DAILY`.</li><li>Per la modalità di esportazione `"FIRST_FULL_THEN_INCREMENTAL"`, è possibile selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
@@ -761,7 +761,7 @@ Per aggiungere un attributo di profilo al flusso di dati di destinazione, esegui
 >
 >**Requisiti di mappatura specifici per la destinazione**
 >
->Il metodo `profileSelectors` descritto in questa sezione funziona per la maggior parte delle destinazioni di streaming. Tuttavia, alcune destinazioni di streaming, tra cui **Adobe Target**, richiedono il flusso di lavoro del set di mappatura della preparazione dati.
+>Il metodo `profileSelectors` descritto in questa sezione funziona per la maggior parte delle destinazioni di streaming. Tuttavia, alcune destinazioni di streaming, tra cui **[!DNL Adobe Target]**, richiedono il flusso di lavoro del set di mappatura della preparazione dati.
 >
 >**Se gli attributi del profilo non vengono visualizzati nell&#39;interfaccia utente di Experience Platform dopo una risposta API (202)** riuscita, è necessario utilizzare il metodo del set di mappatura documentato in [Attiva i tipi di pubblico in destinazioni batch](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 

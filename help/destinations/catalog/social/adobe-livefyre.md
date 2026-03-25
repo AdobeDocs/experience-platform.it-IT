@@ -3,10 +3,10 @@ keywords: livefyre;estensione livefyre
 title: Estensione Adobe Livefyre
 description: L’estensione Adobe Livefyre è una destinazione social in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 3%
+source-wordcount: '423'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Adobe Livefyre ti consente di scoprire, organizzare e pubblicare un flusso costante di contenuti generati dagli utenti sul tuo sito web per creare esperienze autentiche e altamente personalizzate.
 
-Adobe Livefyre è un’estensione per social network in Adobe Experience Platform. Per ulteriori informazioni su Adobe Livefyre, consulta la [Guida all&#39;implementazione di Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=it).
+Adobe Livefyre è un&#39;estensione social in [!DNL Adobe Experience Platform]. Per ulteriori informazioni su Adobe Livefyre, consulta la [Guida all&#39;implementazione di Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, è necessario accedere ai tag in Adobe Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere ai tag in [!DNL Adobe Experience Platform]. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contattare l&#39;amministratore dell&#39;organizzazione per ottenere l&#39;accesso ai tag e chiedere loro di concedere l&#39;autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa estensione {#install-extension}
 

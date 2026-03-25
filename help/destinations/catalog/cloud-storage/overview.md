@@ -1,11 +1,11 @@
 ---
 keywords: destinazione archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
-description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
+description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud di Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '457'
 ht-degree: 6%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 6%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform può distribuire i tipi di pubblico come file di dati alle posizioni di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni, tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] e SFTP. Per le destinazioni [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs], i dati vengono inviati in streaming da Experience Platform in formato [!DNL JSON].
+[!DNL Adobe Experience Platform] può distribuire i tuoi tipi di pubblico come file di dati nei tuoi percorsi di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni, tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] e SFTP. Per le destinazioni [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs], i dati vengono inviati in streaming da Experience Platform in formato [!DNL JSON].
 
 ![Destinazioni archiviazione cloud Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Destinazioni di archiviazione cloud supportate {#supported-destinations}
 
-Adobe Experience Platform supporta le esportazioni di dati verso le seguenti destinazioni di archiviazione cloud:
+[!DNL Adobe Experience Platform] supporta le esportazioni di dati alle seguenti destinazioni di archiviazione cloud:
 
 * [Connessione Amazon Kinesis](amazon-kinesis.md)
 * [Connessione Amazon S3](amazon-s3.md)
-* [Connessione BLOB di Azure](azure-blob.md)
+* [Connessione BLOB Azure](azure-blob.md)
 * [Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Connessione Azure Event Hubs](azure-event-hubs.md)
 * [Data Landing Zone](data-landing-zone.md)
@@ -79,4 +79,4 @@ Le destinazioni di archiviazione cloud supportano i seguenti tipi di esportazion
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver selezionato una delle [destinazioni cloud supportate](#supported-destinations) da utilizzare, leggere l&#39;esercitazione [connetti a destinazioni](/help/destinations/ui/connect-destination.md) per scoprire come stabilire una connessione alla destinazione. Quindi, leggi il tutorial di attivazione sulle destinazioni basate su file per scoprire come avviare l&#39;esportazione dei dati di [1&rbrace; nella destinazione dell&#39;archiviazione cloud.](/help/destinations/ui/activate-batch-profile-destinations.md)
+Dopo aver selezionato una delle [destinazioni cloud supportate](#supported-destinations) da utilizzare, leggere l&#39;esercitazione [connetti a destinazioni](/help/destinations/ui/connect-destination.md) per scoprire come stabilire una connessione alla destinazione. Quindi, leggi il tutorial di attivazione sulle destinazioni basate su file per scoprire come avviare l&#39;esportazione dei dati di [1} nella destinazione dell&#39;archiviazione cloud.](/help/destinations/ui/activate-batch-profile-destinations.md)

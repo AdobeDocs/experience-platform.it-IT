@@ -3,9 +3,9 @@ title: Connessione TikTok
 description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1211'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager. Per ulteriori informazioni, visitare il [Centro assistenza commerciale di TikTok](https://ads.tiktok.com/help/article/audiences).
+Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da [!DNL Adobe Experience Platform] a TikTok utilizzando l&#39;integrazione in tempo reale di Adobe con TikTok Ads Manager. Per ulteriori informazioni, visitare il [Centro assistenza commerciale di TikTok](https://ads.tiktok.com/help/article/audiences).
 
 >[!IMPORTANT]
 >
@@ -22,17 +22,17 @@ Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting 
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare la destinazione TikTok, ecco un caso d’uso di esempio per i clienti Adobe Experience Platform.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione TikTok, ecco un caso d&#39;uso di esempio per i clienti [!DNL Adobe Experience Platform].
 
 ### Caso d’uso {#use-case-1}
 
-Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso i loro account di social media. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico a TikTok per visualizzare annunci nei feed di social media dei propri clienti.
+Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso i loro account di social media. Il marchio di abbigliamento può acquisire gli indirizzi e-mail dal proprio CRM per [!DNL Adobe Experience Platform], creare tipi di pubblico dai propri dati offline e inviarli a TikTok per la visualizzazione di annunci nei feed di social media dei propri clienti.
 
 ## Prerequisiti {#prerequisites}
 
 È necessario disporre dell&#39;accesso [!DNL Admin] o [!DNL Operator] all&#39;account TikTok Ads Manager a cui si desidera inviare i tipi di pubblico. Ulteriori istruzioni sono disponibili nel [Centro assistenza TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
-Prima di inviare i dati all&#39;account TikTok Ads Manager, devi concedere l&#39;autorizzazione Adobe Experience Platform per accedere all&#39;account annuncio per `Audience Management`. Questa autorizzazione può essere fornita da [inserendo il tuo ID Ads Manager](#authenticate) nell&#39;interfaccia utente di Experience Platform e concedendo l&#39;autorizzazione dopo essere stato reindirizzato al tuo account TikTok Ads Manager.
+Prima di inviare i dati all&#39;account TikTok Ads Manager, devi concedere a [!DNL Adobe Experience Platform] l&#39;autorizzazione per accedere all&#39;account annuncio per `Audience Management`. Questa autorizzazione può essere fornita da [inserendo il tuo ID Ads Manager](#authenticate) nell&#39;interfaccia utente di Experience Platform e concedendo l&#39;autorizzazione dopo essere stato reindirizzato al tuo account TikTok Ads Manager.
 
 ## Identità supportate {#supported-identities}
 
@@ -40,10 +40,10 @@ TikTok supporta l’attivazione delle identità descritte nella tabella seguente
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. I valori GAID con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. I valori IDFA con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| Numero di telefono | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform e devono essere in formato E.164. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| E-mail | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. I valori GAID con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. I valori IDFA con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| Numero di telefono | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform] e devono essere in formato E.164. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| E-mail | Indirizzi e-mail con hash con algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 | [!DNL Federated Audience Composition] | Sì | Tipi di pubblico importati in Experience Platform tramite [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ Di seguito è riportato un esempio di corretta mappatura identità durante l’e
 
 Selezione dei campi di origine:
 
-* Selezionare un identificatore (ad esempio: `Email_LC_SHA256`) come identità di origine che identifica in modo univoco un profilo in Adobe Experience Platform e [!DNL TikTok Ads Manager].
+* Selezionare un identificatore (ad esempio: `Email_LC_SHA256`) come identità di origine che identifica in modo univoco un profilo in [!DNL Adobe Experience Platform] e [!DNL TikTok Ads Manager].
 
 Selezione dei campi di destinazione:
 

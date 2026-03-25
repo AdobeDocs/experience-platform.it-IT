@@ -2,22 +2,22 @@
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
 title: Formato del messaggio
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2512'
+source-wordcount: '2470'
 ht-degree: 0%
 
 ---
 
 # Formato del messaggio
 
-## Prerequisiti - Concetti di Adobe Experience Platform {#prerequisites}
+## Prerequisiti - Concetti [!DNL Adobe Experience Platform] {#prerequisites}
 
 Per comprendere il formato del messaggio e la configurazione e il processo di trasformazione del profilo sul lato Adobe, acquisisci familiarità con i seguenti concetti di Experience Platform:
 
 * **Experience Data Model (XDM)**. [Panoramica XDM](../../../../xdm/home.md) e [Come creare uno schema XDM in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Classe**. [Creare e modificare le classi nell&#39;interfaccia utente](../../../../xdm/ui/resources/classes.md).
-* **IdentityMap**. La mappa delle identità rappresenta una mappa di tutte le identità degli utenti finali in Adobe Experience Platform. Fare riferimento a `xdm:identityMap` nel dizionario di campi [XDM](../../../../xdm/schema/field-dictionary.md).
+* **IdentityMap**. La mappa delle identità rappresenta una mappa di tutte le identità degli utenti finali in [!DNL Adobe Experience Platform]. Fare riferimento a `xdm:identityMap` nel dizionario di campi [XDM](../../../../xdm/schema/field-dictionary.md).
 * **AppartenenzaSegmento**. L&#39;attributo XDM [segmentMembership](../../../../xdm/schema/field-dictionary.md) indica di quali tipi di pubblico è membro un profilo. Per i tre valori diversi nel campo `status`, leggere la documentazione sul gruppo di campi schema [Dettagli appartenenza pubblico](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
@@ -35,13 +35,13 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ## Panoramica {#overview}
 
-Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
+Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da [!DNL Adobe Experience Platform] nelle destinazioni.
 
-Adobe Experience Platform esporta dati in un numero significativo di destinazioni, in vari formati di dati. Alcuni esempi di tipi di destinazione sono le piattaforme pubblicitarie (Google), i social network (Facebook) e le posizioni di archiviazione cloud (Amazon S3, Azure Event Hub).
+[!DNL Adobe Experience Platform] esporta dati in un numero significativo di destinazioni, in vari formati di dati. Alcuni esempi di tipi di destinazione sono le piattaforme pubblicitarie (Google), i social network (Facebook) e le posizioni di archiviazione cloud (Amazon S3, Azure Event Hub).
 
 Experience Platform può regolare il formato dei messaggi dei profili esportati in modo che corrisponda al formato previsto sul tuo lato. Per comprendere questa personalizzazione, sono importanti i seguenti concetti:
 
-* Schema XDM di origine (1) e destinazione (2) in Adobe Experience Platform
+* Lo schema XDM di origine (1) e di destinazione (2) in [!DNL Adobe Experience Platform]
 * il formato previsto del messaggio sul lato partner (3), e
 * Livello di trasformazione tra lo schema XDM e il formato del messaggio previsto, che è possibile definire creando un [modello di trasformazione del messaggio](#using-templating).
 
@@ -67,11 +67,11 @@ In base alle trasformazioni dello schema descritte in precedenza, ecco come camb
 
 ## Guida introduttiva: trasformazione di tre attributi di base {#getting-started}
 
-Per illustrare il processo di trasformazione del profilo, nell&#39;esempio seguente vengono utilizzati tre attributi di profilo comuni in Adobe Experience Platform: **nome**, **cognome** e **indirizzo e-mail**.
+Per illustrare il processo di trasformazione del profilo, nell&#39;esempio seguente vengono utilizzati tre attributi di profilo comuni in [!DNL Adobe Experience Platform]: **nome**, **cognome** e **indirizzo e-mail**.
 
 >[!NOTE]
 >
->Il cliente mappa gli attributi dallo schema XDM di origine allo schema XDM del partner nell&#39;interfaccia utente di Adobe Experience Platform, nel passaggio **Mapping** del flusso di lavoro [attiva destinazione](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>Il cliente mappa gli attributi dallo schema XDM di origine allo schema XDM del partner nell&#39;interfaccia utente [!DNL Adobe Experience Platform], nel passaggio **Mapping** del flusso di lavoro [attiva destinazione](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Supponiamo che la tua piattaforma possa ricevere un formato di messaggio come:
 
@@ -186,7 +186,7 @@ Per trasformare gli attributi del profilo esportati nella destinazione, consulta
 
 >[!IMPORTANT]
 >
->Per un elenco di tutti gli attributi di profilo disponibili in Adobe Experience Platform, consulta il [dizionario di campi XDM](../../../../xdm/schema/field-dictionary.md).
+>Per un elenco di tutti gli attributi di profilo disponibili in [!DNL Adobe Experience Platform], vedere il dizionario di campi [XDM](../../../../xdm/schema/field-dictionary.md).
 
 
 **Input**
@@ -609,7 +609,7 @@ Profilo 2:
 
 **Risultato**
 
-`json` rappresenta i dati esportati da Adobe Experience Platform.
+`json` rappresenta i dati esportati da [!DNL Adobe Experience Platform].
 
 ```json
 {
@@ -802,7 +802,7 @@ Profilo 2:
 
 **Risultato**
 
-`json` rappresenta i dati esportati da Adobe Experience Platform.
+`json` rappresenta i dati esportati da [!DNL Adobe Experience Platform].
 
 ```json
 {
@@ -1212,13 +1212,13 @@ La tabella seguente fornisce le descrizioni delle funzioni negli esempi preceden
 |---------|----------|----------|
 | `input.profile` | Il profilo, rappresentato come [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue lo schema XDM del partner menzionato più sopra in questa pagina. |  |
 | `hasSegments` | Questa funzione prende una mappa degli ID del pubblico dello spazio dei nomi come parametro. La funzione restituisce `true` se nella mappa è presente almeno un pubblico (indipendentemente dal suo stato) e `false` in caso contrario. Puoi utilizzare questa funzione per decidere se eseguire o meno l’iterazione su una mappa di tipi di pubblico. | `hasSegments(input.profile.segmentMembership)` |
-| `destination.namespaceSegmentAliases` | Mappa dagli ID pubblico in uno specifico spazio dei nomi Adobe Experience Platform agli alias pubblico nel sistema del partner. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
-| `destination.namespaceSegmentNames` | Mappa i nomi del pubblico in spazi dei nomi specifici di Adobe Experience Platform ai nomi del pubblico nel sistema del partner. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentAliases` | Mappa dagli ID pubblico in uno spazio dei nomi [!DNL Adobe Experience Platform] specifico agli alias pubblico nel sistema del partner. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | Mappa da nomi di pubblico in spazi dei nomi [!DNL Adobe Experience Platform] specifici a nomi di pubblico nel sistema del partner. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
 | `destination.namespaceSegmentTimestamps` | Restituisce l’ora in cui un pubblico è stato creato, aggiornato o attivato in formato timestamp UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: restituisce l&#39;ora di creazione del segmento con ID `seg-id-1`, dallo spazio dei nomi `ups`, in formato timestamp UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: restituisce l&#39;ora in cui il pubblico con l&#39;ID `seg-id-1`, dallo spazio dei nomi `ups`, è stato aggiornato, in formato timestamp UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: restituisce l&#39;ora in cui il pubblico con ID `seg-id-1`, dallo spazio dei nomi `ups`, è stato attivato nella destinazione, in formato timestamp UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: restituisce l&#39;ora in cui l&#39;attivazione del pubblico è stata aggiornata sulla destinazione, in formato timestamp UNIX.</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | Restituisce solo i tipi di pubblico con stato `realized`, in tutti gli spazi dei nomi. | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | Restituisce solo i tipi di pubblico con stato `exited`, in tutti gli spazi dei nomi. | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **Obsoleto. Sostituito da`destination.namespaceSegmentAliases`** <br><br> Mappa dagli ID pubblico nello spazio dei nomi Adobe Experience Platform agli alias pubblico nel sistema del partner. | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **Obsoleto. Sostituito da`destination.namespaceSegmentNames`** <br><br> Mappa dai nomi del pubblico nello spazio dei nomi Adobe Experience Platform ai nomi del pubblico nel sistema del partner. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentAliases` | **Obsoleto. Sostituito da`destination.namespaceSegmentAliases`** <br><br> Mappa dagli ID pubblico nello spazio dei nomi [!DNL Adobe Experience Platform] agli alias pubblico nel sistema del partner. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Obsoleto. Sostituito da`destination.namespaceSegmentNames`** <br><br> Mappa dai nomi del pubblico nello spazio dei nomi [!DNL Adobe Experience Platform] ai nomi del pubblico nel sistema del partner. | `destination.segmentNames["seg-name-1"]` |
 | `destination.segmentTimestamps` | **Obsoleto. Sostituito da`destination.namespaceSegmentTimestamps`** <br><br> Restituisce l&#39;ora in cui un pubblico è stato creato, aggiornato o attivato in formato timestamp UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: restituisce l&#39;ora di creazione del pubblico con l&#39;ID `seg-id-1`, in formato timestamp UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: restituisce l&#39;ora in cui il pubblico con l&#39;ID `seg-id-1` è stato aggiornato, in formato timestamp UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: restituisce l&#39;ora in cui il pubblico con l&#39;ID `seg-id-1` è stato attivato nella destinazione, in formato timestamp UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: restituisce l&#39;ora in cui l&#39;attivazione del pubblico è stata aggiornata sulla destinazione, in formato timestamp UNIX.</li></ul> |
 
 {style="table-layout:auto"}

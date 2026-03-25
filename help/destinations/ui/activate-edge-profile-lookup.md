@@ -3,16 +3,16 @@ title: Cercare gli attributi del profilo edge in tempo reale
 description: Scopri come cercare gli attributi del profilo Edge in tempo reale utilizzando la destinazione Personalization personalizzata e l’API di Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1833'
 ht-degree: 1%
 
 ---
 
 # Cercare in tempo reale gli attributi del profilo sul bordo
 
-Adobe Experience Platform utilizza [Real-Time Customer Profile](../../profile/home.md) come unica origine di verità per tutti i dati del profilo. Per un recupero rapido dei dati in tempo reale, utilizza [profili edge](../../profile/edge-profiles.md), che sono profili leggeri distribuiti in [Edge Network](../../collection/home.md#edge). Questo consente casi d’uso di personalizzazione rapidi e in tempo reale.
+[!DNL Adobe Experience Platform] utilizza [Real-Time Customer Profile](../../profile/home.md) come unica origine di verità per tutti i dati del profilo. Per un recupero rapido dei dati in tempo reale, utilizza [profili edge](../../profile/edge-profiles.md), che sono profili leggeri distribuiti in [Edge Network](../../collection/home.md). Questo consente casi d’uso di personalizzazione rapidi e in tempo reale.
 
 ## Casi d’uso {#use-cases}
 
@@ -91,7 +91,7 @@ Dopo aver creato una connessione **[!UICONTROL Custom Personalization With Attri
 
 >[!IMPORTANT]
 >
-> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+> * Per attivare i dati e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 > 
 > Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
@@ -112,7 +112,7 @@ Dopo aver creato una connessione **[!UICONTROL Custom Personalization With Attri
    Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
    * **[!UICONTROL Segmentation Service]**: pubblico generato in Experience Platform dal servizio di segmentazione. Per ulteriori dettagli, consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md).
-   * **[!UICONTROL Custom upload]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Custom upload]**: pubblico generato al di fuori di Experience Platform e caricato in Experience Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
    * Altri tipi di pubblico, provenienti da altre soluzioni Adobe, ad esempio [!DNL Audience Manager].
 
      ![Selezionare il passaggio dei tipi di pubblico del flusso di lavoro di attivazione evidenziando diversi tipi di pubblico.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

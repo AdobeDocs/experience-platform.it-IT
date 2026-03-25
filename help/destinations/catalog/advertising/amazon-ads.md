@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettivi pubblicitari per venditori registrati, fornitori di libri, autori di Kindle Direct Publishing (KDP), sviluppatori di app e/o agenzie. L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integrazione chiavi in mano ai prodotti Amazon Ads, incluso Amazon DSP (ADSP). Utilizzando la destinazione Amazon Ads in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione sul DSP Amazon.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2128'
 ht-degree: 3%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 3%
 
 [!DNL Amazon Ads] offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettivi pubblicitari per venditori registrati, fornitori di libri, autori di Kindle Direct Publishing (KDP), sviluppatori di app e/o agenzie.
 
-L&#39;integrazione di [!DNL Amazon Ads] con Adobe Experience Platform fornisce l&#39;integrazione chiavi in mano ai prodotti [!DNL Amazon Ads], inclusi Amazon DSP (ADSP) e Amazon Marketing Cloud (AMC).
+L&#39;integrazione di [!DNL Amazon Ads] con [!DNL Adobe Experience Platform] fornisce l&#39;integrazione chiavi in mano ai prodotti [!DNL Amazon Ads], inclusi Amazon DSP (ADSP) e Amazon Marketing Cloud (AMC).
 
-Utilizzando la destinazione [!DNL Amazon Ads] in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l&#39;attivazione in Amazon DSP.  Inoltre, gli utenti possono caricare i propri dati in [!DNL Amazon Marketing Cloud] per comprendere le prestazioni in base al pubblico, alle dimensioni fornite dall&#39;inserzionista, all&#39;appartenenza ai segmenti di Amazon o ad altri segnali disponibili in AMC. Dopo aver caricato i tipi di pubblico degli inserzionisti in AMC, gli utenti possono utilizzare [!DNL Amazon Marketing Cloud] per modificare, migliorare o aggiungere ai membri del pubblico utilizzando i segnali di Amazon provenienti da [!DNL Amazon Marketing Cloud].
+Utilizzando la destinazione [!DNL Amazon Ads] in [!DNL Adobe Experience Platform], gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l&#39;attivazione in Amazon DSP.  Inoltre, gli utenti possono caricare i propri dati in [!DNL Amazon Marketing Cloud] per comprendere le prestazioni in base al pubblico, alle dimensioni fornite dall&#39;inserzionista, all&#39;appartenenza ai segmenti di Amazon o ad altri segnali disponibili in AMC. Dopo aver caricato i tipi di pubblico degli inserzionisti in AMC, gli utenti possono utilizzare [!DNL Amazon Marketing Cloud] per modificare, migliorare o aggiungere ai membri del pubblico utilizzando i segnali di Amazon provenienti da [!DNL Amazon Marketing Cloud].
 
-AMC riunisce segnali univoci provenienti da tutte le proprietà possedute e gestite da Amazon, che si estendono su diversi tipi di media, tra cui display, video, streaming TV, audio e annunci sponsorizzati. Gli utenti possono inviare segmenti curati da Adobe Experience Platform ad AMC per migliorare l’apprendimento, ad esempio i gruppi del pubblico sul mercato, le coorti di lifestyle e i modelli di brand engagement. I segmenti aumentati possono quindi essere utilizzati per ottimizzare le attivazioni multimediali in Amazon DSP.
+AMC riunisce segnali univoci provenienti da tutte le proprietà possedute e gestite da Amazon, che si estendono su diversi tipi di media, tra cui display, video, streaming TV, audio e annunci sponsorizzati. Gli utenti possono inviare segmenti curati da [!DNL Adobe Experience Platform] ad AMC per migliorare l&#39;apprendimento, ad esempio gruppi di pubblico sul mercato, coorti di lifestyle e modelli di brand engagement. I segmenti aumentati possono quindi essere utilizzati per ottimizzare le attivazioni multimediali in Amazon DSP.
 
 >[!IMPORTANT]
 >
@@ -28,15 +28,15 @@ AMC riunisce segnali univoci provenienti da tutte le proprietà possedute e gest
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione *[!DNL Amazon Ads]*, ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione *[!DNL Amazon Ads]*, ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Attivazione e targeting {#activation-and-targeting}
 
-Questa integrazione con Amazon DSP consente agli inserzionisti [!DNL Amazon Ads] di trasmettere i tipi di pubblico CDP degli inserzionisti da Adobe Experience Platform a Amazon DSP per creare tipi di pubblico degli inserzionisti per il targeting pubblicitario. I tipi di pubblico possono essere selezionati in Amazon DSP sia per il targeting positivo che per quello negativo (soppressione).
+Questa integrazione con Amazon DSP consente agli inserzionisti [!DNL Amazon Ads] di passare i tipi di pubblico CDP dell&#39;inserzionista da [!DNL Adobe Experience Platform] a Amazon DSP per creare tipi di pubblico dell&#39;inserzionista per il targeting pubblicitario. I tipi di pubblico possono essere selezionati in Amazon DSP sia per il targeting positivo che per quello negativo (soppressione).
 
 ### Analytics e misurazione {#analytics-and-measurement}
 
-Questa integrazione con [!DNL Amazon Marketing Cloud] (AMC) consente a [!DNL Amazon Ads] inserzionisti di passare segmenti CDP da Adobe Experience Platform Form ad AMC. Gli inserzionisti possono quindi unire gli input CDP con [!DNL Amazon Ads] segnali e condurre analisi personalizzate su argomenti quali l&#39;impatto mediatico, i segmenti di pubblico e i percorsi di clienti in un formato conforme alla privacy. Ad esempio, un inserzionista può caricare un elenco dei propri clienti esistenti per comprendere le prestazioni aggregate della campagna pubblicitaria, o statistiche aggregate di eventi di conversione su Amazon, come la visualizzazione di una pagina dei dettagli di un prodotto, l’aggiunta di un prodotto a un carrello o l’acquisto di un prodotto.
+Questa integrazione con [!DNL Amazon Marketing Cloud] (AMC) consente a [!DNL Amazon Ads] inserzionisti di passare segmenti CDP dal modulo [!DNL Adobe Experience Platform] ad AMC. Gli inserzionisti possono quindi unire gli input CDP con [!DNL Amazon Ads] segnali e condurre analisi personalizzate su argomenti quali l&#39;impatto mediatico, i segmenti di pubblico e i percorsi di clienti in un formato conforme alla privacy. Ad esempio, un inserzionista può caricare un elenco dei propri clienti esistenti per comprendere le prestazioni aggregate della campagna pubblicitaria, o statistiche aggregate di eventi di conversione su Amazon, come la visualizzazione di una pagina dei dettagli di un prodotto, l’aggiunta di un prodotto a un carrello o l’acquisto di un prodotto.
 
 ### Ottimizzazione di Advertising {#advertising-optimization}
 
@@ -44,7 +44,7 @@ Questa integrazione con [!DNL Amazon Marketing Cloud] (AMC) consente agli inserz
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare la connessione [!DNL Amazon Ads] con Adobe Experience Platform, gli utenti devono prima avere accesso a un account Amazon DSP Advertiser o a un&#39;istanza [!DNL Amazon Marketing Cloud]. Per eseguire il provisioning di queste istanze, visitare la pagina seguente del sito Web [!DNL Amazon Ads]:
+Per utilizzare la connessione [!DNL Amazon Ads] con [!DNL Adobe Experience Platform], gli utenti devono prima avere accesso a un account Amazon DSP Advertiser o a un&#39;istanza [!DNL Amazon Marketing Cloud]. Per eseguire il provisioning di queste istanze, visitare la pagina seguente del sito Web [!DNL Amazon Ads]:
 
 * [Introduzione ad Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
 * [Introduzione ad Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
@@ -55,8 +55,8 @@ La connessione *[!DNL Amazon Ads]* supporta l&#39;attivazione delle identità de
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | `firstName` | Nome dell’utente | Supporta testo normale o SHA256. Se si utilizza testo normale, abilitare [!UICONTROL Apply transformation] nell&#39;interfaccia utente di Adobe. |
 | `lastName` | Cognome dell’utente | Supporta testo normale o SHA256. Se si utilizza testo normale, abilitare [!UICONTROL Apply transformation] nell&#39;interfaccia utente di Adobe. |
 | `street` | Indirizzo dell’utente a livello stradale | È supportato solo l&#39;input con hash SHA-256. Normalizza prima dell’hashing. **non** abilitare la trasformazione lato Adobe. |
@@ -74,7 +74,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -112,7 +112,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
-Viene visualizzata l&#39;interfaccia di connessione [!DNL Amazon Ads] in cui sono stati selezionati per la prima volta gli account dell&#39;inserzionista a cui si desidera connettersi. Al momento della connessione, verrai reindirizzato a Adobe Experience Platform con una nuova connessione, fornita con l’ID dell’account inserzionista selezionato. Seleziona l’Account dell’inserzionista appropriato nella schermata di configurazione della destinazione per procedere.
+Viene visualizzata l&#39;interfaccia di connessione [!DNL Amazon Ads] in cui sono stati selezionati per la prima volta gli account dell&#39;inserzionista a cui si desidera connettersi. Al momento della connessione, l&#39;utente viene reindirizzato a [!DNL Adobe Experience Platform] con una nuova connessione, fornita con l&#39;ID dell&#39;account inserzionista selezionato. Seleziona l’Account dell’inserzionista appropriato nella schermata di configurazione della destinazione per procedere.
 
 ### Inserire i dettagli della destinazione {#destination-details}
 

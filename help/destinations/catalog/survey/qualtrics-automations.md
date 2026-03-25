@@ -4,9 +4,9 @@ title: Automazioni Qualtrics
 description: Sincronizza i dati relativi all’esperienza e ai clienti operativi per sbloccare la personalizzazione su larga scala. Utilizza l’aggregazione di più fonti di dati operativi in Adobe Experience Platform come input in Qualtrics Experience ID per comprendere meglio i tuoi clienti e consentire un’attività di sensibilizzazione mirata per colmare il divario quando si tratta di comprendere le intenzioni, le emozioni e i driver di esperienza.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1259'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Sincronizza i dati relativi all’esperienza e ai clienti operativi per sbloccare la personalizzazione su larga scala.
 
-Utilizza l’aggregazione di più fonti di dati operativi in Adobe Experience Platform come input in Qualtrics Experience ID per comprendere meglio i tuoi clienti e consentire un’attività di sensibilizzazione mirata per colmare il divario quando si tratta di comprendere le intenzioni, le emozioni e i driver di esperienza.
+Utilizzare l&#39;aggregazione di più origini di dati operativi in [!DNL Adobe Experience Platform] come input in Qualtrics Experience ID per comprendere meglio i clienti e consentire un&#39;attività di sensibilizzazione mirata per colmare il divario quando si tratta di comprendere le intenzioni, le emozioni e i fattori di esperienza.
 
 >[!IMPORTANT]
 >
@@ -25,23 +25,23 @@ Utilizza l’aggregazione di più fonti di dati operativi in Adobe Experience Pl
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare la destinazione *Qualtrics Automations*, ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione *Qualtrics Automations*, ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### #1 del caso d’uso {#use-case-1}
 
-**Scenario**: un&#39;azienda vuole misurare la soddisfazione dei clienti in vari punti di contatto digitali, come il sito Web e l&#39;app mobile. Utilizzano Adobe Experience Platform per attivare i sondaggi Qualtrics in base alle interazioni degli utenti, ad esempio per completare un acquisto o visitare una pagina web specifica.
+**Scenario**: un&#39;azienda vuole misurare la soddisfazione dei clienti in vari punti di contatto digitali, come il sito Web e l&#39;app mobile. Utilizzano [!DNL Adobe Experience Platform] per attivare sondaggi Qualtrics in base alle interazioni dell&#39;utente, ad esempio per completare un acquisto o visitare una pagina Web specifica.
 
 **Risultato**: raccogliendo feedback in tempo reale, l&#39;azienda può apportare miglioramenti basati sui dati alla propria esperienza del cliente, con conseguente aumento della soddisfazione e della fedeltà.
 
 ### #2 del caso d’uso {#use-case-2}
 
-**Scenario**: un&#39;organizzazione mira a migliorare il proprio processo di onboarding dei dipendenti. Utilizzano Adobe Experience Platform per raccogliere feedback dai nuovi assunti attraverso sondaggi Qualtrics. I sondaggi vengono attivati automaticamente dopo un periodo di onboarding predefinito.
+**Scenario**: un&#39;organizzazione mira a migliorare il proprio processo di onboarding dei dipendenti. Utilizzano [!DNL Adobe Experience Platform] per raccogliere feedback dai nuovi assunti tramite sondaggi Qualtrics. I sondaggi vengono attivati automaticamente dopo un periodo di onboarding predefinito.
 
 **Risultato**: il feedback continuo consente all&#39;organizzazione di adattare e migliorare il processo di onboarding, migliorando il coinvolgimento e la produttività dei nuovi dipendenti.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di impostare la destinazione Qualtrics in Adobe Experience Platform, accertati di aver soddisfatto i seguenti prerequisiti:
+Prima di impostare la destinazione Qualtrics in [!DNL Adobe Experience Platform], verificare che siano soddisfatti i seguenti prerequisiti:
 
 * Hai un account Qualtrics.
 * Hai ottenuto il token API necessario da Qualtrics.
@@ -73,7 +73,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -205,7 +205,7 @@ Come accennato in precedenza, questa destinazione utilizza uno schema aperto, pe
 
 Per verificare che i dati siano stati acquisiti in Qualtrics, passa al flusso di lavoro contenente il tuo **evento JSON** e passa a **Cronologia esecuzioni** dove dovresti visualizzare le esecuzioni del flusso di lavoro. Ogni flusso di lavoro ha uno stato di **Completato** o **Non riuscito**. Selezionando una particolare esecuzione verranno visualizzate ulteriori informazioni su di essa, consentendo la risoluzione dei problemi in caso di problemi.
 
-Se in **Cronologia esecuzioni** non sono visibili esecuzioni, significa che il flusso di lavoro non è ancora stato attivato, a indicare che potrebbe esserci un problema. Verifica che il flusso di lavoro sia abilitato e che l&#39;**URL** nella destinazione in Adobe Experience Platform sia corretto. Le esecuzioni del flusso di lavoro non sono istantanee, pertanto potresti dover attendere un po’ prima che venga completato.
+Se in **Cronologia esecuzioni** non sono visibili esecuzioni, significa che il flusso di lavoro non è ancora stato attivato, a indicare che potrebbe esserci un problema. Verificare che il flusso di lavoro sia abilitato e che l&#39;**URL** nella destinazione in [!DNL Adobe Experience Platform] sia corretto. Le esecuzioni del flusso di lavoro non sono istantanee, pertanto potresti dover attendere un po’ prima che venga completato.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

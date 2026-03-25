@@ -2,9 +2,9 @@
 title: Connessione Snap Inc
 description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1141'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 | [!DNL Federated Audience Composition] | Sì | Tipi di pubblico importati in Experience Platform tramite [Federated Audience Composition](https://experienceleague.adobe.com/it/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
@@ -80,7 +80,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -106,15 +106,15 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Per eseguire l’autenticazione nella destinazione, effettua le seguenti operazioni:
 
-1. Trova la destinazione *Snap Inc* dal catalogo di destinazione di Adobe Experience Platform e seleziona **Configura**.
+1. Trovare la destinazione *Snap Inc* dal catalogo di destinazione di [!DNL Adobe Experience Platform] e selezionare **Configura**.
 2. Seleziona **[!UICONTROL Connect to destination]**. Verrai reindirizzato alla seguente schermata:
    ![Schermata di autenticazione 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
 3. Immetti le credenziali di Snapchat e seleziona **Accedi**.
-4. Verranno visualizzati i dati di Snapchat a cui Adobe Experience Platform potrà accedere. Selezionare **Continua** per continuare il processo di connessione.
+4. Verranno visualizzati i dati di Snapchat a cui [!DNL Adobe Experience Platform] potrà accedere. Selezionare **Continua** per continuare il processo di connessione.
 
 ![Schermata di autenticazione 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
-Dopo aver selezionato Continua, attendi di essere reindirizzato a Adobe Experience Platform.
+Dopo aver selezionato Continua, attendere il reindirizzamento a [!DNL Adobe Experience Platform].
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -150,11 +150,11 @@ Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione de
 Dopo aver attivato i tipi di pubblico nella destinazione *Snap Inc*, potrai visualizzarli nella sezione [**Tipi di pubblico** di Snap Ads Manager](https://businesshelp.snapchat.com/s/article/audience-sharing). Per passare a questa sezione, effettua le seguenti operazioni:
 
 1. Accedi a [Gestione annunci snap](https://ads.snapchat.com/)
-2. Seleziona **Tipi di pubblico** dal menu a discesa nell&#39;angolo in alto a sinistra dello schermo. I tipi di pubblico attivati in Adobe Experience Platform sono visualizzati nella Libreria tipi di pubblico:
+2. Seleziona **Tipi di pubblico** dal menu a discesa nell&#39;angolo in alto a sinistra dello schermo. I tipi di pubblico attivati in [!DNL Adobe Experience Platform] verranno visualizzati nella Libreria tipi di pubblico:
 
 ![Tipi di pubblico](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=it#evaluate-segments).
+Tieni presente che quando un pubblico di Adobe viene attivato per la prima volta per Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. [!DNL Adobe Experience Platform] non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico in Experience Platform, consulta la [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

@@ -2,9 +2,9 @@
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato da Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1297'
 ht-degree: 2%
 
 ---
@@ -60,13 +60,13 @@ La tabella seguente descrive gli eventi supportati dai modelli di metadati per i
 
 | Sezione modello | Descrizione |
 |--- |--- |
-| `create` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, creare in modo programmatico segmenti/tipi di pubblico nella piattaforma e sincronizzare nuovamente le informazioni con Adobe Experience Platform. |
-| `update` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, aggiornare programmaticamente segmenti/tipi di pubblico nella piattaforma e sincronizzare nuovamente le informazioni con Adobe Experience Platform. |
+| `create` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all&#39;API, creare in modo programmatico segmenti/tipi di pubblico nella piattaforma e sincronizzare nuovamente le informazioni con [!DNL Adobe Experience Platform]. |
+| `update` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all&#39;API, aggiornare programmaticamente segmenti/tipi di pubblico nella piattaforma e sincronizzare nuovamente le informazioni su [!DNL Adobe Experience Platform]. |
 | `delete` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, per eliminare in modo programmatico segmenti/tipi di pubblico nella piattaforma. |
 | `validate` | Esegue le convalide per qualsiasi campo nella configurazione del modello prima di effettuare una chiamata all&#39;API partner. Ad esempio, puoi verificare che l’ID account dell’utente sia stato immesso correttamente. |
 | `notify` | Si applica solo alle destinazioni basate su file. Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API e ricevere una notifica sulle esportazioni dei file riuscite. |
-| `createDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, per creare in modo programmatico un flusso di dati nella piattaforma e sincronizzare nuovamente le informazioni con Adobe Experience Platform. |
-| `updateDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API, aggiornare in modo programmatico un flusso di dati nella piattaforma e sincronizzare nuovamente le informazioni con Adobe Experience Platform. |
+| `createDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all&#39;API, creare in modo programmatico un flusso di dati nella piattaforma e sincronizzare nuovamente le informazioni su [!DNL Adobe Experience Platform]. |
+| `updateDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all&#39;API, aggiornare a livello di programmazione un flusso di dati nella piattaforma e sincronizzare nuovamente le informazioni su [!DNL Adobe Experience Platform]. |
 | `deleteDestination` | Include tutti i componenti necessari (URL, metodo HTTP, intestazioni, corpo della richiesta e della risposta) per effettuare una chiamata HTTP all’API ed eliminare in modo programmatico un flusso di dati dalla piattaforma. |
 
 {style="table-layout:auto"}

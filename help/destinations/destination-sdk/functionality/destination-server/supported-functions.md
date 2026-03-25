@@ -2,10 +2,10 @@
 description: Experience Platform Destination SDK utilizza i modelli Pebble, che consentono di trasformare i dati esportati da Experience Platform nel formato richiesto dalla destinazione.
 title: Funzioni di trasformazione supportate in Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '548'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Il modello di trasformazione dei messaggi viene utilizzato nella [configurazione
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere i concetti e le funzioni di questa pagina di riferimento, leggere prima il documento [message format](message-format.md). È necessario conoscere la struttura [&#x200B; di un profilo](message-format.md#profile-structure) in Experience Platform prima di poter utilizzare i modelli [!DNL Pebble] per trasformare i dati esportati.
+Per comprendere i concetti e le funzioni di questa pagina di riferimento, leggere prima il documento [message format](message-format.md). È necessario conoscere la struttura [ di un profilo](message-format.md#profile-structure) in Experience Platform prima di poter utilizzare i modelli [!DNL Pebble] per trasformare i dati esportati.
 
 Prima di passare alle funzioni descritte di seguito, esaminare gli esempi di modelli nella sezione [Utilizzo di un linguaggio di modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico](message-format.md#using-templating). Gli esempi qui presenti iniziano con una struttura molto semplice e aumentano di complessità.
 
@@ -45,7 +45,7 @@ Dalla sezione dei tag [!DNL Pebble], Destination SDK supporta solo:
 >L&#39;utilizzo di `for` è diverso quando si esegue l&#39;iterazione tra gli elementi *array* o *map* in un modello. Quando esegui l’iterazione attraverso un array, puoi ottenere direttamente l’elemento. Quando si esegue l&#39;iterazione di una mappa, si ottiene ogni voce della mappa che ha una coppia chiave-valore.
 >
 > * Per un esempio di elemento array, considera le identità in uno spazio dei nomi [identityMap](message-format.md#identities), dove è possibile eseguire iterazioni tra elementi come `identityMap.gaid`, `identityMap.email` o simili.
-> * Per un esempio di elemento mappa, pensa a [segmentMembership](message-format.md#segment-membership).
+> * Per un esempio di elemento mappa, pensa a [segmentMembership](message-format.md#audience-membership).
 
 Dalla sezione del filtro [!DNL Pebble], Destination SDK supporta tutte le funzioni. Un esempio più avanti mostra come la funzione `date` può essere utilizzata all&#39;interno di Destination SDK.
 
@@ -53,7 +53,7 @@ Dalla sezione delle funzioni [!DNL Pebble], Adobe non supporta *not* la funzione
 
 ## Esempio di utilizzo della funzione `date` {#date-function}
 
-Per illustrare il modo in cui le funzioni [!DNL Pebble] vengono utilizzate in Destination SDK, vedere di seguito come la funzione data ([link nella documentazione di Pebble](https://pebbletemplates.io/wiki/filter/date/)) viene utilizzata per trasformare il formato di una marca temporale.
+Per illustrare il modo in cui le funzioni [!DNL Pebble] vengono utilizzate in Destination SDK, vedere di seguito come la funzione data ([link nella documentazione di Pebble](https://pebbletemplates.io/wiki/filter/date/)) trasforma il formato di una marca temporale.
 
 ### Caso d’uso {#date-use-case}
 

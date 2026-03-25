@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per testare il modello di trasformazione dei messaggi di destinazione in streaming prima di pubblicare la destinazione.
 title: Creare e testare un modello di trasformazione dei messaggi
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Come parte di Destination SDK, Adobe fornisce strumenti di sviluppo per aiutarti a configurare e testare la destinazione. Questa pagina descrive come creare e testare un modello di trasformazione dei messaggi. Per informazioni su come verificare la destinazione, leggere [Verifica la configurazione di destinazione](streaming-destination-testing-overview.md).
 
-Per **creare e testare un modello di trasformazione dei messaggi** tra lo schema di destinazione in Adobe Experience Platform e il formato di messaggio supportato dalla destinazione, utilizzare lo *strumento di creazione dei modelli* descritto di seguito.  Ulteriori informazioni sulla trasformazione dei dati tra lo schema di origine e di destinazione nel documento [formato messaggio](../../functionality/destination-server/message-format.md#using-templating).
+Per **creare e testare un modello di trasformazione dei messaggi** tra lo schema di destinazione in [!DNL Adobe Experience Platform] e il formato di messaggio supportato dalla destinazione, utilizzare lo *strumento di creazione dei modelli* descritto di seguito.  Ulteriori informazioni sulla trasformazione dei dati tra lo schema di origine e di destinazione nel documento [formato messaggio](../../functionality/destination-server/message-format.md#using-templating).
 
 Di seguito è illustrato il modo in cui la creazione e il test di un modello di trasformazione dei messaggi si adattano al [flusso di lavoro di configurazione di destinazione](../../guides/configure-destination-instructions.md) in Destination SDK:
 
@@ -24,7 +24,7 @@ Di seguito è illustrato il modo in cui la creazione e il test di un modello di 
 
 ## Perché è necessario creare e testare un modello di trasformazione dei messaggi {#why-create-message-transformation-template}
 
-Uno dei primi passaggi nella creazione della destinazione in Destination SDK consiste nel pensare a come il formato dei dati per l’iscrizione al pubblico, le identità e gli attributi di profilo viene trasformato quando si esporta da Adobe Experience Platform alla destinazione. Trova informazioni sulla trasformazione tra lo schema XDM di Adobe e lo schema di destinazione nel [documento del formato del messaggio](../../functionality/destination-server/message-format.md#using-templating).
+Uno dei primi passaggi per la creazione della destinazione in Destination SDK consiste nel pensare a come viene trasformato il formato dati per l&#39;iscrizione al pubblico, le identità e gli attributi di profilo quando si esporta da [!DNL Adobe Experience Platform] nella destinazione. Trova informazioni sulla trasformazione tra lo schema XDM di Adobe e lo schema di destinazione nel [documento del formato del messaggio](../../functionality/destination-server/message-format.md#using-templating).
 
 Affinché la trasformazione venga eseguita correttamente, è necessario fornire un modello di trasformazione simile a questo esempio: [Creare un modello che invia segmenti, identità e attributi di profilo](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -54,7 +54,7 @@ Il processo per ottenere e testare il modello è iterativo. Ripeti i passaggi se
 
 1. [ottenere un modello di esempio](../../testing-api/streaming-destinations/create-template.md#sample-template-api).
 2. Utilizza il modello di esempio come punto di partenza per creare una bozza personalizzata.
-3. Chiama l&#39;endpoint API del modello di rendering [&#128279;](../../testing-api/streaming-destinations/create-template.md#render-template-api) con il tuo modello. Adobe genera profili di esempio in base allo schema e restituisce il risultato o eventuali errori riscontrati.
+3. Chiama l&#39;endpoint API del modello di rendering [](../../testing-api/streaming-destinations/create-template.md#render-template-api) con il tuo modello. Adobe genera profili di esempio in base allo schema e restituisce il risultato o eventuali errori riscontrati.
 4. Confronta i dati esportati con il formato dati previsto dalla destinazione. Se necessario, modifica il modello.
 5. Ripeti questo processo fino a quando i profili esportati non corrispondono al formato di dati previsto della destinazione.
 
@@ -158,12 +158,12 @@ Prima di utilizzare il modello per eseguire il rendering di profili che corrispo
 
 ## Rendering dell’API modello {#render-template-api}
 
-Dopo aver creato un modello di trasformazione dei messaggi utilizzando l&#39;[API modello di esempio](create-template.md#sample-template-api), puoi [eseguire il rendering del modello](render-template-api.md) per generare i dati esportati in base a esso. Questo ti consente di verificare se i profili che Adobe Experience Platform esporterebbe nella destinazione corrispondono al formato previsto della destinazione.
+Dopo aver creato un modello di trasformazione dei messaggi utilizzando l&#39;[API modello di esempio](create-template.md#sample-template-api), puoi [eseguire il rendering del modello](render-template-api.md) per generare i dati esportati in base a esso. Questo consente di verificare se i profili che [!DNL Adobe Experience Platform] esporterebbe nella destinazione corrispondono al formato previsto della destinazione.
 
 Per esempi di chiamate che puoi effettuare, consulta il riferimento API:
 
-* [Rendering di un modello senza profili inviati nel corpo](render-template-api.md#multiple-profiles-no-body)
-* [Eseguire il rendering di un modello con i profili inviati nel corpo](render-template-api.md#multiple-profiles-with-body)
+* [Rendering di un modello senza profili inviati nel corpo](render-template-api.md#best-effort)
+* [Eseguire il rendering di un modello con i profili inviati nel corpo](render-template-api.md#configurable-aggregation)
 
 Modifica il modello ed effettua chiamate all’endpoint API del modello di rendering fino a quando i profili esportati non corrispondono al formato di dati previsto della destinazione.
 

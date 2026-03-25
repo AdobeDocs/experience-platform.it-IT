@@ -3,20 +3,20 @@ keywords: estensione Analytics;estensione Analytics;analisi destinazione
 title: Estensione Adobe Analytics
 description: L'estensione Adobe Analytics è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 5%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
-# Estensione Adobe Analytics
+# Estensione [!DNL Adobe Analytics]
 
 ## Panoramica {#overview}
 
-Adobe Analytics è una soluzione leader di settore che ti consente di comprendere i tuoi clienti come persone e gestire la tua attività grazie alle informazioni sul cliente.
+[!DNL Adobe Analytics] è una soluzione leader di settore che ti consente di comprendere i tuoi clienti come persone e gestire la tua attività grazie alle informazioni sul cliente.
 
-Adobe Analytics è un’estensione di analytics in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, consulta la [panoramica dell&#39;estensione Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) nella documentazione dei tag.
+[!DNL Adobe Analytics] è un&#39;estensione di analytics in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, consulta la [panoramica dell&#39;estensione Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) nella documentazione dei tag.
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Experience Platform, consulta la [panoramica sulle estensioni tag](../launch-extensions/overview.md).
 
@@ -26,11 +26,11 @@ Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzi
 
 Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Experience Platform.
 
-Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per accedere all&#39;interfaccia utente di Data Collection e chiedere di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
+Per utilizzare questa estensione, devi accedere ai tag in Experience Platform. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto. Contatta l&#39;amministratore dell&#39;organizzazione per accedere all&#39;interfaccia utente di Data Collection e chiedere di concederti l&#39;autorizzazione **[!UICONTROL manage_properties]** per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l&#39;estensione Adobe Analytics:
+Per installare l&#39;estensione [!DNL Adobe Analytics]:
 
 Nell&#39;interfaccia [Experience Platform](https://platform.adobe.com/), passa a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
@@ -42,7 +42,7 @@ Seleziona la proprietà tag in cui desideri installare l’estensione. Puoi anch
 
 Il flusso di lavoro ti porta all’interfaccia utente di Data Collection per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la [pagina dell&#39;estensione Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=it) nella documentazione dei tag.
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la [pagina dell&#39;estensione Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) nella documentazione dei tag.
 
 Puoi anche installare l&#39;estensione direttamente nell&#39;[interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Per ulteriori informazioni, consulta la guida in [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

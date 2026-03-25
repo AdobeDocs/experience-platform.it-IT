@@ -2,16 +2,16 @@
 description: Il servizio delle destinazioni in Adobe Experience Platform utilizza endpoint di configurazione per diversi componenti che creano la funzionalità delle destinazioni. Scopri come questi componenti combinati consentono ad Experience Platform di connettersi ai partner di destinazione, inviare messaggi personalizzati e attivare i dati del profilo nell’ecosistema digitale.
 title: Opzioni di configurazione in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
 # Opzioni di configurazione in Destination SDK
 
-Il servizio delle destinazioni in Adobe Experience Platform utilizza endpoint di configurazione per diversi componenti che creano la funzionalità delle destinazioni.
+Il servizio Destinazioni in [!DNL Adobe Experience Platform] utilizza endpoint di configurazione per diversi componenti che creano la funzionalità Destinazioni.
 
 La combinazione di questi componenti consente ad Experience Platform di connettersi alle piattaforme di destinazione, inviare messaggi personalizzati, esportare file personalizzati e attivare i dati del profilo nell’ecosistema digitale.
 
@@ -38,7 +38,7 @@ Per le destinazioni basate su file, questa configurazione include anche i format
 
 ## Configurazione della destinazione {#destination-configuration}
 
-Questo endpoint di configurazione contiene informazioni di base e avanzate sulla destinazione. Ad esempio, è qui che puoi specificare i tipi di identità che la tua destinazione può supportare, il formato desiderato dei file esportati (per le destinazioni basate su file) e vari attributi dell’interfaccia utente per la scheda di destinazione nell’interfaccia utente di Adobe Experience Platform.
+Questo endpoint di configurazione contiene informazioni di base e avanzate sulla destinazione. Ad esempio, è qui che puoi specificare i tipi di identità che la tua destinazione può supportare, il formato desiderato dei file esportati (per le destinazioni basate su file) e vari attributi dell&#39;interfaccia utente per la scheda di destinazione nell&#39;interfaccia utente [!DNL Adobe Experience Platform].
 
 Per informazioni dettagliate su ciascuno dei componenti di configurazione di destinazione, consulta la documentazione riportata di seguito. Puoi configurare le funzionalità descritte di seguito tramite l&#39;endpoint [destinations](../authoring-api/destination-configuration/create-destination-configuration.md).
 

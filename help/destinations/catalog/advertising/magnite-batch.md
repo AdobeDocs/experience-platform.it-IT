@@ -3,9 +3,9 @@ title: Destinazione batch Magnite
 description: Utilizza questa destinazione per fornire in batch i tipi di pubblico di Adobe CDP alla piattaforma Magnite Streaming.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1756'
 ht-degree: 2%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 2%
 
 Questo documento descrive la destinazione Magnite: Batch e fornisce alcuni esempi di casi d’uso per comprendere meglio come attivare ed esportare i tipi di pubblico.
 
-I tipi di pubblico di Adobe Real-Time CDP possono essere inviati alla piattaforma Magnite Streaming in due modi: una volta al giorno oppure in tempo reale:
+I tipi di pubblico di Adobe [!DNL Real-Time CDP] possono essere inviati alla piattaforma Magnite Streaming in due modi: una volta al giorno oppure in tempo reale:
 
 1. Se desideri e/o vuoi consegnare i tipi di pubblico una sola volta al giorno, puoi utilizzare la destinazione Magnite: Batch, che distribuisce i tipi di pubblico a Magnite Streaming tramite una consegna giornaliera di file batch S3. Questi tipi di pubblico in batch vengono memorizzati indefinitamente nella piattaforma Magnite, a differenza dei tipi di pubblico in tempo reale, che vengono memorizzati solo per un paio di giorni.
 
 2. Tuttavia, se desideri o vuoi inviare i tipi di pubblico più frequentemente, dovrai utilizzare la destinazione [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md). Quando si utilizza la destinazione in tempo reale, Magnite Streaming riceverà i tipi di pubblico in tempo reale, ma Magnite può memorizzare solo i tipi di pubblico in tempo reale temporaneamente nella propria piattaforma e verranno rimossi dal sistema entro un paio di giorni. Per questo motivo, se desideri utilizzare la destinazione Magnite in tempo reale, *anche* dovrai utilizzare la destinazione Magnite: Batch - ogni pubblico che attivi nella destinazione in tempo reale, dovrai attivare anche nella destinazione Batch.
 
-Per ricapitolare: se desideri distribuire i tipi di pubblico di Adobe Real-Time CDP solo una volta al giorno, utilizzerai solo la destinazione Magnite: Batch e i tipi di pubblico verranno consegnati una volta al giorno. Se desideri distribuire il pubblico di Adobe Real-Time CDP in tempo reale, utilizzerai *sia* la destinazione Magnite: Batch che la destinazione Magnite Real-Time. Per ulteriori informazioni, contattare Magnite: Streaming.
+Per ricapitolare: se desideri distribuire i tipi di pubblico di Adobe [!DNL Real-Time CDP] una sola volta al giorno, utilizzerai solo la destinazione Magnite: Batch e i tipi di pubblico verranno consegnati una volta al giorno. Se si desidera distribuire i tipi di pubblico di Adobe [!DNL Real-Time CDP] in tempo reale, si utilizzeranno *sia* la destinazione Magnite: Batch e la destinazione Magnite in tempo reale. Per ulteriori informazioni, contattare Magnite: Streaming.
 
 
-Continua a leggere di seguito per ulteriori informazioni sulla destinazione Magnite: Batch, su come connettersi ad essa e su come attivare i tipi di pubblico di Adobe Real-Time CDP.
+Continuare a leggere di seguito per ulteriori informazioni sulla destinazione Magnite: Batch, su come connettersi ad essa e su come attivare i tipi di pubblico di Adobe [!DNL Real-Time CDP].
 Per ulteriori informazioni sulla destinazione in tempo reale, consulta [questa pagina della documentazione](magnite-streaming.md).
 
 >[!IMPORTANT]
@@ -34,7 +34,7 @@ Per ulteriori informazioni sulla destinazione in tempo reale, consulta [questa p
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare la destinazione Batch Magnite:, ecco alcuni esempi di casi d’uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione Batch Magnite:, ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### #1 del caso d’uso {#use-case-1}
 
@@ -50,7 +50,7 @@ Tutti i tipi di pubblico attivati tramite la destinazione Magnite: Batch verrann
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare le destinazioni [!DNL Magnite] in Adobe Experience Platform, è innanzitutto necessario disporre di un account Magnite Streaming. Se hai un account [!DNL Magnite Streaming], contatta il tuo account manager [!DNL Magnite] per ricevere le credenziali per accedere a [!DNL Magnite's] destinazioni. Se non disponi di un account [!DNL Magnite Streaming], contatta adobe-tech@magnite.com
+Per utilizzare le destinazioni [!DNL Magnite] in [!DNL Adobe Experience Platform], è innanzitutto necessario disporre di un account Magnite Streaming. Se hai un account [!DNL Magnite Streaming], contatta il tuo account manager [!DNL Magnite] per ricevere le credenziali per accedere a [!DNL Magnite's] destinazioni. Se non disponi di un account [!DNL Magnite Streaming], contatta adobe-tech@magnite.com
 
 ## Identità supportate {#supported-identities}
 
@@ -73,7 +73,7 @@ La destinazione Magnite: Batch può ricevere *qualsiasi* origine identità da Ad
 | Origine pubblico | Supportato | Descrizione |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -189,7 +189,7 @@ Nella schermata &quot;Configure a filename and export schedule for each audience
 
 Una volta caricati i tipi di pubblico, puoi verificare che siano stati creati e caricati correttamente.
 
-* La destinazione Magnite: Batch distribuisce i file S3 a Magnite Streaming con cadenza giornaliera. Dopo la consegna e l’acquisizione, i tipi di pubblico/segmenti dovrebbero apparire in Magnite Streaming e possono essere applicati a un’offerta. Puoi confermarlo cercando l’ID segmento o il nome segmento condiviso durante i passaggi di attivazione in Adobe Experience Platform.
+* La destinazione Magnite: Batch distribuisce i file S3 a Magnite Streaming con cadenza giornaliera. Dopo la consegna e l’acquisizione, i tipi di pubblico/segmenti dovrebbero apparire in Magnite Streaming e possono essere applicati a un’offerta. Per confermare, cercare l&#39;ID segmento o il nome segmento condiviso durante i passaggi di attivazione in [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >

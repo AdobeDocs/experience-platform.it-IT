@@ -3,9 +3,9 @@ keywords: connessione facebook;facebook connection;facebook destinations;faceboo
 title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2734'
 ht-degree: 5%
 
 ---
@@ -22,17 +22,17 @@ Attiva profili per le campagne [!DNL Facebook] per il targeting, la personalizza
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Facebook], ecco due casi d&#39;uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa funzione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Facebook], ecco due casi d&#39;uso di esempio che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa funzione.
 
 ### #1 del caso d’uso {#use-case-1}
 
-Un retailer online vuole raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate basate sui loro ordini precedenti. Il retailer online può acquisire gli indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico alla piattaforma social [!DNL Facebook], ottimizzando le spese pubblicitarie.
+Un retailer online vuole raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate basate sui loro ordini precedenti. Il retailer online può acquisire gli indirizzi e-mail dal proprio CRM per [!DNL Adobe Experience Platform], creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico alla piattaforma social [!DNL Facebook], ottimizzando le spese pubblicitarie.
 
 ### #2 del caso d’uso {#use-case-2}
 
 Una compagnia aerea ha diversi livelli di clienti (Bronzo, Argento e Oro) e vuole fornire a ciascuno di questi livelli offerte personalizzate tramite piattaforme social. Tuttavia, non tutti i clienti utilizzano l&#39;app mobile della compagnia aerea e alcuni di loro non hanno effettuato l&#39;accesso al sito web della compagnia. Gli unici identificatori di cui dispone l’azienda su questi clienti sono gli ID iscrizione e gli indirizzi e-mail.
 
-Per eseguire il targeting tra i social media, può integrare i dati del cliente dal CRM in Adobe Experience Platform, utilizzando gli indirizzi e-mail come identificatori.
+Per eseguire il targeting tra i social media, è possibile integrare i dati del cliente dal CRM in [!DNL Adobe Experience Platform], utilizzando gli indirizzi e-mail come identificatori.
 
 Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di iscrizione e i livelli cliente associati, per creare nuovi tipi di pubblico che possono essere indirizzati tramite la destinazione [!DNL Facebook].
 
@@ -44,8 +44,8 @@ Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di isc
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | `IDFA` | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| `phone_sha256` | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| `email_lc_sha256` | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| `phone_sha256` | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| `email_lc_sha256` | Indirizzi e-mail con hash con algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 | `extern_id` | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
 | `gender` | Genere | Valori accettati: <ul><li>`m` per maschio</li><li>`f` per femmina</li></ul> Experience Platform **esegue automaticamente l&#39;hash** di questo valore prima di inviarlo a Facebook. Questo hashing automatico è necessario per rispettare i requisiti di sicurezza e privacy di Facebook. **not** fornisci valori con hash preliminare per questo campo, in quanto questo causerà un errore nel processo di corrispondenza. |
 | `date_of_birth` | Data di nascita | Formato accettato: `yyyy-MM-DD`. <br>Experience Platform **applica automaticamente l&#39;hash** a questo valore prima di inviarlo a Facebook. Questo hashing automatico è necessario per rispettare i requisiti di sicurezza e privacy di Facebook. **not** fornisci valori con hash preliminare per questo campo, in quanto questo causerà un errore nel processo di corrispondenza. |
@@ -64,7 +64,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -99,11 +99,11 @@ Prima di poter inviare i tipi di pubblico a [!DNL Facebook], assicurati di soddi
 
 * L&#39;account utente di [!DNL Facebook] deve avere accesso completo a [!DNL Facebook Business Account], proprietario dell&#39;account dell&#39;annuncio che si sta utilizzando.
 * L&#39;account utente [!DNL Facebook] deve avere l&#39;autorizzazione **[!DNL Manage campaigns]** abilitata per l&#39;account annuncio che intendi utilizzare.
-* L&#39;account aziendale **Adobe Experience Cloud** deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Usa `business ID=206617933627973`. Per ulteriori informazioni, consulta [Aggiungere partner al tuo Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook.
+* L&#39;account aziendale **[!DNL Adobe Experience Cloud]** deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Usa `business ID=206617933627973`. Per ulteriori informazioni, consulta [Aggiungere partner al tuo Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook.
 
   >[!IMPORTANT]
   >
-  > Durante la configurazione delle autorizzazioni per Adobe Experience Cloud, devi abilitare l&#39;autorizzazione **Gestisci campagne**. L&#39;autorizzazione è necessaria per l&#39;integrazione di [!DNL Adobe Experience Platform].
+  > Durante la configurazione delle autorizzazioni per [!DNL Adobe Experience Cloud], devi abilitare l&#39;autorizzazione **Gestisci campagne**. L&#39;autorizzazione è necessaria per l&#39;integrazione di [!DNL Adobe Experience Platform].
 
 * Leggi e firma le Condizioni per l&#39;utilizzo di [!DNL Facebook Custom Audiences]. Per farlo, vai a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID]. Assicurati che la sezione `business_id=206617933627973` sia presente nell&#39;URL quando firmi i termini di servizio.
 
@@ -115,7 +115,7 @@ Prima di poter inviare i tipi di pubblico a [!DNL Facebook], assicurati di soddi
 
 [!DNL Facebook] non richiede l&#39;invio di informazioni personali (PII, personally identifiable information) in chiaro. Pertanto, i tipi di pubblico attivati in [!DNL Facebook] possono essere ricavati da *identificatori con hash*, ad esempio indirizzi e-mail o numeri di telefono.
 
-A seconda del tipo di ID inseriti in Adobe Experience Platform, devi rispettare i requisiti corrispondenti.
+A seconda del tipo di ID in cui si effettua l&#39;acquisizione in [!DNL Adobe Experience Platform], è necessario soddisfare i requisiti corrispondenti.
 
 ## Massimizzare le percentuali di corrispondenza dell’audience {#match-rates}
 
@@ -136,7 +136,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
 ## Requisiti di hashing delle e-mail {#email-hashing-requirements}
 
-Puoi eseguire l&#39;hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro in Experience Platform e impostarli con [!DNL Experience Platform] come hashing al momento dell&#39;attivazione.
+Puoi aggiungere hash agli indirizzi e-mail prima di acquisirli in [!DNL Adobe Experience Platform], oppure usare indirizzi e-mail in chiaro in Experience Platform e impostarli come [!DNL Experience Platform] al momento dell&#39;attivazione.
 
 Per informazioni sull&#39;acquisizione di indirizzi e-mail in Experience Platform, consulta la [panoramica sull&#39;acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e la [panoramica sull&#39;acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -171,7 +171,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL Facebook] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -295,7 +295,7 @@ Per [!DNL Facebook], un&#39;attivazione riuscita significa che un pubblico perso
 
 >[!TIP]
 >
->L&#39;integrazione tra Adobe Experience Platform e [!DNL Facebook] supporta i backfill cronologici del pubblico. Tutti i requisiti storici del pubblico vengono inviati a [!DNL Facebook] quando attivi i tipi di pubblico nella destinazione.
+>L&#39;integrazione tra [!DNL Adobe Experience Platform] e [!DNL Facebook] supporta i backfill cronologici del pubblico. Tutti i requisiti storici del pubblico vengono inviati a [!DNL Facebook] quando attivi i tipi di pubblico nella destinazione.
 
 ## Risoluzione dei problemi {#troubleshooting}
 

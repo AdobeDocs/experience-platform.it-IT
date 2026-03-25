@@ -3,9 +3,9 @@ title: Connettore profilo Pega
 description: Utilizza il connettore di profilo Pega per Amazon S3 in Adobe Experience Platform per esportare dati di profilo completi o incrementali, o entrambi, nell’archiviazione cloud Amazon S3. In Pega Customer Decision Hub, è possibile pianificare i processi di dati in Customer Profile Designer per importare periodicamente i dati del profilo dallo storage Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1225'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Utilizza [!DNL Pega Profile Connector] in Adobe Experience Platform per creare una connessione in uscita in tempo reale all&#39;archiviazione [!DNL Amazon Web Services] (AWS) S3 per esportare periodicamente i dati del profilo in file CSV da Adobe Experience Platform nei tuoi bucket S3. In [!DNL Pega Customer Decision Hub], è possibile pianificare processi di dati per importare questi dati profilo dall’archiviazione S3 per aggiornare il profilo di [!DNL Pega Customer Decision Hub].
+Utilizza [!DNL Pega Profile Connector] in [!DNL Adobe Experience Platform] per creare una connessione in uscita in tempo reale all&#39;archivio S3 [!DNL Amazon Web Services] (AWS) per esportare periodicamente i dati del profilo in file CSV da [!DNL Adobe Experience Platform] nei tuoi bucket S3. In [!DNL Pega Customer Decision Hub], è possibile pianificare processi di dati per importare questi dati profilo dall’archiviazione S3 per aggiornare il profilo di [!DNL Pega Customer Decision Hub].
 
 Questo connettore consente di configurare l&#39;esportazione iniziale dei dati del profilo e di sincronizzare periodicamente nuovi profili in [!DNL Pega Customer Decision Hub].  La disponibilità di dati aggiornati nell’hub decisionale del cliente fornisce una visualizzazione migliore e aggiornata della base clienti per le decisioni ottimali successive.
 
@@ -24,19 +24,19 @@ Questo connettore consente di configurare l&#39;esportazione iniziale dei dati d
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL Pega Profile Connector], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Pega Profile Connector], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Caso d’uso 1 {#use-case-1}
 
-Un addetto marketing desidera configurare inizialmente [!DNL Pega Customer Decision Hub] con i dati del profilo caricati da Adobe Experience Platform. Si tratta di un carico completo iniziale seguito da carichi delta su base pianificata.
+Un addetto marketing desidera impostare inizialmente [!DNL Pega Customer Decision Hub] con i dati del profilo caricati da [!DNL Adobe Experience Platform]. Si tratta di un carico completo iniziale seguito da carichi delta su base pianificata.
 
 ### Caso d’uso 2 {#use-case-2}
 
-Un addetto al marketing desidera che in [!DNL Pega Customer Decision Hub] siano disponibili dati di profilo aggiornati da Adobe Experience Platform, in modo da poter migliorare costantemente le informazioni Pega sui profili dei clienti.
+Un addetto al marketing desidera che i dati di profilo aggiornati di [!DNL Adobe Experience Platform] siano disponibili in [!DNL Pega Customer Decision Hub] per migliorare costantemente le informazioni Pega sui profili dei clienti.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Experience Platform e importare i profili in [!DNL Pega Customer Decision Hub], è necessario soddisfare i seguenti prerequisiti:
+Prima di poter utilizzare questa destinazione per esportare i dati da [!DNL Adobe Experience Platform] e importare i profili in [!DNL Pega Customer Decision Hub], è necessario soddisfare i seguenti prerequisiti:
 
 * Configurare il bucket [!DNL Amazon S3] e il percorso della cartella da utilizzare per l&#39;esportazione e l&#39;importazione di file di dati.
 * Configura la chiave di accesso [!DNL Amazon S3] e la chiave segreta [!DNL Amazon S3]: In [!DNL Amazon S3], genera una coppia `access key - secret access key` per concedere l&#39;accesso Experience Platform al tuo account [!DNL Amazon S3].
@@ -49,7 +49,7 @@ Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Expe
 
 | Identità di destinazione | Descrizione |
 |---|---|
-| *IDCliente* | Identificatore utente comune che identifica in modo univoco un profilo in [!DNL Pega Customer Decision Hub] e Adobe Experience Platform |
+| *IDCliente* | Identificatore utente comune che identifica in modo univoco un profilo in [!DNL Pega Customer Decision Hub] e [!DNL Adobe Experience Platform] |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Per autenticare nella destinazione, compilare i campi obbligatori e selezionare **[!UICONTROL Connect to destination]**.
 
-* Chiave di accesso **[!DNL Amazon S3]** e chiave segreta **[!DNL Amazon S3]**: in [!DNL Amazon S3], genera una coppia `access key - secret access key` per concedere l&#39;accesso Adobe Experience Platform al tuo account [!DNL Amazon S3]. Ulteriori informazioni sono disponibili nella [documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* Chiave di accesso **[!DNL Amazon S3]** e chiave segreta **[!DNL Amazon S3]**: in [!DNL Amazon S3], genera una coppia `access key - secret access key` per concedere l&#39;accesso [!DNL Adobe Experience Platform] al tuo account [!DNL Amazon S3]. Ulteriori informazioni sono disponibili nella [documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -147,7 +147,7 @@ Per [!DNL Pega Profile Connector] destinazioni, [!DNL Experience Platform] crea 
 Importazione dei dati di profilo da S3 completata. I dati vengono inseriti nell&#39;archivio dati di profilo [!DNL Pega Customer]. I dati importati del profilo cliente possono essere convalidati in [!DNL Pega Customer Profile Designer], come illustrato nella figura seguente.
 ![Immagine della schermata dell&#39;interfaccia utente in cui è possibile convalidare i dati del profilo di Adobe nel profilo cliente Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-In [!DNL Pega Customer Decision Hub], gli amministratori di dati possono configurare processi di dati in [!DNL Customer Profile Designer] per importare periodicamente i dati del profilo da S3, come illustrato nella figura seguente. Per ulteriori informazioni su come configurare i processi di dati per importare i dati del profilo da [, vedere &#x200B;](#additional-resources)risorse aggiuntive[!DNL Amazon S3].
+In [!DNL Pega Customer Decision Hub], gli amministratori di dati possono configurare processi di dati in [!DNL Customer Profile Designer] per importare periodicamente i dati del profilo da S3, come illustrato nella figura seguente. Per ulteriori informazioni su come configurare i processi di dati per importare i dati del profilo da [, vedere ](#additional-resources)risorse aggiuntive[!DNL Amazon S3].
 ![Immagine della schermata dell&#39;interfaccia utente per configurare i processi di dati nel profilo cliente Designer](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## Risorse aggiuntive {#additional-resources}

@@ -3,10 +3,10 @@ title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 14%
+source-wordcount: '583'
+ht-degree: 8%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 14%
 
 >[!AVAILABILITY]
 >
->Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante Adobe.
+>Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Prime e Ultimate [!DNL Real-Time CDP]. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
-Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pubblico potenziali](/help/segmentation/types/prospect-audiences.md) da Adobe Experience Platform nella destinazione preferita.
+Questo articolo spiega il flusso di lavoro necessario per esportare [tipi di pubblico potenziali](/help/segmentation/types/prospect-audiences.md) da [!DNL Adobe Experience Platform] nella destinazione preferita.
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -77,7 +77,7 @@ Per il resto del flusso di lavoro di attivazione per esportare i tipi di pubblic
 
 >[!NOTE]
 >
->Tieni presente che nel passaggio di pianificazione, il flusso di lavoro per attivare i tipi di pubblico potenziali ti consente solo di [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Le esportazioni di file incrementali non sono supportate.
+>Tieni presente che nel passaggio di pianificazione, il flusso di lavoro per attivare i tipi di pubblico potenziali consente solo di [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Le esportazioni di file incrementali non sono supportate.
 
 <!--
 
@@ -87,8 +87,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 
-Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
+Esplora altri casi d&#39;uso abilitati tramite il supporto dei dati dei partner in [!DNL Real-Time CDP]:
 
 * [Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Utilizza il supporto dati di terze parti in Real-Time CDP per [espandere la base di profili con i profili di potenziali clienti dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
+* Utilizza il supporto dati di terze parti in [!DNL Real-Time CDP] per [espandere la tua base di profili di potenziali clienti dei partner dati e interagire con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
 * [Sfrutta il riconoscimento dei partner per personalizzare le esperienze in loco](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l&#39;utente si autentichi o abbia una storia precedente con il tuo marchio.

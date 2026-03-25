@@ -4,10 +4,10 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '5203'
-ht-degree: 4%
+source-wordcount: '5178'
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer o Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante Adobe.
+>* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto [!DNL Real-Time CDP] Prime e Ultimate, [!DNL Adobe Journey Optimizer] o Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[&#x200B; di &#x200B;](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
+>**Elemento azione**: la versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 -->
 
-Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow Service API] per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform nel percorso di archiviazione cloud preferito, ad esempio [!DNL Amazon S3], percorsi SFTP o [!DNL Google Cloud Storage].
+Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow Service API] per esportare [set di dati](/help/catalog/datasets/overview.md) da [!DNL Adobe Experience Platform] nel percorso di archiviazione cloud preferito, ad esempio [!DNL Amazon S3], percorsi SFTP o [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow 
 
 ## Set di dati disponibili per l’esportazione {#datasets-to-export}
 
-I set di dati che puoi esportare dipendono dall’applicazione Experience Platform (Real-Time CDP, Adobe Journey Optimizer), dal livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati (ad esempio, Data Distiller).
+I set di dati che è possibile esportare dipendono dall&#39;applicazione Experience Platform ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), dal livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati, ad esempio Data Distiller.
 
 Per informazioni sui set di dati da esportare, consulta la tabella [nella pagina delle esercitazioni dell&#39;interfaccia utente](/help/destinations/ui/export-datasets.md#datasets-to-export).
 
@@ -68,9 +68,9 @@ Per esportare i set di dati, tieni presente i seguenti prerequisiti:
 
 ![Panoramica - i passaggi per creare una destinazione ed esportare i set di dati](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): tutti i dati correttamente acquisiti in Adobe Experience Platform vengono mantenuti all&#39;interno di [!DNL Data Lake] come set di dati. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): tutti i dati correttamente acquisiti in [!DNL Adobe Experience Platform] vengono mantenuti all&#39;interno di [!DNL Data Lake] come set di dati. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
    * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per esportare i set di dati nelle destinazioni dell’archiviazione cloud in Experience Platform.

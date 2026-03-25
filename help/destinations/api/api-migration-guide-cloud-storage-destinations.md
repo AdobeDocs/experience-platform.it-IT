@@ -4,9 +4,9 @@ title: Guida alla migrazione delle API per le destinazioni dell’archiviazione 
 description: Scopri le modifiche nel flusso di lavoro per attivare le destinazioni di archiviazione cloud come parte della migrazione alle nuove schede di destinazione di archiviazione cloud con funzionalità aggiuntive.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1328'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* La funzionalità descritta in questa pagina è disponibile per i clienti che hanno acquistato i pacchetti Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante Adobe.
+>* La funzionalità descritta in questa pagina è disponibile per i clienti che hanno acquistato i pacchetti Prime e Ultimate [!DNL Real-Time CDP]. Per ulteriori informazioni, contatta il rappresentante Adobe.
 
 ## Contesto di migrazione {#migration-context}
 
 A partire dal [ottobre 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), puoi utilizzare le nuove funzionalità di esportazione dei file per accedere a funzionalità di personalizzazione avanzate durante l&#39;esportazione di file da Experience Platform:
 
-* Nuove [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Nuove [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names).
 * Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite il [nuovo passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Possibilità di selezionare il [tipo di file](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del file esportato.
 * Possibilità di [personalizzare la formattazione dei file CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -46,7 +46,7 @@ Tieni presente che attualmente nell’interfaccia utente di Experience Platform 
 
 ![Immagine delle due schede di destinazione Amazon S3 in una visualizzazione affiancata.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Anche se queste destinazioni con funzionalità avanzate sono state inizialmente offerte come versione beta, *Adobe sta ora spostando tutti i clienti Real-Time CDP nelle nuove destinazioni dell&#39;archiviazione cloud*. Per i clienti che già utilizzavano [!DNL Amazon S3], [!DNL Azure Blob] o SFTP, ciò significa che i flussi di dati esistenti verranno migrati alle nuove schede. Continua a leggere per ulteriori informazioni sulle modifiche specifiche come parte della migrazione.
+Anche se queste destinazioni con funzionalità avanzate sono state inizialmente offerte come versione beta, *Adobe sta ora spostando tutti i [!DNL Real-Time CDP] clienti nelle nuove destinazioni dell&#39;archiviazione cloud*. Per i clienti che già utilizzavano [!DNL Amazon S3], [!DNL Azure Blob] o SFTP, ciò significa che i flussi di dati esistenti verranno migrati alle nuove schede. Continua a leggere per ulteriori informazioni sulle modifiche specifiche come parte della migrazione.
 
 ## A chi si applica questa pagina {#who-this-applies-to}
 
@@ -60,13 +60,6 @@ Se ad esempio si utilizza uno script per filtrare i flussi di dati di destinazio
 
 Questa sezione include il tutorial API pertinente e la documentazione di riferimento per la funzionalità avanzata di esportazione dei dati nelle destinazioni di archiviazione cloud.
 
-<!--
-
-TBD if we keep this link but will likely remove it
-
-[Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
-
--->
 * [Tutorial API per esportare i tipi di pubblico nelle destinazioni di archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Documentazione di riferimento API del servizio Flusso di destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 

@@ -2,10 +2,10 @@
 description: Scopri come configurare le identità di destinazione supportate per le destinazioni create con Destination SDK.
 title: Configurazione dello spazio dei nomi dell’identità
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ Quando configuri gli spazi dei nomi di identità per la destinazione, puoi ottim
 
 * Consente agli utenti di mappare gli attributi XDM agli spazi dei nomi delle identità.
 * Consente agli utenti di mappare [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) agli spazi dei nomi di identità personalizzati.
-* Consente agli utenti di mappare [spazi dei nomi di identità personalizzati](../../../../identity-service/features/namespaces.md#manage-namespaces) agli spazi dei nomi di identità personalizzati.
+* Consente agli utenti di mappare [spazi dei nomi di identità personalizzati](../../../../identity-service/features/namespaces.md#create-namespaces) agli spazi dei nomi di identità personalizzati.
 
 Per capire dove questo componente si inserisce in un&#39;integrazione creata con Destination SDK, consulta il diagramma nella documentazione delle [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -118,9 +118,9 @@ La configurazione seguente abilita l&#39;opzione opzionale [Applica trasformazio
    }
 ```
 
-Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in modo che Adobe Experience Platform ne esegua automaticamente l’hashing all’attivazione.
+Selezionare questa opzione quando si utilizzano campi di origine senza hash per fare in modo che [!DNL Adobe Experience Platform] li esegua automaticamente l&#39;hash all&#39;attivazione.
 
-Quando si esegue il mapping degli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hash (ad esempio: `email_lc_sha256` o `phone_sha256`), selezionare l&#39;opzione **Applica trasformazione** per fare in modo che Adobe Experience Platform esegua automaticamente l&#39;hash degli attributi di origine all&#39;attivazione.
+Quando si esegue il mapping degli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hash (ad esempio: `email_lc_sha256` o `phone_sha256`), selezionare l&#39;opzione **Applica trasformazione** per impostare [!DNL Adobe Experience Platform] per l&#39;hash automatico degli attributi di origine durante l&#39;attivazione.
 
 ## Configurare l’hashing obbligatorio del campo sorgente {#configure-mandatory-hashing}
 

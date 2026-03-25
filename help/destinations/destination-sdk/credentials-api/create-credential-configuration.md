@@ -2,7 +2,7 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per creare una configurazione delle credenziali per Adobe Experience Platform Destination SDK.
 title: Creare una configurazione delle credenziali
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 7%

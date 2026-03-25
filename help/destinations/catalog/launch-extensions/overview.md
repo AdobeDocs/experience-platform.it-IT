@@ -3,16 +3,16 @@ keywords: estensioni tag;estensione tag;destinazioni lancio; estensioni tag piat
 title: Estensioni tag in Adobe Experience Platform
 description: Adobe Experience Platform fornisce la nuova generazione di funzionalità di gestione tag di Adobe. Experience Platform offre un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '480'
 ht-degree: 2%
 
 ---
 
-# Estensioni tag in Adobe Experience Platform
+# Estensioni tag in [!DNL Adobe Experience Platform]
 
-Adobe Experience Platform fornisce la nuova generazione di funzionalità di gestione tag di Adobe. Experience Platform offre un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate. I tag sono offerti ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto.
+[!DNL Adobe Experience Platform] fornisce la nuova generazione di funzionalità di gestione tag di Adobe. Experience Platform offre un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate. I tag sono offerti ai clienti [!DNL Adobe Experience Cloud] come funzionalità inclusa a valore aggiunto.
 
 Per un’introduzione ai tag, consulta le risorse seguenti:
 
@@ -21,13 +21,13 @@ Per un’introduzione ai tag, consulta le risorse seguenti:
 
 ## Come trovare le estensioni tag nell’interfaccia di Experience Platform {#how-to-find-extensions-in-interface}
 
-Per trovare le estensioni nell&#39;interfaccia di Experience Platform, passa a **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]** e seleziona **[!UICONTROL Estensioni]** nel filtro **[!UICONTROL Tipi]**.
+Per trovare le estensioni nell&#39;interfaccia di Experience Platform, passa a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** e seleziona **[!UICONTROL Extensions]** nel filtro **[!UICONTROL Types]**.
 
 ![Filtro estensioni nell&#39;interfaccia](../../assets/catalog/launch-extensions/filter.png)
 
 ## Funzionamento delle estensioni tag {#how-extensions-work}
 
-Un&#39;estensione tag [&#128279;](../../../tags/home.md#extensions) è un pacchetto di codice che migliora le funzionalità di un sito Web o di un&#39;app mobile. Ciò può includere l&#39;invio di dati evento non elaborati a una destinazione come [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), ma possono anche servire altre funzioni.
+Un&#39;estensione tag [](../../../tags/home.md#extensions) è un pacchetto di codice che migliora le funzionalità di un sito Web o di un&#39;app mobile. Ciò può includere l&#39;invio di dati evento non elaborati a una destinazione come [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), ma possono anche servire altre funzioni.
 
 È importante distinguere tra estensioni di tag ed estensioni di inoltro eventi. Le estensioni visualizzate nell&#39;interfaccia utente delle destinazioni di Experience Platform sono *estensioni tag*. Per ulteriori informazioni sulle [differenze tra i tag e l&#39;inoltro degli eventi](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags), consulta la panoramica sull&#39;inoltro degli eventi.
 

@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;sendgrid;sendgrid destinazione
 title: Connessione SendGrid
 description: La destinazione SendGrid consente di esportare i dati di prime parti e di attivarli in SendGrid in base alle esigenze aziendali.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1943'
+source-wordcount: '1933'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [SendGrid](https://www.sendgrid.com) è una piattaforma di comunicazione con i clienti molto diffusa per le e-mail transazionali e di marketing.
 
-Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), che ti consente di esportare i profili e-mail di prime parti e di attivarli all&#39;interno di un nuovo pubblico SendGrid per le tue esigenze aziendali.
+Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), che consente di esportare i profili e-mail di prime parti e attivarli all&#39;interno di un nuovo pubblico SendGrid per le esigenze aziendali.
 
 SendGrid utilizza token API bearer come meccanismo di autenticazione per comunicare con l’API SendGrid.
 
@@ -34,7 +34,7 @@ Prima di iniziare a configurare la destinazione sono necessari i seguenti elemen
 
 ![Pagina delle impostazioni delle chiavi API SendGrid con il pulsante Crea chiave API.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
+Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
 
 >[!IMPORTANT]
 >
@@ -59,7 +59,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -72,7 +72,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
-Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Description]**: descrizione facoltativa che consentirà di identificare questa destinazione in futuro.
@@ -197,7 +197,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 1. Monitora il riepilogo del pubblico e controlla che il conteggio dei profili corrisponda al conteggio creato all’interno del set di dati.
    ![Pannello di riepilogo del pubblico che mostra il conteggio dei profili per il pubblico SendGrid selezionato.](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
-1. L&#39;API [SendGrid Marketing Lists > Create List](https://docs.sendgrid.com/api-reference/lists/create-list) viene utilizzata per creare elenchi di contatti univoci all&#39;interno di SendGrid unendo il valore dell&#39;attributo *list_name* e la marca temporale dell&#39;esportazione dei dati. Passare al sito SendGrid e verificare se è stato creato il nuovo elenco di contatti conforme al modello di nome.
+1. [SendGrid Marketing Lists > Create List API](https://docs.sendgrid.com/api-reference/lists/create-list) crea elenchi di contatti univoci all&#39;interno di SendGrid unendo il valore dell&#39;attributo *list_name* e la marca temporale dell&#39;esportazione dei dati. Passare al sito SendGrid e verificare se è stato creato il nuovo elenco di contatti conforme al modello di nome.
    ![Pagina InviaElenchi di marketing Grid con un elenco di contatti appena creato conforme al modello di nome previsto.](../../assets/catalog/email-marketing/sendgrid/29.jpg)
    ![Visualizzazione dettagli elenco contatti SendGrid che conferma la creazione del nuovo elenco con il nome corretto.](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 

@@ -4,9 +4,9 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3020'
 ht-degree: 8%
 
 ---
@@ -36,7 +36,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -103,7 +103,7 @@ Per ulteriori informazioni, consulta la [documentazione dell&#39;endpoint del ce
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che puoi per la destinazione API HTTP. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione API HTTP. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
 
 ## Tipi di autenticazione supportati {#supported-authentication-types}
 
@@ -174,8 +174,8 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Password]** per 
 >**Limitazione mTLS:** mTLS non supportata con autenticazione password OAuth 2. Per informazioni dettagliate, consulta la sezione [mTLSsAssessment](#mtls-considerations).
 
 * **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
-* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
-* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a [!DNL Adobe Experience Platform].
+* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a [!DNL Adobe Experience Platform].
 * **[!UICONTROL Username]**: nome utente per accedere all&#39;endpoint HTTP.
 * **[!UICONTROL Password]**: password per accedere all&#39;endpoint HTTP.
 
@@ -194,8 +194,8 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentia
 >Limitazione **mTLS:** mTLS non supportata con autenticazione credenziali client OAuth 2. Per informazioni dettagliate, consulta la sezione [mTLSsAssessment](#mtls-considerations).
 
 * **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
-* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a Adobe Experience Platform.
-* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a [!DNL Adobe Experience Platform].
+* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a [!DNL Adobe Experience Platform].
 * **[!UICONTROL Client Credentials Type]**: selezionare il tipo di concessione di credenziali client OAuth2 supportata dall&#39;endpoint:
    * **[!UICONTROL Body Form Encoded]**: In questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviata alla tua destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
    * **[!UICONTROL Basic Authorization]**: in questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *in un&#39;intestazione `Authorization`* dopo essere stati codificati in base64 e inviati alla destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).

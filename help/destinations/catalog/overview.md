@@ -3,9 +3,9 @@ keywords: Catalogo;catalogo
 title: Panoramica del catalogo delle destinazioni
 description: Il catalogo Destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Queste destinazioni includono soluzioni Adobe, piattaforme pubblicitarie, piattaforme di sondaggio, piattaforme di marketing via e-mail e altro ancora.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Sfoglia il catalogo per determinare quali piattaforme di destinazione sono migli
 
 ## Categorie di destinazione {#destination-categories}
 
-In Adobe Experience Platform puoi attivare i dati in diverse categorie di destinazione. I link riportati di seguito forniscono ulteriori informazioni su ciascuna categoria di destinazione:
+È possibile attivare i dati in diverse categorie di destinazione in [!DNL Adobe Experience Platform]. I link riportati di seguito forniscono ulteriori informazioni su ciascuna categoria di destinazione:
 
 - [Panoramica di Adobe [!UICONTROL destinations]](adobe/overview.md)
 - [[!UICONTROL Advertising] [!UICONTROL destinations] panoramica](advertising/overview.md)

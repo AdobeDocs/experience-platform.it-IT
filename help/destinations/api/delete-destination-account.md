@@ -5,16 +5,16 @@ title: Eliminare un account di destinazione utilizzando l’API del servizio Flu
 type: Tutorial
 description: Scopri come eliminare un account di destinazione utilizzando l’API del servizio Flusso.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 20%
+source-wordcount: '749'
+ht-degree: 17%
 
 ---
 
 # Eliminare un account di destinazione utilizzando l’API del servizio Flusso
 
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione senza problemi dei dati da [!DNL Adobe Experience Platform]. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 Prima di attivare i dati, devi connetterti alla destinazione impostando prima un account di destinazione. Questo tutorial illustra i passaggi necessari per eliminare gli account di destinazione che non sono più necessari utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -26,9 +26,9 @@ Prima di attivare i dati, devi connetterti alla destinazione impostando prima un
 
 Questo tutorial richiede un ID di connessione valido. L’ID di connessione rappresenta la connessione dell’account alla destinazione. Se non disponi di un ID di connessione valido, seleziona la destinazione desiderata dal [catalogo delle destinazioni](../catalog/overview.md) e segui i passaggi descritti per [connetterti alla destinazione](../ui/connect-destination.md) prima di provare questa esercitazione.
 
-Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+* [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni predefinite con le piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da [!DNL Adobe Experience Platform]. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza di [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per eliminare correttamente un account di destinazione utilizzando l&#39;API [!DNL Flow Service].

@@ -5,10 +5,10 @@ title: Connettersi alle destinazioni batch e attivare i dati utilizzando l’API
 description: Istruzioni dettagliate per l’utilizzo dell’API del servizio Flusso per creare una destinazione di archiviazione cloud in batch o di e-mail marketing in Experience Platform e attivare i dati
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3431'
-ht-degree: 4%
+source-wordcount: '3423'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions).
+>* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions).
 >
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions).
 >
@@ -38,7 +38,7 @@ Se preferisci utilizzare l&#39;interfaccia utente di Experience Platform per con
 
 ## Introduzione {#get-started}
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di creare tipi di pubblico in [!DNL Adobe Experience Platform] dai dati di [!DNL Real-Time Customer Profile].
@@ -531,7 +531,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `name` | Specificare un nome per la connessione di base alla destinazione batch. |
 | `description` | In alternativa, è possibile fornire una descrizione della connessione di base. |
 | `connectionSpec.id` | Utilizza l’ID della specifica di connessione per la destinazione batch desiderata. Hai ottenuto questo ID nel passaggio [Ottieni l&#39;elenco delle destinazioni disponibili](#get-the-list-of-available-destinations). |
-| `auth.specname` | Indica il formato di autenticazione per la destinazione. Per individuare il nome della specifica per la destinazione, eseguire una chiamata di [GET all&#39;endpoint delle specifiche di connessione](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), fornendo la specifica di connessione della destinazione desiderata. Cercare il parametro `authSpec.name` nella risposta. <br> Ad esempio, per le destinazioni Adobe Campaign è possibile utilizzare uno qualsiasi di `S3`, `SFTP with Password` o `SFTP with SSH Key`. |
+| `auth.specname` | Indica il formato di autenticazione per la destinazione. Per individuare il nome della specifica per la destinazione, eseguire una chiamata di [GET all&#39;endpoint delle specifiche di connessione](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), fornendo la specifica di connessione della destinazione desiderata. Cercare il parametro `authSpec.name` nella risposta. <br> Ad esempio, per [!DNL Adobe Campaign] destinazioni è possibile utilizzare una qualsiasi delle `S3`, `SFTP with Password` o `SFTP with SSH Key`. |
 | `params` | A seconda della destinazione a cui ti stai connettendo, devi fornire diversi parametri di autenticazione richiesti. Per le connessioni Amazon S3, devi fornire l’ID di accesso e la chiave segreta alla posizione di archiviazione Amazon S3. <br> Per individuare i parametri richiesti per la destinazione, eseguire una [chiamata GET all&#39;endpoint delle specifiche di connessione](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), fornendo la specifica di connessione della destinazione desiderata. Cercare il parametro `authSpec.spec.required` nella risposta. |
 
 {style="table-layout:auto"}
@@ -934,7 +934,7 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Specifica un nome per il flusso di dati che stai creando. |
 | `description` | Facoltativamente, puoi fornire una descrizione del flusso di dati. |
-| `flowSpec.Id` | Utilizzare l&#39;ID della specifica di flusso per la destinazione batch a cui si desidera connettersi. Per recuperare l&#39;ID della specifica di flusso, eseguire un&#39;operazione GET sull&#39;endpoint `flowspecs`, come illustrato nella [documentazione di riferimento API delle specifiche di flusso](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Nella risposta, cerca `upsTo` e copia l&#39;ID corrispondente della destinazione batch a cui desideri connetterti. Ad esempio, per Adobe Campaign, cerca `upsToCampaign` e copia il parametro `id`. |
+| `flowSpec.Id` | Utilizzare l&#39;ID della specifica di flusso per la destinazione batch a cui si desidera connettersi. Per recuperare l&#39;ID della specifica di flusso, eseguire un&#39;operazione GET sull&#39;endpoint `flowspecs`, come illustrato nella [documentazione di riferimento API delle specifiche di flusso](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Nella risposta, cerca `upsTo` e copia l&#39;ID corrispondente della destinazione batch a cui desideri connetterti. Ad esempio, per [!DNL Adobe Campaign], cercare `upsToCampaign` e copiare il parametro `id`. |
 | `sourceConnectionIds` | Utilizza l&#39;ID della connessione di origine ottenuto nel passaggio [Connetti ai dati di Experience Platform](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | Utilizzare l&#39;ID connessione di destinazione ottenuto nel passaggio [Connetti alla destinazione batch](#connect-to-batch-destination). |
 | `transformations` | Nel passaggio successivo, compilerai questa sezione con i tipi di pubblico e gli attributi del profilo da attivare. |
@@ -965,7 +965,7 @@ In caso di esito positivo, la risposta restituisce l&#39;ID (`id`) del flusso di
 
 Dopo aver creato tutte le connessioni e il flusso di dati, ora puoi attivare i dati del profilo nella piattaforma di destinazione. In questo passaggio, seleziona i tipi di pubblico e gli attributi di profilo da esportare nella destinazione.
 
-È inoltre possibile determinare il formato di denominazione dei file esportati e gli attributi da utilizzare come [chiavi di deduplicazione](../ui/activate-batch-profile-destinations.md#mandatory-keys) o [attributi obbligatori](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In questo passaggio puoi anche determinare la pianificazione per inviare dati alla destinazione.
+È inoltre possibile determinare il formato di denominazione dei file esportati e gli attributi da utilizzare come [chiavi di deduplicazione](../ui/activate-batch-profile-destinations.md#mandatory-attributes) o [attributi obbligatori](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In questo passaggio puoi anche determinare la pianificazione per inviare dati alla destinazione.
 
 Per attivare i tipi di pubblico nella nuova destinazione, devi eseguire un’operazione JSON PATCH, simile all’esempio di seguito. Puoi attivare più tipi di pubblico e attributi di profilo in una sola chiamata. Per ulteriori informazioni su JSON PATCH, consulta la [specifica RFC](https://tools.ietf.org/html/rfc6902).
 
@@ -1049,7 +1049,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 | `id` | Specifica l’ID del pubblico che stai aggiungendo al flusso di dati di destinazione. |
 | `name` | *Facoltativo*. Specifica il nome del pubblico che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un pubblico al flusso di dati di destinazione senza specificarne il nome. |
-| `filenameTemplate` | Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: facoltativo. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: facoltativo. Seleziona una di queste due opzioni affinché i file includano l’ora in cui sono generati da Experience Platform.</li><li>`custom-text`: facoltativo. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, fare riferimento alla sezione [Configura nomi di file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell&#39;esercitazione sull&#39;attivazione delle destinazioni batch. |
+| `filenameTemplate` | Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: facoltativo. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: facoltativo. Seleziona una di queste due opzioni affinché i file includano l’ora in cui sono generati da Experience Platform.</li><li>`custom-text`: facoltativo. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, fare riferimento alla sezione [Configura nomi di file](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) nell&#39;esercitazione sull&#39;attivazione delle destinazioni batch. |
 | `exportMode` | Obbligatorio Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. |
 | `startDate` | Seleziona la data in cui il pubblico deve iniziare a esportare i profili nella tua destinazione. |
 | `frequency` | Obbligatorio <br> <ul><li>Per la modalità di esportazione `"DAILY_FULL_EXPORT"`, è possibile selezionare `ONCE`, `DAILY`, `WEEKLY` o `MONTHLY`.</li><li>Per la modalità di esportazione `"FIRST_FULL_THEN_INCREMENTAL"`, è possibile selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |

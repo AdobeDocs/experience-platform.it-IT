@@ -5,9 +5,9 @@ title: Attivare i tipi di pubblico su destinazioni batch tramite l’API di atti
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che si verificano prima dell’attivazione.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Un hotel si aspetta un tempo inclemente nei giorni successivi e il team vuole in
 
 ### Test di integrazione {#integration-testing}
 
-I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience Platform per esportare i tipi di pubblico on-demand, in modo da testare la loro integrazione personalizzata con Adobe Experience Platform e garantire il corretto funzionamento di tutto.
+I responsabili IT possono utilizzare l&#39;API di attivazione ad hoc di Experience Platform per esportare i tipi di pubblico on-demand, in modo da testare la loro integrazione personalizzata con [!DNL Adobe Experience Platform] e garantire il corretto funzionamento di tutto.
 
 ## Guardrail {#guardrails}
 
@@ -54,14 +54,14 @@ Quando utilizzi l’API di attivazione ad hoc, tieni presenti le seguenti protez
 
 ## Considerazioni sulla segmentazione {#segmentation-considerations}
 
-Adobe Experience Platform esegue processi di segmentazione pianificati una volta ogni 24 ore. L’API di attivazione ad hoc viene eseguita in base ai risultati di segmentazione più recenti.
+[!DNL Adobe Experience Platform] esegue i processi di segmentazione pianificati una volta ogni 24 ore. L’API di attivazione ad hoc viene eseguita in base ai risultati di segmentazione più recenti.
 
 ## Passaggio 1: Prerequisiti {#prerequisites}
 
-Prima di poter effettuare chiamate alle API di Adobe Experience Platform, assicurati di soddisfare i seguenti prerequisiti:
+Prima di poter effettuare chiamate alle API [!DNL Adobe Experience Platform], assicurati di soddisfare i seguenti prerequisiti:
 
-* Hai un account organizzazione con accesso a Adobe Experience Platform.
-* Per il tuo account Experience Platform sono abilitati i ruoli `developer` e `user` per il profilo di prodotto API Adobe Experience Platform. Contatta l&#39;amministratore [Admin Console](../../access-control/home.md) per abilitare questi ruoli per il tuo account.
+* Hai un account organizzazione con accesso a [!DNL Adobe Experience Platform].
+* Per il tuo account Experience Platform sono abilitati i ruoli `developer` e `user` per il profilo di prodotto API [!DNL Adobe Experience Platform]. Contatta l&#39;amministratore [Admin Console](../../access-control/home.md) per abilitare questi ruoli per il tuo account.
 * Hai un Adobe ID. Se non hai un Adobe ID, passa a [Adobe Developer Console](https://developer.adobe.com/console) e crea un nuovo account.
 
 ## Passaggio 2: raccogliere le credenziali {#credentials}
@@ -107,7 +107,7 @@ Segui le istruzioni descritte [qui](../../segmentation/api/export-jobs.md#retrie
 
 Nella risposta, cerca il primo record che include la proprietà dello schema seguente.
 
-```
+```json
 "schema":{
    "name":"_xdm.context.profile"
 }
@@ -120,7 +120,7 @@ L&#39;ID del processo di esportazione del pubblico si trova nella proprietà `id
 
 ## Passaggio 5: eseguire il processo di attivazione ad hoc {#activation-job}
 
-Adobe Experience Platform esegue processi di segmentazione pianificati una volta ogni 24 ore. L’API di attivazione ad hoc viene eseguita in base ai risultati di segmentazione più recenti.
+[!DNL Adobe Experience Platform] esegue i processi di segmentazione pianificati una volta ogni 24 ore. L’API di attivazione ad hoc viene eseguita in base ai risultati di segmentazione più recenti.
 
 >[!IMPORTANT]
 >

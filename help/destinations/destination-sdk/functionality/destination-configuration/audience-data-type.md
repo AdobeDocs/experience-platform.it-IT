@@ -2,9 +2,9 @@
 description: Scopri come configurare il tipo di pubblico per le destinazioni create con Destination SDK.
 title: Configurare il tipo di dati del pubblico
 exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
-source-git-commit: 5d84ea1baa96c288d9d37606122e0a41880478b9
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '732'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ Leggi i tipi di dati sul pubblico riportati di seguito per scoprire le differenz
 | [Tipi di pubblico per persone](../../../../segmentation/types/people-audiences.md) | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](../../../../segmentation/types/account-audiences.md) | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](../../../../segmentation/types/prospect-audiences.md) | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](../../../../catalog/datasets/overview.md) | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](../../../../catalog/datasets/overview.md) | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 Il tipo di dati del pubblico supportato dipende dal tipo di destinazione creato.
 Fai riferimento alla tabella seguente per capire quali tipi di destinazione supportano quali tipi di dati di pubblico.
 
-| Tipo di destinazione | Pubblico persone | Pubblico dell’account | Pubblico potenziale | Set di dati |
+| Tipo di destinazione | Pubblico persone | Tipi di pubblico di account | Tipi di pubblico di potenziali clienti | Set di dati |
 |---------|----------|---------|---------|---------|
 | Streaming | ✓ | ✓ | X | X |
 | Basato su file | ✓ | ✓ | ✓ | ✓ |
@@ -391,7 +391,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
-## Esporta set di dati {#datasets}
+## Esporta i set di dati {#datasets}
 
 Prendi in considerazione l’aggiunta del supporto per l’esportazione dei set di dati nella destinazione quando desideri esportare set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. Puoi utilizzare questi dati per reporting, flussi di lavoro sulla scienza dei dati e molti altri casi d’uso. Ad esempio, in qualità di amministratore, ingegnere dati o analista, puoi esportare dati da Experience Platform per sincronizzarli con il tuo data warehouse, utilizzarli negli strumenti di analisi [!DNL BI], negli strumenti per il cloud esterno [!DNL ML] o archiviarli nel tuo sistema per esigenze di archiviazione a lungo termine.
 

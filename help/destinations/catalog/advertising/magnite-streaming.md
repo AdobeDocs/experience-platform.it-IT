@@ -3,9 +3,9 @@ title: Connessione di destinazione Magnite in tempo reale
 description: Utilizza questa destinazione per fornire in tempo reale i tipi di pubblico di Adobe CDP alla piattaforma Magnite Streaming.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Le destinazioni [!DNL Magnite: Real-Time] e [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) in Adobe Experience Platform consentono di mappare ed esportare i tipi di pubblico per il targeting e l&#39;attivazione sulla piattaforma Magnite Streaming.
+Le destinazioni [!DNL Magnite: Real-Time] e [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) in [!DNL Adobe Experience Platform] consentono di mappare ed esportare i tipi di pubblico per il targeting e l&#39;attivazione sulla piattaforma Magnite Streaming.
 
 L&#39;attivazione dei tipi di pubblico nella piattaforma [!DNL Magnite Streaming] è un processo in due fasi che richiede l&#39;utilizzo delle destinazioni Magnite: Real-Time e Magnite: Batch.
 
@@ -33,15 +33,15 @@ Per attivare i tipi di pubblico in [!DNL Magnite Streaming], è necessario:
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Magnite: Real-Time], ecco un esempio di caso d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Magnite: Real-Time], ecco un esempio di caso d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Attivazione e targeting {#activation-and-targeting}
 
-Questa integrazione con Magnite consente ai clienti di trasmettere i propri tipi di pubblico CDP da Adobe Experience Platform a Magnite per il targeting pubblicitario. I tipi di pubblico possono essere selezionati all’interno di Magnite per il targeting positivo e negativo (soppressione).
+Questa integrazione con Magnite consente ai clienti di passare i propri tipi di pubblico CDP da [!DNL Adobe Experience Platform] a Magnite per il targeting pubblicitario. I tipi di pubblico possono essere selezionati all’interno di Magnite per il targeting positivo e negativo (soppressione).
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare le destinazioni [!DNL Magnite] in Adobe Experience Platform, devi prima disporre di un account [!DNL Magnite Streaming]. Se hai un account [!DNL Magnite Streaming], contatta il tuo account manager [!DNL Magnite] per ricevere le credenziali per accedere a [!DNL Magnite's] destinazioni.
+Per utilizzare le destinazioni [!DNL Magnite] in [!DNL Adobe Experience Platform], devi prima disporre di un account [!DNL Magnite Streaming]. Se hai un account [!DNL Magnite Streaming], contatta il tuo account manager [!DNL Magnite] per ricevere le credenziali per accedere a [!DNL Magnite's] destinazioni.
 Se non disponi di un account [!DNL Magnite Streaming], contatta adobe-tech@magnite.com
 
 ## Identità supportate {#supported-identities}
@@ -61,7 +61,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 | Origine pubblico | Supportato | Descrizione |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View destinations]** e **[!UICONTROL Manage destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View destinations]** e **[!UICONTROL Manage destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
@@ -178,11 +178,11 @@ Dopo aver caricato i tipi di pubblico, puoi verificare che siano stati creati e 
 
 -->
 
-* Dopo l&#39;acquisizione, i tipi di pubblico dovrebbero comparire in [!DNL Magnite Streaming] entro pochi minuti e possono essere applicati a un&#39;offerta. Puoi confermarlo cercando l’ID segmento condiviso durante i passaggi di attivazione in Adobe Experience Platform.
+* Dopo l&#39;acquisizione, i tipi di pubblico dovrebbero comparire in [!DNL Magnite Streaming] entro pochi minuti e possono essere applicati a un&#39;offerta. Per confermare, cercare l&#39;ID segmento condiviso durante i passaggi di attivazione in [!DNL Adobe Experience Platform].
 
 ## Attiva gli stessi tipi di pubblico tramite la destinazione [!DNL Magnite: Batch] {#activate-magnite-batch}
 
-I tipi di pubblico condivisi con [!DNL Magnite Streaming] utilizzando la destinazione in tempo reale dovranno essere condivisi anche utilizzando la destinazione Magnite: Batch. Se configurati correttamente, i nomi dei segmenti nell&#39;interfaccia utente [!DNL Magnite Streaming] vengono aggiornati per riflettere quelli utilizzati nell&#39;aggiornamento post-giornaliero di Adobe Experience Platform.
+I tipi di pubblico condivisi con [!DNL Magnite Streaming] utilizzando la destinazione in tempo reale dovranno essere condivisi anche utilizzando la destinazione Magnite: Batch. Se configurati correttamente, i nomi dei segmenti nell&#39;interfaccia utente [!DNL Magnite Streaming] vengono aggiornati per riflettere quelli utilizzati nell&#39;aggiornamento post-giornaliero [!DNL Adobe Experience Platform].
 
 Infine, se per l’integrazione non è stata configurata una destinazione Batch, impostala ora tramite il documento di destinazione Magnite: Batch.
 

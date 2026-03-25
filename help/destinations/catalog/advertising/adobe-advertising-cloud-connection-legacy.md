@@ -2,14 +2,14 @@
 title: Connessione legacy Adobe Advertising Cloud DSP
 description: Adobe Advertising Cloud DSP è una destinazione integrata per Adobe Real-Time Customer Data Platform che consente di condividere pubblici autenticati di prime parti con inserzionisti e utenti approvati per l’attivazione della campagna.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1035'
 ht-degree: 2%
 
 ---
 
-# Connessione legacy Adobe Advertising Cloud DSP
+# Connessione DSP [!DNL Adobe Advertising Cloud] legacy
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-La destinazione Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) consente di condividere i tipi di pubblico autenticati di prime parti con inserzionisti e utenti approvati per l’attivazione della campagna con DSP. Per ulteriori informazioni sull&#39;integrazione di Real-Time CDP con DSP, vedere [Informazioni sull&#39;attivazione di tipi di pubblico autenticati da origini pubblico](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=it).
+La destinazione [!DNL Adobe Advertising Cloud] [!DNL Demand-Side Platform] (DSP) consente di condividere i tipi di pubblico autenticati di prime parti con inserzionisti e utenti approvati per l&#39;attivazione della campagna con DSP. Per ulteriori informazioni sull&#39;integrazione di [!DNL Real-Time CDP] con DSP, vedere [Informazioni sull&#39;attivazione di tipi di pubblico autenticati da origini pubblico](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -25,11 +25,11 @@ La destinazione Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) consen
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare la destinazione Advertising Cloud DSP, ecco alcuni esempi di casi d’uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione Advertising Cloud DSP, ecco alcuni esempi di casi d&#39;uso che i clienti di [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Caso di utilizzo: pubblicità del brand {#brand-advertising}
 
-Un retailer online desidera effettuare il retargeting dei clienti di alto valore tramite una campagna di visualizzazione senza utilizzare i cookie per il targeting. Retailer condivide un pubblico costituito dagli ID e-mail con hash dei suoi clienti di alto valore dal suo account Adobe Real-Time Customer Data Platform (Real-Time CDP) al suo account DSP. DSP converte quindi gli ID e-mail con hash in [!DNL RampIDs] autenticati tramite una partnership tra DSP e LiveRamp. L&#39;elemento [!DNL RampIDs] risultante può essere utilizzato in una campagna di visualizzazione per eseguire il targeting del pubblico.
+Un retailer online desidera effettuare il retargeting dei clienti di alto valore tramite una campagna di visualizzazione senza utilizzare i cookie per il targeting. Retailer condivide un pubblico costituito dagli ID e-mail con hash dei suoi clienti di alto valore dal suo account Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) al suo account DSP. DSP converte quindi gli ID e-mail con hash in [!DNL RampIDs] autenticati tramite una partnership tra DSP e LiveRamp. L&#39;elemento [!DNL RampIDs] risultante può essere utilizzato in una campagna di visualizzazione per eseguire il targeting del pubblico.
 
 ### Caso di utilizzo dell’agenzia {#agency-use-case}
 
@@ -39,13 +39,13 @@ Un&#39;agenzia di media, con un account DSP, sta conducendo una campagna di reta
 
 * Impostazioni a livello di account DSP e di campagna per abilitare la condivisione del pubblico con [!DNL LiveRamp RampID], che tradurrà i dati dei clienti in [!DNL RampIDs] per creare segmenti di destinazione. Il team del tuo account di DSP eseguirà questa configurazione. [!DNL RampID] è disponibile tramite una partnership tra DSP e [!DNL LiveRamp] e non è necessaria la tua iscrizione a [!DNL LiveRamp] per utilizzarlo.
 * L’ID organizzazione Experience Cloud per l’account Experience Platform. Puoi trovare il tuo ID nella pagina del tuo profilo utente di [!DNL Real-Time CDP].
-* Un&#39;origine [[!DNL Real-Time CDP] in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=it) per ricevere i tipi di pubblico per l&#39;attivazione della campagna. Il team del tuo account DSP creerà l’origine utilizzando il tuo ID organizzazione Experience Cloud.
-* Chiave di origine per l&#39;account DSP o l&#39;inserzionista, generata quando viene creata un&#39;origine [[!DNL Real-Time CDP] in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=it). Il team del tuo account DSP condividerà con te questa chiave. La utilizzerai in Experience Platform per creare una connessione di destinazione alla destinazione Advertising Cloud DSP, come [spiegato di seguito](#authenticate).
+* Un&#39;origine [[!DNL Real-Time CDP] in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) per ricevere i tipi di pubblico per l&#39;attivazione della campagna. Il team del tuo account DSP creerà l’origine utilizzando il tuo ID organizzazione Experience Cloud.
+* Chiave di origine per l&#39;account DSP o l&#39;inserzionista, generata quando viene creata un&#39;origine [[!DNL Real-Time CDP] in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Il team del tuo account DSP condividerà con te questa chiave. La utilizzerai in Experience Platform per creare una connessione di destinazione alla destinazione Advertising Cloud DSP, come [spiegato di seguito](#authenticate).
 * Dati del cliente costituiti da e-mail o e-mail con hash.
 
 ## Identità supportate {#supported-identities}
 
-La destinazione Adobe Advertising Cloud DSP supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
+La destinazione DSP [!DNL Adobe Advertising Cloud] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
@@ -76,7 +76,7 @@ Per connettersi alla destinazione, seguire le istruzioni per [creare una conness
 
 Per connettersi alla destinazione, fornire il parametro seguente nella sezione [!UICONTROL Connection type], quindi selezionare **[!UICONTROL Connect to destination]**.:
 
-* **[!UICONTROL Account or Advertiser Key]**: [!UICONTROL Source Key] viene generato quando viene creata un&#39;origine [[!DNL Real-Time CDP]  nell&#39;interfaccia utente di DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=it). Il team del tuo account DSP condividerà con te questa chiave dopo la creazione dell’origine.
+* **[!UICONTROL Account or Advertiser Key]**: [!UICONTROL Source Key] viene generato quando viene creata un&#39;origine [[!DNL Real-Time CDP]  nell&#39;interfaccia utente di DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Il team del tuo account DSP condividerà con te questa chiave dopo la creazione dell’origine.
 
 ![Campo tipo di connessione](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

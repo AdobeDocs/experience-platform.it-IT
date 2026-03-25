@@ -2,9 +2,9 @@
 title: Connessione Marketo Engage
 description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1853'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 [!DNL Marketo Engage] è l&#39;unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l&#39;analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 
-Utilizza questa destinazione per la sincronizzazione in tempo reale dei dati del pubblico e degli attributi del profilo tra Adobe Experience Platform e Marketo Engage.
+Utilizzare questa destinazione per la sincronizzazione in tempo reale dei dati del pubblico e degli attributi del profilo tra [!DNL Adobe Experience Platform] e Marketo Engage.
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL Marketo Engage], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Marketo Engage], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Casi di utilizzo della sincronizzazione del pubblico {#audience-sync-use-cases}
 
@@ -39,14 +39,14 @@ Possono attivare i tipi di pubblico in Marketo Engage e utilizzare il tipo di si
 
 **Interagisci di nuovo ed espandi la portata con la sincronizzazione completa dei profili**
 
-Il team marketing desidera attivare un pubblico di interesse per il prodotto per una nuova campagna. Anche se molti dei profili esistono già in Marketo, alcuni sono nuovi e presenti solo in Real-Time CDP. Le persone esistenti desiderano assicurarsi di aggiornare tali persone in Marketo, ma anche creare nuovi profili.
+Il team marketing desidera attivare un pubblico di interesse per il prodotto per una nuova campagna. Anche se molti dei profili esistono già in Marketo, alcuni sono nuovi e presenti solo in [!DNL Real-Time CDP]. Le persone esistenti desiderano assicurarsi di aggiornare tali persone in Marketo, ma anche creare nuovi profili.
 
-Possono attivare i propri tipi di pubblico in Marketo Engage e utilizzare il tipo di sincronizzazione **[!UICONTROL Audience and Profile]** combinato con l&#39;azione **[!UICONTROL Update existing and create new persons]** per assicurarsi di eseguire il targeting dei lead esistenti da Marketo e crearne di nuovi per i nuovi tipi di pubblico esportati da Real-Time CDP.
+Possono attivare i propri tipi di pubblico in Marketo Engage e utilizzare il tipo di sincronizzazione **[!UICONTROL Audience and Profile]** combinato con l&#39;azione **[!UICONTROL Update existing and create new persons]** per assicurarsi di eseguire il targeting dei lead esistenti da Marketo e crearne di nuovi per i nuovi tipi di pubblico esportati da [!DNL Real-Time CDP].
 
 ## Prerequisiti {#prerequisites}
 
-* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
-* Solo le istanze di Marketo Engage nella stessa organizzazione Adobe Real-Time CDP saranno disponibili durante la configurazione di questa destinazione.
+* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
+* Durante la configurazione di questa destinazione saranno disponibili solo le istanze di Marketo Engage nella stessa organizzazione Adobe [!DNL Real-Time CDP].
 * Questa destinazione può essere utilizzata solo dalle istanze di Marketo Engage con i relativi utenti gestiti in Adobe Admin Console.
 
 ## Identità supportate {#supported-identities}
@@ -66,7 +66,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> <br> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> <br> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -145,8 +145,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
    * **[!UICONTROL Audience and profile]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo e mantenere aggiornate le informazioni sul profilo.
    * **[!UICONTROL Profile only]**: selezionare questa opzione quando si desidera mantenere aggiornati i profili lead di Marketo con le informazioni più recenti di Experience Platform.
    * **[!UICONTROL Audience only]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo senza aggiornare le informazioni sul profilo.
-* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**&#x200B;o **[!UICONTROL Audience and profile]**&#x200B;tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
-* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/it/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
+* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**o **[!UICONTROL Audience and profile]**tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
+* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
 
   >[!NOTE]
   >
@@ -193,7 +193,7 @@ Se si utilizza un campo di deduplicazione diverso, è necessario mappare manualm
 
 Dopo aver esportato i tipi di pubblico in Marketo Engage, devi accedere al tuo account Marketo per verificare che i tipi di pubblico siano stati attivati come previsto. Controlla le partizioni dei lead e le aree di lavoro pertinenti in Marketo per verificare che i dati del pubblico vengano visualizzati correttamente e che le azioni previste (ad esempio l’aggiornamento o la creazione di persone) siano state eseguite.
 
-Se non visualizzi i dati previsti, controlla le impostazioni di mappatura ed esportazione in Adobe Experience Platform e riprova.
+Se i dati previsti non vengono visualizzati, rivedere le impostazioni di mappatura ed esportazione in [!DNL Adobe Experience Platform] e riprovare a eseguire l&#39;esportazione.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

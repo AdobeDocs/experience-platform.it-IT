@@ -3,9 +3,9 @@ title: Customer Match Google + Display e connessione Video 360
 description: Con il connettore di destinazione Google Customer Match + Display & Video 360, puoi utilizzare i dati online e offline di Experience Platform per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping, Gmail e YouTube.
 badge: label="Disponibilità limitata" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2442'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 Utilizzare questa destinazione per attivare gli elenchi [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) basati su PII di prime parti direttamente nelle proprietà [!DNL Google Display & Video 360] come [!DNL Search], [!DNL YouTube], [!DNL Gmail] e [!DNL Google Display Network].
 
-Alcune terze parti integrate in Google, come Adobe Real-Time CDP, possono utilizzare [!DNL Google Audience Partner API] per creare tipi di pubblico [!DNL Customer Match] direttamente nell&#39;account [!DNL Display & Video 360] dei clienti.
+Alcune terze parti integrate in Google, come Adobe [!DNL Real-Time CDP], possono utilizzare [!DNL Google Audience Partner API] per creare tipi di pubblico [!DNL Customer Match] direttamente nell&#39;account [!DNL Display & Video 360] dei clienti.
 
 Con la funzionalità introdotta di recente di poter utilizzare [!DNL Customer Matched] tipi di pubblico in [!DNL Display & Video 360], ora puoi indirizzare i tipi di pubblico in un elenco esteso di origini inventario.
 
@@ -34,7 +34,7 @@ Con la funzionalità introdotta di recente di poter utilizzare [!DNL Customer Ma
 ><br/>
 >I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.
 ><br/>
->I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare le destinazioni Real-Time CDP Google esistenti senza interruzioni.
+>I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità [segment definition](../../../segmentation/home.md#segment-definitions) all&#39;interno di [Segment Builder](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati e continuare a utilizzare le destinazioni Google [!DNL Real-Time CDP] esistenti senza interruzioni.
 
 ## Quando utilizzare questa destinazione {#when-to-use}
 
@@ -46,7 +46,7 @@ Nel catalogo delle destinazioni sono disponibili diverse integrazioni con Google
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come e quando utilizzare questa destinazione, ecco alcuni casi d’uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa funzione.
+Per aiutarti a capire meglio come e quando utilizzare questa destinazione, ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa funzione.
 
 ### #1 del caso d’uso {#use-case-1}
 
@@ -66,8 +66,8 @@ Per promuovere la versione, caricano in Experience Platform gli indirizzi e-mail
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| phone_sha256_e.164 | Numeri di telefono in formato E164, con hash con l’algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| phone_sha256_e.164 | Numeri di telefono in formato E164, con hash con l’algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Se il campo di origine contiene attributi senza hash, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per impostare [!DNL Experience Platform] per l&#39;hashing automatico dei dati all&#39;attivazione. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -149,7 +149,7 @@ I clienti con account conformi vengono inseriti nell&#39;elenco Consentiti autom
 
 [!DNL Google] non richiede l&#39;invio di informazioni personali (PII, personally identifiable information) in chiaro. Pertanto, i tipi di pubblico attivati in [!DNL Google Customer Match] devono essere ricavati da *identificatori con hash*, ad esempio indirizzi e-mail con hash o numeri di telefono.
 
-A seconda del tipo di ID inseriti in Adobe Experience Platform, devi rispettare i requisiti corrispondenti.
+A seconda del tipo di ID in cui si effettua l&#39;acquisizione in [!DNL Adobe Experience Platform], è necessario soddisfare i requisiti corrispondenti.
 
 ### Requisiti di hashing del numero di telefono {#phone-number-hashing-requirements}
 
@@ -164,7 +164,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Google Customer M
 
 ### Requisiti di hashing delle e-mail {#hashing-requirements}
 
-Puoi eseguire l&#39;hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro in Experience Platform e impostarli con [!DNL Experience Platform] come hashing al momento dell&#39;attivazione.
+Puoi aggiungere hash agli indirizzi e-mail prima di acquisirli in [!DNL Adobe Experience Platform], oppure usare indirizzi e-mail in chiaro in Experience Platform e impostarli come [!DNL Experience Platform] al momento dell&#39;attivazione.
 
 Per ulteriori informazioni sui requisiti di hashing di Google e altre restrizioni all’attivazione, consulta le seguenti sezioni nella documentazione di Google:
 
@@ -190,7 +190,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Connettersi alla destinazione {#connect}
 
@@ -263,7 +263,7 @@ L&#39;hash dei dati di origine degli attributi non viene eseguito automaticament
 
 ## Monitorare la destinazione {#monitor-destination}
 
-Dopo la connessione alla destinazione e la definizione di un flusso di dati di destinazione, puoi utilizzare la [funzionalità di monitoraggio](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP per ottenere informazioni dettagliate sui record del profilo attivati nella destinazione in ogni esecuzione del flusso di dati.
+Dopo la connessione alla destinazione e la definizione di un flusso di dati di destinazione, puoi utilizzare la [funzionalità di monitoraggio](/help/dataflows/ui/monitor-destinations.md) in [!DNL Real-Time CDP] per ottenere informazioni dettagliate sui record del profilo attivati nella destinazione in ogni esecuzione del flusso di dati.
 
 Le informazioni di monitoraggio per la connessione [!DNL Google Customer Match + Display & Video 360] includono informazioni a livello di pubblico relative a identità attivate, escluse e non riuscite in ogni flusso di dati e flusso di dati eseguito. [Ulteriori informazioni](/help/dataflows/ui/monitor-destinations.md#segment-level-view) sulla nuova funzionalità.
 
@@ -273,7 +273,7 @@ Dopo aver completato il flusso di attivazione, passa all&#39;account **[!UICONTR
 
 ## Governance dei dati {#data-governance}
 
-Alcune destinazioni in Experience Platform hanno determinate regole e obblighi per i dati inviati alla piattaforma di destinazione o ricevuti da essa. L’utente è responsabile della comprensione delle limitazioni e degli obblighi relativi ai suoi dati e di come utilizza tali dati in Adobe Experience Platform e nella piattaforma di destinazione. Adobe Experience Platform fornisce strumenti di governance dei dati per aiutarti a gestire alcuni di questi obblighi in materia di utilizzo dei dati. [Ulteriori informazioni](../../../data-governance/labels/overview.md) sugli strumenti e i criteri di governance dei dati.
+Alcune destinazioni in Experience Platform hanno determinate regole e obblighi per i dati inviati alla piattaforma di destinazione o ricevuti da essa. L&#39;utente è responsabile della comprensione delle limitazioni e degli obblighi relativi ai propri dati e del modo in cui li utilizza in [!DNL Adobe Experience Platform] e nella piattaforma di destinazione. [!DNL Adobe Experience Platform] fornisce strumenti di governance dei dati per aiutarti a gestire alcuni di questi obblighi di utilizzo dei dati. [Ulteriori informazioni](../../../data-governance/labels/overview.md) sugli strumenti e i criteri di governance dei dati.
 
 ## Risoluzione dei problemi {#troubleshooting}
 

@@ -2,16 +2,16 @@
 description: Scopri come impostare un criterio di aggregazione per determinare come raggruppare e raggruppare in batch le richieste HTTP nella destinazione.
 title: Criterio di aggregazione
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1233'
 ht-degree: 2%
 
 ---
 
 # Criterio di aggregazione
 
-Per garantire la massima efficienza durante l’esportazione dei dati nell’endpoint API, puoi utilizzare varie impostazioni per aggregare i profili esportati in batch più o meno grandi, raggrupparli per identità e altri casi d’uso. Questo ti consente anche di adattare le esportazioni di dati a qualsiasi limite a valle dell’endpoint API (limitazione di frequenza, numero di identità per chiamata API, ecc.).
+Per garantire la massima efficienza durante l’esportazione dei dati nell’endpoint API, puoi utilizzare varie impostazioni per aggregare i profili esportati in batch più o meno grandi, raggrupparli per identità e altri casi d’uso. Questo consente inoltre di adattare le esportazioni di dati a qualsiasi limite a valle dell’endpoint API (limitazione di frequenza, numero di identità per chiamata API, ecc.).
 
 Utilizza l’aggregazione configurabile per approfondire le impostazioni fornite da Destination SDK oppure utilizza l’aggregazione della massima diligenza per dire a Destination SDK di raggruppare le chiamate API nel miglior modo possibile.
 

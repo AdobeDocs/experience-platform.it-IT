@@ -3,10 +3,10 @@ keywords: pubblicità; criteri;
 title: Connessione critica
 description: Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l’intera Internet. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della categoria, Criteo assicura che ogni punto di contatto nel percorso di acquisto sia personalizzato per raggiungere la clientela con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 11%
+source-wordcount: '1146'
+ht-degree: 12%
 
 ---
 
@@ -35,11 +35,11 @@ Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze pi
 
 ## Identità supportate {#supported-identities}
 
-Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --- | --- | --- |
-| `email_sha256` | Indirizzi e-mail con hash con algoritmo SHA-256 | Gli indirizzi e-mail con hash SHA-256 e testo normale sono supportati da Adobe Experience Platform. Se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione [!UICONTROL Apply transformation] per fare in modo che Experience Platform esegua automaticamente l&#39;hash dei dati all&#39;attivazione. |
+| `email_sha256` | Indirizzi e-mail con hash con algoritmo SHA-256 | Gli indirizzi di posta elettronica con hash SHA-256 e testo normale sono supportati da [!DNL Adobe Experience Platform]. Se il campo di origine contiene attributi senza hash, seleziona l&#39;opzione [!UICONTROL Apply transformation] per fare in modo che Experience Platform esegua automaticamente l&#39;hash dei dati all&#39;attivazione. |
 | `gum_id` | Identificatore cookie [!DNL GUM] criterio | [!DNL GUM IDs] consente ai client di mantenere una corrispondenza tra il proprio sistema di identificazione utente e l&#39;identificazione utente di Criteo ([!DNL UID]). Se il tipo di identificatore è `gum_id`, è necessario includere anche un parametro aggiuntivo, [!DNL GUM Caller ID]. Rivolgiti al team del tuo account Criteo per [!DNL GUM Caller ID] appropriato o per ottenere ulteriori informazioni su questa sincronizzazione di [!DNL GUM ID], se necessario. |
 
 ## Tipi di pubblico supportati {#supported-audiences}
@@ -49,7 +49,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -78,11 +78,11 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Casi d’uso {#use-cases}
 
-Per aiutarti a capire meglio come utilizzare la destinazione [!DNL Criteo], ecco alcuni obiettivi che i clienti Adobe Experience Platform possono raggiungere con [!DNL Criteo]:
+Per aiutarti a capire meglio come utilizzare la destinazione [!DNL Criteo], ecco alcuni obiettivi che i clienti [!DNL Adobe Experience Platform] possono raggiungere con [!DNL Criteo]:
 
 ### Caso d&#39;uso 1: recupero del traffico {#use-case-1}
 
-Presenta la tua azienda con offerte di prodotti pertinenti e creatività flessibile. Con consigli sui prodotti intelligenti, gli annunci presenteranno automaticamente i prodotti che hanno più probabilità di attivare visite e coinvolgimento. Il targeting flessibile consente di creare tipi di pubblico dal set di dati di e-commerce di Criteo o dai tuoi elenchi di potenziali clienti e dai segmenti Adobe CDP.
+Presenta la tua azienda con offerte di prodotti pertinenti e creatività flessibile. Con consigli sui prodotti intelligenti, gli annunci presenteranno automaticamente i prodotti che hanno più probabilità di attivare visite e coinvolgimento. Il targeting flessibile consente di creare tipi di pubblico dal set di dati commerce di Criteo o dai tuoi elenchi di potenziali clienti e dai segmenti Adobe CDP.
 
 ### Caso d’uso 2: aumentare le conversioni dei siti web {#use-case-2}
 
@@ -100,7 +100,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 I passaggi per la connessione sono i seguenti:
 
-1. Accedi a Adobe Experience Platform e connettiti alla destinazione critica.
+1. Accedere a [!DNL Adobe Experience Platform] e connettersi alla destinazione Criteo.
 
    ![Accesso](../../assets/catalog/advertising/criteo/connect-destination.png)
 
@@ -203,7 +203,7 @@ Il corpo della richiesta di rimozione del profilo utente ricevuto dalla connessi
 
 ## Utilizzo dei dati e governance {#data-usage}
 
-Tutte le destinazioni Adobe Experience Platform sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come Adobe Experience Platform applica la governance dei dati, consulta la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it).
 
 ## Risorse aggiuntive {#additional-resources}
 

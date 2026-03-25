@@ -2,9 +2,9 @@
 title: Algola
 description: Utilizza questo connettore per attivare i tipi di pubblico in Algolia per la personalizzazione e l’utilizzo in ricerche e consigli. Puoi quindi utilizzare il connettore di origine del profilo utente di Algolia per importare i profili in Real-Time CDP per creare tipi di pubblico avanzati.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1112'
 ht-degree: 4%
 
 ---
@@ -17,27 +17,27 @@ ht-degree: 4%
 >
 >Il connettore di destinazione [!DNL Algolia] e la pagina della documentazione vengono creati e gestiti dal team di Algolia Integration Services. Per richieste di informazioni o richieste di aggiornamento, contattale all&#39;indirizzo [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com).
 
-Utilizza la connessione di destinazione [!DNL Algolia] per inviare il pubblico di Adobe Experience Platform in Algolia per ricerche personalizzate e consigli. Prima di poter utilizzare il connettore di destinazione [!DNL Algolia], è necessario configurare il connettore di origine [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Durante l’esercitazione di configurazione del connettore di origine, verrà creata l’identità Token utente Algolia. Questa identità è necessaria per la mappatura quando configuri il connettore di destinazione.
+Utilizza la connessione di destinazione [!DNL Algolia] per inviare [!DNL Adobe Experience Platform] tipi di pubblico in Algolia per ricerche personalizzate e consigli. Prima di poter utilizzare il connettore di destinazione [!DNL Algolia], è necessario configurare il connettore di origine [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Durante l’esercitazione di configurazione del connettore di origine, verrà creata l’identità Token utente Algolia. Questa identità è necessaria per la mappatura quando configuri il connettore di destinazione.
 
-Questa esercitazione fornisce i passaggi per creare una connessione di destinazione [!DNL Algolia] e un flusso di dati utilizzando l&#39;interfaccia utente di Adobe Experience Platform.
+Questa esercitazione fornisce i passaggi per creare una connessione di destinazione [!DNL Algolia] e un flusso di dati utilizzando l&#39;interfaccia utente [!DNL Adobe Experience Platform].
 
 ![Catalogo di destinazione con destinazione Algolia.](../../assets/catalog/personalization/algolia/catalog.png)
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL Algolia], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Algolia], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Coerenza Personalization {#personalization-consistency}
 
 Utilizza questo connettore di destinazione per distribuire una personalizzazione coerente nel sito dalla pagina Home alla ricerca.
 
-Ad esempio, in qualità di addetto al marketing, potresti voler creare tipi di pubblico avanzati in Adobe Experience Platform da più origini di dati utente, inclusa l’Algolia. Puoi utilizzare il connettore di destinazione [!DNL Algolia] per condividere i tipi di pubblico per le strategie di targeting, con conseguente aumento della personalizzazione e della conversione delle campagne.
+Ad esempio, in qualità di addetto al marketing, potresti voler creare tipi di pubblico avanzati in [!DNL Adobe Experience Platform] da più origini dati utente, inclusa l&#39;Algolia. Puoi utilizzare il connettore di destinazione [!DNL Algolia] per condividere i tipi di pubblico per le strategie di targeting, con conseguente aumento della personalizzazione e della conversione delle campagne.
 
 Per implementare questo caso d&#39;uso, è necessario utilizzare i connettori di origine [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) e di destinazione [!DNL Algolia].
 
-Inizierai importando i profili utente [!DNL Algolia] esistenti in Adobe Experience Platform Real-Time CDP e altre origini per iniziare a creare tipi di pubblico avanzati con il connettore di origine. Gli addetti al marketing creano tipi di pubblico utilizzando i dati del profilo che possono essere inviati in Algolia per la personalizzazione di ricerche e consigli.
+Inizierai importando i profili utente [!DNL Algolia] esistenti in [!DNL Adobe Experience Platform] [!DNL Real-Time CDP] e altre origini per iniziare a creare tipi di pubblico avanzati con il connettore di origine. Gli addetti al marketing creano tipi di pubblico utilizzando i dati del profilo che possono essere inviati in Algolia per la personalizzazione di ricerche e consigli.
 
-Quindi, utilizza il connettore di origine [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) corrispondente per acquisire e integrare nuovamente i profili cliente in Real-Time CDP.
+Quindi, utilizza il connettore di origine [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) corrispondente per acquisire e integrare nuovamente i profili cliente in [!DNL Real-Time CDP].
 
 ## Prerequisiti {#prerequisites}
 
@@ -63,7 +63,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 | Origine pubblico | Supportato | Descrizione |
 |---------|---------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -133,9 +133,9 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 >[!IMPORTANT]
 >
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions).
+>* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
+Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare attributi e identità {#mapping-attributes-identities}
 
@@ -145,7 +145,7 @@ Durante il [!UICONTROL Mapping step], è necessario mappare l&#39;identità di o
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Per verificare se i tipi di pubblico sono stati esportati correttamente nei profili utente, controlla la dashboard di [!DNL Algolia], passa a **[!UICONTROL Advanced Personalization]** e fai clic su **[!UICONTROL User Inspector]**. Trova un profilo utente associato al pubblico Adobe Experience Platform esportato e cercalo nel Controllo utente. L’ID del pubblico viene visualizzato nella sezione del segmento.
+Per verificare se i tipi di pubblico sono stati esportati correttamente nei profili utente, controlla la dashboard di [!DNL Algolia], passa a **[!UICONTROL Advanced Personalization]** e fai clic su **[!UICONTROL User Inspector]**. Trovare un profilo utente associato al pubblico [!DNL Adobe Experience Platform] esportato e cercarlo in Ispettore utente. L’ID del pubblico viene visualizzato nella sezione del segmento.
 
 ![Ispettore utente Algolia](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 

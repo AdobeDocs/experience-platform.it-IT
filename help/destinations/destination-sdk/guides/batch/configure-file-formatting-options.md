@@ -2,9 +2,9 @@
 description: Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 title: Scopri come utilizzare Destination SDK per configurare le opzioni di formattazione per le destinazioni basate su file.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Destination SDK consente di regolare in modo approfondito le opzioni di formattazione e compressione dei file esportati, in base ai requisiti downstream della posizione di archiviazione.
+Destination SDK consente di regolare in modo approfondito le opzioni di formattazione e compressione dei file esportati, in modo da soddisfare qualsiasi requisito downstream nella posizione di archiviazione.
 
 Questa pagina descrive come utilizzare Destination SDK per configurare le opzioni di formattazione dei file per le destinazioni basate su file.
 
@@ -718,7 +718,7 @@ Una risposta corretta restituisce la configurazione di destinazione, incluso l&#
 Una determinata combinazione di opzioni di formattazione dei file può portare a risultati di esportazione indesiderati.
 Adobe consiglia di non selezionare la seguente combinazione di opzioni CSV:
 
-```
+```properties
 nullValue -> ""
 quote -> "
 emptyValue -> ""

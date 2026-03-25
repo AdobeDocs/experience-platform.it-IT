@@ -2,9 +2,9 @@
 title: (V1) Connessione del pubblico in tempo reale Pega CDH
 description: Utilizza la destinazione del pubblico in tempo reale Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull’iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni sulle migliori azioni successive.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1186'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-Utilizza la destinazione del pubblico in tempo reale [!DNL Pega Customer Decision Hub] in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull&#39;iscrizione del pubblico a [!DNL Pega Customer Decision Hub] per le decisioni sulle azioni migliori successive.
+Utilizza la destinazione del pubblico in tempo reale [!DNL Pega Customer Decision Hub] in [!DNL Adobe Experience Platform] per inviare gli attributi del profilo e i dati sull&#39;iscrizione del pubblico a [!DNL Pega Customer Decision Hub] per le decisioni sulle azioni migliori successive.
 
-L&#39;iscrizione al profilo del pubblico da Adobe Experience Platform, quando caricata in [!DNL Pega Customer Decision Hub], può essere utilizzata come predittore nei modelli adattivi e contribuire a fornire i dati contestuali e comportamentali corretti per le decisioni da intraprendere al meglio.
+L&#39;appartenenza al pubblico di profilo da [!DNL Adobe Experience Platform], quando caricata in [!DNL Pega Customer Decision Hub], può essere utilizzata come predittore nei modelli adattivi e contribuire a fornire i dati contestuali e comportamentali corretti per le decisioni da intraprendere al meglio.
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ L&#39;iscrizione al profilo del pubblico da Adobe Experience Platform, quando ca
 
 ## Casi d’uso {#use-cases}
 
-Per capire meglio come e quando utilizzare la destinazione [!DNL Customer Decision Hub], ecco alcuni esempi di casi d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa destinazione.
+Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Customer Decision Hub], ecco alcuni esempi di casi d&#39;uso che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questa destinazione.
 
 ### Telecomunicazioni {#telecommunications}
 
@@ -35,11 +35,11 @@ Un addetto al marketing desidera sfruttare le informazioni provenienti da un&#39
 
 ### Servizi finanziari {#financial-services}
 
-Un addetto al marketing desidera ottimizzare le offerte per i clienti che hanno effettuato o annullato l’abbonamento alle newsletter del piano pensionistico o del piano pensionistico. Le società di servizi finanziari possono acquisire più ID cliente dai propri CRM in Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare profili che entrano ed escono dai tipi di pubblico a [!DNL Pega Customer Decision Hub] per il decisioning NBA (Next-Best-Action) nei canali in uscita.
+Un addetto al marketing desidera ottimizzare le offerte per i clienti che hanno effettuato o annullato l’abbonamento alle newsletter del piano pensionistico o del piano pensionistico. Le società di servizi finanziari possono acquisire più ID cliente dai propri CRM in [!DNL Adobe Experience Platform], creare tipi di pubblico dai propri dati offline e inviare profili che entrano ed escono dai tipi di pubblico a [!DNL Pega Customer Decision Hub] per le decisioni NBA (Next-Best Action) nei canali in uscita.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Experience Platform, assicurarsi di completare i seguenti prerequisiti in [!DNL Pega Customer Decision Hub]:
+Prima di poter utilizzare questa destinazione per esportare i dati da [!DNL Adobe Experience Platform], assicurarsi di completare i seguenti prerequisiti in [!DNL Pega Customer Decision Hub]:
 
 * Configura il [componente di integrazione Profilo Adobe Experience Platform e Appartenenza al pubblico](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) nell&#39;istanza [!DNL Pega Customer Decision Hub].
 * Configurare il tipo di concessione OAuth 2.0 [Registrazione client utilizzando le credenziali client](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) nell&#39;istanza [!DNL Pega Customer Decision Hub].
@@ -51,7 +51,7 @@ Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Expe
 
 | Identità di destinazione | Descrizione |
 |---|---|
-| *IDCliente* | Identificatore utente comune che identifica in modo univoco un profilo in [!DNL Pega Customer Decision Hub] e Adobe Experience Platform |
+| *IDCliente* | Identificatore utente comune che identifica in modo univoco un profilo in [!DNL Pega Customer Decision Hub] e [!DNL Adobe Experience Platform] |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | No | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -138,7 +138,7 @@ Di seguito è riportato un esempio di mapping di identità corretto durante l&#3
 
 Selezione dei campi di origine:
 
-* Selezionare un identificatore (ad esempio: CustomerID) come identità di origine che identifica in modo univoco un profilo in Adobe Experience Platform e [!DNL Pega Customer Decision Hub].
+* Selezionare un identificatore (ad esempio: CustomerID) come identità di origine che identifica in modo univoco un profilo in [!DNL Adobe Experience Platform] e [!DNL Pega Customer Decision Hub].
 * Selezionare le modifiche all&#39;attributo del profilo di origine XDM da esportare e aggiornare in [!DNL Pega Customer Decision Hub].
 
 Selezione dei campi di destinazione:

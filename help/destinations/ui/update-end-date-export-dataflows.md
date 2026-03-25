@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 description: Scopri come aggiornare la data di fine dei flussi di dati di esportazione del set di dati con la data di fine corrente del 1° maggio 2025.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Cosa succede? {#what-is-happening}
 
-La versione di Experience Platform[&#x200B; di &#x200B;](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione di impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° maggio 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*. Questi flussi di dati visualizzano attualmente un messaggio simile a quello mostrato di seguito.
+La versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione di impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° maggio 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*. Questi flussi di dati visualizzano attualmente un messaggio simile a quello mostrato di seguito.
 
 ![Notifica dell&#39;interfaccia utente sulla necessità di aggiornare la data di fine del flusso di dati del set di dati di esportazione.](/help/destinations/assets/ui/export-datasets/update-end-date.png)
 
@@ -52,7 +52,7 @@ Per aggiornare la data di fine dei flussi di dati:
    ![Selezionare il controllo della data di fine evidenziato nel passaggio Pianificazione.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Procedi alla fine del flusso di lavoro e salva gli aggiornamenti.
 
-Per informazioni dettagliate sul passaggio di pianificazione, consulta l&#39;esercitazione sull&#39;interfaccia utente dei [set di dati di esportazione](/help/destinations/api/export-datasets.md#scheduling).
+Per informazioni dettagliate sul passaggio di pianificazione, consulta l&#39;esercitazione sull&#39;interfaccia utente dei [set di dati di esportazione](/help/destinations/api/export-datasets.md#export-datasets-by-using-the).
 
 ## Utilizzare l’API per aggiornare la data di fine {#use-api}
 

@@ -3,9 +3,9 @@ title: Connessione pubblico Acxiom Real ID
 description: Utilizza la destinazione  [!DNL Acxiom Real ID Audience Connection]  per migliorare i tipi di pubblico con la tecnologia  [!DNL Acxiom's Real ID] e attivare i tipi di pubblico su più piattaforme, ad esempio  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora.
 badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1003'
 ht-degree: 6%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 6%
 
 Utilizza la destinazione [!DNL Acxiom Real ID Audience Connection] per migliorare i tipi di pubblico con la tecnologia [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) e attivare i tipi di pubblico su più piattaforme, ad esempio [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e altro ancora.
 
-Questo tutorial fornisce istruzioni per creare un connettore di destinazione [!DNL Acxiom Real ID Audience Connection] utilizzando l&#39;interfaccia utente [!DNL Adobe Experience Platform]. Questo connettore viene utilizzato per generare e distribuire i tipi di pubblico alle destinazioni selezionate.
+Questo tutorial fornisce istruzioni per creare un connettore di destinazione [!DNL Acxiom Real ID Audience Connection] utilizzando l&#39;interfaccia utente [!DNL Adobe Experience Platform]. Questo connettore crea e distribuisce i tipi di pubblico alle destinazioni selezionate.
 
 ## Casi d’uso {#use-cases}
 
-Questo connettore supporta i client che hanno Acxiom Real Identity caricato in Real-Time CDP come identificatore. Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Acxiom Real ID Audience Connection], ecco un caso d&#39;uso di esempio che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questo connettore.
+Questo connettore supporta i client che hanno Acxiom Real Identity caricato in [!DNL Real-Time CDP] come identificatore. Per aiutarti a capire meglio come e quando utilizzare la destinazione [!DNL Acxiom Real ID Audience Connection], ecco un caso d&#39;uso di esempio che i clienti [!DNL Adobe Experience Platform] possono risolvere utilizzando questo connettore.
 
 ### Inviare tipi di pubblico da Experience Platform al tuo account Acxiom {#send-audiences}
 
@@ -34,8 +34,8 @@ Ad esempio, il reparto Marketing Operations di un brand di servizi finanziari gl
 ## Prerequisiti {#prerequisites}
 
 * **Conferma le condizioni per l&#39;utilizzo:** Prima di poter configurare una nuova destinazione [!DNL Acxiom Real ID Audience Connection], è necessario leggere e firmare il Contratto sulle condizioni per l&#39;utilizzo di [!DNL Acxiom's]. Riceverai il collegamento al contratto una volta completato l&#39;ordine cliente eseguito.
-* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/it/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Ottenere la licenza per [!DNL Acxiom's Real ID] prodotto:** Una volta ottenuta la licenza, rendere disponibile il Real ID di Acxiom in Real-Time CDP. Per ulteriori informazioni, vedere [Acxiom Data Enhancement](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement).
+* **Conoscere l&#39;ID organizzazione Adobe:** Per completare i termini del Contratto utente è necessario l&#39;ID organizzazione [!DNL Adobe]. Consulta l&#39;argomento [!DNL Adobe's] *Organizzazioni in Experience Cloud* per informazioni su come [visualizzare l&#39;ID organizzazione](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+* **Ottenere la licenza per [!DNL Acxiom's Real ID] prodotto:** Una volta ottenuta la licenza, rendere disponibile il Real ID di Acxiom entro [!DNL Real-Time CDP]. Per ulteriori informazioni, vedere [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement).
 
 
 ## Identità supportate {#supported-identities}
@@ -54,7 +54,7 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 | Origine pubblico | Supportato | Descrizione |
 |---------------|----------------|----------------|
 | Servizio di segmentazione | Sì | Tipi di pubblico generati tramite Experience Platform [Segmentation Service](https://experienceleague.adobe.com/it/docs/experience-platform/segmentation/home). |
-| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app di Experience Platform come Adobe Journey Optimizer, </li><li> e altro ancora. </li></ul> |
+| Tutte le altre origini del pubblico | Sì | Questa categoria include tutte le origini del pubblico al di fuori dei tipi di pubblico generati tramite [!DNL Segmentation Service]. Leggi informazioni sulle [diverse origini del pubblico](/help/segmentation/ui/audience-portal.md#customize). Alcuni esempi includono: <ul><li> i tipi di pubblico per caricamento personalizzati [importati](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV,</li><li> pubblico simile, </li><li> pubblico federato, </li><li> tipi di pubblico generati in altre app Experience Platform come [!DNL Adobe Journey Optimizer], </li><li> e altro ancora. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 | [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
-| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake di Adobe Experience Platform. | Reporting, flussi di lavoro di data science |
+| [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 
 
-Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
+Per istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione, leggi [Attiva dati pubblico per esportare i profili in batch](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations).
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ Affinché la destinazione [!DNL Acxiom Real ID Audience Connection] riceva corre
 
 {style="table-layout:auto"}
 
-Nella colonna **[!UICONTROL Source Field]** immettere il nome dell&#39;attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL &#x200B; Select source field]**. Quindi, selezionare **[!UICONTROL Next]**.
+Nella colonna **[!UICONTROL Source Field]** immettere il nome dell&#39;attributo di origine che si desidera mappare al campo di destinazione corrispondente oppure selezionare l&#39;icona freccia per aprire la schermata **[!UICONTROL Select source field]**. Quindi, selezionare **[!UICONTROL Next]**.
 ![Schermata di mappatura](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
@@ -144,7 +144,7 @@ Se i risultati sono soddisfacenti, selezionare **[!UICONTROL Finish]** per attiv
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
-Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/it/docs/experience-platform/data-governance/home).
+Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggere la [Panoramica sulla governance dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Risoluzione dei problemi {#troubleshooting}
 
