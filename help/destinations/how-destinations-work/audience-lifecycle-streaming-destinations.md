@@ -2,9 +2,9 @@
 title: Ciclo di vita del pubblico in Experience Platform e nelle destinazioni di streaming
 description: Scopri come i nomi del pubblico e le mappature di Experience Platform si riflettono nelle piattaforme di destinazione di streaming.
 exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '466'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Le seguenti destinazioni di streaming supportano gli aggiornamenti automatici de
 
 * [Acxiom Audience Connection](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
@@ -67,7 +67,7 @@ Le seguenti destinazioni di streaming supportano la rimozione automatica del pub
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(Aziende) LinkedIn Pubblico Corrispondente](../catalog/social/linkedin-b2b.md)
 * [(Legacy) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Pubblico dell&#39;account Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Experience Cloud Audiences](../catalog/adobe/experience-cloud-audiences.md)

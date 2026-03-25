@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: cca83a46d83137af658ed2f9500386b5036ff4ba
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1340'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 6%
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esporta i set di dati](/help/destinations/api/export-datasets.md)
-   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=it#use-cases)
+   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
@@ -71,14 +71,14 @@ ht-degree: 6%
       * [(Legacy) (V2) Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Connessione Marketo Engage Person Sync](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it)
+      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni di Advertising{#advertising}
       * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
       * [(Beta) Connessione del pubblico Acxiom RealID](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Panoramica sulle destinazioni di Advertising](./catalog/advertising/overview.md)
-      * [Connessione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
-      * [Connessione legacy Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection-legacy.md)
+      * [Connessione Adobe Advertising DSP](./catalog/advertising/adobe-advertising-dsp-connection.md)
+      * [Connessione legacy Adobe Advertising Cloud DSP](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
       * [Estensione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Adform connection](./catalog/advertising/adform.md)
       * [Connessione Amazon Ads](./catalog/advertising/amazon-ads.md)
@@ -144,7 +144,7 @@ ht-degree: 6%
       * [Panoramica delle destinazioni di archiviazione cloud](./catalog/cloud-storage/overview.md)
       * [Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connessione Amazon S3](./catalog/cloud-storage/amazon-s3.md)
-      * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
+      * [Connessione BLOB Azure](./catalog/cloud-storage/azure-blob.md)
       * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Connessione Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
@@ -224,7 +224,7 @@ ht-degree: 6%
       * [Connessione [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
    * Destinazioni di streaming {#streaming}
       * [Connessione API HTTP](./catalog/streaming/http-destination.md)
-      * [INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming](./catalog/streaming/ip-address-allow-list.md)
+      * [Indirizzo IP per le destinazioni di streaming](./catalog/streaming/ip-address-allow-list.md)
    * Destinazioni sondaggio {#survey}
       * [Panoramica sulle destinazioni dei sondaggi](./catalog/survey/overview.md)
       * [Destinazione Qualtrics Automations](./catalog/survey/qualtrics-automations.md)
@@ -279,8 +279,8 @@ ht-degree: 6%
          * [Configurare le opzioni di formattazione del file](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Configurare una destinazione Amazon S3 con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
          * [Configurare una destinazione Amazon S3 con nome file personalizzato e opzioni di formattazione](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [Configurare una destinazione dell’archiviazione BLOB di Azure con opzioni di formattazione del file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [Configurare una destinazione di archiviazione Azure Data Lake con le opzioni di formattazione del file personalizzato e la configurazione del nome del file personalizzato](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [Configurare una destinazione di archiviazione BLOB di Azure con opzioni di formattazione del file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [Configurare una destinazione di Azure Data Lake Storage con opzioni di formattazione del file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Configurare una destinazione Data Landing Zone (DLZ) con opzioni di formattazione del file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Configurare una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurare una destinazione basata su file per esportare i tipi di pubblico potenziali](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
