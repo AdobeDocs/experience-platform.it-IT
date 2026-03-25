@@ -33,7 +33,7 @@ Viene visualizzato il dashboard di monitoraggio. Mostra le metriche di monitorag
 
 >[!NOTE]
 >
->Se selezioni **, puoi visualizzare solo** 1} la visualizzazione dello stream di dati.[!UICONTROL Edge segmentation throughput]
+>Se selezioni **, puoi visualizzare solo** 1&rbrace; la visualizzazione dello stream di dati.[!UICONTROL Edge segmentation throughput]
 
 Se si filtra in base al servizio, è possibile scegliere il servizio di cui visualizzare le informazioni sulla velocità effettiva. Ciò include servizi come segmentazione di Edge, raccolta dati, Target, Adobe Journey Optimizer, Offer Decisioning, destinazioni personalizzate personalizzate personalizzate, inoltro eventi, Adobe Analytics e Adobe Audience Manager.
 
