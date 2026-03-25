@@ -5,9 +5,9 @@ title: Eliminare un flusso di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Scopri come eliminare i flussi di dati nelle destinazioni batch e di streaming utilizzando l’API del servizio Flusso.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '552'
 ht-degree: 19%
 
 ---
@@ -86,11 +86,11 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (nessun con
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform per ulteriori informazioni sull&#39;interpretazione delle risposte di errore.
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai usato correttamente l&#39;API [!DNL Flow Service] per eliminare un flusso di dati esistente in una destinazione.
+L&#39;API [!DNL Flow Service] è stata utilizzata correttamente per eliminare un flusso di dati esistente in una destinazione.
 
 Per i passaggi su come eseguire queste operazioni utilizzando l&#39;interfaccia utente, fare riferimento al tutorial su [eliminazione dei flussi di dati nell&#39;interfaccia utente](../ui/delete-destinations.md).
 

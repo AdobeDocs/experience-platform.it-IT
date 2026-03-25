@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;oracle eloqua;oracle
 title: (File) Connessione Oracle Eloqua
 description: Oracle Eloqua è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing B2B e le organizzazioni a gestire campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '790'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al inserisco nell&#39;elenco Consentiti di e-mail marketing.
 
-Se hai bisogno di aggiungere IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta la [inserisce nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
+Se devi aggiungere gli IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta [inserisco nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 

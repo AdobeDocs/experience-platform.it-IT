@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Nell&#39;interfaccia utente di [!DNL Adobe Experience Platform] è possibile vis
 
 Per visualizzare ulteriori dettagli su una destinazione esistente, segui la procedura riportata di seguito. Puoi trovare l’ID di destinazione di una destinazione, l’utente che ha creato la destinazione, quando è stata creata e altre informazioni.
 
-1. Accedi alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Browse]** dall&#39;intestazione superiore per visualizzare le destinazioni esistenti.
+1. Vai alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Browse]** dall&#39;intestazione superiore per visualizzare le destinazioni esistenti.
 
    ![Sfoglia destinazioni](../assets/ui/details-page/browse-destinations.png)
 
@@ -55,7 +55,7 @@ La tabella che segue riporta i controlli e i dettagli forniti dalla barra a dest
 | Elemento barra a destra | Descrizione |
 | --- | --- |
 | [!UICONTROL Activate audiences] | Selezionare questo controllo per modificare i tipi di pubblico mappati alla destinazione, aggiornare le pianificazioni di esportazione o aggiungere e rimuovere gli attributi e le identità mappati. Per ulteriori informazioni, consulta le guide su [attivazione dei dati sul pubblico nelle destinazioni di streaming del pubblico](./activate-segment-streaming-destinations.md), [attivazione dei dati sul pubblico nelle destinazioni basate su profili batch](./activate-batch-profile-destinations.md) e [attivazione dei dati sul pubblico nelle destinazioni basate su profili di streaming](./activate-streaming-profile-destinations.md). |
-| [!UICONTROL Delete] | Consente di eliminare questo flusso di dati e di annullare la mappatura dei tipi di pubblico precedentemente attivati, se presenti. |
+| [!UICONTROL Delete] | Elimina questo flusso di dati e annulla la mappatura di eventuali tipi di pubblico attivati in precedenza. |
 | [!UICONTROL Destination name] | Questo campo può essere modificato per aggiornare il nome della destinazione. |
 | [!UICONTROL Description] | Questo campo può essere modificato per aggiornare o aggiungere una descrizione facoltativa alla destinazione. |
 | [!UICONTROL Destination] | Rappresenta la piattaforma di destinazione a cui vengono inviati i tipi di pubblico. Per ulteriori informazioni, vedere il [catalogo delle destinazioni](../catalog/overview.md). |
@@ -158,7 +158,7 @@ Per modificare la pianificazione di attivazione esistente di più tipi di pubbli
 
 >[!NOTE]
 >
->Per informazioni dettagliate sull&#39;esplorazione della pagina dei dettagli di un pubblico, consulta la [panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#audience-details).
+>Per informazioni dettagliate sulla pagina dei dettagli del pubblico, consulta la [Panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#audience-details).
 
 ### Modificare i nomi dei file per più tipi di pubblico esportati in destinazioni batch {#bulk-edit-file-names}
 

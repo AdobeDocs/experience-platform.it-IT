@@ -1,8 +1,8 @@
 ---
 title: Connessione Salesforce Marketing Cloud
-description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per consentire a visitatori e clienti di personalizzare la propria esperienza.
+description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che puoi utilizzare per creare e personalizzare percorsi per consentire a visitatori e clienti di personalizzare la loro esperienza.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per i visitatori e i clienti al fine di personalizzare la propria esperienza.
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) è una suite di marketing digitale precedentemente nota come ExactTarget che puoi utilizzare per creare e personalizzare percorsi per visitatori e clienti al fine di personalizzare la loro esperienza.
 
 Per inviare i dati sul pubblico a [!DNL Salesforce Marketing Cloud], devi prima [connetterti alla destinazione](#connect-destination) in Experience Platform, quindi [configurare un&#39;importazione di dati](#import-data-into-salesforce) dal percorso di archiviazione in [!DNL Salesforce Marketing Cloud].
 
@@ -57,7 +57,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al inserisco nell&#39;elenco Consentiti di e-mail marketing.
 
-Se hai bisogno di aggiungere IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta la [inserisce nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
+Se devi aggiungere gli IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta [inserisco nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 

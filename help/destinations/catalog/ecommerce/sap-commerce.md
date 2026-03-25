@@ -3,9 +3,9 @@ title: Connessione SAP Commerce
 description: Utilizzare il connettore di destinazione SAP Commerce per aggiornare i record dei clienti nell'account SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2289'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experi
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL SAP Commerce], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL SAP Commerce], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
@@ -44,7 +44,7 @@ Per esportare dati da Experience Platform all&#39;account [!DNL SAP Commerce], �
 
 #### Generare una chiave di servizio {#prerequisites-service-key}
 
-* La chiave del servizio [!DNL SAP Commerce] consente di accedere all&#39;API [!DNL SAP Subscription Billing] tramite Experience Platform. Per creare una chiave di servizio, consultare [!DNL SAP Commerce] [creare una chiave di servizio con ID client e segreto client](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret). [!DNL SAP Commerce] richiede quanto segue:
+* La chiave del servizio [!DNL SAP Commerce] fornisce l&#39;accesso all&#39;API [!DNL SAP Subscription Billing] tramite Experience Platform. Per creare una chiave di servizio, vedere [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret). [!DNL SAP Commerce] richiede quanto segue:
    * ID client
    * Segreto client
    * URL. Schema URL: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato successivamente per ottenere i valori per `Region` e `Endpoint`.
@@ -86,7 +86,7 @@ Per creare i riferimenti personalizzati, accedere all&#39;account [!DNL SAP Subs
 Di seguito è riportato un esempio di come creare un **[!UICONTROL Reference Type]** personalizzato all&#39;interno di [!DNL SAP Subscription Billing]:
 ![Immagine che mostra dove creare un riferimento personalizzato nella fatturazione dell&#39;abbonamento SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-Per ulteriori informazioni, consulta la documentazione [!DNL SAP Subscription Billing] [riferimenti personalizzati](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27).
+Per ulteriori informazioni, consulta la documentazione di [!DNL SAP Subscription Billing] [riferimenti personalizzati](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27).
 
 ### Raccogli le credenziali richieste {#gather-credentials}
 
@@ -306,7 +306,7 @@ Quando esegui il passaggio [Pianifica esportazione pubblico](/help/destinations/
 Di seguito è riportato un esempio del passaggio Pianifica esportazione pubblico, con la posizione di [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** evidenziata:
 ![Immagine da Experience Platform che mostra l&#39;esportazione del pubblico di pianificazione con ID mappatura popolati.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
-A tale scopo, selezionare ogni segmento, quindi immettere il nome del riferimento personalizzato da [!DNL SAP Subscription Billing] nel campo del connettore di destinazione [!DNL SAP Commerce] **[!UICONTROL Mapping ID]**. Per istruzioni sulla creazione di riferimenti personalizzati, consulta la sezione [Creare riferimenti personalizzati in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
+A tale scopo, selezionare ogni segmento, quindi immettere il nome del riferimento personalizzato da [!DNL SAP Subscription Billing] nel campo del connettore di destinazione [!DNL SAP Commerce] **[!UICONTROL Mapping ID]**. Per informazioni sulla creazione di riferimenti personalizzati, vedere la sezione [Creare riferimenti personalizzati in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
 
 >[!IMPORTANT]
 >
@@ -336,7 +336,7 @@ In base all’immagine mostrata sopra in cui hai selezionato due tipi di pubblic
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-Accedi all&#39;account [!DNL SAP Subscription Billing], quindi passa alla pagina **[!UICONTROL Contacts]** per verificare gli stati del pubblico. L’elenco può essere configurato in modo da visualizzare le colonne per i riferimenti personalizzati e gli stati del pubblico corrispondenti.
+Vai all&#39;account [!DNL SAP Subscription Billing], quindi passa alla pagina **[!UICONTROL Contacts]** per controllare gli stati del pubblico. L’elenco può essere configurato in modo da visualizzare le colonne per i riferimenti personalizzati e gli stati del pubblico corrispondenti.
 ![Immagine della fatturazione dell&#39;abbonamento SAP che mostra la pagina di panoramica del cliente con intestazioni di colonna che mostrano il nome del pubblico e le celle dello stato del pubblico](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}

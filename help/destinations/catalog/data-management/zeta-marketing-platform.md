@@ -4,9 +4,9 @@ description: Zeta Marketing Platform (ZMP) è un sistema basato su cloud che con
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1434'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Zeta Marketing Platform (ZMP) è un sistema basato su cloud che consente di acquisire, crescere e mantenere i clienti in modo più efficiente, grazie all’intelligenza (dati proprietari e AI). Per ulteriori dettagli, fare riferimento a [Zeta Global](https://zetaglobal.com/).
+Zeta Marketing Platform (ZMP) è un sistema basato su cloud che consente di acquisire, crescere e mantenere i clienti in modo più efficiente, grazie all’intelligenza (dati proprietari e AI). Per ulteriori dettagli, vedere [Zeta Global](https://zetaglobal.com/).
 
 Con il connettore Zeta Marketing Platform disponibile in [!DNL Adobe Experience Platform], puoi sincronizzare facilmente i tipi di pubblico da Experience Platform allo ZMP.
 

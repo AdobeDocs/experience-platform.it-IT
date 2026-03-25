@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettivi pubblicitari per venditori registrati, fornitori di libri, autori di Kindle Direct Publishing (KDP), sviluppatori di app e/o agenzie. L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integrazione chiavi in mano ai prodotti Amazon Ads, incluso Amazon DSP (ADSP). Utilizzando la destinazione Amazon Ads in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione sul DSP Amazon.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2128'
+source-wordcount: '2127'
 ht-degree: 3%
 
 ---
@@ -162,7 +162,7 @@ La connessione [!DNL Amazon Ads] supporta l&#39;indirizzo e-mail con hash e i nu
 >
 >Per utilizzare questi campi:
 > 
->* Tutti i valori di identità devono essere normalizzati prima dell’acquisizione. Consulta la [guida alla normalizzazione](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* Tutti i valori di identità devono essere normalizzati prima dell’acquisizione. Consulta la [Guida alla normalizzazione](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
 >* È richiesto l’hashing SHA-256, sul lato client o abilitando l’impostazione di trasformazione di Adobe.
 >* L’interfaccia utente di Adobe fornisce una casella di controllo per applicare la trasformazione per campo di identità durante la configurazione del connettore.
 

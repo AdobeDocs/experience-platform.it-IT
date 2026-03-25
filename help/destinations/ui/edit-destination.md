@@ -3,9 +3,9 @@ title: Modificare le destinazioni
 type: Tutorial
 description: Scopri come modificare e aggiornare gli account di destinazioni esistenti nell’interfaccia utente di Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Per modificare vari componenti di una connessione di destinazione esistente:
 
 1. Passa a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Seleziona la destinazione desiderata da modificare.
-3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;per modificare le connessioni di destinazione esistenti.
+3. Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**per modificare le connessioni di destinazione esistenti.
 4. Nella finestra modale, modifica le impostazioni desiderate. Al termine, seleziona **[!UICONTROL Save]**.
 
 Nella finestra di modifica della destinazione è possibile aggiornare tutte le impostazioni configurate al momento della connessione iniziale alla destinazione. Queste impostazioni sono diverse in base alla piattaforma di destinazione che stai aggiornando.
@@ -61,6 +61,6 @@ Utilizzando l’interfaccia utente di Experience Platform o l’API del servizio
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, è stata utilizzata l&#39;area di lavoro **[!UICONTROL destinations]** per aggiornare le connessioni di destinazione esistenti.
+Aggiornamento delle connessioni di destinazione esistenti tramite l&#39;area di lavoro **[!UICONTROL destinations]** completato.
 
 Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../catalog/overview.md).

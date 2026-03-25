@@ -1,11 +1,11 @@
 ---
 keywords: crm;CRM;destinazioni crm;Outreach;Outreach crm destination
 title: Connessione di uscita
-description: La destinazione Outreach ti consente di esportare i dati del tuo account e attivarli in Outreach per le tue esigenze aziendali.
+description: Utilizza la destinazione Outreach per esportare i dati del tuo account e attivarli in Outreach per le tue esigenze aziendali.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1784'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [[!DNL Outreach]](https://www.outreach.io/) è una piattaforma di esecuzione delle vendite con i dati di interazione più B2B tra acquirenti e venditori al mondo e investimenti significativi in tecnologie di intelligenza artificiale proprietarie per tradurre i dati di vendita in informazioni. [!DNL Outreach] consente alle organizzazioni di automatizzare il coinvolgimento nelle vendite e di agire sulla base delle informazioni sui ricavi per migliorare l&#39;efficienza, la prevedibilità e la crescita.
 
-Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;API [aggiornamento risorsa di Outreach](https://api.outreach.io/api/v2/docs#update-an-existing-resource), che consente di aggiornare le identità all&#39;interno di un pubblico corrispondente ai potenziali clienti in [!DNL Outreach].
+Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;API [aggiornamento risorsa di outreach](https://api.outreach.io/api/v2/docs#update-an-existing-resource) per aggiornare le identità all&#39;interno di un pubblico corrispondente ai potenziali clienti in [!DNL Outreach].
 
 [!DNL Outreach] utilizza OAuth 2 con concessione di autorizzazione come meccanismo di autenticazione per comunicare con [!DNL Outreach] [!DNL Update Resource API]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Outreach] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
 
@@ -28,7 +28,7 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai p
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Outreach], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Outreach], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi per lo schema [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
@@ -49,7 +49,7 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 
 #### Impostare le etichette per i campi personalizzati {#prerequisites-custom-fields}
 
-[!DNL Outreach] supporta campi personalizzati per [potenziali](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Per ulteriori informazioni, consultare [Come aggiungere un campo personalizzato in Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach). Per facilitare l’identificazione, si consiglia di aggiornare manualmente le etichette ai nomi del pubblico corrispondenti, anziché mantenere le impostazioni predefinite. Ad esempio:
+[!DNL Outreach] supporta campi personalizzati per [potenziali](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). Per ulteriori informazioni, vedere [Come aggiungere un campo personalizzato in Outreach](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach). Per facilitare l’identificazione, si consiglia di aggiornare manualmente le etichette ai nomi del pubblico corrispondenti, anziché mantenere le impostazioni predefinite. Ad esempio:
 
 Pagina delle impostazioni [!DNL Outreach] per i potenziali clienti che visualizzano campi personalizzati.
 ![Schermata dell&#39;interfaccia utente di Outreach che mostra i campi personalizzati nella pagina delle impostazioni.](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
@@ -209,7 +209,7 @@ Per inviare correttamente i dati sul pubblico da [!DNL Adobe Experience Platform
   > * Il valore numerico *(`N`)* utilizzato in [!UICONTROL Mapping ID] deve corrispondere alla chiave attributo personalizzata con suffisso al valore numerico in [!DNL Outreach]. Esempio: *Etichetta `N` Campo Personalizzato*.
   > * È sufficiente specificare il valore numerico, non l’intera etichetta del campo personalizzato.
   > * [!DNL Outreach] supporta un massimo di 150 campi etichetta personalizzati.
-  > * Per ulteriori informazioni, consulta la [[!DNL Outreach] documentazione del prospect](https://api.outreach.io/api/v2/docs#prospect).
+  > * Per informazioni dettagliate, consulta la [[!DNL Outreach] documentazione del prospect](https://api.outreach.io/api/v2/docs#prospect).
 
    * Ad esempio:
 
@@ -235,7 +235,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio creato all’interno del segmento.
    ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra il riepilogo dei segmenti.](../../assets/catalog/crm/outreach/segment.png)
 
-1. Accedi al sito Web [!DNL Outreach], quindi passa alla pagina [!DNL Apps] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Outreach] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore [!UICONTROL Mapping ID] fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).
+1. Vai al sito Web [!DNL Outreach], quindi passa alla pagina [!DNL Apps] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Outreach] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore [!UICONTROL Mapping ID] fornito durante il passaggio [pianificazione del pubblico](#schedule-segment-export-example).
 
 ![Schermata dell&#39;interfaccia utente di Outreach che mostra la pagina Prospect di Outreach con gli stati di pubblico aggiornati.](../../assets/catalog/crm/outreach/outreach-prospect.png)
 

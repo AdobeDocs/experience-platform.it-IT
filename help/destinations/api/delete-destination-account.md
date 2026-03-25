@@ -5,10 +5,10 @@ title: Eliminare un account di destinazione utilizzando l’API del servizio Flu
 type: Tutorial
 description: Scopri come eliminare un account di destinazione utilizzando l’API del servizio Flusso.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 17%
+source-wordcount: '743'
+ht-degree: 18%
 
 ---
 
@@ -187,4 +187,4 @@ Gli endpoint API in questa esercitazione seguono i principi generali dei messagg
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai usato correttamente l&#39;API [!DNL Flow Service] per eliminare gli account di destinazione esistenti. Per ulteriori informazioni sull&#39;utilizzo delle destinazioni, consulta la [panoramica delle destinazioni](/help/destinations/home.md).
+L&#39;API [!DNL Flow Service] è stata utilizzata per eliminare gli account di destinazione esistenti. Per ulteriori informazioni sull&#39;utilizzo delle destinazioni, vedere la [panoramica delle destinazioni](/help/destinations/home.md).

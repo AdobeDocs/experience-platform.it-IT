@@ -3,27 +3,27 @@ keywords: Experience Platform;home;argomenti popolari; avvisi;destinazioni
 description: È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali sulle destinazioni
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '906'
 ht-degree: 9%
 
 ---
 
 # Iscriviti agli avvisi contestuali sulle destinazioni
 
-[!DNL Adobe Experience Platform] ti consente di abbonarti agli avvisi basati su eventi relativi alle attività [!DNL Adobe Experience Platform]. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro o se si sono verificati errori.
+Utilizzare [!DNL Adobe Experience Platform] per sottoscrivere avvisi basati su eventi relativi alle attività [!DNL Adobe Experience Platform]. Gli avvisi riducono o eliminano la necessità di eseguire il polling dell&#39;[[!DNL Observability Insights] API](../../observability/api/overview.md) per verificare se un processo è stato completato, se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro o se si sono verificati errori.
 
 È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 
-Questo documento descrive come abbonarsi e ricevere messaggi di avviso per i flussi di dati di destinazione.
+Questo documento descrive come abbonarsi ai messaggi di avviso per i flussi di dati di destinazione.
 
-## Introduzione {#getting-started}
+## Guida introduttiva {#getting-started}
 
 Questo documento richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
 * [Destinazioni](../home.md): integrazioni predefinite con le piattaforme di destinazione che consentono l&#39;attivazione diretta dei dati da [!DNL Adobe Experience Platform]. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
-* [Osservabilità](../../observability/home.md): [!DNL Observability Insights] consente di monitorare le attività di Experience Platform tramite l&#39;utilizzo di metriche statistiche e notifiche di eventi.
+* [Osservabilità](../../observability/home.md): utilizza [!DNL Observability Insights] per monitorare le attività di Experience Platform tramite metriche statistiche e notifiche di eventi.
    * [Avvisi](../../observability/alerts/overview.md): quando viene raggiunto un determinato set di condizioni nelle operazioni di Experience Platform (ad esempio un potenziale problema quando il sistema supera una soglia), Experience Platform può inviare messaggi di avviso a tutti gli utenti dell&#39;organizzazione che sono abbonati.
 
 ## Iscriversi agli avvisi nell’interfaccia utente {#subscribe-destination-alerts}
@@ -117,4 +117,4 @@ Viene visualizzata una finestra popup con un elenco di avvisi di destinazione. S
 
 ## Passaggi successivi {#next-steps}
 
-Questo documento fornisce una guida dettagliata su come abbonarsi agli avvisi contestuali per i flussi di dati di destinazione. Per ulteriori informazioni, vedere la [guida all&#39;interfaccia utente degli avvisi](../../observability/alerts/ui.md).
+Ora puoi abbonarti agli avvisi contestuali per i flussi di dati di destinazione. Per ulteriori informazioni, vedere la [guida all&#39;interfaccia utente degli avvisi](../../observability/alerts/ui.md).

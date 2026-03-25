@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione del server di destinazione esistente tramite Adobe Experience Platform Destination SDK.
 title: Eliminare una configurazione del server di destinazione
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '328'
 ht-degree: 2%
 
 ---

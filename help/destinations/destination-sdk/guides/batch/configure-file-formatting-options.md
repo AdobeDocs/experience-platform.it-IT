@@ -2,9 +2,9 @@
 description: Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 title: Scopri come utilizzare Destination SDK per configurare le opzioni di formattazione per le destinazioni basate su file.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Destination SDK consente di regolare in modo approfondito le opzioni di formattazione e compressione dei file esportati, in modo da soddisfare qualsiasi requisito downstream nella posizione di archiviazione.
+Utilizza Destination SDK per regolare in modo approfondito le opzioni di formattazione e compressione dei file esportati, in modo che soddisfino i requisiti downstream nella posizione di archiviazione.
 
 Questa pagina descrive come utilizzare Destination SDK per configurare le opzioni di formattazione dei file per le destinazioni basate su file.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di procedere con i passaggi descritti di seguito, leggere la pagina [Guida introduttiva di Destination SDK](../../getting-started.md) per informazioni su come ottenere le credenziali di autenticazione di Adobe I/O necessarie e altri prerequisiti per l&#39;utilizzo delle API di Destination SDK.
+Prima di procedere con i passaggi descritti di seguito, leggere la pagina della guida introduttiva [Destination SDK](../../getting-started.md) per informazioni su come ottenere le credenziali di autenticazione Adobe I/O necessarie e altri prerequisiti per l&#39;utilizzo delle API Destination SDK.
 
 Adobe consiglia inoltre di leggere e acquisire familiarità con la seguente documentazione prima di procedere:
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, saprai come impostare le opzioni di formattazione dei file personalizzati per i file esportati utilizzando Destination SDK. Successivamente, il tuo team può utilizzare il [flusso di lavoro di attivazione per le destinazioni basate su file](../../../ui/activate-batch-profile-destinations.md) per esportare i dati nella destinazione.
+È ora possibile impostare le opzioni di formattazione dei file personalizzati per i file esportati utilizzando Destination SDK. Successivamente, il tuo team può utilizzare il [flusso di lavoro di attivazione per le destinazioni basate su file](../../../ui/activate-batch-profile-destinations.md) per esportare i dati nella destinazione.

@@ -4,9 +4,9 @@ title: Modificare le connessioni di destinazione utilizzando l’API del servizi
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 5%
 
 ---
@@ -463,8 +463,8 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione di b
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform per ulteriori informazioni sull&#39;interpretazione delle risposte di errore.
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai imparato ad aggiornare vari componenti di una connessione di destinazione utilizzando l&#39;API [!DNL Flow Service]. Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../home.md).
+Hai imparato ad aggiornare vari componenti di una connessione di destinazione utilizzando l&#39;API [!DNL Flow Service]. Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../home.md).

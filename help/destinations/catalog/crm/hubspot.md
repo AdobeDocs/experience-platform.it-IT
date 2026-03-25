@@ -1,18 +1,18 @@
 ---
 title: Connessione HubSpot
-description: La destinazione HubSpot consente di gestire i record dei contatti nell’account HubSpot.
+description: Utilizza la destinazione HubSpot per gestire i record dei contatti nell’account HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1619'
 ht-degree: 3%
 
 ---
 
 # Connessione [!DNL HubSpot]
 
-[[!DNL HubSpot]](https://www.hubspot.com) è una piattaforma CRM con tutti i software, le integrazioni e le risorse necessarie per collegare marketing, vendite, content management e servizio clienti. Consente di collegare dati, team e clienti su un’unica piattaforma CRM.
+[[!DNL HubSpot]](https://www.hubspot.com) è una piattaforma CRM con tutti i software, le integrazioni e le risorse necessarie per collegare marketing, vendite, content management e servizio clienti. Puoi utilizzarlo per collegare dati, team e clienti su un’unica piattaforma CRM.
 
 Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta l&#39;API [[!DNL HubSpot] Contatti](https://developers.hubspot.com/docs/api/crm/contacts) per aggiornare i contatti in [!DNL HubSpot] da un pubblico Experience Platform esistente dopo l&#39;attivazione.
 
@@ -26,11 +26,11 @@ I contatti di [!DNL HubSpot] memorizzano informazioni sulle persone che interagi
 
 ## Prerequisiti {#prerequisites}
 
-Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL HubSpot] e per informazioni da raccogliere prima di utilizzare la destinazione [!DNL HubSpot].
+Vedere le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL HubSpot] e per informazioni da raccogliere prima di utilizzare la destinazione [!DNL HubSpot].
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL HubSpot], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL HubSpot], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Experience Platform per il gruppo di campi dello schema [Dettagli sull&#39;iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
@@ -60,7 +60,7 @@ Se non hai un&#39;app privata, segui la documentazione per [creare un&#39;app pr
 
 ## Guardrail {#guardrails}
 
-[!DNL HubSpot] app private sono soggette a [Limiti di frequenza](https://developers.hubspot.com/docs/api/usage-details). Il numero di chiamate che l&#39;app privata può effettuare dipende dalla sottoscrizione dell&#39;account [!DNL HubSpot] e dall&#39;acquisto del componente aggiuntivo API. Inoltre, fai riferimento a [Altri limiti](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] app private sono soggette a [Limiti di frequenza](https://developers.hubspot.com/docs/api/usage-details). Il numero di chiamate che l&#39;app privata può effettuare dipende dalla sottoscrizione dell&#39;account [!DNL HubSpot] e dall&#39;acquisto del componente aggiuntivo API. Vedi anche [Altri limiti](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Identità supportate {#supported-identities}
 
@@ -122,7 +122,7 @@ Entro **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, cerca [!DNL HubS
 
 ### Autenticarsi nella destinazione {#authenticate}
 
-Compila i campi obbligatori di seguito. Per ulteriori informazioni, consulta la sezione [Raccogliere il  [!DNL HubSpot] token di accesso all&#39;app privata](#gather-credentials).
+Compila i campi obbligatori di seguito. Consulta la sezione [Raccogliere il  [!DNL HubSpot] token di accesso all&#39;app privata](#gather-credentials) per ulteriori informazioni.
 
 * **[!UICONTROL Bearer token]**: token di accesso per l&#39;app privata [!DNL HubSpot].
 
@@ -207,7 +207,7 @@ Al termine della fornitura delle mappature per la connessione di destinazione, s
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-1. Accedi al sito Web [!DNL HubSpot], quindi passa alla pagina **[!UICONTROL Contacts]** per verificare lo stato del pubblico. Questo elenco può essere configurato in modo da visualizzare le colonne per le proprietà personalizzate create con il nome del pubblico, il cui valore corrisponde agli stati del pubblico.
+1. Vai al sito Web [!DNL HubSpot], quindi passa alla pagina **[!UICONTROL Contacts]** per controllare gli stati del pubblico. Questo elenco può essere configurato in modo da visualizzare le colonne per le proprietà personalizzate create con il nome del pubblico, il cui valore corrisponde agli stati del pubblico.
    ![Schermata dell&#39;interfaccia utente HubSpot che mostra la pagina Contatti con intestazioni di colonna che mostrano il nome del pubblico e le celle e lo stato del pubblico](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. In alternativa, è possibile eseguire il drill-down in una singola pagina **[!UICONTROL Person]** e passare alle proprietà che visualizzano il nome del pubblico e gli stati del pubblico.

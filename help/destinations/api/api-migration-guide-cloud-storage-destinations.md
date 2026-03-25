@@ -4,9 +4,9 @@ title: Guida alla migrazione delle API per le destinazioni dell’archiviazione 
 description: Scopri le modifiche nel flusso di lavoro per attivare le destinazioni di archiviazione cloud come parte della migrazione alle nuove schede di destinazione di archiviazione cloud con funzionalità aggiuntive.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1322'
 ht-degree: 1%
 
 ---
@@ -661,7 +661,7 @@ Visualizza gli esempi completi di connessione di base nuova e legacy e di connes
 
 ### Modifiche non compatibili con le versioni precedenti comuni a [!DNL Amazon S3], [!DNL Azure Blob] e destinazioni SFTP {#changes-all-destinations}
 
-Il passaggio del selettore di profilo in tutte e tre le destinazioni viene sostituito da un passaggio di mappatura che consente di rinominare, se necessario, le intestazioni di colonna nei file esportati. Osserva l’immagine affiancata seguente con il vecchio passaggio del selettore di attributi a sinistra e il nuovo passaggio di mappatura a destra.
+Il passaggio del selettore di profilo in tutte e tre le destinazioni viene sostituito da un passaggio di mappatura per rinominare, se necessario, le intestazioni di colonna nei file esportati. Osserva l’immagine affiancata seguente con il vecchio passaggio del selettore di attributi a sinistra e il nuovo passaggio di mappatura a destra.
 
 ![Immagine panoramica della guida alla migrazione](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
@@ -795,4 +795,4 @@ Tieni presente che non vi è alcun impatto sulla pianificazione esistente per le
 
 ## Passaggi successivi {#next-steps}
 
-Una volta letta questa pagina, saprai se è necessario intraprendere un’azione in preparazione alla migrazione delle destinazioni dell’archiviazione cloud. Saprai anche quali pagine della documentazione fare riferimento quando configuri flussi di lavoro basati su API per esportare file da Experience Platform nelle destinazioni di archiviazione cloud preferite. Successivamente, puoi visualizzare l&#39;esercitazione API per [esportare i dati nelle destinazioni dell&#39;archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md).
+Ora sai se è necessario intraprendere qualsiasi azione in preparazione alla migrazione delle destinazioni dell’archiviazione cloud. Saprai anche quali pagine della documentazione fare riferimento quando configuri flussi di lavoro basati su API per esportare file da Experience Platform nelle destinazioni di archiviazione cloud preferite. Successivamente, puoi visualizzare l&#39;esercitazione API per [esportare i dati nelle destinazioni dell&#39;archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md).

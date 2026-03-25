@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un server di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una configurazione del server di destinazione
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2029'
 ht-degree: 6%
 
 ---
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserire l&#39;indirizzo dell&#39;endpoint API a cui Experience Platform deve connettersi. |
 | `httpTemplate.httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Le opzioni sono `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Stringa | *Obbligatorio.* Questa stringa è la versione con escape carattere che trasforma i dati dei clienti Experience Platform nel formato previsto dal servizio. <br> <ul><li> Per informazioni su come scrivere il modello, leggere la sezione [Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape di caratteri, consulta lo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di semplice trasformazione, fare riferimento alla trasformazione [Attributi profilo](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Stringa | *Obbligatorio.* Questa stringa è la versione con escape carattere che trasforma i dati dei clienti Experience Platform nel formato previsto dal servizio. <br> <ul><li> Per informazioni su come scrivere il modello, leggere la sezione [Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape di caratteri, vedere lo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di semplice trasformazione, vedere la trasformazione [Attributi profilo](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Stringa | *Obbligatorio.* Il tipo di contenuto accettato dal server. Questo valore è molto probabilmente `application/json`. |
 
 {style="table-layout:auto"}
@@ -782,7 +782,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ### Creare server di destinazione con schema dinamico {#dynamic-schema-servers}
 
-Gli schemi dinamici ti consentono di recuperare dinamicamente gli attributi di destinazione supportati e generare schemi in base alla tua API. Per configurare lo schema, è necessario configurare un server di destinazione per gli schemi dinamici.
+Gli schemi dinamici recuperano dinamicamente gli attributi di destinazione supportati e generano schemi in base alla tua API. Per configurare lo schema, è necessario configurare un server di destinazione per gli schemi dinamici.
 
 Vedi nella scheda seguente un esempio di server di destinazione per le destinazioni che utilizzano [schemi dinamici](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 
@@ -836,7 +836,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserisci l&#39;indirizzo dell&#39;endpoint API a cui Experience Platform deve connettersi e recupera i campi dello schema da compilare come campi di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione. |
 | `httpTemplate.httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Per i server con schema dinamico, utilizzare `GET`. |
 | `responseFields.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
-| `responseFields.value` | Stringa | *Obbligatorio.* Questa stringa è il modello di trasformazione con escape di carattere che trasforma la risposta ricevuta dall&#39;API partner nello schema partner che verrà visualizzato nell&#39;interfaccia utente di Experience Platform. <br> <ul><li> Per informazioni su come scrivere il modello, leggere la sezione [Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape di caratteri, consulta lo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di semplice trasformazione, fare riferimento alla trasformazione [Attributi profilo](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `responseFields.value` | Stringa | *Obbligatorio.* Questa stringa è il modello di trasformazione con escape di carattere che trasforma la risposta ricevuta dall&#39;API partner nello schema partner che verrà visualizzato nell&#39;interfaccia utente di Experience Platform. <br> <ul><li> Per informazioni su come scrivere il modello, leggere la sezione [Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape di caratteri, vedere lo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di semplice trasformazione, vedere la trasformazione [Attributi profilo](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -934,7 +934,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Per i server a discesa dinamici, utilizzare `GET`. |
 | `httpTemplate.headers` | Oggetto | *Facoltativa.l* Includere tutte le intestazioni necessarie per connettersi al server a discesa dinamico. |
 | `responseFields.templatingStrategy` | Stringa | *Obbligatorio.* Utilizza `PEBBLE_V1`. |
-| `responseFields.value` | Stringa | *Obbligatorio.* Questa stringa è il modello di trasformazione con escape di carattere che trasforma la risposta ricevuta dall&#39;API nei valori che verranno visualizzati nell&#39;interfaccia utente di Experience Platform. <br> <ul><li> Per informazioni su come scrivere il modello, leggere la sezione [Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape di caratteri, consulta lo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.value` | Stringa | *Obbligatorio.* Questa stringa è il modello di trasformazione con escape di carattere che trasforma la risposta ricevuta dall&#39;API nei valori che verranno visualizzati nell&#39;interfaccia utente di Experience Platform. <br> <ul><li> Per informazioni su come scrivere il modello, leggere la sezione [Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull&#39;escape di caratteri, vedere lo standard JSON [RFC, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 

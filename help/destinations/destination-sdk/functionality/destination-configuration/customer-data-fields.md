@@ -2,7 +2,7 @@
 description: Scopri come creare campi di input nell’interfaccia utente di Experience Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '1729'
 ht-degree: 1%
@@ -342,7 +342,7 @@ Impostare il parametro `destinationServerId` sull&#39;ID del server di destinazi
 
 ## Creare campi dati cliente nidificati {#nested-fields}
 
-Puoi creare campi dati cliente nidificati per modelli di integrazione complessi. Questo consente di concatenare una serie di selezioni per il cliente.
+Puoi creare campi dati cliente nidificati per modelli di integrazione complessi. Utilizzali per concatenare una serie di selezioni per il cliente.
 
 Ad esempio, puoi aggiungere campi dati cliente nidificati per richiedere ai clienti di selezionare un tipo di integrazione con la destinazione, seguito immediatamente da un’altra selezione. La seconda selezione è un campo nidificato nel tipo di integrazione.
 

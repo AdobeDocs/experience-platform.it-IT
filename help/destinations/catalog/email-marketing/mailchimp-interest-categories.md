@@ -3,9 +3,9 @@ title: Categorie di interesse Mailchimp
 description: Mailchimp (noto anche come Intuit Mailchimp) è un popolare piattaforma di automazione del marketing e servizio di e-mail marketing utilizzato dalle aziende per gestire e parlare con i contatti (clienti, clienti o altre parti interessate) utilizzando mailing list e campagne di e-mail marketing. Utilizza questo connettore per ordinare i contatti in base ai loro interessi e preferenze.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2395'
+source-wordcount: '2390'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experi
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Mailchimp Interest Categories], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Mailchimp Interest Categories], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti per la destinazione [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -50,7 +50,7 @@ Prima di poter creare una destinazione [!DNL Mailchimp Interest Categories], è 
 
 È necessaria la [!DNL Mailchimp] **chiave API** per autenticare la destinazione [!DNL Mailchimp Interest Categories] in base all&#39;account [!DNL Mailchimp]. La **chiave API** funge da **password** quando [autentichi la destinazione](#authenticate).
 
-Se non disponi della tua **chiave API**, accedi al tuo account e fai riferimento alla [[!DNL Mailchimp] documentazione di generazione della chiave API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) per crearne una.
+Se non disponi della **chiave API**, accedi al tuo account e consulta la [[!DNL Mailchimp] documentazione Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) per crearne una.
 
 Esempio di chiave API: `0123456789abcdef0123456789abcde-us14`.
 
@@ -72,9 +72,9 @@ Per ulteriori informazioni, consulta la [[!DNL Mailchimp] documentazione di base
 
 ### Guardrail {#guardrails}
 
-Ciascuno dei tipi di pubblico di [!DNL Mailchimp] può contenere fino a 60 nomi di gruppo (o categorie di interesse) in un singolo gruppo o in più gruppi all&#39;interno dello stesso pubblico. Per eventuali chiarimenti richiesti, consulta [!DNL Mailchimp] [gruppi](https://mailchimp.com/help/getting-started-with-groups/). Quando si raggiunge questo limite, viene visualizzato un messaggio di errore `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` dall&#39;API [!DNL Mailchimp].
+Ciascuno dei tipi di pubblico di [!DNL Mailchimp] può contenere fino a 60 nomi di gruppo (o categorie di interesse) in un singolo gruppo o in più gruppi all&#39;interno dello stesso pubblico. Consulta [!DNL Mailchimp] [gruppi](https://mailchimp.com/help/getting-started-with-groups/) per eventuali chiarimenti richiesti. Quando si raggiunge questo limite, viene visualizzato un messaggio di errore `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` dall&#39;API [!DNL Mailchimp].
 
-Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], consultare inoltre [&#x200B; &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
+Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], vedere i [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
 
 ## Identità supportate {#supported-identities}
 
@@ -222,7 +222,7 @@ Dopo aver fornito i mapping per la connessione di destinazione, selezionare **[!
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-* Accedi al tuo account [[!DNL Mailchimp]](https://login.mailchimp.com/). Passare quindi alla pagina **[!DNL Audience]**. Espandere il menu **[!DNL Manage Contacts]** e selezionare **[!DNL Groups]**.
+* Vai all&#39;account [[!DNL Mailchimp]](https://login.mailchimp.com/). Passare quindi alla pagina **[!DNL Audience]**. Espandere il menu **[!DNL Manage Contacts]** e selezionare **[!DNL Groups]**.
 
 ![Schermata dell&#39;interfaccia utente Mailchimp che mostra la pagina del gruppo di tipi di pubblico.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 

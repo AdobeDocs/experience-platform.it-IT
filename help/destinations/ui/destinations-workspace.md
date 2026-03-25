@@ -3,9 +3,9 @@ keywords: piattaforma;destinazioni;area di lavoro;area di lavoro;interfaccia ute
 title: Area di lavoro destinazioni
 description: 'L’area di lavoro Destinazioni è costituita da cinque sezioni: Panoramica, Catalogo, Sfoglia, Account e Visualizzazione sistema. Sono descritte nelle sezioni seguenti.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2140'
 ht-degree: 0%
 
 ---
@@ -46,10 +46,10 @@ Le schede di destinazione contengono opzioni di controllo primarie e secondarie.
 
 | Controllo | Descrizione |
 |---------|----------|
-| [!UICONTROL Set up] | Consente di creare una connessione alla destinazione. |
-| [!UICONTROL Activate] | Dopo aver stabilito una connessione alla destinazione, puoi attivare i tipi di pubblico o esportare i set di dati in questa destinazione. |
-| [!UICONTROL Activate audiences] | Dopo aver stabilito una connessione alla destinazione, puoi attivare i tipi di pubblico per questa destinazione. |
-| [!UICONTROL Export datasets] | Dopo aver stabilito una connessione alla destinazione, puoi esportare i set di dati in questa destinazione. |
+| [!UICONTROL Set up] | Crea una connessione alla destinazione. |
+| [!UICONTROL Activate] | Dopo aver stabilito una connessione alla destinazione, attiva i tipi di pubblico o esporta i set di dati in questa destinazione. |
+| [!UICONTROL Activate audiences] | Dopo aver stabilito una connessione alla destinazione, attiva i tipi di pubblico su questa destinazione. |
+| [!UICONTROL Export datasets] | Dopo aver stabilito una connessione alla destinazione, esporta i set di dati in questa destinazione. |
 | [!UICONTROL View account] | Visualizzare gli account connessi per una destinazione. |
 | [!UICONTROL View dataflows] | Visualizzare i flussi di attivazione dati esistenti per una destinazione. |
 | [!UICONTROL View documentation] | Apre un collegamento alla pagina della documentazione della destinazione specifica, per ulteriori informazioni e per facilitare la configurazione. |
@@ -83,7 +83,7 @@ Le destinazioni con l&#39;opzione **[!UICONTROL Enabled/Disabled]** attivata imp
 > ![Sfoglia scheda](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Attiva tipi di pubblico](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** per esportare tipi di pubblico o set di dati in tale destinazione.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;per modificare le connessioni di destinazione esistenti. Per ulteriori informazioni, leggi l&#39;esercitazione su [modifica destinazioni](/help/destinations/ui/edit-destination.md).
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica controllo di destinazione ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**per modificare le connessioni di destinazione esistenti. Per ulteriori informazioni, leggi l&#39;esercitazione su [modifica destinazioni](/help/destinations/ui/edit-destination.md).
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Modifica azioni di marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]** per [modificare le azioni di marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) per la destinazione selezionata.
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare il controllo ![Elimina](/help/images/icons/delete.png) **[!UICONTROL Delete]** per [rimuovere](delete-destinations.md) una connessione esistente a una destinazione.
 > * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Name] e utilizzare ![Visualizza nel controllo di monitoraggio](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]** per visualizzare le informazioni di attivazione per questa destinazione nel [dashboard di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
@@ -110,11 +110,11 @@ Vedere la tabella seguente per tutte le informazioni fornite per ciascuna destin
 
 {style="table-layout:auto"}
 
-Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra, come ID destinazione, descrizione, numero di tipi di pubblico attivati e altro ancora.
+Seleziona una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra, ad esempio ID destinazione, descrizione, numero di tipi di pubblico attivati e altro ancora.
 
 ![Fare clic sulla riga di destinazione](../assets/ui/workspace/click-destination-row.png)
 
-Seleziona il nome della destinazione per visualizzare informazioni sui tipi di pubblico attivati per questa destinazione. Fai clic su **[!UICONTROL Edit destination]** per [modificare le impostazioni di destinazione](/help/destinations/ui/edit-destination.md) o **[!UICONTROL Activate audiences]** per aggiungere nuovi tipi di pubblico al flusso di dati.
+Seleziona il nome della destinazione per visualizzare informazioni sui tipi di pubblico attivati per questa destinazione. Seleziona **[!UICONTROL Edit destination]** per [modificare le impostazioni di destinazione](/help/destinations/ui/edit-destination.md) o **[!UICONTROL Activate audiences]** per aggiungere nuovi tipi di pubblico al flusso di dati.
 
 ### Filtrare i flussi di dati nella scheda Sfoglia {#filter-browse}
 
@@ -181,13 +181,13 @@ Assicurati che i flussi di dati di destinazione rimangano organizzati, facili da
 
 ## [!UICONTROL Accounts] {#accounts}
 
-La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilite con varie destinazioni e consente di aggiornare o eliminare i dettagli dell&#39;account esistente. Vedi la tabella seguente per tutte le informazioni che puoi ottenere su ciascun account di destinazione.
+La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Puoi aggiornare o eliminare i dettagli dell’account esistente da questa scheda. Per tutte le informazioni disponibili per ciascun account di destinazione, consulta la tabella seguente.
 
 >[!TIP]
 >
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Attiva &#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;per esportare tipi di pubblico o set di dati in tale destinazione.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Modifica dettagli &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;per [aggiornare](update-accounts.md) i dettagli di un account di destinazione esistente.
-> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Elimina &#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;per [eliminare](delete-destination-account.md) un account di destinazione esistente.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Attiva ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**per esportare tipi di pubblico o set di dati in tale destinazione.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Modifica dettagli ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**per [aggiornare](update-accounts.md) i dettagli di un account di destinazione esistente.
+> * Selezionare i puntini di sospensione (`...`) nella colonna [!UICONTROL Platform] e utilizzare il controllo ![Elimina ](/help/images/icons/delete.png)**[!UICONTROL Delete]**per [eliminare](delete-destination-account.md) un account di destinazione esistente.
 
 ![Scheda Account](../assets/ui/workspace/accounts-tab.png)
 

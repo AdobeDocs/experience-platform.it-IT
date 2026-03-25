@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per generare un modello di trasformazione dei messaggi di test per la destinazione.
 title: Genera un esempio di modello di trasformazione dei messaggi
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Per ottenere un modello di esempio, devi eseguire una richiesta GET all&#39;endp
 
 >[!TIP]
 >
->* L&#39;ID di destinazione da utilizzare è `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando l&#39;endpoint `/destinations`. Per ulteriori dettagli, consultare [recuperare una configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
+>* L&#39;ID di destinazione da utilizzare è `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando l&#39;endpoint `/destinations`. Per ulteriori dettagli, vedere [recuperare una configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
 
 **Formato API**
 

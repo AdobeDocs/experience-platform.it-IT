@@ -3,7 +3,7 @@ title: Esportare file on-demand in destinazioni batch utilizzando l’interfacci
 type: Tutorial
 description: Scopri come esportare i file on-demand nelle destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 5%
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 Questo articolo spiega come utilizzare l&#39;interfaccia utente di Experience Platform per esportare i file on-demand in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [destinazioni e-mail marketing](/help/destinations/catalog/email-marketing/overview.md).
 
-Il controllo **[!UICONTROL Export file now]** consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un pubblico pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del pubblico.
+Utilizzare il controllo **[!UICONTROL Export file now]** per esportare un file completo senza interrompere la pianificazione di esportazione corrente di un pubblico pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del pubblico.
 
 L’esportazione del file viene attivata immediatamente e utilizza solo i dati dell’istantanea di valutazione del pubblico più recente. Non include le modifiche al profilo o all’identità che si verificano dopo la creazione dello snapshot. Al contrario, le esportazioni pianificate includono sia i dati delle istantanee che le modifiche incrementali che si verificano tra il momento della creazione delle istantanee e quello dell’esportazione.
 

@@ -1,12 +1,12 @@
 ---
 keywords: mobile;mobile engagement destinations;LINE;LINE mobile engagement destinations;LINE mobile engagement destination
 title: Connessione LINE
-description: La destinazione LINE ti consente di aggiungere profili al pubblico di Experience Platform e di fornire esperienze personalizzate agli utenti connessi.
+description: Utilizza la destinazione LINE per aggiungere profili al pubblico di Experience Platform e fornire esperienze personalizzate agli utenti connessi.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1306'
 ht-degree: 3%
 
 ---

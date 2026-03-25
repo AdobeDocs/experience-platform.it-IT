@@ -3,9 +3,9 @@ keywords: estensioni tag;estensione tag;destinazioni lancio; estensioni tag piat
 title: Estensioni tag in Adobe Experience Platform
 description: Adobe Experience Platform fornisce la nuova generazione di funzionalità di gestione tag di Adobe. Experience Platform offre un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Per trovare le estensioni nell&#39;interfaccia di Experience Platform, passa a *
 
 ## Funzionamento delle estensioni tag {#how-extensions-work}
 
-Un&#39;estensione tag [&#128279;](../../../tags/home.md#extensions) è un pacchetto di codice che migliora le funzionalità di un sito Web o di un&#39;app mobile. Ciò può includere l&#39;invio di dati evento non elaborati a una destinazione come [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), ma possono anche servire altre funzioni.
+Un&#39;estensione tag [](../../../tags/home.md#extensions) è un pacchetto di codice che migliora le funzionalità di un sito Web o di un&#39;app mobile. Ciò può includere l&#39;invio di dati evento non elaborati a una destinazione come [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md), ma possono anche servire altre funzioni.
 
 È importante distinguere tra estensioni di tag ed estensioni di inoltro eventi. Le estensioni visualizzate nell&#39;interfaccia utente delle destinazioni di Experience Platform sono *estensioni tag*. Per ulteriori informazioni sulle [differenze tra i tag e l&#39;inoltro degli eventi](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags), consulta la panoramica sull&#39;inoltro degli eventi.
 
@@ -45,7 +45,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Vantaggi dell’utilizzo delle estensioni tag {#extensions-benefits}
 
-Le funzionalità tag di Experience Platform sono gratuite per i clienti Experience Cloud esistenti. Il sistema semplifica la distribuzione dei tag sul sito web tramite estensioni facili da usare che è possibile installare, configurare, aggiornare ed eliminare. I tag lasciano un piccolo spazio sul sito web e consentono di mantenere le pagine in caricamento rapido.
+Le funzionalità tag di Experience Platform sono gratuite per i clienti Experience Cloud esistenti. Il sistema semplifica la distribuzione dei tag sul sito web tramite estensioni facili da usare che è possibile installare, configurare, aggiornare ed eliminare. I tag lasciano un piccolo spazio sul sito web e consentono di caricare rapidamente le pagine.
 
 Anche se non è possibile attivare i tipi di pubblico per le estensioni di tag, è possibile impostare regole per inoltrare solo i dati evento in determinate situazioni. Questa potente funzionalità consente di inoltrare i dati dell’evento solo in determinate situazioni, anziché inviare i dati dell’evento su ogni interazione. Per ulteriori informazioni, consulta le regole nella [documentazione sui tag](../../../tags/ui/managing-resources/rules.md).
 

@@ -1,11 +1,11 @@
 ---
 title: Tag Mailchimp
-description: La destinazione Mailchimp Tags ti consente di esportare i dati del tuo account e attivarli all’interno di Mailchimp per interagire con i contatti.
+description: Utilizza la destinazione Tag Mailchimp per esportare i dati del tuo account e attivarli all’interno di Mailchimp per interagire con i contatti.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1714'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ Consultare le sezioni seguenti per eventuali prerequisiti da impostare in Experi
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Mailchimp Tags], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Mailchimp Tags], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti per la destinazione [!DNL Mailchimp Tags] {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ Prima di poter creare una destinazione [!DNL Mailchimp Tags], è necessario assi
 
 È necessaria la [!DNL Mailchimp] **chiave API** per autenticare la destinazione [!DNL Mailchimp Interest Categories] in base all&#39;account [!DNL Mailchimp]. La **chiave API** funge da **password** quando [autentichi la destinazione](#authenticate).
 
-Se non disponi della tua **chiave API**, accedi al tuo account [!DNL Mailchimp] e fai riferimento alla documentazione di [!DNL Mailchimp] in [come generare la tua chiave API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Se non disponi della tua **chiave API**, accedi al tuo account [!DNL Mailchimp] e consulta la documentazione di [!DNL Mailchimp] in [come generare la tua chiave API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 Esempio di chiave API: `0123456789abcdef0123456789abcde-us14`.
 
@@ -70,7 +70,7 @@ Per ulteriori informazioni, consulta la [[!DNL Mailchimp] documentazione di base
 
 ### Guardrail {#guardrails}
 
-Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], vedere [&#x200B; &#x200B;](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
+Per informazioni dettagliate sui limiti imposti dall&#39;API [!DNL Mailchimp], vedere [ ](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits)limiti di tariffa[!DNL Mailchimp].
 
 ## Identità supportate {#supported-identities}
 
@@ -203,7 +203,7 @@ Dopo aver fornito i mapping per la connessione di destinazione, selezionare **[!
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-1. Accedi al tuo account [[!DNL Mailchimp]](https://login.mailchimp.com/). Quindi passa alla pagina **[!DNL Audience]** > **[!DNL All Contacts]** e controlla se i contatti del pubblico sono stati aggiunti e quelli all&#39;interno del pubblico sono stati aggiornati con il nome del pubblico.
+1. Vai all&#39;account [[!DNL Mailchimp]](https://login.mailchimp.com/). Quindi passa alla pagina **[!DNL Audience]** > **[!DNL All Contacts]** e controlla se i contatti del pubblico sono stati aggiunti e quelli all&#39;interno del pubblico sono stati aggiornati con il nome del pubblico.
    ![Schermata dell&#39;interfaccia utente Mailchimp che mostra la pagina Pubblico.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}

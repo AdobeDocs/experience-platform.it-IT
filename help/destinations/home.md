@@ -2,9 +2,9 @@
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Una delle funzionalità principali di Experience Platform è l’acquisizione de
 
 ## Controlli {#controls}
 
-I controlli nell&#39;area di lavoro [destinazioni](./ui/destinations-workspace.md) consentono di:
+Utilizza i controlli nell&#39;area di lavoro [destinazioni](./ui/destinations-workspace.md) per:
 
 * Sfoglia il catalogo delle piattaforme di destinazione in cui puoi attivare i tuoi dati;
 * Creare, modificare, attivare e disattivare flussi di dati per le destinazioni nel catalogo;

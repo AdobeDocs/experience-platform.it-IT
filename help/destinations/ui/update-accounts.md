@@ -4,9 +4,9 @@ title: Aggiorna account di destinazione
 type: Tutorial
 description: Questo tutorial elenca i passaggi per aggiornare gli account di destinazione nell’interfaccia utente di Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Per tutte le informazioni che puoi ottenere su ciascun account di destinazione, consulta la [Panoramica account](../ui/destinations-workspace.md#accounts).
+La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Per tutte le informazioni disponibili per ciascun account di destinazione, vedere [Panoramica account](../ui/destinations-workspace.md#accounts).
 
 Questo tutorial illustra i passaggi necessari per aggiornare i dettagli dell’account di destinazione utilizzando l’interfaccia utente di Experience Platform.
 
@@ -29,7 +29,7 @@ Per le destinazioni batch, puoi aggiornare l’accesso o la chiave segreta, se �
 
 Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la procedura riportata di seguito.
 
-1. Accedi alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
+1. Vai alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
 
    ![Scheda Account](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -63,6 +63,6 @@ Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la p
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, è stata utilizzata l&#39;area di lavoro **[!UICONTROL destinations]** per aggiornare gli account esistenti.
+Aggiornamento degli account esistenti tramite l&#39;area di lavoro **[!UICONTROL destinations]** completato.
 
 Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../catalog/overview.md).

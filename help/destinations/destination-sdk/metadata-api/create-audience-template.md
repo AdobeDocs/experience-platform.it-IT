@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un modello di pubblico tramite Adobe Experience Platform Destination SDK.
 title: Creare un modello di pubblico
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '617'
 ht-degree: 4%
 
 ---
@@ -261,7 +261,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `httpMethod` | Stringa | Il metodo utilizzato sull’endpoint per creare, aggiornare, eliminare o convalidare a livello di programmazione il pubblico nella destinazione. Esempio: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Stringa | Specifica eventuali intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"Content-Type"` |
 | `headers.value` | Stringa | Specifica il valore delle intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"application/x-www-form-urlencoded"` |
-| `requestBody` | Stringa | Specifica il contenuto del corpo del messaggio da inviare all’API. I parametri da aggiungere all&#39;oggetto `requestBody` dipendono dai campi accettati dall&#39;API. Per informazioni su cosa includere nel corpo del messaggio, consultare la [documentazione sulle macro supportate](../functionality/audience-metadata-management.md#macros). |
+| `requestBody` | Stringa | Specifica il contenuto del corpo del messaggio da inviare all’API. I parametri da aggiungere all&#39;oggetto `requestBody` dipendono dai campi accettati dall&#39;API. Per informazioni su cosa includere nel corpo del messaggio, consulta la [documentazione sulle macro supportate](../functionality/audience-metadata-management.md#macros). |
 | `responseFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#configuration-examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |
 | `responseFields.value` | Stringa | Specifica il valore di tutti i campi di risposta restituiti dall’API quando vengono chiamati. |
 | `responseErrorFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta gli [esempi di modelli](../functionality/audience-metadata-management.md#configuration-examples) nel documento relativo alla funzionalità per i metadati per il pubblico. |

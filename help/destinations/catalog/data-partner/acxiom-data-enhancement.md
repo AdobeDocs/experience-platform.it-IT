@@ -4,9 +4,9 @@ description: Utilizza questo connettore per attivare profili Adobe di prime part
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1413'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Utilizza il connettore [!DNL Acxiom Data Enhancement] per fornire dati descrittivi aggiuntivi ai profili cliente, da utilizzare in applicazioni di analisi, segmentazione e targeting. Con centinaia di elementi disponibili, questo consente di segmentare e modellare meglio i dati, con conseguente targeting più preciso e modellazione predittiva.
+Utilizza il connettore [!DNL Acxiom Data Enhancement] per fornire dati descrittivi aggiuntivi ai profili cliente, da utilizzare in applicazioni di analisi, segmentazione e targeting. Con centinaia di elementi disponibili, questo consente una migliore segmentazione e modellazione dei dati, con conseguente targeting più preciso e modellazione predittiva.
 
 ![Diagramma di marketing per esportare dati di prime parti in Acxiom, quindi importare nuovamente dati arricchiti in Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
@@ -179,7 +179,7 @@ Per verificare se i dati sono stati esportati correttamente, controlla il bucket
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, è stato creato un flusso di dati per esportare i dati del profilo da Experience Platform nel percorso S3 gestito di [!DNL Acxiom]. Successivamente, devi contattare il rappresentante di Adobe con il nome dell’account, i nomi dei file e il percorso del bucket, in modo da poter configurare l’elaborazione.
+È stato creato un flusso di dati per esportare i dati del profilo da Experience Platform nel percorso S3 gestito di [!DNL Acxiom]. Successivamente, devi contattare il rappresentante di Adobe con il nome dell’account, i nomi dei file e il percorso del bucket, in modo da poter configurare l’elaborazione.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

@@ -4,9 +4,9 @@ title: Modifica flussi di dati di attivazione
 type: Tutorial
 description: Segui i passaggi descritti in questo articolo per modificare un flusso di dati di attivazione esistente in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ In [!DNL Adobe Experience Platform] è possibile configurare vari componenti dei
 
 Segui i passaggi seguenti per sfogliare i flussi di dati di attivazione esistenti e identificare quello che desideri modificare.
 
-1. Accedi alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Browse]** dall&#39;intestazione superiore per visualizzare i flussi di dati di destinazione esistenti.
+1. Vai alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Browse]** dall&#39;intestazione superiore per visualizzare i flussi di dati di destinazione esistenti.
 
    ![Sfoglia destinazioni](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -68,7 +68,7 @@ Seleziona **[!UICONTROL Activate audiences]** nella barra a destra. Questa azion
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione di esecuzione Attiva flusso di dati tipi di pubblico.](../assets/ui/edit-activation/activate-audiences.png)
 
-Seleziona il passaggio **[!UICONTROL Scheduling]** nel flusso di lavoro di attivazione per modificare la pianificazione dell&#39;attivazione e la frequenza di esportazione per il flusso di dati. Questo passaggio consente di configurare la frequenza con cui i dati vengono esportati nella destinazione.
+Seleziona il passaggio **[!UICONTROL Scheduling]** nel flusso di lavoro di attivazione per modificare la pianificazione dell&#39;attivazione e la frequenza di esportazione per il flusso di dati. Utilizza questo passaggio per configurare la frequenza con cui i dati vengono esportati nella destinazione.
 
 Nel passaggio **[!UICONTROL Scheduling]** del flusso di lavoro di attivazione è possibile:
 
@@ -87,7 +87,7 @@ Seleziona **[!UICONTROL Activate audiences]** nella barra a destra. Questa azion
 
 ![Immagine dell&#39;interfaccia utente di Experience Platform che mostra l&#39;opzione di esecuzione Attiva flusso di dati tipi di pubblico.](../assets/ui/edit-activation/activate-audiences.png)
 
-Seleziona il passaggio **[!UICONTROL Mapping]** nel flusso di lavoro di attivazione per modificare gli attributi e le identità mappati per il flusso di dati di attivazione. Questo consente di regolare gli attributi e le identità del profilo da esportare nella destinazione.
+Seleziona il passaggio **[!UICONTROL Mapping]** nel flusso di lavoro di attivazione per modificare gli attributi e le identità mappati per il flusso di dati di attivazione. Utilizza questo passaggio per regolare gli attributi e le identità del profilo da esportare nella destinazione.
 
 Nel passaggio **[!UICONTROL Mapping]** del flusso di lavoro di attivazione è possibile:
 
@@ -115,7 +115,7 @@ Seleziona **[!UICONTROL Export datasets]** nella barra a destra per selezionare 
 
 >[!IMPORTANT]
 >
->Per modificare le azioni di marketing è necessario disporre delle autorizzazioni di controllo di accesso **[!UICONTROL Activate Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per modificare le azioni di marketing è necessario disporre delle autorizzazioni di controllo di accesso **[!UICONTROL Activate Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Puoi aggiungere o rimuovere azioni di marketing impostate al momento della connessione iniziale alla destinazione.
 
@@ -142,6 +142,6 @@ Per modificare il nome e la descrizione del flusso di dati di attivazione, utili
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, è stata utilizzata l&#39;area di lavoro **[!UICONTROL destinations]** per aggiornare i flussi di dati di destinazione esistenti.
+I flussi di dati di destinazione sono stati aggiornati utilizzando l&#39;area di lavoro **[!UICONTROL destinations]**.
 
 Per ulteriori informazioni sulle destinazioni, consulta la [panoramica sulle destinazioni](../catalog/overview.md).

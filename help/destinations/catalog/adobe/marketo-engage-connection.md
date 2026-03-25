@@ -1,10 +1,10 @@
 ---
 title: Connessione Marketo Engage
-description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
+description: Marketo Engage è l'unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l'analisi e il commerce. Utilizzala per automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino al marketing basato sull’account e all’attribuzione dei ricavi.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-[!DNL Marketo Engage] è l&#39;unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l&#39;analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
+[!DNL Marketo Engage] è l&#39;unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, l&#39;analisi e il commerce. Utilizzala per automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino al marketing basato sull’account e all’attribuzione dei ricavi.
 
 Utilizzare questa destinazione per la sincronizzazione in tempo reale dei dati del pubblico e degli attributi del profilo tra [!DNL Adobe Experience Platform] e Marketo Engage.
 
@@ -45,7 +45,7 @@ Possono attivare i propri tipi di pubblico in Marketo Engage e utilizzare il tip
 
 ## Prerequisiti {#prerequisites}
 
-* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/it/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
+* L&#39;utente che imposta la destinazione deve disporre dell&#39;autorizzazione [Modifica persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) nell&#39;istanza e nella partizione di Marketo.
 * Durante la configurazione di questa destinazione saranno disponibili solo le istanze di Marketo Engage nella stessa organizzazione Adobe [!DNL Real-Time CDP].
 * Questa destinazione può essere utilizzata solo dalle istanze di Marketo Engage con i relativi utenti gestiti in Adobe Admin Console.
 
@@ -145,8 +145,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
    * **[!UICONTROL Audience and profile]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo e mantenere aggiornate le informazioni sul profilo.
    * **[!UICONTROL Profile only]**: selezionare questa opzione quando si desidera mantenere aggiornati i profili lead di Marketo con le informazioni più recenti di Experience Platform.
    * **[!UICONTROL Audience only]**: selezionare questa opzione quando si desidera aggiungere membri del pubblico agli elenchi di Marketo senza aggiornare le informazioni sul profilo.
-* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**&#x200B;o **[!UICONTROL Audience and profile]**&#x200B;tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo consente di specificare quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
-* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/it/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
+* **[!UICONTROL Partition]**: *La selezione della partizione è disponibile solo quando si sceglie **[!UICONTROL Profile only]**o **[!UICONTROL Audience and profile]**tipi di sincronizzazione*. Selezionare un ID di partizione Marketo associato all&#39;area di lavoro selezionata. Questo specifica quale partizione lead in Marketo riceverà i dati esportati. Se non si sceglie una partizione specifica, i dati verranno inviati alla partizione **[!UICONTROL Default]** in Marketo.
+* **[!UICONTROL Marketo deduplication field]**: selezionare il campo di deduplicazione Marketo che si desidera utilizzare per aggiornare i lead Marketo esistenti. Questo selettore mostra i campi contrassegnati come campi di deduplicazione in Marketo. Se desideri che un campo specifico di Marketo venga visualizzato come campo di deduplicazione, devi contrassegnarlo come [campo ricercabile](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo.
 
   >[!NOTE]
   >

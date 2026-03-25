@@ -5,16 +5,16 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1875'
 ht-degree: 3%
 
 ---
 
 # Connessione [!DNL (V2) Salesforce Marketing Cloud Account Engagement]
 
-La destinazione [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (precedentemente nota come [!DNL Pardot]) consente di esportare i dati del profilo [!DNL Adobe Experience Platform] nella piattaforma di automazione del marketing B2B di Salesforce.
+La destinazione [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (precedentemente nota come [!DNL Pardot]) esporta i dati del profilo [!DNL Adobe Experience Platform] nella piattaforma di automazione del marketing B2B di Salesforce.
 
 Questa integrazione consente la sincronizzazione diretta dei dati tra i profili cliente in [!DNL Adobe Experience Platform] e le campagne marketing in [!DNL Salesforce Marketing Cloud Account Engagement].
 
@@ -219,7 +219,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 1. Passa a uno dei tipi di pubblico selezionati. Seleziona la scheda **[!DNL Activation data]**. Nella colonna **[!UICONTROL Mapping ID]** viene visualizzato il nome del campo personalizzato generato nella pagina [!DNL Marketing Cloud Account Engagement Prospects].
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra l&#39;ID di mappatura per un segmento selezionato.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Accedere al sito Web [[!DNL Salesforce]](https://login.salesforce.com/). Quindi passa alla pagina **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** e controlla se i potenziali clienti del pubblico sono stati aggiunti/aggiornati. In alternativa, è possibile accedere a [[!DNL Account Engagement]](https://pi.pardot.com/) e alla pagina **[!DNL Prospects]**.
+1. Passare al sito Web [[!DNL Salesforce]](https://login.salesforce.com/). Quindi passa alla pagina **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** e controlla se i potenziali clienti del pubblico sono stati aggiunti/aggiornati. In alternativa, è possibile accedere a [[!DNL Account Engagement]](https://pi.pardot.com/) e alla pagina **[!DNL Prospects]**.
    ![Schermata dell&#39;interfaccia utente di Salesforce che mostra la pagina Prospect.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. Per verificare se i potenziali clienti sono stati aggiornati, seleziona un potenziale cliente e verifica se il campo del potenziale cliente personalizzato è stato aggiornato con lo stato del pubblico di Experience Platform.

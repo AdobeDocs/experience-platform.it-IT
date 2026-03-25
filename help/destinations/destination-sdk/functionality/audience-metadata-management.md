@@ -2,9 +2,9 @@
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato da Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1270'
 ht-degree: 2%
 
 ---
@@ -546,20 +546,20 @@ Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di er
 
 | Macro | Descrizione |
 |--- |--- |
-| `{{segment.alias}}` | Consente di accedere all’alias del pubblico in Experience Platform. |
-| `{{segment.name}}` | Consente di accedere al nome del pubblico in Experience Platform. |
-| `{{segment.id}}` | Consente di accedere all’ID del pubblico in Experience Platform. |
-| `{{customerData.accountId}}` | Ti consente di accedere al campo ID account configurato nella configurazione di destinazione. |
-| `{{oauth2ServiceAccessToken}}` | Consente di generare dinamicamente un token di accesso in base alla configurazione OAuth 2. |
-| `{{authData.accessToken}}` | Ti consente di passare il token di accesso all’endpoint API. Utilizza `{{authData.accessToken}}` se Experience Platform deve utilizzare token senza scadenza per connettersi alla tua destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
+| `{{segment.alias}}` | Accede all’alias del pubblico in Experience Platform. |
+| `{{segment.name}}` | Accede al nome del pubblico in Experience Platform. |
+| `{{segment.id}}` | Accede all’ID del pubblico in Experience Platform. |
+| `{{customerData.accountId}}` | Accede al campo ID account configurato nella configurazione di destinazione. |
+| `{{oauth2ServiceAccessToken}}` | Genera in modo dinamico un token di accesso in base alla configurazione OAuth 2. |
+| `{{authData.accessToken}}` | Passa il token di accesso all’endpoint API. Utilizza `{{authData.accessToken}}` se Experience Platform deve utilizzare token senza scadenza per connettersi alla tua destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
 | `{{body.segments[0].segment.id}}` | Restituisce l&#39;identificatore univoco del pubblico creato come valore della chiave `externalAudienceId`. |
 | `{{error.message}}` | Restituisce un messaggio di errore che verrà mostrato agli utenti nell’interfaccia utente di Experience Platform. |
-| `{{{segmentEnrichmentAttributes}}}` | Consente di accedere a tutti gli attributi di arricchimento per un pubblico specifico.  Questa macro è supportata dagli eventi `create`, `update` e `delete`. Gli attributi di arricchimento sono disponibili solo per i [tipi di pubblico del caricamento personalizzato](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
+| `{{{segmentEnrichmentAttributes}}}` | Accede a tutti gli attributi di arricchimento per un pubblico specifico.  Questa macro è supportata dagli eventi `create`, `update` e `delete`. Gli attributi di arricchimento sono disponibili solo per i [tipi di pubblico del caricamento personalizzato](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
 | `{{destination.name}}` | Restituisce il nome della destinazione. |
 | `{{destination.sandboxName}}` | Restituisce il nome della sandbox di Experience Platform in cui è configurata la destinazione. |
 | `{{destination.id}}` | Restituisce l&#39;ID della configurazione di destinazione. |
 | `{{destination.imsOrgId}}` | Restituisce l’ID dell’organizzazione IMS in cui è configurata la destinazione. |
-| `{{destination.enrichmentAttributes}}` | Consente di accedere a tutti gli attributi di arricchimento per tutti i tipi di pubblico mappati a una destinazione. Questa macro è supportata dagli eventi `createDestination`, `updateDestination` e `deleteDestination`. Gli attributi di arricchimento sono disponibili solo per i [tipi di pubblico del caricamento personalizzato](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Consente di accedere agli attributi di arricchimento per tipi di pubblico esterni specifici mappati a una destinazione. Gli attributi di arricchimento sono disponibili solo per i [tipi di pubblico del caricamento personalizzato](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
+| `{{destination.enrichmentAttributes}}` | Accede a tutti gli attributi di arricchimento per tutti i tipi di pubblico mappati a una destinazione. Questa macro è supportata dagli eventi `createDestination`, `updateDestination` e `deleteDestination`. Gli attributi di arricchimento sono disponibili solo per i [tipi di pubblico del caricamento personalizzato](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Accede agli attributi di arricchimento per tipi di pubblico esterni specifici mappati su una destinazione. Gli attributi di arricchimento sono disponibili solo per i [tipi di pubblico del caricamento personalizzato](destination-configuration/schema-configuration.md#external-audiences). Per informazioni sul funzionamento della selezione degli attributi di arricchimento, consulta la [guida all&#39;attivazione del pubblico batch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes). |
 
 {style="table-layout:auto"}

@@ -1,10 +1,10 @@
 ---
-description: Scopri come utilizzare Destination SDK per configurare una destinazione SFTP con opzioni di formattazione di file predefinite e configurazione del nome file personalizzato.
+description: Scopri come utilizzare Destination SDK per configurare una destinazione SFTP con opzioni di formattazione del file predefinite e configurazione del nome file personalizzato.
 title: Configura una destinazione SFTP con opzioni di formattazione del file predefinite e configurazione del nome file personalizzato.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-In questa pagina viene descritto come utilizzare Destination SDK per configurare una destinazione SFTP con [opzioni di formattazione file predefinite](configure-file-formatting-options.md) e una [configurazione nome file](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personalizzata.
+In questa pagina viene descritto come utilizzare Destination SDK per configurare una destinazione SFTP con [opzioni predefinite di formattazione del file](configure-file-formatting-options.md) e una [configurazione del nome file](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personalizzata.
 
 Questa pagina mostra tutte le opzioni di configurazione disponibili per le destinazioni SFTP. Puoi modificare le configurazioni mostrate nei passaggi seguenti o eliminare alcune parti delle configurazioni, in base alle esigenze.
 
-Per le descrizioni dettagliate dei parametri utilizzati di seguito, vedi [opzioni di configurazione nell&#39;SDK delle destinazioni](../../functionality/configuration-options.md).
+Per le descrizioni dettagliate dei parametri utilizzati di seguito, vedere [opzioni di configurazione in Destinazioni SDK](../../functionality/configuration-options.md).
 
 ## Prerequisiti {#prerequisites}
 
-Prima di procedere con i passaggi descritti di seguito, leggere la pagina della [guida introduttiva](../../getting-started.md) di Destination SDK per informazioni su come ottenere le credenziali di autenticazione Adobe I/O necessarie e altri prerequisiti per l&#39;utilizzo delle API Destination SDK.
+Prima di procedere con i passaggi descritti di seguito, leggere la pagina della guida introduttiva [Destination SDK](../../getting-started.md) per informazioni su come ottenere le credenziali di autenticazione Adobe I/O necessarie e altri prerequisiti per l&#39;utilizzo delle API Destination SDK.
 
 ## Passaggio 1: creare una configurazione di server e file {#create-server-file-configuration}
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Richiesta**
 
 La richiesta seguente crea una nuova configurazione del server di destinazione, configurata dai parametri forniti nel payload.
-Il payload seguente include una configurazione SFTP generica, con [parametri di configurazione predefiniti di formattazione del file CSV](../../functionality/destination-server/file-formatting.md) che gli utenti possono definire nell&#39;interfaccia utente di Experience Platform.
+Il payload seguente include una configurazione SFTP generica, con parametri di configurazione predefiniti di [formattazione file CSV](../../functionality/destination-server/file-formatting.md) che gli utenti possono definire nell&#39;interfaccia utente di Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -251,7 +251,7 @@ Una risposta corretta restituisce la nuova configurazione di destinazione, inclu
 
 ## Passaggio 3: verificare l’interfaccia utente di Experience Platform {#verify-ui}
 
-In base alle configurazioni di cui sopra, nel catalogo di Experience Platform verrà ora visualizzata una nuova scheda di destinazione privata da utilizzare.
+In base alle configurazioni di cui sopra, nel catalogo Experience Platform verrà ora visualizzata una nuova scheda di destinazione privata da utilizzare.
 
 ![Registrazione schermata che mostra la pagina del catalogo delle destinazioni con una scheda di destinazione selezionata.](../../assets/guides/batch/destination-card.gif)
 
@@ -273,7 +273,7 @@ Quando si visualizzano le opzioni di configurazione del nome file, si noti come 
 
 Se desideri modificare uno dei campi sopra menzionati, ripeti [i passaggi uno](#create-server-file-configuration) e [due](#create-destination-configuration) per modificare le configurazioni in base alle tue esigenze.
 
-## Passaggio 4: (facoltativo) Publish della tua destinazione {#publish-destination}
+## Passaggio 4: (facoltativo) pubblica la destinazione {#publish-destination}
 
 >[!NOTE]
 >
@@ -287,8 +287,8 @@ Dopo aver configurato la destinazione, utilizza l&#39;[API di pubblicazione dell
 >
 >Questo passaggio non è necessario se stai creando una destinazione privata per il tuo utilizzo e non stai cercando di pubblicarla nel catalogo delle destinazioni affinché altri clienti la possano utilizzare.
 
-Se sei un fornitore di software indipendente (ISV) o un integratore di sistemi (SI) che sta creando una [integrazione prodotta](../../overview.md#productized-custom-integrations), utilizza la [procedura di documentazione self-service](../../docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la tua destinazione nel [catalogo delle destinazioni di Experience Platform](../../../catalog/overview.md).
+Se sei un fornitore di software indipendente (ISV) o un integratore di sistemi (SI) che crea una [integrazione prodotta](../../overview.md#productized-custom-integrations), utilizza il [processo di documentazione self-service](../../docs-framework/documentation-instructions.md) per creare una pagina di documentazione del prodotto per la tua destinazione nel [catalogo delle destinazioni di Experience Platform](../../../catalog/overview.md).
 
 ## Passaggi successivi {#next-steps}
 
-Una volta letto questo articolo, sai come creare una destinazione SFTP personalizzata utilizzando Destination SDK. Successivamente, il tuo team può utilizzare il [flusso di lavoro di attivazione per le destinazioni basate su file](../../../ui/activate-batch-profile-destinations.md) per esportare i dati nella destinazione.
+Ora sai come creare una destinazione SFTP personalizzata utilizzando Destination SDK. Successivamente, il tuo team può utilizzare il [flusso di lavoro di attivazione per le destinazioni basate su file](../../../ui/activate-batch-profile-destinations.md) per esportare i dati nella destinazione.

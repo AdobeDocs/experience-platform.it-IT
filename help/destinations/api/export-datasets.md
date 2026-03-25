@@ -4,9 +4,9 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '5178'
+source-wordcount: '5137'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**Elemento azione**: la versione di Experience Platform[&#x200B; di &#x200B;](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
+>**Elemento azione**: la versione di Experience Platform[ di ](/help/release-notes/latest/latest.md#destinations)settembre 2024 ha introdotto l&#39;opzione per impostare una data `endTime` per i flussi di dati del set di dati di esportazione. Adobe ha inoltre introdotto una data di fine predefinita del 1° settembre 2025 per tutti i flussi di dati di esportazione del set di dati creati *prima della versione di settembre 2024*.
 >
 >Per uno qualsiasi di questi flussi di dati, devi aggiornare manualmente la data di fine nel flusso di dati prima della data di fine, altrimenti le esportazioni si fermeranno in tale data. Utilizza l’interfaccia utente di Experience Platform per visualizzare quali flussi di dati verranno impostati per l’interruzione il 1° settembre 2025.
 >
@@ -42,7 +42,7 @@ Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow 
 
 I set di dati che è possibile esportare dipendono dall&#39;applicazione Experience Platform ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), dal livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati, ad esempio Data Distiller.
 
-Per informazioni sui set di dati da esportare, consulta la tabella [nella pagina delle esercitazioni dell&#39;interfaccia utente](/help/destinations/ui/export-datasets.md#datasets-to-export).
+Consulta la tabella [ nella pagina dei tutorial dell&#39;interfaccia utente](/help/destinations/ui/export-datasets.md#datasets-to-export) per capire quali set di dati puoi esportare.
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -107,7 +107,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Documentazione di riferimento API {#api-reference-documentation}
 
-Questa esercitazione contiene la documentazione di riferimento per tutte le operazioni API. Consulta la documentazione sulle API di destinazione [[!DNL Flow Service]  sul sito Web Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). È consigliabile utilizzare questa esercitazione e la documentazione di riferimento API in parallelo.
+Questa esercitazione contiene la documentazione di riferimento per tutte le operazioni API. Consulta la documentazione API [[!DNL Flow Service] - Destinations sul sito Web Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). È consigliabile utilizzare questa esercitazione e la documentazione di riferimento API in parallelo.
 
 ### Glossario {#glossary}
 
@@ -129,7 +129,7 @@ Prima di avviare il flusso di lavoro per esportare un set di dati, identifica la
 
 {style="table-layout:auto"}
 
-Questi ID sono necessari per creare varie entità [!DNL Flow Service]. È inoltre necessario fare riferimento a parti di [!DNL Connection Spec] per impostare alcune entità in modo da poter recuperare [!DNL Connection Spec] da [!DNL Flow Service APIs]. Vedi gli esempi seguenti di recupero delle specifiche di connessione per tutte le destinazioni nella tabella:
+Questi ID sono necessari per creare varie entità [!DNL Flow Service]. È inoltre necessario fare riferimento a parti dello stesso [!DNL Connection Spec] per impostare determinate entità in modo da poter recuperare [!DNL Connection Spec] da [!DNL Flow Service APIs]. Vedi gli esempi seguenti di recupero delle specifiche di connessione per tutte le destinazioni nella tabella:
 
 >[!BEGINTABS]
 
@@ -941,7 +941,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2 (ADLS Gen2).
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, vedere la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina di documentazione della destinazione Azure Data Lake Gen 2(ADLS Gen2).
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1174,7 +1174,7 @@ Prendi nota dell’ID di connessione dalla risposta. Questo ID sarà richiesto n
 
 ![Diagramma che mostra il passaggio 4 nel flusso di lavoro per l&#39;esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-Successivamente, devi creare una connessione di destinazione in cui sono memorizzati i parametri di esportazione per i set di dati. I parametri di esportazione includono la posizione, il formato del file, la compressione e altri dettagli. Per informazioni sulle proprietà supportate per ciascun tipo di destinazione, fare riferimento alle proprietà `targetSpec` fornite nella specifica di connessione della destinazione. Fai riferimento alle schede seguenti per le proprietà `targetSpec` di tutte le destinazioni supportate.
+Successivamente, devi creare una connessione di destinazione in cui sono memorizzati i parametri di esportazione per i set di dati. I parametri di esportazione includono la posizione, il formato del file, la compressione e altri dettagli. Per informazioni sulle proprietà supportate per ciascun tipo di destinazione, vedere le proprietà `targetSpec` fornite nella specifica di connessione della destinazione. Fai riferimento alle schede seguenti per le proprietà `targetSpec` di tutte le destinazioni supportate.
 
 >[!IMPORTANT]
 >
@@ -1631,7 +1631,7 @@ Utilizzando la specifica di cui sopra, puoi creare una richiesta di connessione 
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina di documentazione della destinazione [!DNL Amazon S3].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina della documentazione di destinazione [!DNL Amazon S3].
 >Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1684,7 +1684,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina di documentazione della destinazione [!DNL Azure Blob Storage].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina della documentazione di destinazione [!DNL Azure Blob Storage].
 >Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
@@ -1738,7 +1738,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 >Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1790,7 +1790,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina di documentazione della destinazione [!DNL Data Landing Zone].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina della documentazione di destinazione [!DNL Data Landing Zone].
 >Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
@@ -1842,7 +1842,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione [!DNL Google Cloud Storage].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina della documentazione di destinazione [!DNL Google Cloud Storage].
 >Per gli altri valori supportati di `datasetFileType`, consulta la documentazione di riferimento API.
 
 
@@ -1994,11 +1994,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams`, che consente di personalizzare i tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
+La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams` per personalizzare i tempi, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, vedere [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
 | `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
@@ -2063,11 +2063,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams`, che consente di personalizzare i tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
+La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams` per personalizzare i tempi, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, vedere [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
 | `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
@@ -2133,11 +2133,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams`, che consente di personalizzare i tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
+La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams` per personalizzare i tempi, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, vedere [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
 | `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
@@ -2203,11 +2203,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams`, che consente di personalizzare i tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
+La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams` per personalizzare i tempi, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, vedere [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
 | `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
@@ -2272,11 +2272,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams`, che consente di personalizzare i tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
+La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams` per personalizzare i tempi, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, vedere [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
 | `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
@@ -2342,11 +2342,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams`, che consente di personalizzare i tempi di esportazione, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
+La tabella seguente fornisce le descrizioni di tutti i parametri nella sezione `scheduleParams` per personalizzare i tempi, la frequenza, la posizione e altro ancora per le esportazioni dei set di dati.
 
 | Parametro | Descrizione |
 |---------|----------|
-| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, fare riferimento a [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esporta file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
+| `exportMode` | Selezionare `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, vedere [esportare file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell&#39;esercitazione di attivazione delle destinazioni batch. Le tre opzioni di esportazione disponibili sono: <br> **File completo - Una volta**: `"DAILY_FULL_EXPORT"` può essere utilizzato solo in combinazione con `timeUnit`:`day` e `interval`:`0` per un&#39;esportazione completa una tantum del set di dati. Le esportazioni giornaliere complete di set di dati non sono supportate. Se hai bisogno di esportazioni giornaliere, utilizza l’opzione di esportazione incrementale. <br> **Esportazioni incrementali giornaliere**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval`:`1` per le esportazioni incrementali giornaliere. <br> **Esportazioni orarie incrementali**: selezionare `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval`:`3`,`6`,`9` o `12` per le esportazioni orarie incrementali. |
 | `timeUnit` | Selezionare `day` o `hour` a seconda della frequenza con cui si desidera esportare i file del set di dati. |
 | `interval` | Selezionare `1` quando `timeUnit` è giorno e `3`,`6`,`9`,`12` quando l&#39;unità di tempo è `hour`. |
 | `startTime` | Data e ora in secondi UNIX in cui devono iniziare le esportazioni dei set di dati. |
@@ -2477,7 +2477,7 @@ Quando vengono compressi, si noti la differenza di formato tra i due tipi di fil
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform per ulteriori informazioni sull&#39;interpretazione delle risposte di errore.
 
 ## Limitazioni note {#known-limitations}
 
@@ -2489,7 +2489,7 @@ Visualizza un [elenco di domande frequenti](/help/destinations/ui/export-dataset
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai connesso correttamente Experience Platform a una delle destinazioni preferite per l’archiviazione cloud batch e hai impostato un flusso di dati per la rispettiva destinazione per esportare i set di dati. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
+Hai connesso Experience Platform a una delle destinazioni preferite per l’archiviazione cloud batch e configurato un flusso di dati per l’esportazione di set di dati nella rispettiva destinazione. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
 
 * [Panoramica sulle destinazioni](../home.md)
 * [Panoramica del catalogo delle destinazioni](../catalog/overview.md)

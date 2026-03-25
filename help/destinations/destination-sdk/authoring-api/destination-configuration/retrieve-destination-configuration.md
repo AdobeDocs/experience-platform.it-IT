@@ -2,9 +2,9 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Recuperare una configurazione di destinazione
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '365'
 ht-degree: 2%
 
 ---

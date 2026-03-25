@@ -3,7 +3,7 @@ title: Connessione PubMatic
 description: PubMatic ottimizza il valore per il cliente offrendo il supply chain di marketing digitale programmatico del futuro. PubMatic Connect combina tecnologia di piattaforma e servizio dedicato per migliorare il modo in cui l’inventario e i dati vengono assemblati e scambiati.
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 3%
@@ -162,7 +162,7 @@ Se utilizzi la destinazione PubMatic Connect (Custom Audience ID Mapping), devi 
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-L&#39;interfaccia utente di [!DNL PubMatic] consente di verificare se i dati sono stati inviati correttamente e se i segmenti sono disponibili. L&#39;aggiornamento dell&#39;interfaccia utente [!DNL PubMatic] può richiedere fino a 24 ore dopo il push dei dati.
+Utilizza l&#39;interfaccia utente [!DNL PubMatic] per verificare se i dati sono stati inviati correttamente e che i segmenti siano disponibili. L&#39;aggiornamento dell&#39;interfaccia utente [!DNL PubMatic] può richiedere fino a 24 ore dopo il push dei dati.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

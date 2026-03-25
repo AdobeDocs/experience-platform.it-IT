@@ -4,9 +4,9 @@ title: Elimina account di destinazione
 type: Tutorial
 description: Questo tutorial elenca i passaggi per eliminare gli account di destinazione nell’interfaccia utente di Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Per tutte le informazioni che puoi ottenere su ciascun account di destinazione, consulta la [Panoramica account](../ui/destinations-workspace.md#accounts).
+La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilite con varie destinazioni. Per tutte le informazioni disponibili per ciascun account di destinazione, vedere [Panoramica account](../ui/destinations-workspace.md#accounts).
 
 Questo tutorial illustra i passaggi necessari per eliminare gli account di destinazione non più necessari tramite l’interfaccia utente di Experience Platform.
 
@@ -29,7 +29,7 @@ Questo tutorial illustra i passaggi necessari per eliminare gli account di desti
 
 Per eliminare gli account di destinazione esistenti, effettua le seguenti operazioni.
 
-1. Accedi alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
+1. Vai alla [interfaccia utente di Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
 
    ![Scheda Account](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -47,6 +47,6 @@ Per eliminare gli account di destinazione esistenti, effettua le seguenti operaz
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai utilizzato correttamente l’area di lavoro delle destinazioni per eliminare gli account esistenti.
+Hai utilizzato correttamente l’area di lavoro delle destinazioni per eliminare gli account esistenti.
 
-Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fare riferimento al tutorial sull&#39;eliminazione di connessioni mediante l&#39;API del servizio Flusso[&#128279;](../api/delete-destination-account.md)
+Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fare riferimento al tutorial sull&#39;eliminazione di connessioni mediante l&#39;API del servizio Flusso[](../api/delete-destination-account.md)

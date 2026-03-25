@@ -1,12 +1,12 @@
 ---
 keywords: destinazione crm;CRM;crm;Microsoft Dynamics 365;destinazione crm Microsoft Dynamics 365
 title: Connessione Microsoft Dynamics 365
-description: La destinazione Microsoft Dynamics 365 consente di esportare i dati dell'account e attivarli in Microsoft Dynamics 365 in base alle esigenze aziendali.
+description: Utilizza la destinazione Microsoft Dynamics 365 per esportare i dati del tuo account e attivarli in Microsoft Dynamics 365 in base alle tue esigenze aziendali.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2076'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/en-us/) è una piattaforma di applicazioni aziendali basata su cloud che combina la pianificazione delle risorse aziendali (ERP) e la gestione delle relazioni con i clienti (CRM) insieme alle applicazioni di produttività e agli strumenti di intelligenza artificiale, per garantire operazioni complete più fluide e controllate, un migliore potenziale di crescita e costi ridotti.
 
-Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), che consente di aggiornare le identità all&#39;interno di un pubblico in [!DNL Dynamics 365].
+Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) per aggiornare le identità all&#39;interno di un pubblico in [!DNL Dynamics 365].
 
 [!DNL Dynamics 365] utilizza OAuth 2 con concessione di autorizzazione come meccanismo di autenticazione per comunicare con [!DNL Contact Entity Reference API]. Le istruzioni per l&#39;autenticazione nell&#39;istanza [!DNL Dynamics 365] sono riportate di seguito, nella sezione [Autentica nella destinazione](#authenticate).
 
@@ -29,7 +29,7 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate agli
 
 ### Prerequisiti di Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Dynamics 365], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Dynamics 365], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [tipi di pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creati in [!DNL Experience Platform].
 
 Se hai bisogno di indicazioni sugli stati del pubblico, consulta la documentazione di Adobe per il gruppo di campi per lo schema [Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md).
 
@@ -196,7 +196,7 @@ Per inviare correttamente i dati sul pubblico da [!DNL Adobe Experience Platform
      |---|---|---|
      | `contactid` | `contactid` | Sì |
 
-   * **[!UICONTROL Select custom attributes]**: selezionare questa opzione per associare il campo di origine a un attributo personalizzato definito nel campo **[!UICONTROL Attribute name]**. Per un elenco completo degli attributi supportati, consulta la [[!DNL Dynamics 365] documentazione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
+   * **[!UICONTROL Select custom attributes]**: selezionare questa opzione per associare il campo di origine a un attributo personalizzato definito nel campo **[!UICONTROL Attribute name]**. Consulta la [[!DNL Dynamics 365] documentazione](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) per un elenco completo degli attributi supportati.
      ![Schermata dell&#39;interfaccia utente di Experience Platform che mostra la mappatura di Target per l&#39;e-mail.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
@@ -245,7 +245,7 @@ Per verificare di aver impostato correttamente la destinazione, segui i passaggi
 1. Controlla il riepilogo del pubblico e assicurati che il conteggio dei profili corrisponda al conteggio creato all’interno del pubblico.
    ![Esempio di schermata dell&#39;interfaccia utente di Experience Platform che mostra il pubblico.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Accedi al sito Web [!DNL Dynamics 365], quindi passa alla pagina [!DNL Customers] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Dynamics 365] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL Mapping ID]** fornito durante il passaggio [pianificazione del pubblico](#schedule-audience-export-example).
+1. Vai al sito Web [!DNL Dynamics 365], quindi passa alla pagina [!DNL Customers] > [!DNL Contacts] e controlla se i profili del pubblico sono stati aggiunti. È possibile vedere che ogni stato del pubblico in [!DNL Dynamics 365] è stato aggiornato con lo stato del pubblico corrispondente da Experience Platform, in base al valore **[!UICONTROL Mapping ID]** fornito durante il passaggio [pianificazione del pubblico](#schedule-audience-export-example).
    ![Schermata dell&#39;interfaccia utente di Dynamics 365 che mostra la pagina Contatti con stati di pubblico aggiornati.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}

@@ -2,9 +2,9 @@
 description: Questa pagina descrive i vari flussi di autorizzazione OAuth 2 supportati da Destination SDK e fornisce istruzioni per impostare l’autorizzazione OAuth 2 per la destinazione.
 title: Autorizzazione OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2243'
+source-wordcount: '2234'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ Per impostare questo metodo di autorizzazione per la destinazione, aggiungi le s
 | `authType` | Stringa | Usare &quot;OAUTH2&quot;. |
 | `grant` | Stringa | Utilizzare &quot;OAUTH2_AUTHORIZATION_CODE&quot;. |
 | `accessTokenUrl` | Stringa | L’URL sul lato dell’utente che rilascia i token di accesso e, facoltativamente, i token di aggiornamento. |
-| `authorizationUrl` | Stringa | L’URL del server di autorizzazione, in cui reindirizzare l’utente per accedere all’applicazione. |
+| `authorizationUrl` | Stringa | L’URL del server di autorizzazione, dove reindirizzare l’utente per passare all’applicazione. |
 | `refreshTokenUrl` | Stringa | *Facoltativo.* L&#39;URL sul tuo lato, che rilascia i token di aggiornamento. Spesso `refreshTokenUrl` è uguale a `accessTokenUrl`. |
 | `clientId` | Stringa | ID client assegnato dal sistema a [!DNL Adobe Experience Platform]. |
 | `clientSecret` | Stringa | Il segreto client assegnato dal sistema a [!DNL Adobe Experience Platform]. |
@@ -460,17 +460,17 @@ Per impostare l’aggiornamento del token di accesso, potrebbe essere necessario
 | `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Stringa | <ul><li>Utilizzare `PEBBLE_V1` se si utilizzano i modelli per il valore in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Utilizzare `NONE` se il valore nel campo `accessTokenRequest.urlBasedDestination.url.value` è una costante. </li></li> |
 | `accessTokenRequest.urlBasedDestination.url.value` | Stringa | L’URL in cui Experience Platform richiede il token di accesso. |
 | `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Stringa | <ul><li>Utilizzare `PEBBLE_V1` se si utilizzano modelli per i valori in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Utilizzare `NONE` se il valore nel campo `accessTokenRequest.httpTemplate.requestBody.value` è una costante. </li></li> |
-| `accessTokenRequest.httpTemplate.requestBody.value` | Stringa | Utilizza il linguaggio dei modelli per personalizzare i campi nella richiesta HTTP per l’endpoint del token di accesso. Per informazioni su come utilizzare la creazione di modelli per personalizzare i campi, consulta la sezione [convenzioni di creazione di modelli](#templating-conventions). |
+| `accessTokenRequest.httpTemplate.requestBody.value` | Stringa | Utilizza il linguaggio dei modelli per personalizzare i campi nella richiesta HTTP per l’endpoint del token di accesso. Per informazioni su come utilizzare i modelli per personalizzare i campi, vedere la sezione [convenzioni di modelli](#templating-conventions). |
 | `accessTokenRequest.httpTemplate.httpMethod` | Stringa | Specifica il metodo HTTP utilizzato per chiamare l&#39;endpoint del token di accesso. Nella maggior parte dei casi, questo valore è `POST`. |
 | `accessTokenRequest.httpTemplate.contentType` | Stringa | Specifica il tipo di contenuto della chiamata HTTP all’endpoint del token di accesso. <br> Ad esempio: `application/x-www-form-urlencoded` o `application/json`. |
 | `accessTokenRequest.httpTemplate.headers` | Stringa | Specifica se è necessario aggiungere intestazioni alla chiamata HTTP all’endpoint del token di accesso. |
 | `accessTokenRequest.responseFields.templatingStrategy` | Stringa | <ul><li>Utilizzare `PEBBLE_V1` se si utilizzano modelli per i valori in `accessTokenRequest.responseFields.value`.</li><li> Utilizzare `NONE` se il valore nel campo `accessTokenRequest.responseFields.value` è una costante. </li></li> |
-| `accessTokenRequest.responseFields.value` | Stringa | Utilizza il linguaggio dei modelli per accedere ai campi nella risposta HTTP dall’endpoint del token di accesso. Per informazioni su come utilizzare la creazione di modelli per personalizzare i campi, consulta la sezione [convenzioni di creazione di modelli](#templating-conventions). |
+| `accessTokenRequest.responseFields.value` | Stringa | Utilizza il linguaggio dei modelli per accedere ai campi nella risposta HTTP dall’endpoint del token di accesso. Per informazioni su come utilizzare i modelli per personalizzare i campi, vedere la sezione [convenzioni di modelli](#templating-conventions). |
 | `accessTokenRequest.validations.name` | Stringa | Indica il nome fornito per la convalida. |
 | `accessTokenRequest.validations.actualValue.templatingStrategy` | Stringa | <ul><li>Utilizzare `PEBBLE_V1` se si utilizzano modelli per i valori in `accessTokenRequest.validations.actualValue.value`.</li><li> Utilizzare `NONE` se il valore nel campo `accessTokenRequest.validations.actualValue.value` è una costante. </li></li> |
-| `accessTokenRequest.validations.actualValue.value` | Stringa | Utilizza il linguaggio dei modelli per accedere ai campi nella risposta HTTP. Per informazioni su come utilizzare la creazione di modelli per personalizzare i campi, consulta la sezione [convenzioni di creazione di modelli](#templating-conventions). |
+| `accessTokenRequest.validations.actualValue.value` | Stringa | Utilizza il linguaggio dei modelli per accedere ai campi nella risposta HTTP. Per informazioni su come utilizzare i modelli per personalizzare i campi, vedere la sezione [convenzioni di modelli](#templating-conventions). |
 | `accessTokenRequest.validations.expectedValue.templatingStrategy` | Stringa | <ul><li>Utilizzare `PEBBLE_V1` se si utilizzano modelli per i valori in `accessTokenRequest.validations.expectedValue.value`.</li><li> Utilizzare `NONE` se il valore nel campo `accessTokenRequest.validations.expectedValue.value` è una costante. </li></li> |
-| `accessTokenRequest.validations.expectedValue.value` | Stringa | Utilizza il linguaggio dei modelli per accedere ai campi nella risposta HTTP. Per informazioni su come utilizzare la creazione di modelli per personalizzare i campi, consulta la sezione [convenzioni di creazione di modelli](#templating-conventions). |
+| `accessTokenRequest.validations.expectedValue.value` | Stringa | Utilizza il linguaggio dei modelli per accedere ai campi nella risposta HTTP. Per informazioni su come utilizzare i modelli per personalizzare i campi, vedere la sezione [convenzioni di modelli](#templating-conventions). |
 
 {style="table-layout:auto"}
 
@@ -491,4 +491,4 @@ A seconda della personalizzazione dell’autorizzazione, potrebbe essere necessa
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, conosci i modelli di autorizzazione OAuth 2 supportati da [!DNL Adobe Experience Platform] e sai come configurare la destinazione con il supporto per l’autorizzazione OAuth 2. Successivamente, puoi impostare la destinazione supportata da OAuth 2 tramite Destination SDK. Leggi [Utilizza Destination SDK per configurare la destinazione](../../guides/configure-destination-instructions.md) per i passaggi successivi.
+È ora possibile comprendere i modelli di autorizzazione OAuth 2 supportati da [!DNL Adobe Experience Platform] e sapere come configurare la destinazione con il supporto per l&#39;autorizzazione OAuth 2. Successivamente, puoi impostare la destinazione supportata da OAuth 2 tramite Destination SDK. Leggi [Utilizza Destination SDK per configurare la destinazione](../../guides/configure-destination-instructions.md) per i passaggi successivi.

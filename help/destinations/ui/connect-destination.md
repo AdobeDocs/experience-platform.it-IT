@@ -3,9 +3,9 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per connettersi a una destinazione, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per connettersi a una destinazione che supporta le esportazioni dei set di dati, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 ## Panoramica {#overview}
 
@@ -33,7 +33,7 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
    * **[!UICONTROL Activate]**. Connessione già impostata a questa destinazione. Questa destinazione supporta l’attivazione del pubblico e le esportazioni di set di dati.
    * **[!UICONTROL Activate audiences]**. Connessione già impostata a questa destinazione. Questa destinazione supporta solo l’attivazione del pubblico.
 
-   Per ulteriori informazioni sulla differenza tra questi controlli, è inoltre possibile fare riferimento alla sezione [Catalogo](../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+   Per ulteriori informazioni sulla differenza tra questi controlli, vedere la sezione [Catalogo](../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
    Selezionare **[!UICONTROL Set up]**, **[!UICONTROL Activate]** o **[!UICONTROL Activate audiences]**, a seconda del controllo disponibile.
 
@@ -109,7 +109,7 @@ Alcune destinazioni basate su file supportano l’attivazione del pubblico per c
 
 ### Abilita avvisi di destinazione {#enable-alerts}
 
-1. (Facoltativo) Seleziona gli avvisi del flusso di dati di destinazione a cui desideri abbonarti. È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso. Gli avvisi disponibili variano in base al tipo di destinazione (basata su file o streaming) a cui ti stai connettendo. Leggi [Abbonati agli avvisi contestuali di destinazione](alerts.md) per informazioni dettagliate sugli avvisi di flusso di dati di destinazione.
+1. (Facoltativo) Seleziona gli avvisi del flusso di dati di destinazione a cui desideri abbonarti. Abbonati agli avvisi durante la creazione di un flusso di dati per ricevere messaggi di avviso relativi allo stato, al successo o all’errore dell’esecuzione del flusso. Gli avvisi disponibili variano in base al tipo di destinazione (basata su file o streaming) a cui ti stai connettendo. Leggi [Abbonati agli avvisi contestuali di destinazione](alerts.md) per informazioni dettagliate sugli avvisi di flusso di dati di destinazione.
 
    ![Finestra di dialogo Configura nuova destinazione con le opzioni di sottoscrizione degli avvisi di destinazione contestuali evidenziate.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -127,6 +127,6 @@ Alcune destinazioni basate su file supportano l’attivazione del pubblico per c
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, hai imparato a utilizzare l’interfaccia utente di Experience Platform per stabilire una connessione a una destinazione. I parametri di connessione disponibili e richiesti variano da destinazione a destinazione. È inoltre necessario consultare la pagina della documentazione di destinazione nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md) per informazioni specifiche sugli input richiesti e sulle opzioni disponibili per tipo di destinazione.
+Ora sai come utilizzare l’interfaccia utente di Experience Platform per stabilire una connessione a una destinazione. I parametri di connessione disponibili e richiesti variano da destinazione a destinazione. Consulta la pagina della documentazione di destinazione nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md) per informazioni specifiche sugli input richiesti e sulle opzioni disponibili per tipo di destinazione.
 
-Quindi, puoi procedere all&#39;[attivazione dei tipi di pubblico](/help/destinations/ui/activation-overview.md) o all&#39;[esportazione dei set di dati](/help/destinations/ui/export-datasets.md) nella tua destinazione.
+Quindi, procedi all&#39;[attivazione dei tipi di pubblico](/help/destinations/ui/activation-overview.md) o all&#39;[esportazione dei set di dati](/help/destinations/ui/export-datasets.md) nella tua destinazione.

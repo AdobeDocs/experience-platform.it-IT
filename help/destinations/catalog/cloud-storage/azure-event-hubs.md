@@ -4,9 +4,9 @@ title: Connessione Azure Event Hubs
 description: Crea una connessione in uscita in tempo reale all'archivio  [!DNL Azure Event Hubs]  per inviare dati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2142'
 ht-degree: 5%
 
 ---
@@ -73,7 +73,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione [!DNL Azure Event Hubs]. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione [!DNL Azure Event Hubs]. Per l&#39;elenco completo degli IP da inserire nell&#39;elenco Consentiti, vedere [Indirizzo IP da per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 
@@ -125,8 +125,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Name]**: immettere un nome per la connessione a [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: fornire una descrizione della connessione. Esempi: &quot;Clienti di livello Premium&quot;, &quot;Clienti interessati al kitesurfing&quot;.
 * **[!UICONTROL eventHubName]**: fornire un nome per il flusso nella destinazione [!DNL Azure Event Hubs].
-* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
-* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
 
 ### Abilita avvisi {#enable-alerts}
 

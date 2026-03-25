@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '4966'
+source-wordcount: '4933'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 Questa guida richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato tramite il quale [!DNL Experience Platform] organizza i dati sull&#39;esperienza del cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di creare tipi di pubblico e generarli in [!DNL Adobe Experience Platform] dai dati di [!DNL Real-Time Customer Profile].
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] crea tipi di pubblico in [!DNL Adobe Experience Platform] dai tuoi dati di [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola istanza [!DNL Experience Platform] in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per attivare i dati nelle destinazioni basate su file in Experience Platform.
@@ -87,7 +87,7 @@ Tutte le richieste che contengono un payload (`POST`, `PUT`, `PATCH`) richiedono
 
 ### Documentazione di riferimento API {#api-reference-documentation}
 
-Questa esercitazione contiene la documentazione di riferimento per tutte le operazioni API. Consulta la documentazione [Flow Service - Destinations API (Servizio di flusso - Destinazioni) sul sito Web Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). È consigliabile utilizzare questa esercitazione e la documentazione di riferimento API in parallelo.
+Questa esercitazione contiene la documentazione di riferimento per tutte le operazioni API. Consulta la documentazione [Flow Service - Destinations API sul sito Web Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). È consigliabile utilizzare questa esercitazione e la documentazione di riferimento API in parallelo.
 
 ### Glossario {#glossary}
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere le credenziali di autenticazione richieste, consulta la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina della documentazione di destinazione di Azure Data Lake Gen 2 (ADLS Gen2).
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, vedere la sezione [autentica nella destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) della pagina di documentazione della destinazione Azure Data Lake Gen 2(ADLS Gen2).
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -1202,7 +1202,7 @@ Prendi nota dell’ID di connessione dalla risposta. Questo ID sarà richiesto n
 
 Successivamente, devi creare una connessione di destinazione. [Le connessioni di destinazione](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) memorizzano i parametri di esportazione per i tipi di pubblico esportati. I parametri di esportazione includono la posizione di esportazione, il formato del file, la compressione e altri dettagli. Ad esempio, per i file CSV, puoi selezionare diverse opzioni di esportazione. Ottieni informazioni dettagliate su tutte le opzioni di esportazione CSV supportate nella [pagina configurazioni di formattazione file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-Per informazioni sulle proprietà supportate per ciascun tipo di destinazione, fare riferimento alle proprietà `targetSpec` fornite in `connection spec` della destinazione. Fai riferimento alle schede seguenti per le proprietà `targetSpec` di tutte le destinazioni supportate.
+Per informazioni sulle proprietà supportate per ciascun tipo di destinazione, vedere le proprietà `targetSpec` fornite in `connection spec` della destinazione. Fai riferimento alle schede seguenti per le proprietà `targetSpec` di tutte le destinazioni supportate.
 
 >[!BEGINTABS]
 
@@ -2402,7 +2402,7 @@ Utilizzando la specifica di cui sopra, puoi creare una richiesta di connessione 
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina di documentazione della destinazione [!DNL Amazon S3].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) della pagina della documentazione di destinazione [!DNL Amazon S3].
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2438,7 +2438,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, fare riferimento alla [pagina configurazioni di formattazione file](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, vedere la [pagina di configurazione del formato file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2496,7 +2496,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina di documentazione della destinazione [!DNL Azure Blob Storage].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) della pagina della documentazione di destinazione [!DNL Azure Blob Storage].
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2532,7 +2532,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, fare riferimento alla [pagina configurazioni di formattazione file](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, vedere la [pagina di configurazione del formato file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) della pagina della documentazione di destinazione di Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2625,7 +2625,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, fare riferimento alla [pagina configurazioni di formattazione file](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, vedere la [pagina di configurazione del formato file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2683,7 +2683,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina di documentazione della destinazione [!DNL Data Landing Zone].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) della pagina della documentazione di destinazione [!DNL Data Landing Zone].
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2718,7 +2718,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, fare riferimento alla [pagina configurazioni di formattazione file](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, vedere la [pagina di configurazione del formato file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2776,7 +2776,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni su come ottenere i parametri di destinazione richiesti, fare riferimento alla sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina di documentazione della destinazione [!DNL Google Cloud Storage].
+>Per informazioni su come ottenere i parametri di destinazione richiesti, vedere la sezione [compila i dettagli di destinazione](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) della pagina della documentazione di destinazione [!DNL Google Cloud Storage].
 
 Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
 
@@ -2812,7 +2812,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, fare riferimento alla [pagina configurazioni di formattazione file](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, vedere la [pagina di configurazione del formato file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2905,7 +2905,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, fare riferimento alla [pagina configurazioni di formattazione file](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Per informazioni dettagliate sulle opzioni CSV disponibili per l&#39;esportazione di file, vedere la [pagina di configurazione del formato file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -4875,11 +4875,11 @@ Nella documentazione di riferimento API sono disponibili informazioni sui [vari 
 
 ## Gestione degli errori API {#api-error-handling}
 
-Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Per ulteriori informazioni sull&#39;interpretazione delle risposte di errore, consultare [codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform.
+Gli endpoint API in questa esercitazione seguono i principi generali dei messaggi di errore API di Experience Platform. Consulta [Codici di stato API](/help/landing/troubleshooting.md#api-status-codes) e [errori di intestazione della richiesta](/help/landing/troubleshooting.md#request-header-errors) nella guida alla risoluzione dei problemi di Experience Platform per ulteriori informazioni sull&#39;interpretazione delle risposte di errore.
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai connesso correttamente Experience Platform a una delle destinazioni di archiviazione cloud preferite e hai impostato un flusso di dati per la rispettiva destinazione per esportare i tipi di pubblico. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
+Hai connesso correttamente Experience Platform a una delle destinazioni di archiviazione cloud preferite e configurato un flusso di dati per la rispettiva destinazione per esportare i tipi di pubblico. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
 
 * [Panoramica sulle destinazioni](../home.md)
 * [Panoramica del catalogo delle destinazioni](../catalog/overview.md)

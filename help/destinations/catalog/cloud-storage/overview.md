@@ -3,7 +3,7 @@ keywords: destinazione archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud di Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 6%
@@ -75,8 +75,8 @@ Analogamente agli esempi precedenti, è possibile utilizzare ulteriori macro per
 Le destinazioni di archiviazione cloud supportano i seguenti tipi di esportazione:
 
 * **Esportazione basata su profilo**. Ciò significa che stai esportando dettagli sulle persone nel pubblico. Questi dettagli sono necessari per la personalizzazione e possono includere attributi, eventi, appartenenze a un pubblico e altro ancora.
-* **Esportazione set di dati**. Questa funzionalità consente di esportare interi set di dati in destinazioni di archiviazione cloud. [Ulteriori informazioni](/help/destinations/ui/export-datasets.md) sulla nuova funzionalità.
+* **Esportazione set di dati**. Utilizza questa funzionalità per esportare interi set di dati in destinazioni di archiviazione cloud. [Ulteriori informazioni](/help/destinations/ui/export-datasets.md) sulla nuova funzionalità.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver selezionato una delle [destinazioni cloud supportate](#supported-destinations) da utilizzare, leggere l&#39;esercitazione [connetti a destinazioni](/help/destinations/ui/connect-destination.md) per scoprire come stabilire una connessione alla destinazione. Quindi, leggi il tutorial di attivazione sulle destinazioni basate su file per scoprire come avviare l&#39;esportazione dei dati di [1&rbrace; nella destinazione dell&#39;archiviazione cloud.](/help/destinations/ui/activate-batch-profile-destinations.md)
+Dopo aver selezionato una delle [destinazioni cloud supportate](#supported-destinations) da utilizzare, leggere l&#39;esercitazione [connetti a destinazioni](/help/destinations/ui/connect-destination.md) per scoprire come stabilire una connessione alla destinazione. Quindi, leggi il tutorial di attivazione sulle destinazioni basate su file per scoprire come avviare l&#39;esportazione dei dati di [1} nella destinazione dell&#39;archiviazione cloud.](/help/destinations/ui/activate-batch-profile-destinations.md)

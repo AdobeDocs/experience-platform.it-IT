@@ -2,9 +2,9 @@
 description: Scopri come configurare le specifiche del server di destinazione in Adobe Experience Platform Destination SDK tramite l’endpoint "/authoring/destination-servers".
 title: Specifiche server per le destinazioni create con Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2745'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ Quando [crea](../../authoring-api/destination-server/create-destination-server.m
 
 ## Campi hardcoded e template {#templatized-fields}
 
-Quando crei un server di destinazione tramite Destination SDK, puoi definire i valori dei parametri di configurazione codificandoli nella configurazione o utilizzando campi modello. I campi con modello consentono di leggere i valori forniti dall’utente dall’interfaccia utente di Experience Platform.
+Quando crei un server di destinazione tramite Destination SDK, puoi definire i valori dei parametri di configurazione codificandoli nella configurazione o utilizzando campi modello. I campi con modelli leggono i valori forniti dall’utente dall’interfaccia utente di Experience Platform.
 
 I parametri del server di destinazione hanno due campi configurabili. Queste opzioni determinano se si utilizzano valori hardcoded o template.
 
@@ -160,7 +160,7 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 
 ## Server di destinazione [!DNL Amazon S3] {#s3-example}
 
-Questo server di destinazione consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nell&#39;archiviazione Amazon S3.
+Utilizzare questo server di destinazione per esportare file contenenti dati [!DNL Adobe Experience Platform] nell&#39;archivio Amazon S3.
 
 L’esempio seguente mostra un esempio di configurazione del server di destinazione per una destinazione Amazon S3.
 
@@ -194,7 +194,7 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 
 ## Server di destinazione [!DNL SFTP] {#sftp-example}
 
-Questo server di destinazione consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nel server di archiviazione [!DNL SFTP].
+Utilizzare questo server di destinazione per esportare file contenenti dati [!DNL Adobe Experience Platform] nel server di archiviazione [!DNL SFTP].
 
 L’esempio seguente mostra un esempio di configurazione del server di destinazione per una destinazione SFTP.
 
@@ -232,7 +232,7 @@ L’esempio seguente mostra un esempio di configurazione del server di destinazi
 
 ## Server di destinazione [!DNL Azure Data Lake Storage] ([!DNL ADLS]) {#adls-example}
 
-Questo server di destinazione ti consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nel tuo account [!DNL Azure Data Lake Storage].
+Utilizzare questo server di destinazione per esportare file contenenti dati [!DNL Adobe Experience Platform] nell&#39;account [!DNL Azure Data Lake Storage].
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Azure Data Lake Storage].
 
@@ -260,7 +260,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 
 ## Server di destinazione [!DNL Azure Blob Storage] {#blob-example}
 
-Questo server di destinazione consente di esportare file contenenti dati [!DNL Adobe Experience Platform] nel contenitore [!DNL Azure Blob Storage].
+Utilizzare questo server di destinazione per esportare file contenenti dati [!DNL Adobe Experience Platform] nel contenitore [!DNL Azure Blob Storage].
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Azure Blob Storage].
 
@@ -294,7 +294,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 
 ## Server di destinazione [!DNL Data Landing Zone] ([!DNL DLZ]) {#dlz-example}
 
-Questo server di destinazione consente di esportare i file contenenti dati di Experience Platform in un archivio [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
+Utilizzare questo server di destinazione per esportare i file contenenti dati di Experience Platform in un archivio [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Data Landing Zone] ([!DNL DLZ]).
 
@@ -324,7 +324,7 @@ Nell&#39;esempio seguente viene illustrato un esempio di configurazione del serv
 
 ## Server di destinazione [!DNL Google Cloud Storage] {#gcs-example}
 
-Questo server di destinazione ti consente di esportare i file contenenti dati di Experience Platform nel tuo account [!DNL Google Cloud Storage].
+Utilizzare questo server di destinazione per esportare i file contenenti dati di Experience Platform nell&#39;account [!DNL Google Cloud Storage].
 
 Nell&#39;esempio seguente viene illustrato un esempio di configurazione del server di destinazione per una destinazione [!DNL Google Cloud Storage].
 

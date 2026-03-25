@@ -3,9 +3,9 @@ keywords: Integrazione InMoment;inmoment;Inmoment;launch
 title: Estensione InMoment
 description: L’estensione InMoment è una destinazione di sondaggio in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '445'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-L&#39;estensione tag [!DNL InMoment] consente di abilitare in modo rapido e semplice il feedback online tramite il prodotto Digital Intercept. Nell’app, le intercettazioni possono essere configurate e gestite tramite l’amministratore di CXI Cloud, consentendo ai responsabili CX di avere un maggiore controllo sul programma.
+L&#39;estensione tag [!DNL InMoment] consente un feedback online rapido e semplice tramite il prodotto Digital Intercept. Nell’app, le intercettazioni possono essere configurate e gestite tramite l’amministratore di CXI Cloud, consentendo ai responsabili CX di avere un maggiore controllo sul programma.
 
 [!DNL InMoment] è un&#39;estensione del sondaggio in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Glossario di Adobe Experience Platform Destination SDK
 description: Comprendi la terminologia importante quando crei una destinazione utilizzando Experience Platform Destination SDK.
 exl-id: d65f390a-a980-49b8-9570-840f03534553
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '669'
 ht-degree: 2%
 
 ---
@@ -44,6 +44,6 @@ Modello **[!DNL Pebble]**: un modello [!DNL Pebble] trasforma i dati esportati d
 
 **Specifiche modello e strategie di modelli**: le specifiche modello sono configurazioni utilizzate per formattare le richieste HTTP inviate da [!DNL Adobe Experience Platform] a una destinazione. Trasformano i campi degli attributi del profilo dallo schema XDM in un formato supportato dalla piattaforma di destinazione. Utilizzando un linguaggio per modelli simile a [!DNL Jinja], queste specifiche consentono trasformazioni di dati dinamiche basate su regole e dati di input specifici. [Ulteriori informazioni](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md).
 
-**Test API**: l&#39;API di test consente di convalidare le configurazioni di destinazione prima di inviare una richiesta di pubblicazione. Fornisce strumenti per generare profili di esempio e testare il flusso di dati, garantendo che la configurazione corrisponda ai requisiti della destinazione. L’API supporta sia le destinazioni in streaming che quelle basate su file (batch), offrendo un modo per simulare i dati e risolvere potenziali problemi nel processo di configurazione. Ulteriori informazioni sull&#39;API di test per [streaming](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) e [destinazioni basate su file](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
+**Test API**: utilizza l&#39;API di test per convalidare le configurazioni di destinazione prima di inviare una richiesta di pubblicazione. Fornisce strumenti per generare profili di esempio e testare il flusso di dati, garantendo che la configurazione corrisponda ai requisiti della destinazione. L’API supporta sia le destinazioni in streaming che quelle basate su file (batch), offrendo un modo per simulare i dati e risolvere potenziali problemi nel processo di configurazione. Ulteriori informazioni sull&#39;API di test per [streaming](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) e [destinazioni basate su file](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
 
 **Modello di trasformazione**: un modello di trasformazione personalizza il formato dei dati dallo schema XDM di Adobe al formato previsto della destinazione. [Ulteriori informazioni](/help/destinations/destination-sdk/functionality/destination-server/message-format.md).

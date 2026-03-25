@@ -3,7 +3,7 @@ keywords: clicktale;estensione clicktale;destinazione clicktale
 title: Estensione Clicktale
 description: L’estensione Clicktale è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: fb721f0a-6026-4d7b-ba42-2e540e9c5426
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-L&#39;estensione tag [!DNL Clicktale] consente di distribuire codice e mappare elementi dati utilizzando [!DNL Clicktale's] Visual Editor.
+Utilizzare l&#39;estensione tag [!DNL Clicktale] per distribuire il codice e mappare gli elementi dati utilizzando [!DNL Clicktale's] Visual Editor.
 
 [!DNL Clicktale] è un&#39;estensione di analytics in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, vedere la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
 

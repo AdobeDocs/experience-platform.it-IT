@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;adobe campaign;campaign
 title: Connessione Adobe Campaign
 description: Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '926'
 ht-degree: 5%
 
 ---
@@ -58,7 +58,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al inserisco nell&#39;elenco Consentiti di e-mail marketing.
 
-Se hai bisogno di aggiungere IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta la [inserisce nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
+Se devi aggiungere gli IP Adobe al tuo inserisco nell&#39;elenco Consentiti di, consulta [inserisco nell&#39;elenco Consentiti di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md).
 
 ## Connettersi alla destinazione {#connect}
 
@@ -122,10 +122,10 @@ Per [!DNL Adobe Campaign] destinazioni, [!DNL Experience Platform] crea un file 
 >[!IMPORTANT]
 >
 >* Durante l&#39;esecuzione dell&#39;integrazione, tenere presenti i limiti di archiviazione [!DNL SFTP], i limiti di archiviazione del database e i limiti del profilo attivo in base al contratto [!DNL Adobe Campaign].
->* È necessario pianificare, importare e mappare i segmenti esportati in [!DNL Adobe Campaign] utilizzando [!DNL Campaign] flussi di lavoro. Consulta [Configurazione di un&#39;importazione ricorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) nella documentazione di [!DNL Adobe Campaign Classic] e [Informazioni sulle attività di gestione dati](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=it) nella documentazione di [!DNL Adobe Campaign Standard].
+>* È necessario pianificare, importare e mappare i segmenti esportati in [!DNL Adobe Campaign] utilizzando [!DNL Campaign] flussi di lavoro. Consulta [Impostazione di un&#39;importazione ricorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) nella documentazione di [!DNL Adobe Campaign Classic] e [Informazioni sulle attività di gestione dati](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) nella documentazione di [!DNL Adobe Campaign Standard].
 >* Il metodo preferito per inviare dati a [!DNL Adobe Campaign] è tramite [!DNL Amazon S3] o [!DNL Azure Blob].
 
-Dopo aver connesso [!DNL Experience Platform] al tuo archivio [!DNL Amazon S3] o [!DNL Azure Blob], devi configurare l&#39;importazione dei dati dal percorso di archiviazione in [!DNL Adobe Campaign]. Per informazioni su come eseguire questa operazione, fare riferimento alle seguenti [!DNL Adobe Campaign] pagine della documentazione:
+Dopo aver connesso [!DNL Experience Platform] al tuo archivio [!DNL Amazon S3] o [!DNL Azure Blob], devi configurare l&#39;importazione dei dati dal percorso di archiviazione in [!DNL Adobe Campaign]. Per informazioni su come eseguire questa operazione, vedere le seguenti [!DNL Adobe Campaign] pagine di documentazione:
 
-* [Introduzione all&#39;importazione ed esportazione dei dati](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=it) e [Caricamento dei dati (file)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=it) nella documentazione di [!DNL Adobe Campaign Classic].
-* [Introduzione ai processi e alla gestione dei dati](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=it) e [Carica file](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=it) nella documentazione di [!DNL Adobe Campaign Standard].
+* [Introduzione all&#39;importazione ed esportazione dei dati](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=it) e [Caricamento dei dati (file)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) nella documentazione di [!DNL Adobe Campaign Classic].
+* [Introduzione ai processi e alla gestione dei dati](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) e [Carica file](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) nella documentazione di [!DNL Adobe Campaign Standard].

@@ -2,9 +2,9 @@
 description: Scopri come impostare un criterio di aggregazione per determinare come raggruppare e raggruppare in batch le richieste HTTP nella destinazione.
 title: Criterio di aggregazione
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1225'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Per capire dove questo componente si inserisce in un&#39;integrazione creata con
 
 In questo articolo vengono descritte tutte le impostazioni dei criteri di aggregazione supportate che è possibile utilizzare per la destinazione.
 
-Dopo aver letto questo documento, consulta la documentazione su [utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating) e gli [esempi chiave di aggregazione](../../functionality/destination-server/message-format.md#template-aggregation-key) per scoprire come includere i criteri di aggregazione nel modello di trasformazione dei messaggi in base ai criteri di aggregazione selezionati.
+Dopo aver letto questo documento, consulta la documentazione su [utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating) e gli [esempi chiave di aggregazione](../../functionality/destination-server/message-format.md#template-aggregation-key) per capire come includere i criteri di aggregazione nel modello di trasformazione dei messaggi in base ai criteri di aggregazione selezionati.
 
 >[!IMPORTANT]
 >
@@ -81,7 +81,7 @@ L’esempio di configurazione seguente mostra una configurazione dell’aggregaz
 | `aggregationType` | Stringa | Indica il tipo di criterio di aggregazione da utilizzare nella destinazione. Tipi di aggregazione supportati: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Intero | Experience Platform può aggregare più profili esportati in una singola chiamata HTTP. <br><br>Questo valore indica il numero massimo di profili che l&#39;endpoint deve ricevere in una singola chiamata HTTP. Tieni presente che si tratta di un’aggregazione ottimale. Ad esempio, se specifichi il valore 100, Experience Platform potrebbe inviare a una chiamata un numero qualsiasi di profili inferiore a 100. <br><br> Se il server non accetta più utenti per richiesta, impostare questo valore su `1`. |
 | `bestEffortAggregation.splitUserById` | Booleano | Utilizza questo flag se la chiamata alla destinazione deve essere divisa per identità. Imposta questo flag su `true` se il server accetta una sola identità per chiamata, per uno spazio dei nomi identità specificato. |
-| `bestEffortAggregation.aggregationKey` | Oggetto | *Facoltativo*. Consente di aggregare i profili esportati mappati sulla destinazione in base ai parametri descritti di seguito. Questo parametro può essere omesso o impostato su `null` se l&#39;aggregazione non è necessaria. Se fornito, funziona in modo identico alla chiave di aggregazione nell’aggregazione configurabile. |
+| `bestEffortAggregation.aggregationKey` | Oggetto | *Facoltativo*. Aggrega i profili esportati mappati alla destinazione in base ai parametri descritti di seguito. Questo parametro può essere omesso o impostato su `null` se l&#39;aggregazione non è necessaria. Se fornito, funziona in modo identico alla chiave di aggregazione nell’aggregazione configurabile. |
 | `bestEffortAggregation.aggregationKey.includeSegmentId` | Booleano | Imposta questo parametro su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico. |
 | `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Booleano | Imposta questo parametro e `includeSegmentId` su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico e allo stato del pubblico. |
 | `bestEffortAggregation.aggregationKey.includeIdentity` | Booleano | Impostare questo parametro su `true` se si desidera raggruppare i profili esportati nella destinazione in base allo spazio dei nomi delle identità. |
@@ -96,7 +96,7 @@ L’esempio di configurazione seguente mostra una configurazione dell’aggregaz
 
 ## Aggregazione configurato {#configurable-aggregation}
 
-L’aggregazione configurabile funziona meglio se si preferisce gestire batch di grandi dimensioni con migliaia di profili nella stessa chiamata. Questa opzione consente inoltre di aggregare i profili esportati in base a regole di aggregazione complesse.
+L’aggregazione configurabile funziona meglio se si preferisce gestire batch di grandi dimensioni con migliaia di profili nella stessa chiamata. Questa opzione supporta anche l’aggregazione dei profili esportati in base a regole di aggregazione complesse.
 
 L’esempio di configurazione seguente mostra una configurazione dell’aggregazione configurabile. Per un esempio dell&#39;aggregazione della migliore sforzo, vedere la sezione [aggregazione della migliore sforzo](#best-effort-aggregation). I parametri applicabili all’aggregazione configurabile sono indicati nella tabella seguente.
 
@@ -136,7 +136,7 @@ L’esempio di configurazione seguente mostra una configurazione dell’aggregaz
 | `configurableAggregation.splitUserById` | Booleano | Utilizza questo flag se la chiamata alla destinazione deve essere divisa per identità. Imposta questo flag su `true` se il server accetta una sola identità per chiamata, per uno spazio dei nomi identità specificato. |
 | `configurableAggregation.maxBatchAgeInSecs` | Intero | Utilizzato in combinazione con `maxNumEventsInBatch`, questo parametro determina il tempo di attesa di Experience Platform per l&#39;invio di una chiamata API all&#39;endpoint. <ul><li>Valore minimo (secondi): 301</li><li>Valore massimo (secondi): 3.600</li></ul> Ad esempio, se utilizzi il valore massimo per entrambi i parametri, Experience Platform attenderà 3.600 secondi O fino a quando non saranno presenti 10000 profili qualificati prima di effettuare la chiamata API, a seconda di quale evento si verifica per primo. |
 | `configurableAggregation.maxNumEventsInBatch` | Intero | Utilizzato insieme a `maxBatchAgeInSecs`, questo parametro determina il numero di profili qualificati da aggregare in una chiamata API. <ul><li>Valore minimo: 1.000</li><li>Valore massimo: 10.000</li></ul> Ad esempio, se utilizzi il valore massimo per entrambi i parametri, Experience Platform attenderà 3.600 secondi O fino a quando non saranno presenti 10.000 profili qualificati prima di effettuare la chiamata API, a seconda di quale evento si verifica per primo. |
-| `configurableAggregation.aggregationKey` | - | Consente di aggregare i profili esportati mappati sulla destinazione in base ai parametri descritti di seguito. |
+| `configurableAggregation.aggregationKey` | - | Aggrega i profili esportati mappati alla destinazione in base ai parametri descritti di seguito. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Imposta questo parametro su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Imposta questo parametro e `includeSegmentId` su `true` se vuoi raggruppare i profili esportati nella tua destinazione in base all&#39;ID pubblico e allo stato del pubblico. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booleano | Impostare questo parametro su `true` se si desidera raggruppare i profili esportati nella destinazione in base allo spazio dei nomi delle identità. |

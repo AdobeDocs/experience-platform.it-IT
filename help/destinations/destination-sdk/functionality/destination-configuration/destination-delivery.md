@@ -2,16 +2,16 @@
 description: Scopri come configurare le impostazioni di consegna della destinazione per le destinazioni create con Destination SDK, per indicare dove vanno i dati esportati e quale regola di autenticazione viene utilizzata nella posizione in cui verranno recapitati i dati.
 title: Consegna della destinazione
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 2%
 
 ---
 
 # Consegna della destinazione
 
-Per offrire un maggiore controllo sulla destinazione dei dati esportati, Destination SDK consente di specificare le impostazioni di consegna della destinazione.
+Per offrire un maggiore controllo sulla destinazione dei dati esportati, utilizza Destination SDK per specificare le impostazioni di consegna della destinazione.
 
 La sezione di consegna della destinazione indica dove vanno i dati esportati e quale regola di autenticazione viene utilizzata nella posizione in cui verranno recapitati i dati.
 

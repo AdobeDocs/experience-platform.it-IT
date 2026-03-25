@@ -4,9 +4,9 @@ title: Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale allo storage Amazon Kinesis per eseguire lo streaming dei dati da Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2061'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 >
 > Questa destinazione è disponibile solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Il servizio [!DNL Kinesis Data Streams] di [!DNL Amazon Web Services] consente di raccogliere ed elaborare flussi di dati di grandi dimensioni in tempo reale.
+Il servizio [!DNL Kinesis Data Streams] di [!DNL Amazon Web Services] raccoglie ed elabora grandi flussi di record di dati in tempo reale.
 
 È possibile creare una connessione in uscita in tempo reale all&#39;archivio [!DNL Amazon Kinesis] per inviare dati da [!DNL Adobe Experience Platform].
 
@@ -73,7 +73,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione [!DNL Amazon Kinesis]. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione [!DNL Amazon Kinesis]. Per l&#39;elenco completo degli IP da inserire nell&#39;elenco Consentiti, vedere [Indirizzo IP da per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
 
 ## Autorizzazioni [!DNL Amazon Kinesis] richieste {#required-kinesis-permission}
 
@@ -152,8 +152,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Name]**: specifica un nome per la connessione a [!DNL Amazon Kinesis]
 * **[!UICONTROL Description]**: fornire una descrizione per la connessione a [!DNL Amazon Kinesis].
 * **[!UICONTROL Stream]**: fornire il nome di un flusso di dati esistente nell&#39;account [!DNL Amazon Kinesis]. Experience Platform esporterà i dati in questo flusso.
-* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
-* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
 
 <!--
 

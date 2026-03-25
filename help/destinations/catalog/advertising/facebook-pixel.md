@@ -3,9 +3,9 @@ keywords: facebook pixel extensions;facebook pixel extension;facebook pixel dest
 title: Estensione Facebook Pixel
 description: L'estensione Facebook Pixel è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione su Adobe Exchange.
 exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '419'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-[!DNL Facebook Pixel] è uno strumento di analisi che ti consente di misurare l&#39;efficacia della tua pubblicità comprendendo le azioni intraprese dalle persone sul tuo sito Web.
+[!DNL Facebook Pixel] è uno strumento di analisi che consente di misurare l&#39;efficacia della pubblicità attraverso la comprensione delle azioni intraprese dagli utenti sul sito Web.
 
 [!DNL Facebook Pixel] è un&#39;estensione pubblicitaria in [!DNL Adobe Experience Platform]. Per ulteriori informazioni sulla funzionalità dell&#39;estensione, visitare il sito Web [Facebook Pixel](https://developers.facebook.com/docs/facebook-pixel/).
 

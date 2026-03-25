@@ -1,11 +1,11 @@
 ---
 keywords: e-mail;e-mail;destinazioni e-mail;sendgrid;sendgrid destinazione
 title: Connessione SendGrid
-description: La destinazione SendGrid consente di esportare i dati di prime parti e di attivarli in SendGrid in base alle esigenze aziendali.
+description: Utilizzare la destinazione SendGrid per esportare i dati di prime parti e attivarli in SendGrid in base alle esigenze aziendali.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1928'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [SendGrid](https://www.sendgrid.com) è una piattaforma di comunicazione con i clienti molto diffusa per le e-mail transazionali e di marketing.
 
-Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), che consente di esportare i profili e-mail di prime parti e attivarli all&#39;interno di un nuovo pubblico SendGrid per le esigenze aziendali.
+Questa [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts) per esportare i profili e-mail di prime parti e attivarli all&#39;interno di un nuovo pubblico SendGrid per le tue esigenze aziendali.
 
 SendGrid utilizza token API bearer come meccanismo di autenticazione per comunicare con l’API SendGrid.
 
@@ -27,14 +27,14 @@ Prima di iniziare a configurare la destinazione sono necessari i seguenti elemen
 1. È necessario disporre di un account SendGrid.
    * Passare alla pagina [abbonamento](https://signup.sendgrid.com/) di SendGrid per registrarsi e creare un account SendGrid, se non ne è già disponibile uno.
 1. Dopo aver effettuato l’accesso al portale SendGrid, è necessario generare anche un token API.
-1. Passare al sito Web SendGrid e accedere alla pagina **[!DNL Settings]** > **[!DNL API Keys]**. In alternativa, fare riferimento alla [documentazione SendGrid](https://app.sendgrid.com/settings/api_keys) per accedere alla sezione appropriata nell&#39;app SendGrid.
+1. Passare al sito Web SendGrid e accedere alla pagina **[!DNL Settings]** > **[!DNL API Keys]**. In alternativa, consulta la [documentazione SendGrid](https://app.sendgrid.com/settings/api_keys) per accedere alla sezione appropriata nell&#39;app SendGrid.
 1. Infine, selezionare il pulsante **[!DNL Create API Key]**.
    * Consulta la [documentazione di SendGrid](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key), se hai bisogno di istruzioni sulle azioni da eseguire.
    * Se desideri generare la chiave API a livello di programmazione, consulta la [documentazione SendGrid](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![Pagina delle impostazioni delle chiavi API SendGrid con il pulsante Crea chiave API.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
+Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
 
 >[!IMPORTANT]
 >
@@ -123,7 +123,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
-Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Description]**: descrizione facoltativa che consentirà di identificare questa destinazione in futuro.

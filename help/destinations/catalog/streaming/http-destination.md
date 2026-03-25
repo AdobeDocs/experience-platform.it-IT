@@ -4,9 +4,9 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '3020'
+source-wordcount: '3017'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ Per inviare i dati del profilo agli endpoint HTTP, devi prima [connetterti alla 
 
 ## Casi d’uso {#use-cases}
 
-La destinazione API HTTP consente di esportare i dati di profilo XDM e i tipi di pubblico in endpoint HTTP generici. A questo punto puoi eseguire analisi personalizzate o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
+Utilizza la destinazione API HTTP per esportare i dati di profilo XDM e i tipi di pubblico in endpoint HTTP generici. A questo punto puoi eseguire analisi personalizzate o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 
 Gli endpoint HTTP possono essere sistemi propri del cliente o soluzioni di terze parti.
 
@@ -103,7 +103,7 @@ Per ulteriori informazioni, consulta la [documentazione dell&#39;endpoint del ce
 
 ## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione API HTTP. Per l&#39;elenco completo degli indirizzi IP da inserire nell&#39;elenco Consentiti, consulta il inserisco nell&#39;elenco Consentiti di [degli indirizzi IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che puoi per la destinazione API HTTP. Per l&#39;elenco completo degli IP da inserire nell&#39;elenco Consentiti, vedere [Indirizzo IP da per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md).
 
 ## Tipi di autenticazione supportati {#supported-authentication-types}
 
@@ -236,8 +236,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Headers]**: immettere le intestazioni personalizzate che si desidera includere nelle chiamate di destinazione, nel seguente formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP Endpoint]**: URL dell&#39;endpoint HTTP a cui si desidera inviare i dati del profilo. Questo è l’endpoint di ricezione dei dati. Se utilizzi mTLS, l’endpoint deve avere TLS disabilitato e solo mTLS abilitato.
 * **[!UICONTROL Query parameters]**: facoltativamente, è possibile aggiungere parametri di query all&#39;URL dell&#39;endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. **Nota**: i nomi dei segmenti sono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includono il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
-* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. **Nota**: i nomi dei segmenti sono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includono il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
 
 ### Abilita avvisi {#enable-alerts}
 

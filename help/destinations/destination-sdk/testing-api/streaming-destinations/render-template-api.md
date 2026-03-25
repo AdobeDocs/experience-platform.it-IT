@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per convalidare l’output nella destinazione di streaming in base al modello di trasformazione del messaggio.
 title: Convalidare la struttura del profilo esportato
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Puoi iniziare utilizzando un semplice modello che esporta i profili non elaborat
 
 >[!TIP]
 >
->* L&#39;ID di destinazione da utilizzare è `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando l&#39;endpoint `/destinations`. Per ulteriori dettagli, consultare [recuperare una configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
+>* L&#39;ID di destinazione da utilizzare è `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando l&#39;endpoint `/destinations`. Per ulteriori dettagli, vedere [recuperare una configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md).
 
 **Formato API**
 

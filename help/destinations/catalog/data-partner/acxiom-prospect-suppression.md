@@ -4,9 +4,9 @@ description: Esporta il pubblico di prima parte verso la destinazione Acxiom per
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1531'
 ht-degree: 4%
 
 ---
@@ -187,7 +187,7 @@ Per verificare se i dati sono stati esportati correttamente, controlla il bucket
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, è stato creato un flusso di dati per esportare i dati batch da Experience Platform nel percorso S3 gestito di [!DNL Acxiom]. Per configurare l’elaborazione, contatta il rappresentante Acxiom con il nome dell’account, il nome del file e il percorso del bucket.
+È stato creato un flusso di dati per esportare i dati batch da Experience Platform nel percorso S3 gestito di [!DNL Acxiom]. Per configurare l’elaborazione, contatta il rappresentante Acxiom con il nome dell’account, il nome del file e il percorso del bucket.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

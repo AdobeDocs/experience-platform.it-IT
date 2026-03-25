@@ -2,9 +2,9 @@
 title: Algola
 description: Utilizza questo connettore per attivare i tipi di pubblico in Algolia per la personalizzazione e l’utilizzo in ricerche e consigli. Puoi quindi utilizzare il connettore di origine del profilo utente di Algolia per importare i profili in Real-Time CDP per creare tipi di pubblico avanzati.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1108'
 ht-degree: 4%
 
 ---
@@ -133,9 +133,9 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 >[!IMPORTANT]
 >
 >* Per attivare i dati, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo di accesso](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
->* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/it/docs/experience-platform/access-control/home#permissions).
+>* Per esportare le identità, è necessario disporre dell&#39;autorizzazione di controllo di accesso [Visualizza grafico identità](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
+Leggi [Attivare profili e tipi di pubblico nelle destinazioni di esportazione del pubblico di streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) per le istruzioni sull&#39;attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare attributi e identità {#mapping-attributes-identities}
 
@@ -163,4 +163,4 @@ Per ulteriori informazioni, fare riferimento alla seguente documentazione di [!D
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, è stato creato un flusso di dati per esportare i tipi di pubblico da Experience Platform nell&#39;applicazione [!DNL Algolia]. Per ulteriori informazioni sulla piattaforma [!DNL Algolia], consulta la [documentazione Algolia](https://www.algolia.com/doc/).
+È stato creato un flusso di dati per esportare i tipi di pubblico da Experience Platform nell&#39;applicazione [!DNL Algolia]. Per ulteriori informazioni sulla piattaforma [!DNL Algolia], consulta la [documentazione Algolia](https://www.algolia.com/doc/).
