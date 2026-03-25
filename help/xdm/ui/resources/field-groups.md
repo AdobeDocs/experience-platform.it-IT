@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 9%
+source-wordcount: '1004'
+ht-degree: 8%
 
 ---
 
@@ -23,6 +23,10 @@ In Experience Data Model (XDM), i gruppi di campi di schema sono componenti riut
 Un gruppo di campi definisce le classi con cui è compatibile, in base al comportamento dei dati che il gruppo di campi rappresenta (record o serie temporali). Ciò significa che non tutti i gruppi di campi sono disponibili per l&#39;utilizzo con tutte le classi.
 
 Adobe Experience Platform fornisce molti gruppi di campi standard che coprono un&#39;ampia gamma di casi d&#39;uso di marketing. Tuttavia, puoi anche creare e modificare i tuoi gruppi di campi personalizzati per definire concetti aggiuntivi relativi alla tua attività all’interno degli schemi XDM. Questa guida fornisce una panoramica su come creare, modificare e gestire gruppi di campi personalizzati per la tua organizzazione nell’interfaccia utente di Experience Platform.
+
+>[!NOTE]
+>
+>Le azioni XDM sono disponibili nella tabella di inventario e nella visualizzazione dei dettagli della risorsa (**[!UICONTROL More]**). Le azioni complete si applicano solo alle risorse personalizzate (definite dal tenant); le risorse standard hanno opzioni limitate. Vedi [Gestione di schemi, classi, gruppi di campi e tipi di dati: azioni ed eliminazione](../explore.md#xdm-resource-actions).
 
 ## Prerequisiti {#prerequisites}
 

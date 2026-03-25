@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente degli schemi
 description: Questa panoramica descrive le principali funzionalità dell’area di lavoro Schemi in Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '343'
 ht-degree: 9%
 
 ---
 
-# [!UICONTROL Schemi] - Panoramica interfaccia utente
+# [!UICONTROL Schemas] Panoramica dell’interfaccia utente
 
-L&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Adobe Experience Platform consente di gestire le risorse Experience Data Model (XDM), inclusi schemi, classi, gruppi di campi di schema e tipi di dati. Puoi visualizzare ed esplorare le risorse di base fornite da Adobe e creare risorse e schemi personalizzati per la tua organizzazione.
+L&#39;area di lavoro [!UICONTROL Schemas] nell&#39;interfaccia utente di Adobe Experience Platform consente di gestire le risorse Experience Data Model (XDM), inclusi schemi, classi, gruppi di campi di schema e tipi di dati. Puoi visualizzare ed esplorare le risorse di base fornite da Adobe e creare risorse e schemi personalizzati per la tua organizzazione.
 
-Per accedere all&#39;area di lavoro nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemi]** nella barra a sinistra.
+Per accedere all&#39;area di lavoro nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemas]** nella barra a sinistra.
 
 ![L&#39;area di lavoro Schemi con Schemi evidenziati nell&#39;interfaccia utente di Experience Platform ha lasciato la navigazione.](../images/ui/overview/schemas-tab.png)
 
@@ -27,7 +27,11 @@ Se utilizzi l&#39;area di lavoro per la prima volta, inizia con la guida su [esp
 
 ## Creazione e gestione di risorse XDM
 
-L&#39;area di lavoro [!UICONTROL Schemi] fornisce potenti strumenti per la creazione e la personalizzazione delle risorse XDM della tua organizzazione. Per informazioni su come creare e modificare ciascun tipo di risorsa nell’interfaccia utente, consulta la seguente documentazione:
+>[!NOTE]
+>
+>Le azioni XDM sono disponibili nella tabella di inventario e nella visualizzazione dei dettagli della risorsa (**[!UICONTROL More]**). Le azioni complete si applicano solo alle risorse personalizzate (definite dal tenant); le risorse standard hanno opzioni limitate. Vedi [Gestione di schemi, classi, gruppi di campi e tipi di dati: azioni ed eliminazione](./explore.md#xdm-resource-actions).
+
+L&#39;area di lavoro [!UICONTROL Schemas] fornisce potenti strumenti per la creazione e la personalizzazione delle risorse XDM dell&#39;organizzazione. Per informazioni su come creare e modificare ciascun tipo di risorsa nell’interfaccia utente, consulta la seguente documentazione:
 
 * [Schemi](./resources/schemas.md)
 * [Classi](./resources/classes.md)
@@ -40,4 +44,4 @@ Classi, gruppi di campi e tipi di dati sono tutti campi che contribuiscono a uno
 
 ## Passaggi successivi
 
-Questo documento fornisce un&#39;introduzione all&#39;area di lavoro [!UICONTROL Schemi] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni su come gestire gli schemi e altre risorse XDM, consulta la documentazione disponibile in questa panoramica.
+Questo documento fornisce un&#39;introduzione all&#39;area di lavoro [!UICONTROL Schemas] nell&#39;interfaccia utente di Experience Platform. Per ulteriori informazioni su come gestire gli schemi e altre risorse XDM, consulta la documentazione disponibile in questa panoramica.

@@ -4,10 +4,10 @@ title: Esportare gli schemi XDM nell’interfaccia utente
 description: Scopri come esportare uno schema esistente in una sandbox o organizzazione diversa nell’interfaccia utente di Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -29,6 +29,10 @@ Per soddisfare questa esigenza, l&#39;area di lavoro [!UICONTROL Schemas] nell&#
 ## Prerequisiti
 
 Anche se l’interfaccia utente di Experience Platform consente di esportare risorse XDM, è necessario utilizzare l’API Schema Registry per importare tali risorse in altre sandbox o organizzazioni per completare il flusso di lavoro. Consulta la guida [guida introduttiva all&#39;API Schema Registry](../api/getting-started.md) per informazioni importanti sulle intestazioni di autenticazione richieste prima di seguire questa guida.
+
+>[!NOTE]
+>
+>Se non riesci a trovare azioni quali **Elimina** o **Copia struttura JSON**, assicurati di utilizzare una risorsa personalizzata (definita dal tenant) e di accedervi dal menu della riga della tabella o dalla visualizzazione dettagli (**[!UICONTROL More]**). La disponibilità delle azioni dipende anche dalle autorizzazioni e dai vincoli di utilizzo. Vedi [Gestione di schemi, classi, gruppi di campi e tipi di dati: azioni ed eliminazione](./explore.md#xdm-resource-actions).
 
 ## Generare un payload di esportazione {#generate-export-payload}
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Generare dati di esempio per uno schema XDM nell’interfaccia utente
 description: Scopri come generare dati JSON di esempio in base a uno schema esistente nell’interfaccia utente di Adobe Experience Platform.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 14%
+source-wordcount: '449'
+ht-degree: 13%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 14%
 Per acquisire i dati in Adobe Experience Platform, il formato e la struttura dei dati devono essere conformi a uno schema Experience Data Model (XDM) esistente. A seconda della complessità dello schema per un particolare set di dati, può essere difficile determinare la forma esatta dei dati prevista dal set di dati al momento dell’acquisizione.
 
 Per qualsiasi schema definito nell’interfaccia utente di Experience Platform, puoi generare un oggetto JSON di esempio conforme alla struttura dello schema. Questo oggetto può fungere da modello per tutti i dati acquisiti nei set di dati che utilizzano lo schema in questione.
+
+>[!NOTE]
+>
+>Se non riesci a trovare azioni quali **Elimina** o **Copia struttura JSON**, assicurati di utilizzare una risorsa personalizzata (definita dal tenant) e di accedervi dal menu della riga della tabella o dalla visualizzazione dettagli (**[!UICONTROL More]**). La disponibilità delle azioni dipende anche dalle autorizzazioni e dai vincoli di utilizzo. Vedi [Gestione di schemi, classi, gruppi di campi e tipi di dati: azioni ed eliminazione](./explore.md#xdm-resource-actions).
 
 Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Schemas]** nel menu di navigazione a sinistra. Nella scheda **[!UICONTROL Browse]**, individua lo schema per il quale desideri generare i dati di esempio. Selezionala dall’elenco e la barra a destra si aggiorna per mostrare i dettagli dello schema. Da qui, seleziona **[!UICONTROL Download sample file]**.
 

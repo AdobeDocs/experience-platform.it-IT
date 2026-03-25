@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1600'
 ht-degree: 5%
 
 ---
@@ -23,6 +23,10 @@ In Adobe Experience Platform, la classe di uno schema definisce gli aspetti comp
 Adobe fornisce diverse classi standard (&quot;core&quot;) Experience Data Model (XDM), tra cui [XDM Individual Profile](../../classes/individual-profile.md) e [XDM ExperienceEvent](../../classes/experienceevent.md). Oltre a queste classi principali, puoi anche creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione.
 
 Questo documento fornisce una panoramica su come creare, modificare e gestire le classi personalizzate nell’interfaccia utente di Experience Platform.
+
+>[!NOTE]
+>
+>Le azioni XDM sono disponibili nella tabella di inventario e nella visualizzazione dei dettagli della risorsa (**[!UICONTROL More]**). Le azioni complete si applicano solo alle risorse personalizzate (definite dal tenant); le risorse standard hanno opzioni limitate. Vedi [Gestione di schemi, classi, gruppi di campi e tipi di dati: azioni ed eliminazione](../explore.md#xdm-resource-actions).
 
 ## Prerequisiti {#prerequisites}
 

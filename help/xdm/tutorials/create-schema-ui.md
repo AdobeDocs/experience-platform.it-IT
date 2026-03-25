@@ -5,9 +5,9 @@ title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4670'
+source-wordcount: '4740'
 ht-degree: 1%
 
 ---
@@ -159,7 +159,7 @@ Lo schema [!UICONTROL Loyalty Members] ha lo scopo di acquisire i dati relativi 
 Tuttavia, potrebbe esserci uno scenario in cui desideri includere campi personalizzati aggiuntivi non coperti dai gruppi di campi standard per ottenere i casi d’uso. Se aggiungi campi fedeltà personalizzati, puoi scegliere tra due opzioni:
 
 1. Crea un nuovo gruppo di campi personalizzato per acquisire questi campi. Questo è il metodo che verrà descritto in questa esercitazione.
-1. Estendere il gruppo di campi [!UICONTROL Loyalty Details] standard con campi personalizzati. In questo modo [!UICONTROL Loyalty Details] verrà convertito in un gruppo di campi personalizzato e il gruppo di campi standard originale non sarà più disponibile. Per ulteriori informazioni sull&#39;aggiunta di [!UICONTROL Schemas]campi personalizzati alla struttura dei gruppi di campi standard[, consulta la guida dell&#39;interfaccia utente di &#x200B;](../ui/resources/schemas.md#custom-fields-for-standard-groups).
+1. Estendere il gruppo di campi [!UICONTROL Loyalty Details] standard con campi personalizzati. In questo modo [!UICONTROL Loyalty Details] verrà convertito in un gruppo di campi personalizzato e il gruppo di campi standard originale non sarà più disponibile. Per ulteriori informazioni sull&#39;aggiunta di [!UICONTROL Schemas]campi personalizzati alla struttura dei gruppi di campi standard[, consulta la guida dell&#39;interfaccia utente di ](../ui/resources/schemas.md#custom-fields-for-standard-groups).
 
 Per creare un nuovo gruppo di campi, seleziona **[!UICONTROL Add]** nella sottosezione **[!UICONTROL Field groups]** come prima, ma questa volta seleziona **[!UICONTROL Create New Field group]** nella parte superiore della finestra di dialogo visualizzata. Viene quindi richiesto di fornire un nome visualizzato e una descrizione per il nuovo gruppo di campi. Per questo tutorial, assegna al nuovo gruppo di campi il nome &quot;[!DNL Custom Loyalty Details]&quot;, quindi seleziona **[!UICONTROL Add field groups]**.
 
@@ -360,6 +360,10 @@ Seleziona **[!UICONTROL Enable]** per confermare la scelta. È possibile selezio
 
 ## Altre azioni {#more}
 
+>[!NOTE]
+>
+>Quando si utilizzano risorse XDM, le azioni sono disponibili sia nella tabella inventario (menu righe) che nella visualizzazione dettagli risorsa (**[!UICONTROL More]**). Per accedere al set completo di azioni, tra cui **Elimina**, **Copia struttura JSON** e **Aggiungi al pacchetto**, è necessario selezionare una risorsa personalizzata (definita dal tenant). Le risorse standard (fornite da Adobe) dispongono di azioni limitate. Per una panoramica completa delle azioni, dei vincoli e delle autorizzazioni, vedere [Gestione di schemi, classi, gruppi di campi e tipi di dati: azioni ed eliminazione](../ui/explore.md#xdm-resource-actions).
+
 Nell’Editor di schema è inoltre possibile eseguire azioni rapide per copiare la struttura JSON dello schema o eliminare lo schema. Seleziona [!UICONTROL More] nella parte superiore della visualizzazione per visualizzare un elenco a discesa con azioni rapide.
 
 ![Editor schema con il pulsante Altro evidenziato e le opzioni dell&#39;elenco a discesa visualizzate.](../images/tutorials/create-schema/more-actions.png)
@@ -409,11 +413,11 @@ Ora puoi seguire l&#39;esercitazione su [definizione di una relazione di schema 
 
 Nel video seguente viene illustrato come creare uno schema semplice nell&#39;interfaccia utente [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/3430219?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 Il video seguente ha lo scopo di rafforzare la tua comprensione del lavoro con i gruppi di campo e le classi.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413602?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Appendice
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4635'
-ht-degree: 2%
+source-wordcount: '4680'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ Quindi, passare a [definire le chiavi primarie](../fields/identity.md#define-a-i
 
 >[!NOTE]
 >
->Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL &#x200B; Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
+>Una volta salvato, il campo [!UICONTROL Type] nella barra laterale [!UICONTROL  Schema properties] indica che si tratta di uno schema [!UICONTROL Relational]. Questo è indicato anche nella barra laterale dei dettagli nella vista inventario schema.
 >![L&#39;area di lavoro dell&#39;Editor di schema mostra una struttura di schema relazionale vuota con tipo relazionale evidenziato.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Carica un file DDL {#upload-ddl-file}
@@ -178,6 +178,12 @@ Per modificare uno schema esistente, selezionare la scheda **[!UICONTROL Browse]
 Dopo aver selezionato uno schema, [!DNL Schema Editor] viene visualizzato con la struttura dello schema mostrata nell&#39;area di lavoro. Ora puoi [aggiungere gruppi di campi](#add-field-groups) allo schema (o [aggiungere singoli campi](#add-individual-fields) da tali gruppi), [modificare i nomi visualizzati dei campi](#display-names) o [modificare i gruppi di campi personalizzati esistenti](./field-groups.md#edit) se lo schema ne utilizza uno.
 
 ## Altre azioni {#more}
+
+>[!NOTE]
+>
+>Le azioni XDM sono disponibili nella tabella di inventario e nella visualizzazione dei dettagli della risorsa (**[!UICONTROL More]**). Le azioni complete si applicano solo alle risorse personalizzate (definite dal tenant); le risorse standard hanno opzioni limitate. Vedi [Gestione di schemi, classi, gruppi di campi e tipi di dati: azioni ed eliminazione](../explore.md#xdm-resource-actions).
+
+Di seguito sono descritte le azioni di intestazione dell&#39;Editor di schema.
 
 Nell’Editor di schema è inoltre possibile eseguire azioni rapide per copiare la struttura JSON dello schema o eliminare lo schema, se non è stato abilitato per Real-Time Customer Profile o se a esso sono associati set di dati. Seleziona [!UICONTROL More] nella parte superiore della visualizzazione per visualizzare un elenco a discesa con azioni rapide.
 
