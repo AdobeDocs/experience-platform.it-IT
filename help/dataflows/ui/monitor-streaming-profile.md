@@ -21,12 +21,12 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Experience
 
 * [Flussi dati](../home.md): i flussi dati rappresentano processi di dati che trasferiscono informazioni in Experience Platform. Sono configurati in vari servizi per facilitare lo spostamento di dati dai connettori di origine ai set di dati di destinazione, nonché al servizio Identity, al profilo cliente in tempo reale e alle destinazioni.
 * [Profilo cliente in tempo reale](../../profile/home.md): Profilo cliente in tempo reale combina dati provenienti da più origini, online, offline, CRM e di terze parti, in un&#39;unica vista actionable di ciascun cliente, consentendo esperienze coerenti e personalizzate in tutti i punti di contatto.
-* [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): l&#39;acquisizione in streaming per Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.Experience Platform consente di gestire esperienze coordinate, coerenti e rilevanti generando un profilo cliente in tempo reale per ciascuno dei singoli clienti. .
+* [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): l&#39;acquisizione in streaming per Experience Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.Experience Platform consente di gestire esperienze coordinate, coerenti e rilevanti generando un profilo cliente in tempo reale per ciascuno dei singoli clienti.
 * [Capacità](../../landing/license-usage-and-guardrails/capacity.md): in Experience Platform, le capacità ti informano se la tua organizzazione ha superato uno dei tuoi guardrail e ti forniscono informazioni su come risolvere questi problemi.
 
 >[!NOTE]
 >
->La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Real-Time CDP Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>La capacità di trasmissione in streaming supporta fino a 1500 eventi in entrata al secondo. Puoi acquistare ulteriore segmentazione streaming per supportare fino a un massimo di 13.500 eventi in entrata al secondo&#x200B;. Per ulteriori informazioni, consultare le descrizioni del prodotto [Pacchetti B2C Edition - Prime e Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Metriche di monitoraggio per l’acquisizione del profilo di streaming {#streaming-profile-metrics}
 
