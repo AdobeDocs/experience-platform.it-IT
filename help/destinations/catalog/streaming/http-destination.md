@@ -1,13 +1,13 @@
 ---
 keywords: streaming; destinazione HTTP
 title: Connessione API HTTP
-description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
+description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo a un endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 0fc433689ac351bff3fc6930f5e4781f9cde5ade
 workflow-type: tm+mt
-source-wordcount: '3017'
-ht-degree: 8%
+source-wordcount: '2898'
+ht-degree: 7%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 8%
 >
 > Questa destinazione è disponibile solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
-La destinazione API HTTP è una destinazione di streaming [!DNL Adobe Experience Platform] che consente di inviare i dati del profilo agli endpoint HTTP di terze parti.
+La destinazione API HTTP è una destinazione di streaming di Experience Platform che consente di inviare i dati del profilo agli endpoint HTTP di terze parti.
 
-Per inviare i dati del profilo agli endpoint HTTP, devi prima [connetterti alla destinazione](#connect-destination) in [!DNL Adobe Experience Platform].
+Per inviare i dati del profilo agli endpoint HTTP, devi prima [connetterti alla destinazione](#connect-destination) in Experience Platform.
 
 ## Casi d’uso {#use-cases}
 
@@ -40,13 +40,11 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 {style="table-layout:auto"}
 
-
-
 Tipi di pubblico supportati per tipo di dati sul pubblico:
 
 | Tipo di dati del pubblico | Supportato | Descrizione | Casi d’uso |
 |--------------------|-----------|-------------|-----------|
-| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti, consente di eseguire il targeting di gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
+| [Tipi di pubblico per persone](/help/segmentation/types/people-audiences.md) | Sì | In base ai profili dei clienti. Utilizzali per targetizzare gruppi specifici di persone per campagne di marketing. | Acquirenti frequenti, abbandoni del carrello |
 | [Pubblico dell&#39;account](/help/segmentation/types/account-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti all’interno di organizzazioni specifiche per strategie di marketing basate sull’account. | Marketing B2B |
 | [Pubblico potenziale](/help/segmentation/types/prospect-audiences.md) | No | Puoi indirizzare l’attività a singoli utenti che non sono ancora clienti, ma che condividono alcune caratteristiche con il tuo pubblico di destinazione. | Ricerca di dati di terze parti |
 | [Esportazioni set di dati](/help/catalog/datasets/overview.md) | No | Raccolte di dati strutturati archiviati nel Data Lake [!DNL Adobe Experience Platform]. | Reporting, flussi di lavoro di data science |
@@ -60,7 +58,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 | ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Profile-based]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
+| Tipo di esportazione | **[!UICONTROL Profile-based]** | Stai esportando tutti i membri di un pubblico, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni sulle [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -73,7 +71,7 @@ Per utilizzare la destinazione API HTTP per esportare dati da Experience Platfor
 * L&#39;endpoint HTTP deve supportare lo schema del profilo di Experience Platform. Nella destinazione API HTTP non è supportata alcuna trasformazione in uno schema di payload di terze parti. Consulta la sezione [dati esportati](#exported-data) per un esempio dello schema di output di Experience Platform.
 * L&#39;endpoint HTTP deve supportare le intestazioni.
 * L’endpoint HTTP deve rispondere entro 2 secondi per garantire la corretta elaborazione dei dati ed evitare errori di timeout.
-* Se prevedi di utilizzare mTLS: l’endpoint di ricezione dei dati deve avere TLS disabilitato e solo mTLS abilitato. mTLS non è supportato se l&#39;endpoint richiede l&#39;autenticazione tramite password OAuth 2 o credenziali client.
+* Se prevedi di utilizzare mTLS: l’endpoint di ricezione dei dati deve avere TLS disabilitato e solo mTLS abilitato.
 
 >[!TIP]
 >
@@ -81,23 +79,21 @@ Per utilizzare la destinazione API HTTP per esportare dati da Experience Platfor
 
 ## Supporto e certificato del protocollo mTLS {#mtls-protocol-support}
 
-È possibile utilizzare [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) per garantire una maggiore sicurezza nelle connessioni in uscita alle connessioni di destinazione API HTTP.
+È possibile utilizzare [!DNL Mutual Transport Layer Security] (mTLS) per garantire una maggiore sicurezza nelle connessioni in uscita alle connessioni di destinazione API HTTP.
 
-[!DNL mTLS] è un protocollo di autenticazione reciproca che garantisce che entrambe le parti che condividono le informazioni siano quelle che dichiarano di essere prima che i dati vengano condivisi. [!DNL mTLS] include un passaggio aggiuntivo rispetto allo standard [!DNL TLS], in cui il server richiede e verifica anche il certificato del client, mentre il client verifica il certificato del server.
+mTLS è un protocollo di autenticazione reciproca che garantisce che entrambe le parti che condividono le informazioni siano chi affermano di essere prima che i dati vengano condivisi. mTLS include un ulteriore passaggio rispetto a TLS standard, in cui il server richiede e verifica anche il certificato del client, mentre il client verifica il certificato del server.
 
 ### Considerazioni su mTLS {#mtls-considerations}
 
 Il supporto mTLS per le destinazioni API HTTP si applica **solo all&#39;endpoint di ricezione dei dati** in cui vengono inviate le esportazioni dei profili (il campo **[!UICONTROL HTTP Endpoint]** in [dettagli destinazione](#destination-details)).
 
-mTLS **non è supportato** se l&#39;endpoint richiede l&#39;autenticazione tramite password OAuth 2 o credenziali client.
-
 ### Configurazione di mTLS per l’esportazione dei dati {#configuring-mtls}
 
-Per utilizzare [!DNL mTLS] con [!DNL HTTP API] destinazioni, **[!UICONTROL HTTP Endpoint]** (endpoint di ricezione dati) configurato nella pagina [dettagli destinazione](#destination-details) deve avere [!DNL TLS] protocolli disabilitati e solo [!DNL mTLS] abilitati. Se il protocollo [!DNL TLS] 1.2 è ancora abilitato sull&#39;endpoint, non verrà inviato alcun certificato per l&#39;autenticazione client. Ciò significa che per utilizzare [!DNL mTLS] con la destinazione [!DNL HTTP API], l&#39;endpoint del server che riceve i dati deve essere un endpoint di connessione abilitato solo per [!DNL mTLS].
+Per utilizzare mTLS con le destinazioni API HTTP, l&#39;endpoint **[!UICONTROL HTTP Endpoint]** (endpoint di ricezione dati) configurato nella pagina [dettagli destinazione](#destination-details) deve avere protocolli TLS disabilitati e solo mTLS abilitato. Se il protocollo TLS 1.2 è ancora abilitato sull’endpoint, non viene inviato alcun certificato per l’autenticazione client. Ciò significa che per utilizzare mTLS con la destinazione API HTTP, l’endpoint del server che riceve i dati deve essere un endpoint di connessione abilitato solo per mTLS.
 
 ### Recupera e controlla i dettagli del certificato {#certificate}
 
-Se desideri esaminare i dettagli del certificato come [!DNL Common Name] (CN) e [!DNL Subject Alternative Names] (SAN) per un&#39;ulteriore convalida di terze parti, utilizza l&#39;API per recuperare il certificato ed estrarre tali campi dalla risposta.
+Se desideri esaminare i dettagli del certificato come Nome comune (CN) e Nome alternativo soggetto (SAN) per un’ulteriore convalida di terze parti, utilizza l’API per recuperare il certificato ed estrarre tali campi dalla risposta.
 
 Per ulteriori informazioni, consulta la [documentazione dell&#39;endpoint del certificato pubblico](../../../data-governance/mtls-api/public-certificate-endpoint.md).
 
@@ -149,56 +145,48 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 #### Autenticazione token Bearer {#bearer-token-authentication}
 
-Se si seleziona il tipo di autenticazione **[!UICONTROL Bearer token]** per la connessione all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connect to destination]**:
+Se si seleziona il tipo di autenticazione **[!UICONTROL Bearer token]** per la connessione all&#39;endpoint HTTP, immettere le informazioni seguenti e selezionare **[!UICONTROL Connect to destination]**:
 
-![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP utilizzando l&#39;autenticazione token bearer.](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Schermata di autenticazione API HTTP con il campo [!UICONTROL Bearer token].](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL Bearer token]**: inserire il token Bearer per l&#39;autenticazione nel percorso HTTP.
+* **[!UICONTROL Bearer token]**: immetti il token Bearer per l&#39;autenticazione nel percorso HTTP.
 
 #### Nessuna autenticazione {#no-authentication}
 
 Se si seleziona il tipo di autenticazione **[!UICONTROL None]** per la connessione all&#39;endpoint HTTP:
 
-![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP, senza autenticazione.](../../assets/catalog/http/http-api-authentication-none.png)
+![Schermata di autenticazione API HTTP con il tipo di autenticazione [!UICONTROL None] selezionato.](../../assets/catalog/http/http-api-authentication-none.png)
 
-Quando si seleziona questa autenticazione aperta, è necessario selezionare solo **[!UICONTROL Connect to destination]** e la connessione all&#39;endpoint è stata stabilita.
+Quando selezioni questa opzione di autenticazione, devi selezionare solo **[!UICONTROL Connect to destination]** e la connessione all&#39;endpoint è stata stabilita.
 
 #### Autenticazione password OAuth 2 {#oauth-2-password-authentication}
 
-Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Password]** per la connessione all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connect to destination]**:
+Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Password]** per la connessione all&#39;endpoint HTTP, immettere le informazioni seguenti e selezionare **[!UICONTROL Connect to destination]**:
 
-![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP utilizzando OAuth 2 con autenticazione tramite password.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
-
->[!NOTE]
->
->**Limitazione mTLS:** mTLS non supportata con autenticazione password OAuth 2. Per informazioni dettagliate, consulta la sezione [mTLSsAssessment](#mtls-considerations).
+![Schermata di autenticazione API HTTP con [!UICONTROL OAuth 2 Password] campi.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
-* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a [!DNL Adobe Experience Platform].
-* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a [!DNL Adobe Experience Platform].
+* **[!UICONTROL Client ID]**: `client ID` assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: `client secret` assegnato dal sistema a Adobe Experience Platform.
 * **[!UICONTROL Username]**: nome utente per accedere all&#39;endpoint HTTP.
 * **[!UICONTROL Password]**: password per accedere all&#39;endpoint HTTP.
 
 #### Autenticazione credenziali client OAuth 2 {#oauth-2-client-credentials-authentication}
 
-Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentials]** per la connessione all&#39;endpoint HTTP, immettere i campi seguenti e selezionare **[!UICONTROL Connect to destination]**:
+Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentials]** per la connessione all&#39;endpoint HTTP, immettere le informazioni seguenti e selezionare **[!UICONTROL Connect to destination]**:
 
-![Immagine della schermata dell&#39;interfaccia utente in cui è possibile connettersi alla destinazione API HTTP utilizzando OAuth 2 con autenticazione delle credenziali client.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Schermata di autenticazione API HTTP con [!UICONTROL OAuth 2 Client Credentials] campi.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
 >
 >Quando si utilizza l&#39;autenticazione [!UICONTROL OAuth 2 Client Credentials], [!UICONTROL Access Token URL] può avere un massimo di un parametro di query. L&#39;aggiunta di un [!UICONTROL Access Token URL] con più parametri di query può causare problemi durante la connessione all&#39;endpoint.
 
->[!NOTE]
->
->Limitazione **mTLS:** mTLS non supportata con autenticazione credenziali client OAuth 2. Per informazioni dettagliate, consulta la sezione [mTLSsAssessment](#mtls-considerations).
-
 * **[!UICONTROL Access Token URL]**: l&#39;URL sul tuo lato che emette i token di accesso e, facoltativamente, i token di aggiornamento.
-* **[!UICONTROL Client ID]**: [!DNL client ID] assegnato dal sistema a [!DNL Adobe Experience Platform].
-* **[!UICONTROL Client Secret]**: [!DNL client secret] assegnato dal sistema a [!DNL Adobe Experience Platform].
-* **[!UICONTROL Client Credentials Type]**: selezionare il tipo di concessione di credenziali client OAuth2 supportata dall&#39;endpoint:
-   * **[!UICONTROL Body Form Encoded]**: In questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviata alla tua destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
-   * **[!UICONTROL Basic Authorization]**: in questo caso, [!DNL client ID] e [!DNL client secret] sono inclusi *in un&#39;intestazione `Authorization`* dopo essere stati codificati in base64 e inviati alla destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
+* **[!UICONTROL Client ID]**: `client ID` assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client Secret]**: `client secret` assegnato dal sistema a Adobe Experience Platform.
+* **[!UICONTROL Client Credentials Type]**: selezionare il tipo di concessione di credenziali client OAuth 2 supportata dall&#39;endpoint:
+   * **[!UICONTROL Body Form Encoded]**: In questo caso, `client ID` e `client secret` sono inclusi *nel corpo della richiesta* inviata alla tua destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
+   * **[!UICONTROL Basic Authorization]**: in questo caso, `client ID` e `client secret` sono inclusi *in un&#39;intestazione `Authorization`* dopo essere stati codificati in base64 e inviati alla destinazione. Ad esempio, consulta la sezione [Tipi di autenticazione supportati](#supported-authentication-types).
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
@@ -210,7 +198,7 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentia
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Endpoint HTTP"
->abstract="URL dell’endpoint HTTP a cui desideri inviare i dati del profilo. Questo è il tuo endpoint di ricezione dei dati e supporta mTLS , se configurato (non è disponibile con l’autenticazione OAuth 2 tramite password o credenziali cliente)."
+>abstract="URL dell’endpoint HTTP a cui desideri inviare i dati del profilo. Questo è l’endpoint per la ricezione di dati e, se configurato, supporta mTLS."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -229,19 +217,19 @@ Se si seleziona il tipo di autenticazione **[!UICONTROL OAuth 2 Client Credentia
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Immagine della schermata dell&#39;interfaccia utente che mostra i campi completati per i dettagli della destinazione HTTP.](../../assets/catalog/http/http-api-destination-details.png)
+![Schermata dei dettagli della destinazione API HTTP con campi completati.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: immettere un nome con cui riconoscere questa destinazione in futuro.
 * **[!UICONTROL Description]**: immettere una descrizione che consentirà di identificare questa destinazione in futuro.
 * **[!UICONTROL Headers]**: immettere le intestazioni personalizzate che si desidera includere nelle chiamate di destinazione, nel seguente formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP Endpoint]**: URL dell&#39;endpoint HTTP a cui si desidera inviare i dati del profilo. Questo è l’endpoint di ricezione dei dati. Se utilizzi mTLS, l’endpoint deve avere TLS disabilitato e solo mTLS abilitato.
 * **[!UICONTROL Query parameters]**: facoltativamente, è possibile aggiungere parametri di query all&#39;URL dell&#39;endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. **Nota**: i nomi dei segmenti sono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includono il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
-* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, vedi la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Names]**: attivare/disattivare se si desidera che l&#39;esportazione dei dati includa i nomi dei tipi di pubblico che si stanno esportando. **Nota**: i nomi del pubblico sono inclusi solo per i tipi di pubblico mappati alla destinazione. I tipi di pubblico non mappati visualizzati nell&#39;esportazione non includeranno il campo `name`. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Include Segment Timestamps]**: attivare se si desidera che l&#39;esportazione dei dati includa la marca temporale UNIX quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX quando i tipi di pubblico sono stati mappati alla destinazione per l&#39;attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta la sezione [Dati esportati](#exported-data) più avanti.
 
 ### Abilita avvisi {#enable-alerts}
 
-Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento a destinazioni avvisi tramite l&#39;interfaccia utente](../../ui/alerts.md).
+Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi di destinazione tramite l&#39;interfaccia utente](../../ui/alerts.md).
 
 Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!UICONTROL Next]**.
 
@@ -263,10 +251,10 @@ Nel passaggio [[!UICONTROL Select attributes]](../../ui/activate-streaming-profi
 Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione API HTTP per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica del pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
 
 * L’aggiornamento del profilo è stato determinato da una modifica nell’appartenenza al pubblico per almeno uno dei tipi di pubblico mappati alla destinazione. Ad esempio, il profilo è idoneo per uno dei tipi di pubblico mappati sulla destinazione o è uscito da uno dei tipi di pubblico mappati sulla destinazione.
-* L&#39;aggiornamento del profilo è stato determinato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo che si era già qualificato per uno dei tipi di pubblico mappati sulla destinazione è stata aggiunta una nuova identità nell’attributo identity map.
+* L&#39;aggiornamento del profilo è stato determinato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo che era già qualificato per uno dei tipi di pubblico mappati sulla destinazione è stata aggiunta una nuova identità all’attributo di mappa identità.
 * L’aggiornamento del profilo è stato determinato da una modifica degli attributi per almeno uno degli attributi mappati alla destinazione. Ad esempio, uno degli attributi mappati sulla destinazione nel passaggio di mappatura viene aggiunto a un profilo.
 
-In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono idonei per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
+In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono idonei per il pubblico, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
 
 >[!NOTE]
 >
@@ -278,7 +266,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell&#39;esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) del segmento mappato nel flusso di dati di attivazione. <br> **Importante**: quando l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata, i nomi dei segmenti vengono inclusi solo per i segmenti mappati alla destinazione. I segmenti non mappati visualizzati nell&#39;esportazione non includeranno il campo `name`, anche se l&#39;opzione è abilitata. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se lo stato `segmentMembership` di un profilo cambia in `realized` o `exiting` o se vengono aggiornati eventuali attributi mappati, viene avviata un&#39;esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>L&#39;oggetto `segmentMembership` include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo è qualificato possono far parte dell&#39;esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) mappato dal pubblico nel flusso di dati di attivazione. <br> **Importante**: quando l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata, i nomi dei segmenti sono inclusi solo per i tipi di pubblico mappati alla destinazione. I tipi di pubblico non mappati visualizzati nell&#39;esportazione non includeranno il campo `name`, anche se l&#39;opzione è abilitata. </li><li>Sono incluse anche tutte le identità nell&#39;oggetto `identityMap` (attualmente Experience Platform non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -286,7 +274,7 @@ Ad esempio, considera questo flusso di dati come una destinazione HTTP in cui tr
 
 ![Esempio di flusso di dati di destinazione API HTTP.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Un&#39;esportazione di profilo nella destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti mappati*. Tuttavia, nell&#39;esportazione dei dati, nell&#39;oggetto `segmentMembership` (vedi la sezione [Dati esportati](#exported-data) di seguito), potrebbero essere visualizzati altri tipi di pubblico non mappati, se quel particolare profilo è un membro di essi e se questi condividono lo stesso criterio di unione del pubblico che ha attivato l&#39;esportazione. Se un profilo è idoneo per il segmento **Cliente con auto DeLorean** ma è anche membro dei segmenti **Guardato &quot;Ritorno al futuro&quot;** filmato e **Fantascienza**, anche questi altri due tipi di pubblico saranno presenti nell&#39;oggetto `segmentMembership` dell&#39;esportazione dati, anche se non sono mappati nel flusso di dati, se condividono lo stesso criterio di unione con il segmento **Cliente con auto DeLorean**.
+Un&#39;esportazione di profili nella destinazione viene attivata quando un profilo si qualifica per uno dei *tre tipi di pubblico mappati* o ne esce. Nell&#39;esportazione dei dati, l&#39;oggetto `segmentMembership` (vedi [Dati esportati](#exported-data) di seguito) può includere anche tipi di pubblico non mappati, se tale profilo è un membro di essi e condividono lo stesso criterio di unione del pubblico che ha attivato l&#39;esportazione. Ad esempio, se un profilo è idoneo per il pubblico **Cliente con auto DeLorean** ma è anche membro del pubblico **Guarda il film &quot;Ritorno al futuro&quot;** e **Fantascienza**, anche questi due tipi di pubblico vengono visualizzati nell&#39;oggetto `segmentMembership`, purché condividano lo stesso criterio di unione con il pubblico **Cliente con auto DeLorean**.
 
 Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro attributi mappati in precedenza determineranno un’esportazione di destinazione e uno qualsiasi dei quattro attributi mappati presenti nel profilo sarà presente nell’esportazione di dati.
 
@@ -296,7 +284,7 @@ Quando aggiungi un nuovo pubblico a una destinazione esistente o crei una nuova 
 
 ## Dati esportati {#exported-data}
 
-I dati di [!DNL Experience Platform] esportati arrivano nella destinazione di [!DNL HTTP] in formato JSON. Ad esempio, l’esportazione seguente contiene un profilo idoneo per un determinato segmento, è membro di altri due segmenti ed è uscito da un altro segmento. L’esportazione include anche l’attributo del profilo nome, cognome, data di nascita e indirizzo e-mail personale. Le identità per questo profilo sono ECID e e-mail.
+I dati Experience Platform esportati vengono consegnati alla destinazione HTTP in formato JSON. Ad esempio, l’esportazione seguente contiene un profilo idoneo per un determinato pubblico, è membro di altri due tipi di pubblico ed è uscito da un altro pubblico. L’esportazione include anche l’attributo del profilo nome, cognome, data di nascita e indirizzo e-mail personale. Le identità per questo profilo sono ECID e e-mail.
 
 ```json
 {
@@ -377,7 +365,7 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 >[!NOTE]
 >
->In questo esempio, il primo segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) è mappato alla destinazione e include il campo `name`. Il secondo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) non è mappato alla destinazione e non include il campo `name`, anche se l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata.
+>In questo esempio, il primo pubblico (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) è mappato alla destinazione e include il campo `name`. Il secondo pubblico (`354e086f-2e11-49a2-9e39-e5d9a76be683`) non è mappato alla destinazione e non include il campo `name`, anche se l&#39;opzione **[!UICONTROL Include Segment Names]** è abilitata.
 
 +++
 
@@ -392,7 +380,7 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
-            "mappingUpdatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000
           }
         }
       }
@@ -402,9 +390,9 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 ## Limiti e criteri per nuovi tentativi {#limits-retry-policy}
 
-Nel 95% dei casi, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati con successo, con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione HTTP.
+Per il 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione HTTP.
 
-In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
+Quando le richieste alla destinazione API HTTP non vanno a buon fine, Experience Platform le archivia e riprova due volte.
 
 ## Risoluzione dei problemi {#troubleshooting}
 
