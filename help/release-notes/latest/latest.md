@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2026
 description: Note sulla versione di Adobe Experience Platform di marzo 2026.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
+source-git-commit: fad4cd198eda42f530e731a22ea79096a3cf3807
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1797'
 ht-degree: 20%
 
 ---
@@ -27,6 +27,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 
 - [Gestione avanzata del ciclo di vita dei dati](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [Capacità](#capacity)
 - [Stream di dati](#datastreams)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -54,11 +55,22 @@ Utilizza Agent Orchestrator per creare e distribuire agenti basati sull’intell
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent per [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent per [!DNL Microsoft 365 Copilot] è il tuo agente incorporato che porta le informazioni di marketing di Adobe direttamente negli strumenti quotidiani come [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e altre app di [!DNL Microsoft 365]. È possibile utilizzare questo agente per richiamare informazioni attendibili sulle campagne dalle applicazioni Adobe durante la pianificazione delle campagne, la revisione dei tipi di pubblico, la collaborazione con i colleghi per rispondere alle domande dei clienti e per prendere decisioni basate sui dati senza uscire dal flusso di lavoro [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, consulta la [documentazione su Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Capacità {#capacity}
+
+Capacity fornisce una visione completa delle [protezioni](../../rtcdp/guardrails/overview.md) della tua organizzazione e fornisce consigli su come risolvere le potenziali violazioni di capacità allocando le capacità a livello di sandbox.
+
+**Nuova funzionalità**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Velocità effettiva di segmentazione edge | Ora puoi visualizzare e gestire i guardrail relativi alla velocità effettiva di segmentazione Edge. Per ulteriori informazioni, leggere la [Panoramica capacità](/help/landing/license-usage-and-guardrails/capacity.md#edge-segmentation-throughput). |
+| Supporto per il monitoraggio degli stream di dati edge | È ora disponibile il monitoraggio in tempo reale per gli stream di dati edge, che fornisce trasparenza nella velocità effettiva e in altre metriche. Per ulteriori informazioni, leggere la [guida per il monitoraggio dei server perimetrali](/help/dataflows/ui/monitor-edge.md). |
 
 ## Stream di dati {#datastreams}
 
