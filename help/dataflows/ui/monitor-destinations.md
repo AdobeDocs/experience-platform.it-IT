@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
+source-git-commit: b61d6d49e3fcd9a75d2920048ce76d3707592edb
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 10%
+source-wordcount: '3580'
+ht-degree: 9%
 
 ---
 
@@ -19,7 +19,7 @@ La dashboard di monitoraggio offre una rappresentazione visiva del percorso di u
 
 Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare la dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni tramite l’interfaccia utente di Experience Platform.
 
-## Guida introduttiva {#getting-started}
+## Introduzione {#getting-started}
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -70,7 +70,7 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identità non riuscite"
->abstract="Conteggio delle singole identità di profilo non riuscite per la destinazione selezionata. Per informazioni, controlla la diagnostica degli errori."
+>abstract="Numero di singole identità di profilo non riuscite per la destinazione selezionata. Per informazioni dettagliate, consulta la diagnostica degli errori."
 
 Per le destinazioni di streaming, la scheda [!UICONTROL Dataflow runs] fornisce un aggiornamento orario per i dati delle metriche sui flussi di dati in esecuzione. Le statistiche più importanti etichettate sono per le identità.
 
@@ -94,15 +94,15 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 - **[!UICONTROL Audience]**: numero di tipi di pubblico associati a ogni esecuzione del flusso di dati.
 - **[!UICONTROL Processing duration]**: tempo necessario per l&#39;elaborazione del flusso di dati.
    - Per **[!UICONTROL completed]** esecuzioni, la metrica del tempo di elaborazione mostra sempre un&#39;ora.
-   - Per le esecuzioni dei flussi di dati che si trovano ancora in uno stato **[!UICONTROL processing]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione dei flussi di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 9:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. La durata del tempo di elaborazione è direttamente influenzata dai nuovi tentativi eseguiti a seguito della risposta della destinazione non riuscita. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
+   - Per le esecuzioni dei flussi di dati che sono ancora in stato **[!UICONTROL processing]**, la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche che corrispondono all&#39;esecuzione dei flussi di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 9:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. La durata del tempo di elaborazione è direttamente influenzata dai nuovi tentativi eseguiti a seguito della risposta della destinazione non riuscita. Quindi, una volta che la finestra di elaborazione si chiude e lo stato dell&#39;esecuzione del flusso di dati diventa **completato**, il tempo di elaborazione visualizzato viene modificato in un&#39;ora.
 - **[!UICONTROL Profiles received]**: numero totale di profili ricevuti nel flusso di dati.
 - **[!UICONTROL Identities activated]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata durante l&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identities excluded]**: numero totale di identità di profilo escluse dall&#39;attivazione in base ad attributi mancanti e violazione del consenso.
-- **[!UICONTROL Identities failed]** Numero totale di identità di profilo non attivate nella destinazione a causa di errori.
+- **[!UICONTROL Identities failed]**: numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 
   >[!IMPORTANT]
   >
-  > A partire da marzo 2025, Adobe implementerà un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting in Experience Platform e le piattaforme di destinazione.
+  > A partire da marzo 2025, Adobe sta implementando un aggiornamento per aumentare la precisione dei rapporti per le destinazioni di streaming. Questo miglioramento garantisce un migliore allineamento tra il reporting in Experience Platform e le piattaforme di destinazione.
   >
   > Prima di questo aggiornamento, **[!UICONTROL Identities failed]** includeva tutti i tentativi di attivazione. Dopo questo aggiornamento, nel conteggio totale viene incluso solo l’ultimo tentativo di attivazione.
   > 
@@ -147,7 +147,7 @@ Il monitoraggio a livello di pubblico per le destinazioni di streaming è dispon
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Profili ricevuti"
->abstract="Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti."
+>abstract="Numero totale di profili ricevuti nell’esecuzione del flusso di dati. Per le esportazioni pianificate, sono inclusi i profili dell’ultima istantanea del pubblico e tutti i profili la cui appartenenza o identità al pubblico è cambiata tra l’ora di creazione della istantanea e l’ora di esportazione. Di conseguenza, questo conteggio potrebbe essere superiore al numero di profili nel pubblico."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -208,7 +208,7 @@ Puoi anche scegliere di visualizzare informazioni dettagliate su un determinato 
 >
 >Ora puoi visualizzare le informazioni sul flusso di dati e sul flusso di dati associato che viene eseguito nel dashboard di monitoraggio. Per ulteriori informazioni, consulta la sezione seguente.
 
-## Dashboard di monitoraggio delle destinazioni {#monitoring-destinations-dashboard}
+## Dashboard delle destinazioni di monitoraggio {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ Utilizzare l&#39;interruttore **[!UICONTROL Show failures only]** per visualizza
 
 ![Il flusso di dati esegue la visualizzazione con l&#39;opzione Mostra errori evidenziata](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
-### Visualizzazione a livello di pubblico {#segment-level-view}
+### Visualizzazione a livello di pubblico {#audience-level-view}
 
 Quando **[!UICONTROL Audiences]** è selezionato, viene visualizzato un elenco dei tipi di pubblico attivati nel flusso di dati selezionato, all&#39;interno dell&#39;intervallo di tempo selezionato. Questa schermata include informazioni a livello di pubblico sui record attivati, sui record esclusi, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati. Esaminando le metriche per i record esclusi e attivati, puoi verificare se un pubblico è stato attivato correttamente o meno.
 
@@ -351,7 +351,7 @@ Utilizza il pulsante filtro ![filter](/help/images/icons/filter-add.png) per ana
 
 La pagina Esecuzioni flusso di dati visualizza informazioni sulle esecuzioni del flusso di dati, tra cui l’ora di inizio dell’esecuzione del flusso di dati, il tempo di elaborazione, i record ricevuti, i record attivati, i record esclusi, i record con errore, il tasso di attivazione e lo stato.
 
-Quando esegui il drill-down nella pagina del flusso di dati dalla [visualizzazione a livello di pubblico](#segment-level-view), puoi filtrare il flusso di dati eseguito in base alle seguenti opzioni:
+Quando esegui il drill-down nella pagina del flusso di dati dalla [visualizzazione a livello di pubblico](#audience-level-view), puoi filtrare il flusso di dati eseguito in base alle seguenti opzioni:
 
 - **[!UICONTROL Dataflow runs with failed records]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati non riuscite per l&#39;attivazione. Per verificare il motivo per cui i record in una determinata esecuzione del flusso di dati non sono riusciti, vedere la [pagina dei dettagli di esecuzione del flusso di dati](#dataflow-run-details-page) per tale esecuzione.
 - **[!UICONTROL Dataflow runs with excluded records]**: per il pubblico selezionato, questa opzione elenca tutti i flussi di dati eseguiti in cui alcuni record non sono stati completamente attivati e alcuni profili sono stati saltati. Per verificare il motivo per cui i record in una determinata esecuzione del flusso di dati sono stati ignorati, vedere la [pagina dei dettagli dell&#39;esecuzione del flusso di dati](#dataflow-run-details-page) per tale esecuzione.
@@ -371,7 +371,7 @@ La pagina dei dettagli di esecuzione del flusso di dati, oltre ai dettagli ripor
 - **[!UICONTROL IMS org ID]**: organizzazione a cui appartiene il flusso di dati.
 - **[!UICONTROL Last updated]**: ora dell&#39;ultimo aggiornamento del flusso di dati.
 
-La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile per le destinazioni elencate nella sezione [visualizzazione a livello di pubblico](#segment-level-view).
+La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile per le destinazioni elencate nella sezione [visualizzazione a livello di pubblico](#audience-level-view).
 
 Nella visualizzazione errori di esecuzione del flusso di dati viene visualizzato un elenco di record con errori e di record ignorati. Vengono visualizzate informazioni sia per i record con errori che per quelli ignorati, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell&#39;elenco vengono visualizzati i record con errori. Per visualizzare i record ignorati, selezionare l&#39;interruttore **[!UICONTROL Records skipped]**.
 
