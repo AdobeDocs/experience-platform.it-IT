@@ -1,9 +1,10 @@
 ---
 title: Collegare Oracle Eloqua (V2) ad Experience Platform nell’interfaccia utente
 description: Scopri come collegare il tuo account Oracle Eloqua ad Experience Platform nell’interfaccia utente.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 1%
 
 ---
@@ -124,7 +125,6 @@ Dopo aver completato l&#39;aggiornamento dei campi calcolati, selezionare **[!UI
 >* **Contatti:** `C_DateModified`
 >* **Account:** `M_DateModified`
 >* **Attività:** `CreatedAt`
->* **Oggetti personalizzati:** `UpdatedAt`
 >* **Campagna:** `updatedAt`
 
 Al termine della mappatura, puoi configurare una pianificazione di acquisizione per il flusso di dati. Imposta [!UICONTROL Frequency] su `Once` per configurare un&#39;acquisizione unica. Per l&#39;acquisizione incrementale, puoi impostare [!UICONTROL Frequency] su `Hour`, `Day` o `Week`. Quando utilizzi l&#39;acquisizione incrementale, devi anche configurare [!UICONTROL Interval] per definire il periodo di tempo che intercorre tra le esecuzioni dell&#39;acquisizione. Ad esempio, se la frequenza di acquisizione è impostata su `Day` e l&#39;intervallo è impostato su `15`, il flusso di dati verrà pianificato in modo da acquisire i dati ogni 15 giorni.
