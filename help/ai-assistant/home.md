@@ -2,9 +2,9 @@
 title: Panoramica dell’Assistente AI (legacy) in Adobe Experience Platform
 description: Scopri l’Assistente IA (legacy), le sue sfumature e i casi d’uso, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-Time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 68c55e370cab58ce5c93359520bf4ce671282a1b
+source-git-commit: cc3ac0bb3e448f4a4fa69df5dcb7c45b098ca255
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1264'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Questo documento si applica all’Assistente IA (legacy). Per informazioni sull&#39;Assistente IA (generazione successiva), leggere la [Guida dell&#39;interfaccia utente dell&#39;Assistente IA](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) nella [IA nella documentazione di Experience Cloud](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/home).
+>Questo documento si applica all’Assistente IA (legacy). Per informazioni sull&#39;Assistente IA (generazione successiva), leggere la [Guida dell&#39;interfaccia utente dell&#39;Assistente IA](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) nella [IA nella documentazione di Experience Cloud](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 Per un confronto tra Assistente IA (legacy) e Assistente IA (di nuova generazione), consulta la tabella seguente:
 
@@ -23,7 +23,7 @@ Per un confronto tra Assistente IA (legacy) e Assistente IA (di nuova generazion
 | Ambito delle funzionalità | È possibile utilizzare l’Assistente AI (legacy) sia per conoscere il prodotto che per acquisire informazioni operative. | Puoi utilizzare l’Assistente all’intelligenza artificiale (di nuova generazione) per conoscere il prodotto, ottenere informazioni operative, acquisire competenze avanzate in ambito agente ed eseguire attività in più fasi. |
 | Architettura della piattaforma | L’Assistente IA (legacy) non è basato sullo stack di Agent Orchestrator. | L&#39;Assistente di intelligenza artificiale (di nuova generazione) è basato su [Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), che abilita l&#39;estensibilità e il coordinamento avanzato tra le funzionalità. |
 | Applicazione coperta | L’Assistente IA (legacy) è un’implementazione specifica per l’applicazione. | È possibile utilizzare AI Assistant (di nuova generazione) per un’esperienza di AI Assistant unificata in tutte le applicazioni Adobe Experience Cloud. |
-| Modello di accesso e autorizzazione | Modello di accesso con ambito di applicazione allineato ai limiti dei singoli prodotti. | Tutti gli utenti possono accedere ad AI Assistant (Next-Gen) e agli agenti Experience Platform associati. **Nota**: <ul><li>**Adobe Experience Manager**: l&#39;amministratore deve concedere l&#39;autorizzazione per accedere all&#39;Assistente di intelligenza artificiale (di nuova generazione) tramite [Adobe Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics**: l&#39;amministratore deve concedere l&#39;autorizzazione per accedere all&#39;Assistente di intelligenza artificiale tramite [Customer Journey Analytics Access Control](https://experienceleague.adobe.com/it/docs/analytics-platform/using/technotes/access-control?lang=en). Questo consente di porre domande sulla conoscenza del prodotto e sulle informazioni sui dati. |
+| Modello di accesso e autorizzazione | Modello di accesso con ambito di applicazione allineato ai limiti dei singoli prodotti. | Tutti gli utenti possono accedere ad AI Assistant (Next-Gen) e agli agenti Experience Platform associati. **Nota**: <ul><li>**Adobe Experience Manager**: l&#39;amministratore deve concedere l&#39;autorizzazione per accedere all&#39;Assistente di intelligenza artificiale (di nuova generazione) tramite [Adobe Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics**: l&#39;amministratore deve concedere l&#39;autorizzazione per accedere all&#39;Assistente di intelligenza artificiale tramite [Customer Journey Analytics Access Control](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en). Questo consente di porre domande sulla conoscenza del prodotto e sulle informazioni sui dati. |
 
 Il video seguente ha lo scopo di illustrare l’Assistente per l’intelligenza artificiale.
 
@@ -75,7 +75,7 @@ Per conoscenza del prodotto si intendono i concetti e gli argomenti basati sulla
 
 Guarda il video seguente per ulteriori informazioni sulle conoscenze del prodotto per l’Assistente di intelligenza artificiale (legacy):
 
->[!VIDEO](https://video.tv.adobe.com/v/3475938/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Insight operativi {#operational-insights}
 
@@ -93,9 +93,12 @@ Puoi porre domande all’Assistente AI (legacy) sulle informazioni operative nei
 | Tipi di pubblico | <ul><li>Conteggio del pubblico</li><li>Tipo di pubblico (in streaming o in batch)</li><li>Date di creazione/modifica</li><li>Stato attivazione</li><li>Conteggio dei profili</li><li>Pubblico duplicato</li><li>Ricerca definizione pubblico</li><li>Pubblico: relazione tra pubblico</li><li>Pubblico - relazione attributo</li><li>Pubblico: relazione tra set di dati</li><li>Pubblico - relazione destinazione</li><li>Ricerca nome</li><li>Ricerca per nome e ID | <ul><li>Sovrapposizioni del pubblico</li><li>Attivazione del pubblico</li><li>Pubblico - Relazioni con la campagna</li><li>Audit</li><li>Crea/modifica</li><li>Etichette</li><li>Tendenze di qualificazione dei profili</li></ul> |
 | Flussi di dati | <ul><li>Conteggi dei flussi di dati</li><li>Stato del flusso di dati</li><li>Flusso di dati: relazione set di dati</li><li>Flusso di dati - relazione di origine</li></ul> | <ul><li>Creazione/modifica</li><li>Relazioni flusso di dati-batch</li><li>Acquisisci conteggio profili</li></ul> |
 | Set di dati | <ul><li>Conteggio set di dati</li><li>Stato abilitazione profilo</li><li>Data di creazione/modifica</li><li>Set di dati: relazione schema</li><li>Set di dati: relazione pubblico</li><li>Set di dati: relazione attributo</li><li>Set di dati: relazione flusso di dati</li><li>Dimensione set di dati</li><li>Numero di righe</li><li>Ricerca nome </li><li>Ricerca per nome e ID</li></ul> | <ul><li>Audit</li><li>Creato da</li><li>Set di dati: relazione batch</li><li>Creazione/modifica del set di dati</li><li>Numero di profili</li><li>Ricerca di valori</li></ul> |
+| Modelli di dati (Federated Audience Composition) | <ul><li>Conteggi dei modelli di dati</li><li>Ricerca nome</li><li>Relazione tra modello dati e schema</li><li>Proprietà collegamento</li><li>Stato</li><li>Date di creazione e modifica</li><li>Relazione tra modello dati e collegamento</li></ul> | |
 | Destinazioni | <ul><li>Conteggi di destinazione configurati</li><li>Destinazione - Relazione pubblico</li><li>Relazione attributo di destinazione</li></ul> | <ul><li>Configurazione account</li><li>Informazioni sulle credenziali dell&#39;account</li><li>Profili univoci attivati</li></ul> |
+| Database federati (Federated Audience Composition) | <ul><li>Conteggio database</li><li>Nome database</li><li>Tipo di database</li><li>Date create/modificate</li><li>Stato</li></ul> | |
 | Percorsi | <ul><li>Conteggi</li><li>Ricerca nome</li><li>Ricerca per nome e ID</li><li>Stato del percorso</li><li>Stato attivato (pubblico vs. eventi)</li><li>Date di creazione/modifica</li><li>Frequenza ricorrente</li></ul> | <ul><li>Attributi - Relazioni percorso</li><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Eventi</li><li>Percorso - set di dati</li><li>Percorso - schema</li><li>Offerte</li><li>Tendenze di qualificazione dei profili</li><li>Eventi passaggio</li></ul> |
 | Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerca nome</li><li>Ricerca per nome e ID</li></ul> | <ul><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Gruppi di campi</li><li>Identità</li><li>Spazi dei nomi delle identità</li><li>Etichette</li><li>Numero di profili</li></ul> |
+| Schemi (Federated Audience Composition) | <ul><li>Conteggi schema</li><li>Ricerca nome schema/etichetta</li><li>Date di creazione e modifica</li><li>Relazione schema-database</li><li>Schemi di tipo di pubblico</li></ul> | <ul><li>Relazione schema-composizione</li><li>Proprietà dello schema</li></ul> |
 | Origini | <ul><li>Conteggi account</li><li>Stato account</li><li>Flussi di dati attivi/inattivi per ogni account</li><li>Connettore Source - relazione flusso di dati</li><li>Account Source - relazione flusso di dati</li></ul> | <ul><li>Informazioni sulle credenziali dell’account</li><li>Configurazione account</li><li>Metriche di acquisizione dei dati</li><li>Numero di profili</li><li>Source - relazioni batch</li></ul> |
 
 {style="table-layout:auto"}
@@ -104,7 +107,7 @@ Per le domande sulle informazioni operative, le risposte potrebbero non riflette
 
 Per ulteriori informazioni sulle informazioni operative di AI Assistant (legacy), guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444040?captions=ita&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Ambito della funzione {#feature-scope}
 
