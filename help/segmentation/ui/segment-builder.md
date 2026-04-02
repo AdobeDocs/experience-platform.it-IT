@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '6574'
 ht-degree: 10%
@@ -68,7 +68,7 @@ Per **[!UICONTROL Merge policy]**, puoi scegliere a quale criterio di unione app
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -144,7 +144,7 @@ Puoi utilizzare i seguenti operatori per i rispettivi tipi di dati:
 | Questo mese | Il valore si è verificato questo mese di calendario. | Mese di nascita **è** questo mese |
 | Quest’anno | Il valore si è verificato quest&#39;anno di calendario. | La data di registrazione **è** quest&#39;anno |
 | Data personalizzata | Il valore si è verificato nella data specificata. | La data di acquisto **è il** Data personalizzata |
-| Nell’ultimo/a | Il valore si è verificato nell’ultimo periodo di tempo scelto. Compleanno **è** nell&#39;ultimo mese |
+| Nell’ultimo/a | Il valore si è verificato nell’ultimo periodo di tempo scelto. Compleanno **è** nell&#39;ultimo mese | |
 | Da (a) | Il valore si è verificato nelle due date di calendario scelte. Questo periodo di tempo è **inclusivo** di entrambe le date. | Data di creazione account **is** Dal 20 aprile al 13 luglio |
 | Durante | Il valore si è verificato nel mese o anno selezionato. | Vendita **is** nel mese di marzo |
 | Entro (+/-) | Il valore si è verificato entro giorni, settimane, mesi o anni dalla data selezionata. Questo periodo di tempo è **inclusivo** di entrambe le date. | L&#39;abbandono del carrello è **entro** 3 giorni |

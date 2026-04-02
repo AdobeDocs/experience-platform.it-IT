@@ -4,7 +4,7 @@ title: Dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '4677'
 ht-degree: 8%
@@ -55,7 +55,8 @@ Dalla libreria dei widget è possibile sfogliare la selezione di widget di pubbl
 
 È possibile visualizzare l&#39;istruzione SQL che genera le informazioni visualizzate nel dashboard con un interruttore nell&#39;area di lavoro [!UICONTROL Overview]. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Experience Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzionalità, vedere la [Guida dell&#39;interfaccia utente SQL](../view-sql.md).
 
-<!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
+<!-- 
+## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
@@ -67,7 +68,8 @@ The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness o
 
 See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. -->
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. 
+-->
 
 ## Sfoglia profili {#browse-profiles}
 
@@ -285,7 +287,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 
 Il widget **[!UICONTROL Profile count]** visualizza il numero totale di profili uniti nell&#39;archivio profili al momento dell&#39;acquisizione dello snapshot. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un singolo profilo per ogni singolo utente.
 
-Per ulteriori informazioni, consulta la sezione [&#x200B; sui criteri di unione più indietro in questo documento](#merge-policies).
+Per ulteriori informazioni, consulta la sezione [ sui criteri di unione più indietro in questo documento](#merge-policies).
 
 >[!NOTE]
 >
@@ -439,7 +441,8 @@ Il widget [!UICONTROL Unsegmented profiles change trend] utilizza un grafico a l
 
 The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) 
+-->
 
 ### [!UICONTROL Audiences] {#audiences}
 
@@ -452,11 +455,13 @@ Selezionare **[!UICONTROL Audiences]** per passare alla scheda [!UICONTROL Audie
 <!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
 
 <!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
-<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+<!-- 
+### [!UICONTROL Audiences change trend] {#audiences-change-trend}
 
 This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.
 
-The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. 
+-->
 
 <!-- ![The Audiences change trend widget.]() -->
 
@@ -517,7 +522,8 @@ Quando il widget mostra il crossover visivo delle definizioni dei segmenti, puoi
 ![Dashboard dei profili dell&#39;interfaccia utente di Experience Platform con menu a discesa dei criteri di unione ed evidenziati gli elenchi a discesa dei tipi di pubblico dei widget.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
-<!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
+<!-- 
+## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
@@ -583,7 +589,8 @@ The three levels of completeness are:
 * Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
 * Low completeness: Profiles have less than 30% of attributes filled.
 
-![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) -->
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) 
+-->
 
 ## Passaggi successivi
 
