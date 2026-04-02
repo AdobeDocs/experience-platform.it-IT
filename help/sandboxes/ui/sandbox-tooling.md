@@ -2,10 +2,10 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: fad8cc977ec6928420abab4fd3dafca7475c33c4
+source-git-commit: f5c32c5687b5931ed59fa6a379ed5e5927e3a9ac
 workflow-type: tm+mt
-source-wordcount: '3448'
-ht-degree: 6%
+source-wordcount: '3641'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +58,7 @@ I seguenti oggetti vengono importati ma sono in stato bozza o disabilitato:
 
 ### Oggetti Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attualmente supportati per gli strumenti e le limitazioni della sandbox. Per un elenco completo delle best practice, consulta la [guida alle best practice generali di Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
+Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attualmente supportati per gli strumenti e le limitazioni della sandbox. Per un elenco completo delle best practice, consulta la [guida alle best practice generali di Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
 
 | Piattaforma | Oggetto | Oggetti dipendenti supportati | Dettagli |
 | --- | --- | --- | --- |
@@ -70,8 +70,8 @@ Nella tabella seguente sono elencati [!DNL Adobe Journey Optimizer] oggetti attu
 | [!DNL Adobe Journey Optimizer] | Azioni personalizzate |  | Le azioni personalizzate possono essere aggiunte a un pacchetto in modo indipendente. Una volta assegnata a un percorso, un’azione personalizzata non può più essere modificata. Per apportare aggiornamenti alle azioni personalizzate, devi: <ul><li>spostare le azioni personalizzate prima di eseguire la migrazione di un percorso</li><li>aggiorna le configurazioni (come intestazioni di richiesta, parametri di query e autenticazione) per le azioni personalizzate dopo la migrazione</li><li>esegui la migrazione degli oggetti percorso con le azioni personalizzate aggiunte durante il primo passaggio</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Modello di contenuto | | Un modello di contenuto può essere copiato come oggetto dipendente dell&#39;oggetto percorso. I modelli autonomi consentono di riutilizzare facilmente i contenuti personalizzati nelle campagne e nei percorsi Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Frammento | Tutti i frammenti nidificati. | Un frammento può essere copiato come oggetto dipendente dell’oggetto percorso. I frammenti sono componenti riutilizzabili a cui è possibile fare riferimento in una o più e-mail in campagne e percorsi Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | Funzione Decisioni | Prima di copiare gli oggetti Decisioning, nella sandbox di destinazione devono essere presenti i seguenti oggetti: <ul><li>Attributi di profilo utilizzati negli oggetti Decisioning</li><li>Gruppo di campi di Attributi offerta personalizzati</li><li>Gli schemi di flussi di dati utilizzati per gli attributi di contesto tra regole, classificazione o limite.</li></ul> | <ul><li>La copia delle formule di classificazione che utilizzano modelli AI non è attualmente supportata.</li><li>Gli elementi decisionali (elementi offerta) non vengono inclusi automaticamente. Per assicurarsi che siano trasferiti, aggiungili manualmente utilizzando l&#39;opzione **Aggiungi al pacchetto**.</li><li>I criteri che utilizzano una strategia di selezione richiedono l’aggiunta manuale degli elementi decisionali associati durante il processo di copia. I criteri che utilizzano elementi di decisione manuali o di fallback includeranno automaticamente tali elementi come dipendenze dirette.</li><li>Gli elementi decisionali devono essere copiati prima di qualsiasi altro oggetto correlato.</li><li>Per un elenco completo degli oggetti supportati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campagne | I seguenti oggetti utilizzati nella campagna vengono copiati come oggetti dipendenti: <ul><li>Campagne</li><li>Tipi di pubblico</li><li>Schemi</li><li>Modelli di contenuto</li><li>Frammenti</li><li>Messaggio/Contenuto</li><li>Configurazione dei canali</li><li>Oggetti decisionali unificati</li><li>Impostazioni/varianti esperimento</li></ul> | <ul><li>Le campagne possono essere copiate insieme a tutti gli elementi relativi al profilo, al pubblico, allo schema, ai messaggi in linea e agli oggetti dipendenti. Alcuni elementi non vengono copiati, ad esempio le etichette di utilizzo dei dati e le impostazioni della lingua. Per un elenco completo degli oggetti che non possono essere copiati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>Se esiste una configurazione identica, il sistema rileva e riutilizza automaticamente un oggetto di configurazione del canale esistente nella sandbox di destinazione. Se non viene trovata alcuna configurazione corrispondente, la configurazione del canale viene ignorata durante l’importazione e gli utenti devono aggiornare manualmente le impostazioni del canale nella sandbox di destinazione per questo percorso.</li><li>Gli utenti possono riutilizzare gli esperimenti e i tipi di pubblico esistenti nella sandbox di destinazione come oggetti dipendenti delle campagne selezionate.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Funzione Decisioni | Prima di copiare gli oggetti Decisioning, nella sandbox di destinazione devono essere presenti i seguenti oggetti: <ul><li>Attributi di profilo utilizzati negli oggetti Decisioning</li><li>Gruppo di campi di Attributi offerta personalizzati</li><li>Gli schemi di flussi di dati utilizzati per gli attributi di contesto tra regole, classificazione o limite.</li></ul> | <ul><li>La copia delle formule di classificazione che utilizzano modelli AI non è attualmente supportata.</li><li>Gli elementi decisionali (elementi offerta) non vengono inclusi automaticamente. Per assicurarsi che vengano trasferiti, aggiungerli manualmente utilizzando l&#39;opzione **Aggiungi al pacchetto**.</li><li>I criteri che utilizzano una strategia di selezione richiedono l’aggiunta manuale degli elementi decisionali associati durante il processo di copia. I criteri che utilizzano elementi di decisione manuali o di fallback includeranno automaticamente tali elementi come dipendenze dirette.</li><li>Gli elementi decisionali devono essere copiati prima di qualsiasi altro oggetto correlato.</li><li>Per un elenco completo degli oggetti supportati, fare riferimento alla guida [esportazione di oggetti in un&#39;altra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
 
 ## Esportare oggetti in un pacchetto {#export-objects}
 
@@ -229,13 +229,36 @@ Viene visualizzata la pagina [!UICONTROL Package object and dependencies] in cui
 
 Attendere il completamento dell&#39;importazione. Il tempo necessario per il completamento può variare a seconda del numero di oggetti nel pacchetto. È possibile monitorare il processo di importazione dalla scheda [!UICONTROL Sandboxes] **[!UICONTROL Jobs]**.
 
+### Copia rapida di un oggetto in una sandbox {#express-copy}
+
+>[!IMPORTANT]
+>
+>La funzione di copia rapida è attualmente in versione beta e disponibile solo per alcuni clienti. Express Copy (Beta) al momento supporta solo i flussi di dati di schema e origine.
+
+È possibile accedere alla copia rapida dalla pagina Inventario oggetti. Ad esempio, per visualizzare un elenco degli schemi disponibili, seleziona **[!UICONTROL Schemas]** dal menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Browse]**. Selezionare quindi i puntini di sospensione (`...`) accanto allo schema selezionato per visualizzare le opzioni di controllo in un menu a discesa. Seleziona **[!UICONTROL Add to package]** dal menu a discesa.
+
+![Elenco di schemi che mostrano il menu a discesa che evidenzia il controllo [!UICONTROL Add to package].](../images/ui/sandbox-tooling/add-to-package-express.png)
+
+Viene visualizzata la finestra di dialogo **[!UICONTROL Add to package]**. Seleziona l&#39;opzione **[!UICONTROL Express copy]**, quindi seleziona **[!UICONTROL Target sandbox]** dal menu a discesa. Infine, selezionare **[!UICONTROL Add]** per confermare le scelte.
+
+Finestra di dialogo ![[!UICONTROL Add to package], visualizzazione di un pacchetto selezionato dal menu a discesa.](../images/ui/sandbox-tooling/express-copy.png)
+
+>[!NOTE]
+>
+> Express Copy crea automaticamente un pacchetto degli oggetti selezionati con le relative dipendenze richieste e li distribuisce nella sandbox di destinazione. Se nella sandbox di destinazione esiste già un oggetto dipendente, questo viene riutilizzato; in caso contrario viene creato un nuovo oggetto.
+
+Per verificare lo stato della richiesta di copia rapida, selezionare **[!UICONTROL Sandboxes]** dal menu di navigazione a sinistra, quindi selezionare la scheda **[!UICONTROL Jobs]**. Viene visualizzato un elenco di tutti i processi e lo stato di elaborazione corrente.
+
+![Scheda Processi che mostra un elenco di processi.](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+
 ## Monitorare i dettagli di importazione {#view-import-details}
 
 Per visualizzare i dettagli importati, passare alla scheda [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** e selezionare il pacchetto dall&#39;elenco. In alternativa, utilizza la barra di ricerca per cercare il pacchetto.
 
 ![La scheda sandbox [!UICONTROL Jobs] evidenzia la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/imports-tab.png)
 
-<!--### View imported objects {#view-imported-objects}
+<!--
+### View imported objects {#view-imported-objects}
 
 On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
@@ -245,7 +268,8 @@ Select **[!UICONTROL View imported objects]** from the right details pane on the
 
 Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+-->
 
 Seleziona **[!UICONTROL View import summary]** dal riquadro dei dettagli a destra nella scheda **[!UICONTROL Jobs]** nell&#39;ambiente Sandbox.
 
@@ -353,7 +377,7 @@ Dopo aver identificato gli oggetti di destinazione da aggiornare, selezionare **
 
 Il video seguente illustra gli strumenti della sandbox e spiega come creare un nuovo pacchetto, pubblicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446095/?captions=ita&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Passaggi successivi
 
