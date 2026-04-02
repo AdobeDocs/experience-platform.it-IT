@@ -2,10 +2,10 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 17%
+source-wordcount: '1897'
+ht-degree: 19%
 
 ---
 
@@ -96,23 +96,25 @@ Experience Platform fornisce diversi spazi dei nomi di identità disponibili per
 
 I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tutte le organizzazioni all’interno di Experience Platform:
 
-| Nome visualizzato | Descrizione |
-| ------------ | ----------- |
-| AdCloud | Uno spazio dei nomi che rappresenta Adobe AdCloud. |
-| Adobe Analytics (ID legacy) | Uno spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento sugli [spazi dei nomi Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=it#namespaces). |
-| Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
-| Servizio di notifica push di Apple | Uno spazio dei nomi che rappresenta le identità raccolte tramite il servizio Apple Push Notification. Per ulteriori informazioni, consulta il seguente documento sul [servizio Apple Push Notification](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1). |
-| ECID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](./ecid.md). |
-| E-mail | Uno spazio dei nomi che rappresenta un indirizzo e-mail. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
-| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Per ulteriori informazioni, consulta il seguente documento sul supporto dell&#39;hashing [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=it#hashing-support). |
-| Firebase Cloud Messaging | Spazio dei nomi che rappresenta le identità raccolte tramite Google Firebase Cloud Messaging per le notifiche push. Per ulteriori informazioni, consulta il seguente documento sulla [messaggistica cloud di Google Firebase](https://firebase.google.com/docs/cloud-messaging). |
-| Google Ad ID (GAID) | Uno spazio dei nomi che rappresenta un ID di Google Advertising. Per ulteriori informazioni, consulta il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
-| Telefono | Uno spazio dei nomi che rappresenta un numero di telefono. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
-| Telefono (E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash nel formato E.164. Il formato E.164 include un segno più (`+`), un codice internazionale di chiamata del paese, un indicativo di località locale e un numero di telefono. Ad esempio: `(+)(country code)(area code)(phone number)`. |
-| Telefono (SHA256) | Spazio dei nomi che rappresenta i numeri di telefono che devono essere sottoposti a hashing utilizzando SHA256. È necessario rimuovere simboli, lettere ed eventuali zeri iniziali. È inoltre necessario aggiungere come prefisso il codice di chiamata del paese. |
-| Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati a cui deve essere applicato l’hashing utilizzando sia il formato SHA256 che il formato E.164. |
-| TNTID | Uno spazio dei nomi che rappresenta Adobe Target. Per ulteriori informazioni, consulta il seguente documento su [Target](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html). |
-| AID di Windows | Spazio dei nomi che rappresenta un ID di Advertising Windows. Per ulteriori informazioni, vedere il seguente documento in [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041). |
+| Nome visualizzato | Simbolo di identità (codice) | Tipo di identità | Descrizione |
+| ------------ | ---------------------- | ------------- | ----------- |
+| AdCloud | AdCloud | ID cookie | Uno spazio dei nomi che rappresenta Adobe AdCloud. |
+| Adobe Analytics (ID legacy) | AAID | ID cookie | Uno spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento sugli [spazi dei nomi Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces). |
+| Apple IDFA (ID per inserzionisti) | IDFA | ID dispositivo | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
+| Servizio di notifica push di Apple | APNS | ID dispositivo | Uno spazio dei nomi che rappresenta le identità raccolte tramite il servizio Apple Push Notification. Per ulteriori informazioni, consulta il seguente documento sul [servizio Apple Push Notification](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1). |
+| ECID | ECID | ID cookie | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](./ecid.md). |
+| E-mail | E-mail | E-mail | Uno spazio dei nomi che rappresenta un indirizzo e-mail. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
+| E-mail (SHA256, in minuscolo) | Email_LC_SHA256 | E-mail | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Per ulteriori informazioni, consulta il seguente documento sul supporto dell&#39;hashing [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support). |
+| Firebase Cloud Messaging | FCM | ID dispositivo | Spazio dei nomi che rappresenta le identità raccolte tramite Google Firebase Cloud Messaging per le notifiche push. Per ulteriori informazioni, consulta il seguente documento sulla [messaggistica cloud di Google Firebase](https://firebase.google.com/docs/cloud-messaging). |
+| Google Ad ID (GAID) | GAID | ID dispositivo | Uno spazio dei nomi che rappresenta un ID di Google Advertising. Per ulteriori informazioni, consulta il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
+| Telefono | Telefono | Numero di telefono | Uno spazio dei nomi che rappresenta un numero di telefono. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
+| Telefono (E.164) | Tel_E.164 | Numero di telefono | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash nel formato E.164. Il formato E.164 include un segno più (`+`), un codice internazionale di chiamata del paese, un indicativo di località locale e un numero di telefono. Ad esempio: `(+)(country code)(area code)(phone number)`. |
+| Telefono (SHA256) | Telefono_SHA256 | Numero di telefono | Spazio dei nomi che rappresenta i numeri di telefono che devono essere sottoposti a hashing utilizzando SHA256. È necessario rimuovere simboli, lettere ed eventuali zeri iniziali. È inoltre necessario aggiungere come prefisso il codice di chiamata del paese. |
+| Telefono (SHA256_E.164) | Telefono_SHA256_E.164 | Numero di telefono | Uno spazio dei nomi che rappresenta numeri di telefono non elaborati a cui deve essere applicato l’hashing utilizzando sia il formato SHA256 che il formato E.164. |
+| TNTID | TNTID | ID cookie | Uno spazio dei nomi che rappresenta Adobe Target. Per ulteriori informazioni, consulta il seguente documento su [Target](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html). |
+| AID di Windows | WAID | ID dispositivo | Spazio dei nomi che rappresenta un ID di Advertising Windows. Per ulteriori informazioni, vedere il seguente documento in [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041). |
+
+{style="table-layout:auto"}
 
 ### Visualizzare gli spazi dei nomi delle identità {#view-identity-namespaces}
 
@@ -127,7 +129,7 @@ Viene visualizzata una directory di spazi dei nomi dell’organizzazione contene
 
 ![Directory di spazi dei nomi di identità personalizzati nell&#39;organizzazione.](../images/namespace/browse.png)
 
-## Creare spazi dei nomi personalizzati {#create-namespaces}
+## Crea spazi dei nomi personalizzati {#create-namespaces}
 
 A seconda dei dati organizzativi e dei casi di utilizzo, potrebbe essere necessario specificare spazi dei nomi personalizzati. È possibile creare spazi dei nomi personalizzati utilizzando l&#39;API [[!DNL Identity Service]](../api/create-custom-namespace.md) o tramite l&#39;interfaccia utente.
 
