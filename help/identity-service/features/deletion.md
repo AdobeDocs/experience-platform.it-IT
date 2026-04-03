@@ -2,9 +2,9 @@
 title: Eliminazioni nel servizio Identity
 description: Questo documento fornisce una panoramica dei vari meccanismi che puoi utilizzare per eliminare i dati di identità in Experience Platform e fornire chiarezza su come i grafici di identità possono essere interessati.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1197'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Puoi utilizzare Catalog Service per inviare richieste di eliminazione di set di 
 
 ### Scadenze del set di dati nell’igiene dei dati
 
-L&#39;area di lavoro [[!UICONTROL Igiene dei dati]](../../hygiene/ui/overview.md) nell&#39;interfaccia utente di Adobe Experience Platform consente di pianificare le scadenze per i set di dati. Quando un set di dati raggiunge la data di scadenza, il data lake, Identity Service e Real-Time Customer Profile iniziano processi separati per rimuovere i contenuti del set di dati dai rispettivi servizi. Per ulteriori informazioni, consulta la guida su [gestione delle scadenze dei set di dati tramite l&#39;area di lavoro [!UICONTROL Igiene dei dati]](../../hygiene/ui/dataset-expiration.md).
+L&#39;area di lavoro [[!UICONTROL Data Hygiene]](../../hygiene/ui/overview.md) nell&#39;interfaccia utente di Adobe Experience Platform consente di pianificare le scadenze per i set di dati. Quando un set di dati raggiunge la data di scadenza, il data lake, Identity Service e Real-Time Customer Profile iniziano processi separati per rimuovere i contenuti del set di dati dai rispettivi servizi. Per ulteriori informazioni, leggere la guida su [gestione delle scadenze dei set di dati tramite l&#39;area di lavoro [!UICONTROL Data Hygiene]](../../hygiene/ui/dataset-expiration.md).
 
 La tabella seguente fornisce una suddivisione delle differenze tra l’eliminazione dei set di dati in Catalog Service e l’igiene dei dati:
 
