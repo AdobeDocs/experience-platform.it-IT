@@ -2,7 +2,7 @@
 title: (V2) Connessione del pubblico in tempo reale Pega CDH
 description: Utilizza la destinazione del pubblico in tempo reale Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull’iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni sulle migliori azioni successive.
 exl-id: cbb998f9-c268-4d65-87d8-fab56c0844dc
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 4%
