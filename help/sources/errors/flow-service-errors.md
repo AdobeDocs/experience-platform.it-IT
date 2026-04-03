@@ -2,10 +2,10 @@
 title: Messaggi di errore del servizio Flusso
 description: Scopri i messaggi di errore che possono verificarsi quando utilizzi il servizio Flusso per le origini.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 35%
+source-wordcount: '1666'
+ht-degree: 37%
 
 ---
 
@@ -23,10 +23,10 @@ La tabella seguente illustra gli errori relativi alla convalida interna in Flow 
 | --- | --- | --- |
 | `1100-400` | Richiesta non valida | Impossibile elaborare la richiesta. Errore dal provider di flussi: non autorizzato a questa operazione. |
 | `1101-404` | Risorsa non trovata | Impossibile trovare la risorsa richiesta. Errore dal provider di flusso: la risorsa con l&#39;ID specificato non esiste. |
-| `1102-500` | Errore interno | Errore interno. Riprova. Se il problema persiste, contatta l’assistenza clienti. |
+| `1102-500` | Errore interno | Si è verificato un errore interno sconosciuto. Riprova più tardi. Se il problema persiste, contatta il supporto clienti. |
 | `1103-503` | Servizio non disponibile | Il servizio è temporaneamente non disponibile. Riprova più tardi. Se il problema persiste, contatta l’assistenza clienti. |
 | `1104-504` | Timeout del gateway | Si è verificato un timeout del gateway. Riprova. Se il problema persiste, contatta l’assistenza clienti. |
-| `1400-500` | Errore interno | Errore interno. Riprova. Se il problema persiste, contatta l’assistenza clienti. |
+| `1400-500` | Errore interno | Si è verificato un errore interno sconosciuto. Riprova più tardi. Se il problema persiste, contatta il supporto clienti. |
 | `1401-400` | Richiesta non valida | I parametri di limite e conteggio non possono essere forniti insieme nella stessa richiesta. Specifica solo il parametro di limite o quello di conteggio e riprova. |
 | `1402-400` | Richiesta non valida | L&#39;azione &#39;finalize&#39; è supportata solo per le richieste di provider. |
 | `1403-400` | Intestazione mancante | Intestazione &quot;If-Match&quot; mancante nella richiesta. Specifica l’intestazione e riprova. |
@@ -100,13 +100,13 @@ La tabella seguente illustra gli errori relativi alla verifica del token utente 
 | `2002-401` | Intestazione mancante | L’intestazione x-gw-ims-org-id non è presente nella richiesta. Aggiorna il valore dell’intestazione e riprova. |
 | `2100-404` | Sandbox non trovata | Impossibile trovare la sandbox denominata &#39;dev&#39;. Verifica che il nome della sandbox sia corretto e riprova. |
 | `2101-404` | Sandbox non trovata | Impossibile trovare la sandbox denominata &#39;dev&#39;. Errore dall’API di gestione sandbox: sandbox con nome &quot;dev&quot; non presente. Verifica se la risorsa esiste. |
-| `2102-500` | Errore nell’ottenere la sandbox tramite nome | Si è verificato un problema durante il recupero di una sandbox denominata &#39;dev&#39;. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova più tardi. |
+| `2102-500` | Errore nell’ottenere la sandbox tramite nome | Si è verificato un problema durante il recupero di una sandbox denominata &#39;dev&#39;. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova. |
 | `2103-404` | Sandbox non trovata | Impossibile trovare la sandbox con ID 8da3ef09-b469-404a e nome dev. Verifica che i valori ID e nome sandbox siano corretti e riprova. |
-| `2104-500` | Errore nell’ottenere la sandbox tramite identificatore | Si è verificato un problema durante il recupero di una sandbox con ID &#39;8da3ef09-b469-404a&#39; e nome &#39;dev&#39;. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova più tardi. |
+| `2104-500` | Errore nell’ottenere la sandbox tramite identificatore | Si è verificato un problema durante il recupero di una sandbox con ID &#39;8da3ef09-b469-404a&#39; e nome &#39;dev&#39;. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova. |
 | `2105-400` | Intestazione mancante | Nella richiesta manca l’intestazione x-sandbox-name. Aggiungi l’intestazione nella richiesta e riprova. |
 | `2106-404` | Errore nell’ottenere la sandbox predefinita | Impossibile trovare le informazioni della sandbox predefinita. |
-| `2107-500` | Errore nell’ottenere la sandbox predefinita | Si è verificato un problema nel recuperare una sandbox predefinita. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova più tardi. |
-| `2108-500` | Errore nell’ottenere le sandbox attive | Si è verificato un problema nel recuperare una sandbox attiva. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova più tardi. |
+| `2107-500` | Errore nell’ottenere la sandbox predefinita | Si è verificato un problema nel recuperare una sandbox predefinita. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova. |
+| `2108-500` | Errore nell’ottenere le sandbox attive | Si è verificato un problema nel recuperare una sandbox attiva. Errore dall’API di gestione sandbox: si è verificato un errore. Riprova. |
 | `2110-400` | Intestazioni non consentite | L’intestazione x-sandbox-id non è consentita con il token utente. Aggiorna l’intestazione e riprova. |
 | `2111-403` | Intestazioni con valore limitato | L’intestazione x-sandbox-name con valore * è limitata al token utente. Aggiorna l’intestazione e il valore e riprova. |
 | `2112-400` | Intestazioni con valore diverso non consentite | Le intestazioni x-sandbox-name e x-sandbox-id devono avere entrambe il valore * per le query tra sandbox. Aggiorna le intestazioni e riprova. |
