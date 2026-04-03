@@ -4,7 +4,7 @@ description: Scopri come i registri di controllo consentono di vedere chi ha ese
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1579'
 ht-degree: 29%
@@ -169,7 +169,7 @@ Tutte le azioni che possono essere eseguite nell’interfaccia utente possono es
 
 ## Gestione dei registri di audit per Adobe Admin Console
 
-Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/it/enterprise/using/audit-logs.html).
+Per informazioni su come gestire i registri di audit per le attività in Adobe Admin Console, consulta il seguente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Passaggi successivi e risorse aggiuntive
 
@@ -177,4 +177,4 @@ Questa guida illustra come gestire i registri di audit in Experience Platform. P
 
 Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/344647?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
