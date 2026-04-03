@@ -2,10 +2,10 @@
 title: Gestire la conservazione dei set di dati di Experience Event nel Data Lake tramite TTL
 description: Scopri come valutare, impostare e gestire la conservazione dei set di dati di Experience Event nel data lake utilizzando le configurazioni Time-To-Live (TTL) con le API di Adobe Experience Platform. Questa guida spiega come la scadenza a livello di riga TTL supporti le regole di conservazione dei dati, ottimizzi l'efficienza dello storage e garantisca un'efficace gestione del ciclo di vita dei dati. Inoltre, fornisce casi d’uso e best practice per aiutarti ad applicare il TTL in modo efficace.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2472'
-ht-degree: 0%
+source-wordcount: '2471'
+ht-degree: 1%
 
 ---
 
@@ -46,7 +46,7 @@ Ad esempio, considera un servizio di streaming video che tiene traccia delle int
 
 ## Valuta idoneità TTL {#evaluate-ttl-suitability}
 
-Prima di applicare un criterio di conservazione, valuta se il set di dati è un buon candidato per la scadenza a livello di riga. Considera quanto segue:
+Prima di applicare un criterio di conservazione, valuta se il set di dati è un buon candidato per la scadenza a livello di riga. Considera i seguenti aspetti:
 
 - Rilevanza dei dati nel tempo: i dati meno recenti forniscono valore o diventano obsoleti?
 - Impatto sui processi a valle: la rimozione dei dati influisce su reporting, analisi o integrazioni?
@@ -112,7 +112,7 @@ Utilizza l’endpoint API di igiene dei dati `/ttl/{DATASET_ID}` per pianificare
 
 Per ulteriori informazioni, consulta la documentazione dell&#39;[API di igiene dei dati](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) di Adobe Developer.
 
-Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [&#x200B; &lbrace;API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
+Per [controllare il TTL attualmente applicato a un set di dati](#check-applied-ttl-values), effettuare una richiesta GET all&#39;endpoint [ {API](https://developer.adobe.com/experience-platform-apis/references/catalog/) di Catalog Service `/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -126,7 +126,7 @@ GET /ttl/{DATASET_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_ID}` | Stringa generata dal sistema che identifica in modo univoco un set di dati. Per trovare un ID di set di dati, utilizza l&#39;endpoint `/datasets`. Per istruzioni su come filtrare le risposte per i set di dati rilevanti, consulta la [guida API per oggetti catalogo &#x200B;](../api/list-objects.md). |
+| `{DATASET_ID}` | Stringa generata dal sistema che identifica in modo univoco un set di dati. Per trovare un ID di set di dati, utilizza l&#39;endpoint `/datasets`. Per istruzioni su come filtrare le risposte per i set di dati rilevanti, consulta la [guida API per oggetti catalogo ](../api/list-objects.md). |
 
 **Richiesta**
 
@@ -318,7 +318,8 @@ La scadenza a livello di riga richiede le seguenti condizioni tecniche:
 I TTL dei set di dati vengono valutati ed elaborati ogni 30 giorni, eliminando tutti i record scaduti. Un evento è considerato scaduto se è stato acquisito in Experience Platform più di 30 giorni fa (data di acquisizione > 30 giorni) e la sua data evento supera il periodo di conservazione definito (TTL).
 +++
 
-<!-- ### How soon will the Dataset Retention job delete data from Profile services?
+<!-- 
+### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
 Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
@@ -328,7 +329,8 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 - New events receive a 30-day expiration as they are ingested.
 - Existing events with a timestamp older than April 15th are immediately deleted.
 - Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
-+++ -->
++++ 
+-->
 
 ### È possibile impostare diversi criteri di conservazione per il data lake e i servizi profilo?
 
@@ -345,7 +347,7 @@ Sì, puoi impostare diversi criteri di conservazione per il data lake e i serviz
 ### Come posso verificare l’utilizzo del set di dati corrente?
 
 +++Risposta
-Puoi controllare le dimensioni dell&#39;archivio del set di dati più recente per il data lake e gli archivi profilo come metriche separate nell&#39;area di lavoro di inventario [!UICONTROL Set di dati]. Ordinare le colonne per identificare i set di dati più grandi e verificare che siano applicati i criteri di conservazione.
+È possibile verificare le dimensioni dell&#39;archivio del set di dati più recente per il data lake e gli archivi profilo come metriche separate nell&#39;area di lavoro inventario [!UICONTROL Dataset]. Ordinare le colonne per identificare i set di dati più grandi e verificare che siano applicati i criteri di conservazione.
 
 Per l’utilizzo a livello di sandbox, consulta la dashboard Utilizzo licenze. Per informazioni dettagliate, consulta la [documentazione sull&#39;utilizzo delle licenze](../../dashboards/guides/license-usage.md).
 +++
