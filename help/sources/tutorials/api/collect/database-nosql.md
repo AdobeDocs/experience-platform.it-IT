@@ -3,7 +3,7 @@ title: Creare un flusso di dati per le origini del database utilizzando l’API 
 type: Tutorial
 description: Scopri come utilizzare l’API del servizio Flusso per creare un flusso di dati e acquisire i dati dal database in Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 3%
@@ -656,8 +656,6 @@ curl -X POST \
         }
     }'
 ```
-
-+++
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
