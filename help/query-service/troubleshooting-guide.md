@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Domande frequenti su Query Service e Data Distiller
 description: Questo documento contiene domande e risposte comuni relative a Query Service e Data Distiller. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '5441'
-ht-degree: 0%
+source-wordcount: '5423'
+ht-degree: 2%
 
 ---
 
@@ -65,7 +65,7 @@ Una possibile causa è la funzione di completamento automatico. La funzione elab
 ### Posso usare [!DNL Postman] per l&#39;API Query Service?
 
 +++Risposta
-Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/36258?captions=ita) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
@@ -115,12 +115,12 @@ Alcune parole chiave riservate non possono essere utilizzate come nome di colonn
 +++Risposta
 I passaggi seguenti descrivono come visualizzare una vista a tabella di un set di dati tramite l’interfaccia utente, inclusi tutti i campi e le colonne nidificati in un modulo appiattito.
 
-- Dopo aver effettuato l&#39;accesso ad Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente per passare a [!UICONTROL Set di dati] dashboard.
-- Si apre la scheda [!UICONTROL Sfoglia] dei set di dati. Puoi utilizzare la barra di ricerca per perfezionare le opzioni disponibili. Seleziona un set di dati dall’elenco visualizzato.
+- Dopo aver effettuato l&#39;accesso ad Experience Platform, seleziona **[!UICONTROL Datasets]** nel menu di navigazione a sinistra dell&#39;interfaccia utente per passare al dashboard [!UICONTROL Datasets].
+- Viene aperta la scheda Set di dati [!UICONTROL Browse]. Puoi utilizzare la barra di ricerca per perfezionare le opzioni disponibili. Seleziona un set di dati dall’elenco visualizzato.
 
 ![Dashboard dei set di dati nell&#39;interfaccia utente di Experience Platform con la barra di ricerca e un set di dati evidenziati.](./images/troubleshooting/dataset-selection.png)
 
-- Viene visualizzata la schermata [!UICONTROL Attività set di dati]. Seleziona **[!UICONTROL Anteprima set di dati]** per aprire una finestra di dialogo dello schema XDM e una visualizzazione a tabella dei dati appiattiti dal set di dati selezionato. Ulteriori dettagli sono disponibili nella [anteprima della documentazione di un set di dati](../catalog/datasets/user-guide.md#preview-a-dataset)
+- Viene visualizzata la schermata [!UICONTROL Datasets activity]. Selezionare **[!UICONTROL Preview dataset]** per aprire una finestra di dialogo dello schema XDM e della visualizzazione tabulare dei dati appiattiti dal set di dati selezionato. Ulteriori dettagli sono disponibili nella [anteprima della documentazione di un set di dati](../catalog/datasets/user-guide.md#preview-a-dataset)
 
 ![Scheda Attività del set di dati del dashboard dei set di dati con Anteprima set di dati evidenziata.](./images/troubleshooting/dataset-preview.png)
 
@@ -151,16 +151,16 @@ Un’interrogazione può essere bloccata durante l’elaborazione per diversi mo
 [Nella pagina della guida di Adobe è disponibile un elenco completo dei numeri di telefono dell&#39;Assistenza clienti di Adobe](https://helpx.adobe.com/ca/contact/phone.html). In alternativa, è possibile trovare la guida online completando i passaggi seguenti:
 
 - Passa a [https://www.adobe.com/](https://www.adobe.com/it/) nel browser Web.
-- Sul lato destro della barra di navigazione superiore, seleziona **[!UICONTROL Accedi]**.
+- Sul lato destro della barra di navigazione superiore, selezionare **[!UICONTROL Sign In]**.
 
 ![Sito Web Adobe con l&#39;opzione Accedi evidenziata.](./images/troubleshooting/adobe-sign-in.png)
 
 - Utilizza l’Adobe ID e la password registrati con la licenza Adobe.
-- Seleziona **[!UICONTROL Guida e supporto]** dalla barra di navigazione superiore.
+- Seleziona **[!UICONTROL Help & Support]** dalla barra di navigazione superiore.
 
 ![Menu a discesa della barra di navigazione superiore con Guida in linea e supporto tecnico, Supporto Enterprise e Contattaci evidenziati.](./images/troubleshooting/help-and-support.png)
 
-Verrà visualizzato un banner a discesa contenente una sezione [!UICONTROL Guida e supporto tecnico]. Seleziona **[!UICONTROL Contattaci]** per aprire l&#39;Assistente virtuale dell&#39;Assistenza clienti di Adobe, oppure seleziona **[!UICONTROL Supporto Enterprise]** per assistenza dedicata alle organizzazioni di grandi dimensioni.
+Verrà visualizzato un banner a discesa contenente una sezione [!UICONTROL Help and support]. Selezionare **[!UICONTROL Contact us]** per aprire l&#39;Assistente virtuale dell&#39;Assistenza clienti di Adobe oppure selezionare **[!UICONTROL Enterprise support]** per la Guida dedicata per le organizzazioni di grandi dimensioni.
 +++
 
 ### Come si implementa una serie sequenziale di job senza eseguire i job successivi se il job precedente non viene completato correttamente?
@@ -372,7 +372,7 @@ LIMIT 100;
 
 ### Come si modifica il fuso orario in e da un timestamp UTC?
 
-+++Risposta
++++ Risposta
 Adobe Experience Platform mantiene i dati in formato timestamp UTC (Coordinated Universal Time). Un esempio del formato UTC è `2021-12-22T19:52:05Z`
 
 Query Service supporta funzioni SQL incorporate per convertire un determinato timestamp in e dal formato UTC. Entrambi i metodi `to_utc_timestamp()` e `from_utc_timestamp()` richiedono due parametri: timestamp e timezone.
@@ -381,6 +381,8 @@ Query Service supporta funzioni SQL incorporate per convertire un determinato ti
 |-----------|---------------|
 | Marca temporale | Il timestamp può essere scritto in formato UTC o in formato `{year-month-day}` semplice. Se non viene specificata un&#39;ora, il valore predefinito è la mezzanotte del mattino del giorno specificato. |
 | Fuso orario | Il fuso orario è scritto in un formato `{continent/city})`. Deve corrispondere a uno dei codici di fuso orario riconosciuti presenti nel [database TZ di dominio pubblico](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
++++
 
 #### Converti in timestamp UTC
 
@@ -420,7 +422,7 @@ La query restituisce una marca temporale in formato UTC per il fuso orario passa
 
 ### Come posso filtrare i dati delle serie temporali?
 
-+++Risposta
++++ Risposta
 Quando esegui una query con dati di serie temporali, utilizza il filtro timestamp quando possibile per un’analisi più accurata.
 
 >[!NOTE]
@@ -504,7 +506,7 @@ WHERE T2.ID IS NULL
 
 +++
 
-### È possibile creare un set di dati utilizzando una query CTAS con un doppio nome di sottolineatura come quelli visualizzati nell’interfaccia utente? Esempio: `test_table_001`.
+### È possibile creare un set di dati utilizzando una query CTAS con un doppio nome di sottolineatura come quelli visualizzati nell’interfaccia utente? Ad esempio: `test_table_001`.
 
 +++Risposta
 No, si tratta di una limitazione intenzionale in Experience Platform che si applica a tutti i servizi Adobe, incluso Query Service. Un nome con due trattini bassi è accettabile come nome di schema e set di dati, ma il nome della tabella per il set di dati può contenere solo un singolo trattino basso.
