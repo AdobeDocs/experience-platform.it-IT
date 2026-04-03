@@ -3,7 +3,7 @@ title: Endpoint cartelle
 description: Scopri come creare, aggiornare, gestire ed eliminare cartelle utilizzando le API di Adobe Experience Platform.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
@@ -26,7 +26,7 @@ Prima di continuare, consulta la [guida introduttiva](./getting-started.md) per 
 
 ## Recuperare un elenco di cartelle {#list}
 
-Per recuperare un elenco di cartelle appartenenti alla tua organizzazione, devi eseguire una richiesta di GET all&#39;endpoint `/folder` e specificare il tipo di cartella e l&#39;ID della cartella principale.
+Per recuperare un elenco di cartelle appartenenti alla tua organizzazione, devi eseguire una richiesta GET all&#39;endpoint `/folder` e specificare il tipo di cartella e l&#39;ID della cartella principale.
 
 **Formato API**
 
@@ -185,7 +185,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Recuperare una cartella specifica {#get}
 
-Per recuperare una cartella specifica appartenente alla tua organizzazione, devi eseguire una richiesta di GET all&#39;endpoint `/folder` e specificare il tipo di cartella e l&#39;ID della cartella.
+Per recuperare una cartella specifica appartenente alla tua organizzazione, devi eseguire una richiesta GET all&#39;endpoint `/folder` e specificare il tipo di cartella e l&#39;ID della cartella.
 
 **Formato API**
 
@@ -256,7 +256,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 ## Convalida una cartella specificata {#validate}
 
-È possibile verificare se una cartella è idonea a contenere oggetti effettuando una richiesta di GET all&#39;endpoint `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` e fornendo sia il tipo di cartella che l&#39;ID.
+È possibile verificare se una cartella può contenere oggetti effettuando una richiesta GET all&#39;endpoint `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` e fornendo sia il tipo di cartella che l&#39;ID.
 
 **Formato API**
 
@@ -378,7 +378,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Eliminare una cartella specifica {#delete}
 
-Per eliminare una cartella specifica appartenente alla tua organizzazione, devi eseguire una richiesta DELETE a `/folder` e specificare il tipo di cartella e l&#39;ID della cartella.
+È possibile eliminare una cartella specifica appartenente all&#39;organizzazione effettuando una richiesta DELETE a `/folder` e specificando il tipo di cartella e l&#39;ID della cartella.
 
 ***Formato API**
 
