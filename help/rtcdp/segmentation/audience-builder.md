@@ -2,11 +2,11 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Scopri come utilizzare Audience Builder in Real-Time Customer Data Platform per creare tipi di pubblico.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1115'
 ht-degree: 7%
 
 ---
@@ -54,11 +54,15 @@ La scheda [!UICONTROL Attributes] consente di sfogliare gli attributi dell&#39;a
 
 ![La scheda Attributi viene visualizzata in Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
+>[!NOTE]
+>
+>I dati di riepilogo si trovano in **Disponibilità limitata**.
+
 Quando selezioni un attributo, puoi visualizzare i dati di riepilogo selezionando l&#39;[icona informazioni](../../images/icons/info.png). I dati di riepilogo includono informazioni quali i primi valori, una spiegazione di cosa è il campo, il conteggio dei record dei valori, nonché la percentuale di conti che contengono i valori per questo attributo.
 
 La sezione **[!UICONTROL Populated]** mostra il numero di record in cui l&#39;attributo viene popolato rispetto al numero totale di record disponibili e alla percentuale di account che hanno un valore per questo campo.
 
-Nella sezione **[!UICONTROL Top values]** vengono visualizzati i valori più frequenti per l&#39;attributo e sono inclusi dettagli quali il valore, il numero di record che contengono il valore e la percentuale di record totali che il valore rappresenta.
+Nella sezione **[!UICONTROL Top values]** vengono visualizzati i valori più frequenti per l&#39;attributo e sono inclusi dettagli quali il valore, il numero di record che contengono il valore e la percentuale di record totali che il valore rappresenta. Il numero di record per ciascun campo è determinato dallo snapshot del profilo, che fornisce una visualizzazione consolidata dei record dopo l’unione di tutti i dati del set di dati contributivo.
 
 ![Un popover che visualizza una versione completa dei dati di riepilogo per un attributo.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
 
