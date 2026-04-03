@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2021
 description: Note sulla versione di Adobe Experience Platform di settembre 2021.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 30%
@@ -51,7 +51,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!DNL Data Landing Zone] | È ora possibile creare una connessione di origine [!DNL Data Landing Zone] utilizzando [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o l&#39;interfaccia utente [4&rbrace;. &#x200B;](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) [!DNL Data Landing Zone] è un&#39;interfaccia di archiviazione [!DNL Azure Blob] fornita da Experience Platform, che consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per inserire i file in Experience Platform. Per ulteriori informazioni, vedere [[!DNL Data Landing Zone] panoramica](../../sources/connectors/cloud-storage/data-landing-zone.md). |
+| [!DNL Data Landing Zone] | È ora possibile creare una connessione di origine [!DNL Data Landing Zone] utilizzando [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) o l&#39;interfaccia utente [4}. ](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) [!DNL Data Landing Zone] è un&#39;interfaccia di archiviazione [!DNL Azure Blob] fornita da Experience Platform, che consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per inserire i file in Experience Platform. Per ulteriori informazioni, vedere [[!DNL Data Landing Zone] panoramica](../../sources/connectors/cloud-storage/data-landing-zone.md). |
 | [!DNL Snowflake] | È ora possibile creare una connessione di origine [!DNL Snowflake] utilizzando l&#39;[[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) o l&#39;[interfaccia utente](../../sources/tutorials/ui/create/databases/snowflake.md) per portare dati dal database [!DNL Snowflake] ad Experience Platform. Per ulteriori informazioni, vedere [[!DNL Snowflake] panoramica](../../sources/connectors/databases/snowflake.md). |
 | [!DNL SFTP] miglioramenti all&#39;origine | È possibile impostare manualmente un numero di porta personalizzato durante la creazione di una connessione di origine [!DNL SFTP]. Per ulteriori informazioni, vedere [[!DNL SFTP] panoramica](../../sources/connectors/cloud-storage/sftp.md). |
 
