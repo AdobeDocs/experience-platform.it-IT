@@ -1,8 +1,8 @@
 ---
 title: Calcolo delle statistiche dei set di dati
-description: In questo documento viene descritto come calcolare le statistiche a livello di colonna sui set di dati di Azure Data Lake Storage (ADLS) con comandi SQL.
+description: Questo documento descrive come calcolare le statistiche a livello di colonna sui set di dati ADLS (Data Lake Storage) di Azure con comandi SQL.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Se non si specifica in precedenza un nome di alias, Query Service genera automat
 Di seguito è riportato un esempio di output di una query `COMPUTE STATISTICS`:
 
 ```console
-| Statistics ID         | 
+| Statistics ID         |
 | --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
