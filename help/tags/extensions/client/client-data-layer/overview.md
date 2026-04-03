@@ -2,7 +2,7 @@
 title: Estensione Adobe Client Data Layer
 description: Scopri l’estensione per tag Adobe Client Data Layer in Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 91%
@@ -13,8 +13,10 @@ ht-degree: 91%
 
 Questa documentazione fornisce esempi e best practice sull’utilizzo dell’estensione Adobe Client Data Layer.
 
-<!-- (Missing document?)
-If you would like to have more details on development consideration, [please reach this page](./dev.md). -->
+<!-- 
+(Missing document?)
+If you would like to have more details on development consideration, [please reach this page](./dev.md). 
+-->
 
 ## Installazione
 
@@ -22,12 +24,14 @@ Per installare l’estensione, passa al catalogo delle estensioni nell’interfa
 
 ![Visualizzazione dell’estensione ACDL nel catalogo](./images/catalog.png)
 
-<!-- (GitHub link?)
+<!-- 
+(GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
 This installation will not be supported on our end.<br>
 >[!NOTE]
 >
-> _Consider renaming the extension name in the extension.json file_ -->
+> _Consider renaming the extension name in the extension.json file_ 
+-->
 
 ## Visualizzazione dell’estensione
 
