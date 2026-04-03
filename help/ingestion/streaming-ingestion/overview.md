@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull’acquisizione in streaming
 description: Scopri l’acquisizione in streaming in Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Adobe Experience Platform ti consente di creare esperienze coordinate, coerenti 
 
 Il video seguente è stato progettato per comprendere meglio l’acquisizione in streaming e illustra i concetti descritti in precedenza.
 
->[!VIDEO](https://video.tv.adobe.com/v/36263?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Trasmetti record profilo e [!DNL ExperienceEvents]
 
