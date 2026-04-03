@@ -2,9 +2,10 @@
 title: Estensione API Reddit Conversions
 description: Scopri come utilizzare l’estensione API Reddit Ads Conversions per inviare eventi di interazione dell’utente a Reddit Ads per annunci pubblicitari mirati.
 last-substantial-update: 2025-05-1
-source-git-commit: 603cc86892f518852552eaa2fe1bdeaa296137cf
+exl-id: 550f7b62-84d7-49d4-8551-b8785cdedd0f
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -15,7 +16,7 @@ Reddit è una piattaforma di social media con una base di utenti diversificata, 
 
 Utilizza l&#39;estensione API [[!DNL Reddit] Conversions](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) per inviare a [!DNL Reddit Ads] gli eventi di interazione utente acquisiti in Adobe Experience Platform Edge Network. Utilizza questa estensione per aiutare il tuo marchio a raggiungere un pubblico di oltre 379 milioni di utenti attivi ogni settimana, comprendere meglio il comportamento degli utenti ed eseguire annunci pubblicitari mirati.
 
-Leggi questa guida per scoprire come installare, configurare e utilizzare l&#39;estensione API per le conversioni di [!DNL Reddit] nell&#39;inoltro degli eventi [rules](https://experienceleague.adobe.com/it/docs/experience-platform/tags/ui/rules).
+Leggi questa guida per scoprire come installare, configurare e utilizzare l&#39;estensione API per le conversioni di [!DNL Reddit] nell&#39;inoltro degli eventi [rules](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 
 ## Vantaggi chiave {#benefits}
 
@@ -42,20 +43,19 @@ Per connettere Experience Platform a [!DNL Reddit], sono necessari i seguenti in
 
 Per installare e configurare l&#39;estensione API per conversioni [!DNL Reddit], eseguire la procedura seguente:
 
-1. Nell&#39;interfaccia utente di Experience Platform Data Collection, seleziona [!UICONTROL Estensioni] dalla navigazione a sinistra per accedere al catalogo [!UICONTROL Estensioni]. Quindi [Crea una nuova proprietà di inoltro eventi](https://experienceleague.adobe.com/it/docs/experience-platform/tags/event-forwarding/overview#properties) o seleziona una proprietà esistente.
-2. Passa a **[!UICONTROL Estensioni]** nel pannello di navigazione a sinistra. Selezionare **[!UICONTROL Catalogo]**, quindi selezionare l&#39;estensione **[!DNL Reddit]**.
+1. Nell&#39;interfaccia utente di Experience Platform Data Collection, selezionare [!UICONTROL Extensions] dal menu di navigazione a sinistra per accedere al catalogo [!UICONTROL Extensions]. Quindi [Crea una nuova proprietà di inoltro eventi](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) o seleziona una proprietà esistente.
+2. Passa a **[!UICONTROL Extensions]** nel pannello di navigazione a sinistra. Selezionare **[!UICONTROL Catalog]** e quindi l&#39;estensione **[!DNL Reddit]**.
    ![Catalogo delle estensioni di Adobe Experience Platform con l&#39;estensione Reddit evidenziata.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Fornisci i seguenti dettagli di configurazione:
    - **ID pixel**: immettere l&#39;ID [!DNL Reddit Ads] pixel.
-   - **Token di accesso di conversione**: immetti il token generato nell&#39;account [!DNL Reddit Ads] e al termine seleziona **[!UICONTROL Salva]**.
-
+   - **Token di accesso di conversione**: immetti il token generato nell&#39;account [!DNL Reddit Ads] e seleziona **[!UICONTROL Save]** al termine.
      ![Dettagli di configurazione per l&#39;estensione API Reddit Conversions, inclusi i campi per ID pixel e Token di accesso di conversione.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Configurare una regola di inoltro degli eventi {#config-rule}
 
 Dopo aver configurato gli elementi dati, creare regole di inoltro degli eventi per determinare quando e come gli eventi vengono inviati a [!DNL Reddit Ads].
 
-1. Passa a **Regole** nella proprietà di inoltro eventi e crea una nuova [regola](https://experienceleague.adobe.com/it/docs/experience-platform/tags/ui/rules).
+1. Passa a **Regole** nella proprietà di inoltro eventi e crea una nuova [regola](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
 2. In **Azioni**, aggiungi una nuova azione e imposta l&#39;estensione su **[!DNL Reddit CAPI]**.
 3. Imposta **Tipo azione** su **Invia evento**.
    ![Interfaccia di configurazione della regola di inoltro eventi per l&#39;estensione API Reddit Conversions, con i campi estensione e tipo di azione evidenziati.](../../../images/extensions/server/reddit/reddit-rule.png)
@@ -128,6 +128,6 @@ Per ulteriori dettagli su [!DNL Reddit Ads], visita la [documentazione di Reddit
 
 Dopo aver letto questo documento, sarai in grado di configurare e utilizzare l&#39;estensione API Conversions di [!DNL Reddit]. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Adobe Experience Platform, consulta la [panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md) o le risorse seguenti:
 
-- [Condividi chiavi di corrispondenza](https://business.reddithelp.com/s/article/about-attribution-matching-signals) e metadati dell&#39;evento [&#128279;](https://business.reddithelp.com/s/article/about-event-metadata): scopri come condividere in modo efficace chiavi di corrispondenza e metadati dell&#39;evento.
+- [Condividi chiavi di corrispondenza](https://business.reddithelp.com/s/article/about-attribution-matching-signals) e metadati dell&#39;evento [](https://business.reddithelp.com/s/article/about-event-metadata): scopri come condividere in modo efficace chiavi di corrispondenza e metadati dell&#39;evento.
 - [Deduplica eventi](https://business.reddithelp.com/s/article/event-deduplication): assicurati che il tracciamento degli eventi sia accurato tramite la deduplicazione degli eventi.
 - [Creare un token di accesso di conversione](https://business.reddithelp.com/helpcenter/s/article/conversion-access-token): eseguire la procedura seguente per creare un token di accesso di conversione per l&#39;autenticazione API sicura.
