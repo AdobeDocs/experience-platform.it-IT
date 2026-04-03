@@ -2,7 +2,7 @@
 title: Best practice per l’adesione alle licenze di gestione dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '3390'
 ht-degree: 1%
@@ -182,7 +182,9 @@ Sono disponibili diversi rapporti per comprendere la composizione dell’archivi
 
 * **API report di sovrapposizione set di dati**: espone i set di dati che contribuiscono maggiormente al pubblico indirizzabile. È possibile utilizzare questo report per identificare i [!DNL ExperienceEvent] set di dati per i quali impostare una scadenza. Per ulteriori informazioni, consulta l&#39;esercitazione su [generazione del report di sovrapposizione dei set di dati](../../profile/tutorials/dataset-overlap-report.md).
 * **API rapporto di sovrapposizione identità**: espone gli spazi dei nomi delle identità che contribuiscono maggiormente al pubblico indirizzabile. Per ulteriori informazioni, consulta l&#39;esercitazione su [generazione del rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+
+<!-- 
+* **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 ### Scadenze dati profilo pseudonimo {#pseudonymous-profile-expirations}
@@ -191,7 +193,7 @@ Utilizza la funzionalità di scadenza dei dati dei profili pseudonimi per rimuov
 
 ### Interfaccia utente del set di dati - Conservazione del set di dati di Experience Event {#data-retention}
 
-Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [&#128279;](../../catalog/datasets/user-guide.md#data-retention-policy).
+Configura le impostazioni di scadenza e conservazione del set di dati per applicare un periodo di conservazione fisso per i dati nel data lake e nell’archivio profili. Al termine del periodo di conservazione, i dati vengono eliminati. La scadenza dei dati di Experience Event rimuove solo gli eventi e non i dati della classe di profilo, il che ridurrà il [volume totale di dati](total-data-volume.md) nelle metriche di utilizzo della licenza. Per ulteriori informazioni, leggere la guida all&#39;impostazione dei criteri di conservazione dei dati [](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ### Scadenze eventi esperienza profilo {#event-expirations}
 
