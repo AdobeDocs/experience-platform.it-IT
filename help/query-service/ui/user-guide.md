@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. L’editor delle query supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '3341'
 ht-degree: 0%
@@ -123,11 +123,13 @@ La funzionalità [!UICONTROL Format text] rende la query più leggibile aggiunge
 
 ![Editor query con [!UICONTROL Format text] e istruzioni SQL evidenziate.](../images/ui/query-editor/format-text.png)
 
-<!-- ### Undo text {#undo-text}
+<!-- 
+### Undo text {#undo-text}
 
 If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
 
-![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) 
+-->
 
 ### Copia SQL {#copy-sql}
 
@@ -312,7 +314,7 @@ Il video seguente illustra come eseguire query nell’interfaccia di Adobe Exper
 >
 >L’interfaccia utente rappresentata nel video è obsoleta, ma la logica utilizzata nel flusso di lavoro rimane la stessa.
 
->[!VIDEO](https://video.tv.adobe.com/v/39842?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Monitorare e gestire le sessioni simultanee {#monitor-manage-sessions}
 
