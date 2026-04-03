@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dei criteri di utilizzo dei dati
 description: I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 18%
@@ -52,12 +52,13 @@ Quando si verifica un utilizzo dei dati nel servizio dell’organizzazione, è n
 
 Consulta l&#39;appendice di questo documento per un elenco delle [azioni di marketing disponibili definite da Adobe](#core-actions). È inoltre possibile definire azioni di marketing personalizzate utilizzando l&#39;API [!DNL Policy Service] o l&#39;interfaccia utente [!DNL Experience Platform]. Ulteriori informazioni sull’utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=it).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestione dei criteri di utilizzo dei dati {#manage}
