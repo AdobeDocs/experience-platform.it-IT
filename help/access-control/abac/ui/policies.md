@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Gestire i criteri di controllo di accesso
 description: Gestisci i criteri di controllo dell’accesso tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: b0094920720c54990953f79de32ab95c2a5c7e1c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '625'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -102,7 +102,8 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Activate Policy]**. Sele
 
 Attivando un criterio, puoi passare al passaggio successivo per [gestire le autorizzazioni per un ruolo](permissions.md).
 
-<!--Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
+<!--
+Policies are applied at the sandbox level to control which sandboxes enforce label-based access control. By default, the **[!UICONTROL Auto-include]** feature is turned on, which means all current and future sandboxes are automatically added to the policy. When **[!UICONTROL Auto-include]** is turned off, only the sandboxes you manually add will be subject to the policy's access control rules.
 
 To begin configuring a policy's sandboxes, navigate to **[!UICONTROL Permissions]** in [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"}. Select **[!UICONTROL Policies]** from the left panel, then select the **[!UICONTROL Default-Label-Based-Access-Control-Policy]** from the list.
 
