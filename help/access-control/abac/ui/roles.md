@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Creazione di un ruolo tramite il controllo degli accessi basato su attributi
 description: Gestisci i ruoli tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
+source-git-commit: ed966156c253a8c07380079013d98c578821ae03
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 13%
@@ -59,9 +59,11 @@ Verrà visualizzato un avviso che indica che il ruolo è stato salvato correttam
 
 Il nuovo ruolo è stato creato e si è reindirizzati alla pagina **[!UICONTROL Roles]**, in cui il nuovo ruolo creato verrà visualizzato nell&#39;elenco.
 
-<!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
+<!-- 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475981/?captions=ita&learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) 
+-->
 
 ## Duplicare un ruolo
 
