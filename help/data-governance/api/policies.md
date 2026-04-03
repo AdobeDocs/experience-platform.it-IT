@@ -5,7 +5,7 @@ title: Endpoint API per i criteri di governance dei dati
 description: I criteri di governance dei dati sono regole adottate dall’organizzazione che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati all’interno di Experience Platform. L’endpoint /policies viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 3%
@@ -382,7 +382,7 @@ Per aggiornare un criterio personalizzato esistente, devi fornire il relativo ID
 
 >[!NOTE]
 >
->Vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio personalizzato[&#128279;](#patch) se si desidera aggiornare solo uno o più campi per un criterio, anziché sovrascriverlo.
+>Vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio personalizzato[ se si desidera aggiornare solo uno o più campi per un criterio, anziché sovrascriverlo.](#patch)
 
 **Formato API**
 
@@ -667,7 +667,7 @@ Per impostazione predefinita, solo i criteri di governance dei dati abilitati pa
 
 >[!NOTE]
 >
->Solo i criteri di base possono essere abilitati o disabilitati da questo endpoint. Per abilitare o disabilitare i criteri personalizzati, vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio[&#128279;](#patch) in .
+>Solo i criteri di base possono essere abilitati o disabilitati da questo endpoint. Per abilitare o disabilitare i criteri personalizzati, vedere la sezione relativa all&#39;aggiornamento di una parte di un criterio[ in ](#patch).
 
 **Formato API**
 
