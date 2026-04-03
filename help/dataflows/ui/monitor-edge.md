@@ -1,13 +1,13 @@
 ---
 title: Monitorare la segmentazione dei bordi
 description: Scopri come utilizzare il dashboard di monitoraggio per osservare la velocità effettiva di segmentazione Edge.
-source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
+exl-id: 7abba7e8-1f2d-4a21-a93f-8bda7aa4d849
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 3%
 
 ---
-
 
 # Monitorare la segmentazione dei bordi
 
@@ -33,7 +33,7 @@ Viene visualizzato il dashboard di monitoraggio. Mostra le metriche di monitorag
 
 >[!NOTE]
 >
->Se selezioni **, puoi visualizzare solo** 1&rbrace; la visualizzazione dello stream di dati.[!UICONTROL Edge segmentation throughput]
+>Se selezioni **, puoi visualizzare solo** 1} la visualizzazione dello stream di dati.[!UICONTROL Edge segmentation throughput]
 
 Se si filtra in base al servizio, è possibile scegliere il servizio di cui visualizzare le informazioni sulla velocità effettiva. Ciò include servizi come segmentazione di Edge, raccolta dati, Target, Adobe Journey Optimizer, Offer Decisioning, destinazioni personalizzate personalizzate personalizzate, inoltro eventi, Adobe Analytics e Adobe Audience Manager.
 
