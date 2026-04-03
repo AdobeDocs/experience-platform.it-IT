@@ -2,7 +2,7 @@
 title: Approfondimenti destinazioni
 description: Scopri le istruzioni SQL che alimentano gli insight sulle destinazioni e utilizza queste query per generare insights personalizzati per esplorare ulteriormente l’attivazione dei dati da Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 3%
@@ -21,12 +21,12 @@ Tutte le informazioni seguenti sono disponibili per l&#39;utilizzo come parte de
 
 ## Tipi di pubblico attivati {#activated-audiences}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Qual è il conteggio totale dei tipi di pubblico attivati filtrati da una particolare destinazione?
-- Qual è il numero di tipi di pubblico attivati da ciascuna destinazione?
+- Qual è il conteggio del pubblico attivato da ciascuna destinazione?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT
@@ -48,16 +48,16 @@ WHERE
 
 +++
 
-Consulta la [documentazione sui widget dei tipi di pubblico attivati](../guides/destinations.md#activated-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget di tipi di pubblico attivati](../guides/destinations.md#activated-audiences) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Tipi di pubblico attivati su tutte le destinazioni {#activated-audiences-across-all-destinations}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quanti tipi di pubblico vengono attivati su tutte le destinazioni?
 - Qual è il conteggio totale dei tipi di pubblico attivati?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,17 +71,17 @@ WHERE
 
 +++
 
-Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione sui tipi di pubblico attivati per tutti i widget di destinazioni](../guides/destinations.md#activated-audiences-across-all-destinations).
+Consulta la [documentazione sui tipi di pubblico attivati per tutti i widget di destinazione](../guides/destinations.md#activated-audiences-across-all-destinations) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Destinazioni attive per piattaforma di destinazione {#active-destinations-by-destination-platform}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quante destinazioni sono attive?
 - Qual è la suddivisione delle destinazioni attive per piattaforma di destinazione?
 - Qual è il numero di destinazioni attive suddiviso per ogni piattaforma di destinazione?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,17 +96,17 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione delle destinazioni attive per widget piattaforma di destinazione](../guides/destinations.md#active-destinations-by-destination-platform).
+Per informazioni sull&#39;aspetto e sulle funzionalità di questo insight, consulta la [documentazione delle destinazioni attive per widget piattaforma di destinazione](../guides/destinations.md#active-destinations-by-destination-platform).
 
 ## Tendenza delle dimensioni del pubblico {#audience-size-trend}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - In che modo la dimensione del pubblico è cambiata nel tempo, incluse le anomalie per un pubblico mappato su una destinazione?
 - Come trovo la tendenza complessiva in termini di dimensioni del pubblico, per destinazione, nei periodi specificati di 30 giorni, 90 giorni e 12 mesi?
 - Quali sono le caratteristiche chiave del pubblico che contribuisce alla dimensione, ad esempio i picchi relativi alle campagne di e-mail marketing?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT d.destination_name,
@@ -142,17 +142,17 @@ SELECT d.destination_name,
 
 +++
 
-Consulta la [documentazione del widget tendenza dimensioni pubblico](../guides/destinations.md#audience-size-trend) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget tendenza dimensioni pubblico](../guides/destinations.md#audience-size-trend) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Segmenti di pubblico comuni {#common-audiences}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quali sono i tipi di pubblico comuni tra due destinazioni diverse?
 - Quanti profili ha ciascuno dei tipi di pubblico comuni tra due destinazioni diverse?
 - Qual è il pubblico più grande a cui sono mappate due destinazioni?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT k.destination_name1,
@@ -214,17 +214,17 @@ SELECT k.destination_name1,
 
 +++
 
-Consulta la [documentazione sui widget Tipi di pubblico comuni](../guides/destinations.md#common-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget Tipi di pubblico comuni](../guides/destinations.md#common-audiences) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Stato della destinazione {#destination-status}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Qual è il numero totale di destinazioni abilitate per l’uso?
 - Qual è il numero totale di destinazioni disabilitate?
 - Qual è la suddivisione percentuale tra destinazioni abilitate e disabilitate?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT COUNT(CASE
@@ -238,16 +238,16 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione del widget di stato della destinazione](../guides/destinations.md#destination-status).
+Per informazioni sull&#39;aspetto e sulle funzionalità di questo insight, consulta la [documentazione del widget di stato della destinazione](../guides/destinations.md#destination-status).
 
 ## Conteggio delle destinazioni {#destinations-count}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quante destinazioni sono attualmente configurate?
 - Come è cambiato nel tempo il numero totale di destinazioni?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -256,17 +256,17 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Consulta la [documentazione del widget Conteggio destinazioni](../guides/destinations.md#destinations-count) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione del widget Conteggio destinazioni](../guides/destinations.md#destinations-count) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Integrità del pubblico mappato {#mapped-audience-health}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quali tipi di pubblico mappati su una destinazione presentano variazioni significative negli ultimi 30 giorni?
 - Qual è la dimensione più recente di un pubblico mappato e se è cambiato nell’ultimo mese?
 - Come posso elencare tutti i tipi di pubblico mappati su una destinazione in base alla gravità delle modifiche di dimensione nell’ultimo mese?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT destination_name,
@@ -325,17 +325,17 @@ SELECT destination_name,
 
 +++
 
-Per informazioni sull&#39;aspetto e le funzionalità di questa informazione, consulta la [documentazione mappata sui widget di integrità del pubblico](../guides/destinations.md#mapped-audience-health).
+Consulta la [documentazione del widget di integrità del pubblico mappato](../guides/destinations.md#mapped-audience-health) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Tipi di pubblico mappato {#mapped-audiences}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quanti tipi di pubblico sono mappati a una particolare destinazione?
 - Come è cambiato nel tempo il conteggio dei tipi di pubblico mappati?
 - Dove posso confrontare due destinazioni per vedere la sovrapposizione di pubblico mappata su ciascuna destinazione?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Consulta la [documentazione sui widget dei tipi di pubblico mappati](../guides/destinations.md#mapped-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget dei tipi di pubblico mappati](../guides/destinations.md#mapped-audiences) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -368,13 +369,13 @@ See the [Mapped audiences by identity widget documentation](../guides/destinatio
 
 ## Destinazioni più utilizzate {#most-used-destinations}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quali sono le destinazioni più utilizzate?
 - Quanti tipi di pubblico sono mappati su ogni destinazione, ordinati dal più alto al meno?
 - In che modo la mappatura dei tipi di pubblico sulle destinazioni cambia da uno snapshot all’altro?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -393,17 +394,17 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Consulta la [documentazione sulle destinazioni più utilizzate](../guides/destinations.md#most-used-destinations) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sulle destinazioni più utilizzate](../guides/destinations.md#most-used-destinations) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Tipi di pubblico attivati di recente {#recently-activated-audiences}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - A quale destinazione è stato attivato più di recente un pubblico?
 - Come posso trovare un elenco di tutte le destinazioni in base alla data dell’ultimo aggiornamento?
 - Come posso confrontare due destinazioni in base alle attivazioni più recenti?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT
@@ -424,17 +425,17 @@ LIMIT
 
 +++
 
-Consulta la [documentazione sui widget dei tipi di pubblico attivati di recente](../guides/destinations.md#recently-activated-audiences) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Consulta la [documentazione sui widget dei tipi di pubblico attivati di recente](../guides/destinations.md#recently-activated-audiences) per informazioni sull&#39;aspetto e le funzionalità di questo insight.
 
 ## Tipi di pubblico attivati di recente per destinazione {#recently-activated-audiences-by-destination}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quali tipi di pubblico vengono attivati per una particolare destinazione?
 - Come trovo un elenco di tipi di pubblico attivati da un particolare pubblico dal più recente al meno recente?
 - Come posso trovare un elenco di tipi di pubblico entro la data in cui è stato attivato per una destinazione specifica?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT c.destination_name,
@@ -455,17 +456,17 @@ SELECT c.destination_name,
 
 +++
 
-Consulta la [documentazione sui tipi di pubblico attivati di recente dal widget di destinazione](../guides/destinations.md#recently-activated-audiences-by-destination) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e sulle funzionalità di questo insight, consulta la [documentazione sui tipi di pubblico attivati di recente per widget di destinazione](../guides/destinations.md#recently-activated-audiences-by-destination).
 
 ## Destinazioni create di recente {#recently-created-destinations}
 
-Domande a cui questa informazione ha risposto:
+Domande a cui ha risposto questo insight:
 
 - Quali sono le destinazioni create più di recente?
 - Come trovo un elenco di destinazioni con la data di creazione?
 - Quale nuova destinazione è stata creata di recente?
 
-+++Seleziona questa opzione per visualizzare il codice SQL che genera questa informazione approfondita
++++Seleziona questa opzione per visualizzare l’SQL che genera questo insight
 
 ```sql
 SELECT DISTINCT
@@ -484,9 +485,10 @@ LIMIT
 
 +++
 
-Consulta la [documentazione sulle destinazioni create di recente](../guides/destinations.md#recently-created-destinations) per informazioni sull&#39;aspetto e le funzionalità di questa informazione.
+Per informazioni sull&#39;aspetto e le funzionalità di questo insight, consulta la [documentazione sui widget delle destinazioni create di recente](../guides/destinations.md#recently-created-destinations).
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
