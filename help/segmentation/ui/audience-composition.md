@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2293'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-Se sei un cliente di Adobe Journey Optimizer, leggi la [guida introduttiva alla composizione del pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=it) nella documentazione di Adobe Journey Optimizer per ulteriori informazioni sull&#39;utilizzo della composizione del pubblico in tale contesto.
+Se sei un cliente di Adobe Journey Optimizer, leggi la [guida introduttiva alla composizione del pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) nella documentazione di Adobe Journey Optimizer per ulteriori informazioni sull&#39;utilizzo della composizione del pubblico in tale contesto.
 
 >[!ENDSHADEBOX]
 
@@ -244,7 +244,8 @@ Verrà visualizzato il popover **[!UICONTROL Enrichment attributes]**. Puoi sele
 
 ![Gli attributi di arricchimento che desideri aggiungere sono evidenziati.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
-<!-- ## [!UICONTROL Join] {#join-block}
+<!-- 
+## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
 
@@ -262,7 +263,8 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
-![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) 
+-->
 
 ## [!UICONTROL Rank] {#rank-block}
 
