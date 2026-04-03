@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull’assegnazione tag dei contenuti
 description: L’assegnazione tag dei contenuti è un insieme di servizi di intelligenza artificiale che ti consente di estrarre funzioni intelligenti dai contenuti, organizzare, semplificare il flusso dei contenuti e fornire ai clienti esperienze personalizzate di maggiore impatto.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 1%
