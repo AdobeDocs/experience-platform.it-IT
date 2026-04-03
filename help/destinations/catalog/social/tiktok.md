@@ -3,7 +3,7 @@ title: Connessione TikTok
 description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1211'
 ht-degree: 4%
