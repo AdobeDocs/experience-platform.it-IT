@@ -76,7 +76,7 @@ I cookie di prime parti sono più efficaci quando vengono impostati utilizzando 
 >
 >I cookie impostati con il metodo `document.cookie` di JavaScript (incluso l&#39;utilizzo del metodo tag [`cookie.set()`](../tags/cookie.md)) non sono quasi mai protetti dai criteri del browser che limitano la durata dei cookie.
 
-I record `A` o `AAAA` sono supportati solo per l&#39;impostazione e il tracciamento dei cookie. Il metodo principale per la raccolta dei dati è tramite un DNS `CNAME`. Gli FPID vengono impostati utilizzando un record `A` o `AAAA` e inviati ad Adobe utilizzando un `CNAME`. Il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) consente di configurare `CNAME` per la raccolta dati.
+I record `A` o `AAAA` sono supportati solo per l&#39;impostazione e il tracciamento dei cookie. Il metodo principale per la raccolta dei dati è tramite un DNS `CNAME`. Gli FPID vengono impostati utilizzando un record `A` o `AAAA` e inviati ad Adobe utilizzando un `CNAME`. Il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it#adobe-managed-certificate-program) consente di configurare `CNAME` per la raccolta dati.
 
 ### Quando impostare il cookie {#when-to-set-cookie}
 
@@ -105,7 +105,7 @@ Puoi inviare gli FPID ad Edge Network in due modi:
 
 Per impostare un cookie FPID dal tuo dominio, devi configurare `CNAME` per le chiamate al Web SDK, quindi abilitare la funzionalità cookie ID di prime parti nella configurazione dello stream di dati. Un record `CNAME` nel DNS consente di creare un alias da un nome di dominio a un altro. Questo alias può aiutare a far apparire i servizi di terze parti come se facessero parte del tuo dominio, rendendo i loro cookie simili ai cookie di prime parti. Quando la raccolta dati di prime parti viene abilitata utilizzando `CNAME`, tutti i cookie per il dominio vengono inviati su richieste effettuate all&#39;endpoint di raccolta dati.
 
-1. Utilizzare Adobe per creare un record `CNAME` da utilizzare per la raccolta dati nell&#39;organizzazione. Consulta il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) per l&#39;intero processo.
+1. Utilizzare Adobe per creare un record `CNAME` da utilizzare per la raccolta dati nell&#39;organizzazione. Consulta il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/adobe-managed-cert) per l&#39;intero processo.
 1. Abilita l&#39;opzione **[!UICONTROL First Party ID Cookie]** nello stream di dati. Questa impostazione indica all’Edge Network di fare riferimento al cookie specificato durante la ricerca di un ID dispositivo di prime parti invece di cercare il valore nella mappa delle identità. Quando abiliti questa impostazione, devi fornire il nome del cookie in cui si prevede che venga memorizzato l’FPID. Per ulteriori informazioni, vedere [Creare e configurare gli stream di dati](/help/datastreams/configure.md#advanced-options).
 
    ![Immagine dell&#39;interfaccia utente di Platform che mostra la configurazione dello stream di dati evidenziando l&#39;impostazione del cookie ID di prime parti](/help/collection/js/assets/first-party-id-datastreams.png)
@@ -198,7 +198,7 @@ Se esegui la migrazione agli ID dispositivo di prime parti da un’implementazio
 
 | Visita | Descrizione |
 | --- | --- |
-| Prima visita | Supponiamo che non abbiate ancora iniziato a impostare il cookie FPID. L&#39;ECID contenuto nel cookie [AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) è l&#39;identificatore utilizzato per identificare il visitatore. |
+| Prima visita | Supponiamo che non abbiate ancora iniziato a impostare il cookie FPID. L&#39;ECID contenuto nel cookie [AMCV](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=it#section-c55af54828dc4cce89f6118655d694c8) è l&#39;identificatore utilizzato per identificare il visitatore. |
 | Seconda visita | Rollout della soluzione FPID avviato. L’ECID esistente è ancora presente e rimane l’identificatore primario per l’identificazione dei visitatori. |
 | Terza visita | Tra la seconda e la terza visita, è trascorso abbastanza tempo da consentire l’eliminazione dell’ECID a causa dei criteri del browser. Tuttavia, poiché l&#39;FPID è stato impostato utilizzando un record DNS `A`, l&#39;FPID persiste. L’FPID è ora considerato l’ID primario e viene utilizzato per seed l’ECID, che viene scritto sul dispositivo dell’utente finale. L’utente viene ora considerato un nuovo visitatore nelle soluzioni Adobe Experience Platform e Experience Cloud. |
 | Quarta visita | Tra la terza e la quarta visita, è trascorso abbastanza tempo da consentire l’eliminazione dell’ECID a causa dei criteri del browser. Come la visita precedente, l’FPID rimane dovuto al modo in cui è stato impostato. Questa volta viene generato lo stesso ECID della visita precedente. L’utente viene visualizzato nelle soluzioni Adobe Experience Platform e Experience Cloud come lo stesso utente della visita precedente. |

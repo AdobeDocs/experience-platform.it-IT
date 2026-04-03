@@ -34,7 +34,7 @@ Nella tabella seguente viene illustrato l&#39;effetto combinato di `defaultConse
 
 >[!NOTE]
 >
->I cookie di identità e di consenso vengono impostati anche quando un visitatore rinuncia. Questi cookie sono necessari per rispettare le preferenze di raccolta dei dati del visitatore. Per un elenco completo dei cookie impostati da Web SDK, vedere [Cookie di Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk).
+>I cookie di identità e di consenso vengono impostati anche quando un visitatore rinuncia. Questi cookie sono necessari per rispettare le preferenze di raccolta dei dati del visitatore. Per un elenco completo dei cookie impostati da Web SDK, vedere [Cookie di Web SDK](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/cookies/web-sdk).
 
 Quando un visitatore concede nuovamente il consenso dopo averlo revocato in precedenza (chiamando `setConsent` con `"general": "in"` dopo `"general": "out"`), il Web SDK riprende a inviare eventi e utilizza l&#39;ECID esistente dal cookie se non è scaduto. L’identità del visitatore viene mantenuta.
 

@@ -47,7 +47,7 @@ Come linea guida, attendi che sia trascorso il periodo di vita massima del cooki
 
 ## Aggiornamenti delle caratteristiche di Audience Manager
 
-Quando i dati formattati XDM vengono inviati ad Audience Manager durante la migrazione, devono essere convertiti in segnali. Le caratteristiche devono essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è semplificato utilizzando lo strumento [BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management).
+Quando i dati formattati XDM vengono inviati ad Audience Manager durante la migrazione, devono essere convertiti in segnali. Le caratteristiche devono essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è semplificato utilizzando lo strumento [BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=it#getting-started-with-bulk-management).
 
 ## Migrazione degli ID di terze parti {#third-party-id}
 
