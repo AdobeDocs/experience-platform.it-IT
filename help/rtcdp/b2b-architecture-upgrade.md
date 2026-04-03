@@ -1,9 +1,9 @@
 ---
 title: Aggiornamenti dell'architettura a Real-Time CDP B2B edition
 description: Leggi questo documento per scoprire gli aggiornamenti completi dell’architettura a Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 1%
@@ -138,7 +138,8 @@ Nella nuova architettura, l’endpoint &quot;create a segment job&quot; (crea un
 
 Ora puoi recuperare gli schemi di account e opportunità come entità dimensione di ricerca solo dopo aver completato il processo di risoluzione giornaliero delle entità. I nuovi record acquisiti non saranno disponibili per l’arricchimento dei profili o le definizioni dei segmenti fino al completamento del successivo ciclo di risoluzione dell’entità (in genere ogni 24 ore).
 
-<!-- ### Deprecation of audience creation via API for B2B entities
+<!-- 
+### Deprecation of audience creation via API for B2B entities
 
 Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
@@ -151,7 +152,8 @@ Creation of audiences using B2B entities via API is being deprecated. The list o
 * Marketing List
 * Marketing List Member
 
-Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. 
+-->
 
 ### Modifiche alle importazioni di tipi di pubblico con più entità negli strumenti sandbox
 
