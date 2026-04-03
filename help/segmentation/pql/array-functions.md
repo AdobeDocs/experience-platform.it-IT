@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funzioni Array, List e Set PQL
 description: Profile Query Language (PQL) offre funzioni per semplificare l’interazione con array, elenchi e stringhe.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -54,7 +54,7 @@ La seguente query PQL definisce gli utenti con compleanni che non sono in marzo,
 person.birthMonth notIn [3, 6, 9]
 ```
 
-## Interseca
+## Intersects
 
 La funzione `intersects` viene utilizzata per determinare se due matrici o elenchi hanno almeno un membro comune come booleano.
 
@@ -72,7 +72,7 @@ La seguente query PQL definisce gli utenti i cui colori preferiti includono alme
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Intersezione 
+## Intersezione
 
 La funzione `intersection` viene utilizzata per determinare i membri comuni di due array o elenchi come elenco.
 
@@ -108,7 +108,7 @@ La seguente query PQL definisce le persone che hanno visitato tutte le loro citt
 person.favoriteCities.subsetOf(person.visitedCities)
 ```
 
-## Superset di
+## Soprainsieme di
 
 La funzione `supersetOf` viene utilizzata per determinare se un array specifico (array A) è un superset di un altro array (array B). In altre parole, l’array A contiene tutti gli elementi dell’array B come booleano.
 
@@ -144,7 +144,7 @@ La seguente query PQL definisce gli utenti il cui colore preferito include il ro
 person.favoriteColors.includes("red")
 ```
 
-## Diverso
+## Distinct
 
 La funzione `distinct` viene utilizzata per rimuovere i valori duplicati da un array o da un elenco come array.
 
@@ -261,7 +261,7 @@ La funzione `bottomN` viene utilizzata per restituire gli ultimi `N` elementi in
 ```
 
 | Argomento | Descrizione |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | Matrice o elenco da ordinare. |
 | `{VALUE}` | Proprietà in cui ordinare l&#39;array o l&#39;elenco. |
 | `{AMOUNT}` | Il numero di elementi da restituire. |
