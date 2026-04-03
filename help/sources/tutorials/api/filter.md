@@ -2,10 +2,10 @@
 title: Filtrare I Dati A Livello Di Riga Per Un Source Utilizzando L’API Del Servizio Di Flusso
 description: Questo tutorial illustra i passaggi necessari per filtrare i dati a livello di origine utilizzando l’API del servizio Flow
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 5%
+source-wordcount: '1820'
+ht-degree: 4%
 
 ---
 
@@ -416,7 +416,7 @@ La tabella seguente illustra i tipi di attività standard per [!DNL Marketo]. Ut
 | ID tipo di attività | Nome tipo di attività |
 | --- | --- |
 | 1 | Visita pagina Web |
-| 2 | Modulo da compilare |
+| 2 | Compila modulo |
 | 3 | Fai clic sul collegamento |
 | 6 | Invia e-mail |
 | 7 | E-mail consegnata |
@@ -425,7 +425,7 @@ La tabella seguente illustra i tipi di attività standard per [!DNL Marketo]. Ut
 | 10 | Apri e-mail |
 | 11 | Fai clic su E-mail |
 | 12 | Nuovo lead |
-| 21 | Conversione lead |
+| 21 | Converti lead |
 | 22 | Modifica punteggio |
 | 24 | Aggiungi all&#39;elenco |
 | 25 | Rimuovi dall’elenco |
@@ -457,7 +457,7 @@ Crea un [[!DNL Marketo] flusso di dati](../ui/create/adobe-applications/marketo.
 
 Dopo aver creato un flusso di dati, devi recuperarne l’ID corrispondente.
 
-Nell&#39;interfaccia utente passare al catalogo delle origini e selezionare **[!UICONTROL Flussi dati]** dall&#39;intestazione superiore. Utilizza la colonna di stato per identificare tutti i flussi di dati salvati in modalità bozza, quindi seleziona il nome del flusso di dati. Quindi, utilizza il pannello **[!UICONTROL Proprietà]** a destra per individuare l&#39;ID del flusso di dati.
+Nell&#39;interfaccia utente passare al catalogo delle origini e selezionare **[!UICONTROL Dataflows]** dall&#39;intestazione superiore. Utilizza la colonna di stato per identificare tutti i flussi di dati salvati in modalità bozza, quindi seleziona il nome del flusso di dati. Quindi, utilizza il pannello **[!UICONTROL Properties]** a destra per individuare l&#39;ID del flusso di dati.
 
 ### Recuperare i dettagli del flusso di dati
 
@@ -881,7 +881,7 @@ In caso di esito positivo, la risposta restituisce l’ID e il corrispondente `e
 
 +++
 
-Puoi utilizzare l’interfaccia utente di Experience Platform per verificare che il flusso di dati della bozza sia stato pubblicato. Passa alla pagina dei flussi di dati nel catalogo delle origini e fai riferimento al **[!UICONTROL Stato]** del flusso di dati. In caso di esito positivo, ora lo stato deve essere impostato su **Abilitato**.
+Puoi utilizzare l’interfaccia utente di Experience Platform per verificare che il flusso di dati della bozza sia stato pubblicato. Passa alla pagina dei flussi di dati nel catalogo delle origini e fai riferimento a **[!UICONTROL Status]** del flusso di dati. In caso di esito positivo, ora lo stato deve essere impostato su **Abilitato**.
 
 >[!TIP]
 >
