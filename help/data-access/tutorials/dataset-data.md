@@ -5,7 +5,7 @@ title: Visualizzare i dati del set di dati utilizzando l’API di accesso ai dat
 type: Tutorial
 description: Scopri come individuare, accedere e scaricare i dati memorizzati all’interno di un set di dati utilizzando l’API di accesso ai dati in Adobe Experience Platform. Questo documento introduce alcune delle funzioni univoche dell’API di accesso ai dati, ad esempio il paging e i download parziali.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 10%
@@ -348,7 +348,7 @@ A seconda che l’ID file punti a un singolo file o a una directory, l’array d
 ```
 
 | Proprietà | Descrizione |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | URL per scaricare il file associato. |
 
 Questa risposta restituisce una directory contenente due file separati, con ID `{FILE_ID_2}` e `{FILE_ID_3}`. In questo caso, devi seguire l’URL di ciascun file per accedere al file.
@@ -443,7 +443,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | Proprietà | Descrizione |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `Range: bytes=0-99` | Specifica l&#39;intervallo di byte da scaricare. Se non viene specificato, l’API scarica l’intero file. In questo esempio vengono scaricati i primi 100 byte. |
 
 **Risposta**
