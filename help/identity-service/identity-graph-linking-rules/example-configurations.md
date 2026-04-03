@@ -2,7 +2,7 @@
 title: Guida alle configurazioni delle regole di collegamento del grafico di identità
 description: Scopri i diversi tipi di implementazione che è possibile configurare utilizzando le Regole di collegamento del grafico di identità.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -240,7 +240,7 @@ Stai acquisendo sia un CRMID senza hash (offline) che un CRMID con hash (online)
 Configurate le seguenti impostazioni nell&#39;interfaccia Simulazione grafico (Graph Simulation) prima di simulare il grafico.
 
 | Nome visualizzato | Simbolo di identità | Tipo di identità | Univoco per grafico | Priorità dello spazio dei nomi |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -281,6 +281,7 @@ CRMID: Jane, CRMIDhash: aaaa
 ![Un grafo di dispositivi condiviso con un errore nel processo di hashing, che comporta un CRMID con hashing non univoco.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -339,7 +340,8 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
 ### Caso d’uso: i dati includono tre spazi dei nomi univoci
 
