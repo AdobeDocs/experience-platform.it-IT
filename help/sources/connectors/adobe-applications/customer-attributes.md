@@ -31,7 +31,7 @@ Impossibile selezionare uno spazio dei nomi esistente per l&#39;identità quando
 
 Affinché i dati di [!DNL Customer Attributes] possano essere collegati ad altri set di dati di [!DNL Profile], i relativi dati e identità devono poter essere associati a un Experience Cloud ID.
 
-È possibile stabilire lo spazio dei nomi `CORE` impostando l&#39;ID Experience Cloud per il visitatore utilizzando [Identità nella raccolta dati](/help/collection/identity/overview.md), [SDK mobile](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) o l&#39;API del servizio Experience Cloud ID [](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
+È possibile stabilire lo spazio dei nomi `CORE` impostando l&#39;ID Experience Cloud per il visitatore utilizzando [Identità nella raccolta dati](/help/collection/identity/overview.md), [SDK mobile](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/) o l&#39;API del servizio Experience Cloud ID [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
 
 Il file [!DNL Customer Attributes] non popola ulteriormente altre relazioni di identità. Ad esempio, se un set di dati di origine [!DNL Customer Attributes] contiene un campo **E-mail** e un campo **ID fedeltà**, questi campi devono essere etichettati come campi di identità nello schema per essere elaborati in [!DNL Identity Service].
 
