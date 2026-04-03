@@ -1,7 +1,8 @@
 ---
 title: Note sulla versione di Adobe Experience Platform di ottobre 2025
 description: Note sulla versione di Adobe Experience Platform di ottobre 2025.
-source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
+exl-id: 93feff2b-d998-41f1-8d93-332238a1d88d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 26%
@@ -106,7 +107,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | --- | --- |
 | Modifica nella creazione del set di dati per l’origine Adobe Analytics | Come parte del processo di creazione del flusso di dati tra Adobe Analytics e Experience Platform, viene creato un set di dati tramite Catalog Service. Questo set di dati funge da contenitore per i dati da recapitare. Attualmente, questo processo coinvolge un ID DataSource che viene estratto dalla suite di rapporti di Analytics, inviato a Catalog Service e quindi associato al set di dati appena creato. Dopo la modifica, l’opzione per fornire l’ID DataSource non sarà più disponibile durante la creazione del set di dati. Pertanto, ai nuovi set di dati creati dall’origine Analytics non verrà più associato un ID DataSource in Catalog Service. Questa modifica si applica solo ai metadati e non modifica in alcun modo l’archiviazione dei dati nel set di dati. Tuttavia, è importante sapere che l’ID DataSource fornito da Catalog Service non sarà più disponibile nei nuovi set di dati creati per Adobe Analytics. Per ulteriori informazioni sul connettore di origine di Adobe Analytics, consulta la [documentazione di origine di Adobe Analytics](../../sources/connectors/adobe-applications/analytics.md). |
 | Disponibilità generale dell&#39;origine [!DNL Google Ads] (solo API) | La versione [API dell&#39;origine  [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md) è ora in Disponibilità generale. La documentazione API è stata aggiornata per indicare che la versione più recente è ora `v21` e che Experience Platform supporta tutte le versioni v19 e successive. [La versione dell&#39;interfaccia utente](../../sources/tutorials/ui/create/advertising/ads.md) rimane in versione beta e supporta solo l&#39;acquisizione una tantum. Per utilizzare l’acquisizione dati incrementale, utilizza la route API. |
-| Supporto per la rete virtuale [!DNL Azure Event Hubs] | Adobe ora supporta esplicitamente le connessioni di rete virtuale a [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), consentendo il trasferimento di dati su reti private anziché pubbliche. I clienti possono inserire nell&#39;elenco Consentiti Experience Platform VNet per instradare il traffico dei hub eventi in modo privato tramite la dorsale privata di Azure, fornendo sicurezza e conformità migliorate per i flussi di lavoro di acquisizione dei dati. |
+| Supporto per la rete virtuale [!DNL Azure Event Hubs] | Adobe ora supporta esplicitamente le connessioni di rete virtuale a [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), consentendo il trasferimento di dati su reti private anziché pubbliche. I clienti possono inserire nell&#39;elenco Consentiti Experience Platform VNet per indirizzare il traffico dei hub eventi in modo privato attraverso la dorsale privata di Azure, fornendo sicurezza e conformità migliorate per i flussi di lavoro di acquisizione dei dati. |
 
 {style="table-layout:auto"}
 
