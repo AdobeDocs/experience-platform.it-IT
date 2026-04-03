@@ -3,7 +3,7 @@ keywords: connessione facebook;facebook connection;facebook destinations;faceboo
 title: Connessione Facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2733'
 ht-degree: 5%
@@ -171,7 +171,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 Il video seguente illustra inoltre i passaggi per configurare una destinazione [!DNL Facebook] e attivare i tipi di pubblico.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411786/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
