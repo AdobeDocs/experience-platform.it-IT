@@ -2,7 +2,7 @@
 title: Panoramica del profilo cliente in tempo reale
 description: Real-Time Customer Profile unisce i dati provenienti da varie origini e fornisce l’accesso a tali dati sotto forma di profili dei clienti individuali e di eventi delle serie temporali correlati. Questa funzione consente agli addetti al marketing di promuovere esperienze coordinate, coerenti e rilevanti con i propri tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Le entità dimensionali e B2B sono collegate all&#39;entità primaria tramite **
 
 Sebbene [!DNL Real-Time Customer Profile] elabori i dati acquisiti e utilizzi Adobe Experience Platform [!DNL Identity Service] per unire i dati correlati tramite il mapping delle identità, mantiene i propri dati nell&#39;archivio dati [!DNL Profile]. L&#39;archivio [!DNL Profile] è separato dai dati del catalogo nel data lake e dai dati [!DNL Identity Service] nel grafico delle identità.
 
-L’archivio dei profili utilizza un’infrastruttura Microsoft Azure Cosmos DB e Experience Platform Data Lake utilizza l’archiviazione Microsoft Azure Data Lake.
+L’archivio dei profili utilizza un’infrastruttura Microsoft Azure Cosmos DB e l’Experience Platform Data Lake utilizza lo storage Microsoft Azure Data Lake.
 
 ### Guardrail del profilo
 
@@ -89,13 +89,15 @@ Una delle caratteristiche principali di [!DNL Real-Time Customer Profile] è la 
 
 Per ulteriori informazioni sugli schemi di unione, tra cui come accedere agli schemi di unione nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente dello schema di unione](ui/union-schema.md).
 
-<!-- ### (Alpha) Computed attributes
+<!--
+### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). 
+-->
 
 ## Profili e pubblico
 
