@@ -4,10 +4,10 @@ description: Scopri gli aggiornamenti dei criteri di idoneità alla segmentazion
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -45,7 +45,7 @@ Se devi valutare una definizione di segmento utilizzando la segmentazione in str
 
 Ad esempio, supponiamo che tu abbia due tipi di pubblico, con un pubblico che ospita i dati dello schema del profilo e gli altri dati dello schema dell’evento dell’esperienza di alloggio:
 
-| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| Pubblico | Schema | Tipo di Source | Definizione di query | ID pubblico |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Residenti in California | Profilo | Sorgente batch | L&#39;indirizzo dell&#39;abitazione è nello stato della California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Pagamenti recenti | Evento esperienza | Origine streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -66,7 +66,7 @@ Tuttavia, se desideri combinare due tipi di pubblico con i dati dell&#39;evento,
 
 Ad esempio, supponiamo che tu abbia due tipi di pubblico, entrambi contenenti i dati dello schema dell’evento esperienza:
 
-| Pubblico | Schema | Tipo di Source | Definizione query | ID pubblico |
+| Pubblico | Schema | Tipo di Source | Definizione di query | ID pubblico |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Abbandoni recenti | Evento esperienza | Sorgente batch | Ha almeno un evento di abbandono nelle ultime 48 ore | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Pagamenti recenti | Evento esperienza | Origine streaming | Ha almeno un pagamento nelle ultime 24 ore | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
