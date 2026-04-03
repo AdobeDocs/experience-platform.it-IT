@@ -2,9 +2,9 @@
 title: Raccogliere informazioni su prodotti e ordini tramite Adobe Experience Platform Web SDK
 description: Scopri come aggiungere dati relativi a prodotti o a un carrello utilizzando Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Questa sezione descrive i campi disponibili nell&#39;oggetto `commerce`.
 
 Espandere la sezione seguente per visualizzare un esempio di un comando Web SDK che utilizza un campo dell&#39;oggetto `commerce`.
 
-+++`productViews`
++++ productViews
 
 Chiamata di base di Web SDK `sendEvent` che imposta il campo `productViews` su `1`:
 
@@ -91,7 +91,7 @@ Questa sezione descrive tutti i campi supportati dall&#39;oggetto `order`.
 
 Espandere la sezione seguente per visualizzare un esempio di un comando Web SDK che utilizza l&#39;oggetto `commerce`.
 
-+++`Order` esempio di oggetto
++++ `Order` esempio di oggetto
 
 Una chiamata Web SDK `sendEvent` che imposta l&#39;oggetto `order` che si applica a più prodotti nell&#39;array `productListItems`:
 
@@ -151,7 +151,7 @@ L’elenco dei prodotti indica quali prodotti sono correlati all’azione corris
 
 Espandere le sezioni seguenti per visualizzare esempi di comandi Web SDK che utilizzano l&#39;oggetto `productListItems`.
 
-+++`productListItems` esempio
++++ `productListItems` esempio
 
 Una chiamata Web SDK `sendEvent` che imposta `productViews` per più prodotti nell&#39;array `productListItems`:
 
@@ -179,7 +179,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` esempio
++++ `productListAdds` esempio
 
 Una chiamata Web SDK `sendEvent` che imposta l&#39;evento `productListAdds` per più prodotti nell&#39;array `productListItems`:
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` esempio
++++ `checkouts` esempio
 
 Una chiamata Web SDK `sendEvent` che imposta l&#39;evento `checkouts` per più prodotti nell&#39;array `productListItems`:
 
