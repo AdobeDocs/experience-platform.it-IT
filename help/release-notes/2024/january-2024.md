@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2024
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
-source-wordcount: '1662'
-ht-degree: 100%
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+workflow-type: tm+mt
+source-wordcount: '1649'
+ht-degree: 97%
 
 ---
 
@@ -31,9 +31,9 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Playbook di casi d’uso {#use-case-playbooks}
 
-La funzionalità [!UICONTROL Playbook di casi d’uso] è ora disponibile per tutti i clienti Real-Time CDP e Adobe Journey Optimizer. I [!UICONTROL playbook di casi d’uso] sono progettati per aiutare gli utenti a superare eventuali difficoltà quando iniziano a utilizzare Real-time Customer Data Platform o Adobe Journey Optimizer. Quando non sai da dove iniziare o come creare le risorse giuste per i casi d’uso desiderati, i playbook di casi d’uso possono fornirti l’ispirazione e creare diverse risorse da testare e importare negli ambienti di produzione quando sono pronti.
+La funzionalità [!UICONTROL Use Case Playbooks] è ora disponibile per tutti i clienti Real-Time CDP e Adobe Journey Optimizer. [!UICONTROL Use Case Playbooks] sono progettati per aiutare gli utenti a superare le sfide quando si inizia con Real-Time Customer Data Platform o Adobe Journey Optimizer. Se non sai da dove iniziare o come creare le risorse giuste per i casi d’uso desiderati, i playbook di casi d’uso possono fornirti utili spunti e creare diverse risorse da testare e che potrai poi importare negli ambienti di produzione.
 
-Per iniziare a utilizzare i [!UICONTROL playbook di casi d’uso], leggi le seguenti pagine della documentazione:
+Per iniziare a utilizzare [!UICONTROL Use Case Playbooks], leggere le seguenti pagine della documentazione:
 
 - Leggi la [pagina di panoramica](/help/use-case-playbooks/playbooks/overview.md) per comprendere lo scopo, le informazioni sulla disponibilità e per ottenere una dimostrazione completa del funzionamento dei playbook, dall’individuazione alla creazione di istanze, fino all’importazione di risorse generate in altri ambienti sandbox.
 - Ottieni un elenco di tutti i [playbook disponibili](/help/use-case-playbooks/playbooks/playbooks-list.md), raggruppati per prodotto (Real-Time CDP o Journey Optimizer)
@@ -65,7 +65,7 @@ La preparazione dei dati consente ai data engineer di mappare, trasformare e con
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuove funzioni di mappatura | <ul><li>`object_to_map`: utilizza la funzione `object_to_map` per creare tipi di dati di mappatura. Questa funzione supporta diverse sintassi. Per ulteriori informazioni, leggi la guida sulle [funzioni per gerarchie - oggetti](../../data-prep/functions.md#objects). </li><li>`to_map`: utilizza la funzione `to_map` per creare una mappa con coppie di nomi di campi e valori specificati utilizzando gli oggetti. Per ulteriori informazioni, leggi la guida sulle [funzioni per gerarchie - mappe](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilizza la funzione `array_to_map` per creare una mappa con coppie di nomi di campi e valori specificati utilizzando array di oggetti. Per ulteriori informazioni, leggi la guida su [funzioni per gerarchie - mappe](../../data-prep/functions.md#map). |
+| Nuove funzioni di mappatura | <ul><li>`object_to_map`: utilizza la funzione `object_to_map` per creare tipi di dati di mappatura. Questa funzione supporta diverse sintassi. Per ulteriori informazioni, leggi la guida sulle [funzioni per gerarchie - oggetti](../../data-prep/functions.md#objects). </li><li>`to_map`: utilizza la funzione `to_map` per creare una mappa con specifiche coppie di nome campo e valore utilizzando gli oggetti. Per ulteriori informazioni, leggi la guida sulle [funzioni per gerarchie - mappe](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilizza la funzione `array_to_map` per creare una mappa con specifiche coppie di nome campo e valore utilizzando array di oggetti. Per ulteriori informazioni, leggi la guida su [funzioni per gerarchie - mappe](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform fornisce più dashboard attraverso le quali è possibi
 
 | Funzione | Descrizione |
 | --- | --- |
-| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i profili, i tipi di pubblico, le destinazioni e le informazioni personalizzate con l’interruttore Visualizza SQL, quindi eseguire la query su richiesta tramite l’editor di query. L’accesso a SQL che alimenta le informazioni di Real-time Customer Data Platform consente di comprendere la logica alla base dell’analisi del modello dati. Questa trasparenza rende i dati Real-time CDP di Adobe più accessibili, comprensibili e di impatto per il processo decisionale.<br>Puoi trarre spunto dall’SQL di oltre 40 insight esistenti per creare nuove query e ottenere informazioni esclusive dai dati di Experience Platform in base alle tue esigenze di business. SQL è disponibile anche per gli approfondimenti su [Profili](../../dashboards/insights/profiles.md), [Tipi di pubblico](../../dashboards/insights/audiences.md) e [Destinazioni](../../dashboards/insights/destinations.md) nella documentazione di Experience League. Questi documenti evidenziano i casi d’uso aziendali a cui è possibile rispondere con gli approfondimenti standard. Per ulteriori informazioni, leggi la guida sulla [visualizzazione di approfondimenti SQL](../../dashboards/view-sql.md). |
+| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i profili, i tipi di pubblico, le destinazioni e le informazioni personalizzate con il pulsante di attivazione Visualizza SQL, quindi eseguire la query su richiesta tramite l’editor di query. L’accesso a SQL che alimenta le informazioni di Real-time Customer Data Platform consente di comprendere la logica alla base dell’analisi del modello dati. Questa trasparenza rende i dati Real-time CDP di Adobe più accessibili, comprensibili e di impatto per il processo decisionale.<br>Puoi trarre spunto dall’SQL di oltre 40 insight esistenti per creare nuove query e ottenere informazioni esclusive dai dati di Experience Platform in base alle tue esigenze di business. SQL è disponibile anche per gli approfondimenti su [Profili](../../dashboards/insights/profiles.md), [Tipi di pubblico](../../dashboards/insights/audiences.md) e [Destinazioni](../../dashboards/insights/destinations.md) nella documentazione di Experience League. Questi documenti evidenziano i casi d’uso aziendali a cui è possibile rispondere con gli insight standard. Per ulteriori informazioni, leggi la guida sulla [visualizzazione di approfondimenti SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzaz
 
 [!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
-**Nuove destinazioni** {#new-destinations} {#new-destinations}
+**Nuove destinazioni** {#new-destinations}
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
@@ -97,7 +97,7 @@ Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzaz
 
 {style="table-layout:auto"}
 
-**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality} {#destinations-new-updated-functionality}
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
@@ -181,8 +181,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}{type=Informative} Origini [!DNL Oracle NetSuite] | Utilizza le integrazioni [!DNL Oracle NetSuite] nel catalogo delle origini per portare in Experience Platform i dati dai tuoi account [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md). |
-| [!BADGE Beta]{type=Informative}{type=Informative} Origine [!DNL Braze Currents]  | Utilizza l’integrazione [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) nel catalogo delle origini per portare in Experience Platform i dati dal tuo account [!DNL Braze]. |
+| [!BADGE origini Beta]{type=Informative} [!DNL Oracle NetSuite] | Utilizza le integrazioni [!DNL Oracle NetSuite] nel catalogo delle origini per portare in Experience Platform i dati dai tuoi account [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md). |
+| Origine [!BADGE Beta]{type=Informative} [!DNL Braze Currents] | Utilizza l’integrazione [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) nel catalogo delle origini per portare in Experience Platform i dati dal tuo account [!DNL Braze]. |
 | Supporto per l’autenticazione con coppia di chiavi per l’origne batch [!DNL Snowflake] | Ora puoi utilizzare l’autenticazione con coppia di chiavi durante la creazione di un nuovo account [!DNL Snowflake] per i dati in batch. Per ulteriori informazioni, leggi la guida sulla [creazione di un account [!DNL Snowflake] tramite API](../../sources/tutorials/api/create/databases/snowflake.md) o la guida sulla [creazione di un account [!DNL Snowflake] tramite l’interfaccia utente](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
