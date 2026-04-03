@@ -2,10 +2,10 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
+source-git-commit: 482991f0a7efdf4eae5a600ba0bd2a49baca7c37
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 19%
+source-wordcount: '1925'
+ht-degree: 18%
 
 ---
 
@@ -99,12 +99,12 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 | Nome visualizzato | Simbolo di identità (codice) | Tipo di identità | Descrizione |
 | ------------ | ---------------------- | ------------- | ----------- |
 | AdCloud | AdCloud | ID cookie | Uno spazio dei nomi che rappresenta Adobe AdCloud. |
-| Adobe Analytics (ID legacy) | AAID | ID cookie | Uno spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento sugli [spazi dei nomi Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=it#namespaces). |
+| Adobe Analytics (ID legacy) | AAID | ID cookie | Uno spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento sugli [spazi dei nomi Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces). |
 | Apple IDFA (ID per inserzionisti) | IDFA | ID dispositivo | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento sugli [annunci basati su interessi](https://support.apple.com/en-us/HT202074). |
 | Servizio di notifica push di Apple | APNS | ID dispositivo | Uno spazio dei nomi che rappresenta le identità raccolte tramite il servizio Apple Push Notification. Per ulteriori informazioni, consulta il seguente documento sul [servizio Apple Push Notification](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1). |
 | ECID | ECID | ID cookie | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](./ecid.md). |
 | E-mail | E-mail | E-mail | Uno spazio dei nomi che rappresenta un indirizzo e-mail. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
-| E-mail (SHA256, in minuscolo) | Email_LC_SHA256 | E-mail | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Per ulteriori informazioni, consulta il seguente documento sul supporto dell&#39;hashing [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=it#hashing-support). |
+| E-mail (SHA256, in minuscolo) | Email_LC_SHA256 | E-mail | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Per ulteriori informazioni, consulta il seguente documento sul supporto dell&#39;hashing [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support). |
 | Firebase Cloud Messaging | FCM | ID dispositivo | Spazio dei nomi che rappresenta le identità raccolte tramite Google Firebase Cloud Messaging per le notifiche push. Per ulteriori informazioni, consulta il seguente documento sulla [messaggistica cloud di Google Firebase](https://firebase.google.com/docs/cloud-messaging). |
 | Google Ad ID (GAID) | GAID | ID dispositivo | Uno spazio dei nomi che rappresenta un ID di Google Advertising. Per ulteriori informazioni, consulta il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
 | Telefono | Telefono | Numero di telefono | Uno spazio dei nomi che rappresenta un numero di telefono. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
@@ -159,7 +159,7 @@ Quindi, seleziona il tipo di identità da assegnare allo spazio dei nomi persona
 
 ## Spazi dei nomi nei dati di identità
 
-L’indicazione dello spazio dei nomi per un’identità dipende dal metodo utilizzato per fornire i dati di identità. Per informazioni dettagliate sulla fornitura dei dati di identità, leggere la [[!DNL Identity Service] guida all&#39;implementazione](../implementation.md).
+L’indicazione dello spazio dei nomi per un’identità dipende dal metodo utilizzato per fornire i dati di identità. Per informazioni dettagliate sulla fornitura dei dati di identità, leggere la [[!DNL Identity Service] guida all&#39;implementazione](../implementation.md). Se invii identità tramite il Web SDK `identityMap`, consulta [Utilizzo di identityMap nella raccolta dati](/help/collection/identity/identity-map.md) per informazioni su come preparare e formattare i valori di identità prima di inviarli.
 
 ## Passaggi successivi
 

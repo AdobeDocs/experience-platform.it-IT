@@ -2,9 +2,9 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2118'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ La priorità dello spazio dei nomi può essere configurata utilizzando l&#39;[in
 
 ## Utilizzo priorità dello spazio dei nomi
 
-Attualmente, la priorità dello spazio dei nomi influenza il comportamento del sistema di Real-Time Customer Profile. Il diagramma seguente illustra questo concetto. Per ulteriori informazioni, consultare la guida in [Adobe Experience Platform e diagrammi dell&#39;architettura delle applicazioni](https://experienceleague.adobe.com/it/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Attualmente, la priorità dello spazio dei nomi influenza il comportamento del sistema di Real-Time Customer Profile. Il diagramma seguente illustra questo concetto. Per ulteriori informazioni, consultare la guida in [Adobe Experience Platform e diagrammi dell&#39;architettura delle applicazioni](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Diagramma dell&#39;ambito applicazione con priorità dello spazio dei nomi.](../images/namespace-priority/application-scope.png "Diagramma dell&#39;ambito dell&#39;applicazione con priorità dello spazio dei nomi."){zoomable="yes"}
 
@@ -96,7 +96,7 @@ Questa sezione fornisce un esempio di come la configurazione della priorità pu�
 
 Supponiamo che per una determinata sandbox siano stabilite le seguenti configurazioni:
 
-| Namespace | Applicazione reale dello spazio dei nomi | Priorità |
+| Spazio dei nomi | Applicazione reale dello spazio dei nomi | Priorità |
 | --- | --- | --- |
 | CRMID | Utente | 1 |
 | IDFA | Dispositivo hardware Apple (iPhone, IPad, ecc.) | 2 |
@@ -110,11 +110,11 @@ Date le configurazioni sopra descritte, le azioni degli utenti e la determinazio
 
 | Azione utente (evento esperienza) | Stato di autenticazione | Origine dati | Spazi dei nomi nell’evento | Spazio dei nomi dell’identità primaria |
 | --- | --- | --- | --- | --- |
-| Visualizza pagina offerta carta di credito | Non autenticato (anonimo) | Web SDK | `{ECID}` | ECID |
-| Visualizza pagina della guida | Non autenticato | SDK mobile | `{ECID, IDFA}` | IDFA |
-| Visualizza saldo conto corrente | autenticato | Web SDK | `{CRMID, ECID}` | CRMID |
+| Visualizza pagina offerta carta di credito | Non autenticato (anonimo) | SDK per web | `{ECID}` | ECID |
+| Visualizza pagina della guida | Non autenticato | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| Visualizza saldo conto corrente | autenticato | SDK per web | `{CRMID, ECID}` | CRMID |
 | Iscriviti al prestito per la casa | autenticato | Connettore di origine di Analytics | `{CRMID, ECID, AAID}` | CRMID |
-| Trasferisci $1.000 dal controllo al risparmio | autenticato | SDK mobile | `{CRMID, GAID, ECID}` | CRMID |
+| Trasferisci $1.000 dal controllo al risparmio | autenticato | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
@@ -208,13 +208,13 @@ In un dato evento, assicurati che tutti gli spazi dei nomi che rappresentano un&
 
 * **Applicabilità evento**: questo comportamento si applica solo agli eventi inviati direttamente a Edge Network (come WebSDK e Mobile SDK). Gli eventi acquisiti dall&#39;[hub Experience Platform](/help/landing/edge-and-hub-comparison.md), ad esempio quelli acquisiti con l&#39;origine API HTTP, altre origini di streaming e origini batch, non sono soggetti a questa limitazione.
 * **Specificità della segmentazione di Edge**: questo comportamento è specifico della segmentazione Edge. La segmentazione in batch e in streaming sono servizi separati valutati sull’hub e non seguono lo stesso processo. Per ulteriori informazioni, consulta la [guida alla segmentazione Edge](/help/segmentation/methods/edge-segmentation.md).
-* Per ulteriori informazioni, leggere le pagine [Diagrammi di architettura di Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/it/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [Edge Network e confronto hub](/help/landing/edge-and-hub-comparison.md).
+* Per ulteriori informazioni, leggere le pagine [Diagrammi di architettura di Adobe Experience Platform e applicazioni](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [Edge Network e confronto hub](/help/landing/edge-and-hub-comparison.md).
 
 #### Applicazioni Edge Network
 
 Per garantire che le applicazioni su Edge Network abbiano accesso al profilo Edge senza indugio, assicurati che i tuoi eventi includano `primary=true` su CRMID. Questo assicura disponibilità immediata senza attendere aggiornamenti del grafo delle identità dall’hub.
 
 * Le applicazioni su Edge Network come Adobe Target, Offer Decisioning e Destinazioni Personalization personalizzate continueranno a dipendere dall’identità principale negli eventi per accedere ai profili da Edge Profile.
-* Leggi il [diagramma dell&#39;architettura di Experience Platform Web SDK e Edge Network](https://experienceleague.adobe.com/it/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) per ulteriori informazioni sul comportamento di Edge Network.
-* Per ulteriori informazioni su come configurare l&#39;identità primaria in Web SDK[, leggere la documentazione sui &#x200B;](/help/tags/extensions/client/web-sdk/data-element-types.md)tipi di elementi dati[&#x200B; e i &#x200B;](/help/collection/use-cases/identity/id-overview.md)dati di identità in Web SDK.
+* Leggi il [diagramma dell&#39;architettura di Experience Platform Web SDK e Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) per ulteriori informazioni sul comportamento di Edge Network.
+* Per ulteriori informazioni su come configurare l&#39;identità primaria in Web SDK, leggere la documentazione sui [tipi di elementi dati](/help/tags/extensions/client/web-sdk/data-element-types.md) e [identità nella raccolta dati](/help/collection/identity/overview.md).
 * Assicurati che l’ECID sia incluso nell’evento esperienza. Se l&#39;ECID manca, verrà aggiunto al payload dell&#39;evento con `primary=true`, il che potrebbe portare a risultati imprevisti.

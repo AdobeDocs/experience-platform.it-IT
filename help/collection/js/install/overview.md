@@ -3,7 +3,7 @@ title: Panoramica sull'installazione di Web SDK
 description: Scopri come installare Experience Platform Web SDK.
 keywords: installazione web sdk;installazione web sdk;internet explorer;promise;npm package
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: a490c429047f5e5997d69f30a51e6b78debe2d5d
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -24,4 +24,4 @@ Prima di utilizzare o installare il Web SDK, è necessario soddisfare i seguenti
 
 * L’architettura in Adobe Experience Platform deve prima essere configurata. Queste impostazioni includono tutti gli schemi, le identità e i flussi di dati necessari.
 * Devi avere le autorizzazioni giuste configurate per accedere agli strumenti appropriati. Ad esempio, se la tua organizzazione decide di utilizzare l’estensione tag, devi disporre delle autorizzazioni corrette per accedere all’interfaccia utente di Data Collection. Per ulteriori informazioni, vedere [Autorizzazioni per la raccolta dati](../../permissions.md).
-* È consigliabile disporre di un dominio di prima parte (CNAME). Se disponi già di un CNAME per Adobe Analytics, puoi utilizzarlo. Il test nello sviluppo funziona senza un CNAME, ma Adobe consiglia di averne uno prima di pubblicarlo in produzione. Per ulteriori informazioni, consulta [ID dispositivo di prime parti](../../use-cases/identity/first-party-device-ids.md).
+* È consigliabile disporre di un dominio di prima parte (CNAME). Se disponi già di un CNAME per Adobe Analytics, puoi utilizzarlo. Il test nello sviluppo funziona senza un CNAME, ma Adobe consiglia di averne uno prima di pubblicarlo in produzione. Per ulteriori informazioni, consulta [ID dispositivo di prime parti](../../identity/fpid.md).

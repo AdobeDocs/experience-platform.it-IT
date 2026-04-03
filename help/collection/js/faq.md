@@ -2,9 +2,9 @@
 title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Risposte alle domande frequenti su Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1655'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ No. Qualsiasi cliente di Adobe Digital Experience può utilizzare gratuitamente 
 * I clienti che *non* hanno accesso ad Experience Platform o Real-time CDP e desiderano utilizzare [!DNL Web SDK] dovranno configurare le autorizzazioni appropriate per la creazione di schemi e flussi di dati nell&#39;interfaccia utente di Data Collection o nell&#39;interfaccia utente di Experience Platform.
 * I clienti che hanno accesso ad Experience Platform o Real-time CDP e desiderano utilizzare [!DNL Web SDK] dovranno configurare le autorizzazioni appropriate per la creazione di schemi, set di dati, spazi dei nomi delle identità e flussi di dati nell&#39;interfaccia utente di Data Collection o nell&#39;interfaccia utente di Experience Platform.
 
-Per ulteriori informazioni sulla configurazione di queste autorizzazioni, consulta la documentazione sulla [gestione delle autorizzazioni per la raccolta dati](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=it).
+Per ulteriori informazioni sulla configurazione di queste autorizzazioni, consulta la documentazione sulla [gestione delle autorizzazioni per la raccolta dati](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Chi deve utilizzare il Web SDK?
 
@@ -98,7 +98,7 @@ Il Web SDK è attualmente disponibile al pubblico e può essere utilizzato per i
 
 SDK è gratuito ed è ospitato gratuitamente da Adobe. Se necessario, è possibile scaricarlo e ospitarlo sui propri server senza alcun costo.
 
-Il Web SDK richiede l&#39;accesso a [configurazioni dello stream di dati](/help/datastreams/overview.md) e al generatore di schemi XDM di Experience Platform [&#128279;](/help/xdm/tutorials/create-schema-ui.md) per consentire ai server Adobe di gestire correttamente i dati in entrata provenienti da SDK. Se desideri ottenere l’accesso, contatta il team del tuo account Adobe per avviare il processo di richiesta.
+Il Web SDK richiede l&#39;accesso a [configurazioni dello stream di dati](/help/datastreams/overview.md) e al generatore di schemi XDM di Experience Platform [](/help/xdm/tutorials/create-schema-ui.md) per consentire ai server Adobe di gestire correttamente i dati in entrata provenienti da SDK. Se desideri ottenere l’accesso, contatta il team del tuo account Adobe per avviare il processo di richiesta.
 
 ## Quali casi d’uso sono attualmente supportati dal Web SDK?
 
@@ -116,7 +116,7 @@ In altre parole, se si decide di utilizzare Adobe Experience Platform Web SDK pe
 
 ## È possibile eseguire la migrazione degli ECID quando si inizia a utilizzare Web SDK in modo che i visitatori del sito Web non vengano visualizzati come nuovi visitatori?
 
-Sì, Adobe Experience Platform Web SDK fornisce una funzione di migrazione delle identità. Segui le istruzioni per la migrazione degli ID nella [documentazione di Experience Platform Web SDK Identity](/help/collection/use-cases/identity/id-overview.md#migrating-visitor-api-ecid) per ulteriori dettagli.
+Sì, Adobe Experience Platform Web SDK fornisce una funzione di migrazione delle identità. Seguire le istruzioni in [`idMigrationEnabled`](/help/collection/js/commands/configure/idmigrationenabled.md) per ulteriori dettagli.
 
 ## Quali sono le differenze tra il Web SDK e i tag?
 
@@ -144,11 +144,11 @@ Se utilizzi i nostri SDK e invii XDM ad Edge Network, l’inoltro di eventi per 
 
 ## Cos’è un dominio CNAME o di prima parte e perché è importante?
 
-Consulta il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/adobe-managed-cert) nella guida dei servizi di base.
+Consulta il [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) nella guida dei servizi di base.
 
 ## Adobe Experience Platform Web SDK utilizza i cookie? In caso affermativo, quali cookie utilizza?
 
-Consulta [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/cookies/web-sdk) nella guida dei servizi core.
+Consulta [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) nella guida dei servizi core.
 
 ## Quali browser sono supportati da Adobe Experience Platform Web SDK?
 

@@ -2,10 +2,10 @@
 title: defaultConsent
 description: Imposta il metodo predefinito di raccolta dei consensi per la proprietà web.
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
-source-git-commit: 1e272eb18fac2f59f9737756d48947a25573d772
+source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 5%
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Impostare la proprietà stringa `defaultConsent` sul livello di consenso desider
 
 >[!IMPORTANT]
 >
->Il valore `defaultConsent` non persiste tra un caricamento di pagina e l&#39;altro. Assicurarsi di impostare il consenso predefinito desiderato ogni volta che si chiama il comando `configure`.
+>Il valore `defaultConsent` non persiste tra un caricamento di pagina e l&#39;altro. Assicurarsi di impostare il consenso predefinito desiderato ogni volta che si chiama il comando `configure`. Al contrario, il consenso risolto di un visitatore (impostato tramite [`setConsent`](../setconsent.md)) viene mantenuto in un cookie e applicato automaticamente ai caricamenti delle pagine successive.
 
 ```js
 alloy("configure", {
@@ -40,32 +40,7 @@ alloy("configure", {
 
 ## Utilizzo di `defaultConsent` insieme a `setConsent` {#using-consent}
 
-Il Web SDK offre due opzioni di consenso complementari:
-
-* `defaultConsent` (questa pagina): determina le preferenze di consenso predefinite.
-* [`setConsent`](../setconsent.md): acquisisci le preferenze di consenso dei visitatori.
-
-Se utilizzate insieme, queste impostazioni possono portare a risultati diversi di raccolta dati e impostazione dei cookie, a seconda dei valori configurati.
-
-Vedi la tabella seguente per capire quando si verifica la raccolta dei dati e quando vengono impostati i cookie, in base alle impostazioni del consenso.
-
-| `defaultConsent` | `setConsent` | La raccolta dei dati avviene | Web SDK imposta i cookie del browser |
-|---------|----------|---------|---------|
-| `in` | `in` | Sì | Sì |
-| `in` | `out` | No | Sì |
-| `in` | Non impostato | Sì | Sì |
-| `pending` | `in` | Sì | Sì |
-| `pending` | `out` | No | Sì |
-| `pending` | Non impostato | No | No |
-| `out` | `in` | Sì | Sì |
-| `out` | `out` | No | Sì |
-| `out` | Non impostato | No | No |
-
-Per un elenco dei cookie impostati dalla libreria, vedere [Cookie di Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/cookies/web-sdk).
-
->[!NOTE]
->
->I cookie di identità e di consenso vengono impostati anche se un visitatore rinuncia al tracciamento. Questi cookie sono necessari per rispettare le preferenze di raccolta dei loro dati.
+Se utilizzati insieme, `defaultConsent` e `setConsent` producono una raccolta di dati, un&#39;impostazione dei cookie e risultati di identità diversi a seconda dei valori configurati. Per una tabella di interazione completa, consulta [Consenso e identità nella raccolta dati](/help/collection/identity/consent.md#how-consent-affects-identity).
 
 ## Impostazione del consenso predefinito in base a `gdprApplies`
 

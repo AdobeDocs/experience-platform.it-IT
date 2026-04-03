@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2752'
 ht-degree: 5%
 
 ---
@@ -76,7 +76,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 **Correzioni e miglioramenti**
 
 - È stato corretto un errore nel [tracciatore di Media Analytics](commands/getmediaanalyticstracker.md) a causa del quale la proprietà `length` dell&#39;oggetto multimediale accettava erroneamente tipi di dati non validi.
-- È stata migliorata la gestione degli errori [gestione delle identità](../use-cases/identity/id-overview.md) per elaborare correttamente i rifiuti delle promesse quando la ricerca delle identità non riesce.
+- È stata migliorata la gestione degli errori [gestione delle identità](../identity/overview.md) per elaborare correttamente i rifiuti delle promesse quando la ricerca delle identità non riesce.
 - È stato risolto un problema che impediva il rendering del contenuto di personalizzazione con elementi di contenuto HTML a causa di un errore relativo a un elemento `renderStatusHandler` mancante.
 - Correzione della mappa attività [raccolta URL](commands/configure/clickcollectionenabled.md) per la gestione corretta degli URL non HTTP.
 
@@ -147,7 +147,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 **Nuove funzioni**
 
-- È stato aggiunto il supporto per la richiesta dell&#39;[ID CORE](/help/collection/use-cases/identity/id-overview.md) nel comando [getIdentity](commands/getidentity.md).
+- È stato aggiunto il supporto per la richiesta dell&#39;[ID CORE](/help/collection/identity/overview.md#core-id-and-third-party-identity) nel comando [getIdentity](commands/getidentity.md).
 
 **Correzioni e miglioramenti**
 
@@ -165,7 +165,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;inizializzazione dei dettagli del collegamento Activity Map quando veniva chiamato l&#39;hook di monitoraggio `onInstanceConfigured`.
 - È stato risolto un problema a causa del quale le destinazioni dei cookie non venivano impostate sul percorso corretto.
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
-- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[&#x200B; chiamate a causa di una codifica URL non valida nel parametro &#x200B;](commands/sendevent/overview.md).
+- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[ chiamate a causa di una codifica URL non valida nel parametro ](commands/sendevent/overview.md).
 
 ## Versione 2.21.1 - venerdì 18 luglio 2024
 
@@ -296,7 +296,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 **Nuove funzioni**
 
-- Ora puoi distribuire esperienze personalizzate in modo più accurato, condividendo gli ID visitatore tra le app mobili e i contenuti web per dispositivi mobili e tra più domini. Per ulteriori informazioni, consulta la [documentazione dedicata](../use-cases/identity/id-sharing.md).
+- Ora puoi distribuire esperienze personalizzate in modo più accurato, condividendo gli ID visitatore tra le app mobili e i contenuti web per dispositivi mobili e tra più domini. Per ulteriori informazioni, consulta [Identità nella raccolta dati](../identity/overview.md).
 - È ora possibile eseguire il rendering o l&#39;esecuzione di un array di proposte da [!DNL Adobe Target] in applicazioni a pagina singola, senza incrementare le metriche di analisi. Questo riduce gli errori di reporting e aumenta l’accuratezza delle analisi.
 - Sono state aggiunte ulteriori informazioni al comando `getLibraryInfo`, inclusi i comandi disponibili e la configurazione finale per l&#39;istanza.
 
