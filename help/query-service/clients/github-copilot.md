@@ -2,7 +2,7 @@
 title: Connettere il copilota GitHub e il codice Visual Studio a Query Service
 description: Scopri come connettere GitHub Copilot e Visual Studio Code con Adobe Experience Platform Query Service.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 0%
@@ -136,10 +136,11 @@ Puoi anche chattare con [!DNL Copilot] direttamente sul tuo codice. Utilizza **C
 
 ![Finestra di chat in linea con visualizzazione differenze](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## Visualizzazione chat dedicata {#dedicated-chat}
 
