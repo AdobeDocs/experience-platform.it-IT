@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform consente di eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati Profilo cliente in tempo reale che non sono più necessari o che sono stati aggiunti per errore. A tal fine è necessario utilizzare l’API di profilo per creare un processo di sistema del profilo o eliminare una richiesta.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2021'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->I seguenti endpoint possono variare tra le implementazioni di Adobe Experience Platform in esecuzione su Microsoft Azure e Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/landing/multi-cloud).
+>I seguenti endpoint possono variare tra le implementazioni di Adobe Experience Platform in esecuzione su Microsoft Azure e Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti in [!DNL Experience Platform] sono memorizzati in [!DNL Data Lake] e se i set di dati sono stati abilitati per il profilo, tali dati vengono memorizzati anche nell&#39;archivio dati [!DNL Real-Time Customer Profile]. Talvolta può essere necessario eliminare i dati di profilo associati a un set di dati dall’archivio Profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. È necessario utilizzare l&#39;API [!DNL Real-Time Customer Profile] per creare un processo di sistema [!DNL Profile] o &quot;richiesta di eliminazione&quot;.
 
@@ -38,7 +38,7 @@ Puoi anche utilizzare parametri di query facoltativi per filtrare l’elenco del
 
 >[!AVAILABILITY]
 >
->I seguenti parametri di query sono disponibili **solo** quando si utilizza Experience Platform in Microsoft Azure.
+>I seguenti parametri di query sono disponibili **solo** quando si utilizza Experience Platform su Microsoft Azure.
 >
 >Quando si utilizza questo endpoint su AWS, i primi 100 processi di sistema vengono restituiti in ordine decrescente, in base alla data di creazione.
 
@@ -58,7 +58,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!IMPORTANT]
 >
->La richiesta seguente è diversa tra le istanze di Azure e AWS.
+>La seguente richiesta differisce tra le istanze di Azure e AWS.
 
 >[!BEGINTABS]
 
@@ -224,7 +224,7 @@ POST /system/jobs
 
 >[!IMPORTANT]
 >
->La richiesta seguente è diversa tra le istanze di Azure e AWS.
+>La seguente richiesta differisce tra le istanze di Azure e AWS.
 
 >[!BEGINTABS]
 
@@ -369,7 +369,7 @@ POST /system/jobs
 
 >[!IMPORTANT]
 >
->La richiesta seguente è diversa tra le istanze di Azure e AWS.
+>La seguente richiesta differisce tra le istanze di Azure e AWS.
 
 >[!BEGINTABS]
 
@@ -502,7 +502,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della richiesta di
 
 >[!AVAILABILITY]
 >
->La funzionalità seguente è **only** disponibile quando si utilizza Experience Platform in Microsoft Azure.
+>La funzionalità seguente è **only** disponibile quando si utilizza Experience Platform su Microsoft Azure.
 
 Se si tenta di avviare una richiesta di eliminazione per un batch di set di dati Record, si verifica un errore a 400 livelli, simile al seguente:
 
@@ -538,7 +538,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!IMPORTANT]
 >
->La richiesta seguente è diversa tra le istanze di Azure e AWS.
+>La seguente richiesta differisce tra le istanze di Azure e AWS.
 
 >[!BEGINTABS]
 
@@ -654,7 +654,7 @@ Quando lo stato della richiesta di eliminazione è `"COMPLETED"`, è possibile c
 
 >[!AVAILABILITY]
 >
->Questo endpoint è supportato **only** nell&#39;istanza di Azure di Adobe Experience Platform e **not** nell&#39;istanza di AWS.
+>Questo endpoint è supportato **solo** nell&#39;istanza Azure di Adobe Experience Platform e **non è supportato** nell&#39;istanza AWS.
 
 [!DNL Experience Platform] consente di eliminare una richiesta precedente, che può essere utile per diversi motivi, tra cui se il processo di eliminazione non è stato completato o si è bloccato nella fase di elaborazione. Per rimuovere una richiesta di eliminazione, è possibile eseguire una richiesta DELETE all&#39;endpoint `/system/jobs` e includere l&#39;ID della richiesta di eliminazione che si desidera rimuovere nel percorso della richiesta.
 
