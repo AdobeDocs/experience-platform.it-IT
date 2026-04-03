@@ -2,31 +2,31 @@
 title: Gruppo di campi schema Dettagli membro assistenza sanitaria
 description: Scopri il gruppo di campi schema Dettagli membro assistenza sanitaria.
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '610'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Dettagli membro sanitario] gruppo di campi schema
+# [!UICONTROL Healthcare Member Details] gruppo di campi schema
 
-[!UICONTROL Dettagli membro assistenza sanitaria] è un gruppo di campi dello schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce i dettagli di una persona che ha o riceverà assistenza o servizi medici, come informazioni di contatto, medico di base e informazioni sul piano.
+[!UICONTROL Healthcare Member Details] è un gruppo di campi dello schema standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) che acquisisce i dettagli di una persona che ha o riceverà servizi o cure mediche, come informazioni di contatto, medico dell&#39;assistenza primaria e informazioni di piano.
 
 ![Struttura del gruppo di campi](../../images/field-groups/healthcare-member-details/structure.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `billingAddress` | [[!UICONTROL Indirizzo postale]](../../data-types/postal-address.md) | Indirizzo di fatturazione della persona. |
-| `faxPhone` | [[!UICONTROL Numero di telefono]](../../data-types/phone-number.md) | Numero di fax della persona. |
-| `homeAddress` | [[!UICONTROL Indirizzo postale]](../../data-types/postal-address.md) | Indirizzo dell&#39;abitazione della persona. |
-| `homePhone` | [[!UICONTROL Numero di telefono]](../../data-types/phone-number.md) | Numero di telefono dell&#39;abitazione della persona. |
-| `mailingAddress` | [[!UICONTROL Indirizzo postale]](../../data-types/postal-address.md) | Indirizzo postale della persona. |
+| `billingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Indirizzo di fatturazione della persona. |
+| `faxPhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numero di fax della persona. |
+| `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Indirizzo dell&#39;abitazione della persona. |
+| `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numero di telefono dell&#39;abitazione della persona. |
+| `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Indirizzo postale della persona. |
 | `memberDetails` | Oggetto | Oggetto che contiene informazioni dettagliate sugli attributi e sulle relazioni della persona relativi all’assistenza sanitaria. Per ulteriori informazioni sulla struttura dell&#39;oggetto, vedere la [sottosezione seguente](#memberDetails). |
-| `mobilePhone` | [[!UICONTROL Numero di telefono]](../../data-types/phone-number.md) | Numero di telefono cellulare della persona. |
-| `person` | [[!UICONTROL Persona]](../../data-types/person.md) | Un singolo attore, contatto o proprietario correlato all’appartenenza all’assistenza sanitaria della persona. |
-| `personalEmail` | [[!UICONTROL Indirizzo e-mail]](../../data-types/email-address.md) | Indirizzo e-mail personale della persona. |
-| `shippingAddress` | [[!UICONTROL Indirizzo postale]](../../data-types/postal-address.md) | Indirizzo di spedizione della persona. |
+| `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | Numero di telefono cellulare della persona. |
+| `person` | [[!UICONTROL Person]](../../data-types/person.md) | Un singolo attore, contatto o proprietario correlato all’appartenenza all’assistenza sanitaria della persona. |
+| `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | Indirizzo e-mail personale della persona. |
+| `shippingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | Indirizzo di spedizione della persona. |
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `emergencyContact` | Oggetto | Acquisisce i seguenti dettagli di contatto di emergenza per la persona: <ul><li>`fullName`: (stringa) il nome completo del contatto di emergenza.</li><li>`phone`: (stringa) il numero di telefono del contatto di emergenza.</li><li>`relationshipToMember`: (stringa) relazione del contatto di emergenza con la persona.</li></ul> |
-| `medications` | Array di oggetti | Elenca i dettagli dei farmaci attuali e passati associati alla persona. Ogni elemento array è un oggetto che acquisisce i dettagli seguenti: <ul><li>`refillLocation`: ([[!UICONTROL Indirizzo postale]](../../data-types/postal-address.md)) Percorso di ricarica del farmaco.</li><li>`ID`: ID medicinale (stringa).</li><li>`isCurrent`: (booleano) indica se il farmaco è attuale o passato.</li><li>`numberOfRefills`: (numero intero) il numero di ricariche prescritte dal fornitore del medicinale.</li><li>`startDate`: (DateTime) la data in cui la persona ha iniziato a prendere il medicinale.</li></ul> |
+| `medications` | Array di oggetti | Elenca i dettagli dei farmaci attuali e passati associati alla persona. Ogni elemento array è un oggetto che acquisisce i dettagli seguenti: <ul><li>`refillLocation`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)) Percorso di ricarica del medicinale.</li><li>`ID`: ID medicinale (stringa).</li><li>`isCurrent`: (booleano) indica se il farmaco è attuale o passato.</li><li>`numberOfRefills`: (numero intero) il numero di ricariche prescritte dal fornitore del medicinale.</li><li>`startDate`: (DateTime) la data in cui la persona ha iniziato a prendere il medicinale.</li></ul> |
 | `multipleBirth` | Oggetto | Acquisisce i dettagli relativi a più nascite: <ul><li>`isMultipleBirth`: (booleano) indica se la persona ha dato più nascite.</li><li>`multipleBirthNumber`: (numero intero) il numero di bambini nati se `isMultipleBirth` è true.</li></ul> |
 | `plans` | Array di oggetti | Elenca i dettagli dei piani medici correnti e passati associati alla persona. Ogni elemento array è un oggetto che acquisisce i dettagli seguenti: <ul><li>`coverageEndDate`: (DataOra) La data in cui termina la copertura del piano.</li><li>`coverageStartDate`: (DataOra) la data in cui inizia la copertura del piano.</li><li>`isActive`: (booleano) indica se il piano è attivo.</li><li>`planId`: (stringa) ID del piano.</li></ul> |
 | `primaryCarePhysicians` | Array di oggetti | Elenca i dettagli dei medici di base associati alla persona. Ogni elemento array è un oggetto che acquisisce i dettagli seguenti: <ul><li>`endDate`: (DateTime) la data in cui il medico di base ha terminato le cure per la persona.</li><li>`fullname`: (stringa) il nome completo del medico.</li><li>`providerId`: (Stringa) Identificatore univoco del medico.</li><li>`startDate`: (DateTime) la data in cui il medico di base ha iniziato a prendersi cura della persona.</li></ul> |
@@ -50,7 +50,7 @@ ht-degree: 3%
 | `deceasedDate` | Data e ora | La data in cui la persona è deceduta. |
 | `isDeceased` | Booleano | Indica se la persona è deceduta. |
 | `isDependent` | Booleano | Indica se la persona è una persona dipendente. |
-| `nationality` | Stringa | Il rapporto giuridico tra la persona e il suo stato, rappresentato utilizzando il codice ISO 3166-1 Alpha-2. |
+| `nationality` | Stringa | Il rapporto giuridico tra la persona e il suo stato, rappresentato utilizzando il codice Alpha-2 ISO 3166-1. |
 | `preferredAvailability` | Stringa | Il giorno e l’ora di disponibilità preferiti per un appuntamento. |
 | `primaryMemberID` | Stringa | Un identificatore univoco dell’abbonato primario se la persona è una persona dipendente. |
 
