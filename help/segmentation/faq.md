@@ -2,7 +2,7 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: a55272e3124c3fceedcadc33883445132bfec6bd
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4853'
 ht-degree: 2%
@@ -43,7 +43,7 @@ I dati associati a questa colonna di identità primaria sono i dati **only** all
 
 Tutti gli altri dati all&#39;interno del pubblico generato esternamente sono considerati **attributi payload**. Questi attributi possono essere utilizzati **solo** per la personalizzazione e l&#39;arricchimento durante l&#39;attivazione e sono **non** associati a un profilo. Tuttavia, questi attributi vengono memorizzati nel data lake.
 
-Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1&rbrace;.**
+Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1}.**
 
 ### Posso riconciliare i dati del pubblico generato esternamente con un profilo esistente in Experience Platform?
 
@@ -120,7 +120,7 @@ Gli attributi di arricchimento sono attributi che provengono da un set di dati e
 
 | Canale di attivazione | Tipi di pubblico da caricamento personalizzato CSV | Tipi di pubblico da Composizione pubblico |
 | --- | --- | --- |
-| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento **&#x200B;**. |
+| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento ****. |
 | Campagne Adobe Journey Optimizer | Non è possibile attivare né gli attributi del pubblico né quelli del payload. | È possibile attivare sia gli attributi di pubblico che quelli di arricchimento. |
 
 ## Stati del ciclo di vita {#lifecycle-states}
