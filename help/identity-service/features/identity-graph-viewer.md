@@ -2,9 +2,9 @@
 title: Visualizzatore grafico identità
 description: Un grafo di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand su canali diversi.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1379'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ Il documento seguente illustra come accedere e utilizzare il visualizzatore del 
 
 Il video seguente ha lo scopo di facilitare la comprensione del visualizzatore del grafico delle identità.
 
->[!VIDEO](https://video.tv.adobe.com/v/345655/?quality=12&learn=on&captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Introduzione
 
@@ -38,11 +38,11 @@ L’utilizzo del visualizzatore del grafo delle identità richiede una comprensi
 
 ## Accedere al visualizzatore del grafico delle identità {#access-identity-graph-viewer}
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Identità]** nell&#39;area di navigazione a sinistra, quindi seleziona **[!UICONTROL Grafico identità]** dall&#39;elenco di schede nell&#39;intestazione.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Identities]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Identity Graph]** dall&#39;elenco di schede nell&#39;intestazione.
 
 ![Area di lavoro Identità nell&#39;interfaccia utente di Experience Platform, con la scheda Grafico identità selezionata.](../images/graph-viewer/identity-graph.png)
 
-Per visualizzare un grafo delle identità, fornisci uno spazio dei nomi delle identità e il relativo valore corrispondente, quindi seleziona **[!UICONTROL Visualizza]**.
+Per visualizzare un grafo delle identità, fornire uno spazio dei nomi delle identità e il valore corrispondente, quindi selezionare **[!UICONTROL View]**.
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ L’interfaccia del visualizzatore del grafico delle identità è costituita da 
 
 ![Interfaccia del visualizzatore del grafo delle identità.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-Il grafo delle identità visualizza tutte le identità collegate alla combinazione di spazio dei nomi e valore dell’identità immessa. Ogni nodo è costituito da uno spazio dei nomi di identità e dal relativo valore corrispondente. Puoi selezionare, tenere premuto e trascinare qualsiasi nodo per interagire con il grafico. In alternativa, puoi passare il cursore su un nodo per visualizzare informazioni sul valore di identità corrispondente. Selezionare **[!UICONTROL Visualizza grafico]** per nascondere o visualizzare il grafico.
+Il grafo delle identità visualizza tutte le identità collegate alla combinazione di spazio dei nomi e valore dell’identità immessa. Ogni nodo è costituito da uno spazio dei nomi di identità e dal relativo valore corrispondente. Puoi selezionare, tenere premuto e trascinare qualsiasi nodo per interagire con il grafico. In alternativa, puoi passare il cursore su un nodo per visualizzare informazioni sul valore di identità corrispondente. Selezionare **[!UICONTROL View graph]** per nascondere o visualizzare il grafico.
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ Seleziona un collegamento all’interno del grafico per visualizzare il set di d
 
 ![Collegamento di identità tra i nodi e-mail e GAID selezionati.](../images/graph-viewer/identity-link.png)
 
-La tabella [!UICONTROL Identità] fornisce una visualizzazione diversa dei dati di identità, elencando lo spazio dei nomi dell&#39;identità e la combinazione di valori di identità in un formato tabulare. Se si seleziona un nodo nel grafico, la riga evidenziata nella tabella [!UICONTROL Identità] verrà aggiornata.
+La tabella [!UICONTROL Identities] fornisce una visualizzazione diversa dei dati di identità, elencando lo spazio dei nomi dell&#39;identità e la combinazione di valori di identità in un formato tabulare. Se si seleziona un nodo nel grafico, la riga evidenziata nella tabella [!UICONTROL Identities] verrà aggiornata.
 
 ![Tabella delle identità con l&#39;elenco delle identità collegate all&#39;interno del grafico.](../images/graph-viewer/identities-table.png)
 
-Utilizza il menu a discesa per ordinare i dati del grafico ed evidenziare le informazioni su uno spazio dei nomi di identità specifico. Ad esempio, seleziona **[!UICONTROL E-mail]** dal menu per visualizzare i dati specifici dello spazio dei nomi dell&#39;identità e-mail.
+Utilizza il menu a discesa per ordinare i dati del grafico ed evidenziare le informazioni su uno spazio dei nomi di identità specifico. Ad esempio, seleziona **[!UICONTROL Email]** dal menu per visualizzare i dati specifici dello spazio dei nomi dell&#39;identità e-mail.
 
 ![La tabella Identità è stata ordinata in modo da visualizzare solo i dati e-mail.](../images/graph-viewer/sort-email.png)
 
@@ -81,7 +81,7 @@ La barra a destra mostra le informazioni su un’identità selezionata, incluso 
 La tabella seguente fornisce informazioni aggiuntive sulle proprietà dell’origine dati visualizzate nella barra a destra:
 
 | Origine dati | Descrizione |
-| --- | --- | 
+| --- | --- |
 | ID batch | L’identificatore generato automaticamente che corrisponde ai dati batch. |
 | ID set di dati | L’identificatore generato automaticamente che corrisponde al set di dati. |
 | Nome del set di dati | Nome del set di dati che contiene i dati batch. |
@@ -89,15 +89,15 @@ La tabella seguente fornisce informazioni aggiuntive sulle proprietà dell’ori
 
 ![Barra a destra, in cui vengono visualizzati i dati di identità e l&#39;origine dati delle informazioni.](../images/graph-viewer/right-rail.png)
 
-È inoltre possibile utilizzare l&#39;*[!UICONTROL origine dati]* per visualizzare un elenco delle origini dati che contribuiscono alle identità. Seleziona [!UICONTROL Origine dati] per una visualizzazione tabulare dei set di dati e degli ID batch.
+È inoltre possibile utilizzare *[!UICONTROL Data source]* per visualizzare un elenco di origini dati che contribuiscono alle identità. Seleziona [!UICONTROL Data source] per una visualizzazione tabulare dei set di dati e degli ID batch.
 
 ![Scheda origine dati selezionata.](../images/graph-viewer/data-source-table.png)
 
-Utilizza il cursore per filtrare i dati del grafico in base al momento in cui le identità sono state stabilite per la prima volta. Per impostazione predefinita, il visualizzatore del grafico delle identità visualizza tutte le identità collegate all’interno del grafico. Tieni premuto e trascina il cursore per regolare l’ora dell’ultimo timestamp in cui una nuova identità è stata collegata al grafico. Nell&#39;esempio seguente viene visualizzato che il collegamento di identità più recente (GAID) è stato stabilito il **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
+Utilizza il cursore per filtrare i dati del grafico in base al momento in cui le identità sono state stabilite per la prima volta. Per impostazione predefinita, il visualizzatore del grafico delle identità visualizza tutte le identità collegate all’interno del grafico. Tieni premuto e trascina il cursore per regolare l’ora dell’ultimo timestamp in cui una nuova identità è stata collegata al grafico. Nell&#39;esempio seguente, il grafico mostra che il collegamento di identità più recente (GAID) è stato stabilito il **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
 ![Cursore timestamp del visualizzatore grafico selezionato.](../images/graph-viewer/slider-one.png)
 
-Modificare il dispositivo di scorrimento per verificare che sia stato stabilito un altro collegamento di identità (e-mail) il **[!UICONTROL 08/19/2020, 4:25:30 PM]**.
+Modificare il dispositivo di scorrimento per verificare che un altro collegamento di identità (e-mail) sia stato stabilito il **[!UICONTROL 08/19/2020, 4:25:30 PM]**.
 
 ![Il cursore timestamp del visualizzatore grafico è stato regolato in base all&#39;ultimo nuovo collegamento stabilito.](../images/graph-viewer/slider-two.png)
 
@@ -121,7 +121,7 @@ Possono verificarsi errori durante l’accesso al visualizzatore del grafico del
 
 ### Accedere al visualizzatore del grafico delle identità dai set di dati
 
-Puoi anche accedere al visualizzatore del grafico delle identità utilizzando l’interfaccia dei set di dati. Dalla pagina [!UICONTROL Sfoglia] dei set di dati, selezionare un set di dati con cui si desidera interagire, quindi selezionare **[!UICONTROL Anteprima set di dati]**
+Puoi anche accedere al visualizzatore del grafico delle identità utilizzando l’interfaccia dei set di dati. Dalla pagina dei set di dati [!UICONTROL Browse], seleziona un set di dati con cui desideri interagire, quindi seleziona **[!UICONTROL Preview dataset]**
 
 ![anteprima-set di dati](../images/identity-graph-viewer/preview-dataset.png)
 
