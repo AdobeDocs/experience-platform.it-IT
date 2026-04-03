@@ -3,7 +3,7 @@ title: Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1799'
 ht-degree: 2%
@@ -104,7 +104,6 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
       * Il periodo (`.`) (codice ASCII 46). Ad esempio, normalizzare &quot;jane.doe@gmail.com&quot; in &quot;janedoe@gmail.com&quot;.
      * Il segno più (`+`) (codice ASCII 43) e tutti i caratteri successivi. Ad esempio, normalizzare `janedoe+home@gmail.com` in `janedoe@gmail.com`.
   
-
 ## Requisiti di normalizzazione e hashing dei numeri di telefono {#phone-hashing}
 
 Ecco cosa devi sapere sul caricamento dei numeri di telefono:
@@ -164,7 +163,7 @@ La destinazione CRM [!DNL The Trade Desk] è un caricamento di file batch giorna
 
 ### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Account Type]**: scegliere l&#39;opzione **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
