@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Delle Righe A Real-Time Customer Profile Tramite La Preparazione Dei Dati
 description: Scopri come inviare aggiornamenti parziali delle righe a Real-Time Customer Profile utilizzando la preparazione dati.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -133,7 +133,7 @@ Di seguito è riportato un esempio di struttura di payload in ingresso che stabi
 Le operazioni seguenti sono supportate da [!DNL Real-Time Customer Profile]:
 
 | Operazioni | Descrizione |
-| --- | --- | 
+| --- | --- |
 | `create` | Operazione predefinita. Viene generato un metodo di creazione di entità XDM per [!DNL Real-Time Customer Profile]. |
 | `merge` | Viene generato un metodo di aggiornamento entità XDM per [!DNL Real-Time Customer Profile]. |
 | `delete` | Viene generato un metodo di eliminazione dell&#39;entità XDM per [!DNL Real-Time Customer Profile] e vengono rimossi definitivamente i dati da [!DNL Profile store]. |
