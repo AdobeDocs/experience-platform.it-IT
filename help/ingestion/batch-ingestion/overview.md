@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dell’API per l’acquisizione in batch
 description: L’API per l’acquisizione in batch di Adobe Experience Platform consente di acquisire dati in Experience Platform come file batch. I dati da acquisire possono essere i dati di profilo provenienti da un file flat in un sistema di gestione delle relazioni con i clienti (ad esempio un file Parquet) o i dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 4%
@@ -146,7 +146,7 @@ Puoi caricare i file utilizzando l’API Caricamento file di piccole dimensioni.
 
 >[!NOTE]
 >
->L’acquisizione batch può essere utilizzata per aggiornare in modo incrementale i dati nell’archivio profili. Per ulteriori informazioni, vedere la sezione relativa all&#39;aggiornamento di un batch[&#x200B; nella &#x200B;](#patch-a-batch)guida per gli sviluppatori per l&#39;acquisizione batch[.](api-overview.md)
+>L’acquisizione batch può essere utilizzata per aggiornare in modo incrementale i dati nell’archivio profili. Per ulteriori informazioni, vedere la sezione relativa all&#39;aggiornamento di un batch[ nella ](#patch-a-batch)guida per gli sviluppatori per l&#39;acquisizione batch[.](api-overview.md)
 
 >[!INFO]
 >
@@ -412,7 +412,7 @@ Il campo `"status"` è quello che mostra lo stato corrente del batch richiesto. 
 | Attivo | Il batch è stato promosso correttamente ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con &quot;Success&quot; (Completato). |
 | Eliminato | I dati per il batch sono stati completamente rimossi. |
 | Non riuscito | Stato del terminale causato da configurazione e/o dati non validi. I dati per un batch non riuscito **non** verranno visualizzati. Questo stato può essere utilizzato in modo intercambiabile con &quot;Errore&quot;. |
-| Non attivo | Il batch è stato promosso correttamente, ma è stato ripristinato o è scaduto. Il batch non è più disponibile per il consumo a valle. |
+| Inattivo | Il batch è stato promosso correttamente, ma è stato ripristinato o è scaduto. Il batch non è più disponibile per il consumo a valle. |
 | Caricato | I dati per il batch sono completi e il batch è pronto per la promozione. |
 | Caricamento in corso | I dati per questo batch sono in fase di caricamento e il batch è attualmente **non** pronto per essere promosso. |
 | Nuovo tentativo | Elaborazione dei dati per questo batch in corso. Tuttavia, a causa di un errore di sistema o transitorio, il batch non è riuscito. Di conseguenza, si sta tentando di nuovo di eseguire il batch. |
