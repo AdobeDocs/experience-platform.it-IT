@@ -3,7 +3,7 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Tipo di dati Consensi e preferenze
 description: Il tipo di dati Consenso per privacy, Personalization e Preferenze di marketing ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni sui dati.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2305'
 ht-degree: 1%
@@ -257,7 +257,7 @@ Il seguente codice JSON mostra un esempio del tipo di dati che il tipo di dati [
 
 Per utilizzare il tipo di dati [!UICONTROL Consents and Preferences] per acquisire i dati sul consenso dai clienti, è necessario creare un set di dati basato su uno schema che contiene tale tipo di dati.
 
-Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_it) per i passaggi su come assegnare tipi di dati ai campi. Dopo aver creato uno schema contenente un campo con il tipo di dati [!UICONTROL Consents and Preferences], consulta la sezione sulla [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
+Consulta l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare tipi di dati ai campi. Dopo aver creato uno schema contenente un campo con il tipo di dati [!UICONTROL Consents and Preferences], consulta la sezione sulla [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, seguendo i passaggi per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >
