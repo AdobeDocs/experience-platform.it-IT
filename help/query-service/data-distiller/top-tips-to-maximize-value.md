@@ -2,9 +2,9 @@
 title: Principali suggerimenti per massimizzare il valore con Adobe Experience Platform Data Distiller - OS656
 description: Scopri come massimizzare il valore con Adobe Experience Platform Data Distiller arricchendo i dati Real-Time Customer Profile e utilizzando informazioni comportamentali per creare tipi di pubblico mirati. Questa risorsa include un set di dati di esempio e un caso di studio che illustra come applicare il modello Recency, Frequency, Monetary (RFM) per la segmentazione del cliente.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '3743'
+source-wordcount: '3664'
 ht-degree: 0%
 
 ---
@@ -65,22 +65,22 @@ Per caricare un file CSV in Adobe Experience Platform, segui la procedura riport
 
 #### Creare un set di dati da un file CSV {#create-a-dataset}
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Set di dati]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Crea set di dati]**. Quindi seleziona **[!UICONTROL Crea set di dati dal file CSV]** tra le opzioni disponibili.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Datasets]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Create dataset]**. Quindi seleziona **[!UICONTROL Create dataset from CSV file]** tra le opzioni disponibili.
 
-Viene visualizzato il pannello [!UICONTROL Configura set di dati]. Nel campo **[!UICONTROL Name]**, inserisci il nome del set di dati come &quot;luma_web_data&quot; e seleziona **[!UICONTROL Next]**.
+Viene visualizzato il pannello [!UICONTROL Configure Dataset]. Nel campo **[!UICONTROL Name]**, inserisci il nome del set di dati come &quot;luma_web_data&quot; e seleziona **[!UICONTROL Next]**.
 
-Viene visualizzato il pannello [!UICONTROL Aggiungi dati]. Trascina e rilascia il file CSV nella casella **[!UICONTROL Aggiungi dati]** oppure seleziona **[!UICONTROL Scegli file]** per sfogliare e caricare il file.
+Viene visualizzato il pannello [!UICONTROL Add data]. Trascina e rilascia il file CSV nella casella **[!UICONTROL Add data]** oppure seleziona **[!UICONTROL Choose File]** per sfogliare e caricare il file.
 
 Per ulteriori informazioni su questo processo, consulta l&#39;[esercitazione sull&#39;acquisizione batch](../../ingestion/tutorials/ingest-batch-data.md) e il [flusso di lavoro per la creazione di set di dati](../../catalog/datasets/user-guide.md#create) nella guida dell&#39;interfaccia utente del set di dati.
 
 #### Rivedi e completa il caricamento {#review-and-complete-upload}
 
-Una volta caricato il file, nella parte inferiore dell’interfaccia utente viene visualizzata un’anteprima dei dati. Seleziona **[!UICONTROL Fine]** per completare il caricamento.
+Una volta caricato il file, nella parte inferiore dell’interfaccia utente viene visualizzata un’anteprima dei dati. Seleziona **[!UICONTROL Finish]** per completare il caricamento.
 
 ![Sezione &quot;Aggiungi dati&quot; del flusso di lavoro &quot;Crea set di dati da file CSV&quot; con un&#39;anteprima dei dati ed evidenziata la dicitura &quot;Fine&quot;.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 Viene visualizzata la vista delle attività del set di dati &quot;luma_web_data&quot;. Caricamento manuale del file CSV
-viene acquisito come batch e identificato da un [!UICONTROL ID batch]. Un pannello a destra visualizza il nome della tabella come `luma_web_data`.
+viene acquisito come batch e identificato da un [!UICONTROL Batch ID]. Un pannello a destra visualizza il nome della tabella come `luma_web_data`.
 
 >[!TIP]
 >
@@ -88,11 +88,12 @@ viene acquisito come batch e identificato da un [!UICONTROL ID batch]. Un pannel
 
 ![Scheda &quot;Attività set di dati&quot; per il set di dati &quot;luma_web_data&quot; appena creato con nome tabella, ID batch e &quot;Anteprima set di dati&quot; evidenziati.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
+<!-- 
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-Al termine dell&#39;elaborazione dei dati, seleziona [!UICONTROL Anteprima set di dati] nell&#39;angolo in alto a destra per visualizzare l&#39;anteprima del set di dati. Ecco come viene visualizzata l’anteprima del set di dati:
+Al termine dell&#39;elaborazione dei dati, selezionare [!UICONTROL Preview dataset] nell&#39;angolo superiore destro per visualizzare l&#39;anteprima del set di dati. Ecco come viene visualizzata l’anteprima del set di dati:
 
 ![Anteprima del set di dati &quot;luma_web_data&quot;.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -118,7 +119,7 @@ Utilizza Data Distiller per verificare la qualità e la completezza dei set di d
 
 #### Eseguire una query di esplorazione di base {#basic-exploration-queries}
 
-Nell&#39;interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Query]** nella barra di navigazione a sinistra, quindi seleziona **[!UICONTROL Crea query]**. Viene visualizzato l&#39;editor delle query.
+Nell&#39;interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Queries]** nella barra di navigazione a sinistra, quindi seleziona **[!UICONTROL Create Query]**. Viene visualizzato l&#39;editor delle query.
 
 Incolla la seguente query nell’editor ed eseguila:
 
@@ -126,7 +127,7 @@ Incolla la seguente query nell’editor ed eseguila:
 SELECT * FROM luma_web_data; 
 ```
 
-I risultati della query vengono visualizzati sotto l&#39;Editor query nella scheda **[!UICONTROL Risultati]**. Per espandere i risultati in una nuova finestra di dialogo, selezionare **[!UICONTROL Visualizza risultati]**. I risultati sono simili a quelli dell’immagine seguente.
+I risultati della query vengono visualizzati sotto l&#39;Editor query nella scheda **[!UICONTROL Results]**. Per espandere i risultati in una nuova finestra, selezionare **[!UICONTROL View results]**. I risultati sono simili a quelli dell’immagine seguente.
 
 ![Finestra di dialogo Risultati query per i risultati di esplorazione query di base.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
@@ -352,7 +353,7 @@ Per semplificare l&#39;accesso e il riutilizzo, creare un `VIEW` che memorizzi i
 
 Le istruzioni `CASE` nelle istruzioni SQL seguenti classificano i clienti in segmenti in base ai punteggi RFM e assegnano i risultati alla variabile `RFM_Model`.
 
-+++Selezionare per visualizzare SQL
++++Seleziona per visualizzare SQL
 
 ```sql
 CREATE OR replace VIEW rfm_model_segment
@@ -470,11 +471,11 @@ FROM rfm_model_segment;
 
 Il risultato di questa query assomiglia alle creazioni di set di dati precedenti in questo playbook, ma con un ID diverso.
 
-Dopo aver creato il set di dati, passa a **[!UICONTROL Set di dati]** > **[!UICONTROL Sfoglia]** > `adls_rfm_profile` per verificare che il set di dati sia vuoto.
+Dopo aver creato il set di dati, passa a **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` per verificare che il set di dati sia vuoto.
 
 ![Area di lavoro dei set di dati con i dettagli del set di dati &#39;adls_rfm_profile&#39; visualizzati ed evidenziati.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-Puoi anche passare a **[!UICONTROL Schemi]** > **[!UICONTROL Sfoglia]** > `adls_rfm_profile` per visualizzare il diagramma schema XDM per profilo individuale del set di dati appena creato e i relativi gruppi di campi personalizzati.
+Puoi anche passare a **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` per visualizzare il diagramma schema profilo individuale XDM del set di dati appena creato e i relativi gruppi di campi personalizzati.
 
 ![Area di lavoro XDM con il diagramma &#39;adls_rfm_profile&#39; visualizzato nell&#39;area di lavoro dello schema.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -503,30 +504,30 @@ Ora che il codice SQL genera un set di dati derivato e lo abilita per Real-Time 
 
 #### Pianificare l’esecuzione della query
 
-Dopo aver salvato l&#39;istruzione SQL, passare alla scheda **[!UICONTROL Modelli]** per visualizzare la query salvata e avviare il processo di pianificazione. Esistono due modi per pianificare una query:
+Dopo aver salvato l&#39;istruzione SQL, passare alla scheda **[!UICONTROL Templates]** per visualizzare la query salvata e avviare il processo di pianificazione. Esistono due modi per pianificare una query:
 
-Seleziona **[!UICONTROL Aggiungi pianificazione]** nella barra laterale a destra.
+Seleziona **[!UICONTROL Add Schedule]** dalla barra laterale a destra.
 
 ![Scheda Modifica dell&#39;area di lavoro query con Aggiungi pianificazione evidenziata.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-In alternativa, seleziona la scheda **[!UICONTROL Schedules]** sotto il nome del modello, quindi seleziona **[!UICONTROL Aggiungi pianificazione]**.
+In alternativa, selezionare la scheda **[!UICONTROL Schedules]** sotto il nome del modello, quindi selezionare **[!UICONTROL Add Schedule]**.
 
 ![Scheda Pianificazioni dell&#39;area di lavoro Query con Aggiungi pianificazione evidenziata.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
 Per ulteriori dettagli sulla pianificazione delle query, consulta la [documentazione sugli Schedules delle query](../ui/query-schedules.md).
 
-Viene visualizzata la visualizzazione [!UICONTROL Dettagli pianificazione]. Da qui, inserisci i seguenti dettagli per configurare la pianificazione:
+Viene visualizzata la visualizzazione [!UICONTROL Schedule details]. Da qui, inserisci i seguenti dettagli per configurare la pianificazione:
 
-- **[!UICONTROL Frequenza di esecuzione]**: **Settimanale**
-- **[!UICONTROL Giorno dell&#39;esecuzione]**: **Lunedì e martedì**
-- **[!UICONTROL Ora di esecuzione pianificata]**: **10:10 ora UTC**
-- **[!UICONTROL Periodo di pianificazione]**: **17 marzo - 30 aprile 2025**
+- **[!UICONTROL Execution Frequency]**: **Settimanale**
+- **[!UICONTROL Day of Execution]**: **Lunedì e martedì**
+- **[!UICONTROL Schedule Execution Time]**: **10:10 ORA UTC**
+- **[!UICONTROL Schedule Period]**: **17 marzo - 30 aprile 2025**
 
-Seleziona **[!UICONTROL Salva]** per confermare la pianificazione.
+Selezionare **[!UICONTROL Save]** per confermare la pianificazione.
 
 ![I dettagli della pianificazione con le impostazioni configurate e Salva evidenziati.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-Dopo aver salvato la pianificazione, puoi passare alla scheda **[!UICONTROL Query pianificate]** in qualsiasi momento per monitorare i processi pianificati di Data Distiller. Per ulteriori dettagli sulla [visualizzazione dello stato di esecuzione della query, dei messaggi di errore e degli avvisi](../ui/monitor-queries.md), vedere il documento Monitorare le query pianificate.
+Dopo aver salvato la pianificazione, è possibile passare alla scheda **[!UICONTROL Scheduled Queries]** in qualsiasi momento per monitorare i processi pianificati di Data Distiller. Per ulteriori dettagli sulla [visualizzazione dello stato di esecuzione della query, dei messaggi di errore e degli avvisi](../ui/monitor-queries.md), vedere il documento Monitorare le query pianificate.
 
 Una volta configurata, la query SQL viene eseguita automaticamente agli intervalli definiti, garantendo che i dati rimangano aggiornati senza richiedere l&#39;intervento manuale.
 
@@ -543,9 +544,9 @@ Scegli l&#39;approccio più adatto al tuo flusso di lavoro.
 
 #### Soluzione 1: pubblico SQL tramite Data Distiller {#data-distiller-sql-audience}
 
-Utilizza il comando `CREATE AUDIENCE AS SELECT` per definire un nuovo pubblico. Il pubblico creato viene salvato in un set di dati e registrato nell&#39;area di lavoro **[!UICONTROL Tipi di pubblico]** in **[!UICONTROL Data Distiller]**.
+Utilizza il comando `CREATE AUDIENCE AS SELECT` per definire un nuovo pubblico. Il pubblico creato viene salvato in un set di dati e registrato nell&#39;area di lavoro **[!UICONTROL Audiences]** in **[!UICONTROL Data Distiller]**.
 
-I tipi di pubblico creati con l&#39;estensione SQL vengono registrati automaticamente nell&#39;origine [!UICONTROL Data Distiller] nell&#39;area di lavoro [!UICONTROL Tipi di pubblico]. Da [Audience Portal](../../segmentation/ui/audience-portal.md) puoi visualizzare, gestire e attivare i tipi di pubblico in base alle esigenze.
+I tipi di pubblico creati con l&#39;estensione SQL vengono registrati automaticamente nell&#39;origine [!UICONTROL Data Distiller] nell&#39;area di lavoro [!UICONTROL Audiences]. Da [Audience Portal](../../segmentation/ui/audience-portal.md) puoi visualizzare, gestire e attivare i tipi di pubblico in base alle esigenze.
 
 ![Il Portale pubblico mostra i tipi di pubblico disponibili.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
@@ -646,19 +647,19 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 Utilizza gli attributi RFM per segmentare gli utenti in base al loro comportamento e alle loro caratteristiche. Questa sezione ti guida attraverso l’interfaccia utente di Adobe Experience Platform per definire un pubblico utilizzando i punteggi RFM.
 
-Per verificare che i dati siano stati caricati nel profilo cliente in tempo reale, passa a **[!UICONTROL Clienti] > [!UICONTROL Profili] > [!UICONTROL Sfoglia]**. Seleziona **[!UICONTROL Spazio dei nomi identità]** come `Email` e immetti `user0076@example.com`. Controllare i dettagli del profilo per verificare che contenga gli attributi RFM previsti.
+Per verificare che i dati siano stati caricati in Real-Time Customer Profile, passare a **[!UICONTROL Customers]> [!UICONTROL Profiles] >[!UICONTROL Browse]**. Selezionare **[!UICONTROL Identity Namespace]** come `Email` e immettere `user0076@example.com`. Controllare i dettagli del profilo per verificare che contenga gli attributi RFM previsti.
 
 ![L&#39;area di lavoro Profili mostra i profili disponibili con un filtro di identità principale e valore e-mail applicato.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
 ![Nella visualizzazione degli attributi dei profili vengono visualizzati gli attributi di un profilo specifico.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
-Per sfogliare i tipi di pubblico esistenti, seleziona **[!UICONTROL Tipi di pubblico]** nel pannello di navigazione a sinistra e accertati che la scheda **[!UICONTROL Sfoglia]** sia selezionata. Viene visualizzato l’elenco dei tipi di pubblico disponibili nella sandbox. Quando si seleziona un pubblico, vengono visualizzate la descrizione, le regole di qualificazione e il numero di profili inclusi.
+Per sfogliare i tipi di pubblico esistenti, seleziona **[!UICONTROL Audiences]** dal pannello di navigazione a sinistra e assicurati che la scheda **[!UICONTROL Browse]** sia selezionata. Viene visualizzato l’elenco dei tipi di pubblico disponibili nella sandbox. Quando si seleziona un pubblico, vengono visualizzate la descrizione, le regole di qualificazione e il numero di profili inclusi.
 
-Per creare un nuovo pubblico, seleziona **[!UICONTROL Crea pubblico]** in alto a destra. Viene visualizzata una finestra di dialogo con due opzioni. Seleziona **[!UICONTROL Genera regola]** seguito da **[!UICONTROL Crea]**.
+Per creare un nuovo pubblico, seleziona **[!UICONTROL Create Audience]** in alto a destra. Viene visualizzata una finestra di dialogo con due opzioni. Seleziona **[!UICONTROL Build Rule]** seguito da **[!UICONTROL Create]**.
 
 ![Finestra di dialogo Crea pubblico con la regola di compilazione selezionata ed Evidenzia Crea.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
-L’interfaccia utente di Composizione del pubblico consente di accedere agli attributi del profilo. Passa a **[!UICONTROL Attributi] > [!UICONTROL Profilo individuale XDM]** per visualizzare gli attributi disponibili.
+L’interfaccia utente di Composizione del pubblico consente di accedere agli attributi del profilo. Passa a **[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]** per visualizzare gli attributi disponibili.
 
 Per ulteriori dettagli sull&#39;utilizzo di Audience Composition, consulta la [guida dell&#39;interfaccia utente di Audience Composition](../../segmentation/ui/audience-composition.md). Per ulteriori dettagli sull&#39;utilizzo di Segment Builder, consulta la [guida dell&#39;interfaccia utente di Segment Builder](../../segmentation/ui/segment-builder.md).
 
@@ -672,6 +673,6 @@ Per creare un pubblico utilizzando gli attributi RFM, trascina e rilascia l&#39;
 
 ![Creazione di un pubblico nell&#39;interfaccia utente di Composizione pubblico.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
-Per finalizzare il pubblico, seleziona **[!UICONTROL Salva e pubblica]** nell&#39;angolo in alto a destra. Dopo il salvataggio, il pubblico appena creato viene visualizzato nell&#39;area di lavoro [!UICONTROL Tipi di pubblico], in cui puoi esaminarne il riepilogo e i criteri di qualificazione.
+Per finalizzare il pubblico, seleziona **[!UICONTROL Save and Publish]** nell&#39;angolo in alto a destra. Dopo il salvataggio, il pubblico appena creato viene visualizzato nell&#39;area di lavoro [!UICONTROL Audiences], dove è possibile esaminarne il riepilogo e i criteri di qualificazione.
 
 Utilizza Segment Builder (Generatore segmenti) per accedere agli attributi RFM derivati e progettare tipi di pubblico aggiuntivi. Attiva il pubblico SQL appena creato in base ai punteggi RFM e invialo a qualsiasi destinazione preferita, incluso Adobe Journey Optimizer.
