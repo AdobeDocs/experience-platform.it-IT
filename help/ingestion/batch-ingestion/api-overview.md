@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida all’API per l’acquisizione in batch
 description: Questo documento fornisce una guida completa per gli sviluppatori che lavorano con le API di acquisizione batch per Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2435'
 ht-degree: 6%
@@ -801,7 +801,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parametro | Descrizione |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{DATASET_ID}` | ID del set di dati di riferimento. |
 
 **Risposta**
