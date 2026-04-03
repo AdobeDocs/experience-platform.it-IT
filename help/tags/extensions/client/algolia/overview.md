@@ -2,7 +2,7 @@
 title: Panoramica dell’estensione tag in Algolia
 description: Scopri l’estensione Tag per Algolia in Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 6eee26df3841a7829625361fc726bf59a278f867
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1954'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Panoramica dell&#39;estensione tag [!DNL Algolia]
 
-L&#39;estensione tag [!DNL Algolia] consente agli addetti al marketing di impostare facilmente regole che inviano dati di interazione dell&#39;utente a [!DNL Algolia], consentendoti di fornire esperienze di ricerca e individuazione basate su IA più personalizzate.
+L&#39;estensione tag [!DNL Algolia] consente agli addetti al marketing di impostare facilmente regole che inviano dati di interazione dell&#39;utente a [!DNL Algolia], consentendo di fornire esperienze di Ricerca IA e individuazione più personalizzate.
 
 Questa estensione è basata su una funzione chiave:
 
