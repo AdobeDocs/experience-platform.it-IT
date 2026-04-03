@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ricetta vendita al dettaglio
 description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi con seeding per un determinato periodo di tempo. Grazie a un accurato modello di previsione, retailer è in grado di individuare la relazione tra la domanda e le politiche di prezzo e di ottimizzare le decisioni di prezzo per massimizzare le vendite e i ricavi.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
