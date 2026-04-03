@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2022
 description: Note sulla versione di Adobe Experience Platform di agosto 2022.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2014'
+source-wordcount: '1967'
 ht-degree: 27%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Platform fornisce più [!DNL dashboards] tramite i quali è pos
 
 | Funzione | Descrizione |
 | --- | --- |
-| Widget attivazioni pianificate | Il widget [!UICONTROL Attivazioni pianificate] fornisce una visualizzazione in forma di tabella delle destinazioni attivate più di recente. Per ogni segmento, include il nome, la piattaforma di destinazione e la data di inizio e di fine dell’attivazione. Questo widget consente di scoprire subito dove e quando il pubblico viene attivato e rende più trasparenti le attivazioni duplicate o non necessarie. Queste informazioni accumulate evidenziano anche dove sono state escluse eventuali attivazioni. |
+| Widget attivazioni pianificate | Il widget [!UICONTROL Scheduled activations] fornisce una visualizzazione in forma di tabella delle destinazioni attivate più di recente. Per ogni segmento, include il nome, la piattaforma di destinazione e la data di inizio e di fine dell’attivazione. Questo widget consente di scoprire subito dove e quando il pubblico viene attivato e rende più trasparenti le attivazioni duplicate o non necessarie. Queste informazioni accumulate evidenziano anche dove sono state escluse eventuali attivazioni. |
 
 Per ulteriori informazioni su [!DNL Dashboards], consulta la [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
@@ -94,7 +94,7 @@ Per ulteriori informazioni su [!DNL Data Prep], vedere la [[!DNL Data Prep] pano
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| (Beta) Supporto della personalizzazione basata su attributi per le destinazioni di personalizzazione | Con la versione beta della personalizzazione basata su attributi, nel [catalogo di destinazione](../../destinations/catalog/overview.md) verranno visualizzate due nuove schede: <ul><li>**[!UICONTROL Adobe Target V2]**: questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla scheda di Adobe Target V1, il connettore di Target V2 aggiunge un [passaggio di mappatura](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo ad Adobe Target, abilitando la personalizzazione della stessa pagina basata su attributi e della pagina successiva.</li><li>**[!UICONTROL Personalization personalizzato con attributi]**: il connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita da **[!UICONTROL Personalization personalizzato]**, il connettore **[!UICONTROL Personalization personalizzato con attributi]** aggiunge un [passaggio di mappatura](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) facoltativo al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.</li></ul> Gli attributi del profilo <br> possono contenere dati sensibili. Per proteggere questi dati, la destinazione **[!UICONTROL Personalization personalizzato con attributi]** richiede l&#39;utilizzo dell&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) per la raccolta dati. Inoltre, tutte le chiamate API di Edge Network devono essere effettuate in un [contesto autenticato](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
+| (Beta) Supporto della personalizzazione basata su attributi per le destinazioni di personalizzazione | Con la versione beta della personalizzazione basata su attributi, nel [catalogo di destinazione](../../destinations/catalog/overview.md) verranno visualizzate due nuove schede: <ul><li>**[!UICONTROL Adobe Target V2]**: questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita dalla scheda di Adobe Target V1, il connettore di Target V2 aggiunge un [passaggio di mappatura](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo ad Adobe Target, abilitando la personalizzazione della stessa pagina basata su attributi e della pagina successiva.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: questo connettore è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. Oltre alla funzionalità fornita da **[!UICONTROL Custom Personalization]**, il connettore **[!UICONTROL Custom Personalization With Attributes]** aggiunge un [passaggio di mappatura](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) facoltativo al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.</li></ul> Gli attributi del profilo <br> possono contenere dati sensibili. Per proteggere i dati, la destinazione **[!UICONTROL Custom Personalization With Attributes]** richiede l&#39;utilizzo dell&#39;[API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) per la raccolta dati. Inoltre, tutte le chiamate API di Edge Network devono essere effettuate in un [contesto autenticato](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
 
 {style="table-layout:auto"}
 
@@ -116,8 +116,8 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Classe di entità AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Classe basata su record per la creazione di schemi di ricerca per Adobe Journey Optimizer. |
-| Gruppo di campi | [[!UICONTROL Oggetti di lavoro di Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Un gruppo di campi wrapper che fa riferimento a tutti i gruppi di campi specifici dell’oggetto di livello inferiore per Adobe Workfront. |
+| Classe | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Classe basata su record per la creazione di schemi di ricerca per Adobe Journey Optimizer. |
+| Gruppo di campi | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Un gruppo di campi wrapper che fa riferimento a tutti i gruppi di campi specifici dell’oggetto di livello inferiore per Adobe Workfront. |
 
 {style="table-layout:auto"}
 
@@ -125,13 +125,13 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Gruppo di campi | [[!UICONTROL Campi comuni evento passaggio Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Sono state aggiunte due nuove proprietà: `origTimeStamp` e `experienceID`. |
-| Gruppo di campi | [[!UICONTROL Dettagli sull’appartenenza a segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Oltre al [!UICONTROL Profilo individuale XDM], questo gruppo di campi ora può essere utilizzato anche in schemi basati sulla classe XDM Business Account. |
+| Gruppo di campi | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Sono state aggiunte due nuove proprietà: `origTimeStamp` e `experienceID`. |
+| Gruppo di campi | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Oltre a [!UICONTROL XDM Individual Profile], questo gruppo di campi ora può essere utilizzato anche in schemi basati sulla classe XDM Business Account. |
 | Gruppo di campi | (Multiplo) | Diversi gruppi di campi relativi alle attività B2B di Marketo sono stati aggiornati a uno stato stabile. Per ulteriori informazioni, consulta la [richiesta pull](https://github.com/adobe/xdm/pull/1593/files) seguente. |
 | Gruppo di campi | (Multiplo) | Diversi gruppi di campi correlati al meteo sono stati aggiornati per correggere gli errori che si verificavano per `uvIndex` e `sunsetTime`. Per ulteriori informazioni, consulta la [richiesta pull](https://github.com/adobe/xdm/pull/1602/files) seguente. |
-| Tipo di dati | [[!UICONTROL Elemento dell’elenco prodotti]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | È stata aggiunta una nuova proprietà `productImageUrl`. |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dei dati QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | È stata aggiunta una nuova proprietà `framesPerSecond`. |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli della sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` è stato rinominato come `appVersion`. Sono stati aggiornati anche `meta:enum` e `description` campi. |
+| Tipo di dati | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | È stata aggiunta una nuova proprietà `productImageUrl`. |
+| Tipo di dati | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | È stata aggiunta una nuova proprietà `framesPerSecond`. |
+| Tipo di dati | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` è stato rinominato come `appVersion`. Sono stati aggiornati anche `meta:enum` e `description` campi. |
 | Tipi di dati e gruppi di campi | (Multiplo) | Diversi tipi di dati multimediali e gruppi di campi dispongono di nuovi campi e descrizioni aggiornate. Per ulteriori informazioni, consulta la [richiesta pull](https://github.com/adobe/xdm/pull/1582/files) seguente. |
 | (Tutti) | (Multiplo) | Tutti gli oggetti dello schema che contengono un campo `enum` ora contengono anche un campo `meta:enum` corrispondente per indicare i valori di visualizzazione per ciascun vincolo. Per ulteriori informazioni, consulta la [richiesta pull](https://github.com/adobe/xdm/pull/1601/files) seguente. |
 
