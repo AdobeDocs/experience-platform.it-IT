@@ -2,7 +2,7 @@
 title: Gestire i valori suggeriti nell’API
 description: Scopri come aggiungere valori suggeriti a un campo stringa nell’API del registro dello schema.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
@@ -69,9 +69,11 @@ In alternativa, è possibile definire un campo stringa che non contiene un array
 
 Poiché la stringa non dispone di un array `enum` per definire i vincoli, è possibile estendere la relativa proprietà `meta:enum` per includere nuovi valori.
 
-<!-- ## Manage suggested values for standard fields
+<!-- 
+## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). 
+-->
 
 ## Aggiungere valori suggeriti a un campo standard {#add-suggested-standard}
 
@@ -150,7 +152,8 @@ Dopo aver applicato il descrittore, il registro dello schema risponde con quanto
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+<!-- 
+### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -210,7 +213,8 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+``` 
+-->
 
 ## Gestire i valori suggeriti per un campo personalizzato {#suggested-custom}
 
