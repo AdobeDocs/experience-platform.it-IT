@@ -2,7 +2,7 @@
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione di destinazione esistente tramite Adobe Experience Platform Destination SDK.
 title: Eliminare una configurazione di destinazione
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 2%
@@ -43,7 +43,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Richiesta
++++ Richiesta
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -53,7 +53,9 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Risposta
++++
+
++++ Risposta
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a una risposta HTTP vuota.
 
@@ -71,3 +73,5 @@ Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consul
 * [Creare una configurazione di destinazione](create-destination-configuration.md)
 * [Recuperare una configurazione di destinazione](retrieve-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](update-destination-configuration.md)
+
++++
