@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2024
 description: Note sulla versione di Adobe Experience Platform di febbraio 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 94%
@@ -11,7 +11,7 @@ ht-degree: 94%
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 21 febbraio 2024**
+**Data di rilascio: giovedì 21 febbraio 2024**
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -50,7 +50,8 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 Per ulteriori informazioni sulle raccolte dati, consulta la [panoramica sulle raccolte dati](/help/tags/home.md).
 
-<!-- ## Data Prep {#data-prep}
+<!-- 
+## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -62,7 +63,8 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). 
+-->
 
 ## Destinazioni {#destinations}
 
@@ -82,7 +84,7 @@ For more information on Data Prep, read the [Data Prep overview](/help/data-prep
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Attiva i tipi di pubblico dell’account generalmente disponibili | La funzionalità per attivare i tipi di pubblico dell’account in determinate destinazioni è ora generalmente disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time CDP. Consulta il tutorial su [attivazione dei tipi di pubblico dell’account](/help/destinations/ui/activate-account-audiences.md) per ottenere informazioni complete, incluse le destinazioni supportate. |
+| Attivazione di tipi di pubblico di account con disponibilità generale | La funzionalità per attivare i tipi di pubblico di account in determinate destinazioni è ora disponibile per le aziende che acquistano le edizioni [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) di Real-Time CDP. Consulta il tutorial sull’[attivazione dei tipi di pubblico di account](/help/destinations/ui/activate-account-audiences.md) per ottenere informazioni complete, incluse le destinazioni supportate. |
 | Strumenti di applicazione del consenso Digital Markets Act per destinazioni Google | Google sta rilasciando modifiche all’[API Google Ads](https://developers.google.com/google-ads/api/docs/start), a [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html?lang=it) e all’[API Display e Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) per supportare i requisiti relativi alla conformità e al consenso definiti nel [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_it) (DMA) dell’Unione Europea ([Norme relative al consenso degli utenti dell’UE](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti del consenso dovrebbe entrare in vigore il 6 marzo 2024. <br/><br/> Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso dell’utente finale durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi del regolamento DMA dell’Unione Europea.<br/><br/>I clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non devono intraprendere alcuna azione.<br/><br/>I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare le funzionalità di [definizione del segmento](/help/segmentation/home.md#segment-definitions) all’interno del [Generatore di segmenti](/help/segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati, al fine di continuare a utilizzare le destinazioni Real-Time CDP Google esistenti senza interruzioni. |
 | [!BADGE Beta]{type=Informative} Riordina i campi di mappatura per le destinazioni batch | Ora puoi modificare l&#39;ordine delle colonne nelle esportazioni CSV trascinando i campi di mappatura nel passaggio [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordine dei campi mappati nell’interfaccia utente si riflette nell’ordine delle colonne nel file CSV esportato, dall’alto verso il basso, con la riga in alto che corrisponde alla colonna più a sinistra nel file CSV. <br/><br/>Al momento questa funzione è disponibile nella versione beta e solo per i clienti beta. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe. |
 | [!BADGE Beta]{type=Informative} Programmazioni di esportazione predefinite preselezionate per le destinazioni batch | Experience Platform ora imposta automaticamente una pianificazione predefinita per ogni esportazione di file. Per informazioni su come modificare la pianificazione predefinita, consulta la documentazione sulla [pianificazione delle esportazioni del pubblico](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). <br/><br/>Al momento questa funzione è disponibile nella versione beta e solo per i clienti beta. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe. |
@@ -111,11 +113,11 @@ Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini]
 
 [!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Experience Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
-**Nuova funzione**
+**Nuova funzionalità**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Pubblico dell’account | I tipi di pubblico dell’account sono ora generalmente disponibili. Ora puoi utilizzare la segmentazione per account per portare tutta la semplicità e la sofisticazione dell’esperienza di segmentazione del marketing, dai tipi di pubblico basati su persone a quelli basati su account, in entrambe le edizioni B2B e B2P di Real-Time Customer Experience Platform. Questa versione consente di utilizzare i tipi di pubblico basati su persone come predicato per i tipi di pubblico basati su account, aggiunge funzionalità di ricerca, supporta l’utilizzo di entità personalizzate ed è conforme alla governance dei dati. Per ulteriori informazioni su questa funzione, leggere la [panoramica sui tipi di pubblico dell&#39;account](/help/segmentation/types/account-audiences.md). |
+| Tipi di pubblico di account | I tipi di pubblico di account sono stati rilasciati con disponibilità generale. Ora puoi utilizzare la segmentazione per account per portare tutta la semplicità e la sofisticazione dell’esperienza di segmentazione del marketing, dai tipi di pubblico basati su persone a quelli basati su account, in entrambe le edizioni B2B e B2P di Real-Time Customer Experience Platform. Questa versione consente di utilizzare i tipi di pubblico basati su persone come predicato per i tipi di pubblico basati su account, aggiunge funzionalità di ricerca, supporta l’utilizzo di entità personalizzate ed è conforme alla governance dei dati. Per ulteriori informazioni su questa funzione, leggi la [panoramica sui tipi di pubblico di account](/help/segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
