@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 18%
@@ -89,7 +89,8 @@ Le etichette aggiunte a livello di set di dati presentano una &quot;x&quot; acca
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+<!-- 
+To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
 
 ![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
 
@@ -97,7 +98,8 @@ Next, select the **[!UICONTROL Data Governance]** tab to show the labels that ha
 
 ![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
 
-The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. 
+-->
 
 <!--Beleive can cut above here  -->
 
@@ -105,9 +107,11 @@ L&#39;opzione **[!UICONTROL Show Inherited Labels]** è attivata per impostazion
 
 ![Scheda Governance dei dati dell&#39;area di lavoro Set di dati con l&#39;opzione Mostra etichette ereditate evidenziata.](../images/labels/inherited-labels.png)
 
-<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+<!-- 
+Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
 
-![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) 
+-->
 
 >[!NOTE]
 >
@@ -150,10 +154,12 @@ Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e 
 
 Ora puoi anche definire i criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la [panoramica dei criteri di utilizzo dei dati](../policies/overview.md).
 
-<!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
+<!-- 
+The workflow of this video is now outdated. This can be enabled once the video has been updated
 
 ## Additional resources
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422790?captions=ita&quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) 
+-->
