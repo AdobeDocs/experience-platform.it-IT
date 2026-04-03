@@ -2,9 +2,9 @@
 title: Governance dei dati in Query Service
 description: Questa panoramica descrive i principali elementi di governance dei dati in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '3142'
+source-wordcount: '3131'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Per eseguire query in Query Service, è necessario assegnare a un utente un ruol
 
 | Autorizzazione | Descrizione |
 |---|---|
-| [!UICONTROL Gestisci query] | Questa autorizzazione consente agli utenti di eseguire esplorazione dei dati e query batch, in grado di leggere un set di dati esistente o scrivere dati su set di dati. Sono incluse sia `CREATE TABLE AS SELECT` (`CTAS`) che `INSERT INTO AS SELECT` (`ITAS`) query. |
+| [!UICONTROL Manage Queries] | Questa autorizzazione consente agli utenti di eseguire esplorazione dei dati e query batch, in grado di leggere un set di dati esistente o scrivere dati su set di dati. Sono incluse sia `CREATE TABLE AS SELECT` (`CTAS`) che `INSERT INTO AS SELECT` (`ITAS`) query. |
 
 **Autorizzazioni del set di dati**
 
@@ -63,8 +63,8 @@ Tramite l’interfaccia Autorizzazioni è possibile definire il controllo dell�
 
 | Autorizzazione | Descrizione |
 |---|---|
-| [!UICONTROL Gestisci set di dati] | Questa autorizzazione fornisce accesso in sola lettura per gli schemi e consente di accedere a set di dati di lettura, creazione, modifica ed eliminazione da utilizzare con Query Service. |
-| [!UICONTROL Visualizza set di dati] | Questa autorizzazione consente l’accesso in sola lettura per i set di dati e gli schemi da utilizzare con Query Service. |
+| [!UICONTROL Manage Datasets] | Questa autorizzazione fornisce accesso in sola lettura per gli schemi e consente di accedere a set di dati di lettura, creazione, modifica ed eliminazione da utilizzare con Query Service. |
+| [!UICONTROL View Datasets] | Questa autorizzazione consente l’accesso in sola lettura per i set di dati e gli schemi da utilizzare con Query Service. |
 
 #### Controllo dell’accesso per colonne/campi
 
@@ -95,9 +95,9 @@ La parola chiave `CREATE VIEW` definisce una visualizzazione di una query, ma la
 
 Con la funzionalità di controllo degli accessi [basato su attributi](../../access-control/abac/overview.md) è possibile definire ambiti di utilizzo organizzativi o dati sui set di dati fact e di dimensione nell&#39;[archivio accelerato](../data-distiller/sql-insights/send-accelerated-queries.md). Questo consente agli amministratori di gestire l’accesso a segmenti specifici e di gestire meglio l’accesso concesso a utenti o gruppi di utenti.
 
-Per creare restrizioni di accesso basate sui campi per i set di dati accelerati, puoi utilizzare le query CTAS di Query Service per creare set di dati accelerati e strutturarli in base a schemi XDM o schemi ad hoc esistenti. Gli amministratori possono quindi [aggiungere e modificare le etichette di utilizzo dei dati per lo schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [schema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puoi applicare, creare e modificare le etichette negli schemi dall&#39;area di lavoro [!UICONTROL Etichette] nell&#39;interfaccia utente [!UICONTROL Schemi].
+Per creare restrizioni di accesso basate sui campi per i set di dati accelerati, puoi utilizzare le query CTAS di Query Service per creare set di dati accelerati e strutturarli in base a schemi XDM o schemi ad hoc esistenti. Gli amministratori possono quindi [aggiungere e modificare le etichette di utilizzo dei dati per lo schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [schema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). È possibile applicare, creare e modificare etichette agli schemi dall&#39;area di lavoro [!UICONTROL Labels] nell&#39;interfaccia utente di [!UICONTROL Schemas].
 
-Le etichette di utilizzo dei dati possono anche essere [applicate o modificate direttamente nel set di dati](../../data-governance/labels/user-guide.md#add-labels) tramite l&#39;interfaccia utente dei set di dati oppure create dall&#39;area di lavoro [!UICONTROL Etichette] del controllo di accesso. Per ulteriori informazioni, consulta la guida su come [creare una nuova etichetta](../../access-control/abac/ui/labels.md).
+Le etichette di utilizzo dei dati possono anche essere [applicate o modificate direttamente nel set di dati](../../data-governance/labels/user-guide.md#add-labels) tramite l&#39;interfaccia utente dei set di dati o create dall&#39;area di lavoro [!UICONTROL Labels] del controllo di accesso. Per ulteriori informazioni, consulta la guida su come [creare una nuova etichetta](../../access-control/abac/ui/labels.md).
 
 L’accesso degli utenti alle singole colonne può quindi essere controllato dalle etichette di utilizzo dei dati associate e dai set di autorizzazioni applicati ai ruoli assegnati agli utenti.
 
@@ -129,13 +129,13 @@ Una volta completato il flusso di lavoro dei prerequisiti, gli utenti autorizzat
 
 Per una maggiore sicurezza, Query Service fornisce supporto nativo per le connessioni SSL per crittografare le comunicazioni client/server. Experience Platform supporta varie opzioni SSL per soddisfare le tue esigenze di sicurezza dei dati e bilanciare il sovraccarico di elaborazione dovuto alla crittografia e allo scambio di chiavi.
 
-Per ulteriori informazioni, tra cui come connettersi utilizzando il valore del parametro SSL `verify-full`, vedere la guida sulle [opzioni SSL disponibili per le connessioni client di terze parti a Query Service](../clients/ssl-modes.md).
+Per ulteriori informazioni, tra cui come connettersi utilizzando il valore del parametro SSL [, vedere la guida sulle ](../clients/ssl-modes.md)opzioni SSL disponibili per le connessioni client di terze parti a Query Service`verify-full`.
 
 ### Crittografia e chiavi gestite dal cliente (CMK) {#encryption-and-customer-managed-keys}
 
 La crittografia è l&#39;utilizzo di un processo algoritmico per trasformare i dati in testo codificato e illeggibile per garantire che le informazioni siano protette e inaccessibili senza una chiave di decrittografia.
 
-La conformità dei dati di Query Service garantisce che i dati siano sempre crittografati. I dati in transito sono sempre conformi a HTTPS e i dati in transito sono crittografati in un archivio Azure Data Lake utilizzando chiavi a livello di sistema. Per ulteriori informazioni, vedere la documentazione su [come vengono crittografati i dati in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md). Per informazioni dettagliate sulla modalità di crittografia dei dati inattivi nell&#39;archiviazione di Azure Data Lake, vedere la [documentazione ufficiale di Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+La conformità dei dati di Query Service garantisce che i dati siano sempre crittografati. I dati in transito sono sempre conformi a HTTPS e i dati a riposo sono crittografati in un archivio Azure Data Lake utilizzando chiavi a livello di sistema. Per ulteriori informazioni, vedere la documentazione su [come vengono crittografati i dati in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md). Per informazioni dettagliate su come i dati inattivi vengono crittografati nell&#39;archiviazione Azure Data Lake, consulta la [documentazione ufficiale di Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 I dati in transito sono sempre conformi HTTPS. Analogamente, quando i dati sono inattivi nel data lake, la crittografia viene eseguita con la chiave di gestione del cliente (CMK), già supportata da Data Lake Management. La versione attualmente supportata è TLS1.2. Consulta la [documentazione sulle chiavi gestite dal cliente](../../landing/governance-privacy-security/customer-managed-keys/overview.md) per scoprire come impostare le tue chiavi di crittografia per i dati archiviati in Adobe Experience Platform.
 
@@ -150,11 +150,11 @@ Qualsiasi categoria di registro può essere richiesta come desiderato da un uten
 
 L’interfaccia utente dei registri di query ti consente di monitorare e rivedere i dettagli di esecuzione di tutte le query eseguite tramite l’editor delle query o l’API del servizio di query. Ciò garantisce trasparenza alle attività di Query Service, consentendo di controllare i metadati per **tutte** le query eseguite in Query Service. Include tutti i tipi di query, sia quelle esplorative, batch o pianificate.
 
-È possibile accedere ai registri delle query tramite l&#39;interfaccia utente di Experience Platform nella scheda [!UICONTROL Registri] dell&#39;area di lavoro [!UICONTROL Query].
+È possibile accedere ai registri delle query tramite l&#39;interfaccia utente di Experience Platform nella scheda [!UICONTROL Logs] dell&#39;area di lavoro [!UICONTROL Queries].
 
 ![Scheda Registro query con il pannello dei dettagli evidenziato.](../images/data-governance/overview/queries-log.png)
 
-### Registri di audit {#audit-logs}
+### Registri di controllo {#audit-logs}
 
 I registri di audit contengono informazioni più dettagliate rispetto ai registri di query e consentono di filtrare i registri in base ad attributi quali utente, data, tipo di query e così via. Oltre ai dettagli disponibili nell’interfaccia utente del registro delle query, i registri di controllo memorizzano i dettagli sui singoli utenti, insieme ai relativi dati di sessione o alla connettività a un client di terze parti.
 
@@ -170,7 +170,7 @@ La tabella seguente indica le categorie di query acquisite dai registri di audit
 
 Di seguito è riportato un elenco di tre registri server estesi che contengono più dettagli di quelli trovati all’interno dei registri di query. I registri estesi si trovano all’interno delle categorie di query dei registri di audit:
 
-1. **Registri di meta query**: quando viene eseguita una query, vengono eseguite varie sottoquery di back-end associate, ad esempio l&#39;analisi. Questi tipi di query sono noti come query &quot;metadati&quot;. I relativi dettagli sono disponibili nei registri di audit.
+1. **Registri query Meta**: quando viene eseguita una query, vengono eseguite varie sottoquery di back-end associate, ad esempio l&#39;analisi. Questi tipi di query sono noti come query &quot;metadati&quot;. I relativi dettagli sono disponibili nei registri di audit.
 1. **Registri di sessione**: il sistema crea un registro di voci di sessione per un utente quando accede a Query Service, indipendentemente dal fatto che esegua una query.
 1. **Registri di connessione client di terze parti**: viene generato un registro di controllo della connettività quando un utente connette correttamente Query Service a un client di terze parti.
 
