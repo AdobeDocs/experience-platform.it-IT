@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4769'
 ht-degree: 11%
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [&#128279;](/help/access-control/home.md#permissions).
+>* Per attivare i tipi di pubblico e abilitare il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le autorizzazioni di controllo di accesso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [](/help/access-control/home.md#permissions).
 >* Per attivare i tipi di pubblico senza passare attraverso il [passaggio di mappatura](#mapping) del flusso di lavoro, sono necessarie le **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [autorizzazioni di controllo dell&#39;accesso](/help/access-control/home.md#permissions).
 >* Per esportare *identità*, è necessario disporre dell&#39;autorizzazione **[!UICONTROL View Identity Graph]** [per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 >
@@ -496,7 +496,7 @@ Adobe consiglia di selezionare uno spazio dei nomi di identità come [!DNL CRM I
 
 ### Comportamento di deduplicazione per profili con la stessa marca temporale {#deduplication-same-timestamp}
 
-Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/it/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Durante l’esportazione di profili in destinazioni basate su file, la deduplica garantisce che venga esportato un solo profilo quando più profili condividono la stessa chiave di deduplica e la stessa marca temporale di riferimento. Questa marca temporale rappresenta il momento in cui l’iscrizione al pubblico o il grafico delle identità di un profilo è stato aggiornato per l’ultima volta. Per ulteriori informazioni sull&#39;aggiornamento e l&#39;esportazione dei profili, vedere il documento [comportamento di esportazione dei profili](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Considerazioni chiave {#key-considerations}
 
@@ -507,7 +507,7 @@ Durante l’esportazione di profili in destinazioni basate su file, la deduplica
 Considera i seguenti dati, in cui la chiave di deduplicazione è la colonna `Email`:
 
 | E-mail* | nome | cognome | timestamp |
-|---|---|---|---|  
+|---|---|---|---|
 | `test1@test.com` | John | Morris | 2024-10-12T09:50 |
 | `test1@test.com` | John | Doe | 2024-10-12T09:50 |
 | `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
@@ -517,7 +517,7 @@ Considera i seguenti dati, in cui la chiave di deduplicazione è la colonna `Ema
 Dopo la deduplicazione, il file di esportazione conterrà:
 
 | E-mail* | nome | cognome | timestamp |
-|---|---|---|---|  
+|---|---|---|---|
 | `test1@test.com` | John | Doe | 2024-10-12T09:50 |
 | `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
