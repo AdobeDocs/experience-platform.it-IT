@@ -6,10 +6,10 @@ seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
 uuid: 839686c9-6e4f-4661-acf6-150ea24dc47f
 exl-id: ed0579ef-ec26-43df-9453-a395c105038a
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 58%
+source-wordcount: '215'
+ht-degree: 59%
 
 ---
 
@@ -29,16 +29,18 @@ Per cambiare le informazioni in base alla soluzione, seleziona la soluzione da v
 
 ![](images/network-analytics.jpg)
 
-Per visualizzare di nuovo tutte le soluzioni, selezionare **[!UICONTROL Rete]**
+Per tornare alla visualizzazione di tutte le soluzioni, selezionare **[!UICONTROL Network]**
 
 Selezionare un elemento nella visualizzazione di rete per visualizzare una visualizzazione espansa. Dalla finestra di visualizzazione espansa, puoi copiare le informazioni visualizzate negli Appunti.
 
 ![](images/network-expand.jpg)
 
-<!--Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
+<!--
+Use the icon at the top of each column to copy the server call URL to your clipboard, where you can paste it into another document for reference or debugging purposes.
 
-![](images/copy.jpg)-->
+![](images/copy.jpg)
+-->
 
-Per cancellare l&#39;elenco, selezionare **[!UICONTROL Rimuovi eventi]**.
+Per cancellare l&#39;elenco, selezionare **[!UICONTROL Remove Events]**.
 
-Per scaricare un file Excel con le informazioni di questa schermata, selezionare **[!UICONTROL Scarica]**.
+Per scaricare un file Excel contenente le informazioni di questa schermata, selezionare **[!UICONTROL Download]**.
