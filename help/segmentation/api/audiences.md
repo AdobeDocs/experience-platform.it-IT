@@ -3,7 +3,7 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 3%
@@ -183,7 +183,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 ```
 
 | Proprietà | Tipo di pubblico | Descrizione |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Entrambi | Identificatore di sola lettura generato dal sistema per il pubblico. |
 | `audienceId` | Entrambi | Se il pubblico è generato da Platform, è lo stesso valore di `id`. Se il pubblico è generato esternamente, questo valore viene fornito dal client. |
 | `schema` | Entrambi | Lo schema Experience Data Model (XDM) del pubblico. |
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Proprietà | Descrizione |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | Il nome del pubblico. |
 | `description` | Una descrizione del pubblico. |
 | `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. Un `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Parametro | Descrizione |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | ID del pubblico che stai tentando di recuperare. Tieni presente che si tratta del campo `id` e che **non** è il campo `audienceId`. |
 
 **Richiesta**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Proprietà | Descrizione |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | ID del pubblico. Per i tipi di pubblico generati esternamente, questo valore può essere fornito dall’utente. |
 | `name` | Il nome del pubblico. |
 | `namespace` | Lo spazio dei nomi per il pubblico. |
@@ -555,7 +555,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `op` | Tipo di operazione PATCH eseguita. Per questo endpoint, il valore è **always** `/add`. |
-| `path` | Percorso del campo da aggiornare. Impossibile modificare i campi generati dal sistema, ad esempio `id`, `audienceId` e `namespace` **4&rbrace;.** |
+| `path` | Percorso del campo da aggiornare. Impossibile modificare i campi generati dal sistema, ad esempio `id`, `audienceId` e `namespace` **4}.** |
 | `value` | Il nuovo valore assegnato alla proprietà specificata in `path`. |
 
 +++
