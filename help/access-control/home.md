@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: da3328e58b9009d80fea1c84e79fb14c9cc1ecf2
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3279'
 ht-degree: 0%
@@ -132,7 +132,7 @@ La tabella seguente illustra le autorizzazioni disponibili per Experience Platfo
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | Accesso in sola lettura alle configurazioni dei modelli. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | Possibilità di visualizzare e modificare le configurazioni dei piani. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Accesso in sola lettura alle configurazioni dei piani. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Possibilità di porre le domande [[!DNL [AI assistant]]](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Possibilità di porre le domande [!DNL [AI assistant]](../ai-assistant/access.md). |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Accesso per ottenere risposte alle [query Operational Insights](../ai-assistant/home.md##operational-insights). |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Consente agli utenti di generare contenuto utilizzando [!DNL AI Assistant]. |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Consente agli utenti di creare le linee guida per il marchio utilizzando [!DNL AI Assistant]. |
