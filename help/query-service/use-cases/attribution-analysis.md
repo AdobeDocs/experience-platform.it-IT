@@ -2,7 +2,7 @@
 title: Analisi dell’attribuzione
 description: Questo documento spiega come utilizzare Query Service per creare una tecnica di misurazione dell’efficacia del marketing basata sul modello di attribuzione marketing di primo e ultimo contatto.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -19,8 +19,8 @@ Gli esempi SQL in questo documento sono query comunemente utilizzate con i dati 
 
 * [Connettore di origine di Adobe Analytics per la panoramica dei dati della suite di rapporti](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [La documentazione sulle mappature dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fornisce ulteriori informazioni sull&#39;acquisizione e la mappatura dei dati analitici da utilizzare con Query Service.
-* [Panoramica di Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=it)
-* [Guida del pannello Attribuzione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=it).
+* [Panoramica di Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Guida del pannello Attribuzione di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
 Una spiegazione dei parametri all&#39;interno della funzione `OVER()` è disponibile nella sezione [funzioni finestra](../sql/adobe-defined-functions.md#window-functions). Anche il [Glossario dei termini di Adobe Marketing e Commerce](https://business.adobe.com/glossary/index.html) può essere utile.
 
@@ -59,7 +59,7 @@ I risultati delle query di attribuzione sono forniti nella colonna `first_touch`
 
 | Parametri | Descrizione |
 | ---------- | ----------- |
-| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta in Azure Data Factory (ADF). |
+| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta nella Data Factory di Azure. |
 | `{VALUE}` | Valore di `{CHANNEL_VALUE}` che rappresenta l&#39;ultimo contatto nell&#39;intervallo `{EXP_TIMEOUT}` specificato |
 | `{TIMESTAMP}` | Il timestamp di [!DNL Experience Event] in cui si è verificato l&#39;ultimo contatto |
 | `{FRACTION}` | Attribuzione dell’ultimo contatto, espressa come frazione decimale. |
