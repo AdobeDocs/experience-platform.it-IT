@@ -3,7 +3,7 @@ title: Endpoint "Accelerated Queries"
 description: Scopri come accedere alle query dell’archivio accelerato in modo stateless per restituire rapidamente risultati basati su dati aggregati. Questo documento fornisce un esempio di richiesta HTTP e di risposta per l’endpoint Query Service con query accelerate.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
