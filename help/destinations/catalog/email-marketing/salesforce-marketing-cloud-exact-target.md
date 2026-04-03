@@ -2,7 +2,7 @@
 title: (API) Connessione Marketing Cloud Salesforce
 description: Utilizza la destinazione Salesforce Marketing Cloud (precedentemente nota come ExactTarget) per esportare i dati del tuo account e attivarli in Salesforce Marketing Cloud in base alle tue esigenze aziendali.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 2%
@@ -37,7 +37,7 @@ Il reparto vendite di una piattaforma di noleggio a domicilio desidera inviare u
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL (API) Salesforce Marketing Cloud], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL (API) Salesforce Marketing Cloud], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti in [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -104,9 +104,9 @@ Annotare gli elementi riportati di seguito prima di eseguire l&#39;autenticazion
 
 | Credenziali | Descrizione | Esempio |
 | --- | --- | --- |
-| Sottodominio | Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce Marketing Cloud domain prefix], vedere &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) [!DNL Salesforce Marketing Cloud]. | Se il dominio [!DNL Salesforce Marketing Cloud] è <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>è necessario fornire `mcq4jrssqdlyc4lph19nnqgzzs84` come valore. |
-| ID client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [&#x200B; &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | r23kxxxxxxxx0z05xxxxxx |
-| Segreto client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [&#x200B; &#x200B;](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | ipxxxxxxxxT4xxxxxxxxxx |
+| Sottodominio | Per informazioni su come ottenere questo valore dall&#39;interfaccia [[!DNL Salesforce Marketing Cloud domain prefix], vedere ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html)[!DNL Salesforce Marketing Cloud]. | Se il dominio [!DNL Salesforce Marketing Cloud] è <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>è necessario fornire `mcq4jrssqdlyc4lph19nnqgzzs84` come valore. |
+| ID client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [ ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | r23kxxxxxxxx0z05xxxxxx |
+| Segreto client | Per informazioni su come ottenere questo valore dall&#39;interfaccia [!DNL Salesforce Marketing Cloud], consulta la [ ](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html)documentazione[!DNL Salesforce Marketing Cloud]. | ipxxxxxxxxT4xxxxxxxxxx |
 
 {style="table-layout:auto"}
 
