@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2023
 description: Note sulla versione di Adobe Experience Platform di marzo 2023.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2081'
-ht-degree: 97%
+source-wordcount: '2020'
+ht-degree: 93%
 
 ---
 
@@ -20,7 +20,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Preparazione dei dati](#data-prep)
 - [Destinazioni](#destinations)
 - [Experience Data Model](#xdm)
-- [Servizio query](#query-service)
+- [Servizio Query Service](#query-service)
 - [Edizione B2B di Real-Time Customer Data Platform](#b2b)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
@@ -79,7 +79,7 @@ Per ulteriori informazioni sulla preparazione dei dati, consulta [Panoramica sul
 | [[!DNL Adobe Commerce] connessione GA](../../destinations/catalog/personalization/adobe-commerce.md) | Il connettore di destinazione [!DNL Adobe Commerce] (ora generalmente disponibile) consente di selezionare uno o più tipi di pubblico Real-Time CDP da attivare nell’account [!DNL Adobe Commerce] per offrire agli acquirenti un’esperienza dinamica e personalizzata. |
 | [[!DNL Snap Inc] connessione GA](../../destinations/catalog/advertising/snap-inc.md) | Il connettore di destinazione [!DNL Snap Inc] (ora generalmente disponibile) consente ai marketer di importare i segmenti utente creati in Experience Platform in [!DNL Snapchat Ads] e utilizzarli per eseguire il targeting dei loro annunci. |
 | [Connessione Eloqua Oracle (API)](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Utilizza la connessione [!DNL Oracle Eloqua] basata su API per pianificare ed eseguire campagne offrendo un’esperienza personalizzata per i potenziali clienti in [!DNL Oracle Eloqua]. |
-|  [!DNL Amazon Ads] connessione[&#128279;](../../destinations/catalog/advertising/amazon-ads.md)(Beta) | L’integrazione di [!DNL Amazon Ads] con Adobe Experience Platform fornisce integrazione diretta con i prodotti di [!DNL Amazon Ads], tra cui [!DNL Amazon DSP (ADSP)]. Utilizzando la destinazione [!DNL Amazon Ads] in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione su [!DNL Amazon DSP]. |
+|  [!DNL Amazon Ads] connessione](../../destinations/catalog/advertising/amazon-ads.md)[(Beta) | L’integrazione di [!DNL Amazon Ads] con Adobe Experience Platform fornisce integrazione diretta con i prodotti di [!DNL Amazon Ads], tra cui [!DNL Amazon DSP (ADSP)]. Utilizzando la destinazione [!DNL Amazon Ads] in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione su [!DNL Amazon DSP]. |
 | [[!DNL Marketo Measure Ultimate] connessione](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (precedentemente Bizible) offre ai marketer approfondimenti sulle iniziative di marketing più efficaci per aumentare i ricavi e ottimizzare il ritorno sull’investimento per l’azienda. La destinazione consente il flusso di dati business-to-business (B2B) da Adobe Experience Platform a [!DNL Marketo Measure]. La scheda è disponibile solo per la clientela di [!DNL Marketo Measure Ultimate]. |
 | [Connessione TikTok](../../destinations/catalog/social/tiktok.md) | Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. |
 | [Connessione Zendesk](../../destinations/catalog/crm/zendesk.md) | Utilizza questa destinazione per creare e aggiornare le identità all’interno di un segmento come contatti in [!DNL Zendesk]. |
@@ -94,7 +94,7 @@ Per ulteriori informazioni sulla preparazione dei dati, consulta [Panoramica sul
 
 {style="table-layout:auto"}
 
-**Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
+**Correzioni e miglioramenti** {#destinations-fixes-and-enhancements}
 
 Stiamo rilasciando una correzione di bug per la crittografia PGP/GPG nelle destinazioni basate su file per Real-Time CDP. Con questa modifica, le destinazioni esistenti basate su file che attualmente utilizzano la crittografia genereranno un nome file con un’estensione diversa da quella precedente.
 
@@ -111,7 +111,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Consiglio da CSV a schema | Ora puoi caricare i file locali per creare schemi generati dall’apprendimento automatico che eliminano la necessità di creare manualmente uno schema. Dall’area di lavoro [!UICONTROL Origini], carica un file CSV di esempio e gli algoritmi di apprendimento automatico di Adobe ti suggeriranno uno schema basato sui campi di destinazione. Per ulteriori informazioni, consulta la [documentazione](../../ingestion/tutorials/map-csv/recommendations.md).” |
+| Consiglio da CSV a schema | Ora puoi caricare i file locali per creare schemi generati dall’apprendimento automatico che eliminano la necessità di creare manualmente uno schema. Dall&#39;area di lavoro [!UICONTROL Sources], carica un file CSV di esempio e gli algoritmi di apprendimento automatico di Adobe ti suggeriranno uno schema basato sui campi di destinazione. Per ulteriori informazioni, consulta la [documentazione](../../ingestion/tutorials/map-csv/recommendations.md).” |
 
 {style="table-layout:auto"}
 
@@ -119,13 +119,13 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Elemento offerta]](https://github.com/adobe/xdm/pull/1678/files) | Classe che rappresenta un’offerta. |
-| Classe | [[!UICONTROL Elemento decisione]](https://github.com/adobe/xdm/pull/1678/files) | Un elemento che può essere soggetto a decisioning. L’output di un processo di decisioning è uno o più elementi decisionali. |
-| Classe | [[!UICONTROL Timeout del server della sessione multimediale]](https://github.com/adobe/xdm/pull/1676/files) | Indica il tempo, in secondi, trascorso tra l’ultima interazione nota dell’utente e il momento in cui la sessione è stata chiusa. |
-| Gruppo di campi | [[!UICONTROL Attributi calcolati del profilo XDM]](https://github.com/adobe/xdm/pull/1686/files) | Questo aggiunge attributi calcolati dai servizi interni di Adobe ai dati della clientela in arrivo. La clientela non deve utilizzarlo per acquisire i dati. |
-| Tipo di dati | [[!UICONTROL Elemento rimborso]](https://github.com/adobe/xdm/pull/1685/files) | Indica se un rimborso è associato a un ordine e ne definisce il tipo, l’importo e la valuta associata. |
-| Tipo di dati | [[!UICONTROL Dati categoria]](https://github.com/adobe/xdm/pull/1677/files) | Questo nuovo tipo di dati rappresenta la categoria di un prodotto. |
-| Schema | [[!UICONTROL Campi di classificazione di Adobe Target]](https://github.com/adobe/xdm/pull/1682/files) | È stato creato un nuovo schema XDM per i set di dati di classificazione di Target. Contiene un set di campi di metadati che classificano le attività ed esperienze di Target. |
+| Classe | [[!UICONTROL Offer Item]](https://github.com/adobe/xdm/pull/1678/files) | Classe che rappresenta un’offerta. |
+| Classe | [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1678/files) | Un elemento che può essere soggetto a decisioning. L’output di un processo di decisioning è uno o più elementi decisionali. |
+| Classe | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | Indica il tempo, in secondi, trascorso tra l’ultima interazione nota dell’utente e il momento in cui la sessione è stata chiusa. |
+| Gruppo di campi | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | Questo aggiunge attributi calcolati dai servizi interni di Adobe ai dati della clientela in arrivo. La clientela non deve utilizzarlo per acquisire i dati. |
+| Tipo di dati | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Indica se un rimborso è associato a un ordine e ne definisce il tipo, l’importo e la valuta associata. |
+| Tipo di dati | [[!UICONTROL Category data]](https://github.com/adobe/xdm/pull/1677/files) | Questo nuovo tipo di dati rappresenta la categoria di un prodotto. |
+| Schema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | È stato creato un nuovo schema XDM per i set di dati di classificazione di Target. Contiene un set di campi di metadati che classificano le attività ed esperienze di Target. |
 
 {style="table-layout:auto"}
 
@@ -133,16 +133,16 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Gruppo di campi | [[!UICONTROL Dettagli del componente di contenuto]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` è stato rimosso dai [!UICONTROL Dettagli del componente di contenuto] |
-| Gruppo di campi | [[!UICONTROL Tag di entità AJO]](https://github.com/adobe/xdm/pull/1672/files) | Sono stati aggiunti tag di entità AJO ai [!UICONTROL Campi entità AJO] che corrispondono a un percorso o a una campagna |
-| Gruppo di campi | (Multiplo) | Sono stati aggiunti diversi campi per i [[!UICONTROL Campi comuni dell’evento passaggio di Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
-| Gruppo di campi | (Multiplo) | [Sono stati aggiunti diversi tipi di evento XDM per il [!UICONTROL Reporting sui file multimediali]](https://github.com/adobe/xdm/pull/1670/files). |
-| Gruppo di campi | [!UICONTROL Evento modifica di Workfront] | Sono stati aggiunti i gruppi di campo `Full Record` e `Accessor Employee Ids`. |
-| Tipo di dati | [[!UICONTROL Elemento dell’elenco prodotti]](https://github.com/adobe/xdm/pull/1685/files) | L’[!UICONTROL Importo del rimborso] è stato aggiunto per indicare l’importo rimborsato per l’elemento, se presente. |
-| Tipo di dati | [[!UICONTROL Ordine &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | L’[!UICONTROL Elenco rimborsi] è stato aggiunto all’elenco dei rimborsi per questo ordine. |
-| Tipo di dati | [[!UICONTROL Elemento elenco prodotti &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Le categorie di prodotti sono state aggiunte all’elenco dei dati delle categorie di questo prodotto. |
-| Tipo di dati | [!UICONTROL Informazioni sui dettagli della sessione] | È stato aggiunto il campo stringa `pev3` che [indica il tipo di flusso multimediale utilizzato per il reporting](https://github.com/adobe/xdm/pull/1676/files). È stata aggiunta anche la proprietà `pccr` che indica se si è verificato un reindirizzamento. |
-| Tipo di dati | [!UICONTROL Elenco richieste] | Fornisce le [proprietà dell’elenco richieste](https://github.com/adobe/xdm/pull/1675/files). Includono nome, ID e descrizione. |
+| Gruppo di campi | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` è stato rimosso da [!UICONTROL Content Component Details] |
+| Gruppo di campi | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files) | Aggiunti tag di entità AJO a [!UICONTROL AJO Entity Fields], che corrispondono a un Percorso o a una campagna |
+| Gruppo di campi | (Multiplo) | Sono stati aggiunti diversi campi per [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) |
+| Gruppo di campi | (Multiplo) | [Sono stati aggiunti diversi tipi di evento XDM per [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files). |
+| Gruppo di campi | [!UICONTROL Workfront Change Event] | Sono stati aggiunti i gruppi di campo `Full Record` e `Accessor Employee Ids`. |
+| Tipo di dati | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | Il [!UICONTROL Refund Amount] è stato aggiunto per indicare l&#39;importo rimborsato per l&#39;articolo, se presente. |
+| Tipo di dati | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] è stato aggiunto all&#39;elenco dei rimborsi per questo ordine. |
+| Tipo di dati | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Le categorie di prodotti sono state aggiunte all’elenco dei dati delle categorie di questo prodotto. |
+| Tipo di dati | [!UICONTROL Session details information] | È stato aggiunto il campo stringa `pev3` che [indica il tipo di flusso multimediale utilizzato per il reporting](https://github.com/adobe/xdm/pull/1676/files). È stata aggiunta anche la proprietà `pccr` che indica se si è verificato un reindirizzamento. |
+| Tipo di dati | [!UICONTROL Requisition List] | Fornisce le [proprietà dell’elenco richieste](https://github.com/adobe/xdm/pull/1675/files). Includono nome, ID e descrizione. |
 | Tipo di dati | [!UICONTROL Commerce] | Il tipo di dati [Commerce è stato aggiornato](https://github.com/adobe/xdm/pull/1675/files) per includere `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` e `requisitionList`. |
 
 {style="table-layout:auto"}
@@ -151,7 +151,7 @@ Per ulteriori informazioni su XDM in Experience Platform, consulta la [Panoramic
 
 ## Query Service {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
+Il servizio Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 
@@ -161,7 +161,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sul Servizio query, consulta la [Panoramica sul servizio query](../../query-service/home.md).
+Per ulteriori informazioni sul servizio Query Service, consulta la [Panoramica su Query Service](../../query-service/home.md).
 
 ## Edizione B2B di Real-Time Customer Data Platform {#b2b}
 
@@ -185,7 +185,7 @@ Per ulteriori informazioni sull’edizione B2B di Real-Time CDP, consulta la [Pa
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Metriche del profilo | Per ottenere una rappresentazione più precisa delle metriche del profilo, vengono combinate le metriche di raggruppamento delle appartenenze e di abbandono e ora sono calcolate in un periodo di 24 ore. Ulteriori informazioni sono disponibili nella [Guida all’interfaccia utente di segmentazione](../../segmentation/ui/overview.md#browse) |
+| Metriche del profilo | Per ottenere una rappresentazione più precisa delle metriche del profilo, vengono combinate le metriche di raggruppamento delle appartenenze e di abbandono, che ora sono calcolate in un periodo di 24 ore. Ulteriori informazioni sono disponibili nella [Guida all’interfaccia utente di segmentazione](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
