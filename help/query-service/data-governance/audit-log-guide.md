@@ -2,7 +2,7 @@
 title: Integrazione del registro di controllo di Query Service
 description: I registri di audit di Query Service conservano i record relativi a varie azioni dell’utente per formare un audit trail per la risoluzione dei problemi o il rispetto delle politiche aziendali di gestione dei dati e dei requisiti normativi. Questa esercitazione fornisce una panoramica delle funzioni del registro di controllo specifiche di Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
