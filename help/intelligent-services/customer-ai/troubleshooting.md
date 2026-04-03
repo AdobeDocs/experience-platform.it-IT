@@ -6,20 +6,20 @@ title: Risoluzione dei problemi di IA per l’analisi dei clienti
 description: Trova le risposte agli errori comuni in IA per l’analisi dei clienti.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
 
 # Risoluzione dei problemi di IA per l’analisi dei clienti
 
-IA per l’analisi dei clienti visualizza gli errori quando l’apprendimento del modello, il punteggio e la configurazione non riescono. Nella sezione **[!UICONTROL Istanze del servizio]**, una colonna per **[!UICONTROL STATO ULTIMA ESECUZIONE]** visualizza uno dei seguenti messaggi: **[!UICONTROL Operazione completata]**, **[!UICONTROL Problema di formazione]** e **[!UICONTROL Operazione non riuscita]**.
+IA per l’analisi dei clienti visualizza gli errori quando l’apprendimento del modello, il punteggio e la configurazione non riescono. Nella sezione **[!UICONTROL Service instances]** una colonna per **[!UICONTROL LAST RUN STATUS]** visualizza uno dei messaggi seguenti: **[!UICONTROL Success]**, **[!UICONTROL Training issue]** e **[!UICONTROL Failed]**.
 
 ![Stato ultima esecuzione che mostra esito positivo, problema di formazione o errore.](./images/errors/last-run-status.png)
 
-Se viene visualizzato **[!UICONTROL Non riuscito]** o **[!UICONTROL Problema di formazione]**, puoi selezionare lo stato di esecuzione per aprire un pannello laterale. Il pannello laterale contiene **[!UICONTROL Stato ultima esecuzione]** e **[!UICONTROL Dettagli ultima esecuzione]**. **[!UICONTROL Dettagli ultima esecuzione]** contiene informazioni sul motivo per cui l&#39;esecuzione non è riuscita. Nel caso in cui Customer AI non sia in grado di fornire dettagli sull’errore, contatta il supporto con il codice di errore fornito.
+Se viene visualizzato **[!UICONTROL Failed]** o **[!UICONTROL Training issue]**, è possibile selezionare lo stato di esecuzione per aprire un pannello laterale. Il pannello laterale contiene **[!UICONTROL Last run status]** e **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contiene informazioni sul motivo dell&#39;errore di esecuzione. Nel caso in cui Customer AI non sia in grado di fornire dettagli sull’errore, contatta il supporto con il codice di errore fornito.
 
 ![](./images/errors/last-run-details.png){width=300}
 
@@ -37,7 +37,7 @@ Per risolvere questo problema è necessario aggiungere experience.adobe.com come
 
 ## La qualità del modello è scarsa
 
-Se ricevi l&#39;errore &quot;[!UICONTROL La qualità del modello è scarsa. È consigliabile creare una nuova app con la configurazione modificata]&quot;. Segui i passaggi consigliati di seguito per facilitare la risoluzione dei problemi.
+Se ricevi l&#39;errore &quot;[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]&quot;. Segui i passaggi consigliati di seguito per facilitare la risoluzione dei problemi.
 
 ![](./images/errors/model-quality.png){width=300}
 
@@ -73,4 +73,4 @@ Se la limitazione della popolazione di idoneità non ha funzionato o non è poss
 | 411 | NESSUN DATO DI INPUT DOPO ETL | Non sono disponibili dati sul comportamento utente o sul profilo per il modello da utilizzare tra `{{etl_start_date}}` e `{{etl_end_date}}`. Assicurati che il set di dati disponga di dati sufficienti. (Codice di errore: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) | Non sono disponibili dati sul comportamento degli utenti o sul profilo per il modello da utilizzare tra il 2020-04-01 e il 2021-04-01. Assicurati che il set di dati disponga di dati sufficienti. (Codice di errore: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) |
 | 412 | NESSUN EVENTO DOPO ETL | Non sono disponibili dati sul comportamento dell&#39;utente per il modello da utilizzare tra `{{etl_start_date}}` e `{{etl_end_date}}`. Assicurati che il set di dati disponga di dati sufficienti. | Non sono disponibili dati sul comportamento degli utenti per il modello da utilizzare tra il 2020-04-01 e il 2021-04-01. Assicurati che il set di dati disponga di dati sufficienti. (Codice di errore: VALIDATION-412 NO_EVENT_DATA_AFTER_ETL) |
 | 413 | VALORE SINGOLO NELL’OBIETTIVO | CustomerAI richiede che il set di dati disponga di eventi sia qualificati che non qualificati per la definizione dell’obiettivo di previsione. Il set di dati di input contiene solo eventi qualificati compresi tra `{{etl_window_start}}` e `{{etl_window_end}}`. <br><br>Soluzioni suggerite: <br>1. Modificare la definizione dell&#39;obiettivo di previsione <br>2. Verifica la completezza dei dati o utilizza un diverso che includa esempi di eventi non qualificati per l’obiettivo di previsione (Codice di errore: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE) | CustomerAI richiede che il set di dati disponga di eventi sia qualificati che non qualificati per la definizione dell’obiettivo di previsione. Il set di dati di input contiene solo eventi qualificati tra il 2020-04-01 e il 2021-04-01.<br><br>Soluzioni suggerite:<br>1. Modifica la definizione dell’obiettivo di previsione.<br>2. Verifica la completezza dei dati o utilizza un diverso che includa esempi di eventi non qualificati per l’obiettivo di previsione. (Codice di errore: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE) |
-| 414 | NESSUN FATTORE INFLUENTE | Il modello del fattore influente ha generato un output imprevisto. È consigliabile creare una nuova app con una configurazione modificata. (Codice di errore: VALIDATION-414 NO_INFLUENTIAL_FACTOR) | Il modello del fattore influente ha generato un output imprevisto. È consigliabile creare una nuova app con una configurazione modificata. (Codice di errore: VALIDATION-414 NO_INFLUENTIAL_FACTOR) |
+| 414  | NESSUN FATTORE INFLUENTE | Il modello del fattore influente ha generato un output imprevisto. È consigliabile creare una nuova app con una configurazione modificata. (Codice di errore: VALIDATION-414 NO_INFLUENTIAL_FACTOR) | Il modello del fattore influente ha generato un output imprevisto. È consigliabile creare una nuova app con una configurazione modificata. (Codice di errore: VALIDATION-414 NO_INFLUENTIAL_FACTOR) |
