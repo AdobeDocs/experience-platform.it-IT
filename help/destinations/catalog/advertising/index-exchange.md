@@ -3,7 +3,7 @@ title: Scambio indice
 description: Connettiti a Index Exchange (Index) e attiva i dati in modo che i segmenti di pubblico possano essere targetizzati da offerte create nell’interfaccia utente dell’indice.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 3%
@@ -89,7 +89,7 @@ Tipi di pubblico supportati per tipo di dati sul pubblico:
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
-| --------- | ---------- | --------- | 
+| --------- | ---------- | --------- |
 | Tipo di esportazione | **[!UICONTROL Segment export]** | Esporta tutti i membri di un segmento (pubblico) con gli identificatori (IDFA, GAID o altri) utilizzati nella destinazione [!DNL Index Exchange]. |
 | Frequenza di esportazione | **[!UICONTROL Batch]** | Esporta i file nelle piattaforme a valle a intervalli di 3, 6, 8, 12 o 24 ore. Ulteriori informazioni sulle [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
 
@@ -99,7 +99,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [&#128279;](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario disporre dell&#39;autorizzazione di controllo di accesso **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [](/help/access-control/home.md#permissions). Leggi la [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) o contatta l&#39;amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;esercitazione [sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
