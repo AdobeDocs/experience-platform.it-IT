@@ -3,7 +3,7 @@ title: Endpoint tag unificato
 description: Scopri come creare, aggiornare, gestire ed eliminare categorie e tag utilizzando le API di Adobe Experience Platform.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
@@ -34,7 +34,7 @@ Il glossario seguente evidenzia la differenza tra un **tag** e una **categoria d
 
 ## Recuperare un elenco di categorie di tag {#get-tag-categories}
 
-Per recuperare un elenco di categorie di tag appartenenti alla tua organizzazione, devi effettuare una richiesta GET all&#39;endpoint `/tagCategory`.
+Per recuperare un elenco di categorie di tag appartenenti alla tua organizzazione, devi eseguire una richiesta GET all&#39;endpoint `/tagCategory`.
 
 **Formato API**
 
@@ -45,7 +45,7 @@ GET /tagCategory?{QUERY_PARAMETERS}
 
 Per recuperare le categorie di tag è possibile utilizzare i seguenti parametri di query facoltativi.
 
-| Parametro query | Descrizione | Esempio |
+| Parametri query | Descrizione | Esempio |
 | --------------- | ----------- | ------- |
 | `start` | Percorso da cui inizia l’elenco dei risultati. È possibile utilizzarlo per indicare l’indice iniziale per l’impaginazione dei risultati. | `start=a` |
 | `limit` | Il numero massimo di categorie di tag che si desidera recuperare per pagina. | `limit=20` |
@@ -71,7 +71,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di tutte le categorie di tag per l’organizzazione.
 
-+++Risposta di esempio contenente un elenco di tutte le categorie di tag dell’organizzazione.
++++Una risposta di esempio contenente un elenco di tutte le categorie di tag dell’organizzazione.
 
 ```json
 {
@@ -159,7 +159,7 @@ Una risposta di esempio restituisce lo stato HTTP 200 con i dettagli della categ
 
 ## Recuperare una categoria di tag specifica {#get-tag-category}
 
-Per recuperare una categoria di tag specifica che appartiene alla tua organizzazione, devi effettuare una richiesta di GET all&#39;endpoint `/tagCategory` e specificare l&#39;ID della categoria di tag.
+Per recuperare una categoria di tag specifica che appartiene alla tua organizzazione, devi eseguire una richiesta GET all&#39;endpoint `/tagCategory` e specificare l&#39;ID della categoria di tag.
 
 **Formato API**
 
@@ -323,7 +323,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a u
 
 ## Recuperare un elenco di tag {#get-tags}
 
-Per recuperare un elenco di tag appartenenti alla tua organizzazione, devi effettuare una richiesta di GET all&#39;endpoint `/tags` e all&#39;ID della categoria di tag.
+Per recuperare un elenco di tag appartenenti alla tua organizzazione, devi effettuare una richiesta GET all&#39;endpoint `/tags` e all&#39;ID della categoria di tag.
 
 **Formato API**
 
@@ -334,7 +334,7 @@ GET /tags?{QUERY_PARAMETERS}
 
 Durante il recupero dei tag è possibile utilizzare i seguenti parametri di query facoltativi.
 
-| Parametro query | Descrizione | Esempio |
+| Parametri query | Descrizione | Esempio |
 | --------------- | ----------- | ------- |
 | `start` | Percorso da cui inizia l’elenco dei risultati. È possibile utilizzarlo per indicare l’indice iniziale per l’impaginazione dei risultati. | `start=a` |
 | `limit` | Il numero massimo di tag da recuperare per pagina. | `limit=20` |
@@ -542,7 +542,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i dettagli del tag appena creato.
 
-+++Risposta di esempio contenente i dettagli del tag appena creato.
++++Una risposta di esempio che contiene i dettagli del tag appena creato.
 
 ```json
 {
@@ -575,7 +575,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 
 ## Recuperare un tag specifico {#get-tag}
 
-Per recuperare un tag specifico appartenente alla tua organizzazione, devi eseguire una richiesta di GET all&#39;endpoint `/tags` e specificare l&#39;ID del tag da recuperare.
+Per recuperare un tag specifico appartenente alla tua organizzazione, devi eseguire una richiesta GET all&#39;endpoint `/tags` e specificare l&#39;ID del tag da recuperare.
 
 **Formato API**
 
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del tag specificato.
 
-+++Risposta di esempio contenente i dettagli del tag specificato.
++++Risposta di esempio contenente i dettagli del tag specificato. 
 
 ```json
 {
