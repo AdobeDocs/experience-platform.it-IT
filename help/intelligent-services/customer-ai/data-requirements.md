@@ -6,9 +6,9 @@ title: Requisiti dei dati in Customer AI
 topic-legacy: Getting started
 description: Scopri di più sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2539'
 ht-degree: 1%
 
 ---
@@ -49,8 +49,8 @@ IA per l’analisi dei clienti funziona analizzando i seguenti set di dati per p
 
 - Dati di Adobe Analytics tramite il [connettore di origine di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Dati Adobe Audience Manager tramite il [connettore di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Set di dati evento esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=it)
-- [Set di dati evento esperienza del consumatore](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=it#cee-schema)
+- [Set di dati evento esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Set di dati evento esperienza del consumatore](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 Puoi aggiungere più set di dati da origini diverse se ciascuno di essi condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Per ulteriori informazioni sull&#39;aggiunta di più set di dati, visita la [guida utente di IA per l&#39;analisi dei clienti](../customer-ai/user-guide/configure.md).
 
@@ -91,29 +91,29 @@ Gli Eventi di esperienza vengono utilizzati per determinare i vari comportamenti
 
 IA per l’analisi dei clienti utilizza gli eventi in questi quattro gruppi di campi standard per impostazione predefinita: Commerce, Web, Application e Search. Non è necessario disporre di dati per ogni evento nei gruppi di campi standard elencati di seguito, ma per alcuni scenari sono richiesti determinati eventi. Se sono disponibili eventi nei gruppi di campi standard, si consiglia di includerli nello schema. Ad esempio, se desideri creare un modello di IA per l’analisi dei clienti per prevedere gli eventi di acquisto, è utile disporre di dati dai gruppi di campi Commerce e Dettagli pagina web.
 
-Per visualizzare un gruppo di campi nell&#39;interfaccia utente di Experience Platform, seleziona la scheda **[!UICONTROL Schemi]** nella barra a sinistra, quindi la scheda **[!UICONTROL Gruppi di campi]**.
+Per visualizzare un gruppo di campi nell&#39;interfaccia utente di Experience Platform, seleziona la scheda **[!UICONTROL Schemas]** nella barra a sinistra, quindi la scheda **[!UICONTROL Field groups]**.
 
 | Gruppo di campi | Tipo di evento | Percorso campo XDM |
 | --- | --- | --- |
-| [!UICONTROL Dettagli Commerce] | ordine | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Commerce Details] | ordine | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | checkout | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | acquisti | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Dettagli Web] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
-| [!UICONTROL Dettagli applicazione] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashed | <li> `application.crashes.value` </li> <li> `application.name` </li> |
 |  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
 |  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Dettagli ricerca] | ricerca | `search.keywords` |
+| [!UICONTROL Search Details] | ricerca | `search.keywords` |
 
-Inoltre, IA per l’analisi dei clienti può utilizzare i dati di abbonamento per generare modelli di abbandono migliori. I dati della sottoscrizione sono necessari per ogni profilo che utilizza il formato del tipo di dati [[!UICONTROL Sottoscrizione]](../../xdm/data-types/subscription.md). La maggior parte dei campi è facoltativa. Tuttavia, per un modello di abbandono ottimale, è consigliabile fornire i dati per il maggior numero possibile di campi, ad esempio `startDate`, `endDate` e qualsiasi altro dettaglio rilevante. Rivolgiti al team del tuo account per ulteriore supporto su questa funzione.
+Inoltre, IA per l’analisi dei clienti può utilizzare i dati di abbonamento per generare modelli di abbandono migliori. I dati di abbonamento sono necessari per ogni profilo che utilizza il formato del tipo di dati [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md). La maggior parte dei campi è facoltativa. Tuttavia, per un modello di abbandono ottimale, è consigliabile fornire i dati per il maggior numero possibile di campi, ad esempio `startDate`, `endDate` e qualsiasi altro dettaglio rilevante. Rivolgiti al team del tuo account per ulteriore supporto su questa funzione.
 
 ### Aggiunta di eventi personalizzati e attributi di profilo {#add-custom-events}
 
@@ -135,7 +135,7 @@ I migliori candidati per gli eventi personalizzati sono i dati che contengono co
 
 - Registrati per l&#39;account
 
-- Abbonati alla newsletter
+- Iscriviti alla newsletter
 
 - Effettuare una chiamata al servizio clienti
 
@@ -219,7 +219,7 @@ La tabella seguente descrive i vari attributi trovati nell’output di Customer 
 
 | Attributo | Descrizione |
 | ----- | ----------- |
-| [!UICONTROL Punteggio] | La probabilità relativa che un cliente raggiunga l’obiettivo previsto entro l’intervallo di tempo definito. Questo valore non deve essere considerato come percentuale di probabilità, ma piuttosto la probabilità di un individuo rispetto alla popolazione complessiva. Questo punteggio è compreso tra 0 e 100. |
+| [!UICONTROL Score] | La probabilità relativa che un cliente raggiunga l’obiettivo previsto entro l’intervallo di tempo definito. Questo valore non deve essere considerato come percentuale di probabilità, ma piuttosto la probabilità di un individuo rispetto alla popolazione complessiva. Questo punteggio è compreso tra 0 e 100. |
 | Probabilità | Questo attributo rappresenta la reale probabilità che un profilo raggiunga l’obiettivo previsto entro l’intervallo di tempo definito. Quando confronti gli output tra obiettivi diversi, ti consigliamo di considerare la probabilità rispetto al percentile o al punteggio. La probabilità deve sempre essere utilizzata per determinare la probabilità media in tutta la popolazione ammissibile, poiché la probabilità tende a essere sul lato inferiore per gli eventi che non si verificano frequentemente. I valori per l’intervallo di probabilità sono compresi tra 0 e 1. |
 | Percentile | Questo valore fornisce informazioni sulle prestazioni di un profilo rispetto ad altri profili con punteggio simile. Ad esempio, un profilo con un livello percentile di 99 per abbandono indica che è a maggior rischio di abbandono rispetto al 99% di tutti gli altri profili valutati. I percentili sono compresi tra 1 e 100. |
 | Tipo tendenza | Tipo di propensione selezionato. |
