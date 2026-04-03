@@ -4,7 +4,7 @@ description: Scopri i dettagli del modello in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
@@ -104,7 +104,7 @@ La sezione Architettura del modello e formazione descrive il blueprint del model
 | --- | --- | --- |
 | Quale architettura utilizza il modello? | Il tipo di rete neurale, il metodo del gruppo, ecc. | Il modello sfrutta gli alberi decisionali di incremento delle sfumature (GBDT) utilizzando XGBoost, ottimizzati per i dati strutturati. Viene addestrato sulle sequenze storiche di eventi dei clienti per identificare i modelli comportamentali predittivi. |
 | Quali algoritmi sono stati applicati? | Le tecniche di apprendimento automatico utilizzate. | Il modello è costruito utilizzando un approccio di apprendimento supervisionato, sfruttando gli alberi decisionali di incremento del gradiente (GBDT) con XGBoost come algoritmo di apprendimento principale. Inoltre, la regressione logistica è incorporata come modello di base per il benchmarking della precisione predittiva. |
-| Quali framework di formazione sono stati utilizzati? | Le librerie o le piattaforme utilizzate per la formazione. | Il modello è stato sviluppato utilizzando TensorFlow, XGBoost e scikit-learn. La formazione viene eseguita sull’infrastruttura cloud Adobe AI utilizzando le GPU NVIDIA V100 e supportando set di dati su larga scala. |
+| Quali framework di formazione sono stati utilizzati? | Le librerie o le piattaforme utilizzate per la formazione. | Il modello è stato sviluppato utilizzando TensorFlow, XGBoost e scikit-learn. La formazione viene eseguita sull&#39;infrastruttura cloud Adobe AI utilizzando le GPU NVIDIA V100 e supportando i dataset su larga scala. |
 | Quali risorse di elaborazione sono state utilizzate per la formazione? | Risorse hardware e cloud utilizzate per la formazione. | GPU NVIDIA V100, formazione sull&#39;infrastruttura Google Cloud. |
 | Quali metodi di valutazione sono stati utilizzati? | Le metriche e le procedure di test utilizzate per la valutazione. | AUC-ROC, precisione-richiamo e validazione incrociata. |
 
