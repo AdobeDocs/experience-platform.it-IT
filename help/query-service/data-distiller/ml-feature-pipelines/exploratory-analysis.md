@@ -2,7 +2,7 @@
 title: Analisi esplorativa dei dati
 description: Scopri come utilizzare Data Distiller per esplorare e analizzare i dati da un notebook Python.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 13%
@@ -103,9 +103,9 @@ print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 Approximate count: 1284600.0 using 5.0% sample
 ```
 
-## Analisi del funnel e-mail {#email-funnel-analysis}
+## Analisi di E-mail funnel {#email-funnel-analysis}
 
-Un’analisi funnel è un metodo per comprendere i passaggi necessari per raggiungere un risultato target e quanti utenti passano attraverso ciascuno di questi passaggi. L’esempio seguente illustra una semplice analisi funnel dei passaggi che conducono l’utente ad abbonarsi a una newsletter. Il risultato della sottoscrizione è rappresentato da un tipo di evento `web.formFilledOut`.
+Un’analisi funnel è un metodo per comprendere i passaggi necessari per raggiungere un risultato target e quanti utenti riescono a superare ciascuno di questi passaggi. L’esempio seguente illustra una semplice analisi funnel dei passaggi che conducono un utente ad abbonarsi a una newsletter. Il risultato della sottoscrizione è rappresentato da un tipo di evento `web.formFilledOut`.
 
 Innanzitutto, esegui una query per ottenere il numero di utenti a ogni passaggio.
 
@@ -152,7 +152,7 @@ fig.show()
 
 **Output di esempio**
 
-![Infografica del funnel e-mail eventType.](../../images/data-distiller/email-funnel.png)
+![Infografica dell&#39;e-mail eventType funnel.](../../images/data-distiller/email-funnel.png)
 
 ## Correlazioni tra eventi {#event-correlations}
 
@@ -234,7 +234,7 @@ corrdf.fillna(0)
 
 **Output di esempio**:
 
-|    | variabile | valore | funzionalità | pearsonCorrelation |
+|    | variabile | value | funzionalità | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
 | 0 | `webForms_EmailOpens` | 0,218874 | Aperture e-mail | 0,218874 |
 | 1 | `webForms_advertisingClicks` | 0,026805 | advertisingClicks | 0,026805 |
@@ -262,4 +262,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai imparato a utilizzare Data Distiller per esplorare e analizzare i dati di un blocco appunti [!DNL Python]. Il passaggio successivo nella creazione di pipeline di funzionalità da Experience Platform per alimentare modelli personalizzati nell&#39;ambiente di apprendimento automatico è [funzionalità di ingegneria per l&#39;apprendimento automatico](./feature-engineering.md).
+Dopo aver letto questo documento, hai imparato a utilizzare Data Distiller per esplorare e analizzare i dati di un blocco appunti [!DNL Python]. Il passaggio successivo nella creazione di pipeline di funzioni da Experience Platform per alimentare modelli personalizzati nell&#39;ambiente di apprendimento automatico è [funzionalità ingegneristiche per l&#39;apprendimento automatico](./feature-engineering.md).
