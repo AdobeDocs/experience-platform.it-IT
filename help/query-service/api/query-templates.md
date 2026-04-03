@@ -5,7 +5,7 @@ title: Endpoint API per modelli di query
 description: Questa guida descrive le varie chiamate API dei modelli di query che puoi effettuare utilizzando l’API di Query Service.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare utilizzando l&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-Per informazioni sulla creazione di modelli tramite l&#39;interfaccia utente di Experience Platform, vedere la [documentazione dei modelli di query dell&#39;interfaccia utente](../ui/query-templates.md).
+Per informazioni sulla creazione di modelli tramite l&#39;interfaccia utente di Experience Platform, consulta la [documentazione sui modelli di query dell&#39;interfaccia utente](../ui/query-templates.md).
 
 ### Recuperare un elenco di modelli di query
 
@@ -44,7 +44,7 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;e
 | `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base alla creazione in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
 | `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata alcuna data di inizio, la chiamata API restituirà prima i modelli creati più datati, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. I timestamp ISO di base assumono il formato di: `2020-09-07` per esprimere la data 7 settembre 2020. Un esempio più complesso verrebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30, ora standard orientale USA. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
-| `property` | Filtra i risultati in base ai campi. I filtri **devono** avere escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L&#39;unico operatore supportato è `==` (uguale a). Ad esempio, `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
+| `property` | Filtra i risultati in base ai campi. I filtri **devono** essere con escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `name` e `userId`. L&#39;unico operatore supportato è `==` (uguale a). Ad esempio, `name==my_template` restituirà tutti i modelli di query con il nome `my_template`. |
 
 **Richiesta**
 
@@ -180,7 +180,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accettato)
 
 ### Recuperare un modello di query specificato
 
-È possibile recuperare un modello di query specifico effettuando una richiesta di GET all&#39;endpoint `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
+È possibile recuperare un modello di query specifico effettuando una richiesta GET all&#39;endpoint `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```
 
 | Proprietà | Descrizione |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{TEMPLATE_ID}` | Valore `id` del modello di query che si desidera recuperare. |
 
 **Richiesta**
@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La richiesta PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrive** il contenuto corrente del modello di query.
+>La richiesta di PUT richiede la compilazione sia del campo sql che del campo name e **sovrascrive** il contenuto corrente del modello di query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
