@@ -2,9 +2,9 @@
 title: Panoramica del dashboard di monitoraggio
 description: Scopri come utilizzare il dashboard di monitoraggio nell’interfaccia utente di Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: cca405c58551a52a044ac513921298637974e88e
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -38,11 +38,11 @@ Questo documento richiede una buona conoscenza dei seguenti componenti di Experi
 
 ## Guida al dashboard di monitoraggio
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Monitoraggio]** in [!UICONTROL Gestione dati] nell&#39;area di navigazione a sinistra.
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Monitoring]** in [!UICONTROL Data Management] nel menu di navigazione a sinistra.
 
 ![Dashboard di monitoraggio nell&#39;interfaccia utente di Experience Platform.](../assets/ui/monitor-overview/monitoring.png)
 
-Selezionare **[!UICONTROL Tipo di dati]**, quindi utilizzare il menu a discesa per selezionare il tipo di dati che si desidera visualizzare. I tipi di dati sono definiti dalle classi dello schema Experience Data Model (XDM) per garantire che i loro dati seguano un formato standard quando vengono acquisiti in Experience Platform. Per ulteriori informazioni, consulta la seguente documentazione:
+Selezionare **[!UICONTROL Data Type]** e quindi utilizzare il menu a discesa per selezionare il tipo di dati che si desidera visualizzare. I tipi di dati sono definiti dalle classi dello schema Experience Data Model (XDM) per garantire che i loro dati seguano un formato standard quando vengono acquisiti in Experience Platform. Per ulteriori informazioni, consulta la seguente documentazione:
 
 * [Tipo di dati dell’account B2B](../../rtcdp/b2b-tutorial.md)
 * [Tipo di dati del potenziale cliente](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ Puoi filtrare la vista in base ai seguenti tipi di dati:
 
 >[!TAB Tutti]
 
-Seleziona **[!UICONTROL Tutti]** per aggiornare il dashboard e visualizzare le metriche su tutti i dati acquisiti in Experience Platform nel corso di un determinato periodo.
+Seleziona **[!UICONTROL All]** per aggiornare il tuo dashboard e visualizzare le metriche su tutti i dati che sono stati acquisiti in Experience Platform nel corso di un dato periodo.
 
 ![Tipo di dati di monitoraggio impostato su &quot;All&quot;.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB Cliente e account]
 
-Seleziona **[!UICONTROL Cliente e account]** per aggiornare la dashboard e visualizzare le metriche sui dati del cliente e dell&#39;account acquisiti in Experience Platform nel corso di un determinato periodo.
+Seleziona **[!UICONTROL Customer & Account]** per aggiornare la dashboard e visualizzare le metriche sui dati del cliente e dell&#39;account acquisiti in Experience Platform nel corso di un determinato periodo.
 
 ![Tipo di dati di monitoraggio impostato su &quot;Cliente e account&quot;.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB Arricchimento del profilo account]
 
-Seleziona **[!UICONTROL Arricchimento profilo account]** per aggiornare il dashboard e visualizzare le metriche nei dati di arricchimento profilo. **Nota**: è possibile visualizzare le metriche di arricchimento del profilo account solo se si dispone dei diritti per [dati B2B](../../rtcdp/b2b-tutorial.md).
+Seleziona **[!UICONTROL Account profile enrichment]** per aggiornare la dashboard e visualizzare le metriche sui dati di arricchimento del profilo. **Nota**: è possibile visualizzare le metriche di arricchimento del profilo account solo se si dispone dei diritti per [dati B2B](../../rtcdp/b2b-tutorial.md).
 
 ![Tipo di dati di monitoraggio impostato su &quot;Arricchimento del profilo account&quot;.](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -83,25 +83,25 @@ Seleziona **[!UICONTROL Data lake]** per visualizzare le metriche sul tasso di a
 
 >[!TAB Identità]
 
-Seleziona **[!UICONTROL Identità]** per visualizzare il tasso di successo dell&#39;elaborazione dei dati di identità. Per ulteriori informazioni, consulta la guida su [dati identità di monitoraggio](monitor-identities.md).
+Selezionare **[!UICONTROL Identities]** per visualizzare il tasso di successo dell&#39;elaborazione dei dati di identità. Per ulteriori informazioni, consulta la guida su [dati identità di monitoraggio](monitor-identities.md).
 
 ![Dashboard di monitoraggio nell&#39;interfaccia utente con la scheda delle identità selezionata.](../assets/ui/monitor-overview/identities.png)
 
 >[!TAB Profili]
 
-Seleziona **[!UICONTROL Profili]** per visualizzare il tasso di successo dell&#39;elaborazione dei dati del profilo. Per ulteriori informazioni, consulta la guida su [dati del profilo di monitoraggio](monitor-profiles.md).
+Seleziona **[!UICONTROL Profiles]** per visualizzare il tasso di successo dell&#39;elaborazione dei dati del profilo. Per ulteriori informazioni, consulta la guida su [dati del profilo di monitoraggio](monitor-profiles.md).
 
 ![Dashboard di monitoraggio nell&#39;interfaccia utente con la scheda dei profili selezionata.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB Tipi di pubblico]
 
-Seleziona **[!UICONTROL Tipi di pubblico]** per visualizzare le metriche sui tipi di pubblico e sui processi di segmentazione. Per ulteriori informazioni, consulta la guida su [monitoraggio dei dati sul pubblico](monitor-audiences.md).
+Seleziona **[!UICONTROL Audiences]** per visualizzare le metriche sui tipi di pubblico e sui processi di segmentazione. Per ulteriori informazioni, consulta la guida su [monitoraggio dei dati sul pubblico](monitor-audiences.md).
 
 ![Dashboard di monitoraggio nell&#39;interfaccia utente con la scheda Tipi di pubblico selezionata.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB Destinazioni]
 
-Seleziona **[!UICONTROL Destinazioni]** per visualizzare le metriche sulla [!UICONTROL frequenza di attivazione streaming] e sulle [!UICONTROL esecuzioni del flusso di dati per batch non riuscito]. Per ulteriori informazioni, consulta la guida sui [dati sulle destinazioni di monitoraggio](monitor-destinations.md).
+Seleziona **[!UICONTROL Destinations]** per visualizzare le metriche su [!UICONTROL Streaming activate rate] e [!UICONTROL Batch failed dataflow runs]. Per ulteriori informazioni, consulta la guida sui [dati sulle destinazioni di monitoraggio](monitor-destinations.md).
 
 ![Dashboard di monitoraggio nell&#39;interfaccia utente con la scheda delle destinazioni selezionata.](../assets/ui/monitor-overview/destinations.png)
 
@@ -109,17 +109,17 @@ Seleziona **[!UICONTROL Destinazioni]** per visualizzare le metriche sulla [!UIC
 
 ### Configurare l’intervallo di tempo del monitoraggio {#configure-monitoring-time-frame}
 
-Per impostazione predefinita, il dashboard di monitoraggio visualizza le metriche sui dati acquisiti nelle ultime 24 ore. Per aggiornare l&#39;intervallo di tempo, selezionare **[!UICONTROL Ultime 24 ore]**.
+Per impostazione predefinita, il dashboard di monitoraggio visualizza le metriche sui dati acquisiti nelle ultime 24 ore. Per aggiornare l&#39;intervallo di tempo, selezionare **[!UICONTROL Last 24 hours]**.
 
 ![Dashboard di monitoraggio nell&#39;interfaccia utente con la configurazione dell&#39;ora selezionata.](../assets/ui/monitor-overview/select-time.png)
 
 Puoi configurare un nuovo intervallo di tempo per la visualizzazione di monitoraggio dei dati nella finestra di dialogo visualizzata. Puoi creare un intervallo di tempo personalizzato o selezionare dall’elenco di opzioni preconfigurate:
 
-* [!UICONTROL Ultime 24 ore]
-* [!UICONTROL Ultimi 7 giorni]
-* [!UICONTROL Ultimi 30 giorni]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
-Al termine, selezionare **[!UICONTROL Applica]**.
+Al termine, selezionare **[!UICONTROL Apply]**.
 
 ![Finestra popup per la configurazione dell&#39;intervallo di tempo nel dashboard di monitoraggio.](../assets/ui/monitor-overview/update-time.png)
 
@@ -133,6 +133,8 @@ Una volta letto questo documento, potrai spostarti all’interno del dashboard d
 * [Monitorare i dati del pubblico](monitor-audiences.md).
 * [Monitorare i dati delle destinazioni](monitor-destinations.md).
 
-<!-- >[!TAB Prospect]
+<!-- 
+>[!TAB Prospect]
 
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). 
+-->
