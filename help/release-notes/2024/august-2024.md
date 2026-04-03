@@ -2,16 +2,16 @@
 title: Note sulla versione di Adobe Experience Platform di agosto 2024
 description: Note sulla versione di Adobe Experience Platform di agosto 2024.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
-source-wordcount: '1565'
-ht-degree: 100%
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+workflow-type: tm+mt
+source-wordcount: '1556'
+ht-degree: 94%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 20 agosto 2024**
+**Data di rilascio: mercoledì 20 agosto 2024**
 
 >[!TIP]
 >
@@ -33,9 +33,9 @@ Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe 
 
 Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali identificabili (PII) e ad altri tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Experience Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
-**Nuova funzione**
+**Nuova funzionalità**
 
-| Aggiornamento funzionale | Descrizione |
+| Aggiornamento funzionalità | Descrizione |
 | --- | --- |
 | Nuova funzione di Gestione autorizzazioni | È ora possibile utilizzare [Gestione autorizzazioni](../../access-control/abac/permission-manager/overview.md) per generare rapporti utilizzando query semplici, che consentiranno di comprendere la gestione degli accessi e risparmiare tempo nella verifica delle autorizzazioni di accesso in diversi flussi di lavoro e livelli di granularità. Per ulteriori informazioni sulla creazione di rapporti per utenti e ruoli, consulta la [guida utente sulla Gestione autorizzazioni](../../access-control/abac/permission-manager/permissions.md). ![Immagine dell’interfaccia utente di Experience Platform di immagine che evidenzia Gestione autorizzazioni nella barra di navigazione a sinistra.](assets/august/permission-manager-rn.png "Gestione autorizzazioni nell’interfaccia utente."){width="250" align="center" zoomable="yes"} |
 
@@ -63,7 +63,7 @@ Ulteriori informazioni sull’[acquisizione batch](/help/ingestion/batch-ingesti
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
-| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gestisce una serie di istanze diverse per la dashboard e gli endpoint REST. La clientela [!UICONTROL Braze] deve utilizzare l’endpoint REST corretto in base all’istanza per cui è stato eseguito il provisioning. Questa versione aggiunge un nuovo endpoint US-07 che puoi selezionare quando ti connetti a [!UICONTROL Braze]. |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gestisce una serie di istanze diverse per il dashboard e gli endpoint REST. I clienti [!UICONTROL Braze] devono utilizzare l&#39;endpoint REST corretto in base all&#39;istanza a cui si esegue il provisioning. Questa versione aggiunge un nuovo endpoint US-07 che è possibile selezionare quando ci si connette a [!UICONTROL Braze]. |
 
 {style="table-layout:auto"}
 
@@ -74,9 +74,9 @@ Ulteriori informazioni sull’[acquisizione batch](/help/ingestion/batch-ingesti
 | Esportazione di file on-demand nelle destinazioni batch ora disponibile per tutti. | L’opzione per esportare i file on-demand nelle destinazioni batch è ora disponibile per tutti. Per ulteriori informazioni, consulta la [documentazione specifica](../../destinations/ui/export-file-now.md). |
 | Modifica dei programmi di esportazione per più tipi di pubblico esportati nel [passaggio di pianificazione](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’opzione per modificare i programmi di esportazione per più tipi di pubblico esportati direttamente dalla fase di pianificazione del flusso di lavoro di Audience Activation è ora disponibile per tutti. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Modifica pianificazione nel passaggio di pianificazione.](assets/august/edit-schedule.png "Opzione Modifica pianificazione nel passaggio di pianificazione."){width="250" align="center" zoomable="yes"} |
 | Modifica dei nomi dei file per più tipi di pubblico esportati nel [passaggio di pianificazione](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | L’opzione per modificare i nomi di più file esportati direttamente dalla fase di pianificazione del flusso di lavoro di Audience Activation è ora disponibile per tutti. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Modifica nome file nel passaggio di pianificazione.](assets/august/edit-file-name.png "Opzione Modifica nome file nel passaggio di pianificazione."){width="250" align="center" zoomable="yes"} |
-| Rimozione di più tipi di pubblico da un flusso di dati dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-remove). | L’opzione per rimuovere più tipi di pubblico dai flussi di dati esistenti dalla pagina **[!UICONTROL Dettagli destinazione]** è ora disponibile per tutti. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Rimuovi tipi di pubblico nella pagina Dettagli destinazione.](assets/august/bulk-remove-audiences.png "Opzione Rimuovi tipi di pubblico nella pagina Dettagli destinazione."){width="250" align="center" zoomable="yes"} |
-| Esportazione di più file on-demand in destinazioni batch dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-export). | L’opzione per esportare più file on-demand in destinazioni batch dalla pagina **[!UICONTROL Dettagli destinazione]** è ora disponibile per tutti. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Esporta file nella pagina Dettagli destinazione.](assets/august/bulk-export-file-now.png "Opzione Esporta file ora nella pagina Dettagli destinazione."){width="250" align="center" zoomable="yes"} |
-| Modifica dei nomi dei file per più tipi di pubblico esportati dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | È ora possibile modificare i nomi di più file esportati direttamente dalla pagina **[!UICONTROL Dettagli destinazione]**. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Modifica nome file nella pagina dei dettagli destinazione.](assets/august/edit-file-name-destination-details.png "Opzione Modifica nome file nella pagina dei dettagli destinazione."){width="250" align="center" zoomable="yes"} |
+| Rimozione di più tipi di pubblico da un flusso di dati dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-remove). | L&#39;opzione per rimuovere più tipi di pubblico dai flussi di dati esistenti dalla pagina **[!UICONTROL Destination Details]** è ora disponibile per tutti i clienti. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Rimuovi tipi di pubblico nella pagina Dettagli destinazione.](assets/august/bulk-remove-audiences.png "Opzione Rimuovi tipi di pubblico nella pagina Dettagli destinazione."){width="250" align="center" zoomable="yes"} |
+| Esportazione di più file on-demand in destinazioni batch dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-export). | L&#39;opzione per esportare più file on-demand nelle destinazioni batch dalla pagina **[!UICONTROL Destination Details]** è ora disponibile per tutti i clienti. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Esporta file nella pagina Dettagli destinazione.](assets/august/bulk-export-file-now.png "Opzione Esporta file ora nella pagina Dettagli destinazione."){width="250" align="center" zoomable="yes"} |
+| Modifica dei nomi dei file per più tipi di pubblico esportati dalla pagina [Dettagli destinazione](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | È ora possibile modificare i nomi di più file esportati direttamente dalla pagina **[!UICONTROL Destination Details]**. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Modifica nome file nella pagina dei dettagli destinazione.](assets/august/edit-file-name-destination-details.png "Opzione Modifica nome file nella pagina dei dettagli destinazione."){width="250" align="center" zoomable="yes"} |
 | Rimozione di più set di dati da un flusso di dati dalla pagina [Dettagli destinazione](../../destinations/ui/export-datasets.md#remove-dataset). | L’opzione per rimuovere più set di dati da un flusso di dati è ora disponibile per tutti. ![Immagine dell’interfaccia utente di Experience Platform in cui è evidenziata l’opzione Rimuovi set di dati nella pagina dei dettagli destinazione.](assets/august/bulk-remove-datasets.png "Opzione Rimuovi set di dati nella pagina dei dettagli destinazione."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
