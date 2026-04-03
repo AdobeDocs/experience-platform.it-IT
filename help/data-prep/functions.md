@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '6009'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -63,7 +63,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | ltrim | Rimuove lo spazio vuoto dall&#39;inizio della stringa. | <ul><li>STRING: **Obbligatorio** Stringa da cui rimuovere lo spazio vuoto.</li></ul> | ltrim(STRING) | ltrim(&quot;ciao&quot;) | &quot;ciao&quot; |
 | rtrim | Rimuove lo spazio vuoto dalla fine della stringa. | <ul><li>STRING: **Obbligatorio** Stringa da cui rimuovere lo spazio vuoto.</li></ul> | rtrim(STRING) | rtrim(&quot;hello&quot;) | &quot;ciao&quot; |
 | trim | Rimuove lo spazio vuoto dall&#39;inizio e dalla fine della stringa. | <ul><li>STRING: **Obbligatorio** Stringa da cui rimuovere lo spazio vuoto.</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;ciao&quot; |
-| uguale a | Confronta due stringhe per verificare se sono uguali. Questa funzione distingue tra maiuscole e minuscole. | <ul><li>STRING1: **Obbligatorio** La prima stringa da confrontare.</li><li>STRING2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| uguale a | Confronta due stringhe per verificare se sono uguali. Questa funzione distingue tra maiuscole e minuscole. | <ul><li>STRING1: **Obbligatorio** La prima stringa da confrontare.</li><li>STRING2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | falso |
 | equalsIgnoreCase | Confronta due stringhe per verificare se sono uguali. Questa funzione **non** distingue tra maiuscole e minuscole. | <ul><li>STRING1: **Obbligatorio** La prima stringa da confrontare.</li><li>STRING2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;.&#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
 {style="table-layout:auto"}
@@ -142,7 +142,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Controlla se un oggetto è vuoto. | <ul><li>INPUT: **Obbligatorio** L&#39;oggetto che si sta tentando di controllare è vuoto.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| is_empty | Controlla se un oggetto è vuoto. | <ul><li>INPUT: **Obbligatorio** L&#39;oggetto che si sta tentando di controllare è vuoto.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | falso |
 | array_a_oggetto | Crea un elenco di oggetti. | <ul><li>INPUT: **Obbligatorio** Raggruppamento di coppie chiave-matrice.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Crea un oggetto in base alle coppie chiave/valore fornite. | <ul><li>INPUT: **Obbligatorio** Un elenco semplice di coppie chiave/valore.</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crea un oggetto dalla stringa di input. | <ul><li>STRING: **Obbligatorio** Stringa da analizzare per creare un oggetto.</li><li>VALUE_DELIMITER: *Facoltativo* Il delimitatore che separa un campo dal valore. Il delimitatore predefinito è `:`.</li><li>FIELD_DELIMITER: *Facoltativo* Il delimitatore che separa le coppie di valori di campo. Il delimitatore predefinito è `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Nota**: è possibile utilizzare la funzione `get()` insieme a `str_to_object()` per recuperare i valori per le chiavi nella stringa. | <ul><li>Esempio #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Esempio #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>#1 di esempio:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Esempio #2: &quot;John&quot;</li></ul> |
@@ -310,8 +310,10 @@ Per ulteriori informazioni sui valori dei campi dispositivo, leggere l&#39;[elen
 
 {style="table-layout:auto"}
 
-<!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
-| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
+<!-- 
+| aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | 
+-->
 
 ### Copia oggetto {#object-copy}
 
@@ -387,11 +389,11 @@ La tabella seguente delinea un elenco di caratteri riservati e dei corrispondent
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
