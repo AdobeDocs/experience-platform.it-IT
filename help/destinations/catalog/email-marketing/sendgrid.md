@@ -3,7 +3,7 @@ keywords: e-mail;e-mail;destinazioni e-mail;sendgrid;sendgrid destinazione
 title: Connessione SendGrid
 description: Utilizzare la destinazione SendGrid per esportare i dati di prime parti e attivarli in SendGrid in base alle esigenze aziendali.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1928'
 ht-degree: 3%
@@ -34,7 +34,7 @@ Prima di iniziare a configurare la destinazione sono necessari i seguenti elemen
 
 ![Pagina delle impostazioni delle chiavi API SendGrid con il pulsante Crea chiave API.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
+Prima di attivare i dati nella destinazione SendGrid, è necessario creare uno [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=it), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) in [!DNL Experience Platform]. Consulta anche la sezione [limits](#limits) più avanti in questa pagina.
 
 >[!IMPORTANT]
 >
@@ -123,7 +123,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 
 ### Inserire i dettagli della destinazione {#destination-details}
 
-Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Description]**: descrizione facoltativa che consentirà di identificare questa destinazione in futuro.
