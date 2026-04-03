@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestione dei formati dei dati con la preparazione dati
 description: Questo documento offre una panoramica della gestione dei diversi tipi di dati nella preparazione dati.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 8%
+source-wordcount: '624'
+ht-degree: 9%
 
 ---
 
@@ -88,14 +88,14 @@ Nella tabella seguente vengono illustrate le lettere di serie definite per le st
 | Y | Anno, in base alla settimana ISO | Numero | 1996; 96 |
 | y | L&#39;anno | Numero | 2004-04 |
 | M/L | Mese dell’anno | Numero/Testo | 7; 07; lug; luglio; J |
-| w | Settimana dell’anno | Numero | 27 |
-| L | Settimana del mese | Numero | 3 |
+| m | Settimana dell’anno | Numero | 27 |
+| W | Settimana del mese | Numero | 3 |
 | D | Giorno dell&#39;anno | Numero | 189 |
-| d | Giorno del mese | Numero | 10 |
-| F | Giorno della settimana in un mese | Numero | 2 |
+| g | Giorno del mese | Numero | 10 |
+| V | Giorno della settimana in un mese | Numero | 2 |
 | E | Nome del giorno della settimana | Testo | martedì, martedì |
 | u | Giorno della settimana, come numero. 1 rappresenta lunedì, ..., 7 rappresenta domenica | Numero | 1 |
-| un | Indicatore AM/PM | Testo | PM |
+| a | Indicatore AM/PM | Testo | PM |
 | H | Ora del giorno (0-23) | Numero | 0 |
 | k | Ora del giorno (1-24) | Numero | 24 |
 | K | Ora in AM/PM (0-11) | Numero | 0 |
