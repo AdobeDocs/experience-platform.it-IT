@@ -2,7 +2,7 @@
 title: Connessione Verizon MediaYahoo DataX
 description: DataX è un’infrastruttura aggregata Verizon Media/Yahoo che ospita vari componenti che consentono a Verizon Media/Yahoo di scambiare dati con i propri partner esterni in modo sicuro, automatizzato e scalabile.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 4%
@@ -67,7 +67,7 @@ Ulteriori informazioni su [Metadati di tassonomia](https://developer.verizonmedi
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Verizon Media] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+[!DNL Verizon Media] supporta l&#39;attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
