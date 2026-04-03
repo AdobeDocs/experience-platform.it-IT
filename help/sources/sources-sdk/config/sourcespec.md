@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;source 
 title: Configurare le specifiche di origine per le origini self-service (Batch SDK)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare le origini self-service (Batch SDK).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2107'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -240,7 +240,7 @@ Per un esempio di specifica di origine completa, vedere l&#39;[appendice](#sourc
 | `sourceSpec.attributes.spec.properties.urlParams` | Contiene informazioni sul percorso della risorsa URL, sul metodo e sui parametri di query supportati. |  |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Definisce il percorso della risorsa da cui recuperare i dati. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Definisce il metodo HTTP da utilizzare per effettuare la richiesta alla risorsa di recupero dei dati. | `GET`, `POST` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definisce i parametri di query supportati che possono essere utilizzati per aggiungere l’URL di origine quando si effettua una richiesta di recupero dei dati. **Nota**: qualsiasi valore di parametro fornito dall&#39;utente deve essere formattato come segnaposto. Esempio: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` verrà aggiunto all&#39;URL di origine come: `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definisce i parametri di query supportati che possono essere utilizzati per aggiungere l’URL di origine quando si effettua una richiesta di recupero dei dati. **Nota**: qualsiasi valore di parametro fornito dall&#39;utente deve essere formattato come segnaposto. Ad esempio: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` verrà aggiunto all&#39;URL di origine come: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Definisce le intestazioni che devono essere fornite nella richiesta HTTP all’URL di origine durante il recupero dei dati. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Questo attributo può essere configurato per inviare il corpo HTTP tramite una richiesta POST. |  |
 | `sourceSpec.attributes.spec.properties.contentPath` | Definisce il nodo che contiene l’elenco degli elementi da acquisire in Experience Platform. Questo attributo deve seguire una sintassi di percorso JSON valida e deve puntare a un array specifico. | Visualizzare la [sezione risorse aggiuntive](#content-path) per un esempio della risorsa contenuta in un percorso di contenuto. |
