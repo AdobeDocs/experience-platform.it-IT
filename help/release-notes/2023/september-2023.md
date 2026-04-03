@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2023
 description: Note sulla versione di Adobe Experience Platform di settembre 2023.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2269'
-ht-degree: 28%
+source-wordcount: '2242'
+ht-degree: 29%
 
 ---
 
@@ -37,13 +37,13 @@ Gli attributi calcolati consentono di riepilogare facilmente i dati dell’event
 
 ## Avvisi {#alerts}
 
-Experience Platform ti consente di abbonarti agli avvisi basati su eventi per varie attività di Experience Platform. Puoi abbonarti a diverse regole di avviso tramite la scheda [!UICONTROL Avvisi] nell&#39;interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso all&#39;interno dell&#39;interfaccia utente stessa o tramite notifiche e-mail.
+Experience Platform consente di iscriverti agli avvisi basati su eventi per varie attività di Experience Platform. È possibile abbonarsi a diverse regole di avviso tramite la scheda [!UICONTROL Alerts] nell&#39;interfaccia utente di Experience Platform e scegliere di ricevere messaggi di avviso all&#39;interno dell&#39;interfaccia utente stessa o tramite notifiche e-mail.
 
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Scheda Cronologia avvisi | La scheda Avvisi [!UICONTROL Cronologia] includerà ora tutti gli eventi, inclusi ritardi, avvii, operazioni riuscite ed errori. Per ulteriori informazioni sulla scheda della cronologia, leggere la [documentazione dell&#39;interfaccia utente degli avvisi](../../observability/alerts/ui.md). |
+| Scheda Cronologia avvisi | La scheda Avvisi [!UICONTROL History] includerà ora tutti gli eventi, inclusi ritardi, avvii, operazioni riuscite ed errori. Per ulteriori informazioni sulla scheda della cronologia, leggere la [documentazione dell&#39;interfaccia utente degli avvisi](../../observability/alerts/ui.md). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
 | Stream di dati | Supporto per la ricerca del dispositivo | Durante la configurazione di un flusso di dati, ora puoi selezionare il livello di informazioni di ricerca del dispositivo da raccogliere. Le informazioni sulla ricerca del dispositivo includono dati sul dispositivo, sull’hardware, sul sistema operativo e sul browser utilizzati per interagire con la pagina. Impossibile raccogliere le informazioni di ricerca del dispositivo <br> insieme agli hint dell&#39;agente utente e del client. La scelta di raccogliere informazioni sul dispositivo disabiliterà la raccolta di hint dell’agente utente e del client e viceversa. Tutte le informazioni di ricerca del dispositivo sono memorizzate nel gruppo di campi `xdm:device`. Ulteriori informazioni sono disponibili nella documentazione su [configurazione degli stream di dati](../../datastreams/configure.md#geolocation-device-lookup). |
-| Estensioni | Estensione API per [!DNL TikTok] eventi Web | L&#39;estensione [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL TikTok] sotto forma di eventi lato server utilizzando l&#39;API [!DNL TikTok] Web Events. |
+| Estensioni | Estensione API per eventi web [!DNL TikTok] | L&#39;estensione [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL TikTok] sotto forma di eventi lato server utilizzando l&#39;API [!DNL TikTok] Web Events. |
 
 {style="table-layout:auto"}
 
@@ -92,13 +92,13 @@ Per ulteriori informazioni sulla governance dei dati, consulta la [panoramica su
 
 ## Igiene dei dati {#hygiene}
 
-Experience Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati dei consumatori. Utilizzando l&#39;area di lavoro [!UICONTROL Ciclo di vita dei dati] nell&#39;interfaccia utente o tramite chiamate all&#39;API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Usa queste funzionaità per garantire che le informazioni vengano utilizzate come previsto, che vengano aggiornate quando è necessario correggere dati scorretti e che vengano eliminate quando i criteri organizzativi lo ritengono necessario.
+Experience Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati dei consumatori. Utilizzando l&#39;area di lavoro [!UICONTROL Data Lifecycle] nell&#39;interfaccia utente o tramite chiamate all&#39;API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Usa queste funzionaità per garantire che le informazioni vengano utilizzate come previsto, che vengano aggiornate quando è necessario correggere dati scorretti e che vengano eliminate quando i criteri organizzativi lo ritengono necessario.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Eliminazione record [!BADGE Beta]{type=Informative} (versione limitata) | Gestisci il ciclo di vita dei dati in tutti gli archivi dati per rispettare gli impegni dei clienti e i contratti di licenza con le funzioni di Advanced Data Lifecycle Management in Adobe Experience Platform: scadenza automatizzata del set di dati ed eliminazione dei record.<br>Con la scadenza automatica del set di dati è possibile eliminare interi set di dati e impostare una data e un&#39;ora per l&#39;eliminazione del set di dati.<br>Eliminazione record consente di eliminare singoli profili di consumatori eseguendo il targeting delle loro identità primarie. Puoi fornire le identità primarie singolarmente tramite l’interfaccia utente o tramite il caricamento di file CSV/JSON. Per ulteriori informazioni, consulta la [documentazione sull&#39;eliminazione dei record](../../hygiene/ui/record-delete.md) |
+| [!BADGE Eliminazione record Beta]{type=Informative} (versione limitata) | Gestisci il ciclo di vita dei dati in tutti gli archivi dati per rispettare gli impegni dei clienti e i contratti di licenza con le funzioni di Advanced Data Lifecycle Management in Adobe Experience Platform: scadenza automatizzata del set di dati ed eliminazione dei record.<br>Con la scadenza automatica del set di dati è possibile eliminare interi set di dati e impostare una data e un&#39;ora per l&#39;eliminazione del set di dati.<br>Eliminazione record consente di eliminare singoli profili di consumatori eseguendo il targeting delle loro identità primarie. Puoi fornire le identità primarie singolarmente tramite l’interfaccia utente o tramite il caricamento di file CSV/JSON. Per ulteriori informazioni, consulta la [documentazione sull&#39;eliminazione dei record](../../hygiene/ui/record-delete.md) |
 | Scadenze dei set di dati | Riduci al minimo i dati e tieni sotto controllo i contratti di licenza con Scadenza set di dati automatica. Riduci i volumi di dati eliminando interi set di dati e imposta una data e un’ora per l’eliminazione del set di dati. Per ulteriori informazioni, consulta la [documentazione sulle scadenze dei set di dati](../../hygiene/ui/dataset-expiration.md). |
 
 {style="table-layout:auto"}
@@ -113,9 +113,9 @@ Per ulteriori informazioni sulle funzionalità di igiene dei dati di Experience 
 
 | Destinazione | Nuova o aggiornata | Descrizione |
 | ----------- |----------------|----------- |
-| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nuova | Attiva i tipi di pubblico precedentemente integrati in [!DNL LiveRamp] per gli editori premium su media mobili, web, display e TV connesse. <br> Dopo aver effettuato l&#39;onboarding dei tipi di pubblico nell&#39;account [!DNL LiveRamp] tramite la connessione [LiveRamp - Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md), utilizza la nuova connessione [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) per attivare i tipi di pubblico nelle destinazioni a valle. |
-| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nuova | [[!DNL HubSpot]](https://www.hubspot.com) è una piattaforma CRM con tutti i software, le integrazioni e le risorse necessarie per collegare marketing, vendite, content management e servizio clienti. Ti consente di collegare dati, team e clienti su un’unica piattaforma di gestione delle relazioni con i clienti. |
-| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Aggiornata | È stato aggiunto il supporto per [!DNL Dynamics 365] prefissi di campi personalizzati per campi personalizzati non creati nella soluzione predefinita in [!DNL Dynamics 365]. Nel passaggio [Compila i dettagli della destinazione](#destination-details) è stato aggiunto il nuovo campo di input **[!UICONTROL Prefisso personalizzazione]**. |
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nuovo | Attiva i tipi di pubblico precedentemente integrati in [!DNL LiveRamp] per gli editori premium su media mobili, web, display e TV connesse. <br> Dopo aver effettuato l&#39;onboarding dei tipi di pubblico nell&#39;account [!DNL LiveRamp] tramite la connessione [LiveRamp - Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md), utilizza la nuova connessione [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) per attivare i tipi di pubblico nelle destinazioni a valle. |
+| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nuovo | [[!DNL HubSpot]](https://www.hubspot.com) è una piattaforma CRM con tutti i software, le integrazioni e le risorse necessarie per collegare marketing, vendite, content management e servizio clienti. Ti consente di collegare dati, team e clienti su un’unica piattaforma di gestione delle relazioni con i clienti. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Aggiornata | È stato aggiunto il supporto per [!DNL Dynamics 365] prefissi di campi personalizzati per campi personalizzati non creati nella soluzione predefinita in [!DNL Dynamics 365]. Un nuovo campo di input, **[!UICONTROL Customization Prefix]**, è stato aggiunto nel passaggio [Compila i dettagli della destinazione](#destination-details). |
 | [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Aggiornata | La destinazione Tipi di pubblico di Experience Cloud è ora generalmente disponibile. Utilizza questa destinazione per attivare i tipi di pubblico da Real-Time CDP ad Audience Manager e Adobe Analytics. È necessaria una licenza Audience Manager per inviare tipi di pubblico ad Adobe Analytics. |
 
 {style="table-layout:auto"}
@@ -125,7 +125,7 @@ Per ulteriori informazioni sulle funzionalità di igiene dei dati di Experience 
 
 Add these to release notes as they go out
 
-| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
+| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. |
 
 -->
 
@@ -137,9 +137,9 @@ Add these to release notes as they go out
 | (Beta) Supporto per l&#39;esportazione di oggetti di tipo array | Esporta array di valori primitivi (valori stringa, int o booleani) come file di schema flat nelle destinazioni di archiviazione cloud. Ulteriori informazioni sulle funzionalità sono disponibili nella [documentazione](../../destinations/ui/export-arrays-maps-objects.md). |
 | Selettori dinamici a discesa in Destination SDK | Durante la creazione di una destinazione tramite Destination SDK, è ora possibile utilizzare [selettori a discesa dinamici](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) per popolare i campi di un selettore a discesa con i valori recuperati da un&#39;API. |
 
-**Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
+**Correzioni e miglioramenti** {#destinations-fixes-and-enhancements}
 
-- Utilizza [monitoraggio della trasparenza](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) ora disponibile per le destinazioni enterprise ([API HTTP](../../destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) e [Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) a livello di esecuzione del flusso di dati per monitorare le metriche di attivazione e lo stato nella [visualizzazione dettagli flusso di dati](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page), con informazioni aggiuntive tramite codici di errore e messaggi per la risoluzione dei problemi.
+- Utilizza [monitoraggio della trasparenza](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) ora disponibile per le destinazioni enterprise ([API HTTP](../../destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) e [Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md)) a livello di esecuzione del flusso di dati per monitorare le metriche e lo stato di attivazione nella [visualizzazione dettagli flusso di dati](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page), con informazioni aggiuntive tramite codici di errore e messaggi per la risoluzione dei problemi.
 - Quando aggiorni il nome dei tipi di pubblico mappati a [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md), [Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md) e altre destinazioni che utilizzano [modelli di aggiornamento del pubblico](../../destinations/destination-sdk/metadata-api/update-audience-template.md), queste modifiche al nome vengono ora applicate a valle nella destinazione.
 
 Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
@@ -165,8 +165,8 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Tipo di dati | [[!UICONTROL Ritorno]](https://github.com/adobe/xdm/pull/1773/files) | RMA (Return Merchandise Authorization) rilasciato. |
-| Tipo di dati | [[!UICONTROL Elemento restituito]](https://github.com/adobe/xdm/pull/1773/files) | Le informazioni sull&#39;articolo restituito all&#39;interno di RMA (Return Merchandise Authorization). |
+| Tipo di dati | [[!UICONTROL Return]](https://github.com/adobe/xdm/pull/1773/files) | RMA (Return Merchandise Authorization) rilasciato. |
+| Tipo di dati | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) | Le informazioni sull&#39;articolo restituito all&#39;interno di RMA (Return Merchandise Authorization). |
 
 {style="table-layout:auto"}
 
@@ -174,9 +174,9 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione aggiornamento |
 | --- | --- | --- |
-| Estensione | [!UICONTROL Campi entità AJO] | Il flag [[!UICONTROL per più varianti]](https://github.com/adobe/xdm/pull/1774/files) è stato aggiunto ai [!UICONTROL campi di entità AJO] per identificare se la variante è multivariante o meno. |
-| Tipo di dati | [!UICONTROL Voce elenco prodotti] | [[!UICONTROL Elemento restituito]](https://github.com/adobe/xdm/pull/1773/files) aggiunto per includere le informazioni di autorizzazione restituzione merce. |
-| Tipo di dati | Ordine | [[!UICONTROL Informazioni sulla restituzione]](https://github.com/adobe/xdm/pull/1773/files) è stato aggiunto per includere la RMA (Return Merchandise Authorization) rilasciata. |
+| Estensione | [!UICONTROL AJO Entity Fields] | [[!UICONTROL flag for multi-variant]](https://github.com/adobe/xdm/pull/1774/files) è stato aggiunto a [!UICONTROL AJO Entity Fields] per identificare se la variante è multivariante o meno. |
+| Tipo di dati | [!UICONTROL Product list item] | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) è stato aggiunto per includere le informazioni sull&#39;autorizzazione per la restituzione del materiale promozionale. |
+| Tipo di dati | Ordine | [[!UICONTROL Return Info]](https://github.com/adobe/xdm/pull/1773/files) è stato aggiunto per includere la RMA (Return Merchandise Authorization) rilasciata. |
 
 {style="table-layout:auto"}
 
@@ -199,7 +199,7 @@ Per ulteriori informazioni sull’Identity Service, leggi la [panoramica sull’
 
 ## Query Service {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
+Il servizio Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal [!DNL Data Lake] e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 
@@ -210,7 +210,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sul Servizio query, consulta la [Panoramica sul servizio query](../../query-service/home.md).
+Per ulteriori informazioni sul servizio Query Service, consulta [Panoramica su Query Service](../../query-service/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
