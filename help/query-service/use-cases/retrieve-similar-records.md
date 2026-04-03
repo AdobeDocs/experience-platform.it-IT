@@ -2,9 +2,9 @@
 title: Recuperare record simili con funzioni di ordine superiore
 description: Scopri come identificare e recuperare record simili o correlati da uno o più set di dati in base a una metrica di somiglianza e a una soglia di somiglianza. Questo flusso di lavoro può evidenziare relazioni significative o sovrapposizioni tra set di dati diversi.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4030'
 ht-degree: 3%
 
 ---
@@ -697,7 +697,7 @@ WHERE jaccard_similarity>=0.4
 
 I risultati di questa query forniscono le colonne per l&#39;unione per similarità, come illustrato di seguito:
 
-+++Seleziona per espandere
++++ Seleziona per espandere
 
 |   | SetA_ProductName | SetA_ProductName |
 |---|--------------------------|------------------------|
@@ -707,7 +707,7 @@ I risultati di questa query forniscono le colonne per l&#39;unione per similarit
 
 {style="table-layout:auto"}
 
-+++:
++++
 
 ### Passaggi successivi {#next-steps}
 
@@ -717,4 +717,4 @@ Leggendo questo documento, ora puoi utilizzare questa logica per evidenziare rel
 - Pulizia dei dati: per migliorare la qualità dei dati.
 - Analisi del paniere di mercato: per fornire informazioni sul comportamento dei clienti, sulle preferenze e sulle potenziali opportunità di cross-selling.
 
-Se non lo hai già fatto, ti consigliamo di leggere la [panoramica sulla pipeline delle funzionalità AI/ML](../data-distiller/ml-feature-pipelines/overview.md). Utilizza questa panoramica per scoprire come Data Distiller e l’apprendimento automatico che preferisci possono creare modelli di dati personalizzati che supportano i casi di utilizzo di marketing con i dati di Experience Platform.
+Se non lo hai già fatto, ti consigliamo di leggere la [panoramica sulla pipeline delle funzionalità AI/ML](../data-distiller/ml-feature-pipelines/overview.md). Utilizza questa panoramica per scoprire come Data Distiller e l’apprendimento automatico preferito possono creare modelli di dati personalizzati che supportano i casi di utilizzo di marketing con i dati di Experience Platform.
