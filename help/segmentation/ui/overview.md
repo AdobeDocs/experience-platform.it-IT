@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 2%
+source-wordcount: '1028'
+ht-degree: 1%
 
 ---
 
@@ -31,15 +31,15 @@ Devi inoltre comprendere i seguenti termini chiave utilizzati in questo document
 
 ## Panoramica
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Tipi di pubblico]** nell&#39;area di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** contenente la dashboard [!UICONTROL Tipi di pubblico].
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Audiences]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Overview]** che mostra il dashboard [!UICONTROL Audiences].
 
 >[!NOTE]
 >
->Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, la dashboard [!UICONTROL Tipi di pubblico] non è visibile. Nella scheda [!UICONTROL Panoramica] sono invece visualizzati collegamenti e documentazione per aiutarti a iniziare a utilizzare i tipi di pubblico.
+>Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, il dashboard [!UICONTROL Audiences] non è visibile. Nella scheda [!UICONTROL Overview] vengono invece visualizzati collegamenti e documentazione per aiutarti a iniziare a utilizzare i tipi di pubblico.
 
-### [!UICONTROL Tipi di pubblico] dashboard {#segments-dashboard}
+### [!UICONTROL Audiences] dashboard {#segments-dashboard}
 
-La dashboard **[!UICONTROL Tipi di pubblico]** presenta le metriche chiave relative ai dati sul pubblico della tua organizzazione.
+La dashboard di **[!UICONTROL Audiences]** illustra le metriche chiave relative ai dati sul pubblico della tua organizzazione.
 
 Per ulteriori informazioni, visita la [guida dashboard tipi di pubblico](../../dashboards/guides/audiences.md).
 
@@ -47,7 +47,7 @@ Per ulteriori informazioni, visita la [guida dashboard tipi di pubblico](../../d
 
 ## Sfogliare {#browse}
 
-Seleziona la scheda **[!UICONTROL Sfoglia]** per visualizzare il Portale pubblico. Audience Portal fornisce un elenco di tutti i tipi di pubblico che appartengono alla tua organizzazione e alla sandbox e include dettagli quali il conteggio dei profili, l’origine, la data di creazione, la data dell’ultima modifica, i tag e il raggruppamento.
+Seleziona la scheda **[!UICONTROL Browse]** per visualizzare il Portale pubblico. Audience Portal fornisce un elenco di tutti i tipi di pubblico che appartengono alla tua organizzazione e alla sandbox e include dettagli quali il conteggio dei profili, l’origine, la data di creazione, la data dell’ultima modifica, i tag e il raggruppamento.
 
 Inoltre, Audience Portal consente di creare nuovi tipi di pubblico utilizzando Segment Builder (Generatore di segmenti) o Audience Composition (Composizione pubblico), nonché di importare tipi di pubblico generati esternamente in Experience Platform.
 
@@ -55,7 +55,7 @@ Per ulteriori informazioni su Audience Portal, consulta la [panoramica di Audien
 
 ## Composizioni {#compositions}
 
-Seleziona la scheda **[!UICONTROL Composizioni]** per visualizzare un elenco di tutti i tipi di pubblico generati tramite la composizione del pubblico per la tua organizzazione.
+Seleziona la scheda **[!UICONTROL Compositions]** per visualizzare un elenco di tutti i tipi di pubblico generati tramite la Composizione del pubblico per la tua organizzazione.
 
 ![Elenco di tipi di pubblico creati in Composizione pubblico per la tua organizzazione.](../images/ui/overview/compositions.png)
 
@@ -78,15 +78,15 @@ Viene visualizzato un popover che elenca tutti i campi che possono essere visual
 ![Attributi che è possibile visualizzare per la sezione Composizione.](../images/ui/overview/compositions-customize-table.png)
 
 | Campo | Descrizione |
-| ----- | ----------- | 
-| [!UICONTROL Nome] | Il nome del pubblico. |
-| [!UICONTROL Stato] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive` e `Published`. |
-| [!UICONTROL Creato] | L’ora e la data di creazione del pubblico. |
-| [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
-| [!UICONTROL Aggiornato] | Ora e data dell’ultimo aggiornamento del pubblico. |
-| [!UICONTROL Aggiornato da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
+| ----- | ----------- |
+| [!UICONTROL Name] | Il nome del pubblico. |
+| [!UICONTROL Status] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive` e `Published`. |
+| [!UICONTROL Created] | L’ora e la data di creazione del pubblico. |
+| [!UICONTROL Created by] | Nome della persona che ha creato il pubblico. |
+| [!UICONTROL Updated] | Ora e data dell’ultimo aggiornamento del pubblico. |
+| [!UICONTROL Updated by] | Nome dell’ultima persona che ha aggiornato il pubblico. |
 
-Per visualizzare la composizione del pubblico, seleziona il nome di un pubblico nella scheda [!UICONTROL Tipi di pubblico].
+Per visualizzare la composizione del pubblico, selezionare il nome di un pubblico nella scheda [!UICONTROL Audiences].
 
 Viene visualizzata la pagina Composizione pubblico con i blocchi predefiniti che compongono il pubblico. Per ulteriori dettagli su come utilizzare la composizione del pubblico, consulta la [guida dell&#39;interfaccia utente per la composizione del pubblico](./audience-composition.md).
 
