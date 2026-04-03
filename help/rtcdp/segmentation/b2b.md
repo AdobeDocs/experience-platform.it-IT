@@ -2,9 +2,9 @@
 title: Casi di utilizzo della segmentazione per Real-Time Customer Data Platform B2B edition
 description: Panoramica dei vari casi d’uso di Adobe Real-Time Customer Data Platform B2B edition disponibili.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1603'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Prima di poter utilizzare gli attributi di segmentazione per le classi B2B, è n
 
 Una volta soddisfatti questi requisiti, puoi combinare questi attributi per i casi d’uso B2B comuni.
 
-## Guida introduttiva {#getting-started}
+## Introduzione {#getting-started}
 
 Una volta che gli schemi di unione per le classi B2B hanno relazioni stabilite e sono stati utilizzati per acquisire i dati, i loro attributi sono resi disponibili nella barra a sinistra del Generatore di segmenti.
 
@@ -165,6 +165,7 @@ Trova tutte le persone target delle campagne in cui il costo effettivo ha supera
 Trova tutte le persone appartenenti all’elenco statico di Marketo &quot;Utenti dell’anniversario&quot; dove isDeleted=false.
 
 ![Interfaccia utente che visualizza l&#39;organizzazione padre di segmentazione](../assets/segmentation/b2b/example-13.png)
+
 <!-- 
 ### Example 14: Find "decision makers" by opportunity status using streaming or edge segmentation {#find-decision-makers-personalization}
 
@@ -180,7 +181,8 @@ To create this audience, you must use "segment of segments" by creating a base a
 
 After creating the first audience, you can combine that with another audience of  people who are a "Decision Maker" of any opportunity where both the "Closed Flag" is set to true and the "Lost Flag" is set to false.
 
-![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) -->
+![UI displaying example 14 settings](../assets/segmentation/b2b/example-14.png) 
+-->
 
 ## Passaggi successivi {#next-steps}
 
