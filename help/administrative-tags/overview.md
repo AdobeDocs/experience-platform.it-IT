@@ -3,7 +3,7 @@ keywords: Experience Platform; home; argomenti popolari; tag unificati; tag;
 title: Panoramica dei tag unificati
 description: Questo documento fornisce informazioni sui tag unificati in Adobe Experience Platform
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 98%
@@ -12,7 +12,7 @@ ht-degree: 98%
 
 # Panoramica sui tag unificati
 
-I tag sono una funzionalità di Adobe Experience Platform che consente agli amministratori di gestire le tassonomie dei metadati al fine di classificare gli oggetti aziendali per semplificare l’individuazione e la classificazione. I tag sono metadati che possono essere considerati come parole chiave che possono essere associate a un segmento, a un set di dati, a un percorso o ad altri oggetti per consentire alle ricerche di trovare l’oggetto e gli oggetti correlati. I tag sono classificati in due tipi: categorizzati e non categorizzati.
+I tag sono una funzionalità di Adobe Experience Platform che consente agli amministratori di gestire le tassonomie dei metadati al fine di classificare gli oggetti di business per semplificare l’individuazione e la classificazione. I tag sono metadati che possono essere considerati come parole chiave che possono essere associate a un segmento, a un set di dati, a un percorso o ad altri oggetti per consentire alle ricerche di trovare l’oggetto e gli oggetti correlati. I tag sono classificati in due tipi: categorizzati e non categorizzati.
 
 Per fornire più contesto e definire lo scopo di un tag, le categorie organizzano i tag in set utili. Un amministratore definisce i tag categorizzati disponibili che gli utenti possono aggiungere agli oggetti. I nuovi tag che non contengono categorie possono essere creati anche in linea nei flussi di lavoro in cui vengono applicati. Questi tag verranno mostrati nella sezione non categorizzati della libreria di tag. I tag possono essere applicati sia dagli amministratori che dagli utenti, indipendentemente da chi li ha creati. Tutti i tipi di tag possono essere selezionati quando vengono assegnati a un oggetto, a una ricerca oppure a un filtro.
 
