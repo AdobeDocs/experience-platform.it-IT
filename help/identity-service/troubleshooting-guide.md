@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del servizio Identity
 description: Questo documento contiene le risposte alle domande più frequenti sul servizio Adobe Experience Platform Identity e una guida alla risoluzione dei problemi relativi agli errori più comuni.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 0%
@@ -96,7 +96,8 @@ Identity Service dispone di spazi dei nomi standard per supportare l’acquisizi
 Se invii valori PII con hash a Identity Service, devi utilizzare lo stesso metodo di crittografia nei set di dati. In questo modo lo stesso valore di identità in tutti i set di dati genera gli stessi valori con hash e può essere correttamente associato e collegato nel grafico delle identità.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -111,7 +112,8 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## Perché non posso accedere alla pagina o alle API del grafo delle identità?
 
@@ -240,7 +242,7 @@ In caso di errore, il token di accesso non è valido. I token di accesso scadono
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il token di accesso non è stato generato da un&#39;integrazione [!DNL Experience Platform]. Per istruzioni sulla generazione di nuovi token di accesso per un&#39;integrazione [!DNL Experience Platform], vedere il [tutorial di autenticazione](https://www.adobe.com/go/platform-api-authentication-en).
+Questo messaggio di errore viene visualizzato quando il token di accesso non è stato generato da un&#39;integrazione [!DNL Experience Platform]. Per istruzioni sulla generazione di nuovi token di accesso per un&#39;integrazione [, vedere il ](https://www.adobe.com/go/platform-api-authentication-en)tutorial di autenticazione[!DNL Experience Platform].
 
 ### Errore interno nell’ottenere XID nativo dal codice di identità e spazio dei nomi
 
@@ -266,7 +268,7 @@ Quando [!DNL Identity Service] persiste un&#39;identità, all&#39;ID dell&#39;id
 
 Questo messaggio di errore viene visualizzato quando all&#39;organizzazione non sono state assegnate le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
-### Errore del server interno
+### Errore interno del server
 
 ```json
 {
