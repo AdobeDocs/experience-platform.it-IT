@@ -2,10 +2,10 @@
 title: Creare una connessione Source Zendesk nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Zendesk utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 7%
+source-wordcount: '724'
+ht-degree: 8%
 
 ---
 
@@ -45,15 +45,15 @@ Per ulteriori informazioni sullo schema [!DNL Zendesk] richiesto per [!DNL Zende
 
 ## Connetti il tuo account [!DNL Zendesk]
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Origini]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Origini]. Nella schermata [!UICONTROL Catalogo] sono visualizzate diverse origini con cui è possibile creare un account.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nella categoria *Customer Success*, selezionare **[!UICONTROL Zendesk]**, quindi **[!UICONTROL Add data]**.
+Nella categoria *Customer Success* selezionare **[!UICONTROL Zendesk]**, quindi **[!UICONTROL Add data]**.
 
 ![catalogo](../../../../images/tutorials/create/zendesk/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti account Zendesk]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect Zendesk account]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 ### Account esistente
 
@@ -63,13 +63,13 @@ Per utilizzare un account esistente, seleziona l&#39;account *Zendesk* con cui v
 
 ### Nuovo account
 
-Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e le tue credenziali. Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
+Se si sta creando un nuovo account, selezionare **[!UICONTROL New account]**, quindi fornire un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connect to source]** e quindi attendere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![nuovo](../../../../images/tutorials/create/zendesk/new.png)
 
 ### Selezionare i dati
 
-Una volta autenticata l’origine, la pagina si aggiorna in una struttura ad albero interattiva dello schema che consente di esplorare e ispezionare la gerarchia dei dati. Seleziona **[!UICONTROL Avanti]** per procedere.
+Una volta autenticata l’origine, la pagina si aggiorna in una struttura ad albero interattiva dello schema che consente di esplorare e ispezionare la gerarchia dei dati. Selezionare **[!UICONTROL Next]** per continuare.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
@@ -85,7 +85,7 @@ Le sezioni seguenti forniscono ulteriori risorse a cui è possibile fare riferim
 
 Di seguito vengono descritti i passaggi che è possibile eseguire per verificare che la connessione all&#39;origine [!DNL Zendesk] sia stata eseguita correttamente e che i profili [!DNL Zendesk] vengano acquisiti in Experience Platform.
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Set di dati]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Set di dati]. Nella schermata [!UICONTROL Attività set di dati] vengono visualizzati i dettagli delle esecuzioni.
+Nell&#39;interfaccia utente di Experience Platform, selezionare **[!UICONTROL Datasets]** dal menu di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Datasets]. Nella schermata [!UICONTROL Dataset Activity] vengono visualizzati i dettagli delle esecuzioni.
 
 ![Pagina attività](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -93,7 +93,7 @@ Quindi, seleziona l’ID di esecuzione del flusso di dati che desideri visualizz
 
 ![Pagina flusso di dati](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-Infine, seleziona **[!UICONTROL Anteprima set di dati]** per visualizzare i dati acquisiti.
+Infine, seleziona **[!UICONTROL Preview dataset]** per visualizzare i dati acquisiti.
 
 ![Set di dati Zendesk](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
