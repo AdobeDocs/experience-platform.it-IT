@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Funzioni SQL definite da Adobe in Query Service
 description: Questo documento fornisce informazioni sulle funzioni definite da Adobe disponibili in Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Funzioni SQL definite da Adobe in Query Service
 
-Le funzioni definite da Adobe, qui denominate ADF, sono funzioni predefinite di Adobe Experience Platform Query Service che consentono di eseguire attività aziendali comuni sui dati [!DNL Experience Event]. Queste includono funzioni per [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=it) e [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=it) simili a quelle disponibili in Adobe Analytics.
+Le funzioni definite da Adobe, qui denominate ADF, sono funzioni predefinite di Adobe Experience Platform Query Service che consentono di eseguire attività aziendali comuni sui dati [!DNL Experience Event]. Queste includono funzioni per [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) e [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) simili a quelle disponibili in Adobe Analytics.
 
 Questo documento fornisce informazioni per le funzioni definite da Adobe disponibili in [!DNL Query Service].
 
@@ -47,7 +47,7 @@ Quando si utilizzano dati [!DNL Experience Event] provenienti da siti Web, appli
 
 Questo raggruppamento, o sessionizzazione dei dati, consente di associare gli eventi per individuare più contesto sull’esperienza del cliente.
 
-Per ulteriori informazioni sulla sessionizzazione in Adobe Analytics, consulta la documentazione sulle [sessioni in base al contesto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=it).
+Per ulteriori informazioni sulla sessionizzazione in Adobe Analytics, consulta la documentazione sulle [sessioni in base al contesto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Sintassi query**
 
@@ -282,11 +282,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
 |-----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     |
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:05.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:53:45.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 19:22:34.0 |                                     | (Kids)
- 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                | 
+ 457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:12.0 | Home                                |
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:01:57.0 | Kids                                | (Home)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:03:36.0 | Search Results                      | (Kids)
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 20:04:30.0 | Product Details: Pemmican Power Bar | (Search Results)
@@ -487,4 +487,4 @@ Utilizzando le funzioni qui descritte, è possibile scrivere query per accedere 
 
 Il video seguente illustra come eseguire query nell’interfaccia di Adobe Experience Platform e in un client PSQL. Inoltre, il video utilizza anche esempi che coinvolgono singole proprietà in un oggetto XDM, utilizzando le funzioni definite da Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/39842?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
