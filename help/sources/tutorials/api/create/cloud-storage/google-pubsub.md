@@ -3,10 +3,10 @@ title: Creare una connessione Google PubSub Source utilizzando l’API del servi
 description: Scopri come collegare Adobe Experience Platform a un account Google PubSub utilizzando l’API del servizio Flow.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1181'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -90,7 +90,7 @@ POST /connections
 
 Per creare una connessione di base con l&#39;autenticazione basata su progetto, effettuare una richiesta POST all&#39;endpoint `/connections` e fornire `projectId` e `credentials` nel corpo della richiesta.
 
-+++Richiesta
++++ Richiesta
 
 ```shell
 curl -X POST \
@@ -123,9 +123,9 @@ curl -X POST \
 | `auth.params.credentials` | Credenziali o chiave necessarie per autenticare [!DNL PubSub]. |
 | `connectionSpec.id` | ID della specifica di connessione [!DNL PubSub]: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-++++
++++
 
-+++Risposta
++++ Risposta
 
 In caso di esito positivo, la risposta restituisce i dettagli della connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID connessione di base è richiesto nel passaggio successivo per creare una connessione sorgente.
 
@@ -136,13 +136,13 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 }
 ```
 
-++++
++++
 
 >[!TAB Autenticazione basata su argomenti e sottoscrizioni]
 
 Per creare una connessione di base con autenticazione basata su argomento e su sottoscrizione, effettuare una richiesta POST all&#39;endpoint `/connections` e fornire `credentials`, `topicName` e `subscriptionName` nel corpo della richiesta.
 
-+++Richiesta
++++ Richiesta
 
 ```shell
 curl -X POST \
@@ -179,7 +179,7 @@ curl -X POST \
 
 +++
 
-+++Risposta
++++ Risposta
 
 In caso di esito positivo, la risposta restituisce i dettagli della connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID connessione di base è richiesto nel passaggio successivo per creare una connessione sorgente.
 
@@ -190,7 +190,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 
