@@ -3,7 +3,7 @@ title: Salesforce Marketing Cloud - Coinvolgimento dell'account
 description: Scopri come utilizzare la destinazione Salesforce Marketing Cloud Account Engagement (precedentemente nota come Pardot) per esportare i dati del tuo account e attivarli in Salesforce Marketing Cloud Account Engagement in base alle tue esigenze aziendali.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1630'
 ht-degree: 3%
@@ -34,7 +34,7 @@ Vedere le sezioni seguenti per eventuali prerequisiti da impostare in Experience
 
 ### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati nella destinazione [!DNL Marketing Cloud Account Engagement], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=it) creati in [!DNL Experience Platform].
+Prima di attivare i dati nella destinazione [!DNL Marketing Cloud Account Engagement], è necessario disporre di uno [schema](/help/xdm/schema/composition.md), un [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creati in [!DNL Experience Platform].
 
 ### Prerequisiti in [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
