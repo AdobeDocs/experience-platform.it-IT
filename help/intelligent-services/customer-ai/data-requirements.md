@@ -49,8 +49,8 @@ IA per l’analisi dei clienti funziona analizzando i seguenti set di dati per p
 
 - Dati di Adobe Analytics tramite il [connettore di origine di Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Dati Adobe Audience Manager tramite il [connettore di origine Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Set di dati evento esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [Set di dati evento esperienza del consumatore](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- [Set di dati evento esperienza](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=it)
+- [Set di dati evento esperienza del consumatore](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=it#cee-schema)
 
 Puoi aggiungere più set di dati da origini diverse se ciascuno di essi condivide lo stesso tipo di identità (spazio dei nomi), ad esempio un ECID. Per ulteriori informazioni sull&#39;aggiunta di più set di dati, visita la [guida utente di IA per l&#39;analisi dei clienti](../customer-ai/user-guide/configure.md).
 
