@@ -114,7 +114,7 @@ Questo documento fornisce un catalogo di messaggi di errore, descrizioni e risol
 | `1350-400` | Richiesta non valida | Non è stato fornito alcun operatore per il filtro all’origine. Fornisci una richiesta di filtro valida con l’operatore appropriato e riprova. |
 | `1351-400` | Richiesta non valida | L&#39;operatore {operator} specificato non è supportato per il filtro all&#39;origine per questo connettore. Specifica un operatore valido e riprova. |
 | `1352-400` | Richiesta non valida | L&#39;operatore {operator} specificato non può essere mappato ad alcun operatore nativo supportato per {ql}. Specifica un operatore valido e riprova. |
-| `1353-400` | Richiesta non valida | Il filtro all&#39;origine non è ancora supportato per il connettore {connectorType}. Controlla i connettori supportati nella documentazione: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
+| `1353-400` | Richiesta non valida | Il filtro all&#39;origine non è ancora supportato per il connettore {connectorType}. Controlla i connettori supportati nella documentazione: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=it. |
 | `1354-400` | Richiesta non valida | Il linguaggio di query {ql} non è ancora supportato per il filtro all&#39;origine. Specifica una lingua di query valida e riprova. |
 | `1355-400` | Richiesta non valida | Il tipo di filtro fornito non è valido. Il tipo di filtro supportato è: PQL. Fornisci un tipo di filtro valido e riprova. |
 | `1356-400` | Richiesta non valida | Il formato di filtro specificato non è valido. Il formato di filtro supportato è: pql/json. Fornisci un formato di filtro valido e riprova. |
