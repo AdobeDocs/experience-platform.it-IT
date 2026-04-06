@@ -21,7 +21,7 @@ Il documento seguente illustra come accedere e utilizzare il visualizzatore del 
 
 Il video seguente ha lo scopo di facilitare la comprensione del visualizzatore del grafico delle identità.
 
->[!VIDEO](https://video.tv.adobe.com/v/345655/?captions=ita&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Introduzione
 

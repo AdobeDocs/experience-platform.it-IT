@@ -58,9 +58,9 @@ Gli inserzionisti possono scegliere di condividere i segmenti con identificatori
 
 * L’ID organizzazione Experience Cloud per l’account Experience Platform. Puoi trovare il tuo ID nella pagina del profilo utente di Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Un&#39;origine [[!DNL Real-Time CDP] in DSP](https://experienceleague.adobe.com/it/docs/advertising/dsp/audiences/sources/source-manage) per ricevere i tipi di pubblico per l&#39;attivazione della campagna. Il team del tuo account Adobe creerà l’origine utilizzando il tuo ID organizzazione Experience Cloud.
+* Un&#39;origine [[!DNL Real-Time CDP] in DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) per ricevere i tipi di pubblico per l&#39;attivazione della campagna. Il team del tuo account Adobe creerà l’origine utilizzando il tuo ID organizzazione Experience Cloud.
 
-* Chiave di origine per l&#39;account o l&#39;inserzionista [!DNL DSP], generata quando viene creata un&#39;origine [[!DNL Real-Time CDP] in [!DNL DSP]](https://experienceleague.adobe.com/it/docs/advertising/dsp/audiences/sources/source-manage). Il tuo account team di [!DNL DSP] condividerà questa chiave con te. La utilizzerai in Experience Platform per creare una connessione di destinazione alla destinazione Advertising DSP, come spiegato di seguito.
+* Chiave di origine per l&#39;account o l&#39;inserzionista [!DNL DSP], generata quando viene creata un&#39;origine [[!DNL Real-Time CDP] in [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Il tuo account team di [!DNL DSP] condividerà questa chiave con te. La utilizzerai in Experience Platform per creare una connessione di destinazione alla destinazione Advertising DSP, come spiegato di seguito.
 
 ### Configurare la sincronizzazione ID per condividere i cookie {#cookie-sync}
 
@@ -133,7 +133,7 @@ Per connettersi alla destinazione, seguire le istruzioni per [creare una conness
 
 Per connettersi alla destinazione, fornire il seguente parametro nella sezione [!UICONTROL Connection type], quindi selezionare **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Account or Advertiser Key]**: [!UICONTROL Source Key] viene generato quando viene creata un&#39;origine [[!DNL Real-Time CDP]  nell&#39;interfaccia utente di DSP](https://experienceleague.adobe.com/it/docs/advertising/dsp/audiences/sources/source-manage). Il team del tuo account Adobe condividerà con te questa chiave dopo la creazione dell’origine.
+* **[!UICONTROL Account or Advertiser Key]**: [!UICONTROL Source Key] viene generato quando viene creata un&#39;origine [[!DNL Real-Time CDP]  nell&#39;interfaccia utente di DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). Il team del tuo account Adobe condividerà con te questa chiave dopo la creazione dell’origine.
 
 ![Schermata della sezione del tipo di connessione che mostra il campo Account o Chiave inserzionista.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -158,7 +158,7 @@ Dopo aver fornito i dettagli della connessione di destinazione, selezionare **[!
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Set di mappatura preconfigurati"
 >abstract="Abbiamo preconfigurato questi due set di mappatura: ECID e cookie [!DNL adcloud]. Quando attivi i dati in Adobe Advertising DSP, i profili idonei per i tipi di pubblico attivati devono avere almeno un’identità ECID associata al loro profilo, per essere esportati correttamente nella destinazione."
->additional-url="https://experienceleague.adobe.com/it/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-dsp-connection#preconfigured-mappings" text="Ulteriori informazioni sulle mappature preconfigurate"
 
 >[!IMPORTANT]
 >
