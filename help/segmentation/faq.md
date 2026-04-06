@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 7a9c017c2dc7901c7995e5c6fcd178a4fe8709e0
 workflow-type: tm+mt
-source-wordcount: '4853'
+source-wordcount: '4809'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ I dati associati a questa colonna di identità primaria sono i dati **only** all
 
 Tutti gli altri dati all&#39;interno del pubblico generato esternamente sono considerati **attributi payload**. Questi attributi possono essere utilizzati **solo** per la personalizzazione e l&#39;arricchimento durante l&#39;attivazione e sono **non** associati a un profilo. Tuttavia, questi attributi vengono memorizzati nel data lake.
 
-Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1&rbrace;.**
+Anche se è possibile fare riferimento al pubblico generato esternamente durante la creazione di tipi di pubblico utilizzando il Generatore di segmenti, non è possibile utilizzare i singoli attributi di profilo **1}.**
 
 ### Posso riconciliare i dati del pubblico generato esternamente con un profilo esistente in Experience Platform?
 
@@ -120,7 +120,7 @@ Gli attributi di arricchimento sono attributi che provengono da un set di dati e
 
 | Canale di attivazione | Tipi di pubblico da caricamento personalizzato CSV | Tipi di pubblico da Composizione pubblico |
 | --- | --- | --- |
-| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento **&#x200B;**. |
+| Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Impossibile attivare gli attributi di arricchimento ****. |
 | Campagne Adobe Journey Optimizer | Non è possibile attivare né gli attributi del pubblico né quelli del payload. | È possibile attivare sia gli attributi di pubblico che quelli di arricchimento. |
 
 ## Stati del ciclo di vita {#lifecycle-states}
@@ -417,8 +417,6 @@ La segmentazione in streaming funziona su tutti i dati acquisiti utilizzando un�
 ### Come vengono definiti i segmenti come segmentazione in batch o in streaming?
 
 Una definizione di segmento è definita come batch, streaming o segmentazione Edge in base a una combinazione di tipo di query e durata della cronologia degli eventi. Nella sezione [tipi di query di segmentazione in streaming](#query-types) è disponibile un elenco dei segmenti che verranno valutati come definizione di segmento in streaming.
-
-Tieni presente che se una definizione di segmento contiene **both** un&#39;espressione `inSegment` e una catena di eventi singola diretta, non può essere qualificata per la segmentazione in streaming. Se desideri che questa definizione di segmento sia idonea per la segmentazione in streaming, devi rendere la catena di eventi singoli diretti un suo segmento.
 
 ### Perché il numero di segmenti &quot;qualificati totali&quot; continua a crescere mentre il numero in &quot;Ultimi X giorni&quot; rimane pari a zero nella sezione dei dettagli di definizione del segmento?
 
