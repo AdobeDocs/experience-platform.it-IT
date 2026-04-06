@@ -21,7 +21,7 @@ Adobe Experience Platform ti consente di creare esperienze coordinate, coerenti 
 
 Il video seguente è stato progettato per comprendere meglio l’acquisizione in streaming e illustra i concetti descritti in precedenza.
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36263?captions=ita&quality=12&learn=on)
 
 ### Trasmetti record profilo e [!DNL ExperienceEvents]
 

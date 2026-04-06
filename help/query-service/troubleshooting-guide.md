@@ -65,7 +65,7 @@ Una possibile causa è la funzione di completamento automatico. La funzione elab
 ### Posso usare [!DNL Postman] per l&#39;API Query Service?
 
 +++Risposta
-Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/28832) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sì, puoi visualizzare e interagire con tutti i servizi API di Adobe utilizzando [!DNL Postman] (un&#39;applicazione gratuita di terze parti). Consultare la [[!DNL Postman] guida all&#39;installazione](https://video.tv.adobe.com/v/36258?captions=ita) per istruzioni dettagliate sulla configurazione di un progetto in Adobe Developer Console e l&#39;acquisizione di tutte le credenziali necessarie per l&#39;utilizzo con [!DNL Postman]. Consulta la documentazione ufficiale per [istruzioni su come avviare, eseguire e condividere [!DNL Postman] le raccolte](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Esiste un limite al numero massimo di righe restituite da una query tramite l’interfaccia utente?
