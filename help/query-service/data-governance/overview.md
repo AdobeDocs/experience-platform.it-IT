@@ -129,7 +129,7 @@ Una volta completato il flusso di lavoro dei prerequisiti, gli utenti autorizzat
 
 Per una maggiore sicurezza, Query Service fornisce supporto nativo per le connessioni SSL per crittografare le comunicazioni client/server. Experience Platform supporta varie opzioni SSL per soddisfare le tue esigenze di sicurezza dei dati e bilanciare il sovraccarico di elaborazione dovuto alla crittografia e allo scambio di chiavi.
 
-Per ulteriori informazioni, tra cui come connettersi utilizzando il valore del parametro SSL [, vedere la guida sulle ](../clients/ssl-modes.md)opzioni SSL disponibili per le connessioni client di terze parti a Query Service`verify-full`.
+Per ulteriori informazioni, tra cui come connettersi utilizzando il valore del parametro SSL [, vedere la guida sulle &#x200B;](../clients/ssl-modes.md)opzioni SSL disponibili per le connessioni client di terze parti a Query Service`verify-full`.
 
 ### Crittografia e chiavi gestite dal cliente (CMK) {#encryption-and-customer-managed-keys}
 

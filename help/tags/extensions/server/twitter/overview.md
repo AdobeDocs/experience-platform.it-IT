@@ -15,7 +15,7 @@ ht-degree: 2%
 
 [[!DNL Twitter]](https://twitter.com/i/flow/login) è un servizio di social media e social network online, in cui gli utenti pubblicano e interagiscono con messaggi di 280 caratteri, noti come tweet. Gli utenti possono interagire con Twitter utilizzando un browser, un software front-end per dispositivi mobili o a livello di programmazione tramite le sue [API](https://developer.twitter.com/en/docs/twitter-api)
 
-L&#39;estensione [!DNL Twitter]inoltro eventi[ dell&#39;API per le conversioni Web di ](../../../ui/event-forwarding/overview.md) consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Twitter]. Questo documento descrive i casi di utilizzo dell&#39;estensione, come installarla e come integrarne le funzionalità nell&#39;inoltro degli eventi [rules](../../../ui/managing-resources/rules.md).
+L&#39;estensione [!DNL Twitter]inoltro eventi[&#x200B; dell&#39;API per le conversioni Web di &#x200B;](../../../ui/event-forwarding/overview.md) consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Twitter]. Questo documento descrive i casi di utilizzo dell&#39;estensione, come installarla e come integrarne le funzionalità nell&#39;inoltro degli eventi [rules](../../../ui/managing-resources/rules.md).
 
 [!DNL Twitter] richiede [OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) per l&#39;autenticazione con l&#39;API [!DNL Twitter] [!DNL Web Conversions].
 

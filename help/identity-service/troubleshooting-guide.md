@@ -242,7 +242,7 @@ In caso di errore, il token di accesso non è valido. I token di accesso scadono
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il token di accesso non è stato generato da un&#39;integrazione [!DNL Experience Platform]. Per istruzioni sulla generazione di nuovi token di accesso per un&#39;integrazione [, vedere il ](https://www.adobe.com/go/platform-api-authentication-en)tutorial di autenticazione[!DNL Experience Platform].
+Questo messaggio di errore viene visualizzato quando il token di accesso non è stato generato da un&#39;integrazione [!DNL Experience Platform]. Per istruzioni sulla generazione di nuovi token di accesso per un&#39;integrazione [, vedere il &#x200B;](https://www.adobe.com/go/platform-api-authentication-en)tutorial di autenticazione[!DNL Experience Platform].
 
 ### Errore interno nell’ottenere XID nativo dal codice di identità e spazio dei nomi
 

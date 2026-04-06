@@ -136,7 +136,7 @@ Durante la [configurazione](../../ui/connect-destination.md) di questa destinazi
 
 * **Nome**: immettere il nome preferito per la destinazione.
 * **Descrizione**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
-* **Stream di dati**: determina in quale flusso di dati della raccolta dati verranno inclusi i tipi di pubblico. Il menu a discesa mostra solo gli stream di dati in cui sono abilitati i servizi Target e [!DNL Adobe Experience Platform]. Per informazioni dettagliate su come configurare uno stream di dati per [ e ](../../../datastreams/configure.md#aep), vedere [!DNL Adobe Experience Platform]configurazione di uno stream di dati[!DNL Adobe Target].
+* **Stream di dati**: determina in quale flusso di dati della raccolta dati verranno inclusi i tipi di pubblico. Il menu a discesa mostra solo gli stream di dati in cui sono abilitati i servizi Target e [!DNL Adobe Experience Platform]. Per informazioni dettagliate su come configurare uno stream di dati per [&#x200B; e &#x200B;](../../../datastreams/configure.md#aep), vedere [!DNL Adobe Experience Platform]configurazione di uno stream di dati[!DNL Adobe Target].
 
   >[!IMPORTANT]
   >

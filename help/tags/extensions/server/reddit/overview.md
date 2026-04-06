@@ -128,6 +128,6 @@ Per ulteriori dettagli su [!DNL Reddit Ads], visita la [documentazione di Reddit
 
 Dopo aver letto questo documento, sarai in grado di configurare e utilizzare l&#39;estensione API Conversions di [!DNL Reddit]. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Adobe Experience Platform, consulta la [panoramica sull&#39;inoltro degli eventi](../../../ui/event-forwarding/overview.md) o le risorse seguenti:
 
-- [Condividi chiavi di corrispondenza](https://business.reddithelp.com/s/article/about-attribution-matching-signals) e metadati dell&#39;evento [](https://business.reddithelp.com/s/article/about-event-metadata): scopri come condividere in modo efficace chiavi di corrispondenza e metadati dell&#39;evento.
+- [Condividi chiavi di corrispondenza](https://business.reddithelp.com/s/article/about-attribution-matching-signals) e metadati dell&#39;evento [&#128279;](https://business.reddithelp.com/s/article/about-event-metadata): scopri come condividere in modo efficace chiavi di corrispondenza e metadati dell&#39;evento.
 - [Deduplica eventi](https://business.reddithelp.com/s/article/event-deduplication): assicurati che il tracciamento degli eventi sia accurato tramite la deduplicazione degli eventi.
 - [Creare un token di accesso di conversione](https://business.reddithelp.com/helpcenter/s/article/conversion-access-token): eseguire la procedura seguente per creare un token di accesso di conversione per l&#39;autenticazione API sicura.

@@ -555,7 +555,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `op` | Tipo di operazione PATCH eseguita. Per questo endpoint, il valore è **always** `/add`. |
-| `path` | Percorso del campo da aggiornare. Impossibile modificare i campi generati dal sistema, ad esempio `id`, `audienceId` e `namespace` **4}.** |
+| `path` | Percorso del campo da aggiornare. Impossibile modificare i campi generati dal sistema, ad esempio `id`, `audienceId` e `namespace` **4&rbrace;.** |
 | `value` | Il nuovo valore assegnato alla proprietà specificata in `path`. |
 
 +++

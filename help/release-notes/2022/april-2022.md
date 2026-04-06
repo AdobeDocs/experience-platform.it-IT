@@ -208,7 +208,7 @@ L’Edizione B2B di Real-Time CDP, basata su Real-Time Customer Data Platform (R
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per la funzionalità `isDeleted` | Tutti i [!DNL Marketo] set di dati tranne `Activities` ora supportano la mappatura `isDeleted`. La nuova mappatura viene aggiunta automaticamente ai flussi di dati B2B esistenti. È possibile utilizzare il mapping `isDeleted` per filtrare i record eliminati in modo che i dati in [!DNL Data Lake] siano coerenti con i dati di origine. Per ulteriori informazioni su [[!DNL Marketo] , consulta la ](../../sources/connectors/adobe-applications/mapping/marketo.md)guida dei campi di mappatura`isDeleted`. |
+| Supporto per la funzionalità `isDeleted` | Tutti i [!DNL Marketo] set di dati tranne `Activities` ora supportano la mappatura `isDeleted`. La nuova mappatura viene aggiunta automaticamente ai flussi di dati B2B esistenti. È possibile utilizzare il mapping `isDeleted` per filtrare i record eliminati in modo che i dati in [!DNL Data Lake] siano coerenti con i dati di origine. Per ulteriori informazioni su [[!DNL Marketo] , consulta la &#x200B;](../../sources/connectors/adobe-applications/mapping/marketo.md)guida dei campi di mappatura`isDeleted`. |
 
 Per ulteriori informazioni su Real-Time Customer Data Platform B2B edition, consulta la [panoramica B2B](../../rtcdp/b2b-overview.md).
 

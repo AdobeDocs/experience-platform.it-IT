@@ -17,9 +17,9 @@ Questo documento descrive i passaggi per la connessione dello strumento di datab
 
 ## Introduzione
 
-Questa guida richiede che tu abbia già accesso all&#39;app desktop [!DNL DbVisualizer] e che tu abbia familiarità con le modalità di navigazione nella relativa interfaccia. Per scaricare l&#39;app desktop [!DNL DbVisualizer] o per ulteriori informazioni, consulta la [documentazione ufficiale [!DNL DbVisualizer] ](https://www.dbvis.com/download/).
+Questa guida richiede che tu abbia già accesso all&#39;app desktop [!DNL DbVisualizer] e che tu abbia familiarità con le modalità di navigazione nella relativa interfaccia. Per scaricare l&#39;app desktop [!DNL DbVisualizer] o per ulteriori informazioni, consulta la [documentazione ufficiale [!DNL DbVisualizer] &#x200B;](https://www.dbvis.com/download/).
 
-Per acquisire le credenziali necessarie per la connessione di [!DNL  DbVisualizer] ad Experience Platform, è necessario avere accesso all&#39;area di lavoro Query nell&#39;interfaccia utente di Experience Platform. Se al momento non disponi dell’accesso all’area di lavoro Query, contatta l’amministratore dell’organizzazione.
+Per acquisire le credenziali necessarie per la connessione di [!DNL &#x200B; DbVisualizer] ad Experience Platform, è necessario avere accesso all&#39;area di lavoro Query nell&#39;interfaccia utente di Experience Platform. Se al momento non disponi dell’accesso all’area di lavoro Query, contatta l’amministratore dell’organizzazione.
 
 ## Creare una connessione al database {#connect-database}
 
@@ -35,7 +35,7 @@ Immettere quindi le proprietà del driver descritte nella tabella seguente.
 
 >[!IMPORTANT]
 >
->Per collegare DBVisualizer a Adobe Experience Platform, è necessario abilitare l&#39;utilizzo di SSL. Per informazioni sul supporto SSL per connessioni di terze parti a Adobe Experience Platform Query Service e su come connettersi utilizzando la modalità SSL [, consulta la ](./ssl-modes.md)documentazione sulle modalità SSL`verify-full`.
+>Per collegare DBVisualizer a Adobe Experience Platform, è necessario abilitare l&#39;utilizzo di SSL. Per informazioni sul supporto SSL per connessioni di terze parti a Adobe Experience Platform Query Service e su come connettersi utilizzando la modalità SSL [, consulta la &#x200B;](./ssl-modes.md)documentazione sulle modalità SSL`verify-full`.
 
 | Proprietà | Descrizione |
 | ------ | ------ |
