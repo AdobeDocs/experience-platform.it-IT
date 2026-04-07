@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1f733dd25fafed153c8d1065555d2ca45bbb11f1
+source-git-commit: c6a8a516afe31c5c6eaef67712fc646c2944d31d
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1810'
 ht-degree: 2%
 
 ---
@@ -50,6 +50,7 @@ I guardrail di seguito si applicano generalmente all&#39;attivazione tramite [tu
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
 | Numero massimo di tipi di pubblico per una singola destinazione | 250 | Guardrail delle prestazioni | Si consiglia di mappare un massimo di 250 tipi di pubblico su una singola istanza di destinazione. <br><br> Se devi attivare più di 250 tipi di pubblico in una destinazione, puoi: <ul><li> Annullare la mappatura dei tipi di pubblico che non desideri più attivare oppure</li><li>[Crea una nuova istanza di destinazione](ui/connect-destination.md) e associa ad essa i tipi di pubblico.</li></ul> <br> Tieni presente che nel caso di alcune destinazioni, puoi essere limitato a meno di 250 tipi di pubblico mappati alla destinazione. Tali destinazioni sono richiamate più avanti nella pagina, nelle rispettive sezioni. |
+| Numero massimo di tipi di pubblico attivati simultaneamente su una destinazione | 50 | Guardrail delle prestazioni | L’attivazione in blocco di più di 50 tipi di pubblico alla volta per destinazione non è supportata. Come best practice, attiva i tipi di pubblico in batch da 20, attendi alcuni minuti, quindi ripeti. Attivando più di 50 tipi di pubblico simultaneamente, il processo si blocca o la destinazione riceve meno tipi di pubblico del previsto. |
 | Numero massimo di attributi mappati a una destinazione | 50 | Guardrail delle prestazioni | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi su un’istanza di destinazione. |
 | Numero massimo di destinazioni | 100 | Guarddrail imposto dal sistema | Puoi creare un massimo di 100 destinazioni a cui connetterti e attivare i dati, *per sandbox*. [Le destinazioni di personalizzazione di Edge (Personalizzazione personalizzata)](#edge-destinations-activation) possono rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
 | Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Guarddrail imposto dal sistema | Attualmente, è possibile esportare solo *attributi record profilo* nelle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
@@ -196,7 +197,7 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 Per ulteriori informazioni su altri guardrail dei servizi Experience Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto [!DNL Real-Time CDP], consulta la seguente documentazione:
 
 * [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=it#end-to-end-latency-diagrams) per vari servizi Experience Platform.
-* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi Experience Platform.
+* [Real-Time Customer Data Platform (pacchetti B2C Edition - Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
