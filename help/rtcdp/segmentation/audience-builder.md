@@ -2,11 +2,11 @@
 title: Audience Builder in Real-Time Customer Data Platform
 description: Scopri come utilizzare Audience Builder in Real-Time Customer Data Platform per creare tipi di pubblico.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=it#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
+source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1146'
 ht-degree: 7%
 
 ---
@@ -54,13 +54,13 @@ La scheda [!UICONTROL Attributes] consente di sfogliare gli attributi dell&#39;a
 
 ![La scheda Attributi viene visualizzata in Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->I dati di riepilogo si trovano in **Disponibilità limitata**.
+>I dati di riepilogo sono disponibili in **Disponibilità limitata** e possono essere utilizzati sia in B2B edition che nella versione B2P.
 
 Quando selezioni un attributo, puoi visualizzare i dati di riepilogo selezionando l&#39;[icona informazioni](../../images/icons/info.png). I dati di riepilogo includono informazioni quali i primi valori, una spiegazione di cosa è il campo, il conteggio dei record dei valori, nonché la percentuale di conti che contengono i valori per questo attributo.
 
-La sezione **[!UICONTROL Populated]** mostra il numero di record in cui l&#39;attributo viene popolato rispetto al numero totale di record disponibili e alla percentuale di account che hanno un valore per questo campo.
+La sezione **[!UICONTROL Populated]** mostra la percentuale di account che hanno un valore per questo campo.
 
 Nella sezione **[!UICONTROL Top values]** vengono visualizzati i valori più frequenti per l&#39;attributo e sono inclusi dettagli quali il valore, il numero di record che contengono il valore e la percentuale di record totali che il valore rappresenta. Il numero di record per ciascun campo è determinato dallo snapshot del profilo, che fornisce una visualizzazione consolidata dei record dopo l’unione di tutti i dati del set di dati contributivo.
 
@@ -74,11 +74,17 @@ Se un attributo viene popolato da meno del 25% degli account, verrà visualizzat
 
 ![Un popover che visualizza una versione dei dati di riepilogo per un attributo quando è popolato da meno del 25% degli account.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+Quando aggiungi un attributo con dati di riepilogo, puoi anche visualizzare i dati di riepilogo nell’area di lavoro per la creazione delle regole.
+
+![Viene visualizzato l&#39;attributo con i dati di riepilogo.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+Puoi utilizzare il menu a discesa per selezionare uno dei valori principali oppure immettere il valore, che può automaticamente risolversi in uno dei valori principali.
+
+![L&#39;elenco a discesa in cui è possibile aggiungere il valore dell&#39;attributo è evidenziato.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->I dati di riepilogo sono disponibili solo se l’attributo appartiene allo schema Account, Persona o Opportunità. Inoltre, i primi valori vengono visualizzati solo se il campo **non** contiene troppi valori diversi e se i valori di tali campi sono comunemente ripetuti.
->
->Questi dati di riepilogo vengono aggiornati **ogni giorno**.
+>I dati di riepilogo vengono aggiornati **ogni giorno**. Inoltre, i dati di riepilogo sono **non** supportati per gli attributi i cui valori sono matrici o coppie chiave/valore.
 
 Inoltre, l&#39;attributo ha un **[!UICONTROL Ingestion Type]**. Il tipo di acquisizione consente di conoscere l&#39;origine dei dati e può essere uno dei seguenti valori: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** o **[!UICONTROL No Data Ingested]**.
 
