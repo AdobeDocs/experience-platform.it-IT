@@ -2,13 +2,14 @@
 title: Modifica pubblico personalizzato
 description: Reddit Ads collega i brand a persone che stanno attivamente esplorando le loro passioni e i loro problemi in tempo reale. Abbinando conversazioni ad alto intento guidate dalla community con formati di annunci flessibili e un targeting robusto, gli annunci Reddit Ads aiutano gli inserzionisti a raggiungere il pubblico coinvolto, promuovere i risultati delle prestazioni e imparare direttamente dalle comunità che modellano la cultura online. Questa guida è destinata agli inserzionisti e ai team di media che utilizzano Adobe Experience Platform per inviare tipi di pubblico a Reddit Ads. Descrive ciò di cui hai bisogno per collegare i tuoi account, mappare le identità e attivare i tipi di pubblico.
 last-substantial-update: 2026-03-31T00:00:00Z
-source-git-commit: c7c74ba9b5c6a66f92dc6a5403d4f2c5614c0049
+exl-id: bcce02bd-d508-47a0-8f5c-bf162db1859d
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1231'
 ht-degree: 3%
 
 ---
-
 
 # Connessione [!DNL Reddit Custom Audience] {#reddit-custom-audience-connection}
 
