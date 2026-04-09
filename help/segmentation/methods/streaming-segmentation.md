@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida alla segmentazione in streaming
 description: Scopri la segmentazione in streaming, compresi cosa è, come creare un pubblico valutato utilizzando la segmentazione in streaming e come visualizzare i tipi di pubblico creati utilizzando la segmentazione in streaming.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
+source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
 workflow-type: tm+mt
 source-wordcount: '2117'
 ht-degree: 4%
@@ -476,5 +476,3 @@ Qualsiasi definizione di segmento **nuova o modificata** idonea per lo streaming
 Se non è impostato alcun criterio di unione attivo, è necessario [configurare il criterio di unione](../../profile/merge-policies/ui-guide.md#configure) e impostarlo per essere attivo sul server Edge.
 
 +++
-
->[!ENDSHADEBOX]

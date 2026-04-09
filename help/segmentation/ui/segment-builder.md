@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6574'
+source-wordcount: '6708'
 ht-degree: 10%
 
 ---
@@ -68,7 +68,7 @@ Per **[!UICONTROL Merge policy]**, puoi scegliere a quale criterio di unione app
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [&#128279;](#rule-builder-canvas) viene discussa più avanti in questa guida.
+La scheda **[!UICONTROL Attributes]** consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, dove ogni attributo è una sezione che può essere trascinata nell’area di lavoro del generatore di regole al centro dell’area di lavoro. L&#39;area di lavoro del generatore di regole [](#rule-builder-canvas) viene discussa più avanti in questa guida.
 
 ![La sezione degli attributi dei campi del Generatore di segmenti è evidenziata.](../images/ui/segment-builder/attributes.png)
 
@@ -407,7 +407,7 @@ L&#39;elenco dei vincoli di tempo disponibili è il seguente:
 
 | Attività Time constraint | Descrizione | Abilita ignora anno | Esempio |
 | --------------- | ----------- | ------------------- | ------- |
-| Oggi | L&#39;attributo o l&#39;evento confrontato **deve** si verifica oggi. | Sì | ![Esempio del vincolo di tempo &quot;Oggi&quot; in uso.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Oggi | L&#39;attributo o l&#39;evento confrontato **deve** si verifica oggi. Questo è il vincolo di tempo predefinito selezionato. | Sì | ![Esempio del vincolo di tempo &quot;Oggi&quot; in uso.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Ieri | L&#39;attributo o l&#39;evento confrontato **must** si verifica ieri. | Sì | ![Esempio del vincolo di tempo &quot;Ieri&quot; in uso.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | Questo mese | L&#39;attributo o l&#39;evento confrontato **must** si verifica questo mese di calendario. | Sì | ![Esempio del vincolo di tempo &quot;Questo mese&quot; in uso.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | Quest’anno | L&#39;attributo o l&#39;evento da confrontare **must** si verifica in questo anno di calendario. | No | ![Esempio del vincolo di tempo &quot;Quest&#39;anno&quot; in uso.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -422,6 +422,16 @@ L&#39;elenco dei vincoli di tempo disponibili è il seguente:
 | In avanti | L’attributo o l’evento confrontato deve verificarsi nel periodo di tempo successivo selezionato. I periodi di tempo selezionati includono minuti, ore, giorni, settimane, mesi e anni. | No | ![Esempio del vincolo di orario &quot;In next&quot; in uso.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Esiste | L’attributo esiste già. | No | ![Esempio del vincolo di tempo &quot;Esiste&quot; in uso.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | Non esiste | L&#39;attributo non esiste. | No | ![Esempio del vincolo di tempo &quot;Non esiste&quot; in uso.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Ora | L&#39;attributo o l&#39;evento confrontato **must** si verifica correttamente quando il pubblico viene valutato. Questo vincolo di tempo può essere utilizzato solo come opzione di livello secondario, entro vincoli di tempo quali &quot;Prima&quot; o &quot;Dopo&quot;. | Sì | ![Esempio del vincolo di tempo &quot;Now&quot; in uso.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>La differenza tra il vincolo di tempo &quot;Oggi&quot; e &quot;Ora&quot; è sottile, ma significativa.
+>
+>- Utilizza il vincolo di tempo &quot;Oggi&quot; per verificare se l&#39;attributo o l&#39;evento confrontato si verifica alle **mezzanotte** del giorno corrente.
+>- Utilizza il vincolo di tempo &quot;Now&quot; per verificare se l&#39;attributo o l&#39;evento confrontato si verifica **al momento**.
+>
+>Tuttavia, esiste un&#39;eccezione importante: se utilizzi &quot;Oggi&quot; come vincolo di tempo di livello principale, significa che stai controllando se l&#39;attributo o l&#39;evento si è verificato a **any** point oggi.
 
 +++
 
