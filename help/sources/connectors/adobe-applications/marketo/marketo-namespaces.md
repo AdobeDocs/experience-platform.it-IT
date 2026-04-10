@@ -2,9 +2,9 @@
 title: Spazi dei nomi e schemi B2B
 description: Questo documento fornisce una panoramica degli spazi dei nomi personalizzati necessari per la creazione di un connettore di origine B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 87137090aec806b1568dab8cbe9ce785fbc959d2
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1595'
 ht-degree: 6%
 
 ---
@@ -42,17 +42,17 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sul pop
 
 | Variable | Descrizione | Esempio |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare [, consulta il tutorial su ](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
+| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su ](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su ](../../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | Il contenitore `global` contiene tutte le classi, i gruppi di campi di schema, i tipi di dati e gli schemi standard forniti dai partner Adobe e Experience Platform. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
-| `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l’integrazione in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
+| `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l&#39;integrazione in [Adobe Developer Console](https://developer.adobe.com/). Per recuperare l&#39;ID account tecnico, segui la procedura riportata di seguito:<ul><li>Passa a [Adobe Developer Console](https://developer.adobe.com/) e apri il progetto.</li><li>Apri la **credenziale** che utilizza _Account di servizio (JWT)_. **Nota**: nell&#39;interfaccia utente precedente può essere indicato come &quot;Enterprise&quot;.</li><li>I dettagli delle credenziali devono visualizzare l’ID client, l’ID account tecnico, l’ID organizzazione e altri metadati JWT.</li></ul>. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System (IMS) fornisce il framework per l’autenticazione nei servizi Adobe. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Per istruzioni su come recuperare le informazioni di [, consulta il tutorial su  [!DNL Postman]](../../../../landing/postman.md)come configurare la console per sviluppatori e `{ORG_ID}`. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Nome della partizione sandbox virtuale in uso. | `prod` |
 | `TENANT_ID` | ID utilizzato per garantire che le risorse create abbiano lo spazio dei nomi corretto e siano contenute all’interno dell’organizzazione. | `b2bcdpproductiontest` |
-| `PLATFORM_URL` | L’endpoint URL a cui stai effettuando chiamate API. Questo valore è fisso ed è sempre impostato su: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
+| `PLATFORM_URL` | L’endpoint URL a cui stai effettuando chiamate API. Questo valore è fisso ed è sempre impostato su: `platform.adobe.io/`. | `platform.adobe.io/` |
 
 {style="table-layout:auto"}
 
