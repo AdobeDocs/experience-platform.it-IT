@@ -2,12 +2,11 @@
 title: Databricks
 description: Scopri i passaggi preliminari necessari per collegare i database ad Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2026-03-14T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '606'
 ht-degree: 3%
 
 ---
@@ -16,9 +15,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* L&#39;origine [!DNL Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
->
->* L&#39;origine [!DNL Databricks] è in versione beta. Leggi i [termini e condizioni](../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
+>L&#39;origine [!DNL Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
 
 [!DNL Databricks] è una piattaforma basata su cloud progettata per l&#39;analisi dei dati, l&#39;apprendimento automatico e l&#39;intelligenza artificiale. È possibile utilizzare [!DNL Databricks] per integrare e fornire un ambiente olistico per la creazione, la distribuzione e la gestione di soluzioni di dati su larga scala.
 
@@ -159,7 +156,7 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Account di archiviazione | Il nome dell&#39;account di archiviazione. È possibile ottenere questo valore recuperando le credenziali di [!DNL Azure Blob Storage]. |
 | Token SAS | Il token di firma di accesso condiviso per [!DNL Azure Blob Storage]. È possibile ottenere questo valore recuperando le credenziali di [!DNL Azure Blob Storage]. |
 
-![Interfaccia utente di Database in Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+![Interfaccia utente di Databricks in Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
 Se non specificato, l’attività di copia nell’esecuzione del flusso non riesce e restituisce il seguente errore:
 

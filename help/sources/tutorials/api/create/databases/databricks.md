@@ -1,12 +1,10 @@
 ---
 title: Collegare I Database Ad Experience Platform Utilizzando L’API Del Servizio Flusso
 description: Scopri come collegare i database ad Experience Platform utilizzando le API.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '530'
 ht-degree: 3%
 
 ---
@@ -15,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* L&#39;origine [!DNL Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
->
->* L&#39;origine [!DNL Databricks] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
+>L&#39;origine [!DNL Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
 
 Leggi questa guida per scoprire come collegare il tuo account [!DNL Databricks] a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -125,5 +121,5 @@ In caso di esito positivo, la risposta restituisce la connessione appena creata,
 
 Seguendo questa esercitazione, è stata creata una connessione tra l&#39;account [!DNL Databricks] e Experience Platform. Puoi utilizzare l’ID connessione di base appena generato nelle seguenti esercitazioni:
 
-* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
-* [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Esplora la struttura e il contenuto delle tabelle dati utilizzando l&#39;API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crea un flusso di dati per portare i dati del database ad Experience Platform utilizzando l&#39;API  [!DNL Flow Service] ](../../collect/database-nosql.md)

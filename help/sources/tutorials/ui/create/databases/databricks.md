@@ -1,12 +1,10 @@
 ---
 title: Collegare I Database Ad Experience Platform Tramite L’Interfaccia Utente
 description: Scopri come collegare i database ad Experience Platform utilizzando l’interfaccia utente.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '438'
 ht-degree: 4%
 
 ---
@@ -15,9 +13,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->* L&#39;origine [!DNL Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
->
->* L&#39;origine [!DNL Databricks] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
+>L&#39;origine [!DNL Databricks] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-Time CDP Ultimate.
 
 Leggere questa guida per scoprire come collegare l&#39;account [!DNL Databricks] a Adobe Experience Platform utilizzando l&#39;area di lavoro origini nell&#39;interfaccia utente.
 
