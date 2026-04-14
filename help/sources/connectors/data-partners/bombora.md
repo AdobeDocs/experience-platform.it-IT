@@ -3,9 +3,9 @@ title: Intento Bombora
 description: Scopri la fonte dell’Intento di Bombora su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -79,13 +79,13 @@ Lo schema [!DNL Bombora] è denominato **Intento account Bombora B2B**. Si tratt
 
 * Classe - XDM [!DNL Bombora Account Intent]
 * Spazio dei nomi - B2B [!DNL Bombora Account Intent]
-* Identità primaria - `intentID`
+* Identità primaria - `intentID` (**Campo obbligatorio**)
 * Relazioni - Account B2B
 
 | Nome campo | Tipo di dati | Descrizione |
-|------------------------|-----------|----------------------------------------------------------------------------------------|
+| --- | --- | --- |
 | `extSourceSystemAudit` | OGGETTO | Questo campo viene utilizzato dal sistema per il controllo del sistema di origine. |
-| `_id` | STRINGA | Questo campo viene utilizzato dal sistema come identificatore univoco. |
+| `_id` | STRINGA | Questo campo viene generato dal sistema. |
 | `accountDomain` | STRINGA | Questo campo contiene il dominio dell’account. |
 | `accountID` | STRINGA | Questo campo contiene l’ID account B2B a cui è associato questo record intento. |
 | `bomboraAccountName` | STRINGA | Questo campo contiene l&#39;ID azienda di Bombora. |
