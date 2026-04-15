@@ -1,19 +1,15 @@
 ---
 title: sendPushSubscription
 description: Registrare gli abbonamenti alle notifiche push con Adobe Experience Platform.
-source-git-commit: 3abe25a9c538bf4d1b439d48f624d8cad109a99e
+exl-id: 7cb13834-46f4-481c-bd9d-600083eb6cfb
+source-git-commit: 76ba5719bd922c4ff9bff6fda4a359b18f549c5e
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 2%
+source-wordcount: '398'
+ht-degree: 3%
 
 ---
 
-
 # `sendPushSubscription` {#send-push-subscription}
-
->[!AVAILABILITY]
->
->Le notifiche push per il Web SDK sono attualmente in **beta**. La funzionalità e la documentazione sono soggette a modifiche.
 
 Il comando `sendPushSubscription` registra le sottoscrizioni di notifiche push con Adobe Experience Platform. Questo comando gestisce il recupero dei dettagli della sottoscrizione push dal browser e li invia allo stream di dati configurato. È disponibile in Web SDK versione 2.29.0 o successiva.
 

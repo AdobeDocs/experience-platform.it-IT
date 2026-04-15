@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 0750a684c7383bd3f7cb18749078989ad5571816
 workflow-type: tm+mt
-source-wordcount: '5380'
+source-wordcount: '5387'
 ht-degree: 82%
 
 ---
@@ -122,7 +122,7 @@ L’evento si attiva se si verifica un tipo di evento personalizzato. Le funzion
 
 #### Data Element Changed
 
-L’evento si attiva se un elemento dati specificato cambia. È necessario specificare un nome per l’elemento dati. Puoi selezionare l’elemento dati digitandone il nome nel campo di testo o selezionando l’icona dell’elemento dati sul lato destro del campo di testo e scegliendo da un elenco fornito all’interno della finestra di dialogo visualizzata.
+L’evento si attiva se un elemento dati specificato cambia. I sondaggi per i cambiamenti avvengono una volta al secondo. È necessario specificare un nome per l’elemento dati. Puoi selezionare l’elemento dati digitandone il nome nel campo di testo o selezionando l’icona dell’elemento dati sul lato destro del campo di testo e scegliendo da un elenco fornito all’interno della finestra di dialogo visualizzata.
 
 #### Direct Call {#direct-call-event}
 
@@ -497,7 +497,7 @@ Specifica il parametro URL utilizzato nell&#39;URL.
 1. Specifica il valore utilizzato per il parametro URL.
 1. (Facoltativo) Se si tratta di un&#39;espressione regolare, abilita Regex.
 
-#### Subdomain
+#### Sottodominio
 
 Specifica uno o più domini che devono esistere nell&#39;URL.
 
