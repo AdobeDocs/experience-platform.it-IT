@@ -2,9 +2,9 @@
 title: Panoramica degli attributi calcolati
 description: Gli attributi calcolati sono funzioni per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2eb87601d7090bf6bda8098458f9e01690a02b6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1179'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,9 @@ Gli attributi calcolati consentono di convertire rapidamente i dati comportament
 - Standardizzazione dei dati comportamentali aggregati del profilo da utilizzare su piattaforme e app diverse
 - Migliore gestione dei dati con consolidamento dei dati dei vecchi eventi di profilo in informazioni comportamentali significative
 
-Questi aggregati vengono calcolati in base ai set di dati Experience Event abilitati per il profilo e acquisiti in Adobe Experience Platform. Ogni attributo calcolato è un attributo di profilo creato nello schema di unione profili e viene raggruppato nel gruppo di campi &quot;SystemComputedAttribute&quot; nello schema di unione.
+Questi aggregati vengono calcolati in base ai set di dati Experience Event abilitati per il profilo creati dall’utente e acquisiti in Adobe Experience Platform. Ciò significa che non è possibile utilizzare i set di dati generati dal sistema e creati tramite token di servizio tramite SDK, ad esempio i set di dati di sistema di Adobe Journey Optimizer **1}.**
+
+Ogni attributo calcolato è un attributo di profilo creato nello schema di unione profili e viene raggruppato nel gruppo di campi &quot;SystemComputedAttribute&quot; nello schema di unione.
 
 I casi d’uso di esempio includono:
 
