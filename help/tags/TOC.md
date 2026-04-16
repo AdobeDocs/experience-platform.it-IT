@@ -6,9 +6,9 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '828'
 ht-degree: 44%
 
 ---
@@ -57,6 +57,7 @@ ht-degree: 44%
 * Inoltro eventi {#event-forwarding}
    * [Panoramica](./ui/event-forwarding/overview.md)
    * [Introduzione](./ui/event-forwarding/getting-started.md)
+   * [Configurazione guidata](./ui/event-forwarding/guided-setup.md)
    * [Configurazione dei segreti](./ui/event-forwarding/secrets.md)
    * [Monitoraggio (Beta)](./ui/event-forwarding/monitoring.md)
 * Amministrazione {#admin}
