@@ -4,7 +4,7 @@ title: Connessione Azure Event Hubs
 description: Crea una connessione in uscita in tempo reale all'archivio  [!DNL Azure Event Hubs]  per inviare dati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 5%
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 ## Panoramica {#overview}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 > Questa destinazione è disponibile solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 

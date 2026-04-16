@@ -4,7 +4,7 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo a un endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0fc433689ac351bff3fc6930f5e4781f9cde5ade
+source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
 source-wordcount: '2898'
 ht-degree: 7%
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 ## Panoramica {#overview}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 > Questa destinazione è disponibile solo per [clienti Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
 
