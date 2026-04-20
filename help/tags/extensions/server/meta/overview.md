@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API per conversioni Meta
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: ee615de825e6c415c356b7933a661f0da2121f08
 workflow-type: tm+mt
-source-wordcount: '2437'
+source-wordcount: '2220'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Vengono visualizzati i controlli che consentono di configurare i dati evento che
 
 | Sezione di configurazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Server Event Parameters] | Informazioni generali sull&#39;evento, tra cui l&#39;ora in cui si è verificato e l&#39;azione di origine che l&#39;ha attivato. Per ulteriori informazioni sui [!DNL Meta]parametri evento standard[&#x200B; accettati da &#x200B;](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event), consultare la documentazione per gli sviluppatori di [!DNL Conversions API].<br><br>Se si utilizzano sia [!DNL Meta Pixel] che [!DNL Conversions API] per inviare eventi, assicurarsi di includere sia un **[!UICONTROL Event Name]** (`event_name`) che un **[!UICONTROL Event ID]** (`event_id`) con ogni evento, poiché questi valori vengono utilizzati per la [deduplicazione eventi](#deduplication).<br><br>Hai anche la possibilità di **[!UICONTROL Enable Limited Data Use]** per rispettare le rinunce dei clienti. Per informazioni dettagliate su questa funzione, consulta la documentazione di [!DNL Conversions API] sulle [opzioni di elaborazione dati](https://developers.facebook.com/docs/marketing-apis/data-processing-options/). |
+| [!UICONTROL Server Event Parameters] | Informazioni generali sull&#39;evento, tra cui l&#39;ora in cui si è verificato e l&#39;azione di origine che l&#39;ha attivato. Per ulteriori informazioni sui [!DNL Meta]parametri evento standard[ accettati da ](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/server-event), consultare la documentazione per gli sviluppatori di [!DNL Conversions API].<br><br>Se si utilizzano sia [!DNL Meta Pixel] che [!DNL Conversions API] per inviare eventi, assicurarsi di includere sia un **[!UICONTROL Event Name]** (`event_name`) che un **[!UICONTROL Event ID]** (`event_id`) con ogni evento, poiché questi valori vengono utilizzati per la [deduplicazione eventi](#deduplication).<br><br>Hai anche la possibilità di **[!UICONTROL Enable Limited Data Use]** per rispettare le rinunce dei clienti. Per informazioni dettagliate su questa funzione, consulta la documentazione di [!DNL Conversions API] sulle [opzioni di elaborazione dati](https://developers.facebook.com/docs/marketing-apis/data-processing-options/). |
 | [!UICONTROL Customer Information Parameters] | Dati di identità utente utilizzati per attribuire l’evento a un cliente. Per poter essere inviati all&#39;API, alcuni di questi valori devono avere un hash.<br><br>Per garantire una buona connessione API comune e un&#39;elevata qualità di corrispondenza eventi (EMQ), si consiglia di inviare tutti i [parametri accettati per le informazioni sul cliente](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/customer-information-parameters) insieme agli eventi del server. Anche questi parametri dovrebbero avere [priorità in base alla loro importanza e al loro impatto su EMQ](https://www.facebook.com/business/help/765081237991954?id=818859032317965). |
 | [!UICONTROL Custom Data] | Dati aggiuntivi da utilizzare per l’ottimizzazione della consegna di annunci, forniti sotto forma di oggetto JSON. Per ulteriori informazioni sulle proprietà accettate per questo oggetto, consulta la [[!DNL Conversions API] documentazione](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data).<br><br>Se si invia un evento di acquisto, è necessario utilizzare questa sezione per fornire gli attributi richiesti `currency` e `value`. |
 | [!UICONTROL Test Event] | Questa opzione viene utilizzata per verificare se la configurazione sta causando la ricezione di eventi server da parte di [!DNL Meta] come previsto. Per utilizzare questa funzionalità, selezionare la casella di controllo **[!UICONTROL Send as Test Event]** e quindi specificare il codice di un evento di test desiderato nell&#39;input seguente. Una volta distribuita la regola di inoltro degli eventi, se l&#39;estensione e l&#39;azione sono state configurate correttamente, è necessario visualizzare le attività nella visualizzazione **[!DNL Test Events]** in [!DNL Meta Events Manager]. |
@@ -140,40 +140,9 @@ Il video seguente fornisce un’introduzione alla funzione di avvio rapido.
 
 >[!NOTE]
 >
->Questa funzione è progettata per aiutarti a iniziare con un’implementazione di inoltro degli eventi. Non fornirà un’implementazione end-to-end pienamente funzionale che tenga conto di tutti i casi d’uso.
+>La funzione di configurazione guidata consente di effettuare la configurazione con facilità ed efficienza. Questo strumento automatizza più passaggi eseguiti nei tag di Adobe e nell’inoltro degli eventi. Non fornirà un’implementazione end-to-end pienamente funzionale che tenga conto di tutti i casi d’uso.
 
-Questa configurazione installa automaticamente sia l’API di conversione Meta che le estensioni Pixel di Meta. Questa implementazione ibrida è consigliata da Meta per raccogliere e inoltrare le conversioni degli eventi lato server.
-La funzione di configurazione rapida è progettata per aiutare i clienti a iniziare con un’implementazione di inoltro degli eventi e non è concepita per fornire un’implementazione completa e funzionale che tenga conto di tutti i casi d’uso.
-
-Per installare la funzionalità, selezionare **[!UICONTROL Get Started]** per **[!DNL Send Conversions Data to Meta]** nella pagina Raccolta dati di Adobe Experience Platform **[!UICONTROL Home]**.
-
-![Home page della raccolta dati che mostra i dati delle conversioni in meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
-
-Immetti **[!UICONTROL Domain]**, quindi seleziona **[!UICONTROL Next]**. Questo dominio verrà utilizzato come convenzione di denominazione per le proprietà, le regole, gli elementi dati, i flussi di dati e così via dei tag generati automaticamente e dell’inoltro degli eventi.
-
-![schermata di benvenuto con richiesta del nome di dominio](../../../images/extensions/server/meta/welcome.png)
-
-Nella finestra di dialogo **[!UICONTROL Initial Setup]**, immetti **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]** e **[!UICONTROL Data Layer Path]**, quindi seleziona **[!UICONTROL Next]**.
-
-![Finestra di dialogo per l&#39;installazione iniziale](../../../images/extensions/server/meta/initial-setup.png)
-
-Attendere alcuni minuti per il completamento del processo di installazione iniziale, quindi selezionare **[!UICONTROL Next]**.
-
-![Schermata di conferma del completamento dell&#39;installazione iniziale](../../../images/extensions/server/meta/setup-complete.png)
-
-Dalla finestra di dialogo **[!UICONTROL Add Code on Your Site]** copia il codice fornito utilizzando la funzione di copia ![copia](/help/images/icons/copy.png) e incollalo nella `<head>` del sito Web di origine. Una volta implementato, seleziona **[!UICONTROL Start Validation]**
-
-![Aggiungi il codice nella finestra di dialogo del sito](../../../images/extensions/server/meta/add-code-on-your-site.png)
-
-Nella finestra di dialogo [!UICONTROL Validation Results] vengono visualizzati i risultati dell&#39;implementazione dell&#39;estensione Meta. Seleziona **[!UICONTROL Next]**. È inoltre possibile visualizzare ulteriori risultati di convalida selezionando il collegamento **[!UICONTROL Assurance]**.
-
-![Finestra di dialogo dei risultati del test con i risultati dell&#39;implementazione](../../../images/extensions/server/meta/test-results.png)
-
-La visualizzazione della schermata **[!UICONTROL Next Steps]** conferma il completamento dell&#39;installazione. Da qui puoi ottimizzare l’implementazione aggiungendo nuovi eventi, descritti nella sezione successiva.
-
-Se non si desidera aggiungere altri eventi, selezionare **[!UICONTROL Close]**.
-
-![Finestra di dialogo Passaggi successivi](../../../images/extensions/server/meta/next-steps.png)
+Per iniziare con la configurazione guidata, segui le istruzioni contenute nella [Configurazione guidata inoltro eventi](../../../ui/event-forwarding/guided-setup.md).
 
 #### Aggiunta di eventi aggiuntivi
 

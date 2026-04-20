@@ -1,9 +1,10 @@
 ---
 title: Configurazione guidata inoltro eventi
 description: Scopri come impostare l’inoltro degli eventi utilizzando la configurazione guidata.
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+exl-id: c155dec0-9130-4452-834a-08d98a15b006
+source-git-commit: a2dd6b2a5ec8ccf4ca93e845c5b7b2b39d8d1599
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -30,6 +31,10 @@ Questa installazione può installare automaticamente le estensioni. Questa imple
 Per iniziare a utilizzare la funzione, seleziona **[!UICONTROL Get Started]** nell&#39;interfaccia utente di **[!UICONTROL Event Forwarding]** Data Collections.
 
 ![Home page Inoltro eventi che mostra la scheda Introduzione nell&#39;interfaccia utente delle raccolte dati](../../images/ui/guided-setup/get-started.png)
+
+>[!INFO]
+>
+>Puoi anche accedere alla configurazione guidata direttamente dalla home page di Raccolta dati.
 
 ### Creare una nuova proprietà tag {#new-property}
 
