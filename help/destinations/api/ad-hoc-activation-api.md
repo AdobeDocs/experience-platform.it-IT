@@ -5,9 +5,9 @@ title: Attivare i tipi di pubblico su destinazioni batch tramite l’API di atti
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che si verificano prima dell’attivazione.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 944cb03ae8a432b09b54b148e94b2ee1e1bcbc5d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,10 @@ Le risorse in Experience Platform possono essere isolate in specifiche sandbox v
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
 * Tipo di contenuto: `application/json`
+
+### Documentazione di riferimento API {#api-reference-documentation}
+
+Questa esercitazione contiene la documentazione di riferimento per tutte le operazioni API. Consulta il [riferimento API di Ad Hoc Activation](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation).
 
 ## Passaggio 3: creare un flusso di attivazione nell’interfaccia utente di Experience Platform {#activation-flow}
 
