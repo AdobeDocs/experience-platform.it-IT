@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ Non è necessario iniziare da &quot;Esegui&quot; per fornire valore, concentrati
 
 ## Introduzione
 
-Scarica il modello del framework e le risorse di supporto per eseguire un workshop strutturato e produrre una roadmap misurabile e con priorità pronta per l’attivazione.
+Scarica [il modello di framework e le risorse di supporto](../assets/S651-use-case-framework-template.pdf) per eseguire un workshop strutturato e produrre una roadmap misurabile e con priorità pronta per l&#39;attivazione.
+
