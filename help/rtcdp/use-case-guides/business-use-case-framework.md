@@ -1,11 +1,9 @@
 ---
 title: Sfruttare i casi di utilizzo dell’esperienza del cliente per promuovere gli obiettivi aziendali
 description: Utilizza un framework pratico pronto per i workshop per definire, assegnare priorità e attivare casi di utilizzo dell’esperienza del cliente legati a risultati aziendali misurabili. Applica un semplice modello Why → Who/What/Where → How per allineare i team, guidare l’esecuzione e ottenere un impatto concreto.
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
