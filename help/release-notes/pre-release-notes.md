@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
+source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 20%
+source-wordcount: '1344'
+ht-degree: 17%
 
 ---
 
@@ -45,10 +45,13 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 
 | Destinazione | Descrizione |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Corrispondenza cliente Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Abbina i clienti per indirizzo e-mail e interagisci nuovamente con loro in [!DNL Microsoft Advertising Network], inclusi gli annunci Search&amp;Audience. Collega il tuo account [!DNL Microsoft Advertising] a Real-Time CDP per automatizzare la creazione e la gestione degli elenchi di corrispondenze dei clienti direttamente da Experience Platform. |
+| [!BADGE Beta]{type=Informative} [Corrispondenza cliente Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Abbina i clienti per indirizzo e-mail e interagisci nuovamente con loro in [!DNL Microsoft Advertising Network], inclusi gli annunci Search&amp;Audience. Collega il tuo account [!DNL Microsoft Advertising] a Real-Time CDP per automatizzare la creazione e la gestione degli elenchi di corrispondenze dei clienti direttamente da Experience Platform. Per ottenere l’accesso, contatta il tuo account manager Adobe. |
 | [!BADGE Beta]{type=Informative} [Modifica pubblico personalizzato](../destinations/catalog/advertising/reddit-custom-audience.md) | Invia tipi di pubblico da Experience Platform a [!DNL Reddit Ads]. Connetti il tuo account [!DNL Reddit], mappa le identità e attiva i tipi di pubblico per raggiungere le persone che esplorano attivamente i loro interessi su [!DNL Reddit]. |
 | [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] è la destinazione corrente per tutte le nuove connessioni [!DNL Amazon Ads]. Se si dispone di una connessione [(Legacy) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) esistente, questa continuerà a funzionare senza le modifiche necessarie. [!DNL Amazon Ads v2] si connette a [!DNL Ads Data Manager], che fornisce supporto per tipi di identità espansi, campi relativi all&#39;indirizzo e condivisione di dati tra i prodotti [!DNL Amazon Ads], migliorando il targeting e le percentuali di corrispondenza del pubblico rispetto a [(Legacy) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Utilizza [!DNL Rokt] per connettere il pubblico di Experience Platform a decisioni in tempo reale basate sull&#39;intelligenza artificiale, migliorando le prestazioni della campagna tramite targeting, eliminazione e personalizzazione più precisi. |
+| Supporto di tipi di pubblico esterni per [Criteo](../destinations/catalog/advertising/criteo.md) | Attiva i tipi di pubblico da origini diverse da Segmentation Service a [!DNL Criteo], inclusi i tipi di pubblico di caricamento personalizzati (importati da CSV), i tipi di pubblico simili, i tipi di pubblico federati e i tipi di pubblico creati in altre app di Experience Platform come [!DNL Adobe Journey Optimizer]. Per informazioni dettagliate, consulta la sezione [tipi di pubblico supportati](../destinations/catalog/advertising/criteo.md#supported-audiences). |
+| [Connessione Pubblico Acxiom](../destinations/catalog/advertising/acxiom-audience-connection.md) | La destinazione [!DNL Acxiom Audience Connection] è ora generalmente disponibile. Utilizzalo per migliorare i tipi di pubblico con la tecnologia [!DNL Acxiom's Real ID] e attivali in altre piattaforme, tra cui [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] e [!DNL Viant]. |
+| [Connessione pubblico Acxiom Real ID](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | La destinazione [!DNL Acxiom Real ID Audience Connection] è ora generalmente disponibile. Utilizzalo per attivare i tipi di pubblico utilizzando [!DNL Acxiom's Real ID] come chiave di corrispondenza nello stesso set di piattaforme supportate, tra cui [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] e [!DNL Viant]. |
 
 {style="table-layout:auto"}
 
@@ -57,6 +60,10 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 | Correzione | Descrizione |
 | --- | --- |
 | Supporto per il monitoraggio personalizzato di Personalization | Il dashboard di monitoraggio per le destinazioni ora supporta [!DNL Custom Personalization] destinazioni. La nota di limitazione che ha escluso [!DNL Custom Personalization] dal monitoraggio è stata rimossa. |
+| Conteggi dei profili nella revisione dell’attivazione | Il passaggio di revisione dell’attivazione ora mostra i conteggi dei profili per i tipi di pubblico già attivati. Vengono visualizzati anche i conteggi dei profili per le destinazioni di streaming, non solo per le destinazioni batch. |
+| Visibilità scadenza token [!DNL Pinterest] | La destinazione [!DNL Pinterest] ora fa precedere il tempo di scadenza del token restituito direttamente da [!DNL Pinterest], in modo da poter vedere quando è necessaria la riautenticazione. |
+| Il file di esportazione è ora disabilitato per le pianificazioni non valide | L&#39;azione **[!UICONTROL Export file now]** è ora disabilitata quando la pianificazione del pubblico non è valida o non è aggiornata. Una descrizione comando spiega perché l’azione non è disponibile. |
+| Correzione della visibilità delle colonne nel flusso di lavoro di attivazione | È stato risolto un problema a causa del quale la modifica delle colonne visibili in una tabella influiva in modo errato su altre tabelle nel flusso di lavoro di attivazione. |
 
 {style="table-layout:auto"}
 
