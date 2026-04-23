@@ -1,18 +1,15 @@
 ---
 title: pushNotifications
 description: Configura le notifiche push per Web SDK per abilitare i messaggi push basati su browser.
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '414'
 ht-degree: 3%
 
 ---
 
 # `pushNotifications` {#push-notifications}
-
->[!AVAILABILITY]
->
->Le notifiche push per il Web SDK sono attualmente in **beta**. La funzionalità e la documentazione sono soggette a modifiche.
 
 La proprietà `pushNotifications` consente di configurare le notifiche push per le applicazioni Web. Questa funzione consente all’app web di ricevere messaggi inviati da un server, anche quando il sito web non è attualmente caricato nel browser.
 

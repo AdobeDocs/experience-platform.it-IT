@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1743'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Questa guida richiede una buona conoscenza dei seguenti [!DNL Experience Platfor
 
 ## Comprendere gli spazi dei nomi delle identità {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] esegue il bridging dei dati di identità del cliente tra sistemi e dispositivi. [!DNL Identity Service] utilizza **spazi dei nomi di identità** per fornire contesto ai valori di identità tramite la relazione con il proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] esegue il bridging dei dati di identità del cliente tra sistemi e dispositivi. [!DNL Identity Service] utilizza **spazi dei nomi di identità** per fornire contesto ai valori di identità tramite la relazione con il proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, ad esempio un Adobe Advertising ID o un Adobe Target ID.
 
 Identity Service gestisce un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l’organizzazione può anche creare spazi dei nomi personalizzati in base alle sue esigenze specifiche.
 
@@ -67,7 +67,7 @@ Inoltre, l&#39;array `include` del payload della richiesta deve includere i valo
 
 >[!NOTE]
 >
->Per informazioni più dettagliate sugli effetti dell&#39;utilizzo di [&#x200B; e &#x200B;](#profile-v-identity) nell&#39;array `ProfileService`, vedere la sezione relativa alle `identity`richieste di profilo e di identità`include` più avanti in questo documento.
+>Per informazioni più dettagliate sugli effetti dell&#39;utilizzo di [ e ](#profile-v-identity) nell&#39;array `ProfileService`, vedere la sezione relativa alle `identity`richieste di profilo e di identità`include` più avanti in questo documento.
 
 La richiesta seguente crea un nuovo processo di privacy per i dati di un singolo cliente nell&#39;archivio [!DNL Profile]. Nell&#39;array `userIDs` sono forniti due valori di identità per il cliente: uno utilizza lo spazio dei nomi di identità standard `Email` e l&#39;altro utilizza uno spazio dei nomi personalizzato `Customer_ID`. Include inoltre il valore del prodotto per [!DNL Profile] (`ProfileService`) nell&#39;array `include`:
 
@@ -225,4 +225,4 @@ Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando 
 
 Dopo aver letto questo documento, ti verranno presentati i concetti importanti relativi all&#39;elaborazione delle richieste di accesso a dati personali in [!DNL Experience Platform]. Per comprendere meglio come gestire i dati di identità e creare processi relativi alla privacy, continua a leggere la documentazione fornita in questa guida.
 
-Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [&#x200B; nel data lake](../catalog/privacy.md).
+Per informazioni sull&#39;elaborazione delle richieste di accesso a dati personali per le risorse [!DNL Experience Platform] non utilizzate da [!DNL Profile], vedere il documento sull&#39;elaborazione delle richieste di accesso a dati personali [ nel data lake](../catalog/privacy.md).

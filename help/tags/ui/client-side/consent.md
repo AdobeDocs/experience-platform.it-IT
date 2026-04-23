@@ -2,7 +2,7 @@
 title: Implementare i tag JavaScript per gestire il consenso dei clienti
 description: Scopri come gestire i segnali di opt-in e opt-out del cliente per diverse soluzioni Adobe in Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 94%
@@ -19,9 +19,9 @@ Gli sviluppatori di estensioni Adobe Experience Platform utilizzano estensioni e
 
 Questo documento contiene informazioni su come evitare l&#39;attivazione dei tag Adobe senza l&#39;acquisizione del consenso.
 
-## Advertising Cloud
+## Adobe Advertising
 
-Adobe Experience Platform non attiva automaticamente [!DNL Advertising Cloud]. [!DNL Advertising Cloud] si attiva solo se espressamente indicato in un&#39;azione di una regola. Utilizza le condizioni della regola per determinare quando e cosa attivare. Ad esempio, per utilizzare i cookie di determinazione dello stato del consenso, imposta un elemento di dati per leggere tale cookie e utilizzalo come condizione nella regola per determinare quando attivare l&#39;azione Traccia conversione.
+Adobe Experience Platform non attiva automaticamente [!DNL Adobe Advertising]. [!DNL Advertising] si attiva solo se espressamente indicato in un&#39;azione di una regola. Utilizza le condizioni della regola per determinare quando e cosa attivare. Ad esempio, per utilizzare i cookie di determinazione dello stato del consenso, imposta un elemento di dati per leggere tale cookie e utilizzalo come condizione nella regola per determinare quando attivare l&#39;azione Traccia conversione.
 
 Le integrazioni con i programmi di gestione del consenso (ad esempio OneTrust) possono impostare e tenere traccia dei cookie di consenso per i clienti, che possono quindi essere utilizzati nel generatore di regole.
 

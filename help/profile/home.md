@@ -2,7 +2,7 @@
 title: Panoramica del profilo cliente in tempo reale
 description: Real-Time Customer Profile unisce i dati provenienti da varie origini e fornisce l’accesso a tali dati sotto forma di profili dei clienti individuali e di eventi delle serie temporali correlati. Questa funzione consente agli addetti al marketing di promuovere esperienze coordinate, coerenti e rilevanti con i propri tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -113,7 +113,7 @@ L’input in tempo reale è possibile tramite un processo denominato acquisizion
 
 >[!NOTE]
 >
->I dati raccolti tramite le soluzioni Adobe, tra cui [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Advertising Cloud], fluiscono in [!DNL Experience Platform] e vengono acquisiti in [!DNL Profile].
+>I dati raccolti tramite le soluzioni Adobe, tra cui [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Adobe Advertising], fluiscono in [!DNL Experience Platform] e vengono acquisiti in [!DNL Profile].
 
 ### Metriche di acquisizione del profilo
 

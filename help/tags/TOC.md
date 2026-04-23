@@ -6,10 +6,10 @@ user-guide-description: Scopri come distribuire e gestire i tag di analisi, mark
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 44%
+source-wordcount: '827'
+ht-degree: 43%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 44%
       * [Personalizzatore Activity Map](https://exchange.adobe.com/apps/ec/101531)
       * [Aggiornamento pagina azione](https://exchange.adobe.com/apps/ec/102848)
       * [Adform Web Tracking](https://exchange.adobe.com/apps/ec/103195)
-      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [Panoramica](./extensions/client/analytics/overview.md)
          * [Moduli condivisi](./extensions/client/analytics/shared-modules.md)
@@ -157,7 +157,7 @@ ht-degree: 44%
          * [Panoramica](./extensions/client/target-v2/overview.md)
          * [Note sulla versione](./extensions/client/target-v2/release-notes.md)
       * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
-      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100640)
       * [Informazioni su risorse AEM](https://exchange.adobe.com/apps/ec/103406)
       * [Notificatore JS AirBrake](https://exchange.adobe.com/apps/ec/103342)
       * [!DNL Algolia] approfondimenti {#algolia-insights}

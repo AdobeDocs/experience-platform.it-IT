@@ -3,9 +3,9 @@ keywords: destinazioni pubblicitarie;destinazioni;destinazioni piattaforma pubbl
 title: Panoramica sulle destinazioni di Advertising
 description: Connetti Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi su tali piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2084f45ca89e78f980a8d2a53a08966e0588fcdd
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 * [(Beta) Distribuzione del pubblico di Acxiom](acxiom-audience-connection.md)
 * [(Beta) Connessione pubblico Acxiom Real ID](acxiom-real-id-audience-connection.md)
 * [Connessione Adobe Advertising DSP](adobe-advertising-dsp-connection.md)
-* [Connessione legacy Adobe Advertising Cloud DSP](adobe-advertising-cloud-dsp-connection-legacy.md)
+* [Connessione Adobe Advertising DSP legacy](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Connessione Amazon Ads](amazon-ads.md)
 * [Connessione Amazon Ads v2](amazon-ads-v2.md)
 * [Connessione Bombora](bombora.md)
@@ -53,7 +53,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni
 
 ### Estensioni {#extensions}
 
-* [Estensione Adobe Advertising Cloud](adobe-advertising-cloud.md)
+* [Estensione Adobe Advertising](adobe-advertising-cloud.md)
 * [Estensione tag di conversione Awin Advertising](awin-conversiontag.md)
 * [Estensione Awin Advertising Mastertag](awin-mastertag.md)
 * [Estensione di tracciamento degli eventi universali di Bing Ads](bing-ads.md)

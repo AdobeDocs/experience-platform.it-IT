@@ -3,7 +3,7 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1632'
 ht-degree: 2%
@@ -69,7 +69,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 ||Experience Cloud Audiences|Adobe Target|
 |---|---|---|
-| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Advertising Cloud, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Adobe Advertising, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
 | **Supports audience activation** | ✓ | ✓ |
 | **Supports attribute activation** | X | ✓ |
 | **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
@@ -231,7 +231,7 @@ Le definizioni del pubblico vengono propagate ad Edge Network in un massimo di u
 ### Dove posso visualizzare gli attributi attivati in [!DNL Adobe Target]? {#target-activated-attributes-location}
 
 +++Risposta
-Gli attributi saranno disponibili per l&#39;utilizzo in Target nelle offerte [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=it) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=it).
+Gli attributi saranno disponibili per l&#39;utilizzo in Target nelle offerte [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 +++
 
 ### È possibile creare una destinazione senza un flusso di dati e quindi aggiungere un flusso di dati alla stessa destinazione in un secondo momento? {#destination-without-datastream}
@@ -267,7 +267,7 @@ Sì.  Le [regole per la governance dei dati e i criteri di consenso](../data-gov
 ### Le destinazioni [!DNL Adobe Target] e [!DNL Custom Personalization] [!DNL HIPAA] sono conformi? {#hipaa-compliance}
 
 +++Risposta
-[!DNL Adobe Target] non è conforme a [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/it/solutions/industries/healthcare.html). I clienti devono verificare con i propri team legali la disponibilità di [!DNL HIPPA] per i canali di ottimizzazione personalizzati prima di utilizzare la personalizzazione Edge tramite [!DNL Adobe Target] o le destinazioni [!DNL Custom Personalization].
+[!DNL Adobe Target] non è conforme a [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). I clienti devono verificare con i propri team legali la disponibilità di [!DNL HIPPA] per i canali di ottimizzazione personalizzati prima di utilizzare la personalizzazione Edge tramite [!DNL Adobe Target] o le destinazioni [!DNL Custom Personalization].
 
 Per i casi d&#39;uso in cui la gestione dei criteri di consenso deve essere applicata su larga scala, i clienti devono acquistare [!DNL Adobe Privacy & Security Shield]. Le funzionalità di [!DNL Adobe Privacy & Security Shield] sono vendute come suite avanzata di funzionalità e non possono essere acquistate separatamente.
 

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1888'
 ht-degree: 8%
 
 ---
@@ -128,7 +128,7 @@ XDM è una specifica documentata pubblicamente progettata per migliorare la pote
 | Funzione | Descrizione |
 | ---------- | ------------ |
 | Schema di notifica | Nuovo schema che rappresenta i dati di notifica inviati durante il processo di acquisizione dei dati. |
-| Schemi Adobe AdCloud DSP | Sono stati aggiunti cinque nuovi schemi per rappresentare i metadati della piattaforma lato domanda di Adobe Advertising Cloud (DSP): Posizionamento, Campagna, Pacchetto, Inserzionista, Account. |
+| Schemi Adobe AdCloud DSP | Sono stati aggiunti cinque nuovi schemi per rappresentare i metadati della piattaforma lato domanda (DSP) di Adobe Advertising: Posizionamento, Campagna, Pacchetto, Inserzionista, Account. |
 | Gruppi di campi schema Dettagli implementazione ExperienceEvent | Nuovi gruppi di campi ExperienceEvent che aggiungono un campo standard per memorizzare informazioni sul software utilizzato per raccogliere l’evento. |
 | [!DNL Profile Privacy] gruppi di campi | Nuovi gruppi di campi profilo che aggiungono campi per accettare i segnali di rinuncia generale e di vendita/condivisione per [!DNL Real-Time Customer Profile]. |
 | Vincoli di formato per `xdm:alternateDisplayInfo` | I campi &quot;Titolo&quot; e &quot;Descrizione&quot; per `xdm:alternateDisplayInfo` devono essere entrambi stringhe per superare la convalida. |

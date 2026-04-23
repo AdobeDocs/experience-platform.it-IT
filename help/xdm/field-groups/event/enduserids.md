@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Gruppo di campi dello schema Dettagli ID utente finale
 description: Scopri il gruppo di campi dello schema Dettagli ID utente finale.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 5%
+source-wordcount: '191'
+ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Dettagli ID utente finale] gruppo di campi schema
+# [!UICONTROL End User ID Details] gruppo di campi schema
 
 >[!NOTE]
 >
->I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [&#128279;](../name-updates.md).
+>I nomi di diversi gruppi di campi dello schema sono stati modificati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti del nome del gruppo di campi [](../name-updates.md).
 
-[!UICONTROL Dettagli ID utente finale] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni sull&#39;identità di un individuo in diverse applicazioni Adobe. Il gruppo di campi fornisce un oggetto `endUserIDs` di livello principale, che contiene un campo `_experience` di sola lettura i cui valori vengono aggiornati automaticamente durante l&#39;acquisizione dei dati.
+[!UICONTROL End User ID Details] è un gruppo di campi dello schema standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilizzato per descrivere le informazioni sull&#39;identità di un individuo in diverse applicazioni Adobe. Il gruppo di campi fornisce un oggetto `endUserIDs` di livello principale, che contiene un campo `_experience` di sola lettura i cui valori vengono aggiornati automaticamente durante l&#39;acquisizione dei dati.
 
 ![](../../images/field-groups/enduserids.png){width=700}
 
@@ -27,9 +27,9 @@ ht-degree: 5%
 | `aacustomid` | [Identità](../../data-types/identity.md) | ID personalizzati degli utenti finali per Adobe Analytics Cloud. |
 | `aaid` | [Identità](../../data-types/identity.md) | ID degli utenti finali per Adobe Analytics Cloud. |
 | `acid` | [Identità](../../data-types/identity.md) | ID degli utenti finali per Adobe Campaign. |
-| `adcloud` | [Identità](../../data-types/identity.md) | ID degli utenti finali per Adobe Advertising Cloud. |
+| `adcloud` | [Identità](../../data-types/identity.md) | ID degli utenti finali per Adobe Advertising. |
 | `emailid` | [Identità](../../data-types/identity.md) | ID degli indirizzi e-mail. |
-| `mcid` | [Identità](../../data-types/identity.md) | Adobe Marketing Cloud ID (MCID). Il MCID è ora noto come ID Experience Cloud (ECID). |
+| `mcid` | [Identità](../../data-types/identity.md) | Adobe Marketing Cloud ID (MCID). Il MCID è ora noto come Experience Cloud ID (ECID). |
 | `phonenumberid` | [Identità](../../data-types/identity.md) | ID dei numeri di telefono. |
 | `tntid` | [Identità](../../data-types/identity.md) | ID degli utenti finali per Adobe Target. |
 

@@ -3,21 +3,21 @@ title: Scheda Auditor
 description: Scopri come utilizzare la scheda Auditor in Adobe Experience Platform Debugger per testare le implementazioni Adobe Experience Cloud.
 keywords: debugger;estensione debugger di experience platform;chrome;estensione;auditor;dtm;target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 32%
+source-wordcount: '361'
+ht-degree: 33%
 
 ---
 
 # Scheda Auditor
 
-Ad Adobe Experience Platform Debugger, puoi utilizzare la scheda **[!UICONTROL Auditor]** per eseguire una serie di test di audit sulla pagina.
+In Adobe Experience Platform Debugger è possibile utilizzare la scheda **[!UICONTROL Auditor]** per eseguire una serie di test di controllo sulla pagina.
 
 Per utilizzare questa funzione:
 
-1. Seleziona **[!UICONTROL Auditor]** nella navigazione a sinistra.
-1. Selezionare **[!UICONTROL Esegui test Auditor]**. Una volta completati i test, i relativi risultati vengono visualizzati di seguito.
+1. Selezionare **[!UICONTROL Auditor]** nel menu di navigazione a sinistra.
+1. Seleziona **[!UICONTROL Run Auditor Tests]**. Una volta completati i test, i relativi risultati vengono visualizzati di seguito.
 
 ![Schermata dei risultati del test nella scheda Auditor](../images/auditor-results.png)
 
@@ -44,10 +44,10 @@ Tutti i test hanno esito positivo o negativo. Essi verificano la conformità o l
 
 ## Tecnologie Adobe supportate
 
-La funzione di auditor è in grado di valutare le seguenti tecnologie di Adobe:
+La funzione di auditor è in grado di valutare le seguenti tecnologie Adobe:
 
-* Adobe Advertising Cloud DSP
-* Adobe Advertising Cloud Search
+* Adobe Advertising DSP
+* Ricerca Adobe Advertising
 * Adobe Analytics
 * Adobe Experience Cloud Identity Service
 * Adobe Target
