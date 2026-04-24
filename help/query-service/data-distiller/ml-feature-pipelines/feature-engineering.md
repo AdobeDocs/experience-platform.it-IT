@@ -71,7 +71,7 @@ Numero di classi: 50000
 Con una query appropriata puoi raccogliere gli eventi nel set di dati in funzioni numeriche significative che possono essere utilizzate per addestrare un modello di tendenza. Di seguito sono riportati alcuni eventi di esempio:
 
 - **Numero di e-mail** inviate per scopi di marketing e ricevute dall&#39;utente.
-- Parte di queste e-mail aperte ****.
+- Parte di queste e-mail aperte **&#x200B;**.
 - Parte di queste e-mail in cui l&#39;utente **ha selezionato** il collegamento.
 - **Numero di prodotti** visualizzati.
 - Numero di **proposte con cui si è interagito**.
