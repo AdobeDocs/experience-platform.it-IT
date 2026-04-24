@@ -1,26 +1,30 @@
 ---
 title: edgeDomain
-description: Determina il dominio principale a cui desideri inviare i dati.
+description: Determina il dominio a cui desideri inviare i dati.
 exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
-source-git-commit: 09799847c61d82ed5b7cd372d92aa436697d54f3
+source-git-commit: 2d3c31e399989652a0472bbe2174ca8d8554ba30
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '268'
 ht-degree: 3%
 
 ---
 
 # `edgeDomain`
 
-La proprietà `edgeDomain` consente di modificare il dominio in cui il Web SDK invia i dati. Questa proprietà viene spesso utilizzata dalle organizzazioni che utilizzano [cookie di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it). I dati vengono inviati al dominio dell’organizzazione, quindi un record CNAME li inoltra ad Adobe.
+La proprietà `edgeDomain` consente di modificare il dominio in cui il Web SDK invia i dati. L’utilizzo di un dominio personalizzato può contribuire a ridurre l’impatto degli ad blocker.
 
-Il valore utilizzato per `edgeDomain` dipende dalla partecipazione al [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/it/docs/core-services/interface/data-collection/adobe-managed-cert):
+>[!NOTE]
+>
+>Questa proprietà non cambia la posizione in cui vengono impostati i cookie. Il Web SDK imposta sempre [cookie di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it), indipendentemente da dove invierà i dati.
 
-**Se la tua organizzazione partecipa al programma di certificazione gestito da Adobe**, imposta il valore sul dominio di prime parti selezionato durante la configurazione del certificato. In genere questo valore è un sottodominio di proprietà dell’organizzazione. Ad esempio, `data.example.com`. I record CNAME nella tua organizzazione reindirizzano tali dati ad Adobe.
+Il valore utilizzato per `edgeDomain` dipende dalla partecipazione al [programma di certificazione gestito da Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert):
 
-**Se non partecipi al programma di certificazione**, imposta il valore su un sottodominio di `data.adobedc.net`. Adobe consiglia di utilizzare per coerenza l’ID azienda della tua organizzazione. Ad esempio, `example.data.adobedc.net`. Per determinare l&#39;ID società, effettua le seguenti operazioni:
+**Se la tua organizzazione partecipa al programma di certificazione gestito da Adobe**, imposta il valore sul dominio di prime parti selezionato durante la configurazione del certificato. In genere questo valore è un sottodominio di proprietà dell’organizzazione. Ad esempio, `data.example.com`. I record CNAME della tua organizzazione inoltrano tali dati ad Adobe.
+
+**Se la tua organizzazione non partecipa al programma di certificazione**, imposta il valore su un sottodominio di `data.adobedc.net`. Per coerenza, Adobe consiglia di utilizzare l’ID azienda IMS assegnato da Adobe della tua organizzazione. Ad esempio, `example.data.adobedc.net`. Per determinare l’ID società IMS, effettua le seguenti operazioni:
 
 1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali Adobe ID.
-1. In qualsiasi punto dell&#39;interfaccia di Experience Cloud, premere `[Cmd]` + `[I]` (iOS) o `[Ctrl]` + `[I]` (Windows).
+1. In qualsiasi punto dell&#39;interfaccia di Experience Cloud, premere `[Cmd]` + `[I]` (macOS) o `[Ctrl]` + `[I]` (Windows).
 1. Verrà visualizzato **[!UICONTROL User data debugger]**. Seleziona la scheda **[!UICONTROL Assigned orgs]**.
 1. Espandi l’organizzazione IMS desiderata.
 1. Individua il campo **[!UICONTROL Tenant]**. Questo valore è il sottodominio consigliato di `data.adobedc.net` da utilizzare.
