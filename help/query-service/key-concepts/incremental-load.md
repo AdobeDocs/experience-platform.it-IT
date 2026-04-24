@@ -1,33 +1,33 @@
 ---
-title: Carico incrementale in Query Service
-description: La funzione di caricamento incrementale utilizza sia le funzioni di blocco anonimo che di istantanea per fornire una soluzione quasi in tempo reale per spostare i dati dal data lake al data warehouse ignorando i dati corrispondenti.
+title: Incremental Load in Query Service
+description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching data.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
 
-# Carico incrementale in Query Service
+# Incremental load in Query Service
 
-Il modello di progettazione del carico incrementale è una soluzione per la gestione dei dati. Il modello elabora solo le informazioni nel set di dati che è stato creato o modificato dopo l’ultima esecuzione del caricamento.
+The incremental load design pattern is a solution for managing data. The pattern only processes information in the dataset that has been created or modified since the last load execution.
 
-Il caricamento incrementale utilizza varie funzioni fornite da Adobe Experience Platform Query Service, ad esempio blocchi anonimi e snapshot. Questo modello di progettazione aumenta l’efficienza di elaborazione quando tutti i dati già elaborati dall’origine vengono ignorati. Può essere utilizzato sia con l’elaborazione dei dati in streaming che in batch.
+Incremental load uses various features provided by Adobe Experience Platform Query Service such as anonymous block and snapshots. This design pattern increases processing efficiency as any data already processed from the source is skipped. It can be used with both streaming and batch data processing.
 
-Questo documento fornisce una serie di istruzioni per creare un modello di progettazione per l’elaborazione incrementale. Questi passaggi possono essere utilizzati come modello per creare query di caricamento dati incrementali personalizzate.
+This document provides a series of instructions to build a design pattern for incremental processing. These steps can be used as a template to create your own incremental data load queries.
 
 ## Introduzione
 
-Gli esempi SQL illustrati in questo documento richiedono una conoscenza approfondita delle funzionalità di blocco anonimo e snapshot. Si consiglia di leggere la documentazione [query di blocco anonime di esempio](./anonymous-block.md) e la documentazione [clausola snapshot](../sql/syntax.md#snapshot-clause).
+The SQL examples throughout this document require you to have an understanding of the anonymous block and snapshot capabilities. It is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
 
-Per informazioni su qualsiasi terminologia utilizzata in questa guida, fare riferimento alla [guida alla sintassi SQL](../sql/syntax.md).
+For guidance on any terminology used within this guide, refer to the [SQL syntax guide](../sql/syntax.md).
 
-## Caricamento incrementale dei dati
+## Incrementally load data
 
-I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale utilizzando gli snapshot e la funzione di blocco anonimo. Il modello struttura può essere utilizzato come modello per la propria sequenza di query.
+The steps below demonstrate how to create and incrementally load data using snapshots and the anonymous block feature. The design pattern can be used as a template for your own sequence of queries.
 
-1. Creare una tabella `checkpoint_log` per tenere traccia dello snapshot più recente utilizzato per elaborare correttamente i dati. La tabella di rilevamento (`checkpoint_log` in questo esempio) deve prima essere inizializzata in `null` per elaborare in modo incrementale un set di dati.
+1. Create a `checkpoint_log` table to track the most recent snapshot used to process data successfully. The tracking table (`checkpoint_log` in this example) must first be initialized to `null` in order to incrementally process a dataset.
 
    ```SQL
    DROP TABLE IF EXISTS checkpoint_log;
@@ -40,7 +40,7 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
       WHERE false;
    ```
 
-1. Popolare la tabella `checkpoint_log` con un record vuoto per il set di dati che richiede l&#39;elaborazione incrementale. `DIM_TABLE_ABC` è il set di dati da elaborare nell&#39;esempio seguente. Alla prima elaborazione di `DIM_TABLE_ABC`, `last_snapshot_id` è inizializzato come `null`. Questo consente di elaborare l’intero set di dati la prima volta e in modo incrementale in seguito.
+1. Populate the `checkpoint_log` table with one empty record for the dataset that needs incremental processing. `DIM_TABLE_ABC` is the dataset to be processed in the example below. On the first occasion of processing `DIM_TABLE_ABC`, the `last_snapshot_id` is initialized as `null`. This allows you to process the entire dataset on the first occasion and incrementally thereafter.
 
    ```SQL
    INSERT INTO
@@ -52,9 +52,9 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1. Inizializzare quindi `DIM_TABLE_ABC_Incremental` per contenere l&#39;output elaborato da `DIM_TABLE_ABC`. Il blocco anonimo nella sezione di esecuzione **required** dell&#39;esempio SQL seguente, come descritto nei passaggi da uno a quattro, viene eseguito in sequenza per elaborare i dati in modo incrementale.
+1. Next, initialize `DIM_TABLE_ABC_Incremental` to contain processed output from `DIM_TABLE_ABC`. The anonymous block in the **required** execution section of the SQL example below, as described in steps one to four, is executed sequentially to process data incrementally.
 
-   1. Imposta `from_snapshot_id` che indica da dove inizia l&#39;elaborazione. Viene eseguita una query per `from_snapshot_id` nell&#39;esempio dalla tabella `checkpoint_log` per l&#39;utilizzo con `DIM_TABLE_ABC`. All&#39;esecuzione iniziale, l&#39;ID snapshot sarà `null`, il che significa che l&#39;intero set di dati verrà elaborato.
+   1. Set the `from_snapshot_id` which indicates where the processing starts from. Viene eseguita una query per `from_snapshot_id` nell&#39;esempio dalla tabella `checkpoint_log` per l&#39;utilizzo con `DIM_TABLE_ABC`. All&#39;esecuzione iniziale, l&#39;ID snapshot sarà `null`, il che significa che l&#39;intero set di dati verrà elaborato.
    1. Imposta `to_snapshot_id` come ID snapshot corrente della tabella di origine (`DIM_TABLE_ABC`). Nell’esempio, questa viene eseguita dalla tabella dei metadati della tabella di origine.
    1. Utilizzare la parola chiave `CREATE` per creare `DIM_TABLE_ABC_Incremenal` come tabella di destinazione. La tabella di destinazione mantiene i dati elaborati dal set di dati di origine (`DIM_TABLE_ABC`). Ciò consente di aggiungere in modo incrementale alla tabella di destinazione i dati elaborati dalla tabella di origine tra `from_snapshot_id` e `to_snapshot_id`.
    1. Aggiornare la tabella `checkpoint_log` con `to_snapshot_id` per i dati di origine elaborati correttamente da `DIM_TABLE_ABC`.
@@ -84,7 +84,7 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -116,7 +116,7 @@ I passaggi seguenti mostrano come creare e caricare i dati in modo incrementale 
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -154,7 +154,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;

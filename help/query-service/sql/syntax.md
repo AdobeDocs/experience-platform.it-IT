@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento descrive e spiega la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '4686'
+source-wordcount: '4737'
 ht-degree: 1%
 
 ---
@@ -200,9 +200,9 @@ Utilizzare il comando `CREATE TABLE AS SELECT` per materializzare i risultati di
 
 Se sei pronto a addestrare un modello utilizzando funzionalità trasformate, consulta la [documentazione sui modelli](../advanced-statistics/models.md) per informazioni sull&#39;utilizzo di `CREATE MODEL` con la clausola `TRANSFORM`.
 
-Facoltativamente, è possibile includere una clausola `TRANSFORM` per applicare una o più funzioni di ingegneria funzionale direttamente all&#39;interno dell&#39;istruzione CTAS. Utilizza `TRANSFORM` per verificare i risultati della logica di trasformazione prima dell&#39;apprendimento del modello.
+You can optionally include a `TRANSFORM` clause to apply one or more feature engineering functions directly within the CTAS statement. Use `TRANSFORM` to inspect the results of your transformation logic before model training.
 
-Questa sintassi si applica sia alle tabelle permanenti che a quelle temporanee.
+This syntax applies to both permanent and temporary tables.
 
 ```sql
 CREATE TABLE table_name 
@@ -220,19 +220,19 @@ AS (select_query)
 
 | Parametro | Descrizione |
 | ----- | ----- |
-| `schema` | Titolo dello schema XDM. Utilizzare questa clausola solo per associare la nuova tabella a uno schema XDM esistente. |
-| `rowvalidation` | (Facoltativo) Abilita la convalida a livello di riga per ogni batch acquisito nel set di dati. Il valore predefinito è true. |
-| `label` | (Facoltativo) Utilizza il valore `PROFILE` per etichettare il set di dati come abilitato per l’acquisizione del profilo. |
-| `transform` | (Facoltativo) Applica trasformazioni di ingegneria delle funzionalità (ad esempio indicizzazione di stringhe, codifica a caldo o TF-IDF) prima di materializzare il set di dati. Questa clausola viene utilizzata per visualizzare in anteprima le feature trasformate. Per ulteriori dettagli, vedere la documentazione della clausola [`TRANSFORM`](#transform). |
-| `select_query` | Istruzione `SELECT` standard che definisce il set di dati. Per ulteriori dettagli, vedere la sezione [`SELECT` query](#select-queries). |
+| `schema` | The title of the XDM schema. Use this clause only if you wish to associate the new table with an existing XDM schema. |
+| `rowvalidation` | (Optional) Enables row-level validation for each batch ingested into the dataset. Default is true. |
+| `label` | (Optional) Use the value `PROFILE` to label the dataset as enabled for Profile ingestion. |
+| `transform` | (Optional) Applies feature engineering transformations (such as string indexing, one-hot encoding, or TF-IDF) before materializing  the dataset. This clause is used for previewing transformed features. See [`TRANSFORM` clause documentation](#transform) for more details. |
+| `select_query` | A standard `SELECT` statement that defines the dataset. See the [`SELECT` queries section](#select-queries) for more details. |
 
 >[!NOTE]
 >
->L&#39;istruzione `SELECT` deve includere un alias per le funzioni di aggregazione come `COUNT`, `SUM` o `MIN`. È possibile fornire la query `SELECT` con o senza parentesi. Ciò si applica indipendentemente dal fatto che venga utilizzata la clausola `TRANSFORM`.
+>The `SELECT` statement must include an alias for aggregate functions such as `COUNT`, `SUM`, or `MIN`. You can provide the `SELECT` query with or without parentheses. This applies whether or not the `TRANSFORM` clause is used.
 
 **Esempi**
 
-Esempio di base che utilizza una clausola `TRANSFORM` per visualizzare in anteprima alcune funzionalità progettate:
+A basic example using a `TRANSFORM`clause to preview a few engineered features:
 
 ```sql
 CREATE TABLE ctas_transform_table_vp14 
@@ -244,7 +244,7 @@ TRANSFORM(
 AS SELECT * FROM movie_review_e2e_DND;
 ```
 
-Un esempio più avanzato con più passaggi di trasformazione:
+A more advanced example with multiple transformation steps:
 
 ```sql
 CREATE TABLE ctas_transform_table 
@@ -261,7 +261,7 @@ TRANSFORM(
 AS SELECT * FROM movie_review;
 ```
 
-Esempio di tabella temporanea:
+A temporary table example:
 
 ```sql
 CREATE TEMP TABLE ctas_transform_table 
@@ -278,13 +278,13 @@ TRANSFORM(
 AS SELECT * FROM movie_review;
 ```
 
-#### Limitazioni e comportamento {#limitations-and-behavior}
+#### Limitations and behavior {#limitations-and-behavior}
 
-Tenere presenti le limitazioni seguenti quando si utilizza la clausola `TRANSFORM` con `CREATE TABLE` o `CREATE TEMP TABLE`:
+Keep the following limitations in mind when using the `TRANSFORM` clause with `CREATE TABLE` or `CREATE TEMP TABLE`:
 
-- Se una funzione di trasformazione genera un output vettoriale, viene automaticamente convertita in un array.
-- Di conseguenza, le tabelle create con `TRANSFORM` non possono essere utilizzate direttamente nelle istruzioni `CREATE MODEL`. Per generare i vettori di feature appropriati, dovete ridefinire la logica di trasformazione durante la creazione del modello.
-- Le trasformazioni vengono applicate solo durante la creazione della tabella. I nuovi dati inseriti nella tabella con `INSERT INTO` sono **non trasformati automaticamente**. Per applicare le trasformazioni ai nuovi dati, è necessario ricreare la tabella utilizzando `CREATE TABLE AS SELECT` con la clausola `TRANSFORM`.
+- If any transformation function generates a vector output, it is automatically converted to an array.
+- As a result, tables created using `TRANSFORM` cannot be used directly in `CREATE MODEL` statements. You must redefine the transformation logic during model creation to generate the appropriate feature vectors.
+- Transformations are only applied during table creation. I nuovi dati inseriti nella tabella con `INSERT INTO` sono **non trasformati automaticamente**. Per applicare le trasformazioni ai nuovi dati, è necessario ricreare la tabella utilizzando `CREATE TABLE AS SELECT` con la clausola `TRANSFORM`.
 - Questo metodo ha lo scopo di visualizzare in anteprima e convalidare le trasformazioni in un determinato momento e non di creare pipeline di trasformazione riutilizzabili.
 
 >[!NOTE]
@@ -525,7 +525,7 @@ $$BEGIN
 $$END
 
 exceptionHandler:
-      WHEN OTHER
+      WHEN OTHERS
       THEN statementList
 
 statementList:
@@ -543,7 +543,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -647,7 +647,7 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
@@ -724,7 +724,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -775,7 +775,7 @@ CREATE TABLE IF NOT EXISTS target_table_name AS
                      WHERE  @mytableexist = 'true' limit 20
               ) ;
 EXCEPTION
-WHEN other THEN SELECT 'ERROR';
+WHEN OTHERS THEN SELECT 'ERROR';
 
 END $$; 
 ```
@@ -817,16 +817,16 @@ select inline(productListItems) from source_dataset limit 10;
 
 I valori presi da `source_dataset` vengono utilizzati per popolare la tabella di destinazione.
 
-| SKU | _experience | quantità | priceTotal |
+| SKU | _experience | quantity | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |          |              |
-| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)) | 6 | 40 |
-| product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)) | 3 | 12 |
+| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;) | 6 | 40 |
+| product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
-## IMPOSTA
+## SET
 
-Il comando `SET` imposta una proprietà e restituisce il valore di una proprietà esistente oppure elenca tutte le proprietà esistenti. Se viene fornito un valore per una chiave di proprietà esistente, il valore precedente viene sovrascritto.
+The `SET` command sets a property and either returns the value of an existing property or lists all the existing properties. If a value is provided for an existing property key, the old value is overridden.
 
 ```sql
 SET property_key = property_value
@@ -834,22 +834,22 @@ SET property_key = property_value
 
 | Parametri | Descrizione |
 | ------ | ------ |
-| `property_key` | Nome della proprietà che si desidera elencare o modificare. |
-| `property_value` | Il valore con cui si desidera impostare la proprietà. |
+| `property_key` | The name of the property that you want to list or alter. |
+| `property_value` | The value that you want the property to be set as. |
 
-Per restituire il valore per qualsiasi impostazione, utilizzare `SET [property key]` senza `property_value`.
+To return the value for any setting, use `SET [property key]` without a `property_value`.
 
-## [!DNL PostgreSQL] comandi
+## [!DNL PostgreSQL] commands
 
-Le sottosezioni seguenti descrivono i comandi [!DNL PostgreSQL] supportati da Query Service.
+The subsections below cover the [!DNL PostgreSQL] commands supported by Query Service.
 
-### ANALIZZARE LA TABELLA {#analyze-table}
+### ANALYZE TABLE {#analyze-table}
 
-Il comando `ANALYZE TABLE` esegue un&#39;analisi di distribuzione e calcoli statistici per la tabella o le tabelle denominate. L&#39;utilizzo di `ANALYZE TABLE` varia a seconda che i set di dati siano archiviati nell&#39;[archivio accelerato](#compute-statistics-accelerated-store) o nel [data lake](#compute-statistics-data-lake). Per ulteriori informazioni sull’uso di questa variabile, consulta le rispettive sezioni.
+The `ANALYZE TABLE` command performs a distribution analysis and statistical calculations for the named table or tables. The use of `ANALYZE TABLE` varies depending on whether the datasets are stored on the [accelerated store](#compute-statistics-accelerated-store) or the [data lake](#compute-statistics-data-lake). See their respective sections for more information on its use.
 
-#### STATISTICHE DI CALCOLO sull&#39;archivio accelerato {#compute-statistics-accelerated-store}
+#### COMPUTE STATISTICS on the accelerated store {#compute-statistics-accelerated-store}
 
-Il comando `ANALYZE TABLE` calcola le statistiche per una tabella nell&#39;archivio accelerato. Le statistiche sono calcolate sulle query CTAS o ITAS eseguite per una determinata tabella nell’archivio accelerato.
+The `ANALYZE TABLE` command computes statistics for a table on the accelerated store. The statistics are calculated on executed CTAS or ITAS queries for a given table on the accelerated store.
 
 **Esempio**
 
@@ -857,25 +857,25 @@ Il comando `ANALYZE TABLE` calcola le statistiche per una tabella nell&#39;archi
 ANALYZE TABLE <original_table_name>
 ```
 
-Di seguito è riportato un elenco di calcoli statistici disponibili dopo l&#39;utilizzo del comando `ANALYZE TABLE`:-
+The following is a list of statistical calculations that are available after using the `ANALYZE TABLE` command:-
 
-| Valori calcolati | Descrizione |
+| Calculated values | Descrizione |
 |---|---|
-| `field` | Nome della colonna in una tabella. |
-| `data-type` | Tipo di dati accettabile per ogni colonna. |
-| `count` | Numero di righe contenenti un valore non nullo per questo campo. |
-| `distinct-count` | Il numero di valori univoci o distinti per questo campo. |
-| `missing` | Numero di righe con valore Null per questo campo. |
-| `max` | Valore massimo della tabella analizzata. |
-| `min` | Valore minimo della tabella analizzata. |
-| `mean` | Valore medio della tabella analizzata. |
-| `stdev` | Deviazione standard della tabella analizzata. |
+| `field` | The name of the column in a table. |
+| `data-type` | The acceptable type of data for each column. |
+| `count` | The number of rows that contain a non-null value for this field. |
+| `distinct-count` | The number of unique or distinct values for this field. |
+| `missing` | The number of rows that have a null value for this field. |
+| `max` | The maximum value from the analyzed table. |
+| `min` | The minimum value from the analyzed table. |
+| `mean` | The average value of the analyzed table. |
+| `stdev` | The standard deviation of the analyzed table. |
 
-#### STATISTICHE DI CALCOLO sul data lake {#compute-statistics-data-lake}
+#### COMPUTE STATISTICS on the data lake {#compute-statistics-data-lake}
 
-È ora possibile calcolare le statistiche a livello di colonna sui set di dati [!DNL Azure Data Lake Storage] (ADLS) con il comando SQL `COMPUTE STATISTICS`. Calcola le statistiche delle colonne sull’intero set di dati, su un sottoinsieme di un set di dati, su tutte le colonne o su un sottoinsieme di colonne.
+You can now calculate column-level statistics on [!DNL Azure Data Lake Storage] (ADLS) datasets with the `COMPUTE STATISTICS` SQL command. Compute column statistics on either the entire dataset, a subset of a dataset, all columns, or a subset of columns.
 
-`COMPUTE STATISTICS` estende il comando `ANALYZE TABLE`. Tuttavia, i comandi `COMPUTE STATISTICS`, `FILTERCONTEXT` e `FOR COLUMNS` non sono supportati nelle tabelle di archivio accelerate. Queste estensioni per il comando `ANALYZE TABLE` sono attualmente supportate solo per le tabelle ADLS.
+`COMPUTE STATISTICS` extends the `ANALYZE TABLE` command. However, the `COMPUTE STATISTICS`, `FILTERCONTEXT`, and `FOR COLUMNS` commands are not supported on accelerated store tables. These extensions for the `ANALYZE TABLE` command are currently only supported for ADLS tables.
 
 **Esempio**
 
@@ -883,13 +883,13 @@ Di seguito è riportato un elenco di calcoli statistici disponibili dopo l&#39;u
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
-Il comando `FILTER CONTEXT` calcola le statistiche su un sottoinsieme del set di dati in base alla condizione del filtro fornita. Il comando `FOR COLUMNS` esegue il targeting di colonne specifiche per l&#39;analisi.
+The `FILTER CONTEXT` command calculates statistics on a subset of the dataset based on the filter condition provided. The `FOR COLUMNS` command targets specific columns for analysis.
 
 >[!NOTE]
 >
->`Statistics ID` e le statistiche generate sono valide solo per ogni sessione e non è possibile accedervi in diverse sessioni PSQL.<br><br>Limitazioni:<ul><li>La generazione di statistiche non è supportata per i tipi di dati array o mappa</li><li>Le statistiche calcolate sono **non** persistenti tra sessioni diverse.</li></ul><br><br>Opzioni:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Per impostazione predefinita, il flag è impostato su true. Di conseguenza, quando le statistiche vengono richieste su un tipo di dati non supportato, non viene generato un errore ma i campi vengono ignorati automaticamente con i tipi di dati non supportati.<br>Per abilitare le notifiche sugli errori quando vengono richieste statistiche su un tipo di dati non supportato, utilizzare: `SET skip_stats_for_complex_datatypes = false`.
+>The `Statistics ID` and the statistics generated are only valid for each session and cannot be accessed across different PSQL sessions.<br><br>Limitations:<ul><li>Statistics generation is not supported for array or map data types</li><li>Computed statistics are **not** persisted across sessions.</li></ul><br><br>Opzioni:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>By default, the flag is set to true. As a result, when statistics are requested on a datatype that is not supported, it does not error out but silently skips fields with the unsupported datatypes.<br>To enable notifications on errors when statistics are requested on unsupported datatype, use: `SET skip_stats_for_complex_datatypes = false`.
 
-L’output della console viene visualizzato come illustrato di seguito.
+The console output appears as seen below.
 
 ```console
 |     Statistics ID      |
@@ -898,20 +898,20 @@ L’output della console viene visualizzato come illustrato di seguito.
 (1 row)
 ```
 
-È quindi possibile eseguire direttamente una query sulle statistiche calcolate facendo riferimento a `Statistics ID`. Utilizzare `Statistics ID` o il nome dell&#39;alias come illustrato nell&#39;istruzione di esempio seguente per visualizzare l&#39;output completo. Per ulteriori informazioni su questa funzione, consulta la [documentazione sul nome alias](../key-concepts/dataset-statistics.md#alias-name).
+You can then query the computed statistics directly by referencing the `Statistics ID`. Use the the `Statistics ID` or the alias name as shown in the example statement below, to view the output in full. To learn more about this feature, see the [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Utilizzare il comando `SHOW STATISTICS` per visualizzare i metadati per tutte le statistiche temporanee generate nella sessione. Questo comando consente di perfezionare l’ambito dell’analisi statistica.
+Use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics generated in the session. This command can help you refine the scope of your statistical analysis.
 
 ```sql
 SHOW STATISTICS;
 ```
 
-Di seguito è riportato un esempio di output di SHOW STATISTICS.
+An example output of SHOW STATISTICS is seen below.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
@@ -921,17 +921,17 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Per ulteriori informazioni, consulta la [documentazione sulle statistiche del set di dati](../key-concepts/dataset-statistics.md).
+See the [dataset statistics documentation](../key-concepts/dataset-statistics.md) for more information.
 
-#### TABELLAMPIO {#tablesample}
+#### TABLESAMPLE {#tablesample}
 
-Adobe Experience Platform Query Service fornisce set di dati di esempio come parte delle sue funzionalità di elaborazione delle query approssimative.
+Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities.
 
-È consigliabile utilizzare gli esempi di set di dati quando non è necessaria una risposta esatta per un’operazione di aggregazione su un set di dati. Per eseguire query esplorative più efficienti su set di dati di grandi dimensioni tramite una query approssimativa per restituire una risposta approssimativa, utilizzare la funzionalità `TABLESAMPLE`.
+Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. To conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer, use the `TABLESAMPLE` feature.
 
-I set di dati di esempio vengono creati con campioni casuali uniformi dai set di dati esistenti [!DNL Azure Data Lake Storage] (ADLS), utilizzando solo una percentuale di record dell&#39;originale. La funzionalità di esempio del set di dati estende il comando `ANALYZE TABLE` con i comandi SQL `TABLESAMPLE` e `SAMPLERATE`.
+Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.
 
-Nell’esempio seguente, la riga 1 illustra come calcolare un campione del 5% della tabella. La riga 2 illustra come calcolare un campione del 5% da una visualizzazione filtrata dei dati all’interno della tabella.
+In the example below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
 
 **Esempio**
 
@@ -940,11 +940,11 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Per ulteriori informazioni, consulta la [documentazione sugli esempi di set di dati](../key-concepts/dataset-samples.md).
+See the [dataset samples documentation](../key-concepts/dataset-samples.md) for more information.
 
-### INIZIO
+### BEGIN
 
-Il comando `BEGIN` o, in alternativa, il comando `BEGIN WORK` o `BEGIN TRANSACTION`, avvia un blocco della transazione. Tutte le istruzioni immesse dopo il comando begin verranno eseguite in una singola transazione fino a quando non viene fornito un comando COMMIT o ROLLBACK esplicito. Comando uguale a `START TRANSACTION`.
+The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -952,9 +952,9 @@ BEGIN WORK
 BEGIN TRANSACTION
 ```
 
-### CHIUDI
+### CLOSE
 
-Il comando `CLOSE` libera le risorse associate a un cursore aperto. Dopo la chiusura del cursore non sono consentite operazioni successive. Quando il cursore non è più necessario, è necessario chiuderlo.
+The `CLOSE` command frees the resources associated with an open cursor. After the cursor is closed, no subsequent operations are allowed on it. A cursor should be closed when it is no longer needed.
 
 ```sql
 CLOSE name
@@ -1068,20 +1068,20 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 | Parametri | Descrizione |
 | ------ | ------ |
 | `name` | Nome dell&#39;istruzione preparata. |
-| `data_type` | I tipi di dati dei parametri dell&#39;istruzione preparata. Se il tipo di dati di un parametro non è elencato, è possibile dedurlo dal contesto. Se devi aggiungere più tipi di dati, puoi aggiungerli in un elenco separato da virgole. |
+| `data_type` | I tipi di dati dei parametri dell&#39;istruzione preparata. Se il tipo di dati di un parametro non è elencato, è possibile dedurlo dal contesto. If you must add multiple data types, you can add them in a comma-separated list. |
 
 ### ROLLBACK
 
-Il comando `ROLLBACK` annulla la transazione corrente ed elimina tutti gli aggiornamenti effettuati dalla transazione.
+The `ROLLBACK` command undoes the current transaction and discards all the updates made by the transaction.
 
 ```sql
 ROLLBACK
 ROLLBACK WORK
 ```
 
-### SELEZIONA IN
+### SELECT INTO
 
-Il comando `SELECT INTO` crea una nuova tabella e la riempie con i dati calcolati da una query. I dati non vengono restituiti al client, come avviene con un normale comando `SELECT`. Le colonne della nuova tabella hanno i nomi e i tipi di dati associati alle colonne di output del comando `SELECT`.
+The `SELECT INTO` command creates a new table and fills it with data computed by a query. The data is not returned to the client, as it is with a normal `SELECT` command. The new table&#39;s columns have the names and data types associated with the output columns of the `SELECT` command.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -1101,25 +1101,25 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-Ulteriori informazioni sui parametri di query SELECT standard sono disponibili nella [sezione di query SELECT](#select-queries). In questa sezione sono elencati solo i parametri esclusivi del comando `SELECT INTO`.
+More information about the standard SELECT query parameters can be found in the [SELECT query section](#select-queries). This section only lists parameters that are exclusive to the `SELECT INTO` command.
 
 | Parametri | Descrizione |
 | ------ | ------ |
-| `TEMPORARY` o `TEMP` | Un parametro facoltativo. Se il parametro è specificato, la tabella creata è una tabella temporanea. |
-| `UNLOGGED` | Un parametro facoltativo. Se si specifica il parametro, la tabella creata è una tabella non registrata. Ulteriori informazioni sulle tabelle non registrate sono disponibili nella [[!DNL PostgreSQL] documentazione](https://www.postgresql.org/docs/current/sql-createtable.html). |
-| `new_table` | Nome della tabella da creare. |
+| `TEMPORARY` o `TEMP` | An optional parameter. If the parameter is specified, the created table is a temporary table. |
+| `UNLOGGED` | An optional parameter. If the parameter is specified, the created table is an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | The name of the table to be created. |
 
 **Esempio**
 
-La query seguente crea una nuova tabella `films_recent` costituita solo da voci recenti della tabella `films`:
+The following query creates a new table `films_recent` consisting of only recent entries from the table `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 ```
 
-### MOSTRA
+### SHOW
 
-Il comando `SHOW` visualizza l&#39;impostazione corrente dei parametri di runtime. Queste variabili possono essere impostate utilizzando l&#39;istruzione `SET`, modificando il file di configurazione `postgresql.conf`, tramite la variabile di ambiente `PGOPTIONS` (quando si utilizza libpq o un&#39;applicazione basata su libpq) o tramite i flag della riga di comando all&#39;avvio del server Postgres.
+The `SHOW` command displays the current setting of runtime parameters. These variables can be set using the `SET` statement, by editing the `postgresql.conf` configuration file, through the `PGOPTIONS` environmental variable (when using libpq or a libpq-based application), or through command-line flags when starting the Postgres server.
 
 ```sql
 SHOW name
@@ -1128,12 +1128,12 @@ SHOW ALL
 
 | Parametri | Descrizione |
 | ------ | ------ |
-| `name` | Nome del parametro di runtime di cui si desidera ottenere informazioni. I valori possibili per il parametro runtime includono i seguenti valori:<br>`SERVER_VERSION`: questo parametro mostra il numero di versione del server.<br>`SERVER_ENCODING`: questo parametro mostra la codifica del set di caratteri lato server.<br>`LC_COLLATE`: questo parametro mostra l&#39;impostazione delle impostazioni locali del database per le regole di confronto (ordinamento testo).<br>`LC_CTYPE`: questo parametro mostra l&#39;impostazione delle impostazioni locali del database per la classificazione dei caratteri.<br>`IS_SUPERUSER`: questo parametro indica se il ruolo corrente dispone di privilegi di utente avanzato. |
-| `ALL` | Mostra i valori di tutti i parametri di configurazione con le relative descrizioni. |
+| `name` | The name of the runtime parameter you want information about. Possible values for the runtime parameter include the following values:<br>`SERVER_VERSION`: This parameter shows the server&#39;s version number.<br>`SERVER_ENCODING`: This parameter shows the server-side character set encoding.<br>`LC_COLLATE`: This parameter shows the database&#39;s locale setting for collation (text ordering).<br>`LC_CTYPE`: This parameter shows the database&#39;s locale setting for character classification.<br>`IS_SUPERUSER`: This parameter shows if the current role has superuser privileges. |
+| `ALL` | Show the values of all configuration parameters with descriptions. |
 
 **Esempio**
 
-La query seguente mostra l&#39;impostazione corrente del parametro `DateStyle`.
+The following query shows the current setting of the parameter `DateStyle`.
 
 ```sql
 SHOW DateStyle;
@@ -1146,7 +1146,7 @@ SHOW DateStyle;
 (1 row)
 ```
 
-### COPIA
+### COPY
 
 Il comando `COPY` duplica l&#39;output di qualsiasi query `SELECT` in un percorso specificato. Affinché il comando venga eseguito correttamente, l&#39;utente deve avere accesso a questa posizione.
 
@@ -1228,25 +1228,25 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 
 Per aggiungere o eliminare vincoli per le colonne della tabella delle identità primaria e secondaria, utilizzare il comando `ALTER TABLE`.
 
-Gli esempi seguenti aggiungono un’identità primaria e un’identità secondaria aggiungendo vincoli.
+The following examples add a primary identity and a secondary identity by adding constraints.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
 ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 ```
 
-Le identità possono anche essere rimosse eliminando i vincoli, come mostrato nell’esempio seguente.
+Identities can also be removed by dropping constraints, as seen in the example below.
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Per informazioni più dettagliate, consulta il documento su [impostazione di identità in set di dati ad hoc](../data-governance/ad-hoc-schema-identities.md).
+For more detailed information, see the document on [setting identities in an ad hoc datasets](../data-governance/ad-hoc-schema-identities.md).
 
-#### AGGIUNGI COLONNA
+#### ADD COLUMN
 
-Le query SQL seguenti mostrano esempi di aggiunta di colonne a una tabella.
+The following SQL queries show examples of adding columns to a table.
 
 ```sql
 ALTER TABLE table_name ADD COLUMN column_name data_type
@@ -1254,26 +1254,26 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
-##### Tipi di dati supportati
+##### Supported data types
 
-Nella tabella seguente sono elencati i tipi di dati accettati per l&#39;aggiunta di colonne a una tabella con [!DNL Postgres SQL], XDM e [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
+The following table lists the accepted data types for adding columns to a table with [!DNL Postgres SQL], XDM, and the [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
 
-| — | Client PSQL | XDM | ADR | Descrizione |
+| --- | PSQL client | XDM | ADR | Descrizione |
 |---|---|---|---|---|
-| 1 | `bigint` | `int8` | `bigint` | Tipo di dati numerico utilizzato per memorizzare numeri interi di grandi dimensioni compresi tra -9.223.372.036.854.775.807 e 9.223.372.036.854.775.807 in 8 byte. |
-| 2 | `integer` | `int4` | `integer` | Tipo di dati numerico utilizzato per memorizzare numeri interi compresi tra -2.147.483.648 e 2.147.483.647 in 4 byte. |
-| 3 | `smallint` | `int2` | `smallint` | Tipo di dati numerici utilizzato per memorizzare numeri interi compresi tra -32.768 e 215-1 32.767 in 2 byte. |
-| 4 | `tinyint` | `int1` | `tinyint` | Tipo di dati numerico utilizzato per memorizzare valori interi compresi tra 0 e 255 in 1 byte. |
-| 5 | `varchar(len)` | `string` | `varchar(len)` | Tipo di dati carattere di dimensioni variabili. È consigliabile utilizzare `varchar` quando le dimensioni delle voci di dati della colonna variano notevolmente. |
-| 6 | `double` | `float8` | `double precision` | `FLOAT8` e `FLOAT` sono sinonimo validi per `DOUBLE PRECISION`. `double precision` è un tipo di dati a virgola mobile. I valori a virgola mobile sono memorizzati in 8 byte. |
-| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` è un sinonimo valido per `double precision`.`double precision` è un tipo di dati a virgola mobile. I valori a virgola mobile sono memorizzati in 8 byte. |
-| 8 | `date` | `date` | `date` | I tipi di dati `date` sono valori di data di calendario memorizzati a 4 byte senza informazioni di marca temporale. L’intervallo di date valide è compreso tra 01-01-0001 e 12-31-9999. |
-| 9 | `datetime` | `datetime` | `datetime` | Tipo di dati utilizzato per memorizzare un istante di tempo espresso come data e ora del calendario. `datetime` include i qualificatori di: anno, mese, giorno, ora, secondo e frazione. Una dichiarazione `datetime` può includere qualsiasi sottoinsieme di queste unità di tempo che sono unite in quella sequenza o che comprendono solo una singola unità di tempo. |
-| 10 | `char(len)` | `string` | `char(len)` | La parola chiave `char(len)` viene utilizzata per indicare che l&#39;elemento è un carattere a lunghezza fissa. |
+| 1 | `bigint` | `int8` | `bigint` | A numerical data type used to store large integers ranging from –9,223,372,036,854,775,807 to 9,223,372,036,854,775,807 in 8 bytes. |
+| 2 | `integer` | `int4` | `integer` | A numerical data type used to store integers ranging from -2,147,483,648 to 2,147,483,647 in 4 bytes. |
+| 3 | `smallint` | `int2` | `smallint` | A numerical data type used to store integers ranging from -32,768 to 215-1 32,767 in 2 bytes. |
+| 4 | `tinyint` | `int1` | `tinyint` | A numerical data type used to store integers ranging from 0 to 255 in 1 byte. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | A character data type that is of variable-size. `varchar` is best used when the sizes of the column data entries vary considerably. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` and `FLOAT` are valid synonyms for `DOUBLE PRECISION`. `double precision` is a floating-point data type. Floating-point values are stored in 8 bytes. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` is a valid synonym for `double precision`.`double precision` is a floating-point data type. Floating-point values are stored in 8 bytes. |
+| 8 | `date` | `date` | `date` | The `date` data types are 4-byte stored calendar date values without any timestamp information. The range of valid dates is from 01-01-0001 to 12-31-9999. |
+| 9 | `datetime` | `datetime` | `datetime` | A data type used to store an instant in time expressed as a calendar date and time of day. `datetime` includes the qualifiers of: year, month, day, hour, second, and fraction. A `datetime` declaration can include any subset of these time units that are joined in that sequence, or even comprise only a single time unit. |
+| 10 | `char(len)` | `string` | `char(len)` | The `char(len)` keyword is used to indicate that the item is fixed-length character. |
 
-#### AGGIUNGI SCHEMA
+#### ADD SCHEMA
 
-La query SQL seguente mostra un esempio di aggiunta di una tabella a un database o a uno schema.
+The following SQL query shows an example of adding a table to a database / schema.
 
 ```sql
 ALTER TABLE table_name ADD SCHEMA database_name.schema_name
@@ -1281,12 +1281,12 @@ ALTER TABLE table_name ADD SCHEMA database_name.schema_name
 
 >[!NOTE]
 >
-> Impossibile aggiungere tabelle e viste ADLS a database/schemi DWH.
+> ADLS tables and views cannot be added to DWH databases / schemas.
 
 
-#### RIMUOVI SCHEMA
+#### REMOVE SCHEMA
 
-La query SQL seguente mostra un esempio di rimozione di una tabella da un database o da uno schema.
+The following SQL query shows an example of removing a table from a database / schema.
 
 ```sql
 ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
@@ -1294,7 +1294,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 >[!NOTE]
 >
-> Le tabelle e le viste DWH non possono essere rimosse da database/schemi DWH fisicamente collegati.
+> DWH tables and views cannot be removed from physically linked DWH databases / schemas.
 
 
 **Parametri**
@@ -1302,12 +1302,12 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 | Parametri | Descrizione |
 | ------ | ------ |
 | `table_name` | Nome della tabella che si sta modificando. |
-| `column_name` | Nome della colonna che si desidera aggiungere. |
-| `data_type` | Tipo di dati della colonna che si desidera aggiungere. I tipi di dati supportati sono: bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar. |
+| `column_name` | The name of the column you want to add. |
+| `data_type` | The data type of the column you want to add. Supported data types include the following: bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar. |
 
-### MOSTRA CHIAVI PRIMARIE
+### SHOW PRIMARY KEYS
 
-Il comando `SHOW PRIMARY KEYS` elenca tutti i vincoli di chiave primaria per il database specificato.
+The `SHOW PRIMARY KEYS` command lists all the primary key constraints for the given database.
 
 ```sql
 SHOW PRIMARY KEYS
@@ -1320,9 +1320,9 @@ SHOW PRIMARY KEYS
  table_name_2 | column_name2  | text     | "AAID"
 ```
 
-### MOSTRA CHIAVI ESTERNE
+### SHOW FOREIGN KEYS
 
-Il comando `SHOW FOREIGN KEYS` elenca tutti i vincoli di chiave esterna per il database specificato.
+The `SHOW FOREIGN KEYS` command lists all the foreign key constraints for the given database.
 
 ```sql
 SHOW FOREIGN KEYS
@@ -1336,9 +1336,9 @@ SHOW FOREIGN KEYS
 ```
 
 
-### MOSTRA GRUPPI DI DATI
+### SHOW DATAGROUPS
 
-Il comando `SHOW DATAGROUPS` restituisce una tabella di tutti i database associati. Per ogni database, la tabella include schema, tipo di gruppo, tipo figlio, nome figlio e ID figlio.
+The `SHOW DATAGROUPS` command returns a table of all associated databases. For each database, the table includes schema, group type, child type, child name, and child ID.
 
 ```sql
 SHOW DATAGROUPS
@@ -1354,9 +1354,9 @@ SHOW DATAGROUPS
 ```
 
 
-### MOSTRA DATAGROUPS PER tabella
+### SHOW DATAGROUPS FOR table
 
-Il comando `SHOW DATAGROUPS FOR 'table_name'` restituisce una tabella di tutti i database associati che contengono il parametro come relativo elemento figlio. Per ogni database, la tabella include schema, tipo di gruppo, tipo figlio, nome figlio e ID figlio.
+The `SHOW DATAGROUPS FOR 'table_name'` command returns a table of all associated databases that contain the parameter as its child. For each database, the table includes schema, group type, child type, child name, and child ID.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'
@@ -1364,7 +1364,7 @@ SHOW DATAGROUPS FOR 'table_name'
 
 **Parametri**
 
-- `table_name`: nome della tabella per la quale si desidera trovare i database associati.
+- `table_name`: The name of the table that you want to find associated databases for.
 
 ```console
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId

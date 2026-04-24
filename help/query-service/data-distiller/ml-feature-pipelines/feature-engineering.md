@@ -2,10 +2,10 @@
 title: Caratteristiche tecniche per l'apprendimento automatico
 description: Scopri come trasformare i dati in Adobe Experience Platform in funzioni o variabili che possono essere utilizzate da un modello di apprendimento automatico. Utilizza Data Distiller per calcolare le funzioni ML su larga scala e condividerle con il tuo ambiente di apprendimento automatico.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 12%
+source-wordcount: '1146'
+ht-degree: 18%
 
 ---
 
@@ -71,7 +71,7 @@ Numero di classi: 50000
 Con una query appropriata puoi raccogliere gli eventi nel set di dati in funzioni numeriche significative che possono essere utilizzate per addestrare un modello di tendenza. Di seguito sono riportati alcuni eventi di esempio:
 
 - **Numero di e-mail** inviate per scopi di marketing e ricevute dall&#39;utente.
-- Parte di queste e-mail aperte **&#x200B;**.
+- Parte di queste e-mail aperte ****.
 - Parte di queste e-mail in cui l&#39;utente **ha selezionato** il collegamento.
 - **Numero di prodotti** visualizzati.
 - Numero di **proposte con cui si è interagito**.
@@ -146,7 +146,7 @@ df_features.head()
 
 **Output di esempio**
 
-|   | userId | emailsReceived | emailsOpened | e-mailClic | productsViewed | propositionInteracts | propositionIgnorato | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick |
+|   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN |
@@ -156,9 +156,9 @@ df_features.head()
 
 {style="table-layout:auto"}
 
-#### Combinare le query di etichette e funzionalità {#combine-queries}
+#### Combine labels and features queries {#combine-queries}
 
-Infine, la query delle etichette e la query delle funzionalità possono essere combinate in un’unica query che restituisce un set di dati di formazione di etichette e funzionalità:
+Finally, the labels query and the features query can be combined into a single query that returns a training dataset of labels and features:
 
 +++Seleziona per visualizzare la query di esempio
 
@@ -229,13 +229,13 @@ df_training_set.head()
 
 **Output di esempio**
 
-|  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | emailsOpened | e-mailClic | productsViewed | propositionInteracts | propositionIgnorato | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick | random_row_number_for_user |
+|  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionIgnorato | webLinkClicks | minutes_Since_emailSent | minutes_Since_emailOpened | minutes_Since_emailClick | minutes_Since_productView | minutes_Since_propositionInteract | minutes_Since_propositionDismiss | minutes_Since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17/06/2023 13/0&rbrace;59,086:44: | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55,366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Nessuna | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/06/2023 18/0&rbrace;49,083:36: | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Nessuna | NaN | 7 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Nessuna | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Nessuna | NaN | 7 |
 | 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21/06/2023 21/0&rbrace;29,482:58: | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Nessuna | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -381,7 +381,7 @@ WHERE
 ORDER BY timestamp;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 
 END $$;
