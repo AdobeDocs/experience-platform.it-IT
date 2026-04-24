@@ -10,9 +10,10 @@ role: User, Developer
 level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
-source-git-commit: 4805570178a923206565c4ee1b55ab6532579d66
+exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
+source-git-commit: b340d118051e2c38e1098b601e9944a7029129dc
 workflow-type: tm+mt
-source-wordcount: '2376'
+source-wordcount: '2379'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Il server MCP di Real-Time CDP è distribuito come **server di trasporto HTTP remoto** che gli utenti installano e configurano nei client MCP e nelle piattaforme di app supportati (ad esempio Claude, ChatGPT, Claude Code, Codex, Cursor o VS Code). L&#39;autenticazione viene gestita tramite un **flusso di accesso basato su browser**. Quando il client si connette per la prima volta al server, apre il browser predefinito in modo che tu possa accedere con le tue credenziali Adobe e autorizzare l&#39;accesso.
+>Il server MCP di Real-Time CDP è distribuito come **server di trasporto HTTP remoto** che gli utenti installano e configurano nei client MCP e nelle piattaforme di app supportati (ad esempio Claude, ChatGPT, Claude Code, Codex, Cursor o VS Code). L&#39;autenticazione viene gestita tramite un **flusso di accesso basato su browser**. Quando il client si connette per la prima volta al server, apre il browser predefinito in modo che tu possa accedere con le tue credenziali Adobe e autorizzare l&#39;accesso. Contatta il rappresentante Adobe per accedere a questo programma Beta.
 
 ## Beta, sicurezza e note legali {#mcp-notices}
 
@@ -57,18 +58,7 @@ Il server MCP di Real-Time CDP consente di controllare, riepilogare e risolvere 
 
 ## Strumenti disponibili {#mcp-tools}
 
-Il server MCP di Real-Time CDP espone i seguenti strumenti:
-
-| Strumento | Descrizione |
-| --- | --- |
-| **Cerca tipi di pubblico esistenti** | Elenca i tipi di pubblico con filtri facoltativi (nome, tipo di entità, stato del ciclo di vita, spazio dei nomi, origine) o recupera un pubblico specifico per ID. |
-| **Anteprima appartenenza pubblico** | Stimare la dimensione di una query di segmento (PQL per i tipi di pubblico di profilo, SDD per i tipi di pubblico relazionali/dell’account) inclusi i metadati dell’intervallo di affidabilità. |
-| **Elenca tipi di destinazione** | Visualizza il catalogo dei tipi di connettori di destinazione disponibili nella sandbox. |
-| **Elenca account configurati** | Sfoglia gli account di destinazione configurati (connessioni di base) e i relativi dettagli di autenticazione. |
-| **Elenca destinazioni configurate** | Sfoglia i flussi di dati di destinazione, filtrabili per nome, stato, specifica di flusso o connessione di origine/destinazione. |
-| **Elenca connessioni Source** | Controlla le connessioni di origine che contengono le informazioni di mappatura del set di dati per un flusso di dati di destinazione. |
-| **Elenca connessioni di destinazione** | Controllare le connessioni di destinazione che contengono il formato dei dati e la configurazione del percorso per una destinazione. |
-| **Esecuzioni di verifica attivazione** | Esamina la cronologia di esecuzione del flusso di dati di destinazione, filtrabile per ID flusso, stato (operazione riuscita, non riuscita, in corso) e intervallo di tempo di completamento. |
+La disponibilità degli strumenti sta rapidamente cambiando con l&#39;attivazione di nuovi strumenti. Contatta il tuo rappresentante Adobe per ottenere un elenco degli strumenti più recenti disponibili.
 
 >[!NOTE]
 >
@@ -111,29 +101,33 @@ Prima di collegare il server Real-Time CDP MCP al client MCP, verificare quanto 
 
 Prima di iniziare, assicurati di avere i seguenti elementi:
 
-* URL dell&#39;endpoint del server MCP: `https://rtcdp-mcp.adobe.io/mcp`.
+* URL dell&#39;endpoint del server MCP: `Available to Beta customers through your Adobe representative`.
 * Conferma che l’utente di Adobe abbia accesso all’organizzazione Experience Platform di destinazione e alla sandbox.
 
 Il server MCP di Real-Time CDP è un **server MCP HTTP remoto**. In ogni client, la configurazione segue lo stesso schema:
 
 1. Aggiungi l’URL del server.
 2. Salva o abilita la connessione.
-3. Completa l&#39;accesso ad Adobe basato su browser **&#x200B;**&#x200B;la prima volta che il client richiama uno strumento.
+3. Completa l&#39;accesso ad Adobe basato su browser **** la prima volta che il client richiama uno strumento.
 4. Fornisci `imsOrgId` e `sandboxName` per ogni richiesta.
 
 ### Eseguire l’installazione in client basati sull’interfaccia utente {#mcp-connect-ui}
 
 #### Claude
 
-Per `claude.ai` e Claude Desktop, aggiungere il server Real-Time CDP MCP come **connettore personalizzato** utilizzando `https://rtcdp-mcp.adobe.io/mcp`. Nei singoli piani Claude, aggiungerlo in **Personalizza > Connettori**. Nei piani Team ed Enterprise, un proprietario potrebbe aver bisogno di aggiungerlo prima in **Impostazioni organizzazione > Connettori**, dopo di che ogni utente lo connette nelle proprie impostazioni Claude. Una volta configurato, abilita il connettore in una conversazione e completa l’accesso del browser Adobe al primo utilizzo.
+Per `claude.ai` e Claude Desktop, aggiungi il server Real-Time CDP MCP come **connettore personalizzato** utilizzando l&#39;endpoint fornito dal tuo rappresentante Adobe. Nei singoli piani Claude, aggiungerlo in **Personalizza > Connettori**. Nei piani Team ed Enterprise, un proprietario potrebbe aver bisogno di aggiungerlo prima in **Impostazioni organizzazione > Connettori**, dopo di che ogni utente lo connette nelle proprie impostazioni Claude. Una volta configurato, abilita il connettore in una conversazione e completa l’accesso del browser Adobe al primo utilizzo.
 
 #### ChatGPT
 
-In ChatGPT, aggiungi il server MCP di Real-Time CDP come **app/connettore personalizzato** utilizzando `https://rtcdp-mcp.adobe.io/mcp`. A seconda del piano ChatGPT, potrebbe essere necessaria l&#39;approvazione di **Modalità sviluppatore** e dell&#39;amministratore dell&#39;area di lavoro. Dopo aver creato o abilitato l&#39;app o il connettore, collegalo da **Impostazioni > App** o **Impostazioni > App e connettori**, quindi esegui l&#39;autenticazione tramite l&#39;accesso del browser Adobe quando richiesto.
+In ChatGPT, aggiungi il server Real-Time CDP MCP come **app/connettore personalizzato** utilizzando l&#39;endpoint fornito dal tuo rappresentante Adobe. A seconda del piano ChatGPT, potrebbe essere necessaria l&#39;approvazione di **Modalità sviluppatore** e dell&#39;amministratore dell&#39;area di lavoro. Dopo aver creato o abilitato l&#39;app o il connettore, collegalo da **Impostazioni > App** o **Impostazioni > App e connettori**, quindi esegui l&#39;autenticazione tramite l&#39;accesso del browser Adobe quando richiesto.
+
+#### Cursore
+
+In Cursore, aggiungi il server MCP di Real-Time CDP come server MCP remoto utilizzando l’endpoint fornito dal tuo rappresentante Adobe. Apri **Impostazioni > MCP**, aggiungi un nuovo server e incolla l&#39;URL dell&#39;endpoint. Dopo l&#39;aggiunta, abilitare il server per l&#39;area di lavoro selezionando **connetti** per l&#39;autenticazione tramite il browser.
 
 #### Altri client basati su interfaccia utente
 
-Per client quali Cursor, VS Code o altre applicazioni desktop e Web con supporto MCP remoto, aggiungere il server MCP Real-Time CDP come server HTTP **remoto** e utilizzare `https://rtcdp-mcp.adobe.io/mcp`. Se il client supporta intestazioni o token Bearer opzionali, lasciali vuoti a meno che Adobe non fornisca istruzioni specifiche per il contrario; al primo utilizzo l’autenticazione viene gestita tramite il flusso di accesso di Adobe basato su browser.
+Per client quali VS Code o altre applicazioni desktop e Web con supporto MCP remoto, aggiungi il server MCP Real-Time CDP come server HTTP **remoto** utilizzando l&#39;endpoint fornito dal tuo rappresentante Adobe. Se il client supporta intestazioni o token Bearer opzionali, lasciali vuoti a meno che Adobe non fornisca istruzioni specifiche per il contrario; al primo utilizzo l’autenticazione viene gestita tramite il flusso di accesso di Adobe basato su browser.
 
 ### Installazione in client tecnici {#mcp-connect-technical}
 
@@ -142,7 +136,7 @@ Per client quali Cursor, VS Code o altre applicazioni desktop e Web con supporto
 Aggiungere il server dal terminale:
 
 ```bash
-claude mcp add --transport http rtcdp https://rtcdp-mcp.adobe.io/mcp
+claude mcp add --transport http rtcdp <endpoint provided by your Adobe representative>
 ```
 
 Quindi avvia Claude Code ed esegui:
@@ -158,7 +152,7 @@ Seleziona il server `rtcdp` e completa il flusso di accesso di Adobe nel browser
 Aggiungere il server dal terminale:
 
 ```bash
-codex mcp add rtcdp --url https://rtcdp-mcp.adobe.io/mcp
+codex mcp add rtcdp --url <endpoint provided by your Adobe representative>
 ```
 
 Autentica il server:
@@ -177,7 +171,7 @@ codex mcp list
 
 ```toml
 [mcp_servers.rtcdp]
-url = "https://rtcdp-mcp.adobe.io/mcp"
+url = "<endpoint provided by your Adobe representative>"
 ```
 
 ### Parametri di richiesta richiesti {#mcp-connect-params}
