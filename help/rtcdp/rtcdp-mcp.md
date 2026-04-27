@@ -1,6 +1,5 @@
 ---
 solution: Real-Time Customer Data Platform
-product: real-time customer data platform
 title: Utilizzo dei client MCP (Beta)
 description: Scopri come collegare Adobe Real-Time CDP ai client MCP utilizzando il server MCP
 feature: Integrations
@@ -11,9 +10,9 @@ level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
 exl-id: 48dba0d2-7df9-4d76-bc87-5af49a8a40cc
-source-git-commit: b340d118051e2c38e1098b601e9944a7029129dc
+source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
 workflow-type: tm+mt
-source-wordcount: '2379'
+source-wordcount: '2375'
 ht-degree: 0%
 
 ---
@@ -108,7 +107,7 @@ Il server MCP di Real-Time CDP è un **server MCP HTTP remoto**. In ogni client,
 
 1. Aggiungi l’URL del server.
 2. Salva o abilita la connessione.
-3. Completa l&#39;accesso ad Adobe basato su browser **&#x200B;**&#x200B;la prima volta che il client richiama uno strumento.
+3. Completa l&#39;accesso ad Adobe basato su browser **** la prima volta che il client richiama uno strumento.
 4. Fornisci `imsOrgId` e `sandboxName` per ogni richiesta.
 
 ### Eseguire l’installazione in client basati sull’interfaccia utente {#mcp-connect-ui}
