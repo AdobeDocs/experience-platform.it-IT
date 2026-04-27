@@ -107,7 +107,7 @@ Il server MCP di Real-Time CDP è un **server MCP HTTP remoto**. In ogni client,
 
 1. Aggiungi l’URL del server.
 2. Salva o abilita la connessione.
-3. Completa l&#39;accesso ad Adobe basato su browser **** la prima volta che il client richiama uno strumento.
+3. Completa l&#39;accesso ad Adobe basato su browser **&#x200B;**&#x200B;la prima volta che il client richiama uno strumento.
 4. Fornisci `imsOrgId` e `sandboxName` per ogni richiesta.
 
 ### Eseguire l’installazione in client basati sull’interfaccia utente {#mcp-connect-ui}
