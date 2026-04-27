@@ -49,7 +49,7 @@ Prima di abilitare il rilevamento di bot sui flussi di dati, ecco alcuni punti c
 
 ## Prerequisiti {#prerequisites}
 
-For bot detection to work on your datastream, you must add the **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add field groups to a schema.
+For bot detection to work on your datastream, you must add the **[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add field groups to a schema.
 
 ## Configurare il rilevamento di bot per gli stream di dati {#configure}
 
