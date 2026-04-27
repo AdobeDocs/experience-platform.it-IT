@@ -2,10 +2,10 @@
 title: Configurare il rilevamento di bot per gli stream di dati
 description: Scopri come configurare il rilevamento di bot per i flussi di dati, per differenziare il traffico umano e non umano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 0%
+source-wordcount: '1485'
+ht-degree: 1%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 0%
 Il traffico non umano proveniente da programmi automatizzati, web scraper, spider e scanner scriptati può rendere difficile identificare gli eventi provenienti dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati.
 
 Il rilevamento dei bot consente di identificare gli eventi generati da [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) e [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) come generati da spider e bot noti.
+
+>[!NOTE]
+>
+>Utilizza [!DNL Bot Detection Service] per identificare e filtrare il traffico non umano (bot) dai tuoi dati. Questo riduce il rumore nei set di dati raccolti e consente di garantire che le analisi e i rapporti riflettano le interazioni effettive degli utenti.
 
 Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici da classificare come eventi bot. Questo consente di fornire una misurazione più accurata dell’attività dell’utente sul sito o sull’app mobile.
 
@@ -33,55 +37,55 @@ Questo punteggio bot consente alle soluzioni che ricevono la richiesta di identi
 >
 >Il rilevamento dei bot non elimina alcuna richiesta di bot. Aggiorna lo schema XDM solo con il punteggio bot e inoltra l&#39;evento al servizio [datastream](configure.md) configurato.
 >
->Le soluzioni Adobe possono gestire il punteggio bot in diversi modi. Adobe Analytics, ad esempio, utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=it) e non utilizza il punteggio impostato da Edge Network. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
+>Le soluzioni Adobe possono gestire il punteggio bot in diversi modi. Adobe Analytics, ad esempio, utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato da Edge Network. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
 
 ## Considerazioni tecniche {#technical-considerations}
 
 Prima di abilitare il rilevamento di bot sui flussi di dati, ecco alcuni punti chiave da tenere a mente per garantire risultati accurati e un’implementazione fluida:
 
 * Il rilevamento dei bot si applica solo alle richieste non autenticate inviate a `edge.adobedc.net`.
-* Le richieste autenticate inviate a `server.adobedc.net` non vengono valutate per il traffico da bot, in quanto il traffico autenticato è considerato attendibile.
-* Dopo la creazione, le regole di rilevamento dei bot possono richiedere fino a 15 minuti per propagarsi in Edge Network.
+* Authenticated requests sent to `server.adobedc.net` are not evaluated for bot traffic, as authenticated traffic is considered trustworthy.
+* Bot detection rules can take up to 15 minutes to propagate across the Edge Network after being created.
 
 ## Prerequisiti {#prerequisites}
 
-Affinché il rilevamento di bot funzioni sullo stream di dati, devi aggiungere il gruppo di campi **[!UICONTROL Bot Detection Information]** allo schema. Per informazioni su come aggiungere gruppi di campi a uno schema, consulta la documentazione dello schema [XDM](../xdm/ui/resources/schemas.md#add-field-groups).
+For bot detection to work on your datastream, you must add the **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add field groups to a schema.
 
 ## Configurare il rilevamento di bot per gli stream di dati {#configure}
 
-Puoi configurare il rilevamento di bot dopo aver creato una configurazione dello stream di dati. Consulta la documentazione su come [creare e configurare uno stream di dati](configure.md), quindi segui le istruzioni riportate di seguito per aggiungere funzionalità di rilevamento bot allo stream di dati.
+You can configure bot detection after creating a datastream configuration. See the documentation on how to [create and configure a datastream](configure.md), then follow the instructions below to add bot detection capabilities to your datastream.
 
-Vai all’elenco dei flussi di dati e seleziona il flusso di dati a cui desideri aggiungere il rilevamento di bot.
+Go to the datastreams list and select the datastream to which you want to add bot detection.
 
-![Interfaccia utente per gli stream di dati con l&#39;elenco degli stream di dati.](assets/bot-detection/datastream-list.png)
+![Datastreams user interface showing the list of datastreams.](assets/bot-detection/datastream-list.png)
 
-Nella pagina dei dettagli dello stream di dati, seleziona l’opzione **[!UICONTROL Bot Detection]** nella barra a destra.
+In the datastream details page, select the **[!UICONTROL Bot Detection]** option on the right rail.
 
-![Opzione di rilevamento bot evidenziata nell&#39;interfaccia utente dello stream di dati.](assets/bot-detection/bot-detection.png)
+![Bot detection option highlighted in the datastreams user interface.](assets/bot-detection/bot-detection.png)
 
-Viene visualizzata la pagina **[!UICONTROL Bot Detection Rules]**.
+The **[!UICONTROL Bot Detection Rules]** page is shown.
 
-![Impostazioni di rilevamento bot nella pagina delle impostazioni dello stream di dati.](assets/bot-detection/bot-detection-page.png)
+![Bot detection settings in the datastream settings page.](assets/bot-detection/bot-detection-page.png)
 
-Dalla pagina Regole di rilevamento bot, puoi configurare il rilevamento bot utilizzando le seguenti funzionalità:
+From the Bot Detection Rules page, you can configure bot detection by using the following functionalities:
 
-* Utilizzo dell&#39;[elenco internazionale Spider e bot IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
-* Creazione di regole di rilevamento bot personalizzate.
+* Using the [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Creating your own bot detection rules.
 
-### Utilizzare l&#39;elenco internazionale Spiders e bot IAB/ABC {#iab-list}
+### Use the IAB/ABC International Spiders and Bots List {#iab-list}
 
-L&#39;[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) è un elenco standard di terze parti di spider e bot Internet. Questo elenco ti aiuta a identificare il traffico automatizzato, ad esempio crawler di motori di ricerca, strumenti di monitoraggio e altro traffico non umano che potresti non voler includere nei conteggi di analisi.
+The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is a third-party, industry-standard list of internet spiders and bots. This list helps you identify automated traffic such as search engine crawlers, monitoring tools, and other nonhuman traffic that you may not want to include in your analytics counts.
 
-Per configurare lo stream di dati per l’utilizzo dell’elenco internazionale Spiders e Bots IAB/ABC:
+To configure your datastream to use the IAB/ABC International Spiders and Bots List:
 
-1. Attiva/disattiva l&#39;opzione **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]**.
-2. Seleziona **[!UICONTROL Save]** per applicare le impostazioni di rilevamento bot allo stream di dati.
+1. Toggle the **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** option.
+2. Select **[!UICONTROL Save]** to apply the bot detection settings to your datastream.
 
-![Elenco di spider e bot IAB abilitato.](assets/bot-detection/bot-detection-list.png)
+![IAB spiders and bot list enabled.](assets/bot-detection/bot-detection-list.png)
 
-### Creare regole di rilevamento bot {#rules}
+### Create bot detection rules {#rules}
 
-Oltre a utilizzare l&#39;[elenco internazionale Spider e bot IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), puoi definire le tue regole di rilevamento bot per ogni flusso di dati.
+In addition to using the [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), you can define your own bot detection rules for each datastream.
 
 Puoi creare regole di rilevamento bot in base a **indirizzi IP** e **intervalli di indirizzi IP**.
 
