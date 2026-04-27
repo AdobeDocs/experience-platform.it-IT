@@ -2,9 +2,9 @@
 title: Esplorare, risolvere i problemi e verificare l’acquisizione in batch con SQL
 description: Scopri come comprendere e gestire il processo di acquisizione dei dati in Adobe Experience Platform. Questo documento include come verificare i batch ed eseguire query sui dati acquisiti.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fac5ebd3f81e6f4b9f601ab1d9252402cad52b6
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -37,13 +37,13 @@ Quindi, per visualizzare i campi di sistema del set di dati, eseguire un&#39;ist
 
 ![L&#39;interfaccia utente di DBVisualizer con la tabella movie_data e le relative colonne di metadati visualizzata ed evidenziata.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Quando i dati vengono acquisiti in Experience Platform, ad essi viene assegnata una partizione logica basata sui dati in arrivo. Questa partizione logica è rappresentata da `_acp_system_metadata.sourceBatchId`. Questo ID consente di raggruppare e identificare logicamente i batch di dati prima che vengano elaborati e memorizzati.
+Quando i dati vengono acquisiti in Experience Platform, ad essi viene assegnata una partizione logica basata sui dati in arrivo. Questa partizione logica è rappresentata da `_acp_system_metadata.acp_sourceBatchId`. Questo ID consente di raggruppare e identificare logicamente i batch di dati prima che vengano elaborati e memorizzati.
 
 Dopo l&#39;elaborazione e l&#39;acquisizione dei dati nel data lake, viene assegnata una partizione fisica rappresentata da `_ACP_BATCHID`. Questo ID riflette la partizione di archiviazione effettiva nel data lake in cui si trovano i dati acquisiti.
 
 ### Utilizzare SQL per comprendere le partizioni logiche e fisiche {#understand-partitions}
 
-Per comprendere il modo in cui i dati vengono raggruppati e distribuiti dopo l&#39;acquisizione, utilizzare la query seguente per contare il numero di partizioni fisiche distinte (`_ACP_BATCHID`) per ogni partizione logica (`_acp_system_metadata.sourceBatchId`).
+Per comprendere il modo in cui i dati vengono raggruppati e distribuiti dopo l&#39;acquisizione, utilizzare la query seguente per contare il numero di partizioni fisiche distinte (`_ACP_BATCHID`) per ogni partizione logica (`_acp_system_metadata.acp_sourceBatchId`).
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data
@@ -94,15 +94,15 @@ Quindi, convalida e verifica i record acquisiti nel set di dati con SQL.
 >
 >Per recuperare l’ID batch e i record di query associati a tale ID batch, devi innanzitutto creare un batch all’interno di Experience Platform. Se desideri testare il processo autonomamente, puoi acquisire i dati CSV in Experience Platform. Leggi la guida su come [mappare un file CSV su uno schema XDM esistente utilizzando i consigli generati dall&#39;intelligenza artificiale](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Dopo aver acquisito un batch, devi passare alla scheda dell&#39;attività [!UICONTROL Set di dati] per il set di dati in cui hai acquisito i dati.
+Dopo aver acquisito un batch, devi passare a [!UICONTROL Datasets activity tab] per il set di dati in cui hai acquisito i dati.
 
-Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Set di dati]** nell&#39;area di navigazione a sinistra per aprire il dashboard [!UICONTROL Set di dati]. Quindi, seleziona il nome del set di dati dalla scheda [!UICONTROL Sfoglia] per accedere alla schermata [!UICONTROL Attività set di dati].
+Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Datasets]** nel menu di navigazione a sinistra per aprire il dashboard [!UICONTROL Datasets]. Selezionare quindi il nome del set di dati dalla scheda [!UICONTROL Browse] per accedere alla schermata [!UICONTROL Dataset activity].
 
 ![Dashboard dei set di dati dell&#39;interfaccia utente di Experience Platform con i set di dati evidenziati nell&#39;area di navigazione a sinistra.](../images/use-cases/datasets-workspace.png)
 
-Viene visualizzata la visualizzazione [!UICONTROL Attività set di dati]. Questa visualizzazione contiene i dettagli del set di dati selezionato. Include tutti i batch acquisiti che vengono visualizzati in formato tabella.
+Viene visualizzata la visualizzazione [!UICONTROL Dataset activity]. Questa visualizzazione contiene i dettagli del set di dati selezionato. Include tutti i batch acquisiti che vengono visualizzati in formato tabella.
 
-Selezionare un batch dall&#39;elenco dei batch disponibili e copiare l&#39;[!UICONTROL ID batch] dal pannello dei dettagli a destra.
+Selezionare un batch dall&#39;elenco dei batch disponibili e copiare [!UICONTROL Batch ID] dal pannello dei dettagli a destra.
 
 ![L&#39;interfaccia utente di Experience Platform Datasets mostra i record acquisiti evidenziati con un ID batch.](../images/use-cases/batch-id.png)
 
@@ -114,7 +114,7 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-Parola chiave `_ACP_BATCHID` utilizzata per filtrare l&#39;ID [!UICONTROL batch].
+Parola chiave `_ACP_BATCHID` utilizzata per filtrare [!UICONTROL Batch ID].
 
 >[!TIP]
 >
