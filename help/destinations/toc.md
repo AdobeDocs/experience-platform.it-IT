@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 343f9e9fa01b06196106126235508059836e391c
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1413'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 6%
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esporta i set di dati](/help/destinations/api/export-datasets.md)
-   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=it#use-cases)
+   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 6%
       * [(Legacy) (V2) Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Connessione Marketo Engage Person Sync](./catalog/adobe/marketo-engage-person-sync.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=it)
+      * [Condivisione del pubblico in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Connessione Federated Audience Composition](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinazioni di Advertising{#advertising}
       * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
@@ -116,6 +116,7 @@ ht-degree: 6%
       * [Aggiornamento della connessione Pinterest](./catalog/advertising/pinterest-upgrade.md)
       * [Connessione PubMatic](./catalog/advertising/pubmatic.md)
       * [(Beta) Collegamento Reddit Custom Audience](./catalog/advertising/reddit-custom-audience.md)
+      * [Connessione Rokt](./catalog/advertising/rokt.md)
       * [Connessione Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [La connessione a Trade Desk](./catalog/advertising/tradedesk.md)
       * [La connessione CRM del Trade Desk](./catalog/advertising/tradedesk-emails.md)
@@ -287,7 +288,7 @@ ht-degree: 6%
          * [Configurare una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurare una destinazione basata su file per esportare i tipi di pubblico potenziali](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Riferimento API per l’authoring delle destinazioni {#authoring-api}
-      * [Riferimento API per Destination SDK (authoring di destinazione)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Riferimento API per Destination SDK (authoring delle destinazioni)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operazioni del server di destinazione {#server-operations}
          * [Creare una configurazione del server di destinazione](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Recuperare una configurazione del server di destinazione](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
