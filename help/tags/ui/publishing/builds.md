@@ -2,10 +2,10 @@
 title: Build
 description: Scopri il concetto di build e come queste funzionano in Adobe Experience Platform.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 5b7e4d350a9e57ab4edf418642131d6bae598618
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 86%
+source-wordcount: '1080'
+ht-degree: 60%
 
 ---
 
@@ -17,7 +17,7 @@ Si tratta di un composito delle modifiche specificate all’interno della librer
 
 La build consiste in file di codice lato client che si riferiscono a l&#39;uno all&#39;altro. Questi file vengono inviati alla tua posizione di hosting utilizzando l&#39;ambiente e l&#39;host scelti per la libreria. Il codice distribuito sul sito fa riferimento a questa stessa posizione, in modo che i file possano essere caricati quando un utente accede al sito o all&#39;applicazione.
 
-## Contenuti dei file
+## Contenuto del file {#file-contents}
 
 Una libreria definisce un set discreto di risorse tag (estensioni, regole ed elementi dati) che devono essere incluse al suo interno.
 
@@ -34,7 +34,7 @@ Le Build sono suddivise nel file della libreria principale e in molti file di di
 
 I file più piccoli contengono codice e configurazione per singole Azioni caricate sulla pagina, in base alle esigenze. Quando una Regola viene attivata e le sue Condizioni sono valutate in modo tale che le azioni debbano essere eseguite, il codice e la configurazione necessari per quella specifica azione vengono recuperati da uno dei file più piccoli. Questo significa che solo il codice necessario per eseguire le azioni richieste viene caricato sulla pagina, rendendo la libreria principale il più piccola possibile.
 
-## Formato file
+## Formato file {#file-format}
 
 Il formato predefinito del file per le build è un pacchetto di file che contiene tutto il codice necessario affinché le estensioni, gli elementi dati e le regole vengano eseguiti nel modo desiderato.
 
@@ -48,7 +48,7 @@ Indipendentemente dal formato del file, la build viene sempre distribuita nella 
 
 Per completare una build, seleziona una libreria e fai clic sull&#39;opzione Build disponibile a tale livello del processo di pubblicazione (Build per sviluppo, Build per staging e così via).
 
-## Minimizzazione
+## Minimizzazione {#minification}
 
 La minimizzazione riduce i costi di larghezza di banda e migliora la velocità eliminando i dati non necessari per l&#39;esecuzione da un file.
 
@@ -75,3 +75,46 @@ Se uno sviluppatore di estensioni fornisce codici minimizzati con la propria est
 Per ulteriori informazioni sulla minimizzazione, consulta [questo articolo su Stackpath](https://blog.stackpath.com/glossary/minification/).
 
 Quando si esegue una build, per prima cosa viene creata la libreria non minimizzata, quindi viene minimizzata l’intera libreria.
+
+## Visualizzare i dettagli della build {#build-details}
+
+>[!IMPORTANT]
+>
+>Una libreria memorizza le revisioni delle risorse tag, ma una **Build** è un&#39;istantanea point-in-time della libreria contenente i file recapitati al sito.
+
+È possibile accedere alle build e ai relativi dettagli da una **libreria** o da un **ambiente** per visualizzare le build live correnti e verificare cosa contiene una build (estensioni, elementi dati e regole).
+
+### Visualizzare i dettagli della build da una libreria
+
+Nella proprietà dei tag, apri **[!UICONTROL Publishing Flow]** e seleziona una libreria.
+
+![Flusso di pubblicazione nell&#39;interfaccia utente delle raccolte dati che evidenzia una libreria.](../publishing/images/builds/library.png)
+
+Nel pannello dei dettagli, potete esaminare quanto segue:
+
+* **[!UICONTROL Last Build Environment]** — Collegamento all&#39;ambiente che ha ricevuto l&#39;ultima build. Indica se questa libreria è la build corrente per l&#39;ambiente (**Corrente** o **Non corrente**).
+* **[!UICONTROL Current Builds]** — Build attualmente attive nei relativi ambienti. Per le librerie pubblicate, la build di produzione live è indicata dall’icona a forma di fulmine in questa sezione.
+* Per ogni build elencata, puoi visualizzare:
+   * **[!UICONTROL Status]** - Quando è stata creata la build.
+   * **[!UICONTROL Environment]**: l&#39;ambiente in cui è stata distribuita la build.
+   * **[!UICONTROL User]** - Utente che ha creato la build.
+
+![Dettagli libreria visualizzati nel pannello dei dettagli destro](../publishing/images/builds/library-details.png)
+
+### Visualizzare le build da un ambiente
+
+Una build è associata a un ambiente e alla libreria creata per tale ambiente. La build è ciò che contiene effettivamente le risorse compilate.
+
+Selezionare **[!UICONTROL Environment]** dal pannello dei dettagli. Il pannello Dettagli dell’ambiente mostra un elenco delle build recenti, della build live corrente e delle librerie correlate.
+
+![Pannello Dettagli ambiente che evidenzia le build correnti.](../publishing/images/builds/environment.png)
+
+Quindi, seleziona una build per aprirne i dettagli. I dettagli della build mostrano le **Estensioni**, **Elementi dati** e **Regole** incluse nella build.
+
+![Dettagli della build che evidenziano estensioni, elementi dati e regole.](../publishing/images/builds/build.png)
+
+>[!NOTE]
+>
+>Una build può includere più risorse di quelle elencate nella sola libreria. Le **Estensioni**, **Elementi dati** e **Regole** incluse nella build includono il contenuto della libreria e il contenuto a monte. È l’istantanea completa che viene pubblicata sul sito o sull’app.
+
+Utilizzare il pannello dei dettagli per tornare a **[!UICONTROL Environment]** o **[!UICONTROL Library]**.
