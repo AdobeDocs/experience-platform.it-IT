@@ -3,15 +3,20 @@ title: Trasmetti Dati Da Kobie Ad Experience Platform Utilizzando L’Interfacci
 description: Scopri come inviare dati da Kobie a Adobe Experience Platform utilizzando l’interfaccia utente.
 hide: true
 hidefromtoc: true
+badge: Beta
 exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
-source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
+source-git-commit: 90b197a632a5210c4502094de665cab53b76378b
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '904'
 ht-degree: 1%
 
 ---
 
 # Trasmetti dati da [!DNL Kobie Streaming Events] ad Experience Platform utilizzando l&#39;interfaccia utente
+
+>[!AVAILABILITY]
+>
+>L&#39;origine [!DNL Kobie Streaming Events] è in versione beta. Leggi i [termini e condizioni](../../../../home.md#terms-and-conditions) nella panoramica delle origini per ulteriori informazioni sull&#39;utilizzo di origini con etichetta beta.
 
 [!DNL Kobie Alchemy Loyalty Cloud (KALC)] è una piattaforma MACH altamente configurabile, sicura e scalabile che si adatta alla tua strategia di fidelizzazione, accelerando il time-to-value, migliorando l&#39;efficienza e salvaguardando il tuo marchio con la governance di livello enterprise. Grazie alle integrazioni ottimizzate tra CDP, CRM, CMS e altro ancora, [!DNL KALC] consente agli addetti al marketing di distribuire personalizzazioni in tempo reale su ogni canale, fornendo al contempo la flessibilità e la tracciabilità necessarie per evolvere con la crescita della fedeltà al marchio.
 
