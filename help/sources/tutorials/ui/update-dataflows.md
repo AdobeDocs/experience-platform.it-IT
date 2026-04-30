@@ -2,9 +2,9 @@
 description: Scopri come aggiornare un flusso di dati di origini esistente nell’interfaccia utente di Experience Platform.
 title: Aggiornare un flusso di dati di connessione Source nell’interfaccia utente
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
+source-git-commit: 2139566a7c44de8736f7433ba826796dad44715f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '893'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="Scadenza set di dati"
->abstract="Questa colonna indica il numero di giorni rimanenti al set di dati di destinazione prima della scadenza automatica.<br>Un flusso di dati avrà esito negativo se il set di dati di destinazione è scaduto. Per evitare che un flusso di dati sia di esito negativo, assicurati che la scadenza del set di dati di destinazione sia impostata sulla data corretta. Consulta la documentazione per scoprire come aggiornare le date di scadenza."
+>abstract="Questa colonna indica il numero di giorni rimanenti al set di dati di destinazione prima della scadenza automatica.<br>Se un set di dati di destinazione è scaduto, i relativi flussi di dati non funzioneranno. Per evitare che un flusso di dati sia di esito negativo, assicurati che la scadenza del set di dati di destinazione sia impostata sulla data corretta. Consulta la documentazione per scoprire come aggiornare le date di scadenza."
 
 Nell&#39;interfaccia utente di Experience Platform, seleziona **[!UICONTROL Sources]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Dataflows]** dall&#39;intestazione superiore.
 
@@ -47,7 +47,7 @@ Si viene indirizzati al flusso di lavoro di origine in cui è possibile proceder
 
 >[!NOTE]
 >
->La funzione di modifica della mappatura non è attualmente supportata per le seguenti origini: Adobe Analytics, Adobe Audience Manager, API HTTP e [!DNL Marketo Engage].
+>La funzione di modifica della mappatura non è attualmente supportata per le seguenti origini: Adobe Analytics, Adobe Audience Manager e API HTTP.
 
 Durante questo processo, puoi anche aggiornare i set di mappatura associati al flusso di dati.  L’interfaccia di mappatura visualizza la mappatura esistente del flusso di dati e non un nuovo set di mappatura consigliato. Gli aggiornamenti delle mappature vengono applicati solo alle esecuzioni dei flussi di dati pianificate in futuro. I set di mappatura di un flusso di dati pianificato per l’acquisizione una tantum non possono essere aggiornati.
 
