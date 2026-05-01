@@ -3,9 +3,9 @@ title: Intento Demandbase
 description: Scopri l’origine di Intento Demandbase su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account **[!UICONTROL View Sources]** ad Experience Platform, è necessario che per l&#39;account siano abilitate sia le autorizzazioni **[!UICONTROL Manage Sources]** che quelle [!DNL Demandbase]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Per connettere l&#39;account [!DNL Demandbase] ad Experience Platform, è necessario che per l&#39;account siano abilitate sia le autorizzazioni **[!UICONTROL View Sources]** che quelle **[!UICONTROL Manage Sources]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
 
 ### Vincoli di denominazione per file e directory
 
@@ -197,5 +197,28 @@ La corrispondenza del dominio in Experience Platform si basa su una corrisponden
 +++Risposta
 
 I dati sulle finalità possono essere utilizzati in [Tipi di pubblico dell&#39;account](../../../segmentation/types/account-audiences.md) per migliorare il targeting, la segmentazione e la personalizzazione. Sfruttando i segnali di intento, le aziende possono identificare e interagire con gli account che mostrano un forte interesse per argomenti specifici, ottimizzando il marketing e la portata delle vendite
+
++++
+
+### Il gruppo di campi [!DNL Account Key] standard è compatibile con lo schema [!DNL Demandbase Account Intent]?
+
++++Risposta
+
+No. Utilizza il campo `accountID` per stabilire relazioni con lo schema dell’account B2B. Questo evita la necessità di introdurre l’intero gruppo di campi nello schema di riferimento o di origine.
++++
+
+### In che modo lo schema [!DNL Demandbase Account Intent] stabilisce una relazione con lo schema account B2B?
+
++++Risposta
+
+Lo schema [!DNL Demandbase Account Intent] utilizza il campo `accountID` per collegarsi al record account B2B corrispondente. Questo campo viene compilato automaticamente durante l’acquisizione quando viene trovato un dominio corrispondente in entrambi i set di dati. Nello specifico, `accountID` nello schema [!DNL Demandbase] fa riferimento a `accountKey.sourceKey` nello schema account B2B standard.
+
++++
+
+### Perché lo schema [!DNL Demandbase Account Intent] utilizza `accountID` invece della tipica struttura del gruppo di campi [!DNL Account Key]?
+
++++Risposta
+
+Gli schemi [!DNL Demandbase Intent] si concentrano sull&#39;efficienza di archiviazione ed elaborazione. Anziché utilizzare un intero gruppo di campi, lo schema utilizza un singolo campo semplificato (`accountID`) per stabilire relazioni. Questo riduce la complessità e si allinea ai modelli di elaborazione ottimali per i dati di intento.
 
 +++

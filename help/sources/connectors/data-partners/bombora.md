@@ -3,9 +3,9 @@ title: Intento Bombora
 description: Scopri la fonte dell’Intento di Bombora su Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1775'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 ### Configurare le autorizzazioni su Experience Platform
 
-Per connettere l&#39;account **[!UICONTROL View Sources]** ad Experience Platform, è necessario che per l&#39;account siano abilitate sia le autorizzazioni **[!UICONTROL Manage Sources]** che quelle [!DNL Bombora]. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Per connettere l&#39;account [!DNL Bombora] ad Experience Platform, è necessario che per l&#39;account siano abilitate sia le autorizzazioni **[!UICONTROL View Sources]** che quelle **[!UICONTROL Manage Sources]**. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere la [guida all&#39;interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
 
 ### Vincoli di denominazione per file e directory
 
@@ -204,5 +204,28 @@ La corrispondenza del dominio in Experience Platform si basa su una corrisponden
 +++Risposta
 
 I dati sulle finalità possono essere utilizzati in [Tipi di pubblico dell&#39;account](../../../segmentation/types/account-audiences.md) per migliorare il targeting, la segmentazione e la personalizzazione. Sfruttando i segnali di intento, le aziende possono identificare e interagire con gli account che mostrano un elevato interesse per argomenti specifici, ottimizzando il marketing e la portata delle vendite.
+
++++
+
+### Il gruppo di campi [!DNL Account Key] standard è compatibile con lo schema [!DNL Bombora Account Intent]?
+
++++Risposta
+
+No. Utilizza il campo `accountID` per stabilire relazioni con lo schema dell’account B2B. Questo evita la necessità di introdurre l’intero gruppo di campi nello schema di riferimento o di origine.
++++
+
+### In che modo lo schema [!DNL Bombora Account Intent] stabilisce una relazione con lo schema account B2B?
+
++++Risposta
+
+Lo schema [!DNL Bombora Account Intent] utilizza il campo `accountID` per collegarsi al record account B2B corrispondente. Questo campo viene compilato automaticamente durante l’acquisizione quando viene trovato un dominio corrispondente in entrambi i set di dati. Nello specifico, `accountID` nello schema [!DNL Bombora] fa riferimento a `accountKey.sourceKey` nello schema account B2B standard.
+
++++
+
+### Perché lo schema [!DNL Bombora Account Intent] utilizza `accountID` invece della tipica struttura del gruppo di campi [!DNL Account Key]?
+
++++Risposta
+
+Gli schemi [!DNL Bombora Intent] si concentrano sull&#39;efficienza di archiviazione ed elaborazione. Anziché utilizzare un intero gruppo di campi, lo schema utilizza un singolo campo semplificato (`accountID`) per stabilire relazioni. Questo riduce la complessità e si allinea ai modelli di elaborazione ottimali per i dati di intento.
 
 +++
