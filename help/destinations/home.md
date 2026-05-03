@@ -2,9 +2,9 @@
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 7f69bbafa5ccd6759b5afcc2b99cbec32220ad3b
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -99,6 +99,12 @@ Dopo aver stabilito una connessione a una destinazione e aver completato il flus
 ![Esempio di pagina di monitoraggio delle destinazioni.](./assets/overview/monitoring-page-example.png)
 
 Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo dispone di una *sezione Convalida esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experience Platform. Visualizza un esempio di questa sezione per la [destinazione Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+
+## Crittografia dei dati {#encryption}
+
+Tutti i dati in transito esportati da [!DNL Experience Platform] tramite destinazioni viaggiano su connessioni sicure e crittografate utilizzando [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) o versione successiva. Il protocollo TLS utilizzato da [!DNL Experience Platform] nelle comunicazioni in uscita supporta anche [SNI (Server Name Indication)](https://www.rfc-editor.org/rfc/rfc6066#page-6).
+
+Per ulteriori informazioni sull&#39;acquisizione, la crittografia e la persistenza dei dati, vedere [crittografia dei dati in Experience Platform](../landing/governance-privacy-security/encryption.md).
 
 ## Restrizioni alla governance dei dati per l’attivazione dei dati nelle destinazioni {#data-governance}
 
