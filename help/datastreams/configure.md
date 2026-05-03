@@ -241,4 +241,4 @@ La pagina principale dell&#39;area di lavoro [!UICONTROL Datastreams] viene nuov
 
 ## Passaggi successivi {#next-steps}
 
-Questa guida illustra come gestire gli stream di dati nell’interfaccia utente Raccolta dati. Per ulteriori informazioni sull&#39;installazione e la configurazione del Web SDK dopo la configurazione di uno stream di dati, vedere [Guida introduttiva all&#39;estensione tag [!DNL Web SDK] ](/help/tags/extensions/client/web-sdk/getting-started.md).
+Questa guida illustra come gestire gli stream di dati nell’interfaccia utente Raccolta dati. Per ulteriori informazioni sull&#39;installazione e la configurazione del Web SDK dopo la configurazione di uno stream di dati, vedere [Guida introduttiva all&#39;estensione tag [!DNL Web SDK] &#x200B;](/help/tags/extensions/client/web-sdk/getting-started.md).
