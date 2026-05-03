@@ -1,20 +1,20 @@
 ---
-title: Impostazioni delle notifiche push
+title: Impostazioni notifiche push
 description: Configura le impostazioni delle notifiche push per l’estensione tag Web SDK.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
 source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '180'
 ht-degree: 10%
 
 ---
 
-# Impostazioni delle notifiche push {#push-notifications}
+# Impostazioni notifiche push {#push-notifications}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_pushnotifications"
 >title="Notifiche push"
->abstract="Imposta una chiave pubblica VAPID per l&#39;autenticazione delle notifiche push."
+>abstract="Imposta una chiave pubblica VAPID per l’autenticazione delle notifiche push."
 
 Questa sezione di configurazione consente di impostare una chiave pubblica VAPID per l’autenticazione delle notifiche push.
 

@@ -4,8 +4,8 @@ description: Configurare le impostazioni di raccolta dati nell'estensione tag We
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 1%
+source-wordcount: '722'
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datacollection"
 >title="Raccolta dati"
->abstract="Determina quali dati raccogliere e come tali dati vengono raccolti nell’estensione tag."
+>abstract="Determina quali dati raccogliere e come vengono raccolti nell’estensione tag."
 
 Questa sezione di configurazione consente di determinare come vengono raccolti i dati nell’estensione.
 

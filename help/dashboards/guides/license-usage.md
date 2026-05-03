@@ -6,8 +6,8 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: a4381d034463571d2f69e9a2b04b7fbec1828cb9
 workflow-type: tm+mt
-source-wordcount: '3421'
-ht-degree: 39%
+source-wordcount: '3763'
+ht-degree: 40%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Pubblico indirizzabile previsto"
->abstract="Il pubblico indirizzabile è l’insieme dei profili di persona nel profilo cliente in tempo reale che la tua organizzazione è autorizzata a coinvolgere. Questa metrica include sia profili direttamente identificabili che pseudonimi.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
+>abstract="Il pubblico indirizzabile è l’insieme dei profili di persona nel profilo cliente in tempo reale che la tua organizzazione è autorizzata a coinvolgere. Questa metrica include sia profili direttamente identificabili che pseudonimi.<br>Il livello di utilizzo potrebbe raggiungere la quantità massima prevista dalla tua licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
@@ -86,7 +86,7 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="Righe CJA disponibili previste"
->abstract="Le Righe CJA disponibili si riferiscono alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L’utilizzo potrebbe raggiungere la quantità prevista dalla licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
+>abstract="Le Righe CJA disponibili si riferiscono alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>Il livello di utilizzo potrebbe raggiungere la quantità massima prevista dalla tua licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
@@ -128,7 +128,7 @@ ht-degree: 39%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
 >title="Righe CJA disponibili previste"
->abstract="Le Righe CJA disponibili si riferiscono alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>L’utilizzo potrebbe raggiungere la quantità concessa in licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
+>abstract="Le Righe CJA disponibili si riferiscono alla media giornaliera di righe di dati disponibili per l’analisi in Customer Journey Analytics.<br>Il livello di utilizzo ha superato la quantità massima prevista dalla tua licenza. Per ridurre l’utilizzo, configura le scadenze del set di dati o del profilo pseudonimo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=it" text="Scadenze degli eventi esperienza"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenza dei dati dei profili pseudonimi"
 
@@ -260,7 +260,7 @@ Gestire e ottimizzare in modo proattivo le risorse di gestione delle licenze con
 
 >[!IMPORTANT]
 >
->Le previsioni vengono aggiornate settimanalmente ogni venerdì. La data di aggiornamento è inclusa in un&#39;icona di informazioni (![Icona di informazioni.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
+>Le previsioni vengono aggiornate settimanalmente ogni venerdì. La data di aggiornamento è inclusa in un&#39;icona Info (![Questa icona Info.](../images/license-usage/info-icon.png)) sopra il titolo della colonna.
 
 Visualizzare un riepilogo dell&#39;utilizzo dei diritti di un prodotto dalla scheda [!UICONTROL Product] nella tabella [!UICONTROL Core products].
 
@@ -268,7 +268,7 @@ Visualizzare un riepilogo dell&#39;utilizzo dei diritti di un prodotto dalla sch
 
 >[!NOTE]
 >
->Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. È tua responsabilità comprendere l’utilizzo effettivo dell’organizzazione e assicurarsi che non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
+>Tieni presente che le previsioni sull’utilizzo delle licenze sono approssimazioni basate sull’utilizzo passato. Sei responsabile della comprensione dell’utilizzo effettivo dell’organizzazione e di garantire che l’utilizzo non vada oltre l’ambito della licenza dell’organizzazione con Adobe.
 
 La percentuale di utilizzo previsto è determinata come segue:
 
@@ -295,14 +295,14 @@ La funzione di utilizzo previsto supporta le metriche seguenti:
 >
 >A partire dal 20 agosto, i clienti con diritti per &#39;[!UICONTROL Average Profile Richness]&#39; e &#39;[!UICONTROL Total Storage]&#39; hanno invece visto &#39;[!UICONTROL Total Data Volume]&#39; nel dashboard utilizzo licenze. Non vi sono state modifiche alle adesioni dei clienti, ma solo una semplificazione delle metriche di tracciamento. [!UICONTROL Total Data Volume] rappresenta i dati disponibili in Real-Time Customer Profile per i flussi di lavoro di coinvolgimento e personalizzazione. Questa metrica semplificata ha migliorato la gestione e la misurazione dell’utilizzo di Real-Time Customer Profile. I clienti sono stati invitati a contattare il proprio rappresentante Adobe per ulteriori chiarimenti su questa modifica.
 
-Le metriche visualizzate nel dashboard dipendono dai prodotti e dalle adesioni associati all’organizzazione. Se l&#39;organizzazione partecipa alla [prova per agenti Adobe Experience Platform con limite di utilizzo](https://experienceleague.adobe.com/it/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) o concede in licenza agenti Adobe Experience Platform, il dashboard include la metrica [!UICONTROL AI credits]. Se l’organizzazione non concede la licenza per Adobe Experience Platform, l’utilizzo del credito di IA viene visualizzato come metrica principale.
+Le metriche visualizzate nel dashboard dipendono dai prodotti e dalle adesioni associati all’organizzazione. Se l&#39;organizzazione partecipa alla [prova per agenti Adobe Experience Platform con limite di utilizzo](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) o concede in licenza agenti Adobe Experience Platform, il dashboard include la metrica [!UICONTROL AI credits]. Se l’organizzazione non concede la licenza per Adobe Experience Platform, l’utilizzo del credito di IA viene visualizzato come metrica principale.
 
 | Metrica | Descrizione |
 |---|---|
 | [!UICONTROL AI credits] | Il numero di crediti AI utilizzati dall’organizzazione quando si utilizzano agenti Adobe Experience Platform. I crediti IA vengono utilizzati durante la prova con limite di utilizzo degli agenti Adobe Experience Platform e quando vengono concessi in licenza per l’utilizzo di agenti a pagamento. Questa metrica consente di monitorare il consumo di credito AI rispetto al diritto disponibile. |
-| [!UICONTROL Audience Activation Size] | Dimensione totale dei profili attivati in qualsiasi destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite le destinazioni di streaming. |
+| [!UICONTROL Audience Activation Size] | Dimensione totale dei profili attivati in una destinazione basata su file in un anno. Nota: non sono inclusi i profili inviati tramite destinazioni di streaming. |
 | [!UICONTROL Addressable Audience] | Il set di profili persona in Real-Time Customer Profile che la tua organizzazione è autorizzata a coinvolgere, inclusi sia i profili direttamente identificabili che quelli pseudonimi. Questi profili possono contenere attributi, comportamenti e dati di appartenenza ai segmenti. I volumi di profilo vengono calcolati utilizzando il grafo di identità deterministico predefinito di Adobe Experience Platform e sono considerati una feature condivisa. |
-| [!UICONTROL Adhoc Query Service Users Packs] | Un componente aggiuntivo per aumentare il diritto di utenti simultanei autorizzati del Query Service a cinque ulteriori utenti e a un ulteriore query ad hoc per pacchetto in esecuzione contemporanea. È possibile concedere in licenza più pacchetti utente per query ad hoc aggiuntive. |
+| [!UICONTROL Adhoc Query Service Users Packs] | Componente aggiuntivo per aumentare il diritto degli utenti autorizzati di Query Service di altri cinque utenti di Query Service simultanei e di un’ulteriore query ad hoc in esecuzione simultanea per pacchetto. È possibile concedere in licenza più pacchetti utente di Ad Hoc Query aggiuntivi. |
 | [!UICONTROL Average profile richness] | **Obsoleto** - Somma di tutti i dati di produzione archiviati nel servizio profili hub in qualsiasi momento, divisa per cinque volte il numero di profili di persona aziendale autorizzati. [!UICONTROL Average profile richness] è una funzionalità condivisa. |
 | [!UICONTROL CJA Rows Available] | Le righe medie giornaliere di dati disponibili per l’analisi in Customer Journey Analytics. |
 | [!UICONTROL Computed Attributes] | Dati comportamentali aggregati del profilo basati su eventi di esperienza che vengono convertiti in un attributo di profilo e possono essere inclusi in un profilo persona. |
@@ -316,7 +316,7 @@ Le metriche visualizzate nel dashboard dipendono dai prodotti e dalle adesioni a
 | [!UICONTROL Number of Sandboxes] | Numero di separazioni logiche all’interno dell’istanza di qualsiasi servizio on-demand di Adobe che accede a dati e operazioni isolate di Adobe Experience Platform. |
 | [!UICONTROL Profile Richness No of Packs] | Un aumento del volume totale di dati autorizzato di 25 KB per profilo per ogni pacchetto di ricchezza di profilo aggiuntivo. |
 | [!UICONTROL Query Service Compute Hours] | Misurazione del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query in batch. |
-| [!UICONTROL Streaming Segmentation No of Packs] | I pacchetti aggiornano l’appartenenza al segmento per un profilo persona quando nuovi dati entrano nel servizio di segmentazione tramite un flusso di streaming. L’appartenenza al segmento viene valutata in base agli attributi correnti del profilo della persona e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
+| [!UICONTROL Streaming Segmentation No of Packs] | I pacchetti aggiornano l’iscrizione al segmento per un profilo persona man mano che nuovi dati entrano nel servizio di segmentazione attraverso un flusso di streaming. L’iscrizione al segmento viene valutata in base agli attributi del profilo della persona corrente e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
 | [!UICONTROL Total Data Volume] | La quantità totale di dati disponibili per Real-Time Customer Profile da utilizzare nei flussi di lavoro di coinvolgimento. Il volume totale dei dati è calcolato con la seguente formula: **Volume totale dei dati = Pubblico indirizzabile × Rendicità media del profilo**. Questa metrica riflette i dati memorizzati solo nell’archivio profili ed esclude l’archiviazione del data lake. Fornisce una visualizzazione più mirata dei dati rilevanti per il coinvolgimento basato sul profilo. Per ulteriori informazioni, consulta le [domande frequenti sul volume totale dei dati](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 | [!UICONTROL Total Volume of Data Egress] | Il volume annuo cumulativo di dati esportati da Adobe Experience Platform in data warehouse di terze parti. |
 
@@ -324,17 +324,17 @@ Le metriche visualizzate nel dashboard dipendono dai prodotti e dalle adesioni a
 
 >[!TIP]
 >
->È possibile controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
+>Puoi controllare i diritti di licenza nell&#39;ordine di vendita per calcolare metriche quali l&#39;indennità di archiviazione.<br>Ad esempio,<ul><li>Indennità di archiviazione = numero di &quot;profili autorizzati&quot; nel contratto X Ricchezza media profilo</li></ul>
 
 La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, consulta l’appropriata documentazione di descrizione del prodotto:
 
 | Licenza | Descrizione del prodotto |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD PESANTE</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/it/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Servizi app e Intelligent Services](https://helpx.adobe.com/it/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD PESANTE</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Servizi app e Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>PIATTAFORMA DATI CLIENTE RT:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL A 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL A 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>ATTIVAZIONE DI AEP:OD</li><li>AEP:OD ACTIVATION PRFL A 10M</li><li>AEP:OD ACTIVATION PRFL FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/it/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/it/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>ATTIVAZIONE DI AEP:OD</li><li>AEP:OD ACTIVATION PRFL A 10M</li><li>AEP:OD ACTIVATION PRFL FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>ORCHESTRAZIONE PROFILO Real-Time CDP:OD UNP</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/it/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]

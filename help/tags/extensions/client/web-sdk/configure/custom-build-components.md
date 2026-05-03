@@ -4,7 +4,7 @@ description: Creare una build Web SDK personalizzata che disabilita le funzioni 
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
 source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '278'
 ht-degree: 8%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_buildoptions"
 >title="Opzioni di build"
->abstract="Includi o escludi in modo selettivo i moduli dalla libreria JavaScript, riducendo le dimensioni della libreria e migliorando le prestazioni."
+>abstract="Includi o escludi in modo selettivo i moduli dalla libreria JavaScript, per ridurre la dimensione della libreria e migliorare le prestazioni."
 
 La libreria SDK Web include più moduli per varie funzioni come personalizzazione, identità, tracciamento dei collegamenti e altro ancora. A seconda dei casi di utilizzo, potresti aver bisogno solo di funzionalità specifiche invece che dell’intera libreria. La disattivazione dei componenti di build consente di utilizzare solo i moduli necessari, riducendo le dimensioni della libreria e migliorando le prestazioni.
 

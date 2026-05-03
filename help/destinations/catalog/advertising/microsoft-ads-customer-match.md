@@ -8,8 +8,8 @@ hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 14%
+source-wordcount: '1642'
+ht-degree: 18%
 
 ---
 
@@ -94,9 +94,9 @@ Quando si tenta di eseguire l&#39;autenticazione utilizzando un account di lavor
 
 Una volta che l’amministratore IT approva la richiesta nel portale Azure, puoi tornare ad Experience Platform e autenticarti utilizzando il tuo account di lavoro. Per maggiori informazioni, consulta la documentazione di Microsoft:
 
-* [Rivedi e intervieni sulle richieste di consenso degli amministratori](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
-* [Configura il flusso di lavoro di autorizzazione amministratore](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
-* [Configurare il consenso degli utenti alle applicazioni](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+* [Rivedere e intervenire sulle richieste di consenso degli amministratori](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [Configurare il flusso di lavoro di autorizzazione dell’amministratore](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [Configurare il modo in cui gli utenti acconsentono alle applicazioni](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
 
 Se l&#39;amministratore IT non ha ancora approvato la richiesta, l&#39;autenticazione avrà esito negativo con il seguente errore: `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
@@ -104,8 +104,8 @@ Se l&#39;amministratore IT non ha ancora approvato la richiesta, l&#39;autentica
 
 Durante la configurazione della destinazione, devi fornire le seguenti informazioni:
 
-* [!UICONTROL Customer ID]: l&#39;ID cliente [!DNL Microsoft Ads] (CID), in formato intero. Per istruzioni su come trovare il tuo ID cliente, consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
-* [!UICONTROL Customer Account ID]: ID del tuo account cliente [!DNL Microsoft Ads]. Consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) per istruzioni su come trovare il tuo ID account cliente.
+* [!UICONTROL Customer ID]: l&#39;ID cliente [!DNL Microsoft Ads] (CID), in formato intero. Per istruzioni su come trovare il tuo ID cliente, consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/it/advertising/guides/get-started?view=bingads-13#get-ids).
+* [!UICONTROL Customer Account ID]: ID del tuo account cliente [!DNL Microsoft Ads]. Consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/it/advertising/guides/get-started?view=bingads-13#get-ids) per istruzioni su come trovare il tuo ID account cliente.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -120,34 +120,34 @@ Per connettersi a questa destinazione, seguire i passaggi descritti nell&#39;ese
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="ID cliente"
->abstract="Il tuo ID cliente Microsoft Advertising, noto anche come ID account Manager. Questo è l’identificatore di primo livello in Microsoft Advertising che può contenere più account inserzionisti (ID account cliente)."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Ricerca dell&#39;ID cliente"
+>abstract="Il tuo ID cliente Microsoft Advertising, noto anche come ID account manager. Si tratta dell’identificatore di livello superiore in Microsoft Advertising che può contenere più account di inserzionisti (ID account cliente)."
+>additional-url="https://learn.microsoft.com/it/advertising/guides/get-started?view=bingads-13#get-ids" text="Trova il tuo ID cliente"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
 >title="ID account cliente"
->abstract="L’ID del tuo account cliente Microsoft Advertising, noto anche come ID dell’account inserzionista. Questo identifica un account inserzionista specifico sotto il tuo ID cliente."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Ricerca dell&#39;ID account cliente"
+>abstract="Il tuo ID account cliente Microsoft Advertising, noto anche come ID account inserzionista. Identifica un account inserzionista specifico collegato al tuo ID cliente."
+>additional-url="https://learn.microsoft.com/it/advertising/guides/get-started?view=bingads-13#get-ids" text="Trova il tuo ID account cliente"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
 >title="Durata iscrizione"
->abstract="Il numero di giorni in cui un utente rimane nell’elenco di corrispondenza cliente. I valori accettati sono compresi tra 1 e 390 giorni."
+>abstract="Il numero di giorni in cui un utente rimane nell’elenco delle corrispondenze clienti. I valori consentiti sono compresi tra 1 e 390 giorni."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
->title="Disponibilità elenco corrispondenze cliente"
->abstract="Seleziona se l&#39;elenco di corrispondenze cliente è disponibile per un singolo account inserzionista o per tutti gli account sotto l&#39;account manager. Seleziona ID cliente per rendere l&#39;elenco disponibile in tutti gli account inserzionisti con il tuo ID cliente. Seleziona ID account cliente per limitare l’elenco all’ID account cliente specifico."
->additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Ulteriori informazioni sulla condivisione degli elenchi di tipi di pubblico in Microsoft Advertising"
+>title="Disponibilità elenco delle corrispondenze clienti"
+>abstract="Specifica se l’elenco delle corrispondenze clienti è disponibile per un singolo account inserzionista o per tutti gli account collegati all’account manager. Seleziona ID cliente per rendere l’elenco disponibile per tutti gli account di inserzionisti collegati al tuo ID cliente. Seleziona ID account cliente per limitare l’elenco all’ID account cliente specifico."
+>additional-url="https://help.ads.microsoft.com/apex/index/3/it/56727" text="Ulteriori informazioni sulla condivisione dell’elenco di tipi di pubblico in Microsoft Advertising"
 
 Durante la [configurazione](../../ui/connect-destination.md) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Description]**: una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL Customer ID]**: ID cliente [!DNL Microsoft Ads]. Per istruzioni su come trovare il tuo ID cliente, consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids).
-* **[!UICONTROL Customer Account ID]**: ID del tuo account cliente [!DNL Microsoft Ads]. Consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) per istruzioni su come trovare il tuo ID account cliente.
-* **[!UICONTROL Membership Duration]**: il numero di giorni in cui un utente rimane nell&#39;elenco di corrispondenza cliente. I valori accettati sono compresi tra 1 e 390 giorni.
-* **[!UICONTROL Customer Match List Availability]**: selezionare la disponibilità dell&#39;elenco di corrispondenze cliente. In [!DNL Microsoft Advertising] un ID cliente può avere più ID account cliente (account inserzionista). Seleziona **[!UICONTROL Customer ID (all advertising accounts)]** per rendere l&#39;elenco disponibile per tutti gli account inserzionisti con il tuo ID cliente, oppure **[!UICONTROL Customer Account ID (single advertising account)]** per limitare l&#39;elenco allo specifico ID account cliente fornito in precedenza. Per ulteriori dettagli, consulta la [documentazione di Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727).
+* **[!UICONTROL Customer ID]**: ID cliente [!DNL Microsoft Ads]. Per istruzioni su come trovare il tuo ID cliente, consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/it/advertising/guides/get-started?view=bingads-13#get-ids).
+* **[!UICONTROL Customer Account ID]**: ID del tuo account cliente [!DNL Microsoft Ads]. Consulta la [documentazione di Microsoft Advertising](https://learn.microsoft.com/it/advertising/guides/get-started?view=bingads-13#get-ids) per istruzioni su come trovare il tuo ID account cliente.
+* **[!UICONTROL Membership Duration]**: il numero di giorni in cui un utente rimane nell&#39;elenco di corrispondenza cliente. I valori consentiti sono compresi tra 1 e 390 giorni.
+* **[!UICONTROL Customer Match List Availability]**: selezionare la disponibilità dell&#39;elenco di corrispondenze cliente. In [!DNL Microsoft Advertising] un ID cliente può avere più ID account cliente (account inserzionista). Seleziona **[!UICONTROL Customer ID (all advertising accounts)]** per rendere l&#39;elenco disponibile per tutti gli account inserzionisti con il tuo ID cliente, oppure **[!UICONTROL Customer Account ID (single advertising account)]** per limitare l&#39;elenco allo specifico ID account cliente fornito in precedenza. Per ulteriori dettagli, consulta la [documentazione di Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/it/56727).
 
   ![Immagine dell&#39;interfaccia utente di Platform che mostra i campi dei dettagli di destinazione per la destinazione Customer Match di Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 

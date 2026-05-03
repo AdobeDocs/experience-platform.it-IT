@@ -6,8 +6,8 @@ description: Questa guida utente descrive come monitorare i dati nell’interfac
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '641'
-ht-degree: 4%
+source-wordcount: '655'
+ht-degree: 6%
 
 ---
 

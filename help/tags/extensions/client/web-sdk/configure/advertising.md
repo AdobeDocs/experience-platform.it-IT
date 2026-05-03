@@ -4,8 +4,8 @@ description: Abilita o disabilita la funzionalità della piattaforma lato domand
 exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '219'
+ht-degree: 26%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advertising"
 >title="Adobe Advertising"
->abstract="Configura le impostazioni per le integrazioni Adobe Advertising. Tieni presente che non è necessaria alcuna configurazione pubblicitaria per abilitare la misurazione click-through. I client Search, Social e Commerce non richiedono ulteriori azioni; tuttavia, gli utenti di Demand-side Platform (DSP) devono configurare gli inserzionisti in questa sezione per misurare le conversioni view-through."
+>abstract="Configura le impostazioni delle integrazioni di Adobe Advertising. Nota: per abilitare la misurazione dei click-through, non sono necessarie configurazioni Advertising . Per i clienti di Search, Social &amp; Commerce non è necessario effettuare ulteriori azioni. Tuttavia, gli utenti di Demand-Side Platform (DSP) devono configurare gli inserzionisti in questa sezione per misurare le conversioni view-through."
 
 La sezione **[!UICONTROL Adobe Advertising]** consente di abilitare o disabilitare la funzionalità di Demand-side Platform (DSP) se utilizzata nell&#39;implementazione. Devi impostare questo campo solo se l’implementazione utilizza un DSP.
 

@@ -6,8 +6,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
 source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
-source-wordcount: '1818'
-ht-degree: 3%
+source-wordcount: '1874'
+ht-degree: 4%
 
 ---
 
@@ -142,7 +142,7 @@ Per eseguire l&#39;autenticazione nella destinazione, selezionare **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_accountid"
->title="Immetti l&#39;identificatore dell&#39;account di condivisione dati di Snowflake"
+>title="Immetti il tuo identificatore account di condivisione dati Snowflake"
 >abstract="Se l’account è collegato a un’organizzazione, utilizza questo formato: `OrganizationName.AccountName`<br><br> Se invece l’account non è collegato a un’organizzazione, utilizza questo formato: `AccountName`"
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.

@@ -1,15 +1,15 @@
 ---
-title: Impostazioni di configurazione Brand Concierge
+title: Impostazioni di configurazione di Brand Concierge
 description: Configura la persistenza della sessione e i timeout del flusso per la chat di Brand Concierge.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 13%
+source-wordcount: '191'
+ht-degree: 16%
 
 ---
 
-# Impostazioni di configurazione Brand Concierge {#brand-concierge}
+# Impostazioni di configurazione di Brand Concierge {#brand-concierge}
 
 >[!AVAILABILITY]
 >
