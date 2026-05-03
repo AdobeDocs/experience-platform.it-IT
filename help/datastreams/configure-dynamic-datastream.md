@@ -2,25 +2,25 @@
 title: Creare configurazioni di flussi di dati dinamici
 description: Scopri come creare configurazioni di flusso di dati dinamiche, per indirizzare i dati a vari servizi Experience Cloud, in base a regole.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1040'
 ht-degree: 3%
 
 ---
 
 # Creare configurazioni di flussi di dati dinamici
 
-Per impostazione predefinita, l&#39;Edge Network di Experience Platform invia tutti gli eventi che raggiungono uno stream di dati a tutti i [servizi](configure.md#add-services) di Experience Cloud che hai abilitato per gli stream di dati. Questo potrebbe non essere sempre il flusso di lavoro ideale per te, a seconda dei casi d’uso.
+Per impostazione predefinita, [!DNL Adobe Experience Platform Edge Network] invia tutti gli eventi che raggiungono uno stream di dati a tutti i [!DNL Experience Cloud] [servizi](/help/datastreams/configure.md#add-services) abilitati per gli stream di dati. A seconda dei casi di utilizzo, questo potrebbe non essere sempre il flusso di lavoro ideale.
 
-Le configurazioni dello stream di dati dinamici risolvono questo problema attraverso set di regole configurabili dall’utente che puoi definire per ogni servizio abilitato per lo stream di dati e che determinano quale soluzione Experience Cloud deve ricevere ogni tipo di dati.
+Le configurazioni dello stream di dati dinamici gestiscono questo problema attraverso set di regole definite dall&#39;utente per ogni servizio abilitato per lo stream di dati, che controllano quale soluzione [!DNL Experience Cloud] riceve ogni tipo di dati.
 
 ## Prerequisiti {#prerequisites}
 
 Per creare una configurazione dinamica per lo stream di dati, è necessario soddisfare due condizioni:
 
-* Devi avere creato *almeno* uno stream di dati con cui lavorare. Per informazioni dettagliate, consulta la documentazione su come [creare uno stream di dati](configure.md).
-* È necessario avere *almeno* un servizio Experience Cloud aggiunto allo stream di dati. Per informazioni dettagliate, consulta la documentazione su come [aggiungere un servizio](configure.md#add-services) a uno stream di dati.
+* Devi avere creato *almeno* uno stream di dati con cui lavorare. Per informazioni dettagliate, consulta la documentazione su come [creare uno stream di dati](/help/datastreams/configure.md).
+* *almeno* un servizio [!DNL Experience Cloud] aggiunto allo stream di dati. Per informazioni dettagliate, consulta la documentazione su come [aggiungere un servizio](/help/datastreams/configure.md#add-services) a uno stream di dati.
 
 Dopo aver creato uno stream di dati e aggiunto un servizio Experience Cloud, puoi [creare una configurazione dinamica](#create-dynamic-configuration).
 
@@ -32,19 +32,19 @@ Le configurazioni dello stream di dati dinamici hanno limiti e vincoli di presta
 |---------|------------|------|
 | Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per i servizi Experience Platform | 5 | Guardrail delle prestazioni |
 | Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per l’inoltro di eventi | 5 | Guardrail delle prestazioni |
-| Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per Adobe Analytics | 5 | Guardrail delle prestazioni |
-| Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per Adobe Target | 5 | Guardrail delle prestazioni |
-| Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per Adobe Audience Manager | 5 | Guardrail delle prestazioni |
+| Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per [!DNL Adobe Analytics] | 5 | Guardrail delle prestazioni |
+| Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per [!DNL Adobe Target] | 5 | Guardrail delle prestazioni |
+| Numero massimo di configurazioni dello stream di dati dinamici per stream di dati per [!DNL Adobe Audience Manager] | 5 | Guardrail delle prestazioni |
 | Numero massimo di condizioni (predicati) che è possibile combinare all’interno di una singola regola | 100 | Guardrail delle prestazioni |
 | Tempo massimo consentito per valutare tutte le configurazioni dello stream di dati dinamici per stream di dati prima del timeout | 25 ms | Guarddrail imposto dal sistema |
 
 ## Configurazioni dello stream di dati dinamici e sostituzioni della configurazione dello stream di dati {#dynamic-versus-overrides}
 
-Le configurazioni dello stream di dati dinamici e le [sostituzioni della configurazione dello stream di dati](overrides.md) si escludono a vicenda.
+Le configurazioni dello stream di dati dinamici e le [sostituzioni della configurazione dello stream di dati](/help/datastreams/overrides.md) si escludono a vicenda.
 
-Ciò significa che non è possibile utilizzare configurazioni dello stream di dati dinamiche insieme alle sostituzioni della configurazione dello stream di dati. Devi scegliere l&#39;uno o l&#39;altro.
+Non è possibile utilizzare le configurazioni dello stream di dati dinamici insieme alle sostituzioni della configurazione dello stream di dati. Devi scegliere l&#39;uno o l&#39;altro.
 
-Se abiliti sia le configurazioni dello stream di dati dinamici che le sostituzioni della configurazione dello stream di dati, le sostituzioni della configurazione avranno la precedenza e le regole di configurazione dello stream di dati dinamici verranno ignorate.
+Se abiliti entrambi, le sostituzioni di configurazione hanno la precedenza e il sistema ignora le regole di configurazione dello stream di dati dinamico.
 
 ## Creare una configurazione dello stream di dati dinamico {#create-dynamic-configuration}
 
@@ -72,13 +72,13 @@ Dopo che hai [creato uno stream di dati](configure.md) e [aggiunto un servizio](
 
    ![Interfaccia utente Datastreams che mostra il generatore di regole di configurazione dinamica con le risorse trascinate.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Nella sezione **[!UICONTROL Configuration]** attivare/disattivare i servizi per ogni regola, a seconda che si desideri inviare i dati a ogni servizio. Se si disattiva l&#39;interruttore, il routing del servizio è disabilitato e *nessun dato* verrà inviato al servizio downstream.
+1. Nella sezione **[!UICONTROL Configuration]** abilitare o disabilitare i servizi per ogni regola, a seconda che si desideri inviare i dati a ogni servizio. Se si disabilita un servizio, il routing verrà disabilitato e *nessun dato* verrà inviato al servizio downstream.
 
    ![Interfaccia utente Datastreams che mostra la regola di configurazione dinamica con gli interruttori del servizio.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. Al termine, selezionare **[!UICONTROL Save]**.
 
-## Considerazioni sulla priorità delle regole {#considerations}
+## Considerazioni sulla priorità delle regole {#rule-priority}
 
 Puoi definire più regole per ogni configurazione dello stream di dati dinamico. Tuttavia, se i dati corrispondono alle condizioni di più regole, viene presa in considerazione solo la prima regola corrispondente nell’elenco e tutte le altre regole corrispondenti vengono ignorate.
 
@@ -86,7 +86,7 @@ Per ottenere il comportamento di indirizzamento dei dati desiderato, presta atte
 
 Per configurare l&#39;ordine delle regole, è possibile trascinare e rilasciare le finestre delle regole nell&#39;ordine desiderato.
 
-![GIF che mostra come modificare l&#39;ordine delle regole tramite trascinamento.](assets/configure-dynamic-datastream/move-rules.gif)
+![Riordinamento delle regole dello stream di dati dinamici tramite trascinamento della selezione.](assets/configure-dynamic-datastream/move-rules.gif)
 
 ## Criteri di idoneità delle regole {#eligibility-criteria}
 
@@ -117,7 +117,7 @@ Le regole possono utilizzare i seguenti operatori, a seconda del tipo di dati:
 | **Booleano** | `equals true/false`, `does not equal true/false` |
 | **Enum** | `equals`, `does not equal`, `exists`, `does not exist` |
 | **Data** | `today`, `yesterday`, `this month`, `this year`, `custom date`, `in last`, `from`, `during`, `within`, `before`, `after`, `rolling range`, `in next`, `exists`, `does not exist` |
-| **Logico** | `INCLUDE`, `ANY/ALL` (equivalente a AND/OR) |
+| **Logico** | `INCLUDE`, `ANY/ALL` (equivalente a [!DNL AND]/[!DNL OR]) |
 
 >[!NOTE]
 >
@@ -127,17 +127,17 @@ Le regole possono utilizzare i seguenti operatori, a seconda del tipo di dati:
 
 Durante la creazione di regole per le configurazioni di flussi di dati dinamici, è importante comprendere i requisiti strutturali che garantiscono prestazioni e compatibilità del sistema ottimali. La struttura delle regole influisce direttamente sull’efficienza con cui i dati vengono elaborati e instradati attraverso il sistema.
 
-**Utilizza solo espressioni flat**. È necessario definire le regole come espressioni logiche semplici. Le espressioni logiche nidificate (che utilizzano contenitori o più livelli di AND/OR) non sono supportate. Se hai bisogno di una logica complessa, suddividila in più regole semplici.
+**Utilizza solo espressioni flat**. È necessario definire le regole come espressioni logiche semplici. Le espressioni logiche nidificate (utilizzando contenitori o più livelli di [!DNL AND]/[!DNL OR]) non sono supportate. Se hai bisogno di una logica complessa, suddividila in più regole semplici.
 
-Ad esempio, considera la regola complessa mostrata nell’immagine seguente.
+Ad esempio, considera la seguente regola complessa.
 
-![Immagine dell&#39;interfaccia utente di Platform che mostra una regola complessa.](assets/configure-dynamic-datastream/complex-rule.png)
+![Esempio di regola complessa nidificata con più condizioni AND/OR.](assets/configure-dynamic-datastream/complex-rule.png)
 
 Puoi suddividere questa regola nelle seguenti regole più semplici:
 
-![Immagine dell&#39;interfaccia utente di Platform che mostra la prima regola semplificata.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Prima regola semplificata, sostituzione della regola complessa nidificata.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Immagine dell&#39;interfaccia utente di Platform che mostra la seconda regola semplificata.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Seconda regola semplificata, che sostituisce la regola complessa nidificata.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Evita regole complesse**. Regole più semplici garantiscono una valutazione più rapida e una migliore manutenzione.
 
@@ -145,11 +145,7 @@ Puoi suddividere questa regola nelle seguenti regole più semplici:
 
 Le best practice per la creazione di regole di configurazione dello stream di dati dinamici garantiscono prestazioni ottimali, affidabilità del sistema e configurazioni gestibili. Queste linee guida aiutano a evitare insidie comuni e a creare regole efficienti che funzionano perfettamente con l’architettura della piattaforma.
 
-* **Regole semplici e piatte.** Se devi esprimere una logica complessa, usa più regole invece di nidificare.
+* **Regole semplici e piatte.** Se devi esprimere una logica complessa, utilizza più regole invece di nidificare.
 * **Utilizzare solo [tipi di dati supportati](#supported-data-types) e [operatori](#supported-operators).**
 * **Verifica le prestazioni delle regole.** Regole eccessivamente complesse o non supportate possono causare il rifiuto da parte del sistema o influire sulle prestazioni del sistema.
-
-
-
-
 

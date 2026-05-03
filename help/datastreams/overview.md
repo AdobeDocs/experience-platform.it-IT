@@ -2,24 +2,24 @@
 title: Panoramica sugli stream di dati
 description: Scopri come i flussi di dati consentono di collegare l’integrazione lato client di Experience Platform SDK con i prodotti Adobe e le destinazioni di terze parti.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 56%
+source-wordcount: '710'
+ht-degree: 48%
 
 ---
 
 # Panoramica sugli stream di dati
 
-Un flusso di dati rappresenta la configurazione lato server per Adobe Experience Platform Web e Mobile SDK. Mentre il comando [`configure`](/help/collection/js/commands/configure/overview.md) in SDK gestisce le impostazioni lato client (ad esempio `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni.
+Uno stream di dati rappresenta la configurazione lato server per gli SDK Web e Mobile di [!DNL Adobe Experience Platform]. Mentre il comando [`configure`](/help/collection/js/commands/configure/overview.md) in SDK gestisce le impostazioni lato client (ad esempio `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni.
 
-Quando invii una richiesta ad Edge Network, `datastreamId` fa riferimento allo stream di dati in cui vengono inviati i dati. Puoi aggiornare la configurazione lato server senza modificare il codice del tuo sito web.
+Quando invii una richiesta a [!DNL Edge Network], `datastreamId` fa riferimento allo stream di dati in cui vengono inviati i dati. Puoi aggiornare la configurazione lato server senza modificare il codice del tuo sito web.
 
-Puoi creare e gestire gli stream di dati selezionando **[!UICONTROL Datastreams]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di Adobe Experience Platform o Data Collection.
+È possibile creare e gestire gli stream di dati selezionando **[!UICONTROL Datastreams]** nell&#39;area di navigazione a sinistra dell&#39;interfaccia utente di [!DNL Adobe Experience Platform] o di Data Collection.
 
-![Scheda stream di dati nell’interfaccia utente](assets/overview/datastreams-tab.png)
+![Schermata della scheda Flussi di dati nell&#39;interfaccia utente di Adobe Experience Platform.](assets/overview/datastreams-tab.png)
 
-Per ulteriori informazioni su come configurare uno stream di dati nell’interfaccia utente, consulta la [guida alla configurazione](./configure.md).
+Per ulteriori informazioni su come configurare uno stream di dati nell’interfaccia utente, consulta la [guida alla configurazione](/help/datastreams/configure.md).
 
 ## Gestione dei dati sensibili negli stream di dati {#sensitive}
 
@@ -29,7 +29,7 @@ Per ulteriori informazioni su come configurare uno stream di dati nell’interfa
 
 Le politiche aziendali di gestione dei dati e i requisiti normativi stanno aumentando le restrizioni su come i dati sensibili dei clienti possono essere raccolti, elaborati e utilizzati. Ciò include la raccolta, l’elaborazione e l’utilizzo di dati sanitari protetti (PHI), che sono soggetti a normative come l’Health Insurance Portability and Accountability Act (HIPAA).
 
-Gli stream di dati forniscono tre metodi per aiutarti a gestire in modo sicuro i dati sensibili:
+Gli stream di dati forniscono tre metodi per gestire in modo sicuro i dati sensibili:
 
 * [Crittografia avanzata](#encryption)
 * [Governance dei dati](#governance)
@@ -37,7 +37,7 @@ Gli stream di dati forniscono tre metodi per aiutarti a gestire in modo sicuro i
 
 ### Crittografia avanzata {#encryption}
 
-Tutti i dati in transito attraverso la rete Edge vengono condotti tramite connessioni sicure e crittografate utilizzando [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246). Se il flusso di dati porta i dati in Experience Platform, questi vengono quindi crittografati a riposo nel data lake di Experience Platform. Per ulteriori informazioni, consulta il documento sulla [crittografia dei dati in Experience Platform](../landing/governance-privacy-security/encryption.md).
+Tutti i dati in transito attraverso [!DNL Edge Network] vengono eseguiti tramite connessioni sicure e crittografate utilizzando [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246). Se il flusso di dati porta i dati in Experience Platform, questi vengono quindi crittografati a riposo nel data lake di Experience Platform. Per ulteriori informazioni, consulta il documento sulla [crittografia dei dati in Experience Platform](/help/landing/governance-privacy-security/encryption.md).
 
 ### Governance dei dati {#governance}
 
@@ -45,26 +45,26 @@ Gli stream di dati utilizzano le funzionalità integrate di governance dei dati 
 
 Il video seguente fornisce una breve panoramica sulla configurazione e l’applicazione delle restrizioni di utilizzo dei dati per i flussi di dati nell’interfaccia utente:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413103/?captions=ita&quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
-In Experience Platform, puoi applicare [etichette di utilizzo dei dati sensibili](../data-governance/labels/reference.md#sensitive) agli schemi e ai campi contenenti dati ritenuti sensibili dalla tua organizzazione. Ad esempio, l’etichetta `RHD` viene utilizzata per indicare le informazioni sanitarie protette (PHI) e l’etichetta `S1` rappresenta i dati di geolocalizzazione.
+In Experience Platform, puoi applicare [etichette di utilizzo dei dati sensibili](/help/data-governance/labels/reference.md#sensitive) agli schemi e ai campi contenenti dati ritenuti sensibili dalla tua organizzazione. Ad esempio, l’etichetta `RHD` viene utilizzata per indicare le informazioni sanitarie protette (PHI) e l’etichetta `S1` rappresenta i dati di geolocalizzazione.
 
 >[!NOTE]
 >
->Per informazioni dettagliate su come applicare le etichette di utilizzo dei dati nella scheda [!UICONTROL Schemas] dell&#39;interfaccia utente di Experience Platform o di Data Collection, consulta l&#39;[esercitazione sull&#39;etichettatura degli schemi](../xdm/tutorials/labels.md).
+>Per informazioni dettagliate su come applicare le etichette di utilizzo dei dati nella scheda [!UICONTROL Schemas] dell&#39;interfaccia utente di Experience Platform o di Data Collection, consulta l&#39;[esercitazione sull&#39;etichettatura degli schemi](/help/xdm/tutorials/labels.md).
 
-Quando crei un datastream, se lo schema selezionato contiene etichette di utilizzo dei dati sensibili, puoi solo configurare lo stream di dati per inviare tali dati a destinazioni conformi HIPAA. Attualmente, l’unica destinazione conforme HIPAA supportata dagli stream di dati è Adobe Experience Platform. Altri servizi di destinazione, tra cui Adobe Target, Adobe Analytics, Adobe Audience Manager, l’inoltro di eventi e le destinazioni Edge, sono disabilitati per gli stream di dati contenenti etichette di utilizzo dei dati sensibili.
+Quando crei un datastream, se lo schema selezionato contiene etichette di utilizzo dei dati sensibili, puoi solo configurare lo stream di dati per inviare tali dati a destinazioni conformi HIPAA. Attualmente, l&#39;unica destinazione compatibile con HIPAA supportata dagli stream di dati è [!DNL Adobe Experience Platform]. Altri servizi di destinazione, tra cui [!DNL Adobe Target], [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], inoltro eventi e destinazioni edge, sono disabilitati per gli stream di dati contenenti etichette di utilizzo dati sensibili.
 
 Se uno schema viene utilizzato in uno stream di dati esistente con servizi non conformi HIPAA, il tentativo di aggiungere un’etichetta di utilizzo dei dati sensibili allo schema genera un messaggio di violazione dei criteri e l’azione non è consentita. Il messaggio specifica quale flusso di dati ha attivato la violazione e suggerisce di rimuovere tutti i servizi non conformi HIPAA dallo stream di dati per risolvere il problema.
 
-### Registri di controllo
+### Registri di controllo {#audit-logs}
 
 In Experience Platform, le attività dello stream di dati possono essere monitorate mediante registri di controllo. I registri di controllo indicano **chi** ha eseguito un&#39;azione di **cosa** e **quando**, insieme ad altri dati contestuali che possono aiutarti a risolvere i problemi relativi agli stream di dati per aiutare la tua azienda a rispettare i criteri di gestione dei dati aziendali e i requisiti normativi.
 
-Ogni volta che un utente crea, aggiorna o elimina uno stream di dati, viene creato un registro di controllo per registrare l’azione. Lo stesso si verifica ogni volta che un utente crea, aggiorna o elimina una mappatura tramite la [Preparazione dei dati per la raccolta dati](./data-prep.md). Indipendentemente dal fatto che si tratti di uno stream di dati o di una mappatura aggiornata, il registro di controllo risultante è classificato nel tipo di risorsa [!UICONTROL Datastreams].
+Ogni volta che un utente crea, aggiorna o elimina uno stream di dati, viene creato un registro di controllo per registrare l’azione. Lo stesso si verifica ogni volta che un utente crea, aggiorna o elimina una mappatura tramite la [Preparazione dei dati per la raccolta dati](/help/datastreams/data-prep.md). Indipendentemente dal fatto che si tratti di uno stream di dati o di una mappatura aggiornata, il registro di controllo risultante è classificato nel tipo di risorsa [!UICONTROL Datastreams].
 
-Per ulteriori informazioni su come interpretare i registri dagli stream di dati e da altri servizi supportati, consulta la documentazione sui [registri di controllo](../landing/governance-privacy-security/audit-logs/overview.md).
+Per ulteriori informazioni su come interpretare i registri dagli stream di dati e da altri servizi supportati, consulta la documentazione sui [registri di controllo](/help/landing/governance-privacy-security/audit-logs/overview.md).
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
-Questa guida fornisce una panoramica di alto livello sugli stream di dati e del loro utilizzo nella raccolta di dati e nell’elaborazione di dati sensibili. Per informazioni su come impostare un nuovo stream di dati, consulta la [guida alla configurazione dello stream di dati](./configure.md).
+Questa guida fornisce una panoramica di alto livello sugli stream di dati e del loro utilizzo nella raccolta di dati e nell’elaborazione di dati sensibili. Per informazioni su come impostare un nuovo stream di dati, consulta la [guida alla configurazione dello stream di dati](/help/datastreams/configure.md).

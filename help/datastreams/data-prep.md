@@ -2,55 +2,55 @@
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 41%
+source-wordcount: '1143'
+ht-degree: 29%
 
 ---
 
 # Preparazione dei dati per la raccolta dati
 
-Preparazione dati è un servizio di Adobe Experience Platform che puoi utilizzare per mappare, trasformare e convalidare i dati da e verso [Experience Data Model (XDM)](../xdm/home.md). Durante la configurazione di un [flusso di dati](./overview.md) abilitato per Experience Platform, puoi utilizzare le funzionalità di preparazione dati per mappare i dati di origine su XDM durante l&#39;invio ad Experience Platform Edge Network.
+Utilizza [!DNL Data Prep], un servizio [!DNL Adobe Experience Platform], per mappare, trasformare e convalidare i dati da e verso [Experience Data Model (XDM)](/help/xdm/home.md). Durante la configurazione di un [flusso di dati](/help/datastreams/overview.md) abilitato per Experience Platform, puoi utilizzare le funzionalità [!DNL Data Prep] per mappare i dati di origine su XDM durante l&#39;invio a [!DNL Adobe Experience Platform Edge Network].
 
-Tutti i dati inviati da una pagina web devono pervenire ad Experience Platform come XDM. Esistono 3 modi per tradurre i dati da un livello dati su pagina a XDM accettato da Experience Platform:
+Tutti i dati inviati da una pagina web devono pervenire ad Experience Platform come XDM. Sono disponibili tre modi per tradurre i dati da un livello dati su pagina a XDM accettato da Experience Platform:
 
 1. Riformattare il livello dati in XDM sulla pagina web stessa.
-2. Utilizza la funzionalità Tag elementi dati nativi per riformattare in XDM il formato di livello dati esistente di una pagina web.
-3. Riformattare il formato del livello dati esistente di una pagina web in XDM tramite Edge Network, utilizzando la preparazione dati per la raccolta dati.
+2. Utilizza la funzionalità integrata di [!DNL Tags] elementi dati per riformattare in XDM il formato di livello dati esistente di una pagina web.
+3. Riformattare il formato del livello dati esistente di una pagina web in XDM tramite [!DNL Edge Network], utilizzando la preparazione dati per la raccolta dati.
 
-Questa guida si concentra sulla terza opzione.
+Questa guida descrive la terza opzione.
 
 ## Quando utilizzare la preparazione dati per la raccolta dati {#when-to-use-data-prep}
 
-Esistono due casi di utilizzo in cui la preparazione dei dati per la raccolta dei dati è utile:
+La preparazione per la raccolta dei dati è utile in due situazioni:
 
-1. Il sito web ha un livello di dati ben formato, gestito e mantenuto ed è preferibile inviarlo direttamente ad Edge Network anziché utilizzare la manipolazione di JavaScript per convertirlo in XDM sulla pagina (tramite elementi dati Tag o tramite manipolazione manuale di JavaScript).
-2. Sul sito viene distribuito un sistema di assegnazione tag diverso dai tag.
+1. Il sito Web dispone di un livello dati ben formato, gestito e gestito e preferisci inviarlo direttamente a [!DNL Edge Network] invece di utilizzare la manipolazione di JavaScript per convertirlo in XDM sulla pagina (tramite elementi dati [!DNL Tags] o tramite la manipolazione manuale di JavaScript).
+2. Nel sito è stato distribuito un sistema di assegnazione tag diverso da [!DNL Tags].
 
 ## Inviare un livello dati esistente ad Edge Network tramite Web SDK {#send-datalayer-via-websdk}
 
 Il livello dati esistente deve essere inviato utilizzando l&#39;oggetto [`data`](/help/collection/js/commands/sendevent/data.md) nel comando `sendEvent`.
 
-Se utilizzi Tag, devi utilizzare il campo **[!UICONTROL Data]** del tipo di azione [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
+Se si utilizza [!DNL Tags], è necessario utilizzare il campo **[!UICONTROL Data]** del tipo di azione [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
 
-Il resto di questa guida si concentrerà su come mappare il livello dati agli standard XDM dopo che è stato inviato da WebSDK.
+Il resto di questa guida illustra come mappare il livello dati agli standard XDM dopo che è stato inviato dal Web SDK.
 
 >[!NOTE]
 >
->Per informazioni complete su tutte le funzionalità di preparazione dati, comprese le funzioni di trasformazione per i campi calcolati, consulta la seguente documentazione:
+>Per informazioni complete su tutte le funzionalità di [!DNL Data Prep], incluse le funzioni di trasformazione per i campi calcolati, vedere la seguente documentazione:
 >
->* [Panoramica sulla preparazione dei dati](../data-prep/home.md)
->* [Funzioni di mappatura della preparazione dei dati](../data-prep/functions.md)
->* [Gestione dei formati dei dati con la preparazione dei dati](../data-prep/data-handling.md)
+>* [Panoramica sulla preparazione dei dati](/help/data-prep/home.md)
+>* [Funzioni di mappatura della preparazione dei dati](/help/data-prep/functions.md)
+>* [Gestione dei formati dei dati con la preparazione dei dati](/help/data-prep/data-handling.md)
 
-Questa guida illustra come mappare i dati nell’interfaccia utente. Per seguire i passaggi, avvia il processo di creazione di uno stream di dati fino al [passaggio di configurazione di base](./overview.md#create) (incluso).
+Questa guida illustra come mappare i dati nell’interfaccia utente. Per completare i passaggi, avvia il processo di creazione di uno stream di dati fino al [passaggio di configurazione di base](/help/datastreams/configure.md#create) (incluso).
 
-Per una dimostrazione rapida del processo di preparazione dei dati per la raccolta dati, guarda il video seguente:
+Per una dimostrazione rapida del processo di preparazione dei dati per la raccolta dei dati, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/345565?captions=ita&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Select data] {#select-data}
+## Fornisci dati di esempio {#select-data}
 
 Selezionare **[!UICONTROL Save and Add Mapping]** dopo aver completato la configurazione di base per uno stream di dati e viene visualizzato il passaggio **[!UICONTROL Select data]**. Da qui, devi fornire un oggetto JSON campione che rappresenti la struttura dei dati che intendi inviare ad Experience Platform.
 
@@ -158,9 +158,9 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 
 >[!NOTE]
 >
->Utilizza un oggetto JSON di esempio che rappresenta ogni elemento del livello dati che può essere utilizzato su qualsiasi pagina. Ad esempio, non tutte le pagine utilizzano gli elementi del livello dati del carrello. Tuttavia, gli elementi del livello dati del carrello devono essere inclusi in questo oggetto JSON di esempio.
+>Utilizza un oggetto JSON di esempio che rappresenta ogni elemento del livello dati che può essere utilizzato su qualsiasi pagina. Ad esempio, non tutte le pagine utilizzano gli elementi del livello dati del carrello. Tuttavia, includi gli elementi del livello dati del carrello in questo oggetto JSON di esempio.
 
-## [!UICONTROL Mapping]
+## Mappare i dati {#mapping}
 
 Viene visualizzato il passaggio **[!UICONTROL Mapping]**, che consente di mappare i campi nei dati di origine a quelli dello schema dell&#39;evento di destinazione in Experience Platform. Da qui puoi configurare la mappatura in due modi:
 
@@ -169,7 +169,7 @@ Viene visualizzato il passaggio **[!UICONTROL Mapping]**, che consente di mappar
 
 >[!IMPORTANT]
 >
->La mappatura della preparazione dati sostituisce i payload XDM `identityMap`, il che può influire ulteriormente sulla corrispondenza dei profili rispetto ai tipi di pubblico di Real-Time CDP.
+>La mappatura [!DNL Data Prep] sostituisce i payload XDM `identityMap`, il che può influire ulteriormente sulla corrispondenza dei profili rispetto a [!DNL Real-Time CDP] tipi di pubblico.
 
 ### Creare regole di mappatura {#create-mapping}
 
@@ -177,11 +177,11 @@ Per creare una regola di mappatura, selezionare **[!UICONTROL Add new mapping]**
 
 ![Aggiunta di una nuova mappatura.](assets/data-prep/add-new-mapping.png)
 
-Seleziona l’icona della sorgente (![Icona sorgente](/help/images/icons/source.png)) e nella finestra di dialogo visualizzata seleziona il campo di origine che desideri mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizzare il pulsante **[!UICONTROL Select]** per continuare.
+Seleziona l&#39;icona di origine (![icona del selettore di campi di Source](/help/images/icons/source.png)) e nella finestra di dialogo visualizzata seleziona il campo di origine da mappare nell&#39;area di lavoro fornita. Dopo aver scelto un campo, utilizzare il pulsante **[!UICONTROL Select]** per continuare.
 
 ![Selezione del campo da mappare nello schema di origine.](assets/data-prep/source-mapping.png)
 
-Quindi, seleziona l’icona dello schema (![Icona dello schema](/help/images/icons/schema.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegliere il campo a cui si desidera mappare i dati prima di confermare con **[!UICONTROL Select]**.
+Quindi, seleziona l&#39;icona dello schema (![icona del selettore dello schema di destinazione](/help/images/icons/schema.png)) per aprire una finestra di dialogo simile per lo schema dell&#39;evento di destinazione. Scegliere il campo a cui si desidera mappare i dati prima di confermare con **[!UICONTROL Select]**.
 
 ![Selezione del campo da mappare nello schema di destinazione.](assets/data-prep/target-mapping.png)
 
@@ -213,7 +213,7 @@ Nella finestra di dialogo visualizzata, seleziona lo stream di dati di cui desid
 
 >[!NOTE]
 >
->Gli stream di dati possono essere importati solo all’interno della stessa [sandbox](../sandboxes/home.md). In altre parole, non puoi importare uno stream di dati da una sandbox all’altra.
+>Gli stream di dati possono essere importati solo all’interno della stessa [sandbox](/help/sandboxes/home.md). Non puoi importare un flusso di dati da una sandbox all’altra.
 
 La schermata successiva mostra un’anteprima delle regole di mappatura salvate per lo stream di dati selezionato. Verificare che i mapping visualizzati siano quelli previsti, quindi selezionare **[!UICONTROL Import]** per confermare e aggiungere i mapping al nuovo flusso di dati.
 
@@ -223,14 +223,14 @@ La schermata successiva mostra un’anteprima delle regole di mappatura salvate 
 >
 >Se un campo di origine nelle regole di mappatura importate non è incluso nei dati JSON di esempio [forniti in precedenza](#select-data), tali mappature di campi non saranno incluse nell’importazione.
 
-### Completare la mappatura
+### Completare la mappatura {#complete-mapping}
 
-Continua a seguire i passaggi precedenti per mappare il resto dei campi sullo schema di destinazione. Anche se non è necessario mappare tutti i campi sorgente disponibili, tutti i campi nello schema di destinazione impostati come richiesto devono essere mappati per completare questo passaggio. Il contatore **[!UICONTROL Required fields]** indica quanti campi obbligatori non sono ancora mappati nella configurazione corrente.
+Continua a mappare i campi rimanenti sullo schema di destinazione. Anche se non è necessario mappare tutti i campi sorgente disponibili, tutti i campi nello schema di destinazione impostati come richiesto devono essere mappati per completare questo passaggio. Il contatore **[!UICONTROL Required fields]** indica quanti campi obbligatori non sono ancora mappati nella configurazione corrente.
 
-Una volta che il conteggio dei campi richiesto raggiunge zero e la mappatura è soddisfacente, selezionare **[!UICONTROL Save]** per finalizzare le modifiche.
+Quando il conteggio dei campi richiesto raggiunge zero e la mappatura è soddisfacente, selezionare **[!UICONTROL Save]** per finalizzare le modifiche.
 
-![Mappatura completata](assets/data-prep/mapping-complete.png)
+![L&#39;interfaccia di mappatura che mostra tutti i campi obbligatori è stata mappata correttamente con un numero di campi obbligatori pari a zero.](assets/data-prep/mapping-complete.png)
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
-Questa guida illustra come mappare i dati su XDM durante la configurazione di uno stream di dati nell’interfaccia utente. Se stavi seguendo il tutorial generale sugli stream di dati, ora puoi tornare al passaggio sulla [visualizzazione dei dettagli dello stream di dati](./overview.md).
+Questa guida illustra come mappare i dati su XDM durante la configurazione di uno stream di dati nell’interfaccia utente. Se stavi seguendo l&#39;esercitazione generale sui flussi di dati, ora puoi tornare al passaggio [visualizzazione dei dettagli dello stream di dati](/help/datastreams/overview.md).

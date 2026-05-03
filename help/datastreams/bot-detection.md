@@ -2,9 +2,9 @@
 title: Configurare il rilevamento di bot per gli stream di dati
 description: Scopri come configurare il rilevamento di bot per i flussi di dati, per differenziare il traffico umano e non umano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1460'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Il traffico non umano proveniente da programmi automatizzati, web scraper, spider e scanner scriptati può rendere difficile identificare gli eventi provenienti dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati.
 
-Il rilevamento dei bot consente di identificare gli eventi generati da [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) e [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) come generati da spider e bot noti.
+Utilizza il rilevamento di bot per identificare gli eventi generati da [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) e [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) come generati da spider e bot noti.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Il rilevamento dei bot consente di identificare gli eventi generati da [Web SDK]
 
 Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici da classificare come eventi bot. Questo consente di fornire una misurazione più accurata dell’attività dell’utente sul sito o sull’app mobile.
 
-Quando una richiesta ad Edge Network corrisponde a una qualsiasi delle regole di rilevamento di bot, lo schema XDM viene aggiornato con un punteggio bot (sempre impostato su 1), come illustrato di seguito:
+Quando una richiesta a [!DNL Edge Network] corrisponde a una qualsiasi delle regole di rilevamento bot, lo schema XDM viene aggiornato con un punteggio bot (sempre impostato su 1):
 
 ```json
 {
@@ -35,57 +35,57 @@ Questo punteggio bot consente alle soluzioni che ricevono la richiesta di identi
 
 >[!IMPORTANT]
 >
->Il rilevamento dei bot non elimina alcuna richiesta di bot. Aggiorna lo schema XDM solo con il punteggio bot e inoltra l&#39;evento al servizio [datastream](configure.md) configurato.
+>Il rilevamento dei bot non elimina alcuna richiesta di bot. Aggiorna lo schema XDM solo con il punteggio bot e inoltra l&#39;evento al [servizio datastream](/help/datastreams/configure.md) configurato.
 >
->Le soluzioni Adobe possono gestire il punteggio bot in diversi modi. Adobe Analytics, ad esempio, utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=it) e non utilizza il punteggio impostato da Edge Network. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
+>Le soluzioni Adobe possono gestire il punteggio bot in diversi modi. Ad esempio, [!DNL Adobe Analytics] utilizza il proprio [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato da [!DNL Edge Network]. I due servizi utilizzano lo stesso [elenco di bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), pertanto il punteggio bot è identico.
 
 ## Considerazioni tecniche {#technical-considerations}
 
 Prima di abilitare il rilevamento di bot sui flussi di dati, ecco alcuni punti chiave da tenere a mente per garantire risultati accurati e un’implementazione fluida:
 
 * Il rilevamento dei bot si applica solo alle richieste non autenticate inviate a `edge.adobedc.net`.
-* Authenticated requests sent to `server.adobedc.net` are not evaluated for bot traffic, as authenticated traffic is considered trustworthy.
-* Bot detection rules can take up to 15 minutes to propagate across the Edge Network after being created.
+* Le richieste autenticate inviate a `server.adobedc.net` non vengono valutate per il traffico da bot, in quanto il traffico autenticato è considerato attendibile.
+* Dopo la creazione, la propagazione delle regole di rilevamento dei bot in [!DNL Edge Network] può richiedere fino a 15 minuti.
 
 ## Prerequisiti {#prerequisites}
 
-For bot detection to work on your datastream, you must add the **[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add field groups to a schema.
+Affinché il rilevamento bot funzioni sullo stream di dati, devi aggiungere il gruppo di campi **[Informazioni sul rilevamento bot](/help/xdm/field-groups/event/bot-detection-information.md)** allo schema. Per informazioni su come aggiungere gruppi di campi a uno schema, consulta la documentazione dello schema [XDM](/help/xdm/ui/resources/schemas.md#add-field-groups).
 
 ## Configurare il rilevamento di bot per gli stream di dati {#configure}
 
-You can configure bot detection after creating a datastream configuration. See the documentation on how to [create and configure a datastream](configure.md), then follow the instructions below to add bot detection capabilities to your datastream.
+Puoi configurare il rilevamento di bot dopo aver creato una configurazione dello stream di dati. Consulta la documentazione su come [creare e configurare uno stream di dati](/help/datastreams/configure.md), quindi segui le istruzioni riportate di seguito per aggiungere funzionalità di rilevamento bot allo stream di dati.
 
-Go to the datastreams list and select the datastream to which you want to add bot detection.
+Vai all’elenco dei flussi di dati e seleziona il flusso di dati a cui desideri aggiungere il rilevamento di bot.
 
-![Datastreams user interface showing the list of datastreams.](assets/bot-detection/datastream-list.png)
+![Interfaccia utente per gli stream di dati con l&#39;elenco degli stream di dati.](assets/bot-detection/datastream-list.png)
 
-In the datastream details page, select the **[!UICONTROL Bot Detection]** option on the right rail.
+Nella pagina dei dettagli dello stream di dati, seleziona l’opzione **[!UICONTROL Bot Detection]** nella barra a destra.
 
-![Bot detection option highlighted in the datastreams user interface.](assets/bot-detection/bot-detection.png)
+![Opzione di rilevamento bot evidenziata nell&#39;interfaccia utente dello stream di dati.](assets/bot-detection/bot-detection.png)
 
-The **[!UICONTROL Bot Detection Rules]** page is shown.
+Viene visualizzata la pagina **[!UICONTROL Bot Detection Rules]**.
 
-![Bot detection settings in the datastream settings page.](assets/bot-detection/bot-detection-page.png)
+![Impostazioni di rilevamento bot nella pagina delle impostazioni dello stream di dati.](assets/bot-detection/bot-detection-page.png)
 
-From the Bot Detection Rules page, you can configure bot detection by using the following functionalities:
+Dalla pagina Regole di rilevamento bot, puoi configurare il rilevamento bot utilizzando le seguenti funzionalità:
 
-* Using the [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
-* Creating your own bot detection rules.
+* Utilizzo dell&#39;[elenco internazionale Spider e bot IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Creazione di regole di rilevamento bot personalizzate.
 
-### Use the IAB/ABC International Spiders and Bots List {#iab-list}
+### Utilizzare l&#39;elenco internazionale Spiders e bot IAB/ABC {#iab-list}
 
-The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) is a third-party, industry-standard list of internet spiders and bots. This list helps you identify automated traffic such as search engine crawlers, monitoring tools, and other nonhuman traffic that you may not want to include in your analytics counts.
+L&#39;[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) è un elenco standard di terze parti di spider e bot Internet. Questo elenco ti aiuta a identificare il traffico automatizzato, ad esempio crawler di motori di ricerca, strumenti di monitoraggio e altro traffico non umano che potresti non voler includere nei conteggi di analisi.
 
-To configure your datastream to use the IAB/ABC International Spiders and Bots List:
+Per configurare lo stream di dati per l’utilizzo dell’elenco internazionale Spiders e Bots IAB/ABC:
 
-1. Toggle the **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** option.
-2. Select **[!UICONTROL Save]** to apply the bot detection settings to your datastream.
+1. Attiva/disattiva l&#39;opzione **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]**.
+2. Seleziona **[!UICONTROL Save]** per applicare le impostazioni di rilevamento bot allo stream di dati.
 
-![IAB spiders and bot list enabled.](assets/bot-detection/bot-detection-list.png)
+![Elenco di spider e bot IAB abilitato.](assets/bot-detection/bot-detection-list.png)
 
-### Create bot detection rules {#rules}
+### Creare regole di rilevamento bot {#rules}
 
-In addition to using the [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), you can define your own bot detection rules for each datastream.
+Oltre a utilizzare l&#39;[elenco internazionale Spider e bot IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), puoi definire le tue regole di rilevamento bot per ogni flusso di dati.
 
 Puoi creare regole di rilevamento bot in base a **indirizzi IP** e **intervalli di indirizzi IP**.
 
@@ -123,19 +123,19 @@ Per creare una regola di rilevamento bot, effettua le seguenti operazioni:
 
    >[!TIP]
    >
-   >Le condizioni IP si basano su un&#39;operazione logica `OR`. Una richiesta è contrassegnata come proveniente da un bot se corrisponde a una qualsiasi delle condizioni IP definite.
+   >Le condizioni IP si basano su un&#39;operazione logica [!DNL OR]. Una richiesta è contrassegnata come proveniente da un bot se corrisponde a una qualsiasi delle condizioni IP definite.
 
 4. Se si desidera aggiungere condizioni di intestazione alla regola, selezionare **[!UICONTROL Add header conditions group]**, quindi selezionare le intestazioni da utilizzare per la regola.
 
-   ![Schermata delle regole di rilevamento bot con le condizioni di intestazione evidenziate.](assets/bot-detection/header-conditions.png)
+   ![Schermata delle regole di rilevamento bot che mostra l&#39;opzione Add header conditions group.](assets/bot-detection/header-conditions.png)
 
    Quindi, aggiungi le condizioni da utilizzare per l’intestazione selezionata.
 
-   ![Schermata delle regole di rilevamento bot con le condizioni di intestazione evidenziate.](assets/bot-detection/header-condition-rule.png)
+   ![Schermata delle regole di rilevamento bot che mostra i campi della condizione dell&#39;intestazione compilati.](assets/bot-detection/header-condition-rule.png)
 
 5. Dopo aver configurato le regole di rilevamento bot desiderate, seleziona **[!UICONTROL Save]** per applicare le regole allo stream di dati.
 
-   ![Schermata delle regole di rilevamento bot con le condizioni di intestazione evidenziate.](assets/bot-detection/bot-detection-save.png)
+   ![La schermata delle regole di rilevamento bot mostra il pulsante Salva evidenziato.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Esempi di regole di rilevamento bot {#examples}
@@ -144,39 +144,35 @@ Per aiutarti a iniziare a rilevare i bot, puoi utilizzare gli esempi dettagliati
 
 ### Rilevamento bot basato su un indirizzo IP {#one-ip}
 
-Per contrassegnare tutte le richieste provenienti da un indirizzo IP specifico come traffico da bot, crea una nuova regola di rilevamento bot che valuti un singolo indirizzo IP, come illustrato nell’immagine seguente.
+Per contrassegnare tutte le richieste provenienti da un indirizzo IP specifico come traffico da bot, crea una nuova regola di rilevamento bot che valuti un singolo indirizzo IP.
 
-![Regola di rilevamento bot basata su un indirizzo IP.](assets/bot-detection/bot-detection-one-ip.png)
+![Regola di rilevamento bot configurata per valutare un singolo indirizzo IP.](assets/bot-detection/bot-detection-one-ip.png)
 
 ### Rilevamento dei bot basato su due indirizzi IP {#two-ip}
 
-Per contrassegnare tutte le richieste provenienti da uno di due indirizzi IP specifici come traffico da bot, crea una nuova regola di rilevamento bot che valuta due indirizzi IP, come illustrato nell’immagine seguente.
+Per contrassegnare tutte le richieste provenienti da uno di due indirizzi IP specifici come traffico da bot, crea una nuova regola di rilevamento bot che valuta due indirizzi IP.
 
-![Regola di rilevamento bot basata su due indirizzi IP.](assets/bot-detection/bot-detection-two-ips.png)
+![Regola di rilevamento bot configurata per valutare due indirizzi IP specifici.](assets/bot-detection/bot-detection-two-ips.png)
 
 ### Rilevamento di bot basato su un intervallo di indirizzi IP {#range}
 
-Per contrassegnare tutte le richieste provenienti da qualsiasi indirizzo IP in un intervallo specifico come traffico da bot, crea una nuova regola di rilevamento bot che valuti un intero intervallo di indirizzi IP, come illustrato nell’immagine seguente.
+Per contrassegnare tutte le richieste provenienti da qualsiasi indirizzo IP in un intervallo specifico come traffico da bot, crea una nuova regola di rilevamento bot che valuti un intero intervallo di indirizzi IP.
 
-![Regola di rilevamento bot basata sull&#39;intervallo IP.](assets/bot-detection/bot-detection-range.png)
+![Regola di rilevamento bot configurata per valutare un intervallo di indirizzi IP.](assets/bot-detection/bot-detection-range.png)
 
 ### Rilevamento di bot basato su un indirizzo IP e un’intestazione di richiesta {#ip-header}
 
-Per contrassegnare come traffico bot tutte le richieste provenienti da un indirizzo IP specifico e contenenti un’intestazione di richiesta specifica, crea una nuova regola di rilevamento bot, come illustrato nell’immagine seguente.
+Per contrassegnare come traffico bot tutte le richieste provenienti da un indirizzo IP specifico e contenenti un’intestazione di richiesta specifica, crea una nuova regola di rilevamento bot. Questa regola controlla se la richiesta proviene da un indirizzo IP specifico e se l&#39;intestazione della richiesta `referer` inizia con `www.adobe.com`.
 
-Questa regola controlla se la richiesta proviene da un indirizzo IP specifico e se l&#39;intestazione della richiesta `referer` inizia con `www.adobe.com`.
-
-![Regola di rilevamento bot basata sull&#39;indirizzo IP e sull&#39;intestazione della richiesta.](assets/bot-detection/bot-detection-header-ip.png)
+![Regola di rilevamento bot configurata per valutare un indirizzo IP e l&#39;intestazione della richiesta di riferimento.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Rilevamento dei bot in base a più condizioni {#multiple-conditions}
 
 Puoi creare regole di rilevamento bot in base a:
 
-* **Condizioni diverse multiple**: condizioni diverse vengono valutate come un&#39;operazione logica `AND`, il che significa che le condizioni devono essere soddisfatte simultaneamente affinché la richiesta possa essere identificata come proveniente da un bot.
-* **Condizioni multiple dello stesso tipo**: le condizioni dello stesso tipo vengono valutate come un&#39;operazione `OR` logica, il che significa che se una qualsiasi delle condizioni viene soddisfatta, la richiesta viene identificata come proveniente da un bot.
+* **Condizioni diverse multiple**: condizioni diverse vengono valutate come un&#39;operazione logica [!DNL AND], il che significa che tutte le condizioni devono essere soddisfatte contemporaneamente affinché il sistema identifichi la richiesta come traffico da bot.
+* **Condizioni multiple dello stesso tipo**: le condizioni dello stesso tipo vengono valutate come un&#39;operazione logica [!DNL OR], il che significa che se viene soddisfatta una condizione, la richiesta viene identificata come traffico da bot.
 
-La regola mostrata nell’immagine seguente identifica una richiesta di origine da bot se sono soddisfatte le seguenti condizioni:
+La regola seguente identifica una richiesta proveniente da bot se queste condizioni sono soddisfatte: la richiesta proviene da uno dei due indirizzi IP, l&#39;intestazione `referer` inizia con `www.adobe.com` e l&#39;intestazione `sec-ch-ua-mobile` identifica la richiesta come proveniente da un browser desktop.
 
-La richiesta proviene da uno dei due indirizzi IP, l&#39;intestazione `referer` inizia con `www.adobe.com` e l&#39;intestazione `sec-ch-ua-mobile` identifica la richiesta come proveniente da un browser desktop.
-
-![Regola di rilevamento bot basata su più condizioni.](assets/bot-detection/bot-detection-multiple.png)
+![Regola di rilevamento bot configurata con più condizioni IP, referer e user-agent.](assets/bot-detection/bot-detection-multiple.png)
