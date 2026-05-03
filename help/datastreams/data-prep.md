@@ -48,7 +48,7 @@ Questa guida illustra come mappare i dati nell’interfaccia utente. Per complet
 
 Per una dimostrazione rapida del processo di preparazione dei dati per la raccolta dei dati, guarda il video seguente:
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345565?captions=ita&quality=12&enable10seconds=on&speedcontrol=on)
 
 ## Fornisci dati di esempio {#select-data}
 
