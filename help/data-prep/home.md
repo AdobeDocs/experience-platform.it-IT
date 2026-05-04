@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Panoramica sulla preparazione dati
 description: Questo documento introduce la preparazione dati in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4df6f85701f2a509b3f9c7ceddb8d002dd81c6f0
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 3%
 
 ---
 
 
 # Panoramica sulla preparazione dati
 
-La preparazione dati consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). La preparazione dati viene visualizzata come un passaggio &quot;Mappa&quot; nei processi di acquisizione dati, incluso il flusso di lavoro di acquisizione CSV. I data engineer possono utilizzare la preparazione dati per eseguire le seguenti manipolazioni di dati durante l’acquisizione:
+La preparazione dei dati consente ai data engineer di mappare, trasformare e convalidare i dati da e per Experience Data Model (XDM). La preparazione dati viene visualizzata come un passaggio &quot;Mappa&quot; nei processi di acquisizione dati, incluso il flusso di lavoro di acquisizione CSV. I data engineer possono utilizzare la preparazione dati per eseguire le seguenti manipolazioni di dati durante l’acquisizione:
 
 - Definire semplici mappature pass-through per assegnare attributi di input agli attributi XDM
 - Creare campi calcolati per eseguire calcoli su righe che possono essere assegnati ad attributi XDM
@@ -42,7 +42,20 @@ Per ulteriori informazioni sui campi calcolati, leggere la [guida dei campi calc
 
 ### Esci dai caratteri speciali {#escape-special-characters}
 
-È possibile eliminare i caratteri speciali in un campo utilizzando `${...}`. Tuttavia, i file JSON che contengono campi con un punto (`.`) non sono supportati da questo meccanismo. Quando si interagisce con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per eliminare i caratteri speciali. Ad esempio, `address` è un oggetto che contiene l&#39;attributo `street.name`, che può quindi essere indicato come `address.street\.name` invece di `address.street.name`.
+È possibile eliminare i caratteri speciali in un campo utilizzando `${...}`. Tuttavia, i file JSON che contengono campi con un punto (`.`) non sono supportati da questo meccanismo.
+
+Quando si interagisce con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per eliminare i caratteri speciali. Ad esempio, `address` seguente è un oggetto che contiene l&#39;attributo `street.name`:
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+Per fare riferimento a questo campo in una mappatura, è necessario utilizzare `${address.street\.name}`.
 
 ## Set di mappatura
 
