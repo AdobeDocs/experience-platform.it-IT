@@ -5,9 +5,9 @@ title: Inviare più messaggi in una singola richiesta HTTP
 type: Tutorial
 description: Questo documento fornisce un tutorial per inviare più messaggi a Adobe Experience Platform all’interno di una singola richiesta HTTP utilizzando l’acquisizione in streaming.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1724'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Questo tutorial richiede una buona conoscenza di Adobe Experience Platform [!DNL
 - [Panoramica sull&#39;acquisizione dei dati](../home.md): descrive i concetti fondamentali di [!DNL Experience Platform Data Ingestion], inclusi i metodi di acquisizione e i connettori dati.
 - [Panoramica sull&#39;acquisizione in streaming](../streaming-ingestion/overview.md): flusso di lavoro e blocchi predefiniti per l&#39;acquisizione in streaming, ad esempio connessioni in streaming, set di dati, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent].
 
-Questo tutorial richiede inoltre di aver completato l&#39;esercitazione di autenticazione a Adobe Experience Platform[&#x200B; di &#x200B;](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API di [!DNL Experience Platform]. Il completamento del tutorial sull’autenticazione fornisce il valore per l’intestazione Authorization richiesta da tutte le chiamate API in questo tutorial. L’intestazione viene visualizzata nelle chiamate di esempio come segue:
+Questo tutorial richiede inoltre di aver completato l&#39;esercitazione di autenticazione a Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) di [ per effettuare correttamente le chiamate alle API di [!DNL Experience Platform]. Il completamento del tutorial sull’autenticazione fornisce il valore per l’intestazione Authorization richiesta da tutte le chiamate API in questo tutorial. L’intestazione viene visualizzata nelle chiamate di esempio come segue:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 
@@ -39,7 +39,7 @@ Tutte le richieste POST richiedono un’intestazione aggiuntiva:
 
 Dopo aver registrato una connessione in streaming, in qualità di produttore dei dati, avrai un URL univoco che può essere utilizzato per inviare dati ad Experience Platform.
 
-## Trasmetti a un set di dati
+## Trasmetti a un set di dati {#stream-to-dataset}
 
 L’esempio seguente mostra come inviare più messaggi a un set di dati specifico all’interno di una singola richiesta HTTP. Inserisci l’ID del set di dati nell’intestazione del messaggio affinché il messaggio venga acquisito direttamente al suo interno.
 
@@ -519,6 +519,42 @@ I messaggi non riusciti sono identificati da un codice di stato di errore nell�
 I messaggi non validi vengono raccolti e memorizzati in un batch di &quot;errore&quot; all&#39;interno del set di dati specificato da `{DATASET_ID}`.
 
 Per ulteriori informazioni sul recupero dei messaggi batch non riusciti, leggere la [guida recupero dei batch non riusciti](../quality/retrieve-failed-batches.md).
+
+### Inviare più entità XDM a un flusso di dati {#send-multiple-xdm-entities-to-a-dataflow}
+
+Per inviare più entità XDM a un flusso di dati, puoi effettuare le seguenti operazioni:
+
+- Invia una o più entità in un array `messages` all&#39;endpoint di streaming in una richiesta HTTP.
+- Carica un file con più entità utilizzando l’acquisizione batch.
+
+Scegli il metodo che corrisponde al volume di dati e al caso d’uso.
+
+>[!BEGINTABS]
+
+>[!TAB Raggruppa entità in una richiesta HTTP]
+
+È possibile includere più entità XDM in un array `messages` all&#39;interno di una singola richiesta HTTP all&#39;endpoint di acquisizione streaming. Tutti i messaggi possono essere indirizzati agli stessi set di dati e schemi o a schemi diversi, purché appartengano tutti all&#39;organizzazione e alla sandbox **same**.
+
+Utilizza questa opzione quando desideri:
+
+- Riduci le richieste inviando più entità XDM in una chiamata HTTP.
+- Trasmetti i dati in tempo reale attraverso l’endpoint di acquisizione.
+
+Per ulteriori informazioni e istruzioni dettagliate su come inviare la richiesta, leggi la sezione [streaming a un set di dati](#stream-to-dataset).
+
+>[!TAB Carica un file batch]
+
+Puoi caricare un file batch contenente una o più entità XDM in un flusso di dati. Tutti i file caricati nello stesso batch vengono elaborati insieme come una singola unità di acquisizione.
+
+Utilizza questo metodo quando:
+
+- Acquisisci volumi di dati più grandi (ad esempio file CSV, JSON o Parquet).
+- Utilizzano esportazioni basate su file da sistemi a monte.
+- Preferisci l’acquisizione pianificata o in blocco.
+
+Per istruzioni dettagliate, consulta la [guida all&#39;acquisizione in batch](../batch-ingestion/api-overview.md).
+
+>[!ENDTABS]
 
 ## Conferma messaggi acquisiti
 

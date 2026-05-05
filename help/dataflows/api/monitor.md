@@ -5,10 +5,10 @@ title: Monitorare i flussi di dati utilizzando l’API del servizio Flusso
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per monitorare i dati di esecuzione del flusso per verificarne la completezza, gli errori e le metriche tramite l’API del servizio Flusso.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 12%
 
 ---
 
@@ -34,11 +34,11 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Lettura delle chiamate API di esempio
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API [!DNL Experience Platform], devi prima completare l&#39;[esercitazione di autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate alle API di [!DNL Experience Platform], prima è necessario completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -201,3 +201,5 @@ In caso di esito positivo, la risposta restituisce i dettagli relativi all&#39;e
 ## Passaggi successivi
 
 Seguendo questa esercitazione, hai recuperato metriche e informazioni di errore sul flusso di dati utilizzando l&#39;API [!DNL Flow Service]. Ora puoi continuare a monitorare il flusso di dati, a seconda della pianificazione di acquisizione, per monitorarne lo stato e i tassi di acquisizione. Per informazioni su come monitorare i flussi di dati per le origini, leggere l&#39;esercitazione [monitoraggio dei flussi di dati per le origini tramite l&#39;interfaccia utente](../ui/monitor-sources.md). Per ulteriori informazioni su come monitorare i flussi di dati per le destinazioni, leggere l&#39;esercitazione [monitoraggio dei flussi di dati per le destinazioni tramite l&#39;interfaccia utente](../ui/monitor-destinations.md).
+
+Per inviare più entità XDM a un flusso di dati, utilizza un array `messages` nella richiesta HTTP o carica un file (CSV, JSON o Parquet) con più record. Per istruzioni dettagliate e best practice, leggi [come inviare più entità XDM a un flusso di dati](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
