@@ -1,12 +1,12 @@
 ---
 title: Connessione streaming Snowflake
 description: Crea una condivisione dati live di Snowflake per ricevere aggiornamenti del pubblico in streaming direttamente come tabelle condivise nel tuo account.
-last-substantial-update: 2026-03-24T00:00:00Z
+last-substantial-update: 2026-04-28T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0d5bb74473551c9eddd823439e8bbe18126242e9
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1681'
 ht-degree: 2%
 
 ---
@@ -183,12 +183,13 @@ I dati vengono condivisi nel tuo account Snowflake tramite una tabella condivisa
 
 L’esempio seguente mostra righe di esempio da una tabella condivisa: alcune colonne memorizzano le identità e l’appartenenza ai segmenti come JSON; gli attributi di profilo mappati vengono visualizzati come colonne di stringa separate.
 
-![Righe di esempio del foglio di lavoro di Snowflake che mostrano le colonne IDENTITYMAP, SEGMENT_MEMBERSHIP e attributo mappato](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![Righe di esempio del foglio di lavoro di Snowflake che mostrano le colonne TS, IDENTITYMAP, SEGMENT_MEMBERSHIP e degli attributi mappati.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### Struttura dei dati {#data-structure}
 
 La schermata precedente mostra le seguenti colonne:
 
+* **TS**: timestamp che indica quando è stato eseguito l&#39;ultimo aggiornamento di ogni riga.
 * **IDENTITYMAP**: oggetto JSON per ogni mappa identità profilo.
 * **SEGMENT_MEMBERSHIP**: oggetto JSON per ogni pubblico attivato sul flusso di dati. I valori includono `lastQualificationTime` e `status` (ad esempio `realized` quando il profilo è idoneo per il segmento).
 * **Attributi di mappatura**: ogni attributo di mappatura selezionato durante il flusso di lavoro di attivazione viene rappresentato come intestazione di colonna in [!DNL Snowflake].
