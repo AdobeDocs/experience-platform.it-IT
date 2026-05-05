@@ -2,10 +2,10 @@
 title: Note pre-release di Experience Platform
 description: Un’anteprima delle ultime note sulla versione di Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
+source-git-commit: 9b191535ba96c8791a4528361a1945ae27c6456c
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 17%
+source-wordcount: '1428'
+ht-degree: 21%
 
 ---
 
@@ -57,7 +57,7 @@ Nuove funzioni e aggiornamenti alle funzioni esistenti in Adobe Experience Platf
 
 **Correzioni e miglioramenti**
 
-| Correzione | Descrizione |
+| Correggi | Descrizione |
 | --- | --- |
 | Supporto per il monitoraggio personalizzato di Personalization | Il dashboard di monitoraggio per le destinazioni ora supporta [!DNL Custom Personalization] destinazioni. La nota di limitazione che ha escluso [!DNL Custom Personalization] dal monitoraggio è stata rimossa. |
 | Conteggi dei profili nella revisione dell’attivazione | Il passaggio di revisione dell’attivazione ora mostra i conteggi dei profili per i tipi di pubblico già attivati. Vengono visualizzati anche i conteggi dei profili per le destinazioni di streaming, non solo per le destinazioni batch. |
@@ -71,7 +71,7 @@ Per ulteriori informazioni, consulta la [panoramica sulle destinazioni](../desti
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati introdotti in Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati introdotti in Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato.
 
 **Funzioni nuove o aggiornate**
 
@@ -105,7 +105,7 @@ Per ulteriori informazioni, leggere la [Panoramica di Query Service](../query-se
 
 | Funzione | Descrizione |
 | --- | --- |
-| Real-Time CDP MCP (Beta) | Utilizza Real-Time CDP MCP per inserire Real-Time CDP negli agenti di intelligenza artificiale e nei client compatibili con MCP, consentendo di interagire direttamente con gli strumenti Real-Time CDP tramite l’esperienza LLM nativa. Collegando un client compatibile con MCP (ad esempio Claude, ChatGPT, Claude Code, Codex, Cursor o VS Code) a `https://rtcdp-mcp.adobe.io/mcp`, è possibile utilizzare il linguaggio naturale per controllare il pubblico, la configurazione della destinazione e la cronologia dell&#39;esecuzione dell&#39;attivazione, senza scrivere chiamate REST API di Experience Platform o navigare in più flussi di lavoro dell&#39;interfaccia utente. Dopo aver completato l’accesso a Adobe basato su browser, potrai accedere in sola lettura a diversi strumenti, tra cui: <ul><li>Cerca tipi di pubblico esistenti</li><li>Anteprima iscrizione pubblico</li><li>Elenca tipi di destinazione</li><li>Elenca account configurati</li><li>Elenco delle destinazioni configurate</li><li>Elencare connessioni Source</li><li>Elenca connessioni di destinazione</li><li>Controlla esecuzioni di attivazione</li></ul>. Ogni richiesta richiede `imsOrgId` e `sandboxName` parametri per garantire che le azioni abbiano l&#39;ambito della tua organizzazione e sandbox. In questa versione di Beta non sono supportate le operazioni di scrittura. |
+| Real-Time CDP MCP (Beta) | Utilizza Real-Time CDP MCP per inserire Real-Time CDP negli agenti di intelligenza artificiale e nei client compatibili con MCP, consentendo di interagire direttamente con gli strumenti Real-Time CDP tramite l’esperienza LLM nativa. Collegando un client compatibile con MCP (ad esempio Claude, ChatGPT, Claude Code, Codex, Cursor o VS Code) all’endpoint fornito dal rappresentante Adobe, puoi utilizzare il linguaggio naturale per controllare il pubblico, la configurazione della destinazione e la cronologia delle esecuzioni di attivazione, senza scrivere chiamate REST API di Experience Platform o navigare in più flussi di lavoro dell’interfaccia utente. Dopo aver completato l’accesso a Adobe basato su browser, potrai accedere in sola lettura a diversi strumenti, tra cui: <ul><li>Cerca tipi di pubblico esistenti</li><li>Anteprima iscrizione pubblico</li><li>Elenca tipi di destinazione</li><li>Elenca account configurati</li><li>Elenco delle destinazioni configurate</li><li>Elencare connessioni Source</li><li>Elenca connessioni di destinazione</li><li>Controlla esecuzioni di attivazione</li></ul>. Ogni richiesta richiede `imsOrgId` e `sandboxName` parametri per garantire che le azioni abbiano l&#39;ambito della tua organizzazione e sandbox. In questa versione di Beta non sono supportate le operazioni di scrittura. |
 
 {style="table-layout:auto"}
 
