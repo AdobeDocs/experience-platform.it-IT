@@ -2,9 +2,9 @@
 title: Panoramica di Advanced Data Lifecycle Management
 description: Advanced Data Lifecycle Management consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc71e61fd33fe216f8cd326b9df048958c07077a
+source-git-commit: adba9d3cd979f655f477d2d80ed3e55e96fbe486
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '877'
 ht-degree: 2%
 
 ---
@@ -35,8 +35,9 @@ L&#39;interfaccia utente di [!UICONTROL Data Lifecycle] è basata sull&#39;API d
 
 >[!TIP]
 >
->Per monitorare l&#39;utilizzo corrente rispetto ai limiti di quota, vedere la [Guida di riferimento alle quote](./api/quota.md).\
->Per le regole di adesione, i limiti mensili, le timeline di SLA e i criteri di gestione delle eccezioni, consulta la documentazione [Eliminazione record (UI)](./ui/record-delete.md#quotas) e [Ordine di lavoro (API)](./api/workorder.md#quotas).
+>Per ulteriori informazioni di riferimento:
+>- Per monitorare l&#39;utilizzo corrente rispetto ai limiti di quota, vedere la [Guida di riferimento alle quote](./api/quota.md).
+>- Per le regole di adesione, i limiti mensili, le timeline SLA e i criteri di gestione delle eccezioni, vedere la [Guida all&#39;eliminazione dei record (UI)](./ui/record-delete.md#quotas) e la [Guida alla quota degli ordini di lavoro (API)](./api/workorder.md#quotas).
 
 Di seguito è riportato un evento che si verifica quando viene creata una [richiesta di scadenza del set di dati](./ui/dataset-expiration.md):
 
@@ -46,11 +47,29 @@ Di seguito è riportato un evento che si verifica quando viene creata una [richi
 | Set di dati eliminato dal data lake | 1 ora | Il set di dati viene eliminato dalla [pagina di inventario del set di dati](../catalog/datasets/user-guide.md) nell&#39;interfaccia utente. I dati all’interno del data lake vengono eliminati solo in modo non permanente e rimangono tali fino alla fine del processo, dopo di che verranno eliminati in modo definitivo. |
 | Set di dati eliminato dal servizio profilo | 3 ore | Da questo momento in poi, le operazioni che includono segmentazione in batch e streaming, anteprima o stima, esportazione e accesso alle entità non leggeranno più i dati da questo set di dati. I dati all’interno del servizio profilo vengono eliminati solo temporaneamente e rimangono tali fino alla fine del processo, dopo di che verranno eliminati definitivamente. |
 | Conteggio profili e pubblico aggiornati | 48 ore | Una volta aggiornati tutti i profili interessati, tutti i [tipi di pubblico](../segmentation/home.md) correlati vengono aggiornati per riflettere le nuove dimensioni. A seconda del set di dati rimosso e degli attributi su cui stai eseguendo la segmentazione, la dimensione di ciascun pubblico potrebbe aumentare o diminuire a causa dell’eliminazione. A questo punto, qualsiasi modifica risultante nei conteggi complessivi dei profili viene riportata in [widget del dashboard](../dashboards/guides/profiles.md#profile-count-trend) e altri report. |
-| Percorsi e destinazioni aggiornati | 50 ore | [Percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=it), [campagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=it) e [destinazioni](../destinations/home.md) vengono aggiornati in base alle modifiche nei segmenti correlati. |
-| Eliminazione definitiva completata | 15 giorni | Tutti i dati relativi al set di dati vengono eliminati in modo rigido dal data lake e dal servizio profilo. Lo stato [&#x200B; del processo del ciclo di vita dei dati](./ui/browse.md#view-details) che ha eliminato il set di dati viene aggiornato di conseguenza. |
+| Percorsi e destinazioni aggiornati | 50 ore | [Percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) e [destinazioni](../destinations/home.md) vengono aggiornati in base alle modifiche nei segmenti correlati. |
+| Eliminazione definitiva completata | 15 giorni | Tutti i dati relativi al set di dati vengono eliminati in modo rigido dal data lake e dal servizio profilo. Lo stato [ del processo del ciclo di vita dei dati](./ui/browse.md#view-details) che ha eliminato il set di dati viene aggiornato di conseguenza. |
 
 {style="table-layout:auto"}
 
-## Passaggi successivi
+### Registra timeline di eliminazione {#record-delete-transparency}
 
-Questo documento fornisce una panoramica delle funzionalità del ciclo di vita dei dati di Experience Platform. Per iniziare a effettuare richieste di igiene dei dati nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente](./ui/overview.md). Per informazioni su come creare processi del ciclo di vita dei dati a livello di programmazione, consulta la [guida dell&#39;API di igiene dei dati](./api/overview.md)
+Dopo l&#39;invio di una [richiesta di eliminazione record](./ui/record-delete.md) si verifica quanto segue.
+
+>[!NOTE]
+>
+>I tempi sono approssimativi e variano in base al carico del sistema, alla pianificazione batch e al livello di adesione. SLA end-to-end (30 giorni standard, 15 giorni per Privacy and Security Shield o Healthcare Shield) rappresenta l&#39;impegno operativo.
+
+| Fase | Circa tempistica | Descrizione |
+| --- | --- | --- |
+| Richiesta inviata e in batch | Giorno 1-15 | Un ordine di lavoro viene creato e messo in coda. Le richieste possono essere messe in coda e messe in batch per un massimo di 14 giorni prima dell’inizio dell’elaborazione. Il batch è il motivo principale per cui l’eliminazione non è immediata. |
+| Richiesta di eliminazione processo sistemi a valle | Giorno 16-25 | I servizi a valle ricevono ed eseguono la richiesta di eliminazione dei record. |
+| Buffer — Verifiche di integrità e nuovi invii | Giorno 25-30 | Una finestra di buffer consente di controllare l&#39;integrità e di inviare nuovamente i processi non riusciti prima della chiusura della finestra SLA. Lo stato dell&#39;ordine di lavoro viene aggiornato a `completed` dopo che tutti i sistemi hanno confermato l&#39;eliminazione. |
+
+{style="table-layout:auto"}
+
+Per le durate della coda basata sui diritti e i valori SLA massimi, vedere [Elaborazione delle timeline per l&#39;invio degli identificatori](./ui/record-delete.md#sla-processing-timelines).
+
+## Passaggi successivi {#next-steps}
+
+Questo documento fornisce una panoramica delle funzionalità del ciclo di vita dei dati di Experience Platform. Per iniziare ad effettuare richieste di igiene dei dati nell&#39;interfaccia utente, consulta la [guida dell&#39;interfaccia utente del ciclo di vita dei dati](./ui/overview.md). Per creare processi del ciclo di vita dei dati a livello di programmazione, consulta la [Guida dell&#39;API di igiene dei dati](./api/overview.md).

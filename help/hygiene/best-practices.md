@@ -2,9 +2,9 @@
 title: Best practice per la gestione avanzata del ciclo di vita dei dati
 description: Scopri come gestire in modo efficiente le richieste di igiene dei dati in Adobe Experience Platform utilizzando l’interfaccia utente di Advanced Data Lifecycle Management e l’API di igiene dei dati. Questa guida descrive le best practice per massimizzare le identità per richiesta, specificare singoli set di dati e prestare attenzione alla limitazione delle API per evitare rallentamenti. Il documento include le linee guida per l’impostazione della pulizia automatica dei set di dati, le modalità di monitoraggio degli stati degli ordini di lavoro e i metodi dettagliati di recupero delle risposte. Segui queste procedure per semplificare l’elaborazione delle richieste e ottimizzare i tempi di risposta.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Questa guida richiede una buona conoscenza dell&#39;area di lavoro del ciclo di 
 
 ## Linee guida per la creazione di ordini di lavoro {#work-order-creation-guidelines}
 
-È possibile utilizzare l&#39;endpoint `/workorder` nell&#39;API di igiene dei dati per gestire in modo programmatico le richieste di eliminazione dei record in Experience Platform. Con questo endpoint, puoi creare una richiesta di eliminazione, controllarne lo stato o aggiornare una richiesta esistente. Per informazioni su come eseguire queste azioni utilizzando l&#39;API, consulta il documento [Endpoint ordine di lavoro](./api/workorder.md).
+È possibile utilizzare l&#39;endpoint `/workorder` nell&#39;API di igiene dei dati per gestire in modo programmatico le richieste di eliminazione dei record in Experience Platform. Con questo endpoint, puoi creare una richiesta di eliminazione, controllarne lo stato o aggiornare una richiesta esistente. Per informazioni su come eseguire queste azioni utilizzando l&#39;API, consulta il documento [Endpoint ordine di lavoro](./api/workorder.md). Le richieste di cancellazione dei record vengono raggruppate in batch prima dell’inizio dell’elaborazione e il loro completamento può richiedere fino a 30 giorni (SLA standard) o 15 giorni (Privacy and Security Shield o Healthcare Shield). Per un&#39;analisi completa di ciò che accade in ogni fase, vedere [Registrare le timeline di eliminazione](./home.md#record-delete-transparency).
 
 >[!TIP]
 >

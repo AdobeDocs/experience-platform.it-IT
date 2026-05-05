@@ -2,10 +2,10 @@
 title: Sfoglia ordini di lavoro del ciclo di vita dei dati
 description: Scopri come visualizzare e gestire gli ordini di lavoro del ciclo di vita dei dati esistenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 26%
+source-wordcount: '846'
+ht-degree: 25%
 
 ---
 
@@ -86,6 +86,10 @@ A seconda del tipo di ordine di lavoro selezionato, vengono fornite informazioni
 ### Dettagli eliminazione record {#record-delete}
 
 I dettagli di una richiesta di cancellazione del record includono lo stato corrente e il tempo trascorso dall&#39;invio della richiesta. Ogni richiesta include anche una sezione **[!UICONTROL Status by service]** che fornisce dettagli sullo stato di ogni servizio a valle coinvolto nell&#39;eliminazione. Nella barra a destra è possibile utilizzare i controlli per aggiornare il nome e la descrizione dell&#39;ordine di lavoro.
+
+>[!TIP]
+>
+>Le richieste di eliminazione dei record vengono raggruppate in batch prima dell’inizio dell’elaborazione e il loro completamento può richiedere fino a 30 giorni con il SLA standard. Per una suddivisione di ciò che accade in ogni fase, vedi [Registra le timeline di eliminazione](../home.md#record-delete-transparency).
 
 ![Immagine che mostra la pagina dei dettagli per un ordine di lavoro di eliminazione record](../images/ui/browse/record-delete-details.png)
 
