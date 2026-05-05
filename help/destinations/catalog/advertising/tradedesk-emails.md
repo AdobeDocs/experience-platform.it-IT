@@ -1,11 +1,11 @@
 ---
 title: Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
-last-substantial-update: 2025-01-16T00:00:00Z
+last-substantial-update: 2026-04-29T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: a052203dce4949bc795fe181821a8d890c341673
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1861'
 ht-degree: 2%
 
 ---
@@ -101,10 +101,9 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 * Converte tutti i caratteri ASCII in minuscolo.
 * In `gmail.com` indirizzi e-mail, rimuovi i seguenti caratteri dalla parte del nome utente dell&#39;indirizzo e-mail:
 
-      * Il periodo (`.`) (codice ASCII 46). Ad esempio, normalizzare &quot;jane.doe@gmail.com&quot; in &quot;janedoe@gmail.com&quot;.
-     * Il segno più (`+`) (codice ASCII 43) e tutti i caratteri successivi. Ad esempio, normalizzare `janedoe+home@gmail.com` in `janedoe@gmail.com`.
+      * Il carattere punto (`.`) (codice ASCII 46). Ad esempio, normalizza &quot;jane.doe@gmail.com&quot; in &quot;janedoe@gmail.com&quot;.
+     * Il carattere del segno più (`+`) (codice ASCII 43) e tutti i caratteri successivi. Ad esempio, normalizzare `janedoe+home@gmail.com` in `janedoe@gmail.com`.
   
-
 ## Requisiti di normalizzazione e hashing dei numeri di telefono {#phone-hashing}
 
 Ecco cosa devi sapere sul caricamento dei numeri di telefono:
@@ -124,10 +123,10 @@ Ecco cosa devi sapere sui requisiti di normalizzazione dei numeri di telefono:
 * I numeri di telefono E.164 possono avere un massimo di 15 cifre.
 * I numeri di telefono E.164 normalizzati utilizzano la seguente sintassi: `[+][country code][subscriber number including area code]` senza spazi, trattini, parentesi o altri caratteri speciali. Di seguito sono riportati alcuni esempi:
 
-      * US: 1 (234) 567-8901 è normalizzato a +12345678901.
+      * Stati Uniti: 1 (234) 567-8901 è normalizzato a +12345678901.
      * Singapore: 65 1243 5678 è normalizzato a +6512345678.
-     * Australia: il numero di telefono cellulare 0491 570 006 è normalizzato per aggiungere il codice del paese e rilasciare lo zero iniziale: +61491570006.
-     * Regno Unito: il numero di telefono cellulare 07812 345678 è normalizzato per aggiungere il codice del paese e rilasciare lo zero iniziale: +447812345678.
+     * Australia: il numero di telefono cellulare 0491 570 006 è normalizzato per aggiungere il codice paese e rilasciare lo zero iniziale: +61491570006.
+     * Regno Unito: il numero di telefono cellulare 07812 345678 è normalizzato per aggiungere il codice paese e rilasciare lo zero iniziale: +447812345678
   
 Verificare che il numero telefonico normalizzato sia UTF-8, non un altro sistema di codifica come UTF-16.
 
@@ -156,6 +155,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>La funzionalità **[Esporta file ora](/help/destinations/ui/export-file-now.md)** non è disponibile per la destinazione di gestione delle relazioni con i clienti [!DNL The Trade Desk]. Per esportare i tipi di pubblico, utilizza la [esportazione batch giornaliera pianificata](#activate).
+
 ## Connettersi alla destinazione {#connect}
 
 ### Autentica nella destinazione {#authenticate}
@@ -164,7 +167,7 @@ La destinazione CRM [!DNL The Trade Desk] è un caricamento di file batch giorna
 
 ### Inserisci i dettagli della destinazione {#fill-in-details}
 
-Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=it) di questa destinazione, è necessario fornire le seguenti informazioni:
+Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi impostare una connessione alla tua piattaforma di destinazione. Durante la [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) di questa destinazione, è necessario fornire le seguenti informazioni:
 
 * **[!UICONTROL Account Type]**: scegliere l&#39;opzione **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: nome con cui riconoscerai questa destinazione in futuro.
