@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2471'
 ht-degree: 1%
 
 ---
@@ -42,17 +42,29 @@ La sezione [!UICONTROL Data Distiller capabilities] fornisce collegamenti alla d
 
 ![Area di lavoro di Query Service con la sezione delle funzionalità di Data Distiller evidenziata.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Acceleratori {#accelerators}
+
+La scheda **[!UICONTROL Accelerators]** nell&#39;area di lavoro Query fornisce un catalogo di modelli SQL con parametri creati da Adobe per i casi di utilizzo analitici più comuni. Ogni acceleratore viene visualizzato come una riga in una tabella con un nome, un&#39;anteprima SQL e metadati.
+
+Selezionate un acceleratore per aprirlo nell&#39;editor delle query. Fornisci i valori dei parametri ed esegui la query per generare i risultati. Gli acceleratori sono di sola lettura e gestiti da Adobe per garantire la coerenza. Per modificare la logica, creare una copia modificabile utilizzando **[!UICONTROL Create custom template]**. Per informazioni su come individuare, eseguire, pianificare e personalizzare gli acceleratori, consulta la [guida Data Distiller Accelerators](./accelerators.md).
+
 ### Acceleratori di Data Distiller consigliati {#recommended-accelerators}
 
-Selezionare un collegamento rapido per passare alle dashboard pertinenti di Data Distiller [!UICONTROL Templates]. Ogni acceleratore fornisce potenti strumenti e visualizzazioni per aiutarti ad analizzare i dati sul pubblico, ottimizzare la segmentazione e migliorare le strategie di targeting.
+La sezione **[!UICONTROL Recommended Data Distiller accelerators]** nella scheda Panoramica fornisce un accesso rapido agli acceleratori di uso comune. Vengono visualizzate come schede e supportano due flussi di lavoro:
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: da questa dashboard è possibile analizzare le intersezioni di pubblico tra più segmenti di pubblico per scoprire informazioni importanti e ottimizzare le strategie di segmentazione. Puoi anche esportare le tue informazioni per ulteriori analisi offline o a scopo di reporting.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: da questa dashboard, puoi confrontare e contrastare le metriche chiave del pubblico una accanto all&#39;altra per analizzare in dettaglio due gruppi di pubblico. Queste informazioni consentono di comprendere le dimensioni del pubblico, la crescita e altri indicatori chiave delle prestazioni, consentendo di perfezionare la segmentazione e ottimizzare le strategie di targeting con decisioni basate sui dati.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: utilizza la dashboard [!UICONTROL Audience trends] per visualizzare l&#39;evoluzione nel tempo dei tipi di pubblico tramite metriche chiave quali la crescita del pubblico, i conteggi di identità e i profili di identità singoli. Tieni traccia delle tendenze per scoprire informazioni preziose sul comportamento del pubblico, consentendoti di perfezionare la segmentazione, migliorare il coinvolgimento e ottimizzare le strategie di targeting per campagne più efficaci.
-Monitora le metriche del pubblico nel tempo per monitorare le modifiche in termini di dimensioni del pubblico, crescita dell’identità e coinvolgimento complessivo.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: utilizza il dashboard Sovrapposizioni identità pubblico per analizzare le sovrapposizioni identità nei tipi di pubblico selezionati. Le visualizzazioni e i dati tabulati forniscono informazioni approfondite per ottimizzare l’unione delle identità, ridurre la ridondanza e migliorare la segmentazione. Queste informazioni consentono un targeting più efficace, una personalizzazione migliorata e interazioni cliente semplificate.
+- **Gli acceleratori collegati al dashboard** si aprono nell&#39;area di lavoro Dashboard con visualizzazioni predefinite. Questi non richiedono l’input di parametri né l’esecuzione manuale delle query.
+- **Acceleratori basati su query** aperti nell&#39;editor di query, dove vengono forniti i valori dei parametri, viene eseguita la query o viene pianificata.
 
-![L&#39;area di lavoro di Query Service con la sezione acceleratori di Data Distiller evidenziata.](../images/ui/overview/data-distiller-accelerators.png)
+Selezionare una scheda per aprire l&#39;acceleratore. Utilizzare questa sezione per accedere rapidamente ai flussi di lavoro comuni oppure passare alla scheda **[!UICONTROL Accelerators]** per sfogliare l&#39;intero catalogo. Per l&#39;elenco completo degli acceleratori e le istruzioni dettagliate, vedere la [scheda Acceleratori](./accelerators.md#discovery-paths) o la [guida degli acceleratori di Data Distiller](./accelerators.md).
+
+Sono disponibili i seguenti acceleratori collegati al dashboard:
+
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: analizza le intersezioni tra i segmenti di pubblico per identificare i pattern di sovrapposizione e perfezionare la segmentazione.
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: confronta le metriche chiave tra due tipi di pubblico, incluse dimensioni, composizione e modifiche nel tempo.
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: tieni traccia del cambiamento delle metriche del pubblico nel tempo, incluse le dimensioni del pubblico e i conteggi di identità.
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: esamina come i tipi di identità si sovrappongono all&#39;interno dei tipi di pubblico per supportare l&#39;unione delle identità e la precisione della segmentazione.
+
+![Panoramica di Query Service che mostra la sezione degli acceleratori di Data Distiller con le schede di accelerazione consigliate.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Esempi di Data Distiller {#data-distiller-examples}
 
@@ -72,7 +84,7 @@ La sezione Metriche chiave presenta visualizzazioni di dati importanti che conse
 
 #### Impostare un filtro data {#set-date-filter}
 
-Per applicare un filtro data globale per queste visualizzazioni, seleziona l&#39;icona del filtro (![Icona del filtro.](../../images/icons/filter-icon-white.png)) e regolare l&#39;intervallo di date nella finestra di dialogo **[!UICONTROL Filters]**. Applica questo filtro per personalizzare le metriche visualizzate per un intervallo di tempo specifico e migliorare la rilevanza dell’analisi.
+Per applicare un filtro data globale per queste visualizzazioni, seleziona l&#39;icona del filtro (![Un&#39;icona filtro.](../../images/icons/filter-icon-white.png)) e modificare l&#39;intervallo di date nella finestra di dialogo **[!UICONTROL Filters]**. Applica questo filtro per personalizzare le metriche visualizzate per un intervallo di tempo specifico e migliorare la rilevanza dell’analisi.
 
 ![Finestra di dialogo Filtri per i grafici delle metriche chiave nel Workspace di Query Service.](../images/ui/overview/filters-dialog.png)
 
@@ -178,7 +190,7 @@ La scheda **[!UICONTROL Log]** fornisce un elenco delle query eseguite in preced
 
 >[!NOTE]
 >
->Selezionare l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)) da qualsiasi riga del registro query per passare all&#39;editor query. La query è precompilata per facilitarne la modifica.
+>Seleziona l&#39;icona della matita (![Un&#39;icona della matita.](/help/images/icons/edit.png)) da una riga qualsiasi del registro query per passare all’editor delle query. La query è precompilata per facilitarne la modifica.
 
 Per ulteriori informazioni sui file di registro generati automaticamente da un evento di query, consulta la [documentazione dei registri di query](./query-logs.md).
 
