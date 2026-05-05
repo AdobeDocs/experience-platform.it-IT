@@ -3,9 +3,9 @@ keywords: pubblicità; criteri;
 title: Connessione critica
 description: Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l’intera Internet. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della categoria, Criteo assicura che ogni punto di contatto nel percorso di acquisto sia personalizzato per raggiungere la clientela con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 495becf1bd5b6dc418a7bc849eeec352e049d898
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1183'
 ht-degree: 12%
 
 ---
@@ -35,7 +35,7 @@ Criteo potenzia la pubblicità affidabile e di impatto per offrire esperienze pi
 
 ## Identità supportate {#supported-identities}
 
-Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it#getting-started).
+Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --- | --- | --- |
@@ -208,4 +208,4 @@ Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri 
 ## Risorse aggiuntive {#additional-resources}
 
 * [Centro assistenza Criteo](https://help.criteo.com/kb/en)
-* [Portale per sviluppatori Criteo](https://developers.criteo.com)
+* [Portale per sviluppatori di criteri](https://developers.criteo.com)
