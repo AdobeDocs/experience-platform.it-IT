@@ -4,9 +4,9 @@ title: Endpoint API per processi di segmento
 description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico i processi di segmento per la tua organizzazione.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 66ee03814585364826d8d9416530f0a976481b6e
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1240'
 ht-degree: 3%
 
 ---
@@ -451,8 +451,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `metrics` | Oggetto contenente informazioni diagnostiche sul processo di segmentazione. |
 
 +++
-
->[!ENDTABS]
 
 ## Processi di recupero in blocco dei segmenti {#bulk-get}
 
