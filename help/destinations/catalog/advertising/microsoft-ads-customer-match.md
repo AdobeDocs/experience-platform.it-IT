@@ -3,10 +3,8 @@ keywords: pubblicità; microsoft ads; customer match;
 title: Connessione Customer Match di Microsoft Ads
 description: Utilizza la destinazione Customer Match di Microsoft Ads per abbinare i clienti per indirizzo e-mail e coinvolgere di nuovo i clienti nella rete Microsoft Advertising, inclusi gli annunci di ricerca e pubblico.
 badge: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 50bd5be385f62a290fefae60c6ed286d893e430a
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 18%
