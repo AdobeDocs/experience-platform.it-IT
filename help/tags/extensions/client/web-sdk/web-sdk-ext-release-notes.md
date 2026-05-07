@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
+source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
 workflow-type: tm+mt
-source-wordcount: '3320'
+source-wordcount: '3355'
 ht-degree: 24%
 
 ---
@@ -13,6 +13,11 @@ ht-degree: 24%
 # Note sulla versione dell’estensione tag Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione di SDK, consulta le [note sulla versione di Adobe Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Versione 2.35.1 - 7 maggio 2026
+
+- Contiene [versione 2.35.1](/help/collection/js/release-notes.md) di Adobe Experience Platform Web SDK.
+- È stato risolto un problema a causa del quale i componenti richiesti, come Context, venivano esclusi dal bundle SDK e impediva l’invio di eventi.
 
 ## Versione 2.35.0 - 7 maggio 2026
 
@@ -37,7 +42,7 @@ Questo documento descrive le note sulla versione dell’estensione tag Adobe Exp
 **Nuove funzioni**
 
 - Contiene [versione 2.31.0](/help/collection/js/release-notes.md) di Adobe Experience Platform Web SDK.
-- Aggiunta del supporto per il codice di base [&#128279;](/help/collection/js/install/base-code.md) di per l&#39;estensione tag.
+- Aggiunta del supporto per il codice di base ](/help/collection/js/install/base-code.md) di [per l&#39;estensione tag.
 - Aggiunta di **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contesto](configure/data-collection.md#context-settings) alle impostazioni dell&#39;estensione.
 - Aggiunto componente Brand Concierge.
 - È stata aggiunta un’opzione per consentire l’utilizzo di un’istanza della lega con hosting autonomo con Tag.

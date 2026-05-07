@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
+source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
 workflow-type: tm+mt
-source-wordcount: '2963'
+source-wordcount: '2988'
 ht-degree: 6%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 6%
 
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.33.1 - 7 maggio 2026
+
+- È stato risolto un problema a causa del quale i componenti richiesti, come Context, venivano esclusi dal bundle SDK e impediva l’invio di eventi.
 
 ## Versione 2.33.0 - 7 maggio 2026
 
