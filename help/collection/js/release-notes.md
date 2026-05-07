@@ -3,10 +3,10 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '2752'
-ht-degree: 5%
+source-wordcount: '2963'
+ht-degree: 6%
 
 ---
 
@@ -15,6 +15,16 @@ ht-degree: 5%
 
 Questo documento illustra le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [note sulla versione dell&#39;estensione tag Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.33.0 - 7 maggio 2026
+
+- È stato risolto un problema che causava la restituzione di errori API da parte di eventi AdBreak, Chapter e QoE di analisi dei contenuti multimediali in bridging.
+- Aggiunta di Adobe Advertising `stitchId` agli eventi esperienza in uscita quando Advertising è configurato.
+- Sono state migliorate le prestazioni dei comandi `sendEvent` tramite la rimozione di un blocco durante l&#39;elaborazione della destinazione ID.
+- È stato risolto un problema a causa del quale la risoluzione dell’identità pubblicitaria caricava script e iframe di terze parti, anche quando la pubblicità non era configurata.
+- È stata aggiunta la possibilità di leggere il parametro di trasferimento identità `adobe_mc` dall&#39;hash (in precedenza era incluso solo nei parametri di query).
+- È stato risolto un problema che impediva la lettura di `adobe_mc` quando l&#39;URL era codificato più volte.
+- Includi XDM in tutti gli eventi Brand Concierge in uscita.
 
 ## Versione 2.32.0 - 23 marzo 2026
 
@@ -165,7 +175,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - È stato risolto un problema che impediva l&#39;inizializzazione dei dettagli del collegamento Activity Map quando veniva chiamato l&#39;hook di monitoraggio `onInstanceConfigured`.
 - È stato risolto un problema a causa del quale le destinazioni dei cookie non venivano impostate sul percorso corretto.
 - È stato risolto un problema del cliente relativo alla chiamata a ha.
-- È stato risolto un problema che causava il mancato funzionamento di `adobe_mc`sendEvent[&#x200B; chiamate a causa di una codifica URL non valida nel parametro &#x200B;](commands/sendevent/overview.md).
+- È stato risolto un problema che causava il mancato funzionamento di [sendEvent](commands/sendevent/overview.md) chiamate a causa di una codifica URL non valida nel parametro `adobe_mc`.
 
 ## Versione 2.21.1 - venerdì 18 luglio 2024
 
@@ -267,7 +277,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 
 ## Versione 2.13.1 - venerdì 13 ottobre 2022
 
-- È stato risolto un problema che impediva il funzionamento della migrazione dei visitatori se window.Visitor veniva definito dopo la configurazione. Questo è un problema soprattutto quando si esegue con i tag di Adobe.
+- È stato risolto un problema che impediva il funzionamento della migrazione dei visitatori se la finestra di.Il visitatore viene definito dopo la configurazione. Questo è un problema soprattutto quando si esegue con i tag di Adobe.
 - È stato risolto un problema a causa del quale `device.screenWidth` e `device.screenHeight` venivano popolati come stringhe in alcuni ambienti.
 
 ## Versione 2.13.0 - 28 settembre 2022
@@ -374,7 +384,7 @@ Per le ultime note sulla versione dell&#39;estensione tag Web SDK, consulta le [
 - Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Experience Platform Web SDK e Experience Platform Edge Network. Se stai raccogliendo le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
 - Sono stati aggiunti due [hook di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`.
 - Correzione bug: gli eventi di notifica dell’interazione Personalization contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
-- Correzione bug: se il primo evento inviato da SDK fosse impostato su `documentUnloading`, `true`[`sendBeacon` verrebbe utilizzato per inviare l&#39;evento, causando un errore relativo a un&#39;identità non stabilita.](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
+- Correzione bug: se il primo evento inviato da SDK fosse impostato su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l&#39;evento, causando un errore relativo a un&#39;identità non stabilita.`documentUnloading`
 
 ## Versione 2.3.0 - novembre 2020
 
