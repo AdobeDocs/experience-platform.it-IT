@@ -3,9 +3,9 @@ title: Panoramica di Snowflake Source Connector
 description: Scopri come collegare Snowflake a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: fdc66601db3e8ae8fb55503b9e32d88ed48381cf
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1705'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Fornire i valori per le credenziali seguenti per connettere [!DNL Snowflake] ad 
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Ad esempio: `myorg-myaccount.snowflakecomputing.com`. Leggi la sezione sul [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] &#x200B;](#retrieve-your-account-identifier) per ulteriori informazioni. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Ad esempio: `myorg-myaccount.snowflakecomputing.com`. Leggi la sezione sul [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] ](#retrieve-your-account-identifier) per ulteriori informazioni. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `warehouse` | Il data warehouse [!DNL Snowflake] gestisce il processo di esecuzione delle query per l&#39;applicazione. Ogni data warehouse [!DNL Snowflake] è indipendente l&#39;uno dall&#39;altro e deve essere accessibile singolarmente quando si trasferiscono i dati ad Experience Platform. |
 | `database` | Il database [!DNL Snowflake] contiene i dati che si desidera inserire nell&#39;Experience Platform. |
 | `username` | Nome utente per l&#39;account [!DNL Snowflake]. |
@@ -56,7 +56,7 @@ Per utilizzare l&#39;autenticazione con coppia di chiavi, generare innanzitutto 
 
 | Credenziali | Descrizione |
 | --- | --- |
-| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Ad esempio: `myorg-myaccount.snowflakecomputing.com`. Leggi la sezione sul [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] &#x200B;](#retrieve-your-account-identifier) per ulteriori informazioni. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Ad esempio: `myorg-myaccount.snowflakecomputing.com`. Leggi la sezione sul [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] ](#retrieve-your-account-identifier) per ulteriori informazioni. Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Il nome utente dell&#39;account [!DNL Snowflake]. |
 | `privateKey` | La chiave privata con codifica [!DNL Base64-] del tuo account [!DNL Snowflake]. Puoi generare chiavi private crittografate o non crittografate. Se utilizzi una chiave privata crittografata, devi fornire anche una passphrase di chiave privata durante l’autenticazione in Experience Platform. Leggi la sezione sul [recupero della chiave privata](#retrieve-your-private-key) per ulteriori informazioni. |
 | `privateKeyPassphrase` | La passphrase per chiave privata è un ulteriore livello di sicurezza da utilizzare per l&#39;autenticazione con una chiave privata crittografata. Se si utilizza una chiave privata non crittografata, non è necessario fornire la passphrase. |
@@ -72,7 +72,11 @@ Specificare i valori per le credenziali seguenti per connettere [!DNL Snowflake]
 
 >[!WARNING]
 >
->L&#39;autenticazione di base (o l&#39;autenticazione della chiave dell&#39;account) per l&#39;origine [!DNL Snowflake] diventerà obsoleta a novembre 2025. Devi passare all’autenticazione basata su coppia di chiavi per continuare a utilizzare l’origine e ad acquisire i dati dal database ad Experience Platform. Per ulteriori informazioni sulla deprecazione, leggere la [[!DNL Snowflake] guida alle best practice per ridurre i rischi di compromissione delle credenziali](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>L&#39;autenticazione di base (detta anche autenticazione della chiave dell&#39;account) per l&#39;origine [!DNL Snowflake] è **completamente obsoleta per le connessioni ad Experience Platform nelle aree geografiche di Azure**. È necessario utilizzare l&#39;autenticazione della coppia di chiavi per tutte le connessioni nuove ed esistenti basate su Azure.
+>
+>Per le origini [!DNL Snowflake] che si connettono ad Experience Platform in **aree geografiche AWS**, l&#39;autenticazione di base è ancora supportata per il momento, ma è in fase di deprecazione e verrà rimossa in futuro. Si consiglia vivamente di migrare all’autenticazione con coppia di chiavi il prima possibile per garantire una connettività continua.
+>
+>Per ulteriori informazioni su deprecazione e indicazioni, consulta la [[!DNL Snowflake] guida alle best practice per ridurre i rischi di compromissione delle credenziali](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -90,7 +94,7 @@ Per utilizzare l&#39;autenticazione con coppia di chiavi, generare innanzitutto 
 
 | Credenziali | Descrizione |
 | --- | --- |
-| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Ad esempio: `http://myorg-myaccount.snowflakecomputing.com/`. Per ulteriori informazioni, consulta la guida in [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] &#x200B;](#etrieve-your-account-identifier). Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Un nome di account identifica in modo univoco un account all’interno dell’organizzazione. In questo caso, è necessario identificare in modo univoco un account tra diverse [!DNL Snowflake] organizzazioni. A questo scopo, devi anteporre il nome della tua organizzazione al nome dell’account. Ad esempio: `http://myorg-myaccount.snowflakecomputing.com/`. Per ulteriori informazioni, consulta la guida in [recupero dell&#39;identificatore dell&#39;account [!DNL Snowflake] ](#etrieve-your-account-identifier). Per ulteriori informazioni, consulta la [[!DNL Snowflake] documentazione](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | Il nome utente dell&#39;account [!DNL Snowflake]. |
 | `privateKey` | Chiave privata per l&#39;utente [!DNL Snowflake], con codifica base64 come una singola riga senza intestazioni o interruzioni di riga. Per prepararlo, copiare il contenuto del file PEM, rimuovere le righe `BEGIN`/`END` e tutte le interruzioni di riga, quindi codificare il risultato in base64. Leggi la sezione sul [recupero della chiave privata](#retrieve-your-private-key) per ulteriori informazioni. **Nota:** le chiavi private crittografate non sono attualmente supportate per una connessione AWS. |
 | `port` | Numero di porta utilizzato da [!DNL Snowflake] per la connessione a un server tramite Internet. |

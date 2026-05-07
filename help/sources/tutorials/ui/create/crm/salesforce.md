@@ -2,10 +2,10 @@
 title: Collegare l’account Salesforce tramite l’interfaccia utente di Experience Platform
 description: Scopri come collegare il tuo account Salesforce e inserire i dati CRM in Experience Platform utilizzando l’interfaccia utente.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
+source-git-commit: 11e9e1a25a45f4011f15b1e28753a98d4158012c
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '724'
+ht-degree: 3%
 
 ---
 
@@ -26,31 +26,7 @@ Se disponi già di un account [!DNL Salesforce] autenticato, puoi saltare il res
 
 ### Raccogli le credenziali richieste {#gather-required-credentials}
 
->[!WARNING]
->
->L&#39;autenticazione di base per l&#39;origine [!DNL Salesforce] diventerà obsoleta a gennaio 2026. È necessario passare all&#39;autenticazione delle credenziali client OAuth 2 per continuare a utilizzare l&#39;origine e l&#39;acquisizione dei dati dall&#39;account [!DNL Salesforce] in Experience Platform.
-
-L&#39;origine [!DNL Salesforce] supporta l&#39;autenticazione di base e le credenziali client OAuth2.
-
->[!BEGINTABS]
-
->[!TAB Autenticazione di base]
-
-Per connettere l&#39;account [!DNL Salesforce] tramite l&#39;autenticazione di base, è necessario fornire i valori per le credenziali seguenti.
-
-| Credenziali | Descrizione |
-| --- | --- |
-| URL ambiente | URL dell&#39;istanza di origine [!DNL Salesforce]. Il formato dell&#39;URL dell&#39;ambiente è `https://[domain].my.salesforce.com`. |
-| Nome utente | Nome utente per l&#39;account utente [!DNL Salesforce]. |
-| Password | Password per l&#39;account utente [!DNL Salesforce]. |
-| Token di sicurezza | Token di sicurezza per l&#39;account utente [!DNL Salesforce]. |
-| Versione API | (Facoltativo) Versione REST API dell&#39;istanza [!DNL Salesforce] in uso. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, devi immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experience Platform utilizzerà automaticamente l’ultima versione disponibile. |
-
-Per ulteriori informazioni sull&#39;autenticazione, consultare [questa [!DNL Salesforce] guida all&#39;autenticazione](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
-
->[!TAB Credenziali client OAuth2]
-
-È necessario fornire i valori per le credenziali seguenti per connettere l&#39;account [!DNL Salesforce] utilizzando le credenziali client OAuth2.
+L&#39;origine [!DNL Salesforce] supporta l&#39;autenticazione tramite le credenziali client OAuth2.
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -62,56 +38,31 @@ Per ulteriori informazioni sull&#39;autenticazione, consultare [questa [!DNL Sal
 
 Per ulteriori informazioni sull&#39;utilizzo di OAuth per [!DNL Salesforce], leggere la [[!DNL Salesforce] guida sui flussi di autorizzazione OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
->[!ENDTABS]
-
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare l&#39;account [!DNL Salesforce] ad Experience Platform.
-
 ## Connetti il tuo account [!DNL Salesforce]
 
-Nell&#39;interfaccia utente di Experience Platform, passa a **[!UICONTROL Origini]** dal menu a sinistra per aprire l&#39;area di lavoro [!UICONTROL Origini]. Utilizzare il catalogo a sinistra per sfogliare le categorie o la barra di ricerca per trovare rapidamente l&#39;origine che si desidera connettere.
+Nell&#39;interfaccia utente di Experience Platform, passa a **[!UICONTROL Sources]** dal menu a sinistra per aprire l&#39;area di lavoro [!UICONTROL Sources]. Utilizzare il catalogo a sinistra per sfogliare le categorie o la barra di ricerca per trovare rapidamente l&#39;origine che si desidera connettere.
 
-Selezionare **[!DNL Salesforce]** nella categoria *[!UICONTROL CRM]*, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Selezionare **[!DNL Salesforce]** nella categoria *[!UICONTROL CRM]*, quindi selezionare **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->Nel catalogo delle origini, vedrai **[!UICONTROL Configurazione]** se non è connesso alcun account, oppure **[!UICONTROL Aggiungi dati]** se un account è già autenticato.
+>Nel catalogo delle origini, vedrai **[!UICONTROL Set up]** se non è connesso alcun account, oppure **[!UICONTROL Add data]** se un account è già autenticato.
 
 ![Catalogo delle origini nell&#39;interfaccia utente di Experience Platform con la scheda di origine di Salesforce selezionata.](../../../../images/tutorials/create/salesforce/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connetti a Salesforce]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect to Salesforce]**. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
 ### Usa un account esistente
 
-Per utilizzare un account esistente, selezionare **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account che si desidera utilizzare dall&#39;elenco visualizzato. Al termine, selezionare **[!UICONTROL Avanti]** per continuare.
+Per utilizzare un account esistente, selezionare **[!UICONTROL Existing account]**, quindi selezionare l&#39;account che si desidera utilizzare dall&#39;elenco visualizzato. Al termine, selezionare **[!UICONTROL Next]** per continuare.
 
 ![Elenco di account Salesforce autenticati già presenti nell&#39;organizzazione.](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### Crea un nuovo account
 
-Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e fornisci un nome e una descrizione per il nuovo account [!DNL Salesforce].
+Per creare un nuovo account, selezionare **[!UICONTROL New account]** e fornire un nome e una descrizione per il nuovo account [!DNL Salesforce].
 
-![Interfaccia in cui è possibile creare un nuovo account Salesforce fornendo le credenziali di autenticazione appropriate.](../../../../images/tutorials/create/salesforce/new.png)
-
-Quindi, seleziona il tipo di autenticazione che desideri utilizzare per il nuovo account.
-
->[!BEGINTABS]
-
->[!TAB Autenticazione di base]
-
-Per l&#39;autenticazione di base, selezionare **[!UICONTROL Autenticazione di base]**, quindi specificare i valori per le credenziali seguenti:
-
-* URL ambiente
-* Nome utente
-* Password
-* Versione API (opzionale)
-
-Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]**.
-
-![Interfaccia di autenticazione di base per la creazione dell&#39;account Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
-
->[!TAB Credenziali client OAuth2]
-
-Per le credenziali client OAuth 2, selezionare **[!UICONTROL Credenziali client OAuth2]**, quindi specificare i valori per le credenziali seguenti:
+Per le credenziali client OAuth 2, selezionare **[!UICONTROL OAuth2 Client Credential]** e quindi fornire i valori per le credenziali seguenti:
 
 * URL ambiente
 * ID client
@@ -119,15 +70,14 @@ Per le credenziali client OAuth 2, selezionare **[!UICONTROL Credenziali client 
 * Versione API
 * Includi oggetti di eliminazione
 
-Al termine, selezionare **[!UICONTROL Connetti all&#39;origine]**.
+Al termine, selezionare **[!UICONTROL Connect to source]**.
 
-![Interfaccia OAuth per la creazione dell&#39;account Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
 
->[!ENDTABS]
+![Interfaccia in cui è possibile creare un nuovo account Salesforce fornendo le credenziali di autenticazione appropriate.](../../../../images/tutorials/create/salesforce/new.png)
 
 ### Ignora anteprima dei dati di esempio {#skip-preview-of-sample-data}
 
-Durante il passaggio di selezione dei dati, potrebbe verificarsi un timeout durante l’acquisizione di tabelle o file di dati di grandi dimensioni. Puoi saltare l’anteprima dei dati per evitare il timeout e visualizzare comunque lo schema, anche senza dati di esempio. Per ignorare l&#39;anteprima dei dati, abilitare l&#39;interruttore **[!UICONTROL Ignora anteprima dati di esempio]**.
+Durante il passaggio di selezione dei dati, potrebbe verificarsi un timeout durante l’acquisizione di tabelle o file di dati di grandi dimensioni. Puoi saltare l’anteprima dei dati per evitare il timeout e visualizzare comunque lo schema, anche senza dati di esempio. Per ignorare l&#39;anteprima dei dati, attivare/disattivare **[!UICONTROL Skip previewing sample data]**.
 
 Il resto del flusso di lavoro rimarrà invariato. L’unica avvertenza è che ignorare l’anteprima dei dati potrebbe impedire la convalida automatica dei campi calcolati e obbligatori durante il passaggio di mappatura, per cui dovrai convalidarli manualmente durante la mappatura.
 

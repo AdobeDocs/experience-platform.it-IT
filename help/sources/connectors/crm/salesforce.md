@@ -2,9 +2,9 @@
 title: Panoramica di Salesforce Source Connector
 description: Scopri come collegare Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 501cb5e34e565b40160b39aed306a23cf77328ea
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >È ora possibile utilizzare l&#39;origine [!DNL Salesforce] quando si esegue Adobe Experience Platform su Amazon Web Services (AWS). Experience Platform in esecuzione su AWS è attualmente disponibile per un numero limitato di clienti. Per ulteriori informazioni sull&#39;infrastruttura Experience Platform supportata, consulta la [Panoramica multi-cloud di Experience Platform](../../../landing/multi-cloud.md).
-
->[!WARNING]
->
->L&#39;autenticazione di base per l&#39;origine [!DNL Salesforce] diventerà obsoleta a gennaio 2026. È necessario passare all&#39;autenticazione delle credenziali client OAuth 2 per continuare a utilizzare l&#39;origine e l&#39;acquisizione dei dati dall&#39;account [!DNL Salesforce] in Experience Platform.
 
 Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
@@ -239,21 +235,21 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sul pop
 
 | Variable | Descrizione | Esempio |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | Il JSON Web Token (JWT) è una credenziale di autenticazione utilizzata per generare {ACCESS_TOKEN}. Per informazioni su come generare [, consulta il tutorial su &#x200B;](../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{JWT_TOKEN}`. | `{JWT_TOKEN}` |
-| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare [, consulta il tutorial su &#x200B;](../../../landing/api-authentication.md)autenticazione e accesso alle API di Experience Platform`{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Identificatore univoco utilizzato per generare `{ACCESS_TOKEN}`. Per informazioni su come recuperare `{CLIENT_SECRET}`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md). | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | Il JSON Web Token (JWT) è una credenziale di autenticazione utilizzata per generare {ACCESS_TOKEN}. Per informazioni su come generare `{JWT_TOKEN}`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md). | `{JWT_TOKEN}` |
+| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API di Experience Platform. Per informazioni su come recuperare `{API_KEY}`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md). | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API di Experience Platform. Per informazioni su come recuperare `{ACCESS_TOKEN}`, consulta il tutorial su [autenticazione e accesso alle API di Experience Platform](../../../landing/api-authentication.md). | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | Il contenitore `global` contiene tutte le classi, i gruppi di campi di schema, i tipi di dati e gli schemi standard forniti dai partner Adobe e Experience Platform. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
-| `PRIVATE_KEY` | Credenziali utilizzate per autenticare l&#39;istanza [!DNL Postman] nelle API Experience Platform. Per istruzioni su come recuperare [, consulta il tutorial sulla configurazione di Developer Console e  [!DNL Postman]](../../../landing/postman.md)configurazione di Developer Console e{PRIVATE_KEY}. | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | Credenziali utilizzate per autenticare l&#39;istanza [!DNL Postman] nelle API Experience Platform. Per istruzioni su come recuperare {PRIVATE_KEY}, consulta il tutorial sulla configurazione di Developer Console e [configurazione di Developer Console e [!DNL Postman]](../../../landing/postman.md). | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l’integrazione in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System (IMS) fornisce il framework per l’autenticazione nei servizi Adobe. Per quanto riguarda [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Per istruzioni su come recuperare le informazioni di [, consulta il tutorial su  [!DNL Postman]](../../../landing/postman.md)come configurare la console per sviluppatori e `{ORG_ID}`. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Per istruzioni su come recuperare le informazioni di `{ORG_ID}`, consulta il tutorial su [come configurare la console per sviluppatori e  [!DNL Postman]](../../../landing/postman.md). | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Nome della partizione sandbox virtuale in uso. | `prod` |
 | `TENANT_ID` | ID utilizzato per garantire che le risorse create abbiano lo spazio dei nomi corretto e siano contenute all’interno dell’organizzazione. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | L’endpoint URL a cui stai effettuando chiamate API. Questo valore è fisso ed è sempre impostato su: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
-| `munchkinId` | ID univoco dell&#39;account [!DNL Marketo]. Per informazioni su come recuperare [, consulta il tutorial su  [!DNL Marketo] autenticazione dell&#39;istanza](../adobe-applications/marketo/marketo-auth.md).`munchkinId` | `123-ABC-456` |
-| `sfdc_org_id` | L&#39;ID organizzazione per l&#39;account [!DNL Salesforce]. Per ulteriori informazioni sull&#39;acquisizione dell&#39;ID organizzazione [[!DNL Salesforce] , consulta la &#x200B;](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1)guida[!DNL Salesforce] seguente. | `00D4W000000FgYJUA0` |
+| `munchkinId` | ID univoco dell&#39;account [!DNL Marketo]. Per informazioni su come recuperare `munchkinId`, consulta il tutorial su [autenticazione dell&#39;istanza](../adobe-applications/marketo/marketo-auth.md). [!DNL Marketo]  | `123-ABC-456` |
+| `sfdc_org_id` | L&#39;ID organizzazione per l&#39;account [!DNL Salesforce]. Per ulteriori informazioni sull&#39;acquisizione dell&#39;ID organizzazione [!DNL Salesforce], consulta la [[!DNL Salesforce] guida](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) seguente. | `00D4W000000FgYJUA0` |
 | `has_abm` | Valore booleano che indica se sei abbonato a [!DNL Marketo Account-Based Marketing]. | `false` |
 | `has_msi` | Valore booleano che indica se sei abbonato a [!DNL Marketo Sales Insight]. | `false` |
 
@@ -303,7 +299,7 @@ Innanzitutto, utilizza quanto segue per creare una coppia certificato/chiave di 
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
 ```
 
-1. Nel dashboard [!DNL Salesforce] selezionare le impostazioni (![Icona Impostazioni.](/help/images/icons/settings.png)) e quindi selezionare **[!DNL Setup]**.
+1. Nel dashboard [!DNL Salesforce], selezionare le impostazioni (![Icona impostazioni.](/help/images/icons/settings.png)) e quindi selezionare **[!DNL Setup]**.
 2. Passare a [!DNL App Manager] e selezionare **[!DNL New Connection App]**.
 3. Specifica un nome per l&#39;app e consenti la compilazione automatica degli altri campi.
 4. Abilita la casella per [!DNL Enable OAuth Settings].
